@@ -1,0 +1,7 @@
+base = "items::skin_tanned"
+
+[[rulesets]]
+[rulesets.rules]
+"tanned hide" = "皮革"
+"tanned hides" = "皮革"
+"{::materials::adjective}" = "{::materials::adjective}"

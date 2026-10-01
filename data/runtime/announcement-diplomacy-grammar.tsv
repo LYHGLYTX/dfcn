@@ -1,0 +1,134 @@
+# Complete diplomacy, dispute, guard and group dialogue constructions.
+# scope	source	target	semantic scopes	native provenance
+diplomacy-group	The group	这个势力		0x1404ab023..0x1404af4cd
+diplomacy-group	{s}	{s1}	$name	0x1404ab023..0x1404af4cd
+sentence	{s} is our ally, and there is friendship between our peoples.	{s1}是我们的盟友，双方百姓也相处和睦。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is our ally, and there is no hard feeling between our peoples.	{s1}是我们的盟友，双方百姓也没什么芥蒂。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is our ally, but there is ill-will between our peoples.	{s1}是我们的盟友，可双方百姓却互有敌意。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is not at war with us, and there is friendship between our peoples.	{s1}没有与我们交战，双方百姓也相处和睦。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is not at war with us, and there is no hard feeling between our peoples.	{s1}没有与我们交战，双方百姓也没什么芥蒂。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is not at war with us, but there is ill-will between our peoples.	{s1}没有与我们交战，可双方百姓却互有敌意。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is paying us tribute, and there is friendship between our peoples.	{s1}正在向我们进贡，双方百姓也相处和睦。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is paying us tribute, and there is no hard feeling between our peoples.	{s1}正在向我们进贡，双方百姓也没什么芥蒂。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is paying us tribute, but there is ill-will between our peoples.	{s1}正在向我们进贡，可双方百姓却互有敌意。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} accepts our tribute, and there is friendship between our peoples.	{s1}接受我们的贡品，双方百姓也相处和睦。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} accepts our tribute, and there is no hard feeling between our peoples.	{s1}接受我们的贡品，双方百姓也没什么芥蒂。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} accepts our tribute, but there is ill-will between our peoples.	{s1}接受我们的贡品，可双方百姓却互有敌意。	diplomacy-group	0x1404ab023..0x1404ab1c8
+sentence	{s} is at war with us.	{s1}正在与我们交战。	diplomacy-group	0x1404ab023..0x1404ab135
+sentence	{s} is skirmishing with us.	{s1}正在与我们发生小规模冲突。	diplomacy-group	0x1404ab023..0x1404ab135
+sentence	{s} is unknown us.	{s1}不为我们所知。	diplomacy-group	0x1404ab023..0x1404ab135
+diplomacy-cause	a dispute over the treatment of animals	对待动物的方式存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over the treatment of plants	对待植物的方式存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over torture	对酷刑存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over a formalized agreement	对正式协议存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over truthfulness	对是否诚实存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over the devouring of the bodies of sapient beings	对吞食智慧生物的尸体存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over the display of war and hunting trophies	对展示战争和狩猎战利品存在争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	the adversary's inability to communicate and form treaties	对方无法沟通和缔结条约		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a desire to kill the living and any others in opposition	想杀死生者和所有其他反对者		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	the disturbance of once-eternal rest	曾经永恒的安息遭到打扰		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	prior aggression by the adversary	对方此前的侵略		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a first contact that went horribly wrong	初次接触出了严重差错		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	the adversary's refusal to form treaties	对方拒绝缔结条约		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	the adversary's abuse of the aggressor's fallen	对方虐待进攻方的阵亡者		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	an incident involving a lost diplomat	一起涉及失踪外交官的事件		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a disagreement over prior treaties	对以往条约的分歧		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	an incident involving a trade caravan	一起涉及商队的事件		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over territory	领土争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over water rights	用水权争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over grazing rights	放牧权争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over fishing rights	捕鱼权争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over rights-of-way	通行权争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over livestock ownership	牲畜所有权争议		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	general ill feelings over past historical events	以往历史事件造成的普遍怨恨		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a previous war	此前的一场战争		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a previous battle	此前的一场战役		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a previous duel	此前的一场决斗		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a previous conquest	此前的一次征服		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	an abduction	一次绑架		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	an act of theft	一次盗窃		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	an attack by a beast	一次野兽袭击		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a journey	一段旅程		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a previous insurrection	此前的一场起义		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a special occasion	一次特殊活动		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a performance	一场表演		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a competition	一场比赛		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a procession	一次游行		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a ceremony	一次仪式		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a purge	一次清洗		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a raid	一次突袭		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	persecution	迫害		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a coup	一次政变		0x1404ab4fb..0x1404abc93; native finite reason switches
+diplomacy-cause	a dispute over the ownership of {s}	对{s1}的所有权存在争议	$book	0x1404ab798+0x1404ab7d9 ->0x140b94400
+sentence	The trouble started because of {s}.	最初是因为{s1}，才起了冲突。	diplomacy-cause	0x1404ab4fb+0x1404ab6e0;0x1404ab735+0x1404abc99
+sentence	The trouble started because of .	冲突起因不详。		0x1404ab793 ->0x1404abc99: native unknown reason leaves no cause text; also 0x1404ab567 ->0x1404ab6e0
+sentence	There is also a family matter.	另外还牵涉到家族的事。		0x1404abe01..0x1404ac0a5
+sentence	There is also the issue of their godlessness.	还有，他们不信神，这也是个问题。		0x1404abe01..0x1404ac0a5
+sentence	There is also the issue of their worship of {s}.	还有，他们崇拜{s1}，这也是个问题。	$sphere	0x1404abe95..0x1404ac0a5 ->0x140756500/0x140756690
+sentence	There is also the issue of their oneness with {s}.	还有，他们与{s1}融为一体，这也是个问题。	$sphere	0x1404abe95..0x1404ac0a5 ->0x140756500/0x140756690
+sentence	There is also the natural issue of their worship of {s}.	他们崇拜{s1}，这当然也是个问题。	$sphere	0x1404abe95..0x1404ac0a5 ->0x140756500/0x140756690
+sentence	There is also the natural issue of their oneness with {s}.	他们与{s1}融为一体，这当然也是个问题。	$sphere	0x1404abe95..0x1404ac0a5 ->0x140756500/0x140756690
+sentence	Be careful, for their leader {s} is my {s}.	小心点，他们的领袖{s1}可是我的{s2}。	$unit,dialogue-family	0x1404ac113..0x1404ac1e3
+diplomacy-possessor	{s}'s	{s1}的	$unit	0x1404ac35c ->0x140b92f10 possessive mode
+diplomacy-possessor	{s}'	{s1}的	$unit	0x1404ac35c ->0x140b92f10 possessive mode
+sentence	It does not help matters that their leader {s} is {s} {s}.	再说，他们的领袖{s1}还是{s2}{s3}，事情就更难办了。	$unit,diplomacy-possessor,dialogue-family	0x1404ac2a5..0x1404ac3c2
+sentence	There are guards patrolling {s}.	有卫兵在{s1}巡逻。	$distance	0x1404acd86..0x1404ace02 ->0x14147c4a0
+sentence	There is a long-ranging patrol {s}.	有一支远程巡逻队在{s1}。	$distance	0x1404ada1e..0x1404adaf7
+sentence	There are guards in {s} {s}.	{s2}的{s1}里有卫兵。	guard-building,$distance	0x1404ad2de..0x1404ad8e4
+sentence	There are guards in {s}.	{s1}有卫兵。	$distance	0x1404ad30d ->0x1404ad863; absent native building label
+guard-building	the mead hall	蜜酒厅		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a cottage	小屋		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the keep	城堡主楼		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the great tower	巨塔		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a house	房子		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a hillock	土丘住宅		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a tree	树		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	an abandoned shop	废弃商店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a food imports store	进口食品店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a clothing imports store	进口服装店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a general imports store	进口杂货店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a cloth shop	布料店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a leather shop	皮革店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a woven clothing shop	布制服装店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a leather clothing shop	皮制服装店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a bone carver's shop	骨雕店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a gem cutter's shop	宝石切割店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a weaponsmith's shop	武器锻造店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a bowyer's shop	制弓店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a blacksmith's shop	铁匠铺		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a armorsmith's shop	护甲锻造店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a metal craft shop	金属工艺品店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a leather goods shop	皮具店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a carpenter's shop	木匠铺		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a stone furniture shop	石制家具店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	a metal furniture shop	金属家具店		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the imported goods market	进口商品市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the imported food market	进口食品市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the imported clothing market	进口服装市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the meat market	肉类市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the fruit and vegetable market	果蔬市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the cheese market	奶酪市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	the processed goods market	加工商品市场		0x1404ad336..0x1404ad739; finite facility switch
+guard-building	{s} shrine	{s1}的神龛	$name	0x1404ad7ef+0x1404ad7f4
+guard-building	the shrine to {s}	供奉{s1}的神龛	$unit	0x1404ad80b+0x1404ad85d
+diplomacy-groups	{s}	{s1}	$name	0x1404ae17d/0x1404ae73a ->0x140a946e0
+diplomacy-groups	{s} and {s}	{s1}和{s2}	$name,$name	0x1404ae1d0/0x1404ae78d
+diplomacy-groups	{s}, {s}	{s1}、{s2}	$name,diplomacy-groups	0x1404ae1b1/0x1404ae76e; native remaining >=3 comma, remaining==2 and
+sentence	There are no fewer than {s} other groups vying for control.	至少还有{s1}个其他势力在争夺控制权。	$number	0x1404adf5d..0x1404adfb7
+sentence	{s} are vying for control.	{s1}正在争夺控制权。	diplomacy-groups	0x1404ae15a..0x1404ae207
+sentence	No fewer than {s} groups fled.	至少有{s1}个势力逃走了。	$number	0x1404ae5ab..0x1404ae605
+sentence	{s} fled before the attack.	{s1}在袭击前逃离了。	diplomacy-groups	0x1404ae70f..0x1404ae7c4
+sentence	{s} has occupied {s}.	{s1}占领了{s2}。	$name,$name	0x1404aeb2f..0x1404aebb8
+sentence	{s} rules {s}.	{s1}统治着{s2}。	$name,$name	0x1404aeb2f..0x1404aebb8
+sentence	My {s} {s} is {s}.	我的{s1}{s2}担任{s3}。	dialogue-family,$person,biography-office	0x1404aed00..0x1404aee35
+sentence	{s} is {s}.	{s1}是{s2}。	$person,biography-office	0x1404aed59..0x1404aee35; no kinship prefix
+sentence	{s} is a group of {s}.	{s1}是一个由{s2}组成的势力。	$name,$creature	0x1404aee5e..0x1404aeec8 ->0x140b94ed0
+sentence	I rule {s} from this capital as well.	我也在这座首都统治着{s1}。	$name	0x1404af2df..0x1404af461
+sentence	Not that it matters, as {s} abides here in magnificence.	不过这也没什么要紧，{s1}正住在这里享尽荣华呢。	$person	0x1404af33c..0x1404af461; 0x1404af29e historical figure +0x38 language_name ->0x140a946e0
+sentence	Not that it matters, as the seat of {s} is here, and the blood-drinker allows no chattel to rise.	不过这也没什么要紧，{s1}的统治中心就在这里，那吸血者可不会让奴隶有出头之日。	$person	0x1404af38f..0x1404af461; 0x1404af29e historical figure +0x38 language_name ->0x140a946e0
+sentence	Not that it matters, as the seat of {s} is here, and the law is absolute.	不过这也没什么要紧，{s1}的统治中心就在这里，法律说一不二。	$person	0x1404af38f..0x1404af461; 0x1404af29e historical figure +0x38 language_name ->0x140a946e0
+sentence	The seat of {s} is also located here.	{s1}的统治中心也在这里。	$person	0x1404af414..0x1404af461; 0x1404af29e historical figure +0x38 language_name ->0x140a946e0
+diplomacy-cause	a dispute over the ownership of {s}	对{s1}的所有权存在争议	$item	0x1404ab798+0x1404ab7d9 ->0x140b94400; unnamed artifact uses physical item description at 0x140b94583
+diplomacy-cause	a dispute over the ownership of an unknown artifact	对一件不知名造物的所有权存在争议		0x1404ab7d9 ->0x140b946de missing-artifact fallback
+sentence	The trouble started because of a dispute over .	最初是起了争执，才引发冲突。		0x1404ab5bb ->0x1404ab67e ->0x1404ab6e0 and 0x1404ab963 ->0x1404aba0c ->0x1404abc99; native unknown dispute subtype omits its subject
+sentence	I am {s}.	我是{s1}。	biography-office	0x1404aebfe+0x1404aec2c ->0x14099a3c0; shared existing biography office grammar; terminator 0x1404aee26

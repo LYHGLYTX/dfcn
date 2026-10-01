@@ -1,0 +1,17 @@
+# Context-only corrections for the generated-name editor.
+# Other captions reuse data/runtime/translations.tsv; candidate meanings reuse the reviewed
+# WORD/POS senses in data/runtime/procedural-word-senses.tsv, not generic UI homonyms.
+# source<TAB>Chinese
+Clear	清除
+The X	主体词组
+Adjective	形容词
+Prefix	前缀
+Present (1st)	现在时（第一人称）
+Present (2nd)	现在时（第二人称）
+Present (3rd)	现在时（第三人称）
+Past	过去时
+Past (1st)	过去时（第一人称）
+Past (2nd)	过去时（第二人称）
+Past (3rd)	过去时（第三人称）
+Preterite	过去时
+Present Participle	现在分词

@@ -1,0 +1,48 @@
+base = "items::tool"
+
+[[rulesets]]
+[rulesets.rules]
+"{^material}{main}" = "{^material}{main}"
+
+[[rulesets]]
+name = "^material"
+optional = true
+[rulesets.rules]
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"tool" = "工具"
+"tools" = "工具"
+# Vanilla item_tool.txt types without a dedicated items namespace. The
+# nouns follow the existing data/runtime/local-overrides.tsv tool vocabulary, while
+# material composition is shared with every other manufactured item.
+"cauldron" = "大锅"
+"cauldrons" = "大锅"
+"ladle" = "汤勺"
+"ladles" = "汤勺"
+"bowl" = "碗"
+"bowls" = "碗"
+"mortar" = "研钵"
+"mortars" = "研钵"
+"pestle" = "研杵"
+"pestles" = "研杵"
+"carving knife" = "切肉刀"
+"carving knives" = "切肉刀"
+"boning knife" = "剔骨刀"
+"boning knives" = "剔骨刀"
+"slicing knife" = "切片刀"
+"slicing knives" = "切片刀"
+"meat cleaver" = "砍肉刀"
+"meat cleavers" = "砍肉刀"
+"carving fork" = "切肉叉"
+"carving forks" = "切肉叉"
+"honeycomb" = "蜜脾"
+"honeycombs" = "蜜脾"
+"pouch" = "小袋"
+"pouches" = "小袋"
+"helve" = "斧柄"
+"helves" = "斧柄"
+"axe" = "斧头"
+"axes" = "斧头"

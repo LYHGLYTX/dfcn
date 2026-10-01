@@ -1,0 +1,27 @@
+base = "items::totem"
+
+[[rulesets]]
+[rulesets.rules]
+"{main}" = "{main}"
+# 0xca0e50 appends caste.name[0] (or creature.name[0]), optionally the
+# selected body part's name_singular[0], then totem/totems. The owner and
+# anatomy are nouns, not a finished item's material qualifier.
+"{creature} {bodypart}{main}" = "{creature}{bodypart}{main}"
+
+[[rulesets]]
+name = "creature"
+[rulesets.rules]
+"{::creatures::caste::singular}" = "{::creatures::caste::singular}"
+"{::creatures::name::singular}" = "{::creatures::name::singular}"
+
+[[rulesets]]
+name = "bodypart"
+optional = true
+[rulesets.rules]
+"{::health::bodypart::bodypart_main} " = "{::health::bodypart::bodypart_main}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"totem" = "图腾"
+"totems" = "图腾"

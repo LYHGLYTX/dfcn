@@ -1,0 +1,233 @@
+# Complete native announcement sentences from active RAW text and native constructors.
+# The paired source inventory records both RAW definitions and native construction.
+# Complete sentences own verb meanings; ordinary pet/spit/bark/tusk noun entries remain unchanged.
+You boom.	你发出低沉的轰鸣声。
+{n} booms.	{n}发出低沉的轰鸣声。
+You hear a low boom.	你听到了低沉的轰鸣声。
+You ching.	你发出金属般的叮当声。
+{n} chings.	{n}发出金属般的叮当声。
+You hear a metallic ching.	你听到了金属般的叮当声。
+You bark.	你吠叫。
+{n} barks.	{n}吠叫。
+You hear a loud bark.	你听到了响亮的吠叫声。
+You whistle.	你发出哨声。
+{n} whistles.	{n}发出哨声。
+You hear whistling.	你听到了哨声。
+You grunt.	你哼叫。
+{n} grunts.	{n}哼叫。
+You hear a grunt.	你听到了哼叫声。
+You purr.	你发出呼噜声。
+{n} purrs.	{n}发出呼噜声。
+You hear a purr.	你听到了呼噜声。
+You click.	你发出咔哒声。
+{n} clicks.	{n}发出咔哒声。
+You hear a click.	你听到了咔哒声。
+You hear a resounding bark.	你听到了洪亮的吠叫声。
+You hear deep whistling.	你听到了低沉的哨声。
+You hear a loud grunt.	你听到了响亮的哼叫声。
+You hear a deep purr.	你听到了低沉的呼噜声。
+You hear a loud click.	你听到了响亮的咔哒声。
+You whistle harshly.	你发出刺耳的哨声。
+{n} whistles harshly.	{n}发出刺耳的哨声。
+You hear a harsh whistle.	你听到了刺耳的哨声。
+You blow softly.	你轻轻吹气。
+{n} blows softly.	{n}轻轻吹气。
+You hear a soft blowing sound.	你听到了轻轻的吹气声。
+You toot.	你发出短促的嘟嘟声。
+{n} toots.	{n}发出短促的嘟嘟声。
+You hear a toot.	你听到了短促的嘟嘟声。
+The {s} closes.	{s}关闭了。
+The {s} close.	{s}关闭了。
+The {s} opens.	{s}打开了。
+The {s} open.	{s}打开了。
+You hear nearby grinding.	你听到附近传来机械摩擦声。
+You hear grinding.	你听到了机械摩擦声。
+You hear distant grinding.	你听到远处传来机械摩擦声。
+You spit.	你吐了口唾沫。
+{n} spits.	{n}吐了口唾沫。
+You spit!	你吐了口唾沫！
+{n} spits!	{n}吐了口唾沫！
+You spit a glob of molten rock.	你吐出一团熔岩。
+{n} spits a glob of molten rock.	{n}吐出一团熔岩。
+You spit a glob of molten rock!	你吐出一团熔岩！
+{n} spits a glob of molten rock!	{n}吐出一团熔岩！
+You spray a stream of steaming juice.	你喷出一股冒着热气的汁液。
+{n} sprays a stream of steaming juice.	{n}喷出一股冒着热气的汁液。
+You spray a stream of steaming juice!	你喷出一股冒着热气的汁液！
+{n} sprays a stream of steaming juice!	{n}喷出一股冒着热气的汁液！
+You squirt ink.	你喷出墨汁。
+{n} squirts ink.	{n}喷出墨汁。
+You squirt ink!	你喷出墨汁！
+{n} squirts ink!	{n}喷出墨汁！
+You vanish.	你消失了。
+{n} vanishes.	{n}消失了。
+You vanish!	你消失了！
+{n} vanishes!	{n}消失了！
+You raise a heavy fog.	你唤来一片浓雾。
+{n} raises a heavy fog.	{n}唤来一片浓雾。
+You raise a heavy fog!	你唤来一片浓雾！
+{n} raises a heavy fog!	{n}唤来一片浓雾！
+You gesture.	你做了一个手势。
+{n} gestures.	{n}做了一个手势。
+You gesture!	你做了一个手势！
+{n} gestures!	{n}做了一个手势！
+You point.	你伸手一指。
+{n} points.	{n}伸手一指。
+You point!	你伸手一指！
+{n} points!	{n}伸手一指！
+You hold up a hand.	你举起一只手。
+{n} holds up a hand.	{n}举起一只手。
+You hold up a hand!	你举起一只手！
+{n} holds up a hand!	{n}举起一只手！
+You clench a fist.	你握紧拳头。
+{n} clenches a fist.	{n}握紧拳头。
+You clench a fist!	你握紧拳头！
+{n} clenches a fist!	{n}握紧拳头！
+You make a flicking motion.	你做了个轻弹的动作。
+{n} makes a flicking motion.	{n}做了个轻弹的动作。
+You make a flicking motion!	你做了个轻弹的动作！
+{n} makes a flicking motion!	{n}做了个轻弹的动作！
+You wave dismissively.	你不屑地挥了挥手。
+{n} waves dismissively.	{n}不屑地挥了挥手。
+You wave dismissively!	你不屑地挥了挥手！
+{n} waves dismissively!	{n}不屑地挥了挥手！
+You call upon the night.	你呼唤黑夜。
+{n} calls upon the night.	{n}呼唤黑夜。
+You call upon the night!	你呼唤黑夜！
+{n} calls upon the night!	{n}呼唤黑夜！
+You focus.	你集中精神。
+{n} focuses.	{n}集中精神。
+You focus!	你集中精神！
+{n} focuses!	{n}集中精神！
+You feel horrible!	你感觉糟透了！
+{n} looks horrible!	{n}看起来糟透了！
+You shudder and begin to move!	你颤抖着开始移动！
+{n} shudders and begins to move!	{n}颤抖着开始移动！
+You shudder and a spirit rises!	你颤抖起来，一个灵体随之升起！
+{n} shudders and a spirit rises!	{n}颤抖起来，一个灵体随之升起！
+You feel intense pain!	你感到一阵剧痛！
+{n} grimaces!	{n}痛苦地皱起了脸！
+You feel blisters forming!	你感觉身上正在起水疱！
+You feel frozen!	你感觉身体僵住了！
+{n} freezes!	{n}僵住了！
+You feel blood welling up!	你感觉鲜血正在涌出！
+You feel sick!	你感觉不适！
+{n} looks sick!	{n}看起来很不舒服！
+You feel death come over you!	你感觉死亡正在笼罩自己！
+You feel breath leaving you!	你感觉喘不过气来！
+{n} pauses!	{n}停顿了一下！
+You see your sight is fading!	你发现视线越来越模糊！
+You find your sight is fading!	你发现视线越来越模糊！
+You feel dizzy!	你感觉头晕目眩！
+{n} looks dizzy!	{n}看起来头晕目眩！
+You lick {n}.	你舔了舔{n}。
+You lick yourself.	你舔了舔自己。
+{n} licks {n}.	{n1}舔了舔{n2}。
+{n} licks you.	{n}舔了舔你。
+{n} licks himself.	{n}舔了舔自己。
+{n} licks herself.	{n}舔了舔自己。
+{n} licks itself.	{n}舔了舔自己。
+You head-bump {n}.	你用头蹭了蹭{n}。
+You head-bump yourself.	你用头蹭了蹭自己。
+{n} head-bumps {n}.	{n1}用头蹭了蹭{n2}。
+{n} head-bumps you.	{n}用头蹭了蹭你。
+{n} head-bumps himself.	{n}用头蹭了蹭自己。
+{n} head-bumps herself.	{n}用头蹭了蹭自己。
+{n} head-bumps itself.	{n}用头蹭了蹭自己。
+You pet {n}.	你抚摸了{n}。
+You pet yourself.	你抚摸了自己。
+{n} pets {n}.	{n1}抚摸了{n2}。
+{n} pets you.	{n}抚摸了你。
+{n} pets himself.	{n}抚摸了自己。
+{n} pets herself.	{n}抚摸了自己。
+{n} pets itself.	{n}抚摸了自己。
+You tusk {n}.	你用獠牙轻碰{n}。
+You tusk yourself.	你用獠牙轻碰自己。
+{n} tusks {n}.	{n1}用獠牙轻碰{n2}。
+{n} tusks you.	{n}用獠牙轻碰你。
+{n} tusks himself.	{n}用獠牙轻碰自己。
+{n} tusks herself.	{n}用獠牙轻碰自己。
+{n} tusks itself.	{n}用獠牙轻碰自己。
+
+# Native default material-emission verbs when no CDI:VERB overrides them.
+You breathe fire!	你喷出火焰！
+{n} breathes fire!	{n}喷出火焰！
+You hurl a ball of fire!	你掷出一枚火球！
+{n} hurls a ball of fire!	{n}掷出一枚火球！
+You shoot out thick strands of webbing!	你喷出粗壮的蛛丝！
+{n} shoots out thick strands of webbing!	{n}喷出粗壮的蛛丝！
+You breathe a cloud of {s}!	你喷出一团{s}云雾！
+{n} breathes a cloud of {s}!	{n}喷出一团{s}云雾！
+You breathe a glob of {s}!	你喷出一团{s}！
+{n} breathes a glob of {s}!	{n}喷出一团{s}！
+You block the breath.	你挡住了吐息。
+{n} blocks the breath.	{n}挡住了吐息。
+You block the dragonfire.	你挡住了龙焰。
+{n} blocks the dragonfire.	{n}挡住了龙焰。
+You block the fire.	你挡住了火焰。
+{n} blocks the fire.	{n}挡住了火焰。
+# CDI:VERBAL_SPEECH selects CURSE text and wraps the full line in quotes.
+"Who dares to enter my house?  I curse you!"	“谁敢闯入我的居所？我诅咒你！”
+
+# RETRACT_INTO_BP uses raw body-action strings, not CDI:USAGE_HINT.
+You must come out of your shell.	你必须先从壳中伸出来。
+You must unroll.	你必须先舒展开身体。
+You roll into a ball.	你蜷缩成一团。
+{n} rolls into a ball.	{n}蜷缩成一团。
+You unroll.	你舒展开身体。
+{n} unrolls.	{n}舒展开身体。
+You retract into your shell.	你缩进自己的壳里。
+{n} retracts into his shell.	{n}缩进自己的壳里。
+{n} retracts into her shell.	{n}缩进自己的壳里。
+{n} retracts into its shell.	{n}缩进自己的壳里。
+You come out of your shell.	你从壳中伸了出来。
+{n} comes out of his shell.	{n}从壳中伸了出来。
+{n} comes out of her shell.	{n}从壳中伸了出来。
+{n} comes out of its shell.	{n}从壳中伸了出来。
+
+# Whole I_SOURCE trigger strings; punctuation belongs to the RAW trigger field.
+You have been blessed with a week's good fortune!	你受到祝福，将迎来一周的好运！
+{n} has been blessed with a week's good fortune!	{n}受到祝福，将迎来一周的好运！
+You have been blessed with improved equipment!	你受到祝福，装备得到了提升！
+{n} has been blessed with improved equipment!	{n}受到祝福，装备得到了提升！
+You have been blessed with a pet!	你受到祝福，获赐了一只宠物！
+{n} has been blessed with a pet!	{n}受到祝福，获赐了一只宠物！
+You have been granted healing!	你得到了治愈！
+{n} has been granted healing!	{n}得到了治愈！
+You have been cursed with a week's bad luck!	你受到诅咒，将遭遇一周的厄运！
+{n} has been cursed with a week's bad luck!	{n}受到诅咒，将遭遇一周的厄运！
+You have been cursed, for one week, to know life as a beast!	你受到诅咒，将化身野兽生活一周！
+{n} has been cursed, for one week, to know life as a beast!	{n}受到诅咒，将化身野兽生活一周！
+You have been cursed to prowl the night in search of blood!	你受到诅咒，将在黑夜里游荡寻血！
+{n} has been cursed to prowl the night in search of blood!	{n}受到诅咒，将在黑夜里游荡寻血！
+You have been infected with a contagious ghoulish condition	你染上了会传染的食尸鬼病症
+{n} has been infected with a contagious ghoulish condition	{n}染上了会传染的食尸鬼病症
+You have been blessed with a holyweapon!	你受到祝福，获赐了一件神圣武器！
+{n} has been blessed with a holyweapon!	{n}受到祝福，获赐了一件神圣武器！
+You have been blessed with a holyshield!	你受到祝福，获赐了一面神圣盾牌！
+{n} has been blessed with a holyshield!	{n}受到祝福，获赐了一面神圣盾牌！
+You have been blessed with holybodywear!	你受到祝福，获赐了神圣躯干装备！
+{n} has been blessed with holybodywear!	{n}受到祝福，获赐了神圣躯干装备！
+You have been blessed with holylegwear!	你受到祝福，获赐了神圣腿部装备！
+{n} has been blessed with holylegwear!	{n}受到祝福，获赐了神圣腿部装备！
+You have been blessed with holyheadwear!	你受到祝福，获赐了神圣头部装备！
+{n} has been blessed with holyheadwear!	{n}受到祝福，获赐了神圣头部装备！
+You have been blessed with holyhandwear!	你受到祝福，获赐了神圣手部装备！
+{n} has been blessed with holyhandwear!	{n}受到祝福，获赐了神圣手部装备！
+You have been blessed with holyfootwear!	你受到祝福，获赐了神圣足部装备！
+{n} has been blessed with holyfootwear!	{n}受到祝福，获赐了神圣足部装备！
+You have been cursed to assume the form of a {s}-like monster every fool moon!	你受到诅咒，每逢满月就会化身为形似{s}的怪物！
+{n} has been cursed to assume the form of a {s}-like monster every fool moon!	{n}受到诅咒，每逢满月就会化身为形似{s}的怪物！
+You have been cursed by {p}!	你受到了{p}的诅咒！
+{n} has been cursed by {p}!	{n}受到了{p}的诅咒！
+You have been stung by a {s}!	你被一只{s}蜇了！
+{n} has been stung by a {s}!	{n}被一只{s}蜇了！
+{n} have been stung by a {s}!	{n}被一只{s}蜇了！
+You have been bitten by a {s}!	你被一只{s}咬了！
+{n} has been bitten by a {s}!	{n}被一只{s}咬了！
+{n} have been bitten by a {s}!	{n}被一只{s}咬了！
+{s} has gnawed its way out of confinement!	{s}啃开了束缚，逃了出来！
+You root around in the {s}.	你在{s}中翻找。
+{n} roots around in the {s}.	{n}在{s}中翻找。
+You scratch the {s}.	你刨了刨{s}。
+{n} scratches the {s}.	{n}刨了刨{s}。

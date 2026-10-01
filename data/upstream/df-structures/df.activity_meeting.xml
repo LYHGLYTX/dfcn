@@ -1,0 +1,27 @@
+<data-definition>
+    <bitfield-type type-name='activity_flag' base-type='int16_t'> bay12: ACTIVITYFLAG_*
+        <flag-bit name='next_step' original-name='SITESEARCHED'/>
+        <flag-bit name='checked_building' original-name='ARRIVEDATSITE'/>
+        <flag-bit name='add_delay' original-name='INITIALDISCUSS'/>
+        <flag-bit name='topic_discussed' original-name='DISCUSSINGTOPIC'/>
+        <flag-bit name='meeting_done' original-name='MEETINGCOMPLETE'/>
+    </bitfield-type>
+
+    <struct-type type-name='activity_info' original-name='activity_meetingst'>
+        <int32_t name='id' original-name='save_index' init-value='-1' comment='assigned during Save'/>
+        <int32_t name='unit_actor' original-name='actor_unid' ref-target='unit' init-value='-1' comment='diplomat or worker'/>
+        <int32_t name='unit_noble' original-name='target_unid' ref-target='unit' init-value='-1' comment='meeting recipient'/>
+        <int32_t name='place' original-name='civzone_id' ref-target='building' init-value='-1'/>
+        <bitfield base-type='int16_t' type-name='activity_flag' name='flags' original-name='flag'/>
+        <int8_t name='worstroomrank' init-value='3'/>
+        <int16_t name='delay' original-name='discusscount' init-value='0'/>
+        <int32_t name='tree_quota' original-name='tempvalue' init-value='-1'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

@@ -1,0 +1,59 @@
+# Shared semantic references resolved by the native translation adapter.
+# These namespaces deliberately have no wildcard/pass-through rules: names,
+# works, topics and forms must be translated by their established glossaries.
+# activity_place alone identifies a player-authored point/route/burrow name;
+# its native numbered defaults are translated and authored names are preserved.
+base = "text"
+
+[[rulesets]]
+name = "name"
+
+[[rulesets]]
+name = "person"
+
+[[rulesets]]
+name = "book"
+
+[[rulesets]]
+name = "topic"
+[rulesets.rules]
+# Thoughts name the same short subjects as research activities and Knowledge.
+# Keep their vocabulary shared, including subjects absent from book titles.
+"{::activities::topic}" = "{::activities::topic}"
+
+[[rulesets]]
+name = "form"
+
+[[rulesets]]
+name = "deity"
+
+[[rulesets]]
+name = "skill"
+
+[[rulesets]]
+name = "skill_rating"
+
+[[rulesets]]
+name = "rated_skill"
+
+[[rulesets]]
+name = "sphere"
+
+[[rulesets]]
+name = "instrument"
+
+[[rulesets]]
+name = "activity_place"
+
+[[rulesets]]
+name = "artifact"
+
+# A native installed-item name, accepted only through real language roots.
+# This is a fallback after complete item/building/terrain descriptions.
+[[rulesets]]
+name = "native_item_name"
+
+# A substance named in prose uses the shared material noun, not its item
+# qualifier (e.g. "凝胶" rather than "凝胶制").
+[[rulesets]]
+name = "material"

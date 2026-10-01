@@ -1,0 +1,354 @@
+# Generated physical descriptions in Legends biographies and art-image pickers.
+# Grammar source: installed vanilla_procedural/scripts/generators/creatures/
+# shared_info.lua build_description, tweaks, default/good/evil_desc_adds.
+# Night-troll/angel behaviors and angel creators also come from generators/creatures.lua.
+# Vocabulary: existing creature profiles, materials, colors and anatomy.
+# description rows (h/v) are noun phrases; clause/behavior rows are prose.
+# No world-specific names and no replacement race/material dictionary.
+
+# Physical overview and appendages. The whole sentence is translated before
+# link-aware layout, including adjectives containing native commas.
+# {q} uses the existing data/runtime/rulesets/zh-Hans/color.toml vocabulary, not generic {s} word senses.
+A {s}.	一种{s}。	clause
+An {s}.	一种{s}。	clause
+It has {s}.	它长有{s}。	clause
+Its eyes glow {q}.	它的双眼闪着{q}的光。	clause
+Its eye glows {q}.	它的眼睛闪着{q}的光。	clause
+Its {q} hair is {s}.	它的{q}毛发{s}。	clause
+Its {q} feathers are {s}.	它的{q}羽毛{s}。	clause
+Its {q} scales are small and {s}.	它的{q}鳞片很小，{s}。	clause
+Its {q} scales are large and {s}.	它的{q}鳞片很大，{s}。	clause
+Its {q} scales are round and {s}.	它的{q}鳞片呈圆形，{s}。	clause
+Its {q} scales are blocky and {s}.	它的{q}鳞片呈块状，{s}。	clause
+Its {q} scales are jagged and {s}.	它的{q}鳞片参差不齐，{s}。	clause
+Its {q} scales are oval-shaped and {s}.	它的{q}鳞片呈椭圆形，{s}。	clause
+Its {q} skin is {s}.	它的{q}皮肤{s}。	clause
+Its {q} exoskeleton is {s}.	它的{q}外骨骼{s}。	clause
+
+# Form and material clauses compose recursively, in native order.
+{s} composed of {s}	由{s2}构成的{s1}	description
+{s} twisted into humanoid form	扭曲成人形的{s}	description
+{s} in humanoid form	呈人形的{s}	description
+{s} with lidless eyes	长着无睑眼睛的{s}	description
+{s} with external ribs	肋骨外露的{s}	description
+great {s}	巨大的{s}	description
+gigantic {s}	硕大无比的{s}	description
+towering {s}	高耸如塔的{s}	description
+enormous {s}	庞大的{s}	description
+huge {s}	巨型{s}	description
+very large {s}	体型很大的{s}	description
+large {s}	大型{s}	description
+very small {s}	体型很小的{s}	description
+small {s}	小型{s}	description
+eyeless {s}	无眼的{s}	description
+one-eyed {s}	独眼{s}	description
+three-eyed {s}	三眼{s}	description
+beakless {s}	无喙的{s}	description
+noseless {s}	无鼻的{s}	description
+skinless {s}	无皮的{s}	description
+hairy {s}	多毛的{s}	description
+feathered {s}	覆有羽毛的{s}	description
+scaly {s}	覆有鳞片的{s}	description
+fleshy {s}	肉质的{s}	description
+armored {s}	披甲的{s}	description
+# Native 53.16 biography builder (Linux 0xa12140): deity form flags append
+# skeletal, rotting and ghostly independently, BEFORE optional female/male
+# and the caste name. All three can therefore nest; do not enumerate species
+# or replace their established translations. Ordinary ghosts use ghostly too.
+# creature-status also exports these SAME prefixes to the species/caste parser
+# used by named/unnamed event actors. Native actor formatter 0xa136b0 emits
+# zombie before the caste (0xa13dde/0xa13fb3/0xa13fc7), not as a personal name.
+# Keep the existing zombie = 僵尸 and all established description wording.
+zombie {s}	僵尸{s}	creature-status
+skeletal {s}	骷髅形态的{s}	creature-status
+rotting {s}	腐烂的{s}	creature-status
+ghostly {s}	幽灵形态的{s}	creature-status
+six-legged {s}	六足{s}	description
+eight-legged {s}	八足{s}	description
+grime and filth	污垢和秽物	description
+solid salt	固态盐	description
+
+# Counts and classifiers belong to complete appendage phrases, not species.
+a {s} tail	一条{s}尾巴	description
+{c} {s} tails	{c}条{s}尾巴	description
+a {s} horn	一根{s}角	description
+{c} {s} horns	{c}根{s}角	description
+a {s} trunk	一条{s}象鼻	description
+a {s} shell	一个{s}壳	description
+an {s} shell	一个{s}壳	description
+a pair of {s} antennae	一对{s}触角	description
+a proboscis	一根长鼻	description
+large mandibles	巨大的颚	description
+wings	翅膀	description
+feathered wings	羽翼	description
+thin wings of stretched skin	由绷紧皮肤构成的薄翼	description
+lacy wings	蕾丝般的翅膀	description
+long, hanging	修长下垂的	description
+long, straight	修长笔直的	description
+long, curly	修长卷曲的	description
+long, spiral	修长螺旋状的	description
+long, curving	修长弯曲的	description
+long, swinging	修长摇摆的	description
+fat, bulging	肥厚鼓胀的	description
+twisting, jointed	扭曲分节的	description
+short	短小的	description
+stubby	粗短的	description
+narrow	狭窄的	description
+long	修长的	description
+broad	宽阔的	description
+curling	卷曲的	description
+knobby	多瘤节的	description
+round	圆形的	description
+spiral	螺旋状的	description
+square	方形的	description
+enormous	庞大的	description
+fan-like	扇状的	description
+spindly	细长的	description
+squat	粗矮的	description
+branching	分枝状的	description
+
+# The generator joins exactly one of these behaviors after "It has ...",
+# or capitalizes it as a standalone sentence when no appendage was added.
+it has a regal bearing	它仪态威严	behavior
+it has an austere look about it	它神情肃穆	behavior
+it moves deliberately	它行动从容	behavior
+it moves about carelessly	它行动漫不经心	behavior
+it bears a look of unbelievable peace	它显得无比安详	behavior
+it emanates an aura of giving and kindness	它散发着慷慨仁慈的气息	behavior
+joy marks its every movement	它的一举一动都洋溢着喜悦	behavior
+it moves its will in accordance with the truth of things	它的意志遵循万物的真理	behavior
+it is ravening	它贪婪地吞噬一切	behavior
+it is slavering	它垂涎欲滴	behavior
+it belches and croaks	它不断打嗝并发出嘶哑叫声	behavior
+it undulates rhythmically	它有节奏地起伏扭动	behavior
+it squirms and fidgets	它扭动着，躁动不安	behavior
+it has a bloated body	它身躯臃肿	behavior
+it has a gaunt appearance	它形容枯槁	behavior
+it appears to be emaciated	它看上去瘦骨嶙峋	behavior
+it chants ceaselessly	它不停地吟唱	behavior
+it murmurs horrible curses	它低声念诵可怕的诅咒	behavior
+it spouts gibberish periodically	它不时口吐胡言	behavior
+it knows and intones the names of all it encounters	它知晓并吟诵着遇到的所有生灵的名字	behavior
+it repeatedly makes threats of torture and death	它不断以折磨和死亡相威胁	behavior
+it hurls vicious insults constantly	它不停地恶毒咒骂	behavior
+with singular purpose it seeks to destroy the living	它一心要毁灭生者	behavior
+it is crazed for blood and flesh	它对血肉的渴望近乎疯狂	behavior
+
+# Night-troll custom_desc_func selects one of the ordinary, strong or agile
+# behavior families. "it has a bloated body" is shared with the evil set above.
+# Keep both standalone and appendage-joined forms via the behavior compiler.
+it mutters to itself as it moves aimlessly	它漫无目的地游荡，喃喃自语	behavior
+it groans from time to time	它不时发出呻吟	behavior
+it howls into high winds	它迎着狂风嚎叫	behavior
+it shambles sluggishly	它拖着步子缓慢蹒跚前行	behavior
+it stamps the ground and snorts	它跺着地面，喷着鼻息	behavior
+it lumbers along steadily from place to place	它迈着笨重的步子，不停地四处走动	behavior
+its joints are backward	它的关节反向弯曲	behavior
+it moves with uneven jerking motions	它行动时不规则地抽动	behavior
+its limbs jut out at asymmetric angles	它的四肢以不对称的角度伸出	behavior
+it lopes quickly along the ground	它沿着地面大步快跑	behavior
+it strides in silence with purpose	它目标明确地默默大步前行	behavior
+
+# Angel custom_desc_func: every sphere_flavor from generators/creatures.lua,
+# plus its no-sphere fallback. The behavior compiler retains both standalone
+# sentences and appendage-joined clauses, including internal commas/and.
+it looks constantly to the sky for rain	它不停地望向天空，盼着下雨	behavior
+it growls, buzzes, clicks and generally makes a varied racket	它发出咆哮、嗡鸣、咔嗒等各种嘈杂声响	behavior
+it is decorated with intricate patterns	它身上装饰着繁复的图案	behavior
+it is perfectly symmetric	它的身体完全对称	behavior
+it is strikingly beautiful	它美得令人惊叹	behavior
+it is covered with a filmy sac	它全身裹着一层薄膜囊	behavior
+nearby vegetation seem to shrink away from it	附近的草木似乎都在退缩，躲避它	behavior
+the pieces of its body are carefully separated by markings	它身体的各个部分由纹路清晰地分隔开来	behavior
+its moans seem to echo no matter where it resides	无论身处何地，它的呻吟似乎总有回声	behavior
+it spins wildly, lurching and howling	它疯狂地旋转、踉跄并嚎叫	behavior
+it seems very pleasant	它显得十分和善	behavior
+it never misses an opportunity to jump in puddles	它从不放过跳进水洼的机会	behavior
+it appears to be covered with rocky crags	它身上仿佛布满嶙峋的岩石	behavior
+it radiates a sad kindness	它散发着悲悯的气息	behavior
+it makes those around it feel brave	它使周围的生灵感到勇敢	behavior
+it appears constructed	它看上去像是被制造出来的	behavior
+small objects seem to pop into existence around it	它周围似乎总有小物件凭空出现	behavior
+it whirls, skips and jumps whenever it moves	它一动起来便旋转、蹦跳	behavior
+it is difficult to see clearly even in bright light	即使在明亮的光线下，也很难看清它	behavior
+it always turns to welcome the rise of the sun	它总是转身迎接旭日升起	behavior
+it hums pleasantly when the sun is high in the sky	烈日当空时，它会愉快地哼唱	behavior
+it has a rattling exhale	它呼气时发出格格声	behavior
+its body is bent and misshapen	它的身体扭曲畸形	behavior
+it slavers uncontrollably	它止不住地流涎	behavior
+it moves with great focus	它行动时极为专注	behavior
+it bears malodorous pustules	它身上长着恶臭的脓疱	behavior
+the details of its form are easily forgotten without deliberate concentration	若不刻意集中注意力，它的外形细节很容易被遗忘	behavior
+it never looks toward the sun	它从不望向太阳	behavior
+it is utterly still when not taking deliberate action	它不主动行动时便一动不动	behavior
+it looks very solid and stocky	它看上去十分结实敦壮	behavior
+it appears to be closely related to every other of its kind	它似乎与每一个同类都有亲缘关系	behavior
+fanfare follows it wherever it goes	它所到之处都有嘹亮的号角声相随	behavior
+it never appears to be perturbed or surprised by any happening	无论发生何事，它似乎都不会感到困扰或惊讶	behavior
+it appears to be very healthy	它看上去非常健康	behavior
+it skips and twirls as it moves	它一边移动，一边蹦跳旋转	behavior
+a sheen around it always seems to rise upward	它周围的光辉似乎总在向上升腾	behavior
+it only looks comfortable when it is in the water	它似乎只有待在水中才感到自在	behavior
+it always moves carefully around water	它在水边总是小心翼翼地行动	behavior
+it has the delicious smell of freshly-baked goods	它散发着刚出炉的烘焙食品的诱人香气	behavior
+it is impossible to hold a grudge near it	在它身边，任何怨恨都无法留存	behavior
+it is very sturdy-looking	它看上去十分坚固	behavior
+it eagerly moves from place to place	它兴致勃勃地四处走动	behavior
+it changes between two colors intermittently	它不时在两种颜色之间变换	behavior
+it giggles at random	它不时无缘无故地咯咯笑	behavior
+it makes those around it want to give up their possessions	它使周围的生灵想要舍弃自己的财物	behavior
+it seems to smile constantly	它似乎始终面带微笑	behavior
+it is surrounded by a gentle atmosphere	它周围洋溢着柔和的气息	behavior
+it radiates an aura of welcoming	它散发着热情好客的气息	behavior
+it inspects the ground intently as it moves	它边走边专注地察看地面	behavior
+flashes of energy pulse across its surface intermittently	它的体表不时闪过能量的脉动	behavior
+it appears to be a very bitter creature	它看上去满怀怨恨	behavior
+its whole body appears to be faceted in a symmetric fashion	它全身仿佛布满对称的切面	behavior
+it seems eager to pronounce judgment on others	它似乎急于审判他者	behavior
+it appears very deliberate in its actions	它的一举一动都显得深思熟虑	behavior
+it moves ponderously	它行动沉重缓慢	behavior
+it has a very stark look about it	它的外表显得十分严峻	behavior
+it seems unerringly honest if one does not concentrate	若不仔细留意，它看上去无比诚实	behavior
+it returns surrounding light with a new vibrance and intensity	它将周围的光反射得更加鲜亮强烈	behavior
+it crackles with energy	它身上的能量噼啪作响	behavior
+it always seems to be looking far into the distance	它似乎总在眺望远方	behavior
+it stares longingly at those nearby	它深情地凝望着身旁的生灵	behavior
+it never abandons its companions	它从不抛弃同伴	behavior
+it changes direction suddenly at times	它有时会突然改变方向	behavior
+it has an unnerving stare	它的凝视令人不安	behavior
+it heckles those it meets that are not married	它会嘲弄遇到的未婚者	behavior
+it always seems like it is on the verge of crying	它似乎总是泫然欲泣	behavior
+it appears to have sharp shimmering edges on many parts of its body	它身体多处似乎都有闪亮的锋利棱缘	behavior
+it has an angular appearance	它的外形棱角分明	behavior
+it has a distinctly depressing moan	它的呻吟格外令人消沉	behavior
+it is difficult to see clearly	它的身形难以看清	behavior
+it changes color with the phases of the moon	它的颜色随月相变化	behavior
+it is very solidly built	它的体格十分壮实	behavior
+there is a foul reek about it	它周围弥漫着恶臭	behavior
+it cannot abide anything that lives	它无法容忍任何活物	behavior
+it sounds clear tones as its body moves in time	它的身体随节拍律动，发出清亮的音调	behavior
+it seems most at ease when it is outdoors	它在户外似乎最为自在	behavior
+it eerily reflects the light of the stars and moon	它诡异地反射着星月的光芒	behavior
+it reminds those that look upon it of their most unpleasant memories	看见它的生灵会想起自己最痛苦的回忆	behavior
+it cannot look directly at somebody that has broken an oath	它无法直视违背誓言者	behavior
+it always raises a part of its body toward the moon	它总会抬起身体的一部分，朝向月亮	behavior
+it moves very stiffly	它的动作十分僵硬	behavior
+its surface is always enlivened with a refreshing play of color	它的体表总有清新的色彩流转，显得生机勃勃	behavior
+it has an incredibly calm demeanor	它的举止平静得不可思议	behavior
+it rocks back and forth whenever somebody changes their mind in its presence	每当有谁在它面前改变主意，它便前后摇晃	behavior
+it always seems to point toward the sun when it is in the sky	只要太阳还在天上，它似乎就一直朝向太阳	behavior
+it recites verses in a strange language on occasion	它偶尔会用陌生的语言吟诵诗句	behavior
+it appears to be expecting	它看上去怀有身孕	behavior
+it leaves water wherever it goes	它所到之处都会留下水迹	behavior
+it is strikingly colored	它的颜色格外醒目	behavior
+it alternates from instant to instant between sluggishness and extreme vibrancy	它时而迟缓，时而活力四射，瞬息变化	behavior
+it moves with a bouncing rhythm	它的动作带着轻快跳跃的节奏	behavior
+it has a fixed and unblinking gaze when interacting	它与他者互动时目光紧盯，眨也不眨	behavior
+its outer surface seems to flow about its body	它的外表似乎在绕着身体流动	behavior
+it is hard to disobey	它令人难以违抗	behavior
+it always nods eagerly when somebody is speaking	有谁说话时，它总是热切地点头	behavior
+it inspires those around it to acts of great sacrifice	它激励周围的生灵作出巨大的牺牲	behavior
+it makes nearby water undrinkable	它使附近的水变得无法饮用	behavior
+it always seems to be deep in thought	它似乎总在沉思	behavior
+its form is ever-changing	它的形态不断变化	behavior
+it makes absolutely no sound	它完全不发出任何声音	behavior
+it has a slowly shifting pattern on its surface	它的体表有缓缓变化的图案	behavior
+it sings beautiful songs endlessly	它不停地唱着优美的歌	behavior
+it pays attention carefully to anybody that is speaking	它会仔细聆听每一个说话者	behavior
+it appears to sparkle after night falls	夜幕降临后，它似乎会闪闪发光	behavior
+its movement is the sound of wind and rain	它行动时发出风雨之声	behavior
+it looks solidly built	它看上去体格结实	behavior
+it mutters to itself about death	它喃喃自语地谈论死亡	behavior
+it is difficult to look at directly	它令人难以直视	behavior
+it always seems to have its attention on the most valuable object in the area	它似乎总在留意周围最值钱的物件	behavior
+its movements sound like the rattling of chains	它行动时发出锁链碰撞般的声响	behavior
+it is incredibly noisy	它吵闹得不可思议	behavior
+it appears to be covered with sharp hooks and barbs	它身上似乎布满锋利的钩刺和倒刺	behavior
+it seems most content when a fair wind is blowing	顺风吹拂时，它似乎最为满足	behavior
+it never stops moving completely	它从未完全停止移动	behavior
+it is unsettling to be around	待在它身边令人不安	behavior
+it is top-heavy	它的身体上重下轻	behavior
+it has a tendency to laugh quietly to itself every so often	它不时会独自轻声发笑	behavior
+it tenses up throughout its entire body whenever somebody tells a falsehood in its presence	每当有谁在它面前说谎，它便全身紧绷	behavior
+it chitters briefly before sunrise and just after nightfall	日出前和夜幕刚降临时，它会短促地吱喳叫	behavior
+it always tries to embolden any fighting in its presence with exhortations of bravery, even its foes	它总会呼喊着鼓舞眼前所有交战者的勇气，连敌人也不例外	behavior
+it looks very proud of itself	它看上去十分自豪	behavior
+it seems to glow brightly from within	它似乎从体内放射出耀眼的光芒	behavior
+it bellows and cheers without pause	它不停地吼叫欢呼	behavior
+it seems to flow as it moves	它行动时仿佛在流淌	behavior
+it always seems to be counting something	它似乎总在数着什么	behavior
+it changes appearance based on the clouds and precipitation above	它的外貌随上方的云层和降水而变化	behavior
+it is surrounded by an everpresent rush of wind	它周围始终有疾风环绕	behavior
+it acts with unwavering calm	它始终沉着地行动	behavior
+it is covered with divine writing	它身上写满神圣的文字	behavior
+it appears spry and vigorous	它看上去灵活而充满活力	behavior
+it is a divine being	它是神圣的生灵	behavior
+
+# angel_description appends the creator and optional sphere list. Keep the
+# race/title/name together in the existing actor grammar and use the shared
+# sphere vocabulary, rather than adding a save-specific deity or noun map.
+It was created by {n} and is of a part with {r}.	它由{n}创造，与{r}相连。	clause
+It was created by {n}.	它由{n}创造。	clause
+It was created by an unknown deity and is of a part with {r}.	它由一位不知名的神祇创造，与{r}相连。	clause
+It was created by an unknown deity.	它由一位不知名的神祇创造。	clause
+
+# Experiment origins: generators/creatures.lua experiment_description.
+# {s} in these frames and {a} in methods are compile-time slots. The compiler
+# combines only the native optional victim/location branches and keeps the
+# resulting {n} people, {s} species, {p} sites and {d} year captures distinct.
+# Creator race/status spacing is handled by the shared creature descriptor.
+This night creature was first created by {n} {s} in the year {d}.	第{d}年，{n}{s}，首次创造出了这种夜行生物。	experiment-origin
+This night creature was first created by {n} of {p} {s} in the year {d}.	第{d}年，来自{p}的{n}{s}，首次创造出了这种夜行生物。	experiment-origin
+This night creature was first created accidentally by {n} {s} in the year {d}.	第{d}年，{n}{s}，首次意外创造出了这种夜行生物。	failed-experiment-origin
+This night creature was first created accidentally by {n} of {p} {s} in the year {d}.	第{d}年，来自{p}的{n}{s}，首次意外创造出了这种夜行生物。	failed-experiment-origin
+after horrible experiments{a}	{a}进行了可怕的实验后	experiment-method
+after horrible experiments gone wrong{a}	{a}进行的可怕实验失控后	failed-experiment-method
+through the fiend's terrifying power{a}	{a}释放邪魔的可怕力量后	experiment-power
+through the fiend's twisted power{a}	{a}释放邪魔的扭曲力量后	experiment-power
+through the fiend's chaotic power{a}	{a}释放邪魔的混沌力量后	experiment-power
+{s}	对{s}	experiment-subject
+# The native individual branch supplies "the" even before "an unknown
+# creature". Removing that one article here lets {n} reuse the existing
+# unknown-creature term as well as ordinary named species/caste actors.
+the {n}	对{n}	experiment-subject
+multitudes	对大批生物	experiment-subject
+
+# Color and surface texture variants from tweaks.*.color_desc.
+long and shaggy	修长蓬乱	description
+very curly	非常卷曲	description
+short and even	短而整齐	description
+patchy	斑驳稀疏	description
+unkempt	凌乱不整	description
+long and straight	修长笔直	description
+long and wavy	修长呈波浪状	description
+fluffed-out	蓬松舒展	description
+downy	柔软蓬松	description
+long and broad	修长宽阔	description
+long and sparse	修长稀疏	description
+long and narrow	修长狭窄	description
+blocky	呈块状	description
+jagged	参差不齐	description
+oval-shaped	呈椭圆形	description
+overlapping	相互重叠	description
+set far apart	间距很大	description
+close-set	排列紧密	description
+waxy	如蜡般光滑	description
+leathery	坚韧如皮革	description
+warty	布满疣粒	description
+sleek and smooth	光洁平滑	description
+rough and cracked	粗糙龟裂	description
+wrinkled	布满褶皱	description
+
+# Attack/end phrases are part of the creature's biography, not UI alerts.
+Beware its fire!	小心它的火焰！	clause
+Beware its webs!	小心它的蛛网！	clause
+Beware its poisonous vapors!	小心它的有毒蒸气！	clause
+Beware its poisonous gas!	小心它的毒气！	clause
+Beware its deadly dust!	小心它的致命粉尘！	clause
+Beware its deadly spittle!	小心它的致命唾液！	clause
+Beware its noxious secretions!	小心它的有害分泌物！	clause
+Beware its deadly blood!	小心它的致命血液！	clause
+Beware its poisonous bite!	小心它的毒咬！	clause
+Beware its poisonous sting!	小心它的毒刺！	clause
+Beware its hunger for warm blood!	小心它对温热鲜血的渴望！	clause
+Now you will know why you fear the night.	现在你会明白自己为何畏惧黑夜。	clause

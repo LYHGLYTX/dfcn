@@ -1,0 +1,71 @@
+# Native Health -> Description attribute and ghost source branches; PE:6a70a6d9:02711000.
+# Health entry 0x140479f40 selects tab=4, appends caste DESCRIPTION at +0x220,
+# then chooses ghost metadata (+0x118 flag 0x1000) or living attributes and appearance.
+# Living: 0x14047a171 -> 0x141380480, then 0x14047a1b6 -> 0x1413cae60.
+# Appearance: 0x1413cb4d5 -> 0x14070f070, then 0x1413cb4e2 -> 0x140712370.
+# Ghost: 0x14047a144 -> 0x1413daa50; switch 0x1413dab5c has 11 entries.
+# Physical attributes: 6 branches x 8 signed-deviation tiers; -25<deviation<25 emits nothing.
+# Positive predicates use [C:2:0:0], negative predicates [C:4:0:0]; pronouns and lists are composed.
+# literal_text is the exact binary string (including ghost double spaces); source includes the separately emitted attribute copula.
+# RIP-relative mov/movsd/movups sources are retained alongside lea sources.
+image	section	variant_id	variant	condition	function_va	instruction_va	literal_va	literal_text	source
+PE:6a70a6d9:02711000	physical_attribute	0	strength	deviation>=100	0x141380480	0x141380a43	0x141783900	unbelievably strong	is unbelievably strong
+PE:6a70a6d9:02711000	physical_attribute	0	strength	75<=deviation<100	0x141380480	0x141380a7c	0x1417838f4	mighty	is mighty
+PE:6a70a6d9:02711000	physical_attribute	0	strength	50<=deviation<75	0x141380480	0x141380a9e	0x141783930	very strong	is very strong
+PE:6a70a6d9:02711000	physical_attribute	0	strength	25<=deviation<50	0x141380480	0x141380aaf	0x141649d94	strong	is strong
+PE:6a70a6d9:02711000	physical_attribute	0	strength	deviation<=-100	0x141380480	0x141380ac0	0x141783918	unfathomably weak	is unfathomably weak
+PE:6a70a6d9:02711000	physical_attribute	0	strength	-100<deviation<=-75	0x141380480	0x141380ad1	0x141783950	unquestionably weak	is unquestionably weak
+PE:6a70a6d9:02711000	physical_attribute	0	strength	-75<deviation<=-50	0x141380480	0x141380ae2	0x141783940	very weak	is very weak
+PE:6a70a6d9:02711000	physical_attribute	0	strength	-50<deviation<=-25	0x141380480	0x141380af7	0x141782f18	weak	is weak
+PE:6a70a6d9:02711000	physical_attribute	1	agility	deviation>=100	0x141380480	0x141380b10	0x141782f08	amazingly agile	is amazingly agile
+PE:6a70a6d9:02711000	physical_attribute	1	agility	75<=deviation<100	0x141380480	0x141380b52	0x141782f30	extremely agile	is extremely agile
+PE:6a70a6d9:02711000	physical_attribute	1	agility	50<=deviation<75	0x141380480	0x141380b8c	0x141782f20	very agile	is very agile
+PE:6a70a6d9:02711000	physical_attribute	1	agility	25<=deviation<50	0x141380480	0x141380b9d	0x141782f54	agile	is agile
+PE:6a70a6d9:02711000	physical_attribute	1	agility	deviation<=-100	0x141380480	0x141380bae	0x141782f40	abysmally clumsy	is abysmally clumsy
+PE:6a70a6d9:02711000	physical_attribute	1	agility	-100<deviation<=-75	0x141380480	0x141380bbf	0x141782f70	totally clumsy	is totally clumsy
+PE:6a70a6d9:02711000	physical_attribute	1	agility	-75<deviation<=-50	0x141380480	0x141380bd0	0x141782f60	quite clumsy	is quite clumsy
+PE:6a70a6d9:02711000	physical_attribute	1	agility	-50<deviation<=-25	0x141380480	0x141380be5	0x141782e90	clumsy	is clumsy
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	deviation>=100	0x141380480	0x141380c10	0x141782e78	basically unbreakable	is basically unbreakable
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	75<=deviation<100	0x141380480	0x141380c59	0x141782ea8	incredibly tough	is incredibly tough
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	50<=deviation<75	0x141380480	0x141380c75	0x141782e98	quite durable	is quite durable
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	25<=deviation<50	0x141380480	0x141380c86	0x141782ed4	tough	is tough
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	deviation<=-100	0x141380480	0x141380c97	0x141782ec0	shockingly fragile	is shockingly fragile
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	-100<deviation<=-75	0x141380480	0x141380ca8	0x141782ef0	remarkably flimsy	is remarkably flimsy
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	-75<deviation<=-50	0x141380480	0x141380cb9	0x141782ee0	very flimsy	is very flimsy
+PE:6a70a6d9:02711000	physical_attribute	2	toughness	-50<deviation<=-25	0x141380480	0x141380cce	0x14178306c	flimsy	is flimsy
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	deviation>=100	0x141380480	0x141380cf9	0x141783050	absolutely inexhaustible	is absolutely inexhaustible
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	75<=deviation<100	0x141380480	0x141380d2a	0x141783090	indefatigable	is indefatigable
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	50<=deviation<75	0x141380480	0x141380d58	0x141783078	very slow to tire	is very slow to tire
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	25<=deviation<50	0x141380480	0x141380d69	0x1417830b8	slow to tire	is slow to tire
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	deviation<=-100	0x141380480	0x141380d7a	0x1417830a0	truly quick to tire	is truly quick to tire
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	-100<deviation<=-75	0x141380480	0x141380d8b	0x1417830e0	extremely quick to tire	is extremely quick to tire
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	-75<deviation<=-50	0x141380480	0x141380d9c	0x1417830c8	very quick to tire	is very quick to tire
+PE:6a70a6d9:02711000	physical_attribute	3	endurance	-50<deviation<=-25	0x141380480	0x141380db1	0x141782fb0	quick to tire	is quick to tire
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	deviation>=100	0x141380480	0x141380ddc	0x141782f80	possessed of amazing recuperative powers	is possessed of amazing recuperative powers
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	75<=deviation<100	0x141380480	0x141380e2a	0x141782fd8	incredibly quick to heal	is incredibly quick to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	50<=deviation<75	0x141380480	0x141380e53	0x141782fc0	quite quick to heal	is quite quick to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	25<=deviation<50	0x141380480	0x141380e64	0x141783010	quick to heal	is quick to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	deviation<=-100	0x141380480	0x141380e75	0x141782ff8	shockingly slow to heal	is shockingly slow to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	-100<deviation<=-75	0x141380480	0x141380e86	0x141783038	really slow to heal	is really slow to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	-75<deviation<=-50	0x141380480	0x141380e97	0x141783020	very slow to heal	is very slow to heal
+PE:6a70a6d9:02711000	physical_attribute	4	recuperation	-50<deviation<=-25	0x141380480	0x141380eac	0x1417831e0	slow to heal	is slow to heal
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	deviation>=100	0x141380480	0x141380ed7	0x1417831c8	virtually never sick	is virtually never sick
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	75<=deviation<100	0x141380480	0x141380f2a	0x141783208	almost never sick	is almost never sick
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	50<=deviation<75	0x141380480	0x141380f4e	0x1417831f0	very rarely sick	is very rarely sick
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	25<=deviation<50	0x141380480	0x141380f5c	0x141783248	rarely sick	is rarely sick
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	deviation<=-100	0x141380480	0x141380f6a	0x141783220	stunningly susceptible to disease	is stunningly susceptible to disease
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	-100<deviation<=-75	0x141380480	0x141380f78	0x141783278	really susceptible to disease	is really susceptible to disease
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	-75<deviation<=-50	0x141380480	0x141380f86	0x141783258	quite susceptible to disease	is quite susceptible to disease
+PE:6a70a6d9:02711000	physical_attribute	5	disease_resistance	-50<deviation<=-25	0x141380480	0x141380f98	0x141783100	susceptible to disease	is susceptible to disease
+PE:6a70a6d9:02711000	ghost	0	type	ghost_type==0	0x1413daa50	0x1413daa8f	0x1417853d8	A murderous ghost.	A murderous ghost.
+PE:6a70a6d9:02711000	ghost	1	type	ghost_type==1	0x1413daa50	0x1413daaa1	0x1417853c0	A sadistic ghost.	A sadistic ghost.
+PE:6a70a6d9:02711000	ghost	2	type	ghost_type==2	0x1413daa50	0x1413daaef	0x1417851f8	A secretive poltergeist.	A secretive poltergeist.
+PE:6a70a6d9:02711000	ghost	3	type	ghost_type==3	0x1413daa50	0x1413daafe	0x1417851d8	An energetic poltergeist.	An energetic poltergeist.
+PE:6a70a6d9:02711000	ghost	4	type	ghost_type==4	0x1413daa50	0x1413daac2	0x1417853f0	An angry ghost.	An angry ghost.
+PE:6a70a6d9:02711000	ghost	5	type	ghost_type==5	0x1413daa50	0x1413daab3	0x141785400	A violent ghost.	A violent ghost.
+PE:6a70a6d9:02711000	ghost	6	type	ghost_type==6	0x1413daa50	0x1413daad1	0x141785470	A moaning spirit returned from the dead.  It will generally trouble one unfortunate at a time.	A moaning spirit returned from the dead.  It will generally trouble one unfortunate at a time.
+PE:6a70a6d9:02711000	ghost	7	type	ghost_type==7	0x1413daa50	0x1413daae0	0x141785420	A howling spirit.  The ceaseless noise is making sleep difficult.	A howling spirit.  The ceaseless noise is making sleep difficult.
+PE:6a70a6d9:02711000	ghost	8	type	ghost_type==8	0x1413daa50	0x1413dab0d	0x141785268	A troublesome poltergeist.	A troublesome poltergeist.
+PE:6a70a6d9:02711000	ghost	9	type	ghost_type==9	0x1413daa50	0x1413dab1c	0x141785220	A restless haunt, generally troubling past acquaintances and relatives.	A restless haunt, generally troubling past acquaintances and relatives.
+PE:6a70a6d9:02711000	ghost	10	type	ghost_type==10	0x1413daa50	0x1413dab2b	0x1417852d0	A forlorn haunt, seeking out known locations or drifting around the place of death.	A forlorn haunt, seeking out known locations or drifting around the place of death.
+PE:6a70a6d9:02711000	ghost	shared	memorial	ghost metadata exists	0x1413daa50	0x1413dab40	0x141785288	  This spirit has not been properly memorialized or buried.	  This spirit has not been properly memorialized or buried.

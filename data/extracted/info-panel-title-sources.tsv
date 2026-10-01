@@ -1,0 +1,26 @@
+# Scope: titles in the information panel for every item, building and tile/engraving sheet in the installed Windows game.
+# Native executable PE:6a70a6d9:02711000. Addresses below come from static disassembly, not observations of a running game.
+# Infinite material/name/quantity combinations are represented by their native production and shared typed grammar; user-authored names retain their text.
+# Caption precedence: complete material/item/building/terrain productions outrank strict native-item-name fallback. A bare title is never evidence for the broad prose artifact-name parser.
+# Whole-title ownership is attached to the five verified native draw callers before generic grid fragments: Item, Building, Engraving, Terrain and PlannedEngraving. Captured complete sources retain nickname spacing, CJK and clipped tails; authored building names and active edits retain their original text.
+# Runtime title dispatch: src/fortress_item_captions.inc::translate_info_panel_title. Building uses ::map_hover::building and the stockpile resolver; terrain uses translate_tile_description; planned engraving binds the existing Engraving {tiles} production after translating its complete terrain field.
+kind	native_source	draw_or_dispatch	source_pattern	translation_route	catalog
+item-header	0x140c65450 called at 0x140154924	0x140154a23	{complete-item-caption}	NativeInfoTitleKind::Item -> translate_fortress_item_caption; native resize 0x1401549a2 preserves complete source	item-info-title-sources.tsv;map-hover-item-sources.tsv;item-raw-title-sources.tsv
+item-header-designation	0x140c65450;0x140ca5bb0;0x140a82c10	0x140154a23	{quality/wear}[grown ]{type/material/RAW-name}{quantity}{quality/wear}	shared item designation + item-description terms + ::items	item-info-title-sources.tsv;data/runtime/item-description-translations.tsv;data/runtime/rulesets/zh-Hans/items/index.toml
+item-header-artifact	0x140c654cf..0x140c654e2 tail-jump 0x140a94030	0x140154a23	{named-artifact}	artifact identity and native-item-name resolver; named branch returns before quality/wear wrappers	weapon-building-text-sources.tsv
+item-header-mixture	0x140a85630..0x140a85757;material call 0x140a856eb	0x140154a23	{liquid/glob} laced with {material}[, {material}...][ and {material}]	::items::liquid_glob -> ::materials::list; complete material nouns, native comma/and composition	map-hover-item-sources.tsv;src/dfcn.cpp
+item-header-dye	0x140a857f2..0x140a85822;world.raws.descriptors.colors at 0x1424f70b8	0x140154a23	[rotten ]{color} dye mix	::items::powder_misc -> ::color::name	map-hover-item-sources.tsv
+item-header-cast	0x140a83d0b..0x140a83e46;stored material +0x108 and body_part +0xe8	0x140154a23	[{material} ][{body-part} ]cast(s); [{material} ]limb/body cast(s)	::items::orthopedic_cast; typed material and body-part nouns	map-hover-item-sources.tsv
+item-header-totem	0x140ca0e50;name 0x140ca0f08/0x140ca0f59;body part 0x140ca1069	0x140154a23	{caste/species}[ {body-part}] totem(s)	::items::totem; typed caste/species and body-part nouns	item-info-title-sources.tsv
+building-header	virtual +0x188 called at 0x1401804e7	0x140180575	{complete-building-caption}	NativeInfoTitleKind::Building -> ::map_hover::building and ordered stockpile categories; all RTTI-derived building formatters	map-hover-building-sources.tsv
+building-rename	building.name at +0xd0;0x1401804f1	0x140180575	{user-authored-name}[_]	preserve authored name and blinking native cursor	weapon-building-panel-sources.tsv
+building-delegated-item	0x14054ec40;0x14054ed00;0x140554100;0x14055004e	0x140180575	{complete-item-caption}	shared complete item grammar; ::text::native_item_name accepts only same-language native roots and is a fallback after structural captions	map-hover-building-sources.tsv
+tile-engraving-name	cached engraving_title at view_sheets+0x1df0;producer 0x1401a9cc0	0x140158a74	{native-name}, "{English-gloss}"	strict generated-name identity resolver	ile-info-title-sources.tsv
+tile-engraving-untitled	0x1401a9e66;0x1401a9ec4	0x140158a74	Untitled	无题; UI dictionary entry in local-overrides.tsv/translations.tsv	tile-info-title-sources.tsv
+tile-terrain-fallback	0x140e7d330 called at 0x140158ad5	0x140158aef	{complete-terrain-caption}	root ::tiles; all native terrain branches and named plants	tile-info-title-sources.tsv;tile-hover-sources.tsv
+tile-planned-engraving	0x140e7d330 called at 0x140158f19	0x140158f6d	Engraving {complete-terrain-caption}	root Engraving {tiles} -> 雕刻：{tiles}	tile-info-title-sources.tsv
+# Shared caption draws also occur in related building cards and rows. These retain the same formatters; they are not additional title vocabularies.
+building-card	virtual +0x188 called at 0x14015719a	0x140157289	{complete-building-caption}	root ::map_hover::building; shared native resize capture	map-hover-building-sources.tsv
+building-card	virtual +0x188 called at 0x140173f04	0x14017401f	{complete-building-caption}	root ::map_hover::building; shared native resize capture	map-hover-building-sources.tsv
+linked-building	virtual +0x188 called at 0x14019cae5	0x14019cbd8	{complete-building-caption}	root ::map_hover::building	map-hover-building-sources.tsv
+contained-item-row	0x140c65450 called at 0x1401581c1	0x1401582c0	{complete-item-caption}	shared complete item caption; this is the container contents row below the header	map-hover-item-sources.tsv

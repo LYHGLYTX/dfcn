@@ -1,0 +1,452 @@
+# DF 53.16 ELF:bcc6789e6fb477b785a2b02be80b8b1b054ff88c; task formatter 0x1cab560..0x1cb2754
+# kind	source locations	instruction references or RAW owner	source (significant spaces retained)
+# Source inventory only. RAW NAME case is retained; the game capitalizes displayed task titles.
+fragment	0x20f7379	0x1cab6b8,0x1cabac5,0x1cac6a6,0x1cac960,0x1cad70f,0x1cada04,0x1cada53,0x1cadad1,0x1cadbf6,0x1caeed6,0x1caf7d6,0x1cafb5c,0x1cafcfe,0x1cafd48,0x1cafde0,0x1cb0b0a,0x1cb15df,0x1cb1a4c,0x1cb1b27,0x1cb1c28	 
+fragment	0x21df9e3	0x1cae329	 (barrel)
+fragment	0x21e00f8	0x1cb03d0	 (dyed only)
+fragment	0x21dfd5f	0x1cb0db5	 (engrave memorial)
+fragment	0x21df9cd	0x1cae3fd	 (vial)
+fragment	0x21dfe16	0x1caf52b	 Portal
+fragment	0x21dfce0	0x1caca79	 amulet
+fragment	0x219eeb1	0x1cabc34	 and 
+fragment	0x21dfeef	0x1cb003e	 animal trap
+fragment	0x21dffa3	0x1cac61e	 anvil
+fragment	0x21dfe60	0x1cae1a7	 armor stand
+fragment	0x21dff10	0x1cafed8	 backpack
+fragment	0x21e03c4	0x1cae26f	 bag
+fragment	0x21dff32	0x1cafa87	 ballista arrow head
+fragment	0x21dff7f	0x1cadaa4	 ballista parts
+fragment	0x21e03d6	0x1caffb5	 barrel
+fragment	0x2160946	0x1caf45d	 bed
+fragment	0x21da295	0x1cae20c	 bin
+fragment	0x214de53	0x1cb1370	 blocks
+fragment	0x21dff8f	0x1cb19cb	 bolt thrower parts
+fragment	0x221cb85	0x1cb13db	 box
+fragment	0x21dfd07	0x1cb189b	 bracelet
+fragment	0x20f457e	0x1cb0797	 bucket
+fragment	0x21dfe4a	0x1cae044	 cabinet
+fragment	0x2108009	0x1cb0eec	 cage
+fragment	0x21dfe75	0x1caebf1	 casket
+fragment	0x21dff63	0x1cadb21	 catapult parts
+fragment	0x220f968	0x1cb18d6,0x1cb200b	 chain
+fragment	0x20db646	0x1caec75	 chair
+fragment	0x2142060	0x1caeb04,0x1cb1ad3	 chest
+fragment	0x21e0064	0x1cb0529	 cloth 
+fragment	0x21dfe6d	0x1cb1c93	 coffer
+fragment	0x21dfe8a	0x1cb1f59	 coffin
+fragment	0x21d820f	0x1cb1307	 coins
+fragment	0x20df263	0x1caf664	 crafts
+fragment	0x21dfcf1	0x1cac567	 crown
+fragment	0x20f4c82	0x1cad4e0	 crutch
+fragment	0x21dfeda	0x1cb0bdf	 cups
+fragment	0x20d32f5	0x1cb108d	 door
+fragment	0x2173e5b	0x1cac1d0,0x1cb0585,0x1cb0644	 dye
+fragment	0x21dfcfe	0x1cabef5	 earring
+fragment	0x21dfcd6	0x1cb1985	 figurine
+fragment	0x20df254	0x1cb1bbe	 flasks
+fragment	0x21dfe1e	0x1cb020a	 floodgate
+fragment	0x21dffe3	0x1cac740	 for war
+fragment	0x214e6e8	0x1cac111	 gem
+fragment	0x21dfee0	0x1cb09a1	 goblets
+fragment	0x20fbc05	0x1caf354	 grate
+fragment	0x21dfe29	0x1cb17ec	 hatch cover
+fragment	0x20e5cb5	0x1cb06a9	 image
+fragment	0x21e0079	0x1cac174	 leather 
+fragment	0x21dff73	0x1cb1523	 mechanisms
+fragment	0x21dffb9	0x1cb1760	 millstone
+fragment	0x21dfee9	0x1cb2292	 mugs
+fragment	0x21e0015	0x1cae681	 ore
+fragment	0x21dff02	0x1cb0e74	 pipe section
+fragment	0x21dffb2	0x1caf2d7	 quern
+fragment	0x21dff1a	0x1cafaea	 quiver
+fragment	0x21dfcf8	0x1cb18f9	 ring
+fragment	0x20e1b62	0x1cb0a85	 rope
+fragment	0x21dfe7d	0x1cb1cc6	 sarcophagus
+fragment	0x21dfce8	0x1cac280	 scepter
+fragment	0x214a4b4	0x1cacd31	 slab
+fragment	0x20f4c5f	0x1cadc78	 splint
+fragment	0x21dffaa	0x1cadfe0	 statue
+fragment	0x21f49bc	0x1caeb66	 table
+fragment	0x21dfeb5	0x1cb08c3	 terrarium
+fragment	0x21e004d	0x1cb05e8	 thread 
+fragment	0x21dfe92	0x1cb1cde	 throne
+fragment	0x21dffcb	0x1cac827	 to hunt
+fragment	0x210f8a1	0x1cb081f	 toy
+fragment	0x21dfefc	0x1cb00e2	 tube
+fragment	0x21ed335	0x1cabbf3,0x1cac1a2,0x1cb0557,0x1cb0616	 using 
+fragment	0x21dfed3	0x1cb0f7f	 vials
+fragment	0x21dfec7	0x1cae925	 waterskins
+fragment	0x21dfe53	0x1cae0f6	 weapon rack
+fragment	0x20fbc41	0x1cb070d	 window
+fragment	0x20e2a73	0x1cae6f7,0x1cae7e7,0x1cb15bc	 with 
+caption	0x21dfb5f	0x1cad5b7	Apply cast
+fragment	0x21dff47	0x1cafd96	Assemble 
+fragment	0x21dff22	0x1caf0bb	Bait trap with 
+caption	0x21e02c9	0x1cacd64	Beat criminal
+caption	0x21dfb6a	0x1cb14dd	Bring crutch
+caption	0x21e025e	0x1cac88c	Bring item to depot
+caption	0x21e024b	0x1cac874	Bring item to shop
+caption	0x21df924	0x1caedab	Butcher an animal
+fragment	0x21dfb27	0x1cad88d	Cage 
+caption	0x21dfbc7	0x1cb12e4	Cage small animal
+caption	0x21e01eb	0x1cabfe1	Carve downward staircase
+caption	0x21e015a	0x1cb1855	Carve fortification
+caption	0x21e021c	0x1cabfc9	Carve ramp
+caption	0x21e01a0	0x1cad1fd	Carve track
+caption	0x21e0204	0x1cac9d0	Carve up/down staircase
+caption	0x21e01d4	0x1cabff9	Carve upward staircase
+caption	0x21df936	0x1caec8d	Catch live fish
+caption	0x21df946	0x1caeca5	Catch live land animal
+caption	0x212fae2	0x1cad215	Cause trouble
+fragment	0x21dfc96	0x1cae962	Chain 
+caption	0x217508a	0x1cace74	Clean
+caption	0x21dfb83	0x1cae621	Clean patient
+caption	0x21e0281	0x1cad641	Clean self
+caption	0x21e0467	0x1cafb35	Clean trap
+caption	0x21dfdcc	0x1cad2c0	Collect clay
+caption	0x21dfdf0	0x1cad22d	Collect hive products
+caption	0x21dfdbf	0x1cacddc	Collect sand
+caption	0x21e0327	0x1cb13fe	Collect taxes
+caption	0x21e0094	0x1cac8a4	Collect webs
+caption	0x21df900	0x1caf546	Construct building
+fragment	0x21dfd23	0x1cae84a,0x1caf686	Cut 
+caption	0x21dfd28	0x1cb116c	Cut gems
+caption	0x21dfd31	0x1cb11ef	Cut raw glass into gems
+fragment	0x21dfd73	0x1cafef3	Decorate with 
+caption	0x21df913	0x1cae69c	Destroy building
+caption	0x21e0193	0x1cac9e8	Detail floor
+caption	0x21e0187	0x1cabd23	Detail wall
+caption	0x21dfb3d	0x1caefa0	Diagnose patient
+caption	0x21755e7	0x1cabd0b	Dig
+caption	0x21e0227	0x1cb193f	Dig channel
+caption	0x21dfc1f	0x1cb0418	Drain aquarium
+caption	0x21dfb77	0x1cb1576	Dress wound
+caption	0x2173c49	0x1cab761	Drink
+caption	0x21e045d	0x1cac85c	Dump item
+caption	0x21e006c	0x1cb1b4c	Dye cloth
+fragment	0x21e0061	0x1cb0ff0	Dye cloth 
+caption	0x21e0083	0x1cb1b6e	Dye leather
+fragment	0x21e0076	0x1cb0dda	Dye leather 
+caption	0x21e0056	0x1cb1c10	Dye thread
+fragment	0x21e004a	0x1cb1053	Dye thread 
+caption	0x2173c45	0x1cad77b	Eat
+fragment	0x21dfd8d	0x1cae432,0x1cae6b4,0x1cb1439	Encrust 
+caption	0x214a4a4	0x1cacccf	Engrave memorial slab
+caption	0x21e02fe	0x1cad4fb	Execute criminal
+fragment	0x21dfa58	0x1caf8ec	Extract from 
+caption	0x21dfa90	0x1caf9d0	Extract from land animal
+caption	0x21dfa66	0x1cb1120	Extract from plants
+caption	0x21dfa7a	0x1caf8c6	Extract from raw fish
+caption	0x21e002e	0x1caed63	Extract metal strands
+caption	0x21e0233	0x1cb1a34	Fell tree
+caption	0x21e0120	0x1caea67	Fertilize field
+caption	0x21dfc2e	0x1cb0400	Fill aquarium
+caption	0x21dfc3c	0x1cb1a11	Fill pond
+caption	0x21e028c	0x1cab871	Fill waterskin
+caption	0x21e04ae	0x1cb1500	Fire ballista
+caption	0x21e04bc	0x1caca00	Fire bolt thrower
+caption	0x21e04a0	0x1caf228	Fire catapult
+caption	0x2175085	0x1cacdc4	Fish
+fragment	0x21dfe9a	0x1cab60e,0x1cac65f,0x1cac8fa,0x1cad682,0x1cad969,0x1cadb5f,0x1cae8c3,0x1caee3b,0x1cafa3e,0x1cafcc1,0x1caff6c,0x1cafff6,0x1cb007f,0x1cb024b,0x1cb074e,0x1cb07d8,0x1cb0860,0x1cb0904,0x1cb0a14,0x1cb0ac3,0x1cb1235	Forge 
+caption	0x21e023d	0x1cac9b8	Gather plants
+fragment	0x21dfcb6	0x1cac3a7	Geld 
+caption	0x21e0272	0x1cacb1a	Get provisions
+caption	0x21dfc51	0x1cab7e3	Give food
+caption	0x21dfc46	0x1cb17a6	Give water
+caption	0x21e0355	0x1cab74c	Go shopping
+caption	0x21e0335	0x1caecbd	Guard tax collector
+fragment	0x21dfaa9	0x1caf840	Handle 
+caption	0x21dfb05	0x1cad913	Handle small creature
+caption	0x21e0105	0x1caed4b	Harvest plants
+caption	0x2175644	0x1cacdac	Hunt
+caption	0x21e030f	0x1cacd94	Hunt for small creature
+caption	0x21dfb4e	0x1caef88	Immobilize break
+caption	0x21dfdd9	0x1cb1497	Install colony in hive
+fragment	0x21dfacc	0x1cac029	Interrogate 
+caption	0x21e02a1	0x1cacd7c	Kidnap
+caption	0x21e013f	0x1cafa00	Link a building to trigger
+caption	0x21e0480	0x1cb17c9	Load ballista
+caption	0x21e048e	0x1caca18	Load bolt thrower
+caption	0x21e04db	0x1caf9a0	Load cage trap
+caption	0x21e0472	0x1cafd7e	Load catapult
+caption	0x21e04ea	0x1cafb1d	Load stone trap
+caption	0x21e04fa	0x1cafb05	Load weapon trap
+fragment	0x21dff5e	0x1cada3e,0x1cadabc,0x1caf432,0x1cafb4d,0x1cb18be	Make
+fragment	0x21ae9b7	0x1cabf10,0x1cac51f,0x1caca30,0x1cacce7,0x1cadc30,0x1cadc93,0x1cadf96,0x1cadffb,0x1cae1c2,0x1cae227,0x1caea7f,0x1caeb1c,0x1caeb81,0x1caec09,0x1caf30a,0x1caf36f,0x1caf61a,0x1cafaa2,0x1cafe90,0x1cb01c1,0x1cb06c4,0x1cb0e14,0x1cb0e2c,0x1cb0e44,0x1cb0e5c,0x1cb0e8c,0x1cb0ebc,0x1cb0ed4,0x1cb0f04,0x1cb0f1c,0x1cb0f34,0x1cb0f4c,0x1cb0f97,0x1cb0faf,0x1cb0fc7,0x1cb103b,0x1cb10a5,0x1cb10df,0x1cb10f7,0x1cb110f,0x1cb1138,0x1cb1258,0x1cb127b,0x1cb129e,0x1cb12c1,0x1cb1393,0x1cb14ba,0x1cb1832,0x1cb1878,0x1cb1962,0x1cb19a8	Make 
+caption	0x21e0005	0x1cad0bd	Make ash
+caption	0x21dfff7	0x1cad1e5	Make charcoal
+caption	0x21df9b3	0x1caefd0	Make cheese
+fragment	0x21dfd11	0x1cac0c7	Make large 
+caption	0x21df9ed	0x1cb1783	Make lye
+caption	0x21dfa0b	0x1caea4f	Make potash from ash
+caption	0x21df9f6	0x1cb0448	Make potash from lye
+fragment	0x21dfe0c	0x1caddf4	Make raw 
+caption	0x21dfeaa	0x1cac9a0	Make totem
+caption	0x21dfe36	0x1cb1625	Make traction bench
+caption	0x21dfc5b	0x1caddc4	Manage work orders
+caption	0x21e001a	0x1caed7b	Melt a metal object
+fragment	0x21df99a	0x1cb1474	Milk 
+fragment	0x21df970	0x1cb010b	Mill 
+caption	0x21df976	0x1cb1023	Mill plants
+fragment	0x21dfd1d	0x1caf55e	Mint 
+fragment	0x214a2fc	0x1cabb94	Mix 
+caption	0x20f38e2	0x1cac011	No activity
+caption	0x20f3aa7	0x1cb19ee	No job
+caption	0x21e04ce	0x1cadddc	Operate pump
+fragment	0x21dfbf9	0x1cad34f	Pen/pasture 
+caption	0x21dfc06	0x1cb1602	Pen/pasture small animal
+caption	0x21e044c	0x1cace5c	Pickup equipment
+fragment	0x21dfbd9	0x1caca94	Pit/pond 
+caption	0x21dfbe3	0x1cad15b	Pit/pond small animal
+caption	0x21dfba1	0x1cb0430	Place in traction
+caption	0x21e038c	0x1cb173d	Place item in tomb
+caption	0x21e02d7	0x1cad513	Place track vehicle
+caption	0x21e0114	0x1caf6d7	Plant seeds
+fragment	0x21dfd49	0x1caf111	Polish 
+caption	0x21dfd51	0x1cb1198	Polish stones
+caption	0x21df95d	0x1caed93	Prepare a raw fish
+caption	0x21dfa20	0x1cb09d6	Prepare easy meal
+caption	0x21dfa32	0x1cb1afb	Prepare fine meal
+caption	0x21dfa44	0x1cb1ae7	Prepare lavish meal
+fragment	0x21df982	0x1cae298,0x1cae36c,0x1caf172	Process 
+caption	0x21df98b	0x1cb0fd8	Process plants
+caption	0x21df9d5	0x1cb10c7	Process plants (barrel)
+caption	0x21df9bf	0x1cb10b6	Process plants (vial)
+caption	0x21e0130	0x1caf9e8	Pull the lever
+caption	0x21e02eb	0x1cad52b	Push track vehicle
+caption	0x21dfc9d	0x1cb0c87	Put in chains
+caption	0x21dfbb3	0x1cac0af	Put item on display
+caption	0x21e050b	0x1cad584	Reaction
+caption	0x21dfb1b	0x1cb03e8	Recover pet
+caption	0x21dfb2d	0x1caefb8	Recover wounded
+fragment	0x21dfad9	0x1caf707	Release 
+caption	0x21dfae2	0x1caf6ef	Release pet
+caption	0x21dfaee	0x1cad92b	Release small creature
+caption	0x21e01c0	0x1cac8bc	Remove construction
+caption	0x21e01ac	0x1caf2f2	Remove stairs/ramps
+caption	0x21e02a8	0x1cb180f	Report crime
+caption	0x21755bc	0x1cb16f7	Rest
+caption	0x21e0349	0x1cacf1e	Return kill
+caption	0x21e0361	0x1cb166b	Seek artifact
+caption	0x21e036f	0x1cacb32	Seek infant
+caption	0x21dfb98	0x1cb132a	Set bone
+fragment	0x21e008f	0x1cb065f	Sew 
+fragment	0x21df9a0	0x1cacbf0	Shear 
+fragment	0x21dfcab	0x1cad0d5	Slaughter 
+caption	0x21e029b	0x1cb168e	Sleep
+fragment	0x21e000e	0x1cae639	Smelt 
+caption	0x21e017a	0x1cabd3b	Smooth floor
+caption	0x21e016e	0x1cb1212	Smooth wall
+caption	0x21df9a7	0x1cacbd8	Spin thread
+caption	0x21e02b5	0x1cacd4c	Starting fist fight
+caption	0x21e0413	0x1cb1648	Store armor
+caption	0x21e03b7	0x1cb171a	Store item in bag
+caption	0x21e03c9	0x1cad038	Store item in barrel
+caption	0x21e03de	0x1cacbc0	Store item in bin
+caption	0x21e041f	0x1cad020	Store item in location
+caption	0x21e039f	0x1caceee	Store item in stockpile
+caption	0x21e03f0	0x1cb1599	Store item in vehicle
+caption	0x21e037b	0x1cacf06	Store owned item
+caption	0x21e0436	0x1cb191c	Store squad equipment
+caption	0x21e0406	0x1cb16d4	Store weapon
+caption	0x2173361	0x1cab737	Strange mood
+fragment	0x21dfd82	0x1caedc3	Stud with 
+caption	0x2212182	0x1cb134d	Surgery
+caption	0x21dfb91	0x1cae596	Suture
+fragment	0x21dfcbc	0x1cae9c9	Tame 
+caption	0x21dfcc2	0x1caf9b8	Tame a small animal
+fragment	0x21e0044	0x1cac146,0x1cb04fb,0x1cb05ba	Tint 
+caption	0x21dfc87	0x1cab96a	Trade at depot
+fragment	0x21dffc4	0x1cac6e0,0x1cad793,0x1cb16b1	Train 
+caption	0x2174e7d	0x1caf7a5	Unchain
+caption	0x21dfac0	0x1caf78d	Unchain pet
+caption	0x21dfc6e	0x1cb04c9	Update stockpile records
+caption	0x21e00a1	0x1cb03b0	Weave metal cloth
+caption	0x21e00e0	0x1cb1f71	Weave thread into cloth
+caption	0x21e00b3	0x1cb1f89	Weave thread into silk
+caption	0x21e00ca	0x1cb11c7	Weave yarn into cloth
+fragment	0x21dfab1	0x1cb0c0f,0x1cb0c27,0x1cb0c9f,0x1cb0cb7,0x1cb0ccf,0x1cb1aa3	a large animal
+fragment	0x20fc321	0x1cae462,0x1cae6e4,0x1cae7d4	ammo
+fragment	0x2131be8	0x1cb0bf7,0x1cb0c3f,0x1cb0c57,0x1cb0ce7,0x1cb1abb	animal
+fragment	0x213b986	0x1cb1158	cut gems
+fragment	0x21dfda5	0x1cb1184	cut glass
+fragment	0x2173e5c	0x1cabbd0	dye
+fragment	0x21dfd96	0x1cb13c3,0x1cb1416,0x1cb1553	finished goods
+fragment	0x20fc3d2	0x1cb1bd6	fish
+fragment	0x21dff58	0x1cac917	five 
+fragment	0x21dfe06	0x1cadecf	four 
+fragment	0x21ae2c7	0x1cb13ab,0x1cb1451,0x1cb153b	furniture
+fragment	0x214e6e9	0x1caf0f2	gem
+fragment	0x21dffd4	0x1cb1a8b	hunting animal
+fragment	0x21dfd16	0x1cab671,0x1cad9bb,0x1cadbaf,0x1caee8d,0x1cb02b0	large 
+fragment	0x21b01e5	0x1cb1bee	meat
+fragment	0x21dfea1	0x1cab621,0x1cb025e	pair of 
+fragment	0x21dfdaf	0x1cb11db	polished stones
+fragment	0x21cb66e	0x1cb1fc3,0x1cb1fdb,0x1cb1ff3,0x1cb2023,0x1cb203b	small 
+fragment	0x2204ec0	0x1cb0c6f	subject
+fragment	0x21dfec0	0x1cae8d6,0x1cb0917	three 
+fragment	0x20db527	0x1cb1a5f	tool
+fragment	0x21dff51	0x1cb0ea4	twenty-five 
+fragment	0x21dffec	0x1cb1a77	war animal
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:6	MAKE WOODEN CHAIR	make wooden chair
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:21	MAKE WOODEN TABLE	make wooden table
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:34	MAKE WOODEN BED	make wooden bed
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:47	MAKE WOODEN CHEST	make wooden chest
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:60	MAKE WOODEN CABINET	make wooden cabinet
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:73	MAKE WOODEN DOOR	make wooden door
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:86	MAKE WOODEN BARREL	make wooden barrel
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:99	MAKE WOODEN BUCKET	make wooden bucket
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:112	MAKE WOODEN CASKET	make wooden casket
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:125	MAKE WOODEN HATCH COVER	make wooden hatch cover
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:138	MAKE WOODEN GRATE	make wooden grate
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:151	MAKE WOODEN BIN	make wooden bin
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:164	MAKE WOODEN STEPLADDER	make wooden stepladder
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:177	MAKE WOODEN BOOKCASE	make wooden bookcase
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:190	MAKE WOODEN SPLINT	make wooden splint
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:203	MAKE WOODEN CRUTCH	make wooden crutch
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:216	MAKE WOODEN SHIELD	make wooden shield
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:229	MAKE WOODEN BUCKLER	make wooden buckler
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:242	MAKE WOODEN TRAINING AXE	make wooden training axe
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:255	MAKE WOODEN TRAINING SHORT SWORD	make wooden training short sword
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:268	MAKE WOODEN TRAINING SPEAR	make wooden training spear
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:281	MAKE WOODEN PEDESTAL	make wooden pedestal
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:6	ACACIA_BARK_DYE	make acacia bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:17	ALDER_BARK_DYE	make alder bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:26	ALDER_CONE_DYE	make alder cone dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:36	ALMOND_SHELL_DYE	make almond shell dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:46	APPLE_BARK_DYE	make apple bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:55	APPLE_LEAF_DYE	make apple leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:65	APRICOT_BARK_DYE	make apricot bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:74	ASH_BARK_DYE	make ash bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:83	AVOCADO_SKIN_DYE	make avocado skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:93	BANANA_LEAF_DYE	make banana leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:103	BANANA_PEEL_DYE	make banana peel dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:113	BAYBERRY_LEAF_DYE	make bayberry leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:123	BAYBERRY_BERRY_DYE	make bayberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:133	BIRCH_BARK_DYE	make birch bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:142	CHERRY_BARK_DYE	make cherry bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:151	CHERRY_LEAF_DYE	make cherry leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:161	CHESTNUT_BARK_DYE	make chestnut bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:170	CHESTNUT_LEAF_DYE	make chestnut leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:180	CHESTNUT_HULL_DYE	make chestnut hull dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:190	COFFEE_BEAN_DYE	make coffee bean dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:200	GINKGO_LEAF_DYE	make ginkgo leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:210	GUAVA_BARK_DYE	make guava bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:219	GUAVA_LEAF_DYE	make guava leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:229	HAZEL_BARK_DYE	make hazel bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:238	HAZEL_LEAF_DYE	make hazel leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:248	LARCH_BARK_DYE	make larch bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:257	MAHOGANY_BARK_DYE	make mahogany bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:266	MANGROVE_BARK_DYE	make mangrove bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:275	MANGROVE_LEAF_DYE	make mangrove leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:285	MAPLE_BARK_DYE	make maple bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:294	OAK_BARK_DYE	make oak bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:303	OLIVE_BARK_DYE	make olive bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:312	OLIVE_LEAF_DYE	make olive leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:322	PEACH_BARK_DYE	make peach bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:331	PEAR_BARK_DYE	make pear bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:340	PEAR_LEAF_DYE	make pear leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:350	PERSIMMON_FRUIT_DYE	make persimmon dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:360	PINE_BARK_DYE	make pine bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:369	PLUM_BARK_DYE	make plum bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:378	POMEGRANATE_LEAF_DYE	make pomegranate leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:388	POMEGRANATE_RIND_DYE	make pomegranate rind dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:398	POMEGRANATE_BARK_DYE	make pomegranate bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:407	TEA_LEAF_DYE	make tea leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:417	WILLOW_BARK_DYE	make willow bark dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:426	WILLOW_LEAF_DYE	make willow leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:436	RED_SPINACH_LEAF_DYE	make red spinach leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:446	RICE_HUSK_DYE	make rice husk dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:456	SORGHUM_LEAF_DYE	make sorghum leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:466	BILBERRY_FRUIT_DYE	make bilberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:476	BLACKBERRY_FRUIT_DYE	make blackberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:486	BLUEBERRY_FRUIT_DYE	make blueberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:496	CABBAGE_LEAF_DYE	make cabbage leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:506	CRANBERRY_FRUIT_DYE	make cranberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:516	EGGPLANT_FRUIT_DYE	make eggplant dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:526	GRAPE_FRUIT_DYE	make grape dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:536	ONION_SKIN_DYE	make onion skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:546	PEANUT_SHELL_DYE	make peanut shell dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:556	PINEAPPLE_LEAF_DYE	make pineapple leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:566	POTATO_SKIN_DYE	make potato skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:576	RADISH_ROOT_DYE	make radish dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:586	RASPBERRY_FRUIT_DYE	make raspberry dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:596	RHUBARB_LEAF_DYE	make rhubarb leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:606	SPINACH_LEAF_DYE	make spinach leaf dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:616	SWEET_POTATO_SKIN_DYE	make sweet potato skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:626	TOMATO_SKIN_DYE	make tomato skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:636	TURNIP_SKIN_DYE	make turnip skin dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:646	WATERMELON_FRUIT_DYE	make watermelon dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:656	WILD_CARROT_ROOT_DYE	make carrot dye
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:6	TAN_A_HIDE	tan a hide
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:18	RENDER_FAT	render fat
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:27	MAKE_SOAP_FROM_TALLOW	make soap from tallow
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:41	MAKE_SOAP_FROM_OIL	make soap from oil
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:60	MAKE_PEARLASH	make pearlash
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:68	MAKE_PLASTER_POWDER	make plaster powder
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:77	MAKE_SHARP_ROCK	make sharp rock
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:85	MILL_SEEDS_NUTS_TO_PASTE	mill seeds/nuts to paste
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:94	MAKE_CLAY_JUG	make clay jug
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:103	MAKE_CLAY_BRICKS	make clay bricks
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:112	MAKE_CLAY_STATUE	make clay statue
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:121	MAKE_LARGE_CLAY_POT	make large clay pot
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:130	MAKE_CLAY_CRAFTS	make clay crafts
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:139	GLAZE_JUG	glaze clay/stone jug
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:158	GLAZE_STATUE	glaze clay/stone statue
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:172	GLAZE_LARGE_POT	glaze large clay/stone pot
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:186	GLAZE_CRAFT	glaze clay/stone craft
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:200	PRESS_OIL	press liquid from paste
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:216	PRESS_OIL_FRUIT	press liquid from fruit
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:233	MAKE_CLAY_HIVE	make clay hive
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:242	PRESS_HONEYCOMB	press honey from honeycomb
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:258	MAKE_WAX_CRAFTS	make wax crafts
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:266	BREW_DRINK_FROM_PLANT	brew drink from plant
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:283	BREW_DRINK_FROM_PLANT_GROWTH	brew drink from fruit
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:300	MAKE_MEAD	make mead
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:319	PROCESS_PLANT_TO_BAG	process plant to bag
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:334	MAKE_QUICKLIME	make quicklime
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:343	MAKE_MILK_OF_LIME	make milk of lime
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:360	MAKE_PARCHMENT	make parchment
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:373	MAKE_SCROLL	make scroll
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:383	MAKE_QUIRE	make quire
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:390	MAKE_SHEET_FROM_PLANT	make sheet from plant
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:401	MAKE_SLURRY_FROM_PLANT	mash plant into slurry
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:413	PRESS_PLANT_PAPER	press plant slurry into paper sheet
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:423	BIND_BOOK	bind book
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:440	CARVE_BONE_FIGURINE	carve bone figurine
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:454	CARVE_BONE_RING	carve bone ring
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:466	CARVE_BONE_EARRING	carve bone earring
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:478	CARVE_BONE_SCEPTER	carve bone scepter
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:490	CARVE_BONE_AMULET	carve bone amulet
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:502	CARVE_BONE_BRACELET	carve bone bracelet
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:514	CARVE_BONE_CROWN	carve bone crown
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:526	CARVE_BONE_GEM	carve bone cabochon
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:538	CARVE_WOODEN_HELVE	carve wooden helve from branch
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:549	ASSEMBLE STONE AXE	assemble stone axe
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_other.txt:558	MAKE WOODEN DISPLAY CASE	make display case
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:6	BITUMINOUS_COAL_TO_COKE	make coke from bituminous coal
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:14	LIGNITE_TO_COKE	make coke from lignite
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:22	BRASS_MAKING	make brass bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:31	BRASS_MAKING2	make brass bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:40	BRONZE_MAKING	make bronze bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:49	BRONZE_MAKING2	make bronze bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:58	ELECTRUM_MAKING	make electrum bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:67	ELECTRUM_MAKING2	make electrum bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:76	BILLON_MAKING	make billon bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:85	BILLON_MAKING2	make billon bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:94	PEWTER_FINE_MAKING	make fine pewter bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:103	PEWTER_FINE_MAKING2	make fine pewter bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:112	PEWTER_TRIFLE_MAKING	make trifle pewter bars (use ore)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:121	PEWTER_TRIFLE_MAKING2	make trifle pewter bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:130	PEWTER_LAY_MAKING	make lay pewter bars (use bars)
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:140	PIG_IRON_MAKING	make pig iron bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:150	STEEL_MAKING	make steel bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:161	NICKEL_SILVER_MAKING	make nickel silver bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:171	BLACK_BRONZE_MAKING	make black bronze bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:181	STERLING_SILVER_MAKING	make sterling silver bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:190	ROSE_GOLD_MAKING	make rose gold bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:199	BISMUTH_BRONZE_MAKING	make bismuth bronze bars
+raw-reaction	data/vanilla/vanilla_reactions/objects/reaction_smelter.txt:209	ADAMANTINE_WAFERS	make adamantine wafers
+generated-prefix	dwarfort:VA=0x214246a	generated instrument reaction NAME	forge 
+generated-prefix	dwarfort:VA=0x2142477	generated instrument reaction NAME	make 
+generated-prefix	dwarfort:VA=0x214272b	generated instrument reaction NAME	assemble 

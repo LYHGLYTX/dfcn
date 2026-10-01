@@ -1,0 +1,41 @@
+base = "health::appearance::raw"
+
+# Installed vanilla RAW vocabulary used by native appearance modifiers.
+# Source tokens and their original locations are in data/extracted/appearance-raw-sources.tsv.
+# BODY/BP and INDIVIDUAL_NAME already share the reviewed anatomy dictionary;
+# keep that vocabulary in one place and add only appearance-specific nouns.
+[[rulesets]]
+name = "noun"
+[rulesets.rules]
+"{::health::bodypart::bodypart_main}" = "{::health::bodypart::bodypart_main}"
+# STP in BODY/BP and INDIVIDUAL_NAME requests the standard plural. The
+# installed STP names all take -s, including kidneys and stomachs.
+"{::health::bodypart::bodypart_main}s" = "{::health::bodypart::bodypart_main}"
+"body part" = "身体部位"
+"body parts" = "身体部位"
+"beard" = "胡须"
+"belly" = "腹部"
+"chitin" = "甲壳"
+"ears" = "耳朵"
+"eyebrow" = "眉毛"
+"eyebrows" = "眉毛"
+"eyelashes" = "睫毛"
+"eyes" = "眼睛"
+"fat" = "脂肪"
+"feathers" = "羽毛"
+"flesh" = "血肉"
+"fluff" = "绒毛"
+"fur" = "毛皮"
+"hair" = "毛发"
+"hair around the eyes" = "眼周毛发"
+"head and neck down" = "头颈部绒羽"
+"head and tail" = "头部和尾巴"
+"legs" = "腿"
+"moustache" = "八字胡"
+"nose bridge" = "鼻梁"
+"other hair" = "其他毛发"
+"scales" = "鳞片"
+"sideburns" = "鬓角"
+"skin" = "皮肤"
+"tail feathers" = "尾羽"
+"wool" = "羊毛"

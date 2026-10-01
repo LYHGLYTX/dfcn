@@ -1,0 +1,264 @@
+<data-definition>
+    A - even, B - uneven for tone patterns, A - unstressed, B - stressed for accent patterns
+    <enum-type type-name='poetic_form_pattern' original-name='poetic_stress_type' base-type='int32_t'> bay12: PoeticStressType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='AA' original-name='PYRRHIC'/>
+        <enum-item name='AB' original-name='IAMBIC'/>
+        <enum-item name='BA' original-name='TROCHAIC'/>
+        <enum-item name='BB' original-name='SPONDAIC'/>
+        <enum-item name='AAA' original-name='TRIBRACHIC'/>
+        <enum-item name='BAA' original-name='DACTYLIC'/>
+        <enum-item name='ABA' original-name='AMPHIBRACHIC'/>
+        <enum-item name='AAB' original-name='ANAPAESTIC'/>
+        <enum-item name='ABB' original-name='BACCHIC'/>
+        <enum-item name='BBA' original-name='ANTIBACCHIC'/>
+        <enum-item name='BAB' original-name='CRETIC'/>
+        <enum-item name='BBB' original-name='MOLOSSIC'/>
+    </enum-type>
+
+    <enum-type type-name='poetic_form_caesura_position' original-name='poetic_caesura_type' base-type='int32_t'> bay12: PoeticCaesuraType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Initial' original-name='INITIAL'/>
+        <enum-item name='Medial' original-name='MEDIAL'/>
+        <enum-item name='Terminal' original-name='TERMINAL'/>
+    </enum-type>
+
+    <enum-type type-name='poetic_form_additional_feature' original-name='poetic_parallelism_type' base-type='int32_t'> bay12: PoeticParallelismType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='SharesUnderlyingMeaning' original-name='SAME_MEANING'/>
+        <enum-item name='ContrastsUnderlyingMeaning' original-name='CONTRASTED_MEANING'/>
+        <enum-item name='RequiredToMaintainPhrasing' original-name='SAME_PHRASING'/>
+        <enum-item name='SameGrammaticalStructure' original-name='SAME_STRUCTURE'/>
+        <enum-item name='SamePlacementOfAllusions' original-name='SAME_PLACEMENT_OF_ALLUSIONS'/>
+        <enum-item name='ReverseWordOrder' original-name='REVERSE_WORDS'/>
+        <enum-item name='ReverseGrammaticalStructure' original-name='REVERSE_STRUCTURE'/>
+        <enum-item name='PresentsDifferentView' original-name='DIFFERENT_VIEW_OR_ANGLE'/>
+        <enum-item name='MustExpandIdea' original-name='EXPANDS_IDEA'/>
+    </enum-type>
+
+    <enum-type type-name='poetic_form_mood' original-name='poetic_style_type' base-type='int32_t'> bay12: PoeticStyleType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Narrative' original-name='NARRATIVE'/>
+        <enum-item name='Dramatic' original-name='DRAMATIC'/>
+        <enum-item name='Reflective' original-name='REFLECTIVE'/>
+        <enum-item name='Riddle' original-name='RIDDLE'/>
+        <enum-item name='Ribald' original-name='RIBALD'/>
+        <enum-item name='Light' original-name='LIGHT'/>
+        <enum-item name='Solemn' original-name='SOLEMN'/>
+    </enum-type>
+
+    -- Helper type for poetic_form_subject
+    <struct-type type-name='poetic_form_subject_target' is-union='true'>
+        <compound name='Histfig'>
+            <int32_t name='subject_histfig' ref-target='historical_figure'/>
+        </compound>
+        <compound name='Concept'>
+            <enum base-type='int32_t' type-name='sphere_type' name='subject_topic'/>
+        </compound>
+    </struct-type>
+
+    <enum-type type-name='poetic_form_subject' original-name='poetic_subject_type' base-type='int32_t'> bay12: PoeticSubjectType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Past' original-name='PAST'/>
+        <enum-item name='CurrentEvents' original-name='PRESENT'/>
+        <enum-item name='Future' original-name='FUTURE'/>
+        <enum-item name='SomeoneRecentlyDeceased' original-name='RECENTLY_DECEASED_HF'/>
+        <enum-item name='SomeoneRecentlyRetired' original-name='RECENTLY_RETIRED_HF'/>
+        <enum-item name='Religion' original-name='RELIGION'/>
+        <enum-item name='SpecificPlace' original-name='SITE'/>
+        <enum-item name='SpecificWildernessRegion' original-name='SUBREGION'/>
+        <enum-item name='Nature' original-name='NATURE'/>
+        <enum-item name='Lover' original-name='LOVER'/>
+        <enum-item name='Family' original-name='FAMILY'/>
+        <enum-item name='AlcoholicBeverages' original-name='BOOZE'/>
+        <enum-item name='Journey' original-name='TRAVELS'/>
+        <enum-item name='War' original-name='WAR'/>
+        <enum-item name='Hunt' original-name='HUNTING'/>
+        <enum-item name='Mining' original-name='MINING'/>
+        <enum-item name='Death' original-name='DEATH'/>
+        <enum-item name='Immortality' original-name='IMMORTALITY'/>
+        <enum-item name='SomeonesCharacter' original-name='CHARACTER_OF_HF'/>
+        <enum-item name='Histfig' original-name='HFID'/>
+        <enum-item name='Concept' original-name='SPHERE'/>
+    </enum-type>
+
+    <enum-type type-name='poetic_form_action' original-name='poetic_intent_type' base-type='int32_t'> bay12: PoeticIntentType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Describe' original-name='DESCRIBE'/>
+        <enum-item name='Satirize' original-name='SATIRE'/>
+        <enum-item name='AmuseAudience' original-name='AMUSE'/>
+        <enum-item name='Complain' original-name='COMPLAIN'/>
+        <enum-item name='Renounce' original-name='RENUNCIATION'/>
+        <enum-item name='MakeApology' original-name='APOLOGY'/>
+        <enum-item name='ExpressPleasure' original-name='EXPRESS_PLEASURE'/>
+        <enum-item name='ExpressGrief' original-name='GRIEVE'/>
+        <enum-item name='Praise' original-name='PRAISE'/>
+        <enum-item name='TeachMoralLesson' original-name='TEACH'/>
+        <enum-item name='MakeAssertion' original-name='MAKE_ASSERTION'/>
+        <enum-item name='MakeCounterAssertion' original-name='MAKE_COUNTER_ASSERTION'/>
+        <enum-item name='MakeConcession' original-name='MAKE_CONCESSION'/>
+        <enum-item name='SynthesizePreviousIdeas' original-name='SYNTHESIZE_PREVIOUS'/>
+        <enum-item name='DevelopPreviousIdea' original-name='DEVELOP_PREVIOUS'/>
+        <enum-item name='InvertTheAssertion' original-name='INVERT_PREVIOUS'/>
+        <enum-item name='UndercutAssertion' original-name='UNDERCUT_PREVIOUS'/>
+        <enum-item name='MoveAwayFromPreviousIdeas' original-name='MOVE_AWAY_FROM_PREVIOUS'/>
+        <enum-item name='ReflectPreviousIdeas' original-name='REFLECT_ON_PREVIOUS'/>
+        <enum-item name='ConsoleAudience' original-name='CONSOLE'/>
+        <enum-item name='RefuseConsolation' original-name='REFUSE_CONSOLATION'/>
+        <enum-item name='OfferDifferentPerspective' original-name='DIFFERENT_PERSPECTIVE_ON_PREVIOUS'/>
+        <enum-item name='Beseech' original-name='BESEECH' since='v0.47.01'/>
+    </enum-type>
+
+    <bitfield-type type-name="poetic_form_feature" original-name='poetic_form_line_flag' base-type="uint32_t"> bay12: POETIC_FORM_LINE_FLAG_*
+        <flag-bit name="InternalRhyme" original-name='INTERNAL_RHYMES'/>
+        <flag-bit name="EndRhymesDontMatch" original-name='SOFT_END_RHYME'/>
+        <flag-bit name="Alliteration" original-name='ALLITERATION'/>
+        <flag-bit name="Onomatopoeia" original-name='ONOMATOPOEIA'/>
+        <flag-bit name="Antanaclasis" original-name='REPEATED_WORDS_DIFFERENT_MEANINGS'/>
+        <flag-bit name="DifferentReadings" original-name='DIFFERENT_BREAKS_DIFFERENT_MEANINGS'/>
+        <flag-bit name="ReadBackwards" original-name='CAN_BE_READ_BACKWARDS'/>
+        <flag-bit name="ReadOrthogonally" original-name='CAN_BE_READ_DIRECTIONALLY'/>
+        <flag-bit name="Emerge" original-name='CAN_BE_READ_PATHWISE'/>
+        <flag-bit name="Assonance" original-name='ASSONANCE'/>
+        <flag-bit name="Consonance" original-name='CONSONANCE'/>
+        <flag-bit name="Elision" original-name='ELISION'/>
+        <flag-bit name="Epenthesis" original-name='EPENTHESIS'/>
+        <flag-bit name="Synchysis" original-name='SYNCHYSIS'/>
+        <flag-bit name="QuantitativeMeter" original-name='QUANTITATIVE_METER'/>
+        <flag-bit name="Allegory" original-name='ALLEGORY'/>
+        <flag-bit name="Ambiguity" original-name='AMBIGUITY'/>
+        <flag-bit name="Symbolism" original-name='SYMBOLISM'/>
+        <flag-bit name="Metaphor" original-name='METAPHOR'/>
+        <flag-bit name="Simile" original-name='SIMILE'/>
+        <flag-bit name="Metonymy" original-name='METONYMY'/>
+        <flag-bit name="VividImagery" original-name='IMAGERY'/>
+        <flag-bit name="Juxtaposision" original-name='JUXTAPOSITION'/>
+    </bitfield-type>
+
+    <bitfield-type type-name="poetic_form_section_flag" base-type="uint32_t"> bay12: POETIC_FORM_SECTION_FLAG_*
+        <flag-bit name='end_rhyme_global_pattern' original-name='END_RHYME_GLOBAL_PATTERN'/>
+        <flag-bit name='verse_paragraph' original-name='VERSE_PARAGRAPH'/>
+        <flag-bit name='end_rhyme_shared_in_stanzas' original-name='END_RHYME_SHARED_IN_STANZAS'/>
+    </bitfield-type>
+
+    <struct-type type-name='poetic_form_part' original-name='poetic_form_sectionst'>
+        <bitfield base-type='uint32_t' type-name='poetic_form_section_flag' name='flags' original-name='flag'/>
+
+        "has X to Y couplets/..."
+        <int32_t name='count_min' original-name='min_number'/>
+        <int32_t name='count_max' original-name='max_number'/>
+
+        size_in_lines is set: line, couplet, tercet, quatrain, quintain, etc.
+        size_in_lines is not set: "brief verse" if less than 6, otherwise "full verse"
+        <int32_t name='size' original-name='line_number'/>
+
+        <static-array name='refrain_line' count='2' type-name='int32_t'/>
+        <static-array name='refrain_id' count='2' type-name='int32_t'/>
+
+        <stl-vector type-name='int32_t' name='line_endings' original-name='end_rhyme_scheme'/>
+        <stl-vector type-name='int32_t' name='line_feet' original-name='meter'/> "the Nth line has XX feet"
+        <stl-vector type-name='poetic_form_pattern' name='line_patterns' original-name='stress'/>
+        <stl-vector type-name='poetic_form_caesura_position' name='line_caesura_positions' original-name='caesura'/>
+
+        "first line must make use of ..."
+        <stl-vector type-name='poetic_form_feature' name='line_features' original-name='line_flag'/>
+
+        "The XX line ZZ of ... on YY line"
+        <stl-vector type-name='poetic_form_additional_feature' name='additional_features' original-name='parallelism'/> ZZ
+        <stl-vector type-name='int32_t' name='additional_targets' original-name='parallelism_line_1'/> YY
+        <stl-vector type-name='int32_t' name='additional_lines' original-name='parallelism_line_2'/> XX
+
+        <stl-vector type-name='poetic_form_mood' name='line_mood' original-name='line_style'/>
+        <stl-vector type-name='poetic_form_subject' name='line_subject'/>
+        <stl-vector type-name='poetic_form_subject_target' name='line_subject_target' original-name='line_subject_id'/>
+        <stl-vector type-name='poetic_form_action' name='line_action' original-name='line_intent'/>
+        <stl-vector type-name='int32_t' name='line_persona_ind'/>
+
+        <int32_t name='some_lines_syllables' original-name='section_meter'/> "it has lines with ... syllables"
+        <enum type-name='poetic_form_pattern' name='some_lines_pattern' original-name='section_stress'/> "it has lines with a tone/accent pattern of ..."
+
+        "it has ... caesura in each line"
+        <enum type-name='poetic_form_caesura_position' name='each_line_caesura_position' original-name='section_caesura'/>
+
+        "certain lines have ..." same as additional_features above
+        <stl-vector type-name='poetic_form_additional_feature' name='certain_lines_additional_features' original-name='section_parallelism'/>
+
+        <enum type-name='poetic_form_mood' name='mood' original-name='section_style'/>
+        <enum type-name='poetic_form_subject' name='subject' original-name='section_subject'/>
+        <int32_t name='subject_id' original-name='section_subject_id'/>
+        <enum type-name='poetic_form_action' name='action' original-name='section_intent'/>
+        <int32_t name='persona_id' original-name='section_persona_ind'/>
+        <bitfield base-type='uint32_t' type-name='poetic_form_feature' name='line_flags' original-name='section_line_flag'/>
+    </struct-type>
+
+    <enum-type type-name='poetic_form_persona_type' base-type='int32_t'> bay12: PoeticFormPersonaType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='Author' original-name='SELF'/>
+        <enum-item name='Soldier' original-name='SOLDIER'/>
+        <enum-item name='Traveller' original-name='TRAVELLER'/>
+        <enum-item name='RelativeOfAuthor' original-name='OWN_RELATIVE'/>
+        <enum-item name='PartyOfDebate' original-name='DEBATER'/>
+        <enum-item name='FictionalPoet' original-name='FICTIONAL_POET'/>
+        <enum-item name='Histfig' original-name='HIST_FIG'/>
+        <enum-item name='Animal' original-name='CREATURE'/>
+    </enum-type>
+
+    <struct-type type-name='poetic_form_perspective' original-name='poetic_form_personast'>
+        "written from the perspective of ..."
+        <enum type-name='poetic_form_persona_type' name='type'/>
+        <int32_t name='subtype' comment='Histfig:ID, Animal:Race'/>
+        <int32_t name='subtype2' comment='Animal:Caste'/>
+    </struct-type>
+
+    <bitfield-type type-name='poetic_form_flag' base-type='uint32_t'> bay12: POETIC_FORM_FLAG_*
+        <flag-bit name='tone_patterns' original-name='TONAL_REPLACES_STRESS'/>
+        <flag-bit name='produces_individual_poems' original-name='HAS_COMPOSITIONS'/>
+    </bitfield-type>
+
+    <struct-type type-name='poetic_form' original-name='poetic_formst' instance-vector='$global.world.poetic_forms.all' key-field='id'>
+        <int32_t name='id' original-name='global_id'/>
+
+        <compound type-name='language_name' name='name'/>
+        <int32_t name='originating_entity' original-name='origin_entity_id' ref-target='historical_entity'/> "originating in ..."
+        <int32_t name='original_author' original-name='origin_hfid' ref-target='historical_figure'/> "originally devised by ..."
+
+        <int32_t name='subject_hf' original-name='worship_target_hfid' ref-target='historical_figure' comment='worship target'/>
+
+        <bitfield base-type='uint32_t' type-name='poetic_form_flag' name='flags' original-name='flag'/>
+
+        <stl-vector pointer-type='poetic_form_part' name='parts' original-name='section'/>
+        <int32_t name='each_line_feet' original-name='poem_meter'/>
+        <enum type-name='poetic_form_pattern' name='each_line_pattern' original-name='poem_stress'/>
+        <enum type-name='poetic_form_caesura_position' name='every_line_caesura_position' original-name='poem_caesura'/>
+
+        "certain lines often ... and they sometimes ..."
+        <stl-vector type-name='poetic_form_additional_feature' name='common_features' original-name='poem_parallelism'/>
+
+        "is a narrative/... poetic form"
+        <enum type-name='poetic_form_mood' name='mood' original-name='poem_style'/>
+        <enum type-name='poetic_form_subject' name='subject' original-name='poem_subject'/>
+        <compound type-name='poetic_form_subject_target' name='subject_target' original-name='poem_subject_id'/>
+
+        <enum type-name='poetic_form_action' name='action' original-name='poem_intent'/>
+
+        <int32_t name='preferred_perspective' original-name='poem_persona_ind' comment='if not -1, ALWAYS written from that perspective'/>
+
+        "use of ... is characteristic of the form" or "must feature lines which ..."
+        <bitfield type-name='poetic_form_feature' name='features' original-name='poem_line_flag'/>
+
+        <stl-vector pointer-type='poetic_form_perspective' name='perspectives' original-name='persona'/>
+    </struct-type>
+
+    <struct-type type-name='poetic_form_handlerst'>
+        <stl-vector pointer-type='poetic_form' name='all' original-name='global'/>
+
+        <stl-vector pointer-type='poetic_form' name='order_load' has-bad-pointers='true'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

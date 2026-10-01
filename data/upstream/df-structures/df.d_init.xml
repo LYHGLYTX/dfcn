@@ -1,0 +1,198 @@
+<data-definition>
+    <enum-type type-name='d_init_tunnel' base-type='int32_t'> bay12: not an actual enum
+        <enum-item name='NO'/>
+        <enum-item name='FINDER'/>
+        <enum-item name='ALWAYS'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_flags1' original-name='d_init_display_flag_type'> bay12: DInitDisplayFlagType
+        <enum-item name='VARIED_GROUND_TILES'/>
+        <enum-item name='ENGRAVINGS_START_OBSCURED'/>
+        <enum-item name='SHOW_IMP_QUALITY'/>
+        <enum-item name='SHOW_FLOW_AMOUNTS'/>
+        <enum-item name='SHOW_RAMP_ARROWS'/>
+        <enum-item name='FORT_SHOW_CLOTHING_DYES'/>
+        <enum-item name='ADV_SHOW_CLOTHING_DYES'/>
+        <enum-item name='SHOW_RECTANGLE_DIMENSIONS'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_nickname' original-name='nickname_display_type' base-type='int32_t'> bay12: NicknameDisplayType
+        <enum-item name='REPLACE_FIRST'/>
+        <enum-item name='CENTRALIZE'/>
+        <enum-item name='REPLACE_ALL'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_idlers' original-name='init_display_idlers_type' base-type='int32_t'> bay12: InitDisplayIdlersType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='TOP'/>
+        <enum-item name='BOTTOM'/>
+    </enum-type>
+
+    <bitfield-type type-name='tile_flag' base-type='uint8_t'>
+        <flag-bit name='INVERTED'/>
+    </bitfield-type>
+
+    <struct-type type-name='d_init_displayst'>
+        <df-flagarray name='flags' original-name='flag' index-enum='d_init_flags1'/>
+
+        <static-array name='nickname' original-name='nickname_display' count='11' index-enum='game_type'><enum type-name='d_init_nickname'/></static-array> must specify count because game_type.NONE is not -1
+
+        <uint8_t name='sky_tile'/>
+        <static-array name='sky_color' original-name='sky' type-name='int16_t' count='3' comment='not an array'/>
+        <uint8_t name='chasm_tile'/>
+        <uint8_t name='pillar_tile'/>
+
+        N S E W NS NE NW SE SW EW NSE NSW NEW SEW NSEW
+        <static-array name='track_tiles' original-name='track_tile' type-name='uint8_t' count='15' since='v0.34.08'/>
+        <static-array name='track_tile_invert' original-name='track_tile_flag' type-name='tile_flag' count='15' since='v0.34.08'/>
+        <static-array name='track_ramp_tiles' original-name='track_ramp_tile' type-name='uint8_t' count='15' since='v0.34.08'/>
+        <static-array name='track_ramp_invert' original-name='track_ramp_tile_flag' type-name='tile_flag' count='15' since='v0.34.08'/>
+
+        <static-array name='tree_tiles' original-name='tree_part_tile' type-name='uint8_t' count='104' since='v0.40.01'/> TREE_PART_TILENUM
+
+        <static-array name='chasm_color' original-name='chasm' type-name='int16_t' count='3' comment='not an array'/>
+
+        <compound name='wound_color'> not a compound
+            <static-array name='none' original-name='wound_none' type-name='int16_t' count='3' comment='not an array'/>
+            <static-array name='minor' original-name='wound_minor' type-name='int16_t' count='3'/>
+            <static-array name='inhibited' original-name='wound_inhibited' type-name='int16_t' count='3' comment='not an array'/>
+            <static-array name='function_loss' original-name='wound_function_loss' type-name='int16_t' count='3' comment='not an array'/>
+            <static-array name='broken' original-name='wound_broken' type-name='int16_t' count='3' comment='not an array'/>
+            <static-array name='missing' original-name='wound_missing' type-name='int16_t' count='3' comment='not an array'/>
+        </compound>
+
+        <enum type-name='d_init_idlers' name='idlers'/>
+
+        <enum base-type='int32_t' type-name='d_init_tunnel' name="show_embark_tunnel"/>
+        <int32_t name='number_of_lower_elevations_shown' original-name='z_levels_to_show' since='v0.50.01'/>
+    </struct-type>
+
+    <enum-type type-name='d_init_flags2' original-name='init_adventure_flag_type'> bay12: InitAdventureFlagType
+        <enum-item name='MORE' original-name='MORE_ON'/>
+        <enum-item name='ADVENTURER_TRAPS' original-name='TRAPS_ON'/>
+        <enum-item name='ADVENTURER_ALWAYS_CENTER' original-name='ALWAYS_CENTER'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_adventurer_zview' original-name='adventure_z_view_type' base-type='int32_t'> bay12: AdventureZViewType
+        <enum-item name='OFF'/>
+        <enum-item name='UNHIDDEN'/>
+        <enum-item name='CREATURE'/>
+        <enum-item name='ON'/>
+    </enum-type>
+
+    <struct-type type-name='d_init_adventurest'>
+        <df-flagarray name='flags' original-name='flag' index-enum='d_init_flags2'/>
+        <int32_t name='display_length'/>
+        <enum type-name='d_init_adventurer_zview' name='z_view_display_type'/>
+        <int16_t name='z_view_size'/>
+    </struct-type>
+
+    <struct-type type-name='d_init_dwarfst'>
+        <int32_t name="population_cap"/>
+        <int32_t name="strict_population_cap"/>
+        <int32_t name="baby_cap_absolute" original-name='baby_child_cap'/>
+        <int32_t name="baby_cap_percent" original-name='baby_child_perc'/>
+        <int32_t name="visitor_cap"/>
+
+        <int32_t name="specific_seed_cap"/>
+        <int32_t name="fortress_seed_cap"/>
+
+        <static-array name='path_cost' type-name='int32_t' count='4' comment='not an array'/>
+        <static-array name='embark_rect' original-name='embark_rectangle' type-name='int32_t' count='2'/>
+
+        <compound name='store_dist'> not a compound
+            <int32_t name='item_decrease' original-name='store_dist_item_decrease'/>
+            <int32_t name='seed_combine' original-name='store_dist_seed_combine'/>
+            <int32_t name='bucket_combine' original-name='store_dist_bucket_combine'/>
+            <int32_t name='barrel_combine' original-name='store_dist_barrel_combine'/>
+            <int32_t name='bin_combine' original-name='store_dist_bin_combine'/>
+        </compound>
+
+        <int32_t name='graze_coefficient' since='v0.40.13'/>
+        <int32_t name='maximum_embark_dim' since='v0.50.01'/>
+        <int32_t name='cull_dead_units_at' since='v0.50.06'/>
+        <int32_t name='horizontal_scroll_speed' since='v0.51.11'/>
+        <int32_t name='horizontal_scroll_speed_fast' since='v0.51.11'/>
+        <int32_t name='vertical_scroll_speed' since='v0.51.11'/>
+        <int32_t name='vertical_scroll_speed_fast' since='v0.51.11'/>
+        <int32_t name='horizontal_scroll_speed_world' since='v0.51.11'/>
+        <int32_t name='horizontal_scroll_speed_world_fast' since='v0.51.11'/>
+        <int32_t name='vertical_scroll_speed_world' since='v0.51.11'/>
+        <int32_t name='vertical_scroll_speed_world_fast' since='v0.51.11'/>
+    </struct-type>
+
+    <enum-type type-name='d_init_flags4' original-name='init_feature_flag_type'> bay12: InitFeatureFlagType
+        <enum-item name='TEMPERATURE'/>
+        <enum-item name='WEATHER'/>
+        <enum-item name='UNUSED_01_03'/>
+        <enum-item name='UNUSED_01_04'/>
+        <enum-item name='UNUSED_01_05'/>
+        <enum-item name='UNUSED_01_06'/>
+        <enum-item name='AUTOSAVE_PAUSE'/>
+        <enum-item name='UNUSED_01_08'/>
+
+        <enum-item name='INITIAL_SAVE'/>
+        <enum-item name='UNUSED_02_02'/>
+        <enum-item name='CAVEINS'/>
+        <enum-item name='ARTIFACTS'/>
+        <enum-item name='LOG_MAP_REJECTS'/>
+        <enum-item name='PAUSE_ON_LOAD'/>
+        <enum-item name='EMBARK_WARNING_ALWAYS'/>
+        <enum-item name='SHOW_ALL_HISTORY_IN_DWARF_MODE' original-name='SHOW_ALL_HISTORY_IN_FORT_MODE'/>
+
+        <enum-item name='TESTING_ARENA'/>
+        <enum-item name='WALKING_SPREADS_SPATTER_DWF'/>
+        <enum-item name='WALKING_SPREADS_SPATTER_ADV'/>
+        <enum-item name='KEYBOARD_CURSOR'/>
+        <enum-item name='MULTITHREADING'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_embark_confirm' original-name='post_prepare_embark_confirmation_type' base-type='int32_t'> bay12: PostPrepareEmbarkConfirmationType
+        <enum-item name='ALWAYS'/>
+        <enum-item name='IF_POINTS_REMAIN'/>
+        <enum-item name='NO'/>
+    </enum-type>
+
+    <enum-type type-name='d_init_autosave' original-name='auto_save_frequency_type' base-type='int32_t'> bay12: AutoSaveFrequencyType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='SEASONAL'/>
+        <enum-item name='YEARLY'/>
+        <enum-item name='SEMIANNUAL'/>
+    </enum-type>
+
+    <struct-type type-name='d_init_featurest'>
+        <df-flagarray name='flags' original-name='flag' index-enum='d_init_flags4'/>
+        <enum type-name='d_init_embark_confirm' name="post_prepare_embark_confirmation"/>
+        <enum type-name='d_init_autosave' name="autosave" original-name='autosave_frequency'/>
+    </struct-type>
+
+    <bitfield-type type-name='announcement_flags' original-name='init_announcement_flag' base-type='uint32_t'> bay12: INIT_ANNOUNCEMENT_FLAG_*
+        <flag-bit name='DO_MEGA' comment='BOX'/>
+        <flag-bit name='PAUSE' comment='P'/>
+        <flag-bit name='RECENTER' comment='R'/>
+        <flag-bit name='A_DISPLAY' comment='A_D'/>
+        <flag-bit name='D_DISPLAY' comment='D_D'/>
+        <flag-bit name='UNIT_COMBAT_REPORT' comment='UCR'/>
+        <flag-bit name='UNIT_COMBAT_REPORT_ALL_ACTIVE' comment='UCR_A'/>
+        <flag-bit name='ALERT' original-name='ALERT_BUTTON' comment='ALERT' since='v0.50.01'/>
+    </bitfield-type>
+
+    <struct-type type-name='announcements' original-name='d_init_announcementst'>
+        <static-array name='flags' original-name='flag' type-name='announcement_flags' index-enum='announcement_type'/>
+    </struct-type>
+
+    <struct-type type-name='d_init' original-name='d_initst'>
+        <compound type-name='d_init_displayst' name='display'/>
+        <compound type-name='d_init_adventurest' name='adventure'/>
+        <compound type-name='d_init_dwarfst' name='dwarf'/>
+        <compound type-name='d_init_featurest' name='feature'/>
+        <compound type-name='announcements' name='announcements' original-name='announcement'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

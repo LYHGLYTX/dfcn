@@ -1,0 +1,28 @@
+base = "items::orthopedic_cast"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{main}" = "{^0}{main}"
+# 0xa83d0b..0xa83e46 looks up the cast item by id and appends its stored
+# material (+0x108), body_part (+0xe8), then cast/casts. Both fields may be empty.
+"{^0}{::health::bodypart} {cast}" = "{^0}{::health::bodypart}{cast}"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"{::materials::adjective} " = "{::materials::adjective}"
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"limb/body cast" = "肢体/身体石膏"
+"limb/body casts" = "肢体/身体石膏"
+"{cast}" = "{cast}"
+
+[[rulesets]]
+name = "cast"
+[rulesets.rules]
+"cast" = "固定套"
+"casts" = "固定套"

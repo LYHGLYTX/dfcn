@@ -1,0 +1,47 @@
+base = "items::book"
+
+[[rulesets]]
+[rulesets.rules]
+# 0xca0bd0 calls 0xca5bb0 for the complete description inside parentheses.
+# Whole-item quality belongs to the outer items designation; c65450 also
+# separately handles the title-only copy annotation.
+"{::text::book} ({description})" = "{::text::book}（{description}）"
+"{main}" = "{main}"
+
+[[rulesets]]
+name = "description"
+[rulesets.rules]
+"{::items::^0}{main}{::items::$number}" = "{::items::^0}{main}{::items::$number}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+# 0xa84e99..0xa84ee1: material + -bound + codex/codices; an absent
+# material skips the binding prefix. The same production is used with
+# or without an authored title.
+"{binding_material}-bound {codex_kind}" = "{binding_material}书壳装订的{codex_kind}"
+"{kind}" = "{kind}"
+
+[[rulesets]]
+name = "binding_material"
+[rulesets.rules]
+"{::materials}" = "{::materials}"
+"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"
+
+[[rulesets]]
+name = "codex_kind"
+[rulesets.rules]
+"codex" = "抄本"
+"codices" = "抄本"
+
+[[rulesets]]
+name = "kind"
+[rulesets.rules]
+"{codex_kind}" = "{codex_kind}"
+# Keep the unqualified writing-item nouns reachable from shared task rules.
+# Paper/animal-hide qualifiers are assembled by the shared writing-material
+# formatter, not by the ordinary woven-material item prefix.
+"scroll" = "卷轴"
+"scrolls" = "卷轴"
+"quire" = "稿纸"
+"quires" = "稿纸"

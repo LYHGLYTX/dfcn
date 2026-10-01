@@ -1,0 +1,32 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# Complete native self-description helper 0x140689de0..0x14068c230, called by main NPC dialogue at 0x1404dd071.
+# Current/past professions, durations, wandering/hunting/mercenary/snatcher/thief and kills are TEXT_SET clauses already in data/extracted/announcement-dialogue-sources.tsv and data/runtime/announcement-dialogue-translations.tsv.
+# This file supplies the native-only office, guard, prisoner/slave and desire branches. Existing multi-sentence records remain whole through the shared announcement parser.
+biography-office	{s}	{s1}	$term	0x14068a6f2 ->0x14099a3c0; complete existing entity POSITION name, sex/number and land-title variants
+biography-office	{s} of {s}	{s2}的{s1}	$term,$name	0x14068a73e ->0x1409bdfb0:0x1409be03a+0x1409be076; complete institution ownership
+sentence	I am {s}.	我是{s1}。	biography-office	0x14068a6c9+0x14068a6f2+0x14068a73e+0x14068a749
+sentence	I am a forgetful guard.	我是一名健忘的卫兵。		0x14068a938+0x14068aab3+0x14068ab17; missing guard-office data branch
+sentence	I am a {s} of the {s} {s}.	我是{s2}{s3}的{s1}。	$term,$term,$person	0x14068a938+0x14068a9cd+0x14068aa28..0x14068aa7d+0x14068ab17; raw POSITION guard title + superior office + personal name
+sentence	I am a {s} of the {s} {s}, as are you.	与你一样，我也是{s2}{s3}的{s1}。	$term,$term,$person	0x14068a938+0x14068a9cd+0x14068aa28..0x14068aa7d+0x14068aaa2+0x14068ab17
+sentence	I am a {s}, as are you.	与你一样，我也是一名{s1}。	$term	0x14068a938+0x14068a9cd ->0x14068aa8f+0x14068aaa2+0x14068ab17; absent superior's figure branch
+sentence	I am a prisoner of {s}.	我是{s1}的囚犯。	$name	0x14068aada+0x14068ab12+0x14068ab17; complete entity name built at 0x14068a8f7
+sentence	I am a slave of {s}.	我是{s1}的奴隶。	$name	0x14068aaf9+0x14068ab12+0x14068ab17
+sentence	Please help me to escape from this place.	请帮我逃离这个地方。		0x14068c08a; desire switch shared tail 0x14068c12f
+sentence	But mostly I just like to drink.	不过，我最喜欢的还是喝酒。		0x14068c0ac
+sentence	How I long for some excitement in my life...	我真想让日子过得刺激些……		0x14068c0cb
+sentence	I've always dreamed of seeing far-away places.	我一直梦想着去看看遥远的地方。		0x14068c0ea
+sentence	I would give anything to be away from here. I can't stand the boredom!	只要能离开这里，什么代价我都愿意付。我实在受不了这么无聊的日子了！		0x14068c109
+sentence	Can you lead me to battle and a warrior's death?	你能带我上战场，让我像个战士那样战死吗？		0x14068c128
+# Native RAW forwarding call sites, after TEXT_SET lookup 0x14131e4c0 and macro expansion 0x140685d00:
+# Selector evidence: 0x14131e51e indexes the 63-entry jump table at RVA 0x131eefc; each case compares the complete TEXT_SET token.
+# 0x14068ac2f: 0x3c MERCENARY_PROFESSION / 0x3d MERCENARY_PROFESSION_YEAR.
+# 0x14068ae06: 0x29 SNATCHER_PROFESSION / 0x35 SNATCHER_PROFESSION_YEAR.
+# 0x14068af9f: 0x27 HUNTING_PROFESSION / 0x34 HUNTING_PROFESSION_YEAR.
+# 0x14068b1d4: 0x26 WANDERING_PROFESSION / 0x33 WANDERING_PROFESSION_YEAR.
+# 0x14068b36d: 0x28 THIEF_PROFESSION / 0x36 THIEF_PROFESSION_YEAR.
+# 0x14068b507: 0x2a GUARD_PROFESSION; 0x14068b5fd: 0x2b GUARD_WARNING; 0x14068b80f: 0x2c SOLDIER_PROFESSION.
+# 0x14068b9e7: 0x2e PAST_PROFESSION_YEAR; 0x14068ba92: 0x2d PAST_PROFESSION_NO_YEAR.
+# 0x14068bb6f: 0x37 PAST_WANDERING_PROFESSION / 0x38 PAST_HUNTING_PROFESSION / 0x39 PAST_SNATCHER_PROFESSION / 0x3a PAST_THIEF_PROFESSION / 0x3e PAST_MERCENARY_PROFESSION.
+# 0x14068bda4: 0x30 CURRENT_PROFESSION_YEAR; 0x14068be65: 0x2f CURRENT_PROFESSION_NO_YEAR.
+# 0x14068b7e3 and 0x14068bca9 ->0x140696310: 0x140696512 selects 0x31 HIST_FIG_SLAYER; 0x14069673c selects 0x32 ANIMAL_SLAYER; no additional literal outer sentence.
+# 0x14068fffc, in the separate 0x14068f2f0 battle-boast helper, also calls 0x140696310 and uses these same complete RAW slayer text sets.

@@ -1,0 +1,113 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# All general_ref +0x90 implementations are recorded in tools/announcement-reference-source-inventory.tsv.
+# This namespace supplements the existing shared knowledge, item, creature, historical-event and generated-name parsers.
+work-reference	{s} as a poetic form	诗歌形式{s1}	$name	0x140edfd50:0x140edfdae+0x140edfde1; existing Poetic form term
+work-reference	{s} as a musical form	音乐形式{s1}	$name	0x140edfe50:0x140edff36+0x140edff69; existing Musical form term
+work-reference	{s} as a dance form	舞蹈形式{s1}	$name	0x140edffe0:0x140ee00c6+0x140ee00f9; existing Dance form term
+work-reference	the {s} language	{s1}语	$term	0x140ee02b0:0x140ee02df+0x140ee0302..0x140ee0335+0x140ee0340; complete raw language label
+work-reference	the worthlessness of {s}	{s1}毫无价值这一观点	reference-value	0x140ee0380:0x140ee0398+0x140ee03d6+native 33-value switch
+work-reference	the value of {s}	{s1}的价值	reference-value	0x140ee0380:0x140ee03ac+0x140ee03d6+native 33-value switch
+work-reference	nuances of {s}	{s1}的微妙之处	reference-value	0x140ee0380:0x140ee03bb+0x140ee03d6+native 33-value switch
+work-reference	a population of {s}	一群{s1}	reference-population	0x140ef49a0:0x140ef4a16..0x140ef4a82; plural creature/corpse field
+reference-population	{s}	{s1}	$creature	0x140ef4a71->0x140b94ed0; complete plural caste/race
+reference-population	ghostly {s}	幽灵形态的{s1}	reference-population	0x140ef4a31+0x140ef4a71; independent ghostly flag can combine with animated corpses
+reference-population	animated {s} corpses	复活的{s1}尸体	$creature	0x140ef4a4c+0x140ef4a71+0x140ef4a82; plural reanimated corpses
+work-reference	a ghostly {s}	幽灵形态的{s1}	$creature	0x140ef4c10:0x140ef4c3e+0x140ef4c59+0x140ef4c9b
+work-reference	a animated {s} corpse	复活的{s1}尸体	$creature	0x140ef4c10:0x140ef4c3e+0x140ef4c74+0x140ef4c9b+0x140ef4cac; native literal uses a before animated
+work-reference	a ghostly animated {s} corpse	幽灵形态的复活{s1}尸体	$creature	0x140ef4c59+0x140ef4c74+0x140ef4c9b+0x140ef4cac; independent ghost/corpse flags
+work-reference	an unnamed group	一个无名势力		0x140ef5280:0x140ef53f4; scoped entity description, existing Groups=势力
+work-reference	the fiery bowels of the earth	大地的炽热深处		0x140ef4350:0x140ef44af; feature-layer unnamed magma fallback
+work-reference	{s} in {s}	{s2}的{s1}	reference-building,$name	0x140eed3b0:0x140eed6ca+0x140eed743; entire building and site fields
+work-reference	{s}	{s1}	reference-building	0x140eed3b0; complete abstract building, optional name
+reference-building	a {s}	{s1}	reference-building-type	0x140eed445/0x140eed44c+0x140eed490..0x140eed57b; unnamed building
+reference-building	the {s}	{s1}	reference-building-type	0x140eed445+0x140eed490..0x140eed57b; native definite unnamed catacombs/sewers
+reference-building	the {s} {s}	{s1}{s2}	reference-building-type,$name	0x140eed445+0x140eed490..0x140eed57b+0x140eed639; named building
+reference-kind	{s}	{s1}	reference-building-type	0x140eed3b0; bounded noun type for named reference
+reference-kind	{s}	{s1}	$creature	0x140ef0690:0x140ef091d; full named historical figure caste
+reference-kind	ghostly {s}	幽灵形态的{s1}	$creature	0x140ef0690:0x140ef08f5+0x140ef091d
+reference-kind	deity	神祇		0x140ef079a; existing deity term
+reference-kind	force	自然之灵		0x140ef07e3; regional FORCE historical figure, shared with relationship caption
+work-reference	{s}	{s1}	$sphere	0x140ef14a0 tail-calls shared sphere formatter 0x140756690
+work-reference	{s}	{s1}	$book	0x140ee0170:0x140ee021e; existing complete written-content title, including lowercased initial The
+work-reference	the {s} {s}	{s1}{s2}	$item,$book	0x140eec6b0:0x140eec786+0x140eec839; complete artifact type and artifact name
+work-reference	a {s}	{s1}	$item	0x140ef4e41+0x140ef4e9c; item type/subtype/material/index through a82c10, including native punctuation within item names
+inscription	the secrets of life and death	生死秘密		0x1400b3f54; active vanilla_procedural/scripts/generators/interactions/secret.lua:127 IS_NAME; existing data/runtime/legends-events.tsv term
+
+# Native value and building/site type vocabulary reuses the established tables above.
+reference-value	law	法律		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values law
+reference-value	loyalty	忠诚		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values loyalty
+reference-value	family	亲情		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values family
+reference-value	friendship	友情		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values friendship
+reference-value	power	权势		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values power
+reference-value	truth	诚实		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values truth
+reference-value	cunning	谋略		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values cunning
+reference-value	eloquence	口才		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values eloquence
+reference-value	fairness	公平		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values fairness
+reference-value	decorum	礼仪		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values decorum
+reference-value	tradition	传统		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values tradition
+reference-value	artwork	艺术		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values artwork
+reference-value	cooperation	合作		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values cooperation
+reference-value	independence	独立		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values independence
+reference-value	stoicism	克制		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values stoicism
+reference-value	introspection	自省		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values introspection
+reference-value	self-control	自律		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values self-control
+reference-value	tranquility	宁静		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values tranquility
+reference-value	harmony	和谐		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values harmony
+reference-value	merriment	欢庆		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values merriment
+reference-value	craftsmanship	工艺		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values craftwork
+reference-value	martial prowess	武艺		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values martial prowess
+reference-value	skill	技艺		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values skill
+reference-value	hard work	勤劳		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values hard work
+reference-value	sacrifice	牺牲		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values sacrifice
+reference-value	competition	竞争		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values competition
+reference-value	perseverance	坚韧		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values perseverance
+reference-value	leisure time	闲暇		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values leisure time
+reference-value	commerce	商业		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values commerce
+reference-value	romance	浪漫		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values romance
+reference-value	nature	自然		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values nature
+reference-value	peace	和平		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values peace
+reference-value	knowledge	知识		0x140ee040b..0x140ee0786 native switch; existing data/runtime/local-overrides.tsv Values knowledge
+reference-building-type	counting house	账房		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a counting house
+reference-building-type	hospital	医院		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a hospital
+reference-building-type	guildhall	行会大厅		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a guildhall
+reference-building-type	mead hall	蜂蜜酒厅		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a mead hall
+reference-building-type	keep	城堡主楼		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a keep
+reference-building-type	temple	神殿		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a temple
+reference-building-type	library	图书馆		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a library
+reference-building-type	tavern	酒馆		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a tavern
+reference-building-type	spire	地下尖塔		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv an underworld spire
+reference-building-type	market	市场		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a market
+reference-building-type	tomb	陵墓		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a tomb
+reference-building-type	catacombs	地下墓穴		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv the catacombs
+reference-building-type	sewers	下水道		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv the sewers
+reference-building-type	dungeon	地牢		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a dungeon
+reference-building-type	tower	高塔		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a tower
+reference-kind	hamlet	村落		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	town	城镇		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	hillocks	丘陵		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	pits	深坑		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	labyrinth	迷宫		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	lair	巢穴		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	shrine	圣地		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	tower	高塔		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	monastery	修道院		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	fort	堡垒		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	castle	城堡		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	camp	营地		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	tomb	陵墓		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	vault	秘库		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	monument	纪念碑		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	site	地点		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	palace	宫殿		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	dungeon	地牢		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	forest retreat	森林聚落		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	mountain halls	山地大厅		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	dark fortress	黑暗要塞		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	dark pits	黑暗深坑		Native site introduction; existing dark modifier and pits type
+reference-kind	important location	重要地点		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	fortress	要塞		0x1410cbea5/0x1410cbf0d; existing fortress term
+reference-kind	cave	洞穴		0x1410cbf28; existing cave term
+reference-kind	mysterious palace	神秘宫殿		0x1410cc09d; existing world-site palace term
+reference-kind	mysterious dungeon	神秘地牢		0x1410cc0b7; existing world-site dungeon term
+reference-kind	mysterious lair	神秘巢穴		0x1410cc0cc; existing world-site lair term
+work-reference	a {s}	{s1}	reference-kind	0x140ef17dc/0x140ef17e3+0x1410cbe50; unnamed site or figure kind

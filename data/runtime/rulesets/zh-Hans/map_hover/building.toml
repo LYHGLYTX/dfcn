@@ -1,0 +1,214 @@
+# DF 53.16 PE building caption virtual slot +0x188. The complete set of
+# concrete building formatters and their literal/inline sources is retained
+# in data/extracted/map-hover-building-sources.tsv. These are complete hover captions, so
+# material, direction, state and contents cannot become detached word matches.
+base = "map_hover::building"
+
+[[rulesets]]
+[rulesets.rules]
+"{fixed}" = "{fixed}"
+"{material} {furniture}" = "{material}{furniture}"
+"{rough}{material} {rough_furniture}" = "{rough}{material}{rough_furniture}"
+"Vertical {material} Bars" = "{material}垂直栅栏"
+"{direction}{material} Axle" = "{direction}{material}传动轴"
+"{weapon_state}{weapon_contents}" = "{weapon_state}{weapon_contents}"
+"{construction}" = "{construction}"
+"{workshop}" = "{workshop}"
+"{::items::cage}" = "{::items::cage}"
+# Offering places and display furniture return their first contained item;
+# instruments and tool workshops also delegate to the complete item caption.
+# Named artifacts return before the native quality/wear wrappers are added.
+# Only validated native-language names may fill that fallback. Broad English
+# artifact-title parsing would also swallow ordinary material + building text.
+"{::items}" = "{::items}"
+"{::text::native_item_name}" = "{::text::native_item_name}"
+"Activity Zone #{#digits}" = "活动区 #{#digits}"
+# Numbered stockpiles and all combinations of their 17 ordered categories
+# are consumed by the existing complete Stockpile #{d} caption resolver.
+
+[[rulesets]]
+name = "fixed"
+[rulesets.rules]
+"Vacant Shop" = "空置商店"
+"Exotic Clothing Shop" = "异域服装店"
+"Clothing Shop" = "服装店"
+"Crafts Market" = "工艺品市场"
+"General Store" = "杂货店"
+"Wagon" = "马车"
+"Trade Depot" = "贸易站"
+"Nest" = "巢穴"
+"Nest Box" = "巢箱"
+"Offering Place" = "供奉处"
+"Display Furniture" = "展示家具"
+"Bookcase" = "书架"
+"Hive" = "蜂箱"
+"Farm Plot" = "耕地"
+"Smelter" = "熔炉"
+"Glass Furnace" = "玻璃窑"
+"Kiln" = "黏土窑"
+"Wood Furnace" = "烧木窑"
+"Magma Smelter" = "岩浆熔炉"
+"Magma Glass Furnace" = "岩浆玻璃窑"
+"Magma Kiln" = "岩浆黏土窑"
+"Furnace" = "炉窑"
+"Stone-Fall Trap" = "落石陷阱"
+"Cage Trap" = "笼式陷阱"
+"Track Stop" = "轨道站点"
+"Weapon Trap" = "武器陷阱"
+"Pressure Plate" = "压力板"
+"Bolt Thrower" = "弩箭投射器"
+"Ballista" = "弩炮"
+"Catapult" = "投石机"
+"Screw Pump" = "螺杆泵"
+"Water Wheel" = "水车"
+"Windmill" = "风车"
+"Instrument" = "乐器"
+"Tool" = "工具"
+"Bed" = "床"
+"Traction Bench" = "牵引台"
+"Dirt Road" = "土路"
+"Well" = "水井"
+"Gem Window" = "宝石窗"
+"Glass Window" = "玻璃窗"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+"unknown material" = "未知物质"
+"{::materials}" = "{::materials}"
+"{::materials::adjective}" = "{::materials::adjective}"
+"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"
+"{::text::person}'s {::materials::adjective}" = "{::text::person}的{::materials::adjective}"
+# Native material.prefix + state_adj[Solid] may come from generated
+# substances and historic-figure materials outside the finite RAW lexicons.
+# Ordinary RAW grammar and the shared native qualifier resolver both handle
+# complete material phrases; matcher weights select the resulting parse.
+"{::materials::item_qualifier}" = "{::materials::item_qualifier}"
+
+[[rulesets]]
+name = "furniture"
+[rulesets.rules]
+"Door" = "门"
+"Floor Hatch" = "地板活盖"
+"Wall Grate" = "墙壁格栅"
+"Floor Grate" = "地板格栅"
+"Floor Bars" = "地板栅栏"
+"Floodgate" = "水闸"
+"Rope" = "绳索"
+"Chain" = "链条"
+"Gear Assembly" = "齿轮组"
+"Rollers" = "滚链"
+"Lever" = "控制杆"
+"Casket" = "棺木"
+"Sarcophagus" = "石棺"
+"Coffin" = "棺材"
+"Chair" = "椅子"
+"Throne" = "宝座"
+"Animal Trap" = "动物陷阱"
+"Table" = "桌子"
+"Cabinet" = "橱柜"
+"Weapon Rack" = "兵器架"
+"Armor Stand" = "盔甲架"
+"Box" = "盒子"
+"Coffer" = "石箱"
+"Chest" = "箱子"
+"Statue" = "雕像"
+"Slab" = "石板"
+
+[[rulesets]]
+name = "rough"
+optional = true
+[rulesets.rules]
+"Rough " = "粗糙"
+
+[[rulesets]]
+name = "rough_furniture"
+[rulesets.rules]
+"Archery Target" = "箭靶"
+"Support" = "支柱"
+"Pillar" = "柱子"
+"Road" = "道路"
+"Bridge" = "桥"
+
+[[rulesets]]
+name = "direction"
+[rulesets.rules]
+"Horizontal " = "横向"
+"Vertical " = "垂直"
+
+# 0x140554270: the state is independent of the contained-item count.
+# A single item uses the shared complete designation grammar, including
+# quality, wear and artifact names; empty/mixed/multiple contents are nouns.
+[[rulesets]]
+name = "weapon_state"
+[rulesets.rules]
+"Upright " = "直立的"
+"Retracted " = "缩回的"
+
+[[rulesets]]
+name = "weapon_contents"
+[rulesets.rules]
+"Weapon" = "武器"
+"Spears" = "长矛"
+"Spikes" = "尖刺"
+"Spears/Spikes" = "长矛/尖刺"
+"{::items}" = "{::items}"
+"{::text::native_item_name}" = "{::text::native_item_name}"
+
+# 0x14054ee80: construction-in-progress captions use Stair and Track/Ramp,
+# whereas finished terrain uses Stairway and Upward/Downward Track.
+[[rulesets]]
+name = "construction"
+[rulesets.rules]
+"Wall" = "墙体"
+"Reinforced Wall" = "加固墙体"
+"Floor" = "地板"
+"Up Stair" = "上行楼梯"
+"Down Stair" = "下行楼梯"
+"Up/Down Stair" = "上下行楼梯"
+"Ramp" = "斜坡"
+"Fortification" = "垛墙"
+"Construction" = "构筑物"
+"Track {::tiles::tracks::$0}" = "轨道{::tiles::tracks::$0}"
+"Track/Ramp {::tiles::tracks::$0}" = "坡道轨道{::tiles::tracks::$0}"
+
+# 0x14054fa20: profession names may be species-specific RAW names. The
+# standard and installed RAW names share the existing profession vocabulary.
+[[rulesets]]
+name = "workshop"
+[rulesets.rules]
+"Vermin Catcher's Shop" = "害虫捕坊"
+"Siege Workshop" = "攻城器械工坊"
+"Fishery" = "渔业工坊"
+"Leather Works" = "皮革工坊"
+"Magma Forge" = "岩浆锻造坊"
+"Carpenter's Workshop" = "木匠工坊"
+"Loom" = "织布机"
+"Still" = "蒸馏工坊"
+"Quern" = "手推磨"
+"Millstone" = "机械石磨"
+"Kitchen" = "厨房"
+"Farmer's Workshop" = "农夫工坊"
+"Ashery" = "灰坊"
+"Custom Workshop" = "自定义工坊"
+"Soap Maker's Workshop" = "皂匠工坊"
+"Screw Press" = "螺旋压榨机"
+"{workshop_profession}'s Shop" = "{workshop_profession}工坊"
+"{workshop_profession}'s Workshop" = "{workshop_profession}工坊"
+"{workshop_profession}'s Forge" = "{workshop_profession}锻造坊"
+
+[[rulesets]]
+name = "workshop_profession"
+[rulesets.rules]
+"Butcher" = "屠夫"
+"Tanner" = "制革"
+"Dyer" = "染色"
+"Craftsman" = "工艺品"
+"Craftsdwarf" = "工艺品"
+"Jeweler" = "珠宝匠"
+"Metalsmith" = "金属"
+"Stoneworker" = "石匠"
+"Clothier" = "裁缝"
+"Bowyer" = "制弓"
+"Mechanic" = "机械师"
+"{::professions}" = "{::professions}"

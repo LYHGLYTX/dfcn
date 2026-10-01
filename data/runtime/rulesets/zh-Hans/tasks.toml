@@ -1,0 +1,80 @@
+base = "tasks"
+
+[[rulesets]]
+[rulesets.rules]
+# A task separates its action and complete item with one space. Keep that
+# boundary so material names remain inside the item instead of swallowing it.
+"{^0} {main}" = "{^0}{main}"
+# The unit header names the actual hauled item. Use the same complete item
+# grammar as inventories; never drop its material or replace it with "物品".
+"Haul: {::items}" = "搬运：{::items}"
+# Native detailed jobs retain their complete subject/material. These are
+# typed rules, not a wildcard that can discard an unknown name or suffix.
+# Manufacture, dye colors and gem-encrusting continue using the shared menu
+# grammar; this adds task-only actions missing from that workshop menu.
+"Milk {subject}" = "给{subject}挤奶"
+"Shear {subject}" = "给{subject}剪毛"
+"Geld {subject}" = "阉割{subject}"
+"Slaughter {subject}" = "屠宰{subject}"
+"Tame {subject}" = "驯化{subject}"
+"Handle {subject}" = "照料{subject}"
+"Cage {subject}" = "将{subject}关入笼子"
+"Chain {subject}" = "用锁链拴住{subject}"
+"Release {subject}" = "释放{subject}"
+"Interrogate {subject}" = "审讯{subject}"
+"Pit/pond {subject}" = "将{subject}放入坑洞或池塘"
+"Pen/pasture {subject}" = "将{subject}带入畜栏或牧场"
+"Train {subject} for war" = "对{subject}进行战斗训练"
+"Train {subject} to hunt" = "训练{subject}狩猎"
+"Train {subject}" = "训练{subject}"
+"Mill {::plants::name}" = "碾磨{::plants::name}"
+"Process {::plants::name}" = "加工{::plants::name}"
+"Process {::plants::name} (vial)" = "加工{::plants::name}（小瓶）"
+"Process {::plants::name} (barrel)" = "加工{::plants::name}（圆桶）"
+"Extract from {::plants::name}" = "提炼{::plants::name}"
+"Cut {::materials}" = "切割{::materials}"
+"Polish {::materials}" = "打磨{::materials}"
+"Make raw {::materials}" = "制作粗糙{::materials}"
+"Mint {::items::coin}" = "铸造{::items::coin}"
+"Decorate with {decoration}" = "用{decoration}装饰"
+"Stud with {::materials}" = "用{::materials}镶嵌"
+"{::menu::sew}" = "{::menu::sew}"
+"Bait trap with {::materials} gem" = "用{::materials}宝石给陷阱放置诱饵"
+"Bait trap with {bait}" = "用{bait}给陷阱放置诱饵"
+"{::menu::weave} (dyed only)" = "{::menu::weave}（仅限已染色）"
+
+[[rulesets]]
+name = "^0"
+[rulesets.rules]
+"Assemble" = "组装"
+"Forge" = "打造"
+"Make" = "制作"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"{::items}" = "{::items}"
+
+[[rulesets]]
+name = "subject"
+[rulesets.rules]
+"{::creatures::caste::name}" = "{::creatures::caste::name}"
+"{::dwarf_language}" = "{::dwarf_language}"
+"animal" = "动物"
+"a large animal" = "一只大型动物"
+"war animal" = "受过战斗训练的动物"
+"hunting animal" = "受过狩猎训练的动物"
+"subject" = "对象"
+
+[[rulesets]]
+name = "decoration"
+[rulesets.rules]
+"{::materials}" = "{::materials}"
+"{::materials::job}" = "{::materials::job}"
+
+[[rulesets]]
+name = "bait"
+[rulesets.rules]
+"fish" = "鱼"
+"meat" = "肉"
+"gem" = "宝石"

@@ -1,0 +1,486 @@
+# Native DF 53.16 stockpile settings source inventory. Read-only disassembly, not game acceptance.
+# BuildID bcc6789e6fb477b785a2b02be80b8b1b054ff88c
+# family	source location	source (raw forms and generator components are not a cross-product)
+caption	0xdab5c4	Additional options
+caption	0xdb3038	Allow non-plant/animal
+caption	0xdb2fdd	Allow plant/animal
+caption	0xdb61f9,0xdb634d	Amber
+caption	0xdae437,0xdae5c7	Artifact
+caption	0xdb1310	Ash
+caption	0xdac8b4	Bars: metal
+caption	0xdac8ca	Bars: other materials
+caption	0xdac8f6	Blocks: metal
+caption	0xdac90c	Blocks: other materials
+caption	0xdac8e0	Blocks: stone/clay
+caption	0xdac9f1	Body
+caption	0xdac678	Body parts
+caption	0xdb2275,0xdb4dff,0xdb5d95,0xdb61b5,0xdb6309	Bone
+caption	0xdac81a	Bone meal
+caption	0xdac728	Bones
+caption	0xdac7c2	Cheese (animal)
+caption	0xdacb3b	Cheese (plant)
+caption	0xdac754	Clay
+caption	0xdb38a1,0xdb4435,0xdb4cfc,0xdb5cb1	Clear Glass
+caption	0xdb3cf1	Clear glass
+caption	0xda948f	Cloth
+caption	0xdac999	Cloth (metal)
+caption	0xdac96d	Cloth (plant)
+caption	0xdaca5f	Cloth (silk)
+caption	0xdac983	Cloth (yarn)
+caption	0xdb1320	Coal
+caption	0xdac462,0xdac4a4	Color
+caption	0xdb624e,0xdb63a2	Coral
+caption	0xdac402	Core quality
+caption	0xdac662	Corpses
+caption	0xdb4d4f,0xdb5d07,0xdb62cb,0xdb69fc	Crystal Glass
+caption	0xdb610b	Crystal glass
+caption	0xdac6d0	Cut gem
+caption	0xdac938	Cut glass
+caption	0xdac6e6	Cut stone
+caption	0xdacb25	Drink (animal)
+caption	0xdacb0f	Drink (plant)
+caption	0xdaab10	Dyed
+caption	0xdac7ac	Economic
+caption	0xdacae3	Egg
+caption	0xdaaba0	Empty animal traps
+caption	0xdaabb6	Empty cages
+caption	0xdae5a7,0xdae6c7	Exceptional
+caption	0xdac888	Extract (animal)
+caption	0xdac872	Extract (plant)
+caption	0xdac830	Fat
+caption	0xdaca75	Feet
+caption	0xdae567,0xdae687	Finely-crafted
+caption	0xdacab7	Fish
+caption	0xdb6cbc	Fresh raw hide
+caption	0xdac7ee	Fruit/leaves
+caption	0xdab5e1	Furniture/siege ammo
+caption	0xdaca8b	Gem
+caption	0xdb386c,0xdb4dc1,0xdb5db7,0xdb6391	Green Glass
+caption	0xdb623d	Green glass
+caption	0xdac780	Hair/wool
+caption	0xdac6fc	Hands
+caption	0xdac9af	Head
+caption	0xdb6193,0xdb62e7	Horn
+caption	0xdac76a	Horns/hooves
+caption	0xdac60a	Item types
+caption	0xdb4ddd,0xdb5d79,0xdb621b,0xdb636f	Leather
+caption	0xdac89e	Legs
+caption	0xdae52f,0xdae64f	Masterwork
+caption	0xdacaa1	Meat
+caption	0xdab8a7,0xdac5a7	Metal
+caption	0xdac796	Metal ores
+caption	0xdac804	Milled plant
+caption	0xdac68e	Misc. liquid
+caption	0xdab891,0xdac48e	Other materials
+caption	0xdac73e	Other stone
+caption	0xdac94e	Paper
+caption	0xdac6a4	Parchment
+caption	0xdac846	Paste
+caption	0xdb6185,0xdb62d9	Pearl
+caption	0xdb124f	Pearlash
+caption	0xdb4e10,0xdb5da6,0xdb631a	Plant Cloth
+caption	0xdb61c6	Plant cloth
+caption	0xdb0c64	Plant growth (?)
+caption	0xdacaf9	Plants
+caption	0xdb1348	Potash
+caption	0xdaab8d	Prepared meals
+caption	0xdac85c	Pressed material
+caption	0xdb6d01	Rotten raw hide
+caption	0xdac6ba	Rough gem
+caption	0xdac922	Rough glass
+caption	0xdac7d8	Seeds
+caption	0xdb4dee,0xdb5d87,0xdb622c,0xdb6380	Shell
+caption	0xdac636	Shells
+caption	0xdac5bd	Shield
+caption	0xdb4dcf,0xdb5dc8,0xdb620a,0xdb635e	Silk
+caption	0xdac712	Skulls
+caption	0xdb1330	Soap
+caption	0xdb6c52,0xdb6ca0	Standard
+caption	0xdaca07	Stone
+caption	0xdac478	Stone/clay
+caption	0xdae547,0xdae667	Superior quality
+caption	0xdac64c	Teeth
+caption	0xdaca49	Thread (metal)
+caption	0xdaca1d	Thread (plant)
+caption	0xdac620	Thread (silk)
+caption	0xdaca33	Thread (yarn)
+caption	0xdb61a4,0xdb62f8	Tooth
+caption	0xdac418	Total quality
+caption	0xdac9db	Trap components
+caption	0xdab87b	Type
+caption	0xdaab2e	Undyed
+caption	0xdacacd	Unprepared fish
+caption	0xdaab41	Unusable armor
+caption	0xdaab67	Unusable weapons
+caption	0xdaab54	Usable armor
+caption	0xdaab7a	Usable weapons
+caption	0xdb632b	Wax
+caption	0xdac9c5	Weapons
+caption	0xdab564	Weapons/trap comps
+caption	0xdae587,0xdae6a7	Well-crafted
+caption	0xdb223e,0xdb3857,0xdb4e21,0xdb5dd9,0xdb61e8,0xdb633c	Wood
+caption	0xdb4e32,0xdb5dea,0xdb61d7,0xdb625f	Yarn
+caption	0xdaff67	large pots/food storage
+caption	0xdaff27	minecarts
+caption	0xdafe97	other large tools
+caption	0xdaffa7	sand bags
+fragment	0xdb0b27	unprepared 
+caption	0xdafeef	wheelbarrows
+category	stockpile settings renderer / immediate caption	All
+category	stockpile settings renderer / immediate caption	None
+category	stockpile settings renderer / immediate caption	Ammo
+category	stockpile settings renderer / immediate caption	Animals
+category	stockpile settings renderer / immediate caption	Armor
+category	stockpile settings renderer / immediate caption	Bars/blocks
+category	stockpile settings renderer / immediate caption	Coins
+category	stockpile settings renderer / immediate caption	Finished goods
+category	stockpile settings renderer / immediate caption	Food
+category	stockpile settings renderer / immediate caption	Gems
+category	stockpile settings renderer / immediate caption	Refuse
+category	stockpile settings renderer / immediate caption	Sheets
+item-type	0x12b6a70..0x12bdd2f	floodgates
+item-type	0x12b6a70..0x12bdd2f	hatch covers
+item-type	0x12b6a70..0x12bdd2f	grates
+item-type	0x12b6a70..0x12bdd2f	doors
+item-type	0x12b6a70..0x12bdd2f	catapult parts
+item-type	0x12b6a70..0x12bdd2f	ballista parts
+item-type	0x12b6a70..0x12bdd2f	mechanisms
+item-type	0x12b6a70..0x12bdd2f	beds
+item-type	0x12b6a70..0x12bdd2f	traction benches
+item-type	0x12b6a70..0x12bdd2f	windows
+item-type	0x12b6a70..0x12bdd2f	chairs
+item-type	0x12b6a70..0x12bdd2f	tables
+item-type	0x12b6a70..0x12bdd2f	coffins
+item-type	0x12b6a70..0x12bdd2f	statues
+item-type	0x12b6a70..0x12bdd2f	slabs
+item-type	0x12b6a70..0x12bdd2f	querns
+item-type	0x12b6a70..0x12bdd2f	millstones
+item-type	0x12b6a70..0x12bdd2f	armor stands
+item-type	0x12b6a70..0x12bdd2f	weapon racks
+item-type	0x12b6a70..0x12bdd2f	cabinets
+item-type	0x12b6a70..0x12bdd2f	anvils
+item-type	0x12b6a70..0x12bdd2f	buckets
+item-type	0x12b6a70..0x12bdd2f	bins
+item-type	0x12b6a70..0x12bdd2f	boxes
+item-type	0x12b6a70..0x12bdd2f	bags
+item-type	0x12b6a70..0x12bdd2f	siege ammo
+item-type	0x12b6a70..0x12bdd2f	barrels
+item-type	0x12b6a70..0x12bdd2f	ballista arrow heads
+item-type	0x12b6a70..0x12bdd2f	pipe sections
+item-type	0x12b6a70..0x12bdd2f	bolt thrower parts
+item-type	0x12b6a70..0x12bdd2f	chains
+item-type	0x12b6a70..0x12bdd2f	flasks
+item-type	0x12b6a70..0x12bdd2f	goblets
+item-type	0x12b6a70..0x12bdd2f	musical instruments
+item-type	0x12b6a70..0x12bdd2f	toys
+item-type	0x12b6a70..0x12bdd2f	cages
+item-type	0x12b6a70..0x12bdd2f	animal traps
+item-type	0x12b6a70..0x12bdd2f	amulets
+item-type	0x12b6a70..0x12bdd2f	scepters
+item-type	0x12b6a70..0x12bdd2f	crowns
+item-type	0x12b6a70..0x12bdd2f	rings
+item-type	0x12b6a70..0x12bdd2f	earrings
+item-type	0x12b6a70..0x12bdd2f	bracelets
+item-type	0x12b6a70..0x12bdd2f	figurines
+item-type	0x12b6a70..0x12bdd2f	totems
+item-type	0x12b6a70..0x12bdd2f	backpacks
+item-type	0x12b6a70..0x12bdd2f	quivers
+item-type	0x12b6a70..0x12bdd2f	splints
+item-type	0x12b6a70..0x12bdd2f	crutches
+item-type	0x12b6a70..0x12bdd2f	limb/body casts
+item-type	0x12b6a70..0x12bdd2f	tools
+item-type	0x12b6a70..0x12bdd2f	codices
+item-type	0x12b6a70..0x12bdd2f	sheets
+item-type	0x12b6a70..0x12bdd2f	body parts
+item-type	0x12b6a70..0x12bdd2f	remains
+item-type	0x12b6a70..0x12bdd2f	small live animals
+item-type	0x12b6a70..0x12bdd2f	small tame animals
+item-type	0x12b6a70..0x12bdd2f	leaves and fruit
+item-type	0x12b6a70..0x12bdd2f	tanned hides
+item-type	0x12b6a70..0x12bdd2f	boulders
+item-type	0x12b6a70..0x12bdd2f	stone boulders
+item-type	0x12b6a70..0x12bdd2f	headwear
+item-type	0x12b6a70..0x12bdd2f	handwear
+item-type	0x12b6a70..0x12bdd2f	footwear
+item-type	0x12b6a70..0x12bdd2f	legwear
+item-type	0x12b6a70..0x12bdd2f	suits of armor
+item-type	0x12b6a70..0x12bdd2f	ammunition
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:6	bolt
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:6	bolts
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:13	arrow
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:13	arrows
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:20	blowdart
+raw-item	data/vanilla/vanilla_items/objects/item_ammo.txt:20	blowdarts
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:6	breastplate
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:6	breastplates
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:20	mail shirt
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:20	mail shirts
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:34	armor
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:49	coat
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:49	coats
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:62	shirt
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:62	shirts
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:75	cloak
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:75	cloaks
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:88	tunic
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:88	tunics
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:101	toga
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:101	togas
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:114	cape
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:114	capes
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:127	vest
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:127	vests
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:140	dress
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:140	dresses
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:153	robe
+raw-item	data/vanilla/vanilla_items/objects/item_armor.txt:153	robes
+raw-item	data/vanilla/vanilla_items/objects/item_food.txt:6	biscuits
+raw-item	data/vanilla/vanilla_items/objects/item_food.txt:10	stew
+raw-item	data/vanilla/vanilla_items/objects/item_food.txt:14	roast
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:6	gauntlet
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:6	gauntlets
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:21	glove
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:21	gloves
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:32	mitten
+raw-item	data/vanilla/vanilla_items/objects/item_gloves.txt:32	mittens
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:6	helm
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:6	helms
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:22	cap
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:22	caps
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:37	hood
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:37	hoods
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:48	turban
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:48	turbans
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:59	mask
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:59	masks
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:75	head veil
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:75	head veils
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:86	face veil
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:86	face veils
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:97	headscarf
+raw-item	data/vanilla/vanilla_items/objects/item_helm.txt:97	headscarves
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:7	trousers
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:20	greaves
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:34	leggings
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:52	loincloth
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:52	loincloths
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:63	thong
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:63	thongs
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:74	skirt
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:74	skirts
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:86	skirt
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:86	skirts
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:98	skirt
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:98	skirts
+raw-item	data/vanilla/vanilla_items/objects/item_pants.txt:112	braies
+raw-item	data/vanilla/vanilla_items/objects/item_shield.txt:6	shield
+raw-item	data/vanilla/vanilla_items/objects/item_shield.txt:6	shields
+raw-item	data/vanilla/vanilla_items/objects/item_shield.txt:13	buckler
+raw-item	data/vanilla/vanilla_items/objects/item_shield.txt:13	bucklers
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:6	shoe
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:6	shoes
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:17	high boot
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:17	high boots
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:31	low boot
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:31	low boots
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:44	sandal
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:44	sandals
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:55	chausse
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:55	chausses
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:67	sock
+raw-item	data/vanilla/vanilla_items/objects/item_shoes.txt:67	socks
+raw-item	data/vanilla/vanilla_items/objects/item_siegeammo.txt:6	ballista arrow
+raw-item	data/vanilla/vanilla_items/objects/item_siegeammo.txt:6	ballista arrows
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:6	cauldron
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:6	cauldrons
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:16	ladle
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:16	ladles
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:25	bowl
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:25	bowls
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:35	mortar
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:35	mortars
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:45	pestle
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:45	pestles
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:54	carving knife
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:54	carving knives
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:72	boning knife
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:72	boning knives
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:90	slicing knife
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:90	slicing knives
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:108	meat cleaver
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:108	meat cleavers
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:126	carving fork
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:126	carving forks
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:142	nest box
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:142	nest boxes
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:152	jug
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:152	jugs
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:162	pot
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:162	pots
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:173	hive
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:173	hives
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:183	honeycomb
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:183	honeycombs
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:191	pouch
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:191	pouches
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:201	minecart
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:201	minecarts
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:214	wheelbarrow
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:214	wheelbarrows
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:226	stepladder
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:226	stepladders
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:237	scroll rollers
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:248	book binding
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:248	book bindings
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:259	scroll
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:259	scrolls
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:269	quire
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:269	quires
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:281	bookcase
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:281	bookcases
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:293	helve
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:293	helves
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:304	axe
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:304	axes
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:322	pedestal
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:322	pedestals
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:332	display case
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:332	display cases
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:343	altar
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:343	altars
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:353	die
+raw-item	data/vanilla/vanilla_items/objects/item_tool.txt:353	dice
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:6	puzzlebox
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:6	puzzleboxes
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:10	toy boat
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:10	toy boats
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:14	toy hammer
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:14	toy hammers
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:18	toy axe
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:18	toy axes
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:22	mini-forge
+raw-item	data/vanilla/vanilla_items/objects/item_toy.txt:22	mini-forges
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:6	axe blade
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:6	axe blades
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:16	corkscrew
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:16	corkscrews
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:28	ball
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:28	balls
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:39	disc
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:39	discs
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:49	spike
+raw-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:49	spikes
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:6	whip
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:6	whips
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:17	battle axe
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:17	battle axes
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:35	war hammer
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:35	war hammers
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:45	short sword
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:45	short swords
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:62	spear
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:62	spears
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:74	mace
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:74	maces
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:84	crossbow
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:84	crossbows
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:102	pick
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:102	picks
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:112	bow
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:112	bows
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:131	blowgun
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:131	blowguns
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:150	pike
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:150	pikes
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:162	halberd
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:162	halberds
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:176	two-handed sword
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:176	two-handed swords
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:192	long sword
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:192	long swords
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:208	maul
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:208	mauls
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:218	great axe
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:218	great axes
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:232	dagger
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:232	daggers
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:247	scourge
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:247	scourges
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:258	flail
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:258	flails
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:268	morningstar
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:268	morningstars
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:280	scimitar
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:280	scimitars
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:296	training axe
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:296	training axes
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:311	training sword
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:311	training swords
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:328	training spear
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:328	training spears
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:341	great pick
+raw-item	data/vanilla/vanilla_items/objects/item_weapon.txt:341	great picks
+generated-modifier	0x1340220	asymmetrical
+generated-modifier	0x133fee8	bell-shaped
+generated-modifier	0x133da19	bent
+generated-modifier	0x13374f9,0x133a3e6	blocky
+generated-modifier	0x1342040	branching
+generated-modifier	0x13380c8	bulging
+generated-modifier	0x13394fd,0x13399e3,0x133a8e0,0x133e596,0x133feb8,0x1340238,0x1341d88	bulky
+generated-modifier	0x1341d28	cone-headed
+generated-modifier	0x1338fcc	conical
+generated-modifier	0x13417e8	crescent
+generated-modifier	0x133b1f9,0x133b7d3,0x133ce62,0x133d8fb,0x133dbca,0x133df5a	curved
+generated-modifier	0x1341ff8	double-tipped
+generated-modifier	0x1338a6f,0x1339edb,0x133fc60,0x133ff00,0x1340178	frilly
+generated-modifier	0x1340430,0x1340510	intricate
+generated-modifier	0x133fea0,0x1340148,0x13402f0,0x1340448,0x13404f8,0x13417d0,0x1341d40,0x1341ec0,0x1341ed8,0x1341ef0,0x1341f08,0x1341f20,0x1341f38,0x1341f50,0x1341f68,0x1341f80,0x1341fb0	jagged
+generated-modifier	0x1341d58	large-headed
+generated-modifier	0x1341da0,0x1341e60,0x1342028	long
+generated-modifier	0x133d14b	narrow
+generated-modifier	0x133e132	pointed
+generated-modifier	0x1340f00	rectangular
+generated-modifier	0x133fe70,0x1340320	rounded
+generated-modifier	0x1340130	segmented
+generated-modifier	0x133ff18,0x1340190	sheer
+generated-modifier	0x133d5d5	short
+generated-modifier	0x133d30a,0x133fc78,0x133fed0,0x1340208,0x1340528	sleek
+generated-modifier	0x1337b28	split
+generated-modifier	0x1340160,0x1340ee8	square
+generated-modifier	0x1340308,0x1340ed0,0x1341e00,0x1342070	tall
+generated-modifier	0x1341f98	tapered
+generated-modifier	0x133d729,0x1342010	thick
+generated-modifier	0x133de04,0x133e41b,0x133fe88,0x1340460,0x1341ce0,0x1341d10,0x1341db8,0x1341de8,0x1341e18,0x1341e30,0x1341e48,0x1341e78,0x1341fc8,0x1342058	thin
+generated-modifier	0x1341cf8	twisted
+generated-modifier	0x1341d70,0x1341dd0,0x1341e90,0x1341fe0	wavy
+generated-modifier	0x1341ea8	wide-headed
+generated-type	0x1336e80..0x13429c7	blade:blades
+generated-type	0x1336e80..0x13429c7	sword:swords
+generated-type	0x1336e80..0x13429c7	nail:nails
+generated-type	0x1336e80..0x13429c7	prong:prongs
+generated-type	0x1336e80..0x13429c7	lash:lashes
+generated-type	0x1336e80..0x13429c7	knife:knives
+generated-type	0x1336e80..0x13429c7	spike:spikes
+dynamic-creature	stockpile_parameter_animalst / graveyardst / refusest	world.raws.creatures names and castes
+dynamic-plant	stockpile_parameter_woodst / foodst	world.raws.plants names, seeds and growth names
+dynamic-inorganic	stockpile_parameter_stonest / gemst / barblockst / coinsst	world.raws.inorganics state names
+dynamic-organic	stockpile_parameter_foodst / leatherst / clothst / sheetst	food_mat_index: meat, fish, unprepared fish, eggs, plants, drinks, cheeses, seeds, growths, powders, fat, paste, pressed material, liquids, leather, silk, plant fiber, yarn, metal thread, paper and parchment
+dynamic-color	stockpile_parameter_finishedst / leatherst / clothst / armorst	world.raws.descriptors.colors names
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_pants.txt:87	short skirt
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_pants.txt:87	short skirts
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_pants.txt:99	long skirt
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_pants.txt:99	long skirts
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_tool.txt:163	large pot
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_tool.txt:163	large pots
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:7	giant axe blade
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:7	giant axe blades
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:17	enormous corkscrew
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:17	enormous corkscrews
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:29	spiked ball
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:29	spiked balls
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:40	large, serrated disc
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:40	large, serrated discs
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:50	menacing spike
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_trapcomp.txt:50	menacing spikes
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_weapon.txt:233	large dagger
+raw-qualified-item	data/vanilla/vanilla_items/objects/item_weapon.txt:233	large daggers

@@ -1,0 +1,42 @@
+base = "health::contaminant"
+
+[[rulesets]]
+[rulesets.rules]
+"{material} spatter" = "{material}飞溅物"
+"{material} smear" = "{material}污迹"
+"spatter of {material}" = "{material}飞溅物"
+"{material} covering" = "被{material}覆盖"
+# Body deposits have no item picture or action buttons. The quantity is
+# part of the complete caption, not an untranslated standalone prefix.
+"coating of {material}" = "覆有{material}"
+
+# Native map look/hover captions: the quantity precedes a complete material
+# name, including creature/plant prefixes and material phases. Keep all
+# seven surface-deposit amounts here rather than enumerating species or
+# translating only the material tail. Native ELF literals: 0x1d319c1..0x1d31a16.
+"A spattering of {material}" = "少量溅落的{material}"
+"A smear of {material}" = "一抹{material}"
+"A pool of {material}" = "一滩{material}"
+"A thin layer of {material}" = "薄薄一层{material}"
+"A dusting of {material}" = "薄薄一层{material}"
+"A small pile of {material}" = "一小堆{material}"
+"A pile of {material}" = "一堆{material}"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+"{::materials}" = "{::materials}"
+# The native owner precedes the complete species/material name. Keep this
+# personal-name role scoped to deposits, not ordinary material adjectives.
+"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"
+
+[[rulesets]]
+name = "inventory"
+[rulesets.rules]
+"{::health::contaminant} ({::health::bodypart})" = "{::health::contaminant}（{::health::bodypart}）"
+"{::health::contaminant}" = "{::health::contaminant}"
+# Bare headings belong only to a confirmed Items panel. In particular,
+# covering is not a new global replacement for the ordinary English verb.
+"spatter" = "飞溅物"
+"smear" = "污迹"
+"covering" = "覆盖物"

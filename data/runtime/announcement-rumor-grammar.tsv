@@ -1,0 +1,157 @@
+# World-rumor speech, native 0x140680970..0x1406849ff and delegated description builders.
+# scope / complete source or typed constituent / target / field scopes / native source
+sentence	{s}	{s1}	rumor-event	0x140680970
+sentence	{s}, {s}	{s1}，{s2}	rumor-time,rumor-event	0x140680c15;0x140675670..0x140675907
+rumor-person	I	我		0x140680c6d
+rumor-person	me	我		0x140682519
+rumor-person	my {s} {s}	我的{s1}{s2}	$term,$person	0x140680cc2;0x14075a580;0x140b92f10
+rumor-person	{s}	{s1}	$unit	0x140b92f10 via 0x140680970
+rumor-person	{s}	{s1}	$person	0x140b92f10 via 0x140680970
+rumor-owner	my	我的		0x140680d5c
+rumor-owner	{s}'s	{s1}的	rumor-person	0x140680e24
+rumor-position	{s} of {s}	{s2}的{s1}	$term,$name	0x140682b83;0x140b92900
+rumor-position	{s}	{s1}	$term	0x140682aca..0x140682bba
+rumor-time	in a time before time	太古之时		0x14067568b
+rumor-time	in the future	将来		0x1406756ae
+rumor-time	just now	刚才		0x1406756e9
+rumor-time	a few minutes ago	几分钟前		0x140675703
+rumor-time	not a quarter hour ago	不到一刻钟前		0x14067571d
+rumor-time	not a half hour ago	不到半小时前		0x140675737
+rumor-time	not one hour ago	不到一小时前		0x140675751
+rumor-time	a few hours ago	几小时前		0x14067576e
+rumor-time	not one day ago	不到一天前		0x14067578b
+rumor-time	a few days ago	几天前		0x1406757a8
+rumor-time	several days ago	数天前		0x1406757c5
+rumor-time	a week ago	一周前		0x1406757e2
+rumor-time	a few weeks ago	几周前		0x1406757ff
+rumor-time	a month ago	一个月前		0x14067581c
+rumor-time	a few months ago	几个月前		0x140675839
+rumor-time	months ago	数月前		0x14067585c
+rumor-time	a year ago	一年前		0x14067586b
+rumor-time	a few years ago	几年前		0x140675883
+rumor-time	several years ago	数年前		0x1406758a1
+rumor-time	many years ago	很多年前		0x1406758bf
+rumor-time	long ago	很久以前		0x1406758dd
+rumor-time	long, long ago	很久很久以前		0x1406758f2
+rumor-event	{s} agreed to {s} offer of tribute from {s} to {s}.	{s1}同意了{s2}提议，让{s3}向{s4}进贡。	rumor-person,rumor-owner,$name,$name	0x140680c15..0x140680e93
+rumor-event	{s} refused {s} offer of tribute from {s} to {s}.	{s1}拒绝了{s2}进贡提议：由{s3}向{s4}纳贡。	rumor-person,rumor-owner,$name,$name	0x140680ff5..0x14068126e
+rumor-event	{s} agreed to {s} demand of tribute from {s} to {s}.	{s1}答应了{s2}要求，让{s3}向{s4}进贡。	rumor-person,rumor-owner,$name,$name	0x140681484..0x1406816fd
+rumor-event	{s} refused {s} demand of tribute from {s} to {s}.	{s1}拒绝了{s2}要求：让{s3}向{s4}进贡。	rumor-person,rumor-owner,$name,$name	0x140681865..0x140681ae2
+rumor-event	{s} accepted a peace offer from {s} to stop the conflict between {s} and {s}.	{s1}接受了{s2}议和提议，要让{s3}和{s4}停止冲突。	rumor-person,rumor-owner,$name,$name	0x140681c44..0x140681ebd
+rumor-event	{s} refused an offer of peace from {s} regarding the conflict between {s} and {s}.	{s1}拒绝了{s2}为平息{s3}和{s4}的冲突而提出的议和。	rumor-person,rumor-owner,$name,$name	0x140682024..0x1406822a1
+rumor-event	{s} informed {s} that tribute would no longer be offered {s} to {s}.	{s1}告知{s2}，{s3}将不再向{s4}进贡。	rumor-person,rumor-person,$name,$name	0x1406823d6..0x140682639
+rumor-event	{s} claimed {s} in the name of {s}.	{s1}以{s3}的名义取得了{s2}。	rumor-person,$name,$name	0x140682737..0x1406828ab
+rumor-event	{s} became {s}, replacing {s}.	{s1}取代{s3}，成为了{s2}。	rumor-person,rumor-position,rumor-person	0x1406829a9..0x140682ce0
+rumor-event	{s} became {s}.	{s1}成为了{s2}。	rumor-person,rumor-position	0x1406829a9..0x140682ce0
+rumor-event	I hear {s} has a real mean streak.	听说{s1}骨子里就很刻薄。	rumor-person	0x140682d3d..0x140682d88
+rumor-event	Best keep your head down.	最好还是低调些。		0x140682db5
+rumor-event	I hear that there is an insurrection against {s} in {s}.	听说{s2}发生了反抗{s1}的叛乱。	rumor-person,$name	0x140682e24..0x140682e78
+rumor-event	I hear that {s} crushed an insurrection in {s}.	听说{s1}镇压了{s2}的叛乱。	rumor-person,$name	0x140682e88..0x140682ed7
+rumor-event	I hear that {s} waited out an insurrection in {s}.	听说{s1}在{s2}按兵不动，一直等到叛乱平息。	rumor-person,$name	0x140682e88..0x140682ef1
+rumor-event	I hear that {s} lost {s} after an insurrection.	听说{s1}在一场叛乱后失去了{s2}。	rumor-person,$name	0x140682ef6..0x140682f21
+rumor-event	We reclaimed {s} on behalf of {s}.	我们代表{s2}收复了{s1}。	$name,$name	0x140682f5b..0x140682fbe
+rumor-event	I hear that a group calling itself {s} reclaimed {s} on behalf of {s}.	听说一个自称{s1}的势力代表{s3}收复了{s2}。	$name,$name,$name	0x140682f64..0x140682fbe
+rumor-event	We founded {s} after a long journey from the lands of {s}.	我们从{s2}的领地长途跋涉而来，建立了{s1}。	$name,$name	0x140682fff..0x140683062
+rumor-event	I hear that a group calling itself {s} founded {s} after a long journey from the lands of {s}.	听说一个自称{s1}的势力从{s3}的领地长途跋涉而来，建立了{s2}。	$name,$name,$name	0x140683008..0x140683062
+rumor-event	I hear that a group from {s} left to reclaim the ruins.	听说一群来自{s1}的人出发去重建废墟了。	$name	0x140683079..0x1406830d3
+rumor-event	I hear that a group from {s} left to reclaim the ruins of {s}.	听说一群来自{s1}的人出发去重建{s2}的废墟了。	$name,$name	0x140683079..0x1406830d3
+rumor-event	I hear that a group from {s} left to found a new settlement.	听说一群来自{s1}的人出发去建立新的定居点了。	$name	0x1406830d8..0x14068313b
+rumor-event	I hear that a group from {s} left to found a new settlement in {s}.	听说一群来自{s1}的人出发去{s2}建立新的定居点了。	$name,$name	0x1406830d8..0x14068313b
+rumor-event	This place has been conquered.	这个地方已经被征服了。		0x140683155..0x140683204
+rumor-event	This place has been conquered by {s}.	这个地方已经被{s1}征服了。	rumor-person	0x140683155..0x140683204
+rumor-event	I hear that {s} has been conquered.	听说{s1}已经被征服了。	$name	0x14068315e..0x140683204
+rumor-event	I hear that {s} has been conquered by {s}.	听说{s1}已经被{s2}征服了。	$name,rumor-person	0x14068315e..0x140683204
+rumor-event	We formed {s} in order to find better lives after the horrible mismanagement of {s} by {s}.	{s3}把{s2}治理得一团糟，我们才组建了{s1}，想过上好日子。	$name,$name,rumor-person	0x14068325c..0x14068331c
+rumor-event	I hear that a group calling itself {s} moved on in search of a better future after the horrible mismanagement of {s} by {s}.	听说{s3}把{s2}治理得一团糟，一个自称{s1}的势力就离开了，另谋出路。	$name,$name,rumor-person	0x140683285..0x14068331c
+rumor-event	We had to pull out of {s}.	我们不得不撤出{s1}。	$name	0x140683336..0x14068338b
+rumor-event	I hear that {s} gave up on their occupation of {s}.	听说{s1}放弃了对{s2}的占领。	$name,$name	0x14068334f..0x14068338b
+rumor-event	We banded up as {s} and escaped {s}.	我们结成{s1}，逃离{s2}。	$name,rumor-flight	0x1406833b8..0x1406834d1
+rumor-event	I hear that refugees calling themselves {s} fled {s}.	听说有群难民自称{s1}，逃离{s2}。	$name,rumor-flight	0x1406833e1..0x1406834d1
+rumor-flight	from {s} just before an army {s} descended upon the place	了{s1}，随后一支军队{s2}便袭击了那里	$name,rumor-army	0x140683417..0x1406834c6
+rumor-flight	just before an army {s} descended upon the place	了那里，随后一支军队{s1}便袭击了那里	rumor-army	0x140683417..0x1406834c6
+rumor-flight	from {s} just before an army descended upon the place	了{s1}，随后一支军队便袭击了那里	$name	0x140683417..0x1406834c6
+rumor-flight	just before an army descended upon the place	了那里，随后一支军队便袭击了那里		0x140683417..0x1406834c6
+rumor-army	of {s} led by {s}	（隶属{s1}，由{s2}率领）	$name,rumor-person	0x140683453..0x1406834c6
+rumor-army	of {s}	（隶属{s1}）	$name	0x140683453..0x1406834c6
+rumor-army	led by {s}	（由{s1}率领）	rumor-person	0x140683479..0x1406834c6
+rumor-event	I heard that there was an incident.	听说出事了。		0x14068357a
+rumor-event	I heard that {s}, {s} was kidnapped.	听说{s1}，{s2}被人绑走了。	rumor-time,rumor-person	0x1406835c1..0x140683902
+rumor-event	I heard that {s}, {s} was kidnapped from {s}.	听说{s1}，{s2}在{s3}被人绑走了。	rumor-time,rumor-person,$name	0x1406835c1..0x140683902
+rumor-event	I heard that {s}, {s} was kidnapped by {s}.	听说{s1}，{s2}被{s3}绑走了。	rumor-time,rumor-person,rumor-person	0x1406835c1..0x140683902
+rumor-event	I heard that {s}, {s} was kidnapped from {s} by {s}.	听说{s1}，{s4}从{s3}绑走了{s2}。	rumor-time,rumor-person,$name,rumor-person	0x1406835c1..0x140683902
+rumor-event	I hear that {s} was destroyed.	听说{s1}被毁掉了。	$book	0x140683959..0x140683a1d
+rumor-event	I hear that {s} is in {s} in {s}.	听说{s1}在{s2}的{s3}里。	$book,$name,$name	0x140683a2d..0x140683bc2
+rumor-event	I hear that {s} is in {s}.	听说{s1}在{s2}。	$book,$name	0x140683a2d..0x140683e18
+rumor-event	I have {s}.	{s1}在我手里。	$book	0x140683e80..0x140683f86
+rumor-event	{s} has {s}.	{s2}在{s1}手里。	rumor-person,$book	0x140683e8d..0x140683f86
+rumor-event	I hear that {s} is not in {s}'s {s}.	听说{s1}不在{s2}的{s3}里。	$book,$name,$name	0x140683f96..0x1406841a3
+rumor-event	I hear that {s} is not in {s}.	听说{s1}不在{s2}。	$book,$name	0x140683f96..0x14068448a
+rumor-event	I do not have {s}.	{s1}不在我手里。	$book	0x1406844f0..0x1406845f6
+rumor-event	{s} does not possess {s}.	{s2}不在{s1}手里。	rumor-person,$book	0x140684508..0x1406845f6
+# Complete threat descriptions and every accompanying identity/location clause.
+rumor-event	An evil lurks within.	里面潜伏着邪物。		0x140687db7
+rumor-event	A night creature has infiltrated our communities and now makes prey of us.	有只夜行生物混进了我们的聚落，如今把我们当成了猎物。		0x140687dbe
+rumor-event	As you know, we are at war. You might be able to strike our enemies where our armies cannot reach.	你也知道，我们正在打仗。有些地方军队去不了，也许你能到那里打击敌人。		0x140687e00
+rumor-event	Vanquishing a great beast on our behalf would bring us all much glory.	若能替我们打败一头巨兽，我们所有人都将引以为荣。		0x140687ed0
+rumor-event	Mastering the forces of nature would glorify us in the eyes of the world.	要是能驾驭自然之力，世人都会敬重我们。		0x140687f4c
+rumor-event	Demons from the underworld must not be permitted to walk freely upon the land.	绝不能让地下世界的恶魔在地上横行！		0x140687f89
+rumor-event	Not far from here, a fearsome creature has made its home.	离这里不远，盘踞着一只可怕的生物。		0x140687fb2
+rumor-event	Terrible monstrosities live deep under the ground.	可怕的怪物栖息在地下深处。		0x140687fdb
+rumor-event	A force of evil has arisen in the world.	一股邪恶势力已在世间崛起。		0x14068804e
+rumor-event	At the end of the world dwell the fiercest beasts of legend.	世界尽头栖息着传说中最凶猛的野兽。		0x140688124
+rumor-event	Creatures grow mighty out in the wildest regions.	越是荒蛮之地，生灵就越强悍。		0x14068813c
+rumor-event	You might win fame by putting down a wild beast of great renown.	若能杀死一头声名远扬的野兽，你或许也能闯出名声。		0x140688154
+rumor-event	Sometimes animals just get out of control.	动物有时候就是会失控。		0x140688165
+rumor-event	Something truly horrifying has vomited itself forth from the depths of the world.	有个骇人至极的东西从世界深处喷涌而出。		0x14068817d
+rumor-event	A great monster from the underground is said to have emerged from the darkness.	据说，一只地下巨怪已经从黑暗中现身。		0x140688198
+rumor-event	A vile beast from the caverns now walks the land.	一头洞穴里的恶兽跑到了地上，如今正在四处游荡。		0x1406881b1
+rumor-event	A lurking pest has come up from the underground.	一只潜伏在地下的害兽钻出来了。		0x1406881ba
+rumor-event	The world is safer for travelers when night creatures no longer stalk the darkness.	夜行生物不再潜伏于黑暗中，旅人出门也能更安全。		0x1406881ce
+rumor-event	A great beast threatens to bring ruin upon our people.	有头巨兽威胁着我们的族人，可能把我们全毁了。		0x140688282
+rumor-event	We have been under siege by an ancient force of nature.	一股古老的自然之力一直在围攻我们。		0x140688303
+rumor-event	It is time to send our cursed enemy back to the underworld.	该把那个该死的敌人送回地下世界了。		0x14068838d
+rumor-event	Our people have been tormented by a fearsome foe.	我们的族人饱受一个可怕敌人的折磨。		0x140688405
+rumor-event	A beast horrible beyond imagining threatens us.	一头恐怖得难以想象的野兽正威胁着我们。		0x140688442
+rumor-event	The forces of darkness have descended upon us.	黑暗势力已经杀到我们这里了。		0x1406884b5
+rumor-event	We are besieged by a terrifying monster from the harshest wilderness.	一只来自最险恶荒野的可怕怪物正在围攻我们。		0x140688589
+rumor-event	A savage beast from the thick of the wilds hunts us at will.	一头来自荒野深处的凶猛野兽正在肆意猎杀我们。		0x1406885a9
+rumor-event	A ferocious unnatural beast has become the bane of our people.	一头凶猛的异兽成了我们族人的大患。		0x1406885e4
+rumor-event	A ferocious wild animal has been set on us by nature.	大自然派来一头凶猛的野兽袭击我们。		0x1406885eb
+rumor-event	A beast from the wilds has been harassing our people.	有头野兽从荒野而来，一直侵扰我们的族人。		0x14068860a
+rumor-event	A terror most foul from the evil depths nigh the underworld plagues us.	有个极其凶恶的东西在祸害我们，它来自靠近地下世界的邪恶深渊。		0x140688627
+rumor-event	A vile monster from the bowels of the earth has been preying on our people.	有只恶兽来自大地深处，一直在猎杀我们的族人。		0x140688644
+rumor-event	A beast from underground has been assailing us.	有头野兽从地下而来，一直袭击我们。		0x14068865f
+rumor-event	At times, creeping things slither out from below ground.	时不时会有爬行的东西从地下钻出来。		0x140688668
+rumor-event	A creature of the night has our people cowering in fear.	一只夜行生物把我们的族人吓得瑟瑟发抖。		0x14068867e
+rumor-identity	{s} the {s}	{s2}{s1}	$person,$term	0x14068879f..0x140688dae
+rumor-identity	{s}	{s1}	$unit	0x14068879f..0x140688dae
+rumor-identity	{s}	{s1}	$person	0x14068879f..0x140688dae
+rumor-event	Seek this place if you wish to confront {s}.	想对付{s1}，就去找这个地方。	rumor-identity	0x140688726..0x140688dae
+rumor-event	This insidious evil is {s}.	这个阴险的恶徒就是{s1}。	rumor-identity	0x140688735..0x140688dae
+rumor-event	Seek this place if you hunt {s}.	想猎杀{s1}，就去找这个地方。	rumor-identity	0x14068874e..0x140688dae
+rumor-event	The creature is {s}.	这只生物就是{s1}。	rumor-identity	0x14068875d..0x140688dae
+rumor-event	Body corrupted beyond reckoning, he assumes a beastly form to terrorize us.	他的身体已经彻底腐化，还会变成野兽来吓唬我们。		0x140688e0e..0x140688ea3
+rumor-event	Body corrupted beyond reckoning, she assumes a beastly form to terrorize us.	她的身体已经彻底腐化，还会变成野兽来吓唬我们。		0x140688e0e..0x140688ea3
+rumor-event	Body corrupted beyond reckoning, it assumes a beastly form to terrorize us.	它的身体已经彻底腐化，还会变成野兽来吓唬我们。		0x140688e0e..0x140688ea3
+rumor-event	Our people have been pestered by skulking villains.	一伙鬼鬼祟祟的恶徒一直在骚扰我们的族人。		0x1406890e5
+rumor-event	They have a {s} called {s} somewhere in {s}.	他们在{s3}的某处有一座名为{s2}的{s1}。	$term,$name,$name	0x140689103..0x140689256
+rumor-event	They have a {s} called {s} somewhere around here.	他们在这附近的某处有一座名为{s2}的{s1}。	$term,$name	0x140689103..0x140689498
+rumor-event	A highly-organized military order is threatening our people.	一个组织严密的军事修会正威胁着我们的人民。		0x14068926a
+rumor-event	An organized military order have brought terror to our doorsteps.	一个组织严密的军事修会欺上门来，闹得人心惶惶。		0x140689281
+rumor-event	A small but organized military order have been causing us much hardship.	一个军事修会人数不多，却组织严密，害得我们吃尽苦头。		0x140689293
+rumor-event	A marauding warband is threatening our people.	一支四处劫掠的战帮正威胁着我们的人民。		0x1406892b0
+rumor-event	Malicious outlaws have brought terror to our doorsteps.	凶恶的亡命之徒欺上门来，闹得人心惶惶。		0x1406892c7
+rumor-event	Particular outlaws have been causing us much hardship.	有些亡命之徒害得我们吃尽苦头。		0x1406892d9
+rumor-event	A sprawling criminal organization has left our people living in fear.	一个庞大的犯罪组织闹得我们的族人惶惶不可终日。		0x1406892f6
+rumor-event	A scheming criminal gang has eluded capture for far too long.	有个犯罪团伙诡计多端，逍遥法外太久了。		0x14068930d
+rumor-event	A lowly group of outcasts have perpetrated enough crimes against our community to gain notice.	一群落魄的流亡者在我们的聚落作恶，犯下的罪行已让人无法忽视。		0x14068931f
+rumor-event	There are foul goings-on here.	这里有人在干见不得人的勾当。		0x14068934c..0x140689467
+rumor-event	There are foul goings-on over at the {s} of {s}.	{s2}的{s1}那里有人在干见不得人的勾当。	$term,$name	0x14068934c..0x140689467
+rumor-event	A bandit gang calling itself {s} has been harassing people right here on the streets of {s}!	有伙土匪自称{s1}，就在{s2}这里的街上骚扰百姓！	$name,$name	0x1406895be..0x1406896c9
+rumor-event	A bandit gang calling itself {s}, led by {s}, has been harassing people right here on the streets of {s}!	有伙土匪自称{s1}，头目是{s2}，就在{s3}这里的街上骚扰百姓！	$name,rumor-person,$name	0x1406895be..0x1406896c9
+rumor-event	A bandit gang calling itself {s} has been harassing people over in {s}.	有伙土匪自称{s1}，一直在{s2}那边骚扰百姓。	$name,$name	0x1406895be..0x1406896c9
+rumor-event	A bandit gang calling itself {s}, led by {s}, has been harassing people over in {s}.	有伙土匪自称{s1}，头目是{s2}，一直在{s3}那边骚扰百姓。	$name,rumor-person,$name	0x1406895be..0x1406896c9
+rumor-event	The army of {s} is marching here!	{s1}的军队正向这里进军！	rumor-person	0x1406897af..0x140689887
+rumor-event	The army of {s} is marching here!	{s1}的军队正向这里进军！	$name	0x1406897af..0x140689887
+rumor-event	The army of {s} is marching on {s}!	{s1}的军队正向{s2}进军！	rumor-person,$name	0x1406897af..0x140689887
+rumor-event	The army of {s} is marching on {s}!	{s1}的军队正向{s2}进军！	$name,$name	0x1406897af..0x140689887

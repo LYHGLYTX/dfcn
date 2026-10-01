@@ -1,0 +1,226 @@
+base = "health::bodypart"
+
+[[rulesets]]
+[rulesets.rules]
+# Native order is child, owner, tissue. Chinese puts the owner BEFORE the
+# child; only the tissue remains a separate trailing health-detail field.
+"{bodypart_main}{second_part}{main_tissue}" = "{second_part}{bodypart_main}{main_tissue}"
+
+[[rulesets]]
+name = "second_part"
+optional = true
+[rulesets.rules]
+", {bodypart_main}" = "{bodypart_main}"
+
+[[rulesets]]
+name = "main_tissue"
+optional = true
+[rulesets.rules]
+", {tissue}" = "·{tissue}"
+
+[[rulesets]]
+name = "tissue"
+[rulesets.rules]
+"skin" = "皮肤"
+"muscle" = "肌肉"
+"fat" = "脂肪"
+"nervous tissue" = "神经组织"
+"bone" = "骨骼"
+"skull" = "颅骨"
+"hair" = "毛发"
+"nail" = "指甲"
+"{organ} tissue" = "{organ}组织"
+"pancreatic tissue" = "胰腺组织"
+"gut" = "肠子"
+"cartilage" = "软骨"
+"throat" = "喉咙"
+"chin whisker" = "下颌须"
+
+[[rulesets]]
+name = "bodypart_main"
+[rulesets.rules]
+# Generated from the same established BODY/INDIVIDUAL_NAME vocabulary used
+# by Legends. Covers unusual/numbered anatomy without a separate prose joiner.
+"{raw_names}" = "{raw_names}"
+# Current installed vanilla_bodies BODY/BP and creature INDIVIDUAL_NAME
+# vocabulary, including the extinct-creature anatomy newer than the bundled
+# DFI18n table. Keep these authored additions outside generated raw_names.
+"center eye" = "中央眼"
+"crest" = "头冠"
+"fifth eye" = "第五只眼"
+"fifth left finger" = "左手第五指"
+"fifth left rear toe" = "左后脚小趾"
+"finger" = "手指"
+"first horn" = "第一个角"
+"first left finger" = "左手食指"
+"fourth left finger" = "左手小指"
+"front horn" = "前角"
+"head sclerite" = "头部硬片"
+"left fifth feet" = "左第五足"
+"left fifth foot" = "左第五足"
+"left first feet" = "左第一足"
+"left first foot" = "左第一足"
+"left first leg" = "左第一腿"
+"left fourth feet" = "左第四足"
+"left fourth foot" = "左第四足"
+"left fourth leg" = "左第四腿"
+"left front fin" = "左前鳍"
+"left front leg" = "左前腿"
+"left frontal appendage" = "左前附肢"
+"left frontal endite" = "左前附肢内叶"
+"left lower claw" = "左下爪"
+"left lower horn" = "左下角"
+"left lower tentacle" = "左下触手"
+"left rear fin" = "左后鳍"
+"left rear leg" = "左后腿"
+"left second feet" = "左第二足"
+"left second foot" = "左第二足"
+"left second leg" = "左第二腿"
+"left shoulder spine" = "左肩刺"
+"left tentacle" = "左触手"
+"left third feet" = "左第三足"
+"left third foot" = "左第三足"
+"left third leg" = "左第三腿"
+"left tooth" = "左牙"
+"left upper horn" = "左上角"
+"lower carapace" = "下甲壳"
+"right first feet" = "右第一足"
+"right first foot" = "右第一足"
+"right first leg" = "右第一腿"
+"right fourth feet" = "右第四足"
+"right fourth foot" = "右第四足"
+"right fourth leg" = "右第四腿"
+"right front fin" = "右前鳍"
+"right front leg" = "右前腿"
+"right frontal appendage" = "右前附肢"
+"right frontal endite" = "右前附肢内叶"
+"right lower horn" = "右下角"
+"right lower tentacle" = "右下触手"
+"right rear fin" = "右后鳍"
+"right rear leg" = "右后腿"
+"right second feet" = "右第二足"
+"right second foot" = "右第二足"
+"right second leg" = "右第二腿"
+"right shoulder spine" = "右肩刺"
+"right tentacle" = "右触手"
+"right third feet" = "右第三足"
+"right third foot" = "右第三足"
+"right third leg" = "右第三腿"
+"right tooth" = "右牙"
+"right upper horn" = "右上角"
+"sail" = "背帆"
+"second horn" = "第二个角"
+"second left finger" = "左手中指"
+"tail club" = "尾锤"
+"thagomizer" = "尾刺"
+"third left finger" = "左手无名指"
+"tooth whorl" = "旋齿"
+"upper carapace" = "上甲壳"
+# 身体
+# The optional upper/lower prefix must not turn an unqualified body into 半身.
+"body" = "身体"
+"{up_down}body" = "{up_down}半身"
+"upper spine" = "上背部脊柱"
+"middle spine" = "背部脊柱"
+"lower spine" = "腰椎"
+"{side}true ribs" = "{side}真肋"
+"{side}false ribs" = "{side}假肋"
+"{side}floating ribs" = "{side}浮肋"
+# 下半身 - 有前后-针对动物
+"{side}hip" = "{side}臀部"
+"{side}{fl}upper leg" = "{side}{fl}大腿"
+"{side}knee" = "{side}膝"
+"{side}{fl}lower leg" = "{side}{fl}小腿"
+"{side}{fl}leg" = "{side}{fl}腿"
+"{side}{fl}ankle" = "{side}{fl}脚踝"
+"{side}{fl}foot" = "{side}{fl}脚"
+"{side}{fl}paw" = "{side}{fl}爪"
+"{side}{fl}hoof" = "{side}{fl}蹄"
+"{side}{fl}flipper" = "{side}{fl}鳍肢"
+"{toe}{side}{fl}toe" = "{side}{fl}足{toe}趾"
+"{toe}toe" = "{toe}趾"
+#上半身
+"{side}shoulder" = "{side}肩"
+"{side}upper arm" = "{side}上臂"
+"{side}elbow" = "{side}肘"
+"{side}lower arm" = "{side}前臂"
+"{side}wrist" = "{side}手腕"
+"{side}hand" = "{side}手"
+"{side}wing" = "{side}翼"
+"thumb" = "拇指"
+"{finger}finger" = "{finger}指"
+#头颈
+"{side}ear" = "{side}耳"
+"{side}cheek" = "{side}脸颊"
+"{side}eyelid" = "{side}眼睑"
+"head" = "头部"
+"{up_down}lip" = "{up_down}唇"
+"neck" = "脖子"
+#牙齿
+"{up_down}front teeth" = "{up_down}门牙"
+"{up_down}{side}back teeth" = "{side}{up_down}臼齿"
+"{up_down}front tooth" = "{up_down}门牙"
+"{up_down}{side}back tooth" = "{side}{up_down}臼齿"
+# 独立部位
+"throat" = "喉咙"
+"nose" = "鼻子"
+"mouth" = "嘴巴"
+"tongue" = "舌头"
+"{side}tail" = "{side}尾巴"
+"center tail" = "中央尾巴"
+#奇怪,不知道,但是要用
+"skull" = "颅骨"
+"guts" = "肠子"
+"{side}{organ}" = "{side}{organ}"
+
+[[rulesets]]
+name = "organ"
+[rulesets.rules]
+"lung" = "肺"
+"stomach" = "胃"
+"heart" = "心脏"
+"liver" = "肝脏"
+"spleen" = "脾脏"
+"kidney" = "肾"
+"pancreas" = "胰腺"
+"eye" = "眼"
+
+[[rulesets]]
+name = "up_down"
+optional = true
+[rulesets.rules]
+"upper " = "上"
+"lower " = "下"
+
+[[rulesets]]
+name = "side"
+optional = true
+[rulesets.rules]
+"left " = "左"
+"right " = "右"
+
+[[rulesets]]
+name = "fl"
+optional = true
+[rulesets.rules]
+"front " = "前"
+"rear " = "后"
+
+# 手指名称规则集
+[[rulesets]]
+name = "finger"
+[rulesets.rules]
+"first " = "食"
+"second " = "中"
+"third " = "无名"
+"fourth " = "小"
+
+# 脚趾名称规则集
+[[rulesets]]
+name = "toe"
+[rulesets.rules]
+"first " = "第一"
+"second " = "第二"
+"third " = "第三"
+"fourth " = "第四"
+"fifth " = "第五"

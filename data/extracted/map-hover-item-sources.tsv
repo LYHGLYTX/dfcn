@@ -1,0 +1,481 @@
+# Native PE identity PE:6a70a6d9:02711000
+# Static source inventory for map caption branches 0/7/8 and item clouds; not runtime output.
+# item-caption-dispatch continues through the separate unwind fragment at 0x140c6571d..0x140c65f0a.
+# Native vtable +0x5e8 supplies descriptions; +0x5f0 supplies optional articles.
+# Ordinary type/material/RAW slots route through 0x140a82c10; body components through 0x140ca1aa0.
+# Name/material/body-part slots are dynamic; their finite RAW vocabularies and composition rules live in data/runtime/rulesets/zh-Hans.
+# Inline skeleton/body-part literals are retained in data/extracted/corpse-caption-sources.tsv; designation glyphs share src/item_designation.h.
+# Rock 0xca0040: icicle, quality-marked sharp + complete material, small + complete material + rock, or a precious material alone.
+# Slab 0xca0870: complete memorial item + to + personal name or a + unnamed caste/species.
+# Book 0xca0bd0: written title + parenthesized complete codex description, including material-bound codex/codices; c65450 owns title-only copies.
+# Cage 0xca4420: item and building variants share data/runtime/rulesets/zh-Hans/items/cage.toml; inline cage-kind and sex-marker forms are also retained in data/extracted/map-hover-building-sources.tsv.
+kind	owner	entry_va	source_or_vtable_slot_va	reference_va	source
+item-virtual	item_bagst	0x140ca53f0	0x1415f82f8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_constructedst	0x140ca5bb0	0x1415fa500	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_weaponst	0x140ca5bb0	0x1415f7a98	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_actualst	0x140ca5bb0	0x1415fc450	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_blocksst	0x140ca5bb0	0x1415faf00	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_pantsst	0x140ca5bb0	0x141624e00	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_bedst	0x140ca5bb0	0x141625868	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_shoesst	0x140ca5bb0	0x141622170	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_gemst	0x140ca5bb0	0x141624680	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_armorst	0x140ca5bb0	0x14161fe28	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_skin_tannedst	0x140ca5bb0	0x14161d918	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_toolst	0x140ca39f0	0x141623f00	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_boxst	0x140ca5bb0	0x141623780	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_cabinetst	0x140ca5bb0	0x141621130	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_glovesst	0x140ca5bb0	0x14161f3c0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_hatch_coverst	0x140ca5bb0	0x1416267d8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_chairst	0x140ca5bb0	0x1416218b0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_helmst	0x140ca5bb0	0x14161e380	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_binst	0x140ca3500	0x141625fe8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_clothst	0x140ca5bb0	0x14161cf18	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_doorst	0x140ca5bb0	0x141622bd8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_tablest	0x140ca5bb0	0x14161eb00	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_corpsest	0x140ca1aa0	0x141648d78	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_body_componentst	0x140ca1aa0	0x1416485f8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_plantst	0x140ca5bb0	0x14165a050	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_fish_rawst	0x140ca5bb0	0x141658fc8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_remainsst	0x140ca5bb0	0x141655aa8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_liquid_miscst	0x140ca5bb0	0x141656228	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_verminst	0x140ca2a80	0x14165d350	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_critterst	0x140ca2a80	0x141657548	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_meatst	0x140ca5bb0	0x14167bab8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_corpsepiecest	0x140ca1aa0	0x14167c238	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_drinkst	0x140ca5bb0	0x1416bada8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_woodst	0x140ca5bb0	0x1416b7b08	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_globst	0x140ca5bb0	0x1416be1a8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_eggst	0x140ca5bb0	0x1416b6c80	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_petst	0x140ca2a80	0x1416bc0b8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_powder_miscst	0x140ca5bb0	0x1416b9470	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_coinst	0x140ca0d00	0x1416b8850	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_quernst	0x140ca5bb0	0x1416b53a8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_barrelst	0x140ca2b90	0x1416c3308	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_instrumentst	0x140ca5bb0	0x1416c72d8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_statuest	0x140ca0b40	0x1416caa48	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_anvilst	0x140ca5bb0	0x1416c8818	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_cheesest	0x140ca5bb0	0x1416c3a88	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_ammost	0x140ca5bb0	0x1416ca188	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_threadst	0x140ca5bb0	0x1416c9a08	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_fishst	0x140ca5bb0	0x1416c8098	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_shieldst	0x140ca5bb0	0x1416c51e8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_flaskst	0x140ca5bb0	0x1416c2b88	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_traction_benchst	0x140ca5bb0	0x1416c6298	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_backpackst	0x140ca5bb0	0x1416c5aa8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_smallgemst	0x140ca5bb0	0x1416c6b58	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_quiverst	0x140ca5bb0	0x1416c9288	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_gobletst	0x140ca5bb0	0x1416c45c8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_boulderst	0x140ca5bb0	0x1416cb308	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_seedsst	0x140ca5bb0	0x1416d0cc8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_catapultpartsst	0x140ca5bb0	0x141701c50	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_barst	0x140ca5bb0	0x1416f7388	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_floodgatest	0x140ca5bb0	0x1416feea0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_crutchst	0x140ca5bb0	0x1416fdf48	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_bolt_thrower_partsst	0x140ca5bb0	0x1416f1828	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_amuletst	0x140ca5bb0	0x1416f3da8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_bookst	0x140ca0bd0	0x1416ff620	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_branchst	0x140ca5bb0	0x1416f3628	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_weaponrackst	0x140ca5bb0	0x141702b50	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_splintst	0x140ca5bb0	0x1416f5cb0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_trappartsst	0x140ca5bb0	0x1416f2ea8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_ballistapartsst	0x140ca5bb0	0x1416fc870	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_trapcompst	0x140ca5bb0	0x1416f08d0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_scepterst	0x140ca5bb0	0x1416fd7c8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_cagest	0x140ca4420	0x1416f1fa8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_figurinest	0x140ca0b40	0x1417014d0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_animaltrapst	0x140ca5bb0	0x1417005d0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_rockst	0x140ca0040	0x1416f4d00	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_ringst	0x140ca5bb0	0x1416f8a60	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_foodst	0x140ca27c0	0x1416f6c08	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_armorstandst	0x140ca5bb0	0x1417023d0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_ballistaarrowheadst	0x140ca5bb0	0x1416f9398	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_chainst	0x140ca5bb0	0x1416f82e0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_siegeammost	0x140ca5bb0	0x1416f6488	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_earringst	0x140ca5bb0	0x1416fb1f0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_pipe_sectionst	0x140ca5bb0	0x1416f5530	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_coffinst	0x140ca5bb0	0x1416ffe50	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_crownst	0x140ca5bb0	0x1416f7b08	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_roughst	0x140ca5bb0	0x1416f10a8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_gratest	0x140ca5bb0	0x1416fb970	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_bucketst	0x140ca5bb0	0x1416fa298	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_windowst	0x140ca5bb0	0x141700d50	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_sheetst	0x140ca5bb0	0x1416fe6c8	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_braceletst	0x140ca5bb0	0x1416faa70	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_millstonest	0x140ca5bb0	0x1416f9b18	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_toyst	0x140ca5bb0	0x1416fcff0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_orthopedic_castst	0x140ca5bb0	0x141703328	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_plant_growthst	0x140ca5bb0	0x1416f2728	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_slabst	0x140ca0870	0x1416fc0f0	-	getDescription; shared ::items and typed inventory caption resolvers
+item-virtual	item_totemst	0x140ca0e50	0x1416f4528	-	getDescription; shared ::items and typed inventory caption resolvers
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cbf50	0x140a82d8c	grown 
+item-literal	item-type-name-constructor	0x140a82c10	0x14167ccf0	0x140a82e66	logs
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7e0	0x140a82ed8	branch
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce880	0x140a82efd	es
+item-literal	item-type-name-constructor	0x140a82c10	0x141601038	0x140a82f1d	rough gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce870	0x140a82f36	raw green glass
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce860	0x140a82f4f	raw clear glass
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce848	0x140a82f68	raw crystal glass
+item-literal	item-type-name-constructor	0x140a82c10	0x141601038	0x140a82f8a	rough gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cc1b0	0x140a82fa8	rough 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416862ac	0x140a83047	small 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416862ac	0x140a8305e	small 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7ac	0x140a8313e	rock
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7a0	0x140a8315e	small rock
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce790	0x140a831b7	stone boulders
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce780	0x140a831dd	boulders
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce738	0x140a832ba	bars
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7c0	0x140a832d3	charcoal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7b4	0x140a832e9	coke
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce740	0x140a832f2	refined coal
+item-literal	item-type-name-constructor	0x140a82c10	0x14163e59c	0x140a8330b	metal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7cc	0x140a8331a	 bars
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce7d8	0x140a833ca	 wafers
+item-literal	item-type-name-constructor	0x140a82c10	0x1416011f0	0x140a834b8	cut gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce720	0x140a834d1	cut green glass gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce708	0x140a834ea	cut clear glass gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce768	0x140a83500	cut crystal glass gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce760	0x140a8351b	gems
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce758	0x140a83658	blocks
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce758	0x140a8366f	blocks
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6ec	0x140a8371d	door
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce750	0x140a83724	portal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6e0	0x140a8379a	floodgate
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6d0	0x140a8380a	hatch cover
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6c8	0x140a8387a	grate
+item-literal	item-type-name-constructor	0x140a82c10	0x14162fdb4	0x140a838ea	table
+item-literal	item-type-name-constructor	0x140a82c10	0x14163cea0	0x140a8395a	cabinet
+item-literal	item-type-name-constructor	0x140a82c10	0x14163ce90	0x140a839ca	weapon rack
+item-literal	item-type-name-constructor	0x140a82c10	0x14163ce08	0x140a83a3a	armor stand
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce704	0x140a83aaa	bin
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce700	0x140a83b51	box
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6fc	0x140a83b6a	e
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6f4	0x140a83b93	coffer
+item-literal	item-type-name-constructor	0x140a82c10	0x14163cea8	0x140a83ba2	chest
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6a0	0x140a83bc3	boxe
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e9298	0x140a83bd8	s
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce700	0x140a83bec	box
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce69c	0x140a83c64	bag
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce690	0x140a83cff	backpack
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6c0	0x140a83dbc	cast
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce680	0x140a83dc8	limb/body 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6c0	0x140a83dd7	cast
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce680	0x140a83e37	limb/body 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6c0	0x140a83e46	cast
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6b8	0x140a83eb6	splint
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6b0	0x140a83f20	crutch
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce6a8	0x140a83fbb	quiver
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce63c	0x140a8403a	casket
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce630	0x140a84085	sarcophag
+item-literal	item-type-name-constructor	0x140a82c10	0x141642184	0x140a84094	us
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c0828	0x140a8409b	i
+item-literal	item-type-name-constructor	0x140a82c10	0x14162fe0c	0x140a840b7	coffin
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce61c	0x140a841d4	chain
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce624	0x140a841e8	rope
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce664	0x140a84328	vial
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce65c	0x140a84339	flask
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce670	0x140a84350	waterskin
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce648	0x140a843f9	musical instrument
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5e8	0x140a844db	unglazed 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a84643	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c1e44	0x140a8465d	tool
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c1d64	0x140a846fd	toy
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5e0	0x140a847ad	cup
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5dc	0x140a847e1	mug
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5d4	0x140a847fb	goblet
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce614	0x140a8486b	window
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5fc	0x140a8491a	cage
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce608	0x140a84921	terrarium
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce5f4	0x140a84995	barrel
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec8c	0x140a84a05	bucket
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec80	0x140a84a75	animal trap
+item-literal	item-type-name-constructor	0x140a82c10	0x14162fe04	0x140a84af1	chair
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec74	0x140a84b0b	throne
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec70	0x140a84bc1	web
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cecb8	0x140a84c0c	strands
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158b4	0x140a84c3f	yarn
+item-literal	item-type-name-constructor	0x140a82c10	0x14161589c	0x140a84c50	thread
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158a4	0x140a84cc5	cloth
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cecac	0x140a84dcf	sheet
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceca0	0x140a84df2	tanned hide
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec94	0x140a84e55	totem
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec40	0x140a84ebe	-bound 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec2c	0x140a84eda	codex
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec38	0x140a84ee1	codices
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec20	0x140a84f60	figurine
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a84f7e	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x14164fc00	0x140a84fa3	drink
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a84fe6	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec60	0x140a851cb	filthy 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec58	0x140a851e4	sticky 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec48	0x140a85203	vomitous 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebec	0x140a8521f	slimy 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416b1070	0x140a85238	stagnant 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebe4	0x140a85254	dirty 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebdc	0x140a85270	gooey 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebd0	0x140a85289	purulent 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec10	0x140a852a2	ichorous 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec08	0x140a852bb	bloody 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416a6358	0x140a852fa	liquid
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebfc	0x140a8543c	 paste
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebf4	0x140a85491	glob
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb80	0x140a85692	 laced with 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e90d8	0x140a85706	, 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e9110	0x140a85716	 and 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a8577b	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb70	0x140a85818	 dye mix
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb64	0x140a8583c	powder
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a85896	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb5c	0x140a858b8	cheese
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cebc0	0x140a85940	catapult parts
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceba8	0x140a859b8	bolt thrower parts
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb98	0x140a85a30	mechanisms
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb90	0x140a85adf	tube
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb10	0x140a85af9	pipe section
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb00	0x140a85b97	trap component
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a85bc8	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceaf0	0x140a85caa	ballista parts
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceae8	0x140a85d22	anvil
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb54	0x140a85d92	amulet
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb40	0x140a85e02	ballista arrow head
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb30	0x140a85ea9	siege ammo
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceb20	0x140a85ff3	ammunition
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceaa8	0x140a8606b	scepter
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea9c	0x140a860db	crown
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea94	0x140a86145	coin
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea88	0x140a86164	perfect 
+item-literal	item-type-name-constructor	0x140a82c10	0x14164a2c8	0x140a86173	large 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cead8	0x140a8625b	green glass 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceac8	0x140a86271	clear glass 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceab8	0x140a86287	crystal glass 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158fc	0x140a862a3	gem
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceab0	0x140a8635b	 gem
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea50	0x140a86436	ring
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea48	0x140a864a6	earring
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea38	0x140a86516	bracelet
+item-literal	item-type-name-constructor	0x140a82c10	0x14162fdb0	0x140a86586	bed
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea28	0x140a865f6	traction bench
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea7c	0x140a86666	quern
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea70	0x140a866d6	millstone
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea64	0x140a86746	statue
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea58	0x140a86852	memorial
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce9a0	0x140a86866	food imports sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce988	0x140a8687a	clothing imports sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce970	0x140a8688e	general imports sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce960	0x140a868a2	cloth shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cea10	0x140a868b6	leather shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce9f0	0x140a868ca	woven clothing shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce9d0	0x140a868de	leather clothing shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ce9b8	0x140a868f2	bone carver's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf090	0x140a86906	gem cutter's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf078	0x140a8691a	weaponsmith's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf060	0x140a8692e	bowyer's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf048	0x140a86942	blacksmith's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf0f0	0x140a86956	armorsmith's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf0d8	0x140a8696a	metal craft shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf0c0	0x140a8697e	leather goods shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf0a8	0x140a86992	carpenter's shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceff8	0x140a869a6	stone furniture shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefd8	0x140a869ba	metal furniture shop sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefc8	0x140a869ce	tavern sign
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefbc	0x140a869e2	slab
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefbc	0x140a869f6	slab
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a86a14	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf03c	0x140a86a29	corpse
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a86a47	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158cc	0x140a86a6b	tooth
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf034	0x140a86a7c	teeth
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158c4	0x140a86a91	bone
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158bc	0x140a86aa9	shell
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf028	0x140a86ac1	plant part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cf018	0x140a86ad9	silk body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef70	0x140a86af1	leather body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef58	0x140a86b09	wooden body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef48	0x140a86b23	soap body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158e4	0x140a86b3d	horn
+item-literal	item-type-name-constructor	0x140a82c10	0x1416158dc	0x140a86b57	pearl
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef38	0x140a86b71	yarn body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefa8	0x140a86b89	strand body part
+item-literal	item-type-name-constructor	0x140a82c10	0x141681050	0x140a86b92	body part
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cefa0	0x140a86bbb	Rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x14167f0c0	0x140a86d22	remains
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef94	0x140a86d81	seeds
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef88	0x140a86df2	withered 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceee0	0x140a86e66	leaves and fruit
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceed0	0x140a86e77	leaf or fruit
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef88	0x140a86eaa	withered 
+item-literal	item-type-name-constructor	0x140a82c10	0x141614d54	0x140a86efd	plant
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e9298	0x140a86f16	s
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a86f3c	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceec8	0x140a86f54	raw 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e90d8	0x140a870d5	, 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e90d8	0x140a870eb	, 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416a11f0	0x140a87104	fish
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a8712a	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a87251	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceec4	0x140a87266	egg
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a8728c	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416a11f0	0x140a8738b	fish
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef2c	0x140a873a8	live 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef18	0x140a873e1	small live animal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cef0c	0x140a873fb	tame 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceef8	0x140a87404	small tame animal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee88	0x140a8741b	prepared meal
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cec68	0x140a87435	rotten 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee78	0x140a8744a	preserved 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee70	0x140a8750c	 chops
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee68	0x140a8751d	 chop
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceebc	0x140a87556	meat
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceebc	0x140a87570	meat
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c1ecc	0x140a87602	weapon
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a8763b	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceea8	0x140a87767	suits of 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c1ec4	0x140a87776	armor
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a877dc	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceeb4	0x140a87886	chain 
+item-literal	item-type-name-constructor	0x140a82c10	0x14163a34c	0x140a87995	right 
+item-literal	item-type-name-constructor	0x140a82c10	0x14163a324	0x140a879b5	left 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416ceeb4	0x140a879fe	chain 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a87a5f	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee98	0x140a87a73	handwear
+item-literal	item-type-name-constructor	0x140a82c10	0x1416c1d74	0x140a87b17	shield
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee10	0x140a87b36	/buckler
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee10	0x140a87b4a	/buckler
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a87c87	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cee00	0x140a87cb7	footwear
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cedf0	0x140a87da8	headwear
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a87dec	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1416cede8	0x140a87ea8	legwear
+item-literal	item-type-name-constructor	0x140a82c10	0x1415e873c	0x140a87f2c	 
+item-literal	item-type-name-constructor	0x140a82c10	0x1415fcfe0	0x140a88046	item
+item-literal	item-type-name-constructor	0x140a82c10	0x14161bdcc	0x140a88077	 [
+item-literal	item-type-name-constructor	0x140a82c10	0x1415fd690	0x140a88097	]
+item-literal	item-caption-dispatch	0x140c65450	0x1416ee318	0x140c656f4	 (copy)
+item-literal	item_rockst	0x140ca0040	0x1416ee3bc	0x140ca008b	icicle
+item-literal	item_rockst	0x140ca0040	0x1416a5f64	0x140ca01e0	sharp
+item-literal	item_rockst	0x140ca0040	0x1416a5f64	0x140ca0238	sharp
+item-literal	item_rockst	0x140ca0040	0x1415e873c	0x140ca024d	 
+item-literal	item_rockst	0x140ca0040	0x1415edb24	0x140ca03b8	's 
+item-literal	item_rockst	0x140ca0040	0x1415e873c	0x140ca0450	 
+item-literal	item_rockst	0x140ca0040	0x141789108	0x140ca0477	unknown material
+item-literal	item_rockst	0x140ca0040	0x1416ce7ac	0x140ca04f5	rock
+item-literal	item_rockst	0x140ca0040	0x1416862ac	0x140ca056a	small 
+item-literal	item_rockst	0x140ca0040	0x1415edb24	0x140ca06d8	's 
+item-literal	item_rockst	0x140ca0040	0x1415e873c	0x140ca0770	 
+item-literal	item_rockst	0x140ca0040	0x141789108	0x140ca0797	unknown material
+item-literal	item_rockst	0x140ca0040	0x1416ce7ac	0x140ca0820	rock
+item-literal	item_rockst	0x140ca0040	0x1416ce7a0	0x140ca083c	small rock
+item-literal	item_slabst	0x140ca0870	0x1415ed5b4	0x140ca0922	 to 
+item-literal	item_slabst	0x140ca0870	0x1415ed620	0x140ca09c8	a 
+item-literal	item_statuest,item_figurinest	0x140ca0b40	0x1415eb518	0x140ca0b8b	 of 
+item-literal	item_bookst	0x140ca0bd0	0x141615540	0x140ca0c29	 (
+item-literal	item_bookst	0x140ca0bd0	0x141615580	0x140ca0c8b	)
+item-literal	item_totemst	0x140ca0e50	0x1416cec94	0x140ca1099	totem
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416ee378	0x140ca1bb0	your 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1415edb24	0x140ca1c21	's 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1415edb24	0x140ca1cdc	's 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416cec68	0x140ca1d41	rotten 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1415e873c	0x140ca1df4	 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416ee3b0	0x140ca2192	mangled 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1415e873c	0x140ca222f	 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416158f0	0x140ca226d	material
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x14161bdcc	0x140ca24a4	 [
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1415fd690	0x140ca24c3	]
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416ee390	0x140ca252c	partial remains
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416ee380	0x140ca25c5	mutilated 
+item-literal	item_corpsest,item_body_componentst,item_corpsepiecest	0x140ca1aa0	0x1416cf03c	0x140ca25f9	corpse
+item-literal	item_foodst	0x140ca27c0	0x1416cec68	0x140ca27fe	rotten 
+item-literal	item_foodst	0x140ca27c0	0x1415e873c	0x140ca2881	 
+item-literal	item_foodst	0x140ca27c0	0x14161bdcc	0x140ca2971	 [
+item-literal	item_foodst	0x140ca27c0	0x1415fd690	0x140ca29b2	]
+item-literal	item_verminst,item_critterst,item_petst	0x140ca2a80	0x1415e90d8	0x140ca2b09	, 
+item-literal	item_barrelst	0x140ca2b90	0x1416ee3e8	0x140ca2bfa	Prepared Food
+item-literal	item_barrelst	0x140ca2b90	0x1416ee370	0x140ca2c20	Seed
+item-literal	item_barrelst	0x140ca2b90	0x1416156e0	0x140ca2c46	Plant
+item-literal	item_barrelst	0x140ca2b90	0x1416ee368	0x140ca2c6c	Cheese
+item-literal	item_barrelst	0x140ca2b90	0x141601d84	0x140ca2c92	Fish
+item-literal	item_barrelst	0x140ca2b90	0x141601d8c	0x140ca2cb8	Meat
+item-literal	item_barrelst	0x140ca2b90	0x1416ee360	0x140ca2cde	Spice
+item-literal	item_barrelst	0x140ca2b90	0x1416ee358	0x140ca2d04	Mill
+item-literal	item_barrelst	0x140ca2b90	0x14162a2a0	0x140ca2d2a	Fat
+item-literal	item_barrelst	0x140ca2b90	0x1416ee348	0x140ca2d50	Rendered Fat
+item-literal	item_barrelst	0x140ca2b90	0x14162a298	0x140ca2d76	Paste
+item-literal	item_barrelst	0x140ca2b90	0x1416ee330	0x140ca2d9c	Pressed Material
+item-literal	item_barrelst	0x140ca2b90	0x1416ee328	0x140ca2e71	 Barrel
+item-literal	item_barrelst	0x140ca2b90	0x1415edb24	0x140ca2fd8	's 
+item-literal	item_barrelst	0x140ca2b90	0x1415e873c	0x140ca3070	 
+item-literal	item_barrelst	0x140ca2b90	0x141789108	0x140ca3097	unknown material
+item-literal	item_barrelst	0x140ca2b90	0x141615540	0x140ca30b3	 (
+item-literal	item_barrelst	0x140ca2b90	0x141615580	0x140ca30e2	)
+item-literal	item_barrelst	0x140ca2b90	0x1416ee328	0x140ca319a	 Barrel
+item-literal	item_barrelst	0x140ca2b90	0x1415edb24	0x140ca3308	's 
+item-literal	item_barrelst	0x140ca2b90	0x1415e873c	0x140ca33a0	 
+item-literal	item_barrelst	0x140ca2b90	0x141789108	0x140ca33c7	unknown material
+item-literal	item_barrelst	0x140ca2b90	0x141615540	0x140ca33e5	 (
+item-literal	item_barrelst	0x140ca2b90	0x141615580	0x140ca3414	)
+item-literal	item_barrelst	0x140ca2b90	0x1416ee324	0x140ca3497	 <#
+item-literal	item_barrelst	0x140ca2b90	0x1416ee320	0x140ca34ba	>
+item-literal	item_binst	0x140ca3500	0x14162a038	0x140ca355f	Armor
+item-literal	item_binst	0x140ca3500	0x14162cbd4	0x140ca3580	Weapon
+item-literal	item_binst	0x140ca3500	0x14162a0d8	0x140ca35a1	Ammo
+item-literal	item_binst	0x140ca3500	0x1416eee04	0x140ca35c2	Coin
+item-literal	item_binst	0x140ca3500	0x1416eedf8	0x140ca35e3	Bar/Block
+item-literal	item_binst	0x140ca3500	0x14162a458	0x140ca3604	Gem
+item-literal	item_binst	0x140ca3500	0x1416eede8	0x140ca3625	Finished Goods
+item-literal	item_binst	0x140ca3500	0x141629cc8	0x140ca3646	Leather
+item-literal	item_binst	0x140ca3500	0x14162a01c	0x140ca3667	Cloth
+item-literal	item_binst	0x140ca3500	0x14162a06c	0x140ca3688	Sheet
+item-literal	item_binst	0x140ca3500	0x1416eede0	0x140ca369d	 Bin
+item-literal	item_binst	0x140ca3500	0x1415edb24	0x140ca3808	's 
+item-literal	item_binst	0x140ca3500	0x1415e873c	0x140ca38a0	 
+item-literal	item_binst	0x140ca3500	0x141789108	0x140ca38c7	unknown material
+item-literal	item_binst	0x140ca3500	0x141615540	0x140ca38e3	 (
+item-literal	item_binst	0x140ca3500	0x141615580	0x140ca3912	)
+item-literal	item_binst	0x140ca3500	0x1416ee324	0x140ca398b	 <#
+item-literal	item_binst	0x140ca3500	0x1416ee320	0x140ca39ae	>
+item-literal	item_toolst	0x140ca39f0	0x1416ee3e8	0x140ca3a6e	Prepared Food
+item-literal	item_toolst	0x140ca39f0	0x1416ee370	0x140ca3a94	Seed
+item-literal	item_toolst	0x140ca39f0	0x1416156e0	0x140ca3aba	Plant
+item-literal	item_toolst	0x140ca39f0	0x1416ee368	0x140ca3ae0	Cheese
+item-literal	item_toolst	0x140ca39f0	0x141601d84	0x140ca3b06	Fish
+item-literal	item_toolst	0x140ca39f0	0x141601d8c	0x140ca3b2c	Meat
+item-literal	item_toolst	0x140ca39f0	0x1416ee360	0x140ca3b52	Spice
+item-literal	item_toolst	0x140ca39f0	0x1416ee358	0x140ca3b78	Mill
+item-literal	item_toolst	0x140ca39f0	0x14162a2a0	0x140ca3b9e	Fat
+item-literal	item_toolst	0x140ca39f0	0x1416ee348	0x140ca3bc4	Rendered Fat
+item-literal	item_toolst	0x140ca39f0	0x14162a298	0x140ca3bea	Paste
+item-literal	item_toolst	0x140ca39f0	0x1416ee330	0x140ca3c10	Pressed Material
+item-literal	item_toolst	0x140ca39f0	0x1415e873c	0x140ca3ced	 
+item-literal	item_toolst	0x140ca39f0	0x1415edb24	0x140ca3e77	's 
+item-literal	item_toolst	0x140ca39f0	0x1415e873c	0x140ca3f0f	 
+item-literal	item_toolst	0x140ca39f0	0x141789108	0x140ca3f36	unknown material
+item-literal	item_toolst	0x140ca39f0	0x141615540	0x140ca3f52	 (
+item-literal	item_toolst	0x140ca39f0	0x1415e90d8	0x140ca3f92	, 
+item-literal	item_toolst	0x140ca39f0	0x141615580	0x140ca3fcb	)
+item-literal	item_toolst	0x140ca39f0	0x1415e873c	0x140ca404a	 
+item-literal	item_toolst	0x140ca39f0	0x1415edb24	0x140ca41d8	's 
+item-literal	item_toolst	0x140ca39f0	0x1415e873c	0x140ca4270	 
+item-literal	item_toolst	0x140ca39f0	0x141789108	0x140ca4297	unknown material
+item-literal	item_toolst	0x140ca39f0	0x141615540	0x140ca42b5	 (
+item-literal	item_toolst	0x140ca39f0	0x1415e90d8	0x140ca42f5	, 
+item-literal	item_toolst	0x140ca39f0	0x141615580	0x140ca432e	)
+item-literal	item_toolst	0x140ca39f0	0x1416ee324	0x140ca43b1	 <#
+item-literal	item_toolst	0x140ca39f0	0x1416ee320	0x140ca43d4	>
+item-literal	item_cagest	0x140ca4420	0x1416eedd8	0x140ca469d	shared
+item-literal	item_cagest	0x140ca4420	0x1416eedd8	0x140ca47c7	shared
+item-literal	item_cagest	0x140ca4420	0x141615540	0x140ca489f	 (
+item-literal	item_cagest	0x140ca4420	0x141615580	0x140ca4bdd	)
+item-literal	item_cagest	0x140ca4420	0x141615540	0x140ca4bf9	 (
+item-literal	item_cagest	0x140ca4420	0x141615540	0x140ca50f8	 (
+item-literal	item_cagest	0x140ca4420	0x141615580	0x140ca5179	)
+item-literal	item_bagst	0x140ca53f0	0x1416eedd0	0x140ca54be	 Bag
+item-literal	item_bagst	0x140ca53f0	0x1415edb24	0x140ca5628	's 
+item-literal	item_bagst	0x140ca53f0	0x1415e873c	0x140ca56c0	 
+item-literal	item_bagst	0x140ca53f0	0x141789108	0x140ca56e7	unknown material
+item-literal	item_bagst	0x140ca53f0	0x141615540	0x140ca5703	 (
+item-literal	item_bagst	0x140ca53f0	0x141615580	0x140ca5732	)
+item-literal	item_bagst	0x140ca53f0	0x1416eedd0	0x140ca5875	 Bag
+item-literal	item_bagst	0x140ca53f0	0x1415edb24	0x140ca59d8	's 
+item-literal	item_bagst	0x140ca53f0	0x1415e873c	0x140ca5a70	 
+item-literal	item_bagst	0x140ca53f0	0x141789108	0x140ca5a97	unknown material
+item-literal	item_bagst	0x140ca53f0	0x141615540	0x140ca5ab3	 (
+item-literal	item_bagst	0x140ca53f0	0x141615580	0x140ca5ae2	)

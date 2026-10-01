@@ -1,0 +1,41 @@
+<data-definition>
+    <bitfield-type type-name='wilderpop_flag' base-type='uint8_t'> bay12: WILDERPOPFLAG_*
+        <flag-bit name='discovered' original-name='DISCOVERED'/>
+        <flag-bit name='extinct' original-name='NULLIFIED'/>
+        <flag-bit name='already_removed' original-name='DIRECT_ERASE' comment='no longer in world.populations'/>
+        <flag-bit name='need_offload' original-name='NEED_TO_OFFLOAD'/>
+    </bitfield-type>
+
+    <struct-type type-name='local_population' original-name='wilderpopst'>
+        <enum base-type='int8_t' type-name='world_population_type' name='type'/>
+
+        <compound is-union='true'> not actually a union, just race
+            <int16_t name="race" ref-target='creature_raw'/>
+            <int16_t name="plant" ref-target='plant_raw'/>
+        </compound>
+
+        <int32_t name="quantity" original-name='number'/>
+        <int32_t name="quantity_max" original-name='max_number' since='v0.40.01'/>
+
+        <bitfield base-type='uint8_t' type-name='wilderpop_flag' name='flags' original-name='flag'/>
+
+        <compound type-name='world_population_ref' name='population' original-name='rpop_info'/>
+
+        <int32_t name="breed" original-name='breed_id' ref-target='breed'/>
+
+        <int32_t name='interaction_idx' original-name='interaction_index' init-value='-1'/>
+        <int32_t name='interaction_instance' original-name='interaction_instance_id' init-value='-1'/>
+        <int32_t name='interaction_effect' original-name='interaction_effect_id' init-value='-1'/>
+    </struct-type>
+
+    <struct-type type-name='wilderpop_handlerst'>
+        <stl-vector pointer-type='local_population' name='all' original-name='play'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

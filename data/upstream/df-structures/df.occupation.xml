@@ -1,0 +1,76 @@
+<data-definition>
+    <enum-type type-name='service_order_type' base-type='int32_t'> bay12: ServiceOrderType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='DRINK'/>
+        <enum-item name='ROOM_RENTAL'/>
+        <enum-item name='EXTEND_ROOM_RENTAL'/>
+    </enum-type>
+
+    <bitfield-type type-name='service_order_flag' base-type='uint32_t'> bay12: SERVICE_ORDER_FLAG_*
+        <flag-bit name='completed' original-name='SERVICE_COMPLETED'/>
+    </bitfield-type>
+
+    <struct-type type-name='service_orderst'>
+        <int32_t name='local_id'/>
+
+        <enum type-name='service_order_type' name="type"/>
+        <enum type-name='item_type' name='item_type'/>
+        <int16_t name='item_subtype'/>
+        <int16_t name='mat_type' original-name='item_mat'/>
+        <int32_t name='mat_index' original-name='item_matg'/>
+        <int32_t name='customer_hfid'/>
+        <int32_t name='customer_unid'/>
+        <int32_t name='money_owed'/>
+        <int32_t name='room_ab_local_id' comment='not zone or ab id -- something local to ab'/>
+        <int32_t name='start_year'/>
+        <int32_t name='start_season_count'/>
+        <int32_t name='end_year'/>
+        <int32_t name='end_season_count'/>
+        <int32_t name='last_failed_year'/>
+        <int32_t name='last_failed_season_count'/>
+        <int32_t name='activity_id' ref-target='activity_entry'/>
+        <int32_t name='activity_event_id'/>
+        <bitfield base-type='uint32_t' type-name='service_order_flag' name='flag'/>
+    </struct-type>
+
+    <struct-type type-name='service_order_templatest'>
+        <enum type-name='service_order_type' name='type'/>
+        <enum type-name='item_type' name='item_type'/>
+        <int16_t name='item_subtype'/>
+        <int16_t name='mat_type' original-name='item_mat'/>
+        <int32_t name='mat_index' original-name='item_matg'/>
+        <int32_t name='cost'/>
+        <int32_t name='full_cost'/>
+        <int32_t name='room_ab_local_id' comment='not zone or abstract building id'/>
+    </struct-type>
+
+    <struct-type type-name='occupation' instance-vector='$global.world.occupations.all' key-field='id' original-name='occupationst'>
+        <int32_t name='id' original-name='global_id'/>
+
+        <enum type-name='occupation_type' name='type'/>
+        <int32_t name='histfig_id' original-name='holder_hfid' ref-target='historical_figure'/>
+        <int32_t name='unit_id' original-name='holder_unid' ref-target='unit'/>
+        <int32_t name='location_id' original-name='abid' ref-target='abstract_building' aux-value='$$.site_id'/>
+        <int32_t name='site_id' original-name='stid' ref-target='world_site'/>
+        <int32_t name='group_id' original-name='enid' ref-target='historical_entity'/>
+
+        <stl-vector pointer-type='service_orderst' name='service_order' comment='local id vector'/>
+        <int32_t name='next_service_order_id'/>
+
+        <pointer type-name='world_site' name='wg_site' has-bad-pointers='true' comment='worldgen only'/>
+        <pointer type-name='abstract_building' name='wg_ab' has-bad-pointers='true' comment='worldgen only'/>
+    </struct-type>
+
+    <struct-type type-name='occupation_handlerst'>
+        <stl-vector pointer-type='occupation' name='all' original-name='global'/>
+
+        <stl-vector pointer-type='occupation' name='order_load' has-bad-pointers='true'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

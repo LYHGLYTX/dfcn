@@ -1,0 +1,1116 @@
+# Native unit activity graph; ELF:bcc6789e6fb477b785a2b02be80b8b1b054ff88c
+# kind	owner	formatter	literal addresses	instruction references	source
+# Includes job captions, all activity/order virtual methods, status wrappers and finite operands.
+# Significant spaces retained. See data/extracted/unit-activity-source-review.md for compositions, inline stores and shared noun resolvers.
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3abc	0xb71482,0xb715ad	 (Caged)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3ac5	0xb70e80	 (Chained)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38ee	0xb71957	 (activity cancelled)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a8a	0xb718a6	 (cannot follow order)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3937	0xb71a97	 (cannot individually drill)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a57	0xb7196b	 (cannot leave site)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3954	0xb71a83	 (does not exist)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3913	0xb7192f	 (improper barracks)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f397b	0xb71a5b	 (improper building)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f39a8	0xb71a33	 (invalid location)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a20	0xb719bb	 (invalid order)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a6c	0xb71907	 (location no longer in zone)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3928	0xb7191b	 (no activity)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3966	0xb71a6f	 (no archery target)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3904	0xb71943	 (no barracks)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f39d9	0xb71a0b	 (no burrow)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a4c	0xb7197f	 (no item)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a3e	0xb71993	 (no library)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f39f6	0xb719e3	 (no patrol route)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f1c88	0xb719cf	 (no reachable point on route)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f39bc	0xb71a1f	 (no reachable valid target)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a31	0xb719a7	 (no temple)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3a09	0xb718f3	 (not following order)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f39e6	0xb719f7	 (not in squad)
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3990	0xb71a47	 (unreachable location)
+status	unit activity with native colors	0xb70720..0xb71aab	0x219eec9	0xb715cc	 at 
+status	unit activity with native colors	0xb70720..0xb71aab	0x210eb84	0xb7121c	!
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3891	0xb70d83	Attend Meeting
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3883	0xb713c8	Attend Parley
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3aae	0xb71863	Caged
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3ab4	0xb71715	Chained
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3873	0xb7127c	Conduct Meeting
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38bc	0xb71682	Declare war
+status	unit activity with native colors	0xb70720..0xb71aab	0x20d3362	0xb7158e	Demand surrender
+status	unit activity with native colors	0xb70720..0xb71aab	0x20d338e	0xb71018	Diplomacy
+status	unit activity with native colors	0xb70720..0xb71aab	0x20d3380	0xb71841	Improve trade
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38a0	0xb714f6	Make Request of 
+status	unit activity with native colors	0xb70720..0xb71aab	0x20d3373	0xb716c7	Make contact
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38b1	0xb715fb	Make peace
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f372c	0xb70b21	Mercenary
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3701	0xb70b1a	Monster Slayer
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38d6	0xb711a0,0xb7152e	New Arrival
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38e2	0xb70e40	No activity
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3aa7	0xb716a4	No job
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3aa1	0xb71646	Noble
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f3863	0xb712d1,0xb7155f	Return Treasure
+status	unit activity with native colors	0xb70720..0xb71aab	0x20f38c8	0xb717ef	Seek alliance
+status	unit activity with native colors	0xb70720..0xb71aab	0x2210ff0	0xb70b31	Soldier
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3abc	0xb7ac3d	 (Caged)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3ac5	0xb7acf8	 (Chained)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38ee	0xb7a83b	 (activity cancelled)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a8a	0xb7af12	 (cannot follow order)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3937	0xb7a7c3	 (cannot individually drill)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a57	0xb7a697	 (cannot leave site)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3954	0xb7a7af	 (does not exist)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3913	0xb7a7eb	 (improper barracks)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f397b	0xb7a787	 (improper building)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f39a8	0xb7a75f	 (invalid location)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a20	0xb7a6e7	 (invalid order)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a6c	0xb7a813	 (location no longer in zone)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3928	0xb7a7d7	 (no activity)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3966	0xb7a79b	 (no archery target)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3904	0xb7a827	 (no barracks)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f39d9	0xb7a737	 (no burrow)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a4c	0xb7a6ab	 (no item)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a3e	0xb7a6bf	 (no library)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f39f6	0xb7a70f	 (no patrol route)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f1c88	0xb7a6fb	 (no reachable point on route)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f39bc	0xb7a74b	 (no reachable valid target)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a31	0xb7a6d3	 (no temple)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3a09	0xb7a7ff	 (not following order)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f39e6	0xb7a723	 (not in squad)
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3990	0xb7a773	 (unreachable location)
+status	unit activity text	0xb79d40..0xb7b0da	0x219eec9	0xb7ac9b	 at 
+status	unit activity text	0xb79d40..0xb7b0da	0x210eb84	0xb7a4b0	!
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3891	0xb7a500	Attend Meeting
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3883	0xb7a943	Attend Parley
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3aae	0xb7af06	Caged
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3ab4	0xb7adbf	Chained
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3873	0xb7a38c	Conduct Meeting
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38bc	0xb7ad6a	Declare war
+status	unit activity text	0xb79d40..0xb7b0da	0x20d3362	0xb7ac1e	Demand surrender
+status	unit activity text	0xb79d40..0xb7b0da	0x20d338e	0xb7a2bc	Diplomacy
+status	unit activity text	0xb79d40..0xb7b0da	0x20d3380	0xb7af38	Improve trade
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38a0	0xb7aaa7,0xb7acd9	Make Request of 
+status	unit activity text	0xb79d40..0xb7b0da	0x20d3373	0xb7af5b	Make contact
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38b1	0xb7ad27	Make peace
+status	unit activity text	0xb79d40..0xb7b0da	0x20f372c	0xb7a86c,0xb7a8a3,0xb7abba,0xb7ae1b,0xb7ae88	Mercenary
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3701	0xb79feb	Monster Slayer
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38d6	0xb7a3b4,0xb7a602	New Arrival
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38e2	0xb7a5e0	No activity
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3aa7	0xb7ac79	No job
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3aa1	0xb7add8	Noble
+status	unit activity text	0xb79d40..0xb7b0da	0x20f3863	0xb7a9e7,0xb7acba	Return Treasure
+status	unit activity text	0xb79d40..0xb7b0da	0x20f38c8	0xb7ae0a	Seek alliance
+status	unit activity text	0xb79d40..0xb7b0da	0x2210ff0	0xb79ffe	Soldier
+roster	creature role/status display	0x204bab0..0x204e526	0x20f3abc	0x204de60,0x204e002	 (Caged)
+roster	creature role/status display	0x204bab0..0x204e526	0x20f3ac5	0x204d7ab,0x204df66	 (Chained)
+roster	creature role/status display	0x204bab0..0x204e526	0x21cfba8	0x204d430	\#
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc4c	0x204e1bd	Agitated Caged Creature
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc64	0x204d864	Agitated Chained Creature
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc7e	0x204e1a9	Agitated Wilderness Creature
+roster	creature role/status display	0x204bab0..0x204e526	0x217340e	0x204d761	Berserk
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc9b	0x204e195	Caged Guest
+roster	creature role/status display	0x204bab0..0x204e526	0x221ccd6	0x204e160	Caged Prisoner
+roster	creature role/status display	0x204bab0..0x204e526	0x221cca7	0x204d91e	Chained Guest
+roster	creature role/status display	0x204bab0..0x204e526	0x221cce5	0x204d70c	Chained Prisoner
+roster	creature role/status display	0x204bab0..0x204e526	0x221ccc5	0x204d807	Current Resident
+roster	creature role/status display	0x204bab0..0x204e526	0x214e5d5	0x204c1dd	Deceased
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc26	0x204da00	Diplomat / 
+roster	creature role/status display	0x204bab0..0x204e526	0x21f0ec2	0x204d264	Domesticated
+roster	creature role/status display	0x204bab0..0x204e526	0x221cd2f	0x204d2f8	Exceptionally trained
+roster	creature role/status display	0x204bab0..0x204e526	0x221cd1e	0x204d3ed	Expertly trained
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc43	0x204e214	Friendly
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc32	0x204e246,0x204e2c1	Guest / 
+roster	creature role/status display	0x204bab0..0x204e526	0x221ccf6	0x204e14c	Hostile
+roster	creature role/status display	0x204bab0..0x204e526	0x221cbef	0x204df8b	Independent
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc1e	0x204d878	Invader
+roster	creature role/status display	0x204bab0..0x204e526	0x2175459	0x204bb0d	Job
+roster	creature role/status display	0x204bab0..0x204e526	0x221cd45	0x204d38b	Masterfully trained
+roster	creature role/status display	0x204bab0..0x204e526	0x20f36f2	0x204e1ed	Merchant
+roster	creature role/status display	0x204bab0..0x204e526	0x20fcb42	0x204da82	Missing
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc0e	0x204d8d4	Opposed to life
+roster	creature role/status display	0x204bab0..0x204e526	0x20f3f67	0x204e02a	Semi-Wild
+roster	creature role/status display	0x204bab0..0x204e526	0x221cd0b	0x204d329	Skillfully trained
+roster	creature role/status display	0x204bab0..0x204e526	0x20f3f62	0x204de2f	Tame
+roster	creature role/status display	0x204bab0..0x204e526	0x20f3f3c	0x204d3bc	Trained
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc07	0x204d7f6	Undead
+roster	creature role/status display	0x204bab0..0x204e526	0x20df31a	0x204d992	Underworld
+roster	creature role/status display	0x204bab0..0x204e526	0x221ccb5	0x204e181	Uninvited Guest
+roster	creature role/status display	0x204bab0..0x204e526	0x221cc3b	0x204d97e	Visitor
+roster	creature role/status display	0x204bab0..0x204e526	0x221ccfe	0x204d35a	Well-trained
+roster	creature role/status display	0x204bab0..0x204e526	0x221cbfb	0x204d7bf	Wild Animal
+job	job title	0x1cab560..0x1cb2754	0x20f7379	0x1cab6b8,0x1cabac5,0x1cac6a6,0x1cac960,0x1cad70f,0x1cada04,0x1cada53,0x1cadad1,0x1cadbf6,0x1caeed6,0x1caf7d6,0x1cafb5c,0x1cafcfe,0x1cafd48,0x1cafde0,0x1cb0b0a,0x1cb15df,0x1cb1a4c,0x1cb1b27,0x1cb1c28	 
+job	job title	0x1cab560..0x1cb2754	0x21df9e3	0x1cae329	 (barrel)
+job	job title	0x1cab560..0x1cb2754	0x21e00f8	0x1cb03d0	 (dyed only)
+job	job title	0x1cab560..0x1cb2754	0x21dfd5f	0x1cb0db5	 (engrave memorial)
+job	job title	0x1cab560..0x1cb2754	0x21df9cd	0x1cae3fd	 (vial)
+job	job title	0x1cab560..0x1cb2754	0x21dfe16	0x1caf52b	 Portal
+job	job title	0x1cab560..0x1cb2754	0x21dfce0	0x1caca79	 amulet
+job	job title	0x1cab560..0x1cb2754	0x219eeb1	0x1cabc34	 and 
+job	job title	0x1cab560..0x1cb2754	0x21dfeef	0x1cb003e	 animal trap
+job	job title	0x1cab560..0x1cb2754	0x21dffa3	0x1cac61e	 anvil
+job	job title	0x1cab560..0x1cb2754	0x21dfe60	0x1cae1a7	 armor stand
+job	job title	0x1cab560..0x1cb2754	0x21dff10	0x1cafed8	 backpack
+job	job title	0x1cab560..0x1cb2754	0x21e03c4	0x1cae26f	 bag
+job	job title	0x1cab560..0x1cb2754	0x21dff32	0x1cafa87	 ballista arrow head
+job	job title	0x1cab560..0x1cb2754	0x21dff7f	0x1cadaa4	 ballista parts
+job	job title	0x1cab560..0x1cb2754	0x21e03d6	0x1caffb5	 barrel
+job	job title	0x1cab560..0x1cb2754	0x2160946	0x1caf45d	 bed
+job	job title	0x1cab560..0x1cb2754	0x21da295	0x1cae20c	 bin
+job	job title	0x1cab560..0x1cb2754	0x214de53	0x1cb1370	 blocks
+job	job title	0x1cab560..0x1cb2754	0x21dff8f	0x1cb19cb	 bolt thrower parts
+job	job title	0x1cab560..0x1cb2754	0x221cb85	0x1cb13db	 box
+job	job title	0x1cab560..0x1cb2754	0x21dfd07	0x1cb189b	 bracelet
+job	job title	0x1cab560..0x1cb2754	0x20f457e	0x1cb0797	 bucket
+job	job title	0x1cab560..0x1cb2754	0x21dfe4a	0x1cae044	 cabinet
+job	job title	0x1cab560..0x1cb2754	0x2108009	0x1cb0eec	 cage
+job	job title	0x1cab560..0x1cb2754	0x21dfe75	0x1caebf1	 casket
+job	job title	0x1cab560..0x1cb2754	0x21dff63	0x1cadb21	 catapult parts
+job	job title	0x1cab560..0x1cb2754	0x220f968	0x1cb18d6,0x1cb200b	 chain
+job	job title	0x1cab560..0x1cb2754	0x20db646	0x1caec75	 chair
+job	job title	0x1cab560..0x1cb2754	0x2142060	0x1caeb04,0x1cb1ad3	 chest
+job	job title	0x1cab560..0x1cb2754	0x21e0064	0x1cb0529	 cloth 
+job	job title	0x1cab560..0x1cb2754	0x21dfe6d	0x1cb1c93	 coffer
+job	job title	0x1cab560..0x1cb2754	0x21dfe8a	0x1cb1f59	 coffin
+job	job title	0x1cab560..0x1cb2754	0x21d820f	0x1cb1307	 coins
+job	job title	0x1cab560..0x1cb2754	0x20df263	0x1caf664	 crafts
+job	job title	0x1cab560..0x1cb2754	0x21dfcf1	0x1cac567	 crown
+job	job title	0x1cab560..0x1cb2754	0x20f4c82	0x1cad4e0	 crutch
+job	job title	0x1cab560..0x1cb2754	0x21dfeda	0x1cb0bdf	 cups
+job	job title	0x1cab560..0x1cb2754	0x20d32f5	0x1cb108d	 door
+job	job title	0x1cab560..0x1cb2754	0x2173e5b	0x1cac1d0,0x1cb0585,0x1cb0644	 dye
+job	job title	0x1cab560..0x1cb2754	0x21dfcfe	0x1cabef5	 earring
+job	job title	0x1cab560..0x1cb2754	0x21dfcd6	0x1cb1985	 figurine
+job	job title	0x1cab560..0x1cb2754	0x20df254	0x1cb1bbe	 flasks
+job	job title	0x1cab560..0x1cb2754	0x21dfe1e	0x1cb020a	 floodgate
+job	job title	0x1cab560..0x1cb2754	0x21dffe3	0x1cac740	 for war
+job	job title	0x1cab560..0x1cb2754	0x214e6e8	0x1cac111	 gem
+job	job title	0x1cab560..0x1cb2754	0x21dfee0	0x1cb09a1	 goblets
+job	job title	0x1cab560..0x1cb2754	0x20fbc05	0x1caf354	 grate
+job	job title	0x1cab560..0x1cb2754	0x21dfe29	0x1cb17ec	 hatch cover
+job	job title	0x1cab560..0x1cb2754	0x20e5cb5	0x1cb06a9	 image
+job	job title	0x1cab560..0x1cb2754	0x21e0079	0x1cac174	 leather 
+job	job title	0x1cab560..0x1cb2754	0x21dff73	0x1cb1523	 mechanisms
+job	job title	0x1cab560..0x1cb2754	0x21dffb9	0x1cb1760	 millstone
+job	job title	0x1cab560..0x1cb2754	0x21dfee9	0x1cb2292	 mugs
+job	job title	0x1cab560..0x1cb2754	0x21e0015	0x1cae681	 ore
+job	job title	0x1cab560..0x1cb2754	0x21dff02	0x1cb0e74	 pipe section
+job	job title	0x1cab560..0x1cb2754	0x21dffb2	0x1caf2d7	 quern
+job	job title	0x1cab560..0x1cb2754	0x21dff1a	0x1cafaea	 quiver
+job	job title	0x1cab560..0x1cb2754	0x21dfcf8	0x1cb18f9	 ring
+job	job title	0x1cab560..0x1cb2754	0x20e1b62	0x1cb0a85	 rope
+job	job title	0x1cab560..0x1cb2754	0x21dfe7d	0x1cb1cc6	 sarcophagus
+job	job title	0x1cab560..0x1cb2754	0x21dfce8	0x1cac280	 scepter
+job	job title	0x1cab560..0x1cb2754	0x214a4b4	0x1cacd31	 slab
+job	job title	0x1cab560..0x1cb2754	0x20f4c5f	0x1cadc78	 splint
+job	job title	0x1cab560..0x1cb2754	0x21dffaa	0x1cadfe0	 statue
+job	job title	0x1cab560..0x1cb2754	0x21f49bc	0x1caeb66	 table
+job	job title	0x1cab560..0x1cb2754	0x21dfeb5	0x1cb08c3	 terrarium
+job	job title	0x1cab560..0x1cb2754	0x21e004d	0x1cb05e8	 thread 
+job	job title	0x1cab560..0x1cb2754	0x21dfe92	0x1cb1cde	 throne
+job	job title	0x1cab560..0x1cb2754	0x21dffcb	0x1cac827	 to hunt
+job	job title	0x1cab560..0x1cb2754	0x210f8a1	0x1cb081f	 toy
+job	job title	0x1cab560..0x1cb2754	0x21dfefc	0x1cb00e2	 tube
+job	job title	0x1cab560..0x1cb2754	0x21ed335	0x1cabbf3,0x1cac1a2,0x1cb0557,0x1cb0616	 using 
+job	job title	0x1cab560..0x1cb2754	0x21dfed3	0x1cb0f7f	 vials
+job	job title	0x1cab560..0x1cb2754	0x21dfec7	0x1cae925	 waterskins
+job	job title	0x1cab560..0x1cb2754	0x21dfe53	0x1cae0f6	 weapon rack
+job	job title	0x1cab560..0x1cb2754	0x20fbc41	0x1cb070d	 window
+job	job title	0x1cab560..0x1cb2754	0x20e2a73	0x1cae6f7,0x1cae7e7,0x1cb15bc	 with 
+job	job title	0x1cab560..0x1cb2754	0x21dfb5f	0x1cad5b7	Apply cast
+job	job title	0x1cab560..0x1cb2754	0x21dff47	0x1cafd96	Assemble 
+job	job title	0x1cab560..0x1cb2754	0x21dff22	0x1caf0bb	Bait trap with 
+job	job title	0x1cab560..0x1cb2754	0x21e02c9	0x1cacd64	Beat criminal
+job	job title	0x1cab560..0x1cb2754	0x21dfb6a	0x1cb14dd	Bring crutch
+job	job title	0x1cab560..0x1cb2754	0x21e025e	0x1cac88c	Bring item to depot
+job	job title	0x1cab560..0x1cb2754	0x21e024b	0x1cac874	Bring item to shop
+job	job title	0x1cab560..0x1cb2754	0x21df924	0x1caedab	Butcher an animal
+job	job title	0x1cab560..0x1cb2754	0x21dfb27	0x1cad88d	Cage 
+job	job title	0x1cab560..0x1cb2754	0x21dfbc7	0x1cb12e4	Cage small animal
+job	job title	0x1cab560..0x1cb2754	0x21e01eb	0x1cabfe1	Carve downward staircase
+job	job title	0x1cab560..0x1cb2754	0x21e015a	0x1cb1855	Carve fortification
+job	job title	0x1cab560..0x1cb2754	0x21e021c	0x1cabfc9	Carve ramp
+job	job title	0x1cab560..0x1cb2754	0x21e01a0	0x1cad1fd	Carve track
+job	job title	0x1cab560..0x1cb2754	0x21e0204	0x1cac9d0	Carve up/down staircase
+job	job title	0x1cab560..0x1cb2754	0x21e01d4	0x1cabff9	Carve upward staircase
+job	job title	0x1cab560..0x1cb2754	0x21df936	0x1caec8d	Catch live fish
+job	job title	0x1cab560..0x1cb2754	0x21df946	0x1caeca5	Catch live land animal
+job	job title	0x1cab560..0x1cb2754	0x212fae2	0x1cad215	Cause trouble
+job	job title	0x1cab560..0x1cb2754	0x21dfc96	0x1cae962	Chain 
+job	job title	0x1cab560..0x1cb2754	0x217508a	0x1cace74	Clean
+job	job title	0x1cab560..0x1cb2754	0x21dfb83	0x1cae621	Clean patient
+job	job title	0x1cab560..0x1cb2754	0x21e0281	0x1cad641	Clean self
+job	job title	0x1cab560..0x1cb2754	0x21e0467	0x1cafb35	Clean trap
+job	job title	0x1cab560..0x1cb2754	0x21dfdcc	0x1cad2c0	Collect clay
+job	job title	0x1cab560..0x1cb2754	0x21dfdf0	0x1cad22d	Collect hive products
+job	job title	0x1cab560..0x1cb2754	0x21dfdbf	0x1cacddc	Collect sand
+job	job title	0x1cab560..0x1cb2754	0x21e0327	0x1cb13fe	Collect taxes
+job	job title	0x1cab560..0x1cb2754	0x21e0094	0x1cac8a4	Collect webs
+job	job title	0x1cab560..0x1cb2754	0x21df900	0x1caf546	Construct building
+job	job title	0x1cab560..0x1cb2754	0x21dfd23	0x1cae84a,0x1caf686	Cut 
+job	job title	0x1cab560..0x1cb2754	0x21dfd28	0x1cb116c	Cut gems
+job	job title	0x1cab560..0x1cb2754	0x21dfd31	0x1cb11ef	Cut raw glass into gems
+job	job title	0x1cab560..0x1cb2754	0x21dfd73	0x1cafef3	Decorate with 
+job	job title	0x1cab560..0x1cb2754	0x21df913	0x1cae69c	Destroy building
+job	job title	0x1cab560..0x1cb2754	0x21e0193	0x1cac9e8	Detail floor
+job	job title	0x1cab560..0x1cb2754	0x21e0187	0x1cabd23	Detail wall
+job	job title	0x1cab560..0x1cb2754	0x21dfb3d	0x1caefa0	Diagnose patient
+job	job title	0x1cab560..0x1cb2754	0x21755e7	0x1cabd0b	Dig
+job	job title	0x1cab560..0x1cb2754	0x21e0227	0x1cb193f	Dig channel
+job	job title	0x1cab560..0x1cb2754	0x21dfc1f	0x1cb0418	Drain aquarium
+job	job title	0x1cab560..0x1cb2754	0x21dfb77	0x1cb1576	Dress wound
+job	job title	0x1cab560..0x1cb2754	0x2173c49	0x1cab761	Drink
+job	job title	0x1cab560..0x1cb2754	0x21e045d	0x1cac85c	Dump item
+job	job title	0x1cab560..0x1cb2754	0x21e006c	0x1cb1b4c	Dye cloth
+job	job title	0x1cab560..0x1cb2754	0x21e0061	0x1cb0ff0	Dye cloth 
+job	job title	0x1cab560..0x1cb2754	0x21e0083	0x1cb1b6e	Dye leather
+job	job title	0x1cab560..0x1cb2754	0x21e0076	0x1cb0dda	Dye leather 
+job	job title	0x1cab560..0x1cb2754	0x21e0056	0x1cb1c10	Dye thread
+job	job title	0x1cab560..0x1cb2754	0x21e004a	0x1cb1053	Dye thread 
+job	job title	0x1cab560..0x1cb2754	0x2173c45	0x1cad77b	Eat
+job	job title	0x1cab560..0x1cb2754	0x21dfd8d	0x1cae432,0x1cae6b4,0x1cb1439	Encrust 
+job	job title	0x1cab560..0x1cb2754	0x214a4a4	0x1cacccf	Engrave memorial slab
+job	job title	0x1cab560..0x1cb2754	0x21e02fe	0x1cad4fb	Execute criminal
+job	job title	0x1cab560..0x1cb2754	0x21dfa58	0x1caf8ec	Extract from 
+job	job title	0x1cab560..0x1cb2754	0x21dfa90	0x1caf9d0	Extract from land animal
+job	job title	0x1cab560..0x1cb2754	0x21dfa66	0x1cb1120	Extract from plants
+job	job title	0x1cab560..0x1cb2754	0x21dfa7a	0x1caf8c6	Extract from raw fish
+job	job title	0x1cab560..0x1cb2754	0x21e002e	0x1caed63	Extract metal strands
+job	job title	0x1cab560..0x1cb2754	0x21e0233	0x1cb1a34	Fell tree
+job	job title	0x1cab560..0x1cb2754	0x21e0120	0x1caea67	Fertilize field
+job	job title	0x1cab560..0x1cb2754	0x21dfc2e	0x1cb0400	Fill aquarium
+job	job title	0x1cab560..0x1cb2754	0x21dfc3c	0x1cb1a11	Fill pond
+job	job title	0x1cab560..0x1cb2754	0x21e028c	0x1cab871	Fill waterskin
+job	job title	0x1cab560..0x1cb2754	0x21e04ae	0x1cb1500	Fire ballista
+job	job title	0x1cab560..0x1cb2754	0x21e04bc	0x1caca00	Fire bolt thrower
+job	job title	0x1cab560..0x1cb2754	0x21e04a0	0x1caf228	Fire catapult
+job	job title	0x1cab560..0x1cb2754	0x2175085	0x1cacdc4	Fish
+job	job title	0x1cab560..0x1cb2754	0x21dfe9a	0x1cab60e,0x1cac65f,0x1cac8fa,0x1cad682,0x1cad969,0x1cadb5f,0x1cae8c3,0x1caee3b,0x1cafa3e,0x1cafcc1,0x1caff6c,0x1cafff6,0x1cb007f,0x1cb024b,0x1cb074e,0x1cb07d8,0x1cb0860,0x1cb0904,0x1cb0a14,0x1cb0ac3,0x1cb1235	Forge 
+job	job title	0x1cab560..0x1cb2754	0x21e023d	0x1cac9b8	Gather plants
+job	job title	0x1cab560..0x1cb2754	0x21dfcb6	0x1cac3a7	Geld 
+job	job title	0x1cab560..0x1cb2754	0x21e0272	0x1cacb1a	Get provisions
+job	job title	0x1cab560..0x1cb2754	0x21dfc51	0x1cab7e3	Give food
+job	job title	0x1cab560..0x1cb2754	0x21dfc46	0x1cb17a6	Give water
+job	job title	0x1cab560..0x1cb2754	0x21e0355	0x1cab74c	Go shopping
+job	job title	0x1cab560..0x1cb2754	0x21e0335	0x1caecbd	Guard tax collector
+job	job title	0x1cab560..0x1cb2754	0x21dfaa9	0x1caf840	Handle 
+job	job title	0x1cab560..0x1cb2754	0x21dfb05	0x1cad913	Handle small creature
+job	job title	0x1cab560..0x1cb2754	0x21e0105	0x1caed4b	Harvest plants
+job	job title	0x1cab560..0x1cb2754	0x2175644	0x1cacdac	Hunt
+job	job title	0x1cab560..0x1cb2754	0x21e030f	0x1cacd94	Hunt for small creature
+job	job title	0x1cab560..0x1cb2754	0x21dfb4e	0x1caef88	Immobilize break
+job	job title	0x1cab560..0x1cb2754	0x21dfdd9	0x1cb1497	Install colony in hive
+job	job title	0x1cab560..0x1cb2754	0x21dfacc	0x1cac029	Interrogate 
+job	job title	0x1cab560..0x1cb2754	0x21e02a1	0x1cacd7c	Kidnap
+job	job title	0x1cab560..0x1cb2754	0x21e013f	0x1cafa00	Link a building to trigger
+job	job title	0x1cab560..0x1cb2754	0x21e0480	0x1cb17c9	Load ballista
+job	job title	0x1cab560..0x1cb2754	0x21e048e	0x1caca18	Load bolt thrower
+job	job title	0x1cab560..0x1cb2754	0x21e04db	0x1caf9a0	Load cage trap
+job	job title	0x1cab560..0x1cb2754	0x21e0472	0x1cafd7e	Load catapult
+job	job title	0x1cab560..0x1cb2754	0x21e04ea	0x1cafb1d	Load stone trap
+job	job title	0x1cab560..0x1cb2754	0x21e04fa	0x1cafb05	Load weapon trap
+job	job title	0x1cab560..0x1cb2754	0x21dff5e	0x1cada3e,0x1cadabc,0x1caf432,0x1cafb4d,0x1cb18be	Make
+job	job title	0x1cab560..0x1cb2754	0x21ae9b7	0x1cabf10,0x1cac51f,0x1caca30,0x1cacce7,0x1cadc30,0x1cadc93,0x1cadf96,0x1cadffb,0x1cae1c2,0x1cae227,0x1caea7f,0x1caeb1c,0x1caeb81,0x1caec09,0x1caf30a,0x1caf36f,0x1caf61a,0x1cafaa2,0x1cafe90,0x1cb01c1,0x1cb06c4,0x1cb0e14,0x1cb0e2c,0x1cb0e44,0x1cb0e5c,0x1cb0e8c,0x1cb0ebc,0x1cb0ed4,0x1cb0f04,0x1cb0f1c,0x1cb0f34,0x1cb0f4c,0x1cb0f97,0x1cb0faf,0x1cb0fc7,0x1cb103b,0x1cb10a5,0x1cb10df,0x1cb10f7,0x1cb110f,0x1cb1138,0x1cb1258,0x1cb127b,0x1cb129e,0x1cb12c1,0x1cb1393,0x1cb14ba,0x1cb1832,0x1cb1878,0x1cb1962,0x1cb19a8	Make 
+job	job title	0x1cab560..0x1cb2754	0x21e0005	0x1cad0bd	Make ash
+job	job title	0x1cab560..0x1cb2754	0x21dfff7	0x1cad1e5	Make charcoal
+job	job title	0x1cab560..0x1cb2754	0x21df9b3	0x1caefd0	Make cheese
+job	job title	0x1cab560..0x1cb2754	0x21dfd11	0x1cac0c7	Make large 
+job	job title	0x1cab560..0x1cb2754	0x21df9ed	0x1cb1783	Make lye
+job	job title	0x1cab560..0x1cb2754	0x21dfa0b	0x1caea4f	Make potash from ash
+job	job title	0x1cab560..0x1cb2754	0x21df9f6	0x1cb0448	Make potash from lye
+job	job title	0x1cab560..0x1cb2754	0x21dfe0c	0x1caddf4	Make raw 
+job	job title	0x1cab560..0x1cb2754	0x21dfeaa	0x1cac9a0	Make totem
+job	job title	0x1cab560..0x1cb2754	0x21dfe36	0x1cb1625	Make traction bench
+job	job title	0x1cab560..0x1cb2754	0x21dfc5b	0x1caddc4	Manage work orders
+job	job title	0x1cab560..0x1cb2754	0x21e001a	0x1caed7b	Melt a metal object
+job	job title	0x1cab560..0x1cb2754	0x21df99a	0x1cb1474	Milk 
+job	job title	0x1cab560..0x1cb2754	0x21df970	0x1cb010b	Mill 
+job	job title	0x1cab560..0x1cb2754	0x21df976	0x1cb1023	Mill plants
+job	job title	0x1cab560..0x1cb2754	0x21dfd1d	0x1caf55e	Mint 
+job	job title	0x1cab560..0x1cb2754	0x214a2fc	0x1cabb94	Mix 
+job	job title	0x1cab560..0x1cb2754	0x20f38e2	0x1cac011	No activity
+job	job title	0x1cab560..0x1cb2754	0x20f3aa7	0x1cb19ee	No job
+job	job title	0x1cab560..0x1cb2754	0x21e04ce	0x1cadddc	Operate pump
+job	job title	0x1cab560..0x1cb2754	0x21dfbf9	0x1cad34f	Pen/pasture 
+job	job title	0x1cab560..0x1cb2754	0x21dfc06	0x1cb1602	Pen/pasture small animal
+job	job title	0x1cab560..0x1cb2754	0x21e044c	0x1cace5c	Pickup equipment
+job	job title	0x1cab560..0x1cb2754	0x21dfbd9	0x1caca94	Pit/pond 
+job	job title	0x1cab560..0x1cb2754	0x21dfbe3	0x1cad15b	Pit/pond small animal
+job	job title	0x1cab560..0x1cb2754	0x21dfba1	0x1cb0430	Place in traction
+job	job title	0x1cab560..0x1cb2754	0x21e038c	0x1cb173d	Place item in tomb
+job	job title	0x1cab560..0x1cb2754	0x21e02d7	0x1cad513	Place track vehicle
+job	job title	0x1cab560..0x1cb2754	0x21e0114	0x1caf6d7	Plant seeds
+job	job title	0x1cab560..0x1cb2754	0x21dfd49	0x1caf111	Polish 
+job	job title	0x1cab560..0x1cb2754	0x21dfd51	0x1cb1198	Polish stones
+job	job title	0x1cab560..0x1cb2754	0x21df95d	0x1caed93	Prepare a raw fish
+job	job title	0x1cab560..0x1cb2754	0x21dfa20	0x1cb09d6	Prepare easy meal
+job	job title	0x1cab560..0x1cb2754	0x21dfa32	0x1cb1afb	Prepare fine meal
+job	job title	0x1cab560..0x1cb2754	0x21dfa44	0x1cb1ae7	Prepare lavish meal
+job	job title	0x1cab560..0x1cb2754	0x21df982	0x1cae298,0x1cae36c,0x1caf172	Process 
+job	job title	0x1cab560..0x1cb2754	0x21df98b	0x1cb0fd8	Process plants
+job	job title	0x1cab560..0x1cb2754	0x21df9d5	0x1cb10c7	Process plants (barrel)
+job	job title	0x1cab560..0x1cb2754	0x21df9bf	0x1cb10b6	Process plants (vial)
+job	job title	0x1cab560..0x1cb2754	0x21e0130	0x1caf9e8	Pull the lever
+job	job title	0x1cab560..0x1cb2754	0x21e02eb	0x1cad52b	Push track vehicle
+job	job title	0x1cab560..0x1cb2754	0x21dfc9d	0x1cb0c87	Put in chains
+job	job title	0x1cab560..0x1cb2754	0x21dfbb3	0x1cac0af	Put item on display
+job	job title	0x1cab560..0x1cb2754	0x21e050b	0x1cad584	Reaction
+job	job title	0x1cab560..0x1cb2754	0x21dfb1b	0x1cb03e8	Recover pet
+job	job title	0x1cab560..0x1cb2754	0x21dfb2d	0x1caefb8	Recover wounded
+job	job title	0x1cab560..0x1cb2754	0x21dfad9	0x1caf707	Release 
+job	job title	0x1cab560..0x1cb2754	0x21dfae2	0x1caf6ef	Release pet
+job	job title	0x1cab560..0x1cb2754	0x21dfaee	0x1cad92b	Release small creature
+job	job title	0x1cab560..0x1cb2754	0x21e01c0	0x1cac8bc	Remove construction
+job	job title	0x1cab560..0x1cb2754	0x21e01ac	0x1caf2f2	Remove stairs/ramps
+job	job title	0x1cab560..0x1cb2754	0x21e02a8	0x1cb180f	Report crime
+job	job title	0x1cab560..0x1cb2754	0x21755bc	0x1cb16f7	Rest
+job	job title	0x1cab560..0x1cb2754	0x21e0349	0x1cacf1e	Return kill
+job	job title	0x1cab560..0x1cb2754	0x21e0361	0x1cb166b	Seek artifact
+job	job title	0x1cab560..0x1cb2754	0x21e036f	0x1cacb32	Seek infant
+job	job title	0x1cab560..0x1cb2754	0x21dfb98	0x1cb132a	Set bone
+job	job title	0x1cab560..0x1cb2754	0x21e008f	0x1cb065f	Sew 
+job	job title	0x1cab560..0x1cb2754	0x21df9a0	0x1cacbf0	Shear 
+job	job title	0x1cab560..0x1cb2754	0x21dfcab	0x1cad0d5	Slaughter 
+job	job title	0x1cab560..0x1cb2754	0x21e029b	0x1cb168e	Sleep
+job	job title	0x1cab560..0x1cb2754	0x21e000e	0x1cae639	Smelt 
+job	job title	0x1cab560..0x1cb2754	0x21e017a	0x1cabd3b	Smooth floor
+job	job title	0x1cab560..0x1cb2754	0x21e016e	0x1cb1212	Smooth wall
+job	job title	0x1cab560..0x1cb2754	0x21df9a7	0x1cacbd8	Spin thread
+job	job title	0x1cab560..0x1cb2754	0x21e02b5	0x1cacd4c	Starting fist fight
+job	job title	0x1cab560..0x1cb2754	0x21e0413	0x1cb1648	Store armor
+job	job title	0x1cab560..0x1cb2754	0x21e03b7	0x1cb171a	Store item in bag
+job	job title	0x1cab560..0x1cb2754	0x21e03c9	0x1cad038	Store item in barrel
+job	job title	0x1cab560..0x1cb2754	0x21e03de	0x1cacbc0	Store item in bin
+job	job title	0x1cab560..0x1cb2754	0x21e041f	0x1cad020	Store item in location
+job	job title	0x1cab560..0x1cb2754	0x21e039f	0x1caceee	Store item in stockpile
+job	job title	0x1cab560..0x1cb2754	0x21e03f0	0x1cb1599	Store item in vehicle
+job	job title	0x1cab560..0x1cb2754	0x21e037b	0x1cacf06	Store owned item
+job	job title	0x1cab560..0x1cb2754	0x21e0436	0x1cb191c	Store squad equipment
+job	job title	0x1cab560..0x1cb2754	0x21e0406	0x1cb16d4	Store weapon
+job	job title	0x1cab560..0x1cb2754	0x2173361	0x1cab737	Strange mood
+job	job title	0x1cab560..0x1cb2754	0x21dfd82	0x1caedc3	Stud with 
+job	job title	0x1cab560..0x1cb2754	0x2212182	0x1cb134d	Surgery
+job	job title	0x1cab560..0x1cb2754	0x21dfb91	0x1cae596	Suture
+job	job title	0x1cab560..0x1cb2754	0x21dfcbc	0x1cae9c9	Tame 
+job	job title	0x1cab560..0x1cb2754	0x21dfcc2	0x1caf9b8	Tame a small animal
+job	job title	0x1cab560..0x1cb2754	0x21e0044	0x1cac146,0x1cb04fb,0x1cb05ba	Tint 
+job	job title	0x1cab560..0x1cb2754	0x21dfc87	0x1cab96a	Trade at depot
+job	job title	0x1cab560..0x1cb2754	0x21dffc4	0x1cac6e0,0x1cad793,0x1cb16b1	Train 
+job	job title	0x1cab560..0x1cb2754	0x2174e7d	0x1caf7a5	Unchain
+job	job title	0x1cab560..0x1cb2754	0x21dfac0	0x1caf78d	Unchain pet
+job	job title	0x1cab560..0x1cb2754	0x21dfc6e	0x1cb04c9	Update stockpile records
+job	job title	0x1cab560..0x1cb2754	0x21e00a1	0x1cb03b0	Weave metal cloth
+job	job title	0x1cab560..0x1cb2754	0x21e00e0	0x1cb1f71	Weave thread into cloth
+job	job title	0x1cab560..0x1cb2754	0x21e00b3	0x1cb1f89	Weave thread into silk
+job	job title	0x1cab560..0x1cb2754	0x21e00ca	0x1cb11c7	Weave yarn into cloth
+job	job title	0x1cab560..0x1cb2754	0x21dfab1	0x1cb0c0f,0x1cb0c27,0x1cb0c9f,0x1cb0cb7,0x1cb0ccf,0x1cb1aa3	a large animal
+job	job title	0x1cab560..0x1cb2754	0x20fc321	0x1cae462,0x1cae6e4,0x1cae7d4	ammo
+job	job title	0x1cab560..0x1cb2754	0x2131be8	0x1cb0bf7,0x1cb0c3f,0x1cb0c57,0x1cb0ce7,0x1cb1abb	animal
+job	job title	0x1cab560..0x1cb2754	0x213b986	0x1cb1158	cut gems
+job	job title	0x1cab560..0x1cb2754	0x21dfda5	0x1cb1184	cut glass
+job	job title	0x1cab560..0x1cb2754	0x2173e5c	0x1cabbd0	dye
+job	job title	0x1cab560..0x1cb2754	0x21dfd96	0x1cb13c3,0x1cb1416,0x1cb1553	finished goods
+job	job title	0x1cab560..0x1cb2754	0x20fc3d2	0x1cb1bd6	fish
+job	job title	0x1cab560..0x1cb2754	0x21dff58	0x1cac917	five 
+job	job title	0x1cab560..0x1cb2754	0x21dfe06	0x1cadecf	four 
+job	job title	0x1cab560..0x1cb2754	0x21ae2c7	0x1cb13ab,0x1cb1451,0x1cb153b	furniture
+job	job title	0x1cab560..0x1cb2754	0x214e6e9	0x1caf0f2	gem
+job	job title	0x1cab560..0x1cb2754	0x21dffd4	0x1cb1a8b	hunting animal
+job	job title	0x1cab560..0x1cb2754	0x21dfd16	0x1cab671,0x1cad9bb,0x1cadbaf,0x1caee8d,0x1cb02b0	large 
+job	job title	0x1cab560..0x1cb2754	0x21b01e5	0x1cb1bee	meat
+job	job title	0x1cab560..0x1cb2754	0x21dfea1	0x1cab621,0x1cb025e	pair of 
+job	job title	0x1cab560..0x1cb2754	0x21dfdaf	0x1cb11db	polished stones
+job	job title	0x1cab560..0x1cb2754	0x21cb66e	0x1cb1fc3,0x1cb1fdb,0x1cb1ff3,0x1cb2023,0x1cb203b	small 
+job	job title	0x1cab560..0x1cb2754	0x2204ec0	0x1cb0c6f	subject
+job	job title	0x1cab560..0x1cb2754	0x21dfec0	0x1cae8d6,0x1cb0917	three 
+job	job title	0x1cab560..0x1cb2754	0x20db527	0x1cb1a5f	tool
+job	job title	0x1cab560..0x1cb2754	0x21dff51	0x1cb0ea4	twenty-five 
+job	job title	0x1cab560..0x1cb2754	0x21dffec	0x1cb1a77	war animal
+job	current job and surgery variants	0x1cb2760..0x1cb2a56	0x21e053b	0x1cb29de	Remove Rotten Tissue
+job	current job and surgery variants	0x1cb2760..0x1cb2a56	0x21e0522	0x1cb29be	Repair Compound Fracture
+job	current job and surgery variants	0x1cb2760..0x1cb2a56	0x21e0514	0x1cb29fe	Stop Bleeding
+job	current job and surgery variants	0x1cb2760..0x1cb2a56	0x2212182	0x1cb2996	Surgery
+order	kill list caption helper	0x2033380..0x2033952	0x20f7379	0x203383b,0x2033883	 
+order	kill list caption helper	0x2033380..0x2033952	0x221c227	0x203376c	 various
+order	kill list caption helper	0x2033380..0x2033952	0x2175198	0x20333cf,0x203353b	Kill
+order	kill historical figure helper	0x2031660..0x20318d5	0x21b60d2	0x2031791,0x203180e	Kill 
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2173235	0x15036ed	Ambush
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760c9	0x1503ba8	Animal Caretaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bedd	0x1503a9b	Animal Dissection
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be60	0x1503b1e	Animal Training
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176123	0x1503475	Appraisal
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217628d	0x15032c3	Archery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2175019	0x15037b3	Armor
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176191	0x1503945	Armorsmithing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x214d0bc	0x150307f	Astronomy
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762bf	0x1503843	Axe
+skill	skill action nouns	0x1502f40..0x1503ccc	0x221248a	0x150335f	Balance
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf16	0x15031c7	Beekeeping
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217629f	0x150329f	Biting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217631e	0x1503735	Blowgun
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c0a5	0x1503855	Bone Carving
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217636c	0x15036a5	Bone Setting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c06f	0x1502fb1	Bookbinding
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762e2	0x1503747	Bow
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760bf	0x150377d	Bowmaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf21	0x1503a2f	Brewing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bec5	0x1503a77	Butchery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be23	0x1503b54	Carpentry
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf64	0x15039e7	Cheesemaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x214d0d6	0x150305b	Chemistry
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176391	0x15031a3	Climbing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176305	0x1503a1d	Clothes Making
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217614f	0x1503603	Comedy
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21747f4	0x1503597	Concentration
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217615f	0x15035df	Consoling
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217381b	0x1503bea	Conversation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf8b	0x15039c3	Cooking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21748cf	0x1503371	Coordination
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176247	0x1503101	Critical Thinking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762d4	0x15037d7	Crossbow
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176379	0x1503681	Crutch-walking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x22129cd	0x150317f	Dance
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176360	0x15036c9	Diagnostics
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2174802	0x1503585	Discipline
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762b7	0x1503269	Dodging
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf06	0x15034e1	Dyeing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be4e	0x1503b42	Engraving
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176284	0x15032d5	Fighting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bfb4	0x1503a89	Fish Cleaning
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bfc2	0x1503aad	Fish Dissection
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2205fe7	0x150398d	Fishing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176156	0x15035f1	Flattery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21748c0	0x1503037	Fluid Engineer
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217617f	0x150397b	Furnace Operation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2174e25	0x1503191	Gelding
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c03e	0x1503921	Gem Cutting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c04a	0x1503c54	Gem Setting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x214d0e0	0x1503049	Geography
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c0b2	0x1503879	Glassmaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c08f	0x15031eb	Glazing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760db	0x15039b1	Growing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2212781	0x15037fb	Hammer
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760e3	0x150399f	Herbalism
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176142	0x15033e7	Intimidation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217639a	0x1502f9f	Intrigue
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176114	0x1503487	Judging Intent
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761f9	0x1503149	Keyboard Instrument
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762af	0x150327b	Kicking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176388	0x1503245	Knapping
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176339	0x150381f	Knife
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217633f	0x1503759	Lash
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217625f	0x1503c66	Leadership
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213beef	0x1503867	Leatherworking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176259	0x15030ef	Logic
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bfe0	0x1503c1f	Lye Making
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217613c	0x15033f9	Lying
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762c9	0x150380d	Mace
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217632f	0x1503711	Machinery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be58	0x1503b30	Masonry
+skill	skill action nouns	0x1502f40..0x1503ccc	0x214d0b0	0x1503c10	Mathematics
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761ae	0x150388b	Metal Crafting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2205fa9	0x1503933	Metalsmithing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217626a	0x1503233	Military Tactics
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf71	0x15039d5	Milking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf4b	0x1503a0b	Milling
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bd98	0x1503b78	Mining
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176344	0x1503257	Misc. Object
+skill	skill action nouns	0x1502f40..0x1503ccc	0x22129ae	0x150316d	Music
+skill	skill action nouns	0x1502f40..0x1503ccc	0x212c3b0	0x15036ff	Nature
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176108	0x1503499	Negotiation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761c6	0x150364b	Observation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21748b0	0x150306d	Optics Engineer
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21b5b31	0x1503c45	Organization
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176169	0x15035cd	Pacification
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c063	0x1503bc4	Papermaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176231	0x1503113	Percussion Instrument
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760fd	0x15034ab	Persuasion
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762dd	0x150376b	Pike
+skill	skill action nouns	0x1502f40..0x1503ccc	0x22129a3	0x1503615	Poetry
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bfd2	0x15034f3	Potash Making
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c07b	0x15031fd	Pottery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf0d	0x15031d9	Pressing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761da	0x1503627	Prose
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762f6	0x15034cf	Pump Operation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761e0	0x150366f	Reading
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217612d	0x150340b	Record Keeping
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760f6	0x1502f8d	Riding
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf79	0x1503221	Shearing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217500d	0x15037c5	Shield
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c0d0	0x15037a1	Siege Engineering
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762e6	0x150378f	Siege Operation
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761f1	0x150315b	Singing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf29	0x1503505	Soap Making
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761e8	0x150365d	Speaking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762ce	0x15037e9	Spear
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf82	0x150320f	Spinning
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be3a	0x1503b8a	Stone Carving
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217619f	0x150389d	Stone Crafting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be2d	0x1502f7b	Stonecutting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c0be	0x1503969	Strand Extraction
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762a6	0x150328d	Striking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217620d	0x1503137	Stringed Instrument
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761bd	0x15035a9	Studying
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2212182	0x15036b7	Surgery
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2174c94	0x1503693	Suturing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21760ed	0x15034bd	Swimming
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21762c3	0x1503831	Sword
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213befe	0x1503a53	Tanning
+skill	skill action nouns	0x1502f40..0x1503ccc	0x217627b	0x15032e7	Teaching
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176314	0x15039f9	Threshing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176326	0x1503723	Throwing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176176	0x15035bb	Tracking
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bece	0x1503a65	Trapping
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c083	0x15031b5	Wax Working
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c00a	0x1503957	Weaponsmithing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bf35	0x1503a41	Weaving
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176221	0x1503125	Wind Instrument
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213bffd	0x1503573	Wood Burning
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213c056	0x15038af	Woodcrafting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x213be17	0x1503b66	Woodcutting
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176351	0x15036db	Wound Dressing
+skill	skill action nouns	0x1502f40..0x1503ccc	0x2176295	0x15032b1	Wrestling
+skill	skill action nouns	0x1502f40..0x1503ccc	0x21761d2	0x1503639	Writing
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210631	0x1ede030	acute and chronic conditions
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f9bd	0x1ede2a0	adhesives
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221040a	0x1edcaaa	alkali and acids
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f9a2	0x1ede2cd	alloys
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x20ca456	0x1edd9d6	alternate history
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f1cd	0x1edde50	analogical inference
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221079a	0x1eddf40	anatomical studies
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102cb	0x1ede156	anatomy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fc5b	0x1ede7db	anesthesia
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fb18	0x1ede462	animal remedies
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210750	0x1ede363	animals as surgical models
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f470	0x1edda46	aqua regia
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221015d	0x1ede5b0	archaeology
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x212f9e3	0x1ede0cf	art
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102ab	0x1edcffd	astronomical models
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221082d	0x1ede0c0	asylums
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f6d9	0x1eddf10	atmospheric refraction
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221011b	0x1eddd50	autobiographical adventures
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f4e0	0x1ede48f	autopsy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f365	0x1ede6fa	axiomatic reasoning
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fb36	0x1edd3dc	bandages
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f318	0x1ede0de	beauty
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f239	0x1edd963	belief
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210101	0x1ede5ce	biographical dictionaries
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2130add	0x1ede570	biography
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fcb0	0x1ede7bd	blood vessels
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107ad	0x1edcb0c	bodily fluids
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104c3	0x1ede291	cartographical surveying
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210574	0x1ede255	cartography
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f5d6	0x1ede020	cataract surgery
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f2c2	0x1eddc33	causation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fc3d	0x1edd722	cauterization
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210974	0x1eddb3b	chain drives
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffdb	0x1ede871	chord lengths
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f38b	0x1edc95b	chords
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210066	0x1eddec0	circles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105c1	0x1edd6de	climate zones
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221034f	0x1ede520	climatic adaptation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22109ae	0x1ede817	combination locks
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210397	0x1ede2eb	combustible materials
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffb3	0x1eddf70	common divisors
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100de	0x1eddd70	community bonds
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100ee	0x1edd474	community conflict
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102bf	0x1eddeb0	comparative anatomy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x20ca414	0x1edd2ec	comparative biography
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffcc	0x1ede763	cones
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff41	0x1edd364	congruent triangles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffe9	0x1ede862	conic sections
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210843	0x1ede3db	conical water clocks
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f570	0x1ede7ae	convalescence
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x20ca442	0x1ede5bf	cultural comparison
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210148	0x1eddd20	cultural differences
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f7f0	0x1edd25c	cultural history
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100d7	0x1ede1ec	cycles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101fc	0x1eddd08	daylight and seasons
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f167	0x1ede4f8	deductive reasoning
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221058a	0x1edddb0	delta formation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221001b	0x1ede11a	diagonals
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f1b9	0x1ede4bc	dialectic reasoning
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221010e	0x1ede10b	dictionaries
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210320	0x1edd91b	dietary relationships
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c4a	0x1ede781	diplomacy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f2f9	0x1ede0ed	direct inference
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105ec	0x1ede4ad	disease and fouled water
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221061a	0x1ede79f	disease classification
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210346	0x1edce66	diseases
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f947	0x1ede165	dissection
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210539	0x1edd1e7	distance scales
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103f1	0x1ede670	distillation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffd2	0x1edd127	division
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210aea	0x1ede68e	double-acting piston bellows
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106f7	0x1edd8bb	draining
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221023d	0x1ede55f	eclipses
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221056b	0x1edd49e	economic cartography
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221055d	0x1eddd80	economic data
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c79	0x1ede090	economic policy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c06	0x1eddcbb	education
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103ad	0x1ede2af	elemental materials
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210363	0x1eddea0	embriological development
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210295	0x1ede550	empirical observation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f525	0x1edd60a	endemic disease
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221064e	0x1ede808	epidemic disease
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221004f	0x1edde90	equations
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221028b	0x1eddce2	equinoxes
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fe8f	0x1edd983	ethics and the state
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c33	0x1eddc7a	etymology
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103fe	0x1edde00	evaporation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f295	0x1edd812	events
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fb6a	0x1edd62b	exacerbation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106dc	0x1edd1a7	excision
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f35a	0x1edde40	exhaustion
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f24e	0x1eddf30	existence
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210246	0x1ede590	extensive star catalogues
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fc76	0x1ede745	eye anatomy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221030e	0x1ede52f	foraging behavior
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fc0f	0x1edde70	forceps
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f156	0x1ede507	formal reasoning
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210685	0x1edd7ea	fracture classification
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106b0	0x1edd6fb	fracture immobilization
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210672	0x1eddfd0	fracture treatment
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108f6	0x1edd553	gears
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f7bf	0x1edd5c6	genealogy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210518	0x1ede610	geological cartography
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff2f	0x1ede444	geometric objects
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x214d518	0x1edd77b	government
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c1d	0x1eddfa0	grammar
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x21f3bf3	0x1ede2be	hardness
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210549	0x1ede61f	height measurements
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fafa	0x1ede471	herbal remedies
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f599	0x1eddc53	hernia surgery
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100c2	0x1ede1fb	historical causation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210807	0x1ede070	hospital laboratories
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107e9	0x1ede853	hospital staff
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107f8	0x1edd8fb	hospital wards
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107df	0x1eddbae	hospitals
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f18d	0x1ede4da	hypothetical syllogisms
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106e5	0x1ede835	incision
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff8d	0x1edc90c	incommensurable ratios
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fe7a	0x1ede7ea	individual happiness
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f2e5	0x1ede0fc	inductive reasoning
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff79	0x1eddff0	inscribed triangles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fedc	0x1edd167	interpersonal ethics
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff65	0x1edd42b	isosceles triangles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f21d	0x1ede7f9	justification
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221049e	0x1edcf38	laboratory ovens
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f6ce	0x1ede6be	lamination
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104dc	0x1ede282	land surveying
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210025	0x1ede174	large sums
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x219d58e	0x1ede718	law
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210711	0x1ede39f	ligature
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f6b3	0x1ede6cd	light and color
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103df	0x1edd696	liquid extraction
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f5c4	0x1eddc12	lithotomy surgery
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101e6	0x1eddd30	lunar and solar years
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105cf	0x1ede5f0	map accuracy
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221052f	0x1edddc0	map grids
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105dc	0x1edcf79	map projections
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221088b	0x1edde80	mechanical clocks
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210bd9	0x1edd33c	medical ethics
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221081d	0x1edcd98	medical schools
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107ce	0x1eddbeb	mental illnesses
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102e5	0x1ede138	migratory patterns
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fecc	0x1eddfc0	military ethics
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104eb	0x1eddda0	military surveying
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f279	0x1ede727	mind and body
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f4e8	0x1edde60	mineral remedies
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a53	0x1edd9aa	models and templates
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210181	0x1ede1dd	moon phases
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221071a	0x1ede381	mud bags as surgical models
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210aaf	0x1eddab3	mural instruments
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f670	0x1ede772	muscles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff08	0x1ede417	negative quantities
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x21b765e	0x1edd533	nerves
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f343	0x1edd743	notation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f32c	0x1ede426	nothingness
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fea4	0x1edd87b	objects and properties
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210478	0x1edde10	oil of vitriol
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f458	0x1ede2dc	ores
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210003	0x1ede060	parabolas
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f543	0x1ede040	paroxysm
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f204	0x1edd942	perception
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100ae	0x1ede20a	personal interviews
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210605	0x1ede49e	physical examination
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102d3	0x1ede147	physical features
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210736	0x1ede372	plants as surgical models
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f338	0x1ede453	positional notation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x20f281f	0x1edccac	powers
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffa4	0x1edd89b	prime divisors
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221000d	0x1edcde8	prime numbers
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210700	0x1ede080	probing
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f2aa	0x1ede7cc	processes
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fae2	0x1ede480	prognosis
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fef1	0x1ede435	proof by contradiction
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f1a5	0x1ede4cb	propositional logic
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f62c	0x1eddb8b	pulmonary circulation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f5e7	0x1edd44b	pulmonary medicine
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ffc3	0x1edd83a	pyramids
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210045	0x1edd314	quadratic equations
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x21728bc	0x1edd9f3	rainbows
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105a8	0x1ede5dd	rainfall
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f61e	0x1edd4ea	reaction time
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f6e5	0x1eddf00	refraction
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f55a	0x1edc9fc	relapse
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fff8	0x1edd8db	remainders
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22102f8	0x1ede129	reproductive behavior
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff55	0x1edd402	right triangles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106ee	0x1ede826	scraping
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210835	0x1ede3f9	shadow clocks
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210336	0x1ede0a0	social behavior
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210c96	0x1edccf8	social welfare
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210082	0x1ede237	source reliability
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220e230	0x1ede354	specialized surgical instruments
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a14	0x1eddc9b	spheres
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210468	0x1ede65e	spirit of niter
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210250	0x1edd4c6	star catalogues
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f3e9	0x1eddd60	star charts
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22100a3	0x1ede219	state bias
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210726	0x1ede390	surgical models
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210789	0x1edd75d	surgical needles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210777	0x1ede790	surgical scissors
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104e1	0x1ede273	surveying
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104fe	0x1edd7c4	surveying for engineering
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210708	0x1edcd48	suturing
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f17b	0x1ede4e9	syllogistic logic
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221041b	0x1ede64f	systematic experiments
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210095	0x1ede228	systemic bias
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210030	0x1ede183	systems of equations
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210169	0x1edd03d	technological evolution
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103d3	0x1edddd0	the alembic
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210487	0x1ede630	the ampoule
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a82	0x1edc7ac	the armillary sphere
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221086f	0x1ede3bd	the astrarium
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a74	0x1eddf20	the astrolabe
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210580	0x1ede600	the atlas
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22109d5	0x1ede050	the balance wheel
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221043c	0x1edda1e	the beaker
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b4c	0x1edda92	the bellows
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22103c1	0x1ede67f	the blast furnace
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210273	0x1ede53e	the brightness of stars
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a2b	0x1ede2fa	the camera obscura
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210929	0x1eddbcb	the camshaft
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221095f	0x1ede844	the chariot odometer
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210260	0x1edd28c	the color of stars
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b42	0x1eddee0	the crank
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210936	0x1ede010	the crankshaft
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221045b	0x1edd227	the crucible
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22109f6	0x1ede327	the crystal lens
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210998	0x1eddafa	the differential gear
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a68	0x1edd573	the dioptra
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210137	0x1ede5a0	the encyclopedia
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210432	0x1edde20	the flask
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22109e7	0x1ede336	the force pump
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210450	0x1edddf0	the funnel
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210211	0x1ede580	the geocentric model
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a1c	0x1ede309	the glass lens
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221006e	0x1ede0b0	the harmonic series
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b1a	0x1ede6af	the height of the atmosphere
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210226	0x1edd2bc	the heliocentric model
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221087d	0x1ede3ae	the hourglass
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x21e0135	0x1edded0	the lever
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210981	0x1ede000	the mechanical compass
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221018d	0x1ede1ce	the moon and seasons
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101b2	0x1ede1b0	the moon and tides
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101a2	0x1ede1bf	the moon's path
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22107bb	0x1eddf60	the nervous system
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210ac1	0x1eddef0	the orrery
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22106c8	0x1eddfe0	the orthopedic cast
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221091d	0x1ede6eb	the padlock
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a3e	0x1eddb19	the parabolic mirror
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b37	0x1eddad3	the piston
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221089d	0x1edd38c	the pulley
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210493	0x1eddde0	the retort
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221076b	0x1edd3b4	the scalpel
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108a8	0x1edd6b3	the screw
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f3f5	0x1eddd40	the shape of the world
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f69a	0x1edce38	the siphon
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a97	0x1ede6dc	the spherical astrolabe
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108dc	0x1ede736	the straight-beam balance
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221037d	0x1edca49	the struggle for survival
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101d2	0x1ede192	the sun and seasons
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22104af	0x1ede264	the surveying staff
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221069d	0x1ede709	the traction bench
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b68	0x1edceac	the trip hammer
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221090c	0x1edd512	the tumbler lock
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22109c0	0x1edd5e3	the verge escapement
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210447	0x1ede640	the vial
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f650	0x1edd0e7	the voice
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108fc	0x1eddf50	the warded lock
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22105b1	0x1eddd90	the water cycle
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b58	0x1edde30	the water wheel
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ece0	0x1ede6a0	the water-powered piston bellows
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210945	0x1edd0a7	the water-powered sawmill
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210acc	0x1edda6a	the water-powered trip hammer
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108d2	0x1edc74b	the wedge
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108b2	0x1edd66e	the wheel-and-axle
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22108c5	0x1ede754	the windlass
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x22101c5	0x1ede1a1	tidal height
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221aff6	0x1edc80c	time
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fb4f	0x1edd64b	toxicology
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f5ac	0x1eddfb0	tracheotomy surgery
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221065f	0x1edd85b	traumatic injuries
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210059	0x1edd59e	triangle and circles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff83	0x1eddb6d	triangles
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220f4a6	0x1ede246	triangulation
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x219d606	0x1eddf90	truth
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2172931	0x1edcee7	twilight
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220fdac	0x1ede345	valves
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220ff1c	0x1ede408	very large numbers
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210858	0x1ede3cc	water clock reservoirs
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221084b	0x1ede3ea	water clocks
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210b07	0x1edd79b	water displacement
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x2210a07	0x1ede318	water-filled spheres
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x220febb	0x1eddf80	wholes and parts
+topic	knowledge topic short names	0x1edc6d0..0x1ede8be	0x221059a	0x1edcfb7	wind patterns
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727b8	0x14e82c6	agriculture
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ae26f	0x14e82b7	animals
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x212f9e3	0x14e82a8	art
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x22108ee	0x14e8299	balance
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x220f318	0x14e828a	beauty
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2173957	0x14e827b	birth
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727c4	0x14e826c	blight
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727cb	0x14e825d	boundaries
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727d6	0x14e824e	caverns
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142d36	0x14e823f	chaos
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727de	0x14e8230	charity
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21b44bd	0x14e8221	children
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727e6	0x14e8212	coasts
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2204e9e	0x14e8203	consolation
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2115fcf	0x14e81f4	courage
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20df264	0x14e81e5	crafts
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e3cb2	0x14e81d6	creation
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21e2e3b	0x14e81c7	dance
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142d5d	0x14e81b8	darkness
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142fdd	0x14e81a9	dawn
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x219ed9a	0x14e819a	day
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x211550e	0x14e818b	death
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727ed	0x14e817c	deformity
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21727f7	0x14e816d	depravity
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172801	0x14e815e	discipline
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2210657	0x14e814f	disease
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142d7f	0x14e8140	dreams
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217280c	0x14e8131	dusk
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20cafa3	0x14e8122	duty
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2210bc6	0x14e8113	earth
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172811	0x14e80f5	fame
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21f56df	0x14e8104	family
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172816	0x14e80e6	fate
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217281b	0x14e80d7	fertility
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172825	0x14e80c8	festivals
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x212ffc5	0x14e80b9	fire
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20fc3d2	0x14e80aa	fish
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ae936	0x14e809b	fishing
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ade0e	0x14e808c	food
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217282f	0x14e807d	forgiveness
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217283b	0x14e806e	fortresses
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210daa1	0x14e805f	freedom
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e4e56	0x14e8050	gambling
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172846	0x14e8041	games
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217284c	0x14e8032	generosity
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210dad6	0x14e8023	happiness
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x213f9e7	0x14e8014	healing
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172857	0x14e8005	hospitality
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2204c9f	0x14e7ff6	hunting
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172863	0x14e7fe7	inspiration
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e127f	0x14e7fd8	jealousy
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142db1	0x14e7fc9	jewels
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20d35dd	0x14e7fba	justice
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21b00a8	0x14e7fab	labor
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21f0ff7	0x14e7f9c	lakes
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21163b0	0x14e7f8d	laws
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ade3b	0x14e7f7e	lies
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2204d7e	0x14e7f6f	light
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142dda	0x14e7f60	lightning
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217286f	0x14e7f51	longevity
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210e877	0x14e7f42	love
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x214da25	0x14e7f33	loyalty
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172879	0x14e7f24	luck
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210e9ef	0x14e7f15	lust
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217287e	0x14e7f06	marriage
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21f5db8	0x14e7ef7	mercy
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172887	0x14e7ee8	metals
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ae324	0x14e7ed9	minerals
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210d45c	0x14e7eca	misery
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21080f0	0x14e7ebb	mist
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x220f86e	0x14e7eac	moon
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217288e	0x14e7e9d	mountains
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142e87	0x14e7e8e	muck
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e3656	0x14e7e7f	murder
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21ec8cd	0x14e7e70	music
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21b94e3	0x14e7e61	nature
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20f6ffc	0x14e7e52	night
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142ebd	0x14e7e43	nightmares
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217295e	0x14e82e4	no sphere
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172898	0x14e7e34	oaths
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142ed8	0x14e7e25	oceans
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21b008f	0x14e7e16	order
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217289e	0x14e7e07	painting
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20f38b6	0x14e7df8	peace
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728a7	0x14e7de9	persuasion
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21b9700	0x14e7dda	plants
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e14de	0x14e7dcb	poetry
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728b2	0x14e7dbc	pregnancy
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142fbd	0x14e7dad	rain
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728bc	0x14e7d9e	rainbows
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728c5	0x14e7d8f	rebirth
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728cd	0x14e7d80	revelry
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728d5	0x14e7d71	revenge
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728dd	0x14e7d62	rivers
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728e4	0x14e7d53	rulership
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728ee	0x14e7d44	rumors
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x214ccd9	0x14e7d35	sacrifice
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142f43	0x14e7d26	salt
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20dad5b	0x14e7d17	scholarship
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x221019a	0x14e7d08	seasons
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21eccea	0x14e7cf9	silence
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142f4f	0x14e7cea	sky
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728f5	0x14e7cdb	song
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x219c614	0x14e7ccc	speech
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142f7c	0x14e7cbd	stars
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142dd0	0x14e7cae	storms
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21c9782	0x14e7c9f	strength
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21728fa	0x14e7c90	suicide
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2142fd2	0x14e7c81	sun
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x210f6c2	0x14e7c72	theft
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172902	0x14e7c63	thralldom
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217290c	0x14e7c54	thunder
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20e235e	0x14e7c45	torture
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20d3388	0x14e7c36	trade
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172914	0x14e7c27	travelers
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217291e	0x14e7c18	treachery
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2143005	0x14e7c09	trees
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172928	0x14e7bfa	trickery
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x219d606	0x14e7beb	truth
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172931	0x14e7bdc	twilight
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217293a	0x14e7bcd	valor
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172940	0x14e7bbe	victory
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172948	0x14e7baf	volcanos
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x20f38c4	0x14e7ba0	war
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x22105ff	0x14e7b91	water
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21c981c	0x14e7b82	wealth
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x217379b	0x14e7b73	weather
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x21430a1	0x14e7b64	wind
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172951	0x14e7b55	wisdom
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2115878	0x14e7b46	writing
+sphere	deity sphere nouns	0x14e7b20..0x14e82f3	0x2172958	0x14e82d5	youth
+sphere-wrapper	sphere definite article	0x14f0240..0x14f047a	0x21ba050	0x14f0374,0x14f03b6	the 
+activity	activity_eventst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_training_sessionst	0x17af7f0..0x17af8ef	0x21b3f93	0x17af812,0x17af876	Training Session
+activity	activity_event_combat_trainingst	0x17688b0..0x1768c54	0x21b427e	0x1768c1e	Go to Combat Training
+activity	activity_event_combat_trainingst	0x17688b0..0x1768c54	0x21b42ad	0x1768bf8	Lead Combat Training
+activity	activity_event_combat_trainingst	0x17688b0..0x1768c54	0x21b4294	0x1768b56	Organize Combat Training
+activity	activity_event_combat_trainingst	0x17688b0..0x1768c54	0x21b42c2	0x1768bce	Wait for Combat Training
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x2175617	0x176a7d7,0x176a86e	 Demonstration
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x21b420e	0x176a99a	Go to 
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x212fb4b	0x176a978	Lead 
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x21b4349	0x176a90e	Organize 
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x21b4353	0x176a94e	Wait for 
+activity	activity_event_skill_demonstrationst	0x176a450..0x176aa13	0x21b435d	0x176a9b9	Watch 
+activity	activity_event_fill_service_orderst	0x1766e00..0x17670c6	0x21b41f8	0x1766ef0	Serve 
+activity	activity_event_fill_service_orderst	0x1766e00..0x17670c6	0x21b41ff	0x1766f97,0x1766ff6	Serve Customer
+activity	activity_event_individual_skill_drillst	0x1767350..0x1767687	0x21b4244	0x1767638	/Resting
+activity	activity_event_individual_skill_drillst	0x1767350..0x1767687	0x21b4226	0x176765b	Go to Individual Combat Drill
+activity	activity_event_individual_skill_drillst	0x1767350..0x1767687	0x21b422c	0x176760e	Individual Combat Drill
+activity	activity_event_sparringst	0x1768fa0..0x17694c2	0x21b42e6	0x1769466	Go to Sparring Match
+activity	activity_event_sparringst	0x1768fa0..0x17694c2	0x21b4300	0x1769482	Go to Sparring Practice
+activity	activity_event_sparringst	0x1768fa0..0x17694c2	0x21b42fb	0x1769447	Spar
+activity	activity_event_sparringst	0x1768fa0..0x17694c2	0x21b4318	0x176941e	Watch Sparring Practice
+activity	activity_event_ranged_practicest	0x17670d0..0x1767341	0x21b4215	0x17672e6	Archery Practice
+activity	activity_event_ranged_practicest	0x17670d0..0x1767341	0x21b420e	0x1767318	Go to 
+activity	activity_event_harassmentst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_encounterst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_reunionst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_conversationst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_guardst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_conflictst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+activity	activity_event_prayerst	0x1767690..0x1767a37	0x21b424d	0x176782e	Meditate on 
+activity	activity_event_prayerst	0x1767690..0x1767a37	0x212f9b0	0x17679fe	Pray to 
+activity	activity_event_researchst	0x17af6f0..0x17af7ef	0x21756d0	0x17af712,0x17af746	Research
+activity	activity_event_playst	0x17afb20..0x17afc1f	0x2130a9d	0x17afb42,0x17afb76	Play
+activity	activity_event_worshipst	0x17afc20..0x17afd37	0x20fc2f3	0x17afc42,0x17afc7e	Worship
+activity	activity_event_socializest	0x17af8f0..0x17af9ff	0x212f992	0x17af912,0x17af94e	Socialize
+activity	activity_event_ponder_topicst	0x1768010..0x1768270	0x21b4276	0x176804d,0x17680b6	Ponder 
+activity	activity_event_discuss_topicst	0x1767dd0..0x1768010	0x21b426d	0x1767e0d,0x1767e6e	Discuss 
+activity	activity_event_teach_topicst	0x176a080..0x176a441	0x21b4342	0x176a0f5,0x176a219,0x176a39e	Learn 
+activity	activity_event_teach_topicst	0x176a080..0x176a441	0x21b433b	0x176a288,0x176a366	Teach 
+activity	activity_event_readst	0x1768590..0x17688a3	0x20f7379	0x17687ee	 
+activity	activity_event_readst	0x1768590..0x17688a3	0x213888b	0x17685d1,0x176868e	Read
+activity	activity_event_writest	0x1767a40..0x1767dc7	0x21b4267	0x1767b90,0x1767c96	Write
+activity	activity_event_writest	0x1767a40..0x1767dc7	0x21b425a	0x1767a8f,0x1767c76	Write about 
+activity	activity_event_copy_written_contentst	0x1768270..0x1768583	0x20f7379	0x17684ce	 
+activity	activity_event_copy_written_contentst	0x1768270..0x1768583	0x21adab2	0x17682b1,0x176836e	Copy
+activity	activity_event_make_believest	0x1762120..0x176222f	0x21b3fa4	0x1762142,0x17621b6	Play Make Believe
+activity	activity_event_play_with_toyst	0x1768c60..0x1768f9c	0x21b42db	0x1768ca1,0x1768dc6	Play with 
+activity	activity_event_play_with_toyst	0x1768c60..0x1768f9c	0x2175760	0x1768e3e	Toy
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2ea	0x1785819	Artwork
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2130a50	0x1785b24	Chant
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c39f	0x17855c9	Commerce
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x20df3b2	0x178562f	Competition
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2f2	0x17857f6	Cooperation
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c34d	0x17856de	Craftsmanship
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2bd	0x17858c8	Cunning
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2d8	0x178585f	Decorum
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2c5	0x17858a5	Eloquence
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2cf	0x1785882	Fairness
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2ab	0x1785954	Family
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2b2	0x1785931	Friendship
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c371	0x1785675	Hard Work
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c33b	0x1785724	Harmony
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2fe	0x17857d3	Independence
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c314	0x178578d	Introspection
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4417	0x178551e	Inveigh Against 
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2213292	0x17859bd	Knowledge
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x221105b	0x178599a	Law
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c392	0x17855e9	Leisure Time
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b448e	0x17850b7	Listen to Music
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b446f	0x178501f	Listen to Poetry
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4435	0x1784f57	Listen to Sermon
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4451	0x1784fc7	Listen to Story
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2a3	0x1785977	Loyalty
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c35b	0x17856bb	Martial Prowess
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c343	0x1785701	Merriment
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c3b0	0x1785589	Nature
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c3b7	0x1785566	Peace
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b449e	0x17851d4	Perform Dance
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4480	0x17852e7	Perform Music
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c385	0x178560c	Perseverance
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2130b72	0x1785b30,0x1785b44	Play 
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x20df178	0x178590e	Power
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4403	0x1785a20,0x1785a65	Preach on 
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b440e	0x1785ad6	Promote 
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4461	0x1785387	Recite Poetry
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c3a8	0x17855a9	Romance
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c37b	0x1785652	Sacrifice
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4428	0x178576a	Self-Control
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2130a41	0x1785260,0x1785437	Simulate 
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2130a4b	0x1785b01	Sing
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c36b	0x1785698	Skill
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c30b	0x17857b0	Stoicism
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b4446	0x17853af	Tell Story
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c2e0	0x178583c	Tradition
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x212c32f	0x1785747	Tranquility
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x2210eb6	0x17858eb	Truth
+activity	activity_event_performancest	0x1784e90..0x1785b7c	0x21b44ac	0x178518e	Watch Dance
+activity	activity_event_store_objectst	0x17af5f0..0x17af6ef	0x21b3f8a	0x17af612,0x17af646	Activity
+order	squad_order_movest	0x2032de0..0x2033150	0x219eec9	0x2032fc6	 at 
+order	squad_order_movest	0x2032de0..0x2033150	0x221c220	0x20330ae	Point 
+order	squad_order_movest	0x2032de0..0x2033150	0x21750a2	0x2032e21,0x2032f4e	Station
+order	squad_order_defend_burrowsst	0x2032a00..0x2032dd9	0x21e2c80	0x2032d4f	 etc.
+order	squad_order_defend_burrowsst	0x2032a00..0x2032dd9	0x20fba42	0x2032cf6	Burrow 
+order	squad_order_defend_burrowsst	0x2032a00..0x2032dd9	0x221c218	0x2032a33,0x2032c7f	Defend 
+order	squad_order_retrieve_artifactst	0x20313e0..0x2031520	0x221c1c9	0x203140b,0x2031466	Retrieve 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x221c1f8	0x203293b	Demand Tribute from 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x20d330c	0x2032927	Explore 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x20d3315	0x2032913	Pillage 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x20d334b	0x2032849,0x2032896,0x203298b	Raid 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x20d3333	0x2032977	Raze 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x20d3344	0x203294f	Seize 
+order	squad_order_raid_sitest	0x2032790..0x20329ff	0x221c20d	0x2032963	Take Over 
+order	squad_order_rescue_hfst	0x2031a10..0x2031c95	0x20d335a	0x2031a55,0x2031bc6	Rescue 
+order	squad_order_patrol_routest	0x20324a0..0x2032785	0x221c1f0	0x20324cd,0x203263e	Patrol 
+order	squad_order_patrol_routest	0x20324a0..0x2032785	0x20fc0e1	0x20326ee	Route 
+order	squad_order_trainst	0x20311b0..0x20312b7	0x221c180	0x20311d2,0x2031206	Train
+order	squad_order_drive_armies_from_sitest	0x2031ea0..0x2032082	0x20e1f80	0x203204e	 out of 
+order	squad_order_drive_armies_from_sitest	0x2031ea0..0x2032082	0x221c1da	0x2031f80	Drive any members of 
+order	squad_order_drive_entity_off_sitest	0x2031ca0..0x2031e92	0x20e2431	0x2031e5e	 from 
+order	squad_order_drive_entity_off_sitest	0x2031ca0..0x2031e92	0x221c1d3	0x2031d80	Drive 
+order	squad_order_cause_trouble_for_entityst	0x2033150..0x2033379	0x21b60f1	0x203324c,0x20332fd	Cause trouble for 

@@ -1,0 +1,998 @@
+# Complete native Adventure announcement sources; Windows x64 installed executable.
+# family<TAB>native constructor code ranges or literal code VA@file offset<TAB>complete English
+# Native repeated spaces are normalized. Shared submission is 0x1400e3c20.
+adventure.announcement.control	0x1407eed80:0x1407efe49@0x16ad238;0x1407f7020:0x1407fa086@0x16ad238	You've assumed tactical control as nobody else is available.
+adventure.announcement.control	0x1407eed80:0x1407f32da@0x16ad218	You awaken from your slumber.
+adventure.announcement.control	0x1407eed80:0x1407f3392@0x16acc80	Your sleep has been interrupted!
+adventure.announcement.control	0x14082f060:0x14082f682@0x16aeaf0	Dawn is breaking.
+adventure.announcement.control	0x14082f060:0x14082f795@0x16aea80	It is noon.
+adventure.announcement.control	0x14082f060:0x14082f8c0@0x16aea68	Night is falling.
+adventure.announcement.control	0x1408300d0:0x1408309d8@0x16aeb50	Your fate is sealed.
+adventure.announcement.control	0x1408300d0:0x140831ed8@0x16af5a8	Look out for a chance encounter.
+adventure.announcement.control	0x1408300d0:0x140831ee4@0x16af538	Stay the course.
+adventure.announcement.control	0x1408300d0:0x140831ef0@0x16af520	Expect a change.
+adventure.announcement.control	0x1408300d0:0x140831efc@0x16af570	The task will not be completed.
+adventure.announcement.control	0x1408300d0:0x140831f08@0x16af550	The task will be successful.
+adventure.announcement.control	0x1408300d0:0x140831f14@0x16af300	Focus on living in harmony.
+adventure.announcement.control	0x1408300d0:0x140831f20@0x16af2e0	Fulfillment will be yours.
+adventure.announcement.control	0x1408300d0:0x140831f2c@0x16af348	A reckoning awaits.
+adventure.announcement.control	0x1408300d0:0x140831f38@0x16af320	You will awaken to a new possibility.
+adventure.announcement.control	0x1408300d0:0x140831f44@0x16af280	You must reflect on your actions.
+adventure.announcement.control	0x1408300d0:0x140831f50@0x16af270	Beware doubt.
+adventure.announcement.control	0x1408300d0:0x140831f5c@0x16af2c8	Joy is on the horizon.
+adventure.announcement.control	0x1408300d0:0x140831f68@0x16af2a8	A great sadness is coming.
+adventure.announcement.control	0x1408300d0:0x140831f74@0x16af420	A sudden upheaval is in store.
+adventure.announcement.control	0x1408300d0:0x140831f80@0x16af3e8	A coming disaster can be delayed, but not avoided.
+adventure.announcement.control	0x1408300d0:0x140831f8c@0x16af468	Follow your desire.
+adventure.announcement.control	0x1408300d0:0x140831f98@0x16af440	Rely on willpower to see you through.
+adventure.announcement.control	0x1408300d0:0x140831fa4@0x16af378	Beware those that lack passion.
+adventure.announcement.control	0x1408300d0:0x140831fb0@0x16af360	All is not as it seems.
+adventure.announcement.control	0x1408300d0:0x140831fbc@0x16af3b8	Have faith and all shall be rejuvenated.
+adventure.announcement.control	0x1408300d0:0x140831fc8@0x16af398	Cling not to material things.
+adventure.announcement.control	0x1408300d0:0x140831fd4@0x16af100	Hold to hope when all else is lost.
+adventure.announcement.control	0x1408300d0:0x140831fe0@0x16af0e8	Be playful today.
+adventure.announcement.control	0x1408300d0:0x140831fec@0x16af140	Do not be stopped by fear.
+adventure.announcement.control	0x1408300d0:0x140831ff8@0x16af128	You will released.
+adventure.announcement.control	0x1408300d0:0x140832004@0x16af080	Do not take any chances.
+adventure.announcement.control	0x1408300d0:0x140832010@0x16af058	Look to another for what you need.
+adventure.announcement.control	0x1408300d0:0x14083201c@0x16af0c8	The partnership is one-sided.
+adventure.announcement.control	0x1408300d0:0x140832028@0x16af0a0	There are two sides to every story.
+adventure.announcement.control	0x1408300d0:0x140832034@0x16af200	Follow your intuition.
+adventure.announcement.control	0x1408300d0:0x140832040@0x16af1d8	You will travel far from this place.
+adventure.announcement.control	0x1408300d0:0x14083204c@0x16af238	An important decision awaits your careful deliberation.
+adventure.announcement.control	0x1408300d0:0x140832058@0x16af218	Beware of ill-conceived plans.
+adventure.announcement.control	0x1408300d0:0x140832064@0x16af178	Focus today.
+adventure.announcement.control	0x1408300d0:0x140832070@0x16af160	Be compassionate.
+adventure.announcement.control	0x1408300d0:0x14083207c@0x16af1a8	Today you will have a moment of weakness.
+adventure.announcement.control	0x1408300d0:0x140832088@0x16af188	The burden will be lifted soon.
+adventure.announcement.control	0x1408300d0:0x140832094@0x16aeef8	You will have a great accomplishment.
+adventure.announcement.control	0x1408300d0:0x1408320a0@0x16aeed8	See to your responsibilities.
+adventure.announcement.control	0x1408300d0:0x1408320ac@0x16aef40	An end and a new beginning.
+adventure.announcement.control	0x1408300d0:0x1408320b8@0x16aef20	Do not hold on for too long.
+adventure.announcement.control	0x1408300d0:0x1408320c4@0x16aee78	Make a change or forever remain.
+adventure.announcement.control	0x1408300d0:0x1408320d0@0x16aee58	Give up the hopeless cause.
+adventure.announcement.control	0x1408300d0:0x1408320dc@0x16aeeb8	Keep your own counsel today.
+adventure.announcement.control	0x1408300d0:0x1408320e8@0x16aeea0	Do not be reckless.
+adventure.announcement.control	0x1408300d0:0x1408320f4@0x16af008	You will make your final stand.
+adventure.announcement.control	0x1408300d0:0x140832100@0x16aefe8	Be cautious of fatigue today.
+adventure.announcement.control	0x1408300d0:0x14083210c@0x16af048	Ask a question.
+adventure.announcement.control	0x1408300d0:0x140832118@0x16af028	Do not give them too much.
+adventure.announcement.control	0x1408300d0:0x140832124@0x16aef80	Do not keep everything for yourself.
+adventure.announcement.control	0x1408300d0:0x140832130@0x16aef60	The situation cannot get worse.
+adventure.announcement.control	0x1408300d0:0x14083213c@0x16aefc0	The enterprise will be a failure.
+adventure.announcement.control	0x1408300d0:0x140832148@0x16aefa8	Accept a defeat.
+adventure.announcement.control	0x1408300d0:0x140832154@0x16afcb0	Be mindful of others around you.
+adventure.announcement.control	0x1408300d0:0x140832160@0x16afc90	Prepare for disappointment.
+adventure.announcement.control	0x1408300d0:0x14083216c@0x16afcf0	Consider the consequences carefully.
+adventure.announcement.control	0x1408300d0:0x140832178@0x16afcd8	Act quickly today.
+adventure.announcement.control	0x1408300d0:0x140832184@0x16afc40	Be generous today.
+adventure.announcement.control	0x1408300d0:0x140832190@0x16afc08	If you accept the gift, one will be expected in return.
+adventure.announcement.control	0x1408300d0:0x14083219c@0x16afc70	Bring comfort to someone today.
+adventure.announcement.control	0x1408300d0:0x1408321a8@0x16afc58	Now is a time for calm.
+adventure.announcement.control	0x1408300d0:0x1408321b4@0x16afda8	Your dreams will come true.
+adventure.announcement.control	0x1408300d0:0x1408321c0@0x16afd98	Beware a rival.
+adventure.announcement.control	0x1408300d0:0x1408321cc@0x16afdf8	Avoid conflict today.
+adventure.announcement.control	0x1408300d0:0x1408321d8@0x16afdc8	Do not avoid a necessary conflict today.
+adventure.announcement.control	0x1408300d0:0x1408321e4@0x16afd40	Look ahead to the future.
+adventure.announcement.control	0x1408300d0:0x1408321f0@0x16afd18	An obstacle will present itself.
+adventure.announcement.control	0x1408300d0:0x1408321fc@0x16afd80	Begin an adventure.
+adventure.announcement.control	0x1408300d0:0x140832208@0x16afd60	You have missed your chance.
+adventure.announcement.control	0x1408300d0:0x140832214@0x16afaa8	Accept the loss and move on.
+adventure.announcement.control	0x1408300d0:0x140832220@0x16afa88	Make the decision quickly.
+adventure.announcement.control	0x1408300d0:0x14083222c@0x16afae8	Explore today.
+adventure.announcement.control	0x1408300d0:0x140832238@0x16afac8	A new friendship will form.
+adventure.announcement.control	0x1408300d0:0x140832244@0x16afa18	It is not as simple as you think.
+adventure.announcement.control	0x1408300d0:0x140832250@0x16af9e0	You will learn something you did not want to know.
+adventure.announcement.control	0x1408300d0:0x14083225c@0x16afa60	Follow your desire to reconcile.
+adventure.announcement.control	0x1408300d0:0x140832268@0x16afa40	It is too soon to forgive.
+adventure.announcement.control	0x1408300d0:0x140832274@0x16afba8	Your ambition is misguided.
+adventure.announcement.control	0x1408300d0:0x140832280@0x16afb78	The object of your ambition will be realized.
+adventure.announcement.control	0x1408300d0:0x14083228c@0x16afbe8	There is no right choice.
+adventure.announcement.control	0x1408300d0:0x140832298@0x16afbc8	Rethink your priorities.
+adventure.announcement.control	0x1408300d0:0x1408322a4@0x16afb20	You will received bad advice.
+adventure.announcement.control	0x1408300d0:0x1408322b0@0x16afaf8	A clever strategy will be required.
+adventure.announcement.control	0x1408300d0:0x1408322bc@0x16afb58	Take care you are not deceived.
+adventure.announcement.control	0x1408300d0:0x1408322c8@0x16afb40	Indulge heartily.
+adventure.announcement.control	0x1408300d0:0x1408322d4@0x16af870	You will know suffering soon.
+adventure.announcement.control	0x1408300d0:0x1408322e0@0x16af858	Rethink your approach.
+adventure.announcement.control	0x1408300d0:0x1408322ec@0x16af8b0	You must reveal the truth.
+adventure.announcement.control	0x1408300d0:0x1408322f8@0x16af890	Some changes are inevitable.
+adventure.announcement.control	0x1408300d0:0x140832304@0x16af7e8	Whatever happens, it will be for the best.
+adventure.announcement.control	0x1408300d0:0x140832310@0x16af7c8	It is time to leave it behind.
+adventure.announcement.control	0x1408300d0:0x14083231c@0x16af840	Do not fear loss.
+adventure.announcement.control	0x1408300d0:0x140832328@0x16af818	You must face the challenge today.
+adventure.announcement.control	0x1408300d0:0x140832334@0x16af998	Today, somebody will be cruel.
+adventure.announcement.control	0x1408300d0:0x140832340@0x16af960	Master yourself today; discipline will be required.
+adventure.announcement.control	0x1408300d0:0x14083234c@0x16af9c8	Beware a hidden plan.
+adventure.announcement.control	0x1408300d0:0x140832358@0x16af9b8	Be practical.
+adventure.announcement.control	0x1408300d0:0x140832364@0x16af8f0	Think of others today, not yourself.
+adventure.announcement.control	0x1408300d0:0x140832370@0x16af8d0	See to the simple comforts.
+adventure.announcement.control	0x1408300d0:0x14083237c@0x16af930	Think on what came before and what follows.
+adventure.announcement.control	0x1408300d0:0x140832388@0x16af918	It will not be fair.
+adventure.announcement.control	0x1408300d0:0x140832394@0x16af670	Believe no one today.
+adventure.announcement.control	0x1408300d0:0x1408323a0@0x16af658	See to your legacy.
+adventure.announcement.control	0x1408300d0:0x1408323ac@0x16af6b0	Instability.
+adventure.announcement.control	0x1408300d0:0x1408323b8@0x16af688	The effort will reach a culmination.
+adventure.announcement.control	0x1408300d0:0x1408323c4@0x16af608	Any success will be fleeting.
+adventure.announcement.control	0x1408300d0:0x1408323cd@0x16af5e0	Make the sacrifice regardless of fear.
+adventure.announcement.control	0x1408300d0:0x1408323d6@0x16af648	Do not stall.
+adventure.announcement.control	0x1408300d0:0x1408323df@0x16af628	Make no needless sacrifices.
+adventure.announcement.control	0x1408300d0:0x1408323e8@0x16af758	Be sure to keep to a high standard today.
+adventure.announcement.control	0x1408300d0:0x1408323f1@0x16af748	Be patient.
+adventure.announcement.control	0x1408300d0:0x1408323fa@0x16af7b0	Take the middle path.
+adventure.announcement.control	0x1408300d0:0x140832403@0x16af788	You must choose between two extremes.
+adventure.announcement.control	0x1408300d0:0x14083240c@0x16af6e0	Beware a lack of balance.
+adventure.announcement.control	0x1408300d0:0x140832415@0x16af6c0	Be diligent and undistracted.
+adventure.announcement.control	0x1408300d0:0x14083241e@0x16af728	There will be no reward.
+adventure.announcement.control	0x1408300d0:0x140832427@0x16af700	Persevere though it may be for nothing.
+adventure.announcement.control	0x1408300d0:0x140832430@0x16b01c8	Eat not the fruits of your labor.
+adventure.announcement.control	0x1408300d0:0x140832439@0x16b01b0	It is a false success.
+adventure.announcement.control	0x1408300d0:0x140832442@0x16b0200	You will be rewarded.
+adventure.announcement.control	0x14083b5b0:0x14083b6b1@0x16afea8	You set a fire.
+adventure.announcement.control	0x140895fd0:0x140896d83@0x16b3de0	No. That's disgusting.
+adventure.announcement.control	0x140895fd0:0x140896fef@0x16b3ea8	It's too much! You feel even more sick.
+adventure.announcement.control	0x140895fd0:0x140896ff9@0x16b3eb8	You feel even more sick.
+adventure.announcement.control	0x140895fd0:0x14089708e@0x16b3e70	It's too much! You might not be able to keep it down.
+adventure.announcement.control	0x140895fd0:0x140897098@0x16b3e80	You might not be able to keep it down.
+adventure.announcement.control	0x140895fd0:0x140897191@0x16b3ef8	You feel really full.
+adventure.announcement.control	0x140895fd0:0x1408971ea@0x16b3ed8	You are starting to feel full.
+adventure.announcement.control	0x140833df0	You read {s}.
+adventure.announcement.control	0x140834410	You pull out {s}.
+adventure.announcement.control	0x140834eb0	You cease nocking {s}.
+adventure.announcement.control	0x140834830;0x14088d130;0x1408a4a00	You begin loading {s} into {s}.
+adventure.announcement.control	0x140834830;0x14088d130;0x1408a4a00	You begin nocking {s} in {s}.
+adventure.announcement.control	0x1408360a0;0x140837150	You fill your {s} with {s}.
+adventure.announcement.control	0x1408360a0;0x140837150	Your {s} is already full.
+adventure.announcement.control	0x1408360a0;0x140837150	It won't fit in your {s}.
+adventure.announcement.control	0x1408360a0	{s} is empty.
+adventure.announcement.control	0x140836b20	The {s} is hot enough already.
+adventure.announcement.control	0x140836b20	You heat the {s}.
+adventure.announcement.control	0x140836b20	You heat the {s} to no effect.
+adventure.announcement.control	0x140894b00;0x1408956d0;0x14007de50:0x14007e11b-0x14007e317;item=0x140c65450	You empty {s}.
+adventure.announcement.control	0x140894b00;0x1408956d0	You empty the {s}.
+adventure.announcement.control	0x140894b00	You drop {s}.
+adventure.announcement.control	0x140895240	You put on {s}.
+adventure.announcement.control	0x1408956d0	You take out the {s}.
+adventure.announcement.control	0x1408956d0	You take off {s}.
+adventure.announcement.control	0x140895fd0	You eat the {s}.
+adventure.announcement.control	0x140895fd0	You drink the {s}.
+adventure.announcement.control	0x140895fd0	You lick the {s}.
+adventure.announcement.control	0x140895fd0	The {s} is too salty.
+adventure.announcement.control	0x140895fd0	The {s} is too hot.
+adventure.announcement.control	0x140895fd0	The {s} is too cold.
+adventure.announcement.control	0x140899df0	You pack the {s} on to {n}.
+adventure.announcement.control	0x14089a1e0;0x14089a950	You put the {s} into the {s}.
+adventure.announcement.control	0x14089a1e0;0x14089a950	You put the {s} on the {s}.
+adventure.announcement.control	0x14089a1e0;0x14089a950	You put the {s} on display.
+adventure.announcement.control	0x1408a6e70	You fail to grab the {s}!
+adventure.announcement.control	0x14082fd20;0x14088a2b0	You struggle for {s}.
+adventure.announcement.control	0x14088d130;0x1408a4a00;0x1408a5640	You prepare to shoot {s} in {s}.
+adventure.announcement.control	0x14088d130;0x1408a4a00;0x1408a5640	You prepare to shoot {s} nocked in {s}.
+adventure.announcement.control	0x14088d130;0x1408a4a00;0x1408a5640	You prepare to shoot {n} with {s} in {s}.
+adventure.announcement.control	0x14088d130;0x1408a4a00;0x1408a5640	You prepare to shoot {n} with {s} nocked in {s}.
+adventure.announcement.control	0x140834830;0x14088d130;0x1408a4a00	You begin loading {s} into {s} with intentions of shooting {n}.
+adventure.announcement.control	0x140834830;0x14088d130;0x1408a4a00	You begin nocking {s} in {s} with intentions of shooting {n}.
+adventure.announcement.control	0x1408a5fe0;0x1408a65d0	You begin to throw {s}.
+adventure.announcement.control	0x1408a5fe0;0x1408a65d0	You begin to throw {s} at {n}.
+adventure.announcement.control	0x1407f7020	You do not have a free grasp for {s}.
+adventure.announcement.control	0x1407f7020	You don't have any ammunition for {s}.
+adventure.announcement.control	0x1407f7020	{s} is already prepared to shoot.
+adventure.announcement.control	0x1407f7020	You've found a colony of {s}.
+adventure.announcement.control	0x1407f7020	You've found a colony of {s} and another small creature.
+adventure.announcement.control	0x1407f7020	You've found a colony of {s} and some other small creatures.
+adventure.announcement.control	0x1407f7020	A {s} cannot climb.
+adventure.announcement.control	0x140865d80	A {s} cannot hold the terrain.
+adventure.announcement.control	0x14089c4d0	A {s} cannot jump.
+adventure.announcement.control	0x14089d8d0	A {s} cannot speak.
+adventure.announcement.control	0x1408189b0	You have discovered a {s}.
+adventure.announcement.control	0x1408189b0	You cannot travel through the {s}.
+adventure.announcement.control	0x140805600	You've located a {s} right under you!
+adventure.announcement.control	0x140805600	You've located a {s} to the {s}!
+adventure.announcement.control	0x140805600	You've located a {s} above and to the {s}!
+adventure.announcement.control	0x140805600	You've located a {s} below and to the {s}!
+adventure.announcement.control	0x1407eed80	"You've found {p}! My chosen, you must speak to them and offer your service."
+adventure.announcement.control	0x1407eed80:0x1407f0f90@0x16ace10	"You will have to leave this structure first before you can travel. Try to make your way out to the settlement."
+adventure.announcement.control	0x1407eed80:0x1407f139b@0x16ace90	"Do you feel the pull? You sense the direction of my representative. It is possible to travel quickly to reach them, or you may journey more deliberately. It is your decision."
+adventure.announcement.control	0x1407eed80:0x1407f1759@0x16accf0	"Congratulations! Now you must return this precious object to its proper home."
+adventure.announcement.control	0x1407eed80	"You seek {e}. If you do not find the location in your log, ask others for directions. You may also follow the pull from your senses."
+adventure.announcement.control	0x1407eed80	"The journey is long. Be sure to travel to {e}, rather than walking leisurely."
+adventure.announcement.control	0x1407eed80:0x1407f1ac9@0x16ac7f0	"This place is dangerous. Steel yourself against ancient enemies. Try not to let yourself be surrounded, and remain standing. Enter and vanquish! Or slip in unseen. Securing the treasure is all that matters."
+adventure.announcement.control	0x1407eed80:0x1407f1efb@0x16aca10	"Congratulations, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well."
+adventure.announcement.control	0x1407eed80:0x1407f2079@0x16ac950	"With the treasure, you are near to glory and fulfillment of your task. Your senses can lead you on your return journey."
+adventure.announcement.control	0x1407eed80:0x1407f2196@0x16acae0	"You may return the object to the faithful by gifting it to one of the priests, or you may simply drop it in this structure wherever you see fit."
+adventure.announcement.control	0x1407eed80:0x1407f2252@0x16add00	"My other worshippers? As you wish, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well."
+adventure.announcement.control	0x1407eed80:0x1407f2306@0x16adce0	"Ungrateful apostate!"
+adventure.announcement.control	0x1407eed80:0x1407f3c02@0x16ad1b0	"You are approaching your destination. End your travels now and prepare yourself."
+adventure.announcement.control	0x1407eed80;0x140dcc6a0:0x140dcced5-0x140dcd09b;deity=0x140a946e0;default-only;RAW-trigger-separate	You have been cursed by {p}!
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We should have made it there by now."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We should have made it there by now."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We should be making better progress."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We should be making better progress."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We are going the wrong way."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We are going the wrong way."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We haven't performed for some time."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We haven't performed for some time."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We have arrived at our destination."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We have arrived at our destination."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "The oppressor has been overthrown!"
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "The oppressor has been overthrown!"
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says, "We must go back."
+adventure.announcement.control	0x140806230:0x1408089df-0x140808ca9	{n} says: "We must go back."
+adventure.announcement.control	0x140806230:0x140808a87-0x140808ca9	{n} says, "We must not abandon {n}!"
+adventure.announcement.control	0x140806230:0x140808a87-0x140808ca9	{n} says: "We must not abandon {n}!"
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Don't you know that {p} is a jealous deity? Why consult another?
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Don't you know that {p} is a jealous deity? Why consult another? Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Don't you know that {p} is a jealous deity? Why consult another? Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Don't you know that {p} is a jealous deity? Why consult another? Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Why wasn't {p}, a jealous deity, consulted first?
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Why wasn't {p}, a jealous deity, consulted first? Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Why wasn't {p}, a jealous deity, consulted first? Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	Why wasn't {p}, a jealous deity, consulted first? Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Do not tempt fate.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Do not tempt fate. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Do not tempt fate. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140830b70-0x1408311b3	You already know the will of {p}. Do not tempt fate. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Freedom is allowed even in this.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are forgiven.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are forgiven. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are forgiven. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are forgiven. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are free to do as you choose.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are free to do as you choose. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are free to do as you choose. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are free to do as you choose. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Your happiness is still desired.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Your happiness is still desired. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Your happiness is still desired. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Your happiness is still desired. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are loved.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are loved. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are loved. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You are loved. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You have been granted mercy.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You have been granted mercy. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You have been granted mercy. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. You have been granted mercy. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Peace is cherished.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Peace is cherished. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Peace is cherished. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Peace is cherished. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such care for your happiness!
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such care for your happiness! Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such care for your happiness! Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such care for your happiness! Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bound.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bound. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bound. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bound. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bounds.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bounds. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bounds. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. {r} without bounds. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such {r}!
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such {r}! Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such {r}! Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such {r}! Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such is the spirit of {r}.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Infinite {r}!
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Infinite {r}! Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Infinite {r}! Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Infinite {r}! Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh sweet {r}!
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh sweet {r}! Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh sweet {r}! Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh sweet {r}! Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh tender {r}!
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh tender {r}! Let a week pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh tender {r}! Let some days pass.
+adventure.announcement.control	0x1408300d0:0x140831220-0x14083153c	Praise {p} for ignoring your hubris. Oh tender {r}! Let another day pass.
+adventure.announcement.control	0x1408300d0:0x140831664	Hubris!
+adventure.announcement.control	0x1408300d0:0x140830442-0x1408305b5	You roll.
+adventure.announcement.control	0x1408300d0:0x140830442-0x1408305b5	You roll, divining the will of {p} according to the practice of {e}.
+adventure.announcement.control	0x1408300d0:0x140830442-0x1408305b5	You roll, testing the will of {p}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} shows a word but you cannot read.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} shows the word "{s}".
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} shows {d} "{s}"s.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} shows {d}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} shows {s}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} comes up a word but you cannot read.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} comes up the word "{s}".
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} comes up {d} "{s}"s.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} comes up {d}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} comes up {s}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} lands on a word but you cannot read.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} lands on the word "{s}".
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} lands on {d} "{s}"s.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} lands on {d}.
+adventure.announcement.control	0x1408300d0:0x140830793-0x1408308eb;face=0x14085da20	{s} lands on {s}.
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sustenance! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sustenance! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of sustenance and sleep! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of sustenance! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in need of sleep! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in a state! See to yourself before you face what's ahead."
+adventure.announcement.control	0x1407eed80:0x1407f1c76-0x1407f1df9	"You are close. Follow your senses to the entrance. But my chosen, you are in a state! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."
+adventure.announcement.control	0x1407eed80:0x1407f04d1-0x1407f0762	"Greetings. I am {p}, and I have chosen you. Seek out {p} in {e} and fulfill your destiny."
+adventure.announcement.control	0x1407eed80:0x1407f04d1-0x1407f0762	"Greetings. I am {p}, and I have chosen you. The remnants of creation, {e}, belong with my followers, {e}. Seek out {p} in {e} and fulfill your destiny."
+adventure.announcement.control	0x1407eed80:0x1407f04d1-0x1407f0762	"Greetings. I am {p}, and I have chosen you as my instrument of {r}. Seek out {p} in {e} and fulfill your destiny."
+adventure.announcement.control	0x1407eed80:0x1407f04d1-0x1407f0762	"Greetings. I am {p}, and I have chosen you as my instrument of {r}. The remnants of creation, {e}, belong with my followers, {e}. Seek out {p} in {e} and fulfill your destiny."
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You feed on {n}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You flounder in the water!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You flounder in the lava!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You flounder in the magma!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You push {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede;0x14132c090:0x14132c54d-0x14132c668	You lose hold of the {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You mount {n}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You dismount.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} flounders in the water!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} flounders in the lava!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} flounders in the magma!
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} pushes {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede;0x14132c090:0x14132c54d-0x14132c668	{n} loses hold of the {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} mounts {n}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} dismounts.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You cannot mount {n} due to the presence of an existing rider.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You fail to mount {n} in time.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You fail to dismount in time.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You stand up.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} stands up.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You lie on the ground.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{n} lies on the ground.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{s} is already nocked with {s} and you prepared to shoot.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede;native-empty-ammunition-append=0x1415098b9	{s} is already nocked with .
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You finish nocking {s} in {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You finish nocking {s} in {s} and prepare to shoot.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	{s} is already loaded with {s} and you prepared to shoot.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede;native-empty-ammunition-append=0x1415098b9	{s} is already loaded with .
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You finish loading {s} into {s}.
+adventure.announcement.shared-action	0x1415059c0:0x141505d24-0x141509ede	You finish loading {s} into {s} and prepare to shoot.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	{n} gains possession of the {s}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	{n} maintains possession of the {s}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	You gain possession of the {s}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	You maintain possession of the {s}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	You've lost possession of the {s}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	The {s} remains stuck in {n}'s {t}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	The {s} remains stuck in your {t}.
+adventure.announcement.shared-action	0x140c88f50:0x140c89330-0x140c89dc3	The {s} is torn from your {t}.
+adventure.announcement.shared-action	0x1413f5350:0x1413f663b-0x1413f67ff	You reorganize your possessions.
+adventure.announcement.shared-action	0x1413f5350:0x1413f663b-0x1413f67ff	{n} reorganizes his possessions.
+adventure.announcement.shared-action	0x1413f5350:0x1413f663b-0x1413f67ff	{n} reorganizes her possessions.
+adventure.announcement.shared-action	0x1413f5350:0x1413f663b-0x1413f67ff	{n} reorganizes its possessions.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} straps {s} to his {t}.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} draws {s} with his {t}.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} straps {s} to her {t}.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} draws {s} with her {t}.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} straps {s} to its {t}.
+adventure.announcement.shared-action	0x140224ec0:0x1402264f6-0x1402269cc;0x141502780:0x141502d76-0x1415031a1;possessive=0x140aa4850;anatomy=0x1413345d0	{n} draws {s} with its {t}.
+adventure.announcement.shared-action	0x140224ec0:0x140226c0a-0x1402290f6	{n} drops {s}.
+adventure.announcement.shared-action	0x140224ec0:0x140226c0a-0x1402290f6	{n} drinks {s}.
+adventure.announcement.shared-action	0x140224ec0:0x140226c0a-0x1402290f6	{p} is sneaking an extra drink to {p}!
+adventure.announcement.shared-action	0x14027e300:0x14027eb2d-0x14027ebac	You butcher {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You make {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You make {s} and {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You make {s} and more.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You have finished working on {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You have finished working on {s} and {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You have finished working on {s} and more.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You practice your {s}.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You practice your {s} but make nothing of note.
+adventure.announcement.shared-action	0x1402804b0:0x140280709-0x140280feb	You make nothing.
+adventure.announcement.shared-item-job	0x141397100:0x141397273-0x1413973b5	{n} pulls out and drops {s}.
+adventure.announcement.shared-item-job	0x141397100:0x141397273-0x1413973b5	{n} pulls out and releases {s}.
+adventure.announcement.shared-item-job	0x1401fe5c0:0x1401feebc-0x1401feff9	You have bestowed the name {b} upon {s}.
+adventure.announcement.shared-item-job	0x1413cfbe0:0x1413d0206-0x1413d0325	{n} has bestowed the name {b} upon a {s}!
+adventure.announcement.shared-item-job	0x1413cfbe0:0x1413d0658-0x1413d0739	{n} has grown attached to a {s}!
+adventure.announcement.shared-item-job	0x1413e6e20:0x1413e774d-0x1413e7cf6	{s} has been moved from its proper place!
+adventure.announcement.shared-item-job	0x1413e6e20:0x1413e774d-0x1413e7cf6	{s} is missing from its proper place!
+adventure.announcement.shared-item-job	0x1413e6e20:0x1413e774d-0x1413e7cf6	{s} was seen being passed to a thief!
+adventure.announcement.shared-item-job	0x1413e6e20:0x1413e774d-0x1413e7cf6	{s} was seen being stolen!
+adventure.announcement.shared-item-job	0x1413e8800:0x1413e8c7e-0x1413e8d33	{n} drinks the {s}.
+adventure.announcement.shared-item-job	0x1413e8800:0x1413e8e57-0x1413e8ff8	{n} eats the {s}.
+adventure.announcement.shared-item-job	0x1413e8800:0x1413e912b-0x1413e915f	It makes them look even more sick.
+adventure.announcement.shared-item-job	0x1413e8800:0x1413e9182-0x1413e91ad	They look sick suddenly.
+adventure.announcement.shared-item-job	0x1410821f0:0x14108227f-0x1410824d0	You have located {b}, "{b}", a {s}.
+adventure.announcement.shared-item-job	0x140276850:0x1402770fe-0x1402772e2;capture=unbounded-comma-and-item-list	You receive {i} to conclude the transaction.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}!
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! He claims it as a personal treasure.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! He claims it as a family heirloom.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! He claims it as an heirloom in the name of the family ancestor {p}.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! He offers it to {e}.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! She claims it as a personal treasure.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! She claims it as a family heirloom.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! She claims it as an heirloom in the name of the family ancestor {p}.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! She offers it to {e}.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! It claims it as a personal treasure.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! It claims it as a family heirloom.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! It claims it as an heirloom in the name of the family ancestor {p}.
+adventure.announcement.shared-item-job	0x140a95780:0x140a9671a-0x140a96f15	{n} has created {b}, a {s}! It offers it to {e}.
+adventure.announcement.shared-item-job	0x140a80510:0x140a80616-0x140a80869;period-immediate=0x140a8070b	The {s} were unable to complete the {s}.
+adventure.announcement.shared-item-job	0x140a80510:0x140a809cd-0x140a80b7d	Jobs removed from unpowered {s}.
+adventure.announcement.shared-item-job	0x141325080:0x141325e4d-0x141325f76	The {s} suspended the construction of {s}.
+adventure.announcement.shared-item-job	0x141325080:0x1413260e0-0x141326238	The {s} suspended a linkage from {s}.
+adventure.announcement.shared-item-job	0x141325080:0x141327bd3-0x141327ca0	{s} ({s}) has been completed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Unscheduled.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Cannot reach site.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Getting married.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Inappropriate dig square.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Area became inappropriate.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Moved.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need empty bucket.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need empty trap.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need empty bag.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need empty cage.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need valid, active sand collection zone.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need valid, active clay collection zone.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No available colony.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Sand vanished.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Clay vanished.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Incapable of carrying.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Too injured.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Exhausted.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Resting injury.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Animal inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Patient inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Infant inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No partner.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Item inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Drop-off inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Building inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Area inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Nothing in cage.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Nothing to cage.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Nothing to catch.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No patient.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Patient not resting.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No infant.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Already leading creature.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No food available.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Water source vanished.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No water source.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Water source contaminated.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Creature occupying site.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No bucket at well.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Bucket full of extraneous material.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Well dry.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need office.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Wrong ammunition.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Ammunition inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No ammunition.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No item.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No weapon.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Item blocking site.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Building site submerged.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Animal not restrained.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No creature.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Inappropriate building.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No building.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No floor space.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No designated area.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No party.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Wrong justice state.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Nothing in building.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Relieved.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Water is frozen.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Terrified.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Mortally afraid.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Experiencing emotional shock.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Horrified.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Grieving.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Too sad.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: In agony.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Anguished.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Despairing.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Dismayed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Distressed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Frightened.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Miserable.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Mortified.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Shaken.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: In existential crisis.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Too insane.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Too depressed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Oblivious.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Catatonic.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Taken by mood.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Went insane.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Throwing tantrum.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Could not find path.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Path blocked.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Seeking artifact.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Handling dangerous creature.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Going to bed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Seeking Infant.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Dangerous terrain.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Forbidden area.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Job item lost or destroyed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Job item misplaced.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Getting food.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Getting water.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Hunting vermin for food.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Target inaccessible.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Target too injured.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No target.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No mechanism for target.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No target building.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No mechanism for trigger.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No trigger.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Attacking building.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Lost pick.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Invalid officer.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: "Farewell!" Leaving.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Removed from guard.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Equipment mismatch.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Unconscious.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Webbed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Paralyzed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Caged.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: In Custody.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Getting something to drink.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Using well.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Lost axe.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Not responsible for trade.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No available traction bench.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need splint.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need thread.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need cloth.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need crutch.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Bad script! #1.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Bad script! #2.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Bad script! #3.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Need bag containing powder suitable for cast application.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No weapon for execution.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No appropriate ammunition.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Not appointed.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: No longer requested.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Interrupted by {n}.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Interrupted by combat.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Needs {s}.
+adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Needs {s} in linked stockpile.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The temple petition by {e} has been ignored.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The guildhall petition by {e} has been ignored.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The citizenship petition of {n} has been ignored.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The residency petition of {e} has been ignored.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The residency petition of {n} has been ignored.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The guildhall agreement with {e} has been satisfied.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The priesthood of {e} is ready to be recognized (from the temple's location menu.) This will satisfy the agreement.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The high priest of {e} is ready to be recognized (from the temple's location menu.) This will satisfy the agreement.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The agreement to establish a temple for {e} has been abandoned.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	The agreement to establish a guildhall for {e} has been abandoned.
+adventure.announcement.social-world	0x140e365c0:0x140e3684e-0x140e3974f	{e}, a {s} guild, has been established.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	The {n} has been missing for a week.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	{n} has ended a mandate.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	A mandate has ended.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. What are a few pesky demons after all?
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. The gods surely want you to dig deeper still!
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. And why shouldn't you dig deeper still?!
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	{n} is satisfied with their position here. Everything is properly royal, properly furnished. And yet? A true Mountainhome must have a true throne! And a true ruler requires seven symbols, symbols not of this world. Mere steel will not suffice. This legend does not end until we've chipped out the last treasures of the underworld!
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	{n} is satisfied with their position here. Everything is properly royal, properly furnished. And yet? A true Mountainhome must have a true throne! And a true ruler requires seven symbols, symbols not of this world. Mere steel will not suffice. Deeper. We must dig deeper.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	{n} is satisfied with their position here. Congratulations! (You should be proud of your accomplishment. Embark in a world with the deepest cavern layers for further challenges.)
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Your fortress is out of food! Consider placing a farmplot on some underground soil and planting seeds. Try building a butcher's shop and slaughtering some livestock. Perhaps you can gather plants, fruit, or go fishing.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Your fortress is out of food! Consider placing a farmplot on some underground soil and planting seeds. Do you have any livestock to slaughter? Perhaps you can gather plants, fruit, or go fishing.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Your fortress is out of food! Are your farmplots working? Make sure you are planting edible plants. Try building a butcher's shop and slaughtering some livestock. Perhaps you can gather plants, fruit, or go fishing.
+adventure.announcement.social-world	0x140e39910:0x140e3a003-0x140e3c811	Your fortress is out of food! Are your farmplots working? Make sure you are planting edible plants. Do you have any livestock to slaughter? Perhaps you can gather plants, fruit, or go fishing.
+adventure.announcement.social-world	0x140e41870:0x140e41cda-0x140e41de6	The annual tribute from {e} has arrived.
+adventure.announcement.social-world	0x140e42d20:0x140e43df7-0x140e43e1d	Their wagons have bypassed your inaccessible site.
+adventure.announcement.social-world	0x140e4b750	A {s} diplomat from {e} has arrived.
+adventure.announcement.social-world	0x140e4ca70	{n} from {e} has arrived.
+adventure.announcement.social-world	0x140e4ca70:0x140e4dbc9-0x140e4dc87	No {s}? How curious...
+adventure.announcement.social-world	0x140e506a0;0x140e51490	{n} has come!
+adventure.announcement.social-world	0x140e53870	The merchants from {e} will be leaving soon.
+adventure.announcement.social-world	0x140e53870	The merchants from {e} have embarked on their journey.
+adventure.announcement.social-world	0x140e605e0	{n} bids you farewell!
+adventure.announcement.social-world	0x140e646f0	{n} has been elected {s}.
+adventure.announcement.social-world	0x140e646f0	{n} has been re-elected.
+adventure.announcement.social-world	0x14133bcf0;0x141373640;0x141374fc0	{p} has become a {s}.
+adventure.announcement.social-world	0x14133bcf0;0x141373640;0x141374fc0	has become a {s}.
+adventure.announcement.social-world	0x141391aa0	A diplomat could not complete a meeting and has left unhappy.
+adventure.announcement.social-world	0x1413b89d0:0x1413b9308-0x1413b932d	{n} cannot find a path to its destination.
+adventure.announcement.social-world	0x141348a40	{n} has stopped responding to the world...
+adventure.announcement.social-world	0x141348a40	{n} has gone berserk!
+adventure.announcement.social-world	0x141348a40	{n} has gone stark raving mad!
+adventure.announcement.social-world	0x141348a40	{n} is stricken by melancholy!
+adventure.announcement.social-world	0x14134ac10	{n} has forgotten a demand.
+adventure.announcement.social-world	0x14134ac10	{n} has a new demand.
+adventure.announcement.social-world	0x14134de20	{n} has mandated the construction of certain goods.
+adventure.announcement.social-world	0x14134de20	{n} has imposed a ban on certain exports.
+adventure.announcement.social-world	0x14134de20	{n} has altered the prices of goods.
+adventure.announcement.social-world	0x1413b2a30	{n}'s mandate has ended.
+adventure.announcement.social-world	0x1413b2a30	{n}'s mandates have ended.
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	You have disturbed the sleep of the dead!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} sucks the wind out of {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} sucks the wind out of you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} raises a high fever in {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} raises a high fever in you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} inflicts excruciating pain upon {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} inflicts excruciating pain upon you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} causes a spell of dizziness in {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} causes a spell of dizziness in you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} paralyzes {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} paralyzes you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} stuns {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} stuns you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} makes {n} convulse and retch!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} makes you convulse and retch!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} batters {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} batters you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} is throwing a tantrum, possessed by {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} has risen and is haunting the fortress!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} is following {n}!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} is following you!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{s} has been misplaced. No doubt {n} is to blame!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{s} toppled by {n}.
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} is throwing objects around the fortress!
+adventure.announcement.social-world	0x1413d5350:0x1413d5534-0x1413da370	{n} can be heard howling throughout the fortress!
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50;direction-distance=0x14147c4a0	The {s} of {e}, {s}, looks to your thriving economy for its future prosperity and has been incorporated into your holdings.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50;direction-distance=0x14147c4a0	The {s} of {e}, {s}, looks to your thriving economy for its future prosperity.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n}, being the rightful heir, has inherited the position of {s}.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n}, being the rightful heir, has inherited the position of {s} of {e}.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n} has been appointed to the position of {s}.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n} has been appointed to the position of {s} of {e}.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n} has been elected to the position of {s}.
+adventure.announcement.social-world	0x141468370:0x14146ec28-0x141477e50	{n} has been elected to the position of {s} of {e}.
+adventure.announcement.social-world	0x141517810:0x141517f47-0x1415180d9	You are now in control of {e}, ruling {e}.
+adventure.announcement.social-world	0x141517810:0x141517f47-0x1415180d9	You are now in control of {e}, ruling {e} from {e}.
+adventure.announcement.social-world	0x140e506a0;0x140e51490;description=creature-caste-native-string	{n} has come! {q}
+adventure.announcement.social-world	0x140e646f0:0x140e654d1;title-helper=0x1409bdfb0	{n} has been elected {s} of {e}.
+adventure.announcement.migrants	0x140e46ea3@0x172d938	Your ruler has arrived, dressed as a peasant!
+adventure.announcement.migrants	0x140e49bf0@0x172d970	Some migrants have decided to brave this terrifying place, knowing it may be their miserable tomb.
+adventure.announcement.migrants	0x140e49c02@0x172d9e0	Some migrants have arrived at this miserable place, despite the danger.
+adventure.announcement.migrants	0x140e49c0b@0x172d7d0	Some migrants have arrived at this miserable place.
+adventure.announcement.migrants	0x140e49c24@0x172d810	Some migrants have decided to brave this terrifying unhappy place, knowing it may be their tomb.
+adventure.announcement.migrants	0x140e49c36@0x172d880	Some migrants have arrived at this unhappy place, despite the danger.
+adventure.announcement.migrants	0x140e49c3f@0x172d8c8	Some migrants have arrived at this unhappy place.
+adventure.announcement.migrants	0x140e49c4d@0x172db40	Some migrants have decided to brave this terrifying place, knowing it may be their tomb.
+adventure.announcement.migrants	0x140e49c59@0x172dba0	Some migrants have arrived, despite the danger.
+adventure.announcement.migrants	0x140e49c62@0x172dbd0	Some migrants have arrived.
+adventure.announcement.migrants	0x140e49cf9@0x172dbf0	A migrant has decided to brave this terrifying miserable place.
+adventure.announcement.migrants	0x140e49d0b@0x172da30	A migrant has arrived at this miserable place, despite the danger.
+adventure.announcement.migrants	0x140e49d14@0x172da78	A migrant has arrived at this miserable place.
+adventure.announcement.migrants	0x140e49d2d@0x172daa8	A migrant has decided to brave this terrifying unhappy place.
+adventure.announcement.migrants	0x140e49d3f@0x172daf0	A migrant has arrived at this unhappy place, despite the danger.
+adventure.announcement.migrants	0x140e49d48@0x172dd88	A migrant has arrived at this unhappy place.
+adventure.announcement.migrants	0x140e49d56@0x172ddb8	A migrant has decided to brave this terrifying place.
+adventure.announcement.migrants	0x140e49d62@0x172ddf0	A migrant has arrived, despite the danger.
+adventure.announcement.migrants	0x140e49d6b@0x172de20	A migrant has arrived.
+adventure.announcement.migrants	0x140e49e38@0x172dc30	No one else even considered making the journey to this cursed miserable death-trap.
+adventure.announcement.migrants	0x140e49e4d@0x172dc90	Others refused to journey to this dangerous and miserable fortress.
+adventure.announcement.migrants	0x140e49e59@0x172dce0	Others were too nervous to make the journey to this miserable fortress.
+adventure.announcement.migrants	0x140e49e75@0x172dd30	No one else even considered making the journey to this cursed unhappy death-trap.
+adventure.announcement.migrants	0x140e49e8a@0x172df90	Others refused to journey to this dangerous and unhappy fortress.
+adventure.announcement.migrants	0x140e49e96@0x172dfe0	Others were too nervous to make the journey to this unhappy fortress.
+adventure.announcement.migrants	0x140e49ea7@0x172e030;0x140e4a06f@0x172e030	No one else even considered making the journey to this cursed death-trap.
+adventure.announcement.migrants	0x140e49ebc@0x172e080;0x140e4a081@0x172e080	Others refused to journey to this dangerous fortress.
+adventure.announcement.migrants	0x140e49ec8@0x172de38;0x140e4a08a@0x172de38	Others were too nervous to make the journey.
+adventure.announcement.migrants	0x140e49ee4@0x172de70	No one even considered making the journey to such a cursed miserable death-trap this season.
+adventure.announcement.migrants	0x140e49ef6@0x172ded0	Migrants refused to journey to such a dangerous and miserable fortress this season.
+adventure.announcement.migrants	0x140e49eff@0x172df30	Migrants were too nervous to make the journey this season to this miserable fortress.
+adventure.announcement.migrants	0x140e49f18@0x172e620	No one even considered making the journey to such a cursed unhappy death-trap this season.
+adventure.announcement.migrants	0x140e49f2a@0x172e680	Migrants refused to journey to such a dangerous and unhappy fortress this season.
+adventure.announcement.migrants	0x140e49f33@0x172e6e0	Migrants were too nervous to make the journey this season to this unhappy fortress.
+adventure.announcement.migrants	0x140e49f41@0x172e740;0x140e4a098@0x172e740	No one even considered making the journey to such a cursed death-trap this season.
+adventure.announcement.migrants	0x140e49f4d@0x172e500;0x140e4a0a4@0x172e500	Migrants refused to journey to such a dangerous fortress this season.
+adventure.announcement.migrants	0x140e49f56@0x172e548;0x140e4a0ad@0x172e548	Migrants were too nervous to make the journey this season.
+adventure.announcement.migrants	0x140e49fc6@0x172e590	No one else even considered making the journey to this miserable hellhole.
+adventure.announcement.migrants	0x140e49fd8@0x172e5e0	Others refused to journey to this unhappy fortress.
+adventure.announcement.migrants	0x140e49fe1@0x172e8a0	Others were too wary to make the journey.
+adventure.announcement.migrants	0x140e49fef@0x172e8d0	No one even considered making the journey to such a miserable hellhole this season.
+adventure.announcement.migrants	0x140e49ffb@0x172e930	Migrants refused to journey to this unhappy fortress this season.
+adventure.announcement.migrants	0x140e4a004@0x172e978	Migrants were too wary to make the journey this season.
+adventure.announcement.migrants	0x140e4a11c@0x172e798	The fortress attracted no migrants this season.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.
+adventure.announcement.caravan	0x140e42d20:0x140e437e2-0x140e43ca3;type=0x43;complete-caravan-paragraph;native-capitalize=0x14052d650	A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.
+adventure.announcement.social-world	0x140e4dd10:0x140e4ed20-0x140e4eec8;profession-label=0x14132f980(r8b=1)	A {s} from {e} has arrived.
+adventure.announcement.shared-final	0x14007de50:0x14007e11b-0x14007e317;actor=0x14132e430;item=0x140c65450	{n} empties {s}.
+adventure.announcement.shared-final	0x14007de50:0x14007e455-0x14007e753;item=0x140c65450	You pick up {s}.
+adventure.announcement.shared-final	0x14007de50:0x14007e455-0x14007e753;actor=0x14132e430;item=0x140c65450	{n} picks up {s}.
+adventure.announcement.shared-final	0x140e4a320:0x140e4b57d-0x140e4b674;literalVA=0x14172f5d0;file=0x172e7d0;176bytes;event344=MONARCH_ARRIVAL:A_D:D_D:BOX	Your ruler has arrived with a full entourage. Your thriving site is now the capital, and with continued fortune and toil, the legend of a true Mountainhome may yet be written.
+adventure.announcement.shared-final	0x141328450:0x1413284f5-0x14132863c;job-description=0x140d03170;event271=JOB_OVERWRITTEN:A_D:D_D;no-terminal-punctuation	OVERWROTE JOB: {s} BY {s}
+adventure.announcement.shared-final	0x1413435b0:0x141343cbb-0x141343dac;waterbody-name=vtable+0x70	There is nothing to catch in {e}.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northwestern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southwestern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northeastern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southeastern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the western eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the western magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the western cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the western lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the western swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the western ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the northern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the northern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the eastern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southern eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southern magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the southern cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southern lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southern swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the southern ocean.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the central eerie cavern.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the central magma sea.
+adventure.announcement.shared-final	0x1413435b0:0x141343e9c-0x14134410f;native9-direction-switch+terrain-switch	There is nothing to catch in the central cavern.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the central lake.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the central swamps.
+adventure.announcement.shared-final	0x1413435b0:0x1413441f3-0x14134446a;native9-direction-switch+terrain-switch	There is nothing to catch in the central ocean.
+adventure.announcement.shared-final	0x140dcc6a0:0x140dcccc4-0x140dcd09b;deity=0x140a946e0;default-only;RAW-trigger-separate	{n} has been cursed by {p}!
+adventure.announcement.shared-final	0x1413a78c0:0x1413a8212-0x1413a8334;creator-language-name=0x140a94030	Your miners have defaced a {p}!

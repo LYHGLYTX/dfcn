@@ -1,0 +1,19 @@
+# Workshop task tooltip complete sources; native image and all installed vanilla RAW object packages.
+# kind	source location	owner	complete source
+# DF 53.16 PE: category tooltip RVA 0x8c2bf0..0x8c2c97 reads CATEGORY_DESCRIPTION and wraps at 29 columns.
+# DF 53.16 PE: job tooltip RVA 0x8c2ca0..0x8c3e18; Produces:/Requires: exist only for nonempty sections.
+# Dynamic products: formatter RVA 0xa2adb0, paragraph call RVA 0x8c3327, one complete item per call.
+# Dynamic reagents: formatter call RVA 0x8c36d3, then inline wrapping at 29 columns; no paragraph call.
+# Reaction DESCRIPTION paragraphs: paragraph call RVA 0x8c3c39, separate from products and reagents.
+# DESCRIPTION:USE_TOOL:<id>: tool definition description +0x188, paragraph call RVA 0x8c3d24.
+# DESCRIPTION:USE_INSTRUMENT:<id>: instrument definition description +0x278, paragraph call RVA 0x8c3e0a.
+# REAGENT/PRODUCT definitions and generated instrument names/descriptions require shared dynamic translation.
+# shared-workshop-section-grammar identifies fixed heading keys without an independent native data literal.
+# Preserve complete source prose; native line fragments and symbolic DESCRIPTION indirections are not source keys.
+category-description	Dwarf Fortress.exe:VA=0x141735b20	CATEGORY:INSTRUMENT_PIECE	Make instrument pieces which can be used to assemble complete musical instruments.
+category-description	Dwarf Fortress.exe:VA=0x141735ca0	CATEGORY:INSTRUMENT	Assemble complete musical instruments and construct single-piece instruments.
+heading	Dwarf Fortress.exe:VA=0x1416beba8	job product/reagent section	Produces:
+heading	Dwarf Fortress.exe:VA=0x1416bebb8	job product/reagent section	Requires:
+category-description	data/vanilla/vanilla_reactions/objects/reaction_adv_carpenter.txt:18	CATEGORY:ADV_CARPENTRY	Make furniture at a carpenter's workshop using logs and a sharp tool.
+category-description	data/vanilla/vanilla_reactions/objects/reaction_dyes.txt:14	CATEGORY:MAKE_DYE	Make dyes from plants and plant parts that don't require a mill.
+category-description	data/vanilla/vanilla_reactions/objects/reaction_other.txt:451	CATEGORY:ADV_BONE_CARVING	Make crafts from bone using a sharp weapon or tool.

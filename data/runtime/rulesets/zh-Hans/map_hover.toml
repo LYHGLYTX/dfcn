@@ -1,0 +1,37 @@
+# Shared fortress/adventure map caption constructor (PE 53.16 RVA 0x406860).
+# These typed productions are selected only for a complete native hover row.
+# Species/material fields use the same RAW vocabulary as items and creatures.
+base = "map_hover"
+
+[[rulesets]]
+[rulesets.rules]
+"{unit}" = "{unit}"
+# The native building virtual method owns material, direction, mechanism
+# state, contents and workshop type as one caption.
+"{building}" = "{building}"
+# RVA 0x406e2c..0x407119: colony flag, counts 10..49 and counts >=50.
+"a colony of {::creatures::name::plural}" = "一群聚居的{::creatures::name::plural}"
+"many {::creatures::name::plural}" = "许多{::creatures::name::plural}"
+"a swarm of {::creatures::name::plural}" = "一大群{::creatures::name::plural}"
+# RVA 0x407379: liquid material name followed by its vapor state.
+"{::materials} vapor" = "{::materials}蒸气"
+# RVA 0x407550..0x40762d: all six surface-deposit quantities and owners.
+"{::health::contaminant}" = "{::health::contaminant}"
+
+[[rulesets]]
+name = "track_side"
+[rulesets.rules]
+# RVA 0x407dd4..0x407e4f: optional handedness of the item leaving a print.
+"right" = "右"
+"left" = "左"
+
+[[rulesets]]
+name = "track_owner"
+[rulesets.rules]
+# RVA 0x407f24..0x40839a: species/caste owns the material/body-part tail.
+"{::creatures::name::singular}'s" = "{::creatures::name::singular}的"
+"{::creatures::caste::singular}'s" = "{::creatures::caste::singular}的"
+# 0x407bf1..0x407c7f can prepend the historical person's name to a
+# material-bearing footwear print. It has the same ownership syntax as a
+# caste/body-part print but must use the personal-name resolver.
+"{::text::person}'s" = "{::text::person}的"

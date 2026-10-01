@@ -1,0 +1,209 @@
+# Family<TAB>native constructor VA<TAB>complete source production.
+# Source inventory is a superset; only reconstructed productions are entered here.
+shared-world	0x1404df190	You flinch.
+shared-world	0x1404df190	{n} flinches.
+shared-world	0x1404df190	You are unperturbed.
+shared-world	0x1404df190	{n} appears unperturbed.
+shared-world	0x1404df190	That was compelling!
+shared-world	0x1404df190	{n} appears to acquiesce.
+shared-world	0x1404df190	It is not convincing.
+shared-world	0x1404df190	{n} appears unconvinced.
+shared-world	0x1404988b0	{n} spits out {s}.
+shared-world	0x1404988b0	{n} drops {s}.
+shared-world	0x1404988b0	You have become enraged!
+shared-world	0x1404988b0	{n} has become enraged!
+shared-world	0x140684a10	{n} stops and pays attention to you.
+shared-world	0x1402afed0	{n} has revealed the presence of {n} to {n}.
+shared-world	0x1409ba3c0	{n} has assumed the position of {s} of {e}.
+shared-world	0x1409ba3c0	{n} has assumed the position of {s}.
+shared-world	0x1414644c0	After a polite discussion with local rivals, {n} has claimed the position of {s} of {e}.
+shared-world	0x1414644c0	After a polite discussion with a local rival, {n} has claimed the position of {s} of {e}.
+shared-world	0x14053bcf0	A {s} sculpture has melted!
+shared-world	0x14053d660	Digging designation cancelled: warm stone located.
+shared-world	0x14053d660	Digging designation cancelled: damp stone located.
+shared-world	0x140561e60	{s} have hatched.
+shared-world	0x140568c40	You've caught a {s}!
+shared-world	0x140568c40	Your trap was robbed of the {s}!
+shared-world	0x140577040	{n} has constructed a masterpiece!
+shared-world	0x1405879e0	A masterwork of {n} has been lost!
+shared-world	0x140a092c0	Tribute is being unloaded.  (A report is available.)
+shared-world	0x140a092c0	Merchants have arrived and are unloading their goods.
+shared-world	0x140a092c0	A trade depot is requiered for the delivery of the tribute.
+shared-world	0x140a092c0	The merchants need a trade depot to unload their goods.
+shared-world	0x140a0b4a0	{n} has adopted {n}.
+shared-world	0x140a25d80	Something has pulled a lever!
+shared-world	0x140a25d80	Something has triggered a pressure plate!
+shared-world	0x140a25d80	Something has emptied a cage!
+shared-world	0x140a25d80	Something has unchained a creature!
+shared-world	0x140a88610	A kidnapper has made off with {n}!
+shared-world	0x140a88610	{n} has stolen {s}!
+shared-world	0x140a88610	A thief has stolen {s}!
+shared-world	0x140ad0710	You have created a masterpiece {s}!
+shared-world	0x140ad0710	{n} has created a masterpiece {s}!
+shared-world	0x140ad2240	{n} begins to stalk and brood...
+shared-world	0x140ad2240	{n} looses a roaring laughter, fell and terrible!
+shared-world	0x140ad2240	{n} has been possessed!
+shared-world	0x140ad2240	{n} withdraws from society...
+shared-world	0x140ad2240	{n} is taken by a fey mood!
+shared-world	0x140bb8910	The world has passed into {e}.
+shared-world	0x140dac290	{n} has claimed a {s}.
+shared-world	0x140dac290	{n} has begun a mysterious construction!
+shared-world	0x140db7100	{n} push past you, interrupting your action.
+shared-world	0x140db7100	{n} pushes past you, interrupting your action.
+shared-world	0x140dbc020	{n} has dyed a masterpiece!
+shared-world	0x140dc0b00	{n} has cooked a masterpiece!
+shared-world	0x140dcdbf0	You chop down the {s}.
+shared-world	0x140dce2b0	{s} toppled by {n}.
+shared-world	0x140dce2b0	{s} destroyed by {n}.
+shared-world	0x141449dc0	Winter is upon you.
+shared-world	0x141449dc0	Winter has arrived on the calendar.
+shared-world	0x141449dc0	The dry season has come.
+shared-world	0x141449dc0	Autumn has come.
+shared-world	0x141449dc0	Autumn has arrived on the calendar.
+shared-world	0x141449dc0	It is now summer.
+shared-world	0x141449dc0	Summer has arrived on the calendar.
+shared-world	0x141449dc0	The wet season has arrived!
+shared-world	0x141449dc0	Spring has arrived!
+shared-world	0x141449dc0	Spring has arrived on the calendar.
+shared-world	0x14144ccb0	You have improved {s} masterfully!
+shared-world	0x14144ccb0	{n} has improved {s} masterfully!
+shared-world	0x1414627d0	Something has collapsed on the surface!
+shared-world	0x1414627d0	A section of the cavern has collapsed!
+shared-world	0x141486440	{n} has engraved a masterpiece!
+shared-world	0x1414cc8d0	{n} and {n} have married.  Congratulations!
+shared-world	0x1414ee3d0	{n} is brawling under the influence!
+shared-world	0x140a5d230	The glowing barrier has disappeared, replaced by terrible shrieks from the underworld!
+shared-world	0x140a5d230	The glowing barrier has disappeared!
+shared-world	0x140a5f2d0	Deep within this strange place, we've uncovered what must be a treasure of the gods!
+shared-world	0x140a60e50	We checked that stone for heat!  What devilry is this?!
+shared-world	0x140a60e50	Some ancient horror was encased here, until now!
+shared-world	0x140a60e50	Apocalypse!  We are being judged by the gods!
+shared-world	0x140a60e50	Something evil is emerging from this newly exposed pocket!
+shared-world	0x140a60e50	We have unleashed the echo of a forgotten divine retribution!
+shared-world	0x140a618d0	Horrifying screams come from the darkness below!
+shared-world	0x14010b150	{n} has arrived.
+shared-world	0x14010b150	{n} is visiting.
+shared-world	0x14010b150	{e}, the performance troupe, has arrived.
+shared-world	0x14010b150	{e}, a performance troupe, is visiting.
+shared-world	0x14010b150	{n} has brought back many tales from beyond {e}.
+shared-world	0x14010b150	{n} has brought back a few rumors.
+shared-world	0x14010b150	{n} has brought back a rumor from abroad.
+shared-world	0x14012bdf0	The {s} of {e} has been founded {s} and incorporated into your holdings.
+shared-world	0x14012bdf0	The {s} of {e}, {s}, has been conquered and incorporated into your holdings.
+shared-world	0x14012bdf0	The {s} of {e}, {s}, has been incorporated into your holdings.
+shared-world	0x14012bdf0	The {s} of {e} has been founded {s} and looks to your thriving economy for its future prosperity.
+shared-world	0x14012bdf0	The {s} of {e}, {s}, has been conquered and now looks to your thriving economy for its future prosperity.
+shared-world	0x14012bdf0	The {s} of {e}, {s}, looks to your thriving economy for its future prosperity.
+shared-world	0x1409eb8a0	The {s} of {e} are now expert {s} trainers.
+shared-world	0x1409eb8a0	The {s} of {e} are now quite knowledgeable {s} training methods.
+shared-world	0x1409eb8a0	The {s} of {e} have attained a general familiarity with {s} training methods.
+shared-world	0x1409eb8a0	The {s} of {e} now know a few facts about {s} training.
+shared-world	0x140a0b4a0	An animal has become a {s}.
+shared-world	0x140a0b4a0	{p} has become a {s}.
+shared-world	0x140ac5b30	{e} and the surrounding lands have been made an official land of the realm.
+shared-world	0x140ac5b30	{e} and the surrounding lands have been made an even more official land of the realm.
+shared-world	0x140ac5b30	{e} and the surrounding lands have been made {s}.
+shared-world	0x140ab6840	{s} has been disturbed.
+shared-world	0x140ab6840	A group of {s} has been disturbed.
+shared-world	0x140ab6840	A swarm of {s} has been disturbed.
+shared-world	0x140ab6840	Many {s} have been disturbed.
+shared-world	0x140dac290	Your mason has defaced a {p}!
+shared-world	0x140dac290	Your engraver has carved a track through a {p}!
+shared-world	0x1405338a0:0x140534135-0x1405342ae;creator=0x140a94030	The impertinent magma has defaced a {p}!
+shared-world	0x1414b3f50	The falling debris has defaced a {p}!
+shared-world	0x1414c27f0	The impertinent vegetation has defaced a {p}!
+shared-world	0x1414c45a0	A careless farmer has defaced a {p}!
+shared-world	0x1414c45a0	A foolish builder defaced a {p}!
+shared-world	0x140110460	The dead walk.  Hide while you still can!
+shared-world	0x140110460	Forms twisted from their nature, legion of the night.  What hope remains?
+shared-world	0x140110460	A vile force of darkness has arrived, seeking a parley!
+shared-world	0x140110460	The enemy have come and are preparing to lay siege.  They seek a parley!
+shared-world	0x140110460	An army has come to your lands seeking a parley.
+shared-world	0x140110460	A vile force of darkness has arrived!
+shared-world	0x140110460	The enemy have come and are laying siege to the fortress.
+shared-world	0x140110460	An army is invading!
+shared-world	0x14010b150	{n} has returned.
+shared-world	0x14010b150	{n} has returned.  {v}
+shared-world	0x14010b150	{n} have returned.
+shared-world	0x14010b150	{n} have returned.  {v}
+shared-world	0x14010b150	{n} and others have returned.
+shared-world	0x14010b150	{n} and others have returned.  {v}
+shared-world	0x14010b150	{e} have returned.
+shared-world	0x14010b150	{e} have returned.  {v}
+shared-world	0x14010b150	{e} and others have returned.
+shared-world	0x14010b150	{e} and others have returned.  {v}
+shared-world	0x140110460	The army is commanded by {n}.
+shared-world	0x140110460	The army is commanded by {n}.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a true warrior.
+shared-world	0x140110460	The army is commanded by {n}, a true warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a skilled warrior.
+shared-world	0x140110460	The army is commanded by {n}, a skilled warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a middling warrior.
+shared-world	0x140110460	The army is commanded by {n}, a middling warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time.
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time.  {v}
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and true warrior.
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and true warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and skilled warrior.
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and skilled warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and middling warrior.
+shared-world	0x140110460	The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and middling warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a talented commander.
+shared-world	0x140110460	The army is commanded by {n}, a talented commander.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and true warrior.
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and true warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and skilled warrior.
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and skilled warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and middling warrior.
+shared-world	0x140110460	The army is commanded by {n}, a talented commander and middling warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander.
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and true warrior.
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and true warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and skilled warrior.
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and skilled warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and middling warrior.
+shared-world	0x140110460	The army is commanded by {n}, a seasoned commander and middling warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a competent commander.
+shared-world	0x140110460	The army is commanded by {n}, a competent commander.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and true warrior.
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and true warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and skilled warrior.
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and skilled warrior.  {v}
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and middling warrior.
+shared-world	0x140110460	The army is commanded by {n}, a competent commander and middling warrior.  {v}
+shared-world	0x140110460	Beware their {s}!
+shared-world	0x140110460	Beware their mounted {s}!
+shared-world	0x140110460	Beware their elite {s}!
+shared-world	0x140110460	Beware their elite mounted {s}!
+shared-world	0x140110460	Beware their skilled {s}!
+shared-world	0x140110460	Beware their skilled mounted {s}!
+shared-world	0x140110460	Beware their heavily-armored {s}!
+shared-world	0x140110460	Beware their heavily-armored mounted {s}!
+shared-world	0x140110460	Beware their heavily-armored elite {s}!
+shared-world	0x140110460	Beware their heavily-armored elite mounted {s}!
+shared-world	0x140110460	Beware their heavily-armored skilled {s}!
+shared-world	0x140110460	Beware their heavily-armored skilled mounted {s}!
+shared-world	0x140110460	Beware their armored {s}!
+shared-world	0x140110460	Beware their armored mounted {s}!
+shared-world	0x140110460	Beware their armored elite {s}!
+shared-world	0x140110460	Beware their armored elite mounted {s}!
+shared-world	0x140110460	Beware their armored skilled {s}!
+shared-world	0x140110460	Beware their armored skilled mounted {s}!
+shared-world	0x140110460	With them comes a {s}!
+shared-world	0x140110460	With them comes a {s} from the {s} of {e}!
+shared-world	0x140110460	With them come {s}!
+shared-world	0x140110460	With them come {s} from the {s} of {e}!
+shared-world	0x140110460	With them come monstrous siege engineers!
+shared-world	0x140110460	With them come monstrous siege engineers from the {s} of {e}!
+shared-world	0x140110460	With them come monstrous siege engineers and a {s}!
+shared-world	0x140110460	With them come monstrous siege engineers and a {s} from the {s} of {e}!
+shared-world	0x140110460	With them come monstrous siege engineers and {s}!
+shared-world	0x140110460	With them come monstrous siege engineers and {s} from the {s} of {e}!
+shared-world	0x1405338a0:0x14053411c-0x1405342ae;creator=0x140a94030	The impertinent lava has defaced a {p}!
+shared-world	0x140c796b0	A masterwork of {n} has been lost!
+shared-world	0x140c79fc0	A masterwork of {n} has been lost!
+shared-world	0x140dbce30	{n} has dyed a masterpiece!
+shared-world	0x140dbdff0	{n} has dyed a masterpiece!
+shared-world	0x1414ef770	You have become enraged!
+shared-world	0x1414ef770	{n} has become enraged!

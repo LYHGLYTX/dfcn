@@ -1,0 +1,121 @@
+# Complete PREFSTRING phrases, used only after "for their/its/his/her".
+# Generated vocabulary: src/preference_vocabulary.inc (tools/build_translations.py).
+# Installed extinct-creature RAWs have empty/missing gettext translations.
+affinity for land	对陆地的亲近
+armored carapace	坚硬的甲壳
+back plates	背部骨板
+backward-curving tusks	向后弯曲的獠牙
+beaks	喙
+bold head sclerites	醒目的头部硬片
+broad heads	宽阔的头部
+crest	头冠
+disturbing size	令人不安的体型
+dome	穹顶状的头部
+double carapace	双层甲壳
+elongated snout	细长的吻部
+extra eyes	额外的眼睛
+eye horns	眼上方的角
+feathers	羽毛
+ferocious bite	凶猛的咬击
+ferocious jaws	凶猛的颌部
+flatness	扁平的身形
+flippers	鳍状肢
+forked horns	分叉的角
+frontal appendages	前端附肢
+giant claws	巨大的爪子
+giant second foredigit claws	前肢第二指上的巨爪
+gigantic eye teeth	巨大的犬齿
+graceful flight	优雅的飞行姿态
+graceful movement	优雅的动作
+grasping proboscis	能抓握的长吻
+hairy heads	毛茸茸的头部
+head crests	头冠
+jawed proboscis	带颌的长吻
+jaws	颌部
+lively nature	活泼的天性
+lobopods	叶足
+long tongues	长舌头
+menacing spikes	令人畏惧的尖刺
+parenting	育幼行为
+round heads	圆圆的头部
+sail	背帆
+sails	背帆
+scuttling	迅速爬行的姿态
+scything claws	镰刀般的爪子
+short arms	短小的前肢
+shovel-like lower tusks	铲状的下獠牙
+single claws	独爪
+slithering	蜿蜒爬行的姿态
+small trunk	短小的鼻子
+snouts	吻部
+spots	斑点
+stout bodies	粗壮的身体
+tail club	尾锤
+tail spikes	尾刺
+terrifying beaks	骇人的喙
+three horns	三只角
+thumb spikes	拇指上的尖刺
+tilted walk	倾斜行走的姿态
+tiny arms	细小的前肢
+tooth whorl	螺旋状的牙列
+two teeth	两颗牙齿
+wedge-shaped heads	楔形的头部
+wings	翅膀
+wingspan	翼展
+# Literal PREFSTRING productions in vanilla_procedural/scripts/generators.
+horrifying features	骇人的外貌
+macabre ways	阴森的习性
+terror-inspiring antics	令人恐惧的举动
+unfathomably horrifying nature	难以想象的恐怖本性
+unsettling origin	令人不安的来历
+disgusting appearance	令人作呕的外貌
+peaceful nature	平和的天性
+kind nature	善良的天性
+joyful nature	快乐的天性
+rhythmic undulations	富有节奏的起伏
+bloated appearance	臃肿的外形
+# Plant-context corrections: botanical traits, not weapon/UI/building senses.
+amazing arms	奇妙的枝臂
+autumn coloration	秋日色彩
+blossoms	花朵
+branch shedding	脱落的枝条
+buds and berries	嫩芽与浆果
+bulbs	鳞茎
+buttresses	板根
+catkins	柔荑花序
+cloves	蒜瓣
+coldness to the touch	冰凉的触感
+curving trunk	弯曲的树干
+edible roots	可食用的根
+feathery leaves	羽毛状的叶子
+fine grain	细腻的纹理
+fluffy catkins	毛茸茸的柔荑花序
+fruit	果实
+fruit and nuts	果实与坚果
+fuzzy projections	毛茸茸的突起
+gray leaves	灰色的叶子
+hanging leaves	下垂的叶子
+inner light	内在的光芒
+leaf coloration	叶子的色彩
+length	修长的形态
+lens-shaped seeds	透镜状的种子
+living shadows	活生生的阴影
+loose inflorescences	疏松的花序
+needles	针叶
+nut-filled pots	罐状果壳中的坚果
+popped kernels	爆开的籽粒
+precise lines	规整的纹路
+precise thorns	排列齐整的尖刺
+raining spores	雨点般洒落的孢子
+rounded tops	圆润的顶部
+shrouded history	神秘的历史
+silver bark	银色的树皮
+smelly catkins	气味难闻的柔荑花序
+soothing fragrance	令人舒畅的芳香
+stiff, triangular leaves	坚硬的三角形叶子
+stout shape	粗壮的形态
+stunning color	惊艳的色彩
+tubers	块茎
+waxy berries	带蜡质的浆果
+wicked thorns	凶险的尖刺
+wine	果酒

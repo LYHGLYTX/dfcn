@@ -1,0 +1,32 @@
+# Local game state and collected text
+/run/
+/data/runtime/untranslated.tsv
+/data/runtime/native-pe-images.json
+/data/extracted/dumps/
+/data/extracted/capture-first-match.bmp
+*.log
+
+# Build and Python caches
+/data/extracted/cache/
+__pycache__/
+*.py[cod]
+*.o
+*.obj
+*.dll
+*.so
+*.pdb
+*.publish
+*.old
+*.tmp
+
+# Packaged runtime
+/DFCN-Windows-x64-minimal.zip
+
+# Local credentials and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

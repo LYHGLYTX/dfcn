@@ -1,0 +1,47 @@
+<data-definition>
+    <bitfield-type type-name='contaminant_flag' base-type='uint16_t' since='v0.40.13'> bay12: CONTAMINANT_FLAG_*
+        <flag-bit name='evaporates' original-name='EVAPORATES' comment='does not contaminate tile when washed away'/>
+    </bitfield-type>
+
+    <struct-type type-name='spatter_common' original-name='contaminantst'>
+        <int16_t name='mat_type' original-name='material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='matgloss'/>
+        <enum base-type='int16_t' type-name='matter_state' name='mat_state' original-name='state'/>
+        <compound type-name='temperaturest' name='temperature'/>
+        <int32_t name='size' original-name='level' comment='1-24=spatter, 25-49=smear, 50-* = coating'/>
+        <bitfield base-type='uint16_t' type-name='contaminant_flag' name='base_flags' original-name='flag' since='v0.40.13'/>
+    </struct-type>
+
+    <bitfield-type type-name='item_contaminant_flag' base-type='uint16_t'> bay12: ITEM_CONTAMINANT_FLAG_*
+        <flag-bit name='external' original-name='EXTERNAL'/>
+    </bitfield-type>
+
+    <struct-type type-name='spatter' original-name='item_contaminantst'>
+        <compound type-name='spatter_common' name='base' original-name='contam'/> sub-element, NOT subclass!
+        <int16_t name='body_part_id' original-name='bp'
+                 refers-to='$$._global._parent._global.body.body_plan.body_parts[$]'/>
+        <bitfield base-type='uint16_t' type-name='item_contaminant_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <bitfield-type type-name='unit_contaminant_flag' base-type='uint16_t'> bay12: UNIT_CONTAMINANT_FLAG_*
+        <flag-bit name='external' original-name='EXTERNAL'/>
+    </bitfield-type>
+
+    <struct-type type-name='unit_spatter' original-name='unit_contaminantst'>
+        <compound type-name='spatter_common' name='base' original-name='contam'/> sub-element, NOT subclass!
+        <int16_t name='body_part_id' original-name='bp'
+                 refers-to='$$._global._parent._global.body.body_plan.body_parts[$]'/>
+        <bitfield base-type='uint16_t' type-name='unit_contaminant_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <struct-type type-name='plant_spatter' original-name='veg_contaminantst'>
+        <compound type-name='spatter_common' name='base' original-name='contam'/> sub-element, NOT subclass!
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

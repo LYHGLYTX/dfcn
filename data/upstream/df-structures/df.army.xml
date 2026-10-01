@@ -1,0 +1,109 @@
+<data-definition>
+    <enum-type type-name='army_flags' original-name='army_flag'> bay12: ArmyFlag
+        <enum-item name='player' original-name='YOU'/>
+        <enum-item name='hidden' original-name='HIDDEN'/>
+        <enum-item name='sleeping' original-name='SLEEPING'/>
+        <enum-item name='waiting' original-name='WAITING'/>
+        <enum-item name='sneaking' original-name='SNEAKING'/>
+        <enum-item name='composing' original-name='COMPOSING'/>
+        <enum-item name='working' original-name='WORKING'/>
+        <enum-item name='dwarf_mode_preparing' original-name='DWARF_MODE_PREPARING'/>
+    </enum-type>
+
+    -- Unused: ArmyGoalType
+
+    <struct-type type-name='army_popst'>
+        <int32_t name="count" original-name='num'/>
+        <compound type-name='entity_pop_specifierst' name='pop_spec'/>
+    </struct-type>
+
+    <bitfield-type type-name='army_nemesis_flag' base-type='uint32_t'> bay12: ARMY_NEMESIS_FLAG_*
+        <flag-bit name='sleeps' original-name='SLEEPS'/>
+        <flag-bit name='eats' original-name='EATS'/>
+        <flag-bit name='drinks' original-name='DRINKS'/>
+        <flag-bit name='is_sleeping' original-name='IS_SLEEPING'/>
+        <flag-bit name='on_watch' original-name='ON_WATCH'/>
+        <flag-bit name='bloodsucker' original-name='BLOODSUCKER'/>
+        <flag-bit name='do_needs' original-name='DO_NEEDS'/>
+    </bitfield-type>
+
+    <struct-type type-name='army_nemesisst'>
+        <int32_t name='nemesis_id' original-name='global_id' init-value='-1'/>
+        <int32_t name='hunger_timer' original-name='hunger'/>
+        <int32_t name='thirst_timer' original-name='thirst'/>
+        <int32_t name='sleepiness_timer' original-name='drowsiness'/>
+        <int32_t name='stored_fat' original-name='energy_storage'/>
+        <int32_t name='blood_thirst'/>
+        <bitfield base-type='uint32_t' type-name='army_nemesis_flag' name='flags' original-name='flag'/>
+        <int32_t name='abs_x' original-name='abs_tile_x' init-value='-1000000'/>
+        <int32_t name='abs_y' original-name='abs_tile_y' init-value='-1000000'/>
+        <int32_t name='abs_z' original-name='abs_elevation' init-value='-1000000'/>
+        <int32_t name='tracking_rating'/>
+        <int32_t name='sneak_rating' since='v0.44.01'/>
+        <int32_t name='smell_trigger' init-value='100'/>
+        <int32_t name='low_light_vision'/>
+        <int32_t name='odor_level'/>
+        <stl-vector pointer-type='stl-string' name='can_sense_by_class'/>
+        <int32_t name='needs_build_up' since='v0.42.01'/>
+        <int32_t name='mount_nemid' ref-target='nemesis_record' since='v0.47.01'/>
+        <int32_t name='travel_rate' since='v0.47.01'/>
+        <int32_t name='section_master_acid' ref-target='army_controller'/>
+        <int32_t name='section_index'/>
+    </struct-type>
+
+    <struct-type type-name='army' key-field='id' original-name='armyst'
+                 instance-vector='$global.world.armies.all'>
+        <int32_t name='id' original-name='global_id'/>
+        <compound type-name='coord' name='pos' comment='abs_smm_x,abs_smm_y,layer_depth'/>
+        <compound type-name='coord' name='last_pos' comment='o_abs_smm_x,o_abs_smm_y,o_layer_depth'/>
+        <int16_t name='travel_count' init-value='0' comment="1, 2, 5, 10, 15, 20, 21 seen"/>
+        <int32_t name='wait_count' init-value='0' comment="When set, large value like army or army_controller id, but no match found"/>
+        <int32_t name='watch_time' init-value='0'/>
+        <stl-vector pointer-type='army_nemesisst' name='members' original-name='nem'/>
+        <stl-vector pointer-type='army_popst' name='squads' original-name='pop'/>
+        <int32_t name='tracking_rating'/>
+        <int32_t name='sneak_rating' since='v0.44.01'/>
+        <int32_t name='travel_rate' since='v0.47.03' comment="16 only value seen"/>
+
+        <int32_t name='controller_id' original-name='army_controller_id' ref-target='army_controller'/>
+        <pointer type-name="army_controller" name='controller' original-name='army_controller'/>
+
+        <df-flagarray name='flags' original-name='flag' index-enum='army_flags'/>
+        <stl-vector type-name='int32_t' name='block_path_x' original-name='path_abs_smm_x' comment="path in map_block coordinates. Seems to be the near term"/>
+        <stl-vector type-name='int32_t' name='block_path_y' original-name='path_abs_smm_y'/>
+        <stl-vector type-name='int32_t' name='path_x' original-name='path_region_x' comment="path in world coordinates. Seems to be the extension beyond those laid out in block_path_x/y"/>
+        <stl-vector type-name='int32_t' name='path_y' original-name='path_region_y'/>
+
+        <int32_t name='hidden_sr_ind' init-value='-1' comment='subregion'/>
+        <int32_t name='hidden_fl_ind' init-value='-1' comment='feature layer'/>
+
+        <int32_t name='current_army_tracking_info_id' ref-target='army_tracking_info'/>
+
+        <int32_t name='min_smell_trigger' original-name='smell_trigger'/>
+        <int32_t name='max_odor_level' original-name='odor_level' comment='1000 if undead are present'/>
+        <int32_t name='max_low_light_vision' original-name='low_light_vision'/>
+        <stl-vector pointer-type='stl-string' name='sense_creature_classes' original-name='detectable_creature_class'/>
+        <stl-vector pointer-type='stl-string' name='creature_class' original-name='contained_creature_class' comment="Usually 'GENERAL_POISON' and 'MAMMAL'. Seen something else for undead"/>
+
+        <enum type-name='item_type' name='item_type' original-name='tent_it'/>
+        <int16_t name='item_subtype' original-name='tent_st' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+        <int16_t name='mat_type' original-name='tent_mat' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='tent_matg'/>
+
+        <stl-vector pointer-type='item' name='items' original-name='item' since='v0.44.07'/>
+
+        <size_t name='pool_id' init-value='-1'/>
+    </struct-type>
+
+    <struct-type type-name='army_handlerst'>
+        <stl-vector pointer-type='army' name='all' original-name='global'/>
+        <stl-vector pointer-type='army' name='order_load' has-bad-pointers='true'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

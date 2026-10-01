@@ -1,0 +1,31 @@
+<data-definition>
+    <enum-type type-name='effect_type'> bay12: Effects, no base type
+        <enum-item name='Sparkles' original-name='SPARKLES'/>
+        <enum-item name='Color' original-name='COLOR'/>
+        <enum-item name='ShrinkingDot' original-name='SHRINKINGDOT'/>
+    </enum-type>
+
+    <struct-type type-name='effect_info' original-name='effectst'>
+        <int32_t name='save_idx' original-name='save_index'/>
+
+        <pointer type-name='job' name='job'/>
+        <enum base-type='int16_t' type-name='effect_type' name='type'/>
+        <int16_t name='foreground' original-name='color'/>
+        <int16_t name='background' original-name='colorb'/>
+        <int8_t name='bright' original-name='colorbr'/>
+        <compound type-name='coord' name='pos'/>
+        <int32_t name='timer' original-name='fuel'/>
+        <int32_t name='id'/>
+    </struct-type>
+
+    <struct-type type-name='effect_handlerst'>
+        <stl-vector pointer-type='effect_info' name='all' original-name='play'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

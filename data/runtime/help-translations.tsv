@@ -1,0 +1,805 @@
+# Native help/tutorial prose and complete adventure guidance, DF 53.16.
+# Source inventory: data/extracted/help-sources.tsv; native semantic boundaries never depend on screen wrapping.
+# Dedicated help scope: no empty targets or row-dependent deletion rules.
+# Target [C:foreground:background:bright] tags retain native semantic highlights through Chinese reflow.
+# Optional t flag: native dynamic prose, {p}=person/deity, {e}=place/group/artifact, {r}=sphere, {d}=number, {k}=current native key binding.
+Prepare to guide your stout charges to fortune in a world fraught with many perils.	准备好带领这些矮人，在危机四伏的世界中追寻财富吧。
+You'll begin by creating your world and watching the region's history unfold.	你首先要创建世界，见证这片土地的历史徐徐展开。
+Once this process is complete, you can prepare a group and send them out to seek wealth deep in the mountains.	这一过程结束后，就可以筹备一支队伍，派他们前往深山探寻财富。
+As you dig deeper and more citizens take up residence in your outpost, your doings will attract attention, both wanted and unwanted.	随着挖掘不断深入，越来越多居民在前哨站定居，你的事业也将引来各方关注，其中既有善意，也有恶意。
+Deal with challenges as they arise, and you might one day find that your humble settlement has grown to become a Mountainhome, the center of your civilization.	迎接接踵而来的挑战，终有一天，你或许会发现这座简陋的聚居地已发展为山之家，成为整个文明的中心。
+Quick start and short tutorial?	快速开始并进行简短教程？
+Would you like your fortress located in a forested mineral-rich region of this world where you can play through a short tutorial?	是否将要塞建在这个世界中森林茂密、矿产丰富的地区，并在那里体验简短教程？
+Non-interactive help will be available whatever you decide.	无论如何选择，都可以查阅非交互式帮助。
+If this is your first time playing, please heed the embark warnings about aquifers, saltwater, and other hazards.	如果这是你第一次游玩，请留意启程时关于含水层、咸水和其他危险的警告。
+Some locations are challenging even for experienced players, and it will be a very short game indeed if you don't know how to deal with them!	有些地点即使对老手也很有挑战；若不懂得应对，你的游戏可能很快就会结束！
+After you embark, help is available by pressing the help button in the top right corner, including all of the tutorials.	启程后，可点击右上角的帮助按钮，查阅包括全部教程在内的帮助内容。
+Your view is focused on one elevation at a time. To move the camera around, press	视野一次只显示一个高度层。要移动视角，请按
+or hold the middle mouse button and drag the view.	，或按住鼠标中键拖动视野。
+To change the camera's elevation, press	要改变视角所在的高度层，请按
+or roll the mouse wheel. Hold shift to move faster.	[C:7:0:0]，或[C:2:0:1]滚动鼠标滚轮[C:7:0:0]。按住 Shift 可加快移动。
+When your view is in the air above other tiles, you can see them below, but you can only interact with objects in your current elevation.	当视角位于其他地块上方的空中时，你可以看到下方的地块，但只能与当前高度层的对象交互。
+The view will be dark underground until you begin mining. You can move the camera to the surface with the surface button (highlighted.) The	开始采矿之前，地下视野会是一片黑暗。点击已高亮的地表按钮可将视角移到地表。按
+hotkey will recenter on your wagon.	热键可将视角重新对准货车。
+You can zoom in and out of the play area using	你可以缩放游戏区域，使用
+, Ctrl+mouse wheel, or the indicated buttons.	[C:7:0:0]、[C:2:0:1]Ctrl＋鼠标滚轮[C:7:0:0]，或图示按钮。
+It's time to get to work! Let's start by digging a stairwell into the ground.	该开工了！先挖一条通往地下的楼梯井吧。
+There may be plenty of hillside to dig into, but you'll want to seek wealth below the surface.	即使山坡上有充足的地方可以开挖，你也应该深入地底寻找财富。
+Mining tasks are designated on the play area. Begin by clicking the highlighted Mining button.	[C:7:0:0]在游戏区域中划定采矿任务。首先点击已高亮的“[C:5:0:1]挖掘[C:7:0:0]”按钮。
+There are several ways to mine. Stairwells (selected) start at one elevation and are completed at	采矿有多种方式。当前选中的楼梯井从一个高度层开始，延伸至
+the next. Click the surface, move the camera down one level, and click the underground. Reversing the	[C:7:0:0]另一个高度层。[C:2:0:1]点击[C:7:0:0]地表，[C:2:0:1]将视角向下移动一层[C:7:0:0]，再[C:2:0:1]点击[C:7:0:0]地下。反过来
+Now we'll unpause the game and let the miner finish the task. Press	现在解除暂停，让矿工完成任务。按
+to unpause or use the highlighted controls at the top of the screen. You should pause regularly starting out.	解除暂停，也可使用屏幕顶部已高亮的按钮。刚上手时应经常暂停。
+Let's make a safe place to work. Select Regular Mining mode, to the left of Stair Mining mode.	[C:7:0:0]我们来开辟一个安全的工作场所。在“[C:5:0:1]楼梯开采[C:7:0:0]”模式左侧选择“[C:5:0:1]常规采矿[C:7:0:0]”模式。
+Dig a rectangle underground big enough for a large Stockpile and some Workshops.	[C:7:0:0]在地下挖出一块矩形区域，要足够容纳一个大型[C:6:0:0]储物堆[C:7:0:0]和几座[C:6:0:0]工坊[C:7:0:0]。
+Consider that most Workshops are 3x3 squares. Mining through the stone layers further down may take longer,	[C:7:0:0]请记住，大多数[C:6:0:0]工坊[C:7:0:0]占地 3×3 格。挖掘更深处的岩层可能耗时更久，
+but it leaves Boulders which are an essential building material.	[C:7:0:0]但能获得[C:6:0:1]石材[C:7:0:0]，这是重要的建筑材料。
+Later you can consider making a Meeting Area	[C:7:0:0]之后你可以考虑设置一个[C:3:0:0]集会区[C:7:0:0]，
+from the Zones menu. Otherwise your citizens will continue to gather by the Wagon outside.	[C:7:0:0]可在“[C:5:0:1]区域[C:7:0:0]”菜单中找到。否则，居民仍会聚集在外面的[C:6:0:0]货车[C:7:0:0]旁。
+The supplies on the wagon are in danger of being carried off by wild creatures!	货车上的物资可能被野生生物偷走！
+It's time to build a Stockpile underground to unload them. Stockpiles are crucial to moving	[C:7:0:0]现在该在地下设置一个[C:6:0:0]储物堆[C:7:0:0]，把物资卸进去。[C:6:0:0]储物堆[C:7:0:0]对于将
+supplies around your fortress where they are needed.	物资运送到要塞中需要它们的地方至关重要。
+Stockpiles are placed with the Stockpile button (highlighted.) Click it now.	[C:7:0:0]通过已高亮的“[C:5:0:1]储物堆[C:7:0:0]”按钮设置[C:6:0:0]储物堆[C:7:0:0]。现在点击它。
+Click two corners of a rectangle somewhere safe	在安全地点点击矩形的两个对角，
+to place your pile. Stockpiles can be placed both on the surface and underground.	[C:7:0:0]划定储物堆。[C:6:0:0]储物堆[C:7:0:0]既可以设在地表，也可以设在地下。
+Once the pile is placed, click Accept and select the All option.	[C:7:0:0]划定储物堆后，点击“[C:5:0:1]接受[C:7:0:0]”，再选择“[C:5:0:1]全部[C:7:0:0]”。
+If unpaused, your workers should start unloading the wagon into the Stockpile.	[C:7:0:0]解除暂停后，工人应该会开始把货车上的物资搬进[C:6:0:0]储物堆[C:7:0:0]。
+Later you may want to customize your Stockpiles by clicking on them and pressing the Custom	[C:7:0:0]之后，你可以点击[C:6:0:0]储物堆[C:7:0:0]，再点击“[C:5:0:1]自定义[C:7:0:0]”
+button to forbid certain categories, like Refuse for example. A separate Refuse Stockpile is a	[C:7:0:0]按钮，禁止存放某些类别的物品，例如[C:5:0:1]垃圾[C:7:0:0]。单独设置一个[C:6:0:0]垃圾储物堆[C:7:0:0]，
+good idea to keep your fortress clean.	有助于保持要塞清洁。
+If the Stockpile menu is still open, you can close it now by right-clicking. Right-clicking can	[C:7:0:0]如果“[C:5:0:1]储物堆[C:7:0:0]”菜单仍然开着，现在可以右键关闭。右键
+always be used to close most menus, as well as	通常可以关闭大多数菜单，也可以使用
+With shelter ready underground, it's time to build.	地下避难场所已经就绪，该开始建造了。
+First you need building materials, like Wood or Boulders.	[C:7:0:0]首先，你需要[C:6:0:1]木头[C:7:0:0]或[C:6:0:1]石材[C:7:0:0]等建筑材料。
+Before you start chopping down trees you may want to create a dedicated Wood Stockpile.	[C:7:0:0]开始砍树之前，不妨先设置一个[C:6:0:0]专门存放木头的储物堆[C:7:0:0]。
+Haulers will also drop Wood in your All Stockpile unless you turn it off in the Custom Stockpile Menu.	[C:2:0:0]搬运工[C:7:0:0]也会把[C:6:0:1]木头[C:7:0:0]放进[C:6:0:0]接收全部物品的储物堆[C:7:0:0]，除非你在“[C:5:0:1]自定义储物堆[C:7:0:0]”菜单中禁用了这一项。
+When you are ready, open the Woodcutting menu and designate the trunk of a tree on the surface.	[C:7:0:0]准备好后，打开“[C:5:0:1]伐木[C:7:0:0]”菜单，指定地表上一棵树的树干。
+Make sure your woodcutter can walk to the designated location.	确保樵夫能走到指定地点。
+Now we just need to wait for the woodcutter to chop down the tree.	现在只需等待樵夫把树砍倒。
+If the fallen logs are accessible, everyone will help store them in the Stockpile.	[C:7:0:0]只要掉落的原木可以到达，所有人都会帮忙将其搬进[C:6:0:0]储物堆[C:7:0:0]。
+You can right click to close Woodcutting mode. Right clicking closes most menus.	[C:7:0:0]右键可退出“[C:5:0:1]伐木[C:7:0:0]”模式。大多数菜单也可以右键关闭。
+If all of your Stockpiles are full, go ahead and place another one.	[C:7:0:0]如果所有[C:6:0:0]储物堆[C:7:0:0]都满了，就再设置一个。
+Now that you have the building materials it's time to start building.	有了建筑材料，现在可以开始建造。
+Workshops are one of many buildings you can place with the highlighted Build button. Click it now.	[C:6:0:0]工坊[C:7:0:0]只是众多可建建筑中的一种，点击已高亮的“[C:5:0:1]建造[C:7:0:0]”按钮即可放置。现在点击它。
+Most Workshops require building material, such as Wood or Boulders.	[C:7:0:0]大多数[C:6:0:0]工坊[C:7:0:0]都需要[C:6:0:1]木头[C:7:0:0]或[C:6:0:1]石材[C:7:0:0]等建筑材料。
+If you have some Wood stockpiled, you'll be able to place a Carpenter's Workshop.	[C:7:0:0]储备了一些[C:6:0:1]木头[C:7:0:0]后，你就能建造[C:6:0:0]木匠工坊[C:7:0:0]。
+Click Workshops -> Carpenter and place the shop in an empty area on the surface or underground.	[C:7:0:0]点击“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]木匠工坊[C:7:0:0]”，在地表或地下的空地上放置工坊。
+When unpaused, a worker should now build the Workshop.	[C:7:0:0]解除暂停后，工人应该就会开始建造[C:6:0:0]工坊[C:7:0:0]。
+Once the worker is done, click on the building to select it.	工人完工后，点击建筑选中它。
+Your industrious citizens will perform any task added to the Workshop.	[C:7:0:0]勤劳的居民会执行你添加到[C:6:0:0]工坊[C:7:0:0]中的各项任务。
+Most objects that are placed, like Doors and Furniture, must first be built in a Workshop.	[C:6:0:1]门[C:7:0:0]和[C:6:0:1]家具[C:7:0:0]等大多数需要放置的物品，都必须先在[C:6:0:0]工坊[C:7:0:0]中制作。
+Furniture created at the Carpenter's Workshop usually takes one Wood to build. Add a task and make a Bed.	[C:6:0:0]木匠工坊[C:7:0:0]制作的[C:6:0:1]家具[C:7:0:0]通常每件消耗一份[C:6:0:1]木头[C:7:0:0]。添加任务，制作一张[C:6:0:1]床[C:7:0:0]。
+Chop down more trees if necessary. Unpause and wait for the Bed to be completed.	[C:7:0:0]必要时再砍一些树。解除暂停，等待[C:6:0:1]床[C:7:0:0]制作完成。
+Now that you have a Bed you can place in it the fortress.	[C:7:0:0]现在你有了一张[C:6:0:1]床[C:7:0:0]，可以将它放进要塞。
+Use the Build menu to place it in a room underground, just like the Workshop. Dig a new room first if you like.	[C:7:0:0]和放置[C:6:0:0]工坊[C:7:0:0]一样，使用“[C:5:0:1]建造[C:7:0:0]”菜单，将床放进地下房间。也可以先另挖一个房间。
+Beds are found in the Furniture category. Unlike Workshops, Beds must be placed underground.	[C:5:0:1]床[C:7:0:0]位于“[C:5:0:1]家具[C:7:0:0]”分类下。与[C:6:0:0]工坊[C:7:0:0]不同，[C:6:0:0]床[C:7:0:0]必须放在地下。
+With a Bed placed, your workers will have somewhere to sleep. Later you can create a	[C:7:0:0]放好[C:6:0:0]床[C:7:0:0]后，工人就有地方睡觉了。之后可以建造
+room with a Door and use the Zones menu to assign an official Bedroom for each resident.	[C:7:0:0]带[C:6:0:0]门[C:7:0:0]的房间，再通过“[C:5:0:1]区域[C:7:0:0]”菜单，为每位居民正式划定[C:3:0:0]卧室[C:7:0:0]。
+The rest of the interface is now enabled.	现在，其余界面功能也已开放。
+You can click on Creatures and Items just as you can click on Buildings to get more information about them.	[C:7:0:0]你可以像点击[C:6:0:0]建筑[C:7:0:0]一样，点击[C:2:0:0]生物[C:7:0:0]或[C:6:0:1]物品[C:7:0:0]，查看它们的详细信息。
+Click on a Resident to see their needs, inventory, thoughts, relations, and more.	[C:7:0:0]点击[C:2:0:0]居民[C:7:0:0]，可查看其需求、物品栏、想法、人际关系等信息。
+You can also access information from the Citizens button.	[C:7:0:0]也可以通过“[C:5:0:1]居民[C:7:0:0]”按钮查看这些信息。
+Feel free to pause and check out the information.	你随时可以暂停，仔细查看信息。
+Right click to dismiss the information sheet.	右键关闭信息面板。
+This is an example urgent alert! These are very important. Ignore them at your peril.	这是一条紧急警报示例！此类警报非常重要，无视它们可能造成严重后果。
+Important and sometimes urgent information is given as alerts on the left side of the screen.	重要信息，有时也是紧急信息，会通过屏幕左侧的警报显示。
+There have been several already!	已经出现过好几条了！
+There have been a few already!	已经出现过几条了！
+Hover over an alert icon to see the information.	将鼠标移到警报图标上即可查看信息。
+Left click on an alert for recentering options, and right click to dismiss an alert.	左键点击警报可选择定位相关地点，右键点击则将其关闭。
+You may need supplies before the coming of winter.	冬天到来之前，你可能需要补充物资。
+To trade with the autumn caravan, you must build a Trade Depot from the Build menu.	[C:7:0:0]要与秋季商队交易，必须先通过“[C:5:0:1]建造[C:7:0:0]”菜单修建[C:6:0:0]贸易站[C:7:0:0]。
+You need something of value to trade.	你需要拿出有价值的东西交换。
+Crafts are an easy way to make a lot of trade goods quickly.	[C:7:0:0]制作[C:6:0:1]工艺品[C:7:0:0]，是快速获得大量贸易商品的简单办法。
+Make the appropriate workshop with Workshops -> Crafts.	[C:7:0:0]通过“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]工艺品工坊[C:7:0:0]”建造相应工坊。
+An obvious material to use to make the crafts is rock.	石头自然是制作工艺品的好材料。
+If you dig down enough layers you will find a near infinite amount of Boulders of various	[C:7:0:0]只要向下挖掘足够多层，你就能找到几乎取之不尽、种类繁多的[C:6:0:1]石材[C:7:0:0]，
+kinds as well as some Rough Gems if you are lucky.	[C:7:0:0]运气好的话还会发现一些[C:6:0:1]宝石原石[C:7:0:0]。
+Gems can be Cut at the Jeweler's Workshop. Encrust them on Crafts and other items to add even more value.	[C:6:0:1]宝石[C:7:0:0]可以在[C:6:0:0]珠宝匠工坊[C:7:0:0]中[C:3:0:1]切割[C:7:0:0]。将其[C:3:0:1]镶嵌[C:7:0:0]到[C:6:0:1]工艺品[C:7:0:0]和其他物品上，能进一步提升价值。
+As you enter new menus, there will be information and tips.	进入新的菜单时，会出现相关信息和提示。
+The Help button at the top of the screen contains more guides.	[C:7:0:0]屏幕顶部的“[C:5:0:1]帮助[C:7:0:0]”按钮中还有更多指南。
+Click it now, and this tutorial will be concluded.	现在点击它，本教程便告结束。
+In order to keep your citizens alive in the unforgiving wilderness they will need shelter, drink, and food.	要让居民在严酷的荒野中活下来，你需要为他们提供住所、饮料和食物。
+Use the arrow at the top of this window to minimize the tutorial when it obscures your view.	如果教程窗口挡住了视野，可以点击窗口顶部的箭头将其最小化。
+By now you should have a room underground where your residents can hide from the creatures above.	现在，你应该已有一间地下房间，可供居民躲避地表的生物。
+To make sure they spend their free time down there you will need to use the Zones menu to create a Meeting Area.	[C:7:0:0]要让居民在闲暇时待在地下，你还需要通过“[C:5:0:1]区域[C:7:0:0]”菜单设置一个[C:3:0:0]集会区[C:7:0:0]。
+Later you may try the Burrows menu to create a safe place for your civilians to hide when real trouble comes.	[C:7:0:0]以后还可以使用“[C:5:0:1]活动区[C:7:0:0]”菜单设置安全地点，让平民在真正的危机来临时躲进去。
+Some essential tasks must be assigned from the Labor menu.	[C:7:0:0]某些重要工作必须在“[C:5:0:1]劳动[C:7:0:0]”菜单中分配。
+Click here and make sure you have a	点击这里，确保你已安排了
+If you haven't suffered any casualties, you should have these labors assigned already.	如果尚无人员伤亡，这些工作应该已经有人负责。
+But if one of these brave workers falls, you'll need to assign somebody to these duties.	但如果这些勇敢的工人有人倒下，你就需要另外指派人手接替。
+There are two ways to make drinks for your residents.	为居民提供饮料有两种办法。
+The main way is by brewing alcohol.	主要办法是酿酒。
+This is done by building a Still from the Build menu using Workshops -> Farming -> Still.	[C:7:0:0]打开“[C:5:0:1]建造[C:7:0:0]”菜单，依次选择“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]蒸馏工坊[C:7:0:0]”，建造一座[C:6:0:0]蒸馏工坊[C:7:0:0]。
+Once the Still is constructed, click on it and add the task Brew Drink from Plant (or fruit). If you have no suitable Plants, you	[C:6:0:0]蒸馏工坊[C:7:0:0]建成后，点击它，添加“[C:3:0:1]用植物（或果实）酿酒[C:7:0:0]”任务。如果没有合适的[C:6:0:1]植物[C:7:0:0]，你
+may try Planting or Gathering.	[C:7:0:0]可以尝试[C:5:0:1]种植[C:7:0:0]或[C:5:0:1]采集[C:7:0:0]。
+The task also requires a Barrel from the Carpenter's Workshop.	[C:7:0:0]这一任务还需要[C:6:0:0]木匠工坊[C:7:0:0]制作的[C:6:0:1]桶[C:7:0:0]。
+If you survive until the caravan comes you may also trade for Drinks	[C:7:0:0]如果能坚持到商队到来，也可以交易获得[C:6:0:1]饮料[C:7:0:0]
+or Plants there. The number of Drink rations can be seen at the top of the screen.	[C:7:0:0]或[C:6:0:1]植物[C:7:0:0]。屏幕顶部会显示[C:6:0:1]饮料[C:7:0:0]的储量。
+Absent alcohol and in warmer weather, you can designate a Water Source from the Zones menu at a river or pond,	[C:7:0:0]没有酒而天气又较暖时，可以在“[C:5:0:1]区域[C:7:0:0]”菜单中选择[C:3:0:0]取水区[C:7:0:0]，在河流或池塘边划定，
+so that your residents have water to drink. You'll want one of these anyway for other purposes, like cleaning	让居民有水可喝。无论如何，你都需要水源来完成其他事务，例如清洗
+and certain Workshop tasks. You may find water underground.	[C:7:0:0]和某些[C:6:0:0]工坊[C:7:0:0]任务。地下也可能找到水。
+There's some food on the embark Wagon, and you can trade for food, but you can also grow your own.	[C:7:0:0]启程时的[C:6:0:0]货车[C:7:0:0]上有一些食物，你也可以通过交易获得食物，但还可以自己种植。
+The Wagon comes with some Seeds, but as you might expect, these crops must be grown underground!	[C:6:0:0]货车[C:7:0:0]带有一些[C:6:0:1]种子[C:7:0:0]，不过正如你可能想到的，这些作物必须种在地下！
+Using Mining orders, you'll need to carve out a rectangular area underground for your Farmplot.	[C:7:0:0]使用[C:5:0:1]采矿[C:7:0:0]命令，在地下挖出一块矩形区域，用来设置[C:6:0:0]农田[C:7:0:0]。
+The underground rectangle must be near the surface, where there is soil (loam, clay, or sand.) One level down should suffice, before you hit rock.	这块地下矩形区域必须靠近地表，要有土壤，例如壤土、黏土或沙土。通常向下一层就够了，不要挖到岩层中。
+The highest mountain elevations do not have soil.	最高的山地高度层没有土壤。
+Make sure to leave the ceiling above intact so the underground soil doesn't receive any sunlight.	确保保留完整的顶层，不让地下土壤受到阳光照射。
+With a subterranean soil floor exposed, you can place an underground Farmplot.	[C:7:0:0]露出地下土壤地面后，就可以设置地下[C:6:0:0]农田[C:7:0:0]。
+This isn't rich soil, but will suffice for now. Dig deeper to find better soil.	这里的土壤不算肥沃，但暂时够用。向深处挖掘，才能找到更好的土壤。
+Select Farmplot from the Build menu. It's in Workshops -> Farming -> Farmplot. Place the Farmplot on the subterranean soil.	[C:7:0:0]在“[C:5:0:1]建造[C:7:0:0]”菜单中选择[C:5:0:1]农田[C:7:0:0]，路径为“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]农田[C:7:0:0]”。将[C:6:0:0]农田[C:7:0:0]放在地下土壤上。
+You need to select the crops to be grown each season.	你需要选择每个季节种植的作物。
+Click on the Farmplot you placed to pull up the Farming menu.	[C:7:0:0]点击已放置的[C:6:0:0]农田[C:7:0:0]，打开“[C:5:0:1]农业[C:7:0:0]”菜单。
+Plump Helmets are edible and the default Wagon comes with Plump Helmet Spawn, which are their "seeds".	[C:6:0:1]肉盔菇[C:7:0:0]可以食用，默认的[C:6:0:0]货车[C:7:0:0]还带有[C:6:0:1]肉盔菇菌种[C:7:0:0]，也就是它们的“种子”。
+Note that you can obtain aboveground Seeds from trade or by eating gathered Plants, but aboveground farming exposes your Planters to dangers and the elements.	[C:7:0:0]请注意，你可以通过交易或食用采集到的[C:6:0:1]植物[C:7:0:0]获得地表作物[C:6:0:1]种子[C:7:0:0]，但在地表耕种会让[C:2:0:0]播种者[C:7:0:0]暴露于危险和风雨之中。
+Now your Planters, those that can access both the Farmplot and the Spawn, will plant the field, and after a period of growth, they'll be harvested.	[C:7:0:0]现在，能够到达[C:6:0:0]农田[C:7:0:0]并取得[C:6:0:1]菌种[C:7:0:0]的[C:2:0:0]播种者[C:7:0:0]会开始播种。作物生长一段时间后，就可以收获。
+If you'd like to focus a few of your citizens on farming, which gives skill benefits, you can assign them to the Planters work detail from the Labor menu.	[C:7:0:0]若想让部分居民专职耕种，以获得技能提升带来的好处，可以在“[C:5:0:1]劳动[C:7:0:0]”菜单中将他们分配到“[C:2:0:0]播种者[C:7:0:0]”劳动分组。
+Fertilizer and skilled Planters have a direct impact on crop yield.	[C:6:0:1]肥料[C:7:0:0]和熟练的[C:2:0:0]播种者[C:7:0:0]会直接影响作物产量。
+These effects are more pronounced deep underground where you can locate the cavern biome and its rich soil.	在地下深处的洞穴生态群系及其肥沃土壤中，这些效果更加明显。
+Potash is the fertilizer of choice, and it can be created in the Ashery, using Ash from Wood burned in a Wood Furnace. A Water Source zone and a Bucket are also required.	[C:6:0:1]草碱[C:7:0:0]是合适的肥料。先在[C:6:0:0]烧木窑[C:7:0:0]中燃烧[C:6:0:1]木头[C:7:0:0]获得[C:6:0:1]灰烬[C:7:0:0]，再用[C:6:0:0]灰坊[C:7:0:0]制作草碱。这还需要一个[C:3:0:0]取水区[C:7:0:0]和一只[C:6:0:1]水桶[C:7:0:0]。
+Fertilizer is not needed to farm.	[C:7:0:0]不[C:6:0:1]施肥[C:7:0:0]也可以种植。
+If there is a river or pond nearby you may consider fishing. If the water isn't frozen, a worker with the	如果附近有河流或池塘，可以考虑钓鱼。只要水没有结冰，被分配了
+fishing labor assigned will begin fishing automatically.	捕鱼工作的工人就会自动开始捕鱼。
+You can optionally choose to designate a Fishing zone if you don't want your workers going far afield.	[C:7:0:0]如果不希望工人走得太远，可以自行划定[C:3:0:0]捕鱼区[C:7:0:0]。
+Remember, your workers do not eat raw fish! You must build a Fishery to prepare them.	[C:7:0:0]记住，工人不吃生鱼！你必须建造[C:6:0:0]渔业工坊[C:7:0:0]来处理它们。
+Do this by selecting Workshops -> Farming -> Fishery.	[C:7:0:0]依次选择“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]渔业工坊[C:7:0:0]”即可建造。
+It is possible to survive by gathering plants outside. Do this by selecting the Gathering order.	[C:7:0:0]采集野外植物也能维持生存。选择“[C:5:0:1]采集[C:7:0:0]”命令，
+Then draw a rectangle over the bushes you wish to search.	然后在想要搜索的灌木上拖出一个矩形。
+Meat from Livestock you slaughter is a source of food.	[C:7:0:0]屠宰[C:2:0:0]牲畜[C:7:0:0]获得的[C:6:0:1]肉[C:7:0:0]也是食物来源。
+To slaughter an Animal you must first build a Butcher's Shop.	[C:7:0:0]要屠宰[C:2:0:0]动物[C:7:0:0]，必须先建造[C:6:0:0]屠夫工坊[C:7:0:0]。
+Do this by selecting the building in Workshops -> Farming -> Butcher.	[C:7:0:0]依次选择“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]屠夫工坊[C:7:0:0]”，放置该建筑。
+Once the shop is built, open the Creatures info menu. From there select the Pets/Livestock tab.	[C:7:0:0]工坊建成后，打开“[C:5:0:1]生物[C:7:0:0]”信息菜单，再选择“[C:5:0:1]宠物／牲畜[C:7:0:0]”标签页。
+There you can select which Animals to slaughter. You may need to minimize the tutorial to see the Slaughter buttons.	[C:7:0:0]在这里可以选择要屠宰的[C:2:0:0]动物[C:7:0:0]。你可能需要将教程最小化，才能看到“[C:5:0:1]屠宰[C:7:0:0]”按钮。
+Note that some Livestock must eat vegetation to survive.	[C:7:0:0]请注意，有些[C:2:0:0]牲畜[C:7:0:0]必须吃植物才能存活。
+To keep them alive use the Pen/Pasture zone from the Zones menu to select a section of grass and click the	[C:7:0:0]要养活它们，可在“[C:5:0:1]区域[C:7:0:0]”菜单中选择“[C:3:0:0]畜栏／牧场[C:7:0:0]”，划出一片草地，再点击
+add button to assign the Animals.	[C:7:0:0]添加按钮，将[C:2:0:0]动物[C:7:0:0]分配进去。
+Zones are areas you designate where your citizens will work, socialize, rest, or perform specific duties.	[C:3:0:0]区域[C:7:0:0]是你划定的场所，居民会在其中工作、社交、休息或执行特定职责。
+There are several kinds of Zones, which you can see in the panel on the left.	[C:3:0:0]区域[C:7:0:0]有多种类型，可在左侧面板中查看。
+Zones are placed much like Stockpiles.	[C:7:0:0]划定[C:3:0:0]区域[C:7:0:0]的方式与[C:6:0:0]储物堆[C:7:0:0]类似。
+Unlike Stockpiles, multiple Zones can overlap.	[C:7:0:0]与[C:6:0:0]储物堆[C:7:0:0]不同，多个[C:3:0:0]区域[C:7:0:0]可以重叠。
+Certain Zones like Bedrooms can be placed several at a time.	[C:3:0:0]卧室[C:7:0:0]等某些[C:3:0:0]区域[C:7:0:0]可以一次划定多个。
+Just make sure you have the correct Furniture placed in the rooms with Doors or vertical entries separating each room before you begin.	[C:7:0:0]开始前，请确保房间中已有所需[C:6:0:0]家具[C:7:0:0]，并用[C:6:0:0]门[C:7:0:0]或垂直出入口将各个房间隔开。
+Burrows are work and living areas where citizens can be assigned.	[C:1:0:0]活动区[C:7:0:0]是可以分配居民的工作和生活范围。
+Workers will try to limit their tasks to the confines of the Burrow, but they will sometimes form paths which pass through other areas.	[C:7:0:0]工人会尽量将工作限制在[C:1:0:0]活动区[C:7:0:0]范围内，但行走路径有时仍会经过其他区域。
+Burrows can be suspended and unsuspended freely. When a Burrow is suspended, assigned citizens will ignore it.	[C:1:0:0]活动区[C:7:0:0]可以随时停用或重新启用。停用时，已分配的居民会忽略该[C:1:0:0]活动区[C:7:0:0]。
+It can be useful to assign all of your civilians to a safe emergency Burrow which you activate in case of intruders.	[C:7:0:0]可以把所有平民分配到一个安全的紧急避难[C:1:0:0]活动区[C:7:0:0]，在入侵者出现时将其启用。
+Minecarts and Tracks are a convenient way to move a lot of objects around the fortress quickly, though they take a little effort to prepare.	[C:6:0:1]矿车[C:7:0:0]和[C:6:0:0]轨道[C:7:0:0]能方便地在要塞中快速运输大量物品，不过需要花些工夫准备。
+One Minecart can be assigned to each route, and workers will move the vehicle from Track Stop to Track Stop according to conditions you specify.	[C:7:0:0]每条路线可以分配一辆[C:6:0:1]矿车[C:7:0:0]。工人会根据你设定的条件，让矿车在各个[C:6:0:0]轨道停靠点[C:7:0:0]之间移动。
+Each Track Stop must be linked to a Stockpile for Items to be put on or removed from the Minecart.	[C:7:0:0]每个[C:6:0:0]轨道停靠点[C:7:0:0]都必须与[C:6:0:0]储物堆[C:7:0:0]连接，才能向[C:6:0:1]矿车装货[C:7:0:0]或从中卸货。
+Only one condition needs to be satisfied for the Minecart to move to the next Track Stop.	[C:7:0:0]只需满足一个条件，[C:6:0:1]矿车[C:7:0:0]就会前往下一个[C:6:0:0]轨道停靠点[C:7:0:0]。
+Minecarts that move too quickly around corners will spill their contents.	[C:6:0:1]矿车[C:7:0:0]转弯过快时，会把所载物品甩出来。
+When a route has a steep descent, consider using powered Rollers, extra curves, track "stops" between Stops with various friction settings, or a worker to guide the vehicle.	[C:7:0:0]如果路线包含陡坡，可以考虑使用[C:6:0:0]动力滚轮[C:7:0:0]、增加弯道、在[C:6:0:0]停靠点[C:7:0:0]之间设置不同摩擦强度的轨道止动器，或让工人引导矿车。
+Here you can see every Item in the fortress.	[C:7:0:0]在这里可以查看要塞中的所有[C:6:0:1]物品[C:7:0:0]。
+Click on category headings to collapse and expand them.	点击分类标题可折叠或展开。
+If you don't have a Bookkeeper, or they don't have an Office to work in, numbers may be approximate.	[C:7:0:0]如果没有[C:5:0:0]簿记员[C:7:0:0]，或者簿记员没有可用的[C:3:0:0]办公室[C:7:0:0]，数量可能只是估计值。
+Work details are one way you can control which workers do which tasks, and they are the only way to assign certain tasks like mining, woodcutting, hunting, and fishing.	劳动分组可以控制哪些工人执行哪些任务；采矿、伐木、狩猎和捕鱼等任务只能通过这种方式分配。
+Generally, almost every task will be available for every citizen, but you can both restrict both citizens and tasks.	通常，几乎所有居民都可以执行几乎所有任务，但你可以同时对居民和任务施加限制。
+Citizens are restricted by using their Specialization button.	[C:7:0:0]使用居民的“[C:5:0:1]专职[C:7:0:0]”按钮，可以限制该居民承担的工作。
+Tasks are restricted by setting their work detail to "Only selected do this".	[C:7:0:0]将劳动分组设为[C:5:0:1]“仅所选人员执行”[C:7:0:0]，可以限制任务的执行者。
+If a task does not have a default work detail, you can create a custom work detail. Once you assign citizens to the task, you can then set "Only selected do this" if you want to restrict it.	[C:7:0:0]如果任务没有默认劳动分组，可以创建自定义劳动分组。分配居民后，若要限制执行者，再选择[C:5:0:1]“仅所选人员执行”[C:7:0:0]。
+Here you can view your nobles, as well as assign your administrators, military leaders, and other officials.	在这里可以查看贵族，并任命行政官员、军事领袖及其他官员。
+Militia Commanders are assigned here.	[C:5:0:0]军事指挥官[C:7:0:0]在这里任命。
+Once the first leader is assigned, subsequent Captain positions will appear.	[C:7:0:0]任命第一位指挥官后，后续的[C:5:0:0]队长[C:7:0:0]职位便会出现。
+These can also be assigned from the squad menu.	这些职位也可以从小队菜单中任命。
+Certain important functions in your fortress can only be performed by assigned administrators, such as the Manager and Bookkeeper.	[C:7:0:0]要塞中的某些重要事务只能由已任命的官员执行，例如[C:5:0:0]经理[C:7:0:0]和[C:5:0:0]簿记员[C:7:0:0]。
+Once they are assigned, you can create work orders, run a Hospital, and count and appraise your hoard.	[C:7:0:0]任命他们后，就可以创建工单、运营[C:1:0:1]医院[C:7:0:0]，并清点和估价你的财富。
+Nobles and certain administrators require rooms, and some may also make demands.	贵族和某些官员需要房间，有些还会提出要求。
+If you have a law enforcement administrator like a Sheriff or Captain of the Guard, witnesses of crimes will make reports, which find their way here.	[C:7:0:0]如果有[C:5:0:0]治安官[C:7:0:0]、[C:5:0:0]卫队长[C:7:0:0]等执法官员，犯罪目击者就会报案，案件会汇总到这里。
+Certain crimes are indicative of larger problems, so you should pay attention to them, and affected victims and family members get upset if crime is ignored.	某些犯罪反映出更大的问题，应当加以关注；若置之不理，受害者及其家属会感到不满。
+It's up to you to choose whom to convict.	由你决定判谁有罪。
+All available witness information is presented for each case.	每个案件都会列出所有已知的目击证词。
+You can also interrogate suspects.	你也可以审讯嫌疑人。
+This is particularly important for schemes where the witnesses might not have the full story.	对于目击者可能并不知晓全貌的阴谋案件，这一点尤其重要。
+It is recommended to place a certain number of Cages and Chains and assign them to a Dungeon zone.	[C:7:0:0]建议放置一定数量的[C:6:0:0]笼子[C:7:0:0]和[C:6:0:0]锁链[C:7:0:0]，并将其划入[C:3:0:0]监牢[C:7:0:0]。
+Officers may opt for physical punishment if they cannot carry out custodial sentences.	如果无法执行拘禁刑罚，执法人员可能改用体罚。
+Here you can create squads, fill their positions, assign equipment and schedules, and give specific orders.	在这里可以创建小队、补充成员、分配装备和日程，并下达具体命令。
+Although this location is relatively safe, it is recommended that you prepare a squad and get them training at some point.	虽然这里比较安全，仍然建议你在适当时候组建小队并开始训练。
+Wildlife and even your own citizens can still be dangerous at times.	野生动物，甚至你自己的居民，有时也会带来危险。
+It is recommended that you prepare a squad and get them training as soon as you can.	建议尽早组建小队并开始训练。
+You have no idea what's lurking out there.	你并不知道外面潜伏着什么。
+The world created at the beginning of the game is active, and others may take an interest in your outpost as it grows.	游戏开始时创建的世界一直在运转。随着前哨站发展，其他势力可能会对这里产生兴趣。
+Stolen Artifacts and kidnapped citizens can be recovered by preparing missions from this screen.	[C:7:0:0]可以在此界面安排任务，找回被盗的[C:6:0:1]造物[C:7:0:0]和遭绑架的居民。
+You can also cause trouble if you'd like to raid your neighbors.	你也可以主动出击，袭击邻居。
+Raids are created by clicking on any site not belonging to your civilization.	点击不属于你所在文明的地点，即可安排袭击。
+Work orders are used to automate Tasks in Workshops.	[C:7:0:0]工单用于自动安排[C:6:0:0]工坊[C:3:0:1]任务[C:7:0:0]。
+These work orders are set to complete a certain number of Tasks and can be given start conditions.	[C:7:0:0]可以设置订单完成一定数量的[C:3:0:1]任务[C:7:0:0]，并为其指定启动条件。
+For instance, you can create an order to Make Wooden Bins if you are out of empty ones, to Brew Drinks if you are running low, or to Make Five Statues every month.	[C:7:0:0]例如，没有空箱子时[C:3:0:1]制作木制储物箱[C:7:0:0]，饮料不足时[C:3:0:1]酿酒[C:7:0:0]，或每个月[C:3:0:1]制作五座雕像[C:7:0:0]。
+You can limit work orders to a number of Workshops.	[C:7:0:0]你可以限制执行订单的[C:6:0:0]工坊[C:7:0:0]数量。
+You can also create work orders at specific Workshops from their building sheet.	[C:7:0:0]也可以从某座[C:6:0:0]工坊[C:7:0:0]的建筑信息面板中，创建仅由该工坊执行的订单。
+The system is reasonably powerful and you can eventually automate almost all of your production if you wish.	这套系统功能相当强大，只要愿意，最终几乎可以让所有生产自动进行。
+If you find that your stockpiles are filling up too fast, you can create room by building Bins,	[C:7:0:0]如果储物堆满得太快，可以制作[C:6:0:1]储物箱[C:7:0:0]、
+Barrels, and Bags. Barrels are used to store Food. Bags are used to store Seeds	[C:6:0:1]桶[C:7:0:0]和[C:6:0:1]袋子[C:7:0:0]来腾出空间。[C:6:0:1]桶[C:7:0:0]用来储存[C:6:0:1]食物[C:7:0:0]，[C:6:0:1]袋子[C:7:0:0]用来储存[C:6:0:1]种子[C:7:0:0]
+(and some other things like Sand). Bins hold just about everything else except Furniture, Wood and Boulders.	[C:7:0:0]以及[C:6:0:1]沙子[C:7:0:0]等其他物品。除[C:6:0:1]家具[C:7:0:0]、[C:6:0:1]木头[C:7:0:0]和[C:6:0:1]石材[C:7:0:0]外，[C:6:0:1]储物箱[C:7:0:0]几乎能装下所有其他东西。
+The Carpenter's Workshop is the best place to make lightweight Bins and Barrels, but they can also be made at	[C:6:0:0]木匠工坊[C:7:0:0]最适合制作轻便的[C:6:0:1]储物箱[C:7:0:0]和[C:6:0:1]桶[C:7:0:0]，不过也可以在
+the Stoneworker's Shop and the Metalsmith's Forge. Bags are created at the Clothier's Shop or the Leatherworks.	[C:6:0:0]石匠工坊[C:7:0:0]和[C:6:0:0]金属锻造坊[C:7:0:0]制作。[C:6:0:1]袋子[C:7:0:0]则由[C:6:0:0]裁缝工坊[C:7:0:0]或[C:6:0:0]皮革工坊[C:7:0:0]制作。
+When the caravan arrives at the Trade Depot, you must click on the depot and select "Bring Goods to Depot".	[C:7:0:0]商队抵达[C:6:0:0]贸易站[C:7:0:0]后，点击贸易站，选择[C:5:0:1]“将货物运往贸易站”[C:7:0:0]。
+Here you can select which goods you wish to trade. After everyone has brought their goods you can	在这里选择想要交易的货物。所有人搬完货物后，就可以
+select "Trade". Don't worry if you have no Broker, just select "Anyone can Trade". You cannot trade	[C:7:0:0]选择[C:5:0:1]“交易”[C:7:0:0]。没有[C:5:0:0]交易员[C:7:0:0]也不要紧，只需选择[C:5:0:1]“任何人均可交易”[C:7:0:0]。只有
+until your Broker or another resident arrives at the depot.	[C:5:0:0]交易员[C:7:0:0]或其他居民到达贸易站后，才能开始交易。
+When trading you select which goods you want from the list on the left, and which goods of yours to	交易时，从左侧列表选择你想买的商品，再从右侧列表选择你要
+trade from the list on the right. Then hit "Trade". The trader will accept if the deal is fair and	[C:7:0:0]出售的货物，然后点击[C:5:0:1]“交易”[C:7:0:0]。如果交易公平，且商人
+they can carry away the weight of the things you are selling.	能够运走你出售的货物，他们就会接受。
+Note that if you have a Broker the value of each good with be shown if their skill is high enough.	[C:7:0:0]请注意，如果[C:5:0:0]交易员[C:7:0:0]的技能足够高，就能显示每件商品的价值。
+In order for some functions to be used, like work orders or bookkeeping, Administrators must be assigned.	[C:7:0:0]要使用工单、簿记等功能，必须任命相应[C:5:0:0]官员[C:7:0:0]。
+To do this select the Nobles and administrators menu and click the add button to assign somebody.	[C:7:0:0]打开“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单，点击添加按钮，选择任命人选。
+Some Administrators will require Offices to perform their work.	[C:7:0:0]有些[C:5:0:0]官员[C:7:0:0]需要[C:3:0:0]办公室[C:7:0:0]才能履行职责。
+You can create these with Zones -> Office.	[C:7:0:0]可以通过“[C:5:0:1]区域[C:7:0:0] → [C:5:0:1]办公室[C:7:0:0]”设置。
+The Zone you select must contain a Chair, or you can paint a Zone and place a Chair later.	[C:7:0:0]划定的[C:3:0:0]区域[C:7:0:0]必须有一把[C:6:0:0]椅子[C:7:0:0]，也可以先划[C:3:0:0]区域[C:7:0:0]，再放置[C:6:0:0]椅子[C:7:0:0]。
+Remember to assign the Administrator to the Office.	[C:7:0:0]记得将[C:3:0:0]办公室[C:7:0:0]分配给相应[C:5:0:0]官员[C:7:0:0]。
+Other nobles may appear or be assigned as	随着游戏进展，其他贵族也可能出现
+the game progresses. Use the Nobles and administrators menu to check their wants and needs.	[C:7:0:0]或得到任命。使用“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单查看他们的愿望和需求。
+In order to make Metal Bars for the Metalsmith, you must smelt Ore.	[C:7:0:0]要为[C:2:0:0]金工[C:7:0:0]制作[C:6:0:1]金属锭[C:7:0:0]，必须冶炼[C:6:0:1]矿石[C:7:0:0]。
+This can done at the Smelter which can be found under Workshops -> Furnaces -> Smelter.	[C:7:0:0]这需要[C:6:0:0]熔炉[C:7:0:0]，可以在“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]炉窑[C:7:0:0] → [C:5:0:1]熔炉[C:7:0:0]”中找到。
+Ore is mined underground, below the soil layers.	[C:6:0:1]矿石[C:7:0:0]要在土壤层下方的地下开采。
+If you have found magma you can build a Magma Smelter directly over it, otherwise you need Fuel.	[C:7:0:0]如果找到了岩浆，可以直接在其上方建造[C:6:0:0]岩浆熔炉[C:7:0:0]；否则就需要[C:6:0:1]燃料[C:7:0:0]。
+To get Fuel you need to make Charcoal with a Wood Furnace,	[C:7:0:0]要获得[C:6:0:1]燃料[C:7:0:0]，需要用[C:6:0:0]烧木窑[C:7:0:0]制作[C:6:0:1]木炭[C:7:0:0]，
+found at Workshops -> Furnaces -> Wood Furnace.	[C:7:0:0]可在“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]炉窑[C:7:0:0] → [C:5:0:1]烧木窑[C:7:0:0]”中找到。
+You may switch to other forms of Fuel later, such as Coal, but you will usually	[C:7:0:0]以后可以改用[C:6:0:1]煤[C:7:0:0]等其他[C:6:0:1]燃料[C:7:0:0]，但通常仍
+need Charcoal from the Wood Furnace to start the process.	[C:7:0:0]需要先用[C:6:0:0]烧木窑[C:7:0:0]制作的[C:6:0:1]木炭[C:7:0:0]来启动这一过程。
+It is a dangerous world, and if the entrances of your fortress are left open,	这是一个危险的世界。若要塞入口毫无防备，
+you can succumb to invasions.	入侵就可能让你覆灭。
+The best way to avoid this fate is to build traps and	避免这种命运的最好办法，是建造陷阱并
+lock the ways into your fortress. The ways to build traps are as wild as your imagination.	封锁进入要塞的通道。陷阱的设计方式，只受你的想象力限制。
+Most require Mechanisms made at the Mechanic's Shop, using Workshops -> Mechanic.	[C:7:0:0]大多数陷阱需要[C:6:0:1]机件[C:7:0:0]。通过“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]机械师[C:7:0:0]”建造[C:6:0:0]机械师工坊[C:7:0:0]，即可制作。
+To stop some enemies from entering your fortress use Build -> Machines/fluids -> Lever to build a Lever.	[C:7:0:0]要阻止某些敌人进入要塞，可通过“[C:5:0:1]建造[C:7:0:0] → [C:5:0:1]机械／流体[C:7:0:0] → [C:5:0:1]拉杆[C:7:0:0]”放置[C:6:0:0]拉杆[C:7:0:0]。
+Then click on the Lever and choose to link it to a Bridge or Door. This will lock the Door	[C:7:0:0]然后点击[C:6:0:0]拉杆[C:7:0:0]，选择将其连接到[C:6:0:0]桥[C:7:0:0]或[C:6:0:0]门[C:7:0:0]。这样就可以锁[C:6:0:0]门[C:7:0:0]
+or raise the Bridge, locking you inside.	[C:7:0:0]或升起[C:6:0:0]桥[C:7:0:0]梁，将要塞封闭起来。
+There are also predesigned traps, such as Weapon, Cage, and Stone-Fall Traps.	[C:7:0:0]游戏也提供现成的陷阱，例如[C:6:0:0]武器[C:7:0:0]陷阱、[C:6:0:0]笼子[C:7:0:0]陷阱和[C:6:0:0]落石陷阱[C:7:0:0]。
+These require a Weapon, Cage, or Boulder to function.	[C:7:0:0]它们分别需要[C:6:0:1]武器[C:7:0:0]、[C:6:0:1]笼子[C:7:0:0]或[C:6:0:1]石材[C:7:0:0]才能运作。
+Non-alcoholic water is essential to a functioning fortress. The most favored place to	除了酒，要塞正常运转也离不开水。最理想的取水地点
+get it is from a Well.	[C:7:0:0]是[C:6:0:0]水井[C:7:0:0]。
+Wells require a Bucket, Blocks, a Rope or Chain, and Mechanisms. They can be built over	[C:6:0:0]水井[C:7:0:0]需要[C:6:0:1]水桶[C:7:0:0]、[C:6:0:1]块材[C:7:0:0]、[C:6:0:1]绳索[C:7:0:0]或[C:6:0:1]锁链[C:7:0:0]，以及[C:6:0:1]机件[C:7:0:0]。它们可以建在
+any body of water. It is possible to find water underground, or divert it from the surface.	任何水体上方。你既可以寻找地下水，也可以从地表引水。
+Aquifers can block the downward progress of your fortress, but it is possible to bypass them.	含水层会阻碍要塞向下扩展，但仍有办法穿过。
+One way is to simply re-designate the damp stone for mining in order to build a 3x3 room around the stairs.	一种办法是重新指定开采潮湿岩石，在楼梯周围挖出一个 3×3 的房间。
+You can then build Walls around the stairs until the leaking water is blocked off.	[C:7:0:0]然后在楼梯周围建[C:6:0:0]墙[C:7:0:0]，直到堵住渗水。
+Repeat this pattern until you get below the aquifer.	重复这一过程，直到穿过含水层。
+Eventually the Clothing that your residents start with will rot away.	[C:7:0:0]居民启程时穿的[C:6:0:1]衣服[C:7:0:0]，最终会腐烂损坏。
+While it is possible to trade for Clothing, Cloth, or Leather, you can also farm Pigtails,	[C:7:0:0]虽然可以通过交易购买[C:6:0:1]衣服[C:7:0:0]、[C:6:0:1]布料[C:7:0:0]和[C:6:0:1]皮革[C:7:0:0]，但你也可以种植[C:6:0:1]猪尾草[C:7:0:0]，
+gather Silk, or tan Skins for Leather.	[C:7:0:0]采集[C:6:0:1]丝[C:7:0:0]，或将[C:6:0:1]兽皮[C:7:0:0]鞣制成[C:6:0:1]皮革[C:7:0:0]。
+After harvesting plants like the Pigtail, first process them at the Farmer's Workshop, then	[C:7:0:0]收获[C:6:0:1]猪尾草[C:7:0:0]等植物后，先在[C:6:0:0]农夫工坊[C:7:0:0]加工，接着
+weave Cloth at the Loom, then make Clothing at the Clothier.	[C:7:0:0]在[C:6:0:0]织布机[C:7:0:0]上织成[C:6:0:1]布[C:7:0:0]，再由[C:6:0:0]裁缝[C:7:0:0]制成[C:6:0:1]衣服[C:7:0:0]。
+Gathered Silk can go directly to the Loom.	[C:7:0:0]采集到的[C:6:0:1]丝[C:7:0:0]可以直接送往[C:6:0:0]织布机[C:7:0:0]。
+Skins can be obtained by butchering Livestock at the Butcher's Shop.	[C:6:0:0]屠夫工坊[C:7:0:0]屠宰[C:2:0:0]牲畜[C:7:0:0]后可以获得[C:6:0:1]兽皮[C:7:0:0]。
+Skins are tanned at the Tanner's Shop, and made into Clothing at the Leather Works.	[C:6:0:1]兽皮[C:7:0:0]在[C:6:0:0]制革工坊[C:7:0:0]鞣制，再由[C:6:0:0]皮革工坊[C:7:0:0]加工成[C:6:0:1]衣服[C:7:0:0]。
+Meeting Areas are Zones where your citizens gather when not working or taking care of their needs.	[C:3:0:0]集会区[C:7:0:0]是居民在不工作、也不忙于满足个人需求时聚集的区域。
+Zones can be assigned to special Locations. Usually one Meeting Area is sufficient, but Locations can span several Zones.	[C:3:0:0]区域[C:7:0:0]可以划归特殊[C:1:0:1]场所[C:7:0:0]。通常一个[C:3:0:0]集会区[C:7:0:0]就足够了，但一个[C:1:0:1]场所[C:7:0:0]也可以横跨多个[C:3:0:0]区域[C:7:0:0]。
+There are five types of Locations, which we'll go over in turn.	[C:1:0:1]场所[C:7:0:0]分为五类，下面逐一介绍。
+Taverns are where your residents gather to drink, socialize, tell stories, and dance.	[C:7:0:0]居民会在[C:1:0:1]酒馆[C:7:0:0]里喝酒、社交、讲故事和跳舞。
+To have a fully functioning Tavern you must have a Stockpile with Booze in it, preferably close by.	[C:7:0:0]要让[C:1:0:1]酒馆[C:7:0:0]正常运作，必须有一个存放[C:6:0:1]酒[C:7:0:0]的[C:6:0:0]储物堆[C:7:0:0]，最好就在附近。
+The inhabitants also like to drink from Goblets, Cups, or Mugs. These must be stored in Chests or	[C:7:0:0]居民也喜欢用[C:6:0:1]高脚杯[C:7:0:0]、[C:6:0:1]杯子[C:7:0:0]或[C:6:0:1]马克杯[C:7:0:0]喝酒。这些器皿必须存放在[C:1:0:1]酒馆[C:7:0:0]里的[C:6:0:0]箱子[C:7:0:0]或
+Coffers inside the Tavern. Optionally you can place Tables and Chairs where your residents can eat.	[C:6:0:0]保险箱[C:7:0:0]中。你还可以摆放[C:6:0:0]桌椅[C:7:0:0]，供居民吃饭。
+You may also leave a cleared space your tavern-goers will use as a dance floor. If you have any Musical	[C:7:0:0]也可以留出一块空地，作为酒馆客人的舞池。如果你拥有[C:6:0:1]乐器[C:7:0:0]，
+Instruments these can also be used by the Tavern.	[C:1:0:1]酒馆[C:7:0:0]也能使用它们。
+From the Tavern Info Menu you can choose to assign Performers or a Tavern Keeper who will serve the	[C:7:0:0]在“[C:5:0:1]酒馆信息[C:7:0:0]”菜单中，可以指派[C:5:0:0]表演者[C:7:0:0]，或安排[C:5:0:0]酒馆老板[C:7:0:0]为
+visitors drinks. There is also an option to allow outsiders to come to your Tavern.	[C:7:0:0]客人供应饮料。你还可以设置是否允许外来者进入[C:1:0:1]酒馆[C:7:0:0]。
+Temples are places for faithful residents to commune with their chosen deity.	[C:1:0:1]神殿[C:7:0:0]是信徒与所信奉神祇交流的地方。
+Upon creation of the Location you must choose which deity to dedicate the Temple to, if any.	[C:7:0:0]创建[C:1:0:1]场所[C:7:0:0]时，你必须决定[C:1:0:1]神殿[C:7:0:0]供奉哪位神祇，或者不指定神祇。
+Sometimes the adherents to a certain religion will demand that you build a Temple to their specific deity.	[C:7:0:0]有时，某个宗教的信徒会要求你为其神祇建造专属[C:1:0:1]神殿[C:7:0:0]。
+You can see how many worshippers of each deity live in your fortress by scrolling over their names.	将鼠标移到神祇名字上，可以查看要塞中有多少位该神祇的信徒。
+In the Temple Info Menu you can see the value of the Temple. Sometimes the worshippers will demand	[C:7:0:0]“[C:6:0:1]神殿信息[C:7:0:0]”菜单会显示[C:1:0:1]神殿[C:7:0:0]的价值。有时，信徒会要求
+that you increase the value of the temple by decorating or adding Furniture like Statues.	[C:7:0:0]通过装饰或添置[C:6:0:0]雕像[C:7:0:0]等[C:6:0:0]家具[C:7:0:0]来提高神殿价值。
+You can also add Chests or Coffers to hold Musical Instruments that the faithful will use.	[C:7:0:0]你还可以添置[C:6:0:0]箱子[C:7:0:0]或[C:6:0:0]保险箱[C:7:0:0]，存放供信徒使用的[C:6:0:1]乐器[C:7:0:0]。
+You can also assign Performers to the Temple and even Priests once the Temple becomes more established.	[C:7:0:0]你可以为[C:1:0:1]神殿[C:7:0:0]安排[C:5:0:0]表演者[C:7:0:0]；当[C:1:0:1]神殿[C:7:0:0]发展到一定程度后，还可以安排[C:5:0:0]祭司[C:7:0:0]。
+Your unfortunate citizens are taken to the Hospital when injured. There they will rest and given water until	[C:7:0:0]不幸受伤的居民会被送往[C:1:0:1]医院[C:7:0:0]。在[C:5:0:0]医生[C:7:0:0]诊治之前，他们会在那里休息，
+they are seen by a Doctor.	[C:7:0:0]并得到饮水照料。
+To fully function your Hospital needs to have Beds,	[C:7:0:0]要让[C:1:0:1]医院[C:7:0:0]正常运作，需要[C:6:0:0]床[C:7:0:0]、
+Buckets (with a source of water), Thread for sutures, and Cloth for bandages.	[C:6:0:1]水桶[C:7:0:0]和水源、缝合用的[C:6:0:1]线[C:7:0:0]，以及制作绷带的[C:6:0:1]布[C:7:0:0]。
+You must build Chests or Coffers inside the Hospital to store these items.	[C:7:0:0]必须在[C:1:0:1]医院[C:7:0:0]内放置[C:6:0:0]箱子[C:7:0:0]或[C:6:0:0]保险箱[C:7:0:0]，存放这些用品。
+Some injuries require Splints, or Gypsum Plaster Powder for Orthopedic Casts. Soap is necessary to prevent infection.	[C:7:0:0]某些伤势需要[C:6:0:1]夹板[C:7:0:0]，或用于制作[C:6:0:1]矫形石膏[C:7:0:0]的[C:6:0:1]石膏粉[C:7:0:0]。预防感染还需要[C:6:0:1]肥皂[C:7:0:0]。
+Some patients will need Crutches after they are treated.	[C:7:0:0]某些病人在治疗后仍需要[C:6:0:1]拐杖[C:7:0:0]。
+You will need to appoint a	你需要任命一位
+from the Nobles and administrators menu.	[C:7:0:0]，请在“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单中任命。
+You will need to assign a Doctor to the Hospital from the Hospital Info Menu.	[C:7:0:0]你需要在“[C:5:0:1]医院信息[C:7:0:0]”菜单中为[C:1:0:1]医院[C:7:0:0]指派[C:5:0:0]医生[C:7:0:0]。
+Later you can assign Doctors to specific roles such as the Diagnostician.	[C:7:0:0]之后可以为[C:5:0:0]医生[C:7:0:0]分配[C:5:0:0]诊断医师[C:7:0:0]等具体职位。
+The Doctor will need a Table to perform surgeries. Some injuries will require	[C:5:0:0]医生[C:7:0:0]做手术需要[C:6:0:0]桌子[C:7:0:0]。某些伤势需要
+Traction Benches which can be built at the Mechanic's Shop.	[C:6:0:0]牵引台[C:7:0:0]，可以在[C:6:0:0]机械师工坊[C:7:0:0]制作。
+The thirst for knowledge some residents have can be satisfied at the Library.	[C:7:0:0]有些居民的求知欲可以在[C:1:0:1]图书馆[C:7:0:0]得到满足。
+From the Library Info Menu you can assign Scholars who discuss their interests with the inhabitants,	[C:7:0:0]在“[C:5:0:1]图书馆信息[C:7:0:0]”菜单中，可以安排[C:5:0:0]学者[C:7:0:0]与居民讨论感兴趣的话题，
+and Scribes to record them. Beware! Some knowledge is dangerous.	[C:7:0:0]并指派[C:5:0:0]抄写员[C:7:0:0]记录。小心！有些知识十分危险。
+In order to hold Scrolls and Codices you will need Bookcases. You will also need	[C:7:0:0]要存放[C:6:0:1]卷轴[C:7:0:0]和[C:6:0:1]书册[C:7:0:0]，需要[C:6:0:0]书柜[C:7:0:0]。你还需要
+Tables for your Scribes to work on. Chests or Coffers are needed to store the	[C:6:0:0]桌子[C:7:0:0]，供[C:5:0:0]抄写员[C:7:0:0]工作；以及[C:6:0:0]箱子[C:7:0:0]或[C:6:0:0]保险箱[C:7:0:0]，用来存放
+Writing Material for the Scribes to write on.	[C:5:0:0]抄写员[C:7:0:0]写作所需的[C:6:0:1]书写材料[C:7:0:0]。
+Guildhalls are where the workers of specific professions gather to socialize and share their knowledge.	[C:1:0:1]行会大厅[C:7:0:0]是特定职业从业者聚集交流、分享知识的地方。
+When deciding which guild to dedicate the Guildhall to, you can scroll over the names of the guilds	[C:7:0:0]决定将[C:1:0:1]行会大厅[C:7:0:0]划归哪个行会时，可以将鼠标移到各个行会的名字上，
+and see how many workers of each profession there are and whether a guild has been established.	查看每种职业有多少从业者，以及相应行会是否已经成立。
+As the guild grows in power they may demand a Guildhall of greater value. This can be increased by	[C:7:0:0]随着行会势力增长，他们可能要求提高[C:1:0:1]行会大厅[C:7:0:0]的价值。你可以通过
+decorating the hall and building Furniture like Statues.	[C:7:0:0]装饰大厅，以及添置[C:6:0:0]雕像[C:7:0:0]等[C:6:0:0]家具[C:7:0:0]来提升价值。
+Before you can create a military, you must appoint a Militia Commander	[C:7:0:0]组建军队之前，必须先任命[C:5:0:0]军事指挥官[C:7:0:0]
+from the Nobles and administrators menu.	[C:7:0:0]，请在“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单中任命。
+Then from the Squad menu you can assign your first squad, led by the Commander. First you must	[C:7:0:0]然后，可以在“[C:5:0:1]小队[C:7:0:0]”菜单中建立第一支由[C:5:0:0]指挥官[C:7:0:0]率领的小队。首先需要
+assign the uniform. A new uniform can be assigned later.	指定制服，之后也可以更换。
+The squad can be customized and you	你可以自定义小队，并且
+can select the leader from the buttons at the top of the squad screen.	可以使用小队界面顶部的按钮选择队长。
+are the checkmark to select the squad to give orders and the Position button to add more soldiers to the squad.	[C:7:0:0]分别是用于选中小队并下达命令的勾选框，以及用于向小队增派士兵的“[C:5:0:1]职位[C:7:0:0]”按钮。
+You can give individual orders to the soldiers by selecting them with the checkmark from the Position menu	[C:7:0:0]可以在“[C:5:0:1]职位[C:7:0:0]”菜单中勾选士兵，向他们单独下令，
+or the whole squad from the Squad menu.	[C:7:0:0]也可以在“[C:5:0:1]小队[C:7:0:0]”菜单中选中整个小队。
+The orders can be found at the bottom of the Squad menu when somebody is selected. You can make a Kill order and confirm it.	[C:7:0:0]选中人员后，命令会显示在“[C:5:0:1]小队[C:7:0:0]”菜单底部。你可以发出并确认[C:3:0:1]击杀[C:7:0:0]命令。
+You can make a Station order to have your squad stand in that position. You can create a Patrol Route	[C:7:0:0]使用[C:3:0:1]驻守[C:7:0:0]命令，让小队留在指定地点。你还可以创建[C:3:0:1]巡逻路线[C:7:0:0]，
+and assign your squads to it. The Defend Burrow order gives you a list of Burrows (created by pressing	[C:7:0:0]并为其分配小队。“[C:3:0:1]保卫活动区[C:7:0:0]”命令会列出可供小队保卫的[C:1:0:0]活动区[C:7:0:0]，这些活动区通过
+the Burrow menu) for your squad to defend. The Training order allows your soldiers to train, but you must	[C:7:0:0]“[C:5:0:1]活动区[C:7:0:0]”菜单创建。“[C:3:0:1]训练[C:7:0:0]”命令可让士兵训练，但必须
+first assign a Barracks created from the Zones menu.	[C:7:0:0]先通过“[C:5:0:1]区域[C:7:0:0]”菜单创建并分配[C:3:0:0]兵营[C:7:0:0]。
+The Equipment menu allows you to customize the uniforms of the selected squads.	[C:7:0:0]“[C:5:0:1]装备[C:7:0:0]”菜单可以自定义已选小队的制服。
+You can assign new uniforms to your squads or add a new one to customize it and add it to the uniform list.	可以为小队指定新制服，也可以新建一套制服，自定义后加入制服列表。
+You can also click on details to customize each individual soldier.	还可以点击“详情”，分别调整每位士兵的装备。
+The Schedule menu is a powerful tool to give automatic orders to the selected squad.	[C:7:0:0]“[C:5:0:1]日程[C:7:0:0]”菜单是向所选小队自动下达命令的强大工具。
+Routines are individual orders given to a squad or individual members of a squad. From here you	例程是向小队或其个别成员下达的一组命令。在这里，你
+can assign and edit the routines your soldiers will follow.	可以分配和编辑士兵要遵循的例程。
+You can also give your squads a monthly schedule. The routines are aligned along the top of	你也可以为小队制定月度日程。例程排列在表格顶部，
+the grid and the months of the year are shown down the left side. To assign different orders	一年中的月份排列在左侧。若要为每个月设置不同命令，
+for each month, line up with your chosen routine, go down the column, and press edit on the	找到所需例程所在列，向下找到相应月份，点击
+orders lining up with the month. You can also copy an order from any cell. Clicking on the	对应命令的编辑按钮。你也可以复制任何单元格中的命令。点击
+column itself will assign the routine to the selected squad.	该列本身，即可将例程分配给所选小队。
+The regular mining command digs a tunnel into the side of a mountain or deep underground.	常规采矿命令会在山体侧面或地下深处挖出隧道。
+This leaves a "ceiling" above and "floor" below the empty space you have mined.	挖出的空间上方会保留“顶层”，下方保留“地板”。
+A ramp is a special square that can be traversed to the level above. There must be space above a ramp	斜坡是一种可通往上一层的特殊地块。要使斜坡可用，其上方必须有空间，
+and an adjacent wall with an open floor above for the ramp to be usable.	旁边还必须有一面墙，且墙上方有可站立的开放地面。
+Digging a ramp into a wall on the same level will create a connection to the higher level and remove the ceiling.	在同层墙体上开挖斜坡，会移除顶层，并建立通向上一层的连接。
+Once a ramp is present, you can start using the regular mining command on the higher level.	有了斜坡，就可以在上一层使用常规采矿命令。
+Digging a channel will mine out a floor or wall at the current level and dig out a ramp at the level	开挖沟渠会挖除当前层的地板或墙体，并在下一层
+below. If there's no solid ground below the square being channeled, channeling will destroy the floor	挖出斜坡。如果下方没有坚实地面，开挖沟渠会移除地板，
+To easily see which ramps go up or down, click the Ramp Vision button by the minimap.	[C:7:0:0]点击小地图旁的“[C:5:0:1]斜坡视图[C:7:0:0]”按钮，可更方便地辨别斜坡通向上层还是下层。
+As your dwarves live and work in your fortress they will generate Refuse.	[C:7:0:0]矮人在要塞中生活和工作时，会产生[C:6:0:1]垃圾[C:7:0:0]。
+This includes everything from Bones and other Remains to worn-out Clothing.	[C:7:0:0]垃圾包括[C:6:0:1]骨头[C:7:0:0]和其他[C:6:0:1]残骸[C:7:0:0]，也包括破旧[C:6:0:1]衣服[C:7:0:0]。
+You can gather the Refuse in a Refuse Stockpile.	[C:7:0:0]可以用[C:6:0:0]垃圾储物堆[C:7:0:0]集中存放[C:6:0:1]垃圾[C:7:0:0]。
+Some Refuse can be put to use, for instance Shells can be turned into Crafts.	[C:7:0:0]有些[C:6:0:1]垃圾[C:7:0:0]还能利用，例如[C:6:0:1]贝壳[C:7:0:0]可以做成[C:6:0:1]工艺品[C:7:0:0]。
+Most of it will just generate foul smelling Miasma.	[C:7:0:0]但大多数垃圾只会产生恶臭的[C:0:0:1]瘴气[C:7:0:0]。
+If your Refuse Stockpile starts to fill up you can create a Dump Zone.	[C:7:0:0]如果[C:6:0:0]垃圾储物堆[C:7:0:0]快满了，可以创建[C:3:0:0]物品倾倒区[C:7:0:0]。
+Use the Zones menu to select Garbage Dump and draw a rectangle over a cliff or hole and	[C:7:0:0]在“[C:5:0:1]区域[C:7:0:0]”菜单中选择“[C:3:0:0]物品倾倒区[C:7:0:0]”，在悬崖或洞口上划出矩形，
+then designate Items for Dumping.	[C:7:0:0]然后指定要[C:3:0:1]倾倒[C:7:0:0]的[C:6:0:1]物品[C:7:0:0]。
+This can be done either from the Item's Info Sheet or by dragging a rectangle over everything	[C:7:0:0]可以从[C:5:0:1]物品信息面板[C:7:0:0]进行指定，也可以使用“[C:5:0:1]倾倒指定[C:7:0:0]”工具，拖出一个矩形，覆盖所有
+you want to dump using the Dump Designation tool.	[C:7:0:0]想要倾倒的物品。
+There are many treasures and perils deep underground.	地下深处蕴藏着许多宝藏，也潜伏着危险。
+In order to pursue the wealth of the earth, you must dig deeper!	要追寻大地的财富，就必须继续向下挖！
+Valuable gems and precious metals can be found, along with richer soil,	在那里可以找到珍贵宝石和贵金属，还有更肥沃的土壤、
+desperately needed water, fungal lumber, and other tantalizing mysteries.	急需的水、真菌木材，以及其他诱人的秘密。
+To attract migrants and build a successful settlement,	要吸引移民、建设繁荣的聚居地，
+you will need to keep your citizens happy.	就需要让居民保持快乐。
+There are many ways to maintain your citizens.	照顾居民有很多办法。
+Alcohol, good food, and personal rooms go a long way.	酒、美食和私人房间都能起到很大作用。
+Meet their needs by providing Meeting Areas and Locations for socializing, worship, and study.	[C:7:0:0]提供用于社交、祈祷和学习的[C:3:0:0]集会区[C:7:0:0]与[C:1:0:1]场所[C:7:0:0]，满足他们的需求。
+Monitor their thoughts to identify problems that you can solve.	留意居民的想法，找出可以解决的问题。
+Unhappy citizens can act out and cause trouble, and fewer people will risk travel to a	不快乐的居民可能发泄情绪、制造麻烦，也更少有人愿意冒险前往
+The current and optional path to victory is to have your fortress elevated to a barony.	目前有一条可选的胜利路线：先让要塞晋升为男爵领。
+From there, you can build your wealth, export goods, and attract more migrants until	之后，积累财富、出口商品、吸引更多移民，直到
+you become a county then a duchy. A happy fortress with many exports and massive wealth	晋升为伯爵领，再晋升为公爵领。居民快乐、出口兴旺且财富丰厚的要塞，
+can attract the existing monarch of the civilization.	能够吸引所在文明现任君主前来。
+This is the first step to completing the game. Next, you'll need to satisfy your ruler's needs,	这是通关的第一步。接下来，需要满足统治者的需求，
+and finally become a Mountainhome by seating them on a legendary throne with seven mythical symbols of office.	最终，让统治者坐上配有七件神话般权位象征的传奇王座，使要塞成为山之家。
+You'll be an accomplished player at this point.	到这一步，你已经是一位出色的玩家了。
+But this is only the beginning. Ultimately, your true goals are up to your imagination.	但这也只是开始。归根结底，你真正的目标由想象力决定。
+Call visitors from all over the world with the greatest tavern, library, or temple the world has ever known.	建造举世无双的酒馆、图书馆或神殿，吸引世界各地的访客。
+Build an elaborate water-powered contraption or domesticate previously untameable wild beasts.	建造精巧的水力机械，或驯服此前无法驯服的野兽。
+Settle in unliveable regions tormented by ancient evils and defend your fortress from zombies with your own army of vampires.	在被远古邪恶折磨、难以生存的地区定居，用自己的吸血鬼军队抵御僵尸。
+Your exploits will be recorded for Legends mode and by the master engravers in subsequent fortresses in your world.	你的壮举会载入传说模式，也会被这个世界后续要塞中的雕刻大师记录下来。
+Most adventurers have three principle needs: food, water, and sleep.	大多数冒险者有三项主要需求：食物、水和睡眠。
+Food can be obtained in towns, from the environment, or by butchering corpses with a sharp object.	可以在城镇或自然环境中寻找食物，也可以用利器屠宰尸体。
+You can find water in wells in towns, or in rivers. Salt and brackish waters are not safe for drinking.	城镇的水井和河流都能取水。咸水和半咸水不能安全饮用。
+Alcohol is also sufficient but may not be as easy to come by as it is in a fortress.	酒也能解渴，但可能不像在要塞里那样容易获得。
+You can sleep using the sleep option in either local play or travel mode.	在本地游玩或旅行模式中，都可以使用睡眠选项休息。
+If you have party members or followers, they will take turns keeping watch and reducing the chance of ambush.	如果有队伍成员或追随者，他们会轮流守夜，降低遭到伏击的概率。
+You also have needs according to your personality as seen in character creation and on your character sheet.	你还会根据性格产生其他需求，可在角色创建界面和角色信息面板中查看。
+If your needs aren't met, you won't perform quite as well in most situations.	若需求得不到满足，你在大多数情况下的表现都会有所下降。
+Combat with any creature will put you in immediate peril. Wounds can be serious and long-lasting, and most enemies	与任何生物战斗都会让你立即陷入危险。伤势可能严重而且长久，大多数敌人
+are capable of killing unprepared opponents.	都能杀死毫无准备的对手。
+The three main methods of attacking are striking, wrestling, and shooting. Items can also be thrown, and there are creatures	主要攻击方式有打击、摔跤和射击。物品也能投掷，有些生物
+with special abilities like spraying webs or breathing fire.	还具有喷网或喷火等特殊能力。
+The three main methods of defending are dodging, parrying, and blocking. If a strike is barely dodged, the defender may have no	主要防御方式有闪避、招架和格挡。若只是勉强避开攻击，防守者可能
+choice but to jump or scramble to another tile (or else be hit.) Parrying is by weapon skill and only works on other weapons.	只能跳到或扑向另一格，否则仍会被击中。招架依赖武器技能，而且只能抵挡武器攻击。
+Blocking is done with a shield and works on any attack, including fire and natural attacks.	格挡使用盾牌，能抵挡各种攻击，包括火焰和生物的天生攻击。
+You may create multiple characters during character creation. These are your party. You may select one party leader freely	创建角色时可以创建多人，组成你的队伍。你可以自由选择一位队长，
+and control them while the others follow, or control each party member tactically. The game ends when the entire party is deceased or retired.	控制队长并让其他人跟随，也可以在战术模式中分别控制各成员。当整支队伍全部死亡或退役时，游戏结束。
+For simplicity, only the party leader needs to eat and drink, though all party members will sleep aside from whoever is on watch.	为简化操作，只有队长需要吃喝；但除守夜者外，所有队员都需要睡眠。
+You can also obtain other followers through conversation, such as a guide or a mercenary. These followers may help or run away in combat,	你也可以通过交谈招募向导、雇佣兵等其他追随者。这些人可能在战斗中帮忙，也可能逃跑，
+and they cannot be controlled directly. Some followers leave when their task is completed, while others will stay until they are asked to leave.	而且无法直接控制。有些追随者任务完成后就会离开，另一些则会留下，直到你请他们离队。
+Followers will join according to your heroic reputation, relevant skill, destiny type, and total follower amount. The total follower amount is	追随者是否加入，取决于你的英雄声望、相关技能、命运类型和追随者总数。追随者总数上限
+based on the Leadership skill and the Social Awareness attribute.	[C:7:0:0]由[C:3:0:1]领导[C:7:0:0]技能和[C:2:0:1]社交洞察[C:7:0:0]属性决定。
+Along with combat, conversations are where most of the events in play happen. You can obtain quests, followers, information,	除了战斗，游戏中大多数事件都发生在交谈中。与世界里的居民交谈，可以获得任务、追随者、信息，
+and more by talking to the other inhabitants you find in the world.	以及更多内容。
+Most conversation events aside from trading take place interlaced with the rest of the game's actions, so don't be surprised if you	除交易外，大多数交谈事件都与游戏中的其他行动交错进行，因此
+don't always receive a reply immediately. The words of people that are talking to you will be highlighted.	对方不一定立即回复。与你交谈的人的话语会高亮显示。
+The Judge of Intent skill can help you keep tabs on the other speaker's mood. The people you are conversing with	[C:3:0:1]意图判断[C:7:0:0]技能有助于了解对方的情绪。与你交谈的人
+might become impatient or upset with you.	可能逐渐不耐烦，或对你感到不满。
+Trading and bartering happen during conversation. Trading occurs in shops and bartering happens in every other context.	交易和以物易物都通过交谈进行。在商店中进行的是交易，其他场合则是以物易物。
+Trading is very similar to trading with a Broker in Fortress mode. You can select any item in a store, or most	[C:7:0:0]交易方式与要塞模式中通过[C:5:0:1]交易员[C:7:0:0]进行交易十分相似。可以选择店内任意物品，或对方携带的大多数
+items that a person is carrying. You don't have to pick up an item in a store before you purchase it, but feel free to do so as long	物品。购买店内商品前不必先拿起来，但只要不离开店铺，也可以先拿起。
+as you don't leave the premises. Then select the items you'd like to trade, and see if you're successful. The trader might	然后选择愿意交换的物品，看看交易能否成功。如果报价接近对方可接受的程度，商人可能
+make a counteroffer if your offer is almost acceptable.	提出还价。
+In Adventure mode, currency plays a role. You can trade the accepted currency of whatever realm you are in for a precise measure of	冒险模式中，货币有实际作用。你可以用当前领地接受的货币，按准确的
+value. Other currencies can be traded as regular items. You might receive change in the currency of the realm. You can change your	价值购买商品。其他货币可以当作普通物品交易，对方也可能用当地货币找零。这样便能
+money between currency types in this fashion.	兑换不同种类的货币。
+There are several types of quests or quest-adjacent tasks that can be received during conversation or from a deity.	你可以在交谈中或从神祇那里接到几种不同类型的任务及相关事务。
+If you are a member of a hearth (a hearthperson), you can speak to your leader to receive an order. Typically this will involve protecting the locals	如果你是一名亲卫，可以找首领领取命令。通常是保护当地居民，
+or stirring up trouble with a neighboring hearth.	或向邻近的亲卫团挑起事端。
+If you speak to a priest at a temple or select the Chosen destiny, you might receive a divine quest.	如果与神殿中的祭司交谈，或选择了天选命运，就可能接到神圣任务。
+Finally, if you ask regular people about their troubles, they might tell you about various tasks which would result in a change in reputation	最后，询问普通人的烦恼，他们可能会告诉你各种任务，完成后可以改变你
+with that community. For instance, you could rescue a kidnapped child or slay a dragon in order to be recognized as a hero.	在当地群体中的声望。例如，救出被绑架的孩子或杀死巨龙，让人们认可你是英雄。
+In order to receive recognition for your accomplishments, you must tell the relevant people about them. The quest giver is a safe bet,	要让功绩得到认可，必须向相关的人讲述你的事迹。告诉任务发布者最稳妥，
+especially if it's a hearth order, but generally you can tell anybody in a group what you've done and they'll react and spread the news. Most villages	亲卫命令尤其如此。不过通常也可以告诉群体中的任何人，他们会作出反应并传播消息。例如，不论是否由当地人委托，
+will be happy that you've slain a dragon, for instance, whether you've received the quest from them or not, and it might be worth	大多数村庄都会为你屠龙而高兴。因此，到酒馆喝上一杯，
+a drink in the tavern to let the people you meet know who you are.	让遇见的人知道你是谁，或许很值得。
+Your retired and abandoned fortresses are available to visit, if you can remember where to find them. Abandoned fortresses	只要记得位置，你就能拜访自己退役或废弃的要塞。废弃要塞
+might contain new residents along with their old treasures...	可能在保留昔日宝藏的同时，迎来了新的住客……
+You don't always need to be slain in combat or starve to death. If you are in a friendly community, you can retire there.	冒险不一定非要以战死或饿死结束。身处友善的聚居地时，你可以在那里退役。
+Retired adventurers will continue their travels, and might show up in a future fortress or be hired by a future adventuring party.	退役的冒险者会继续旅行，可能出现在未来的要塞中，也可能受雇于以后的冒险队伍。
+You can also unretire characters directly if they are still alive.	只要角色还活着，也可以直接让其结束退役，重返冒险。
+Before you begin your travels, we'll familiarize you with the basic controls.	出发旅行之前，先来熟悉基本操作。
+Your view is focused on one elevation at a time. To move the camera around, hold the middle mouse button and drag the view.	视野一次只显示一个高度层。按住鼠标中键拖动，可移动视角。
+To change the camera's elevation, roll the mouse wheel.	[C:2:0:1]滚动鼠标滚轮[C:7:0:0]，可以改变视角所在的高度层。
+When your view is in the air above other tiles, you can usually see them below. If you are indoors or in a cavern, your view might be blocked by the ceiling.	视角位于其他地块上方的空中时，通常可以看到下方。如果身处室内或洞穴，顶层可能挡住视线。
+The view is dark underground. You can recenter on yourself with the	地下视野是黑暗的。要将视角重新对准自己，可以按
+hotkey or by clicking the recenter button.	热键，或点击重新居中按钮。
+Every creature in adventure mode moves simultaneously. Once you initiate movement, play will advance until you can move again. The duration of movement depends on gait, injuries, etc.	冒险模式中的所有生物同时行动。一旦开始移动，游戏就会推进，直到你能再次行动。移动耗时取决于步态、伤势等因素。
+The easiest way to move is to left click in the play area. Your character will path to the target tile if possible.	最简单的移动方式是左键点击游戏区域。只要路径可达，角色就会前往目标地块。
+If you right click in the play area, you'll open a context-sensitive menu of actions. This lets you select a destination more carefully.	右键点击游戏区域，会打开符合当前情境的操作菜单，便于更谨慎地选择目的地。
+It's very important to note that only one creature can be standing in a tile at a time.	请牢记，同一时间每格只能有一个生物站立。
+If you see brown downward triangles under your character, you will move very slowly and should try to stand if you are able.	如果角色下方出现棕色倒三角，移动速度就会很慢；只要能够站起，就应该尝试起身。
+You can alternate between standing and a prone position by clicking the indicated button or pressing	点击图示按钮，或按相应热键，即可在站立和俯卧之间切换：
+You can set your gait/speed and other movement options by clicking the indicated button or pressing	点击图示按钮，或按相应热键，可设置步态、速度及其他移动选项：
+. This menu will also show you how stealthfully you are moving.	。该菜单也会显示你目前的潜行程度。
+If you have a number pad, you can move one tile at a time by pressing	如果有数字小键盘，可以逐格移动，按
+etc. If you want to move carefully, confirming your selection, you can press	等方向键即可。若想谨慎移动，在行动前确认目标，可以按
+You can also flying to other altitudes by left/right clicking while the camera is adjusted.	调整视角高度后，也可以左键或右键点击，飞往其他高度层。
+You can click the indicated button or press	你可以点击图示按钮，或按
+to view your character's status. This can be used to view your injuries, skills and needs.	查看角色状态，包括伤势、技能和需求。
+to view your log. Your character generally starts with a variety of local knowledge, including a few places to have an adventure.	查看日志。角色通常一开始就掌握不少本地知识，其中包括一些适合冒险的地点。
+You can also speak to locals and inquire about their troubles.	你也可以与当地人交谈，询问他们的烦恼。
+to view and interact with your worn and carried items.	查看并操作身上穿戴或携带的物品。
+to interact with nearby objects and environmental features. In particular, this is an easy way to pick things up.	与附近物体和环境设施交互。这也是拾取物品的便捷方式。
+Right click on people to initiate conversations. You can click the indicated button or press	右键点击人物可开始交谈。点击图示按钮，或按
+to continue an active conversation. People can share troubles they'd like your help with, and you can also trade with shopkeepers or barter with most others.	继续当前对话。人们会讲述希望你帮助解决的烦恼；你也可以与店主交易，或与大多数其他人以物易物。
+Conversations, like movement, take place over time. If you engage in a conversation, you'll generally wait for a reply before you can act again.	与移动一样，交谈也会消耗时间。开始交谈后，通常要等到对方回复才能再次行动。
+to butcher a carcass or to engage in crafting activities. Hunting is an important way to get food. The base game has limited crafting.	屠宰尸体或进行制作。狩猎是重要的食物来源，原版游戏的制作内容则较为有限。
+You can strike, wrestle, or shoot to engage in combat. You can also throw objects in your inventory.	可以通过打击、摔跤或射击战斗，也可以投掷物品栏中的物品。
+Moving toward an active opponent will initiate a default attack, or you can use the strike and wrestle buttons (or right click Combat option) to	向正在交战的敌人移动，会发起默认攻击。也可以使用打击、摔跤按钮，或右键菜单中的战斗选项，
+specify your attack more precisly.	更精确地指定攻击方式。
+to yield in combat. If the conflict has not reached a No Quarter state, your opponent should stand down.	在战斗中投降。只要冲突尚未进入“不留活口”状态，对手通常就会停止攻击。
+You can also demand your opponent yield using a conversation option.	你也可以通过交谈选项，要求对方投降。
+to draw or strap your weapon. If your weapons are drawn and you aren't a local soldier, people may panic.	拔出或收起武器。如果你并非当地士兵，亮出武器可能引起恐慌。
+If you miss an announcement or would like to review old messages, you can click the indicated button or press	若错过公告或想回看之前的消息，可以点击图示按钮，或按
+Here you'll see a list of party members, companions, and pets, along with their general location if you know it.	这里会列出队员、同伴和宠物，以及你所知的他们的大致位置。
+You can assume control of party members. Companions who join you later in the journey can't generally be controlled manually.	你可以接管队伍成员。旅途中后来加入的同伴通常不能手动控制。
+You can also set whether a party member will be controlled manually during tactical mode, or whether they'll be controlled by the computer.	你还可以设置，在战术模式中由自己手动控制某位队员，还是交由电脑控制。
+In tactical mode, you can control every party member manually if you wish, allow you to coordinate movements and attack with more precision.	在战术模式中，只要愿意，就可以手动控制每位队员，更精确地协调移动和攻击。
+Tactical mode can be set by a button near the companion mode button on the main menu if you have multiple party members.	如果有多位队员，可以通过主菜单中同伴模式按钮附近的按钮设置战术模式。
+This is your adventurer's log. It functions as an encyclopedia of your known world, and also keeps track of important agreements, such as quests.	这是冒险者日志，既是已知世界的百科全书，也会记录任务等重要约定。
+In the beginning, you'll probably find it populated with a variety of rumors and knowledge known to everybody from your home. This could include some opportunities for adventure.	刚开始时，日志通常已有家乡人尽皆知的各种传闻和知识，其中可能藏着冒险机会。
+Here you can interact with the objects you are carrying. Items can be dropped, worn, eaten, thrown, named, etc. The icon tooltips describe your options for each item.	这里可以操作携带的物品，例如丢弃、穿戴、食用、投掷和命名。每件物品旁图标的悬停提示会说明可用操作。
+Inventory items are all worn, held, in containers, or otherwise related to specific body parts. There is no abstract inventory space.	物品栏中的物品都实际穿戴、拿持、装在容器中，或以其他方式与身体部位相连，并不存在抽象的物品栏空间。
+If you are carrying too much, you'll see an encumbrance indicator above the inventory button. Encumbrance can cause you to move very slowly and should be avoided if possible.	携带过多物品时，物品栏按钮上方会出现负重提示。过重会让移动极其缓慢，应尽量避免。
+This is the movement options menu. Here you can choose your gait and see your current stealth profile.	这是移动选项菜单。在这里可以选择步态，并查看当前的潜行状况。
+Moving quickly costs energy. You'll begin to move slowly or even collapse if you sprint for too long.	快速移动会消耗体力。冲刺太久，就会开始减速，甚至倒下。
+If a gait has two numbers, the first number is the starting speed for the gait, and the second is the maximum speed.	如果一种步态显示两个数值，第一个是起始速度，第二个是最高速度。
+Continue moving in the same direction to build up speed. If you or your mount are moving quickly, your attacks gain velocity.	持续朝同一方向移动可以加速。你或坐骑高速移动时，攻击也会获得额外速度。
+This is the hold and climb menu.	这是抓握与攀爬菜单。
+You can climb trees. First you must establish a hold with a free grasp. Then you can continue to move up into the air, while maintaining a hold on an adjacent tile.	你可以爬树。先用空闲的抓握部位抓住支点，然后在保持抓住相邻地块的同时，继续向上移动。
+If you climb atop certain large branches, you can walk on them freely.	爬到某些粗大的树枝上后，就可以自由行走。
+Some surfaces like walls can be also climbed, but these require climbing skill to hold reliably.	墙壁等某些表面也能攀爬，但需要攀爬技能才能稳稳抓住。
+You can jump while climbing, and you can also release your hold. In these ways, you might reach areas you can't otherwise reach.	攀爬时可以跳跃，也可以松手。借助这些动作，你或许能到达其他方式无法到达的地方。
+The hold menu also allows you to lead and mount pets. You can claim stray animals as pets here too. To name your new pets, use the talk menu.	抓握菜单也可以牵引和骑乘宠物，还能将无主动物收为宠物。要为新宠物命名，请使用交谈菜单。
+This is the conversation menu.	这是交谈菜单。
+Conversations occur over time, like movements and attacks.	与移动和攻击一样，交谈也需要时间。
+When speaking to somebody, you'll choose what to say, and then time will pass while you are speaking and waiting for a reply.	与人交谈时，你先选择说什么，然后在说话和等待回复的过程中，时间会继续推进。
+There are many conversation options. Important ones to note at first are inquiring about troubles, which might set you on the road to adventure,	交谈选项有很多。刚开始尤其值得留意的是询问烦恼，这可能让你踏上冒险之路，
+asking for duties from your leader if you have one, and the ability to trade in shops. You can also ask anybody to join you, but many people will be shy of danger.	向首领领取职责，以及在商店交易。你也可以邀请任何人同行，但很多人会畏惧危险。
+This is the performance menu. Here you can initiate a poetry recital, tell a story, dance, sing, or play a musical instrument.	这是表演菜单。可以朗诵诗歌、讲故事、跳舞、唱歌或演奏乐器。
+You can also compose poems, songs, and choreography if you know a relevant art form.	如果掌握了相关艺术形式，还可以创作诗歌、歌曲或舞蹈编排。
+Performance occur over a period of time related to the specific art form or piece. You can interrupt the performance as it unfolds, commit to finishing it and wait for its completion, or continue in steps.	表演持续时间取决于具体艺术形式或作品。表演中可以中断、决定一直表演完并等待结束，也可以分步推进。
+Compositions take more time, and you'll pass through a period of time similar to sleeping, resting, and traveling.	创作耗时更长，会像睡眠、休息和旅行一样，让一段时间连续流逝。
+This is the butchering and crafting menu.	这是屠宰与制作菜单。
+Butchering requires a sharp-edged weapon or tool, as well as a butcherable carcass. Butchering is an excellent source of meat. The other products cannot currently be used.	屠宰需要有刃口的武器或工具，以及可以屠宰的尸体。屠宰是很好的肉食来源，但其他产物目前还无法使用。
+Crafting in the base game is limited to constructing a stone axe necessary to fell trees. You can pick up few rocks and a tree branch to get started.	原版游戏的制作仅限于打造伐木所需的石斧。捡几块石头和一根树枝，就可以开始。
+Any ability you possess that doesn't fit elsewhere will appear here. For instance, many creatures can spit or pet animals. Others can breathe fire.	你拥有但不属于其他分类的能力会显示在这里。例如，许多生物可以吐唾沫或抚摸动物，有些还能喷火。
+Some abilities, like the flight of winged creatures, can just be used during regular movement without needing this menu.	某些能力，例如有翼生物的飞行，可以直接在普通移动时使用，无需打开这个菜单。
+If you obtain any magical powers during your adventure, you will find them in this menu.	如果在冒险中获得魔法力量，也会在此菜单中找到。
+This is the attack menu. Here you can strike creatures with an item or body part, or you can initiate a dodge or parry movement.	这是攻击菜单。可以用物品或身体部位打击生物，也可以发起闪避或招架动作。
+Attacks target specific body parts and have various modifiers. You will select these in the subsequent menus.	攻击针对具体身体部位，并带有各种修正项。接下来的菜单会让你选择这些内容。
+There is a random element to outcomes and some body parts will be easier or harder to hit from moment to moment.	结果包含随机因素，各身体部位在不同时刻的命中难度也会变化。
+However, skill is the most important determiner of hits versus misses.	不过，技能是决定命中与否的最重要因素。
+Once a strike hits, the materials and velocity are used to determine the damage.	打击命中后，会根据材料和速度计算伤害。
+Skill and item quality can help with this, but sometimes it's just not possible to damage a target material with a weaker material.	技能和物品品质会有帮助，但较弱的材料有时就是无法损伤更坚硬的目标材料。
+For this reason, it's important to obtain better equipment when you can.	因此，只要有机会，就应设法获得更好的装备。
+This is the wrestling menu. Here you can grab creatures and then execute a variety of wrestling moves. You can also initiate defensive actions here.	这是摔跤菜单。可以抓住生物，再施展各种摔跤动作，也可以在这里采取防御行动。
+Wrestling involves specific attacking body parts and specific target body parts.	摔跤涉及具体的攻击身体部位和目标身体部位。
+You can grab creatures with your grasps and limbs, and both the target and attacking part determine which wrestling moves are available.	可以用抓握部位和肢体抓住生物。能使用哪些摔跤动作，由攻击部位和目标部位共同决定。
+Relative body size is the most important determiner of wrestling outcomes. A character's wrestling skill is also important.	双方体型差距是摔跤结果最重要的决定因素，角色的摔跤技能也很重要。
+Unless you are very skilled, you should not attempt to wrestle larger creatures, and you should try to avoid being grabbed by them.	除非十分熟练，否则不要尝试与更大的生物摔跤，也应尽量避免被它们抓住。
+This is the projectile aiming menu. You can shoot projectiles with a launcher like a bow or crossbow, and you can throw almost any object that you are carrying in a grasp.	这是远程瞄准菜单。可以用弓、弩等发射器射击，也可以投掷手中拿着的几乎任何物品。
+You can initiate throwing from the inventory menu, or by pressing	可以从物品栏菜单发起投掷，也可以按
+Be warned that shooting a projectile currently has a long recovery time, so you may be subject to attack after you fire.	请注意，目前发射弹药后的恢复时间较长，因此射击后可能遭到攻击。
+Friendly fire isn't currently possible, so your companions should be safe.	目前不会误伤友军，因此同伴应该是安全的。
+Here you can travel great distances without having to move in the local mode. You still become thirsty, hungry, and drowsy while traveling.	这里可以长途旅行，不必在本地模式中逐步移动。旅行时仍会口渴、饥饿和困倦。
+You are also still subject to attack or ambush, though you can see certain groups on the map and may be able to avoid them.	旅行中仍可能遭到攻击或伏击，不过你能在地图上看到某些队伍，也许可以绕开。
+You can stop traveling using the stop travel button below or by pressing .	点击下方的停止旅行按钮，或按相应热键，即可停止旅行。
+This is the sleep menu. Here you can sleep to overcome drowsiness or wait to pass time.	这是睡眠菜单。可以睡觉消除困倦，也可以等待以打发时间。
+If you have multiple party members, your chances of being ambushed will be greatly reduced.	有多位队员时，遭到伏击的概率会大幅降低。
+It's also generally wise to try to sleep in friendly places, but you might need to obtain permission.	通常最好在友善的地方睡觉，但可能需要先取得许可。
+
+# Help headings, navigation, key-binding connectors and shared short fragments.
+Camera controls	镜头控制
+and	和
+Retirement	退役
+Fortress mode	要塞模式
+Trading	交易
+Conversations	交谈
+Quests and reputation	任务与声望
+The party and followers	队伍与追随者
+Survival	生存
+Travel	旅行
+This is travel mode.	这是旅行模式。
+.	。
+Sleep and rest	睡眠与休息
+Wrestle	摔跤
+Shoot and throw	射击与投掷
+from play.	，在游戏中直接操作。
+Strike	打击
+Abilities	能力
+This is the abilities menu.	这是能力菜单。
+Work orders	工单
+Squads	小队
+This is the squad menu.	这是小队菜单。
+Justice	司法
+Dig deeper	向下再挖
+Traps and levers	陷阱和控制杆
+Bins, bags, and barrels	箱子, 袋子和圆桶
+Planting	种植
+Offices and administrative work	办公室和行政工作
+Ore and smelting	矿石与熔炼
+Trade	贸易
+Stockpiles	储物堆
+Welcome to Dwarf Fortress	欢迎来到矮人要塞
+On your own!	自己来！
+Other food sources	其他食物来源
+Fishing	捕鱼
+Gathering	采集
+Butchering	屠宰
+Companions	同伴
+This is the companion menu.	这是同伴菜单。
+Menu overview	菜单概览
+to view the message log.	查看消息记录。
+Movement	移动
+etc.	等。
+When flying, use	飞行时，使用
+etc. and	等，以及
+Goals	目标
+Adventure mode	冒险模式
+Happiness and stress	幸福与压力
+Shelter	住所
+Labor	劳动
+Drink	饮料
+Burrows	活动区
+Just the beginning	这才刚刚开始
+There's a lot more to learn!	要学的还有很多呢!
+Preparing for the Caravan	为商队做准备
+Alerts	警报
+There has been one already!	已经出现过一条了！
+Information sheets	信息表
+Building	建筑
+Woodcutting	伐木
+Meeting areas and locations	集会区和地点
+Taverns	酒馆
+Temples	神殿
+Hospitals	医院
+Chief Medical Dwarf	首席矮人医师
+Libraries	图书馆
+Guildhalls	行会大厅
+Handling light aquifers	处理轻含水层
+Wells	井
+Combat	战斗
+Hold and climb	抓握与攀爬
+Nobles and administrators	贵族和管理员
+Stocks	库存
+Minecart routes	矿车路线
+Ramps and channels	坡道和沟渠
+Refuse and dumping	垃圾和倾倒
+Clothing	服装
+Mining	挖掘
+order also works.	顺序操作也可以。
+Perform	表演
+Zones	区域
+Military	军事
+The most important buttons	最重要的按钮
+The World	世界
+Work details	劳动分组
+Inventory	物品栏
+This is the inventory menu.	这是物品栏菜单。
+Movement options	移动选项
+Butcher and craft	屠宰与制作
+Talk	交谈
+Adventurer's log	冒险者日志
+Fisherdwarf	捕鱼矮人
+Woodcutter	樵夫
+Miner	矿工
+Welcome adventurer!	欢迎，冒险者！
+(7 of 8)	（第 7 页，共 8 页）
+(8 of 8)	（第 8 页，共 8 页）
+, and	，以及
+,	、
+(5 of 8)	（第 5 页，共 8 页）
+(6 of 8)	（第 6 页，共 8 页）
+(4 of 8)	（第 4 页，共 8 页）
+and create a hole instead.	形成一个洞口。
+(2 of 8)	（第 2 页，共 8 页）
+(3 of 3)	（第 3 页，共 3 页）
+(2 of 3)	（第 2 页，共 3 页）
+(1 of 3)	（第 1 页，共 3 页）
+(1 of 8)	（第 1 页，共 8 页）
+(3 of 8)	（第 3 页，共 8 页）
+etc. to change altitude.	等来改变高度。
+miserable fortress.	痛苦不堪的要塞。
+Next	下一页
+Previous	上一页
+Done	完成
+Okay	确定
+[Viewed]	[已查看]
+[Completed]	[已完成]
+
+# Help overview and every native interactive tutorial objective.
+The game is open-ended and you can do whatever you choose. If you'd like a goal, try to join a village hearth and improve your reputation.	游戏是开放式的，你可以随心所欲。若想有个目标，不妨加入村庄的亲卫团，并提升自己的声望。
+The guides here will suggest other possible avenues of play.	这里的指南还会介绍其他可尝试的玩法。
+And remember: Losing is fun, and now it's personal!	记住：[C:2:0:1]输了才好玩，而这次轮到你亲身体验！[C:7:0:0]
+The game is open-ended and you can do whatever you choose. If you'd like a goal, try to become a barony, then a Mountainhome.	游戏是开放式的，你可以随心所欲。若想有个目标，不妨先晋升为男爵领，再发展为山之家。
+More likely, your dwarves will starve, unless you read the first few guides here!	不过，你的矮人更可能先饿死，除非你读一读这里前几篇指南！
+Stockpile wood	储存木头
+Open building mode	打开建筑模式
+Place carpenter's workshop	放置木匠工坊
+Construct workshop	建造工坊
+Click workshop	点击工坊
+Add a "Make bed" task	添加“制作床”任务
+Make the bed	制作床
+Place a bed	放置床
+Click a citizen or creature	点击居民或生物
+Close the information sheet	关闭信息表
+Dismiss the large red alert	关闭大型红色警报
+Click the help button	点击帮助按钮
+Don't show again	不再显示
+Left click to move	点击鼠标左键移动
+Right click to move	点击鼠标右键移动
+Move the camera	移动镜头
+Move the camera up	将视角向上移动一层
+Move the camera down	将视角向下移动一层
+Zoom in	放大
+Zoom out	缩小
+Open mining mode	打开挖掘模式
+Start stairway	指定楼梯起点
+End stairway	指定楼梯终点
+Unpause	解除暂停
+Finish mining	完成挖掘
+Open stockpile mode	打开储物堆模式
+Place All stockpile	设置接收全部物品的储物堆
+Open tree-felling mode	打开伐木模式
+Designate tree	指定树木
+Chop down tree	砍倒树木
+Room completed ({d} of {d})	房间已挖掘（{d}/{d}）	t
+
+# Complete adventure introductions, including all companion and rescue branches.
+You've finally got your equipment together, such as it is. Now it's time for action and adventure!	你终于把装备凑齐了，虽然算不上多好。现在正是行动与冒险之时！
+In the rush of excitement, you've forgotten where you were going to go.	在兴奋之中，你忘记了原本打算前往何处。
+After a long journey, you are here to meet your most trusted companion.	经过漫长的旅途，你来到这里与最信任的同伴会合。
+Your most trusted companions have made the journey to meet you here today.	你最信任的同伴们远道而来，今天将在这里与你会合。
+Your most trusted companion has made the journey to meet you here today.	你最信任的同伴远道而来，今天将在这里与你会合。
+Your most trusted local companions are meeting you here today.	你最信任的本地同伴今天将在这里与你会合。
+Just reunited after a long journey, you are together with your companions again.	漫长的旅途结束后，你刚与同伴们重逢，大家又聚到了一起。
+Your wanderings have brought you to this place after a long journey.	经过漫长的旅途，你一路漫游来到此地。
+Perhaps some of the people here will be worth talking to before you continue on your way.	继续上路之前，或许值得和这里的一些人谈谈。
+Let the party venture forth!	让队伍踏上冒险之旅吧！
+Perhaps some of your friends here can remind you.	也许这里的朋友能提醒你。
+Perhaps some of your friends here have ideas.	也许这里的朋友有些主意。
+A foolhardy soul might try to rescue the child that has been kidnapped.	胆大莽撞的人或许会尝试营救那个被绑架的孩子。
+A foolhardy soul might try to rescue the children that have been kidnapped.	胆大莽撞的人或许会尝试营救那些被绑架的孩子。
+{p} is from here and might have some local information.	{p}来自这里，或许知道一些当地的情况。	t
+
+# Siege, bandit, and vault starting situations; names retain native name handling.
+The peaceful town of {e} is threatened! The forces of {e} are on the march.	宁静的城镇{e1}正受到威胁！{e2}的大军正在进逼。	t
+The peaceful town of {e} is threatened! The forces of darkness are on the march.	宁静的城镇{e}正受到威胁！黑暗势力的大军正在进逼。	t
+The enemy will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.	敌人绝不会手下留情。时间所剩无几，你必须逃离。也许还能说服家人和朋友一起离开。
+Commanded by {p}, they will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.	他们由{p}统领，绝不会手下留情。时间所剩无几，你必须逃离。也许还能说服家人和朋友一起离开。	t
+The citizens of {e} are plagued by bandits.	{e}的居民深受匪患困扰。	t
+The gang has even sent some troublemakers to harass people right here in town.	这伙强盗甚至派了些暴徒，就在镇上骚扰居民。
+The gang led by {p} has even sent some troublemakers to harass people right here in town.	{p}率领的这伙强盗甚至派了些暴徒，就在镇上骚扰居民。	t
+Legends speak of an ancient vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.	传说中有一座古老的秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+Legends speak of an ancient vault, {e}, where {p} wrested her power from the Underworld by invoking her true name.	传说中有一座古老的秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+Legends speak of an ancient vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.	传说中有一座古老的秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+Legends speak of a vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.	传说中有一座秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+Legends speak of a vault, {e}, where {p} wrested her power from the Underworld by invoking her true name.	传说中有一座秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+Legends speak of a vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.	传说中有一座秘库{e}，{p}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	t
+The location of this place is well-known, but none have penetrated its secrets. If the true name of the monster can be uncovered, you might be able to end this terror forever.	这处地点的位置人尽皆知，却从未有人揭开其中的秘密。如果能查明那怪物的真名，你或许就能永远终结这场恐怖。
+
+# Divine quest directions and every hunger/thirst/sleep warning combination.
+You will have to leave this structure first before you can travel. Try to make your way out to the settlement.	你必须先离开这座建筑，才能开始旅行。试着走出去，来到聚居地中。
+Do you feel the pull? You sense the direction of my representative. It is possible to travel quickly to reach them, or you may journey more deliberately. It is your decision.	感受到那股牵引了吗？你能感知到我使者所在的方向。你可以快速旅行前去会面，也可以从容地一步步前行。由你决定。
+Congratulations! Now you must return this precious object to its proper home.	祝贺你！现在必须将这件珍贵的物品送回它应在的地方。
+This place is dangerous. Steel yourself against ancient enemies. Try not to let yourself be surrounded, and remain standing. Enter and vanquish! Or slip in unseen. Securing the treasure is all that matters.	这里十分危险。坚定意志，准备迎战古老的敌人。尽量避免被包围，并保持站立。进去征服他们吧！也可以悄悄潜入。夺得宝藏才是最重要的。
+You are close. Follow your senses to the entrance.	你已经很近了。跟随感知，找到入口。
+Remember that ice and snow can be heated by a campfire.	记住，可以用营火加热冰雪。
+Congratulations, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well.	祝贺你，我忠诚的天选者！若再次献上你的服务，还有其他事情需要你效劳。如果愿意，你现在也可以按照自己的心意生活。你做得很好。
+With the treasure, you are near to glory and fulfillment of your task. Your senses can lead you on your return journey.	宝藏已在手中，你离荣耀与完成使命只差一步。你的感知能为归途指引方向。
+You may return the object to the faithful by gifting it to one of the priests, or you may simply drop it in this structure wherever you see fit.	你可以把物品赠予其中一位祭司，将它交还给信众；也可以直接放在这座建筑中任何你认为合适的地方。
+My other worshippers? As you wish, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well.	我的其他信徒？如你所愿，我忠诚的天选者！若再次献上你的服务，还有其他事情需要你效劳。如果愿意，你现在也可以按照自己的心意生活。你做得很好。
+Ungrateful apostate!	忘恩负义的叛教者！
+You are approaching your destination. End your travels now and prepare yourself.	你正接近目的地。现在结束旅行，做好准备。
+Greetings. I am {p}, and I have chosen you.	你好。我是{p}，我已选中了你。	t
+Greetings. I am {p}, and I have chosen you as my instrument of {r}.	你好。我是{p}，我已选中你，作为我彰显{r}的使者。	t
+The remnants of creation, {e}, belong with my followers, {e}.	创世的遗留之物{e1}，应当归于我的信众{e2}。	t
+Seek out {p} in {e} and fulfill your destiny.	去{e}寻找{p}，完成你的天命。	t
+You've found {p}! My chosen, you must speak to them and offer your service.	你找到了{p}！我的天选者，你必须与其交谈，表示愿意效劳。	t
+You seek {e}.	你要寻找的是{e}。	t
+If you do not find the location in your log, ask others for directions. You may also follow the pull from your senses.	如果日志里没有这处地点，就向他人问路。你也可以跟随感知中的牵引。
+The journey is long. Be sure to travel to {e}, rather than walking leisurely.	路途遥远。务必使用旅行前往{e}，别再慢悠悠地步行。	t
+But my chosen, you are in a state! See to yourself before you face what's ahead.	但是，我的天选者，你现在的状态很糟！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of drink and sustenance! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水和食物！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of sustenance and sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要食物和睡眠！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of sustenance! See to yourself before you face what's ahead.	但是，我的天选者，你需要食物！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水和睡眠！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of drink! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。
+But my chosen, you are in need of sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要睡眠！面对前方的挑战之前，先照顾好自己。
+
+# Complete native paragraphs with key bindings preserved as captures.
+Your view is focused on one elevation at a time. To move the camera around, press {k} or hold the middle mouse button and drag the view.	视野一次只显示一个高度层。要移动视角，请按{k}，或按住鼠标中键拖动视野。	t
+To change the camera's elevation, press {k} and {k} or roll the mouse wheel. Hold shift to move faster.	要改变视角所在的高度层，请按{k1}和{k2}，或[C:2:0:1]滚动鼠标滚轮[C:7:0:0]。按住 Shift 可加快移动。	t
+The view will be dark underground until you begin mining. You can move the camera to the surface with the surface button (highlighted.) The {k} hotkey will recenter on your wagon.	开始采矿之前，地下视野会是一片黑暗。点击已高亮的地表按钮可将视角移到地表。按{k}热键可将视角重新对准货车。	t
+You can zoom in and out of the play area using {k} , Ctrl+mouse wheel, or the indicated buttons.	你可以使用{k}、[C:2:0:1]Ctrl＋鼠标滚轮[C:7:0:0]或图示按钮，缩放游戏区域。	t
+Now we'll unpause the game and let the miner finish the task. Press {k} to unpause or use the highlighted controls at the top of the screen. You should pause regularly starting out.	现在解除暂停，让矿工完成任务。按{k}解除暂停，也可使用屏幕顶部已高亮的按钮。刚上手时应经常暂停。	t
+If the Stockpile menu is still open, you can close it now by right-clicking. Right-clicking can always be used to close most menus, as well as {k} .	如果“[C:5:0:1]储物堆[C:7:0:0]”菜单仍然开着，现在可以右键关闭。大多数菜单都可以右键关闭，也可以按{k}。	t
+The view is dark underground. You can recenter on yourself with the {k} hotkey or by clicking the recenter button.	地下视野是黑暗的。要将视角重新对准自己，可以按{k}热键，或点击重新居中按钮。	t
+It's very important to note that only one creature can be standing in a tile at a time. If you see brown downward triangles under your character, you will move very slowly and should try to stand if you are able. You can alternate between standing and a prone position by clicking the indicated button or pressing {k} .	请牢记，同一时间每格只能有一个生物站立。如果角色下方出现棕色倒三角，移动速度就会很慢；只要能够站起，就应该尝试起身。点击图示按钮，或按{k}，即可在站立和俯卧之间切换。	t
+You can set your gait/speed and other movement options by clicking the indicated button or pressing {k} . This menu will also show you how stealthfully you are moving.	点击图示按钮，或按{k}，可设置步态、速度及其他移动选项。该菜单也会显示你目前的潜行程度。	t
+If you have a number pad, you can move one tile at a time by pressing {k} etc. If you want to move carefully, confirming your selection, you can press {k} etc.When flying, use {k} etc. and{k} etc. to change altitude. You can also flying to other altitudes by left/right clicking while the camera is adjusted.	如果有数字小键盘，可以按{k1}等方向键逐格移动。若想谨慎移动，在行动前确认目标，可以按{k2}等键。飞行时，使用{k3}等键以及{k4}等键来改变高度。调整视角高度后，也可以左键或右键点击，飞往其他高度层。	t
+You can click the indicated button or press {k} to view your character's status. This can be used to view your injuries, skills and needs.	你可以点击图示按钮，或按{k}查看角色状态，包括伤势、技能和需求。	t
+You can click the indicated button or press {k} to view your log. Your character generally starts with a variety of local knowledge, including a few places to have an adventure. You can also speak to locals and inquire about their troubles.	你可以点击图示按钮，或按{k}查看日志。角色通常一开始就掌握不少本地知识，其中包括一些适合冒险的地点。你也可以与当地人交谈，询问他们的烦恼。	t
+You can click the indicated button or press {k} to view and interact with your worn and carried items.	你可以点击图示按钮，或按{k}查看并操作身上穿戴或携带的物品。	t
+You can click the indicated button or press {k} to interact with nearby objects and environmental features. In particular, this is an easy way to pick things up.	你可以点击图示按钮，或按{k}与附近物体和环境设施交互。这也是拾取物品的便捷方式。	t
+Right click on people to initiate conversations. You can click the indicated button or press {k} to continue an active conversation. People can share troubles they'd like your help with, and you can also trade with shopkeepers or barter with most others.	右键点击人物可开始交谈。点击图示按钮，或按{k}继续当前对话。人们会讲述希望你帮助解决的烦恼；你也可以与店主交易，或与大多数其他人以物易物。	t
+You can click the indicated button or press {k} to butcher a carcass or to engage in crafting activities. Hunting is an important way to get food. The base game has limited crafting.	你可以点击图示按钮，或按{k}屠宰尸体或进行制作。狩猎是重要的食物来源，原版游戏的制作内容则较为有限。	t
+You can click the indicated button or press {k} to yield in combat. If the conflict has not reached a No Quarter state, your opponent should stand down. You can also demand your opponent yield using a conversation option.	你可以点击图示按钮，或按{k}在战斗中投降。只要冲突尚未进入“不留活口”状态，对手通常就会停止攻击。你也可以通过交谈选项，要求对方投降。	t
+You can click the indicated button or press {k} to draw or strap your weapon. If your weapons are drawn and you aren't a local soldier, people may panic.	你可以点击图示按钮，或按{k}拔出或收起武器。如果你并非当地士兵，亮出武器可能引起恐慌。	t
+If you miss an announcement or would like to review old messages, you can click the indicated button or press {k} to view the message log.	若错过公告或想回看之前的消息，可以点击图示按钮，或按{k}查看消息记录。	t
+This is the projectile aiming menu. You can shoot projectiles with a launcher like a bow or crossbow, and you can throw almost any object that you are carrying in a grasp. You can initiate throwing from the inventory menu, or by pressing {k} from play.	这是远程瞄准菜单。可以用弓、弩等发射器射击，也可以投掷手中拿着的几乎任何物品。可以从物品栏菜单发起投掷，也可以在游戏中直接按{k}。	t
+You can stop traveling using the stop travel button below or by pressing .{k} .	点击下方的停止旅行按钮，或按{k}，即可停止旅行。	t
+
+# Help overview, tutorial choice, and game-ending panels.
+Start tutorial	开始教程
+Skip tutorial	跳过教程
+And remember: Losing is fun!	记住：[C:2:0:1]输了才好玩！[C:7:0:0]
+Dwarf Fortress Adventure	矮人要塞：冒险
+Dwarf Fortress	矮人要塞
+Abandoned	废弃
+Your settlement has been abandoned.	你的定居点已被废弃。
+Retired	退役
+Your fortress has settled into the rhythm of day-to-day living, beyond your meticulous concern.	你的要塞已步入日复一日的生活，不再需要你事无巨细地照料。
+Conquered	被征服
+Your strength has been broken.	你的力量已被摧毁。
+Withered	衰亡
+Your settlement has crumbled to its end.	你的聚居地已衰败覆灭。
+Dead	死亡
+Your adventure has come to an end.	你的冒险已经结束。
+You settle in this location...	你在此地定居下来……
+
+# Complete two-column help directory, including every popup guide entry.
+Interactive tutorial	互动式教程
+Preparing for the caravan	为商队做准备
+Information and guides	信息和指南
+Popup: Zones	弹窗:区域
+Popup: Burrows	弹窗:活动区
+Popup: Hauling	弹窗:运输
+Popup: Stocks	弹窗:库存
+Popup: Work details	弹窗：劳动分组
+Popup: Nobles	弹窗:贵族
+Popup: Justice	弹窗:司法
+Popup: Squads	弹窗:小队
+Popup: The world	弹窗:世界
+Popup: Work orders	弹窗:工作清单
+Popup: Companions	弹窗：同伴
+Popup: Adventurer's log	弹窗：冒险者日志
+Popup: Inventory	弹窗：物品栏
+Popup: Movement options	弹窗：移动选项
+Popup: Hold and climb	弹窗：抓握与攀爬
+Popup: Talk	弹窗：交谈
+Popup: Perform	弹窗：表演
+Popup: Butcher and craft	弹窗：屠宰与制作
+Popup: Abilities	弹窗：能力
+Popup: Strike	弹窗：打击
+Popup: Wrestle	弹窗：摔跤
+Popup: Shoot and throw	弹窗：射击与投掷
+Popup: Travel	弹窗：旅行
+Popup: Sleep and rest	弹窗：睡眠与休息

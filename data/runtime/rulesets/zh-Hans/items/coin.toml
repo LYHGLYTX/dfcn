@@ -1,0 +1,19 @@
+base = "items::coin"
+
+[[rulesets]]
+[rulesets.rules]
+# A standalone noun remains 硬币; a material-bearing name uses 金币/银币/etc.
+"{main}" = "{main}"
+"{^0} {main}" = "{^0}币"
+
+[[rulesets]]
+name = "^0"
+[rulesets.rules]
+"{::materials}" = "{::materials}"
+"{::materials::adjective}" = "{::materials::adjective}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"coin" = "硬币"
+"coins" = "硬币"

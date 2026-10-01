@@ -1,0 +1,47 @@
+<data-definition>
+    <bitfield-type type-name='external_flag' base-type='uint32_t'> bay12: EXTERNAL_FLAG_*
+        <flag-bit name='automatic_professions_disabled' original-name='AUTOMATIC_PROFESSIONS_DISABLED'/>
+    </bitfield-type>
+
+    <struct-type type-name='gamest'>
+        <compound type-name='command_linest' name='command_line'/>
+        <compound type-name='main_interface' name='main_interface'/>
+        <compound type-name='minimapst' name='minimap'/>
+        <compound type-name='mod_managerst' name='mod_manager'/>
+        <compound type-name='hash_rngst' name='hash_rng'/>
+        <compound type-name='hash_rngst' name='play_rng'/>
+
+        <uint32_t name='start_tick_count'/>
+
+        <int32_t name='autosave_cycle'/>
+
+        <bool name='want_to_quit_to_title'/>
+
+        <static-array count='11' name='flash_11_by_3'><static-array count='3'><static-array count='2' type-name='int32_t'/></static-array></static-array>
+        <static-array count='7' name='flash_7_by_3'><static-array count='3'><static-array count='2' type-name='int32_t'/></static-array></static-array>
+        <static-array count='4' name='flash_4_by_3'><static-array count='3'><static-array count='2' type-name='int32_t'/></static-array></static-array>
+
+        <bitfield base-type='uint32_t' type-name='external_flag' name='external_flag'/>
+    </struct-type>
+
+    -- Unused: BuildableCheck
+
+    <enum-type type-name='unit_view_mode_type'> bay12: UnitViewModes
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='General' original-name='GENERAL'/>
+        <enum-item name='Inventory' original-name='INVENTORY'/>
+        <enum-item name='Preferences' original-name='PREFS'/>
+        <enum-item name='Wounds' original-name='WOUNDS'/>
+        <enum-item name='PrefLabor' original-name='PREFS_LABOR'/>
+        <enum-item name='PrefDogs' original-name='PREFS_PETS'/>
+        <enum-item name='PrefOccupation' original-name='PREFS_OCCUPATION'/>
+        <enum-item name='PrefExpel' original-name='PREFS_EXPEL'/>
+    </enum-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

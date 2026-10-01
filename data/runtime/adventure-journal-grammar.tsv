@@ -1,0 +1,21 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# People card producer: installed Linux 53.16 dwarfort VA 0x17c7d30..0x17c9ecd.
+# Reuse the same native FAMILY_RELATIONSHIP vocabulary and relative-time
+# formatter as dialogue/rumors, rather than enumerating one screenshot's sex,
+# relationship, date or generated name. These scopes are not global replacements.
+journal-person	You have known this person since his birth.	你从他出生起就认识他。		ELF 0x17c7f58..0x17c7fd0; possessive helper 0x12ca790
+journal-person	You have known this person since her birth.	你从她出生起就认识她。		ELF 0x17c7f58..0x17c7fd0; possessive helper 0x12ca790
+journal-person	You have known this person since its birth.	你从它出生起就认识它。		ELF 0x17c7f58..0x17c7fd0; possessive helper 0x12ca790
+journal-person	You last spoke {s}.	你们上次交谈是在{s1}。	rumor-time	ELF 0x17c8054..0x17c8175 -> 0x10448d0..0x1044d60; all 22 relative-time branches
+journal-person	This is your {s}.	这是你的{s1}。	dialogue-family	ELF 0x17c825e..0x17c83b7 -> 0x1503cd0; complete shared kinship enum
+# Linux submits the kinship string before appending its period at 0x17c8354.
+journal-person	This is your {s}	这是你的{s1}。	dialogue-family	ELF 0x17c8354 precedes 0x17c839e; actual unpunctuated add_paragraph source
+journal-person	Died in the year {s}	卒于第{s1}年	$digits	ELF 0x17c89a2..0x17c8a0b; signed year, no trailing period
+# Fixed lifelong acquaintance, guide, worship/esteem and social-link states
+# already live in the UI catalog. Worship can append any of five esteem
+# sentences in the SAME paragraph: $message retains the complete paragraph.
+journal-person	{s}	{s1}	$message	ELF 0x17c91d0..0x17c9403,0x17c9e29..0x17c9e76; data/runtime/ui-messages.tsv adventure.log
+# Species is native metadata, not a generated name or ordinary prose. The
+# title renderer handles normal species; these are its two divine variants.
+journal-person-kind	{s} deity	{s1}神祇	$creature	ELF 0x17c8a7c..0x17c8b37,0x17c9c16..0x17c9ca5; native creature label + deity
+journal-person-kind	Force	自然之灵		ELF 0x17c9b28/0x17c9dc0; regional FORCE historical figure, shared with relationship caption

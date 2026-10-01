@@ -1,0 +1,418 @@
+<data-definition>
+    <enum-type type-name='site_building_profile_type' base-type='int32_t'> bay12: SiteBuildingProfileType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='AB' comment='abstract building'/>
+        <enum-item name='SRB' comment='site realization building'/>
+    </enum-type>
+
+    <struct-type type-name='property_ownership' original-name='site_building_profilest'>
+        <int32_t name="index" original-name='local_id'/>
+
+        <enum type-name='site_building_profile_type' name='profile'/>
+        <int32_t name='property_index' original-name='id_type' comment="union: ab_id or srb_type"/>
+        <int32_t name="owner_hfid" original-name='exclusive_owner_hfid' ref-target='historical_figure'/>
+        <int32_t name="owner_entity_id" original-name='exclusive_owner_enid' ref-target='historical_entity'/>
+        <int32_t name="last_owner_hfid" ref-target='historical_figure'/>
+        <int32_t name="last_owner_entity_id" original-name='last_owner_enid' ref-target='historical_entity'/>
+    </struct-type>
+
+    <enum-type type-name='wg_quest_posting_type' base-type='int32_t'> bay12: WGQuestPostingType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='RETURN_ARTIFACT_TO_THIS_SITE'/>
+    </enum-type>
+
+    <bitfield-type type-name="wg_quest_posting_flag" base-type='uint32_t'> bay12: WG_QUEST_POSTING_FLAG_*
+        <flag-bit name='obsolete' original-name='OBSOLETE'/>
+    </bitfield-type>
+
+    <struct-type type-name='wg_quest_postingst'>
+        <enum base-type='int32_t' type-name='wg_quest_posting_type' name='type'/>
+        <pointer type-name='historical_entity' name='origin_ent'/>
+        <pointer type-name='artifact_record' name='artifact' original-name='art'/>
+        <pointer type-name='world_site' name='dest_site' original-name='dest_st'/>
+        <pointer type-name='abstract_building' name='dest_bld' original-name='dest_ab'/>
+        <bitfield base-type='uint32_t' type-name='wg_quest_posting_flag' name="flags" original-name='flag'/>
+    </struct-type>
+
+    <struct-type type-name='resource_allotmentst'>
+        <int32_t name="production_zone_index"/>
+        <enum type-name='resource_allotment_specifier_type' name="allotment"/>
+        <int32_t name="special_controlling_entity_id" ref-target='historical_entity'/>
+        <stl-vector type-name='int32_t' name="count"/>
+    </struct-type>
+
+    <struct-type type-name='resource_pilest'>
+        <int32_t name="id" original-name='global_id'/>
+
+        <stl-vector pointer-type='resource_allotmentst' name="allotment"/>
+
+        <stl-vector pointer-type='resource_allotmentst' name="allotment_stone" comment='optional'/>
+        <stl-vector pointer-type='resource_allotmentst' name="allotment_food" comment='optional'/>
+        <stl-vector pointer-type='resource_allotmentst' name="allotment_crop" comment='optional'/>
+    </struct-type>
+
+    <struct-type type-name='world_site_inhabitant' original-name='site_entity_populationst'>
+        <int32_t name="count" original-name='num'/>
+        <compound type-name='entity_pop_specifierst' name='pop_spec'/>
+    </struct-type>
+
+    <struct-type type-name='unit_placement_infost'>
+        <int32_t name="unit_id" original-name='unid' ref-target='unit'/>
+        <int32_t name="pos_x" original-name='abs_tile_x'/>
+        <int32_t name="pos_y" original-name='abs_tile_y'/>
+        <int32_t name="pos_z" original-name='abs_tile_z'/>
+        <int32_t name="container_it_id" ref-target='item'/>
+    </struct-type>
+
+    <struct-type type-name='populacest'>
+        <stl-vector type-name='int32_t' name="nemesis" original-name='nemesis_id' ref-target='nemesis_record'/>
+        <stl-vector pointer-type='artifact_record' name="artifacts" original-name='artifact'/>
+        <stl-vector pointer-type='world_population' name="animals" original-name='pop'/>
+        <stl-vector pointer-type='world_site_inhabitant' name="inhabitants" original-name='ent_pop'/>
+        <stl-vector pointer-type='unit_placement_infost' name='units' original-name='unit_placement_info'/>
+
+        <stl-vector type-name='int32_t' name='hist_fig_id' comment='worldgen only'/>
+        <stl-vector pointer-type='historical_figure' name='hist_fig' comment='worldgen only'/>
+
+        <int32_t name='births_wanted'/>
+        <stl-vector pointer-type='nemesis_record' name='pregnancy_candidate' original-name='pregnancy_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_f_f' original-name='marriage_f_to_f_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_f_m' original-name='marriage_f_to_m_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_f_fm' original-name='marriage_f_to_fm_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_m_f' original-name='marriage_m_to_f_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_m_m' original-name='marriage_m_to_m_candidate_nem'/>
+        <stl-vector pointer-type='nemesis_record' name='marriage_candidate_m_fm' original-name='marriage_m_to_fm_candidate_nem'/>
+    </struct-type>
+
+    -- Unused: site_headerst
+    -- Unused: site_blockst
+    -- Unused: SITE_BLOCK_*
+    -- Unused: sbm_blockst
+    -- Unused: SiteBlockGrab
+    -- Unused: site_block_managerst
+
+    <struct-type type-name='site_map_infost'>
+        <enum type-name='fortress_type' name="fortress_type" init-value='NONE' comment='Only when site.type=Fortress'/>
+        <enum type-name='monument_type' name="monument_type" init-value='NONE' comment='Only when site.type=Monument'/>
+        <enum type-name='lair_type' name="lair_type" init-value='NONE' comment='Only when site.type=LairShrine'/>
+        <stl-vector type-name='lair_characteristic_type' name="lair_characteristic" comment="only on SIMPLE_MOUND and SIMPLE_BURROW"/>
+        <int32_t name="entrance_x" original-name='abs_entrance_x' init-value='-1000000'/>
+        <int32_t name="entrance_y" original-name='abs_entrance_y' init-value='-1000000'/>
+        <int32_t name="entrance_z" original-name='abs_entrance_z' init-value='-1000000'/>
+        <int32_t name="creator" original-name='relevant_hfid' ref-target='historical_figure' since='v0.40.01' comment="all vaults, no others seen"/>
+        <int32_t name="overall_pop_capacity" init-value='0' since='v0.40.01' comment="all vaults, no others seen, always 100"/>
+        <int32_t name='wg_build_work_days' init-value='0' comment="all towers, no others. Seed is a guess based on the very large numbers"/>
+        <enum base-type='int32_t' type-name='religious_practice_type' name='practice_type'/>
+        <compound type-name='religious_practice_data' name='practice_data' original-name='practice_id'/>
+    </struct-type>
+
+    <enum-type type-name='infrastructure_type' base-type='int32_t'> bay12: InfrastructureType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='VILLAGE'/>
+        <enum-item name='PASTURE'/>
+        <enum-item name='MEADOW'/>
+        <enum-item name='SMALL_CROPS'/>
+        <enum-item name='ORCHARD'/>
+        <enum-item name='WOODLAND'/>
+        <enum-item name='WASTE'/>
+        <enum-item name='TOWN'/>
+    </enum-type>
+
+    <bitfield-type type-name='site_crop_flag' base-type='uint32_t'> bay12: SITE_CROP_FLAG_*
+        <flag-bit name='has_growths' original-name='HAS_GROWTHS'/>
+    </bitfield-type>
+
+    <struct-type type-name='site_cropst'>
+        <int32_t name='production_zone_index'/>
+        <int32_t name='allotment_index'/>
+        <int32_t name='count'/>
+        <int32_t name='planting_week'/>
+        <stl-vector type-name='int32_t' name='growth_allotment_index'/>
+        <stl-vector type-name='int32_t' name='growth_num_multiplier'/>
+        <bitfield base-type='uint32_t' type-name='site_crop_flag' name='flag'/>
+    </struct-type>
+
+    -- Unused: wall_infost
+
+    <struct-type type-name='site_generalized_deathst'>
+        <int32_t name='id' original-name='local_id'/>
+        <compound type-name='location_deathst' name='death'/>
+        <int32_t name='entity_id' original-name='killer_enid' ref-target='historical_entity'/>
+    </struct-type>
+
+    <enum-type type-name='site_architecture_change_type' base-type='int32_t'> bay12: SiteArchitectureChangeType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='DOMINANT_ENTITY'/>
+        <enum-item name='SRB_RUINED'/>
+        <enum-item name='SRP_RUINED'/>
+        <enum-item name='GENERALIZED_DAMAGE'/>  bay12: SITE_ARCHITECTURE_CHANGE_GENERALIZED_DAMAGE_FLAG_*
+        <enum-item name='GENERALIZED_DEATH'/> bay12: SITE_ARCHITECTURE_CHANGE_GENERALIZED_DEATH_FLAG_*
+    </enum-type>
+
+    <bitfield-type type-name="site_architecture_flag_generalized_damage" original-name='site_architecture_change_generalized_damage_flag' base-type='uint32_t'> bay12: SITE_ARCHITECTURE_CHANGE_FLAG_GENERALIZED_DAMAGE_*
+        <flag-bit name='cz_alts_created' original-name='CZ_ALTS_CREATED'/>
+    </bitfield-type>
+
+    <bitfield-type type-name="site_architecture_flag_generalized_death" original-name='site_architecture_change_generalized_death_flag' base-type='uint32_t'> bay12: SITE_ARCHITECTURE_CHANGE_FLAG_GENERALIZED_DEATH_*
+        <flag-bit name='cz_alts_created' original-name='CZ_ALTS_CREATED'/>
+    </bitfield-type>
+
+    <bitfield-type type-name="site_architecture_flag" original-name='site_architecture_change_flag' base-type='uint32_t'> bay12: SITE_ARCHITECTURE_CHANGE_FLAG_*
+        <flag-bit name='handled_once' original-name='HAS_BEEN_HANDLED_ONCE'/>
+    </bitfield-type>
+
+    <struct-type type-name='site_architecture_changest'>
+        <enum type-name='site_architecture_change_type' name="type"/>
+        <compound is-union='true' union-tag-field='type'>
+            <int32_t name='NONE' original-name='variable_1'/>
+            <int32_t name='DOMINANT_ENTITY' original-name='entity_id' ref-target='historical_entity'/>
+            <int32_t name='SRB_RUINED' original-name='srb_id'/>
+            <int32_t name='SRP_RUINED' original-name='srp_id'/>
+            <int32_t name='GENERALIZED_DAMAGE' original-name='percentage'/>
+            <int32_t name='GENERALIZED_DEATH_ID' original-name='generalized_death_id'/>
+        </compound>
+        <int32_t name="year"/>
+        <int32_t name="year_tick" original-name='season_count' init-value='-1'/>
+        <bitfield base-type='uint32_t' type-name='site_architecture_flag' name="flags" original-name='flag'/>
+        <compound name='spec_flag' is-union='true' union-tag-field='type'>
+            <bitfield base-type='uint32_t' type-name='site_architecture_flag_generalized_damage' name="GENERALIZED_DAMAGE"/>
+            <bitfield base-type='uint32_t' type-name='site_architecture_flag_generalized_death' name="GENERALIZED_DEATH"/>
+        </compound>
+    </struct-type>
+
+    <struct-type type-name='active_site_conquestst'>
+        <int32_t name='conquest_eventcol' original-name='site_conquest_hecid' ref-target='history_event_collection'/>
+        <int32_t name='entity' original-name='entity_id' ref-target='historical_entity'/>
+    </struct-type>
+
+    <struct-type type-name='active_insurrectionst'>
+        <int32_t name='insurrection_eventcol' original-name='insurrection_hecid' ref-target='history_event_collection'/>
+        <int32_t name='target_entity' original-name='target_entity_id' ref-target='historical_entity'/>
+        <stl-vector type-name='int32_t' name='involved_ci_id' ref-target='cultural_identity'/>
+        <int32_t name='conflict_timer'/>
+        <int32_t name='conflict_cycle'/>
+    </struct-type>
+
+    -- Unused: construction_blueprint_specst
+
+    <bitfield-type type-name="scbp_progress_flag" base-type='uint32_t'> bay12: SCBP_PROGRESS_FLAG_*
+        <flag-bit name='construction_skipped' original-name='CONSTRUCTION_SKIPPED'/>
+        <flag-bit name='building_skipped' original-name='BUILDING_SKIPPED'/>
+    </bitfield-type>
+
+    <bitfield-type type-name="scbp_removal_flag" base-type='uint32_t'> bay12: SCBP_REMOVAL_FLAG_*
+        <flag-bit name='construction' original-name='CONSTRUCTION'/>
+        <flag-bit name='building' original-name='BUILDING'/>
+    </bitfield-type>
+
+    <struct-type type-name='site_construction_blueprintst'>
+        <int32_t name='x' original-name='abs_smm_x'/>
+        <int32_t name='y' original-name='abs_smm_y'/>
+        <int32_t name='z' original-name='abs_z'/>
+
+        <static-array name='construction_type' count='16'><static-array count='16'><enum base-type='int32_t' type-name='building_type'/></static-array></static-array>
+        <static-array name='construction_subtype' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='construction_subcat1' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='construction_subcat2' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='construction_jobitemflag' count='16'><static-array count='16' type-name='job_material_category'/></static-array>
+        <static-array name='construction_phase' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+
+        <static-array name='building_type' count='16'><static-array count='16'><enum base-type='int32_t' type-name='building_type'/></static-array></static-array>
+        <static-array name='building_subtype' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='building_subcat1' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='building_subcat2' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+        <static-array name='building_jobitemflag' count='16'><static-array count='16' type-name='job_material_category'/></static-array>
+        <static-array name='building_phase' count='16'><static-array count='16' type-name='int32_t'/></static-array>
+
+        <static-array name='progress_flag' count='16'><static-array count='16' type-name='scbp_progress_flag'/></static-array>
+        <static-array name='removal_flag' count='16'><static-array count='16' type-name='scbp_removal_flag'/></static-array>
+    </struct-type>
+
+    <struct-type type-name="site_message_boardst">
+        <stl-vector pointer-type='messagest' name='message'/>
+    </struct-type>
+
+    <struct-type type-name='site_first_calc_special_itemsst'>
+        <stl-vector type-name='item_type' name='type' original-name='stolen_i_type'/>
+        <stl-vector type-name='int16_t' name='subtype' original-name='stolen_i_subtype'/>
+        <stl-vector type-name='int16_t' name='mat' original-name='stolen_i_sc1'/>
+        <stl-vector type-name='int32_t' name='matgloss' original-name='stolen_i_sc2'/>
+        <stl-vector type-name='int32_t' name='civ_id' original-name='stolen_i_civ_id' ref-target='historical_entity'/>
+        <stl-vector type-name='int32_t' name='site_id' ref-target='world_site'/>
+    </struct-type>
+
+    <struct-type type-name='wg_site_culture_identity_religious_practicest'>
+        <enum base-type='int32_t' type-name='religious_practice_type' name='type'/>
+        <compound type-name='religious_practice_data' name='data' original-name='practice_id'/>
+        <int32_t name='points'/>
+    </struct-type>
+
+    <enum-type type-name='cultural_interaction_type' base-type='int32_t'> bay12: CulturalInteractionType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='ENTITY_1_PERSECUTES_ENTITY_2'/>
+        <enum-item name='ENTITY_1_RIOTS_AGAINST_ENTITY_2'/>
+        <enum-item name='ENTITY_1_INVEIGHS_AGAINST_ENTITY_2'/>
+        <enum-item name='ENTITY_1_ENCOURAGES_TOLERANCE_OF_ENTITY_2'/>
+    </enum-type>
+
+    <struct-type type-name='wg_site_culture_identity_interactionst'>
+        <enum type-name='cultural_interaction_type' name='type'/>
+        <int32_t name='id1'/>
+        <int32_t name='id2'/>
+        <int32_t name='year'/>
+        <int32_t name='severity'/>
+    </struct-type>
+
+    <struct-type type-name='wg_site_culture_identityst'>
+        <int32_t name='entity_id' ref-target='historical_entity'/>
+        <stl-vector pointer-type='wg_site_culture_identity_religious_practicest' name='religious_practice'/>
+        <stl-vector pointer-type='wg_site_culture_identity_interactionst' name='interaction'/>
+    </struct-type>
+
+    <struct-type type-name='wg_site_culturest'>
+        <stl-vector pointer-type='wg_site_culture_identityst' name='identity'/>
+    </struct-type>
+
+    <struct-type type-name='site_religious_structurest'>
+        <enum type-name='religious_practice_type' name='type' original-name='practice_type'/>
+        <compound type-name='religious_practice_data' name='data' original-name='practice_id'/>
+        <int32_t name='points'/>
+    </struct-type>
+
+    <struct-type type-name='site_religious_structure_batchst'>
+        <static-array count='20' type-name='site_religious_structurest' name='rstruct'/>
+        <int32_t name='rstructnum'/>
+    </struct-type>
+
+    <struct-type type-name='site_culture_infrastructurest'>
+        <stl-vector pointer-type='site_religious_structure_batchst' name='religious_structure_batch'/>
+    </struct-type>
+
+    <enum-type type-name='site_flag_type'> bay12: SiteFlagType
+        <enum-item name='HIDDEN'/>
+        <enum-item name='RUINED'/>
+        <enum-item name='IGNORED_BY_LEGENDS'/>
+        <enum-item name='HAS_MARKET'/>
+        <enum-item name='VISITED'/>
+        <enum-item name='ACTIVE'/>
+        <enum-item name='LOADED'/>
+        <enum-item name='SUBORDINATE'/>
+
+        <enum-item name='PASSED_FIRST_REALIZATION'/>
+        <enum-item name='SETTLED'/>
+        <enum-item name='COMPLETELY_SUPERCEDED'/>
+    </enum-type>
+
+    <struct-type type-name='world_site' key-field='id'
+                 instance-vector='$global.world.world_data.sites'
+                 original-name='sitest'>
+        <compound type-name='language_name' name='name'/>
+
+        <code-helper name='describe'>(describe-obj $.name)</code-helper>
+
+        <int32_t name="civ_id" original-name='maker_civ_id' ref-target='historical_entity'/>
+        <int32_t name="cur_owner_id" original-name='specialization_enid' ref-target='historical_entity'/>
+
+        <enum base-type='int16_t' type-name='world_site_type' name="type"/>
+
+        <compound type-name='coord2d' name='pos'/>
+
+        <int32_t name="id" original-name='local_id'/>
+
+        <compound type-name='populacest' name='populace'/>
+
+        <int32_t name="resource_pile_id"/>
+
+        <int16_t name="rgn_min_x" original-name='mm_sx' comment='in embark tiles'/>
+        <int16_t name="rgn_max_x" original-name='mm_ex'/>
+        <int16_t name="rgn_min_y" original-name='mm_sy'/>
+        <int16_t name="rgn_max_y" original-name='mm_ey'/>
+        <int16_t name="rgn_min_z" original-name='mm_sz'/>
+        <int16_t name="rgn_max_z" original-name='mm_ez'/>
+
+        <int32_t name="global_min_x" original-name='real_abs_mm_sx' comment='in embark tiles'/>
+        <int32_t name="global_min_y" original-name='real_abs_mm_sy'/>
+        <int32_t name="global_max_x" original-name='real_abs_mm_ex'/>
+        <int32_t name="global_max_y" original-name='real_abs_mm_ey'/>
+
+        <uint32_t name="seed" original-name='realization_seed' comment='random'/>
+        <uint32_t name="first_seed" original-name='first_realization_seed' comment='random'/>
+
+        <int32_t name="resident_count" original-name='first_calc_total_pop' comment='count living in houses and shops'/>
+        <int32_t name="brood_creature" original-name='first_calc_brood_creature'/>
+        <int32_t name="brood_caste" original-name='first_calc_brood_caste'/>
+        <pointer type-name='site_first_calc_special_itemsst' name='special_items' original-name='site_first_calc_special_items'/>
+
+        <int32_t name="size" comment='Caves have non zero numbers. No others.'/>
+        <int32_t name="added_size" comment='Subset of caves can have non zero.'/>
+        <int32_t name="infrastructure_pop_level" comment='Monument 0, LairShrine 5, Camp 20, others varying'/>
+        <int32_t name="base_infrastructure_pop_level" comment=' "site_level" is in here somewhere. Same as for unk_124, but varying ones always less/equal'/>
+        <static-array name='infrastructure' type-name='int32_t' index-enum='infrastructure_type' comment="Has all zero for Fortress, Camp, PlayerFortress, Monument, and LairShrine. Cave can have value, while DarkFortress, MountainHalls, ForestRetreat and Town all have at least one non zero value"/>
+
+        <stl-vector pointer-type='site_cropst' name='small_crop' comment='MountainHall, Town, DarkFortress, but not all'/>
+        <stl-vector pointer-type='site_cropst' name='orchard'  comment='forest retreat'/>
+
+        <compound type-name='site_culture_infrastructurest' name='culture_infrastructure'/>
+
+        <df-flagarray name='flag' index-enum='site_flag_type'/>
+
+        <stl-vector pointer-type='abstract_building' name="buildings" original-name='building'/>
+        <int32_t name="next_building_id" original-name='next_abstract_building_id'/>
+
+        <stl-vector pointer-type='property_ownership' name="property_ownership" original-name='site_building_profile' since='v0.47.01'/>
+        <int32_t name="next_property_ownership_id" original-name='next_site_building_profile_id' since='v0.47.01'/>
+
+        <int32_t name="created_tick" original-name='lastvisit_season_count'/>
+        <int32_t name="created_year" original-name='lastvisit_year'/>
+        <int32_t name="moss_counter" comment='constant 0'/>
+        <int32_t name="weathering_counter" comment='constant 0'/>
+
+        <compound type-name='coord' name='recorded_entrance'/>
+
+        <pointer type-name='world_site_realization' name="realization"/>
+
+        <pointer type-name='site_map_infost' name="subtype_info" original-name='site_map_info'/>
+
+        <compound type-name='location_deathst' name='location_death'/>
+
+        <int32_t name='min_depth' since='v0.40.01' comment='compared to feature_init.end_depth'/>
+        <int32_t name='max_depth' since='v0.40.01' comment='compared to feature_init.start_depth'/>
+        <int32_t name='mined_hours' init-value='0' comment="only MountainHalls, but only subset of them"/>
+
+        <stl-vector pointer-type='site_architecture_changest' name="architecture_change" since='v0.40.01'/>
+
+        <stl-vector pointer-type='active_site_conquestst' name="active_site_conquest" since='v0.40.01'/>
+        <stl-vector pointer-type='active_insurrectionst' name="active_insurrection" since='v0.40.01'/>
+
+        <stl-vector pointer-type='site_generalized_deathst' name="generalized_death" since='v0.40.01'/>
+        <int32_t name='next_generalized_death_id' init-value='0' since='v0.43.01'/>
+
+        <stl-vector pointer-type='site_construction_blueprintst' name='construction_blueprint' since='v0.43.01'/>
+        <int32_t name='construction_work_finished_season_count' since='v0.43.01'/>
+        <int32_t name='construction_work_finished_race' since='v0.40.01'/>
+
+        <pointer type-name='site_message_boardst' name="site_message_board"/>
+
+        <int32_t name='looted_perc' since='v0.44.06'/>
+        <pointer type-name='resource_pilest' name='resource_pile' since='v0.44.01'/>
+
+        <compound type-name='coord2d_path' name='temp_path'/>
+        <stl-vector pointer-type='entity_site_link' name="entity_links" original-name='entity_site_profile' since='v0.40.01'/>
+        <stl-vector pointer-type='cultural_identity' name="cultural_identities" original-name='cultural_identity' since='v0.40.01'/>
+
+        <stl-vector pointer-type='occupation' name="wg_occupation" since='v0.42.01'/> during worldgen only
+        <int32_t name='this_years_bloodsuck_murders' since='v0.43.01' comment='uninitialized'/>
+        <stl-vector pointer-type='wg_quest_postingst' name='wg_quest_posting' since='v0.44.01'/>
+
+        <static-array name='wg_queued_merchant' count='20'><pointer type-name='historical_figure' has-bad-pointers='true'/></static-array>
+        <int32_t name='wg_queued_merchant_num'/>
+        <pointer pointer-type='wg_site_culturest' name='wg_site_culture'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

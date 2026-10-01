@@ -1,0 +1,480 @@
+# Native appearance build branches; PE:6a70a6d9:02711000
+# Formatter 0x14070c240..0x14070f06c; jump table 0x14070effc, 28 entries.
+# Conditions are first-match in the order 0..15,-1; full predicates have no pronoun/punctuation.
+# shape_id	shape	muscle_fat_id	condition	branch	reference	literal	source
+0	gigantic	0	muscle>=75 and fat>=75	0x14070c39d	0x14070c3a9	0x141681018	is gigantic with huge muscles and hanging rolls of lard
+0	gigantic	1	muscle>=75	0x14070c39d	0x14070c40b	0x141680f68	is gigantic with incredible muscles
+0	gigantic	2	fat>=75	0x14070c39d	0x14070c49f	0x141680e70	bears untold amounts of fat over a gigantic frame
+0	gigantic	3	muscle>=50	0x14070c39d	0x14070c424	0x141680f38	is very muscular and just gigantic overall
+0	gigantic	4	fat>=50	0x14070c39d	0x14070c4b8	0x141680e48	is very fat and enormous overall
+0	gigantic	5	muscle>=25 and fat>=25	0x14070c39d	0x14070c3c2	0x141680ff8	is huge, muscular and fat
+0	gigantic	6	muscle<=-75 and fat<=-75	0x14070c39d	0x14070c3da	0x141680fb0	is gigantic but incredibly skinny with virtually no muscles to speak of
+0	gigantic	7	muscle<=-75	0x14070c39d	0x14070c454	0x141680ef8	is gigantic yet incredibly weak
+0	gigantic	8	fat<=-75	0x14070c39d	0x14070c4e8	0x141680df8	is incredibly skinny yet gigantic overall
+0	gigantic	9	muscle<=-50	0x14070c39d	0x14070c46d	0x141680ed8	is enormous yet very weak
+0	gigantic	10	fat<=-50	0x14070c39d	0x14070c500	0x1416809f8	has an enormous build but is very skinny
+0	gigantic	11	muscle<=-25 and fat<=-25	0x14070c39d	0x14070c3f2	0x141680f90	is gigantic yet weak and skinny
+0	gigantic	12	muscle>=25	0x14070c39d	0x14070c43c	0x141680f18	is gigantic and muscular
+0	gigantic	13	fat>=25	0x14070c39d	0x14070c4d0	0x141680e28	is gigantic and quite fat
+0	gigantic	14	muscle<=-25	0x14070c39d	0x14070c486	0x141680ea8	isn't very muscular but has a gigantic build
+0	gigantic	15	fat<=-25	0x14070c39d	0x14070c518	0x1416809e0	is enormous yet skinny
+0	gigantic	-1	otherwise	0x14070c39d	0x14070c532	0x1416809d0	is gigantic
+1	very_large	0	muscle>=75 and fat>=75	0x14070c53e	0x14070c54a	0x141680990	is very large and bears great lard rolls and impressive muscles
+1	very_large	1	muscle>=75	0x14070c53e	0x14070c5ac	0x1416808d0	is incredibly muscular and very large
+1	very_large	2	fat>=75	0x14070c53e	0x14070c640	0x1416807f8	is very large and just incredibly fat
+1	very_large	3	muscle>=50	0x14070c53e	0x14070c5c5	0x1416808b0	is very large and very muscular
+1	very_large	4	fat>=50	0x14070c53e	0x14070c659	0x1416807c0	has a very large body with quite a bit of fat on it
+1	very_large	5	muscle>=25 and fat>=25	0x14070c53e	0x14070c563	0x141680968	is very large, fat and muscular
+1	very_large	6	muscle<=-75 and fat<=-75	0x14070c53e	0x14070c57b	0x141680930	is very large yet also very weak and incredibly skinny
+1	very_large	7	muscle<=-75	0x14070c53e	0x14070c5f5	0x141680858	is very weak despite being very large overall
+1	very_large	8	fat<=-75	0x14070c53e	0x14070c689	0x141680ca0	has a very large frame but is incredibly skinny
+1	very_large	9	muscle<=-50	0x14070c53e	0x14070c60e	0x141680840	is very large yet weak
+1	very_large	10	fat<=-50	0x14070c53e	0x14070c6a1	0x141680c78	is very large yet quite skinny as well
+1	very_large	11	muscle<=-25 and fat<=-25	0x14070c53e	0x14070c593	0x1416808f8	is weak and skinny yet has a large build overall
+1	very_large	12	muscle>=25	0x14070c53e	0x14070c5dd	0x141680888	is very large with strong muscles
+1	very_large	13	fat>=25	0x14070c53e	0x14070c671	0x141680790	is fat and has a very large body overall
+1	very_large	14	muscle<=-25	0x14070c53e	0x14070c627	0x141680820	isn't strong but is very large
+1	very_large	15	fat<=-25	0x14070c53e	0x14070c6b9	0x141680c48	is skinny but with a very large body overall
+1	very_large	-1	otherwise	0x14070c53e	0x14070c6d3	0x141680c38	is very large
+2	large	0	muscle>=75 and fat>=75	0x14070c6df	0x14070c6eb	0x141680bf8	is incredibly muscular and fat, with a large build overall
+2	large	1	muscle>=75	0x14070c6df	0x14070c74d	0x141680b38	has bulky muscles on a large body
+2	large	2	fat>=75	0x14070c6df	0x14070c7e1	0x141680a50	has a large body made larger still by mounds of fat
+2	large	3	muscle>=50	0x14070c6df	0x14070c766	0x141680b10	is very muscular with a large body
+2	large	4	fat>=50	0x14070c6df	0x14070c7fa	0x141680a28	has a large body and is very fat
+2	large	5	muscle>=25 and fat>=25	0x14070c6df	0x14070c704	0x141680bd8	is large, muscular and fat
+2	large	6	muscle<=-75 and fat<=-75	0x14070c6df	0x14070c71c	0x141680ba0	has a large body but it is very skinny and frail
+2	large	7	muscle<=-75	0x14070c6df	0x14070c796	0x141680ae0	is large yet frail
+2	large	8	fat<=-75	0x14070c6df	0x14070c82a	0x141681930	has a large body but is incredibly skinny
+2	large	9	muscle<=-50	0x14070c6df	0x14070c7af	0x141680ab8	has a large body but is quite weak
+2	large	10	fat<=-50	0x14070c6df	0x14070c842	0x141681910	is large yet very skinny
+2	large	11	muscle<=-25 and fat<=-25	0x14070c6df	0x14070c734	0x141680b60	is weak and skinny yet has a reasonably large body overall
+2	large	12	muscle>=25	0x14070c6df	0x14070c77e	0x141680af8	is large and muscular
+2	large	13	fat>=25	0x14070c6df	0x14070c812	0x141681960	is large and fat
+2	large	14	muscle<=-25	0x14070c6df	0x14070c7c8	0x141680a88	has ill-defined muscles but is large overall
+2	large	15	fat<=-25	0x14070c6df	0x14070c85a	0x1416818f8	is large yet skinny
+2	large	-1	otherwise	0x14070c6df	0x14070c874	0x1416818e8	is large
+3	tall_thin	0	muscle>=75 and fat>=75	0x14070c880	0x14070c88c	0x1416818a0	would be lanky were it not for the massive muscles and slabs of lard
+3	tall_thin	1	muscle>=75	0x14070c880	0x14070c8ee	0x1416817e0	is tall and thin with incredible muscles
+3	tall_thin	2	fat>=75	0x14070c880	0x14070c982	0x141681700	packs extraordinary obesity on to what was once a tall and thin body
+3	tall_thin	3	muscle>=50	0x14070c880	0x14070c907	0x1416817c0	is tall, thin and very muscular
+3	tall_thin	4	fat>=50	0x14070c880	0x14070c99b	0x141681c50	has a tall, thin frame but manages to be very fat
+3	tall_thin	5	muscle>=25 and fat>=25	0x14070c880	0x14070c8a5	0x141681870	is lanky, with strong muscles and some fat
+3	tall_thin	6	muscle<=-75 and fat<=-75	0x14070c880	0x14070c8bd	0x141681840	has a tall, skinny body that is very frail
+3	tall_thin	7	muscle<=-75	0x14070c880	0x14070c937	0x141681788	is lanky and frail
+3	tall_thin	8	fat<=-75	0x14070c880	0x14070c9cb	0x141681be8	has a tall, narrow body that is just incredibly skinny
+3	tall_thin	9	muscle<=-50	0x14070c880	0x14070c950	0x141681770	is lanky and weak
+3	tall_thin	10	fat<=-50	0x14070c880	0x14070c9e3	0x141681bb0	has a tall, thin frame with very little fat on it
+3	tall_thin	11	muscle<=-25 and fat<=-25	0x14070c880	0x14070c8d5	0x141681810	is tall and thin, weak with few traces of fat
+3	tall_thin	12	muscle>=25	0x14070c880	0x14070c91f	0x1416817a0	is muscular, tall and thin
+3	tall_thin	13	fat>=25	0x14070c880	0x14070c9b3	0x141681c20	has a tall, thin body layered with some fat
+3	tall_thin	14	muscle<=-25	0x14070c880	0x14070c969	0x141681748	is lanky with ill-defined muscles
+3	tall_thin	15	fat<=-25	0x14070c880	0x14070c9fb	0x141681b88	has a tall, thin body with little fat
+3	tall_thin	-1	otherwise	0x14070c880	0x14070ca15	0x141681b78	is lanky
+4	short_broad	0	muscle>=75 and fat>=75	0x14070ca21	0x14070ca2d	0x141681b38	has a short, broad body stacked thick with muscles and lard
+4	short_broad	1	muscle>=75	0x14070ca21	0x14070ca8f	0x141681a58	is stout and incredibly muscular
+4	short_broad	2	fat>=75	0x14070ca21	0x14070cb23	0x141681380	is short, broad and morbidly obese
+4	short_broad	3	muscle>=50	0x14070ca21	0x14070caa8	0x141681a38	is stout and very muscular
+4	short_broad	4	fat>=50	0x14070ca21	0x14070cb3c	0x141681350	has a short broad body with a lot of fat on it
+4	short_broad	5	muscle>=25 and fat>=25	0x14070ca21	0x14070ca46	0x141681b18	is stout, muscular and fat
+4	short_broad	6	muscle<=-75 and fat<=-75	0x14070ca21	0x14070ca5e	0x141681ad0	has a short body that is broad yet with few traces of muscle or fat
+4	short_broad	7	muscle<=-75	0x14070ca21	0x14070cad8	0x1416819e8	has a short broad body but is very frail
+4	short_broad	8	fat<=-75	0x14070ca21	0x14070cb6c	0x141681300	has a short, broad frame with almost no fat on it
+4	short_broad	9	muscle<=-50	0x14070ca21	0x14070caf1	0x1416819a8	has a short broad body with little in the way of muscles
+4	short_broad	10	fat<=-50	0x14070ca21	0x14070cb84	0x1416812d0	has a short, broad body with very little fat
+4	short_broad	11	muscle<=-25 and fat<=-25	0x14070ca21	0x14070ca76	0x141681a80	has a short broad body but is kind of weak and skinny at the same time
+4	short_broad	12	muscle>=25	0x14070ca21	0x14070cac0	0x141681a18	has a stout muscular body
+4	short_broad	13	fat>=25	0x14070ca21	0x14070cb54	0x141681338	is short, broad and fat
+4	short_broad	14	muscle<=-25	0x14070ca21	0x14070cb0a	0x141681978	has a short broad body with ill-defined muscles
+4	short_broad	15	fat<=-25	0x14070ca21	0x14070cb9c	0x141681298	has a short, broad build overall but is somewhat skinny
+4	short_broad	-1	otherwise	0x14070ca21	0x14070cbb6	0x141681288	is stout
+5	incredibly_broad	0	muscle>=75 and fat>=75	0x14070cbc2	0x14070cbce	0x141681230	has a massive broad body, highly muscular, with thick rolls of lard hanging from it
+5	incredibly_broad	1	muscle>=75	0x14070cbc2	0x14070cc30	0x141681128	is incredibly muscular and broad-bodied
+5	incredibly_broad	2	fat>=75	0x14070cbc2	0x14070ccc4	0x141681688	has an incredibly broad body hung with curtains of lard
+5	incredibly_broad	3	muscle>=50	0x14070cbc2	0x14070cc49	0x1416810f8	is has large muscles on a incredibly broad body
+5	incredibly_broad	4	fat>=50	0x14070cbc2	0x14070ccdd	0x141681650	has an extremely broad body with lots of fat on it
+5	incredibly_broad	5	muscle>=25 and fat>=25	0x14070cbc2	0x14070cbe7	0x1416811e8	has an incredibly broad body with some muscle and fat on it
+5	incredibly_broad	6	muscle<=-75 and fat<=-75	0x14070cbc2	0x14070cbff	0x1416811a0	has an extremely broad frame with few traces of either muscle or fat
+5	incredibly_broad	7	muscle<=-75	0x14070cbc2	0x14070cc79	0x141681098	has an incredibly broad body but is very frail
+5	incredibly_broad	8	fat<=-75	0x14070cbc2	0x14070cd0d	0x1416815f0	has an incredibly broad body with almost no fat on it
+5	incredibly_broad	9	muscle<=-50	0x14070cbc2	0x14070cc92	0x141681070	has an extremely broad body but is weak
+5	incredibly_broad	10	fat<=-50	0x14070cbc2	0x14070cd25	0x1416815b8	has an extremely broad body with very little fat
+5	incredibly_broad	11	muscle<=-25 and fat<=-25	0x14070cbc2	0x14070cc17	0x141681150	has an incredibly broad body that is somewhat weak with only a little fat on it
+5	incredibly_broad	12	muscle>=25	0x14070cbc2	0x14070cc61	0x1416810c8	is muscular with an extremely broad body
+5	incredibly_broad	13	fat>=25	0x14070cbc2	0x14070ccf5	0x141681628	is fat with an extremely broad body
+5	incredibly_broad	14	muscle<=-25	0x14070cbc2	0x14070ccab	0x1416816c0	is somewhat weak and has a body that is incredibly broad
+5	incredibly_broad	15	fat<=-25	0x14070cbc2	0x14070cd3d	0x141681588	has an extremely broad body with little fat
+5	incredibly_broad	-1	otherwise	0x14070cbc2	0x14070cd5a	0x141681568	is incredibly broad-bodied
+6	very_broad	0	muscle>=75 and fat>=75	0x14070cd66	0x14070cd72	0x141681510	has a very broad body, with enormous lard pockets packed in with the giant muscles
+6	very_broad	1	muscle>=75	0x14070cd66	0x14070cdd4	0x141681410	is incredibly muscular and has a very broad body
+6	very_broad	2	fat>=75	0x14070cd66	0x14070ce68	0x1416824b8	has a very broad body and is incredibly fat
+6	very_broad	3	muscle>=50	0x14070cd66	0x14070cded	0x1416813f0	is very muscular and broad
+6	very_broad	4	fat>=50	0x14070cd66	0x14070ce81	0x1416824a0	is very broad and fat
+6	very_broad	5	muscle>=25 and fat>=25	0x14070cd66	0x14070cd8b	0x1416814e8	has a very broad, muscular, fat body
+6	very_broad	6	muscle<=-75 and fat<=-75	0x14070cd66	0x14070cda3	0x1416814a0	has a very broad body but it is frail with very little fat on it
+6	very_broad	7	muscle<=-75	0x14070cd66	0x14070ce1d	0x1416813a8	has a very broad body but it is frail
+6	very_broad	8	fat<=-75	0x14070cd66	0x14070ceb1	0x141682460	has a very broad body but almost no fat
+6	very_broad	9	muscle<=-50	0x14070cd66	0x14070ce36	0x141682510	has ill-defined muscles on an otherwise broad body
+6	very_broad	10	fat<=-50	0x14070cd66	0x14070cec9	0x141682428	has a very broad frame with very little fat on it
+6	very_broad	11	muscle<=-25 and fat<=-25	0x14070cd66	0x14070cdbb	0x141681450	has a very broad body overall but it is weak with little fat on it
+6	very_broad	12	muscle>=25	0x14070cd66	0x14070ce05	0x1416813d0	is muscular and very broad
+6	very_broad	13	fat>=25	0x14070cd66	0x14070ce99	0x141682488	is fat and very broad
+6	very_broad	14	muscle<=-25	0x14070cd66	0x14070ce4f	0x1416824e8	has a broad body that is somewhat weak
+6	very_broad	15	fat<=-25	0x14070cd66	0x14070cee1	0x141682400	has a very broad body with little fat
+6	very_broad	-1	otherwise	0x14070cd66	0x14070cefe	0x1416823e8	is very broad-bodied
+7	broad	0	muscle>=75 and fat>=75	0x14070cf0a	0x14070cf16	0x1416823a0	has a broad body bearing impressive muscles and a great load of fat
+7	broad	1	muscle>=75	0x14070cf0a	0x14070cf78	0x1416822e0	has incredible muscles stretched over a broad body
+7	broad	2	fat>=75	0x14070cf0a	0x14070d00c	0x1416827a0	has a broad body made broader still by no shortage of surrounding lard
+7	broad	3	muscle>=50	0x14070cf0a	0x14070cf91	0x1416822b8	is very muscular with a broad body
+7	broad	4	fat>=50	0x14070cf0a	0x14070d025	0x141682780	is broad-bodied and very fat
+7	broad	5	muscle>=25 and fat>=25	0x14070cf0a	0x14070cf2f	0x141682378	is broad-bodied, muscular and fat
+7	broad	6	muscle<=-75 and fat<=-75	0x14070cf0a	0x14070cf47	0x141682340	is frail and very skinny yet with an overall broad body
+7	broad	7	muscle<=-75	0x14070cf0a	0x14070cfc1	0x141682820	has a broad body but it is very frail
+7	broad	8	fat<=-75	0x14070cf0a	0x14070d055	0x141682738	has a broad body with almost no fat on it
+7	broad	9	muscle<=-50	0x14070cf0a	0x14070cfda	0x141682808	is broad yet weak
+7	broad	10	fat<=-50	0x14070cf0a	0x14070d06d	0x141682710	has a broad body with very little fat
+7	broad	11	muscle<=-25 and fat<=-25	0x14070cf0a	0x14070cf5f	0x141682318	is broad-bodied, though weak and skinny
+7	broad	12	muscle>=25	0x14070cf0a	0x14070cfa9	0x1416822a0	is broad and muscular
+7	broad	13	fat>=25	0x14070cf0a	0x14070d03d	0x141682768	is broad and fat
+7	broad	14	muscle<=-25	0x14070cf0a	0x14070cff3	0x1416827e8	is broad with little muscle
+7	broad	15	fat<=-25	0x14070cf0a	0x14070d085	0x1416826e8	has a broad body with little fat
+7	broad	-1	otherwise	0x14070cf0a	0x14070d0a2	0x1416826d0	has a broad body
+8	long_thin	0	muscle>=75 and fat>=75	0x14070d0ae	0x14070d0ba	0x141682660	has a long body and would be slim were it not for the massive layers of lard over equally gigantic muscles
+8	long_thin	1	muscle>=75	0x14070d0ae	0x14070d11c	0x141682570	has a long, thin frame strapped with incredible muscles
+8	long_thin	2	fat>=75	0x14070d0ae	0x14070d1b0	0x141681ed0	has a long, thin frame hidden beneath copious rolls of lard
+8	long_thin	3	muscle>=50	0x14070d0ae	0x14070d135	0x141682548	is long and thin with strong muscles
+8	long_thin	4	fat>=50	0x14070d0ae	0x14070d1c9	0x141681ea0	has a long, thin body with a lot of fat on it
+8	long_thin	5	muscle>=25 and fat>=25	0x14070d0ae	0x14070d0d3	0x141682620	has a long, thin body, thickened by muscle and fat
+8	long_thin	6	muscle<=-75 and fat<=-75	0x14070d0ae	0x14070d0eb	0x1416825e8	has a long, thin frame, frail with very little fat
+8	long_thin	7	muscle<=-75	0x14070d0ae	0x14070d165	0x141681f48	is long and thin but very weak
+8	long_thin	8	fat<=-75	0x14070d0ae	0x14070d1f9	0x141681e40	has a long, thin body with almost no fat on it
+8	long_thin	9	muscle<=-50	0x14070d0ae	0x14070d17e	0x141681f30	is long, weak and thin
+8	long_thin	10	fat<=-50	0x14070d0ae	0x14070d211	0x141681e10	has a long, thin body with very little fat
+8	long_thin	11	muscle<=-25 and fat<=-25	0x14070d0ae	0x14070d103	0x1416825a8	has a long, thin body that is somewhat weak with little fat
+8	long_thin	12	muscle>=25	0x14070d0ae	0x14070d14d	0x141681f68	is long, thin and muscular
+8	long_thin	13	fat>=25	0x14070d0ae	0x14070d1e1	0x141681e70	has a long, thin body with some fat on it
+8	long_thin	14	muscle<=-25	0x14070d0ae	0x14070d197	0x141681f10	is long, thin and somewhat weak
+8	long_thin	15	fat<=-25	0x14070d0ae	0x14070d229	0x141681de8	has a long, thin frame with little fat
+8	long_thin	-1	otherwise	0x14070d0ae	0x14070d246	0x141681dd0	is long and slim
+9	incredibly_thin	0	muscle>=75 and fat>=75	0x14070d252	0x14070d25e	0x141681d80	could be incredibly thin but has massive lardy rolls and enormous muscles
+9	incredibly_thin	1	muscle>=75	0x14070d252	0x14070d2c0	0x141681c88	has an extremely thin body packed with huge muscles
+9	incredibly_thin	2	fat>=75	0x14070d252	0x14070d354	0x1416821a8	has an extremely thin frame underlying a massive lardy edifice
+9	incredibly_thin	3	muscle>=50	0x14070d252	0x14070d2d9	0x141682278	is very muscular and incredibly thin
+9	incredibly_thin	4	fat>=50	0x14070d252	0x14070d36d	0x141682170	has an extremely thin frame with a lot of fat on it
+9	incredibly_thin	5	muscle>=25 and fat>=25	0x14070d252	0x14070d277	0x141681d30	has managed to put some muscle and fat on an extremely thin frame
+9	incredibly_thin	6	muscle<=-75 and fat<=-75	0x14070d252	0x14070d28f	0x141681d00	is a frail, extremely skinny thing
+9	incredibly_thin	7	muscle<=-75	0x14070d252	0x14070d309	0x141682238	is extremely thin and frail
+9	incredibly_thin	8	fat<=-75	0x14070d252	0x14070d39d	0x141682100	has an extremely thin body with almost no fat on it
+9	incredibly_thin	9	muscle<=-50	0x14070d252	0x14070d322	0x141682218	is very weak and extremely thin
+9	incredibly_thin	10	fat<=-50	0x14070d252	0x14070d3b5	0x1416820c8	has an extremely thin body with very litte fat on it
+9	incredibly_thin	11	muscle<=-25 and fat<=-25	0x14070d252	0x14070d2a7	0x141681cc0	is weak with little fat and just incredibly thin overall
+9	incredibly_thin	12	muscle>=25	0x14070d252	0x14070d2f1	0x141682258	is muscular and extremely thin
+9	incredibly_thin	13	fat>=25	0x14070d252	0x14070d385	0x141682138	has an incredibly thin frame with some fat on it
+9	incredibly_thin	14	muscle<=-25	0x14070d252	0x14070d33b	0x1416821e8	is extremely thin with ill-defined muscles
+9	incredibly_thin	15	fat<=-25	0x14070d252	0x14070d3cd	0x141682098	has an incredibly thin body with little fat
+9	incredibly_thin	-1	otherwise	0x14070d252	0x14070d3ea	0x141682080	is incredibly thin
+10	very_thin	0	muscle>=75 and fat>=75	0x14070d3f6	0x14070d402	0x141682040	has a very thin build buried underneath endless muscles and fat
+10	very_thin	1	muscle>=75	0x14070d3f6	0x14070d464	0x141682f28	is incredibly muscular and very thin
+10	very_thin	2	fat>=75	0x14070d3f6	0x14070d4f8	0x141682e58	would be very thin but bears an enormous lardy burden
+10	very_thin	3	muscle>=50	0x14070d3f6	0x14070d47d	0x141682f08	is very muscular and thin
+10	very_thin	4	fat>=50	0x14070d3f6	0x14070d511	0x141682e30	has much fat on a very thin frame
+10	very_thin	5	muscle>=25 and fat>=25	0x14070d3f6	0x14070d41b	0x141682000	would be very thin but has opted for some muscle and fat
+10	very_thin	6	muscle<=-75 and fat<=-75	0x14070d3f6	0x14070d433	0x141681fc0	has a very thin, frail body without visible traces of fat
+10	very_thin	7	muscle<=-75	0x14070d3f6	0x14070d4ad	0x141682ed0	is very thin and weak
+10	very_thin	8	fat<=-75	0x14070d3f6	0x14070d541	0x141682dd0	has a very thin body with almost no fat on it
+10	very_thin	9	muscle<=-50	0x14070d3f6	0x14070d4c6	0x141682eb8	is weak and very thin
+10	very_thin	10	fat<=-50	0x14070d3f6	0x14070d559	0x141682da0	has a very thin frame with very little fat
+10	very_thin	11	muscle<=-25 and fat<=-25	0x14070d3f6	0x14070d44b	0x141681f88	is weak and has a very thin body with very little fat
+10	very_thin	12	muscle>=25	0x14070d3f6	0x14070d495	0x141682ee8	is muscular and very thin
+10	very_thin	13	fat>=25	0x14070d3f6	0x14070d529	0x141682e00	has a very thin frame with a bit of fat on it
+10	very_thin	14	muscle<=-25	0x14070d3f6	0x14070d4df	0x141682e90	is somewhat scrawny and very thin
+10	very_thin	15	fat<=-25	0x14070d3f6	0x14070d571	0x141682d78	has a very thin body with little fat
+10	very_thin	-1	otherwise	0x14070d3f6	0x14070d58b	0x141682d68	is very thin
+11	thin	0	muscle>=75 and fat>=75	0x14070d597	0x14070d5a3	0x141682d20	has a thin frame but it is loaded with muscles and great layers of fat
+11	thin	1	muscle>=75	0x14070d597	0x14070d605	0x141683170	is thin but has incredible muscles
+11	thin	2	fat>=75	0x14070d597	0x14070d693	0x1416830b0	has what was once a thin frame, now bearing enormous, thick layers of fat
+11	thin	3	muscle>=50	0x14070d597	0x14070d61e	0x141683150	is thin and very muscular
+11	thin	4	fat>=50	0x14070d597	0x14070d6ac	0x141683088	has a once-thin frame, now belarded
+11	thin	5	muscle>=25 and fat>=25	0x14070d597	0x14070d5bc	0x141682cd8	has a generally thin build with some muscle and fat on it
+11	thin	6	muscle<=-75 and fat<=-75	0x14070d597	0x14070d5d4	0x141682cb0	is thin, frail and incredibly skinny
+11	thin	7	muscle<=-75	0x14070d597	0x14070d648	0x141683130	is thin and frail
+11	thin	8	fat<=-75	0x14070d597	0x14070d6dc	0x141683030	has a thin body with almost no fat on it
+11	thin	9	muscle<=-50	0x14070d597	0x14070d661	0x141683118	is thin and weak
+11	thin	10	fat<=-50	0x14070d597	0x14070d6f4	0x141683008	has a thin body with very little fat
+11	thin	11	muscle<=-25 and fat<=-25	0x14070d597	0x14070d5ec	0x141683198	is thin, skinny and weak
+11	thin	12	muscle>=25	0x14070d597	0x14070d630	0x141683148	is wiry
+11	thin	13	fat>=25	0x14070d597	0x14070d6c4	0x141683060	has a thin frame with some fat on it
+11	thin	14	muscle<=-25	0x14070d597	0x14070d67a	0x141683100	is thin and scrawny
+11	thin	15	fat<=-25	0x14070d597	0x14070d70c	0x141682fe8	has a thin body with little fat
+11	thin	-1	otherwise	0x14070d597	0x14070d723	0x141682fe0	is thin
+12	incredibly_tall	0	muscle>=75 and fat>=75	0x14070d72f	0x14070d73b	0x141682f90	is incredibly tall, layered with massive muscles and hanging sacks of lard
+12	incredibly_tall	1	muscle>=75	0x14070d72f	0x14070d79d	0x141682a10	is incredibly tall and muscular
+12	incredibly_tall	2	fat>=75	0x14070d72f	0x14070d831	0x141682940	is incredibly tall and fat
+12	incredibly_tall	3	muscle>=50	0x14070d72f	0x14070d7b6	0x1416829e8	is very muscular and extremely tall
+12	incredibly_tall	4	fat>=50	0x14070d72f	0x14070d84a	0x141682920	is very fat and extremely tall
+12	incredibly_tall	5	muscle>=25 and fat>=25	0x14070d72f	0x14070d754	0x141682f50	is incredibly tall with strong muscles and some fat
+12	incredibly_tall	6	muscle<=-75 and fat<=-75	0x14070d72f	0x14070d76c	0x141682a70	is very frail with an extremely tall and skinny body
+12	incredibly_tall	7	muscle<=-75	0x14070d72f	0x14070d7e6	0x1416829a0	is incredibly tall but has a frail body
+12	incredibly_tall	8	fat<=-75	0x14070d72f	0x14070d87a	0x1416828e0	is incredibly tall and skinny
+12	incredibly_tall	9	muscle<=-50	0x14070d72f	0x14070d7ff	0x141682980	is incredibly tall yet weak
+12	incredibly_tall	10	fat<=-50	0x14070d72f	0x14070d892	0x1416828b8	is very skinny and even more tall
+12	incredibly_tall	11	muscle<=-25 and fat<=-25	0x14070d72f	0x14070d784	0x141682a30	is incredibly tall and a bit skinny, with ill-defined muscles
+12	incredibly_tall	12	muscle>=25	0x14070d72f	0x14070d7ce	0x1416829c8	is muscular and incredibly tall
+12	incredibly_tall	13	fat>=25	0x14070d72f	0x14070d862	0x141682900	is fat and extremely tall
+12	incredibly_tall	14	muscle<=-25	0x14070d72f	0x14070d818	0x141682960	is scrawny yet extremely tall
+12	incredibly_tall	15	fat<=-25	0x14070d72f	0x14070d8aa	0x141682898	is skinny and extremely tall
+12	incredibly_tall	-1	otherwise	0x14070d72f	0x14070d8c7	0x141682880	is incredibly tall
+13	very_tall	0	muscle>=75 and fat>=75	0x14070d8d3	0x14070d8df	0x141682848	is very tall with huge muscles and great lardy rolls
+13	very_tall	1	muscle>=75	0x14070d8d3	0x14070d941	0x141682c00	is very tall with huge muscles
+13	very_tall	2	fat>=75	0x14070d8d3	0x14070d9d5	0x141682b40	is very tall with a hanging apron of lard
+13	very_tall	3	muscle>=50	0x14070d8d3	0x14070d95a	0x141682be0	is very tall and muscular
+13	very_tall	4	fat>=50	0x14070d8d3	0x14070d9ee	0x141682b28	is very tall and fat
+13	very_tall	5	muscle>=25 and fat>=25	0x14070d8d3	0x14070d8f8	0x141682c80	is very tall with plenty of muscle and fat
+13	very_tall	6	muscle<=-75 and fat<=-75	0x14070d8d3	0x14070d910	0x141682c50	is very tall and skinny but also very weak
+13	very_tall	7	muscle<=-75	0x14070d8d3	0x14070d98a	0x141682ba8	is very tall yet frail
+13	very_tall	8	fat<=-75	0x14070d8d3	0x14070da1e	0x141682ae8	is very tall and incredibly skinny
+13	very_tall	9	muscle<=-50	0x14070d8d3	0x14070d9a3	0x141682b90	is very tall yet weak
+13	very_tall	10	fat<=-50	0x14070d8d3	0x14070da36	0x141682ad0	is very tall and skinny
+13	very_tall	11	muscle<=-25 and fat<=-25	0x14070d8d3	0x14070d928	0x141682c20	is weak and skinny but very tall overall
+13	very_tall	12	muscle>=25	0x14070d8d3	0x14070d972	0x141682bc0	is muscular and very tall
+13	very_tall	13	fat>=25	0x14070d8d3	0x14070da06	0x141682b10	is fat and very tall
+13	very_tall	14	muscle<=-25	0x14070d8d3	0x14070d9bc	0x141682b70	is very tall yet somewhat weak
+13	very_tall	15	fat<=-25	0x14070d8d3	0x14070da4e	0x141682ab8	is skinny and very tall
+13	very_tall	-1	otherwise	0x14070d8d3	0x14070da68	0x141682aa8	is very tall
+14	tall	0	muscle>=75 and fat>=75	0x14070da74	0x14070da80	0x1416837c0	is very muscular, tall and obese
+14	tall	1	muscle>=75	0x14070da74	0x14070dae2	0x141683728	has loaded a tall body with incredible muscles
+14	tall	2	fat>=75	0x14070da74	0x14070db76	0x141683648	is tall and belarded by great hanging sacks of fat
+14	tall	3	muscle>=50	0x14070da74	0x14070dafb	0x141683708	is tall and very muscular
+14	tall	4	fat>=50	0x14070da74	0x14070db8f	0x141683630	is tall and very fat
+14	tall	5	muscle>=25 and fat>=25	0x14070da74	0x14070da99	0x1416837a0	is tall, muscular and fat
+14	tall	6	muscle<=-75 and fat<=-75	0x14070da74	0x14070dab1	0x141683778	is tall, extremely skinny and frail
+14	tall	7	muscle<=-75	0x14070da74	0x14070db2b	0x1416836c8	is pretty tall but also very frail
+14	tall	8	fat<=-75	0x14070da74	0x14070dbbc	0x141683600	is tall and incredibly skinny
+14	tall	9	muscle<=-50	0x14070da74	0x14070db44	0x141683698	is tall but has quite ill-defined muscles
+14	tall	10	fat<=-50	0x14070da74	0x14070dbd4	0x1416835e8	is tall and very skinny
+14	tall	11	muscle<=-25 and fat<=-25	0x14070da74	0x14070dac9	0x141683758	is tall, weak and skinny
+14	tall	12	muscle>=25	0x14070da74	0x14070db13	0x1416836f0	is tall and muscular
+14	tall	13	fat>=25	0x14070da74	0x14070dba4	0x141683620	is tall and fat
+14	tall	14	muscle<=-25	0x14070da74	0x14070db5d	0x141683680	is tall and scrawny
+14	tall	15	fat<=-25	0x14070da74	0x14070dbec	0x1416835d0	is tall and skinny
+14	tall	-1	otherwise	0x14070da74	0x14070dc03	0x141683a78	is tall
+15	incredibly_long	0	muscle>=75 and fat>=75	0x14070dc0f	0x14070dc1b	0x141683a30	is incredibly long with impressive muscles and great sacks of lard
+15	incredibly_long	1	muscle>=75	0x14070dc0f	0x14070dc7d	0x141683968	is incredibly long and muscular
+15	incredibly_long	2	fat>=75	0x14070dc0f	0x14070dd11	0x141683870	is incredibly long, encapsulated in massive layers of lard
+15	incredibly_long	3	muscle>=50	0x14070dc0f	0x14070dc96	0x141683940	is very muscular and incredibly long
+15	incredibly_long	4	fat>=50	0x14070dc0f	0x14070dd2a	0x141683850	is extremely long and very fat
+15	incredibly_long	5	muscle>=25 and fat>=25	0x14070dc0f	0x14070dc34	0x1416839f0	is extremely long with muscle and fat in equal measure
+15	incredibly_long	6	muscle<=-75 and fat<=-75	0x14070dc0f	0x14070dc4c	0x1416839b8	is frail and really skinny but also extremely long
+15	incredibly_long	7	muscle<=-75	0x14070dc0f	0x14070dcc6	0x1416838f8	is very frail and incredibly long
+15	incredibly_long	8	fat<=-75	0x14070dc0f	0x14070dd5a	0x141683810	is incredibly long and skinny
+15	incredibly_long	9	muscle<=-50	0x14070dc0f	0x14070dcdf	0x1416838d8	is weak and extremely long
+15	incredibly_long	10	fat<=-50	0x14070dc0f	0x14070dd72	0x1416837e8	is very skinny and extremely long
+15	incredibly_long	11	muscle<=-25 and fat<=-25	0x14070dc0f	0x14070dc64	0x141683988	is incredibly long yet is also weak and skinny
+15	incredibly_long	12	muscle>=25	0x14070dc0f	0x14070dcae	0x141683920	is muscular and extremely long
+15	incredibly_long	13	fat>=25	0x14070dc0f	0x14070dd42	0x141683830	is fat and incredibly long
+15	incredibly_long	14	muscle<=-25	0x14070dc0f	0x14070dcf8	0x1416838b0	is somewhat weak and extremely long
+15	incredibly_long	15	fat<=-25	0x14070dc0f	0x14070dd8a	0x1416833d8	is skinny and incredibly long
+15	incredibly_long	-1	otherwise	0x14070dc0f	0x14070dda7	0x1416833c0	is incredibly long
+16	very_long	0	muscle>=75 and fat>=75	0x14070ddb3	0x14070ddbf	0x141683388	is extremely muscular and lardy and also very long
+16	very_long	1	muscle>=75	0x14070ddb3	0x14070de21	0x1416832e0	is very long and incredibly muscular
+16	very_long	2	fat>=75	0x14070ddb3	0x14070deb5	0x141683210	has a very long body that is beset by a morbid corpulence
+16	very_long	3	muscle>=50	0x14070ddb3	0x14070de3a	0x1416832c0	is very long and muscular
+16	very_long	4	fat>=50	0x14070ddb3	0x14070dece	0x1416831f8	is very long and fat
+16	very_long	5	muscle>=25 and fat>=25	0x14070ddb3	0x14070ddd8	0x141683368	is very long, muscular and fat
+16	very_long	6	muscle<=-75 and fat<=-75	0x14070ddb3	0x14070ddf0	0x141683340	has a very long body, frail and skinny
+16	very_long	7	muscle<=-75	0x14070ddb3	0x14070de6a	0x141683288	is very long and frail
+16	very_long	8	fat<=-75	0x14070ddb3	0x14070defe	0x1416831b8	is very long and incredibly skinny
+16	very_long	9	muscle<=-50	0x14070ddb3	0x14070de83	0x141683270	is weak and very long
+16	very_long	10	fat<=-50	0x14070ddb3	0x14070df16	0x1416835b8	is very long and skinny
+16	very_long	11	muscle<=-25 and fat<=-25	0x14070ddb3	0x14070de08	0x141683308	is weak and skinny with a very long body overall
+16	very_long	12	muscle>=25	0x14070ddb3	0x14070de52	0x1416832a0	is muscular and very long
+16	very_long	13	fat>=25	0x14070ddb3	0x14070dee6	0x1416831e0	is fat and very long
+16	very_long	14	muscle<=-25	0x14070ddb3	0x14070de9c	0x141683250	is somewhat weak and very long
+16	very_long	15	fat<=-25	0x14070ddb3	0x14070df2e	0x1416835a0	is skinny and very long
+16	very_long	-1	otherwise	0x14070ddb3	0x14070df48	0x141683590	is very long
+17	long	0	muscle>=75 and fat>=75	0x14070df54	0x14070df60	0x141683568	is extremely muscular, obese and long
+17	long	1	muscle>=75	0x14070df54	0x14070dfc2	0x1416834d0	has an incredibly muscular, long body
+17	long	2	fat>=75	0x14070df54	0x14070e056	0x141683420	is long and incredibly fat
+17	long	3	muscle>=50	0x14070df54	0x14070dfdb	0x1416834a8	is very muscular with a long body
+17	long	4	fat>=50	0x14070df54	0x14070e06f	0x141683408	is long and very fat
+17	long	5	muscle>=25 and fat>=25	0x14070df54	0x14070df79	0x141683548	is long, muscular and fat
+17	long	6	muscle<=-75 and fat<=-75	0x14070df54	0x14070df91	0x141683518	has a frail body, long and incredibly skinny
+17	long	7	muscle<=-75	0x14070df54	0x14070e00b	0x141683470	is long with a frail body
+17	long	8	fat<=-75	0x14070df54	0x14070e09c	0x1416841b0	is long and incredibly skinny
+17	long	9	muscle<=-50	0x14070df54	0x14070e024	0x141683458	is long but weak
+17	long	10	fat<=-50	0x14070df54	0x14070e0b4	0x141684198	is long and very skinny
+17	long	11	muscle<=-25 and fat<=-25	0x14070df54	0x14070dfa9	0x1416834f8	is long, weak and skinny
+17	long	12	muscle>=25	0x14070df54	0x14070dff3	0x141683490	is long and muscular
+17	long	13	fat>=25	0x14070df54	0x14070e084	0x1416833f8	is fat and long
+17	long	14	muscle<=-25	0x14070df54	0x14070e03d	0x141683440	is long and scrawny
+17	long	15	fat<=-25	0x14070df54	0x14070e0cc	0x141684180	is long and skinny
+17	long	-1	otherwise	0x14070df54	0x14070e0e3	0x141684178	is long
+18	incredibly_short_height	0	muscle>=75 and fat>=75	0x14070e0ef	0x14070e0fb	0x141684120	is incredibly short yet has extremely strong muscles hidden under massive lardy rolls
+18	incredibly_short_height	1	muscle>=75	0x14070e0ef	0x14070e15d	0x141684040	has put on an extreme amount of muscle, especially for one so short
+18	incredibly_short_height	2	fat>=75	0x14070e0ef	0x14070e1f1	0x141683f40	is incredibly short but somehow packs in an enormous amount of fat
+18	incredibly_short_height	3	muscle>=50	0x14070e0ef	0x14070e176	0x141684010	is very muscular and incredibly short
+18	incredibly_short_height	4	fat>=50	0x14070e0ef	0x14070e20a	0x141683f18	is very fat and extremely short
+18	incredibly_short_height	5	muscle>=25 and fat>=25	0x14070e0ef	0x14070e114	0x1416840d8	is muscular and fat yet at the same time incredibly short
+18	incredibly_short_height	6	muscle<=-75 and fat<=-75	0x14070e0ef	0x14070e12c	0x1416840b0	is extremely short, weak and thin
+18	incredibly_short_height	7	muscle<=-75	0x14070e0ef	0x14070e1a6	0x141683fd0	is incredibly short and frail
+18	incredibly_short_height	8	fat<=-75	0x14070e0ef	0x14070e23a	0x141684420	is incredibly short and skinny
+18	incredibly_short_height	9	muscle<=-50	0x14070e0ef	0x14070e1bf	0x141683fb0	is weak and extremely short
+18	incredibly_short_height	10	fat<=-50	0x14070e0ef	0x14070e252	0x1416843f8	is very skinny and extremely short
+18	incredibly_short_height	11	muscle<=-25 and fat<=-25	0x14070e0ef	0x14070e144	0x141684088	is weak, skinny and incredibly short
+18	incredibly_short_height	12	muscle>=25	0x14070e0ef	0x14070e18e	0x141683ff0	is muscular and extremely short
+18	incredibly_short_height	13	fat>=25	0x14070e0ef	0x14070e222	0x141684440	is fat and incredibly short
+18	incredibly_short_height	14	muscle<=-25	0x14070e0ef	0x14070e1d8	0x141683f88	is extremely short with little muscle
+18	incredibly_short_height	15	fat<=-25	0x14070e0ef	0x14070e26a	0x1416843d8	is skinny and incredibly short
+18	incredibly_short_height	-1	otherwise	0x14070e0ef	0x14070e287	0x1416843c0	is incredibly short
+19	very_short_height	0	muscle>=75 and fat>=75	0x14070e293	0x14070e29f	0x141684370	is very short but covered with great amounts of lard and with huge muscles
+19	very_short_height	1	muscle>=75	0x14070e293	0x14070e301	0x1416842c0	packs enormous muscles on to a very short body
+19	very_short_height	2	fat>=75	0x14070e293	0x14070e395	0x1416841d0	carries massive amounts of fat, especially for one so short
+19	very_short_height	3	muscle>=50	0x14070e293	0x14070e31a	0x1416842a0	is very muscular and very short
+19	very_short_height	4	fat>=50	0x14070e293	0x14070e3ae	0x141683c98	is very short and fat
+19	very_short_height	5	muscle>=25 and fat>=25	0x14070e293	0x14070e2b8	0x141684340	is very short yet muscular and fat
+19	very_short_height	6	muscle<=-75 and fat<=-75	0x14070e293	0x14070e2d0	0x141684310	is very short, very weak and very skinny
+19	very_short_height	7	muscle<=-75	0x14070e293	0x14070e34a	0x141684250	is very weak and very short
+19	very_short_height	8	fat<=-75	0x14070e293	0x14070e3de	0x141683c58	is very short and incredibly skinny
+19	very_short_height	9	muscle<=-50	0x14070e293	0x14070e363	0x141684230	is weak and really short
+19	very_short_height	10	fat<=-50	0x14070e293	0x14070e3f6	0x141683c38	is very short and skinny
+19	very_short_height	11	muscle<=-25 and fat<=-25	0x14070e293	0x14070e2e8	0x1416842f0	is weak, skinny and very short
+19	very_short_height	12	muscle>=25	0x14070e293	0x14070e332	0x141684270	is very short with well-defined muscular
+19	very_short_height	13	fat>=25	0x14070e293	0x14070e3c6	0x141683c80	is fat and very short
+19	very_short_height	14	muscle<=-25	0x14070e293	0x14070e37c	0x141684210	is somewhat weak and very short
+19	very_short_height	15	fat<=-25	0x14070e293	0x14070e40e	0x141683c18	is skinny and very short
+19	very_short_height	-1	otherwise	0x14070e293	0x14070e428	0x141683c08	is very short
+20	short_height	0	muscle>=75 and fat>=75	0x14070e434	0x14070e440	0x141683bc0	is short yet layered with equal parts of giant muscles and lardy slabs
+20	short_height	1	muscle>=75	0x14070e434	0x14070e4a2	0x141683b10	isn't tall but has incredible muscles
+20	short_height	2	fat>=75	0x14070e434	0x14070e536	0x141683ef0	is short and just incredibly fat
+20	short_height	3	muscle>=50	0x14070e434	0x14070e4bb	0x141683ae8	is short with well-defined muscles
+20	short_height	4	fat>=50	0x14070e434	0x14070e54f	0x141683ed8	is short and obese
+20	short_height	5	muscle>=25 and fat>=25	0x14070e434	0x14070e459	0x141683b88	isn't very tall but makes up for it with muscle and fat
+20	short_height	6	muscle<=-75 and fat<=-75	0x14070e434	0x14070e471	0x141683b58	is short, very weak and incredibly skinny
+20	short_height	7	muscle<=-75	0x14070e434	0x14070e4eb	0x141683ab8	is short and very weak
+20	short_height	8	fat<=-75	0x14070e434	0x14070e57f	0x141683ea0	is short and incredibly skinny
+20	short_height	9	muscle<=-50	0x14070e434	0x14070e504	0x141683aa0	is weak and short
+20	short_height	10	fat<=-50	0x14070e434	0x14070e597	0x141683e80	is short and very skinny
+20	short_height	11	muscle<=-25 and fat<=-25	0x14070e434	0x14070e489	0x141683b38	is weak, short and skinny
+20	short_height	12	muscle>=25	0x14070e434	0x14070e4d3	0x141683ad0	is short and muscular
+20	short_height	13	fat>=25	0x14070e434	0x14070e567	0x141683ec0	is short and fat
+20	short_height	14	muscle<=-25	0x14070e434	0x14070e51d	0x141683a80	is short and not very strong
+20	short_height	15	fat<=-25	0x14070e434	0x14070e5af	0x141683e68	is short and skinny
+20	short_height	-1	otherwise	0x14070e434	0x14070e5c9	0x141683e58	is short
+21	incredibly_short_length	0	muscle>=75 and fat>=75	0x14070e5d5	0x14070e5e1	0x141683e18	is as short as can be yet has great muscles and rolls of lard
+21	incredibly_short_length	1	muscle>=75	0x14070e5d5	0x14070e643	0x141683d58	has an extremely short body that is incredibly muscular
+21	incredibly_short_length	2	fat>=75	0x14070e5d5	0x14070e6c9	0x141684b10	is incredibly short and bears massive lardy rolls
+21	incredibly_short_length	3	muscle>=50	0x14070e5d5	0x14070e65c	0x141683d30	is very muscular if incredibly short
+21	incredibly_short_length	4	fat>=50	0x14070e5d5	0x14070e6e2	0x141684ad0	has an incredibly short body but still manages to be very fat
+21	incredibly_short_length	5	muscle>=25 and fat>=25	0x14070e5d5	0x14070e5fa	0x141683de8	is incredibly short, if muscular and fat
+21	incredibly_short_length	6	muscle<=-75 and fat<=-75	0x14070e5d5	0x14070e612	0x141683dc0	is incredibly short, skinny and frail
+21	incredibly_short_length	7	muscle<=-75	0x14070e5d5	0x14070e67e	0x141683cf8	is as short as they come and very frail on top of that
+21	incredibly_short_length	8	fat<=-75	0x14070e5d5	0x14070e23a	0x141684420	is incredibly short and skinny
+21	incredibly_short_length	9	muscle<=-50	0x14070e5d5	0x14070e697	0x141683cd0	is weak as well as incredibly short
+21	incredibly_short_length	10	fat<=-50	0x14070e5d5	0x14070e70e	0x141684aa8	is very skinny and even more short
+21	incredibly_short_length	11	muscle<=-25 and fat<=-25	0x14070e5d5	0x14070e62a	0x141683d90	is weak and skinny as well as incredibly short
+21	incredibly_short_length	12	muscle>=25	0x14070e5d5	0x14070e18e	0x141683ff0	is muscular and extremely short
+21	incredibly_short_length	13	fat>=25	0x14070e5d5	0x14070e222	0x141684440	is fat and incredibly short
+21	incredibly_short_length	14	muscle<=-25	0x14070e5d5	0x14070e6b0	0x141683cb0	is scrawny and extremely short
+21	incredibly_short_length	15	fat<=-25	0x14070e5d5	0x14070e72a	0x141684a88	is skinny and extremely short
+21	incredibly_short_length	-1	otherwise	0x14070e5d5	0x14070e287	0x1416843c0	is incredibly short
+22	very_short_length	0	muscle>=75 and fat>=75	0x14070e736	0x14070e742	0x141684a48	is very short yet impressively muscular and enormously fat
+22	very_short_length	1	muscle>=75	0x14070e736	0x14070e7a4	0x141684998	carries great muscles on a very short body
+22	very_short_length	2	fat>=75	0x14070e736	0x14070e838	0x1416848c0	has a very short body buttressed by rolls of lard
+22	very_short_length	3	muscle>=50	0x14070e736	0x14070e7bd	0x141684978	is very short and muscular
+22	very_short_length	4	fat>=50	0x14070e736	0x14070e3ae	0x141683c98	is very short and fat
+22	very_short_length	5	muscle>=25 and fat>=25	0x14070e736	0x14070e75b	0x141684a10	is very short in length but muscular and fat as well
+22	very_short_length	6	muscle<=-75 and fat<=-75	0x14070e736	0x14070e773	0x1416849f0	is very short, weak and skinny
+22	very_short_length	7	muscle<=-75	0x14070e736	0x14070e7ed	0x141684940	is very short and frail
+22	very_short_length	8	fat<=-75	0x14070e736	0x14070e3de	0x141683c58	is very short and incredibly skinny
+22	very_short_length	9	muscle<=-50	0x14070e736	0x14070e806	0x141684920	is very short and quite weak
+22	very_short_length	10	fat<=-50	0x14070e736	0x14070e3f6	0x141683c38	is very short and skinny
+22	very_short_length	11	muscle<=-25 and fat<=-25	0x14070e736	0x14070e78b	0x1416849c8	is weak and skinny and also very short
+22	very_short_length	12	muscle>=25	0x14070e736	0x14070e7d5	0x141684958	is muscular and very short
+22	very_short_length	13	fat>=25	0x14070e736	0x14070e3c6	0x141683c80	is fat and very short
+22	very_short_length	14	muscle<=-25	0x14070e736	0x14070e81f	0x1416848f8	is very short with ill-defined muscles
+22	very_short_length	15	fat<=-25	0x14070e736	0x14070e40e	0x141683c18	is skinny and very short
+22	very_short_length	-1	otherwise	0x14070e736	0x14070e428	0x141683c08	is very short
+23	short_length	0	muscle>=75 and fat>=75	0x14070e872	0x14070e87e	0x141684888	is short with great muscles and copious amounts of lard
+23	short_length	1	muscle>=75	0x14070e872	0x14070e8d2	0x141684cb8	is incredibly muscular if a little short
+23	short_length	2	fat>=75	0x14070e872	0x14070e94a	0x141684c40	is short and incredibly fat
+23	short_length	3	muscle>=50	0x14070e872	0x14070e8eb	0x141684c90	is very muscular with a short body
+23	short_length	4	fat>=50	0x14070e872	0x14070e963	0x141684c28	is short and very fat
+23	short_length	5	muscle>=25 and fat>=25	0x14070e872	0x14070e897	0x141684d08	is short in length but muscular and fat
+23	short_length	6	muscle<=-75 and fat<=-75	0x14070e872	0x14070e471	0x141683b58	is short, very weak and incredibly skinny
+23	short_length	7	muscle<=-75	0x14070e872	0x14070e4eb	0x141683ab8	is short and very weak
+23	short_length	8	fat<=-75	0x14070e872	0x14070e57f	0x141683ea0	is short and incredibly skinny
+23	short_length	9	muscle<=-50	0x14070e872	0x14070e918	0x141684c78	is short and weak
+23	short_length	10	fat<=-50	0x14070e872	0x14070e597	0x141683e80	is short and very skinny
+23	short_length	11	muscle<=-25 and fat<=-25	0x14070e872	0x14070e8b9	0x141684ce8	is weak, skinny and short
+23	short_length	12	muscle>=25	0x14070e872	0x14070e4d3	0x141683ad0	is short and muscular
+23	short_length	13	fat>=25	0x14070e872	0x14070e567	0x141683ec0	is short and fat
+23	short_length	14	muscle<=-25	0x14070e872	0x14070e931	0x141684c60	is short and scrawny
+23	short_length	15	fat<=-25	0x14070e872	0x14070e5af	0x141683e68	is short and skinny
+23	short_length	-1	otherwise	0x14070e872	0x14070e5c9	0x141683e58	is short
+24	average	0	muscle>=75 and fat>=75	0x14070e992	0x14070e99e	0x141684bf0	is strapped with massive amounts of muscle and lard
+24	average	1	muscle>=75	0x14070e992	0x14070ea00	0x141684b80	is incredibly muscular
+24	average	2	fat>=75	0x14070e992	0x14070ea82	0x141684628	is corpulent
+24	average	3	muscle>=50	0x14070e992	0x14070ea19	0x141684b68	is very muscular
+24	average	4	fat>=50	0x14070e992	0x14070ea98	0x141684618	is very fat
+24	average	5	muscle>=25 and fat>=25	0x14070e992	0x14070e9b7	0x141684bd8	is muscular and fat
+24	average	6	muscle<=-75 and fat<=-75	0x14070e992	0x14070e9cf	0x141684bb0	is very weak and incredibly skinny
+24	average	7	muscle<=-75	0x14070e992	0x14070ea43	0x141684b48	is very weak
+24	average	8	fat<=-75	0x14070e992	0x14070eac5	0x1416845f8	is incredibly skinny
+24	average	9	muscle<=-50	0x14070e992	0x14070ea56	0x141684648	is weak
+24	average	10	fat<=-50	0x14070e992	0x14070eadd	0x1416845e8	is very skinny
+24	average	11	muscle<=-25 and fat<=-25	0x14070e992	0x14070e9e7	0x141684b98	is weak and skinny
+24	average	12	muscle>=25	0x14070e992	0x14070ea2e	0x141684b58	is muscular
+24	average	13	fat>=25	0x14070e992	0x14070eaad	0x141684610	is fat
+24	average	14	muscle<=-25	0x14070e992	0x14070ea6c	0x141684638	is scrawny
+24	average	15	fat<=-25	0x14070e992	0x14070eaf5	0x1416845d8	is skinny
+24	average	-1	otherwise	0x14070e992	0x14070eb12	0x1416845c0	is average in size
+25	small	0	muscle>=75 and fat>=75	0x14070eb1e	0x14070eb2a	0x141684570	has a small build yet is strapped with massive amounts of muscle and lard
+25	small	1	muscle>=75	0x14070eb1e	0x14070eb8c	0x1416844a0	has incredible muscles over a small build
+25	small	2	fat>=75	0x14070eb1e	0x14070ec20	0x141684808	packs massive amounts of fat on to a small build
+25	small	3	muscle>=50	0x14070eb1e	0x14070eba5	0x141684478	is very muscular yet has a small build
+25	small	4	fat>=50	0x14070eb1e	0x14070ec39	0x1416847e0	has a small build but is very fat
+25	small	5	muscle>=25 and fat>=25	0x14070eb1e	0x14070eb43	0x141684540	has a small build but is muscular and fat
+25	small	6	muscle<=-75 and fat<=-75	0x14070eb1e	0x14070eb5b	0x141684500	has a small build and is very weak and incredibly skinny
+25	small	7	muscle<=-75	0x14070eb1e	0x14070ebd5	0x141684870	is very weak and small
+25	small	8	fat<=-75	0x14070eb1e	0x14070ec69	0x1416847a0	is incredibly skinny with a small build
+25	small	9	muscle<=-50	0x14070eb1e	0x14070ebee	0x141684858	is weak and small
+25	small	10	fat<=-50	0x14070eb1e	0x14070ec81	0x141684778	is very skinny with a small build
+25	small	11	muscle<=-25 and fat<=-25	0x14070eb1e	0x14070eb73	0x1416844d0	has a small build and is weak and skinny
+25	small	12	muscle>=25	0x14070eb1e	0x14070ebbd	0x141684460	is small yet muscular
+25	small	13	fat>=25	0x14070eb1e	0x14070ec51	0x1416847c8	is small and fat
+25	small	14	muscle<=-25	0x14070eb1e	0x14070ec07	0x141684840	is small and scrawny
+25	small	15	fat<=-25	0x14070eb1e	0x14070ec99	0x141684758	is skinny with a small build
+25	small	-1	otherwise	0x14070eb1e	0x14070ecb3	0x141684748	is small
+26	very_small	0	muscle>=75 and fat>=75	0x14070ecbf	0x14070eccb	0x141684710	is very small yet with huge slabs of lard and muscle
+26	very_small	1	muscle>=75	0x14070ecbf	0x14070ed2d	0x141684670	is incredibly muscular for one so small
+26	very_small	2	fat>=75	0x14070ecbf	0x14070edb3	0x1416850d0	has a very small body bedecked with lardy rolls
+26	very_small	3	muscle>=50	0x14070ecbf	0x14070ed46	0x141684650	is very small yet very muscular
+26	very_small	4	fat>=50	0x14070ecbf	0x14070edcc	0x1416850b8	is very small and fat
+26	very_small	5	muscle>=25 and fat>=25	0x14070ecbf	0x14070ece4	0x1416846d8	is muscular and fat yet has a very small overall build
+26	very_small	6	muscle<=-75 and fat<=-75	0x14070ecbf	0x14070ecfc	0x1416846b8	is very weak, skinny and small
+26	very_small	7	muscle<=-75	0x14070ecbf	0x14070ebd5	0x141684870	is very weak and small
+26	very_small	8	fat<=-75	0x14070ecbf	0x14070edfc	0x141685078	is incredibly skinny and very small
+26	very_small	9	muscle<=-50	0x14070ecbf	0x14070ed81	0x141685128	is weak and very small
+26	very_small	10	fat<=-50	0x14070ecbf	0x14070ee14	0x141685058	is very small and skinny
+26	very_small	11	muscle<=-25 and fat<=-25	0x14070ecbf	0x14070ed14	0x141684698	is weak, skinny and very small
+26	very_small	12	muscle>=25	0x14070ecbf	0x14070ed5e	0x141685140	is muscular and very small
+26	very_small	13	fat>=25	0x14070ecbf	0x14070ede4	0x1416850a0	is fat and very small
+26	very_small	14	muscle<=-25	0x14070ecbf	0x14070ed9a	0x141685100	is very small with ill-defined muscles
+26	very_small	15	fat<=-25	0x14070ecbf	0x14070ee2c	0x141685038	is skinny and very small
+26	very_small	-1	otherwise	0x14070ecbf	0x14070ee46	0x141685028	is very small
+27	tiny	0	muscle>=75 and fat>=75	0x14070ee52	0x14070ee5e	0x141684ff8	is tiny yet incredibly muscular and lardy
+27	tiny	1	muscle>=75	0x14070ee52	0x14070eec0	0x141684f30	is a minuscule bundle of muscles
+27	tiny	2	fat>=75	0x14070ee52	0x14070ef54	0x141685298	bears an enormous amount of fat for one so tiny
+27	tiny	3	muscle>=50	0x14070ee52	0x14070eed9	0x141684ef8	has an extremely small body but it is very muscular
+27	tiny	4	fat>=50	0x14070ee52	0x14070ef6a	0x141685280	is tiny yet very fat
+27	tiny	5	muscle>=25 and fat>=25	0x14070ee52	0x14070ee77	0x141684fc8	is muscular and fat and very, very small
+27	tiny	6	muscle<=-75 and fat<=-75	0x14070ee52	0x14070ee8f	0x141684f80	is incredibly small, weak and skinny, so as to be almost nothing
+27	tiny	7	muscle<=-75	0x14070ee52	0x14070ef09	0x141685308	is tiny and utterly weak
+27	tiny	8	fat<=-75	0x14070ee52	0x14070ef91	0x141685238	is tiny overall and in particular incredibly skinny
+27	tiny	9	muscle<=-50	0x14070ee52	0x14070ef22	0x1416852f0	is tiny and weak
+27	tiny	10	fat<=-50	0x14070ee52	0x14070efa6	0x141685208	is very skinny with an overall minuscule build
+27	tiny	11	muscle<=-25 and fat<=-25	0x14070ee52	0x14070eea7	0x141684f58	is tiny, skinny and weak
+27	tiny	12	muscle>=25	0x14070ee52	0x14070eef1	0x141685328	is muscular yet with a incredibly small body overall
+27	tiny	13	fat>=25	0x14070ee52	0x14070ef7c	0x141685270	is fat yet tiny
+27	tiny	14	muscle<=-25	0x14070ee52	0x14070ef3b	0x1416852c8	is tiny with ill-defined muscles
+27	tiny	15	fat<=-25	0x14070ee52	0x14070efbb	0x1416851e8	is incredibly small and skinny
+27	tiny	-1	otherwise	0x14070ee52	0x14070efcb	0x1416851e0	is tiny

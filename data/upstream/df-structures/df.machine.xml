@@ -1,0 +1,71 @@
+<data-definition>
+    <struct-type type-name='machine_nodest'>
+        <int32_t name="building_id" original-name='building_global_id' ref-target='building'/>
+        <stl-vector type-name='int32_t' name="connections" original-name='neighbor_index'
+                    comment='indices into the same component vector'/>
+    </struct-type>
+
+    <bitfield-type type-name="machine_flag" base-type='uint32_t'> bay12: MACHINE_FLAG_*
+        <flag-bit name='active' original-name='ON'/>
+        <flag-bit name='frozen' original-name='FROZEN'/>
+        <flag-bit name='unfreeze_check' original-name='UNFREEZE_CHECK'/>
+    </bitfield-type>
+
+    <enum-type type-name='machine_type'> bay12: MachineType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='standard' original-name='STANDARD'/>
+    </enum-type>
+
+    <class-type type-name='machine' original-name='machinest'
+                instance-vector='$global.world.machines.all' key-field='id'>
+        <int32_t name="x"/>
+        <int32_t name="y"/>
+        <int32_t name="z"/>
+
+        <int32_t name="id" original-name='global_id'/>
+
+        <stl-vector pointer-type='machine_nodest' name="components" original-name='node'/>
+
+        <int32_t name="cur_power" original-name='total_power'/>
+        <int32_t name="min_power" original-name='total_power_needed'/>
+
+        <int8_t name='visual_phase' original-name='position'/>
+        <int16_t name="phase_timer" original-name='position_counter'/>
+
+        <bitfield base-type='uint32_t' type-name='machine_flag' name="flags" original-name='flag'/>
+
+        <virtual-methods>
+            <vmethod ret-type='machine_type' name='getType' original-name='type'/>
+            <vmethod name='moveMachine' original-name='shift_locations'>
+                <int16_t name='shiftx'/>
+                <int16_t name='shifty'/>
+                <int16_t name='shiftz'/>
+            </vmethod>
+            <vmethod name='write_file'> <pointer type-name='file_compressorst' name='filecomp'/> </vmethod>
+            <vmethod name='read_file'>
+                <pointer type-name='file_compressorst' name='filecomp'/>
+                <enum type-name='save_version' name='loadversion'/>
+            </vmethod>
+            <vmethod is-destructor='true'/>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='machine_standardst' inherits-from='machine'/>
+
+    <class-type type-name='machine_handler' original-name='machine_handlerst' custom-methods='true'>
+        <stl-vector pointer-type='machine' name='all' original-name='global'/>
+        <stl-vector pointer-type='machine' name='temp_save' has-bad-pointers='true'/>
+        <virtual-methods>
+            <vmethod name='add_to_machine'>
+                <pointer type-name='building' name='bld'/>
+            </vmethod>
+        </virtual-methods>
+    </class-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

@@ -1,0 +1,38 @@
+base = "items::rock"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{main}" = "{^0}{main}"
+# PE 0xca0040: ordinary stones append rock, precious stones omit it,
+# and knapped stones wrap only sharp in the native quality glyphs.
+"small {material} rock" = "小块{material}石子"
+"{knapped}" = "{knapped}"
+"icicle" = "冰锥"
+
+[[rulesets]]
+name = "knapped"
+[rulesets.rules]
+"{sharp_caption} {material}" = "{sharp_caption}{material}"
+"{sharp_caption} rock" = "{sharp_caption}石子"
+
+[[rulesets]]
+name = "^0"
+[rulesets.rules]
+"small " = "小"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"{material}" = "{material}"
+"rock" = "石子"
+
+[[rulesets]]
+name = "sharp"
+[rulesets.rules]
+"sharp" = "锋利的"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+"{::materials}" = "{::materials}"
+"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"

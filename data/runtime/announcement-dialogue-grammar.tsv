@@ -1,0 +1,182 @@
+# scope	source	target	semantic field scopes	native construction evidence
+sentence	We have {s}.	我们有{s1}。	dialogue-stock	0x1404b759d..0x1404b782e;drink list from 0x140a82c10 with optional numeric/free price per item
+dialogue-stock	{s}, {s}	{s1}、{s2}	dialogue-stock-item,dialogue-stock	0x1404b77c6 comma between 3+ remaining drinks
+dialogue-stock	{s} and {s}	{s1}和{s2}	dialogue-stock-item,dialogue-stock-item	0x1404b77e7 and before final drink
+dialogue-stock	{s}	{s1}	dialogue-stock-item	0x1404b7734 single final drink
+dialogue-stock-item	{s} for {s}	{s1}（价格{s2}）	$term,$digits	0x1404b7759..0x1404b779f;decimal helper0x14052c130
+dialogue-stock-item	{s} for free	{s1}（免费）	$term	0x1404b77a7
+dialogue-stock-item	{s}	{s1}	$term	0x1404b7734
+sentence	I have obtained {s} {s}.	我已取得{s1}{s2}。	$book,$item	0x1404ca1cb..0x1404ca27c
+sentence	I am searching for {s} {s}.	我正在寻找{s1}{s2}。	$book,$item	0x1404ca2be..0x1404ca3c4
+sentence	I am searching for {s} {s}, and this quest is taking me to {s}.	我正在寻找{s1}{s2}，为此要前往{s3}。	$book,$item,$name	0x1404ca2be..0x1404ca3c4
+sentence	Is that {s} falling outside?	外面下的是{s1}吗？	material	0x140677c54..0x140678529;full weather material (creature/plant/inorganic with possessive unit material forms)
+sentence	What is this? {s}?	这是什么？{s1}？	material	0x1406787c0..0x140679021;same weather material builder
+dialogue-family	mother	母亲		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	father	父亲		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	parent	父母一方		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	husband	丈夫		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	wife	妻子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	wives	妻子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	spouse	配偶		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eldest son	长子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	second eldest son	次子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	third eldest son	第三个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fourth eldest son	第四个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fifth eldest son	第五个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	sixth eldest son	第六个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	seventh eldest son	第七个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eighth eldest son	第八个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	ninth eldest son	第九个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	tenth eldest son	第十个儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	son	儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	youngest son	最小的儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	only son	唯一的儿子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eldest daughter	长女		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	second eldest daughter	次女		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	third eldest daughter	第三个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fourth eldest daughter	第四个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fifth eldest daughter	第五个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	sixth eldest daughter	第六个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	seventh eldest daughter	第七个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eighth eldest daughter	第八个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	ninth eldest daughter	第九个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	tenth eldest daughter	第十个女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	daughter	女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	only daughter	唯一的女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	youngest daughter	最小的女儿		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eldest child	最年长的孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	second eldest child	第二个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	third eldest child	第三个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fourth eldest child	第四个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	fifth eldest child	第五个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	sixth eldest child	第六个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	seventh eldest child	第七个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	eighth eldest child	第八个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	ninth eldest child	第九个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	tenth eldest child	第十个孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	child	孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	youngest child	最小的孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	only child	唯一的孩子		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	paternal grandmother	祖母		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	paternal grandfather	祖父		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	maternal grandmother	外祖母		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	maternal grandfather	外祖父		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	grandmother	祖母或外祖母		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	grandfather	祖父或外祖父		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	grandparent	祖辈		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older brother	哥哥		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older sister	姐姐		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older sibling	兄姐		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger brother	弟弟		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger sister	妹妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger sibling	弟妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	cousin	堂表亲		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	aunt	姑姨		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	uncle	叔舅		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	niece	侄甥女		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	nephew	侄甥		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	sibling	兄弟姐妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	grandchild	孙辈		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older half-brother	同父异母或同母异父的哥哥		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older half-sister	同父异母或同母异父的姐姐		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	older half-sibling	同父异母或同母异父的兄姐		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger half-brother	同父异母或同母异父的弟弟		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger half-sister	同父异母或同母异父的妹妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	younger half-sibling	同父异母或同母异父的弟妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	half-sibling	同父异母或同母异父的兄弟姐妹		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family	no relationship	无亲属关系		0x14075a580..0x14075ab7c;native FAMILY_RELATIONSHIP enum;existing terms retained where present
+dialogue-family-indef	a {s}	一位{s1}	dialogue-family	0x14075a5f6
+dialogue-family-indef	an {s}	一位{s1}	dialogue-family	0x14075a5e7
+sentence	I have {s} named {s}.	我有{s1}，名叫{s2}。	dialogue-family-indef,$person	0x14068c230/0x14068c9b0 RAW family sentence via0x140685d00
+sentence	I had {s} named {s}.	我曾有{s1}，名叫{s2}。	dialogue-family-indef,$person	0x14068c230/0x14068c9b0 RAW family sentence via0x140685d00
+sentence	My {s} is named {s}.	我的{s1}名叫{s2}。	dialogue-family,$person	0x14068c230/0x14068c9b0 RAW family sentence via0x140685d00
+sentence	My {s} was named {s}.	我已故的{s1}名叫{s2}。	dialogue-family,$person	0x14068c230/0x14068c9b0 RAW family sentence via0x140685d00
+sentence	He is also my {s}.	他也是我的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	He was also my {s}.	他也是我已故的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	She is also my {s}.	她也是我的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	She was also my {s}.	她也是我已故的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	It is also my {s}.	它也是我的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	It was also my {s}.	它也是我已故的{s1}。	dialogue-family	0x14068ce40..0x14068cf86 RAW ADDITIONAL/_DEAD
+sentence	I have taken down {s} {s} while stalking {s}.	我在{s3}潜行猎杀过{s1}只{s2}。	$number,$creature,$name	data/vanilla/vanilla_text/objects/text_animal_slayer.txt:7; parameter expansion 0x140685d00; actor wrapper/submission 0x140684a10
+sentence	I'm returning to my home in {s} to move into my new home with my {s} {s}.	我正返回{s1}的家，与我的{s2}{s3}搬入我们的新家。	$name,dialogue-family,$unit	0x1404c8f75..0x1404ca77a ->0x140684a10;date 0x140b92640;site 0x140b93930;building 0x140b94090;artifact 0x140b94400;item description 0x140c65450;histfig 0x140b92f10
+sentence	I'm going to {s} to move into my new home with my {s} {s}.	我正前往{s1}，与我的{s2}{s3}搬入我们的新家。	$name,dialogue-family,$unit	0x1404c8f75..0x1404ca77a ->0x140684a10;date 0x140b92640;site 0x140b93930;building 0x140b94090;artifact 0x140b94400;item description 0x140c65450;histfig 0x140b92f10
+sentence	{s} {s}.	{s1}，{s2}。	rumor-time,dialogue-battle	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+sentence	{s} {s} in {s}.	{s1}，在{s3}，{s2}。	rumor-time,dialogue-battle,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x14067624f/0x1406765d3 site/region/underground;omitcurrent-site
+dialogue-battle	{s} attacked {s}	{s1}袭击了{s2}	dialogue-battle-attacker,dialogue-battle-target	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675a27..0x140675d7b
+dialogue-battle	I slew {s}	我杀死了{s1}	dialogue-battle-slain-list	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406762c0..0x1406765ce
+dialogue-battle	many died	许多人丧生		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406762a9
+dialogue-battle	{s}	{s1}	dialogue-battle-deaths	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675d80..0x14067624b
+dialogue-battle-attacker	I	我		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-target	me	我		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-person	somebody	某人		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-person	{s}	{s1}	$person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-attacker	{s}	{s1}	dialogue-battle-person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-attacker	a {s}	一只{s1}	$creature	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-attacker	a {s} of {s}	{s2}的一只{s1}	$creature,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-attacker	the forces of {s}	{s1}的部队	$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-target	{s}	{s1}	dialogue-battle-person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-target	a {s}	一只{s1}	$creature	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-target	a {s} of {s}	{s2}的一只{s1}	$creature,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-target	the forces of {s}	{s1}的部队	$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-group	a creature	一只生物		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x14067613a/0x1406764c1
+dialogue-battle-group	creatures	一些生物		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x14067613a/0x1406764c1
+dialogue-battle-group	a member of {s}	{s1}的一名成员	$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x14067616f
+dialogue-battle-group	the forces of {s}	{s1}的部队	$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140676189
+dialogue-battle-group	{s}	{s1}	$creature	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406761b8/0x140676538 singular/plural no cardinal appended
+dialogue-battle-group	{s} of {s}	{s2}的{s1}	$creature,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406761bd/0x14067653d
+dialogue-battle-slain	{s}	{s1}	dialogue-battle-person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-slain	{s}	{s1}	dialogue-battle-group	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-slain-list	many foes	许多敌人		0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406765b9
+dialogue-battle-slain-list	{s}	{s1}	dialogue-battle-slain	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-slain-list	{s}, {s}	{s1}、{s2}	dialogue-battle-slain,dialogue-battle-slain-list	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;native >=3 comma;==2 and
+dialogue-battle-slain-list	{s} and {s}	{s1}和{s2}	dialogue-battle-slain,dialogue-battle-slain	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;native >=3 comma;==2 and
+dialogue-battle-deaths	{s}	{s1}	dialogue-battle-death	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0
+dialogue-battle-deaths	{s}, {s}	{s1}、{s2}	dialogue-battle-death,dialogue-battle-deaths	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;native >=3 comma;==2 and
+dialogue-battle-deaths	{s} and {s}	{s1}和{s2}	dialogue-battle-death,dialogue-battle-death	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;native >=3 comma;==2 and
+dialogue-battle-death	{s} was slain	{s1}被杀死了	dialogue-battle-person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675e44
+dialogue-battle-death	{s} was slain by {s}	{s1}被{s2}杀死了	dialogue-battle-person,dialogue-battle-person	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675e70 includes leading space
+dialogue-battle-death	{s} was slainby a {s}	{s1}被一只{s2}杀死了	dialogue-battle-person,$creature	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675ff9 native literal 'by a ' has no leading space
+dialogue-battle-death	{s} was slainby a {s} of {s}	{s1}被{s3}的一只{s2}杀死了	dialogue-battle-person,$creature,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140675ff9/0x140676046
+dialogue-battle-death	{s} was slainby the forces of {s}	{s1}被{s2}的部队杀死了	dialogue-battle-person,$name	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x140676062 native literal 'by the forces of ' no leading space
+dialogue-battle-death	{s} died	{s1}丧生了	dialogue-battle-group	0x140675910..0x14067667c;NPC battle account via0x14049cb1a/0x1404af702;date0x140675670;person0x140a946e0;race0x140b94ed0;0x1406761eb
+sentence	Make way for {s} {s} and {s}!	给{s1}{s2}和{s3}让路！	$term,$person,$name	0x1404b604a..0x1404b617a;office99a3c0 +personname0x140a946e0 +groupname0x140a946e0
+sentence	My {s} {s} lives in {s}.	我的{s1}{s2}住在{s3}。	dialogue-family,$person,$name	0x1404b10cf..0x1404b122c;family75a580 +person/site a946e0
+dialogue-object	the object I can't remember	我记不起来的那件东西		0x1404bf98c..0x1404c1665 missing objectfallback
+dialogue-object	{s}	{s1}	$book	0x1404bf9ea artifactref vtable metadata nonzero ->a94030 artifactname
+dialogue-object	{s}	{s1}	$item	0x1404bfa4b..0x1404bfa61 itemdesc c65450;also4c126e/4c1449/4c1624
+sentence	Drop {s}!	放下{s1}！	dialogue-object	0x1404bf98c..0x1404c16d1;four object-request/gift/trade/location speech branches;complete object scope
+sentence	Fortune has favored you, and {s} is yours. Please consider my offer.	你走运了，{s1}归你了。请考虑我的提议。	dialogue-object	0x1404bf98c..0x1404c16d1;four object-request/gift/trade/location speech branches;complete object scope
+sentence	Perhaps you'd be willing to trade {s}?	你愿不愿意拿{s1}来交换？	dialogue-object	0x1404bf98c..0x1404c16d1;four object-request/gift/trade/location speech branches;complete object scope
+sentence	Where is {s}?	{s1}在哪里？	dialogue-object	0x1404bf98c..0x1404c16d1;four object-request/gift/trade/location speech branches;complete object scope
+sentence	So, the {s} and the {s}...	话说，那个{s1}和那个{s2}……	$creature,$creature	0x1404c4823..0x1404c48e2;aa3bd0 species/caste;may submit incomplete joke as authored
+sentence	... and the {s} said, "Are you going to eat that?"	……然后那个{s1}说道：“你要吃那个吗？”	$creature	0x1404c4e35..0x1404c4ed2;6f580 assignment replaces opening joke
+sentence	... and the {s} saw the sun and vomited on the spot!	……然后那个{s1}看见太阳，当场吐了！	$creature	0x1404c4f4c..0x1404c4fda;6f580 assignment replaces opening joke
+dialogue-trouble	deaths	多起死亡		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the death	那起死亡		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	law-breaking	违法活动		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the fighting	争斗		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	armies on the march	正在行军的军队		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the army on the march	那支正在行军的军队		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	abductions	多起绑架		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the abduction	那起绑架		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	occupations	多处占领		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the occupation	那次占领		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	beasts	凶兽		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the beast	那头凶兽		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	criminals	罪犯		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	bandits	强盗		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	skulking vermin	潜伏的害兽		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	bone-chilling horror	骇人的恐怖之物		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	ruffians	暴徒		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	open war	公开交战		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	brewing trouble with our neighbors	与邻邦日益紧张的关系		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+dialogue-trouble	the missing treasure	失落的宝藏		0x1404a1f03..0x1404a2112;15 native enumtypes;singular/plural branches
+sentence	Well, let's see... we've got {s}.	嗯，让我想想……我们这里有{s1}。	dialogue-trouble-list	0x1404a1dd8..0x1404a2179;zero terms submits opening alone
+dialogue-trouble-list	{s}	{s1}	dialogue-trouble	0x1404a2118..0x1404a2179
+dialogue-trouble-list	{s}, {s}	{s1}、{s2}	dialogue-trouble,dialogue-trouble-list	0x1404a2132
+dialogue-trouble-list	{s} and {s}	{s1}和{s2}	dialogue-trouble,dialogue-trouble	0x1404a2153
+sentence	{s}!	{s1}！	dialogue-recognition	0x1404cd3cb..0x1404cd419;0x1404cd4b6..0x1404cd54b
+sentence	{s}, is it really you?	{s1}，真的是你吗？	dialogue-recognition	0x1404cd3cb..0x1404cd419;0x1404cd4b6..0x1404cd54b
+dialogue-recognition	{s}	{s1}	dialogue-family	0x1404cd130..0x1404cd37d;native relative enum vocabulary
+dialogue-recognition	{s}	{s1}	$person	0x1404cd456..0x1404cd492;given name or complete name
+dialogue-recognition	Dear	亲爱的		0x1404cd512;replaces name

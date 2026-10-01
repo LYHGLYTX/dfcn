@@ -1,0 +1,300 @@
+<data-definition>
+    <bitfield-type type-name='location_info_flag' base-type='uint32_t'> bay12: LOCATION_INFO_FLAG_*
+        <flag-bit name='goblets' original-name='NEED_GOBLETS'/>
+        <flag-bit name='instruments' original-name='NEED_INSTRUMENTS'/>
+        <flag-bit name='paper' original-name='NEED_WRITING_MATERIAL'/>
+        <flag-bit name='entity_recognized' original-name='ENTITY_RECOGNIZED'/>
+        <flag-bit name='splints' original-name='NEED_SPLINTS'/>
+        <flag-bit name='thread' original-name='NEED_THREAD'/>
+        <flag-bit name='cloth' original-name='NEED_CLOTH'/>
+        <flag-bit name='crutches' original-name='NEED_CRUTCHES'/>
+        <flag-bit name='powder' original-name='NEED_CAST_POWDER'/>
+        <flag-bit name='buckets' original-name='NEED_BUCKETS'/>
+        <flag-bit name='soap' original-name='NEED_SOAP'/>
+    </bitfield-type>
+
+    <struct-type type-name='abstract_building_contents' original-name='location_infost'>
+        <bitfield base-type='uint32_t' type-name='location_info_flag' name='need_more' original-name='flag'/>
+        <enum type-name='profession' name='profession' original-name='dedicated_unit_type' since='v0.47.01'/>
+        <int32_t name='desired_goblets' original-name='desired_number_stored_goblets'/>
+        <int32_t name='desired_instruments' original-name='desired_number_stored_instruments'/>
+        <int32_t name='desired_paper' original-name='desired_number_stored_writing_material'/>
+        <int32_t name='desired_splints' original-name='desired_number_stored_splints'/>
+        <int32_t name='desired_thread' original-name='desired_number_stored_thread' comment='times 15000'/>
+        <int32_t name='desired_cloth' original-name='desired_number_stored_cloth' comment='times 10000'/>
+        <int32_t name='desired_crutches' original-name='desired_number_stored_crutches'/>
+        <int32_t name='desired_powder' original-name='desired_number_stored_cast_powder' comment='times 150'/>
+        <int32_t name='desired_buckets' original-name='desired_number_stored_buckets'/>
+        <int32_t name='desired_soap' original-name='desired_number_stored_soap' comment='times 150'/>
+        <int32_t name='desired_copies' original-name='total_wc_copies_desired' init-value='2'/>
+        <int32_t name='location_tier' original-name='current_level'/>
+        <int32_t name='location_value' original-name='last_calculated_value'/>
+
+        the following is not saved:
+        <int32_t name='count_goblets' original-name='last_number_stored_goblets'/>
+        <int32_t name='count_instruments' original-name='last_number_stored_instruments'/>
+        <int32_t name='count_paper' original-name='last_number_stored_writing_material'/>
+        <int32_t name='count_splints' original-name='last_number_stored_splints'/>
+        <int32_t name='count_thread' original-name='last_number_stored_thread'/>
+        <int32_t name='count_cloth' original-name='last_number_stored_cloth'/>
+        <int32_t name='count_crutches' original-name='last_number_stored_crutches'/>
+        <int32_t name='count_powder' original-name='last_number_stored_cast_powder'/>
+        <int32_t name='count_buckets' original-name='last_number_stored_buckets'/>
+        <int32_t name='count_soap' original-name='last_number_stored_soap'/>
+        <int32_t name='update_timer' init-value='100'/>
+        <int32_t name='update_count' original-name='major_update_count'/>
+        <stl-vector type-name='int32_t' name='building_ids' original-name='zone_bld_id' ref-target='building' comment='binary'/>
+    </struct-type>
+
+    <enum-type type-name='location_death_type' base-type='int32_t'> bay12: LocationDeathType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='NATURAL'/>
+        <enum-item name='STARVATION'/>
+        <enum-item name='FAILED_DEFENDER'/>
+        <enum-item name='SUCCESSFUL_DEFENDER'/>
+        <enum-item name='FAILED_INVADER'/>
+        <enum-item name='SUCCESSFUL_INVADER'/>
+        <enum-item name='MURDER'/>
+        <enum-item name='NATURAL_SCATTERED'/>
+        <enum-item name='SITE_RAMPAGE'/>
+    </enum-type>
+
+    <struct-type type-name='location_death_batchst'>
+        <int32_t name="num"/>
+        <int32_t name="race" ref-target='creature_raw'/>
+        <int32_t name="epid" ref-target='entity_population'/>
+        <int32_t name="breed_id" ref-target='breed'/>
+        <int32_t name='first_year_used'/>
+        <int32_t name='last_year_used'/>
+        <int32_t name="body_count"/>
+        <enum type-name='location_death_type' name="death_type"/>
+    </struct-type>
+
+    <struct-type type-name='location_deathst'>
+        <stl-vector pointer-type='location_death_batchst' name='batch' since='v0.34.01'/>
+        <stl-vector type-name='int32_t' name='hfid' ref-target='historical_figure' since='v0.34.01' comment="binary; killed by rampaging monster, murder, execution, old age seen. Note that most HFs seem to have been culled"/>
+    </struct-type>
+
+    -- Unused: struct blueprintst
+    -- Unused: struct gbp_element_groupst
+    -- Unused: struct general_blueprintst
+
+    <struct-type type-name='architectural_infost'>
+        <stl-vector type-name='int32_t' name='hfig' original-name='central_hfid' ref-target='historical_figure'/>
+        <int32_t name='architect_hf' original-name='architect_hfid' ref-target='historical_figure'/>
+        <stl-vector name='architectural_elements' original-name='element' ><enum base-type='int16_t' type-name='architectural_element'/></stl-vector>
+        <int16_t name='mat_type' original-name='material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='matgloss'/>
+    </struct-type>
+
+    <struct-type type-name='abstract_building_hf_linkst'>
+        <enum base-type='int16_t' type-name='histfig_hf_link_type' name='type'/>
+        <int32_t name='histfig_id' original-name='hfid' ref-target='historical_figure'/>
+    </struct-type>
+
+    <enum-type type-name='abstract_building_order_type' base-type='int32_t'> bay12: AbstractBuildingOrderType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='COPY_ITEM'/>
+    </enum-type>
+
+    <struct-type type-name='scribejob' original-name='abstract_building_orderst'>
+        <int32_t name='id' original-name='local_id'/>
+        <enum type-name='abstract_building_order_type' name='type'/>
+        <int32_t name='target_id' comment='depends on type, currently item ID'/>
+        <int32_t name='relevant_id' comment='depends on type, currently written content ID'/>
+        <int32_t name='unit_id' original-name='worker_unid' ref-target='unit'/>
+        <int32_t name='activity_entry_id' original-name='activity_id' ref-target='activity_entry'/>
+        <int32_t name='activity_event_id' ref-target='activity_event'/>
+    </struct-type>
+
+    <struct-type type-name='location_scribe_jobs' original-name='abstract_building_order_informationst'>
+        <stl-vector pointer-type='scribejob' name='scribejobs' original-name='order'/>
+        <int32_t name='next_id' original-name='next_order_id'/>
+        <int32_t name='next_check_year'/>
+        <int32_t name='next_check_season_tick' original-name='next_check_season_count'/>
+    </struct-type>
+
+    <struct-type type-name='ab_reputation_infost'>
+        <static-array name='reputation' type-name='int32_t' index-enum='abstract_building_reputation_type'/>
+    </struct-type>
+
+    <class-type type-name='abstract_building' original-name='abstract_buildingst' key-field='id'>
+        <int32_t name='id' original-name='local_id'/>
+
+        <code-helper name='find-instance'>
+            (find-by-id $(find-instance $world_site $$).buildings $id $)
+        </code-helper>
+
+        <stl-vector pointer-type='abstract_building_hf_linkst' name='inhabitants' original-name='hf_link'/>
+        <df-flagarray name='flags' original-name='flag' index-enum='abstract_building_flags'/>
+        <pointer type-name='architectural_infost' name='archinfo'/>
+        <stl-vector type-name='int32_t' name='item_id' ref-target='item' comment='binary'/>
+        <int32_t name='parent_building_id' original-name='master_ab_local_id' ref-target='abstract_building' comment='Tombs use this to hold which catacomb they are part of.'/>
+        <stl-vector type-name='int32_t' name='child_building_ids' original-name='subord_ab_local_id' ref-target='abstract_building' comment='Used by catacombs to hold their tombs'/>
+        <int32_t name='site_owner_id' original-name='maker_ent_id' ref-target='historical_entity' comment='entity that constructed the building'/>
+        <pointer type-name='location_scribe_jobs' name='scribeinfo' original-name='order_info' since='v0.42.01'/>
+        <pointer type-name='site_reputation_info' name='review_info' original-name='ab_review_info' since='v0.42.01'/>
+        <pointer type-name='ab_reputation_infost' name='reputation_info' original-name='ab_reputation_info' since='v0.42.01'/>
+        <int32_t name='site_id' ref-target='world_site'
+                 comment='not initialized/saved/loaded, assumed member of base class'/>
+        <compound type-name='coord2d' name='pos' comment='site_x,site_y' since='v0.42.01'/>
+        <stl-vector pointer-type='occupation' name='occupations' original-name='occupation' since='v0.42.01'/>
+
+        <virtual-methods>
+            <vmethod ret-type='abstract_building_type' name='getType' original-name='type'/>
+            <vmethod name='getDisplayTile' original-name='get_print_information' comment='on navigation minimap'>
+                <pointer type-name='uint8_t' name='symbol'/>
+                <pointer type-name='int16_t' name='color_f'/>
+                <pointer type-name='int16_t' name='color_b'/>
+                <pointer type-name='int16_t' name='color_br'/>
+            </vmethod>
+            <vmethod name='getName' original-name='get_name'><ret-type><pointer type-name='language_name'/></ret-type></vmethod>
+            <vmethod name='getContents' original-name='get_location_info'><ret-type><pointer type-name='abstract_building_contents'/></ret-type></vmethod>
+            <vmethod name='write_file'> <pointer type-name='file_compressorst' name='filecomp'/> </vmethod>
+
+            <vmethod name='read_file'>
+                <pointer type-name='file_compressorst' name='filecomp'/>
+                <enum type-name='save_version' name='loadversion'/>
+            </vmethod>
+            <vmethod is-destructor='true'/>
+            <vmethod ret-type='int32_t' name='getReligionID' original-name='get_entity_id'/>
+            <vmethod ret-type='bool' name='razeable'/>
+            <vmethod ret-type='bool' name='canDisplayBody' original-name='can_display_body'/>
+
+            <vmethod ret-type='int32_t' name='getDefensePerc' original-name='get_defense_perc'/>
+            <vmethod name='getEntombed' original-name='get_location_death'><ret-type><pointer type-name='location_deathst'/></ret-type></vmethod>
+            <vmethod name='generate_xml' original-name='xml_dump'>
+                <pointer type-name='stl-fstream' name='fseed'/>
+                <int32_t original-name='tabn'/>
+            </vmethod>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='abstract_building_mead_hallst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <compound name='door'> not a compound
+            <int32_t name="race" original-name='door_race' ref-target='creature_raw'/>
+            <enum type-name='item_type' name='item_type' original-name='door_i_type'/>
+            <int16_t name='item_subtype' original-name='door_i_subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+            <int16_t name='mat_type' original-name='door_i_sc1' ref-target='material' aux-value='$$.mat_index'/>
+            <int32_t name='mat_index' original-name='door_i_sc2'/>
+        </compound>
+        <compound name='wall'> not a compound
+            <int32_t name="race" original-name='wall_race' ref-target='creature_raw'/>
+            <enum type-name='item_type' name='item_type' original-name='wall_i_type'/>
+            <int16_t name='item_subtype' original-name='wall_i_subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+            <int16_t name='mat_type' original-name='wall_i_sc1' ref-target='material' aux-value='$$.mat_index'/>
+            <int32_t name='mat_index' original-name='wall_i_sc2'/>
+        </compound>
+    </class-type>
+
+    <class-type type-name='abstract_building_counting_housest' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_guildhallst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <compound type-name='abstract_building_contents' name='contents' original-name='location_info'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_hospitalst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <compound type-name='abstract_building_contents' name='contents' original-name='location_info'/>
+    </class-type>
+
+    <bitfield-type type-name='abstract_building_tower_flag' base-type='uint32_t'> bay12: ABSTRACT_BUILDING_TOWER_FLAG_*
+        <flag-bit name='dungeon' original-name='DUNGEON'/>
+        <flag-bit name='improved_fortifications' original-name='IMPROVED_FORTIFICATIONS'/>
+        <flag-bit name='gated_courtyard' original-name='GATED_COURTYARD'/>
+        <flag-bit name='feast_hall' original-name='FEAST_HALL'/>
+    </bitfield-type>
+
+    <class-type type-name='abstract_building_towerst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <bitfield base-type='uint32_t' type-name='abstract_building_tower_flag' name='spec_flag'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_keepst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_dark_towerst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+    </class-type>
+
+    <bitfield-type type-name='abstract_building_underworld_spire_flag' base-type='uint32_t'> bay12: AB_UNDERWORLD_SPIRE_FLAG_*
+        <flag-bit name='gate_open' original-name='GATE_OPEN'/>
+    </bitfield-type>
+
+    <class-type type-name='abstract_building_underworld_spirest' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <bitfield base-type='uint32_t' type-name='abstract_building_underworld_spire_flag' name='spire_flags' original-name='spire_flag'/>
+    </class-type>
+
+    -- Inline union - not a real structure
+    <struct-type type-name='religious_practice_data' is-union='true'>
+        <int32_t name='practice_id'/>
+        <int32_t name='Deity' ref-target='historical_figure'/>
+        <int32_t name='Religion' ref-target='historical_entity'/>
+    </struct-type>
+
+    <class-type type-name='abstract_building_templest' inherits-from='abstract_building'>
+        <enum type-name='religious_practice_type' name='deity_type' original-name='practice_type'/>
+        <compound type-name='religious_practice_data' name='deity_data' original-name='practice_id'/>
+        <compound type-name='language_name' name='name'/>
+        <compound type-name='abstract_building_contents' name='contents' original-name='location_info'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_libraryst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <stl-vector type-name='int32_t' name='copied_artifacts' original-name='copied_art_id' ref-target='artifact_record'/>
+        <int32_t name='last_check_year' original-name='last_message_board_check_year' init-value='-1'/>
+        <int32_t name='last_check_season_tick' original-name='last_message_board_check_season_count' init-value='-1'/>
+        <int32_t name='last_posting_year' original-name='last_message_board_posting_year' init-value='-1'/>
+        <int32_t name='last_posting_season_tick' original-name='last_message_board_posting_season_count' init-value='-1'/>
+        <compound type-name='abstract_building_contents' name='contents' original-name='location_info'/>
+    </class-type>
+
+    <struct-type type-name='rental_roomst'>
+        <int32_t name='id' original-name='local_id'/>
+        <stl-string name='location' original-name='location_string'/>
+        <int32_t name='civzone' original-name='civzone_id' ref-target='building'/>
+        <int32_t name='world_x' original-name='abs_room_x'/>
+        <int32_t name='world_y' original-name='abs_room_y'/>
+        <int32_t name='world_z' original-name='abs_room_z'/>
+    </struct-type>
+
+    <class-type type-name='abstract_building_inn_tavernst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <compound type-name='abstract_building_contents' name='contents' original-name='location_info'/>
+        <stl-vector pointer-type='rental_roomst' name='room_info' original-name='room'/>
+        <int32_t name='next_room_info_id' original-name='next_room_id'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_marketst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_tombst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <compound type-name='location_deathst' name='entombed' original-name='location_death'/>
+        <int32_t name='precedence'  original-name='rough_side_size'/>
+    </class-type>
+
+    <class-type type-name='abstract_building_dungeonst' inherits-from='abstract_building'>
+        <compound type-name='language_name' name='name'/>
+        <enum base-type='int16_t' type-name='dungeon_type' name='dungeon_type'/>
+        <int32_t name='upper_abb_id' original-name='upper_abb_local_id'/>
+        <compound type-name='location_deathst' name='entombed' original-name='location_death'/>
+        <int32_t name='total_block_size'/>
+        <int32_t name='worldgen_entity_total' original-name='wg_current_entity_total' comment='not saved'/>
+        <int32_t name='worldgen_beast_total' original-name='wg_current_beast_total' comment='not saved'/>
+    </class-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

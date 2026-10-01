@@ -1,0 +1,396 @@
+# Native PE text sources for intrigue paragraphs embedded in Justice interrogation reports.
+# Literal bytes are from the installed executable; addresses identify constructor and reference instruction.
+# Dynamic figures, identities, dates, positions, organizations, sites and regions are native memory fields; their combinations are unbounded.
+function_start	function_end	instruction	kind	operand	text
+0x1402a81f0	0x1402a9c5b	0x1402a82a1	cstring	0x141627690	 lured 
+0x1402a81f0	0x1402a9c5b	0x1402a82da	cstring	0x141627650	 to a meeting with 
+0x1402a81f0	0x1402a9c5b	0x1402a8310	cstring	0x141627668	, where the latter
+0x1402a81f0	0x1402a9c5b	0x1402a83ac	cstring	0x141626d88	 met with 
+0x1402a81f0	0x1402a9c5b	0x1402a83e8	cstring	0x1415ee880	 and
+0x1402a81f0	0x1402a9c5b	0x1402a8441	cstring	0x141627c58	, while completely misreading the situation, 
+0x1402a81f0	0x1402a9c5b	0x1402a8450	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8491	cstring	0x141627c88	made a threat
+0x1402a81f0	0x1402a9c5b	0x1402a84a8	cstring	0x141627c30	made flattering remarks
+0x1402a81f0	0x1402a9c5b	0x1402a84c2	cstring	0x141627c48	pulled rank
+0x1402a81f0	0x1402a9c5b	0x1402a8544	cstring	0x141627bf8	 as 
+0x1402a81f0	0x1402a9c5b	0x1402a8576	cstring	0x1415eb518	 of 
+0x1402a81f0	0x1402a9c5b	0x1402a85a4	cstring	0x141627c00	made a blackmail threat, due to embezzlement
+0x1402a81f0	0x1402a9c5b	0x1402a8626	cstring	0x141627bd0	 using the position 
+0x1402a81f0	0x1402a9c5b	0x1402a8638	cstring	0x141627be8	offered a bribe
+0x1402a81f0	0x1402a9c5b	0x1402a8652	cstring	0x141627d10	played for sympathy
+0x1402a81f0	0x1402a9c5b	0x1402a8671	cstring	0x141627d28	 by appealing to a shared worship of 
+0x1402a81f0	0x1402a9c5b	0x1402a86e0	cstring	0x141627ce0	offered revenge upon 
+0x1402a81f0	0x1402a9c5b	0x1402a8715	cstring	0x141627cf8	a jealous grudge, 
+0x1402a81f0	0x1402a9c5b	0x1402a8724	cstring	0x141627cb8	a business rival,
+0x1402a81f0	0x1402a9c5b	0x1402a8733	cstring	0x141627cd0	the tormentor 
+0x1402a81f0	0x1402a9c5b	0x1402a8742	cstring	0x141627c98	the persecutor 
+0x1402a81f0	0x1402a9c5b	0x1402a874e	cstring	0x141627ca8	a grudge, 
+0x1402a81f0	0x1402a9c5b	0x1402a875d	cstring	0x141627a40	the sacrilegious
+0x1402a81f0	0x1402a9c5b	0x1402a876f	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a87a7	cstring	0x141627a58	offered immortality
+0x1402a81f0	0x1402a9c5b	0x1402a87c0	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a87fc	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a886a	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a88b9	cstring	0x141627a20	was too afraid not to comply
+0x1402a81f0	0x1402a9c5b	0x1402a88c0	cstring	0x141627a00	gave in to fear of death
+0x1402a81f0	0x1402a9c5b	0x1402a88e3	cstring	0x1416279e8	succumbed to vanity
+0x1402a81f0	0x1402a9c5b	0x1402a88ea	cstring	0x1416279c0	was too vain to accept death and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a8900	cstring	0x141627980	was overcome by greed
+0x1402a81f0	0x1402a9c5b	0x1402a8912	cstring	0x141627998	was swayed by the emotional appeal
+0x1402a81f0	0x1402a9c5b	0x1402a8921	cstring	0x141627b68	desired vengeance and willingly complied
+0x1402a81f0	0x1402a9c5b	0x1402a8936	cstring	0x141627b98	was too envious of others to face death and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a894b	cstring	0x141627b08	was too ambitious to accept death and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a8960	cstring	0x141627b38	was too proud to accept death and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a8975	cstring	0x141627a90	was too unsettled by death to face it and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a898a	cstring	0x141627ac8	could not accept the uncertainty following death and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a899c	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a89c9	cstring	0x141628020	loathing the powerful
+0x1402a81f0	0x1402a9c5b	0x1402a89d8	cstring	0x141627a80	valuing the law
+0x1402a81f0	0x1402a9c5b	0x1402a89f0	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a8a45	cstring	0x1415edb24	's 
+0x1402a81f0	0x1402a9c5b	0x1402a8a75	cstring	0x141627fe0	lack of respect of
+0x1402a81f0	0x1402a9c5b	0x1402a8a84	cstring	0x141627fc8	lack of fear toward
+0x1402a81f0	0x1402a9c5b	0x1402a8a93	cstring	0x141628010	hatred of
+0x1402a81f0	0x1402a9c5b	0x1402a8aa2	cstring	0x141627ff8	lack of loyalty toward
+0x1402a81f0	0x1402a9c5b	0x1402a8ab1	cstring	0x141628038	distrust of
+0x1402a81f0	0x1402a9c5b	0x1402a8ac3	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8b2e	cstring	0x141627f68	the efforts of surrounding allies to stop the plot
+0x1402a81f0	0x1402a9c5b	0x1402a8b40	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a8baf	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a8c1d	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8c3e	cstring	0x1416280f8	accepted in admiration of power
+0x1402a81f0	0x1402a9c5b	0x1402a8c4d	cstring	0x141627fa0	spurned the law and agreed willingly
+0x1402a81f0	0x1402a9c5b	0x1402a8c5f	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a8cb0	cstring	0x141628118	being unafraid in the moment
+0x1402a81f0	0x1402a9c5b	0x1402a8ccb	cstring	0x1416280d0	being unafraid of death
+0x1402a81f0	0x1402a9c5b	0x1402a8cd7	cstring	0x1416280e8	being unafraid
+0x1402a81f0	0x1402a9c5b	0x1402a8cfc	cstring	0x1416280a8	being unaffected by the comments
+0x1402a81f0	0x1402a9c5b	0x1402a8d0b	cstring	0x141628048	feeling no avarice
+0x1402a81f0	0x1402a9c5b	0x1402a8d1a	cstring	0x141628060	being unswayed by the emotional appeal
+0x1402a81f0	0x1402a9c5b	0x1402a8d29	cstring	0x141627e08	a lack of desire for vengeance
+0x1402a81f0	0x1402a9c5b	0x1402a8d38	cstring	0x141628088	being willing to accept death
+0x1402a81f0	0x1402a9c5b	0x1402a8d56	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a8dab	cstring	0x1415edb24	's 
+0x1402a81f0	0x1402a9c5b	0x1402a8ddb	cstring	0x141627fe0	lack of respect of
+0x1402a81f0	0x1402a9c5b	0x1402a8dea	cstring	0x141627fc8	lack of fear toward
+0x1402a81f0	0x1402a9c5b	0x1402a8df9	cstring	0x141628010	hatred of
+0x1402a81f0	0x1402a9c5b	0x1402a8e08	cstring	0x141627ff8	lack of loyalty toward
+0x1402a81f0	0x1402a9c5b	0x1402a8e17	cstring	0x141628038	distrust of
+0x1402a81f0	0x1402a9c5b	0x1402a8e29	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8e94	cstring	0x141627f68	the efforts of surrounding allies to stop the plot
+0x1402a81f0	0x1402a9c5b	0x1402a8ea6	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a8ed7	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a8f42	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8f72	cstring	0x141627dc0	respected
+0x1402a81f0	0x1402a9c5b	0x1402a8f7e	cstring	0x141627da8	complied out of fear of
+0x1402a81f0	0x1402a9c5b	0x1402a8f8d	cstring	0x141627df0	agreed for love of
+0x1402a81f0	0x1402a9c5b	0x1402a8f9c	cstring	0x141627dd0	accepted out of loyalty to
+0x1402a81f0	0x1402a9c5b	0x1402a8fab	cstring	0x141627e28	trusted
+0x1402a81f0	0x1402a9c5b	0x1402a8fbd	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a8ffb	cstring	0x141627d50	 and agreed
+0x1402a81f0	0x1402a9c5b	0x1402a900d	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a905e	cstring	0x141628118	being unafraid in the moment
+0x1402a81f0	0x1402a9c5b	0x1402a9079	cstring	0x1416280d0	being unafraid of death
+0x1402a81f0	0x1402a9c5b	0x1402a9085	cstring	0x1416280e8	being unafraid
+0x1402a81f0	0x1402a9c5b	0x1402a90aa	cstring	0x1416280a8	being unaffected by the comments
+0x1402a81f0	0x1402a9c5b	0x1402a90b9	cstring	0x141628048	feeling no avarice
+0x1402a81f0	0x1402a9c5b	0x1402a90c8	cstring	0x141628060	being unswayed by the emotional appeal
+0x1402a81f0	0x1402a9c5b	0x1402a90d7	cstring	0x141627e08	a lack of desire for vengeance
+0x1402a81f0	0x1402a9c5b	0x1402a90e6	cstring	0x141628088	being willing to accept death
+0x1402a81f0	0x1402a9c5b	0x1402a9104	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a913c	cstring	0x141628020	loathing the powerful
+0x1402a81f0	0x1402a9c5b	0x1402a914b	cstring	0x141627a80	valuing the law
+0x1402a81f0	0x1402a9c5b	0x1402a9192	cstring	0x141627f68	the efforts of surrounding allies to stop the plot
+0x1402a81f0	0x1402a9c5b	0x1402a91a4	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a9205	cstring	0x141627d60	  Effective pressure to comply came from co-conspirators surrounding 
+0x1402a81f0	0x1402a9c5b	0x1402a9235	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a9247	cstring	0x141627f30	  The plan worked.
+0x1402a81f0	0x1402a9c5b	0x1402a9273	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a92e1	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a9328	cstring	0x141627f48	was unafraid in the moment
+0x1402a81f0	0x1402a9c5b	0x1402a933d	cstring	0x141627ef0	did not fear death and refused
+0x1402a81f0	0x1402a9c5b	0x1402a934c	cstring	0x141627f10	was not afraid and refused
+0x1402a81f0	0x1402a9c5b	0x1402a936e	cstring	0x141627ec0	was unaffected by the comments and refused
+0x1402a81f0	0x1402a9c5b	0x1402a937d	cstring	0x141627e30	felt no avarice and refused
+0x1402a81f0	0x1402a9c5b	0x1402a9386	cstring	0x141627e50	was unswayed by the emotional appeal and refused
+0x1402a81f0	0x1402a9c5b	0x1402a9395	cstring	0x1416282e8	lacked a desire for vengeance and refused
+0x1402a81f0	0x1402a9c5b	0x1402a93a4	cstring	0x141627e88	was willing to accept eventual death and refused
+0x1402a81f0	0x1402a9c5b	0x1402a93bb	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a93e8	cstring	0x1416282c0	admiration of power
+0x1402a81f0	0x1402a9c5b	0x1402a93f7	cstring	0x141628318	disdaining the law
+0x1402a81f0	0x1402a9c5b	0x1402a940e	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a9464	cstring	0x1415edb24	's 
+0x1402a81f0	0x1402a9c5b	0x1402a9491	cstring	0x141628298	respect of
+0x1402a81f0	0x1402a9c5b	0x1402a94a0	cstring	0x141628290	fear of
+0x1402a81f0	0x1402a9c5b	0x1402a94af	cstring	0x1416282b8	love of
+0x1402a81f0	0x1402a9c5b	0x1402a94be	cstring	0x1416282a8	loyalty toward
+0x1402a81f0	0x1402a9c5b	0x1402a94cd	cstring	0x1416282d8	trust of
+0x1402a81f0	0x1402a9c5b	0x1402a94df	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a954a	cstring	0x1416283d8	the efforts of co-conspirators to further the plot
+0x1402a81f0	0x1402a9c5b	0x1402a955c	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a95cd	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a963b	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a965c	cstring	0x141628398	loathed abuses of power and refused
+0x1402a81f0	0x1402a9c5b	0x1402a966b	cstring	0x141628410	valued the law and refused
+0x1402a81f0	0x1402a9c5b	0x1402a967c	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a96d6	cstring	0x1416283c0	fearing of death
+0x1402a81f0	0x1402a9c5b	0x1402a96e5	cstring	0x141628360	being afraid
+0x1402a81f0	0x1402a9c5b	0x1402a96fd	cstring	0x141628330	feelings of vanity
+0x1402a81f0	0x1402a9c5b	0x1402a970c	cstring	0x141628348	feelings of greed
+0x1402a81f0	0x1402a9c5b	0x1402a971e	cstring	0x1416281a0	being swayed by the emotional appeal
+0x1402a81f0	0x1402a9c5b	0x1402a9730	cstring	0x1416281c8	a desire for vengeance
+0x1402a81f0	0x1402a9c5b	0x1402a9745	cstring	0x141628370	an unwillingness to accept death
+0x1402a81f0	0x1402a9c5b	0x1402a975f	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a97b5	cstring	0x1415edb24	's 
+0x1402a81f0	0x1402a9c5b	0x1402a97e2	cstring	0x141628298	respect of
+0x1402a81f0	0x1402a9c5b	0x1402a97f1	cstring	0x141628290	fear of
+0x1402a81f0	0x1402a9c5b	0x1402a9800	cstring	0x1416282b8	love of
+0x1402a81f0	0x1402a9c5b	0x1402a980f	cstring	0x1416282a8	loyalty toward
+0x1402a81f0	0x1402a9c5b	0x1402a981e	cstring	0x1416282d8	trust of
+0x1402a81f0	0x1402a9c5b	0x1402a9830	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a989b	cstring	0x1416283d8	the efforts of co-conspirators to further the plot
+0x1402a81f0	0x1402a9c5b	0x1402a98ad	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a98db	cstring	0x1415fcfe8	  
+0x1402a81f0	0x1402a9c5b	0x1402a9949	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a997f	cstring	0x141628138	had no respect for
+0x1402a81f0	0x1402a9c5b	0x1402a998e	cstring	0x141628168	was unafraid of
+0x1402a81f0	0x1402a9c5b	0x1402a999a	cstring	0x14162815c	hated
+0x1402a81f0	0x1402a9c5b	0x1402a99a9	cstring	0x141628188	felt no loyalty to
+0x1402a81f0	0x1402a9c5b	0x1402a99b5	cstring	0x141628178	distrusted
+0x1402a81f0	0x1402a9c5b	0x1402a99c7	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a99fb	cstring	0x1415e873c	 
+0x1402a81f0	0x1402a9c5b	0x1402a9a2b	cstring	0x141628150	and refused
+0x1402a81f0	0x1402a9c5b	0x1402a9a3c	cstring	0x141627a70	, despite 
+0x1402a81f0	0x1402a9c5b	0x1402a9a96	cstring	0x1416283c0	fearing of death
+0x1402a81f0	0x1402a9c5b	0x1402a9aa5	cstring	0x141628360	being afraid
+0x1402a81f0	0x1402a9c5b	0x1402a9abd	cstring	0x141628330	feelings of vanity
+0x1402a81f0	0x1402a9c5b	0x1402a9acc	cstring	0x141628348	feelings of greed
+0x1402a81f0	0x1402a9c5b	0x1402a9ade	cstring	0x1416281a0	being swayed by the emotional appeal
+0x1402a81f0	0x1402a9c5b	0x1402a9af0	cstring	0x1416281c8	a desire for vengeance
+0x1402a81f0	0x1402a9c5b	0x1402a9b05	cstring	0x141628370	an unwillingness to accept death
+0x1402a81f0	0x1402a9c5b	0x1402a9b19	cstring	0x1415e9110	 and 
+0x1402a81f0	0x1402a9c5b	0x1402a9b52	cstring	0x1416282c0	admiration of power
+0x1402a81f0	0x1402a9c5b	0x1402a9b61	cstring	0x141628318	disdaining the law
+0x1402a81f0	0x1402a9c5b	0x1402a9ba8	cstring	0x1416283d8	the efforts of co-conspirators to further the plot
+0x1402a81f0	0x1402a9c5b	0x1402a9bba	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a9be1	cstring	0x141628240	  Allies surrounding 
+0x1402a81f0	0x1402a9c5b	0x1402a9c17	cstring	0x141628258	 raised their suspicions and the plan was foiled.
+0x1402a81f0	0x1402a9c5b	0x1402a9c26	cstring	0x141628220	  The plan failed.
+0x1402a9e40	0x1402aa524	0x1402a9e9c	cstring	0x1415fe078	In 
+0x1402a9e40	0x1402aa524	0x1402a9ec1	cstring	0x1415e90d8	, 
+0x1402a9e40	0x1402aa524	0x1402a9f03	cstring	0x141628234	, as 
+0x1402a9e40	0x1402aa524	0x1402a9f3c	cstring	0x1415fd504	,
+0x1402a9e40	0x1402aa524	0x1402a9f73	cstring	0x1416281f8	 attempted to corrupt 
+0x1402a9e40	0x1402aa524	0x1402a9f98	cstring	0x141628210	 subordinated 
+0x1402a9e40	0x1402aa524	0x1402a9faf	cstring	0x1416281e0	 corrupted 
+0x1402a9e40	0x1402aa524	0x1402a9ffb	cstring	0x1416281f0	spouse 
+0x1402a9e40	0x1402aa524	0x1402aa00d	cstring	0x141628660	lover 
+0x1402a9e40	0x1402aa524	0x1402aa01f	cstring	0x141628668	childhood friend 
+0x1402a9e40	0x1402aa524	0x1402aa031	cstring	0x141628638	comrade-in-arms 
+0x1402a9e40	0x1402aa524	0x1402aa043	cstring	0x141628650	fellow scholar 
+0x1402a9e40	0x1402aa524	0x1402aa055	cstring	0x141628618	fellow artist 
+0x1402a9e40	0x1402aa524	0x1402aa067	cstring	0x141628628	fellow athlete 
+0x1402a9e40	0x1402aa524	0x1402aa079	cstring	0x141628608	mother 
+0x1402a9e40	0x1402aa524	0x1402aa08b	cstring	0x141628610	father 
+0x1402a9e40	0x1402aa524	0x1402aa09d	cstring	0x1416286f8	master 
+0x1402a9e40	0x1402aa524	0x1402aa0af	cstring	0x141628700	apprentice 
+0x1402a9e40	0x1402aa524	0x1402aa0c1	cstring	0x1416286d8	companion 
+0x1402a9e40	0x1402aa524	0x1402aa0d3	cstring	0x1416286e8	ex-spouse 
+0x1402a9e40	0x1402aa524	0x1402aa138	cstring	0x141628520	guildmate 
+0x1402a9e40	0x1402aa524	0x1402aa147	cstring	0x141628690	fellow company member 
+0x1402a9e40	0x1402aa524	0x1402aa156	cstring	0x141628680	troupemate 
+0x1402a9e40	0x1402aa524	0x1402aa165	cstring	0x1416286c0	fellow order member 
+0x1402a9e40	0x1402aa524	0x1402aa174	cstring	0x1416286a8	fellow believer 
+0x1402a9e40	0x1402aa524	0x1402aa183	cstring	0x141628530	neighbor 
+0x1402a9e40	0x1402aa524	0x1402aa1c1	cstring	0x141628234	, as 
+0x1402a9e40	0x1402aa524	0x1402aa1fe	cstring	0x1415fd504	,
+0x1402a9e40	0x1402aa524	0x1402aa242	cstring	0x141628478	 in order to secure embezzled funds in 
+0x1402a9e40	0x1402aa524	0x1402aa251	cstring	0x141628458	 in order to have an agent in 
+0x1402a9e40	0x1402aa524	0x1402aa260	cstring	0x1416284e0	 in order to have someone to act on plots and schemes in 
+0x1402a9e40	0x1402aa524	0x1402aa26f	cstring	0x1416284a0	 in order to have law enforcement look the other way in 
+0x1402a9e40	0x1402aa524	0x1402aa28c	cstring	0x141628440	 as a member of 
+0x1402a9e40	0x1402aa524	0x1402aa2b0	cstring	0x1416285b8	 toward the fulfillment of plots and schemes in 
+0x1402a9e40	0x1402aa524	0x1402aa330	cstring	0x141628430	the wilds
+0x1402a9e40	0x1402aa524	0x1402aa345	cstring	0x1415e85b4	.
+0x1402a9e40	0x1402aa524	0x1402aa3a3	cstring	0x1415fcfe8	  
+0x1402a9e40	0x1402aa524	0x1402aa425	cstring	0x1415fcfe8	  
+0x1402a9e40	0x1402aa524	0x1402aa463	cstring	0x141628458	 in order to have an agent in 
+0x1402a9e40	0x1402aa524	0x1402aa4e3	cstring	0x141628430	the wilds
+0x1402a9e40	0x1402aa524	0x1402aa4f8	cstring	0x1415e85b4	.
+0x1402aa700	0x1402aad8a	0x1402aa75c	cstring	0x1415fe078	In 
+0x1402aa700	0x1402aad8a	0x1402aa781	cstring	0x1415e90d8	, 
+0x1402aa700	0x1402aad8a	0x1402aa7c3	cstring	0x141628234	, as 
+0x1402aa700	0x1402aad8a	0x1402aa7fc	cstring	0x1415fd504	,
+0x1402aa700	0x1402aad8a	0x1402aa811	cstring	0x1416281f8	 attempted to corrupt 
+0x1402aa700	0x1402aad8a	0x1402aa861	cstring	0x1416281f0	spouse 
+0x1402aa700	0x1402aad8a	0x1402aa873	cstring	0x141628660	lover 
+0x1402aa700	0x1402aad8a	0x1402aa885	cstring	0x141628668	childhood friend 
+0x1402aa700	0x1402aad8a	0x1402aa897	cstring	0x141628638	comrade-in-arms 
+0x1402aa700	0x1402aad8a	0x1402aa8a9	cstring	0x141628650	fellow scholar 
+0x1402aa700	0x1402aad8a	0x1402aa8bb	cstring	0x141628618	fellow artist 
+0x1402aa700	0x1402aad8a	0x1402aa8cd	cstring	0x141628628	fellow athlete 
+0x1402aa700	0x1402aad8a	0x1402aa8df	cstring	0x141628608	mother 
+0x1402aa700	0x1402aad8a	0x1402aa8f1	cstring	0x141628610	father 
+0x1402aa700	0x1402aad8a	0x1402aa903	cstring	0x1416286f8	master 
+0x1402aa700	0x1402aad8a	0x1402aa915	cstring	0x141628700	apprentice 
+0x1402aa700	0x1402aad8a	0x1402aa927	cstring	0x1416286d8	companion 
+0x1402aa700	0x1402aad8a	0x1402aa939	cstring	0x1416286e8	ex-spouse 
+0x1402aa700	0x1402aad8a	0x1402aa99e	cstring	0x141628520	guildmate 
+0x1402aa700	0x1402aad8a	0x1402aa9ad	cstring	0x141628690	fellow company member 
+0x1402aa700	0x1402aad8a	0x1402aa9bc	cstring	0x141628680	troupemate 
+0x1402aa700	0x1402aad8a	0x1402aa9cb	cstring	0x1416286c0	fellow order member 
+0x1402aa700	0x1402aad8a	0x1402aa9da	cstring	0x1416286a8	fellow believer 
+0x1402aa700	0x1402aad8a	0x1402aa9e9	cstring	0x141628530	neighbor 
+0x1402aa700	0x1402aad8a	0x1402aaa27	cstring	0x141628234	, as 
+0x1402aa700	0x1402aad8a	0x1402aaa64	cstring	0x1415fd504	,
+0x1402aa700	0x1402aad8a	0x1402aaaa8	cstring	0x141628478	 in order to secure embezzled funds in 
+0x1402aa700	0x1402aad8a	0x1402aaab7	cstring	0x141628458	 in order to have an agent in 
+0x1402aa700	0x1402aad8a	0x1402aaac6	cstring	0x1416284e0	 in order to have someone to act on plots and schemes in 
+0x1402aa700	0x1402aad8a	0x1402aaad5	cstring	0x1416284a0	 in order to have law enforcement look the other way in 
+0x1402aa700	0x1402aad8a	0x1402aaaf2	cstring	0x141628440	 as a member of 
+0x1402aa700	0x1402aad8a	0x1402aab16	cstring	0x1416285b8	 toward the fulfillment of plots and schemes in 
+0x1402aa700	0x1402aad8a	0x1402aab96	cstring	0x141628430	the wilds
+0x1402aa700	0x1402aad8a	0x1402aabab	cstring	0x1415e85b4	.
+0x1402aa700	0x1402aad8a	0x1402aac09	cstring	0x1415fcfe8	  
+0x1402aa700	0x1402aad8a	0x1402aac8b	cstring	0x1415fcfe8	  
+0x1402aa700	0x1402aad8a	0x1402aacc9	cstring	0x141628458	 in order to have an agent in 
+0x1402aa700	0x1402aad8a	0x1402aad49	cstring	0x141628430	the wilds
+0x1402aa700	0x1402aad8a	0x1402aad5e	cstring	0x1415e85b4	.
+0x1402a81f0	0x1402a9c5b	0x1402a8273	dynamic-call	0x140b92f10	record+0x14 lurer; contextual figure identity
+0x1402a81f0	0x1402a9c5b	0x1402a82d2	dynamic-call	0x140b92f10	record+0x08 target; contextual figure identity
+0x1402a81f0	0x1402a9c5b	0x1402a8305	dynamic-call	0x140b92f10	record+0x04 corruptor; contextual figure identity
+0x1402a81f0	0x1402a9c5b	0x1402a856b	dynamic-call	0x14006fa10	resolved entity position+0x98 string; position title
+0x1402a81f0	0x1402a9c5b	0x1402a8594	dynamic-call	0x140b92900	record+0x4c entity; position organization
+0x1402a81f0	0x1402a9c5b	0x1402a86ae	dynamic-call	0x140b92f10	record+0x54 offered figure; shared deity, public identity context
+0x1402a81f0	0x1402a9c5b	0x1402a86d0	dynamic-call	0x140b92f10	record+0x54 offered figure; shared deity, report identity context
+0x1402a81f0	0x1402a9c5b	0x1402a879a	dynamic-call	0x140b92f10	record+0x54 offered figure; revenge target
+0x1402a9e40	0x1402aa524	0x1402a9eb6	dynamic-call	0x140b92640	event+0x08 year, event+0x0c year tick; date
+0x1402a9e40	0x1402aa524	0x1402a9eed	dynamic-call	0x140b92f10	event+0x28 corruptor; contextual figure identity
+0x1402a9e40	0x1402aa524	0x1402a9f34	dynamic-call	0x140c3a590	event+0x2c corruptor assumed identity
+0x1402a9e40	0x1402aa524	0x1402aa1b0	dynamic-call	0x140b92f10	event+0x30 target; contextual figure identity
+0x1402a9e40	0x1402aa524	0x1402aa1f3	dynamic-call	0x140c3a590	event+0x34 target assumed identity
+0x1402a9e40	0x1402aa524	0x1402aa2a5	dynamic-call	0x140b92900	support+0x24 organization for circumstance=257
+0x1402a9e40	0x1402aa524	0x1402aa2cf	dynamic-call	0x140b93930	event+0x40 site
+0x1402a9e40	0x1402aa524	0x1402aa2f1	dynamic-call	0x140b94940	event+0x48 underground layer
+0x1402a9e40	0x1402aa524	0x1402aa314	dynamic-call	0x140b94a40	event+0x44 world region
+0x1402a9e40	0x1402aa524	0x1402aa388	dynamic-call	0x1402a71e0	support+0x08 persuasion result appended as complete sentences
+0x1402a9e40	0x1402aa524	0x1402aa40a	dynamic-call	0x1402a81f0	support+0x10 intrigue result appended as complete sentences
+0x1402aa700	0x1402aad8a	0x1402aa776	dynamic-call	0x140b92640	event+0x08 year, event+0x0c year tick; date
+0x1402aa700	0x1402aad8a	0x1402aa7ad	dynamic-call	0x140b92f10	event+0x28 corruptor; contextual figure identity
+0x1402aa700	0x1402aad8a	0x1402aa7f4	dynamic-call	0x140c3a590	event+0x2c corruptor assumed identity
+0x1402aa700	0x1402aad8a	0x1402aaa16	dynamic-call	0x140b92f10	event+0x30 target; contextual figure identity
+0x1402aa700	0x1402aad8a	0x1402aaa59	dynamic-call	0x140c3a590	event+0x34 target assumed identity
+0x1402aa700	0x1402aad8a	0x1402aab0b	dynamic-call	0x140b92900	support+0x24 organization for circumstance=257
+0x1402aa700	0x1402aad8a	0x1402aab35	dynamic-call	0x140b93930	event+0x38 site
+0x1402aa700	0x1402aad8a	0x1402aab57	dynamic-call	0x140b94940	event+0x40 underground layer
+0x1402aa700	0x1402aad8a	0x1402aab7a	dynamic-call	0x140b94a40	event+0x3c world region
+0x1402aa700	0x1402aad8a	0x1402aabee	dynamic-call	0x1402a71e0	support+0x08 persuasion result appended as complete sentences
+0x1402aa700	0x1402aad8a	0x1402aac70	dynamic-call	0x1402a81f0	support+0x10 intrigue result appended as complete sentences
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a848b	method=0; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a84a5	method=1; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a84bc	method=2; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a859e	method=3; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a8632	method=4; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a864c	method=5; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a86da	method=6; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a847f	native-switch	0x1402a87a1	method=7; table=0x1402a9c5c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a870f	offered_relationship=3; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=4; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=5; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=6; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=7; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=8; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a876c	offered_relationship=9; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a871e	offered_relationship=10; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a873c	offered_relationship=11; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a874b	offered_relationship=12; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a872d	offered_relationship=13; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8703	native-switch	0x1402a8757	offered_relationship=14; table=0x1402a9c7c
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a892a	success facet response=2; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=3; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=4; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=5; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8969	success facet response=6; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=7; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8969	success facet response=8; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a88fa	success facet response=9; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=10; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=11; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=12; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=13; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=14; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=15; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=16; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=17; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a88a5	success facet response=18; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a897e	success facet response=19; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a88d0	success facet response=20; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a893f	success facet response=21; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=22; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=23; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=24; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a891b	success facet response=25; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8954	success facet response=26; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=27; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=28; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a897e	success facet response=29; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=30; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=31; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=32; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=33; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=34; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=35; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a8999	success facet response=36; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a81f0	0x1402a9c5b	0x1402a8899	native-switch	0x1402a890c	success facet response=37; table=0x1402a9cac; index_table=0x1402a9cd8
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa019	target_relationship=0; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa02b	target_relationship=1; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=2; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=3; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa007	target_relationship=4; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=5; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa03d	target_relationship=6; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa04f	target_relationship=7; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa061	target_relationship=8; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=9; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=10; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=11; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=12; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=13; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=14; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=15; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa192	target_relationship=16; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402a9ff5	target_relationship=17; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa073	target_relationship=18; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa085	target_relationship=19; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa097	target_relationship=20; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa0a9	target_relationship=21; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa0bb	target_relationship=22; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa0cd	target_relationship=23; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa17d	target_relationship=24; table=0x1402aa524
+0x1402a9e40	0x1402aa524	0x1402a9fe8	native-switch	0x1402aa0df	target_relationship=25; table=0x1402aa524
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa87f	target_relationship=0; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa891	target_relationship=1; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=2; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=3; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa86d	target_relationship=4; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=5; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8a3	target_relationship=6; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8b5	target_relationship=7; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8c7	target_relationship=8; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=9; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=10; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=11; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=12; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=13; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=14; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=15; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9f8	target_relationship=16; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa85b	target_relationship=17; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8d9	target_relationship=18; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8eb	target_relationship=19; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa8fd	target_relationship=20; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa90f	target_relationship=21; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa921	target_relationship=22; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa933	target_relationship=23; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa9e3	target_relationship=24; table=0x1402aad8c
+0x1402aa700	0x1402aad8a	0x1402aa84e	native-switch	0x1402aa945	target_relationship=25; table=0x1402aad8c

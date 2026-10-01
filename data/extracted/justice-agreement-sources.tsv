@@ -1,0 +1,1136 @@
+# Native source inventory: all printable RIP-relative literals and calls in the agreement and negotiation constructors.
+kind	function	instruction	address	source_or_callee
+call	agreement-formed	0x1402aafd0	0x1400b9dc0	0x1400b9dc0
+literal	agreement-formed	0x1402aafef	0x1415fe078	In 
+literal	agreement-formed	0x1402aaff6	0x141628558	Subject revealed that in 
+call	agreement-formed	0x1402ab004	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab014	0x140b92640	0x140b92640
+literal	agreement-formed	0x1402ab01f	0x1415e90d8	, 
+call	agreement-formed	0x1402ab029	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab0c0	0x141628ad8	a corrupt agreement was formed
+call	agreement-formed	0x1402ab0ca	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab177	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ab1ad	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab1c7	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab203	0x141539680	0x141539680
+literal	agreement-formed	0x1402ab210	0x141628578	an unknown party
+call	agreement-formed	0x1402ab21a	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab22b	0x1415e90d8	, 
+call	agreement-formed	0x1402ab235	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab255	0x14162853c	, and 
+call	agreement-formed	0x1402ab25f	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab273	0x1415e9110	 and 
+call	agreement-formed	0x1402ab27d	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab28b	QWORD	QWORD PTR [rip+0x133a897]        # 0x1415e5b28
+literal	agreement-formed	0x1402ab298	0x141628548	 concocted 
+call	agreement-formed	0x1402ab2a2	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab2c6	0x1416288c8	a embezzlement conspiracy
+call	agreement-formed	0x1402ab2d0	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab2e0	0x141628918	a corruption conspiracy
+call	agreement-formed	0x1402ab2ea	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab2fa	0x141628900	a bribery conspiracy
+call	agreement-formed	0x1402ab304	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab319	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ab328	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ab35b	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab375	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab3ad	QWORD	QWORD PTR [rip+0x133a775]        # 0x1415e5b28
+call	agreement-formed	0x1402ab3b4	0x141539680	0x141539680
+literal	agreement-formed	0x1402ab3bb	0x141628578	an unknown party
+call	agreement-formed	0x1402ab3c5	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ab3d2	0x1416288e8	 plotted to infiltrate 
+call	agreement-formed	0x1402ab3dc	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab3f5	0x140b92900	0x140b92900
+call	agreement-formed	0x1402ab427	0x140070e20	0x140070e20
+call	agreement-formed	0x1402ab465	0x140070e20	0x140070e20
+call	agreement-formed	0x1402ab4a3	0x140070e20	0x140070e20
+call	agreement-formed	0x1402ab4e1	0x140070e20	0x140070e20
+literal	agreement-formed	0x1402ab506	0x1416288a8	 in order to 
+call	agreement-formed	0x1402ab510	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab555	0x1416289d8	prepare a coup
+literal	agreement-formed	0x1402ab564	0x141628898	instill terror
+literal	agreement-formed	0x1402ab573	0x141628880	initiate sabotage
+literal	agreement-formed	0x1402ab582	0x1416288b8	steal treasures
+call	agreement-formed	0x1402ab58c	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab5a0	0x1415e90d8	, 
+call	agreement-formed	0x1402ab5aa	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab5c9	0x14162853c	, and 
+call	agreement-formed	0x1402ab5d3	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab5e7	0x1415e9110	 and 
+call	agreement-formed	0x1402ab5f1	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab627	0x1416289e8	 approached by 
+call	agreement-formed	0x1402ab62e	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab65b	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab675	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab680	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402ab68a	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab6c6	QWORD	QWORD PTR [rip+0x133a45c]        # 0x1415e5b28
+call	agreement-formed	0x1402ab6cd	0x141539680	0x141539680
+literal	agreement-formed	0x1402ab6da	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ab6e1	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab70e	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab728	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab732	0x14006f850	0x14006f850
+call	agreement-formed	0x1402ab73c	0x14006f750	0x14006f750
+call	agreement-formed	0x1402ab751	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ab75f	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ab797	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab7b1	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab7e9	QWORD	QWORD PTR [rip+0x133a339]        # 0x1415e5b28
+call	agreement-formed	0x1402ab7f0	0x141539680	0x141539680
+literal	agreement-formed	0x1402ab7f7	0x141628578	an unknown party
+call	agreement-formed	0x1402ab801	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ab80f	0x141628960	 plotted to frame 
+call	agreement-formed	0x1402ab819	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab849	0x140b92f10	0x140b92f10
+literal	agreement-formed	0x1402ab854	0x141628974	 for 
+call	agreement-formed	0x1402ab85e	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ab887	0x1415ed680	production order violation
+literal	agreement-formed	0x1402ab893	0x1415ed648	export prohibition violation
+literal	agreement-formed	0x1402ab89f	0x1415ed668	job order violation
+literal	agreement-formed	0x1402ab8ab	0x141628930	a conspiracy to slow labor
+literal	agreement-formed	0x1402ab8b7	0x1415ede54	murder
+literal	agreement-formed	0x1402ab8c0	0x1415ed6a0	disorderly conduct
+literal	agreement-formed	0x1402ab8c9	0x1415ed6b8	building destruction
+literal	agreement-formed	0x1402ab8d2	0x1415ed720	bribery
+literal	agreement-formed	0x1402ab8db	0x1415ed728	embezzlement
+literal	agreement-formed	0x1402ab8e4	0x1415ed700	vandalism
+literal	agreement-formed	0x1402ab8ed	0x1415edefc	theft
+literal	agreement-formed	0x1402ab8f6	0x1415edee8	robbery
+literal	agreement-formed	0x1402ab8ff	0x1415edf28	espionage
+literal	agreement-formed	0x1402ab908	0x1415edf10	treason
+literal	agreement-formed	0x1402ab911	0x141628950	blood-drinking
+literal	agreement-formed	0x1402ab91a	0x1416287a0	attempted theft
+literal	agreement-formed	0x1402ab923	0x1416287b0	attempted murder
+literal	agreement-formed	0x1402ab92c	0x1415edf40	kidnapping
+literal	agreement-formed	0x1402ab935	0x141628778	attempted kidnapping
+call	agreement-formed	0x1402ab93f	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ab94a	0x141628790	 by fooling 
+call	agreement-formed	0x1402ab954	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ab97f	0x140b92f10	0x140b92f10
+literal	agreement-formed	0x1402ab9a3	0x1416289e8	 approached by 
+call	agreement-formed	0x1402ab9aa	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ab9b3	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ab9c6	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ab9d2	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402ab9d7	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402ab9e1	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ab9eb	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ab9f5	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ab9fc	0x14006f560	0x14006f560
+call	agreement-formed	0x1402aba05	0x14006f690	0x14006f690
+call	agreement-formed	0x1402aba18	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402aba24	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402aba2e	0x14006f850	0x14006f850
+call	agreement-formed	0x1402aba43	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402aba51	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402aba62	0x14006f690	0x14006f690
+call	agreement-formed	0x1402aba75	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402aba81	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402aba8b	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402aba92	0x141628578	an unknown party
+call	agreement-formed	0x1402aba9c	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402abaa7	0x141628730	 plotted to induce a war of 
+call	agreement-formed	0x1402abab1	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abaca	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402abad5	0x1416154e0	 upon 
+call	agreement-formed	0x1402abadf	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abaf8	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402abb13	0x1416289e8	 approached by 
+call	agreement-formed	0x1402abb1a	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abb23	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abb39	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abb45	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402abb4a	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402abb54	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abb5e	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abb71	0x1415e85b4	.
+call	agreement-formed	0x1402abb7b	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abbc4	0x1402a71e0	0x1402a71e0
+call	agreement-formed	0x1402abbcd	0x14052d650	0x14052d650
+literal	agreement-formed	0x1402abbdf	0x1415fcfe8	  
+call	agreement-formed	0x1402abbe9	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abc03	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abc47	QWORD	QWORD PTR [rip+0x1339edb]        # 0x1415e5b28
+literal	agreement-formed	0x1402abc4e	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402abc55	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abc5e	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abc74	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abc80	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abc99	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abca7	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abcb4	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abcc5	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abcd8	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abce4	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abcee	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abcf5	0x141628578	an unknown party
+call	agreement-formed	0x1402abcff	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402abd0a	0x141628750	 plotted to sabotage the activities of 
+call	agreement-formed	0x1402abd14	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abd44	0x140b92f10	0x140b92f10
+call	agreement-formed	0x1402abd5b	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402abd76	0x14160205c	 at 
+call	agreement-formed	0x1402abd80	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abd93	0x140b93930	0x140b93930
+literal	agreement-formed	0x1402abdae	0x1416289e8	 approached by 
+call	agreement-formed	0x1402abdb5	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abdbe	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abdd7	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abde3	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402abde8	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402abdf2	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abdfc	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abe03	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402abe0a	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abe13	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abe2c	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abe38	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abe42	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abe58	0x14162870c	 via 
+call	agreement-formed	0x1402abe62	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abe6b	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abe7e	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abe8a	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abea3	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abeb1	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abebe	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402abecf	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abee2	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abeee	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abef8	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abeff	0x141628578	an unknown party
+call	agreement-formed	0x1402abf09	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402abf14	0x141628718	 plotted to abduct 
+call	agreement-formed	0x1402abf1e	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402abf51	0x140b92f10	0x140b92f10
+literal	agreement-formed	0x1402abf6c	0x1416289e8	 approached by 
+call	agreement-formed	0x1402abf73	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abf7c	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abf8f	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abf9b	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402abfa0	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402abfaa	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402abfb2	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402abfb9	0x14006f560	0x14006f560
+call	agreement-formed	0x1402abfc2	0x14006f690	0x14006f690
+call	agreement-formed	0x1402abfd5	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402abfe1	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402abfeb	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402abff9	0x14162870c	 via 
+call	agreement-formed	0x1402ac003	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac00c	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac01f	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac02b	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac044	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac052	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac05f	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac070	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac083	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac08f	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac099	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac0a0	0x141628578	an unknown party
+call	agreement-formed	0x1402ac0aa	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac0b5	0x141628848	 plotted to assassinate 
+call	agreement-formed	0x1402ac0bf	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ac0f2	0x140b92f10	0x140b92f10
+literal	agreement-formed	0x1402ac10d	0x1416289e8	 approached by 
+call	agreement-formed	0x1402ac114	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac11d	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac130	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac13c	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402ac141	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402ac14b	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac153	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ac15a	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac163	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac176	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac182	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac18c	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac19a	0x14162870c	 via 
+call	agreement-formed	0x1402ac1a4	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac1ad	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac1c0	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac1cc	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac1e5	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac1f3	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac200	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac211	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac224	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac230	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac23a	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac241	0x141628578	an unknown party
+call	agreement-formed	0x1402ac24b	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac256	0x141628868	 plotted to steal 
+call	agreement-formed	0x1402ac260	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ac279	0x140b94400	0x140b94400
+literal	agreement-formed	0x1402ac294	0x1416289e8	 approached by 
+call	agreement-formed	0x1402ac29b	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac2a4	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac2bd	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac2c9	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402ac2ce	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402ac2d8	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac2e2	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac2e9	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ac2f0	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac2f9	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac312	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac31e	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac328	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac33e	0x14162870c	 via 
+call	agreement-formed	0x1402ac348	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac351	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac364	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac370	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac389	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac397	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac3a4	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac3b5	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac3c8	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac3d4	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac3de	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac3e5	0x141628578	an unknown party
+call	agreement-formed	0x1402ac3ef	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac3fa	0x141628828	 promised 
+call	agreement-formed	0x1402ac404	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ac41b	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac42e	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac43a	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac444	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac44b	0x141628578	an unknown party
+call	agreement-formed	0x1402ac455	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac45a	0x141628838	 to give 
+call	agreement-formed	0x1402ac464	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac472	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac485	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac491	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac49b	0x14006f850	0x14006f850
+call	agreement-formed	0x1402ac4ab	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac4be	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac4ca	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac4d4	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac4db	0x141628578	an unknown party
+call	agreement-formed	0x1402ac4e5	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac4f0	0x141628810	 a position
+call	agreement-formed	0x1402ac4fa	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ac509	0x1415ecfb4	 in 
+call	agreement-formed	0x1402ac513	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac526	0x140b92900	0x140b92900
+call	agreement-formed	0x1402ac535	0x1400b9dc0	0x1400b9dc0
+literal	agreement-formed	0x1402ac553	0x1416289e8	 approached by 
+call	agreement-formed	0x1402ac55a	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac563	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac579	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac585	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402ac58a	0x141628980	 to handle the matter directly or through another party
+call	agreement-formed	0x1402ac594	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac59c	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ac5a3	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac5ac	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac5c2	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac5ce	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac5d8	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac5f6	0x14162870c	 via 
+call	agreement-formed	0x1402ac600	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac631	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac660	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac67a	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ac6b2	0x141539680	0x141539680
+literal	agreement-formed	0x1402ac6bf	0x141628578	an unknown party
+call	agreement-formed	0x1402ac6c9	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ac6da	0x1415e90d8	, 
+call	agreement-formed	0x1402ac6e4	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ac6ff	0x14162853c	, and 
+literal	agreement-formed	0x1402ac708	0x1415e9110	 and 
+call	agreement-formed	0x1402ac70f	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac71d	QWORD	QWORD PTR [rip+0x1339405]        # 0x1415e5b28
+call	agreement-formed	0x1402ac732	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac740	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac74e	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac75f	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac772	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac77e	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac788	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac78f	0x141628578	an unknown party
+call	agreement-formed	0x1402ac799	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac7a4	0x141628820	 began 
+call	agreement-formed	0x1402ac7ae	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ac7cb	0x141628c48	passing a portion of corruptly-obtained funds
+literal	agreement-formed	0x1402ac7d4	0x1416287f8	embezzling funds
+literal	agreement-formed	0x1402ac7dd	0x1416287c8	accepting bribes in exchange for leniency
+call	agreement-formed	0x1402ac7e7	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac81b	0x14007daf0	0x14007daf0
+call	agreement-formed	0x1402ac835	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac845	0x1400bbe40	0x1400bbe40
+literal	agreement-formed	0x1402ac852	0x141627bf8	 as 
+call	agreement-formed	0x1402ac85c	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac86c	0x1415ed620	a 
+literal	agreement-formed	0x1402ac875	0x1415e8e48	the 
+call	agreement-formed	0x1402ac87c	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac88c	0x14099a3c0	0x14099a3c0
+call	agreement-formed	0x1402ac897	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402ac89c	0x1415eb518	 of 
+call	agreement-formed	0x1402ac8a6	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac8b9	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402ac8d0	0x1415ed5b4	 to 
+literal	agreement-formed	0x1402ac8d9	0x1416289b8	 under the influence of 
+call	agreement-formed	0x1402ac8e0	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac8e9	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac902	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac90e	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac918	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac92e	0x14162870c	 via 
+call	agreement-formed	0x1402ac938	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ac941	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac954	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac960	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac976	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac987	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ac99a	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ac9a6	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ac9b0	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ac9b7	0x141628578	an unknown party
+call	agreement-formed	0x1402ac9c1	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ac9cc	0x141628c78	 aided 
+call	agreement-formed	0x1402ac9d6	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ac9e6	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ac9f7	0x14006f690	0x14006f690
+call	agreement-formed	0x1402aca0d	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402aca19	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402aca23	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402aca2a	0x141628578	an unknown party
+call	agreement-formed	0x1402aca34	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402aca3f	0x141628bf0	 in becoming a permanent part of the living world
+call	agreement-formed	0x1402aca49	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402aca79	0x140b5a6c0	0x140b5a6c0
+literal	agreement-formed	0x1402aca88	0x141628c28	.  The ritual took place in 
+call	agreement-formed	0x1402aca92	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acaa5	0x140b93930	0x140b93930
+literal	agreement-formed	0x1402acab8	0x141615840	 using 
+call	agreement-formed	0x1402acac2	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acad5	0x140b94400	0x140b94400
+literal	agreement-formed	0x1402acae9	0x141628bb8	.  The ritual involved 
+call	agreement-formed	0x1402acafd	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acb0e	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acb21	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acb2d	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acb37	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402acb3e	0x141628578	an unknown party
+call	agreement-formed	0x1402acb48	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acb53	0x141628bd0	 agreed to a parley with 
+call	agreement-formed	0x1402acb5d	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402acb6d	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acb7e	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acb94	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acba0	0x1400b9d10	0x1400b9d10
+literal	agreement-formed	0x1402acbab	0x141628578	an unknown party
+call	agreement-formed	0x1402acbb5	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acbca	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acbdb	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acbee	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acbfa	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acc04	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402acc0b	0x141628578	an unknown party
+call	agreement-formed	0x1402acc15	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acc20	0x141628b78	 made an agreement with 
+call	agreement-formed	0x1402acc2a	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402acc3a	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acc4b	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acc61	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acc6d	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acc77	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402acc7e	0x141628578	an unknown party
+call	agreement-formed	0x1402acc88	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acc97	0x141628b98	, becoming a resident of 
+call	agreement-formed	0x1402acca1	0x14006f560	0x14006f560
+call	agreement-formed	0x1402accb4	0x140b93930	0x140b93930
+literal	agreement-formed	0x1402accd7	0x141628cf0	 to study
+call	agreement-formed	0x1402acce1	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acceb	0x141628cd8	 to work as a mercenary
+call	agreement-formed	0x1402accf5	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402accff	0x141628d18	 to entertain the citizenry
+call	agreement-formed	0x1402acd09	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acd13	0x141628d00	 to eradicate monsters
+call	agreement-formed	0x1402acd1d	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acd31	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acd42	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acd55	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acd61	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acd6b	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402acd72	0x141628578	an unknown party
+call	agreement-formed	0x1402acd7c	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acd87	0x141628b78	 made an agreement with 
+call	agreement-formed	0x1402acd91	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402acda1	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402acdb2	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acdc8	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402acdd4	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acdde	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402acde5	0x141628578	an unknown party
+call	agreement-formed	0x1402acdef	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ace02	0x141628ca8	, becoming a citizen of 
+call	agreement-formed	0x1402ace0c	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ace1f	0x140b93930	0x140b93930
+call	agreement-formed	0x1402ace34	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ace45	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ace58	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ace64	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402ace6e	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ace75	0x141628578	an unknown party
+call	agreement-formed	0x1402ace7f	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ace8a	0x141628cc8	 joined with 
+call	agreement-formed	0x1402ace94	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402acea4	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402aceb5	0x14006f690	0x14006f690
+call	agreement-formed	0x1402acece	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402aceda	0x1400b9d10	0x1400b9d10
+call	agreement-formed	0x1402acee4	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402aceeb	0x141628578	an unknown party
+call	agreement-formed	0x1402acef5	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acf24	0x141628c80	 to help rescue 
+call	agreement-formed	0x1402acf2e	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acf5f	0x140b92f10	0x140b92f10
+call	agreement-formed	0x1402acf85	0x140c3a590	0x140c3a590
+literal	agreement-formed	0x1402acf8f	0x141628c98	 to oust 
+call	agreement-formed	0x1402acf99	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acfac	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402acfb1	0x1415ed97c	 from 
+call	agreement-formed	0x1402acfbb	0x14006f560	0x14006f560
+call	agreement-formed	0x1402acfce	0x140b93930	0x140b93930
+literal	agreement-formed	0x1402acfd8	0x141628a90	 to entertain the world
+call	agreement-formed	0x1402acfe2	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402acfec	0x141628aa8	 to live a life of adventure
+call	agreement-formed	0x1402acff6	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad000	0x141628a60	 after being compelled to serve
+call	agreement-formed	0x1402ad00a	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad014	0x141628a80	 as a guide
+call	agreement-formed	0x1402ad01e	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad02d	0x141628a28	 to find 
+call	agreement-formed	0x1402ad037	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ad060	0x140b92f10	0x140b92f10
+literal	agreement-formed	0x1402ad070	0x141628a28	 to find 
+call	agreement-formed	0x1402ad07a	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ad0a8	0x140c3a590	0x140c3a590
+literal	agreement-formed	0x1402ad0bc	0x1415ed5b4	 to 
+literal	agreement-formed	0x1402ad0c8	0x141628a38	 in order to be brought to safety
+call	agreement-formed	0x1402ad0d2	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ad0e7	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad0f8	0x14006f690	0x14006f690
+call	agreement-formed	0x1402ad10b	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad125	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad12f	0x14006f850	0x14006f850
+literal	agreement-formed	0x1402ad136	0x141628578	an unknown party
+call	agreement-formed	0x1402ad140	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad14b	0x1416289f8	 agreed to establish 
+call	agreement-formed	0x1402ad155	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ad16a	0x141628a10	a grand guildhall
+call	agreement-formed	0x1402ad174	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad183	0x141628b50	a guildhall
+call	agreement-formed	0x1402ad18d	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad1a2	0x141628b60	a temple complex
+call	agreement-formed	0x1402ad1ac	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad1bb	0x141628b28	a temple
+call	agreement-formed	0x1402ad1c5	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad1d0	0x141628974	 for 
+call	agreement-formed	0x1402ad1da	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad1e9	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad221	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad23b	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad277	QWORD	QWORD PTR [rip+0x13388ab]        # 0x1415e5b28
+call	agreement-formed	0x1402ad27e	0x141539680	0x141539680
+call	agreement-formed	0x1402ad293	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad2a1	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad2d6	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad2f0	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad328	QWORD	QWORD PTR [rip+0x13387fa]        # 0x1415e5b28
+call	agreement-formed	0x1402ad32f	0x141539680	0x141539680
+literal	agreement-formed	0x1402ad336	0x141628578	an unknown party
+call	agreement-formed	0x1402ad340	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad34e	0x141628b38	 requested that 
+call	agreement-formed	0x1402ad358	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad38d	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad3a7	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad3df	QWORD	QWORD PTR [rip+0x1338743]        # 0x1415e5b28
+call	agreement-formed	0x1402ad3e6	0x141539680	0x141539680
+literal	agreement-formed	0x1402ad3ed	0x141628578	an unknown party
+call	agreement-formed	0x1402ad3f7	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad402	0x141628af8	 make an offer of service
+call	agreement-formed	0x1402ad40c	0x14006fa10	0x14006fa10
+literal	agreement-formed	0x1402ad425	0x1415ed5b4	 to 
+call	agreement-formed	0x1402ad42f	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad442	0x140b92900	0x140b92900
+call	agreement-formed	0x1402ad456	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad465	0x1400b9dc0	0x1400b9dc0
+call	agreement-formed	0x1402ad49a	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad4b4	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad4ec	QWORD	QWORD PTR [rip+0x1338636]        # 0x1415e5b28
+call	agreement-formed	0x1402ad4f3	0x141539680	0x141539680
+literal	agreement-formed	0x1402ad4fa	0x141628578	an unknown party
+call	agreement-formed	0x1402ad504	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad512	0x141628b18	 asked that 
+call	agreement-formed	0x1402ad51c	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad551	0x1400e2b80	0x1400e2b80
+call	agreement-formed	0x1402ad56b	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad5a3	QWORD	QWORD PTR [rip+0x133857f]        # 0x1415e5b28
+call	agreement-formed	0x1402ad5aa	0x141539680	0x141539680
+literal	agreement-formed	0x1402ad5b1	0x141628578	an unknown party
+call	agreement-formed	0x1402ad5bb	0x14006f560	0x14006f560
+literal	agreement-formed	0x1402ad5c6	0x141628ac8	 retrieve 
+call	agreement-formed	0x1402ad5d0	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad5e3	0x140b94400	0x140b94400
+literal	agreement-formed	0x1402ad5f8	0x1415ed97c	 from 
+call	agreement-formed	0x1402ad602	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad615	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402ad628	0x141628974	 for 
+call	agreement-formed	0x1402ad632	0x14006f560	0x14006f560
+call	agreement-formed	0x1402ad645	0x140b92900	0x140b92900
+literal	agreement-formed	0x1402ad655	0x141628ad8	a corrupt agreement was formed
+call	agreement-formed	0x1402ad65f	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad669	0x141539680	0x141539680
+call	agreement-formed	0x1402ad69d	0x1402a81f0	0x1402a81f0
+call	agreement-formed	0x1402ad6a6	0x14052d650	0x14052d650
+literal	agreement-formed	0x1402ad6b8	0x1415fcfe8	  
+call	agreement-formed	0x1402ad6c2	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad6dc	0x14006fa10	0x14006fa10
+call	agreement-formed	0x1402ad6e6	0x14006f850	0x14006f850
+call	agreement-formed	0x1402ad6f2	0x141539660	0x141539660
+call	negotiation	0x1402a724e	0x140b92f10	0x140b92f10
+call	negotiation	0x1402a7257	0x14052d650	0x14052d650
+call	negotiation	0x1402a7271	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7285	0x1415eb518	 of 
+call	negotiation	0x1402a728f	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a729e	0x140b92900	0x140b92900
+literal	negotiation	0x1402a72a9	0x141626d88	 met with 
+call	negotiation	0x1402a72b3	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a72db	0x140b92f10	0x140b92f10
+call	negotiation	0x1402a7323	0x1400ba0a0	0x1400ba0a0
+call	negotiation	0x1402a733a	0x1401ba140	0x1401ba140
+literal	negotiation	0x1402a7351	0x1415e90d8	, 
+call	negotiation	0x1402a735b	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a7378	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7380	0x1415eb518	 of 
+call	negotiation	0x1402a738a	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a7399	0x140b92900	0x140b92900
+literal	negotiation	0x1402a73ac	0x141626d68	, representing 
+call	negotiation	0x1402a73b6	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a73c5	0x140b92900	0x140b92900
+literal	negotiation	0x1402a73cd	0x1415fd504	,
+call	negotiation	0x1402a73d7	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a73e1	0x1415eb518	 of 
+call	negotiation	0x1402a73eb	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a73fa	0x140b92900	0x140b92900
+literal	negotiation	0x1402a742c	0x141626e88	 to improve trade relations
+literal	negotiation	0x1402a743b	0x141626e68	 to make contact and open trade
+literal	negotiation	0x1402a7447	0x141626d50	 to seek an alliance
+literal	negotiation	0x1402a7453	0x141626d28	 to demand unconditional surrender
+literal	negotiation	0x1402a7462	0x141626d78	 to make peace
+call	negotiation	0x1402a746c	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7474	0x1415e85b4	.
+call	negotiation	0x1402a747e	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a748f	0x141626e00	  The negotiation was doomed to failure while the morale of the invaders sieging 
+call	negotiation	0x1402a7499	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a74a8	0x140b93930	0x140b93930
+literal	negotiation	0x1402a74b3	0x141626e58	 held firm.
+literal	negotiation	0x1402a7527	0x1416270f0	  The task was made 
+call	negotiation	0x1402a7531	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7542	0x1416270b8	much easier
+literal	negotiation	0x1402a7556	0x1416271ec	easier
+literal	negotiation	0x1402a7565	0x1416271f8	somewhat easier
+call	negotiation	0x1402a7575	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7580	0x141627080	 by the relative populations of the civilizations.
+literal	negotiation	0x1402a75a0	0x1416270f0	  The task was made 
+call	negotiation	0x1402a75aa	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a75bb	0x141627108	much more difficult
+literal	negotiation	0x1402a75cf	0x1416270c8	more difficult
+literal	negotiation	0x1402a75db	0x1416270d8	somewhat more difficult
+literal	negotiation	0x1402a75f7	0x141626dd8	  The 
+call	negotiation	0x1402a7601	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7615	0x141626de0	sheer number of lost invaders
+literal	negotiation	0x1402a7623	0x141626d98	great number of lost invaders
+literal	negotiation	0x1402a7631	0x141626db8	high number of lost invaders
+literal	negotiation	0x1402a7640	0x141627120	enemy losses during invasions
+call	negotiation	0x1402a7650	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a765b	0x141627140	 made the task seem more possible.
+call	negotiation	0x1402a7665	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7692	0x1415fcfe8	  
+call	negotiation	0x1402a769c	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a76d5	0x140b92f10	0x140b92f10
+call	negotiation	0x1402a76de	0x14052d650	0x14052d650
+call	negotiation	0x1402a76f8	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a7702	0x14006f850	0x14006f850
+literal	negotiation	0x1402a770a	0x1415e873c	 
+call	negotiation	0x1402a7714	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a772c	0x1416271e0	began to
+literal	negotiation	0x1402a7733	0x1416271d0	attempted to
+call	negotiation	0x1402a7741	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7749	0x1415e873c	 
+call	negotiation	0x1402a7753	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a77dc	0x141627198	negotiate persuasively
+literal	negotiation	0x1402a77eb	0x1416271b0	negotiate with discernment
+literal	negotiation	0x1402a77fd	0x141627168	negotiate deceptively
+literal	negotiation	0x1402a7809	0x141627180	negotiate forcefully
+literal	negotiation	0x1402a781b	0x141626f58	negotiate amidst light conversation
+literal	negotiation	0x1402a782d	0x141626f80	negotiate, keeping a sense of humor
+literal	negotiation	0x1402a783f	0x141626f00	negotiate, mixing in a dose of flattery
+literal	negotiation	0x1402a7851	0x141626f28	negotiate with empathy for their counterpart
+literal	negotiation	0x1402a7863	0x141626ed0	negotiate calmly
+literal	negotiation	0x1402a7875	0x141626ee8	negotiate eloquently
+literal	negotiation	0x1402a7887	0x141626ea8	negotiate
+literal	negotiation	0x1402a78a7	0x141626eb8	argue persuasively
+literal	negotiation	0x1402a78db	0x141627050	feel out intentions and argue
+call	negotiation	0x1402a78e5	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a78fc	0x141627030	 carefully
+literal	negotiation	0x1402a7903	0x141627070	 with subtlety
+literal	negotiation	0x1402a7919	0x141627040	brazenly lie
+literal	negotiation	0x1402a7928	0x141626ff0	intimidate their adversary
+literal	negotiation	0x1402a7937	0x141627010	make conversation to set a mood
+literal	negotiation	0x1402a7946	0x141626fa8	use humor to disarm their opponent
+literal	negotiation	0x1402a7952	0x141626fd0	flatter their counterpart
+literal	negotiation	0x1402a7961	0x141627458	appeal to shared history and show empathy
+literal	negotiation	0x1402a7970	0x141627488	calm any misgivings about the proposal
+literal	negotiation	0x1402a7979	0x141627420	make a rousing speech
+call	negotiation	0x1402a7989	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7994	0x1415fd968	.  
+call	negotiation	0x1402a799e	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a79df	0x140b92f10	0x140b92f10
+call	negotiation	0x1402a79e8	0x14052d650	0x14052d650
+call	negotiation	0x1402a7a02	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a7a3a	QWORD	QWORD PTR [rip+0x133e0e8]        # 0x1415e5b28
+call	negotiation	0x1402a7a41	0x141539680	0x141539680
+literal	negotiation	0x1402a7a4c	0x1415e873c	 
+call	negotiation	0x1402a7a56	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7abd	0x141627438	negotiated with discernment
+literal	negotiation	0x1402a7acf	0x1416273f0	negotiated persuasively
+literal	negotiation	0x1402a7ad8	0x141627408	negotiated deceptively
+literal	negotiation	0x1402a7ae4	0x1416273c0	negotiated forcefully
+literal	negotiation	0x1402a7af3	0x1416273d8	negotiated lightly
+literal	negotiation	0x1402a7b05	0x141627530	negotiated with humor
+literal	negotiation	0x1402a7b14	0x141627548	negotiated with flattery
+literal	negotiation	0x1402a7b23	0x141627500	negotiated with empathy
+literal	negotiation	0x1402a7b2c	0x141627518	negotiated calmly
+literal	negotiation	0x1402a7b3b	0x1416274d8	negotiated eloquently
+literal	negotiation	0x1402a7b4a	0x1416274f0	negotiated
+call	negotiation	0x1402a7b63	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7b74	0x1416274b0	 in turn
+call	negotiation	0x1402a7b7e	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7b91	0x141627298	 and had the mastery
+literal	negotiation	0x1402a7b98	0x1416274c0	 but was outmaneuvered
+literal	negotiation	0x1402a7bc4	0x141627260	read
+literal	negotiation	0x1402a7bcb	0x1416272b0	attempted to read
+call	negotiation	0x1402a7bd9	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7be4	0x141627268	 their opposite's underlying motivations
+call	negotiation	0x1402a7bee	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7bff	0x141627238	 as well
+call	negotiation	0x1402a7c09	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7c1a	0x141627248	 but was swept along
+call	negotiation	0x1402a7c24	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7c3b	0x1416275d0	.  The proposal 
+call	negotiation	0x1402a7c45	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7c62	0x1416275e8	was a spectacular failure
+literal	negotiation	0x1402a7c97	0x141627208	made a persuasive argument
+call	negotiation	0x1402a7ca1	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7cb2	0x141627228	 of their own
+call	negotiation	0x1402a7cbc	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7cd1	0x141627388	 but was ultimately swayed
+literal	negotiation	0x1402a7ce3	0x1416273a8	spun a web of deceit
+call	negotiation	0x1402a7ced	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7cfe	0x141627228	 of their own
+call	negotiation	0x1402a7d08	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7d1d	0x141627340	 but became tied in their own knots
+literal	negotiation	0x1402a7d2f	0x141627368	intimidated their opposite
+call	negotiation	0x1402a7d39	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7d4a	0x1416272f8	 with matching fury
+call	negotiation	0x1402a7d54	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7d69	0x141627310	 but grew meeker throughout the proceedings
+literal	negotiation	0x1402a7d75	0x1416272e0	made light conversation
+literal	negotiation	0x1402a7d7c	0x1416272c8	joined the conversation
+call	negotiation	0x1402a7d91	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7da9	0x141627818	 and skillfully shut down the proceedings
+literal	negotiation	0x1402a7db0	0x1416277e8	 and over time came around on the matter
+literal	negotiation	0x1402a7dcb	0x141627798	made several jokes
+call	negotiation	0x1402a7dd5	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7de6	0x141627228	 of their own
+call	negotiation	0x1402a7df0	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7e04	0x141627750	 and dismissed the matter
+literal	negotiation	0x1402a7e0b	0x1416277b0	 but came to see the seriousness of the issue at hand
+call	negotiation	0x1402a7e19	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7e3f	0x141627718	made a great show of flattery
+literal	negotiation	0x1402a7e46	0x141627770	flattered their opposite in turn
+call	negotiation	0x1402a7e54	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7e62	0x141627920	 but left the matter unaddressed
+literal	negotiation	0x1402a7e69	0x141627738	 and ultimately agreed
+literal	negotiation	0x1402a7e8f	0x1416278d8	showed empathy with their opposite
+literal	negotiation	0x1402a7e96	0x141627948	joined in the discussion of history and past griefs
+call	negotiation	0x1402a7ea4	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7ebe	0x141627898	 but did not agree
+literal	negotiation	0x1402a7ec5	0x141627900	 and agreed on the issue
+literal	negotiation	0x1402a7ed7	0x1416278b0	attempted to put their opposite at ease
+call	negotiation	0x1402a7ee1	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7ef2	0x141627238	 as well
+call	negotiation	0x1402a7efc	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7f0f	0x141627848	 but did not ultimately agree
+literal	negotiation	0x1402a7f16	0x141627738	 and ultimately agreed
+literal	negotiation	0x1402a7f3d	0x141627608	replied with a fiery speech
+literal	negotiation	0x1402a7f44	0x141627868	replied with a grand oration of their own
+call	negotiation	0x1402a7f52	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7f67	0x141627628	 but ultimately the matter was agreed
+call	negotiation	0x1402a7f71	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a7f80	0x141627590	was a resounding failure
+literal	negotiation	0x1402a7f9a	0x1416275b0	was an embarrassing failure
+literal	negotiation	0x1402a7fb1	0x141627568	was a failure
+literal	negotiation	0x1402a7fc3	0x141627578	was not successful
+literal	negotiation	0x1402a7fe4	0x1416276c8	was wildly successful beyond any expectations
+literal	negotiation	0x1402a7ff5	0x1416276f8	was a truly grand success
+literal	negotiation	0x1402a8009	0x141627698	was a great success
+literal	negotiation	0x1402a801d	0x1416276b0	was highly successful
+literal	negotiation	0x1402a802c	0x141627680	succeeded
+call	negotiation	0x1402a8036	0x14006fa10	0x14006fa10
+literal	negotiation	0x1402a8041	0x1415e85b4	.
+call	negotiation	0x1402a804b	0x14006fa10	0x14006fa10
+call	negotiation	0x1402a8055	0x14006f850	0x14006f850
+call	negotiation	0x1402a8061	0x141539660	0x141539660
+dynamic	agreement-formed	0x1402ab014	0x140b92640	date: year and seconds -> native calendar text
+dynamic	agreement-formed	0x1402ab1ad	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ab35b	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ab3f5	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ab65b	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ab70e	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ab797	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ab849	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402ab97f	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402ab9c6	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402aba18	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402aba75	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abaca	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402abaf8	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402abb39	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abbc4	0x1402a71e0	followup: complete negotiation paragraph from detail+0x08
+dynamic	agreement-formed	0x1402abc74	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abcd8	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abd44	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402abd5b	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402abd93	0x140b93930	site: complete location identity
+dynamic	agreement-formed	0x1402abdd7	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abe2c	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abe7e	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abee2	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abf51	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402abf8f	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402abfd5	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac01f	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac083	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac0f2	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402ac130	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac176	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac1c0	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac224	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac279	0x140b94400	artifact: named artifact, book or item identity
+dynamic	agreement-formed	0x1402ac2bd	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac312	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac364	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac3c8	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac42e	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac485	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac4be	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac526	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ac579	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac5c2	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac660	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac772	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac88c	0x14099a3c0	office: position title selected by native gender/number formatter
+dynamic	agreement-formed	0x1402ac8b9	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ac902	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac954	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ac99a	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402aca0d	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402aca79	0x140b5a6c0	ritual-motive: native motive with entity/site/figure parameters
+dynamic	agreement-formed	0x1402acaa5	0x140b93930	site: complete location identity
+dynamic	agreement-formed	0x1402acad5	0x140b94400	artifact: named artifact, book or item identity
+dynamic	agreement-formed	0x1402acb21	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acb94	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acbee	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acc61	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402accb4	0x140b93930	site: complete location identity
+dynamic	agreement-formed	0x1402acd55	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acdc8	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ace1f	0x140b93930	site: complete location identity
+dynamic	agreement-formed	0x1402ace58	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acece	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402acf5f	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402acf85	0x140c3a590	identity: species/profession/name/entity or corresponding real historical figure
+dynamic	agreement-formed	0x1402acfac	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402acfce	0x140b93930	site: complete location identity
+dynamic	agreement-formed	0x1402ad060	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	agreement-formed	0x1402ad0a8	0x140c3a590	identity: species/profession/name/entity or corresponding real historical figure
+dynamic	agreement-formed	0x1402ad10b	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad221	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad2d6	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad38d	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad442	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ad49a	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad551	0x1400e2b80	party: historical-figure/entity vectors with observer context
+dynamic	agreement-formed	0x1402ad5e3	0x140b94400	artifact: named artifact, book or item identity
+dynamic	agreement-formed	0x1402ad615	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ad645	0x140b92900	entity: complete generated or authored organization name
+dynamic	agreement-formed	0x1402ad69d	0x1402a81f0	followup: complete intrigue paragraph from detail+0x10
+dynamic	negotiation	0x1402a724e	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	negotiation	0x1402a729e	0x140b92900	entity: complete generated or authored organization name
+dynamic	negotiation	0x1402a72db	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	negotiation	0x1402a7399	0x140b92900	entity: complete generated or authored organization name
+dynamic	negotiation	0x1402a73c5	0x140b92900	entity: complete generated or authored organization name
+dynamic	negotiation	0x1402a73fa	0x140b92900	entity: complete generated or authored organization name
+dynamic	negotiation	0x1402a74a8	0x140b93930	site: complete location identity
+dynamic	negotiation	0x1402a76d5	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	negotiation	0x1402a79df	0x140b92f10	figure: contextual identity, subject replacement, relationships and aliases
+dynamic	negotiation	0x1402a7360	position+0x98	office: native string copied intact at 0x1402a7378
+branch	negotiation	0x1402a78c0	0x1402a798e	unsupported opening skill leaves an empty strategy before period
+branch	negotiation	0x1402a7c7a	0x1402a7c29	unsupported response skill leaves an empty response before proposal sentence
+branch	agreement-formed	0x1402abc11	0x1402ad66e	append negotiation and then intrigue independently when both detail pointers are present
+literal	ritual-motive	0x140b5a71d	0x1415e873c	 
+call	ritual-motive	0x140b5a724	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5a74e	0x1416d72a8	for an insurrection
+literal	ritual-motive	0x140b5a760	0x1416d7298	to adventure
+literal	ritual-motive	0x140b5a772	0x1416d72d8	as a guide
+literal	ritual-motive	0x140b5a784	0x1416d72c0	in order to be rescued
+literal	ritual-motive	0x140b5a7a2	0x1416d71d8	after pondering the ineffable subtleties of 
+call	ritual-motive	0x140b5a7a9	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5a7ce	0x140756500	0x140756500
+call	ritual-motive	0x140b5a7e8	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5a824	QWORD	QWORD PTR [rip+0xa8b2fe]        # 0x1415e5b28
+call	ritual-motive	0x140b5a82b	0x141539680	0x141539680
+literal	ritual-motive	0x140b5a83b	0x1416d7208	due to their cosmic similarity
+literal	ritual-motive	0x140b5a84d	0x1416d7268	in order to maintain balance in the universe
+literal	ritual-motive	0x140b5a85f	0x1416d7228	to create a monument to the boundaries between realities
+literal	ritual-motive	0x140b5a871	0x1416d7160	to sow the seeds of chaos therein
+literal	ritual-motive	0x140b5a883	0x1416d7130	to provide opportunities for courage to rise
+literal	ritual-motive	0x140b5a895	0x1416d71c0	that more might die
+literal	ritual-motive	0x140b5a8a7	0x1416d7188	that all should gaze upon a truly gruesome visage
+literal	ritual-motive	0x140b5a8b9	0x1416d4d50	because it was destined
+literal	ritual-motive	0x140b5a8cb	0x1416d70a8	that great fortresses might be raised and tested in siege
+literal	ritual-motive	0x140b5a8dd	0x1416d7098	on a whim
+literal	ritual-motive	0x140b5a8ef	0x1416d7108	that it might bathe in misery forever
+literal	ritual-motive	0x140b5a901	0x1416d70e8	that more might be murdered
+literal	ritual-motive	0x140b5a90d	0x1416d7000	in order to make nightmares reality
+literal	ritual-motive	0x140b5a91f	0x1416d6fd8	in order to make thralls of everyone
+literal	ritual-motive	0x140b5a931	0x1416d7068	in order that acts of torture be perpetrated
+literal	ritual-motive	0x140b5a943	0x1416d7028	to provide opportunities for acts of valor to be performed
+literal	ritual-motive	0x140b5a955	0x1416d6f78	that war might rage forever
+literal	ritual-motive	0x140b5a967	0x1416d6f58	in order to find a relative
+literal	ritual-motive	0x140b5a979	0x1416d6fc0	to offer condolences
+literal	ritual-motive	0x140b5a98b	0x1416d6f98	in order to be brought to safety
+literal	ritual-motive	0x140b5a99d	0x1416d6f18	to help with a rescue
+literal	ritual-motive	0x140b5a9af	0x1416d6ef8	due to insufficient work
+literal	ritual-motive	0x140b5a9c1	0x1416d6f48	to request work
+literal	ritual-motive	0x140b5a9d3	0x1416d6f30	that weapons be made
+literal	ritual-motive	0x140b5a9e5	0x1416d6ea0	to vent at a priest
+literal	ritual-motive	0x140b5a9f7	0x1416d6e88	to cry on a priest
+literal	ritual-motive	0x140b5aa09	0x1416d6ed8	to vent at somebody in charge
+literal	ritual-motive	0x140b5aa1b	0x1416d6eb8	to cry on somebody in charge
+literal	ritual-motive	0x140b5aa2d	0x1416d6e28	as the goal was not reached
+literal	ritual-motive	0x140b5aa3f	0x1416d6df0	as insufficient progress was made toward the goal
+literal	ritual-motive	0x140b5aa51	0x1416d6e68	after going the wrong direction
+literal	ritual-motive	0x140b5aa63	0x1416d6e48	after arriving at the location
+literal	ritual-motive	0x140b5aa75	0x1416d6d70	as the relevant government was no longer in control
+literal	ritual-motive	0x140b5aa87	0x1416d6d58	after leaving the site
+literal	ritual-motive	0x140b5aa99	0x1416d6dc8	after being reunited with a loved one
+literal	ritual-motive	0x140b5aaab	0x1416d6da8	after a violent disagreement
+literal	ritual-motive	0x140b5aabd	0x1416d6d18	after adoption
+literal	ritual-motive	0x140b5aacf	0x1416d6cf0	after invocation of the true name
+literal	ritual-motive	0x140b5aae1	0x1416d6d48	after finding 
+call	ritual-motive	0x140b5aaeb	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5ab0d	0x140b92f10	0x140b92f10
+literal	ritual-motive	0x140b5ab1d	0x1416d6d28	in order to eradicate beasts
+literal	ritual-motive	0x140b5ab2f	0x1416d6ca0	in order to entertain people
+literal	ritual-motive	0x140b5ab41	0x1416d6c78	in order to make a living as a warrior
+literal	ritual-motive	0x140b5ab53	0x1416d6cd8	in order to study
+literal	ritual-motive	0x140b5ab65	0x1416d6cc0	in order to flee
+literal	ritual-motive	0x140b5ab77	0x1416d7bb0	after being exiled following a criminal conviction
+literal	ritual-motive	0x140b5ab89	0x1416d7b90	in order to pursue scholarship
+literal	ritual-motive	0x140b5ab9b	0x1416d7c08	in order to be with the master
+literal	ritual-motive	0x140b5abad	0x1416d7be8	in order to become a citizen
+literal	ritual-motive	0x140b5abbf	0x1416d7b30	in order to continue working alone
+literal	ritual-motive	0x140b5abd1	0x1416d7b20	due to jealousy
+literal	ritual-motive	0x140b5abe3	0x1416d7b78	in order to glorify 
+literal	ritual-motive	0x140b5abf5	0x1416d7b58	due to a lack of performances
+literal	ritual-motive	0x140b5ac07	0x1416d7ab8	after being prevented from leaving
+literal	ritual-motive	0x140b5ac19	0x1416d7aa0	out of curiosity
+literal	ritual-motive	0x140b5ac2b	0x1416d7b00	to fill a role as a mercenary
+literal	ritual-motive	0x140b5ac3d	0x1416d7ae0	to fill a role as a performer
+literal	ritual-motive	0x140b5ac4f	0x1416d7a48	to fill a role as a scholar
+literal	ritual-motive	0x140b5ac61	0x1416d7a30	in order to drink
+literal	ritual-motive	0x140b5ac73	0x1416d7a80	in order to admire architecture
+literal	ritual-motive	0x140b5ac85	0x1416d7a68	in order to pray
+literal	ritual-motive	0x140b5ac97	0x1416d79c8	in order to relax
+literal	ritual-motive	0x140b5aca9	0x1416d79b0	to experience danger
+literal	ritual-motive	0x140b5acbb	0x1416d7a08	after being unable to find an artifact
+literal	ritual-motive	0x140b5acc7	0x1416d79e0	after failing to create an artifact
+literal	ritual-motive	0x140b5acd9	0x1416d7950	due to lack of sleep
+literal	ritual-motive	0x140b5aceb	0x1416d7930	after being trapped in a cage
+literal	ritual-motive	0x140b5acfd	0x1416d7990	after a great deal of stress
+literal	ritual-motive	0x140b5ad0f	0x1416d7968	after being unable to leave a location
+literal	ritual-motive	0x140b5ad21	0x1416d78e8	in order to sanctify 
+literal	ritual-motive	0x140b5ad33	0x1416d78d0	as an heirloom of the 
+call	ritual-motive	0x140b5ad3d	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5ad47	0x140072080	0x140072080
+call	ritual-motive	0x140b5ad6a	0x140b92f10	0x140b92f10
+literal	ritual-motive	0x140b5ad75	0x1416d7928	 family
+literal	ritual-motive	0x140b5ad87	0x1416d7900	as a symbol of authority within 
+call	ritual-motive	0x140b5ad91	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5ad9f	0x140b92900	0x140b92900
+literal	ritual-motive	0x140b5adaf	0x1416d7858	due to envy of those that live on
+literal	ritual-motive	0x140b5adc1	0x1416d7828	due to panic about what happens after death
+literal	ritual-motive	0x140b5add3	0x1416d78b8	due to fear of death
+literal	ritual-motive	0x140b5ade5	0x1416d7880	unable to face any possible judgment and the afterlife
+literal	ritual-motive	0x140b5adf1	0x1416d77a0	being too proud to give in to death
+literal	ritual-motive	0x140b5ae03	0x1416d7778	being too vain to give in to death
+literal	ritual-motive	0x140b5ae15	0x1416d77e8	having ambitions for which death was only a small obstacle
+literal	ritual-motive	0x140b5ae27	0x1416d77c8	due to fear of persecution
+literal	ritual-motive	0x140b5ae39	0x1416d7708	to smooth the operation of 
+literal	ritual-motive	0x140b5ae4b	0x1416d76f0	due to a belief in 
+call	ritual-motive	0x140b5ae55	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5ae8d	0x141670b50	nuances
+literal	ritual-motive	0x140b5ae97	0x141670b54	ces
+literal	ritual-motive	0x140b5aea2	0x141670b56	s
+literal	ritual-motive	0x140b5aeb6	0x1415eb518	 of 
+call	ritual-motive	0x140b5aec1	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5aee1	0x1416415b8	law
+literal	ritual-motive	0x140b5aef3	0x1416415b0	loyalty
+literal	ritual-motive	0x140b5af05	0x1416415fc	family
+literal	ritual-motive	0x140b5af17	0x1416415f0	friendship
+literal	ritual-motive	0x140b5af29	0x1416415e4	power
+literal	ritual-motive	0x140b5af3b	0x1416415dc	truth
+literal	ritual-motive	0x140b5af4d	0x141641570	cunning
+literal	ritual-motive	0x140b5af59	0x141641560	eloquence
+literal	ritual-motive	0x140b5af6b	0x141641550	fairness
+literal	ritual-motive	0x140b5af7d	0x141641548	decorum
+literal	ritual-motive	0x140b5af89	0x1416415a0	tradition
+literal	ritual-motive	0x140b5af9b	0x141641598	artwork
+literal	ritual-motive	0x140b5afad	0x141641588	cooperation
+literal	ritual-motive	0x140b5afbf	0x141641578	independence
+literal	ritual-motive	0x140b5afd1	0x141641500	stoicism
+literal	ritual-motive	0x140b5afe3	0x1416414f0	introspection
+literal	ritual-motive	0x140b5aff5	0x1416414e0	self-control
+literal	ritual-motive	0x140b5b007	0x1416414d0	tranquility
+literal	ritual-motive	0x140b5b019	0x141641540	harmony
+literal	ritual-motive	0x140b5b025	0x141641530	merriment
+literal	ritual-motive	0x140b5b037	0x141641520	craftsmanship
+literal	ritual-motive	0x140b5b049	0x141641510	martial prowess
+literal	ritual-motive	0x140b5b05b	0x141641724	skill
+literal	ritual-motive	0x140b5b067	0x141641718	hard work
+literal	ritual-motive	0x140b5b070	0x141641708	sacrifice
+literal	ritual-motive	0x140b5b07f	0x1416416f8	competition
+literal	ritual-motive	0x140b5b08e	0x141641758	perseverance
+literal	ritual-motive	0x140b5b09d	0x141641748	leisure time
+literal	ritual-motive	0x140b5b0ac	0x141641738	commerce
+literal	ritual-motive	0x140b5b0bb	0x141641730	romance
+literal	ritual-motive	0x140b5b0ca	0x1416416ec	nature
+literal	ritual-motive	0x140b5b0d9	0x1415ee0cc	peace
+literal	ritual-motive	0x140b5b0e2	0x1416416e0	knowledge
+call	ritual-motive	0x140b5b0f3	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5b10d	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5b145	QWORD	QWORD PTR [rip+0xa8a9dd]        # 0x1415e5b28
+call	ritual-motive	0x140b5b14c	0x141539680	0x141539680
+literal	ritual-motive	0x140b5b15d	0x1416d7758	as part of a trade negotiation
+literal	ritual-motive	0x140b5b16f	0x1416d7728	in order to cement the bonds of friendship
+literal	ritual-motive	0x140b5b181	0x1416d5128	as a symbol of everlasting peace
+literal	ritual-motive	0x140b5b193	0x1416d5118	on a pilgrimage
+literal	ritual-motive	0x140b5b1a5	0x1416d76a8	to gather information
+literal	ritual-motive	0x140b5b1b7	0x1416d7688	in order to find sanctuary
+literal	ritual-motive	0x140b5b1c9	0x1416d76d0	due to a shared interest in 
+call	ritual-motive	0x140b5b1d3	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5b1fb	0x1416d76c0	philosophy
+call	ritual-motive	0x140b5b205	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b20f	0x1416d7658	mathematics
+call	ritual-motive	0x140b5b219	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b223	0x141663d68	history
+call	ritual-motive	0x140b5b22d	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b237	0x1416d7648	astronomy
+call	ritual-motive	0x140b5b241	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b24b	0x1416d7678	natural history
+call	ritual-motive	0x140b5b255	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b25f	0x1416d7668	chemistry
+call	ritual-motive	0x140b5b269	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b273	0x1416d7610	geography
+call	ritual-motive	0x140b5b27d	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b284	0x1416d7600	medicine
+call	ritual-motive	0x140b5b28e	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b295	0x1416d7638	engineering
+call	ritual-motive	0x140b5b29f	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b2a6	0x14161b6dc	poetry
+call	ritual-motive	0x140b5b2b0	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b2b7	0x1415eb50c	music
+call	ritual-motive	0x140b5b2c1	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b2c8	0x1415edfc0	dance
+call	ritual-motive	0x140b5b2d2	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b2df	0x1416d7620	due to a lack of funds
+literal	ritual-motive	0x140b5b2e8	0x1416d75a0	after taking heavy losses in battle
+call	ritual-motive	0x140b5b2f8	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5b313	0x1415e873c	 
+call	ritual-motive	0x140b5b31d	0x14006fa10	0x14006fa10
+literal	ritual-motive	0x140b5b353	0x1416d7588	after the death of 
+call	ritual-motive	0x140b5b35d	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5b37d	0x140b92f10	0x140b92f10
+literal	ritual-motive	0x140b5b387	0x1416d75e8	after praying to 
+call	ritual-motive	0x140b5b391	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b3b1	0x140b92f10	0x140b92f10
+literal	ritual-motive	0x140b5b3bb	0x1416d75c8	after performing the rites of 
+call	ritual-motive	0x140b5b3c5	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b3d3	0x140b92900	0x140b92900
+literal	ritual-motive	0x140b5b3d8	0x1416d7528	 in a dedicated temple
+call	ritual-motive	0x140b5b3e2	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b3ec	0x1416d74f8	after incompletely performing the rites of 
+call	ritual-motive	0x140b5b3f6	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b404	0x140b92900	0x140b92900
+literal	ritual-motive	0x140b5b409	0x1416d7560	 in an improperly dedicated temple
+call	ritual-motive	0x140b5b413	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b41d	0x1416d74f8	after incompletely performing the rites of 
+call	ritual-motive	0x140b5b427	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b435	0x140b92900	0x140b92900
+literal	ritual-motive	0x140b5b43a	0x1416d7540	 in an undedicated temple
+call	ritual-motive	0x140b5b444	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b44e	0x1416d75e8	after praying to 
+call	ritual-motive	0x140b5b458	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b478	0x140b92f10	0x140b92f10
+literal	ritual-motive	0x140b5b47d	0x1416d7528	 in a dedicated temple
+call	ritual-motive	0x140b5b487	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b491	0x1416d74b0	after dreaming of 
+literal	ritual-motive	0x140b5b49d	0x1416d74a0	after a dream
+call	ritual-motive	0x140b5b4a7	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b4b1	0x1416d74e0	after a nightmare
+call	ritual-motive	0x140b5b4bb	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b4de	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b4e8	0x1416d74c8	after defeating 
+literal	ritual-motive	0x140b5b4f4	0x1416d8130	as the item was a favorite possession
+call	ritual-motive	0x140b5b4fe	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b508	0x1416d8108	by preserving a part of the body
+call	ritual-motive	0x140b5b512	0x14006f560	0x14006f560
+literal	ritual-motive	0x140b5b51c	0x1416d8170	after abducting 
+literal	ritual-motive	0x140b5b528	0x1416d8158	after murdering 
+literal	ritual-motive	0x140b5b534	0x1416d80e8	during 
+call	ritual-motive	0x140b5b53e	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b54d	0x14013cc50	0x14013cc50
+call	ritual-motive	0x140b5b562	0x14006f690	0x14006f690
+call	ritual-motive	0x140b5b576	r8	r8
+call	ritual-motive	0x140b5b580	0x1400b9d10	0x1400b9d10
+call	ritual-motive	0x140b5b58a	0x14006f850	0x14006f850
+literal	ritual-motive	0x140b5b594	0x1416d80d0	after acquiring 
+call	ritual-motive	0x140b5b59e	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b5ac	0x140b94400	0x140b94400
+literal	ritual-motive	0x140b5b5b6	0x1416d8100	after 
+call	ritual-motive	0x140b5b5c0	0x14006f560	0x14006f560
+call	ritual-motive	0x140b5b5ce	0x140b94400	0x140b94400
+literal	ritual-motive	0x140b5b5d9	0x1416d80f0	 was given away
+literal	ritual-motive	0x140b5b5eb	0x1416d8060	after preying on the blood of civilized creatures
+literal	ritual-motive	0x140b5b5fd	0x1416d8040	being unnaturally ageless
+literal	ritual-motive	0x140b5b60c	0x1416d80b0	after a scholarly lecture in 
+call	ritual-motive	0x140b5b616	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5b624	0x140b93930	0x140b93930
+literal	ritual-motive	0x140b5b631	0x1416d8098	after a performance in 
+literal	ritual-motive	0x140b5b640	0x1416d7fc8	after accepting bribes in exchange for leniency
+literal	ritual-motive	0x140b5b64f	0x1416d7fb0	after embezzling funds
+literal	ritual-motive	0x140b5b65e	0x1416d8008	after receiving a cut of corruptly-obtained funds
+literal	ritual-motive	0x140b5b66d	0x1416d7438	from afar
+literal	ritual-motive	0x140b5b67c	0x1416d7480	during an infiltration mission
+call	ritual-motive	0x140b5b686	0x14006fa10	0x14006fa10
+call	ritual-motive	0x140b5b692	0x141539660	0x141539660

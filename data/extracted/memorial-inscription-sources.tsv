@@ -1,0 +1,781 @@
+# Offline native memorial inscription sources; PE:6a70a6d9:02711000
+# RVAs refer to the installed Windows Dwarf Fortress.exe; significant native spaces retained.
+# kind	owner	function-start	function-end	instruction-or-table-entry	literal-or-branch-target	source	native-operand-or-production
+formatter	memorial-inscription-writer	0xcc23e0	0xcc5384	-	-		instructions end at 0xcc5278; remaining bytes are jump tables
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2433	0x16eead8	In memory of	lea    rdx,[rip+0xa2c69e]        # 0x1416eead8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc243d	0x6f8d0		call   0x14006f8d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc24b6	0x15ec860	...	lea    rdx,[rip+0x92a3a3]        # 0x1415ec860
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc24c0	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc24cf	0x1539660		call   0x141539660
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2531	0x15e873c	 	lea    rdx,[rip+0x926204]        # 0x1415e873c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2538	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2548	0xa94030		call   0x140a94030
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc256e	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc257e	0x1685d4c	 a 	lea    rdx,[rip+0x9c37c7]        # 0x141685d4c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2585	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc25c0	0xaa3bd0		call   0x140aa3bd0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc25e6	0x6fa10		call   0x14006fa10
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2624	-		call   QWORD PTR [rip+0x9234fe]        # 0x1415e5b28
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc262b	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2685	0x1539680		call   0x141539680
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc27db	0x16eeac8	 / Born 	lea    rdx,[rip+0xa2c2e6]        # 0x1416eeac8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc27e5	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc27f0	0x52c130		call   0x14052c130
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc27fb	0x16eeac0	 / 	lea    rdx,[rip+0xa2c2be]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2805	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2810	0x16eeab0	Went missing	lea    rdx,[rip+0xa2c299]        # 0x1416eeab0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc281a	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc282c	0x15ed558	 in the year 	lea    rdx,[rip+0x92ad25]        # 0x1415ed558
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2836	0x6f560		call   0x14006f560
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc288f	-		call   r8
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc28b3	-		call   r8
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc28c0	-		call   QWORD PTR [rax]
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc28d0	0x72080		call   0x140072080
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc290a	0x72750		call   0x140072750
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2925	0xcb1720		call   0x140cb1720
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc29a1	0xcb1720		call   0x140cb1720
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2a07	0xb94400		call   0x140b94400
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2a28	0xb94400		call   0x140b94400
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2a84	0x15ed620	a 	lea    rdx,[rip+0x92ab95]        # 0x1415ed620
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2a92	0x6f580		call   0x14006f580
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ae6	0xa82c10		call   0x140a82c10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b04	0x15ed620	a 	lea    rdx,[rip+0x92ab15]        # 0x1415ed620
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b12	0x6f580		call   0x14006f580
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b67	0xa82c10		call   0x140a82c10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b71	0x16eeaa4	Boiled	lea    rdx,[rip+0xa2bf2c]        # 0x1416eeaa4
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b7d	0x16eea9c	Melted	lea    rdx,[rip+0xa2bf18]        # 0x1416eea9c
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b89	0x16eea90	Condensed	lea    rdx,[rip+0xa2bf00]        # 0x1416eea90
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2b95	0x16eea80	Solidified	lea    rdx,[rip+0xa2bee4]        # 0x1416eea80
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ba1	0x16eea68	Died in the heat	lea    rdx,[rip+0xa2bec0]        # 0x1416eea68
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bad	0x16eea50	Encased in cooling lava	lea    rdx,[rip+0xa2be9c]        # 0x1416eea50
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bb9	0x16eea30	Encased in cooling magma	lea    rdx,[rip+0xa2be70]        # 0x1416eea30
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bc5	0x16eea20	Encased in ice	lea    rdx,[rip+0xa2be54]        # 0x1416eea20
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bd1	0x16eea10	Froze to death	lea    rdx,[rip+0xa2be38]        # 0x1416eea10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bdd	0x16eea00	Died in a cage	lea    rdx,[rip+0xa2be1c]        # 0x1416eea00
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2be9	0x16ee9e8	Fell into a deep chasm	lea    rdx,[rip+0xa2bdf8]        # 0x1416ee9e8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2bf5	0x16ee9d8	Died peacefully	lea    rdx,[rip+0xa2bddc]        # 0x1416ee9d8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c01	0x16ee9c0	Died in the dark	lea    rdx,[rip+0xa2bdb8]        # 0x1416ee9c0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c0d	0x16ee9a8	Starved to death	lea    rdx,[rip+0xa2bd94]        # 0x1416ee9a8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c19	0x16ee998	Died of thirst	lea    rdx,[rip+0xa2bd78]        # 0x1416ee998
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c25	0x16ee978	Burned up in magma	lea    rdx,[rip+0xa2bd4c]        # 0x1416ee978
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c31	0x16ee968	Burned up in 	lea    rdx,[rip+0xa2bd30]        # 0x1416ee968
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c3f	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c6d	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c72	0x16db280	 dragon fire	lea    rdx,[rip+0xa18607]        # 0x1416db280
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c84	0x15ed620	a 	lea    rdx,[rip+0x92a995]        # 0x1415ed620
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2c92	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2cb3	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2cb8	0x16db270	's dragon fire	lea    rdx,[rip+0xa185b1]        # 0x1416db270
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2cc4	0x16db2a8	dragon fire	lea    rdx,[rip+0xa185dd]        # 0x1416db2a8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2cd6	0x16ee950	Burned to death by 	lea    rdx,[rip+0xa2bc73]        # 0x1416ee950
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ce4	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d0c	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d11	0x16db224	 fire	lea    rdx,[rip+0xa1850c]        # 0x1416db224
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d23	0x16ee938	Burned to death by a 	lea    rdx,[rip+0xa2bc0e]        # 0x1416ee938
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d31	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d52	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d57	0x16db224	 fire	lea    rdx,[rip+0xa184c6]        # 0x1416db224
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d63	0x16ee928	Burned to death	lea    rdx,[rip+0xa2bbbe]        # 0x1416ee928
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d6f	0x16ee910	Scalded to death	lea    rdx,[rip+0xa2bb9a]        # 0x1416ee910
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d7b	0x16ee8f0	Burned up in a magma mist	lea    rdx,[rip+0xa2bb6e]        # 0x1416ee8f0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d87	0x16ee8d8	Crushed by a drawbridge	lea    rdx,[rip+0xa2bb4a]        # 0x1416ee8d8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d93	0x16ee8b0	Crushed under a collapsing ceiling	lea    rdx,[rip+0xa2bb16]        # 0x1416ee8b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2d9f	0x16ee898	Killed by falling rocks	lea    rdx,[rip+0xa2baf2]        # 0x1416ee898
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2dab	0x16ee888	Shot and killed	lea    rdx,[rip+0xa2bad6]        # 0x1416ee888
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2db9	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2dc4	0x15eda08	 by 	lea    rdx,[rip+0x92ac3d]        # 0x1415eda08
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2dd2	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2df8	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e05	0x16cc1a0	 by a 	lea    rdx,[rip+0xa09394]        # 0x1416cc1a0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e13	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e34	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e43	0x15ee5e0	 with 	lea    rdx,[rip+0x92b796]        # 0x1415ee5e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e5b	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e6e	0xb9d10		call   0x1400b9d10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e73	0x15ed97c	 from 	lea    rdx,[rip+0x92ab02]        # 0x1415ed97c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e7c	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2e8f	0xb9d10		call   0x1400b9d10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ea7	0x15ee5e0	 with 	lea    rdx,[rip+0x92b732]        # 0x1415ee5e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2eb5	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ec8	0xb9d10		call   0x1400b9d10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ed2	0x16ee878	Bled to death	lea    rdx,[rip+0xa2b99f]        # 0x1416ee878
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ee0	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2eeb	0x16db1f8	, slain by 	lea    rdx,[rip+0xa18306]        # 0x1416db1f8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2ef9	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2f1f	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2f2c	0x16db1e8	, slain by a 	lea    rdx,[rip+0xa182b5]        # 0x1416db1e8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2f3a	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2f5b	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2f6e	0x15ee5e0	 with 	lea    rdx,[rip+0x92b66b]        # 0x1415ee5e0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fa7	0x16db170	, slain	lea    rdx,[rip+0xa181c2]        # 0x1416db170
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fb5	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fbc	0x16ee860	Succumbed to infection	lea    rdx,[rip+0xa2b89d]        # 0x1416ee860
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fca	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fd5	0x16db1f8	, slain by 	lea    rdx,[rip+0xa1821c]        # 0x1416db1f8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc2fe3	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3009	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc301d	0x16db1e8	, slain by a 	lea    rdx,[rip+0xa181c4]        # 0x1416db1e8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc302b	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc304c	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3056	0x16ef300	Suffocated	lea    rdx,[rip+0xa2c2a3]        # 0x1416ef300
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3064	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3095	0x16db1f8	, slain by 	lea    rdx,[rip+0xa1815c]        # 0x1416db1f8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30a3	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30ad	0x16ef2e8	Hacked to pieces	lea    rdx,[rip+0xa2c234]        # 0x1416ef2e8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30bb	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30c6	0x15eda08	 by 	lea    rdx,[rip+0x92a93b]        # 0x1415eda08
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30d4	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc30fa	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc310e	0x16cc1a0	 by a 	lea    rdx,[rip+0xa0908b]        # 0x1416cc1a0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc311a	0x16ef2d8	Executed	lea    rdx,[rip+0xa2c1b7]        # 0x1416ef2d8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3123	0x16ef2c8	Beheaded	lea    rdx,[rip+0xa2c19e]        # 0x1416ef2c8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc312c	0x16ef2b8	Crucified	lea    rdx,[rip+0xa2c185]        # 0x1416ef2b8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3138	0x16ef2a8	Buried alive	lea    rdx,[rip+0xa2c169]        # 0x1416ef2a8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3144	0x16ef290	Left out in the air	lea    rdx,[rip+0xa2c145]        # 0x1416ef290
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3150	0x16ee990	Drowned	lea    rdx,[rip+0xa2b839]        # 0x1416ee990
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc315c	0x16ef280	Burned alive	lea    rdx,[rip+0xa2c11d]        # 0x1416ef280
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3168	0x16ef270	Fed to beasts	lea    rdx,[rip+0xa2c101]        # 0x1416ef270
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3174	0x16ef260	Struck down	lea    rdx,[rip+0xa2c0e5]        # 0x1416ef260
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3182	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc318d	0x15eda08	 by 	lea    rdx,[rip+0x92a874]        # 0x1415eda08
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31a3	0x16cc1a0	 by a 	lea    rdx,[rip+0xa08ff6]        # 0x1416cc1a0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31af	0x16ef250	Slaughtered	lea    rdx,[rip+0xa2c09a]        # 0x1416ef250
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31b8	0x16ef240	Scuttled	lea    rdx,[rip+0xa2c081]        # 0x1416ef240
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31c4	0x16ef228	Drained of blood	lea    rdx,[rip+0xa2c05d]        # 0x1416ef228
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31d0	0x16ef218	Murdered	lea    rdx,[rip+0xa2c041]        # 0x1416ef218
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31dc	0x16ef200	Killed by a trap	lea    rdx,[rip+0xa2c01d]        # 0x1416ef200
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31e8	0x16ef1e8	Killed by a vehicle	lea    rdx,[rip+0xa2bff9]        # 0x1416ef1e8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc31f4	0x16ef1c8	Killed by a flying object	lea    rdx,[rip+0xa2bfcd]        # 0x1416ef1c8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3200	0x16ef1b8	Vanished	lea    rdx,[rip+0xa2bfb1]        # 0x1416ef1b8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc320e	0x16ef1a8	Collapsed	lea    rdx,[rip+0xa2bf93]        # 0x1416ef1a8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc321c	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3227	0x16db0e0	, struck down by 	lea    rdx,[rip+0xa17eb2]        # 0x1416db0e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3235	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc325b	0xb92f10		call   0x140b92f10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3268	0x16db0c8	, struck down by a 	lea    rdx,[rip+0xa17e59]        # 0x1416db0c8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3276	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3296	0xb94ed0		call   0x140b94ed0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32b9	0x16db058	, struck down 	lea    rdx,[rip+0xa17d98]        # 0x1416db058
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32c7	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32cc	0x15ee5e0	 with 	lea    rdx,[rip+0x92b30d]        # 0x1415ee5e0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32e3	0x16db058	, struck down 	lea    rdx,[rip+0xa17d6e]        # 0x1416db058
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32f1	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc32f6	0x15ee5e0	 with 	lea    rdx,[rip+0x92b2e3]        # 0x1415ee5e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3304	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3317	0xb9d10		call   0x1400b9d10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3333	0x16db058	, struck down 	lea    rdx,[rip+0xa17d1e]        # 0x1416db058
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3341	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3346	0x15ee5e0	 with 	lea    rdx,[rip+0x92b293]        # 0x1415ee5e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3354	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3367	0xb9d10		call   0x1400b9d10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc336e	0x16ef198	Put to rest	lea    rdx,[rip+0xa2be23]        # 0x1416ef198
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3377	0x16ef170	Died after colliding with an obstacle	lea    rdx,[rip+0xa2bdf2]        # 0x1416ef170
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3383	0x16ef158	Impaled on spikes	lea    rdx,[rip+0xa2bdce]        # 0x1416ef158
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc338f	0x16ef148	Scared to death	lea    rdx,[rip+0xa2bdb2]        # 0x1416ef148
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc339d	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33ac	0x15eda08	 by 	lea    rdx,[rip+0x92a655]        # 0x1415eda08
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33b8	0x16ef128	Leapt from a great height	lea    rdx,[rip+0xa2bd69]        # 0x1416ef128
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33c1	0x16ee990	Drowned	lea    rdx,[rip+0xa2b5c8]        # 0x1416ee990
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33cf	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33ed	0x16eeac8	 / Born 	lea    rdx,[rip+0xa2b6d4]        # 0x1416eeac8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc33f7	0x6f560		call   0x14006f560
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3402	0x52c130		call   0x14052c130
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc340d	0x16eeac0	 / 	lea    rdx,[rip+0xa2b6ac]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3417	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc343d	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3468	0xbabe0		call   0x1400babe0
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc34c4	-		call   r8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc34d7	0x15ecfb4	 in 	lea    rdx,[rip+0x929ad6]        # 0x1415ecfb4
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc34e1	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3507	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3514	0x6f850		call   0x14006f850
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc352a	0x15ed558	 in the year 	lea    rdx,[rip+0x92a027]        # 0x1415ed558
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3534	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc353f	0x52c130		call   0x14052c130
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3555	0x6f850		call   0x14006f850
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3562	0x6f850		call   0x14006f850
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc356f	0x6f850		call   0x14006f850
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35a1	0x16eeac0	 / 	lea    rdx,[rip+0xa2b518]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35ab	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35b0	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35de	0x1605a98	 - 	lea    rdi,[rip+0x9424b3]        # 0x141605a98
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35e7	0x16ef124	b.	lea    rdx,[rip+0xa2bb36]        # 0x1416ef124
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35f1	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc35f6	0x16ef120	 d.	lea    rdi,[rip+0xa2bb23]        # 0x1416ef120
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3603	0x52c130		call   0x14052c130
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc360e	0x6f560		call   0x14006f560
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3632	0x16eeac0	 / 	lea    rdx,[rip+0xa2b487]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3639	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc363e	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3679	0x16ef114	d.	lea    rax,[rip+0xa2ba94]        # 0x1416ef114
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3680	0x16ef118	Died 	lea    rdx,[rip+0xa2ba91]        # 0x1416ef118
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3692	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc36a1	0x52c130		call   0x14052c130
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc36d0	0x16eeac0	 / 	lea    rdx,[rip+0xa2b3e9]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc36d7	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc36e9	0x15fe678	Creator of 	lea    rdx,[rip+0x93af88]        # 0x1415fe678
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc36f0	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc372c	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3756	0x6fa10		call   0x14006fa10
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3794	-		call   QWORD PTR [rip+0x92238e]        # 0x1415e5b28
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc379b	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3809	0xba0a0		call   0x1400ba0a0
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc381c	-		call   QWORD PTR [rdx]
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3831	-		call   QWORD PTR [rax+0x30]
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc383d	0xb9dc0		call   0x1400b9dc0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc384d	0xbbe40		call   0x1400bbe40
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc38af	0xba0a0		call   0x1400ba0a0
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc38c8	-		call   QWORD PTR [rax+0x30]
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc38d4	0xb9dc0		call   0x1400b9dc0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc38e2	0xbbe40		call   0x1400bbe40
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc394b	0x16eeac0	 / 	lea    rdx,[rip+0xa2b16e]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3952	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc39d5	0x707d0		call   0x1400707d0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc39f9	0x153aa78		call   0x14153aa78
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a06	0x52d3c0		call   0x14052d3c0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a35	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a51	0x9bdfb0		call   0x1409bdfb0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a67	0x15eb518	 of 	lea    rdx,[rip+0x927aaa]        # 0x1415eb518
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a6e	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a81	0xb92900		call   0x140b92900
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a8c	-		call   QWORD PTR [rax+0x40]
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3a97	-		call   QWORD PTR [rdx+0x48]
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3ac3	0x15ecfb4	 in 	lea    rdx,[rip+0x9294ea]        # 0x1415ecfb4
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3aca	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3ad9	0x15e90d8	, 	lea    rdx,[rip+0x9255f8]        # 0x1415e90d8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3ae0	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3aee	0x52c130		call   0x14052c130
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3b00	0x15ed5b4	 to 	lea    rdx,[rip+0x929aad]        # 0x1415ed5b4
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3b07	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3b15	0x52c130		call   0x14052c130
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3b22	0x6f850		call   0x14006f850
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3b92	0x7da30		call   0x14007da30
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3baf	-		call   r8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3c24	0xb99da0		call   0x140b99da0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3c72	0xbad30		call   0x1400bad30
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3ca2	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3cf6	0x16eeac0	 / 	lea    rdx,[rip+0xa2adc3]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3cfd	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d0f	0x16ef108	Slayer of	lea    rdx,[rip+0xa2b3f2]        # 0x1416ef108
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d16	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d3b	0x15e956c	 the 	lea    rdx,[rip+0x92582a]        # 0x1415e956c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d42	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d7d	0xaa3bd0		call   0x140aa3bd0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3d89	0x52d3c0		call   0x14052d3c0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3db3	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3dc0	0x6f850		call   0x14006f850
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3e02	0x15e873c	 	lea    rdx,[rip+0x924933]        # 0x1415e873c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3e09	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3e42	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3e6c	0x6fa10		call   0x14006fa10
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3eaa	-		call   QWORD PTR [rip+0x921c78]        # 0x1415e5b28
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3eb1	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc3fd4	0x6f8d0		call   0x14006f8d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4029	0x16eeac0	 / 	lea    rdx,[rip+0xa2aa90]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4030	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4035	0x16ef0e8	Hunter of 	lea    rax,[rip+0xa2b0ac]        # 0x1416ef0e8
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc403c	0x16ef0f8	Slayer of 	lea    rdx,[rip+0xa2b0b5]        # 0x1416ef0f8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4056	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4062	0x52d3c0		call   0x14052d3c0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc408c	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4099	0x6f850		call   0x14006f850
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc40a3	0x66b70		call   0x140066b70
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc40cf	-		call   QWORD PTR [rax]
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4124	0x16eeac0	 / 	lea    rdx,[rip+0xa2a995]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc412b	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4130	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc416a	0x16ef0d0	Devoted 	lea    rdx,[rip+0xa2af5f]        # 0x1416ef0d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4179	0x16ef0e0	Loving 	lea    rdx,[rip+0xa2af60]        # 0x1416ef0e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4188	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc41c0	0x16465b0	parent	lea    rdx,[rip+0x9823e9]        # 0x1416465b0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc41c7	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc41df	0x16ef090	parent and spouse	lea    rdx,[rip+0xa2aeaa]        # 0x1416ef090
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc41e6	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc420c	0x1646574	spouse	lea    rdx,[rip+0x982361]        # 0x141646574
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4213	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc423a	0x16465a8	father	lea    rdx,[rip+0x982367]        # 0x1416465a8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4241	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4259	0x16ef0b8	father and husband	lea    rdx,[rip+0xa2ae58]        # 0x1416ef0b8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4260	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4286	0x1646588	husband	lea    rdx,[rip+0x9822fb]        # 0x141646588
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc428d	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42b1	0x1646634	mother	lea    rdx,[rip+0x98237c]        # 0x141646634
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42b8	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42cd	0x16ef0a8	mother and wife	lea    rdx,[rip+0xa2add4]        # 0x1416ef0a8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42d4	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42f3	0x164657c	wife	lea    rdx,[rip+0x982282]        # 0x14164657c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc42fa	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc434a	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc43ed	0x16eeac0	 / 	lea    rdx,[rip+0xa2a6cc]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc43f4	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc43f9	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc443d	0x16ef060	Lover of 	lea    rdx,[rip+0xa2ac1c]        # 0x1416ef060
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4446	0x16ef070	At one with 	lea    rdx,[rip+0xa2ac23]        # 0x1416ef070
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc444f	0x16ef080	United with 	lea    rdx,[rip+0xa2ac2a]        # 0x1416ef080
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4464	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4570	0x72570		call   0x140072570
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc457d	0xc3a4f0		call   0x140c3a4f0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc45a3	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc45d3	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc45de	0x15edb24	's 	lea    rdx,[rip+0x92953f]        # 0x1415edb24
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc45ec	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc462e	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc465b	0x14add70		call   0x1414add70
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc468e	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4699	0x15e873c	 	lea    rdx,[rip+0x92409c]        # 0x1415e873c
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc46a7	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc46c9	0x1789108	unknown material	lea    rdx,[rip+0xac4a38]        # 0x141789108
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc46d7	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4706	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4728	0x14add70		call   0x1414add70
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc475f	0x163fff0	 wood	lea    rdx,[rip+0x97b88a]        # 0x14163fff0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4766	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc477f	0x14add70		call   0x1414add70
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47be	0x163ffe8	 fabric	lea    rdx,[rip+0x97b823]        # 0x14163ffe8
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47c5	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47dd	0x16eeac0	 / 	lea    rdx,[rip+0xa2a2dc]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47e4	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47f7	0x16ef060	Lover of 	lea    rdx,[rip+0xa2a862]        # 0x1416ef060
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc47fe	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc484b	0xa82c10		call   0x140a82c10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4876	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc488e	0x16eeac0	 / 	lea    rdx,[rip+0xa2a22b]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4895	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc489a	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc48d4	0x16ef050	Admirer of 	lea    rdx,[rip+0xa2a775]        # 0x1416ef050
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc48e3	0x16ef060	Lover of 	lea    rdx,[rip+0xa2a776]        # 0x1416ef060
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc48f2	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4951	0x6f8d0		call   0x14006f8d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4969	0x16eeac0	 / 	lea    rdx,[rip+0xa2a150]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4970	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4975	0xeb68b0		call   0x140eb68b0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc49af	0x16ef050	Admirer of 	lea    rdx,[rip+0xa2a69a]        # 0x1416ef050
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc49be	0x16ef040	Friend of 	lea    rdx,[rip+0xa2a67b]        # 0x1416ef040
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc49cd	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4a4c	0x6f8d0		call   0x14006f8d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4a64	0x16eeac0	 / 	lea    rdx,[rip+0xa2a055]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4a6b	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4a7e	0x16ef030	The color 	lea    rdx,[rip+0xa2a5ab]        # 0x1416ef030
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4a85	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4afb	0x6f8d0		call   0x14006f8d0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4b26	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4b39	0x16ef028	 made 	lea    rdx,[rip+0xa2a4e8]        # 0x1416ef028
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4b40	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4b85	0x16cecc4	him	lea    rdx,[rip+0xa0a138]        # 0x1416cecc4
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4b8f	0x153ae1a		call   0x14153ae1a
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4bc3	0x707d0		call   0x1400707d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4bda	0x16cecc4	him	mov    ecx,DWORD PTR [rip+0xa0a0e4]        # 0x1416cecc4
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4be3	0x16cecc6	m	movzx  ecx,BYTE PTR [rip+0xa0a0dc]        # 0x1416cecc6
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4c2a	0x1539680		call   0x141539680
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4c74	0x16cecc0	her	lea    rdx,[rip+0xa0a045]        # 0x1416cecc0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4c7e	0x153ae1a		call   0x14153ae1a
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4cb2	0x707d0		call   0x1400707d0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4cc9	0x16cecc0	her	mov    ecx,DWORD PTR [rip+0xa09ff1]        # 0x1416cecc0
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4cd2	0x16cecc2	r	movzx  ecx,BYTE PTR [rip+0xa09fe9]        # 0x1416cecc2
+inline-literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4d09	-	it	mov    WORD PTR [rax],0x7469
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4d3d	0x707d0		call   0x1400707d0
+inline-literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4d58	-	it	mov    WORD PTR [rdi],0x7469
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4d97	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4dc9	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4dd4	0x16ef020	 happy	lea    rdx,[rip+0xa2a245]        # 0x1416ef020
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4de3	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4dfb	0x16eeac0	 / 	lea    rdx,[rip+0xa29cbe]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4e02	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4e15	0x16ef050	Admirer of 	lea    rdx,[rip+0xa2a234]        # 0x1416ef050
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4e1c	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4e9b	0x6f8d0		call   0x14006f8d0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4eaf	0x72570		call   0x140072570
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4ed8	0x16eeac0	 / 	lea    rdx,[rip+0xa29be1]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4edf	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4ef2	0x16ef060	Lover of 	lea    rdx,[rip+0xa2a167]        # 0x1416ef060
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4ef9	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4f32	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4f5d	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc4f6a	0x6f850		call   0x14006f850
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5028	0x16eeac0	 / 	lea    rdx,[rip+0xa29a91]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc502f	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5042	0x16ef060	Lover of 	lea    rdx,[rip+0xa2a017]        # 0x1416ef060
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5049	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5082	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc50ad	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc50ba	0x6f850		call   0x14006f850
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5178	0x16eeac0	 / 	lea    rdx,[rip+0xa29941]        # 0x1416eeac0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc517f	0x6fa10		call   0x14006fa10
+literal	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5192	0x16ef060	Lover of 	lea    rdx,[rip+0xa29ec7]        # 0x1416ef060
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5199	0x6fa10		call   0x14006fa10
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc51d2	0xa946e0		call   0x140a946e0
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc51fd	0x6fa10		call   0x14006fa10
+indirect-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc523b	-		call   QWORD PTR [rip+0x9208e7]        # 0x1415e5b28
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5242	0x1539680		call   0x141539680
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5267	0x6f850		call   0x14006f850
+direct-call	memorial-inscription-writer	0xcc23e0	0xcc5384	0xcc5271	0x65890		call   0x140065890
+formatter	slab-item-title	0xca0870	0xca0b3e	-	-		instructions end at 0xca0b3e; remaining bytes are jump tables
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0893	0xca5bb0		call   0x140ca5bb0
+literal	slab-item-title	0xca0870	0xca0b3e	0xca0922	0x15ed5b4	 to 	lea    rdx,[rip+0x94cc8b]        # 0x1415ed5b4
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca092c	0x6fa10		call   0x14006fa10
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca095d	0xa94030		call   0x140a94030
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0977	0x6fa10		call   0x14006fa10
+indirect-call	slab-item-title	0xca0870	0xca0b3e	0xca09bb	-		call   QWORD PTR [rip+0x945167]        # 0x1415e5b28
+literal	slab-item-title	0xca0870	0xca0b3e	0xca09c8	0x15ed620	a 	lea    rdx,[rip+0x94cc51]        # 0x1415ed620
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca09d2	0x6fa10		call   0x14006fa10
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0a6f	0x6f8d0		call   0x14006f8d0
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0ac1	0x6f8d0		call   0x14006f8d0
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0ade	0x6fa10		call   0x14006fa10
+indirect-call	slab-item-title	0xca0870	0xca0b3e	0xca0b16	-		call   QWORD PTR [rip+0x94500c]        # 0x1415e5b28
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0b1d	0x1539680		call   0x141539680
+direct-call	slab-item-title	0xca0870	0xca0b3e	0xca0b29	0x1539660		call   0x141539660
+formatter	position-site-suffix	0x9bdfb0	0x9be0f8	-	-		instructions end at 0x9be0f8; remaining bytes are jump tables
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be023	0x7db20		call   0x14007db20
+literal	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be03a	0x15eb518	 of 	lea    rdx,[rip+0xc2d4d7]        # 0x1415eb518
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be044	0x6fa10		call   0x14006fa10
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be076	0xa946e0		call   0x140a946e0
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be094	0x6fa10		call   0x14006fa10
+indirect-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be0ce	-		call   QWORD PTR [rip+0xc27a54]        # 0x1415e5b28
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be0d5	0x1539680		call   0x141539680
+direct-call	position-site-suffix	0x9bdfb0	0x9be0f8	0x9be0e8	0x1539660		call   0x141539660
+formatter	historical-figure-reference	0xb92f10	0xb93927	-	-		instructions end at 0xb93927; remaining bytes are jump tables
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb92f52	0x67dc0		call   0x140067dc0
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb92f8a	0x16df900	interrogator	lea    rdx,[rip+0xb4c96f]        # 0x1416df900
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb92fa1	0x1674d08	subject	lea    rdx,[rip+0xae1d60]        # 0x141674d08
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb92fb3	0xb9dc0		call   0x1400b9dc0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93003	0xa946e0		call   0x140a946e0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9301f	0x6fa10		call   0x14006fa10
+indirect-call	historical-figure-reference	0xb92f10	0xb93927	0xb9305c	-		call   QWORD PTR [rip+0xa52ac6]        # 0x1415e5b28
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93063	0x1539680		call   0x141539680
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93073	0x16290f0	Nameless	lea    rdx,[rip+0xa96076]        # 0x1416290f0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb930a2	0x72570		call   0x140072570
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb930dd	0xa946e0		call   0x140a946e0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb930f9	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93104	0x6f850		call   0x14006f850
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9310e	0x16df8e0	an unidentified creature	lea    rdx,[rip+0xb4c7cb]        # 0x1416df8e0
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93133	0x15fdb08	[LPAGE:HF:	lea    rdx,[rip+0xa6a9ce]        # 0x1415fdb08
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9313d	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9314b	0x52c130		call   0x14052c130
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93153	0x15fd690	]	lea    rdx,[rip+0xa6a536]        # 0x1415fd690
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9315d	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9318a	0x67dc0		call   0x140067dc0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93199	0x67dc0		call   0x140067dc0
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9325d	0x1662ef8	myself	mov    eax,DWORD PTR [rip+0xacfc95]        # 0x141662ef8
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93266	0x1662efc	lf	movzx  eax,WORD PTR [rip+0xacfc8f]        # 0x141662efc
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9329a	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb932c2	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb932e0	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9331b	0x15e8e48	the 	lea    rdx,[rip+0xa55b26]        # 0x1415e8e48
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93325	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9333f	0x167db90	zombie 	lea    rdx,[rip+0xaea84a]        # 0x14167db90
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93349	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93377	0x15fdbb8	ghostly 	lea    rdx,[rip+0xa6a83a]        # 0x1415fdbb8
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93381	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93416	0x6f8d0		call   0x14006f8d0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93469	0x6f8d0		call   0x14006f8d0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93483	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93499	0x15e873c	 	lea    rdx,[rip+0xa5529c]        # 0x1415e873c
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb934a3	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb934c0	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb934c8	0x15e873c	 	lea    rdx,[rip+0xa5526d]        # 0x1415e873c
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb934d2	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb934dc	0x6f850		call   0x14006f850
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93504	0xa946e0		call   0x140a946e0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9351e	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93551	0x15e956c	 the 	lea    rdx,[rip+0xa56014]        # 0x1415e956c
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9355b	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93575	0x167db90	zombie 	lea    rdx,[rip+0xaea614]        # 0x14167db90
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9357f	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb935ad	0x15fdbb8	ghostly 	lea    rdx,[rip+0xa6a604]        # 0x1415fdbb8
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb935b7	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93648	0x6f8d0		call   0x14006f8d0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9369a	0x6f8d0		call   0x14006f8d0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb936b7	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb936cd	0x15e873c	 	lea    rdx,[rip+0xa55068]        # 0x1415e873c
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb936d7	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb936f4	0x6fa10		call   0x14006fa10
+indirect-call	historical-figure-reference	0xb92f10	0xb93927	0xb93730	-		call   QWORD PTR [rip+0xa523f2]        # 0x1415e5b28
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93737	0x1539680		call   0x141539680
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9374e	0x15ed620	a 	lea    rcx,[rip+0xa59ecb]        # 0x1415ed620
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93755	0x15e8e48	the 	lea    rdx,[rip+0xa556ec]        # 0x1415e8e48
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93763	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9377d	0x167db90	zombie 	lea    rdx,[rip+0xaea40c]        # 0x14167db90
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93787	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb937b5	0x15fdbb8	ghostly 	lea    rdx,[rip+0xa6a3fc]        # 0x1415fdbb8
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb937bf	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb937ea	0xaa3bd0		call   0x140aa3bd0
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93806	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb9381c	0x15e873c	 	lea    rdx,[rip+0xa54f19]        # 0x1415e873c
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93826	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93843	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9384e	0x6f850		call   0x14006f850
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93867	0x15e9260	's	lea    rdx,[rip+0xa559f2]        # 0x1415e9260
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93871	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb93886	0x15fda88	[/LPAGE]	lea    rdx,[rip+0xa6a1fb]        # 0x1415fda88
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93890	0x6fa10		call   0x14006fa10
+indirect-call	historical-figure-reference	0xb92f10	0xb93927	0xb938c8	-		call   QWORD PTR [rip+0xa5225a]        # 0x1415e5b28
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb938cf	0x1539680		call   0x141539680
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb938dc	0x1663cd8	an unknown creature	lea    rdx,[rip+0xad03f5]        # 0x141663cd8
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb938e6	0x6fa10		call   0x14006fa10
+literal	historical-figure-reference	0xb92f10	0xb93927	0xb938f2	0x15e9260	's	lea    rdx,[rip+0xa55967]        # 0x1415e9260
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb93902	0x6fa10		call   0x14006fa10
+direct-call	historical-figure-reference	0xb92f10	0xb93927	0xb9390e	0x1539660		call   0x141539660
+formatter	historical-creature-reference	0xb94ed0	0xb9501c	-	-		instructions end at 0xb9501c; remaining bytes are jump tables
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94f45	0xaa3770		call   0x140aa3770
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94f5e	0xaa3bd0		call   0x140aa3bd0
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94f7c	0x6fa10		call   0x14006fa10
+indirect-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94fb6	-		call   QWORD PTR [rip+0xa50b6c]        # 0x1415e5b28
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94fbd	0x1539680		call   0x141539680
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94fca	0x1539660		call   0x141539660
+literal	historical-creature-reference	0xb94ed0	0xb9501c	0xb94fdb	0x1662fa8	creature	lea    rdx,[rip+0xacdfc6]        # 0x141662fa8
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb94fe5	0x6fa10		call   0x14006fa10
+literal	historical-creature-reference	0xb94ed0	0xb9501c	0xb94ffa	0x15e9298	s	lea    rdx,[rip+0xa54297]        # 0x1415e9298
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb95004	0x6fa10		call   0x14006fa10
+direct-call	historical-creature-reference	0xb94ed0	0xb9501c	0xb95011	0x1539660		call   0x141539660
+formatter	artifact-identity	0xb94400	0xb94710	-	-		instructions end at 0xb94710; remaining bytes are jump tables
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb94494	-		call   QWORD PTR [rax]
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb944a7	-		call   QWORD PTR [rax+0xe0]
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb944b7	-		call   QWORD PTR [rax]
+literal	artifact-identity	0xb94400	0xb94710	0xb944bf	0x15fdaa8	[LPAGE:ARTIFACT:	lea    rdx,[rip+0xa695e2]        # 0x1415fdaa8
+literal	artifact-identity	0xb94400	0xb94710	0xb944ce	0x16df718	[LPAGE:BOOK:	lea    rdx,[rip+0xb4b243]        # 0x1416df718
+direct-call	artifact-identity	0xb94400	0xb94710	0xb944de	0x6fa10		call   0x14006fa10
+direct-call	artifact-identity	0xb94400	0xb94710	0xb944e8	0x52c130		call   0x14052c130
+literal	artifact-identity	0xb94400	0xb94710	0xb944f3	0x15fd690	]	lea    rdx,[rip+0xa69196]        # 0x1415fd690
+direct-call	artifact-identity	0xb94400	0xb94710	0xb944fd	0x6fa10		call   0x14006fa10
+direct-call	artifact-identity	0xb94400	0xb94710	0xb94530	0xa946e0		call   0x140a946e0
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb94547	-		call   QWORD PTR [rax]
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb9455a	-		call   QWORD PTR [rax+0xe0]
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb9456a	-		call   QWORD PTR [rax]
+direct-call	artifact-identity	0xb94400	0xb94710	0xb94583	0xc65450		call   0x140c65450
+direct-call	artifact-identity	0xb94400	0xb94710	0xb945f5	0x707d0		call   0x1400707d0
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb9464c	-		call   QWORD PTR [rip+0xa514d6]        # 0x1415e5b28
+direct-call	artifact-identity	0xb94400	0xb94710	0xb94653	0x1539680		call   0x141539680
+direct-call	artifact-identity	0xb94400	0xb94710	0xb94676	0x6fa10		call   0x14006fa10
+literal	artifact-identity	0xb94400	0xb94710	0xb94686	0x15fda88	[/LPAGE]	lea    rdx,[rip+0xa693fb]        # 0x1415fda88
+direct-call	artifact-identity	0xb94400	0xb94710	0xb94690	0x6fa10		call   0x14006fa10
+indirect-call	artifact-identity	0xb94400	0xb94710	0xb946ca	-		call   QWORD PTR [rip+0xa51458]        # 0x1415e5b28
+direct-call	artifact-identity	0xb94400	0xb94710	0xb946d1	0x1539680		call   0x141539680
+literal	artifact-identity	0xb94400	0xb94710	0xb946de	0x16df700	an unknown artifact	lea    rdx,[rip+0xb4b01b]        # 0x1416df700
+direct-call	artifact-identity	0xb94400	0xb94710	0xb946e8	0x6fa10		call   0x14006fa10
+direct-call	artifact-identity	0xb94400	0xb94710	0xb946f5	0x1539660		call   0x141539660
+formatter	entity-identity	0xb92900	0xb92a78	-	-		instructions end at 0xb92a78; remaining bytes are jump tables
+direct-call	entity-identity	0xb92900	0xb92a78	0xb9294a	0xba0a0		call   0x1400ba0a0
+literal	entity-identity	0xb92900	0xb92a78	0xb9296a	0x165e438	[LPAGE:ENT:	lea    rdx,[rip+0xacbac7]        # 0x14165e438
+direct-call	entity-identity	0xb92900	0xb92a78	0xb92974	0x6fa10		call   0x14006fa10
+direct-call	entity-identity	0xb92900	0xb92a78	0xb9297f	0x52c130		call   0x14052c130
+literal	entity-identity	0xb92900	0xb92a78	0xb9298a	0x15fd690	]	lea    rdx,[rip+0xa6acff]        # 0x1415fd690
+direct-call	entity-identity	0xb92900	0xb92a78	0xb92994	0x6fa10		call   0x14006fa10
+direct-call	entity-identity	0xb92900	0xb92a78	0xb929c7	0xa946e0		call   0x140a946e0
+direct-call	entity-identity	0xb92900	0xb92a78	0xb929e5	0x6fa10		call   0x14006fa10
+literal	entity-identity	0xb92900	0xb92a78	0xb929f4	0x15fda88	[/LPAGE]	lea    rdx,[rip+0xa6b08d]        # 0x1415fda88
+direct-call	entity-identity	0xb92900	0xb92a78	0xb929fe	0x6fa10		call   0x14006fa10
+indirect-call	entity-identity	0xb92900	0xb92a78	0xb92a38	-		call   QWORD PTR [rip+0xa530ea]        # 0x1415e5b28
+direct-call	entity-identity	0xb92900	0xb92a78	0xb92a3f	0x1539680		call   0x141539680
+literal	entity-identity	0xb92900	0xb92a78	0xb92a4c	0x16df940	an unknown civilization	lea    rdx,[rip+0xb4ceed]        # 0x1416df940
+direct-call	entity-identity	0xb92900	0xb92a78	0xb92a56	0x6fa10		call   0x14006fa10
+direct-call	entity-identity	0xb92900	0xb92a78	0xb92a63	0x1539660		call   0x141539660
+formatter	personal-name	0xa94030	0xa946d1	-	-		instructions end at 0xa946d1; remaining bytes are jump tables
+direct-call	personal-name	0xa94030	0xa946d1	0xa940ac	0xb9b80		call   0x1400b9b80
+direct-call	personal-name	0xa94030	0xa946d1	0xa940c9	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa940d3	0xb9b80		call   0x1400b9b80
+direct-call	personal-name	0xa94030	0xa946d1	0xa940e4	0x6f5d0		call   0x14006f5d0
+direct-call	personal-name	0xa94030	0xa946d1	0xa940ee	0x52d3c0		call   0x14052d3c0
+direct-call	personal-name	0xa94030	0xa946d1	0xa94108	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa94115	0x6f850		call   0x14006f850
+literal	personal-name	0xa94030	0xa946d1	0xa9413d	0x15e873c	 	lea    rdx,[rip+0xb545f8]        # 0x1415e873c
+direct-call	personal-name	0xa94030	0xa946d1	0xa94147	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa94151	0xb9b80		call   0x1400b9b80
+direct-call	personal-name	0xa94030	0xa946d1	0xa9416a	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa94174	0xb9b80		call   0x1400b9b80
+direct-call	personal-name	0xa94030	0xa946d1	0xa94225	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa9429c	0x6fa10		call   0x14006fa10
+literal	personal-name	0xa94030	0xa946d1	0xa942b3	0x15e873c	 	lea    rdx,[rip+0xb54482]        # 0x1415e873c
+direct-call	personal-name	0xa94030	0xa946d1	0xa942bd	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa942c6	0x52d3c0		call   0x14052d3c0
+direct-call	personal-name	0xa94030	0xa946d1	0xa942e0	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa942ec	0x6f850		call   0x14006f850
+direct-call	personal-name	0xa94030	0xa946d1	0xa9438c	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa94403	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa9447a	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa944f1	0x6fa10		call   0x14006fa10
+literal	personal-name	0xa94030	0xa946d1	0xa9450f	0x15e873c	 	lea    rdx,[rip+0xb54226]        # 0x1415e873c
+direct-call	personal-name	0xa94030	0xa946d1	0xa94519	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa94522	0x52d3c0		call   0x14052d3c0
+direct-call	personal-name	0xa94030	0xa946d1	0xa9453c	0x6fa10		call   0x14006fa10
+indirect-call	personal-name	0xa94030	0xa946d1	0xa9457e	-		call   QWORD PTR [rip+0xb515a4]        # 0x1415e5b28
+direct-call	personal-name	0xa94030	0xa946d1	0xa94585	0x1539680		call   0x141539680
+direct-call	personal-name	0xa94030	0xa946d1	0xa94624	0x6fa10		call   0x14006fa10
+literal	personal-name	0xa94030	0xa946d1	0xa9463b	0x15e873c	 	lea    rdx,[rip+0xb540fa]        # 0x1415e873c
+direct-call	personal-name	0xa94030	0xa946d1	0xa94645	0x6fa10		call   0x14006fa10
+direct-call	personal-name	0xa94030	0xa946d1	0xa9464e	0x52d3c0		call   0x14052d3c0
+direct-call	personal-name	0xa94030	0xa946d1	0xa94668	0x6fa10		call   0x14006fa10
+indirect-call	personal-name	0xa94030	0xa946d1	0xa946a0	-		call   QWORD PTR [rip+0xb51482]        # 0x1415e5b28
+direct-call	personal-name	0xa94030	0xa946d1	0xa946a7	0x1539680		call   0x141539680
+direct-call	personal-name	0xa94030	0xa946d1	0xa946b3	0x1539660		call   0x141539660
+formatter	generated-name	0xa946e0	0xa94ea2	-	-		instructions end at 0xa94ea2; remaining bytes are jump tables
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa9477e	0xb9b80		call   0x1400b9b80
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94798	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa947a2	0xb9b80		call   0x1400b9b80
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94816	0x707d0		call   0x1400707d0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94834	0x153aa78		call   0x14153aa78
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94844	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94867	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94874	0x6f850		call   0x14006f850
+literal	generated-name	0xa946e0	0xa94ea2	0xa948a3	0x15e873c	 	lea    rdx,[rip+0xb53e92]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa948ad	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa948b7	0xb9b80		call   0x1400b9b80
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa948d1	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa948db	0xb9b80		call   0x1400b9b80
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94934	0xd2cb50		call   0x140d2cb50
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94948	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa9495e	0x15e873c	 	lea    rdx,[rip+0xb53dd7]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94968	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94976	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94990	0x6fa10		call   0x14006fa10
+indirect-call	generated-name	0xa946e0	0xa94ea2	0xa949c9	-		call   QWORD PTR [rip+0xb51159]        # 0x1415e5b28
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa949d0	0x1539680		call   0x141539680
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94a21	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa94a3b	0x15e873c	 	lea    rdx,[rip+0xb53cfa]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94a45	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94a5d	0x15ed9bc	The 	lea    rdx,[rip+0xb58f58]        # 0x1415ed9bc
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94a67	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94a78	0x15e8e48	the 	lea    rdx,[rip+0xb543c9]        # 0x1415e8e48
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94a82	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94a93	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94aad	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94ad8	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa94af2	0x15e873c	 	lea    rdx,[rip+0xb53c43]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94afc	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94b11	0x15ed9bc	The 	lea    rdx,[rip+0xb58ea4]        # 0x1415ed9bc
+literal	generated-name	0xa946e0	0xa94ea2	0xa94b1a	0x15e8e48	the 	lea    rdx,[rip+0xb54327]        # 0x1415e8e48
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94b2a	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94b3b	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94b55	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94b80	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa94b9a	0x15e873c	 	lea    rdx,[rip+0xb53b9b]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94ba4	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94bb9	0x15ed9bc	The 	lea    rdx,[rip+0xb58dfc]        # 0x1415ed9bc
+literal	generated-name	0xa946e0	0xa94ea2	0xa94bc2	0x15e8e48	the 	lea    rdx,[rip+0xb5427f]        # 0x1415e8e48
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94bd2	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94be3	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94c53	0x707d0		call   0x1400707d0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94c74	0x153aa78		call   0x14153aa78
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94c98	0x6fa10		call   0x14006fa10
+indirect-call	generated-name	0xa946e0	0xa94ea2	0xa94cd0	-		call   QWORD PTR [rip+0xb50e52]        # 0x1415e5b28
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94cd7	0x1539680		call   0x141539680
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d05	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa94d1f	0x15e873c	 	lea    rdx,[rip+0xb53a16]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d29	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94d4b	0x15ed9bc	The 	lea    rdx,[rip+0xb58c6a]        # 0x1415ed9bc
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d55	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94d62	0x15e8e48	the 	lea    rdx,[rip+0xb540df]        # 0x1415e8e48
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d6c	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d7a	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94d94	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94da6	0x6f850		call   0x14006f850
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94df3	0xd2cb50		call   0x140d2cb50
+literal	generated-name	0xa946e0	0xa94ea2	0xa94e09	0x15e873c	 	lea    rdx,[rip+0xb5392c]        # 0x1415e873c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e13	0x6fa10		call   0x14006fa10
+literal	generated-name	0xa946e0	0xa94ea2	0xa94e18	0x16ced90	of 	lea    rax,[rip+0xc39f71]        # 0x1416ced90
+literal	generated-name	0xa946e0	0xa94ea2	0xa94e1f	0x16cee1c	Of 	lea    rdx,[rip+0xc39ff6]        # 0x1416cee1c
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e38	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e46	0x52d3c0		call   0x14052d3c0
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e60	0x6fa10		call   0x14006fa10
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e6a	0x6f850		call   0x14006f850
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e76	0x1539660		call   0x141539660
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e96	0x65890		call   0x140065890
+direct-call	generated-name	0xa946e0	0xa94ea2	0xa94e9c	0x65890		call   0x140065890
+formatter	creature-noun	0xaa3bd0	0xaa3d93	-	-		instructions end at 0xaa3d93; remaining bytes are jump tables
+direct-call	creature-noun	0xaa3bd0	0xaa3d93	0xaa3c86	0x6f8d0		call   0x14006f8d0
+direct-call	creature-noun	0xaa3bd0	0xaa3d93	0xaa3d08	0x6f8d0		call   0x14006f8d0
+direct-call	creature-noun	0xaa3bd0	0xaa3d93	0xaa3d54	0x6f8d0		call   0x14006f8d0
+death-branch	cause:0	0xcc23e0	0xcc5384	0xcc5278	0xcc2bf5	Died peacefully	plain
+death-branch	cause:1	0xcc23e0	0xcc5384	0xcc527c	0xcc2c0d	Starved to death	plain
+death-branch	cause:2	0xcc23e0	0xcc5384	0xcc5280	0xcc2c19	Died of thirst	plain
+death-branch	cause:3	0xcc23e0	0xcc5384	0xcc5284	0xcc2dab	Shot and killed	killer+weapons
+death-branch	cause:4	0xcc23e0	0xcc5384	0xcc5288	0xcc2ed2	Bled to death	slain+weapons
+death-branch	cause:5	0xcc23e0	0xcc5384	0xcc528c	0xcc33c1	Drowned	plain
+death-branch	cause:6	0xcc23e0	0xcc5384	0xcc5290	0xcc3056	Suffocated	slain-by+weapons
+death-branch	cause:7	0xcc23e0	0xcc5384	0xcc5294	0xcc3174	Struck down	killer+weapons
+death-branch	cause:8	0xcc23e0	0xcc5384	0xcc5298	0xcc31b8	Scuttled	plain
+death-branch	cause:9	0xcc23e0	0xcc5384	0xcc529c	0xcc3377	Died after colliding with an obstacle	slain
+death-branch	cause:10	0xcc23e0	0xcc5384	0xcc52a0	0xcc2c25	Burned up in magma	plain
+death-branch	cause:11	0xcc23e0	0xcc5384	0xcc52a4	0xcc2d7b	Burned up in a magma mist	plain
+death-branch	cause:12	0xcc23e0	0xcc5384	0xcc52a8	0xcc2c31	Burned up in 	dragon-fire
+death-branch	cause:13	0xcc23e0	0xcc5384	0xcc52ac	0xcc2cd0	Burned to death	fire
+death-branch	cause:14	0xcc23e0	0xcc5384	0xcc52b0	0xcc2d6f	Scalded to death	plain
+death-branch	cause:15	0xcc23e0	0xcc5384	0xcc52b4	0xcc2d93	Crushed under a collapsing ceiling	plain
+death-branch	cause:16	0xcc23e0	0xcc5384	0xcc52b8	0xcc2d87	Crushed by a drawbridge	plain
+death-branch	cause:17	0xcc23e0	0xcc5384	0xcc52bc	0xcc2d9f	Killed by falling rocks	plain
+death-branch	cause:18	0xcc23e0	0xcc5384	0xcc52c0	0xcc2be9	Fell into a deep chasm	plain
+death-branch	cause:19	0xcc23e0	0xcc5384	0xcc52c4	0xcc2bdd	Died in a cage	plain
+death-branch	cause:20	0xcc23e0	0xcc5384	0xcc52c8	0xcc31d0	Murdered	killer
+death-branch	cause:21	0xcc23e0	0xcc5384	0xcc52cc	0xcc31dc	Killed by a trap	plain
+death-branch	cause:22	0xcc23e0	0xcc5384	0xcc52d0	0xcc3200	Vanished	plain
+death-branch	cause:23	0xcc23e0	0xcc5384	0xcc52d4	0xcc2c0d	Starved to death	plain
+death-branch	cause:24	0xcc23e0	0xcc5384	0xcc52d8	0xcc2c0d	Starved to death	plain
+death-branch	cause:25	0xcc23e0	0xcc5384	0xcc52dc	0xcc2ba1	Died in the heat	plain
+death-branch	cause:26	0xcc23e0	0xcc5384	0xcc52e0	0xcc2bd1	Froze to death	plain
+death-branch	cause:27	0xcc23e0	0xcc5384	0xcc52e4	0xcc3383	Impaled on spikes	slain
+death-branch	cause:28	0xcc23e0	0xcc5384	0xcc52e8	0xcc2bad	Encased in cooling lava	plain
+death-branch	cause:29	0xcc23e0	0xcc5384	0xcc52ec	0xcc2bb9	Encased in cooling magma	plain
+death-branch	cause:30	0xcc23e0	0xcc5384	0xcc52f0	0xcc2bc5	Encased in ice	plain
+death-branch	cause:31	0xcc23e0	0xcc5384	0xcc52f4	0xcc3123	Beheaded	killer
+death-branch	cause:32	0xcc23e0	0xcc5384	0xcc52f8	0xcc312c	Crucified	killer
+death-branch	cause:33	0xcc23e0	0xcc5384	0xcc52fc	0xcc3138	Buried alive	killer
+death-branch	cause:34	0xcc23e0	0xcc5384	0xcc5300	0xcc3150	Drowned	killer
+death-branch	cause:35	0xcc23e0	0xcc5384	0xcc5304	0xcc315c	Burned alive	killer
+death-branch	cause:36	0xcc23e0	0xcc5384	0xcc5308	0xcc3168	Fed to beasts	killer
+death-branch	cause:37	0xcc23e0	0xcc5384	0xcc530c	0xcc30ad	Hacked to pieces	killer
+death-branch	cause:38	0xcc23e0	0xcc5384	0xcc5310	0xcc3144	Left out in the air	killer
+death-branch	cause:39	0xcc23e0	0xcc5384	0xcc5314	0xcc2b71	Boiled	plain
+death-branch	cause:40	0xcc23e0	0xcc5384	0xcc5318	0xcc2b7d	Melted	plain
+death-branch	cause:41	0xcc23e0	0xcc5384	0xcc531c	0xcc2b89	Condensed	plain
+death-branch	cause:42	0xcc23e0	0xcc5384	0xcc5320	0xcc2b95	Solidified	plain
+death-branch	cause:43	0xcc23e0	0xcc5384	0xcc5324	0xcc2fbc	Succumbed to infection	slain
+death-branch	cause:44	0xcc23e0	0xcc5384	0xcc5328	0xcc336e	Put to rest	plain
+death-branch	cause:45	0xcc23e0	0xcc5384	0xcc532c	0xcc338f	Scared to death	killer
+death-branch	cause:46	0xcc23e0	0xcc5384	0xcc5330	0xcc2c01	Died in the dark	plain
+death-branch	cause:47	0xcc23e0	0xcc5384	0xcc5334	0xcc320c	Collapsed	struck-down+weapons
+death-branch	cause:48	0xcc23e0	0xcc5384	0xcc5338	0xcc31c4	Drained of blood	killer
+death-branch	cause:49	0xcc23e0	0xcc5384	0xcc533c	0xcc31af	Slaughtered	killer+weapons
+death-branch	cause:50	0xcc23e0	0xcc5384	0xcc5340	0xcc31e8	Killed by a vehicle	plain
+death-branch	cause:51	0xcc23e0	0xcc5384	0xcc5344	0xcc31f4	Killed by a flying object	plain
+death-branch	cause:52	0xcc23e0	0xcc5384	0xcc5348	0xcc33b8	Leapt from a great height	plain
+death-branch	cause:53	0xcc23e0	0xcc5384	0xcc534c	0xcc33c1	Drowned	plain
+death-branch	cause:54	0xcc23e0	0xcc5384	0xcc5350	0xcc311a	Executed	killer
+death-default	cause:outside-0..54	0xcc23e0	0xcc5384	0xcc2a58	0xcc3549		empty death phrase; use fallback dates
+preference-branch	preference:0:material	0xcc23e0	0xcc5384	0xcc5354	0xcc43df	{United with |At one with |Lover of }{material}	
+preference-branch	preference:1:creature	0xcc23e0	0xcc5384	0xcc5358	0xcc495b	{Admirer of |Friend of }{creature-plural}	
+preference-branch	preference:2:food	0xcc23e0	0xcc5384	0xcc535c	0xcc5260		
+preference-branch	preference:3:hate-creature	0xcc23e0	0xcc5384	0xcc5360	0xcc5260		
+preference-branch	preference:4:item	0xcc23e0	0xcc5384	0xcc5364	0xcc47cf	Lover of {item-plural}	
+preference-branch	preference:5:plant	0xcc23e0	0xcc5384	0xcc5368	0xcc4880	{Admirer of |Lover of }{plant-plural}	
+preference-branch	preference:6:tree	0xcc23e0	0xcc5384	0xcc536c	0xcc4880	{Admirer of |Lover of }{plant-plural}	
+preference-branch	preference:7:color	0xcc23e0	0xcc5384	0xcc5370	0xcc4a56	The color {color} made {him|her|it} happy	
+preference-branch	preference:8:shape	0xcc23e0	0xcc5384	0xcc5374	0xcc4ded	Admirer of {shape-plural}	
+preference-branch	preference:9:poetic-form	0xcc23e0	0xcc5384	0xcc5378	0xcc4ea5	Lover of {generated-name}	
+preference-branch	preference:10:musical-form	0xcc23e0	0xcc5384	0xcc537c	0xcc4f74	Lover of {generated-name}	
+preference-branch	preference:11:dance-form	0xcc23e0	0xcc5384	0xcc5380	0xcc50c4	Lover of {generated-name}	
+preference-default	preference:outside-0..11	0xcc23e0	0xcc5384	0xcc43c3	0xcc5260		no preference text
+production	opening	0xcc23e0	0xcc5384	0xcc2433	-	In memory of...	missing historical figure; return immediately
+production	opening	0xcc23e0	0xcc5384	0xcc2525	-	In memory of {original-name}	hf +0xaa != 0; OriginalName(hf +0x38)
+production	opening	0xcc23e0	0xcc5384	0xcc2578	-	In memory of a {creature-singular}	hf +0xaa == 0; race +2, caste +4
+production	missing	0xcc23e0	0xcc5384	0xcc27d5	-	[ / Born {birth-year}] / Went missing[ in the year {missing-year}]	birth/missing years >=1; historical unit incident flag bit1 clear
+production	death	0xcc23e0	0xcc5384	0xcc33d4	-	[ / Born {birth-year}] / {cause}[ in {event-collection-title}][ in the year {death-year}]	nonempty recognized cause; birth/death years >=1; first collection containing event ID
+production	fallback-dates	0xcc23e0	0xcc5384	0xcc3587	-	 / {birth-year} - {death-year}	both years >=1; random wording A
+production	fallback-dates	0xcc23e0	0xcc5384	0xcc35e7	-	 / b.{birth-year} d.{death-year}	both years >=1; random wording B
+production	fallback-dates	0xcc23e0	0xcc5384	0xcc361b	-	 / {Died |d.}{death-year}	birth year <1; death year >=1; random wording
+production	killer	0xcc23e0	0xcc5384	0xcc2dff	-	[ by {figure}| by a {creature}]	event slayer HF +0x2c preferred; race +0x30, caste +0x34 fallback
+production	slain	0xcc23e0	0xcc5384	0xcc2f26	-	[, slain by {figure}|, slain by a {creature}]	same killer priority; no weapons for this family
+production	weapons	0xcc23e0	0xcc5384	0xcc2e39	-	[ with {weapon}[ from {shooter}]| with {shooter}]	nonempty item descriptions from +0x38..44 and +0x48..54; artifact identity preferred
+production	slain+weapons	0xcc23e0	0xcc5384	0xcc2f8f	-	[, slain by {figure}|, slain by a {creature}|, slain]{weapons}	without killer add slain only when at least one weapon string exists
+production	slain-by+weapons	0xcc23e0	0xcc5384	0xcc307d	-	[, slain by {figure}|, slain by a {creature}|, slain by ]{weapons}	native no-killer with-weapon variant retains by and double space
+production	struck-down+weapons	0xcc23e0	0xcc5384	0xcc3221	-	[, struck down by {figure}|, struck down by a {creature}|, struck down ]{weapons}	without killer add struck down only with weapons; native doubled space retained
+production	dragon-fire	0xcc23e0	0xcc5384	0xcc2c31	-	Burned up in {figure-possessive} dragon fire|Burned up in a {creature}'s dragon fire|Burned up in dragon fire	HF first, creature second, unnamed source last
+production	fire	0xcc23e0	0xcc5384	0xcc2cd0	-	Burned to death by {figure-possessive} fire|Burned to death by a {creature} fire|Burned to death	HF first, creature second, unnamed source last
+production	creation	0xcc23e0	0xcc5384	0xcc36a6	-	 / Creator of {artifact-name}	unit +0x11c &0x800; generated name at unit +0xa08
+production	position	0xcc23e0	0xcc5384	0xcc3939	-	 / {position-title} of {entity-or-site}[ in {year}|, {start-year} to {end-year}]	selected hf entity-link type10/11; gendered title and priority from position RAW; end -1 uses death-year
+production	named-kill	0xcc23e0	0xcc5384	0xcc3cf6	-	 / Slayer of[ the {creature-singular}][ {generated-name}]	species differs from dead hf -> creature; another HF of killed species exists -> name
+production	unnamed-kills	0xcc23e0	0xcc5384	0xcc4029	-	 / {Hunter of |Slayer of }{creature-plural}	fallback when no selected named victim; at least 5 kills; creature flag selects slayer
+production	family	0xcc23e0	0xcc5384	0xcc4124	-	 / {Loving |Devoted }{parent|spouse|parent and spouse|father|husband|father and husband|mother|wife|mother and wife}	hf relation kind3 parent; kinds2/15 spouse; sex1 male,0 female,other neutral
+production	preference	0xcc23e0	0xcc5384	0xcc4306	-	[ / {one-random-preference}]	current soul preference vector; 12-way enum, 2/3/default empty; saved random choice must be retained
+production	material	0xcc23e0	0xcc5384	0xcc4492	-	[{figure-name}'s ][{material-prefix} ]{solid-state-name}[ wood| fabric]	named HF material type219..418 adds owner; plant material419..618 appends wood or fabric flags
+external-source	event-collection-title	-	-	0xcc34c4	-	statue-history-sources.tsv	same native virtual slot +0x30; complete collection roots/callees/literals
+external-source	item-and-material-leaves	-	-	0xcc484b	0xa82c10	statue-art-sources.tsv	complete shared item noun, material selection and RAW leaves
+stored-data	inscription	-	-	0xcc2426	-	item_slabst +0xe8	creation-time text; +0x108 HF id; +0x10c subtype 0; do not rerun this mutating writer when translating

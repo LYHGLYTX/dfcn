@@ -1,0 +1,226 @@
+# Complete conspiracy and interrogation speech, reconstructed from native branches.
+# Name/organization/item slots contain typed constituents; no prose fallback slots.
+I serve {n}.	我为{n}效力。
+I do not know! My instructions come from {n}.	我不知道！我的指令来自{n}。
+I have no master, but {n} sometimes has need for my services.	我没有主人，但{n}有时需要我效劳。
+{n} asks that I look past illicit acts in my official capacities.	{n}要求我利用职务之便，对不法行为睁一只眼闭一只眼。
+{n} demands a portion of my official funds.	{n}索要一部分由我经手的公款。
+I sent {n} to ask that {n} look past illicit acts.	我派{n1}要求{n2}对不法行为睁一只眼闭一只眼。
+I sent {n} to demand a portion of the official funds from {n}.	我派{n1}向{n2}索要一部分公款。
+I asked that {n} look past illicit acts.	我要求{n}对不法行为睁一只眼闭一只眼。
+I demand a portion of the official funds from {n}.	我向{n}索要一部分公款。
+{n} sent me to ask that {n} look past illicit acts.	{n1}派我要求{n2}对不法行为睁一只眼闭一只眼。
+{n} sent me to demand a portion of the official funds from {n}.	{n1}派我向{n2}索要一部分公款。
+{n} asked me to grant an important position to me when one came available.	{n1}要求我在职位出现空缺时，将一个重要职位授予我。
+{n} asked me to grant an important position to {n} when one came available.	{n1}要求我在职位出现空缺时，将一个重要职位授予{n2}。
+{n} asked me to grant an important position in {e} to me when one came available.	{n1}要求我在职位出现空缺时，将{e}的一个重要职位授予我。
+{n} asked me to grant an important position in {e} to {n} when one came available.	{n1}要求我在职位出现空缺时，将{e}的一个重要职位授予{n2}。
+I asked {n} to grant an important position to me when one came available.	我要求{n1}在职位出现空缺时，将一个重要职位授予我。
+I asked {n} to grant an important position to {n} when one came available.	我要求{n1}在职位出现空缺时，将一个重要职位授予{n2}。
+I asked {n} to grant an important position in {e} to me when one came available.	我要求{n1}在职位出现空缺时，将{e}的一个重要职位授予我。
+I asked {n} to grant an important position in {e} to {n} when one came available.	我要求{n1}在职位出现空缺时，将{e}的一个重要职位授予{n2}。
+{n} told me to ask {n} to grant an important position to me when one came available.	{n1}让我要求{n2}在职位出现空缺时，将一个重要职位授予我。
+{n} told me to ask {n} to grant an important position to {n} when one came available.	{n1}让我要求{n2}在职位出现空缺时，将一个重要职位授予{n3}。
+{n} told me to ask {n} to grant an important position in {e} to me when one came available.	{n1}让我要求{n2}在职位出现空缺时，将{e}的一个重要职位授予我。
+{n} told me to ask {n} to grant an important position in {e} to {n} when one came available.	{n1}让我要求{n2}在职位出现空缺时，将{e}的一个重要职位授予{n3}。
+{n} told me to tell {n} to ask {n} to grant an important position to me when one came available.	{n1}让我转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予我。
+{n} told me to tell {n} to ask {n} to grant an important position to {n} when one came available.	{n1}让我转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予{n4}。
+{n} told me to tell {n} to ask {n} to grant an important position in {e} to me when one came available.	{n1}让我转告{n2}，要求{n3}在职位出现空缺时，将{e}的一个重要职位授予我。
+{n} told me to tell {n} to ask {n} to grant an important position in {e} to {n} when one came available.	{n1}让我转告{n2}，要求{n3}在职位出现空缺时，将{e}的一个重要职位授予{n4}。
+{n} told me to tell {n} to tell {n} to ask {n} to grant an important position to me when one came available.	{n1}让我转告{n2}，让其再转告{n3}，要求{n4}在职位出现空缺时，将一个重要职位授予我。
+{n} told me to tell {n} to tell {n} to ask {n} to grant an important position to {n} when one came available.	{n1}让我转告{n2}，让其再转告{n3}，要求{n4}在职位出现空缺时，将一个重要职位授予{n5}。
+{n} told me to tell {n} to tell {n} to ask {n} to grant an important position in {e} to me when one came available.	{n1}让我转告{n2}，让其再转告{n3}，要求{n4}在职位出现空缺时，将{e}的一个重要职位授予我。
+{n} told me to tell {n} to tell {n} to ask {n} to grant an important position in {e} to {n} when one came available.	{n1}让我转告{n2}，让其再转告{n3}，要求{n4}在职位出现空缺时，将{e}的一个重要职位授予{n5}。
+Through {n}, I told {n} to ask {n} to grant an important position to me when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予我。
+Through {n}, I told {n} to ask {n} to grant an important position to {n} when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予{n4}。
+Through {n}, I told {n} to ask {n} to grant an important position in {e} to me when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将{e}的一个重要职位授予我。
+Through {n}, I told {n} to ask {n} to grant an important position in {e} to {n} when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将{e}的一个重要职位授予{n4}。
+I told {n} to ask {n} to grant an important position to me when one came available.	我让{n1}要求{n2}在职位出现空缺时，将一个重要职位授予我。
+I told {n} to ask {n} to grant an important position to {n} when one came available.	我让{n1}要求{n2}在职位出现空缺时，将一个重要职位授予{n3}。
+I told {n} to ask {n} to grant an important position in {e} to me when one came available.	我让{n1}要求{n2}在职位出现空缺时，将{e}的一个重要职位授予我。
+I told {n} to ask {n} to grant an important position in {e} to {n} when one came available.	我让{n1}要求{n2}在职位出现空缺时，将{e}的一个重要职位授予{n3}。
+{n} was asked to grant an important position to me when one came available.	有人要求{n1}在职位出现空缺时，将一个重要职位授予我。
+{n} was asked to grant an important position to {n} when one came available.	有人要求{n1}在职位出现空缺时，将一个重要职位授予{n2}。
+{n} was asked to grant an important position in {e} to me when one came available.	有人要求{n1}在职位出现空缺时，将{e}的一个重要职位授予我。
+{n} was asked to grant an important position in {e} to {n} when one came available.	有人要求{n1}在职位出现空缺时，将{e}的一个重要职位授予{n2}。
+{n} engaged me to obtain {b}.	{n1}雇我取得{b}。
+{n} engaged me to obtain {i}.	{n1}雇我取得{i}。
+{n} engaged me to obtain an unknown artifact.	{n1}雇我取得一件不知名的造物。
+{n} engaged me to obtain Untitled.	{n1}雇我取得《无题》。
+{n} engaged me to assassinate {n}.	{n1}雇我刺杀{n2}。
+{n} engaged me to assassinate .	{n1}雇我刺杀。
+{n} engaged me to abduct {n}.	{n1}雇我绑架{n2}。
+{n} engaged me to abduct .	{n1}雇我绑架。
+{n} engaged me to sabotage the activities of {n}.	{n1}雇我破坏{n2}的活动。
+{n} engaged me to sabotage the activities of {n} at {e}.	{n1}雇我在{e1}破坏{n2}的活动。
+{n} engaged me to sabotage the activities of {e}.	{n1}雇我破坏{e1}的活动。
+{n} engaged me to sabotage the activities of {e} at {e}.	{n1}雇我在{e2}破坏{e1}的活动。
+{n} engaged me to sabotage the activities of .	{n1}雇我实施破坏活动。
+I sent {n} to engage {n} to obtain {b}.	我派{n1}雇{n2}取得{b}。
+I sent {n} to engage {n} to obtain {i}.	我派{n1}雇{n2}取得{i}。
+I sent {n} to engage {n} to obtain an unknown artifact.	我派{n1}雇{n2}取得一件不知名的造物。
+I sent {n} to engage {n} to obtain Untitled.	我派{n1}雇{n2}取得《无题》。
+I sent {n} to engage {n} to assassinate {n}.	我派{n1}雇{n2}刺杀{n3}。
+I sent {n} to engage {n} to assassinate .	我派{n1}雇{n2}刺杀。
+I sent {n} to engage {n} to abduct {n}.	我派{n1}雇{n2}绑架{n3}。
+I sent {n} to engage {n} to abduct .	我派{n1}雇{n2}绑架。
+I sent {n} to engage {n} to sabotage the activities of {n}.	我派{n1}雇{n2}破坏{n3}的活动。
+I sent {n} to engage {n} to sabotage the activities of {n} at {e}.	我派{n1}雇{n2}在{e1}破坏{n3}的活动。
+I sent {n} to engage {n} to sabotage the activities of {e}.	我派{n1}雇{n2}破坏{e1}的活动。
+I sent {n} to engage {n} to sabotage the activities of {e} at {e}.	我派{n1}雇{n2}在{e2}破坏{e1}的活动。
+I sent {n} to engage {n} to sabotage the activities of .	我派{n1}雇{n2}实施破坏活动。
+I engaged {n} to obtain {b}.	我雇{n1}取得{b}。
+I engaged {n} to obtain {i}.	我雇{n1}取得{i}。
+I engaged {n} to obtain an unknown artifact.	我雇{n1}取得一件不知名的造物。
+I engaged {n} to obtain Untitled.	我雇{n1}取得《无题》。
+I engaged {n} to assassinate {n}.	我雇{n1}刺杀{n2}。
+I engaged {n} to assassinate .	我雇{n1}刺杀。
+I engaged {n} to abduct {n}.	我雇{n1}绑架{n2}。
+I engaged {n} to abduct .	我雇{n1}绑架。
+I engaged {n} to sabotage the activities of {n}.	我雇{n1}破坏{n2}的活动。
+I engaged {n} to sabotage the activities of {n} at {e}.	我雇{n1}在{e1}破坏{n2}的活动。
+I engaged {n} to sabotage the activities of {e}.	我雇{n1}破坏{e1}的活动。
+I engaged {n} to sabotage the activities of {e} at {e}.	我雇{n1}在{e2}破坏{e1}的活动。
+I engaged {n} to sabotage the activities of .	我雇{n1}实施破坏活动。
+{n} sent me to engage {n} to obtain {b}.	{n1}派我雇{n2}取得{b}。
+{n} sent me to engage {n} to obtain {i}.	{n1}派我雇{n2}取得{i}。
+{n} sent me to engage {n} to obtain an unknown artifact.	{n1}派我雇{n2}取得一件不知名的造物。
+{n} sent me to engage {n} to obtain Untitled.	{n1}派我雇{n2}取得《无题》。
+{n} sent me to engage {n} to assassinate {n}.	{n1}派我雇{n2}刺杀{n3}。
+{n} sent me to engage {n} to assassinate .	{n1}派我雇{n2}刺杀。
+{n} sent me to engage {n} to abduct {n}.	{n1}派我雇{n2}绑架{n3}。
+{n} sent me to engage {n} to abduct .	{n1}派我雇{n2}绑架。
+{n} sent me to engage {n} to sabotage the activities of {n}.	{n1}派我雇{n2}破坏{n3}的活动。
+{n} sent me to engage {n} to sabotage the activities of {n} at {e}.	{n1}派我雇{n2}在{e1}破坏{n3}的活动。
+{n} sent me to engage {n} to sabotage the activities of {e}.	{n1}派我雇{n2}破坏{e1}的活动。
+{n} sent me to engage {n} to sabotage the activities of {e} at {e}.	{n1}派我雇{n2}在{e2}破坏{e1}的活动。
+{n} sent me to engage {n} to sabotage the activities of .	{n1}派我雇{n2}实施破坏活动。
+{n} engaged me to infiltrate {e}.	{n}雇我渗透{e}。
+{n} engaged me to infiltrate {e} in order to steal treasures.	{n}雇我渗透{e}，以窃取宝藏。
+{n} engaged me to infiltrate {e} in order to initiate sabotage.	{n}雇我渗透{e}，以开展破坏活动。
+{n} engaged me to infiltrate {e} in order to steal treasures and initiate sabotage.	{n}雇我渗透{e}，以窃取宝藏和开展破坏活动。
+{n} engaged me to infiltrate {e} in order to instill terror.	{n}雇我渗透{e}，以制造恐慌。
+{n} engaged me to infiltrate {e} in order to steal treasures and instill terror.	{n}雇我渗透{e}，以窃取宝藏和制造恐慌。
+{n} engaged me to infiltrate {e} in order to initiate sabotage and instill terror.	{n}雇我渗透{e}，以开展破坏活动和制造恐慌。
+{n} engaged me to infiltrate {e} in order to steal treasures, initiate sabotage, and instill terror.	{n}雇我渗透{e}，以窃取宝藏、开展破坏活动和制造恐慌。
+{n} engaged me to infiltrate {e} in order to prepare a coup.	{n}雇我渗透{e}，以策划政变。
+{n} engaged me to infiltrate {e} in order to steal treasures and prepare a coup.	{n}雇我渗透{e}，以窃取宝藏和策划政变。
+{n} engaged me to infiltrate {e} in order to initiate sabotage and prepare a coup.	{n}雇我渗透{e}，以开展破坏活动和策划政变。
+{n} engaged me to infiltrate {e} in order to steal treasures, initiate sabotage, and prepare a coup.	{n}雇我渗透{e}，以窃取宝藏、开展破坏活动和策划政变。
+{n} engaged me to infiltrate {e} in order to instill terror and prepare a coup.	{n}雇我渗透{e}，以制造恐慌和策划政变。
+{n} engaged me to infiltrate {e} in order to steal treasures, instill terror, and prepare a coup.	{n}雇我渗透{e}，以窃取宝藏、制造恐慌和策划政变。
+{n} engaged me to infiltrate {e} in order to initiate sabotage, instill terror, and prepare a coup.	{n}雇我渗透{e}，以开展破坏活动、制造恐慌和策划政变。
+{n} engaged me to infiltrate {e} in order to steal treasures, initiate sabotage, instill terror, and prepare a coup.	{n}雇我渗透{e}，以窃取宝藏、开展破坏活动、制造恐慌和策划政变。
+{n} engaged me to infiltrate .	{n}雇我渗透。
+{n} engaged me to infiltrate  in order to steal treasures.	{n}雇我渗透，以窃取宝藏。
+{n} engaged me to infiltrate  in order to initiate sabotage.	{n}雇我渗透，以开展破坏活动。
+{n} engaged me to infiltrate  in order to steal treasures and initiate sabotage.	{n}雇我渗透，以窃取宝藏和开展破坏活动。
+{n} engaged me to infiltrate  in order to instill terror.	{n}雇我渗透，以制造恐慌。
+{n} engaged me to infiltrate  in order to steal treasures and instill terror.	{n}雇我渗透，以窃取宝藏和制造恐慌。
+{n} engaged me to infiltrate  in order to initiate sabotage and instill terror.	{n}雇我渗透，以开展破坏活动和制造恐慌。
+{n} engaged me to infiltrate  in order to steal treasures, initiate sabotage, and instill terror.	{n}雇我渗透，以窃取宝藏、开展破坏活动和制造恐慌。
+{n} engaged me to infiltrate  in order to prepare a coup.	{n}雇我渗透，以策划政变。
+{n} engaged me to infiltrate  in order to steal treasures and prepare a coup.	{n}雇我渗透，以窃取宝藏和策划政变。
+{n} engaged me to infiltrate  in order to initiate sabotage and prepare a coup.	{n}雇我渗透，以开展破坏活动和策划政变。
+{n} engaged me to infiltrate  in order to steal treasures, initiate sabotage, and prepare a coup.	{n}雇我渗透，以窃取宝藏、开展破坏活动和策划政变。
+{n} engaged me to infiltrate  in order to instill terror and prepare a coup.	{n}雇我渗透，以制造恐慌和策划政变。
+{n} engaged me to infiltrate  in order to steal treasures, instill terror, and prepare a coup.	{n}雇我渗透，以窃取宝藏、制造恐慌和策划政变。
+{n} engaged me to infiltrate  in order to initiate sabotage, instill terror, and prepare a coup.	{n}雇我渗透，以开展破坏活动、制造恐慌和策划政变。
+{n} engaged me to infiltrate  in order to steal treasures, initiate sabotage, instill terror, and prepare a coup.	{n}雇我渗透，以窃取宝藏、开展破坏活动、制造恐慌和策划政变。
+I engaged {n} to infiltrate {e}.	我雇{n}渗透{e}。
+I engaged {n} to infiltrate {e} in order to steal treasures.	我雇{n}渗透{e}，以窃取宝藏。
+I engaged {n} to infiltrate {e} in order to initiate sabotage.	我雇{n}渗透{e}，以开展破坏活动。
+I engaged {n} to infiltrate {e} in order to steal treasures and initiate sabotage.	我雇{n}渗透{e}，以窃取宝藏和开展破坏活动。
+I engaged {n} to infiltrate {e} in order to instill terror.	我雇{n}渗透{e}，以制造恐慌。
+I engaged {n} to infiltrate {e} in order to steal treasures and instill terror.	我雇{n}渗透{e}，以窃取宝藏和制造恐慌。
+I engaged {n} to infiltrate {e} in order to initiate sabotage and instill terror.	我雇{n}渗透{e}，以开展破坏活动和制造恐慌。
+I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, and instill terror.	我雇{n}渗透{e}，以窃取宝藏、开展破坏活动和制造恐慌。
+I engaged {n} to infiltrate {e} in order to prepare a coup.	我雇{n}渗透{e}，以策划政变。
+I engaged {n} to infiltrate {e} in order to steal treasures and prepare a coup.	我雇{n}渗透{e}，以窃取宝藏和策划政变。
+I engaged {n} to infiltrate {e} in order to initiate sabotage and prepare a coup.	我雇{n}渗透{e}，以开展破坏活动和策划政变。
+I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, and prepare a coup.	我雇{n}渗透{e}，以窃取宝藏、开展破坏活动和策划政变。
+I engaged {n} to infiltrate {e} in order to instill terror and prepare a coup.	我雇{n}渗透{e}，以制造恐慌和策划政变。
+I engaged {n} to infiltrate {e} in order to steal treasures, instill terror, and prepare a coup.	我雇{n}渗透{e}，以窃取宝藏、制造恐慌和策划政变。
+I engaged {n} to infiltrate {e} in order to initiate sabotage, instill terror, and prepare a coup.	我雇{n}渗透{e}，以开展破坏活动、制造恐慌和策划政变。
+I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, instill terror, and prepare a coup.	我雇{n}渗透{e}，以窃取宝藏、开展破坏活动、制造恐慌和策划政变。
+I engaged {n} to infiltrate .	我雇{n}渗透。
+I engaged {n} to infiltrate  in order to steal treasures.	我雇{n}渗透，以窃取宝藏。
+I engaged {n} to infiltrate  in order to initiate sabotage.	我雇{n}渗透，以开展破坏活动。
+I engaged {n} to infiltrate  in order to steal treasures and initiate sabotage.	我雇{n}渗透，以窃取宝藏和开展破坏活动。
+I engaged {n} to infiltrate  in order to instill terror.	我雇{n}渗透，以制造恐慌。
+I engaged {n} to infiltrate  in order to steal treasures and instill terror.	我雇{n}渗透，以窃取宝藏和制造恐慌。
+I engaged {n} to infiltrate  in order to initiate sabotage and instill terror.	我雇{n}渗透，以开展破坏活动和制造恐慌。
+I engaged {n} to infiltrate  in order to steal treasures, initiate sabotage, and instill terror.	我雇{n}渗透，以窃取宝藏、开展破坏活动和制造恐慌。
+I engaged {n} to infiltrate  in order to prepare a coup.	我雇{n}渗透，以策划政变。
+I engaged {n} to infiltrate  in order to steal treasures and prepare a coup.	我雇{n}渗透，以窃取宝藏和策划政变。
+I engaged {n} to infiltrate  in order to initiate sabotage and prepare a coup.	我雇{n}渗透，以开展破坏活动和策划政变。
+I engaged {n} to infiltrate  in order to steal treasures, initiate sabotage, and prepare a coup.	我雇{n}渗透，以窃取宝藏、开展破坏活动和策划政变。
+I engaged {n} to infiltrate  in order to instill terror and prepare a coup.	我雇{n}渗透，以制造恐慌和策划政变。
+I engaged {n} to infiltrate  in order to steal treasures, instill terror, and prepare a coup.	我雇{n}渗透，以窃取宝藏、制造恐慌和策划政变。
+I engaged {n} to infiltrate  in order to initiate sabotage, instill terror, and prepare a coup.	我雇{n}渗透，以开展破坏活动、制造恐慌和策划政变。
+I engaged {n} to infiltrate  in order to steal treasures, initiate sabotage, instill terror, and prepare a coup.	我雇{n}渗透，以窃取宝藏、开展破坏活动、制造恐慌和策划政变。
+I decided to frame {n} for production order violation by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下违反生产命令罪。
+{n} engaged me to frame {n} for production order violation by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下违反生产命令罪。
+I engaged {n} to frame {n} for production order violation by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下违反生产命令罪。
+I decided to frame {n} for export prohibition violation by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下违反出口禁令罪。
+{n} engaged me to frame {n} for export prohibition violation by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下违反出口禁令罪。
+I engaged {n} to frame {n} for export prohibition violation by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下违反出口禁令罪。
+I decided to frame {n} for job order violation by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下违反工作命令罪。
+{n} engaged me to frame {n} for job order violation by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下违反工作命令罪。
+I engaged {n} to frame {n} for job order violation by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下违反工作命令罪。
+I decided to frame {n} for a conspiracy to slow labor by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下合谋怠工罪。
+{n} engaged me to frame {n} for a conspiracy to slow labor by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下合谋怠工罪。
+I engaged {n} to frame {n} for a conspiracy to slow labor by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下合谋怠工罪。
+I decided to frame {n} for murder by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下谋杀罪。
+{n} engaged me to frame {n} for murder by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下谋杀罪。
+I engaged {n} to frame {n} for murder by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下谋杀罪。
+I decided to frame {n} for disorderly conduct by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下扰乱秩序罪。
+{n} engaged me to frame {n} for disorderly conduct by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下扰乱秩序罪。
+I engaged {n} to frame {n} for disorderly conduct by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下扰乱秩序罪。
+I decided to frame {n} for building destruction by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下毁坏建筑罪。
+{n} engaged me to frame {n} for building destruction by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下毁坏建筑罪。
+I engaged {n} to frame {n} for building destruction by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下毁坏建筑罪。
+I decided to frame {n} for bribery by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下贿赂罪。
+{n} engaged me to frame {n} for bribery by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下贿赂罪。
+I engaged {n} to frame {n} for bribery by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下贿赂罪。
+I decided to frame {n} for embezzlement by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下挪用资金罪。
+{n} engaged me to frame {n} for embezzlement by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下挪用资金罪。
+I engaged {n} to frame {n} for embezzlement by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下挪用资金罪。
+I decided to frame {n} for vandalism by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下破坏公物罪。
+{n} engaged me to frame {n} for vandalism by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下破坏公物罪。
+I engaged {n} to frame {n} for vandalism by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下破坏公物罪。
+I decided to frame {n} for theft by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下盗窃罪。
+{n} engaged me to frame {n} for theft by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下盗窃罪。
+I engaged {n} to frame {n} for theft by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下盗窃罪。
+I decided to frame {n} for robbery by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下抢劫罪。
+{n} engaged me to frame {n} for robbery by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下抢劫罪。
+I engaged {n} to frame {n} for robbery by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下抢劫罪。
+I decided to frame {n} for espionage by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下间谍活动罪。
+{n} engaged me to frame {n} for espionage by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下间谍活动罪。
+I engaged {n} to frame {n} for espionage by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下间谍活动罪。
+I decided to frame {n} for treason by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下叛国罪。
+{n} engaged me to frame {n} for treason by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下叛国罪。
+I engaged {n} to frame {n} for treason by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下叛国罪。
+I decided to frame {n} for blood-drinking by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下吸血罪。
+{n} engaged me to frame {n} for blood-drinking by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下吸血罪。
+I engaged {n} to frame {n} for blood-drinking by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下吸血罪。
+I decided to frame {n} for attempted theft by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下盗窃未遂罪。
+{n} engaged me to frame {n} for attempted theft by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下盗窃未遂罪。
+I engaged {n} to frame {n} for attempted theft by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下盗窃未遂罪。
+I decided to frame {n} for attempted murder by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下谋杀未遂罪。
+{n} engaged me to frame {n} for attempted murder by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下谋杀未遂罪。
+I engaged {n} to frame {n} for attempted murder by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下谋杀未遂罪。
+I decided to frame {n} for kidnapping by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下绑架罪。
+{n} engaged me to frame {n} for kidnapping by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下绑架罪。
+I engaged {n} to frame {n} for kidnapping by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下绑架罪。
+I decided to frame {n} for attempted kidnapping by fooling {n}.	我决定通过欺骗{n2}，诬陷{n1}犯下绑架未遂罪。
+{n} engaged me to frame {n} for attempted kidnapping by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下绑架未遂罪。
+I engaged {n} to frame {n} for attempted kidnapping by fooling {n}.	我雇{n1}通过欺骗{n3}，诬陷{n2}犯下绑架未遂罪。
+{n} engaged to induce a war of {e} upon {e}.	{n}参与挑起{e1}对{e2}的战争。
+{n} engaged to induce a war of {e} upon .	{n}参与挑起{e1}的战争。
+{n} engaged to induce a war of  upon {e}.	{n}参与挑起对{e1}的战争。
+{n} engaged to induce a war of  upon .	{n}参与挑起的战争。
+I engaged {n} to induce a war of {e} upon {e}.	我雇{n}挑起{e1}对{e2}的战争。
+I engaged {n} to induce a war of {e} upon .	我雇{n}挑起{e1}的战争。
+I engaged {n} to induce a war of  upon {e}.	我雇{n}挑起对{e1}的战争。
+I engaged {n} to induce a war of  upon .	我雇{n}挑起的战争。

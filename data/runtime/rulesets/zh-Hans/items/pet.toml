@@ -1,0 +1,14 @@
+base = "items::pet"
+
+[[rulesets]]
+[rulesets.rules]
+"{main}" = "{main}"
+# Named tame critters use the same complete name + comma prefix as vermin.
+"{::text::person}, {main}" = "{::text::person}，{main}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"small tame animal" = "驯化小动物"
+"small tame animals" = "驯化小动物"
+"tame {::creatures::caste::singular}" = "驯化{::creatures::caste::singular}"

@@ -1,0 +1,44 @@
+<data-definition>
+    <enum-type type-name='mandate_type'> bay12: Mandates, no external base type
+        <enum-item name='Export' original-name='RESTRICTION_EXPORT_ITEM'/>
+        <enum-item name='Make' original-name='MAKE_ITEM'/>
+        <enum-item name='Guild' original-name='PAYJOB'/>
+    </enum-type>
+
+    <bitfield-type type-name='mandate_flag' base-type='uint32_t'> bay12: MANDATEFLAG_*
+        <flag-bit name='mandate_total_exempt' original-name='MANDATETOTALEXEMPT'/>
+    </bitfield-type>
+
+    <struct-type type-name='mandate' original-name='mandatest'>
+        <pointer type-name='unit' name='unit' original-name='sorce'/>
+
+        <enum base-type='int16_t' type-name='mandate_type' name='mode' original-name='overtype'/>
+
+        <enum type-name='item_type' name='item_type' original-name='itemtype'/>
+        <int16_t name='item_subtype' original-name='itemsubtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+
+        <int16_t name='mat_type' original-name='subcat1' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='subcat2'/>
+
+        <int16_t name='amount_total' original-name='number'/>
+        <int16_t name='amount_remaining' original-name='numberleft'/>
+
+        <int32_t name='timeout_counter' original-name='activetime' comment='counts once per 10 frames'/>
+        <int32_t name='timeout_limit' original-name='duration' comment='once counter passes limit, mandate ends'/>
+
+        <compound type-name='punishmentst' name='punishment'/>
+        <int8_t name='punish_multiple' original-name='mega_punish' comment='punish 10 units, not just 1'/>
+        <bitfield base-type='uint32_t' type-name='mandate_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <struct-type type-name='mandate_handlerst'>
+        <stl-vector pointer-type='mandate' name='all' original-name='play'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

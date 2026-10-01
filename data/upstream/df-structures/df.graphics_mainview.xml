@@ -1,0 +1,65 @@
+<data-definition>
+    <struct-type type-name='map_viewport' original-name='print_map_rectangle_paramst'>
+        <bool name='adv_mode' original-name='dungeon'/>
+        <bool name='export_local'/>
+        <int8_t name='map_rotation' original-name='orientation'/>
+        <int16_t name='min_x' original-name='view_sx'/>
+        <int16_t name='min_y' original-name='view_sy'/>
+        <int16_t name='max_x' original-name='view_ex'/>
+        <int16_t name='max_y' original-name='view_ey'/>
+        <compound type-name='coord' name='corner'/>
+        <pointer type-name='graphic_viewportst' name='main_viewport' original-name='viewport'/>
+        <static-array name='lower_viewport' pointer-type='graphic_viewportst' count='8'/>
+        <int32_t name='under_limit_start'/>
+        <pointer type-name='int32_t' name='under_limit' is-array='true'/>
+        <int32_t name='under_limit_dx'/>
+        <int32_t name='under_limit_dy'/>
+    </struct-type>
+
+    <bitfield-type type-name='unit_move_dir' base-type='uint8_t'> bay12: UNIT_MOVE_DIR_*
+        <flag-bit name='N'/>
+        <flag-bit name='S'/>
+        <flag-bit name='E'/>
+        <flag-bit name='W'/>
+    </bitfield-type>
+
+    <struct-type type-name='map_renderer' original-name='graphics_mainviewst'>
+        <static-array name='entity' original-name='forceprint' count='768'>
+            <static-array count='256' type-name='int8_t' comment='|=1 building, |=2 ramp/stair'/>
+        </static-array>
+        <stl-vector pointer-type='unit' name='cursor_units' original-name='look_unit'/>
+        <pointer type-name='unit' name='cursor_guts' original-name='look_guts'/>
+        <bool name='multiple_guts' original-name='look_manyguts'/>
+        <pointer type-name='item' name='cursor_corpse' original-name='look_corpse'/>
+        <int32_t name='cursor_corpse_cnt' original-name='look_manycorpse'/>
+        <pointer type-name='item' name='cursor_corpsepiece' original-name='look_pieces'/>
+        <int32_t name='cursor_corpsepiece_cnt' original-name='look_manypieces'/>
+        <pointer type-name='item' name='cursor_bones' original-name='look_bones'/>
+        <int32_t name='cursor_bones_cnt' original-name='look_manybones'/>
+        <pointer type-name='item' name='cursor_other' original-name='look_item'/>
+        <int32_t name='cursor_other_cnt' original-name='look_manyitem'/>
+        <bool name='export_local'/>
+        <int8_t name='map_rotation' original-name='orientation'/>
+        <uint32_t name='cur_tick_count' original-name='curtick' comment='GetTickCount'/>
+        <int16_t name='tick_phase' original-name='printphase' comment='cur_year_tick%10080'/>
+        <int8_t name='dim_colors' original-name='main_dim'/>
+
+        <bool name='in_conflict'/>
+        <static-array name='unit_move' count='500' type-name='unit_action_type'/>
+        <static-array name='unit_move_dir' count='500'>
+            <bitfield base-type='uint8_t' type-name='unit_move_dir'/>
+        </static-array>
+        <static-array name='unit_move_coord' count='500'><int32_t name='x'/><int32_t name='y'/></static-array>
+        <static-array name='unit_move_coord_mxy' count='500'><int32_t name='x'/><int32_t name='y'/></static-array>
+        <static-array name='unit_move_phase' count='500' type-name='int32_t'/>
+        <int32_t name='unit_move_num'/>
+        <int32_t name='unit_move_greatest_phase'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

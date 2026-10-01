@@ -1,0 +1,463 @@
+# Scoped musical-instrument grammar. Not global substring translations.
+# scope<TAB>English pattern<TAB>Chinese; typed captures: n=name, i=named piece,
+# m=material, f=string material, c=count, r=pitch band, t=timbre, z=size, d=shape,
+# p=phrase, v=verb, s=sentence.
+# Existing piece terminology migrated from translate_embark_instrument_item.
+# Generator evidence: Linux 53.16 dwarfort rodata 0x1d41279..0x1d464b0.
+piece	pump	气泵
+piece	pumps	气泵
+piece	bellows	风箱
+piece	bells	音铃
+piece	string	琴弦
+piece	strings	琴弦
+piece	pipe	音管
+piece	pipes	音管
+piece	body	琴身
+piece	bodies	琴身
+piece	chest	琴箱
+piece	chests	琴箱
+piece	case	琴箱
+piece	cases	琴箱
+piece	keyboard	键盘
+piece	keyboards	键盘
+piece	console	演奏台
+piece	consoles	演奏台
+piece	blowpipe	吹管
+piece	blowpipes	吹管
+piece	drone pipe	持续音管
+piece	drone pipes	持续音管
+piece	bag	气囊
+piece	bags	气囊
+piece	melody pipe	旋律管
+piece	melody pipes	旋律管
+piece	frame	框架
+piece	frames	框架
+piece	yoke	轭架
+piece	yokes	轭架
+piece	neck	琴颈
+piece	necks	琴颈
+piece	bow	琴弓
+piece	bows	琴弓
+piece	hammer	音锤
+piece	hammers	音锤
+piece	mallet	音槌
+piece	mallets	音槌
+piece	plectrum	拨片
+piece	plectra	拨片
+piece	neck bowl	颈碗
+piece	neck bowls	颈碗
+piece	head	鼓面
+piece	heads	鼓面
+piece	stand	支架
+piece	stands	支架
+piece	wind chest	风箱
+piece	wind chests	风箱
+piece	sound-chest	共鸣箱
+piece	sound-chests	共鸣箱
+piece	chime	音钟
+piece	chimes	音钟
+piece	stick	鼓棒
+piece	sticks	鼓棒
+piece	drum	鼓
+piece	drums	鼓
+piece	triangle	三角铁
+piece	triangles	三角铁
+piece	bell	音铃
+r	extremely low	极低
+r	very low	超低
+r	mid-low	中低
+r	middle	中
+r	mid-high	中高
+r	very high	超高
+r	extremely high	极高
+r	lowest	最低
+r	low	低
+r	high	高
+r	highest	最高
+r	top	最高
+r	low-middle	中低
+r	middle-high	中高
+t	clear	清澈
+t	noisy	嘈杂
+t	full	饱满
+t	thin	单薄
+t	round	圆润
+t	sharp	锐利
+t	smooth	柔顺
+t	choppy	断续
+t	steady	稳定
+t	evolving	渐变
+t	strong	强劲
+t	delicate	细腻
+t	bright	明亮
+t	graceful	优雅
+t	sparse	疏淡
+t	breathy	带气声
+t	strained	紧绷
+t	broad	宽广
+t	light	轻盈
+t	mellow	柔和
+t	wobbling	摇曳
+t	focused	凝聚
+t	even	均匀
+t	fluid	流畅
+t	vibrating	振颤
+t	quavering	颤抖
+t	eerie	诡异
+t	fragile	纤弱
+t	brittle	清脆
+t	pure	纯净
+t	piercing	穿透力强
+t	strident	尖锐
+t	wavering	摇曳
+t	harsh	粗粝
+t	reedy	带簧管音色
+t	nasal	鼻音浓重
+t	buzzy	带嗡鸣声
+t	rough	粗糙
+t	warm	温润
+t	rugged	粗犷
+t	heavy	厚重
+t	flat	平淡
+t	dark	低沉
+t	crisp	爽脆
+t	sonorous	洪亮
+t	watery	水声般清润
+t	gentle	柔和
+t	slicing	锐利
+t	liquid	流动如水
+t	raucous	沙哑刺耳
+t	breezy	轻快
+t	raspy	沙哑
+t	wispy	轻柔飘渺
+t	shrill	尖厉
+t	muddy	浑浊
+t	rich	浑厚
+t	dull	沉闷
+t	floating	飘逸
+t	ringing	清亮
+t	resonant	共鸣饱满
+t	sweet	甜美
+t	rippling	起伏
+t	sparkling	清亮灵动
+# Contextual material forms: strings are not bolts of silk cloth.
+f	silk	丝线
+f	gut	肠线
+f	wool	毛线
+f	yarn	纱线
+f	thread	线
+f	cloth	线
+m	silk	丝
+m	gut	肠线
+m	ceramic	陶瓷质
+m	wooden	木质
+m	shell	壳质
+m	bone	骨质
+m	metal	金属质
+m	glass	玻璃质
+m	stone	石质
+m	wood	木质
+m	leather	皮革质
+m	mysterious	神秘
+z	huge stationary	巨型固定式
+z	large stationary	大型固定式
+z	mid-size stationary	中型固定式
+z	small stationary	小型固定式
+z	tiny stationary	微型固定式
+z	large hand-held	大型手持式
+z	mid-size hand-held	中型手持式
+z	small hand-held	小型手持式
+z	tiny hand-held	微型手持式
+c	a	1
+c	an	1
+c	a single	1
+c	single	1
+c	one	1
+c	two	2
+c	three	3
+c	four	4
+c	five	5
+c	six	6
+c	seven	7
+c	eight	8
+c	nine	9
+c	ten	10
+c	eleven	11
+c	twelve	12
+c	thirteen	13
+c	fourteen	14
+c	fifteen	15
+c	sixteen	16
+c	seventeen	17
+c	eighteen	18
+c	nineteen	19
+c	twenty	20
+c	thirty	30
+c	forty	40
+c	fifty	50
+c	sixty	60
+c	seventy	70
+c	eighty	80
+c	ninety	90
+c	nearly {c1}	近{c1}
+c	{c1}-and-a-half	{c1}.5
+c	a {c1}	{c1}
+c	an {c1}	{c1}
+r	a {r1}	{r1}
+r	an {r1}	{r1}
+t	a {t1}	{t1}
+t	an {t1}	{t1}
+t	{t1} {t2}	{t1}、{t2}
+p	cylindrical bore	圆柱形内膛
+p	conical bore	圆锥形内膛
+p	cylindrical	圆柱形
+p	conical	圆锥形
+p	closed cylindrical	封闭圆柱形
+p	globular	球形
+p	looping	盘绕形
+p	double-tube	双管
+p	bowl-shaped	碗形
+p	the main string	主弦
+p	main string	主弦
+p	main strings	主弦
+p	finger	手指
+p	fingers	手指
+p	hand	手
+p	hands	双手
+p	their fingers	手指
+p	their hands	双手
+p	fipple	哨嘴
+p	pedalboard	踏板组
+p	reed	簧片
+p	reeds	簧片
+p	single reed	单簧
+p	free reed	自由簧
+p	double reed	双簧
+p	flared bell	喇叭口
+p	flared bells	喇叭口
+p	wind instrument	管乐器
+p	percussion instrument	打击乐器
+p	musical instrument	乐器
+p	instrument	乐器
+p	horn	号角
+p	to the body	至琴身
+p	on the ground	在地面上
+p	plucked	拨响
+p	struck	敲响
+p	{f1}-stringed instrument	{f1}弦乐器
+p	{f1} string	{f1}琴弦
+p	{f1} strings	{f1}琴弦
+p	{f1} main string	{f1}主弦
+p	{f1} main strings	{f1}主弦
+p	{p1} neck connecting to a {p2} body	连接{p2}琴身的{p1}琴颈
+p	{p1} neck connecting to an {p2} body	连接{p2}琴身的{p1}琴颈
+p	{p1} with {p2}	{p1}，配有{p2}
+p	{p1} and {p2}	{p1}和{p2}
+p	{p1}, {p2}	{p1}、{p2}
+p	{p1} above which hang {p2}	{p1}，上方悬有{p2}
+p	{p1} which houses {p2}	{p1}，内部装有{p2}
+p	{p1} which rest on {p2}	{p1}，放置于{p2}上
+p	{p1} which rests on {p2}	{p1}，放置于{p2}上
+p	{p1} which rest {p2}	{p1}，放置{p2}
+p	{p1} which rests {p2}	{p1}，放置{p2}
+p	a {p1}	{p1}
+p	an {p1}	{p1}
+p	the {p1}	{p1}
+p	{c1} main strings	{c1}根主弦
+p	{c1} strings	{c1}根琴弦
+p	{c1} pipes	{c1}根音管
+p	{c1} bells	{c1}个音铃
+p	{c1} {p1}	{c1}个{p1}
+# Resolve the complete bore construction before generic modifier sequences.
+# Keep the interior shape separate from the instrument's material and size.
+p	{z1} conical bore {m1} wind instrument	{z1}{m1}管乐器，内膛呈圆锥形
+p	{z1} cylindrical bore {m1} wind instrument	{z1}{m1}管乐器，内膛呈圆柱形
+p	{m1} {p1}	{m1}{p1}
+p	{z1} {p1}	{z1}{p1}
+p	{d1} {p1}	{d1}{p1}
+p	on {p1}	在{p1}上
+p	adjacent {p1}	并列的{p1}
+p	conical {p1}	圆锥形{p1}
+p	cylindrical {p1}	圆柱形{p1}
+p	closed cylindrical {p1}	封闭圆柱形{p1}
+p	conical bore {p1}	圆锥形内膛{p1}
+p	cylindrical bore {p1}	圆柱形内膛{p1}
+p	globular {p1}	球形{p1}
+p	looping {p1}	盘绕形{p1}
+p	double-tube {p1}	双管{p1}
+p	bowl-shaped {p1}	碗形{p1}
+p	{p1} wind instrument	{p1}管乐器
+p	{p1} horn	{p1}号角
+v	plays	拉奏
+v	picks	拨奏
+v	strikes	敲击
+v	plucks	弹拨
+v	scrapes	刮奏
+v	rubs around the lip of	沿口缘摩擦
+v	shakes	摇动
+v	strikes together	相互敲击
+# Complete part descriptions. {i} includes the complete native name + part.
+s	the {i1} plucks the strings of the instrument	{i1}用于拨动乐器的琴弦
+s	the {i1} plucks the string of the instrument	{i1}用于拨动乐器的琴弦
+s	the {i1} strike the strings of the instrument	{i1}用于敲击乐器的琴弦
+s	the {i1} strike the string of the instrument	{i1}用于敲击乐器的琴弦
+s	the {i1} is drawn across the strings of the instrument	{i1}通过在琴弦上拉动来演奏乐器
+s	the {i1} is drawn across the string of the instrument	{i1}通过在琴弦上拉动来演奏乐器
+s	the {i1} of the instrument vibrates with the strings, producing sound	乐器的{i1}随琴弦一同振动，产生声音
+s	the {i1} of the instrument vibrates with the string, producing sound	乐器的{i1}随琴弦一同振动，产生声音
+s	the {i1} vibrates with the rest of the instrument, producing sound	{i1}随乐器的其他部分一同振动，产生声音
+s	the {i1} vibrate, causing the instrument to produce sound	{i1}通过振动使乐器发声
+s	the {i1} vibrates, causing the instrument to produce sound	{i1}通过振动使乐器发声
+s	the strings of the instrument are attached to the {i1}	乐器的琴弦固定在{i1}上
+s	the {i1} makes up the bulk of the instrument	{i1}构成了乐器的主体
+s	the {i1} make up the bulk of the instrument	{i1}构成了乐器的主体
+s	the {i1} are used by the musician to strike the instrument and produce sound	演奏者用{i1}敲击乐器，使其发声
+s	the {i1} is used by the musician to strike the instrument and produce sound	演奏者用{i1}敲击乐器，使其发声
+s	the {i1} is used by the musician to control the steady flow of air through the instrument	演奏者用{i1}控制气流，使其稳定地通过乐器
+s	the {i1} is used by the musician to send air into the instrument	演奏者用{i1}向乐器内送气
+s	the {i1} is used by the musician to select the pitch of the instrument	演奏者用{i1}选择乐器的音高
+s	the {i1} allows the musician to select the pitch of the instrument	演奏者通过{i1}选择乐器的音高
+s	the {i1} allows the musician room to stop {p1} and select the pitch of the instrument	{i1}为演奏者提供按压{p1}的位置，以选择乐器的音高
+s	the {i1} produce a constant pitch with the flow of air out of the instrument	气流流出乐器时，{i1}产生音高恒定的声音
+s	the {i1} produces a constant pitch with the flow of air out of the instrument	气流流出乐器时，{i1}产生音高恒定的声音
+s	the {i1} is the body of the instrument	{i1}是乐器的主体
+s	the {i1} is the housing for the workings of the instrument	{i1}是容纳乐器内部结构的外壳
+s	the {i1} vibrate, producing the sound of the instrument	{i1}通过振动产生乐器的声音
+s	the {i1} is used to supply air to the instrument	{i1}用于向乐器供气
+s	the {i1} is used to send air through the instrument	{i1}用于向乐器内送气
+s	the {i1} is used to support the instrument	{i1}用于支撑乐器
+s	the {i1} are stretched over the instrument and used to produce sound	{i1}绷在乐器上，用于发声
+s	the {i1} is stretched over the instrument and used to produce sound	{i1}绷在乐器上，用于发声
+s	the musician uses the {i1} to select the pitch as the air leaves the instrument	气流流出乐器时，演奏者用{i1}选择音高
+# Instrument identity, construction and playing technique.
+# A described part is not the instrument's generated type name.
+s	the melody pipe is a {p1}	旋律管是{p1}
+s	the {n1} is a {p1}	{n1}是一种{p1}
+s	the {n1} is an {p1}	{n1}是一种{p1}
+s	it consists of {p1}	它由{p1}组成
+s	the strings are suspended from the yoke down to the body and {s1}	琴弦从轭架悬至琴身；{s1}
+s	the strings are suspended from the frame down to the body and {s1}	琴弦从框架悬至琴身；{s1}
+s	the strings are tied from the top of the neck down over the body and {s1}	琴弦从琴颈顶端系至琴身；{s1}
+s	the instrument rests flat as {s1}	乐器平放，{s1}
+s	the musician {v1} {p1} together	演奏者将{p1}相互{v1}
+s	the musician {v1} {p1} with {p2}	演奏者用{p2}{v1}{p1}
+s	the musician {v1} {p1}	演奏者{v1}{p1}
+s	{c1} other strings vibrate in sympathy and are rarely played themselves	另有{c1}根琴弦产生共鸣，很少被直接演奏
+s	another string vibrates in sympathy and is rarely played itself	另有一根琴弦产生共鸣，很少被直接演奏
+s	a drone string is occasionally plucked	一根持续音弦偶尔会被拨响
+s	a drone string is occasionally struck	一根持续音弦偶尔会被敲响
+s	{c1} drone strings are occasionally plucked	{c1}根持续音弦偶尔会被拨响
+s	{c1} drone strings are occasionally struck	{c1}根持续音弦偶尔会被敲响
+s	frets on the neck allow the musician to alter the pitch	演奏者可利用琴颈上的品改变音高
+s	the musician can alter the pitch of a string by stopping it against the neck	演奏者可将琴弦按在琴颈上，以改变音高
+s	the musician can alter the pitch of a string by stopping it against the body	演奏者可将琴弦按在琴身上，以改变音高
+s	tuning is possible with adjustable bridges	可通过调节琴码调音
+s	tuning is accomplished by pegs	通过弦轴调音
+s	tuning is also possible using small levers	也可使用小杠杆调音
+s	pitch can also be altered by pedals	也可通过踏板改变音高
+s	a {m1} bowl is attached to the neck to provide additional overtones	琴颈上装有一个{m1}碗，用于增加泛音
+s	tuning is accomplished by adjusting the tension of the head	通过调节鼓面的张力调音
+# Range and timbre: keep the register meanings identical to musical-form prose.
+s	the instrument has a single {r1} pitch	乐器只能发出一个{r1}音
+s	the instrument has less than an octave of range, with {r1} pitch	乐器的音域跨度不足一个八度，音高为{r1}音
+s	the instrument has a {c1} octave range going from {r1} to {r2} pitch	乐器的音域跨度为{c1}个八度，从{r1}音至{r2}音
+s	the instrument has an {c1} octave range going from {r1} to {r2} pitch	乐器的音域跨度为{c1}个八度，从{r1}音至{r2}音
+s	the instrument has a {c1}-octave range going from {r1} to {r2} pitch	乐器的音域跨度为{c1}个八度，从{r1}音至{r2}音
+s	the instrument has an {c1}-octave range going from {r1} to {r2} pitch	乐器的音域跨度为{c1}个八度，从{r1}音至{r2}音
+s	the instrument produces a complex sound that cannot be said to be of a single pitch	乐器发出的声音复杂，没有单一确定的音高
+s	the instrument has {t1} timbre	乐器的音色{t1}
+s	at all pitches, the instrument has {t1} timbre	乐器在所有音高上的音色都{t1}
+s	it has {c1} registers	它有{c1}个音区
+s	the {r1} register has {t1} timbre	{r1}音区的音色{t1}
+s	the {r1} register begins at {r2} pitch and has {t1} timbre	{r1}音区从{r2}音开始，音色{t1}
+# Wind-instrument families and keyboards.
+p	wind instrument consisting of {p1}	由{p1}组成的管乐器
+p	wind instrument consisting of a central wind chest and {p1}	由中央风箱和{p1}组成的管乐器
+p	{p1}, fitted with free reeds	装有自由簧的{p1}
+p	wind instrument through which constant air flow is maintained by use of a {p1} bag, itself supplied by a {p2}	管乐器，使用{p1}气囊维持稳定气流，并通过{p2}向气囊供气
+p	{p1} which uses a {m1} bellows to send air over interior reeds	{p1}，用{m1}风箱使气流吹过内部簧片
+p	{p1} which uses a {m1} bellows to pressurize air, ultimately blowing it through any of {p2}	{p1}，用{m1}风箱压缩空气，并将气流送入{p2}
+p	{p1} which uses a {m1} pump to send water into a chamber, ultimately supplying air to blow through any of {p2}	{p1}，用{m1}气泵向腔室注水，从而供气吹响{p2}
+# Free-reed keyboard instruments use an independent playing sentence, not
+# the relative clause used by the pumped/pressurized pipe branches.
+# Linux 53.16: 0x134f7fe appends ".  The musician uses a ", then the
+# material and " bellows to send air over interior reeds.  " at 0x134f81c.
+s	the musician uses a {m1} bellows to send air over interior reeds	演奏者用{m1}风箱使气流吹过内部簧片
+s	the musician blows into the fipple at one end	演奏者向一端的哨嘴吹气
+s	the musician blows across a hole in the side	演奏者向侧面的孔吹气
+s	the musician blows across the end hole	演奏者向末端的孔吹气
+s	the musician blows over a single reed at one end	演奏者向一端的单簧吹气
+s	the musician blows through a double reed at one end	演奏者向一端的双簧吹气
+s	the musician blows into the fipple at the end of each pipe	演奏者向各音管末端的哨嘴吹气
+s	the musician blows across a hole in the side of each pipe	演奏者向各音管侧面的孔吹气
+s	the musician blows across the end of each pipe	演奏者向各音管末端吹气
+s	the musician blows over a single reed in each pipe	演奏者向各音管内的单簧吹气
+s	the musician blows through a double reed in each pipe	演奏者向各音管内的双簧吹气
+s	the musician selects the pitch by {p1}	演奏者通过{p1}选择音高
+s	the musician selects the pitch by {p1} a {p2} melody pipe attached to the bag	演奏者通过{p1}连接气囊的{p2}旋律管来选择音高
+s	the musician blows into the instrument and selects pitch {p1}	演奏者向乐器内吹气，并通过{p1}选择音高
+s	{c1} {m1} drone pipes provide constant accompaniment	{c1}根{m1}持续音管提供恒定的伴奏音
+s	{c1} {m1} drone pipe provides constant accompaniment	{c1}根{m1}持续音管提供恒定的伴奏音
+s	{p1} drone pipes provide constant accompaniment	{p1}持续音管提供恒定的伴奏音
+s	{p1} drone pipe provides constant accompaniment	{p1}持续音管提供恒定的伴奏音
+s	the musician cannot control the volume	演奏者无法控制音量
+s	all of the pipes are single reed	所有音管均使用单簧
+s	all of the pipes are free reed	所有音管均使用自由簧
+s	all of the pipes are flue pipes	所有音管均为哨管
+s	the instrument has flue pipes and both single reed and free reed pipes	乐器配有哨管、单簧管和自由簧管
+s	the instrument has both single reed and free reed pipes	乐器配有单簧管和自由簧管
+s	the instrument has flue pipes and reed pipes	乐器配有哨管和簧管
+s	the instrument has flue pipes and free reed pipes	乐器配有哨管和自由簧管
+s	the musician directs air through chosen pipes by playing a {p1}	演奏者通过操作{p1}，让气流进入选定的音管
+s	the desired pitch is selected using a {p1}	通过{p1}选择所需的音高
+s	the musician uses a {p1} to select which of these strings are {p2}	演奏者通过{p1}选择要{p2}的琴弦
+s	the musician uses a {p1} to select which of these bells are struck	演奏者通过{p1}选择要敲响的音铃
+p	stopping holes	按住音孔
+p	pressing keys to stop holes	按键闭合音孔
+p	achieving higher and higher harmonics	逐渐吹出更高的泛音
+p	by achieving higher and higher harmonics	逐渐吹出更高的泛音
+p	by adjusting a slide	调节滑管
+p	by restricting air flow out of the bell	限制喇叭口的气流
+p	by pressing valves to route air through different tubes	按下活塞，使气流通过不同的音管
+p	by pressing valves to route air through different tube	按下活塞，使气流通过不同的音管
+s	{s1} and can also press keys to stop holes	{s1}，也可以按键闭合音孔
+s	{s1} and can also stop holes	{s1}，也可以按住音孔
+# Additional complete generator branches found in manual hover captures.
+# Musical components are not jewelry rings or construction/metal stock bars.
+piece	ring	音环
+piece	rings	音环
+piece	bar	音条
+piece	bars	音条
+piece	block	音块
+piece	blocks	音块
+piece	bowl	碗
+piece	bowls	碗
+m	cloth	布质
+p	cloth	布质
+p	tube	管
+p	tubes	管
+p	{p1} attached to {p2}	{p1}，固定在{p2}上
+p	hourglass {p1}	沙漏形{p1}
+shape	hourglass	沙漏形
+shape	bowl-shaped	碗形
+shape	cylindrical	圆柱形
+shape	conical	圆锥形
+shape	barrel	圆桶形
+shape	goblet	高脚杯形
+shape	straight	笔直
+shape	curved	弯曲
+shape	closed	封闭
+s	the musician selects the pitch by stopping holes in the {p1} melody pipe attached to the bag	演奏者通过按住连接气囊的{p1}旋律管上的音孔来选择音高
+s	the musician selects the pitch by pressing keys to stop holes in the {p1} melody pipe attached to the bag	演奏者通过按键闭合连接气囊的{p1}旋律管上的音孔来选择音高
+s	the musician can alter the pitch of the string by stopping it against the neck	演奏者可将琴弦按在琴颈上，以改变音高
+s	the musician can alter the pitch of the string by stopping it against the body	演奏者可将琴弦按在琴身上，以改变音高
+# Native 53.16 single-string generator defect, not a clipped screen row:
+# 0x1354f46 / 0x1354f5a call string assignment (0x132fc50) with "the",
+# replacing the accumulated introduction, instead of appending (0x1332760).
+# The branches rejoin 0x1349eee / 0x1349f37 and append the neck/body clause.
+# Translate the proven pitch-control meaning using the existing full-sentence
+# terminology above. All following tuning/range/register/timbre sentences
+# still go through the complete paragraph parser; never discard this clause
+# or invent the instrument's overwritten construction/material description.
+s	the string by stopping it against the neck	演奏者可将琴弦按在琴颈上，以改变音高
+s	the string by stopping it against the body	演奏者可将琴弦按在琴身上，以改变音高

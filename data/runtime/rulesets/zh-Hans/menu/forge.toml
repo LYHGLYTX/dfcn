@@ -1,0 +1,19 @@
+base = "menu::forge"
+
+[[rulesets]]
+[rulesets.rules]
+"{kind}{main}" = "{kind}{main}"
+
+[[rulesets]]
+name = "kind"
+[rulesets.rules]
+"Forge" = "锻造"
+"Forge three" = "锻造三个"
+"Forge five" = "锻造五个"
+"Forge twenty-five" = "锻造二十五个"
+"Forge pair of" = "锻造一对"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+" {::items::main}" = "{::items::main}"

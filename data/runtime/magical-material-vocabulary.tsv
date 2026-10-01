@@ -1,0 +1,174 @@
+# Native supernatural material vocabulary: family<TAB>English<TAB>noun<TAB>attributive form.
+# Sources: current data/runtime/translations.tsv, data/runtime/procedural-word-senses.tsv, former remnant
+# and divine-textile tables. New gaps are scoped here, never global word senses.
+# These are grammatical roles, not a rule to strip 质: dream/cloud/glitch stuff
+# retain their established substance names. Native Lua defines the combinations.
+remnant-adjective	primordial	原初	原初
+remnant-adjective	elder	上古	上古
+remnant-adjective	cosmic	宇宙	宇宙
+remnant-adjective	primal	原始	原始
+remnant-adjective	elemental	元素	元素
+remnant-adjective	primeval	太古	太古
+remnant-material	stone	石头	石质
+remnant-material	crystal	水晶	晶质
+remnant-material	chaos	混沌	混沌质
+remnant-material	darkness	黑暗	暗质
+remnant-material	dreamstuff	梦质	梦质
+remnant-material	fire	火焰	火质
+remnant-material	light	光	光质
+remnant-material	lightning	闪电	雷质
+remnant-material	metal	金属	金属质
+remnant-material	moonstone	月石	月石质
+remnant-material	mudstone	泥石	泥石质
+remnant-material	ice	冰	冰质
+remnant-material	leaf	叶	叶质
+remnant-material	salt	盐	盐质
+remnant-material	cloudstuff	云质	云质
+remnant-material	stardust	星尘	星尘质
+remnant-material	sunstone	日石	日石质
+remnant-material	wood	木头	木质
+remnant-material	obsidian	黑曜石	黑曜石质
+remnant-material	glitchstuff	异常质	异常质
+# Healing substances: adjective senses refer to the material, not personality,
+# arithmetic (odd), blood (goo), or fate (weird). No ordinary glossary changes.
+healing-adjective	curious	奇异	奇异
+healing-adjective	weird	怪异	怪异
+healing-adjective	odd	古怪	古怪
+healing-adjective	strange	奇怪	奇怪
+healing-adjective	unusual	异常	异常
+healing-adjective	peculiar	奇特	奇特
+healing-material	liquid	液体	液体制
+healing-material	fluid	流体	流体制
+healing-material	broth	汤汁	汤汁制
+healing-material	juice	汁液	汁液制
+healing-material	goo	黏稠物	黏稠物制
+healing-material	liquor	烈酒	烈酒制
+healing-material	solution	溶液	溶液制
+healing-material	jelly	凝胶	凝胶制
+healing-material	pulp	果肉	果肉制
+healing-material	wax	蜡	蜡制
+healing-material	jam	果酱	果酱制
+healing-material	dough	面团	面团制
+state	frozen	冻结的	冻结的
+state	molten	熔融的	熔融的
+state	boiling	沸腾的	沸腾的
+# Divine metals retain their established complete names in both roles.
+divine-metal	shining metal	发光金属	发光金属
+divine-metal	flashing metal	闪耀金属	闪耀金属
+divine-metal	rusted metal	生锈金属	生锈金属
+divine-metal	twisting metal	扭曲金属	扭曲金属
+divine-metal	dark metal	黑暗金属	黑暗金属
+divine-metal	glowing metal	柔和金属	柔和金属
+divine-metal	bright metal	明亮金属	明亮金属
+divine-metal	pale metal	苍白金属	苍白金属
+divine-metal	pock-marked metal	凹陷金属	凹陷金属
+divine-metal	blistered metal	鼓泡金属	鼓泡金属
+divine-metal	ruddy metal	红润金属	红润金属
+divine-metal	flickering metal	闪烁金属	闪烁金属
+divine-metal	faceted metal	多面金属	多面金属
+divine-metal	translucent metal	透明金属	透明金属
+divine-metal	frosty metal	结霜金属	结霜金属
+divine-metal	slick metal	光滑金属	光滑金属
+divine-metal	singing metal	振鸣金属	振鸣金属
+divine-metal	black metal	乌黑金属	乌黑金属
+divine-metal	multicolored metal	多彩金属	多彩金属
+divine-metal	clear blue metal	湛蓝金属	湛蓝金属
+divine-metal	twinkling metal	闪亮金属	闪亮金属
+divine-metal	crashing metal	破碎金属	破碎金属
+divine-metal	blazing metal	燃烧金属	燃烧金属
+divine-metal	booming metal	轰鸣金属	轰鸣金属
+divine-metal	searing metal	灼热金属	灼热金属
+divine-metal	flowing metal	流动金属	流动金属
+# Divine silk: preserve the existing equipment qualifiers, but do not use a
+# dangling 丝质 as a substance noun or append silk to a native essence name.
+divine-silk	blazing cloth	炽燃的丝绸	炽燃的丝质
+divine-silk	bright cloth	明亮的丝绸	明亮的丝质
+divine-silk	clear blue cloth	澄蓝的丝绸	澄蓝的丝质
+divine-silk	dancing wisps	舞动灵缕	舞动灵缕的丝质
+divine-silk	dirty fabric	污秽的丝绸	污秽的丝质
+divine-silk	faceted cloth	晶面的丝绸	晶面的丝质
+divine-silk	flashing sparks	闪光火花	闪光火花的丝质
+divine-silk	flickering cloth	明灭的丝绸	明灭的丝质
+divine-silk	flowing cloth	飘流的丝绸	飘流的丝质
+divine-silk	flowing fabric	流淌的丝绸	流淌的丝质
+divine-silk	glowing cloth	荧光的丝绸	荧光的丝质
+divine-silk	heavy cloth	厚重的丝绸	厚重的丝质
+divine-silk	liquid cloth	液态的丝绸	液态的丝质
+divine-silk	liquid darkness	液态黑暗	液态黑暗的丝质
+divine-silk	misty cloth	雾霭的丝绸	雾霭的丝质
+divine-silk	moist fabric	湿润的丝绸	湿润的丝质
+divine-silk	molten liquid	熔融液	熔融液的丝质
+divine-silk	motes of light	光尘	光尘的丝质
+divine-silk	multicolored cloth	多彩的丝绸	多彩的丝质
+divine-silk	never-still cloth	永动的丝绸	永动的丝质
+divine-silk	pale fabric	苍白的丝绸	苍白的丝质
+divine-silk	patchy cloth	斑驳的丝绸	斑驳的丝质
+divine-silk	pitch-black fabric	漆黑的丝绸	漆黑的丝质
+divine-silk	rotted fabric	腐朽的丝绸	腐朽的丝质
+divine-silk	rustling fabric	窸窣的丝绸	窸窣的丝质
+divine-silk	screaming mouths	尖啸之口	尖啸之口的丝质
+divine-silk	shadow stuff	暗影物质	暗影的丝质
+divine-silk	shimmering cloth	微光的丝绸	微光的丝质
+divine-silk	shining cloth	闪耀的丝绸	闪耀的丝质
+divine-silk	sonorous lines	鸣响丝线	鸣响丝线的丝质
+divine-silk	still blue fabric	静蓝的丝绸	静蓝的丝质
+divine-silk	translucent cloth	半透明的丝绸	半透明的丝质
+divine-silk	twisted fabric	扭曲的丝绸	扭曲的丝质
+divine-silk	undulating cloth	波动的丝绸	波动的丝质
+divine-silk	white cloth	洁白的丝绸	洁白的丝质
+divine-silk	wispy cloth	缥缈的丝绸	缥缈的丝质
+# Evil-weather materials are also STATE_NAME_ADJ substances in native Lua.
+cloud-adjective	cursed	受诅咒的	受诅咒的
+cloud-adjective	wicked	邪恶的	邪恶的
+cloud-adjective	evil	邪恶的	邪恶的
+cloud-adjective	creeping	蔓延的	蔓延的
+cloud-adjective	haunting	萦绕的	萦绕的
+cloud-adjective	abominable	可憎的	可憎的
+cloud-adjective	devilish	恶魔般的	恶魔般的
+cloud-adjective	fiendish	凶恶的	凶恶的
+cloud-adjective	foul	污秽的	污秽的
+cloud-adjective	heinous	邪恶的	邪恶的
+cloud-adjective	nefarious	邪恶的	邪恶的
+cloud-adjective	profane	亵渎的	亵渎的
+cloud-adjective	vile	卑劣的	卑劣的
+cloud-adjective	accursed	被诅咒的	被诅咒的
+cloud-adjective	blighted	枯萎的	枯萎的
+cloud-adjective	execrable	可憎的	可憎的
+cloud-adjective	infernal	地狱般的	地狱般的
+cloud-adjective	unholy	不洁的	不洁的
+cloud-adjective	eerie	诡异的	诡异的
+cloud-material	mist	薄雾	薄雾制
+cloud-material	dust	灰尘	灰尘制
+cloud-material	ash	灰烬	灰烬制
+cloud-material	soot	煤烟	煤烟制
+cloud-material	fog	雾	雾制
+cloud-material	gloom	阴霾	阴霾制
+cloud-material	murk	暗雾	暗雾制
+cloud-material	smoke	烟	烟制
+cloud-material	vapor	蒸气	蒸气制
+rain-adjective	pungent	刺鼻的	刺鼻的
+rain-adjective	acrid	辛辣的	辛辣的
+rain-adjective	bitter	苦涩的	苦涩的
+rain-adjective	stinking	发臭的	发臭的
+rain-adjective	abhorrent	可憎的	可憎的
+rain-adjective	fetid	恶臭的	恶臭的
+rain-adjective	filthy	污秽的	污秽的
+rain-adjective	heinous	邪恶的	邪恶的
+rain-adjective	horrid	可怕的	可怕的
+rain-adjective	loathsome	令人厌恶的	令人厌恶的
+rain-adjective	malodorous	有恶臭的	有恶臭的
+rain-adjective	nauseating	令人作呕的	令人作呕的
+rain-adjective	putrid	腐败的	腐败的
+rain-adjective	repellent	令人厌恶的	令人厌恶的
+rain-adjective	repulsive	令人厌恶的	令人厌恶的
+rain-adjective	revolting	恶心的	恶心的
+rain-adjective	rotten	腐烂的	腐烂的
+rain-adjective	vile	卑劣的	卑劣的
+rain-material	slime	粘液	粘液制
+rain-material	goo	黏稠物	黏稠物制
+rain-material	mucus	粘液	粘液制
+rain-material	ooze	污泥	污泥制
+rain-material	sludge	软泥	软泥制
+rain-material	filth	污垢	污垢制
+rain-material	muck	污泥	污泥制
+rain-material	slush	泥浆	泥浆制

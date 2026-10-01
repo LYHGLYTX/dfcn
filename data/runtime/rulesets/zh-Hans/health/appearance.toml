@@ -1,0 +1,439 @@
+base = "health::appearance"
+
+# Character descriptions, including Health -> Description and adventurer
+# creation -> Appearance. Reuse existing anatomical/colour names unless
+# ordinary prose needs a contextual form (hair on a person, lips, etc.).
+# Do not reference these leaves from the global root or flatten them into TSV.
+[[rulesets]]
+name = "personal_noun"
+[rulesets.rules]
+"hair" = "头发"
+
+[[rulesets]]
+name = "noun"
+[rulesets.rules]
+"lips" = "嘴唇"
+"lip" = "嘴唇"
+"exterior" = "体表"
+# Animal TLCM_NOUN entries retain the reviewed DFI18n creature vocabulary.
+"front paw" = "前爪"
+"front paws" = "前爪"
+"rear paw" = "后爪"
+"rear paws" = "后爪"
+
+# Native injury descriptions use both gone and missing. Preserve the existing
+# wound wording here so all pronouns and anatomical names share one vocabulary.
+[[rulesets]]
+name = "wound"
+[rulesets.rules]
+"cut open" = "被切开"
+"torn open" = "被撕裂"
+"smashed open" = "被砸裂"
+"broken open" = "折裂"
+"smashed apart" = "被粉碎"
+"cut apart" = "被切断"
+"torn apart" = "被撕断"
+"broken apart" = "折断"
+"fractured" = "骨折"
+"broken" = "骨折"
+"bruised" = "受到挫伤"
+"dented" = "凹陷"
+"bleeding" = "正在出血"
+"missing" = "已经缺失"
+"gone" = "已经缺失"
+"mangled beyond recognition" = "被毁得面目全非"
+"spilled" = "流散在外"
+"gelded" = "已被阉割"
+"been partially butchered" = "已被部分肢解"
+"a compound fracture" = "开放性骨折"
+"compound fractures" = "开放性骨折"
+"frost-bitten" = "被冻伤"
+"burned" = "被烧伤"
+"melted" = "已经熔化"
+"boiled" = "被煮烂"
+"frozen" = "已经冻结"
+"condensed" = "已经凝结"
+"rotten" = "已经腐烂"
+"blistered" = "起了水疱"
+"slightly swollen" = "略有肿胀"
+"swollen" = "肿胀"
+"quite swollen" = "相当肿胀"
+"very swollen" = "严重肿胀"
+"heavily swollen" = "高度肿胀"
+"completely swollen" = "完全肿胀"
+
+# Native fluid-emission verbs at 0x140712812..0x140712856. The actual
+# liquid name is resolved separately from the creature's blood material.
+[[rulesets]]
+name = "wound_fluid"
+[rulesets.rules]
+"gouting" = "正大量喷涌出"
+"gushing" = "正涌出"
+"spraying" = "正喷出"
+"running with" = "正流出"
+"dripping" = "正滴出"
+"oozing" = "正渗出"
+
+# Scar predicates follow bears/bear and share the wound anatomy parser.
+# Length describes the scar, so it must not use body-stature vocabulary.
+[[rulesets]]
+name = "scar"
+[rulesets.rules]
+"{scar_mark}" = "留有{scar_mark}"
+"the marks of old wounds, including {scar_mark}" = "留有多处旧伤，包括{scar_mark}"
+"the marks of numerous old wounds, the chief among them {scar_mark}" = "留有众多旧伤，其中最显眼的是{scar_mark}"
+
+[[rulesets]]
+name = "scar_mark"
+[rulesets.rules]
+"a {scar_length} straight scar" = "一道{scar_length}的直线状疤痕"
+"a straight scar" = "一道直线状疤痕"
+"a {scar_length} curving scar" = "一道{scar_length}的弧形疤痕"
+"a curving scar" = "一道弧形疤痕"
+"a {scar_length} jagged scar" = "一道{scar_length}的锯齿状疤痕"
+"a jagged scar" = "一道锯齿状疤痕"
+"a {scar_length} dent" = "一处{scar_length}的凹痕"
+"a dent" = "一处凹痕"
+
+[[rulesets]]
+name = "scar_length"
+[rulesets.rules]
+"short" = "短"
+"long" = "长"
+"tiny" = "细小"
+"massive" = "巨大"
+"large" = "大"
+"small" = "小"
+"huge" = "巨大"
+"{degree} {scar_length}" = "{degree}{scar_length}"
+
+# Hair and other coverings can mix two colors. Separate references preserve
+# both captures; every color name still comes from the reviewed color table.
+[[rulesets]]
+name = "color"
+[rulesets.rules]
+"{::color::name} mixed with {mixed_color}" = "{::color::name}，夹杂着{mixed_color}"
+"{::color::name} with flecks of {mixed_color}" = "{::color::name}，夹杂着点点{mixed_color}"
+"{::color::name} with a touch of {mixed_color}" = "{::color::name}，略带{mixed_color}"
+"{::color::name} with some {mixed_color}" = "{::color::name}，夹杂着一些{mixed_color}"
+
+[[rulesets]]
+name = "mixed_color"
+[rulesets.rules]
+"{::color::name}" = "{::color::name}"
+
+# Native body-build predicates are separate from possessed anatomical
+# features: "has a thin frame with some fat on it" describes the whole unit.
+# Shared by every pronoun, species and the appearance/health render paths.
+[[rulesets]]
+name = "build"
+[rulesets.rules]
+"isn't tall" = "个子不高"
+"is not tall" = "个子不高"
+"has incredible muscles" = "肌肉异常发达"
+"is strapped with massive amounts of muscle and lard" = "浑身肌肉和脂肪都极多"
+"has a {build_frame} with {build_fat} on it" = "{build_frame}，{build_fat}"
+"has a {build_frame} with {build_fat}" = "{build_frame}，{build_fat}"
+"has a {build_frame}" = "{build_frame}"
+"has an {build_frame} with {build_fat} on it" = "{build_frame}，{build_fat}"
+"has an {build_frame} with {build_fat}" = "{build_frame}，{build_fat}"
+"has an {build_frame}" = "{build_frame}"
+"has {build_muscles} muscles" = "肌肉线条{build_muscles}"
+
+# Muscle definition is a body-build predicate, including contrast clauses
+# such as "is tall but has quite ill-defined muscles".
+[[rulesets]]
+name = "build_muscles"
+[rulesets.rules]
+"ill-defined" = "模糊"
+"well-defined" = "分明"
+"{degree} {build_muscles}" = "{degree}{build_muscles}"
+
+[[rulesets]]
+name = "build_frame"
+[rulesets.rules]
+"{build_shape} {build_noun}" = "{build_noun}{build_shape}"
+
+[[rulesets]]
+name = "build_noun"
+[rulesets.rules]
+"frame" = "体格"
+"body" = "身体"
+"build" = "体型"
+
+[[rulesets]]
+name = "build_shape"
+[rulesets.rules]
+"thin" = "纤细"
+"broad" = "宽阔"
+"long" = "修长"
+"tall" = "高挑"
+"short" = "矮小"
+"large" = "高大"
+"small" = "较小"
+"tall, thin" = "高挑而纤细"
+"long, thin" = "修长而纤细"
+"short, broad" = "矮小而宽阔"
+"short broad" = "矮小而宽阔"
+"generally thin" = "整体纤细"
+"{degree} {build_shape}" = "{degree}{build_shape}"
+
+[[rulesets]]
+name = "build_fat"
+[rulesets.rules]
+"some fat" = "略有脂肪"
+"a bit of fat" = "略有脂肪"
+"a little fat" = "只有少量脂肪"
+"little fat" = "脂肪很少"
+"very little fat" = "脂肪极少"
+# Preserve the spelling emitted by the native body-build text.
+"very litte fat" = "脂肪极少"
+"almost no fat" = "几乎没有脂肪"
+"a lot of fat" = "脂肪很多"
+"lots of fat" = "脂肪很多"
+"quite a bit of fat" = "脂肪颇多"
+"some muscle and fat" = "有些肌肉和脂肪"
+"few traces of either muscle or fat" = "肌肉和脂肪都极少"
+
+[[rulesets]]
+name = "degree"
+[rulesets.rules]
+"slightly" = "稍"
+"somewhat" = "略"
+# Appearance degree, including "a fairly deep and raspy voice".
+# The Legends performance rating for "fairly" does not apply here.
+"fairly" = "较为"
+"quite" = "相当"
+"very" = "很"
+"extremely" = "极"
+"incredibly" = "异常"
+"deeply" = "深深"
+"sharply" = "明显"
+"nearly" = "近乎"
+"extraordinarily" = "格外"
+
+[[rulesets]]
+name = "common"
+[rulesets.rules]
+"short" = "短"
+"long" = "长"
+"tall" = "高"
+"broad" = "宽大"
+"narrow" = "窄"
+"thin" = "细"
+"thick" = "粗"
+"large" = "大"
+"small" = "小"
+"round" = "圆"
+"deep" = "深"
+"shallow" = "浅"
+"medium-length" = "长短适中"
+"clean-shaven" = "剃光了"
+"stubble" = "只剩短茬"
+"greasy" = "油腻"
+"tangled" = "纠结成团"
+"straight" = "直"
+"neatly combed" = "梳理得很整齐"
+"unkempt" = "蓬乱"
+"braided" = "编成了辫子"
+"double braided" = "编成了双辫"
+"arranged in double braids" = "编成了双辫"
+"in a ponytail" = "扎成了马尾"
+"tied in a pony tail" = "扎成了马尾"
+# All remaining native feature adjectives come from the complete switch
+# tables at 0x140716a84 and 0x140716ae4, not screenshot-specific sentences.
+"high" = "高"
+"low" = "低"
+"sunken" = "凹陷"
+"protruding" = "突出"
+"bulging" = "凸起"
+"wrinkled" = "布满褶皱"
+"smooth" = "光滑"
+"convex" = "外凸"
+"concave" = "内凹"
+"curly" = "卷曲"
+"coiled" = "卷成小圈"
+"wavy" = "呈波浪状"
+"dense" = "浓密"
+"sparse" = "稀疏"
+"upturned" = "上翘"
+"hooked" = "呈钩状"
+"splayed out" = "向外张开"
+"flattened" = "扁平"
+"dry" = "干燥"
+"crinkly" = "干皱"
+"rounded" = "圆润"
+"close-set" = "间距小"
+"wide-set" = "间距大"
+"widely-spaced" = "间隙大"
+"gapped" = "间隙大"
+"crowded" = "挤在一起"
+"slit" = "呈细缝状"
+"large-irised" = "虹膜大"
+"small-irised" = "虹膜小"
+"thin-irised" = "虹膜窄"
+"great-lobed" = "耳垂很大且摇摆"
+"hanging-lobed" = "耳垂大且下垂"
+"free-lobed" = "耳垂与脸颊分离"
+"fuse-lobed" = "耳垂紧贴脸颊"
+"nearly fuse-lobed" = "耳垂几乎紧贴脸颊"
+"small-lobed" = "耳垂小"
+"high-cheekboned" = "颧骨高"
+"low-cheekboned" = "颧骨低"
+"broad-chinned" = "下巴宽"
+"narrow-chinned" = "下巴窄"
+"jutting-chinned" = "下巴前突"
+"recess-chinned" = "下巴后缩"
+"square-chinned" = "下巴方正"
+"round-chinned" = "下巴圆润"
+"deep-voiced" = "声音低沉"
+"high-voiced" = "声音尖细"
+"raspy-voiced" = "声音沙哑"
+"clear-voiced" = "声音清亮"
+
+[[rulesets]]
+name = "lips"
+[rulesets.rules]
+"thin" = "薄"
+"thick" = "厚"
+
+[[rulesets]]
+name = "skin"
+[rulesets.rules]
+"thin" = "薄"
+"thick" = "厚"
+# Native skin-age predicates. The Legends-only entry is unavailable here;
+# keep its reviewed wording and render the degree phrases as whole predicates.
+"wrinkled" = "布满褶皱"
+"slightly wrinkled" = "略有褶皱"
+"extremely wrinkled" = "褶皱极多"
+
+[[rulesets]]
+name = "ears"
+[rulesets.rules]
+"tall" = "长"
+"thin" = "薄"
+"thick" = "厚"
+"flattened" = "贴着头部"
+"very flattened" = "紧贴头部"
+"slightly flattened" = "略微贴着头部"
+
+[[rulesets]]
+name = "head"
+[rulesets.rules]
+"tall" = "长"
+
+[[rulesets]]
+name = "cheekbones"
+[rulesets.rules]
+"low" = "低"
+"high" = "高"
+
+[[rulesets]]
+name = "irises"
+[rulesets.rules]
+"thin" = "窄"
+"thick" = "宽"
+
+[[rulesets]]
+name = "eyes"
+[rulesets.rules]
+"rounded" = "圆润"
+"protruding" = "外凸"
+"bulging" = "外凸"
+"close-set" = "间距小"
+"wide-set" = "间距大"
+"widely-spaced" = "间距大"
+"deep-set" = "深陷"
+"sunken" = "深陷"
+"deeply sunken" = "深深凹陷"
+"slit" = "眯成细缝"
+
+[[rulesets]]
+name = "teeth"
+[rulesets.rules]
+"gapped" = "间隙大"
+"widely-spaced" = "间隙大"
+"crowded" = "排列拥挤"
+"tangled" = "交错不齐"
+
+[[rulesets]]
+name = "voice"
+[rulesets.rules]
+# Vocal clarity is not the transparent colour with the same spelling.
+"clear" = "清亮"
+"deep" = "低沉"
+"low" = "低沉"
+"raspy" = "沙哑"
+"scratchy" = "嘶哑"
+"high" = "尖细"
+"high-pitched" = "尖细"
+"guttural" = "喉音浑厚"
+"grating" = "刺耳"
+"squeaky" = "尖利"
+
+# These adjectives describe a named subfeature rather than the entire organ.
+# The renderer keeps them as separate predicates, not "小耳垂的耳朵".
+[[rulesets]]
+name = "detail_ears"
+[rulesets.rules]
+"small-lobed" = "耳垂小"
+"{degree} small-lobed" = "耳垂{degree}小"
+"hanging-lobed" = "耳垂下垂"
+"great-lobed" = "耳垂很大且摇摆"
+"free-lobed" = "耳垂与脸颊分离"
+"fuse-lobed" = "耳垂紧贴脸颊"
+"nearly fuse-lobed" = "耳垂几乎紧贴脸颊"
+
+[[rulesets]]
+name = "detail_eyes"
+[rulesets.rules]
+"large-irised" = "虹膜大"
+"thin-irised" = "虹膜窄"
+"small-irised" = "虹膜小"
+"{degree} large-irised" = "虹膜{degree}大"
+"{degree} thin-irised" = "虹膜{degree}窄"
+"{degree} small-irised" = "虹膜{degree}小"
+
+[[rulesets]]
+name = "chin"
+[rulesets.rules]
+"broad" = "宽"
+"narrow" = "窄"
+"massive" = "硕大"
+"jutting" = "前突"
+"prominent" = "突出"
+"recessed" = "后缩"
+"deeply recessed" = "深深后缩"
+"square" = "方正"
+"angular" = "棱角分明"
+"round" = "圆润"
+
+[[rulesets]]
+name = "lobes"
+[rulesets.rules]
+"great swinging" = "很大且摇摆"
+"large hanging" = "大且下垂"
+"nearly fused" = "几乎紧贴脸颊"
+
+# The body-level fallback can emit every enum in the same modifier switch.
+# Keep descriptions of subfeatures from being attached to "身体" itself.
+[[rulesets]]
+name = "detail_body"
+[rulesets.rules]
+"high-cheekboned" = "颧骨高"
+"low-cheekboned" = "颧骨低"
+"broad-chinned" = "下巴宽"
+"narrow-chinned" = "下巴窄"
+"jutting-chinned" = "下巴前突"
+"recess-chinned" = "下巴后缩"
+"square-chinned" = "下巴方正"
+"round-chinned" = "下巴圆润"
+"deep-voiced" = "声音低沉"
+"high-voiced" = "声音尖细"
+"raspy-voiced" = "声音沙哑"
+"clear-voiced" = "声音清亮"
+"large-irised" = "虹膜大"
+"small-irised" = "虹膜小"
+"great-lobed" = "耳垂很大且摇摆"
+"fuse-lobed" = "耳垂紧贴脸颊"

@@ -1,0 +1,19 @@
+base = "menu::sew"
+
+[[rulesets]]
+[rulesets.rules]
+"{kind}{main}" = "{kind}{main}"
+
+[[rulesets]]
+name = "kind"
+[rulesets.rules]
+"Sew" = "缝缀"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+" leather image" = "皮质图案"
+" cloth image" = "布质图案"
+" silk image" = "丝质图案"
+" yarn image" = "纱质图案"
+" {::materials::adjective} image" = "{::materials::adjective}图案"

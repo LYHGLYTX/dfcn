@@ -1,0 +1,230 @@
+# Complete history_event agreement paragraph and subject constructions.
+# Sources: tools/announcement-event-literal-inventory.tsv; branch inspection includes all chained PE function portions.
+# scope	source	target	semantic fields	native provenance
+historical-event-paragraph	In {s}, {s}.	{s1}，{s2}。	$date,agreement-record	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+historical-event-paragraph	Subject revealed that in {s}, {s}.	受审者交代，{s1}，{s2}。	$date,agreement-record	0x1402aafef..0x1402ab029; flag-dependent opening
+historical-event-paragraph	In {s}, {s}. {s}	{s1}，{s2}。{s3}	$date,agreement-record,agreement-followup	0x1402abbc4 -> 0x1402a71e0;0x1402ad69d -> 0x1402a81f0; independently appended complete narratives
+historical-event-paragraph	Subject revealed that in {s}, {s}. {s}	受审者交代，{s1}，{s2}。{s3}	$date,agreement-record,agreement-followup	0x1402abbc4 -> 0x1402a71e0;0x1402ad69d -> 0x1402a81f0; independently appended complete narratives
+agreement-followup	{s}	{s1}	negotiation-paragraph	0x1402abb8d..0x1402abc09; detail+0x08 negotiation
+agreement-followup	{s}	{s1}	justice-intrigue-paragraph	0x1402ad66e..0x1402ad6e6; detail+0x10 intrigue
+agreement-followup	{s} {s}	{s1}{s2}	negotiation-paragraph,justice-intrigue-paragraph	0x1402abc11 -> 0x1402ad66e; negotiation then intrigue when both detail pointers are present
+historical-event-title	{s}	{s1}	agreement-title	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+historical-event-title	{s} in {s}	{s2}的{s1}	agreement-title,$date	0x1402ad8c5..0x1402ad8e3 common date tail
+agreement-party	an unknown party	身份不明的一方		0x1402ab210 and analogous absent participant branches
+agreement-party-list	an unknown party	身份不明的一方		0x1402ab210 and analogous absent participant branches
+agreement-party	{s}	{s1}	$unit	0x1400e2b80..0x1400e2cb1; first HF vector -> 0x140b92f10
+agreement-party	{s}	{s1}	$name	0x1400e2b80..0x1400e2cb1; second entity vector -> 0x140b92900
+agreement-party-list	{s}	{s1}	agreement-party	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-party-list	{s}, {s}	{s1}、{s2}	agreement-party,agreement-party-list	0x1400e2b80..0x1400e2cb1 and 0x1402ab1ad..0x1402ab27d
+agreement-party-list	{s}, and {s}	{s1}和{s2}	agreement-party,agreement-party-list	0x1400e2b80..0x1400e2cb1 and 0x1402ab1ad..0x1402ab27d
+agreement-party-list	{s} and {s}	{s1}和{s2}	agreement-party,agreement-party-list	0x1400e2b80..0x1400e2cb1 and 0x1402ab1ad..0x1402ab27d
+agreement-item	{s}	{s1}	$book	0x140b94400; named artifact or written work
+agreement-item	{s}	{s1}	$item	0x140b94400 -> 0x140c65450; unnamed non-book artifact
+agreement-item	an unknown artifact	一件来历不明的造物		0x140b94400 fallback
+agreement-target	{s}	{s1}	$unit	0x1402abd44/0x1402ae1df; historical figure target
+agreement-target	{s}	{s1}	$name	0x1402abd5b/0x1402ae1f6; entity target
+agreement-record	{s}	{s1}	agreement-core	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-record	{s} under the influence of {s}	在{s2}的影响下，{s1}	agreement-core,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-record	{s} approached by {s} to handle the matter directly or through another party	{s1}；{s2}曾出面接洽，要求亲自处理此事或交由他人处理	agreement-core,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-record	{s} via {s}	{s1}，由{s2}居中联络	agreement-record,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title	{s}	{s1}	agreement-title-core	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title	{s} under the influence of {s}	{s2}影响下的{s1}	agreement-title-core,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title	{s} via {s}	经{s2}居中联络的{s1}	agreement-title,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	a corrupt agreement was formed	达成了一项腐败交易		0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}	{s1}与{s2}达成协议	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb; native optional site
+agreement-core	{s} made an agreement with {s} to study	{s1}与{s2}达成协议，以便求学	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb; native optional site
+agreement-core	{s} made an agreement with {s} to work as a mercenary	{s1}与{s2}达成协议，以便从事雇佣兵工作	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb; native optional site
+agreement-core	{s} made an agreement with {s} to entertain the citizenry	{s1}与{s2}达成协议，以便为居民表演	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb; native optional site
+agreement-core	{s} made an agreement with {s} to eradicate monsters	{s1}与{s2}达成协议，以便消灭怪物	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb; native optional site
+agreement-core	{s} joined with {s} as a guide to find {s}	{s1}与{s2}同行，担任向导寻找{s3}	agreement-party-list,agreement-party-list,$unit	0x1402ad014..0x1402ad0a8; guide target uses historical figure 0x140b92f10 or identity 0x140c3a590
+agreement-core	{s} joined with {s} as a guide to {s}	{s1}与{s2}同行，担任向导前往{s3}	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb; guide flag and destination
+agreement-core	{s} began passing a portion of corruptly-obtained funds	{s1}开始转交部分非法所得	agreement-party-list	0x1402ac7cb..0x1402ac970; native absent recipient
+agreement-title-core	the formation of a corrupt agreement	腐败交易的达成		0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} concocted a embezzlement conspiracy	{s1}策划了挪用资金的阴谋	agreement-party-list	0x1402ab298..0x1402ab304; native uses a embezzlement
+agreement-title-core	the embezzlement conspiracy concocted by {s}	{s1}策划的挪用资金阴谋	agreement-party-list	0x1402ad9a1..0x1402adad2
+agreement-core	{s} concocted a corruption conspiracy	{s1}策划了腐败的阴谋	agreement-party-list	0x1402ab298..0x1402ab304; native uses a embezzlement
+agreement-title-core	the corruption conspiracy concocted by {s}	{s1}策划的腐败阴谋	agreement-party-list	0x1402ad9a1..0x1402adad2
+agreement-core	{s} concocted a bribery conspiracy	{s1}策划了贿赂的阴谋	agreement-party-list	0x1402ab298..0x1402ab304; native uses a embezzlement
+agreement-title-core	the bribery conspiracy concocted by {s}	{s1}策划的贿赂阴谋	agreement-party-list	0x1402ad9a1..0x1402adad2
+agreement-core	{s} plotted to infiltrate {s}	{s1}密谋潜入{s2}	agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to infiltrate {s} in order to {s}	{s1}密谋潜入{s2}，以便{s3}	agreement-party-list,$name,agreement-goals	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to infiltrate {s}	{s1}潜入{s2}的阴谋	agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-goals	prepare a coup	筹备政变		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	instill terror	制造恐慌		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	initiate sabotage	展开破坏行动		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	steal treasures	盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+# Goal lists retain the native order instead of requiring one enumerated order.
+agreement-goals	{s} and {s}	{s1}和{s2}	agreement-goals,agreement-goals	0x1402ab40d..0x1402ab4e1; independent goal bits; native list conjunction
+agreement-goals	{s}, and {s}	{s1}和{s2}	agreement-goals,agreement-goals	0x1402ab40d..0x1402ab4e1; independent goal bits; native final list conjunction
+agreement-goals	{s}, {s}	{s1}、{s2}	agreement-goals,agreement-goals	0x1402ab40d..0x1402ab4e1; independent goal bits; native list separator
+agreement-goals	prepare a coup and instill terror	筹备政变、制造恐慌		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup and initiate sabotage	筹备政变、展开破坏行动		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup and steal treasures	筹备政变、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	instill terror and initiate sabotage	制造恐慌、展开破坏行动		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	instill terror and steal treasures	制造恐慌、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	initiate sabotage and steal treasures	展开破坏行动、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup, instill terror, and initiate sabotage	筹备政变、制造恐慌、展开破坏行动		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup, instill terror, and steal treasures	筹备政变、制造恐慌、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup, initiate sabotage, and steal treasures	筹备政变、展开破坏行动、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	instill terror, initiate sabotage, and steal treasures	制造恐慌、展开破坏行动、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-goals	prepare a coup, instill terror, initiate sabotage, and steal treasures	筹备政变、制造恐慌、展开破坏行动、盗取财宝		0x1402ab3f5..0x1402ab5f1; four ordered independent goal bits
+agreement-core	{s} plotted to frame {s} for {s} by fooling {s}	{s1}密谋欺骗{s4}，将{s3}的罪名栽赃给{s2}	agreement-party-list,$unit,agreement-crime,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to frame {s} for {s} by fooling {s}	{s1}欺骗{s4}、将{s3}的罪名栽赃给{s2}的阴谋	agreement-party-list,$unit,agreement-crime,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-crime	production order violation	违反生产命令		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	export prohibition violation	违反出口禁令		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	job order violation	违反工作命令		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	a conspiracy to slow labor	合谋怠工		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	murder	谋杀		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	disorderly conduct	扰乱秩序		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	building destruction	毁坏建筑		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	bribery	贿赂		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	embezzlement	挪用资金		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	vandalism	破坏公物		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	theft	盗窃		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	robbery	抢劫		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	espionage	间谍活动		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	treason	叛国		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	blood-drinking	吸血		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	attempted theft	盗窃未遂		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	attempted murder	谋杀未遂		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	kidnapping	绑架		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-crime	attempted kidnapping	绑架未遂		0x1402ab887..0x1402ab93f / 0x1402add8f..0x1402ade3d; nineteen native crimes
+agreement-core	{s} plotted to induce a war of {s} upon {s}	{s1}密谋挑起{s2}对{s3}的战争	agreement-party-list,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to induce a war of {s} upon {s}	{s1}挑起{s2}对{s3}战争的阴谋	agreement-party-list,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to sabotage the activities of {s}	{s1}密谋破坏{s2}的活动	agreement-party-list,agreement-target	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to sabotage the activities of {s}	{s1}破坏{s2}活动的阴谋	agreement-party-list,agreement-target	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to sabotage the activities of {s} at {s}	{s1}密谋破坏{s2}在{s3}的活动	agreement-party-list,agreement-target,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to sabotage the activities of {s} at {s}	{s1}破坏{s2}在{s3}活动的阴谋	agreement-party-list,agreement-target,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to abduct {s}	{s1}密谋绑架{s2}	agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to abduct {s}	{s1}绑架{s2}的阴谋	agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to assassinate {s}	{s1}密谋刺杀{s2}	agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to assassinate {s}	{s1}刺杀{s2}的阴谋	agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} plotted to steal {s}	{s1}密谋盗取{s2}	agreement-party-list,agreement-item	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the plot of {s} to steal {s}	{s1}盗取{s2}的阴谋	agreement-party-list,agreement-item	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} promised {s} a position	{s1}答应给{s2}安排一个职位	agreement-party-list,agreement-party-list	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-core	{s} promised {s} to give {s} a position	{s1}答应{s2}，给{s3}安排一个职位	agreement-party-list,agreement-party-list,agreement-party-list	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-core	{s} promised {s} to give a position	{s1}答应{s2}安排一个职位	agreement-party-list,agreement-party-list	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-title-core	the promise by {s} to {s} of a position	{s1}答应给{s2}安排职位的承诺	agreement-party-list,agreement-party-list	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-title-core	the promise by {s} to {s} to give {s} a position	{s1}答应{s2}、给{s3}安排职位的承诺	agreement-party-list,agreement-party-list,agreement-party-list	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-title-core	the promise by {s} to {s} to give a position	{s1}答应{s2}安排职位的承诺	agreement-party-list,agreement-party-list	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-core	{s} promised {s} a position in {s}	{s1}答应给{s2}在{s3}安排一个职位	agreement-party-list,agreement-party-list,$name	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-core	{s} promised {s} to give {s} a position in {s}	{s1}答应{s2}，给{s3}在{s4}安排一个职位	agreement-party-list,agreement-party-list,agreement-party-list,$name	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-core	{s} promised {s} to give a position in {s}	{s1}答应{s2}在{s3}安排一个职位	agreement-party-list,agreement-party-list,$name	0x1402ac37b..0x1402ac52b; same/different promisee-recipient branches
+agreement-title-core	the promise by {s} to {s} of a position in {s}	{s1}答应给{s2}在{s3}安排职位的承诺	agreement-party-list,agreement-party-list,$name	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-title-core	the promise by {s} to {s} to give {s} a position in {s}	{s1}答应{s2}、给{s3}在{s4}安排职位的承诺	agreement-party-list,agreement-party-list,agreement-party-list,$name	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-title-core	the promise by {s} to {s} to give a position in {s}	{s1}答应{s2}在{s3}安排职位的承诺	agreement-party-list,agreement-party-list,$name	0x1402aeac2..0x1402aecfa; native same-recipient uses of a position
+agreement-core	{s} began passing a portion of corruptly-obtained funds to {s}	{s1}开始将部分非法所得转交给{s2}	agreement-party-list,agreement-party-list	0x1402ac7cb..0x1402ac970; passing to vs other actions under influence
+agreement-title-core	the passing of corruptly-obtained funds by {s} to {s}	{s1}进行的非法所得的转交（交给{s2}）	agreement-party-list,agreement-party-list	0x1402aeedc..0x1402af20b; no space in native embezzlement of/bribery of
+agreement-core	{s} began passing a portion of corruptly-obtained funds as a {s} of {s} to {s}	{s1}以{s3}的{s2}身份开始将部分非法所得转交给{s4}	agreement-party-list,$office,$name,agreement-party-list	0x1402ac7cb..0x1402ac970; passing to vs other actions under influence
+agreement-title-core	the passing of corruptly-obtained funds by {s} as a {s} of {s} to {s}	{s1}以{s3}的{s2}身份进行的非法所得的转交（交给{s4}）	agreement-party-list,$office,$name,agreement-party-list	0x1402aeedc..0x1402af20b; no space in native embezzlement of/bribery of
+agreement-core	{s} began passing a portion of corruptly-obtained funds as the {s} of {s} to {s}	{s1}以{s3}的{s2}身份开始将部分非法所得转交给{s4}	agreement-party-list,$office,$name,agreement-party-list	0x1402ac7cb..0x1402ac970; passing to vs other actions under influence
+agreement-title-core	the passing of corruptly-obtained funds by {s} as the {s} of {s} to {s}	{s1}以{s3}的{s2}身份进行的非法所得的转交（交给{s4}）	agreement-party-list,$office,$name,agreement-party-list	0x1402aeedc..0x1402af20b; no space in native embezzlement of/bribery of
+agreement-core	{s} began embezzling funds	{s1}开始挪用资金	agreement-party-list	0x1402ac7cb..0x1402ac970
+agreement-title-core	the embezzlement of{s}	{s1}进行的挪用资金	agreement-party-list	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} began embezzling funds as a {s} of {s}	{s1}以{s3}的{s2}身份开始挪用资金	agreement-party-list,$office,$name	0x1402ac7cb..0x1402ac970
+agreement-title-core	the embezzlement of{s} as a {s} of {s}	{s1}以{s3}的{s2}身份进行的挪用资金	agreement-party-list,$office,$name	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} began embezzling funds as the {s} of {s}	{s1}以{s3}的{s2}身份开始挪用资金	agreement-party-list,$office,$name	0x1402ac7cb..0x1402ac970
+agreement-title-core	the embezzlement of{s} as the {s} of {s}	{s1}以{s3}的{s2}身份进行的挪用资金	agreement-party-list,$office,$name	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} began accepting bribes in exchange for leniency	{s1}开始收受贿赂以换取宽大处理	agreement-party-list	0x1402ac7cb..0x1402ac970
+agreement-title-core	the bribery of{s}	{s1}进行的受贿	agreement-party-list	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} began accepting bribes in exchange for leniency as a {s} of {s}	{s1}以{s3}的{s2}身份开始收受贿赂以换取宽大处理	agreement-party-list,$office,$name	0x1402ac7cb..0x1402ac970
+agreement-title-core	the bribery of{s} as a {s} of {s}	{s1}以{s3}的{s2}身份进行的受贿	agreement-party-list,$office,$name	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} began accepting bribes in exchange for leniency as the {s} of {s}	{s1}以{s3}的{s2}身份开始收受贿赂以换取宽大处理	agreement-party-list,$office,$name	0x1402ac7cb..0x1402ac970
+agreement-title-core	the bribery of{s} as the {s} of {s}	{s1}以{s3}的{s2}身份进行的受贿	agreement-party-list,$office,$name	0x1402aeedc..0x1402af20b; missing native space before participant is intentional
+agreement-core	{s} aided {s} in becoming a permanent part of the living world	{s1}帮助{s2}永远留在生者的世界	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} aided {s} in becoming a permanent part of the living world {s}	{s1}帮助{s2}永远留在生者的世界，{s3}	agreement-party-list,agreement-party-list,$description	0x1402aca3f..0x1402aca79; complete native motive from 0x140b5a6c0
+agreement-core	{s}. The ritual took place in {s}	{s1}。仪式在{s2}举行	agreement-core,$name	0x1402aca88..0x1402acaf0; independent site/item options
+agreement-core	{s}. The ritual took place in {s} using {s}	{s1}。仪式在{s2}举行，使用了{s3}	agreement-core,$name,agreement-item	0x1402aca88..0x1402acaf0; independent site/item options
+agreement-core	{s}. The ritual involved {s}	{s1}。仪式使用了{s2}	agreement-core,agreement-item	0x1402aca88..0x1402acaf0; independent site/item options
+agreement-title-core	the permanent joining by {s} of {s} to the living world	{s1}帮助{s2}永远留在生者世界的仪式	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} agreed to a parley with {s}	{s1}同意与{s2}谈判	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the parley between {s} and {s}	{s1}与{s2}的谈判	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a resident of {s}	{s1}与{s2}达成协议，成为{s3}的居民	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} and become a resident of {s}	{s1}与{s2}达成的居留协议：成为{s3}的居民	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a resident of {s} to study	{s1}与{s2}达成协议，成为{s3}的居民，以便求学	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} to study and become a resident of {s}	{s1}与{s2}达成的居留协议：成为{s3}的居民，以便求学	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a resident of {s} to work as a mercenary	{s1}与{s2}达成协议，成为{s3}的居民，以便从事雇佣兵工作	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} to work as a mercenary and become a resident of {s}	{s1}与{s2}达成的居留协议：成为{s3}的居民，以便从事雇佣兵工作	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a resident of {s} to entertain the citizenry	{s1}与{s2}达成协议，成为{s3}的居民，以便为居民表演	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} to entertain the citizenry and become a resident of {s}	{s1}与{s2}达成的居留协议：成为{s3}的居民，以便为居民表演	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a resident of {s} to eradicate monsters	{s1}与{s2}达成协议，成为{s3}的居民，以便消灭怪物	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} to eradicate monsters and become a resident of {s}	{s1}与{s2}达成的居留协议：成为{s3}的居民，以便消灭怪物	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} made an agreement with {s}, becoming a citizen of {s}	{s1}与{s2}达成协议，成为{s3}的公民	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement between {s} and {s} and become a citizen of {s}	{s1}与{s2}达成的入籍协议：成为{s3}的公民	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s}	{s1}与{s2}同行	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s}	{s1}与{s2}同行	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to help rescue {s}	{s1}与{s2}同行，协助营救{s3}	agreement-party-list,agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to help rescue {s}	{s1}与{s2}同行，协助营救{s3}	agreement-party-list,agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to oust {s} from {s}	{s1}与{s2}同行，将{s3}逐出{s4}	agreement-party-list,agreement-party-list,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to oust {s} from {s}	{s1}与{s2}同行，将{s3}逐出{s4}	agreement-party-list,agreement-party-list,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to entertain the world	{s1}与{s2}同行，为世人表演	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to entertain the world	{s1}与{s2}同行，为世人表演	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to live a life of adventure	{s1}与{s2}同行，过冒险生活	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to live a life of adventure	{s1}与{s2}同行，过冒险生活	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} after being compelled to serve	{s1}与{s2}同行，被迫为其效力	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} in bound service	{s1}与{s2}同行，被迫为其效力	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} as a guide	{s1}与{s2}同行，担任向导	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} as a guide	{s1}与{s2}同行，担任向导	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to find {s}	{s1}与{s2}同行，寻找{s3}	agreement-party-list,agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to find {s}	{s1}与{s2}同行，寻找{s3}	agreement-party-list,agreement-party-list,$unit	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to find {s}	{s1}与{s2}同行，寻找{s3}	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to find {s}	{s1}与{s2}同行，寻找{s3}	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} to {s}	{s1}与{s2}同行，前往{s3}	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} to {s}	{s1}与{s2}同行，前往{s3}	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} joined with {s} in order to be brought to safety	{s1}与{s2}同行，以便被带到安全的地方	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the joining of {s} with {s} in order to be brought to safety	{s1}与{s2}同行，以便被带到安全的地方	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} agreed to establish a grand guildhall for {s}	{s1}同意为{s2}建造大行会大厅	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement by {s} to establish a grand guildhall for {s}	{s1}为{s2}建造大行会大厅的协议	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} agreed to establish a guildhall for {s}	{s1}同意为{s2}建造行会大厅	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement by {s} to establish a guildhall for {s}	{s1}为{s2}建造行会大厅的协议	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} agreed to establish a temple complex for {s}	{s1}同意为{s2}建造神殿建筑群	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement by {s} to establish a temple complex for {s}	{s1}为{s2}建造神殿建筑群的协议	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} agreed to establish a temple for {s}	{s1}同意为{s2}建造神殿	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the agreement by {s} to establish a temple for {s}	{s1}为{s2}建造神殿的协议	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} requested that {s} make an offer of service	{s1}要求{s2}表示愿意效力	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} make an offer of service	{s1}要求{s2}表示愿意效力的请求	agreement-party-list,agreement-party-list	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} requested that {s} make an offer of service to {s}	{s1}要求{s2}向{s3}表示愿意效力	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} make an offer of service to {s}	{s1}要求{s2}向{s3}表示愿意效力的请求	agreement-party-list,agreement-party-list,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} asked that {s} retrieve {s}	{s1}请{s2}取回{s3}	agreement-party-list,agreement-party-list,agreement-item	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} retrieve {s}	{s1}请{s2}取回{s3}的请求	agreement-party-list,agreement-party-list,agreement-item	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} asked that {s} retrieve {s} for {s}	{s1}请{s2}为{s4}取回{s3}	agreement-party-list,agreement-party-list,agreement-item,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} retrieve {s} for {s}	{s1}请{s2}为{s4}取回{s3}的请求	agreement-party-list,agreement-party-list,agreement-item,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} asked that {s} retrieve {s} from {s}	{s1}请{s2}从{s4}处取回{s3}	agreement-party-list,agreement-party-list,agreement-item,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} retrieve {s} from {s}	{s1}请{s2}从{s4}处取回{s3}的请求	agreement-party-list,agreement-party-list,agreement-item,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-core	{s} asked that {s} retrieve {s} from {s} for {s}	{s1}请{s2}为{s5}从{s4}处取回{s3}	agreement-party-list,agreement-party-list,agreement-item,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+agreement-title-core	the request by {s} that {s} retrieve {s} from {s} for {s}	{s1}请{s2}为{s5}从{s4}处取回{s3}的请求	agreement-party-list,agreement-party-list,agreement-item,$name,$name	0x1402aaf70..0x1402ad7eb / 0x1402ad7f0..0x1402afec3
+
+# Squad collision: both complete force descriptions and the complete casualty aftermath.
+historical-event-paragraph	In {s}, {s}.	{s1}，{s2}。	$date,historical-squad-clash	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-event-title	the clash between {s} and {s} in {s}	{s1}与{s2}在{s3}的交战	historical-squad,historical-squad,historical-battle-location	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-event-title	the clash between {s} and {s} in {s} in {s}	{s4}，{s1}与{s2}在{s3}的交战	historical-squad,historical-squad,historical-battle-location,$date	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-squad-clash	{s}	{s1}	historical-squad-clash-core	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-squad-clash	{s}, {s}	{s1}，{s2}	historical-squad-clash-core,historical-clash-outcome	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-squad-clash-core	{s} clashed with {s} in {s}	{s1}与{s2}在{s3}交战	historical-commanded-squad,historical-commanded-squad,historical-battle-location	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-commanded-squad	{s}	{s1}	historical-squad	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-commanded-squad	{s}, brilliantly led by {s},	{s1}（由{s2}率领，指挥出色）	historical-squad,$unit	0x140b6ced8..0x140b6cf91 / 0x140b6d1e2..0x140b6d269
+historical-commanded-squad	{s}, inspiringly led by {s},	{s1}（由{s2}率领，鼓舞了士气）	historical-squad,$unit	0x140b6ced8..0x140b6cf91 / 0x140b6d1e2..0x140b6d269
+historical-commanded-squad	{s}, ably led by {s},	{s1}（由{s2}率领，指挥得当）	historical-squad,$unit	0x140b6ced8..0x140b6cf91 / 0x140b6d1e2..0x140b6d269
+historical-commanded-squad	{s}, led by {s},	{s1}（由{s2}率领）	historical-squad,$unit	0x140b6ced8..0x140b6cf91 / 0x140b6d1e2..0x140b6d269
+historical-commanded-squad	{s}, poorly led by {s},	{s1}（由{s2}率领，指挥不当）	historical-squad,$unit	0x140b6ced8..0x140b6cf91 / 0x140b6d1e2..0x140b6d269
+historical-squad	{s}	{s1}	$unit	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-squad	{s}	{s1}	$name	0x140b6cea9; named squad language_name
+historical-squad	a lone {s}	一只独行的{s1}	historical-military-creature	0x140b6d108; unnamed single combatant
+historical-squad	a single {s}	一只{s1}	historical-military-creature	0x140b6d30a; unnamed single combatant
+historical-squad	{s} {s}	{s1}个{s2}	$number,historical-military-creature	0x140b6d134/0x140b6d339 -> 0x14052e360; creature 0x140b94ed0
+historical-military-creature	{s}	{s1}	$creature	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-military-creature	animated {s}	复活的{s1}	$creature	0x140b6d1a7/0x140b6d3e7; raised-creature flag
+historical-battle-location	unknown lands	未知之地		0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-battle-location	{s}	{s1}	$name	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-battle-location	{s} in {s}	{s2}的{s1}	$name,$name	0x140b6d45b..0x140b6d483; subsite plus site
+historical-clash-outcome	slaying them	全歼对方		0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-clash-outcome	slaying {s}	击杀对方{s1}	$number	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-clash-outcome	dying	自身阵亡		0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-clash-outcome	losing everyone	己方全军覆没		0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-clash-outcome	losing {s}	己方阵亡{s1}	$number	0x140b6cd90..0x140b6d6f8 / 0x140b6d700..0x140b6dcac
+historical-clash-outcome	slaying them and dying	全歼对方，自身阵亡		0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent
+historical-clash-outcome	slaying them and losing everyone	全歼对方，己方全军覆没		0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent
+historical-clash-outcome	slaying them and losing {s}	全歼对方，己方阵亡{s1}	$number	0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent
+historical-clash-outcome	slaying {s} and dying	击杀对方{s1}，自身阵亡	$number	0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent
+historical-clash-outcome	slaying {s} and losing everyone	击杀对方{s1}，己方全军覆没	$number	0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent
+historical-clash-outcome	slaying {s} and losing {s}	击杀对方{s1}，己方阵亡{s2}	$number,$number	0x140b6d4d8..0x140b6d6c9; enemy losses and own losses are independent

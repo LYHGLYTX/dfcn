@@ -1,0 +1,113 @@
+base = "psychology::needs"
+
+[[rulesets]]
+[rulesets.rules]
+"{main}" = "{main}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+# Focus describes attention, not happiness. Do not add duration, frequency,
+# inability to act, or emotional distress absent from the English statement.
+"Overall,{sex} is very focused with satisfied needs{tail}" = "总体而言，{sex}的需求得到满足，因而十分专注{tail}"
+"Overall,{sex} is quite focused with satisfied needs{tail}" = "总体而言，{sex}的需求得到满足，因而相当专注{tail}"
+"Overall,{sex} is somewhat focused with satisfied needs{tail}" = "总体而言，{sex}的需求得到满足，因而较为专注{tail}"
+"Overall,{sex} is badly distracted by unmet needs{tail}" = "总体而言，需求未得到满足，使{sex}严重分心{tail}"
+"Overall,{sex} is distracted by unmet needs{tail}" = "总体而言，需求未得到满足，使{sex}分心{tail}"
+"Overall,{sex} is unfocused by unmet needs{tail}" = "总体而言，需求未得到满足，使{sex}注意力不集中{tail}"
+"Overall,{sex} is untroubled by unmet needs{tail}" = "总体而言，{sex}并不因需求尚未满足而感到困扰{tail}"
+"{sex} is unfettered {things::fulfilled}{tail}" = "{sex}{things::fulfilled}，心无牵挂{tail}"
+"{sex} is level-headed {things::fulfilled}{tail}" = "{sex}{things::fulfilled}，头脑清醒{tail}"
+"{sex} is untroubled {things::fulfilled}{tail}" = "{sex}{things::fulfilled}，心无烦忧{tail}"
+"{sex} is not distracted {things::unfulfilled}{tail}" = "虽然{sex}{things::unfulfilled}，但并未因此分心{tail}"
+"{sex} is unfocused {things::unfulfilled}{tail}" = "{sex}因{things::unfulfilled}而注意力不集中{tail}"
+"{sex} is distracted {things::unfulfilled}{tail}" = "{sex}因{things::unfulfilled}而分心{tail}"
+"{sex} is badly distracted {things::unfulfilled}{tail}" = "{sex}因{things::unfulfilled}而严重分心{tail}"
+
+[[rulesets]]
+name = "things::fulfilled"
+[rulesets.rules]
+"after spending time with people" = "与他人相处后"
+"after drinking" = "饮酒后"
+# Resolve the identity through the shared deity/name vocabulary. A passthrough
+# capture would leave the name untranslated and could swallow the final stop.
+"after communing with {::text::deity}" = "与{::text::deity}交流后"
+"after meditation" = "冥想后"
+"after staying occupied" = "忙碌过后"
+"after admiring art" = "欣赏艺术后"
+"after doing something creative" = "发挥创造力后"
+"after doing something exciting" = "从事刺激的活动后"
+"after learning something" = "学到新知后"
+"after being with family" = "与家人相处后"
+"after being with friends" = "与朋友相处后"
+"after hearing eloquent speech" = "聆听妙语后"
+"after upholding tradition" = "维护传统后"
+"after self-examination" = "自我反省后"
+"after making merry" = "欢庆后"
+"after practicing a craft" = "练习手艺后"
+"after practicing a martial art" = "练习武艺后"
+"after practicing a skill" = "练习技能后"
+"after taking it easy" = "放松休息后"
+"after making romance" = "恋爱后"
+"after seeing animals" = "见到动物后"
+"after seeing a great beast" = "见到巨兽后"
+"after acquiring something" = "获取物品后"
+"after eating a good meal" = "食用品质良好的食物后"
+"after fighting" = "战斗后"
+"after causing trouble" = "惹是生非后"
+"after arguing" = "争论后"
+"after being extravagant" = "享受奢华后"
+"after wandering" = "漫游后"
+"after helping somebody" = "帮助他人后"
+"after thinking abstractly" = "进行抽象思考后"
+
+[[rulesets]]
+name = "things::unfulfilled"
+[rulesets.rules]
+"after being away from people" = "远离他人"
+"after being kept from alcohol" = "无法饮酒"
+"after being unable to pray to {::text::deity}" = "无法向{::text::deity}祷告"
+"after being unable to pray" = "无法祷告"
+"after being unoccupied" = "无事可做"
+"after being unable to admire art" = "无法欣赏艺术"
+"after doing nothing creative" = "没有发挥创造力"
+"after leading an unexciting life" = "生活缺少刺激"
+"after not learning anything" = "没有学到任何东西"
+"after being away from family" = "远离家人"
+"after being away from friends" = "远离朋友"
+"after being unable to hear eloquent speech" = "无法聆听妙语"
+"after being away from traditions" = "脱离传统"
+"after a lack of introspection" = "缺乏自省"
+"after being unable to make merry" = "无法欢庆"
+"after being unable to practice a craft" = "无法练习手艺"
+"after being unable to practice a martial art" = "无法练习武艺"
+"after being unable to practice a skill" = "无法练习技能"
+"after being unable to take it easy" = "无法放松休息"
+"after being unable to make romance" = "无法恋爱"
+"after being away from animals" = "远离动物"
+"after being away from great beasts" = "远离巨兽"
+"after being unable to acquire something" = "无法获取物品"
+"after a lack of decent meals" = "缺少品质良好的食物"
+"after being unable to fight" = "无法战斗"
+"after a lack of trouble-making" = "没有惹是生非"
+"after being unable to argue" = "无法争论"
+"after being unable to be extravagant" = "无法享受奢华"
+"after being unable to wander" = "无法漫游"
+"after being unable to help anybody" = "无法帮助他人"
+"after a lack of abstract thinking" = "缺少抽象思考"
+
+[[rulesets]]
+name = "sex"
+[rulesets.rules]
+" he" = "他"
+" she" = "她"
+" it" = "它"
+"He" = "他"
+"She" = "她"
+"It" = "它"
+
+[[rulesets]]
+name = "tail"
+optional = true
+[rulesets.rules]
+"." = "。"

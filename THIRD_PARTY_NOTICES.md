@@ -1,0 +1,63 @@
+# 项目许可与第三方声明
+
+## 项目许可
+
+DFCN 的原创内容采用知识共享署名—非商业性使用—相同方式共享 4.0 国际许可（CC BY-NC-SA 4.0）。完整条款见根目录 `LICENSE`，官方文本：https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode 。
+
+第三方代码、译文及其他上游资源保留各自许可与署名；本项目许可不替代这些资源的原有许可。下文及各资源随附文件中的许可声明继续适用。
+
+## 第三方翻译数据
+
+`data/runtime/translations.tsv` 除 `data/runtime/local-overrides.tsv` 中的本地修订外，由
+`tools/build_translations.py` 从以下社区汉化数据生成：
+
+1. **DFI18n 简体中文数据**
+   - 项目：https://github.com/DFI18n/dfi18n-data-zh-hans
+   - 导入版本：`2ed0ac42a43375ce1d3d3fcd1403f825be58b3e6`
+   - 本地原始文件：`data/upstream/simple.zh-Hans.csv`
+   - 许可：知识共享署名-非商业性使用 4.0 国际（CC BY-NC 4.0）
+   - 著作权：矮人要塞中文维基翻译组翻译人员
+
+2. **Dwarf Fortress 国际化项目简体中文 objects 数据**
+   - 项目：https://github.com/dfint/translations-backup
+   - 翻译平台：https://app.transifex.com/dwarf-fortress-translation/dwarf-fortress-steam/
+   - 导入版本：`9e5456218e60639157e9735e6590b7a47eb86edb`
+   - 本地原始文件：`data/upstream/objects.zh-Hans.po`
+   - 用途：本体生物 `[DESCRIPTION:]` 简介、名称与形状，以及动植物
+     `[PREFSTRING:]` 偏好特征；偏好专用词义编入 `src/preference_vocabulary.inc`
+   - 译者署名：完整保留在 PO 文件头部；上游备份仓库未附加独立许可文件
+
+3. **dfzh / Dwarf Fortress 中文汉化插件数据**
+   - 项目：https://github.com/wodzys/dwarf-fortress-chinese
+   - 导入版本：`8843701150bc3762df40e1584fe30e33608b976b`
+   - 本地上游输入：`data/upstream/dfzh_dict_exact.csv`、`data/upstream/dfzh_dict_word.csv`
+   - 项目实际使用的规则集：`data/runtime/rulesets/zh-Hans/`，包含本地修订和生成规则
+   - `data/runtime/rulesets/zh-Hans/color.toml` 同时用于生成偏好正文的颜色专用词义
+   - 规则集翻译数据许可：CC BY-NC 4.0
+   - 著作权：矮人要塞中文维基翻译组翻译人员
+
+4. **dfzh C++ 递归规则翻译引擎**
+   - 项目：https://github.com/wodzys/dwarf-fortress-chinese
+   - 导入版本：`8843701150bc3762df40e1584fe30e33608b976b`
+   - 本地文件：`src/rulesets_manager.cpp`、`src/rulesets_manager.h`
+   - 许可：MIT；许可文本见 `third_party/dfzh-rules-engine.LICENSE`
+
+5. **toml++ 3.4.0**
+   - 项目：https://github.com/marzer/tomlplusplus
+   - 导入版本：`30172438cee64926dc41fdd9c11fb3ba5b2ba9de`
+   - 用途：加载社区 TOML 递归规则集
+   - 许可：MIT；许可文本见 `third_party/tomlplusplus/LICENSE`
+
+6. **ECDICT 英汉词典**
+   - 项目：https://github.com/skywind3000/ECDICT
+   - 导入版本：`bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b`
+   - 用途：离线生成 `data/runtime/procedural-terms.tsv`，并为人工复核后的
+     `data/runtime/procedural-word-senses.tsv` 提供初始英汉义项
+   - 许可：MIT；许可文本见 `data/upstream/licenses/ECDICT.LICENSE`
+   - 著作权：Copyright (c) 2025 Linwei
+
+完整许可文本分别保存在 `data/upstream/licenses/dfi18n-data.LICENSE.md` 和
+`data/upstream/licenses/dfzh-data.LICENSE.md`。DFCN 对数据做了格式转换、冲突过滤、数字模板转换、
+RAW 空白归一化和 CP437 屏幕编码转换；本地 dfzh 词表另按项目约定将居民管理
+功能 Burrows 统一为“活动区”，并将 Zones 弹窗标题修订为“区域”。
+未改变这些翻译数据的许可条件。

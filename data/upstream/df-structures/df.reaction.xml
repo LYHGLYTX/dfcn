@@ -1,0 +1,258 @@
+<data-definition>
+    <bitfield-type type-name='reaction_reagent_flags' original-name='reaction_reagent_flag'> bay12: REACTION_REAGENT_FLAG_*
+        <flag-bit name='PRESERVE_REAGENT' original-name='PRESERVE'/>
+        <flag-bit name='IN_CONTAINER' original-name='DO_NOT_CHECK_DIRECTLY'/>
+        <flag-bit name='DOES_NOT_DETERMINE_PRODUCT_AMOUNT'/>
+    </bitfield-type>
+
+    <enum-type type-name='reaction_reagent_type' base-type='int32_t'> bay12: ReactionReagentType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='item' original-name='ITEM'/>
+    </enum-type>
+
+    <class-type type-name='reaction_reagent' original-name='reaction_reagentst'>
+        <stl-string name="code" original-name='token'/>
+
+        <code-helper name='describe'>$.code</code-helper>
+
+        <int32_t name='quantity' original-name='number_required'/>
+
+        <bitfield type-name='reaction_reagent_flags' name="flags" original-name='flag'/>
+
+        <virtual-methods>
+            <vmethod ret-type='reaction_reagent_type' name='getType' original-name='reagent_type'/>
+            <vmethod ret-type='bool' name='have_enough_from_precalc_info'>
+                <pointer type-name='building' name='bld'/>
+                <pointer name='boulder_count'><stl-vector type-name='int32_t'/></pointer>
+                <pointer name='ore_count'><stl-vector type-name='int32_t'/></pointer>
+                <pointer name='rclass'><stl-vector pointer-type='stl-string'/></pointer>
+                <pointer name='class_count'><stl-vector type-name='int32_t'/></pointer>
+                <int32_t name='overall_reaction_index'/>
+            </vmethod>
+            <vmethod is-destructor='true'/>
+            <vmethod name='resolveTokens' original-name='finalize'>
+                <int32_t name='reaction_index'/>
+            </vmethod>
+            <vmethod name='contribute_to_job_req'><pointer type-name='job_reqst' name='jbr'/><int32_t name='reagent_index'/><int32_t name='reaction_index'/></vmethod>
+
+            <vmethod ret-type='bool' name='matchesRoot' original-name='item_match'>
+                <pointer type-name='item' name='it'/>
+                <int32_t name='overall_reaction_index' ref-target='reaction'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='matchesChild' original-name='contained_item_match'>
+                <pointer type-name='item' name='it'/>
+                <pointer type-name='reaction' name='rct'/>
+                <int32_t name='contains_reaction_index' ref-target='reaction'/>
+            </vmethod>
+            <vmethod name='getDescription' original-name='get_name'>
+                <pointer type-name='stl-string' name='str'/>
+                <int32_t name='overall_reaction_index' ref-target='reaction'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='isLyeBearing' original-name='use_internal_potashables'/>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='reaction_reagent_itemst' inherits-from='reaction_reagent'>
+        <enum base-type='int16_t' type-name='item_type' name='item_type' original-name='type'/>
+        <int16_t name='item_subtype' original-name='subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+        <int16_t name='mat_type' original-name='subcat1' ref-target='material' aux-value='$$.mat_index' init-value='-1'/>
+        <int16_t name='mat_index' original-name='subcat2' init-value='-1'/>
+
+        <stl-string name='reaction_class' original-name='class_token'/>
+        <stl-string name='has_material_reaction_product' original-name='reaction_product_class'/>
+
+        <bitfield type-name='job_item_flags1' name='flags1' original-name='itemneeded_flag'/>
+        <bitfield type-name='job_item_flags2' name='flags2' original-name='itemneeded_flag2'/>
+        <bitfield type-name='job_item_flags3' name='flags3' original-name='itemneeded_flag3'/>
+        <uint32_t name='flags4' original-name='itemneeded_flag4'/>
+        <uint32_t name='flags5' original-name='itemneeded_flag5'/>
+
+        <int32_t name='metal_ore' ref-target='inorganic_raw'/>
+        <int32_t name='min_dimension' original-name='min_dimension_taken'/>
+
+        <stl-vector type-name='int32_t' name='contains' original-name='contains_reagent_index'/>
+
+        <enum type-name='tool_uses' name='has_tool_use' original-name='tool_use'/>
+        <int32_t name='dye_color' ref-target='descriptor_color'/>
+
+        <static-array type-name='stl-string' name='item_str' original-name='item_string_1' count='2'/> not an array
+        <static-array type-name='stl-string' name='material_str' original-name='item_string_3' count='3'/> not an array
+        <stl-string name='metal_ore_str' original-name='metal_ore_string'/>
+        <stl-vector pointer-type='stl-string' name='contains_str' original-name='contains_reagent_token'/>
+    </class-type>
+
+    <enum-type type-name='reaction_product_type' base-type='int32_t'> bay12: ReactionProductType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='item' original-name='ITEM'/>
+        <enum-item name='improvement' original-name='ITEM_IMPROVEMENT'/>
+    </enum-type>
+
+    <class-type type-name='reaction_product' original-name='reaction_productst'>
+        <stl-string name='product_token' original-name='token' since='v0.42.01'/>
+        <stl-string name="product_to_container" original-name='product_to_container_token'/>
+
+        <virtual-methods>
+            <vmethod ret-type='reaction_product_type' name='getType' original-name='product_type'/>
+            <vmethod name='resolveTokens' original-name='finalize'>
+                <int32_t name='reaction_index'/>
+            </vmethod>
+            <vmethod name='produce' original-name='make_product'>
+                <pointer type-name='unit' name='mover'/>
+                <pointer name='itv_product'><stl-vector pointer-type='reaction_product'/></pointer>
+                <pointer name='itv'><stl-vector pointer-type='item'/></pointer>
+                <pointer name='used_reagent'><stl-vector pointer-type='reaction_reagent'/></pointer>
+                <pointer name='used_it'><stl-vector pointer-type='item'/></pointer>
+                <int32_t name='multiplier'/>
+                <enum type-name='job_skill' name='sk'/>
+                <int32_t name='roll' comment='gets +10 for matching preferences, uses cutoffs 23/30/35/45/55 for Well/Fine/Superior/Exceptional/Masterwork'/>
+                <pointer type-name='historical_entity' name='civ'/>
+                <pointer type-name='world_site' name='st'/>
+                <pointer name='improved_i' comment='only used when making improvements'><stl-vector pointer-type='item'/></pointer>
+            </vmethod>
+            <vmethod name='getDescription' original-name='get_name' comment='used in Adventurer mode reactions?'>
+                <pointer type-name='stl-string' name='str'/>
+            </vmethod>
+            <vmethod is-destructor='true'/>
+        </virtual-methods>
+    </class-type>
+
+    <enum-type type-name='reaction_product_item_flags' original-name='reaction_product_item_flag_type'> bay12: ReactionProductItemFlagType
+        <enum-item name='GET_MATERIAL_SAME' original-name='USE_REAGENT_MATERIAL'/>
+        <enum-item name='GET_MATERIAL_PRODUCT' original-name='USE_REACTION_PRODUCT_CLASS'/>
+        <enum-item name='FORCE_EDGE'/>
+        <enum-item name='PASTE' original-name='PRODUCT_PASTE'/>
+        <enum-item name='PRESSED' original-name='PRODUCT_PRESSED'/>
+        <enum-item name='CRAFTS'/>
+        <enum-item name='USE_FULL_REACTION_PRODUCT_CLASS'/>
+        <enum-item name='USE_REAGENT_ITEM'/>
+        <enum-item name='TRANSFER_ARTIFACT_STATUS'/>
+    </enum-type>
+
+    <class-type type-name='reaction_product_itemst' inherits-from='reaction_product'>
+        <enum base-type='int16_t' type-name='item_type' name='item_type' original-name='type'/>
+        <int16_t name='item_subtype' original-name='subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+        <int16_t name='mat_type' original-name='subcat1' ref-target='material' aux-value='$$.mat_index' init-value='-1'/>
+        <int32_t name='mat_index' original-name='subcat2' init-value='-1'/>
+
+        <int16_t name='probability' original-name='chance'/>
+        <int16_t name='count' original-name='number'/>
+        <int32_t name='product_dimension'/>
+
+        <df-flagarray name='flags' original-name='flag' index-enum='reaction_product_item_flags'/>
+
+        <compound name='get_material'> not a compound
+            <stl-string name='reagent_code' original-name='mat_source_reagent_token'/>
+            <stl-string name='product_code' original-name='mat_source_reaction_product_class'/>
+        </compound>
+
+        <static-array type-name='stl-string' name='item_str' original-name='item_string_1' count='2'/> not an array
+        <static-array type-name='stl-string' name='material_str' original-name='item_string_3' count='3'/> not an array
+    </class-type>
+
+    <enum-type type-name='reaction_product_improvement_flags' original-name='reaction_product_item_improvement_flag_type'> bay12: ReactionProductItemImprovementFlagType
+        <enum-item name='GET_MATERIAL_SAME' original-name='USE_REAGENT_MATERIAL'/>
+        <enum-item name='GET_MATERIAL_PRODUCT' original-name='USE_REACTION_PRODUCT_CLASS'/>
+        <enum-item name='GLAZED'/>
+    </enum-type>
+
+    <class-type type-name='reaction_product_item_improvementst' inherits-from='reaction_product'>
+        <stl-string name="target_reagent" original-name='target_token'/>
+
+        <enum type-name='improvement_type' name='improvement_type'/>
+        <enum base-type='int32_t' type-name='itemimprovement_specific_type' name='improvement_specific_type' original-name='spectype'/>
+
+        <int16_t name='mat_type' original-name='subcat1' ref-target='material' aux-value='$$.mat_index' init-value='-1'/>
+        <int32_t name='mat_index' original-name='subcat2' init-value='-1'/>
+
+        <int16_t name='probability' original-name='chance'/>
+
+        <df-flagarray name='flags' original-name='flag' index-enum='reaction_product_improvement_flags'/>
+
+        <compound name='get_material'> not a compound
+            <stl-string name='reagent_code' original-name='mat_source_reagent_token'/>
+            <stl-string name='product_code' original-name='mat_source_reaction_product_class'/>
+        </compound>
+        <stl-string name='part_token'/>
+
+        <static-array type-name='stl-string' name='material_str' original-name='mat_string_1' count='3'/> not an array
+    </class-type>
+
+    <struct-type type-name='reaction_description' original-name='reaction_description_elementst'>
+        <stl-string name='text'/>
+        <enum type-name='item_type' name='item_type'/>
+        <stl-string name='item_token'/>
+    </struct-type>
+
+    <enum-type type-name='reaction_flags' original-name='reaction_flag_type'> bay12: ReactionFlagType
+        <enum-item name='FUEL'/>
+        <enum-item name='AUTOMATIC'/>
+        <enum-item name='ADVENTURE_MODE_ENABLED'/>
+        <enum-item name='GENERATED'/>
+        <enum-item name='FORTRESS_MODE_ENABLED'/>
+        <enum-item name='WORLDGEN_ENABLED'/>
+    </enum-type>
+
+    <struct-type type-name='reaction' original-name='reactionst'
+                instance-vector='$global.world.raws.reactions.reactions'>
+        <stl-string name="code" original-name='token'/>
+        <code-helper name='describe'>$.code</code-helper>
+
+        <stl-string name="name"/>
+        <df-flagarray name='flags' original-name='flag' index-enum='reaction_flags'/>
+        <stl-vector pointer-type='reaction_reagent' name="reagents" original-name='reagent'/>
+        <stl-vector pointer-type='reaction_product' name="products" original-name='product'/>
+        <enum type-name='job_skill' name='skill'/>
+        <int32_t name='max_multiplier' init-value='-1' since='v0.42.01'/>
+
+        <compound name='building'> not a compound
+            <stl-vector pointer-type='stl-string' name='token' original-name='building_token'/>
+            <stl-vector type-name='interface_key' name='temp_job_key' original-name='building_temp_job_key'/>
+
+            <stl-vector name='type' original-name='building_type'>
+                <enum base-type='int32_t' type-name='building_type'/>
+            </stl-vector>
+            <stl-vector type-name='int32_t' name='subtype' original-name='building_subtype'/>
+            <stl-vector type-name='int32_t' name='custom' original-name='building_custom_id'/>
+            <stl-vector type-name='interface_key' name='hotkey' original-name='building_job_key'/>
+        </compound>
+
+        <int32_t name="index"/>
+
+        <int32_t name="source_hfid" ref-target='historical_figure' since='v0.42.01'/>
+        <int32_t name="source_enid" ref-target='historical_entity' since='v0.42.01'/>
+
+        <stl-vector pointer-type='stl-string' name="raw_strings" original-name='current_definition' since='v0.42.01'/>
+
+        <stl-string name="category" original-name='category_token' since='v0.42.01'/>
+
+        <stl-vector pointer-type='reaction_description' name="descriptions" original-name='description_element' since='v0.42.01'/>
+
+        <int32_t name='rand_range' original-name='randrange' since='v0.47.02' init-value='11'/>
+        <int32_t name='skill_mult' since='v0.47.02' init-value='5'/>
+        <int32_t name='attr_gain' original-name='att_ip' since='v0.47.02' init-value='10'/>
+        <int32_t name='exp_gain' original-name='skill_ip' since='v0.47.02' init-value='30'/>
+    </struct-type>
+
+    <struct-type type-name='reaction_category' original-name='custom_reaction_categoryst'>
+        <stl-string name='id' original-name='token'/>
+        <stl-string name='parent' original-name='parent_token'/>
+        <stl-string name='name'/>
+        <enum type-name='interface_key' name='key'/>
+        <stl-string name='description'/>
+    </struct-type>
+
+    -- Unused: reaction_handling_informationst
+
+    <struct-type type-name='reaction_handlerst'>
+        <stl-vector pointer-type='reaction' name='reactions' original-name='reaction'/>
+
+        <stl-vector pointer-type='reaction_category' name='reaction_categories' original-name='custom_category'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

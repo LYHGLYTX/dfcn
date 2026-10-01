@@ -1,0 +1,38 @@
+base = "materials"
+
+[[rulesets]]
+[rulesets.rules]
+"{^prefix}{state}" = "{^prefix}{state}"
+# Native job material categories (for example ivory/tooth and pearl) are
+# also used by complete gem/item names. Keep their established vocabulary
+# in data/runtime/rulesets/zh-Hans/materials/job.toml and make it reachable from the shared material noun entry.
+"{job}" = "{job}"
+# Native fallback in the map track/item constructors (0x407d49,
+# 0xca0477 and storage-item methods); still a complete material noun.
+"unknown material" = "未知物质"
+
+# The finished-item material callback is a real namespace dependency, just
+# like items::storage_container. Declare it so references are loadable; its
+# only implementation is the shared native qualifier resolver, not a second
+# adjective grammar or a wildcard fallback.
+[[rulesets]]
+name = "item_qualifier"
+
+# Native liquid/glob captions use an arbitrary-length list of complete
+# material nouns. The typed resolver preserves each material as one unit.
+[[rulesets]]
+name = "list"
+
+[[rulesets]]
+name = "^prefix"
+optional = true
+[rulesets.rules]
+"{::plants::name::singular} " = "{::plants::name::singular}"
+"{::creatures::name::singular} " = "{::creatures::name::singular}"
+"{::creatures::name::singular}'s " = "{::creatures::name::singular}"
+
+[[rulesets]]
+name = "adjective"
+[rulesets.rules]
+"{^prefix}{state::adjective}" = "{^prefix}{state::adjective}"
+"{job::adjective}" = "{job::adjective}"

@@ -1,0 +1,203 @@
+# Shared native world, craft, social and environment announcements.
+# Complete records and actual constructors are paired in data/extracted/announcement-world-sources.tsv.
+You flinch.	你畏缩了一下。
+{n} flinches.	{n}畏缩了一下。
+You are unperturbed.	你不为所动。
+{n} appears unperturbed.	{n}看上去毫不在意。
+That was compelling!	这番话很有说服力！
+{n} appears to acquiesce.	{n}似乎默认了。
+It is not convincing.	这番话不够有说服力。
+{n} appears unconvinced.	{n}似乎还不信服。
+{n} spits out {s}.	{n}吐出了{s}。
+{n} drops {s}.	{n}放下了{s}。
+You have become enraged!	你暴怒了！
+{n} has become enraged!	{n}暴怒了！
+{n} stops and pays attention to you.	{n}停了下来，把注意力转向你。
+{n} has revealed the presence of {n} to {n}.	{n1}向{n3}透露了{n2}的存在。
+{n} has assumed the position of {s} of {e}.	{n}就任了{e}的{s}。
+{n} has assumed the position of {s}.	{n}就任了{s}。
+After a polite discussion with local rivals, {n} has claimed the position of {s} of {e}.	与当地的几位竞争者客气地商谈后，{n}取得了{e}的{s}之位。
+After a polite discussion with a local rival, {n} has claimed the position of {s} of {e}.	与当地的一位竞争者客气地商谈后，{n}取得了{e}的{s}之位。
+A {s} sculpture has melted!	一座{s}雕塑熔化了！
+Digging designation cancelled: warm stone located.	挖掘指定已取消：发现温热的岩石。
+Digging designation cancelled: damp stone located.	挖掘指定已取消：发现潮湿的岩石。
+{s} have hatched.	{s}孵化了。
+You've caught a {s}!	你捕获了一只{s}！
+Your trap was robbed of the {s}!	你陷阱中的{s}被偷走了！
+{n} has constructed a masterpiece!	{n}建造出了一件杰作！
+A masterwork of {n} has been lost!	{n}的一件杰作遗失了！
+Tribute is being unloaded.  (A report is available.)	正在卸下贡品。（可查看报告。）
+Merchants have arrived and are unloading their goods.	商人已经到达，正在卸货。
+A trade depot is requiered for the delivery of the tribute.	运送贡品需要贸易站。
+The merchants need a trade depot to unload their goods.	商人需要贸易站才能卸下货物。
+{n} has adopted {n}.	{n1}收养了{n2}。
+Something has pulled a lever!	有什么东西拉动了拉杆！
+Something has triggered a pressure plate!	有什么东西触发了压力板！
+Something has emptied a cage!	有什么东西清空了笼子！
+Something has unchained a creature!	有什么东西解开了一只生物的锁链！
+A kidnapper has made off with {n}!	{n}被绑匪掳走了！
+{n} has stolen {s}!	{n}偷走了{s}！
+A thief has stolen {s}!	小偷偷走了{s}！
+You have created a masterpiece {s}!	你制作出了一件杰作级的{s}！
+{n} has created a masterpiece {s}!	{n}制作出了一件杰作级的{s}！
+{n} begins to stalk and brood...	{n}阴着脸来回踱步，陷入了沉思……
+{n} looses a roaring laughter, fell and terrible!	{n}放声狂笑，笑声凶恶骇人！
+{n} has been possessed!	{n}被附身了！
+{n} withdraws from society...	{n}开始远离人群……
+{n} is taken by a fey mood!	{n}陷入了神秘的情绪！
+The world has passed into {e}.	世界已进入{e1}。
+{n} has claimed a {s}.	{n}占据了一座{s}。
+{n} has begun a mysterious construction!	{n}动手制作起了什么神秘的东西！
+{n} push past you, interrupting your action.	{n}从你身旁挤过，打断了你的动作。
+{n} pushes past you, interrupting your action.	{n}从你身旁挤过，打断了你的动作。
+{n} has dyed a masterpiece!	{n}染出了一件杰作！
+{n} has cooked a masterpiece!	{n}烹饪出了一道杰作！
+You chop down the {s}.	你砍倒了{s}。
+{s} toppled by {n}.	{s}被{n}推倒了。
+{s} destroyed by {n}.	{s}被{n}摧毁了。
+Winter is upon you.	冬季来临了。
+Winter has arrived on the calendar.	按历法，已到冬季。
+The dry season has come.	旱季来临了。
+Autumn has come.	秋季来临了。
+Autumn has arrived on the calendar.	按历法，已到秋季。
+It is now summer.	现在是夏季了。
+Summer has arrived on the calendar.	按历法，已到夏季。
+The wet season has arrived!	雨季来临了！
+Spring has arrived!	春季来临了！
+Spring has arrived on the calendar.	按历法，已到春季。
+You have improved {s} masterfully!	你对{s}的装饰达到了杰作水平！
+{n} has improved {s} masterfully!	{n}对{s}的装饰达到了杰作水平！
+Something has collapsed on the surface!	地表有什么东西坍塌了！
+A section of the cavern has collapsed!	洞穴的一部分坍塌了！
+{n} has engraved a masterpiece!	{n}刻出了一件杰作！
+{n} and {n} have married.  Congratulations!	{n1}和{n2}结婚了。恭喜！
+{n} is brawling under the influence!	{n}喝醉了，正在斗殴！
+The glowing barrier has disappeared, replaced by terrible shrieks from the underworld!	发光的屏障消失了，地下世界随即传来可怕的尖叫声！
+The glowing barrier has disappeared!	发光的屏障消失了！
+Deep within this strange place, we've uncovered what must be a treasure of the gods!	我们在这片奇异之地的深处发现了宝藏——这一定是诸神的宝藏！
+We checked that stone for heat!  What devilry is this?!	我们明明检查过那块石头的温度！这是什么邪术？！
+Some ancient horror was encased here, until now!	这里原来封着某种远古的恐怖之物，如今封印破了！
+Apocalypse!  We are being judged by the gods!	末日降临了！诸神正在审判我们！
+Something evil is emerging from this newly exposed pocket!	有什么邪恶之物正从这片新露出的空腔中涌出！
+We have unleashed the echo of a forgotten divine retribution!	那场早已被遗忘的神罚，余威竟被我们释放出来了！
+Horrifying screams come from the darkness below!	下方的黑暗中传来了骇人的尖叫！
+{n} has arrived.	{n}已经到达。
+{n} is visiting.	{n}来访了。
+{e}, the performance troupe, has arrived.	演出团{e}已经到达。
+{e}, a performance troupe, is visiting.	演出团{e}来访了。
+{n} has brought back many tales from beyond {e}.	{n}带回了许多故事，讲的都是{e}以外的见闻。
+{n} has brought back a few rumors.	{n}带回了几则传闻。
+{n} has brought back a rumor from abroad.	{n}带回了一则来自外地的传闻。
+The {s} of {e} has been founded {s} and incorporated into your holdings.	{s1}{e}已建于{s2}，并入了你的领地。
+The {s} of {e}, {s}, has been conquered and incorporated into your holdings.	位于{s2}的{s1}{e}已被征服，并入了你的领地。
+The {s} of {e}, {s}, has been incorporated into your holdings.	位于{s2}的{s1}{e}已并入你的领地。
+The {s} of {e} has been founded {s} and looks to your thriving economy for its future prosperity.	{s1}{e}已建于{s2}，期盼你的繁荣经济带动它发展。
+The {s} of {e}, {s}, has been conquered and now looks to your thriving economy for its future prosperity.	位于{s2}的{s1}{e}已被征服，如今期盼你的繁荣经济带动它发展。
+The {s} of {e}, {s}, looks to your thriving economy for its future prosperity.	位于{s2}的{s1}{e}将未来的繁荣寄望于你蓬勃发展的经济。
+The {s} of {e} are now expert {s} trainers.	{e}的{s1}如今已成为驯养{s2}的专家。
+The {s} of {e} are now quite knowledgeable {s} training methods.	{e}的{s1}已相当熟悉{s2}的驯养方法。
+The {s} of {e} have attained a general familiarity with {s} training methods.	{e}的{s1}已大致掌握{s2}的驯养方法。
+The {s} of {e} now know a few facts about {s} training.	{e}的{s1}对驯养{s2}有了一点了解。
+An animal has become a {s}.	一只动物成为了{s}。
+{p} has become a {s}.	{p}成为了{s}。
+{e} and the surrounding lands have been made an official land of the realm.	{e}及其周边地区已被正式纳入王国领土。
+{e} and the surrounding lands have been made an even more official land of the realm.	{e}及其周边地区在王国中的领土地位进一步提升。
+{e} and the surrounding lands have been made {s}.	{e}及其周边地区已成为{s}。
+{s} has been disturbed.	{s}受到了惊扰。
+A group of {s} has been disturbed.	一群{s}受到了惊扰。
+A swarm of {s} has been disturbed.	一大群{s}受到了惊扰。
+Many {s} have been disturbed.	许多{s}受到了惊扰。
+Your mason has defaced a {p}!	你的石匠毁坏了一件{p}的作品！
+Your engraver has carved a track through a {p}!	你的雕刻师开凿的轨道穿过了一件{p}的作品！
+The impertinent magma has defaced a {p}!	不安分的岩浆毁了{p}的一件作品！
+The falling debris has defaced a {p}!	坠落的碎片毁坏了一件{p}的作品！
+The impertinent vegetation has defaced a {p}!	胡乱生长的植被毁了{p}的一件作品！
+A careless farmer has defaced a {p}!	一位粗心的农夫毁坏了一件{p}的作品！
+A foolish builder defaced a {p}!	一位愚蠢的建筑工毁坏了一件{p}的作品！
+The dead walk.  Hide while you still can!	死者又走动起来了。趁还来得及，快躲起来！
+Forms twisted from their nature, legion of the night.  What hope remains?	万物扭曲变形，化作暗夜大军。我们还能指望什么？
+A vile force of darkness has arrived, seeking a parley!	一支邪恶的黑暗势力已经到来，要求谈判！
+The enemy have come and are preparing to lay siege.  They seek a parley!	敌军已到达，正在准备围城。他们要求谈判！
+An army has come to your lands seeking a parley.	一支军队来到了你的领地，要求谈判。
+A vile force of darkness has arrived!	一支邪恶的黑暗势力已经到来！
+The enemy have come and are laying siege to the fortress.	敌军已经到达，正在围攻要塞。
+An army is invading!	一支军队正在入侵！
+{n} has returned.	{n}回来了。
+{n} has returned.  {v}	{n}回来了。{v}
+{n} have returned.	{n}回来了。
+{n} have returned.  {v}	{n}回来了。{v}
+{n} and others have returned.	{n}等人回来了。
+{n} and others have returned.  {v}	{n}等人回来了。{v}
+{e} have returned.	{e}回来了。
+{e} have returned.  {v}	{e}回来了。{v}
+{e} and others have returned.	{e}等人回来了。
+{e} and others have returned.  {v}	{e}等人回来了。{v}
+The army is commanded by {n}.	这支军队由{n}指挥。
+The army is commanded by {n}.  {v}	这支军队由{n}指挥。{v}
+The army is commanded by {n}, a true warrior.	这支军队的统领是{n}，是一位真正的勇士。
+The army is commanded by {n}, a true warrior.  {v}	这支军队的统领是{n}，是一位真正的勇士。{v}
+The army is commanded by {n}, a skilled warrior.	这支军队的统领是{n}，是一位武艺高强的战士。
+The army is commanded by {n}, a skilled warrior.  {v}	这支军队的统领是{n}，是一位武艺高强的战士。{v}
+The army is commanded by {n}, a middling warrior.	这支军队的统领是{n}，是一位武艺平平的战士。
+The army is commanded by {n}, a middling warrior.  {v}	这支军队的统领是{n}，是一位武艺平平的战士。{v}
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time.	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界。
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time.  {v}	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界。{v}
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and true warrior.	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位真正的勇士。
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and true warrior.  {v}	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位真正的勇士。{v}
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and skilled warrior.	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位武艺高强的战士。
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and skilled warrior.  {v}	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位武艺高强的战士。{v}
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and middling warrior.	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位武艺平平的战士。
+The army is commanded by {n}, an ancient and horrible demon escaped from the underworld before the dawn of time and middling warrior.  {v}	{n}统领着这支军队。这远古恶魔恐怖至极，早在时间诞生之前就逃出了地下世界，还是一位武艺平平的战士。{v}
+The army is commanded by {n}, a talented commander.	这支军队的统领是{n}，是一位才华出众的统帅。
+The army is commanded by {n}, a talented commander.  {v}	这支军队的统领是{n}，是一位才华出众的统帅。{v}
+The army is commanded by {n}, a talented commander and true warrior.	这支军队的统领是{n}，是一位才华出众的统帅，也是真正的勇士。
+The army is commanded by {n}, a talented commander and true warrior.  {v}	这支军队的统领是{n}，是一位才华出众的统帅，也是真正的勇士。{v}
+The army is commanded by {n}, a talented commander and skilled warrior.	这支军队的统领是{n}，是一位才华出众的统帅，也是武艺高强的战士。
+The army is commanded by {n}, a talented commander and skilled warrior.  {v}	这支军队的统领是{n}，是一位才华出众的统帅，也是武艺高强的战士。{v}
+The army is commanded by {n}, a talented commander and middling warrior.	这支军队的统领是{n}，是一位才华出众的统帅，也是武艺平平的战士。
+The army is commanded by {n}, a talented commander and middling warrior.  {v}	这支军队的统领是{n}，是一位才华出众的统帅，也是武艺平平的战士。{v}
+The army is commanded by {n}, a seasoned commander.	这支军队的统领是{n}，是一位久经沙场的统帅。
+The army is commanded by {n}, a seasoned commander.  {v}	这支军队的统领是{n}，是一位久经沙场的统帅。{v}
+The army is commanded by {n}, a seasoned commander and true warrior.	这支军队的统领是{n}，是一位久经沙场的统帅，也是真正的勇士。
+The army is commanded by {n}, a seasoned commander and true warrior.  {v}	这支军队的统领是{n}，是一位久经沙场的统帅，也是真正的勇士。{v}
+The army is commanded by {n}, a seasoned commander and skilled warrior.	这支军队的统领是{n}，是一位久经沙场的统帅，也是武艺高强的战士。
+The army is commanded by {n}, a seasoned commander and skilled warrior.  {v}	这支军队的统领是{n}，是一位久经沙场的统帅，也是武艺高强的战士。{v}
+The army is commanded by {n}, a seasoned commander and middling warrior.	这支军队的统领是{n}，是一位久经沙场的统帅，也是武艺平平的战士。
+The army is commanded by {n}, a seasoned commander and middling warrior.  {v}	这支军队的统领是{n}，是一位久经沙场的统帅，也是武艺平平的战士。{v}
+The army is commanded by {n}, a competent commander.	这支军队的统领是{n}，是一位称职的统帅。
+The army is commanded by {n}, a competent commander.  {v}	这支军队的统领是{n}，是一位称职的统帅。{v}
+The army is commanded by {n}, a competent commander and true warrior.	这支军队的统领是{n}，是一位称职的统帅，也是真正的勇士。
+The army is commanded by {n}, a competent commander and true warrior.  {v}	这支军队的统领是{n}，是一位称职的统帅，也是真正的勇士。{v}
+The army is commanded by {n}, a competent commander and skilled warrior.	这支军队的统领是{n}，是一位称职的统帅，也是武艺高强的战士。
+The army is commanded by {n}, a competent commander and skilled warrior.  {v}	这支军队的统领是{n}，是一位称职的统帅，也是武艺高强的战士。{v}
+The army is commanded by {n}, a competent commander and middling warrior.	这支军队的统领是{n}，是一位称职的统帅，也是武艺平平的战士。
+The army is commanded by {n}, a competent commander and middling warrior.  {v}	这支军队的统领是{n}，是一位称职的统帅，也是武艺平平的战士。{v}
+Beware their {s}!	小心他们的{s}！
+Beware their mounted {s}!	小心他们的{s}骑兵！
+Beware their elite {s}!	小心他们那些精锐{s}！
+Beware their elite mounted {s}!	小心他们那些精锐{s}骑兵！
+Beware their skilled {s}!	小心他们那些训练有素的{s}！
+Beware their skilled mounted {s}!	小心他们那些训练有素的{s}骑兵！
+Beware their heavily-armored {s}!	小心他们那些身披重甲的{s}！
+Beware their heavily-armored mounted {s}!	小心他们那些身披重甲的{s}骑兵！
+Beware their heavily-armored elite {s}!	小心他们那些身披重甲的精锐{s}！
+Beware their heavily-armored elite mounted {s}!	小心他们那些身披重甲的精锐{s}骑兵！
+Beware their heavily-armored skilled {s}!	小心他们那些身披重甲、训练有素的{s}！
+Beware their heavily-armored skilled mounted {s}!	小心他们那些身披重甲、训练有素的{s}骑兵！
+Beware their armored {s}!	小心他们那些身穿盔甲的{s}！
+Beware their armored mounted {s}!	小心他们那些身穿盔甲的{s}骑兵！
+Beware their armored elite {s}!	小心他们那些身穿盔甲的精锐{s}！
+Beware their armored elite mounted {s}!	小心他们那些身穿盔甲的精锐{s}骑兵！
+Beware their armored skilled {s}!	小心他们那些身穿盔甲、训练有素的{s}！
+Beware their armored skilled mounted {s}!	小心他们那些身穿盔甲、训练有素的{s}骑兵！
+With them comes a {s}!	一只{s}也随军而来！
+With them comes a {s} from the {s} of {e}!	随军而来的还有一只{s1}，来自{e}的{s2}！
+With them come {s}!	{s}也随军而来！
+With them come {s} from the {s} of {e}!	随军而来的还有{s1}，来自{e}的{s2}！
+With them come monstrous siege engineers!	可怕的攻城巨兽也随军而来！
+With them come monstrous siege engineers from the {s} of {e}!	随军而来的还有可怕的攻城巨兽，来自{e}的{s}！
+With them come monstrous siege engineers and a {s}!	可怕的攻城巨兽和一只{s}也随军而来！
+With them come monstrous siege engineers and a {s} from the {s} of {e}!	随军而来的还有可怕的攻城巨兽和一只{s1}，来自{e}的{s2}！
+With them come monstrous siege engineers and {s}!	可怕的攻城巨兽和{s}也随军而来！
+With them come monstrous siege engineers and {s} from the {s} of {e}!	随军而来的还有可怕的攻城巨兽和{s1}，来自{e}的{s2}！
+The impertinent lava has defaced a {p}!	不安分的熔岩毁了{p}的一件作品！

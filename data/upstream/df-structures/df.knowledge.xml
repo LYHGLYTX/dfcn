@@ -1,0 +1,15 @@
+<data-definition>
+    <struct-type type-name='knowledgest'>
+        <stl-vector type-name='bool' name='discovered_creature_foods' original-name='tasted_race' index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='discovered_creatures' original-name='seen_race' index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='discovered_plant_foods' original-name='tasted_plant' index-refers-to='(find-plant-raw $)'/>
+        <stl-vector type-name='bool' name='discovered_plants' original-name='seen_plant' index-refers-to='(find-plant-raw $)' comment='allows planting of seeds'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

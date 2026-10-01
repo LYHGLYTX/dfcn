@@ -1,0 +1,28 @@
+<data-definition>
+    <struct-type type-name='schedule_slot' original-name='schedule_elementst'>
+        <enum base-type='int16_t' type-name='schedule_type' name='type'/>
+        <int16_t name='start_time' original-name='min_hour'/>
+        <int16_t name='end_time' original-name='max_hour'/>
+        <int16_t name='priority'/>
+        <int8_t name='processed' original-name='done'/>
+    </struct-type>
+
+    <struct-type type-name='schedule_info' original-name='schedulest' key-field='id' instance-vector='$global.world.schedules.all'>
+        <int32_t name='id' original-name='global_id'/>
+        <int16_t name='ax'/>
+        <stl-vector pointer-type='schedule_slot' name='slots' original-name='element'/>
+    </struct-type>
+
+    <struct-type type-name='schedule_handlerst'>
+        <stl-vector pointer-type='schedule_info' name='all' original-name='play' />
+
+        <stl-vector pointer-type='schedule_info' name='temp_save' has-bad-pointers='true' />
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

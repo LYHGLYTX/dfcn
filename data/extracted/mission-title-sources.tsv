@@ -1,0 +1,129 @@
+# Native mission title source inventory, Windows DF 53.16.
+# SHA256 205770918fd54c96cbbcf89223ebd449e2e113c7c873ed81177c4511a3450db7; image base 0x140000000; addresses below are RVAs.
+# Decompiled from installed PE branches, four raid jump tables, field accessors, diplomacy helper, and typed name helpers.
+# Source data only: no game calls, translator execution, build, test, or screenshot coverage measurement.
+kind	scope	instruction_rva	target_rva	selector	source	dynamic_source	notes
+function	world-render	0x1c17e0	0x1d3abc	all			PE exception function range; all four mission title compositions belong to this owner
+field	mission	0x75110	0x138	goal		mission+0x138	32-bit mission goal getter; input mission object
+field	mission	0x1c65a9	0x130	data		mission+0x130	union data pointer; first int32 is raid type / artifact ID / historical figure ID; diplomacy uses int16 request vector
+field	mission	0x1c6617	0x8	site		mission+0x8	int32 site ID; used by military, worker requests and diplomacy
+title-root	mission-list	0x1c64b6	0x1c662e	goal=2,17,18,19,25			Other goals contribute no title text; related assignments also have separate no-order/job-description branches outside this mission-title root
+draw	mission-list	0x1c66d5	0x1c66da	all title goals		0xad9960	addst; r8d=0; r9d=0; draw return address is a semantic source binding, not an English vocabulary match
+title-root	mission-details	0x1c8d98	0x1c8f0e	goal=2,17,18,19,25			Other goals contribute no title text; related assignments also have separate no-order/job-description branches outside this mission-title root
+draw	mission-details	0x1c8f3f	0x1c8f44	all title goals		0xad9960	addst; r8d=0; r9d=0; draw return address is a semantic source binding, not an English vocabulary match
+title-root	related-messenger-assignment	0x1ccbc7	0x1cd03e	goal=2,17,18,19,25			Other goals contribute no title text; related assignments also have separate no-order/job-description branches outside this mission-title root
+title-root	related-squad-assignment	0x1cd789	0x1cdc00	goal=2,17,18,19,25			Other goals contribute no title text; related assignments also have separate no-order/job-description branches outside this mission-title root
+goal	mission-list-and-details	0x1c64c1	0xb93930	2	{raid action}{site}	site	raid action comes from the complete 7-entry table below; default action Raid
+goal	mission-list-and-details	0x1c64ca	0xb94400	17	Recover {artifact or work}	artifact-or-book	data first int32 is artifact ID; flags=0; named, unnamed book, unnamed item and missing ID branches below
+goal	mission-list-and-details	0x1c64d3	0xb92f10	18	Rescue {figure or creature description}	historical-figure	data first int32 is historical figure ID; default context from 0x72080; both int16 formatting arguments are 1
+goal	mission-list-and-details	0x1c64d8	0xb93930	19	Request workers from {site}	site	mission site ID; flags=0
+goal	mission-list-and-details	0x1c64dd	0x1bb400	25	{diplomacy action} at {site}	site-and-proposals	mission data is request vector; diplomacy helper then site helper 0xb93930 flags=0
+goal	mission-list-and-details	0x1c64dd	0x1c662e	all other values			No action/object label emitted; native default is empty, not a generic unknown mission
+raid-branch	mission-list	0x1c65bf	0x1c65e6	0	Raze 	{site}	table RVA 0x1d3858; slot RVA 0x1d3858; literal RVA 0x1603a78
+raid-branch	mission-list	0x1c65bf	0x1c65ef	1	Take over 	{site}	table RVA 0x1d3858; slot RVA 0x1d385c; literal RVA 0x1603d90
+raid-branch	mission-list	0x1c65bf	0x1c65f8	2	Seize 	{site}	table RVA 0x1d3858; slot RVA 0x1d3860; literal RVA 0x1603d9c
+raid-branch	mission-list	0x1c65bf	0x1c65dd	3	Demand tribute from 	{site}	table RVA 0x1d3858; slot RVA 0x1d3864; literal RVA 0x1603a60
+raid-branch	mission-list	0x1c65bf	0x1c6601	4	Raid 	{site}	table RVA 0x1d3858; slot RVA 0x1d3868; literal RVA 0x1603da4
+raid-branch	mission-list	0x1c65bf	0x1c65cb	5	Explore 	{site}	table RVA 0x1d3858; slot RVA 0x1d386c; literal RVA 0x1603a40
+raid-branch	mission-list	0x1c65bf	0x1c65d4	6	Pillage 	{site}	table RVA 0x1d3858; slot RVA 0x1d3870; literal RVA 0x1603a50
+raid-default	mission-list	0x1c65bf	0x0	outside unsigned 0..6	Raid 	{site}	Includes negative values; exact same default as raid type 4
+raid-branch	mission-details	0x1c8e9f	0x1c8ec6	0	Raze 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38d4; literal RVA 0x1603a78
+raid-branch	mission-details	0x1c8e9f	0x1c8ecf	1	Take over 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38d8; literal RVA 0x1603d90
+raid-branch	mission-details	0x1c8e9f	0x1c8ed8	2	Seize 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38dc; literal RVA 0x1603d9c
+raid-branch	mission-details	0x1c8e9f	0x1c8ebd	3	Demand tribute from 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38e0; literal RVA 0x1603a60
+raid-branch	mission-details	0x1c8e9f	0x1c8ee1	4	Raid 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38e4; literal RVA 0x1603da4
+raid-branch	mission-details	0x1c8e9f	0x1c8eab	5	Explore 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38e8; literal RVA 0x1603a40
+raid-branch	mission-details	0x1c8e9f	0x1c8eb4	6	Pillage 	{site}	table RVA 0x1d38d4; slot RVA 0x1d38ec; literal RVA 0x1603a50
+raid-default	mission-details	0x1c8e9f	0x0	outside unsigned 0..6	Raid 	{site}	Includes negative values; exact same default as raid type 4
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf6e	0	Raze 	{site}	table RVA 0x1d3978; slot RVA 0x1d3978; literal RVA 0x1603a78
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf77	1	Take over 	{site}	table RVA 0x1d3978; slot RVA 0x1d397c; literal RVA 0x1603d90
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf80	2	Seize 	{site}	table RVA 0x1d3978; slot RVA 0x1d3980; literal RVA 0x1603d9c
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf65	3	Demand tribute from 	{site}	table RVA 0x1d3978; slot RVA 0x1d3984; literal RVA 0x1603a60
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf89	4	Raid 	{site}	table RVA 0x1d3978; slot RVA 0x1d3988; literal RVA 0x1603da4
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf53	5	Explore 	{site}	table RVA 0x1d3978; slot RVA 0x1d398c; literal RVA 0x1603a40
+raid-branch	related-messenger-assignment	0x1ccf47	0x1ccf5c	6	Pillage 	{site}	table RVA 0x1d3978; slot RVA 0x1d3990; literal RVA 0x1603a50
+raid-default	related-messenger-assignment	0x1ccf47	0x0	outside unsigned 0..6	Raid 	{site}	Includes negative values; exact same default as raid type 4
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb30	0	Raze 	{site}	table RVA 0x1d3994; slot RVA 0x1d3994; literal RVA 0x1603a78
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb39	1	Take over 	{site}	table RVA 0x1d3994; slot RVA 0x1d3998; literal RVA 0x1603d90
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb42	2	Seize 	{site}	table RVA 0x1d3994; slot RVA 0x1d399c; literal RVA 0x1603d9c
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb27	3	Demand tribute from 	{site}	table RVA 0x1d3994; slot RVA 0x1d39a0; literal RVA 0x1603a60
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb4b	4	Raid 	{site}	table RVA 0x1d3994; slot RVA 0x1d39a4; literal RVA 0x1603da4
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb15	5	Explore 	{site}	table RVA 0x1d3994; slot RVA 0x1d39a8; literal RVA 0x1603a40
+raid-branch	related-squad-assignment	0x1cdb09	0x1cdb1e	6	Pillage 	{site}	table RVA 0x1d3994; slot RVA 0x1d39ac; literal RVA 0x1603a50
+raid-default	related-squad-assignment	0x1cdb09	0x0	outside unsigned 0..6	Raid 	{site}	Includes negative values; exact same default as raid type 4
+diplomacy-branch	mission-list-and-details	0x1bb42e	0x1603498	10	Demand surrender	{site}	"Priority 1; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb462	0x16034b0	1	Make peace	{site}	"Priority 2; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb49c	0x16034c0	13	Declare war	{site}	"Priority 3; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb4d0	0x16034d0	14	Seek alliance	{site}	"Priority 4; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb504	0x16034e0	15	Make contact	{site}	"Priority 5; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb53e	0x16034f0	16	Improve trade	{site}	"Priority 6; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+diplomacy-branch	mission-list-and-details	0x1bb553	0x1603500	default	Diplomacy	{site}	"Priority 7; first matching request present in int16 vector wins, independently of vector order; title appends literal "" at "" then site"
+literal	mission-list	0x1c64f6	0x160205c		 at 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c650e	0x1603a28		Request workers from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c651a	0x15ee320		Rescue 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c6571	0x1603db0		Recover 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65cb	0x1603a40		Explore 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65d4	0x1603a50		Pillage 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65dd	0x1603a60		Demand tribute from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65e6	0x1603a78		Raze 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65ef	0x1603d90		Take over 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c65f8	0x1603d9c		Seize 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-list	0x1c6601	0x1603da4		Raid 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ddb	0x160205c		 at 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8df3	0x1603a28		Request workers from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8dff	0x15ee320		Rescue 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8e51	0x1603db0		Recover 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8eab	0x1603a40		Explore 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8eb4	0x1603a50		Pillage 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ebd	0x1603a60		Demand tribute from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ec6	0x1603a78		Raze 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ecf	0x1603d90		Take over 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ed8	0x1603d9c		Seize 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	mission-details	0x1c8ee1	0x1603da4		Raid 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccc19	0x160205c		 at 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1cccce	0x1603a28		Request workers from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccd84	0x15ee320		Rescue 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1cce68	0x1603db0		Recover 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf53	0x1603a40		Explore 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf5c	0x1603a50		Pillage 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf65	0x1603a60		Demand tribute from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf6e	0x1603a78		Raze 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf77	0x1603d90		Take over 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf80	0x1603d9c		Seize 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-messenger-assignment	0x1ccf89	0x1603da4		Raid 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cd7db	0x160205c		 at 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cd890	0x1603a28		Request workers from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cd946	0x15ee320		Rescue 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cda2a	0x1603db0		Recover 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb15	0x1603a40		Explore 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb1e	0x1603a50		Pillage 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb27	0x1603a60		Demand tribute from 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb30	0x1603a78		Raze 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb39	0x1603d90		Take over 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb42	0x1603d9c		Seize 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+literal	related-squad-assignment	0x1cdb4b	0x1603da4		Raid 		RIP-relative string operand decoded in native mission title branch; spaces preserved
+dynamic	site	0xb939d9	0xa946e0	ID exists	{site language name}	site language_name	Translated native language_name with translate=true; flags=0 means no LPAGE wrappers
+fallback	site	0xb93a5e	0x16df910	ID missing	an unknown site		All military, worker request and diplomacy titles share this fallback
+dynamic	artifact-or-book	0xb94530	0xa946e0	artifact exists and translated name nonempty	{artifact or work title}	artifact+0x8 language_name	Native translated title; may contain articles, compounds, multiword phrases, punctuation, or custom player text
+fallback	artifact-or-book	0xb945b0	0x0	name empty and book/scroll/writing tool	Untitled		Inline movabs bytes 55 6e 74 69 74 6c 65 64; duplicate allocation branch at 0xb9460b; BOOK=0x59, SCROLL=0x57 or item virtual +0xe0 with tool-use 20
+dynamic	artifact-or-book	0xb94583	0xc65450	name empty and other item	{item description}	item description	Full item description with native parameter values 0,1; material/type/adjectives can occur here; use existing item name/RAW vocabulary sources rather than title transliteration
+fallback	artifact-or-book	0xb946de	0x16df700	artifact ID missing	an unknown artifact		Native flags=0; LPAGE:ARTIFACT, LPAGE:BOOK wrappers are unreachable for mission title calls
+context	historical-figure	0x1c6534	0x72080	goal=18		default event context	flags=0, knowledge/interrogation pointers null, source/subject figure IDs -1; grammar arguments 1,1 suppress species decoration on named figures and possessive suffixes
+dynamic	historical-figure	0xb93504	0xa946e0	named figure	{figure name}	figure+0x38 language_name	Complete generated/personal name; no mission action word belongs to this name
+literal	historical-figure	0xb9374e	0x15ed620	unnamed figure	a 	{creature description}	Default context yields indefinite article because subject figure ID is -1
+literal	historical-figure	0xb9377d	0x167db90	unnamed animated corpse	zombie 	{creature description}	Prepended when figure info corpse-animation field +0x160 is set
+literal	historical-figure	0xb937b5	0x15fdbb8	unnamed ghost	ghostly 	{creature description}	Ghost flag without a live curse-description override
+dynamic	historical-figure	0xb937ea	0xaa3bd0	unnamed figure	{creature RAW singular/caste name}	creature raw and caste	All creature types, including generated creatures; existing creature-name-vocabulary.tsv and native_history references apply
+dynamic	historical-figure	0xb9382b	0x0	unnamed figure with curse identity	 {curse description}	figure info+0x48 -> +0x90 string	Optional dynamic suffix, not an action/title token
+fallback	historical-figure	0xb938dc	0x1663cd8	figure ID missing	an unknown creature		Context-specific interrogator/subject/pronoun/LPAGE branches cannot be selected by the default mission context
+layout	mission-list	0x1c663d	0xbb120	all title goals		loc(y=rowTop+1,x=listLeft)	listLeft = screenRight-55; rowTop starts at 1 and advances by 3; loc stores r8d at gps+0x84 (x), edx at gps+0x88 (y)
+layout	mission-list	0x1c6401	0x264bd98	background		gps.texpos_button_rectangle	3x3 at GPS+0x19a8; each row card spans listLeft..listRight inclusively and rowTop..rowTop+2
+layout	mission-list	0x1c62bc	0x0	right boundary		listRight	screenRight-2 when all missions fit; screenRight-4 when native scrollbar is needed
+layout	mission-list	0x1c6931	0x2655400	remove button		gps.texpos_building_jobs_remove	3x3 at GPS+0xb010; top-left=(listRight-3,rowTop); title right-exclusive may use this x; button suppressed while only traveling commanders/messengers remain
+truncate	mission-list	0x1c6677	0xe1230	size >= W-2		W = (listRight-3)-listLeft	Resize to W-3; if W-3>3 overwrite positions W-6,W-5,W-4 with dots at 0x1c6694/0x1c66a9/0x1c66be; complete source exists before resize
+layout	mission-details	0x1c8f1a	0xbb120	all title goals		loc(y=1,x=screenRight-55)	No resize in the detail title composition; title addst itself applies screen edge; containing native frame sets the available bounds
+literal	mission-details	0x1c95cf	0x160408c	separate action control	Remove		Not the mission-list delete icon and not part of the mission title
+scope	dynamic-text	0x0	0x0	all save-specific values		typed runtime fields	Finite title/action/fallback branches are fully enumerated here. Save-generated names, custom text and mod RAW entries form dynamic sets and cannot be enumerated as fixed English sentences.
+graphic	mission-list	0x1c695d	0x2655400	remove control		gps.texpos_building_jobs_remove	Native red cross is graphical-only, has no Delete/Remove label and does not append text to the mission title
+dynamic	historical-figure	0xaa3cee	0xaa3bd0	caste ID valid and singular NAME nonempty	{caste singular NAME}	caste+0x20 std::string	Mission calls this helper with plural argument r8b=0; caste plural +0x40 is not selected
+dynamic	historical-figure	0xaa3d3a	0xaa3bd0	caste missing, invalid or name empty	{creature singular NAME}	creature_raw+0x20 std::string	Falls back from caste to creature RAW NAME; invalid race ID returns empty exactly as native source does

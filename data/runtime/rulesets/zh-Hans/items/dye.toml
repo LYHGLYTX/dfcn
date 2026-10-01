@@ -1,0 +1,56 @@
+base = "items::dye"
+
+[[rulesets]]
+[rulesets.rules]
+# A dye may use the whole plant/fruit name, an already complete growth name
+# (tea leaf, ginkgo leaf), or a separate plant-part modifier. Keep the absent
+# modifier branch explicit: optional words must not leave two source spaces.
+"{^0} {name}" = "{^0}{name}"
+"{none} {name}" = "{none}{name}"
+"{^0} {prefix} {name}" = "{^0}{prefix}{name}"
+"{none} {prefix} {name}" = "{none}{prefix}{name}"
+"{::color} {name}" = "{::color}{name}"
+# Named milling dyes also enter this typed namespace in "Tint ... using"
+# tasks. Keep the material names established in data/runtime/rulesets/zh-Hans/materials/state.toml.
+"dimple dye" = "窝杯染料"
+"emerald dye" = "宝石绿染料"
+"redroot dye" = "赤根染料"
+"sliver dye" = "裂钩染料"
+
+[[rulesets]]
+name = "name"
+[rulesets.rules]
+"dye" = "染料"
+
+[[rulesets]]
+name = "^0"
+[rulesets.rules]
+"{::plants::growth::singular}" = "{::plants::growth::singular}"
+"{::plants::name::singular}" = "{::plants::name::singular}"
+
+[[rulesets]]
+name = "none"
+[rulesets.rules]
+"sweet potato" = "甘薯"
+"turnip" = "芜菁"
+"hazel" = "榛"
+"carrot" = "胡萝卜"
+"potato" = "马铃薯"
+"radish" = "小萝卜"
+"rice husk" = "稻壳"
+# RAW seed singular names; reuse data/runtime/rulesets/zh-Hans/plants/seed.toml's established translations.
+"coffee bean" = "咖啡豆"
+"peanut" = "花生"
+
+[[rulesets]]
+name = "prefix"
+[rulesets.rules]
+"bark" = "树皮"
+"cone" = "球果"
+"leaf" = "叶"
+"skin" = "皮"
+"rind" = "皮"
+"peel" = "皮"
+"husk" = "壳"
+"hull" = "壳"
+"shell" = "壳"

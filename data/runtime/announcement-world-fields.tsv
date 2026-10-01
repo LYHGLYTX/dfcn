@@ -1,0 +1,62 @@
+# Scoped complete distance/direction fields from native 0x14147c4a0..0x14147c774.
+# Anonymous participants in native speech (0x1400e2b80 / 0x140b92f10).
+Announcement unit: an unknown party	身份不明的人	l
+Announcement unit: somebody whose name I don't know	一个我不知道名字的人	l
+Announcement unit: an unidentified creature	身份不明的生物	l
+Announcement unit: an unknown creature	未知生物	l
+Announcement unit: nameless	无名者	l
+Announcement unit: interrogator	审讯者	l
+Announcement unit: subject	审讯对象	l
+Announcement speech: lisp	（话音带着嘶嘶声）	l
+Announcement distance: very near	近在咫尺	l
+Announcement distance: aboveground	地表	l
+Announcement distance: inaccessible from here	此处无法到达的地方	l
+Announcement distance: in the depths	深处	l
+Announcement distance: just to the north	就在北方	l
+Announcement distance: just to the south	就在南方	l
+Announcement distance: just to the east	就在东方	l
+Announcement distance: just to the west	就在西方	l
+Announcement distance: just to the northwest	就在西北方	l
+Announcement distance: just to the northeast	就在东北方	l
+Announcement distance: just to the southwest	就在西南方	l
+Announcement distance: just to the southeast	就在东南方	l
+Announcement distance: far to the north	远在北方	l
+Announcement distance: far to the south	远在南方	l
+Announcement distance: far to the east	远在东方	l
+Announcement distance: far to the west	远在西方	l
+Announcement distance: far to the northwest	远在西北方	l
+Announcement distance: far to the northeast	远在东北方	l
+Announcement distance: far to the southwest	远在西南方	l
+Announcement distance: far to the southeast	远在东南方	l
+Announcement distance: a day's travel to the north	距此一天路程的北方	l
+Announcement distance: a day's travel to the south	距此一天路程的南方	l
+Announcement distance: a day's travel to the east	距此一天路程的东方	l
+Announcement distance: a day's travel to the west	距此一天路程的西方	l
+Announcement distance: a day's travel to the northwest	距此一天路程的西北方	l
+Announcement distance: a day's travel to the northeast	距此一天路程的东北方	l
+Announcement distance: a day's travel to the southwest	距此一天路程的西南方	l
+Announcement distance: a day's travel to the southeast	距此一天路程的东南方	l
+Announcement distance: nearly a day's travel to the north	距此近一天路程的北方	l
+Announcement distance: nearly a day's travel to the south	距此近一天路程的南方	l
+Announcement distance: nearly a day's travel to the east	距此近一天路程的东方	l
+Announcement distance: nearly a day's travel to the west	距此近一天路程的西方	l
+Announcement distance: nearly a day's travel to the northwest	距此近一天路程的西北方	l
+Announcement distance: nearly a day's travel to the northeast	距此近一天路程的东北方	l
+Announcement distance: nearly a day's travel to the southwest	距此近一天路程的西南方	l
+Announcement distance: nearly a day's travel to the southeast	距此近一天路程的东南方	l
+Announcement distance: a half day's travel to the north	距此半天路程的北方	l
+Announcement distance: a half day's travel to the south	距此半天路程的南方	l
+Announcement distance: a half day's travel to the east	距此半天路程的东方	l
+Announcement distance: a half day's travel to the west	距此半天路程的西方	l
+Announcement distance: a half day's travel to the northwest	距此半天路程的西北方	l
+Announcement distance: a half day's travel to the northeast	距此半天路程的东北方	l
+Announcement distance: a half day's travel to the southwest	距此半天路程的西南方	l
+Announcement distance: a half day's travel to the southeast	距此半天路程的东南方	l
+Announcement distance: a short walk to the north	步行不远即可到达的北方	l
+Announcement distance: a short walk to the south	步行不远即可到达的南方	l
+Announcement distance: a short walk to the east	步行不远即可到达的东方	l
+Announcement distance: a short walk to the west	步行不远即可到达的西方	l
+Announcement distance: a short walk to the northwest	步行不远即可到达的西北方	l
+Announcement distance: a short walk to the northeast	步行不远即可到达的东北方	l
+Announcement distance: a short walk to the southwest	步行不远即可到达的西南方	l
+Announcement distance: a short walk to the southeast	步行不远即可到达的东南方	l

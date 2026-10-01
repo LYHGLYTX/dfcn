@@ -1,0 +1,21 @@
+<data-definition>
+    <bitfield-type type-name='meetingmoment_flag' base-type='uint32_t'> bay12: MEETINGMOMENTFLAG_*
+        <flag-bit name='close_screen' original-name='DEAD'/>
+        <flag-bit name='new_screen' original-name='RESTING'/>
+    </bitfield-type>
+
+    <struct-type type-name='dipscript_popup' original-name='meetingmomentst' >
+        <int32_t name='meeting_holder_actor' original-name='actor_unid' ref-target='unit'/>
+        <int32_t name='meeting_holder_noble' original-name='noble_unid' ref-target='unit'/>
+        <pointer type-name='activity_info' name='activity' original-name='act'/>
+        <bitfield base-type='uint32_t' type-name='meetingmoment_flag' name='flags' original-name='flag'/>
+        <int32_t name='moment_time_left'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

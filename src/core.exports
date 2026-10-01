@@ -1,0 +1,4 @@
+{
+    global: dfhooks_*; dfcn_*;
+    local: *;
+};

@@ -1,0 +1,998 @@
+# Complete native Adventure announcement sentences and reviewed finite constructions.
+# English<TAB>简体中文; provenance: data/extracted/adventure-announcement-sources.tsv.
+# Native repeated spaces are normalized by the shared text preparation path.
+You've assumed tactical control as nobody else is available.	由于没有其他人可用，你已接管战术控制。
+You awaken from your slumber.	你从睡梦中醒来。
+Your sleep has been interrupted!	你的睡眠被打断了！
+Dawn is breaking.	天快亮了。
+It is noon.	正午时分。
+Night is falling.	夜幕降临。
+Your fate is sealed.	你的命运已定。
+Look out for a chance encounter.	留意一次偶然的相遇。
+Stay the course.	坚持既定的道路。
+Expect a change.	变化即将到来。
+The task will not be completed.	任务无法完成。
+The task will be successful.	任务将会成功。
+Focus on living in harmony.	专注于和谐共处。
+Fulfillment will be yours.	你将获得满足。
+A reckoning awaits.	清算终将到来。
+You will awaken to a new possibility.	你将发现一种新的可能。
+You must reflect on your actions.	你必须反思自己的行为。
+Beware doubt.	提防疑虑。
+Joy is on the horizon.	喜悦即将到来。
+A great sadness is coming.	巨大的悲伤即将降临。
+A sudden upheaval is in store.	一场突如其来的剧变正在等待着你。
+A coming disaster can be delayed, but not avoided.	即将到来的灾难可以推迟，却无法避免。
+Follow your desire.	追随你的愿望。
+Rely on willpower to see you through.	依靠意志力度过难关。
+Beware those that lack passion.	提防缺乏热情之人。
+All is not as it seems.	事情并非表面看起来那样。
+Have faith and all shall be rejuvenated.	心怀信念，一切都将重获生机。
+Cling not to material things.	不要执着于身外之物。
+Hold to hope when all else is lost.	即使失去一切，也要坚守希望。
+Be playful today.	今天不妨玩乐一番。
+Do not be stopped by fear.	不要让恐惧阻止你。
+You will released.	你将获得解脱。
+Do not take any chances.	不要冒险。
+Look to another for what you need.	向他人寻求你需要的东西。
+The partnership is one-sided.	这段合作只有一方在付出。
+There are two sides to every story.	每件事都有两面。
+Follow your intuition.	跟随你的直觉。
+You will travel far from this place.	你将远行，离开此地。
+An important decision awaits your careful deliberation.	一项重要决定等待你仔细斟酌。
+Beware of ill-conceived plans.	提防考虑不周的计划。
+Focus today.	今天要专心。
+Be compassionate.	心怀怜悯。
+Today you will have a moment of weakness.	今天你将有片刻的软弱。
+The burden will be lifted soon.	重担很快就会卸下。
+You will have a great accomplishment.	你将取得伟大的成就。
+See to your responsibilities.	履行你的责任。
+An end and a new beginning.	一个终点，一个新的开始。
+Do not hold on for too long.	不要执着太久。
+Make a change or forever remain.	做出改变，否则将永远停滞不前。
+Give up the hopeless cause.	放弃毫无希望的事业。
+Keep your own counsel today.	今天不要轻易透露自己的想法。
+Do not be reckless.	不要鲁莽行事。
+You will make your final stand.	你将进行最后的抗争。
+Be cautious of fatigue today.	今天要当心疲劳。
+Ask a question.	提出一个问题。
+Do not give them too much.	不要给他们太多。
+Do not keep everything for yourself.	不要把一切都留给自己。
+The situation cannot get worse.	情况不会更糟了。
+The enterprise will be a failure.	这项事业将会失败。
+Accept a defeat.	接受失败。
+Be mindful of others around you.	留意你身边的人。
+Prepare for disappointment.	做好失望的准备。
+Consider the consequences carefully.	仔细考虑后果。
+Act quickly today.	今天要迅速行动。
+Be generous today.	今天要慷慨待人。
+If you accept the gift, one will be expected in return.	收下礼物，就应当有所回报。
+Bring comfort to someone today.	今天给某人带去慰藉。
+Now is a time for calm.	现在应当保持冷静。
+Your dreams will come true.	你的梦想将会成真。
+Beware a rival.	提防对手。
+Avoid conflict today.	今天要避免冲突。
+Do not avoid a necessary conflict today.	今天不要回避必要的冲突。
+Look ahead to the future.	着眼未来。
+An obstacle will present itself.	一个障碍即将出现。
+Begin an adventure.	开始一场冒险。
+You have missed your chance.	你已错失良机。
+Accept the loss and move on.	接受损失，继续前行。
+Make the decision quickly.	迅速做出决定。
+Explore today.	今天去探索一番。
+A new friendship will form.	一段新的友谊将会萌生。
+It is not as simple as you think.	事情没有你想的那么简单。
+You will learn something you did not want to know.	你将得知某件你不愿知道的事。
+Follow your desire to reconcile.	遵从内心和解的愿望。
+It is too soon to forgive.	现在宽恕还为时过早。
+Your ambition is misguided.	你的抱负走错了方向。
+The object of your ambition will be realized.	你的宏愿将会实现。
+There is no right choice.	没有正确的选择。
+Rethink your priorities.	重新考虑事情的轻重缓急。
+You will received bad advice.	你将得到不好的建议。
+A clever strategy will be required.	你将需要一个巧妙的策略。
+Take care you are not deceived.	小心受骗。
+Indulge heartily.	尽情享受。
+You will know suffering soon.	你很快就会体会到苦难。
+Rethink your approach.	重新考虑你的方法。
+You must reveal the truth.	你必须揭露真相。
+Some changes are inevitable.	有些变化不可避免。
+Whatever happens, it will be for the best.	无论发生什么，都会是最好的安排。
+It is time to leave it behind.	是时候放下过去了。
+Do not fear loss.	不要害怕失去。
+You must face the challenge today.	今天你必须面对挑战。
+Today, somebody will be cruel.	今天会有人做出残酷之举。
+Master yourself today; discipline will be required.	今天要约束自己；你将需要自律。
+Beware a hidden plan.	提防暗中的谋划。
+Be practical.	务实一些。
+Think of others today, not yourself.	今天为他人着想，别只顾自己。
+See to the simple comforts.	照顾好日常起居。
+Think on what came before and what follows.	想想过去，也想想未来。
+It will not be fair.	此事不会公平。
+Believe no one today.	今天不要相信任何人。
+See to your legacy.	考虑自己留给后世的东西。
+Instability.	动荡不安。
+The effort will reach a culmination.	这番努力将迎来顶点。
+Any success will be fleeting.	任何成功都将转瞬即逝。
+Make the sacrifice regardless of fear.	即使恐惧，也要做出牺牲。
+Do not stall.	不要拖延。
+Make no needless sacrifices.	不要做无谓的牺牲。
+Be sure to keep to a high standard today.	今天务必严格要求自己。
+Be patient.	耐心一些。
+Take the middle path.	选择折中之道。
+You must choose between two extremes.	你必须在两个极端之间做出选择。
+Beware a lack of balance.	当心失衡。
+Be diligent and undistracted.	勤勉专注。
+There will be no reward.	你将得不到回报。
+Persevere though it may be for nothing.	即使可能徒劳，也要坚持。
+Eat not the fruits of your labor.	不要享用自己劳动的成果。
+It is a false success.	这只是虚假的成功。
+You will be rewarded.	你将获得回报。
+You set a fire.	你点起了一把火。
+No. That's disgusting.	不行。那太恶心了。
+It's too much! You feel even more sick.	太多了！你感到更加恶心了。
+You feel even more sick.	你感到更加恶心了。
+It's too much! You might not be able to keep it down.	太多了！你可能会吐出来。
+You might not be able to keep it down.	你可能会吐出来。
+You feel really full.	你感到很饱。
+You are starting to feel full.	你开始感到饱了。
+You read {s}.	你阅读了{s}。
+You pull out {s}.	你拔出了{s}。
+You cease nocking {s}.	你停止搭上{s}。
+You begin loading {s} into {s}.	你开始将{s1}装入{s2}。
+You begin nocking {s} in {s}.	你开始将{s1}搭在{s2}上。
+You fill your {s} with {s}.	你将{s2}装进自己的{s1}。
+Your {s} is already full.	你的{s}已经装满了。
+It won't fit in your {s}.	你的{s}装不下它。
+{s} is empty.	{s}是空的。
+The {s} is hot enough already.	{s}已经够热了。
+You heat the {s}.	你加热了{s}。
+You heat the {s} to no effect.	你加热了{s}，但没有效果。
+You empty {s}.	你倒空了{s}。
+You empty the {s}.	你倒空了{s}。
+You drop {s}.	你放下了{s}。
+You put on {s}.	你穿上了{s}。
+You take out the {s}.	你取出了{s}。
+You take off {s}.	你脱下了{s}。
+You eat the {s}.	你吃下了{s}。
+You drink the {s}.	你喝下了{s}。
+You lick the {s}.	你舔了舔{s}。
+The {s} is too salty.	{s}太咸了。
+The {s} is too hot.	{s}太烫了。
+The {s} is too cold.	{s}太冷了。
+You pack the {s} on to {n}.	你将{s}装到{n}身上。
+You put the {s} into the {s}.	你将{s1}放进{s2}。
+You put the {s} on the {s}.	你将{s1}放在{s2}上。
+You put the {s} on display.	你将{s}摆出来展示。
+You fail to grab the {s}!	你没能抓住{s}！
+You struggle for {s}.	你争夺着{s}。
+You prepare to shoot {s} in {s}.	你准备发射装在{s2}里的{s1}。
+You prepare to shoot {s} nocked in {s}.	你准备射出搭在{s2}上的{s1}。
+You prepare to shoot {n} with {s} in {s}.	你准备朝{n}发射装在{s2}里的{s1}。
+You prepare to shoot {n} with {s} nocked in {s}.	你准备朝{n}射出搭在{s2}上的{s1}。
+You begin loading {s} into {s} with intentions of shooting {n}.	你开始将{s1}装入{s2}，准备射击{n}。
+You begin nocking {s} in {s} with intentions of shooting {n}.	你开始将{s1}搭在{s2}上，准备射击{n}。
+You begin to throw {s}.	你开始投掷{s}。
+You begin to throw {s} at {n}.	你开始向{n}投掷{s}。
+You do not have a free grasp for {s}.	你没有空闲的手来拿{s}。
+You don't have any ammunition for {s}.	你没有可供{s}使用的弹药。
+{s} is already prepared to shoot.	{s}已经准备好射击了。
+You've found a colony of {s}.	你发现了一群{s}。
+You've found a colony of {s} and another small creature.	你发现了一群{s}和另一只小动物。
+You've found a colony of {s} and some other small creatures.	你发现了一群{s}和其他一些小动物。
+A {s} cannot climb.	{s}无法攀爬。
+A {s} cannot hold the terrain.	{s}无法抓住地形。
+A {s} cannot jump.	{s}无法跳跃。
+A {s} cannot speak.	{s}无法说话。
+You have discovered a {s}.	你发现了一处{s}。
+You cannot travel through the {s}.	你无法穿过{s}。
+You've located a {s} right under you!	你发现脚下就有一处{s}！
+You've located a {s} to the {s}!	你发现{s2}有一处{s1}！
+You've located a {s} above and to the {s}!	你发现上方的{s2}有一处{s1}！
+You've located a {s} below and to the {s}!	你发现下方的{s2}有一处{s1}！
+"You've found {p}! My chosen, you must speak to them and offer your service."	“你找到了{p}！我的天选者，你必须与其交谈，表示愿意效劳。”
+"You will have to leave this structure first before you can travel. Try to make your way out to the settlement."	“你必须先离开这座建筑，才能开始旅行。试着走出去，来到聚居地中。”
+"Do you feel the pull? You sense the direction of my representative. It is possible to travel quickly to reach them, or you may journey more deliberately. It is your decision."	“感受到那股牵引了吗？你能感知到我使者所在的方向。你可以快速旅行前去会面，也可以从容地一步步前行。由你决定。”
+"Congratulations! Now you must return this precious object to its proper home."	“祝贺你！现在必须将这件珍贵的物品送回它应在的地方。”
+"You seek {e}. If you do not find the location in your log, ask others for directions. You may also follow the pull from your senses."	“你要寻找的是{e}。如果日志里没有这处地点，就向他人问路。你也可以跟随感知中的牵引。”
+"The journey is long. Be sure to travel to {e}, rather than walking leisurely."	“路途遥远。务必使用旅行前往{e}，别再慢悠悠地步行。”
+"This place is dangerous. Steel yourself against ancient enemies. Try not to let yourself be surrounded, and remain standing. Enter and vanquish! Or slip in unseen. Securing the treasure is all that matters."	“这里十分危险。坚定意志，准备迎战古老的敌人。尽量避免被包围，并保持站立。进去征服他们吧！也可以悄悄潜入。夺得宝藏才是最重要的。”
+"Congratulations, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well."	“祝贺你，我忠诚的天选者！若再次献上你的服务，还有其他事情需要你效劳。如果愿意，你现在也可以按照自己的心意生活。你做得很好。”
+"With the treasure, you are near to glory and fulfillment of your task. Your senses can lead you on your return journey."	“宝藏已在手中，你离荣耀与完成使命只差一步。你的感知能为归途指引方向。”
+"You may return the object to the faithful by gifting it to one of the priests, or you may simply drop it in this structure wherever you see fit."	“你可以把物品赠予其中一位祭司，将它交还给信众；也可以直接放在这座建筑中任何你认为合适的地方。”
+"My other worshippers? As you wish, my faithful chosen! There are other ways you can serve, if you offer your service again. You may also live your life as you see fit now if you choose. You have done well."	“我的其他信徒？如你所愿，我忠诚的天选者！若再次献上你的服务，还有其他事情需要你效劳。如果愿意，你现在也可以按照自己的心意生活。你做得很好。”
+"Ungrateful apostate!"	“忘恩负义的叛教者！”
+"You are approaching your destination. End your travels now and prepare yourself."	“你正接近目的地。现在结束旅行，做好准备。”
+You have been cursed by {p}!	你受到了{p}的诅咒！
+{n} says, "We should have made it there by now."	{n}说：“我们现在本该已经到那里了。”
+{n} says: "We should have made it there by now."	{n}说：“我们现在本该已经到那里了。”
+{n} says, "We should be making better progress."	{n}说：“我们本该走得更快些。”
+{n} says: "We should be making better progress."	{n}说：“我们本该走得更快些。”
+{n} says, "We are going the wrong way."	{n}说：“我们走错方向了。”
+{n} says: "We are going the wrong way."	{n}说：“我们走错方向了。”
+{n} says, "We haven't performed for some time."	{n}说：“我们有一阵子没表演了。”
+{n} says: "We haven't performed for some time."	{n}说：“我们有一阵子没表演了。”
+{n} says, "We have arrived at our destination."	{n}说：“我们到达目的地了。”
+{n} says: "We have arrived at our destination."	{n}说：“我们到达目的地了。”
+{n} says, "The oppressor has been overthrown!"	{n}说：“压迫者已被推翻！”
+{n} says: "The oppressor has been overthrown!"	{n}说：“压迫者已被推翻！”
+{n} says, "We must go back."	{n}说：“我们必须回去。”
+{n} says: "We must go back."	{n}说：“我们必须回去。”
+{n} says, "We must not abandon {n}!"	{n1}说：“我们不能抛下{n2}！”
+{n} says: "We must not abandon {n}!"	{n1}说：“我们不能抛下{n2}！”
+Don't you know that {p} is a jealous deity? Why consult another?	难道你不知道{p}是位善妒的神祇吗？为什么要向别的神问卜？
+Don't you know that {p} is a jealous deity? Why consult another? Let a week pass.	难道你不知道{p}是位善妒的神祇吗？为什么要向别的神问卜？等上一周。
+Don't you know that {p} is a jealous deity? Why consult another? Let some days pass.	难道你不知道{p}是位善妒的神祇吗？为什么要向别的神问卜？等上几天。
+Don't you know that {p} is a jealous deity? Why consult another? Let another day pass.	难道你不知道{p}是位善妒的神祇吗？为什么要向别的神问卜？再等一天。
+You already know the will of {p}.	你已经知晓{p}的意志。
+You already know the will of {p}. Let a week pass.	你已经知晓{p}的意志。等上一周。
+You already know the will of {p}. Let some days pass.	你已经知晓{p}的意志。等上几天。
+You already know the will of {p}. Let another day pass.	你已经知晓{p}的意志。再等一天。
+Why wasn't {p}, a jealous deity, consulted first?	为什么没有先向善妒的神祇{p}问卜？
+Why wasn't {p}, a jealous deity, consulted first? Let a week pass.	为什么没有先向善妒的神祇{p}问卜？等上一周。
+Why wasn't {p}, a jealous deity, consulted first? Let some days pass.	为什么没有先向善妒的神祇{p}问卜？等上几天。
+Why wasn't {p}, a jealous deity, consulted first? Let another day pass.	为什么没有先向善妒的神祇{p}问卜？再等一天。
+You already know the will of {p}. Do not tempt fate.	你已经知晓{p}的意志。不要试探命运。
+You already know the will of {p}. Do not tempt fate. Let a week pass.	你已经知晓{p}的意志。不要试探命运。等上一周。
+You already know the will of {p}. Do not tempt fate. Let some days pass.	你已经知晓{p}的意志。不要试探命运。等上几天。
+You already know the will of {p}. Do not tempt fate. Let another day pass.	你已经知晓{p}的意志。不要试探命运。再等一天。
+Praise {p} for ignoring your hubris. Freedom is allowed even in this.	赞美{p}，宽恕了你的狂妄。即使在此事上，你也享有自由。
+Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let a week pass.	赞美{p}，宽恕了你的狂妄。即使在此事上，你也享有自由。等上一周。
+Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let some days pass.	赞美{p}，宽恕了你的狂妄。即使在此事上，你也享有自由。等上几天。
+Praise {p} for ignoring your hubris. Freedom is allowed even in this. Let another day pass.	赞美{p}，宽恕了你的狂妄。即使在此事上，你也享有自由。再等一天。
+Praise {p} for ignoring your hubris. You are forgiven.	赞美{p}，宽恕了你的狂妄。你已获宽恕。
+Praise {p} for ignoring your hubris. You are forgiven. Let a week pass.	赞美{p}，宽恕了你的狂妄。你已获宽恕。等上一周。
+Praise {p} for ignoring your hubris. You are forgiven. Let some days pass.	赞美{p}，宽恕了你的狂妄。你已获宽恕。等上几天。
+Praise {p} for ignoring your hubris. You are forgiven. Let another day pass.	赞美{p}，宽恕了你的狂妄。你已获宽恕。再等一天。
+Praise {p} for ignoring your hubris. You are free to do as you choose.	赞美{p}，宽恕了你的狂妄。你可以自由选择自己的行动。
+Praise {p} for ignoring your hubris. You are free to do as you choose. Let a week pass.	赞美{p}，宽恕了你的狂妄。你可以自由选择自己的行动。等上一周。
+Praise {p} for ignoring your hubris. You are free to do as you choose. Let some days pass.	赞美{p}，宽恕了你的狂妄。你可以自由选择自己的行动。等上几天。
+Praise {p} for ignoring your hubris. You are free to do as you choose. Let another day pass.	赞美{p}，宽恕了你的狂妄。你可以自由选择自己的行动。再等一天。
+Praise {p} for ignoring your hubris. Your happiness is still desired.	赞美{p}，宽恕了你的狂妄。仍有人盼望你能幸福。
+Praise {p} for ignoring your hubris. Your happiness is still desired. Let a week pass.	赞美{p}，宽恕了你的狂妄。仍有人盼望你能幸福。等上一周。
+Praise {p} for ignoring your hubris. Your happiness is still desired. Let some days pass.	赞美{p}，宽恕了你的狂妄。仍有人盼望你能幸福。等上几天。
+Praise {p} for ignoring your hubris. Your happiness is still desired. Let another day pass.	赞美{p}，宽恕了你的狂妄。仍有人盼望你能幸福。再等一天。
+Praise {p} for ignoring your hubris. You are loved.	赞美{p}，宽恕了你的狂妄。你被爱着。
+Praise {p} for ignoring your hubris. You are loved. Let a week pass.	赞美{p}，宽恕了你的狂妄。你被爱着。等上一周。
+Praise {p} for ignoring your hubris. You are loved. Let some days pass.	赞美{p}，宽恕了你的狂妄。你被爱着。等上几天。
+Praise {p} for ignoring your hubris. You are loved. Let another day pass.	赞美{p}，宽恕了你的狂妄。你被爱着。再等一天。
+Praise {p} for ignoring your hubris. You have been granted mercy.	赞美{p}，宽恕了你的狂妄。你已蒙受仁慈。
+Praise {p} for ignoring your hubris. You have been granted mercy. Let a week pass.	赞美{p}，宽恕了你的狂妄。你已蒙受仁慈。等上一周。
+Praise {p} for ignoring your hubris. You have been granted mercy. Let some days pass.	赞美{p}，宽恕了你的狂妄。你已蒙受仁慈。等上几天。
+Praise {p} for ignoring your hubris. You have been granted mercy. Let another day pass.	赞美{p}，宽恕了你的狂妄。你已蒙受仁慈。再等一天。
+Praise {p} for ignoring your hubris. Peace is cherished.	赞美{p}，宽恕了你的狂妄。和平备受珍视。
+Praise {p} for ignoring your hubris. Peace is cherished. Let a week pass.	赞美{p}，宽恕了你的狂妄。和平备受珍视。等上一周。
+Praise {p} for ignoring your hubris. Peace is cherished. Let some days pass.	赞美{p}，宽恕了你的狂妄。和平备受珍视。等上几天。
+Praise {p} for ignoring your hubris. Peace is cherished. Let another day pass.	赞美{p}，宽恕了你的狂妄。和平备受珍视。再等一天。
+Praise {p} for ignoring your hubris. Such care for your happiness!	赞美{p}，宽恕了你的狂妄。竟如此关怀你的幸福！
+Praise {p} for ignoring your hubris. Such care for your happiness! Let a week pass.	赞美{p}，宽恕了你的狂妄。竟如此关怀你的幸福！等上一周。
+Praise {p} for ignoring your hubris. Such care for your happiness! Let some days pass.	赞美{p}，宽恕了你的狂妄。竟如此关怀你的幸福！等上几天。
+Praise {p} for ignoring your hubris. Such care for your happiness! Let another day pass.	赞美{p}，宽恕了你的狂妄。竟如此关怀你的幸福！再等一天。
+Praise {p} for ignoring your hubris. {r} without bound.	赞美{p}，宽恕了你的狂妄。无边的{r}。
+Praise {p} for ignoring your hubris. {r} without bound. Let a week pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。等上一周。
+Praise {p} for ignoring your hubris. {r} without bound. Let some days pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。等上几天。
+Praise {p} for ignoring your hubris. {r} without bound. Let another day pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。再等一天。
+Praise {p} for ignoring your hubris. {r} without bounds.	赞美{p}，宽恕了你的狂妄。无边的{r}。
+Praise {p} for ignoring your hubris. {r} without bounds. Let a week pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。等上一周。
+Praise {p} for ignoring your hubris. {r} without bounds. Let some days pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。等上几天。
+Praise {p} for ignoring your hubris. {r} without bounds. Let another day pass.	赞美{p}，宽恕了你的狂妄。无边的{r}。再等一天。
+Praise {p} for ignoring your hubris. Such {r}!	赞美{p}，宽恕了你的狂妄。何等的{r}！
+Praise {p} for ignoring your hubris. Such {r}! Let a week pass.	赞美{p}，宽恕了你的狂妄。何等的{r}！等上一周。
+Praise {p} for ignoring your hubris. Such {r}! Let some days pass.	赞美{p}，宽恕了你的狂妄。何等的{r}！等上几天。
+Praise {p} for ignoring your hubris. Such {r}! Let another day pass.	赞美{p}，宽恕了你的狂妄。何等的{r}！再等一天。
+Praise {p} for ignoring your hubris. Such is the spirit of {r}.	赞美{p}，宽恕了你的狂妄。这就是{r}的精神。
+Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let a week pass.	赞美{p}，宽恕了你的狂妄。这就是{r}的精神。等上一周。
+Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let some days pass.	赞美{p}，宽恕了你的狂妄。这就是{r}的精神。等上几天。
+Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let another day pass.	赞美{p}，宽恕了你的狂妄。这就是{r}的精神。再等一天。
+Praise {p} for ignoring your hubris. Infinite {r}!	赞美{p}，宽恕了你的狂妄。无穷的{r}！
+Praise {p} for ignoring your hubris. Infinite {r}! Let a week pass.	赞美{p}，宽恕了你的狂妄。无穷的{r}！等上一周。
+Praise {p} for ignoring your hubris. Infinite {r}! Let some days pass.	赞美{p}，宽恕了你的狂妄。无穷的{r}！等上几天。
+Praise {p} for ignoring your hubris. Infinite {r}! Let another day pass.	赞美{p}，宽恕了你的狂妄。无穷的{r}！再等一天。
+Praise {p} for ignoring your hubris. Oh sweet {r}!	赞美{p}，宽恕了你的狂妄。啊，甘美的{r}！
+Praise {p} for ignoring your hubris. Oh sweet {r}! Let a week pass.	赞美{p}，宽恕了你的狂妄。啊，甘美的{r}！等上一周。
+Praise {p} for ignoring your hubris. Oh sweet {r}! Let some days pass.	赞美{p}，宽恕了你的狂妄。啊，甘美的{r}！等上几天。
+Praise {p} for ignoring your hubris. Oh sweet {r}! Let another day pass.	赞美{p}，宽恕了你的狂妄。啊，甘美的{r}！再等一天。
+Praise {p} for ignoring your hubris. Oh tender {r}!	赞美{p}，宽恕了你的狂妄。啊，温柔的{r}！
+Praise {p} for ignoring your hubris. Oh tender {r}! Let a week pass.	赞美{p}，宽恕了你的狂妄。啊，温柔的{r}！等上一周。
+Praise {p} for ignoring your hubris. Oh tender {r}! Let some days pass.	赞美{p}，宽恕了你的狂妄。啊，温柔的{r}！等上几天。
+Praise {p} for ignoring your hubris. Oh tender {r}! Let another day pass.	赞美{p}，宽恕了你的狂妄。啊，温柔的{r}！再等一天。
+Hubris!	狂妄！
+You roll.	你掷出了骰子。
+You roll, divining the will of {p} according to the practice of {e}.	你按照{e}的习俗掷骰，卜问{p}的意志。
+You roll, testing the will of {p}.	你掷出骰子，试探{p}的意志。
+{s} shows a word but you cannot read.	{s1}显示出一个词，但你不识字。
+{s} shows the word "{s}".	{s1}显示出“{s2}”这个词。
+{s} shows {d} "{s}"s.	{s1}显示出{d}个“{s2}”。
+{s} shows {d}.	{s1}显示出{d}。
+{s} shows {s}.	{s1}显示出{s2}。
+{s} comes up a word but you cannot read.	{s1}掷出了一个词，但你不识字。
+{s} comes up the word "{s}".	{s1}掷出了“{s2}”这个词。
+{s} comes up {d} "{s}"s.	{s1}掷出了{d}个“{s2}”。
+{s} comes up {d}.	{s1}掷出了{d}。
+{s} comes up {s}.	{s1}掷出了{s2}。
+{s} lands on a word but you cannot read.	{s1}落在一个词，但你不识字。
+{s} lands on the word "{s}".	{s1}落在“{s2}”这个词。
+{s} lands on {d} "{s}"s.	{s1}落在{d}个“{s2}”。
+{s} lands on {d}.	{s1}落在{d}。
+{s} lands on {s}.	{s1}落在{s2}。
+"You are close. Follow your senses to the entrance."	“你已经很近了。跟随感知，找到入口。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sustenance! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水和食物！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sustenance! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水和食物！面对前方的挑战之前，先照顾好自己。记住，可以用营火加热冰雪。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of sustenance and sleep! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要食物和睡眠！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水和睡眠！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水和睡眠！面对前方的挑战之前，先照顾好自己。记住，可以用营火加热冰雪。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of sustenance! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要食物！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of drink! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。记住，可以用营火加热冰雪。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in need of sleep! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要睡眠！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in a state! See to yourself before you face what's ahead."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你现在的状态很糟！面对前方的挑战之前，先照顾好自己。”
+"You are close. Follow your senses to the entrance. But my chosen, you are in a state! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你现在的状态很糟！面对前方的挑战之前，先照顾好自己。记住，可以用营火加热冰雪。”
+"Greetings. I am {p}, and I have chosen you. Seek out {p} in {e} and fulfill your destiny."	“你好。我是{p1}，我已选中了你。去{e}寻找{p2}，完成你的天命。”
+"Greetings. I am {p}, and I have chosen you. The remnants of creation, {e}, belong with my followers, {e}. Seek out {p} in {e} and fulfill your destiny."	“你好。我是{p1}，我已选中了你。创世的遗留之物{e1}，应当归于我的信众{e2}。去{e3}寻找{p2}，完成你的天命。”
+"Greetings. I am {p}, and I have chosen you as my instrument of {r}. Seek out {p} in {e} and fulfill your destiny."	“你好。我是{p1}，我已选中你，作为我彰显{r}的使者。去{e}寻找{p2}，完成你的天命。”
+"Greetings. I am {p}, and I have chosen you as my instrument of {r}. The remnants of creation, {e}, belong with my followers, {e}. Seek out {p} in {e} and fulfill your destiny."	“你好。我是{p1}，我已选中你，作为我彰显{r}的使者。创世的遗留之物{e1}，应当归于我的信众{e2}。去{e3}寻找{p2}，完成你的天命。”
+You feed on {n}.	你吸食{n}。
+You flounder in the water!	你在水中挣扎！
+You flounder in the lava!	你在熔岩中挣扎！
+You flounder in the magma!	你在岩浆中挣扎！
+You push {s}.	你推动了{s}。
+You lose hold of the {s}.	你没能抓住{s}。
+You mount {n}.	你骑上了{n}。
+You dismount.	你从坐骑上下来了。
+{n} flounders in the water!	{n}在水中挣扎！
+{n} flounders in the lava!	{n}在熔岩中挣扎！
+{n} flounders in the magma!	{n}在岩浆中挣扎！
+{n} pushes {s}.	{n}推动了{s}。
+{n} loses hold of the {s}.	{n}没能抓住{s}。
+{n} mounts {n}.	{n1}骑上了{n2}。
+{n} dismounts.	{n}从坐骑上下来了。
+You cannot mount {n} due to the presence of an existing rider.	{n}已经有骑手，你无法骑上去。
+You fail to mount {n} in time.	你没能及时骑上{n}。
+You fail to dismount in time.	你没能及时从坐骑上下来。
+You stand up.	你起身了。
+{n} stands up.	{n}起身了。
+You lie on the ground.	你趴在了地上。
+{n} lies on the ground.	{n}趴在了地上。
+{s} is already nocked with {s} and you prepared to shoot.	{s1}已经搭好{s2}，你已准备射击。
+{s} is already nocked with .	{s}已经搭好了。
+You finish nocking {s} in {s}.	你已在{s2}上搭好{s1}。
+You finish nocking {s} in {s} and prepare to shoot.	你已在{s2}上搭好{s1}，并准备射击。
+{s} is already loaded with {s} and you prepared to shoot.	{s1}已经装好{s2}，你已准备射击。
+{s} is already loaded with .	{s}已经装好了。
+You finish loading {s} into {s}.	你已在{s2}上装好{s1}。
+You finish loading {s} into {s} and prepare to shoot.	你已在{s2}上装好{s1}，并准备射击。
+{n} gains possession of the {s}.	{n}取得了{s}。
+{n} maintains possession of the {s}.	{n}仍控制着{s}。
+You gain possession of the {s}.	你取得了{s}。
+You maintain possession of the {s}.	你仍控制着{s}。
+You've lost possession of the {s}.	你失去了{s}。
+The {s} remains stuck in {n}'s {t}.	{s}仍卡在{n}的{t}中。
+The {s} remains stuck in your {t}.	{s}仍卡在你的{t}中。
+The {s} is torn from your {t}.	{s}被从你的{t}中扯了出来。
+You reorganize your possessions.	你重新整理了随身物品。
+{n} reorganizes his possessions.	{n}重新整理了自己的随身物品。
+{n} reorganizes her possessions.	{n}重新整理了自己的随身物品。
+{n} reorganizes its possessions.	{n}重新整理了自己的随身物品。
+{n} straps {s} to his {t}.	{n}将{s}绑在自己的{t}上。
+{n} draws {s} with his {t}.	{n}用自己的{t}拔出了{s}。
+{n} straps {s} to her {t}.	{n}将{s}绑在自己的{t}上。
+{n} draws {s} with her {t}.	{n}用自己的{t}拔出了{s}。
+{n} straps {s} to its {t}.	{n}将{s}绑在自己的{t}上。
+{n} draws {s} with its {t}.	{n}用自己的{t}拔出了{s}。
+{n} drops {s}.	{n}放下了{s}。
+{n} drinks {s}.	{n}喝下了{s}。
+{p} is sneaking an extra drink to {p}!	{p1}正在偷偷多给{p2}一杯酒！
+You butcher {s}.	你屠宰了{s}。
+You make {s}.	你制作了{s}。
+You make {s} and {s}.	你制作了{s1}和{s2}。
+You make {s} and more.	你制作了{s}等物品。
+You have finished working on {s}.	你完成了对{s}的加工。
+You have finished working on {s} and {s}.	你完成了对{s1}和{s2}的加工。
+You have finished working on {s} and more.	你完成了对{s}等物品的加工。
+You practice your {s}.	你练习了{s}。
+You practice your {s} but make nothing of note.	你练习了{s}，但没有做出什么像样的东西。
+You make nothing.	你什么也没做出来。
+{n} pulls out and drops {s}.	{n}拔出并丢下了{s}。
+{n} pulls out and releases {s}.	{n}拔出并松开了{s}。
+You have bestowed the name {b} upon {s}.	你将{s}命名为{b}。
+{n} has bestowed the name {b} upon a {s}!	{n}将一件{s}命名为{b}！
+{n} has grown attached to a {s}!	{n}对一件{s}产生了依恋！
+{s} has been moved from its proper place!	{s}被移离了原本的位置！
+{s} is missing from its proper place!	{s}从原本的位置不见了！
+{s} was seen being passed to a thief!	{s}被人看见交给了一个窃贼！
+{s} was seen being stolen!	{s}被人看见遭到偷窃！
+{n} drinks the {s}.	{n}喝下了{s}。
+{n} eats the {s}.	{n}吃下了{s}。
+It makes them look even more sick.	这使其看起来更加恶心了。
+They look sick suddenly.	其突然显得很恶心。
+You have located {b}, "{b}", a {s}.	你找到了{b1}（“{b2}”），一件{s}。
+You receive {i} to conclude the transaction.	你收到了{i}，完成了交易。
+{n} has created {b}, a {s}!	{n}创造了{b}，一件{s}！
+{n} has created {b}, a {s}! He claims it as a personal treasure.	{n}创造了{b}，一件{s}！他宣布将其作为私人珍宝。
+{n} has created {b}, a {s}! He claims it as a family heirloom.	{n}创造了{b}，一件{s}！他宣布将其作为传家宝。
+{n} has created {b}, a {s}! He claims it as an heirloom in the name of the family ancestor {p}.	{n}创造了{b}，一件{s}！他以家族先祖{p}之名，宣布将其作为传家宝。
+{n} has created {b}, a {s}! He offers it to {e}.	{n}创造了{b}，一件{s}！他将其献给{e}。
+{n} has created {b}, a {s}! She claims it as a personal treasure.	{n}创造了{b}，一件{s}！她宣布将其作为私人珍宝。
+{n} has created {b}, a {s}! She claims it as a family heirloom.	{n}创造了{b}，一件{s}！她宣布将其作为传家宝。
+{n} has created {b}, a {s}! She claims it as an heirloom in the name of the family ancestor {p}.	{n}创造了{b}，一件{s}！她以家族先祖{p}之名，宣布将其作为传家宝。
+{n} has created {b}, a {s}! She offers it to {e}.	{n}创造了{b}，一件{s}！她将其献给{e}。
+{n} has created {b}, a {s}! It claims it as a personal treasure.	{n}创造了{b}，一件{s}！它宣布将其作为私人珍宝。
+{n} has created {b}, a {s}! It claims it as a family heirloom.	{n}创造了{b}，一件{s}！它宣布将其作为传家宝。
+{n} has created {b}, a {s}! It claims it as an heirloom in the name of the family ancestor {p}.	{n}创造了{b}，一件{s}！它以家族先祖{p}之名，宣布将其作为传家宝。
+{n} has created {b}, a {s}! It offers it to {e}.	{n}创造了{b}，一件{s}！它将其献给{e}。
+The {s} were unable to complete the {s}.	{s1}未能完成{s2}。
+Jobs removed from unpowered {s}.	已取消无动力的{s}中的工作。
+The {s} suspended the construction of {s}.	{s1}暂停了{s2}的建造。
+The {s} suspended a linkage from {s}.	{s1}暂停了从{s2}接出的联动连接。
+{s} ({s}) has been completed.	{s1}（{s2}）已完成。
+{n} cancels {s}: Unscheduled.	{n}取消了{s}：未排定。
+{n} cancels {s}: Cannot reach site.	{n}取消了{s}：无法到达地点。
+{n} cancels {s}: Getting married.	{n}取消了{s}：正在结婚。
+{n} cancels {s}: Inappropriate dig square.	{n}取消了{s}：挖掘方格不合适。
+{n} cancels {s}: Area became inappropriate.	{n}取消了{s}：区域已变得不合适。
+{n} cancels {s}: Moved.	{n}取消了{s}：已移动。
+{n} cancels {s}: Need empty bucket.	{n}取消了{s}：需要空桶。
+{n} cancels {s}: Need empty trap.	{n}取消了{s}：需要空陷阱。
+{n} cancels {s}: Need empty bag.	{n}取消了{s}：需要空袋。
+{n} cancels {s}: Need empty cage.	{n}取消了{s}：需要空笼。
+{n} cancels {s}: Need valid, active sand collection zone.	{n}取消了{s}：需要有效且启用的采砂区。
+{n} cancels {s}: Need valid, active clay collection zone.	{n}取消了{s}：需要有效且启用的采黏土区。
+{n} cancels {s}: No available colony.	{n}取消了{s}：没有可用的蜂巢。
+{n} cancels {s}: Sand vanished.	{n}取消了{s}：砂子不见了。
+{n} cancels {s}: Clay vanished.	{n}取消了{s}：黏土不见了。
+{n} cancels {s}: Incapable of carrying.	{n}取消了{s}：无法搬运。
+{n} cancels {s}: Too injured.	{n}取消了{s}：伤势过重。
+{n} cancels {s}: Exhausted.	{n}取消了{s}：累。
+{n} cancels {s}: Resting injury.	{n}取消了{s}：正在养伤。
+{n} cancels {s}: Animal inaccessible.	{n}取消了{s}：无法接近动物。
+{n} cancels {s}: Patient inaccessible.	{n}取消了{s}：无法接近病患。
+{n} cancels {s}: Infant inaccessible.	{n}取消了{s}：无法接近婴儿。
+{n} cancels {s}: No partner.	{n}取消了{s}：没有搭档。
+{n} cancels {s}: Item inaccessible.	{n}取消了{s}：无法取得物品。
+{n} cancels {s}: Drop-off inaccessible.	{n}取消了{s}：无法到达交付地点。
+{n} cancels {s}: Building inaccessible.	{n}取消了{s}：无法到达建筑。
+{n} cancels {s}: Area inaccessible.	{n}取消了{s}：无法到达区域。
+{n} cancels {s}: Nothing in cage.	{n}取消了{s}：笼中没有东西。
+{n} cancels {s}: Nothing to cage.	{n}取消了{s}：没有可装入笼中的生物。
+{n} cancels {s}: Nothing to catch.	{n}取消了{s}：没有可捕捉的生物。
+{n} cancels {s}: No patient.	{n}取消了{s}：没有病患。
+{n} cancels {s}: Patient not resting.	{n}取消了{s}：病患没有休息。
+{n} cancels {s}: No infant.	{n}取消了{s}：没有婴儿。
+{n} cancels {s}: Already leading creature.	{n}取消了{s}：已在牵引生物。
+{n} cancels {s}: No food available.	{n}取消了{s}：没有可用的食物。
+{n} cancels {s}: Water source vanished.	{n}取消了{s}：水源不见了。
+{n} cancels {s}: No water source.	{n}取消了{s}：没有水源。
+{n} cancels {s}: Water source contaminated.	{n}取消了{s}：水源受到污染。
+{n} cancels {s}: Creature occupying site.	{n}取消了{s}：有生物占据地点。
+{n} cancels {s}: No bucket at well.	{n}取消了{s}：水井没有水桶。
+{n} cancels {s}: Bucket full of extraneous material.	{n}取消了{s}：桶中装满了异物。
+{n} cancels {s}: Well dry.	{n}取消了{s}：水井干涸。
+{n} cancels {s}: Need office.	{n}取消了{s}：需要办公室。
+{n} cancels {s}: Wrong ammunition.	{n}取消了{s}：弹药不对。
+{n} cancels {s}: Ammunition inaccessible.	{n}取消了{s}：无法取得弹药。
+{n} cancels {s}: No ammunition.	{n}取消了{s}：没有弹药。
+{n} cancels {s}: No item.	{n}取消了{s}：没有物品。
+{n} cancels {s}: No weapon.	{n}取消了{s}：没有武器。
+{n} cancels {s}: Item blocking site.	{n}取消了{s}：有物品阻挡地点。
+{n} cancels {s}: Building site submerged.	{n}取消了{s}：建筑工地被淹没。
+{n} cancels {s}: Animal not restrained.	{n}取消了{s}：动物未被拴住。
+{n} cancels {s}: No creature.	{n}取消了{s}：没有生物。
+{n} cancels {s}: Inappropriate building.	{n}取消了{s}：建筑不合适。
+{n} cancels {s}: No building.	{n}取消了{s}：没有建筑。
+{n} cancels {s}: No floor space.	{n}取消了{s}：没有地面空间。
+{n} cancels {s}: No designated area.	{n}取消了{s}：没有指定的区域。
+{n} cancels {s}: No party.	{n}取消了{s}：没有聚会。
+{n} cancels {s}: Wrong justice state.	{n}取消了{s}：司法状态不对。
+{n} cancels {s}: Nothing in building.	{n}取消了{s}：建筑中没有东西。
+{n} cancels {s}: Relieved.	{n}取消了{s}：放心。
+{n} cancels {s}: Water is frozen.	{n}取消了{s}：水已结冰。
+{n} cancels {s}: Terrified.	{n}取消了{s}：极度恐惧。
+{n} cancels {s}: Mortally afraid.	{n}取消了{s}：怕得要死。
+{n} cancels {s}: Experiencing emotional shock.	{n}取消了{s}：受到情感冲击。
+{n} cancels {s}: Horrified.	{n}取消了{s}：惊骇。
+{n} cancels {s}: Grieving.	{n}取消了{s}：悲痛中。
+{n} cancels {s}: Too sad.	{n}取消了{s}：过于悲伤。
+{n} cancels {s}: In agony.	{n}取消了{s}：极度痛苦。
+{n} cancels {s}: Anguished.	{n}取消了{s}：痛苦不堪。
+{n} cancels {s}: Despairing.	{n}取消了{s}：绝望。
+{n} cancels {s}: Dismayed.	{n}取消了{s}：沮丧。
+{n} cancels {s}: Distressed.	{n}取消了{s}：痛苦。
+{n} cancels {s}: Frightened.	{n}取消了{s}：惊恐。
+{n} cancels {s}: Miserable.	{n}取消了{s}：悲惨不已。
+{n} cancels {s}: Mortified.	{n}取消了{s}：羞愧难当。
+{n} cancels {s}: Shaken.	{n}取消了{s}：震惊不已。
+{n} cancels {s}: In existential crisis.	{n}取消了{s}：陷入存在危机。
+{n} cancels {s}: Too insane.	{n}取消了{s}：过于疯狂。
+{n} cancels {s}: Too depressed.	{n}取消了{s}：过于抑郁。
+{n} cancels {s}: Oblivious.	{n}取消了{s}：浑然不觉。
+{n} cancels {s}: Catatonic.	{n}取消了{s}：陷入木僵。
+{n} cancels {s}: Taken by mood.	{n}取消了{s}：陷入奇异情绪。
+{n} cancels {s}: Went insane.	{n}取消了{s}：发疯了。
+{n} cancels {s}: Throwing tantrum.	{n}取消了{s}：正在发脾气。
+{n} cancels {s}: Could not find path.	{n}取消了{s}：找不到路径。
+{n} cancels {s}: Path blocked.	{n}取消了{s}：路径受阻。
+{n} cancels {s}: Seeking artifact.	{n}取消了{s}：正在寻找造物。
+{n} cancels {s}: Handling dangerous creature.	{n}取消了{s}：正在处理危险生物。
+{n} cancels {s}: Going to bed.	{n}取消了{s}：正在就寝。
+{n} cancels {s}: Seeking Infant.	{n}取消了{s}：正在寻找婴儿。
+{n} cancels {s}: Dangerous terrain.	{n}取消了{s}：地形危险。
+{n} cancels {s}: Forbidden area.	{n}取消了{s}：禁区。
+{n} cancels {s}: Job item lost or destroyed.	{n}取消了{s}：工作物品丢失或损毁。
+{n} cancels {s}: Job item misplaced.	{n}取消了{s}：工作物品放错位置。
+{n} cancels {s}: Getting food.	{n}取消了{s}：正在取食物。
+{n} cancels {s}: Getting water.	{n}取消了{s}：正在取水。
+{n} cancels {s}: Hunting vermin for food.	{n}取消了{s}：正在捕捉害虫充饥。
+{n} cancels {s}: Target inaccessible.	{n}取消了{s}：无法接近目标。
+{n} cancels {s}: Target too injured.	{n}取消了{s}：目标伤势过重。
+{n} cancels {s}: No target.	{n}取消了{s}：没有目标。
+{n} cancels {s}: No mechanism for target.	{n}取消了{s}：没有用于目标的机件。
+{n} cancels {s}: No target building.	{n}取消了{s}：没有目标建筑。
+{n} cancels {s}: No mechanism for trigger.	{n}取消了{s}：没有用于触发器的机件。
+{n} cancels {s}: No trigger.	{n}取消了{s}：没有触发器。
+{n} cancels {s}: Attacking building.	{n}取消了{s}：正在攻击建筑。
+{n} cancels {s}: Lost pick.	{n}取消了{s}：丢失了镐。
+{n} cancels {s}: Invalid officer.	{n}取消了{s}：官员无效。
+{n} cancels {s}: "Farewell!" Leaving.	{n}取消了{s}：“再见！”正在离开。
+{n} cancels {s}: Removed from guard.	{n}取消了{s}：已被调离警卫队。
+{n} cancels {s}: Equipment mismatch.	{n}取消了{s}：装备不匹配。
+{n} cancels {s}: Unconscious.	{n}取消了{s}：无意识。
+{n} cancels {s}: Webbed.	{n}取消了{s}：被网缠住的。
+{n} cancels {s}: Paralyzed.	{n}取消了{s}：麻痹。
+{n} cancels {s}: Caged.	{n}取消了{s}：关在笼中。
+{n} cancels {s}: In Custody.	{n}取消了{s}：被拘押。
+{n} cancels {s}: Getting something to drink.	{n}取消了{s}：正在找东西喝。
+{n} cancels {s}: Using well.	{n}取消了{s}：正在使用水井。
+{n} cancels {s}: Lost axe.	{n}取消了{s}：丢失了斧。
+{n} cancels {s}: Not responsible for trade.	{n}取消了{s}：不负责贸易。
+{n} cancels {s}: No available traction bench.	{n}取消了{s}：没有可用的牵引台。
+{n} cancels {s}: Need splint.	{n}取消了{s}：需要夹板。
+{n} cancels {s}: Need thread.	{n}取消了{s}：需要线。
+{n} cancels {s}: Need cloth.	{n}取消了{s}：需要布。
+{n} cancels {s}: Need crutch.	{n}取消了{s}：需要拐杖。
+{n} cancels {s}: Bad script! #1.	{n}取消了{s}：脚本错误！#1。
+{n} cancels {s}: Bad script! #2.	{n}取消了{s}：脚本错误！#2。
+{n} cancels {s}: Bad script! #3.	{n}取消了{s}：脚本错误！#3。
+{n} cancels {s}: Need bag containing powder suitable for cast application.	{n}取消了{s}：需要装有适合制作石膏绷带的粉末的袋子。
+{n} cancels {s}: No weapon for execution.	{n}取消了{s}：没有行刑武器。
+{n} cancels {s}: No appropriate ammunition.	{n}取消了{s}：没有合适的弹药。
+{n} cancels {s}: Not appointed.	{n}取消了{s}：尚未任命。
+{n} cancels {s}: No longer requested.	{n}取消了{s}：已不再需要。
+{n} cancels {s}: Interrupted by {n}.	{n1}取消了{s}：被{n2}打断。
+{n} cancels {s}: Interrupted by combat.	{n}取消了{s}：被战斗打断。
+{n} cancels {s}: Needs {s}.	{n}取消了{s1}：需要{s2}。
+{n} cancels {s}: Needs {s} in linked stockpile.	{n}取消了{s1}：相连的储物堆中需要{s2}。
+The temple petition by {e} has been ignored.	{e}的神殿申请未获理会。
+The guildhall petition by {e} has been ignored.	{e}的行会大厅申请未获理会。
+The citizenship petition of {n} has been ignored.	{n}的公民资格申请未获理会。
+The residency petition of {e} has been ignored.	{e}的居留申请未获理会。
+The residency petition of {n} has been ignored.	{n}的居留申请未获理会。
+The guildhall agreement with {e} has been satisfied.	与{e}达成的行会大厅协议已履行。
+The priesthood of {e} is ready to be recognized (from the temple's location menu.) This will satisfy the agreement.	{e}的祭司团已准备好获得认可（可在神殿的地点菜单中操作）。这将履行协议。
+The high priest of {e} is ready to be recognized (from the temple's location menu.) This will satisfy the agreement.	{e}的大祭司已准备好获得认可（可在神殿的地点菜单中操作）。这将履行协议。
+The agreement to establish a temple for {e} has been abandoned.	为{e}建立神殿的协议已被放弃。
+The agreement to establish a guildhall for {e} has been abandoned.	为{e}建立行会大厅的协议已被放弃。
+{e}, a {s} guild, has been established.	{s}行会{e}已经成立。
+The {n} has been missing for a week.	{n}已经失踪一周。
+{n} has ended a mandate.	{n}结束了一项法令。
+A mandate has ended.	一项法令已结束。
+Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense.	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。
+Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. What are a few pesky demons after all?	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。区区几个恼人的恶魔又算得了什么？
+Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. The gods surely want you to dig deeper still!	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。诸神一定希望你继续向更深处挖掘！
+Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense. And why shouldn't you dig deeper still?!	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。又有什么理由不继续向更深处挖掘呢？！
+{n} is satisfied with their position here. Everything is properly royal, properly furnished. And yet? A true Mountainhome must have a true throne! And a true ruler requires seven symbols, symbols not of this world. Mere steel will not suffice. This legend does not end until we've chipped out the last treasures of the underworld!	{n}对自己在这里的地位感到满意。一切都尽显皇家气派，陈设齐备。但这就够了吗？真正的山国都城必须有一座真正的王座！真正的统治者还需要七件象征，来自尘世之外的象征。寻常钢铁远远不够。直到挖出冥界最后的宝藏，这段传奇才会结束！
+{n} is satisfied with their position here. Everything is properly royal, properly furnished. And yet? A true Mountainhome must have a true throne! And a true ruler requires seven symbols, symbols not of this world. Mere steel will not suffice. Deeper. We must dig deeper.	{n}对自己在这里的地位感到满意。一切都尽显皇家气派，陈设齐备。但这就够了吗？真正的山国都城必须有一座真正的王座！真正的统治者还需要七件象征，来自尘世之外的象征。寻常钢铁远远不够。更深。我们必须挖得更深。
+{n} is satisfied with their position here. Congratulations! (You should be proud of your accomplishment. Embark in a world with the deepest cavern layers for further challenges.)	{n}对自己在这里的地位感到满意。祝贺你！（你应当为自己的成就感到自豪。若想迎接进一步的挑战，请在拥有最深洞穴层的世界中启程。）
+Your fortress is out of food! Consider placing a farmplot on some underground soil and planting seeds. Try building a butcher's shop and slaughtering some livestock. Perhaps you can gather plants, fruit, or go fishing.	你的要塞没有食物了！考虑在地下土壤上建造农田并播种。试着建造屠宰坊，宰杀一些牲畜。也许可以采集植物、水果，或者去捕鱼。
+Your fortress is out of food! Consider placing a farmplot on some underground soil and planting seeds. Do you have any livestock to slaughter? Perhaps you can gather plants, fruit, or go fishing.	你的要塞没有食物了！考虑在地下土壤上建造农田并播种。还有可供宰杀的牲畜吗？也许可以采集植物、水果，或者去捕鱼。
+Your fortress is out of food! Are your farmplots working? Make sure you are planting edible plants. Try building a butcher's shop and slaughtering some livestock. Perhaps you can gather plants, fruit, or go fishing.	你的要塞没有食物了！农田是否正常运作？务必种植可食用的植物。试着建造屠宰坊，宰杀一些牲畜。也许可以采集植物、水果，或者去捕鱼。
+Your fortress is out of food! Are your farmplots working? Make sure you are planting edible plants. Do you have any livestock to slaughter? Perhaps you can gather plants, fruit, or go fishing.	你的要塞没有食物了！农田是否正常运作？务必种植可食用的植物。还有可供宰杀的牲畜吗？也许可以采集植物、水果，或者去捕鱼。
+The annual tribute from {e} has arrived.	来自{e}的年度贡品已送达。
+Their wagons have bypassed your inaccessible site.	他们的货车绕过了你无法通行的据点。
+A {s} diplomat from {e} has arrived.	来自{e}的{s}外交官已抵达。
+{n} from {e} has arrived.	来自{e}的{n}已抵达。
+No {s}? How curious...	没有{s}？真奇怪……
+{n} has come!	{n1}来了！
+The merchants from {e} will be leaving soon.	来自{e}的商人即将离开。
+The merchants from {e} have embarked on their journey.	来自{e}的商人已经启程。
+{n} bids you farewell!	{n}向你道别！
+{n} has been elected {s}.	{n}已当选为{s}。
+{n} has been re-elected.	{n}已再次当选。
+{p} has become a {s}.	{p}成为了{s}。
+has become a {s}.	已成为{s}。
+A diplomat could not complete a meeting and has left unhappy.	一位外交官未能完成会面，已不悦地离开。
+{n} cannot find a path to its destination.	{n}找不到前往目的地的路径。
+{n} has stopped responding to the world...	{n}已不再对外界作出反应……
+{n} has gone berserk!	{n}发狂了！
+{n} has gone stark raving mad!	{n}彻底疯了！
+{n} is stricken by melancholy!	{n}陷入了忧郁！
+{n} has forgotten a demand.	{n}忘记了一项要求。
+{n} has a new demand.	{n}提出了一项新要求。
+{n} has mandated the construction of certain goods.	{n}下令制作某些物品。
+{n} has imposed a ban on certain exports.	{n}禁止出口某些物品。
+{n} has altered the prices of goods.	{n}调整了物品价格。
+{n}'s mandate has ended.	{n}的一项法令已结束。
+{n}'s mandates have ended.	{n}的多项法令已结束。
+You have disturbed the sleep of the dead!	你惊扰了死者的长眠！
+{n} sucks the wind out of {n}!	{n1}抽走了{n2}的气息！
+{n} sucks the wind out of you!	{n}抽走了你的气息！
+{n} raises a high fever in {n}!	{n1}使{n2}高烧不退！
+{n} raises a high fever in you!	{n}使你高烧不退！
+{n} inflicts excruciating pain upon {n}!	{n1}使{n2}承受剧痛！
+{n} inflicts excruciating pain upon you!	{n}使你承受剧痛！
+{n} causes a spell of dizziness in {n}!	{n1}使{n2}一阵眩晕！
+{n} causes a spell of dizziness in you!	{n}使你一阵眩晕！
+{n} paralyzes {n}!	{n1}使{n2}瘫痪！
+{n} paralyzes you!	{n}使你瘫痪！
+{n} stuns {n}!	{n1}使{n2}眩晕！
+{n} stuns you!	{n}使你眩晕！
+{n} makes {n} convulse and retch!	{n1}使{n2}抽搐干呕！
+{n} makes you convulse and retch!	{n}使你抽搐干呕！
+{n} batters {n}!	{n1}殴打{n2}！
+{n} batters you!	{n}殴打你！
+{n} is throwing a tantrum, possessed by {n}!	{n1}被{n2}附身，正在大发脾气！
+{n} has risen and is haunting the fortress!	{n}已从死后归来，在要塞中作祟！
+{n} is following {n}!	{n1}正在跟随{n2}！
+{n} is following you!	{n}正在跟随你！
+{s} has been misplaced. No doubt {n} is to blame!	{s}被挪走了。毫无疑问，{n}就是罪魁祸首！
+{s} toppled by {n}.	{s1}被{n1}推倒了。
+{n} is throwing objects around the fortress!	{n}正在要塞各处乱扔物品！
+{n} can be heard howling throughout the fortress!	整个要塞都能听到{n}的嚎叫！
+The {s} of {e}, {s}, looks to your thriving economy for its future prosperity and has been incorporated into your holdings.	位于{s2}的{s1}{e}将未来的繁荣寄望于你蓬勃发展的经济，并已纳入你的领地。
+The {s} of {e}, {s}, looks to your thriving economy for its future prosperity.	位于{s2}的{s1}{e}将未来的繁荣寄望于你蓬勃发展的经济。
+{n}, being the rightful heir, has inherited the position of {s}.	{n}作为合法继承人，继承了{s}。
+{n}, being the rightful heir, has inherited the position of {s} of {e}.	{n}作为合法继承人，继承了{e}的{s}。
+{n} has been appointed to the position of {s}.	{n}被任命为{s}。
+{n} has been appointed to the position of {s} of {e}.	{n}被任命为{e}的{s}。
+{n} has been elected to the position of {s}.	{n}被选举为{s}。
+{n} has been elected to the position of {s} of {e}.	{n}被选举为{e}的{s}。
+You are now in control of {e}, ruling {e}.	你现在掌控了{e1}，统治着{e2}。
+You are now in control of {e}, ruling {e} from {e}.	你现在掌控了{e1}，从{e3}统治着{e2}。
+{n} has come! {q}	{n1}来了！{q1}
+{n} has been elected {s} of {e}.	{n}已当选为{e}的{s}。
+Your ruler has arrived, dressed as a peasant!	你的统治者乔装成农民抵达了！
+Some migrants have decided to brave this terrifying place, knowing it may be their miserable tomb.	一些移民决定勇闯这片恐怖之地，明知这里可能成为他们悲惨的坟墓。
+Some migrants have arrived at this miserable place, despite the danger.	一些移民不顾危险，来到了这个悲惨的地方。
+Some migrants have arrived at this miserable place.	一些移民来到了这个悲惨的地方。
+Some migrants have decided to brave this terrifying unhappy place, knowing it may be their tomb.	一些移民决定勇闯这片恐怖而不幸的地方，明知这里可能成为他们的坟墓。
+Some migrants have arrived at this unhappy place, despite the danger.	一些移民不顾危险，来到了这个不幸的地方。
+Some migrants have arrived at this unhappy place.	一些移民来到了这个不幸的地方。
+Some migrants have decided to brave this terrifying place, knowing it may be their tomb.	一些移民决定勇闯这片恐怖之地，明知这里可能成为他们的坟墓。
+Some migrants have arrived, despite the danger.	一些移民不顾危险，抵达了这里。
+Some migrants have arrived.	一些移民抵达了。
+A migrant has decided to brave this terrifying miserable place.	一名移民决定勇闯这个恐怖而悲惨的地方。
+A migrant has arrived at this miserable place, despite the danger.	一名移民不顾危险，来到了这个悲惨的地方。
+A migrant has arrived at this miserable place.	一名移民来到了这个悲惨的地方。
+A migrant has decided to brave this terrifying unhappy place.	一名移民决定勇闯这个恐怖而不幸的地方。
+A migrant has arrived at this unhappy place, despite the danger.	一名移民不顾危险，来到了这个不幸的地方。
+A migrant has arrived at this unhappy place.	一名移民来到了这个不幸的地方。
+A migrant has decided to brave this terrifying place.	一名移民决定勇闯这片恐怖之地。
+A migrant has arrived, despite the danger.	一名移民不顾危险，抵达了这里。
+A migrant has arrived.	一名移民抵达了。
+No one else even considered making the journey to this cursed miserable death-trap.	其他人连前往这个受诅咒、悲惨的死亡陷阱的念头都没有。
+Others refused to journey to this dangerous and miserable fortress.	其他人拒绝前往这座危险而悲惨的要塞。
+Others were too nervous to make the journey to this miserable fortress.	其他人因太过害怕，未敢踏上前往这座悲惨要塞的旅途。
+No one else even considered making the journey to this cursed unhappy death-trap.	其他人连前往这个受诅咒、不幸的死亡陷阱的念头都没有。
+Others refused to journey to this dangerous and unhappy fortress.	其他人拒绝前往这座危险而不幸的要塞。
+Others were too nervous to make the journey to this unhappy fortress.	其他人因太过害怕，未敢踏上前往这座不幸要塞的旅途。
+No one else even considered making the journey to this cursed death-trap.	其他人连前往这个受诅咒的死亡陷阱的念头都没有。
+Others refused to journey to this dangerous fortress.	其他人拒绝前往这座危险的要塞。
+Others were too nervous to make the journey.	其他人因太过害怕，未敢踏上旅途。
+No one even considered making the journey to such a cursed miserable death-trap this season.	本季无人有意前往这样一个受诅咒、悲惨的死亡陷阱。
+Migrants refused to journey to such a dangerous and miserable fortress this season.	本季移民拒绝前往这样一座危险而悲惨的要塞。
+Migrants were too nervous to make the journey this season to this miserable fortress.	本季移民因太过害怕，未敢踏上前往这座悲惨要塞的旅途。
+No one even considered making the journey to such a cursed unhappy death-trap this season.	本季无人有意前往这样一个受诅咒、不幸的死亡陷阱。
+Migrants refused to journey to such a dangerous and unhappy fortress this season.	本季移民拒绝前往这样一座危险而不幸的要塞。
+Migrants were too nervous to make the journey this season to this unhappy fortress.	本季移民因太过害怕，未敢踏上前往这座不幸要塞的旅途。
+No one even considered making the journey to such a cursed death-trap this season.	本季无人有意前往这样一个受诅咒的死亡陷阱。
+Migrants refused to journey to such a dangerous fortress this season.	本季移民拒绝前往这样一座危险的要塞。
+Migrants were too nervous to make the journey this season.	本季移民因太过害怕，未敢踏上旅途。
+No one else even considered making the journey to this miserable hellhole.	其他人连前往这个悲惨的鬼地方的念头都没有。
+Others refused to journey to this unhappy fortress.	其他人拒绝前往这座不幸的要塞。
+Others were too wary to make the journey.	其他人因太过警惕，未敢踏上旅途。
+No one even considered making the journey to such a miserable hellhole this season.	本季无人有意前往这样一个悲惨的鬼地方。
+Migrants refused to journey to this unhappy fortress this season.	本季移民拒绝前往这座不幸的要塞。
+Migrants were too wary to make the journey this season.	本季移民因太过警惕，未敢踏上旅途。
+The fortress attracted no migrants this season.	本季要塞没有吸引到移民。
+A caravan from {e} has arrived. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Overall trade sentiments are great.	来自{e}的商队已抵达。总体贸易意愿很高。
+A caravan from {e} has arrived. Overall trade sentiments are very good.	来自{e}的商队已抵达。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Overall trade sentiments are good.	来自{e}的商队已抵达。总体贸易意愿良好。
+A caravan from {e} has arrived. Overall trade sentiments are terrible.	来自{e}的商队已抵达。总体贸易意愿极差。
+A caravan from {e} has arrived. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Overall trade sentiments are cautious.	来自{e}的商队已抵达。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are great.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿很高。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are very good.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿非常良好。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are good.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿良好。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿极差。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. The presence of your ruler has attracted great riches. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你的统治者在此坐镇，吸引来了巨额财富。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a major land has attracted much more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为大领地的地位吸引来了比平时多得多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。不过，总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are good.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿良好。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are terrible.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿极差。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are tenuous at best.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿至多只能算勉强。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are lukewarm.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿不冷不热。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿偏于谨慎。
+A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. However, overall trade sentiments are cautious.	来自{e}的{s}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。不过，总体贸易意愿偏于谨慎。
+A {s} from {e} has arrived.	一位来自{e}的{s}已抵达。
+{n} empties {s}.	{n}倒空了{s}。
+You pick up {s}.	你拾起了{s}。
+{n} picks up {s}.	{n}拾起了{s}。
+Your ruler has arrived with a full entourage. Your thriving site is now the capital, and with continued fortune and toil, the legend of a true Mountainhome may yet be written.	你的统治者带着完整的随行队伍抵达了。你这繁荣的地点如今已成为都城，只要好运和辛勤劳作继续下去，真正的山国都城传奇终将谱写。
+OVERWROTE JOB: {s} BY {s}	任务已被覆盖：{s1}被{s2}取代
+There is nothing to catch in {e}.	{e}中没有可捕捉的东西。
+There is nothing to catch in the northwestern eerie cavern.	西北部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the northwestern magma sea.	西北部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the northwestern cavern.	西北部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the northwestern lake.	西北部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the northwestern swamps.	西北部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the northwestern ocean.	西北部的海洋中没有可捕捉的东西。
+There is nothing to catch in the southwestern eerie cavern.	西南部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the southwestern magma sea.	西南部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the southwestern cavern.	西南部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the southwestern lake.	西南部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the southwestern swamps.	西南部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the southwestern ocean.	西南部的海洋中没有可捕捉的东西。
+There is nothing to catch in the northeastern eerie cavern.	东北部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the northeastern magma sea.	东北部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the northeastern cavern.	东北部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the northeastern lake.	东北部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the northeastern swamps.	东北部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the northeastern ocean.	东北部的海洋中没有可捕捉的东西。
+There is nothing to catch in the southeastern eerie cavern.	东南部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the southeastern magma sea.	东南部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the southeastern cavern.	东南部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the southeastern lake.	东南部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the southeastern swamps.	东南部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the southeastern ocean.	东南部的海洋中没有可捕捉的东西。
+There is nothing to catch in the western eerie cavern.	西部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the western magma sea.	西部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the western cavern.	西部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the western lake.	西部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the western swamps.	西部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the western ocean.	西部的海洋中没有可捕捉的东西。
+There is nothing to catch in the northern eerie cavern.	北部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the northern magma sea.	北部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the northern cavern.	北部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the northern lake.	北部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the northern swamps.	北部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the northern ocean.	北部的海洋中没有可捕捉的东西。
+There is nothing to catch in the eastern eerie cavern.	东部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the eastern magma sea.	东部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the eastern cavern.	东部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the eastern lake.	东部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the eastern swamps.	东部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the eastern ocean.	东部的海洋中没有可捕捉的东西。
+There is nothing to catch in the southern eerie cavern.	南部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the southern magma sea.	南部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the southern cavern.	南部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the southern lake.	南部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the southern swamps.	南部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the southern ocean.	南部的海洋中没有可捕捉的东西。
+There is nothing to catch in the central eerie cavern.	中部的诡异洞穴中没有可捕捉的东西。
+There is nothing to catch in the central magma sea.	中部的岩浆海中没有可捕捉的东西。
+There is nothing to catch in the central cavern.	中部的洞穴中没有可捕捉的东西。
+There is nothing to catch in the central lake.	中部的湖泊中没有可捕捉的东西。
+There is nothing to catch in the central swamps.	中部的沼泽中没有可捕捉的东西。
+There is nothing to catch in the central ocean.	中部的海洋中没有可捕捉的东西。
+{n} has been cursed by {p}!	{n}受到了{p}的诅咒！
+Your miners have defaced a {p}!	你的矿工毁坏了一件{p}的作品！

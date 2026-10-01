@@ -1,0 +1,26 @@
+# Scoped native musical passage labels; integrate with data/runtime/local-overrides.tsv, not whole-sentence UI catalog.
+# Source: Dwarf Fortress.exe 0x1400af0b0..0x1400af2ab. Chinese terms follow existing translate_music_section vocabulary.
+Announcement music passage: a simple passage	简单乐段	w
+Announcement music passage: the introduction	引子	w
+Announcement music passage: the exposition of the theme	主题呈示部	w
+Announcement music passage: the exposition of the first theme	第一主题呈示部	w
+Announcement music passage: the exposition of the second theme	第二主题呈示部	w
+Announcement music passage: the exposition of the previous passage	前一乐段呈示部	w
+Announcement music passage: a recapitulation of the theme	主题再现部	w
+Announcement music passage: a recapitulation of the first theme	第一主题再现部	w
+Announcement music passage: a recapitulation of the second theme	第二主题再现部	w
+Announcement music passage: a recapitulation of the previous passage	前一乐段再现部	w
+Announcement music passage: the synthesis of the two themes	双主题综合部	w
+Announcement music passage: the synthesis of previous passages	前述乐段综合部	w
+Announcement music passage: a verse	主歌段	w
+Announcement music passage: a chorus	副歌段	w
+Announcement music passage: the finale	终曲	w
+Announcement music passage: the coda	尾声	w
+Announcement music passage: a bridge-passage	过渡段	w
+Announcement music passage: the theme	主题	w
+Announcement music passage: the first theme	第一主题	w
+Announcement music passage: the second theme	第二主题	w
+Announcement music passage: a series of variations	变奏组	w
+Announcement music passage: a series of variations on the theme	主题变奏组	w
+Announcement music passage: a series of variations on the first theme	第一主题变奏组	w
+Announcement music passage: a series of variations on the second theme	第二主题变奏组	w

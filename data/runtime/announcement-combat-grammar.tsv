@@ -1,0 +1,562 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# All records are local grammar productions, never global word replacements. Every capture must resolve in its declared scope.
+# Native sentence capitalization is folded only for literal matching; captures retain case and full ownership.
+unit	you	你		native unit/pronoun helpers 0x14132e430 0x140aa4730; existing He/She/It terms
+unit	he	他		native unit/pronoun helpers 0x14132e430 0x140aa4730; existing He/She/It terms
+unit	she	她		native unit/pronoun helpers 0x14132e430 0x140aa4730; existing He/She/It terms
+unit	it	它		native unit/pronoun helpers 0x14132e430 0x140aa4730; existing He/She/It terms
+unit	they	他们		native unit/pronoun helpers 0x14132e430 0x140aa4730; existing He/She/It terms
+unit	{s}	{s1}	$unit	0x14132e430
+owner	your	你的		0x1400e5809+0x1400e5985; pronoun helper 0x140aa4850
+owner	his	他的		0x1400e5809+0x1400e5985; pronoun helper 0x140aa4850
+owner	her	她的		0x1400e5809+0x1400e5985; pronoun helper 0x140aa4850
+owner	its	它的		0x1400e5809+0x1400e5985; pronoun helper 0x140aa4850
+owner	their	他们的		0x1400e5809+0x1400e5985; pronoun helper 0x140aa4850
+owner	{s}'s	{s1}的	unit	0x1400e5831+0x1400e59ad
+layer	body part	身体部位		0x141361885+0x1400e686d+0x1400e6ac8+0x1400e7aec+0x1400e7e95
+layer	part	部位		0x141361885+0x1400e686d+0x1400e6ac8+0x1400e7aec+0x1400e7e95
+layer	main part	主要部分		0x141361885+0x1400e686d+0x1400e6ac8+0x1400e7aec+0x1400e7e95
+layer	injured part	受伤部位		0x141361885+0x1400e686d+0x1400e6ac8+0x1400e7aec+0x1400e7e95
+layer	severed part	断肢		0x141361885+0x1400e686d+0x1400e6ac8+0x1400e7aec+0x1400e7e95
+layer	{s}'s {s}	{s1}的{s2}	layer,$term	0x1400e7732+0x1400e7a26+0x1400e8158
+layer	{s}	{s1}	$body	0x1413345d0; RAW body names
+layer	{s}	{s1}	$term	0x1400e7768+0x1400e79b5; RAW tissue/material display names
+object	{s}	{s1}	$body	0x1400e5b17+0x141361868; anatomical semantics precede homonymous item nouns
+object	{s}	{s1}	$item	0x1400e5afa+0x1413617c3
+object	body part	身体部位		0x141361885+0x141361c5a
+owned-object	{s} {s}	{s1}{s2}	owner,object	0x141361f2c+0x141361f34+0x141361f5a
+equipment	{s} {s}	{s1}{s2}	owner,$body	0x14064b736..0x14064b7b3; anatomy before homonymous item instrument
+equipment	{s}	{s1}	owned-object	0x14064b736..0x14064b7b3; unarmed owner and full body part
+equipment	{s}	{s1}	$body	0x14064b7a0; unarmed anatomical instrument
+equipment	{s}	{s1}	$item	0x14064af07..0x14064b736; item helper 0x140c65450
+equipment	{s} {s}	{s1}{s2}	owner,$item	0x14064afdc+0x14064b736
+equipment	the {s} of {s}	{s2}的{s1}	weapon-part,equipment	0x14064af91+0x14064afb7
+weapon-part	shaft	杆		RAW ATTACK subpart; data/runtime/rulesets/zh-Hans/adv/attack.toml hitway
+weapon-part	flat	平面		RAW ATTACK subpart; data/runtime/rulesets/zh-Hans/adv/attack.toml hitway
+weapon-part	pommel	圆头		RAW ATTACK subpart; data/runtime/rulesets/zh-Hans/adv/attack.toml hitway
+actor	{s}	{s1}	unit	0x1400e57f2
+actor	the spinning {s}	旋转着的{s1}	$item	0x1400e5887+0x1400e58e0+0x1400e5911
+actor	the flying {s}	飞来的{s1}	$item	0x1400e5887+0x1400e58e9+0x1400e5911
+actor	the {s}	{s1}	$item	0x1400e58de+0x1400e5911
+attack-verb	bite	咬		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	bites	咬		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	snatch at	扑抓		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	snatches at	扑抓		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	kick	踢踹		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	kicks	踢踹		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	scratch	抓		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	scratches	抓		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	gore	顶刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	gores	顶刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	punch	拳击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	punches	拳击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slap	拍打		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slaps	拍打		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	stab	戳刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	stabs	戳刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	stab at	戳刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	stabs at	戳刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	claw	爪击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	claws	爪击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	snatch	抓住		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	snatches	抓住		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	lash	鞭打		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	lashes	鞭打		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	sting	蜇刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	stings	蜇刺		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slice	切割		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slices	切割		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	bash	猛击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	bashes	猛击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	hack	砍		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	hacks	砍		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	strike	打击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	strikes	打击		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slash	劈		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	slashes	劈		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	push	推		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack-verb	pushes	推		active vanilla ATTACK_VERB / item_weapon.txt ATTACK; native 0x14064a9e6+0x14064af07+0x14064b97a; existing data/runtime/rulesets/zh-Hans/adv/attack.toml terminology
+attack	{s} {s} in the {s}	{s1}{s2}的{s3}	attack-verb,unit,object	0x1400e5a74+0x1400e5a91+0x1400e5aaf+0x1400e5b24
+attack	{s} {s} by the {s}	{s1}{s2}的{s3}	attack-verb,unit,object	0x1400e5aa8; attack flag 0x4 selects by-the branch
+attack	{s} from behind	从背后{s1}	attack	0x1400e5b33 repeated on each damage outcome
+attack	{s} from the side	从侧面{s1}	attack	0x1400e5b40 repeated on each damage outcome
+attack	{s} with {s}	用{s2}{s1}	attack,equipment	0x1400e5b5d+0x1400e5b75; independently optional full weapon phrase
+head	{s} {s}	{s1}{s2}	actor,attack	0x1400e5a58..0x1400e5b75
+layer-phrase	the {s}	{s1}	layer	0x1400e7718+0x1400e777d+0x1400e79b5
+layer-phrase	it	它		0x1400e779b
+layer-list	{s}	{s1}	layer-phrase	0x1400e78d4..0x1400e79b5
+layer-list	{s} and {s}	{s1}和{s2}	layer-phrase,layer-list	0x1400e78d4; 0x1400e7906 omits repeated damage verb
+damage-verb	tearing	撕裂		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	tearing apart	撕碎		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	shattering	击碎		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	chipping	崩裂		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	fracturing	折断		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	denting	砸凹		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage-verb	bruising	挫伤		0x1400e7620..0x1400e76c4+0x1400e7914..0x1400e79a5
+damage	{s} {s}	{s1}了{s2}	damage-verb,layer-list	0x1400e7718..0x1400e77cf
+damage	tearing it apart	将它撕碎		0x1400e779b+0x1400e77bf
+damage	{s} through a hole in the {s}	{s1}，穿过{s2}上的孔洞	damage,layer	0x1400e7a9c..0x1400e7af7
+damage	passing through a hole in the {s}	穿过{s1}上的孔洞	layer	0x1400e7c0f..0x1400e7d40
+damage	jamming the {s} through the {s}	将{s1}挤压穿过{s2}	layer,layer	0x1400e7d50..0x1400e7fcd
+damage	jamming the {s} out of the wound	将{s1}从伤口挤出	layer	0x1400e7d50+0x1400e7fd2
+damage	breaking away the {s}	使{s1}断落	layer	0x1400e8088+0x1400e80ee
+fraction	most of	大部分		0x1400e80b1+0x1400e80c3+0x1400e80cc+0x1400e80de
+fraction	half of	一半		0x1400e80b1+0x1400e80c3+0x1400e80cc+0x1400e80de
+fraction	a piece of	一块		0x1400e80b1+0x1400e80c3+0x1400e80cc+0x1400e80de
+fraction	the rest of	剩余部分		0x1400e80b1+0x1400e80c3+0x1400e80cc+0x1400e80de
+damage	breaking away {s} the {s}	使{s2}的{s1}断落	fraction,layer	0x1400e8088..0x1400e818e
+damage-list	{s}	{s1}	damage	0x1400e746c+0x1400e7475; ordered native damage-record loop
+damage-list	{s} and {s}	{s1}，并{s2}	damage,damage-list	0x1400e746c+0x1400e7d40+0x1400e7ff8
+damage-list	{s}, {s}	{s1}，{s2}	damage,damage-list	0x1400e7475+0x1400e8001
+damage-list	{s} through the {s}	{s1}，穿过{s2}	damage-list,equipment	0x1400e82ff+0x1400e833f
+decay	rancid	腐臭的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	decomposing	正在腐烂的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	rotten	腐烂的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	fetid	恶臭的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	foul	污秽的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	reeking	臭气熏天的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	filthy	肮脏的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+decay	stinking	发臭的		0x1400e8418..0x1400e84a2; bodily-fluid rot status
+fluid	{s} {s}	{s1}{s2}	owner,$term	0x1400e83a6+0x1400e83d3+0x1400e84f8
+fluid	{s} {s} {s}	{s1}{s2}{s3}	owner,decay,$term	0x1400e83d3+0x1400e84ad+0x1400e84f8
+fluid	{s}	{s1}	$term	0x1400e9a39+0x1400e9bdc+0x1400e9d49
+damage-list	{s} and spilling {s}	{s1}，使{s2}洒出	damage-list,fluid	0x1400e837a..0x1400e8527; may repeat for several fluids
+sentence	{s}, but it is deflected by {s}!	{s1}，却被{s2}挡开了！	head,equipment	0x1400e5a43+0x1400e5df6
+sentence	{s}, but the attack is deflected by {s}!	{s1}，但攻击被{s2}挡开了！	head,equipment	0x1400e5b7a+0x1400e5df6
+sentence	{s}, lightly tapping the target!	{s1}，只是轻轻碰到了目标！	head	0x1400e5fcb
+sentence	{s}, but there is no force!	{s1}，却没有造成任何冲击！	head	0x1400e5fd2
+sentence	{s}, but it passes right through!	{s1}，却直接穿了过去！	head	0x1400e6019
+sentence	{s}, but the attack passes right through!	{s1}，但攻击直接穿了过去！	head	0x1400e6147
+sentence	{s}, but it glances away!	{s1}，却擦过弹开了！	head	0x1400e619d
+sentence	{s}, but the attack glances away!	{s1}，但攻击擦过弹开了！	head	0x1400e62cb
+sentence	{s} and the severed part sails off in an arc!	{s1}，断肢划着弧线飞了出去！	head	0x1400e6492+0x1400e65be
+body-result	{s} is smashed into the body, an unrecognizable mass	{s1}被砸进了身体里，变成了难以辨认的一团	layer-phrase	0x1400e68b8
+body-result	{s} splits in gore	{s1}裂开，血肉横飞	layer-phrase	0x1400e68e1
+body-result	{s} collapses	{s1}塌陷了	layer-phrase	0x1400e68ea
+body-result	{s} is ripped into loose shreds	{s1}被撕得支离破碎	layer-phrase	0x1400e6b31
+body-result	{s} is torn apart	{s1}被撕碎了	layer-phrase	0x1400e6b5a
+body-result	{s} is cloven asunder	{s1}被劈开了	layer-phrase	0x1400e6b98
+body-result	{s} explodes into gore	{s1}爆成了一片血肉	layer-phrase	0x1400e6c1e
+body-result	{s} collapses into a lump of gore	{s1}塌成了一团血肉	layer-phrase	0x1400e6c7f
+body-result	{s} is crushed	{s1}被压碎了	layer-phrase	0x1400e6ccb
+sentence	{s} and {s}!	{s1}，{s2}！	head,body-result	0x1400e689b..0x1400e6ccb
+sentence	{s} and it is mostly cut away from the rest of the torso!	{s1}，它与躯干其余部分的连接大多被切断了！	head	0x1400e6b6f
+sentence	{s}, {s}!	{s1}，{s2}！	head,damage-list	0x1400e7276..0x1400e8538
+sentence	{s} and {s}!	{s1}，并{s2}！	head,damage-list	0x1400e746c+0x1400e8538
+sentence	{s}!	{s1}！	head	0x1400e6e84+0x1400e71d4; completed strike without additional tissue clause
+injury-subject	a major artery	一条主要动脉		0x1400e89ab..0x1400e8c75
+injury-subject	an artery	一条动脉		0x1400e89ab..0x1400e8c75
+injury-subject	many nerves	多条神经		0x1400e89ab..0x1400e8c75
+injury-subject	a motor nerve	一条运动神经		0x1400e89ab..0x1400e8c75
+injury-subject	a sensory nerve	一条感觉神经		0x1400e89ab..0x1400e8c75
+injury-subject	a ligament	一条韧带		0x1400e89ab..0x1400e8c75
+injury-subject	a tendon	一条肌腱		0x1400e89ab..0x1400e8c75
+injury-subject	{s} in the {s}	{s2}内的{s1}	injury-subject,$body	0x1400e89f4+0x1400e8ad9+0x1400e8bcb+0x1400e8cb8
+injury	{s} has been opened by the attack	{s1}被攻击撕开了	injury-subject	0x1400e8a29
+injury	{s} has been severed	{s1}被切断了	injury-subject	0x1400e8b1f+0x1400e8b28+0x1400e8b3a
+injury	{s} have been severed	{s1}被切断了	injury-subject	0x1400e8b1f+0x1400e8b28+0x1400e8b3a
+injury-condition	torn	撕裂		0x1400e8c10..0x1400e8d19
+injury-condition	sprained	扭伤		0x1400e8c10..0x1400e8d19
+injury-condition	strained	拉伤		0x1400e8c10..0x1400e8d19
+injury-condition	bruised	挫伤		0x1400e8c10..0x1400e8d19
+injury	{s} has been {s}	{s1}遭到{s2}	injury-subject,injury-condition	0x1400e8bfa+0x1400e8ce5
+injury-list	{s}	{s1}	injury	0x1400e8a42..0x1400e8d3a
+injury-list	{s}, {s}	{s1}，{s2}	injury,injury-list	0x1400e8a42..0x1400e8d3a
+injury-list	{s} and {s}	{s1}，{s2}	injury,injury-list	0x1400e8a42..0x1400e8d3a
+sentence	{s}!	{s1}！	injury-list	0x1400e8ef2
+sentence	The geldables have been torn away!	生殖器被撕掉了！		0x1400e5e43
+sentence	It is a gelding strike!	这一击造成了阉割！		0x1400e86f0
+sentence	It is a gelding blow!	这一击造成了阉割！		0x1400e86f9
+sentence	{s} is ripped to shreds!	{s1}被撕成了碎片！	equipment	0x1400e8fcf+0x1400e905e
+sentence	{s} breaks!	{s1}断裂了！	equipment	0x1400e8fd8+0x1400e905e
+sentence	{s} attack is interrupted!	{s1}攻击被打断了！	owner	0x1400e90f4+0x1400e917e
+sentence	The {s} has lodged firmly in the wound!	{s1}牢牢嵌在了伤口中！	$item	0x1400e929d+0x1400e92ba+0x1400e9349
+sentence	{s} latch on firmly!	{s1}牢牢咬住了！	unit	0x1400e94db+0x1400e94e4+0x1400e956f
+sentence	{s} latch on firmly to {s}!	{s1}牢牢咬住了{s2}！	unit,owned-object	0x1400e939b+0x1400e93a4+0x1400e93b4+0x1400e94a8
+sentence	{s} latches on firmly!	{s1}牢牢咬住了！	unit	0x1400e94db+0x1400e94e4+0x1400e956f
+sentence	{s} latches on firmly to {s}!	{s1}牢牢咬住了{s2}！	unit,owned-object	0x1400e939b+0x1400e93a4+0x1400e93b4+0x1400e94a8
+sentence	{s} have become enraged!	{s1}暴怒了！	unit	0x1400e91cc
+sentence	{s} have been knocked unconscious!	{s1}被击昏了！	unit	0x1400e9692
+sentence	{s} have been stunned again!	{s1}又被击晕了！	unit	0x1400e977a
+sentence	{s} have been stunned!	{s1}被击晕了！	unit	0x1400e9783
+sentence	{s} has become enraged!	{s1}暴怒了！	unit	0x1400e91cc
+sentence	{s} has been knocked unconscious!	{s1}被击昏了！	unit	0x1400e9692
+sentence	{s} has been stunned again!	{s1}又被击晕了！	unit	0x1400e977a
+sentence	{s} has been stunned!	{s1}被击晕了！	unit	0x1400e9783
+sentence	{s} are propelled away by the force of the blow!	{s1}被这一击打飞了！	unit	0x1400e95bb
+sentence	{s} are having more trouble breathing!	{s1}呼吸更加困难了！	unit	0x1400e9867
+sentence	{s} are having trouble breathing!	{s1}呼吸困难了！	unit	0x1400e9870
+sentence	{s} is propelled away by the force of the blow!	{s1}被这一击打飞了！	unit	0x1400e95bb
+sentence	{s} is having more trouble breathing!	{s1}呼吸更加困难了！	unit	0x1400e9867
+sentence	{s} is having trouble breathing!	{s1}呼吸困难了！	unit	0x1400e9870
+sentence	{s} feel sick!	{s1}觉得恶心！	unit	0x1400e992b..0x1400e995d
+sentence	{s} feel even more sick!	{s1}觉得更恶心了！	unit	0x1400e992b..0x1400e995d
+sentence	{s} looks sick!	{s1}看起来想吐了！	unit	0x1400e992b..0x1400e995d
+sentence	{s} looks even more sick!	{s1}看起来更加想吐了！	unit	0x1400e992b..0x1400e995d
+sentence	{s} is injected into the {s}!	{s1}被注入了{s2}！	fluid,fluid	0x1400e9a39+0x1400e9b66
+sentence	{s} pours over the {s}!	{s1}倾泻在{s2}上！	fluid,$body	0x1400e9bdc+0x1400e9cc3
+sentence	{s} flows over the {s}!	{s1}流淌在{s2}上！	fluid,$body	0x1400e9be5+0x1400e9cc3
+sentence	{s} splatters over the {s}!	{s1}飞溅在{s2}上！	fluid,$body	0x1400e9bee+0x1400e9cc3
+sentence	{s} crumbles over the {s}!	{s1}碎落在{s2}上！	fluid,$body	0x1400e9bf7+0x1400e9cc3
+sentence	{s} is sucked out of the wound!	{s1}从伤口中被吸了出来！	fluid	0x1400e9d49+0x1400e9dd3
+sentence	{s}	{s1}	$message	existing complete ui-message catalog; no per-word fallback
+sentence	{s} release the grip of {s} from {s}.	{s1}解除了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x141361ed8..0x141361fb1+0x141362281
+sentence	{s} releases the grip of {s} from {s}.	{s1}解除了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x141361ed8..0x141361fb1+0x141362281
+sentence	{s} break the grip of {s} from {s}!	{s1}挣脱了{s2}对{s3}的抓握！	unit,owned-object,owned-object	0x141361fd3..0x1413620ac+0x141362281
+sentence	{s} breaks the grip of {s} from {s}!	{s1}挣脱了{s2}对{s3}的抓握！	unit,owned-object,owned-object	0x141361fd3..0x1413620ac+0x141362281
+sentence	{s} are unable to break the grip of {s} on {s}!	{s1}无法挣脱{s2}对{s3}的抓握！	unit,owned-object,owned-object	0x14136210e..0x1413621f7+0x141362281
+sentence	{s} is unable to break the grip of {s} on {s}!	{s1}无法挣脱{s2}对{s3}的抓握！	unit,owned-object,owned-object	0x14136210e..0x1413621f7+0x141362281
+
+# Shared attack outcome builder 0x14064a350; grammar alternatives retain all native optional clauses.
+attack-verb	silently {s}	悄无声息地{s1}	attack-verb	0x140650ebe..0x140650ef5; prefixes attack-record verb, not unit name
+head	The force bends the {s}	冲击力弯折了{s1}	$body	0x140653080..0x140653164; complete prefix transferred to damage record
+head	The force twists the {s}	冲击力扭转了{s1}	$body	0x140653080..0x140653164; complete prefix transferred to damage record
+head	The force pulls the {s}	冲击力拉扯了{s1}	$body	0x140653080..0x140653164; complete prefix transferred to damage record
+assault	{s} attack {s}	{s1}攻击{s2}	actor,unit	0x14064d2d0..0x14064d348+0x14064e2ba..0x14064e30a
+assault	{s} attacks {s}	{s1}攻击{s2}	actor,unit	0x14064d2d0..0x14064d348+0x14064e2ba..0x14064e30a
+shot	{s} strike at {s}	{s1}向{s2}发动射击	actor,unit	0x14064d52d..0x14064d55c+0x14064db18..0x14064db47+0x14064f1b5..0x14064f1e4
+shot	{s} strikes at {s}	{s1}向{s2}发动射击	actor,unit	0x14064d52d..0x14064d55c+0x14064db18..0x14064db47+0x14064f1b5..0x14064f1e4
+evasion	{s} scramble away	{s1}连滚带爬地躲开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} scramble away from {s}!	{s1}连滚带爬地躲开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+evasion	{s} scrambles away	{s1}连滚带爬地躲开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} scrambles away from {s}!	{s1}连滚带爬地躲开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+evasion	{s} roll away	{s1}翻滚躲开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} roll away from {s}!	{s1}翻滚躲开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+evasion	{s} rolls away	{s1}翻滚躲开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} rolls away from {s}!	{s1}翻滚躲开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+evasion	{s} jump away	{s1}跳开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} jump away from {s}!	{s1}跳开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+evasion	{s} jumps away	{s1}跳开了	unit	0x14064d38a..0x14064d7c5+0x14064e33c..0x14064e3b1
+sentence	{s} jumps away from {s}!	{s1}跳开了{s2}！	unit,actor	0x14064e08a..0x14064e112
+sentence	{s} but {s}!	{s1}，但{s2}！	assault,evasion	0x14064d327+0x14064d348+0x14064d7c5; 0x14064e2e9+0x14064e3b1
+sentence	{s} miss {s}!	{s1}未能击中{s2}！	actor,unit	0x14064e61b..0x14064e658
+sentence	{s} miss {s} badly, blocked by the divine intervention of mighty {s}!	{s1}远远偏离了{s2}，攻击被强大的{s3}以神力阻止了！	actor,unit,$person	0x140650242..0x1406502c4; native deity name helper
+sentence	{s} misses {s}!	{s1}未能击中{s2}！	actor,unit	0x14064e61b..0x14064e658
+sentence	{s} misses {s} badly, blocked by the divine intervention of mighty {s}!	{s1}远远偏离了{s2}，攻击被强大的{s3}以神力阻止了！	actor,unit,$person	0x140650242..0x1406502c4; native deity name helper
+sentence	{s} let the {s} drop away as {s} attack.	{s1}在{s3}攻击时放开了{s2}。	unit,object,unit	0x14064bb11..0x14064bbed; anatomy helper at 0x14064bb68
+sentence	{s} let the {s} drop away as {s} attacks.	{s1}在{s3}攻击时放开了{s2}。	unit,object,unit	0x14064bb11..0x14064bbed; anatomy helper at 0x14064bb68
+sentence	{s} lets the {s} drop away as {s} attack.	{s1}在{s3}攻击时放开了{s2}。	unit,object,unit	0x14064bb11..0x14064bbed; anatomy helper at 0x14064bb68
+sentence	{s} lets the {s} drop away as {s} attacks.	{s1}在{s3}攻击时放开了{s2}。	unit,object,unit	0x14064bb11..0x14064bbed; anatomy helper at 0x14064bb68
+sentence	{s} catch {s} with {s}!	{s1}用{s3}抓住了{s2}！	unit,owned-object,owned-object	0x14064bfc7..0x14064c0ab and 0x14064c258..0x14064c33c; both captured pairs are possessive + body
+sentence	{s} catches {s} with {s}!	{s1}用{s3}抓住了{s2}！	unit,owned-object,owned-object	0x14064bfc7..0x14064c0ab and 0x14064c258..0x14064c33c; both captured pairs are possessive + body
+sentence	{s} but the shot is blocked!	{s1}，但射来的攻击被挡住了！	shot	0x14064d55c+0x14064f1e4..0x14064f254
+sentence	{s} but the shot is blocked with {s}!	{s1}，但射来的攻击被{s2}挡住了！	shot,equipment	0x14064f1e4..0x14064f254; optional weapon branch
+defense-adverb	deftly	熟练地		0x14064db62..0x14064db9a+0x14064f94f..0x14064f989
+defense-adverb	just barely	勉强		0x14064db62..0x14064db9a+0x14064f94f..0x14064f989
+defense-adverb	easily	轻易		0x14064db62..0x14064db9a+0x14064f94f..0x14064f989
+defense-adverb	effortlessly	毫不费力地		0x14064db62..0x14064db9a+0x14064f94f..0x14064f989
+defense-adverb	narrowly	险险		0x14064db62..0x14064db9a+0x14064f94f..0x14064f989
+shot-result	parried	招架住了		0x14064dbad+0x14064f99c
+shot-result	{s} parried	{s1}招架住了	defense-adverb	0x14064db62..0x14064dbad+0x14064f94f..0x14064f99c
+shot-result	deflected	挡开了		0x14064dbad+0x14064f99c
+shot-result	{s} deflected	{s1}挡开了	defense-adverb	0x14064db62..0x14064dbad+0x14064f94f..0x14064f99c
+sentence	{s} but the shot is {s}!	{s1}，但射来的攻击被{s2}！	shot,shot-result	0x14064f99c..0x14064fa0c; optional deflecting item
+sentence	{s} but the shot is {s} by {s}!	{s1}，但射来的攻击被{s3}{s2}！	shot,shot-result,equipment	0x14064db47..0x14064dc26+0x14064f933..0x14064fa0c
+sentence	{s} block {s}!	{s1}挡住了{s2}！	unit,actor	0x14064f299..0x14064f325; optional item
+sentence	{s} block {s} with {s}!	{s1}用{s3}挡住了{s2}！	unit,actor,equipment	0x14064f299..0x14064f325
+sentence	{s} blocks {s}!	{s1}挡住了{s2}！	unit,actor	0x14064f299..0x14064f325; optional item
+sentence	{s} blocks {s} with {s}!	{s1}用{s3}挡住了{s2}！	unit,actor,equipment	0x14064f299..0x14064f325
+sentence	{s} bat {s} aside!	{s1}将{s2}拨到了一旁！	unit,actor	0x14064fa4c..0x14064faf9; optional instrument
+sentence	{s} bat {s} aside with {s}!	{s1}用{s3}将{s2}拨到了一旁！	unit,actor,equipment	0x14064fa4c..0x14064faf9
+sentence	{s} bat {s} out of the air!	{s1}将{s2}从空中击落了！	unit,actor	0x14064fa4c..0x14064faf9; optional instrument
+sentence	{s} bat {s} out of the air with {s}!	{s1}用{s3}将{s2}从空中击落了！	unit,actor,equipment	0x14064fa4c..0x14064faf9
+sentence	{s} bats {s} aside!	{s1}将{s2}拨到了一旁！	unit,actor	0x14064fa4c..0x14064faf9; optional instrument
+sentence	{s} bats {s} aside with {s}!	{s1}用{s3}将{s2}拨到了一旁！	unit,actor,equipment	0x14064fa4c..0x14064faf9
+sentence	{s} bats {s} out of the air!	{s1}将{s2}从空中击落了！	unit,actor	0x14064fa4c..0x14064faf9; optional instrument
+sentence	{s} bats {s} out of the air with {s}!	{s1}用{s3}将{s2}从空中击落了！	unit,actor,equipment	0x14064fa4c..0x14064faf9
+unit-list	{s}	{s1}	unit	0x140650b5d..0x140650c9a
+unit-list	{s}, {s}	{s1}和{s2}	unit,unit-list	0x140650b9e+0x140650bc4+0x140650c1f; preserves all affected units
+unit-list	{s}, and {s}	{s1}和{s2}	unit,unit-list	0x140650b9e+0x140650bc4+0x140650c1f; preserves all affected units
+unit-list	{s} and {s}	{s1}和{s2}	unit,unit-list	0x140650b9e+0x140650bc4+0x140650c1f; preserves all affected units
+sentence	{s} are stunned by divine power!	{s1}被神力震慑了！	unit-list	0x140650bea+0x140650c72+0x140650c7b+0x140650c9a
+sentence	{s} is stunned by divine power!	{s1}被神力震慑了！	unit-list	0x140650bea+0x140650c72+0x140650c7b+0x140650c9a
+sentence	Many are stunned by divine power!	许多生物被神力震慑了！		0x140650b5d+0x140650c9a
+sentence	{s} has moved out of range!	{s1}已经离开了攻击范围！	unit	0x14064a578
+
+# Wrestling 0x140646f00, including prefixes consumed by the shared damage tree.
+attack-verb	grab	抓住		0x140649ccf+0x140649cd8; emitted through standard attack-record head
+attack-verb	grabs	抓住		0x140649ccf+0x140649cd8; emitted through standard attack-record head
+sentence	{s} lock {s} with {s}!	{s1}用{s3}锁住{s2}！	unit,owned-object,owned-object	0x140647499..0x140647576; target and instrument are possessive + anatomical part
+sentence	{s} locks {s} with {s}!	{s1}用{s3}锁住{s2}！	unit,owned-object,owned-object	0x140647499..0x140647576; target and instrument are possessive + anatomical part
+head	{s} pinch {s} with {s}	{s1}用{s3}掐{s2}	unit,owned-object,owned-object	0x140647d60..0x140647e2e; target and instrument are possessive + anatomical part
+head	{s} pinches {s} with {s}	{s1}用{s3}掐{s2}	unit,owned-object,owned-object	0x140647d60..0x140647e2e; target and instrument are possessive + anatomical part
+head	{s} gouge {s} with {s}	{s1}用{s3}挖{s2}	unit,owned-object,owned-object	0x140647fe8..0x1406480b6; target and instrument are possessive + anatomical part
+head	{s} gouges {s} with {s}	{s1}用{s3}挖{s2}	unit,owned-object,owned-object	0x140647fe8..0x1406480b6; target and instrument are possessive + anatomical part
+head	{s} bend {s} with {s}	{s1}用{s3}弯折{s2}	unit,owned-object,owned-object	0x140648491..0x14064855e; target and instrument are possessive + anatomical part
+head	{s} bends {s} with {s}	{s1}用{s3}弯折{s2}	unit,owned-object,owned-object	0x140648491..0x14064855e; target and instrument are possessive + anatomical part
+sentence	{s} place a chokehold on {s} with {s}!	{s1}用{s3}勒住了{s2}！	unit,owned-object,owned-object	0x140647671..0x140647733
+sentence	{s} places a chokehold on {s} with {s}!	{s1}用{s3}勒住了{s2}！	unit,owned-object,owned-object	0x140647671..0x140647733
+sentence	{s} take {s} down by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其摔倒了！	unit,unit,object,owned-object	0x140647850..0x140647912
+sentence	{s} takes {s} down by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其摔倒了！	unit,unit,object,owned-object	0x140647850..0x140647912
+sentence	{s} throw {s} by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其抛了出去！	unit,unit,object,owned-object	0x1406479f1..0x140647ab3
+sentence	{s} throws {s} by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其抛了出去！	unit,unit,object,owned-object	0x1406479f1..0x140647ab3
+head	{s} shake {s} around by the {s}	{s1}抓着{s2}的{s3}来回甩动	unit,unit,object	0x14064903d..0x1406490a0; prebuilt prefix forwarded into damage core
+head	{s} shakes {s} around by the {s}	{s1}抓着{s2}的{s3}来回甩动	unit,unit,object	0x14064903d..0x1406490a0; prebuilt prefix forwarded into damage core
+head	{s} strangle {s}	{s1}扼住{s2}	unit,owned-object	0x1406497b7..0x140649866; dynamic possessive + body; prebuilt damage prefix
+head	{s} strangles {s}	{s1}扼住{s2}	unit,owned-object	0x1406497b7..0x140649866; dynamic possessive + body; prebuilt damage prefix
+sentence	{s} adjust the grip of {s} on {s}.	{s1}调整了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x14064828d..0x14064834f
+sentence	{s} adjusts the grip of {s} on {s}.	{s1}调整了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x14064828d..0x14064834f
+sentence	{s} struggle in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	unit,owned-object,owned-object	0x1406486d2..0x140648794
+sentence	{s} struggles in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	unit,owned-object,owned-object	0x1406486d2..0x140648794
+sentence	{s} release the choke hold of {s} on {s}.	{s1}解除了{s2}对{s3}的勒颈控制。	unit,owned-object,owned-object	0x140648861..0x1406489c0; both native owner-order branches covered by typed owned-object
+sentence	{s} releases the choke hold of {s} on {s}.	{s1}解除了{s2}对{s3}的勒颈控制。	unit,owned-object,owned-object	0x140648861..0x1406489c0; both native owner-order branches covered by typed owned-object
+sentence	{s} loosen the choke hold of {s} on {s}.	{s1}松开了{s2}对{s3}的勒颈控制。	unit,owned-object,owned-object	0x140648861..0x1406489c0; both native owner-order branches covered by typed owned-object
+sentence	{s} loosens the choke hold of {s} on {s}.	{s1}松开了{s2}对{s3}的勒颈控制。	unit,owned-object,owned-object	0x140648861..0x1406489c0; both native owner-order branches covered by typed owned-object
+sentence	{s} release the joint lock of {s} on {s}.	{s1}解除了{s2}对{s3}的关节锁技。	unit,owned-object,owned-object	0x140648a7f..0x140648bde; both native owner-order branches covered by typed owned-object
+sentence	{s} releases the joint lock of {s} on {s}.	{s1}解除了{s2}对{s3}的关节锁技。	unit,owned-object,owned-object	0x140648a7f..0x140648bde; both native owner-order branches covered by typed owned-object
+sentence	{s} loosen the joint lock of {s} on {s}.	{s1}松开了{s2}对{s3}的关节锁技。	unit,owned-object,owned-object	0x140648a7f..0x140648bde; both native owner-order branches covered by typed owned-object
+sentence	{s} loosens the joint lock of {s} on {s}.	{s1}松开了{s2}对{s3}的关节锁技。	unit,owned-object,owned-object	0x140648a7f..0x140648bde; both native owner-order branches covered by typed owned-object
+sentence	{s} release the grip of {s} on {s}.	{s1}解除了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x140648ca5..0x140648e04+0x1406494fe..0x140649601; both native owner-order branches covered by typed owned-object
+sentence	{s} releases the grip of {s} on {s}.	{s1}解除了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x140648ca5..0x140648e04+0x1406494fe..0x140649601; both native owner-order branches covered by typed owned-object
+sentence	{s} break the grip of {s} on {s}.	{s1}挣脱了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x140648ca5..0x140648e04+0x1406494fe..0x140649601; both native owner-order branches covered by typed owned-object
+sentence	{s} breaks the grip of {s} on {s}.	{s1}挣脱了{s2}对{s3}的抓握。	unit,owned-object,owned-object	0x140648ca5..0x140648e04+0x1406494fe..0x140649601; both native owner-order branches covered by typed owned-object
+sentence	The {s} is ripped away and remains in {s} mouth!	{s1}被撕了下来，仍留在{s2}口中！	object,owner	0x140649254..0x1406492e0
+sentence	The {s} is ripped away and remains in {s} grip!	{s1}被撕了下来，仍未脱离{s2}抓握！	object,owner	0x140649254..0x1406492e0
+sentence	{s} lose hold of the {s}!	{s1}没能抓牢{s2}！	unit,object	0x1406493b9..0x140649409
+sentence	{s} loses hold of the {s}!	{s1}没能抓牢{s2}！	unit,object	0x1406493b9..0x140649409
+sentence	{s} pass out.	{s1}昏过去了。	unit	0x140649a0d..0x140649a37
+sentence	{s} passes out.	{s1}昏过去了。	unit	0x140649a0d..0x140649a37
+
+# Flying-unit collision/obstacle shared builder 0x140eadea0.
+sentence	{s} skip across the {s}!	{s1}在{s2}表面弹跳着掠过！	unit,$term	0x140eae9b8..0x140eaea96; only water/magma/lava native branches
+sentence	{s} skips across the {s}!	{s1}在{s2}表面弹跳着掠过！	unit,$term	0x140eae9b8..0x140eaea96; only water/magma/lava native branches
+sentence	{s} slam into an obstacle!	{s1}猛撞在了障碍物上！	unit	0x140eaf64e..0x140eaf67c+0x140eb38a9..0x140eb38d6
+sentence	{s} slam into an obstacle and blow apart!	{s1}猛撞在障碍物上，四分五裂了！	unit	0x140eaf3e1..0x140eaf46e+0x140eb368b..0x140eb3711
+sentence	{s} slam into an obstacle and blows apart!	{s1}猛撞在障碍物上，四分五裂了！	unit	0x140eaf3e1..0x140eaf46e+0x140eb368b..0x140eb3711
+sentence	{s} slam into {s}!	{s1}猛撞上了{s2}！	unit,unit	0x140eb0235..0x140eb02e5+0x140eb1c83..0x140eb1d2e+0x140eb2f8a..0x140eb3044; native unit helper for both participants
+sentence	{s} slams into an obstacle!	{s1}猛撞在了障碍物上！	unit	0x140eaf64e..0x140eaf67c+0x140eb38a9..0x140eb38d6
+sentence	{s} slams into an obstacle and blow apart!	{s1}猛撞在障碍物上，四分五裂了！	unit	0x140eaf3e1..0x140eaf46e+0x140eb368b..0x140eb3711
+sentence	{s} slams into an obstacle and blows apart!	{s1}猛撞在障碍物上，四分五裂了！	unit	0x140eaf3e1..0x140eaf46e+0x140eb368b..0x140eb3711
+sentence	{s} slams into {s}!	{s1}猛撞上了{s2}！	unit,unit	0x140eb0235..0x140eb02e5+0x140eb1c83..0x140eb1d2e+0x140eb2f8a..0x140eb3044; native unit helper for both participants
+sentence	{s} scramble out of {s} flight path!	{s1}连滚带爬地避开了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+sentence	{s} scrambles out of {s} flight path!	{s1}连滚带爬地避开了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+sentence	{s} roll out of {s} flight path!	{s1}翻滚着避开了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+sentence	{s} rolls out of {s} flight path!	{s1}翻滚着避开了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+sentence	{s} jump out of {s} flight path!	{s1}跳开，避过了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+sentence	{s} jumps out of {s} flight path!	{s1}跳开，避过了{s2}飞行路线！	unit,owner	0x140eb1167..0x140eb12d6
+
+# Body recovery, environmental exposure and mental-state native families.
+sentence	{s} have less swelling.	{s1}肿胀减轻了。	unit	0x140d7a2f0+0x140d7a4f2..0x140d7a5b1
+sentence	{s} has less swelling.	{s1}肿胀减轻了。	unit	0x140d7a2f0+0x140d7a4f2..0x140d7a5b1
+sentence	{s} is no longer infected.	{s1}的感染痊愈了。	unit	0x140d7a680+0x140d7a860..0x140d7a91f
+sentence	{s} are no longer infected.	{s1}的感染痊愈了。	unit	0x140d7a680+0x140d7a860..0x140d7a91f
+sentence	{s} recover from nerve damage.	{s1}受损的神经恢复了。	unit	0x140d7abd0+0x140d7adb7..0x140d7ae73
+sentence	{s} recovers from nerve damage.	{s1}受损的神经恢复了。	unit	0x140d7abd0+0x140d7adb7..0x140d7ae73
+sentence	{s} have fewer wounds.	{s1}的一些伤口愈合了。	unit	0x140d7be90+0x140d7c1a2..0x140d7c266
+sentence	{s} has fewer wounds.	{s1}的一些伤口愈合了。	unit	0x140d7be90+0x140d7c1a2..0x140d7c266
+sentence	{s} have fewer damaged tissues.	{s1}的一些受损组织恢复了。	unit	0x140d7c330+0x140d7c743..0x140d7c80c
+sentence	{s} has fewer damaged tissues.	{s1}的一些受损组织恢复了。	unit	0x140d7c330+0x140d7c743..0x140d7c80c
+sentence	{s} are less sluggish.	{s1}没那么迟缓了。	unit	0x140d7dba0+0x140d7ddad..0x140d7de6c
+sentence	{s} looks less sluggish.	{s1}没那么迟缓了。	unit	0x140d7dba0+0x140d7ddad..0x140d7de6c
+sentence	{s} feel less feverish.	{s1}的发热减轻了。	unit	0x140d7e1b0+0x140d7e37e..0x140d7e43a
+sentence	{s} looks less feverish.	{s1}的发热减轻了。	unit	0x140d7e1b0+0x140d7e37e..0x140d7e43a
+sentence	{s} feel less dizzy.	{s1}的眩晕减轻了。	unit	0x140d7fe50+0x140d8001e..0x140d800da
+sentence	{s} looks less dizzy.	{s1}的眩晕减轻了。	unit	0x140d7fe50+0x140d8001e..0x140d800da
+owned-layer	{s} {s}	{s1}{s2}	owner,layer	0x140d7cf97..0x140d7d437; regrowth uses owner plus body/tissue names
+sentence	{s} body parts regrow!	{s1}身体部位重新长出来了！	owner	0x140d7d067+0x140d7d2e1+0x140d7d430
+sentence	{s} tissues regrow!	{s1}组织重新长出来了！	owner	0x140d7d067+0x140d7d2e1+0x140d7d430
+sentence	{s} geldables regrow!	{s1}生殖器重新长出来了！	owner	0x140d7d067+0x140d7d2e1+0x140d7d430
+sentence	{s} regrows!	{s1}重新长出来了！	owned-layer	0x140d7d2b0+0x140d7d411
+sentence	{s} and more regrow!	{s1}和其他部位重新长出来了！	owned-layer	0x140d7d2b9; one body part plus other body/tissue/geldable regrowth
+sentence	{s} and geldables regrow!	{s1}和生殖器重新长出来了！	owned-layer	0x140d7d408; one tissue plus geldable regrowth
+sentence	{s} are caught in a lava mist!	{s1}被熔岩雾笼罩了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} are caught in dragonfire!	{s1}被龙焰吞没了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} are caught in a cloud of flames!	{s1}被火焰云吞没了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859; 0x140aa7960:0x140aa81bc/0x140aa8513 -> 0x140aa823e/0x140aa8595
+sentence	{s} are caught in a burst of steam!	{s1}被喷涌的蒸汽笼罩了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} are caught in a pool of magma!	{s1}被困在了岩浆池中！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} are caught in a pool of lava!	{s1}被困在了熔岩池中！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} are caught up in the web!	{s1}被蛛网缠住了！	unit	0x14134ff5d..0x141350045; 0x140aa8c30:0x140aa8e68/0x140aa9224 -> 0x140aa8ef1/0x140aa92b9; 0x140da8080 shared ordinary-web branch
+sentence	{s} are caught in a cloud of {s}!	{s1}被{s2}云笼罩了！	unit,$term	0x141350c2d..0x141350d83; material helper provides whole cloud material
+sentence	{s} is caught in a lava mist!	{s1}被熔岩雾笼罩了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} is caught in dragonfire!	{s1}被龙焰吞没了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} is caught in a cloud of flames!	{s1}被火焰云吞没了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859; 0x140aa7960:0x140aa81bc/0x140aa8513 -> 0x140aa823e/0x140aa8595
+sentence	{s} is caught in a burst of steam!	{s1}被喷涌的蒸汽笼罩了！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} is caught in a pool of magma!	{s1}被困在了岩浆池中！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} is caught in a pool of lava!	{s1}被困在了熔岩池中！	unit	0x14134f440; branches 0x14134f9b8+0x14134fc7b+0x141350282+0x14135064f+0x141351852+0x141351859
+sentence	{s} is caught up in the web!	{s1}被蛛网缠住了！	unit	0x14134ff5d..0x141350045; 0x140aa8c30:0x140aa8e68/0x140aa9224 -> 0x140aa8ef1/0x140aa92b9; 0x140da8080 shared ordinary-web branch
+sentence	{s} is caught in a cloud of {s}!	{s1}被{s2}云笼罩了！	unit,$term	0x141350c2d..0x141350d83; material helper provides whole cloud material
+sentence	{s} has entered a martial trance!	{s1}进入了战斗专注状态！	unit	0x1414e81aa+0x1414e8241; 0x1414eae5e+0x1414eaec8
+sentence	{s} is throwing a tantrum!	{s1}正在大发脾气！	unit	0x1414ea0d1+0x1414ea145
+sentence	{s} has slipped into depression...	{s1}陷入了抑郁……	unit	0x1414ea1b6+0x1414ea22a
+sentence	{s} is stumbling around obliviously!	{s1}浑浑噩噩地四处踉跄！	unit	0x1414ea293+0x1414ea307
+
+# Complete ambush, discovery, transformation, night creature/creation and secondary combat-state families.
+sentence	You have learned the power "{s}"!	你学会了能力“{s1}”！	ability	0x141353705..0x1413537b4; CE_CAN_DO_INTERACTION adventure name at +0x378
+sentence	{s} have transformed into a {s}!	{s1}变成了{s2}！	unit,$term	0x141353a3b..0x141353a80+0x14135461b/0x14135466b+0x14135471a; full caste/creature name
+sentence	{s} has transformed into a {s}!	{s1}变成了{s2}！	unit,$term	0x141353a3b..0x141353a80+0x14135461b/0x14135466b+0x14135471a; full caste/creature name
+sentence	Horrors! Demons in the deep!	太可怕了！深处有恶魔！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	The wilds are turning on us! Curse these lands!	荒野生物反过来攻击我们了！诅咒这片土地！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	Intruders! Drive them away!	有入侵者！赶走他们！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	Cavern dwellers! Send them back to the darkness!	洞穴居民！把他们赶回黑暗中去！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	An ambush! Skulking vermin!	有埋伏！鬼鬼祟祟的害虫！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	An ambush! Curse all friends of nature!	有埋伏！诅咒所有自然之友！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	An ambush! Curse them!	有埋伏！诅咒他们！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	Thief! Protect the hoard from skulking filth!	小偷！保护财宝，别让鬼祟的败类得手！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	Snatcher! Protect the children!	拐子！保护孩子们！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	An ambush! Drive them out!	有埋伏！把他们赶出去！		0x1413625b0..0x1413640b1; complete native static branch
+sentence	{s} has come!	{s1}来了！	unit	0x1413627bb+0x141362a43
+sentence	{s} has come! {s}	{s1}来了！{s2}	unit,$description	0x1413627bb+0x1413628e6+0x14136290a; full appended RAW description
+sentence	{s} was spotted sneaking around!	发现{s1}在附近鬼鬼祟祟地活动！	unit	0x141362da7+0x141362fc1
+sentence	{s} was spotted sneaking around! "You will not stand between me and {s}!"	发现{s1}在附近鬼鬼祟祟地活动！“你休想阻止我夺取{s2}！”	unit,$book	0x141362da7+0x141362e8e+0x140b94400+0x141362ec1; complete artifact identity
+sentence	{s} was spotted sneaking around! "I'll live to fight another day!"	发现{s1}在附近鬼鬼祟祟地活动！“我会活下来，改日再战！”	unit	0x141362da7+0x141362f0d
+sentence	An injured {s} has sprung from ambush!	一只受伤的{s1}从埋伏中跳了出来！	$term	0x141363c56..0x141363cfa
+sentence	A {s} has sprung from ambush!	一只{s1}从埋伏中跳了出来！	$term	0x141363d18..0x141363dbc
+sentence	There is a {s} hidden away here.	这里藏着一只{s1}。	$term	0x141363f27+0x140aa3bd0+0x141363fa1
+sentence	Night creatures!	夜行生物！		0x14148da20..0x14148fc08; whole static branches
+sentence	Night creature!	夜行生物！		0x14148da20..0x14148fc08; whole static branches
+sentence	Ambush!	有埋伏！		0x14148da20..0x14148fc08; whole static branches
+sentence	You feel uneasy.	你感到不安。		0x14148da20..0x14148fc08; whole static branches
+sentence	You are surrounded by incessant cackling.	四周怪笑声不绝于耳。		0x14148da20..0x14148fc08; whole static branches
+sentence	You failed to compose anything.	你什么作品也没创作出来。		0x14148da20..0x14148fc08; whole static branches
+sentence	You failed to write anything.	你什么也没写出来。		0x14148da20..0x14148fc08; whole static branches
+work	{s}	{s1}	$book	0x14148f2ce+0x14148f542; creative work title helper
+work	{s}	{s1}	$term	0x14148f2ce+0x14148f542; creative work type description
+sentence	You have composed {s}. {s}	你创作了{s1}。{s2}	work,work-description	0x14148f29f..0x14148f304+0x14148f529..0x14148f575; entire appended 0x140cc5d50 description
+sentence	You have composed {s}.	你创作了{s1}。	work	0x14148f29f..0x14148f304+0x14148f529..0x14148f575; empty description branch
+sentence	You have authored {s}. {s}	你著成了{s1}。{s2}	work,work-description	0x14148f29f..0x14148f304+0x14148f529..0x14148f575; entire appended 0x140cc5d50 description
+sentence	You have authored {s}.	你著成了{s1}。	work	0x14148f29f..0x14148f304+0x14148f529..0x14148f575; empty description branch
+sentence	You have written {s} on to {s}.	你将{s1}写到了{s2}上。	work,$item	0x14148f5ef..0x14148f673
+sentence	You have discovered a river.	你发现了一条河流。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered an expansive cavern deep underground.	你发现了地底深处的一片广阔洞穴。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a great magma sea.	你发现了一片广阔的岩浆海。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a cave entrance.	你发现了一个洞穴入口。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a downward passage.	你发现了一条向下的通道。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a deep pit.	你发现了一个深坑。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a magma pool.	你发现了一个岩浆池。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered a volcano.	你发现了一座火山。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered an unusual volcanic wall studded with gems.	你发现了一面嵌满宝石的奇异火山岩壁。		0x1414a2b50..0x1414a4008; whole discovery branch
+sentence	You have discovered an eerie cavern. The air above the dark stone floor is alive with vortices of purple light and dark, boiling clouds. Seemingly bottomless glowing pits mark the surface.	你发现了一座诡异的洞穴。幽暗的石地上空，紫色光涡与翻腾的暗云不断涌动。地面上散布着发光的深坑，仿佛深不见底。		0x1414a2f81 imagebase+0x1787f80; full 190-byte source copied through 0x1414a3007 and submitted 0x1414a301e
+sentence	You have found a curious underground structure.	你发现了一座奇特的地下建筑。		0x1414a37c2..0x1414a3815
+sentence	{s}! Praise the miners!	{s1}！赞美矿工们！	material	0x1414a3583..0x1414a362a; material/unknown-material fallback
+sentence	You have struck {s}! Praise the miners!	你挖到了{s1}！赞美矿工们！	$term	0x1414a3b71..0x1414a3c61
+sentence	You have struck {s}!	你挖到了{s1}！	$term	0x1414a3cb7..0x1414a3de4
+material	unknown material	未知材料		0x1414a35e5
+sentence	{s} spits out {s}.	{s1}吐出了{s2}。	unit,$item	0x1414eddb7..0x1414ede67; both native item-release branches
+sentence	{s} drops {s}.	{s1}丢下了{s2}。	unit,$item	0x1414eddb7..0x1414ede67; both native item-release branches
+sentence	{s} eat a {s}.	{s1}吃掉了一只{s2}。	unit,$term	0x1414f438e..0x1414f448f; 0x140aa3bd0 vermin species name
+sentence	{s} eats a {s}.	{s1}吃掉了一只{s2}。	unit,$term	0x1414f438e..0x1414f448f; 0x140aa3bd0 vermin species name
+sentence	{s} has guzzled some {s}!	{s1}猛喝了些{s2}！	unit,$item	0x1414f53af..0x1414f5472; complete item phrase, native has for all persons
+sentence	{s} destroyed by battering ram.	{s1}被攻城锤摧毁了。	$term	0x1414fae12 native building description+0x1414fb01f/0x1414fb183+0x1414fb196+0x1414fb1e7
+sentence	{s} toppled by battering ram.	{s1}被攻城锤撞倒了。	$term	0x1414fae12 native building description+0x1414fb01f/0x1414fb183+0x1414fb196+0x1414fb1e7
+sentence	{s} pull on the embedded {s}.	{s1}拉扯着嵌入体内的{s2}。	unit,$item	0x140645253..0x14064543a; inline period at 0x1406452e2
+sentence	{s} pulls on the embedded {s}.	{s1}拉扯着嵌入体内的{s2}。	unit,$item	0x140645253..0x14064543a; inline period at 0x1406452e2
+sentence	{s} try to remove {s}.	{s1}试图取出{s2}。	unit,$item	0x14064560f..0x1406457f8; inline period 0x14064569d
+sentence	{s} tries to remove {s}.	{s1}试图取出{s2}。	unit,$item	0x14064560f..0x1406457f8; inline period 0x14064569d
+sentence	{s} are caught in a burst of {s}!	{s1}被困在了喷发的{s2}中！	unit,$term	0x140abb9a0+0x140abbd4c..0x140abbe85; material 0x1414d1920
+sentence	{s} are struck by a ball of flames!	{s1}被一团火球击中了！	unit	0x140eb3ad0+0x140eb4349..0x140eb4468
+sentence	{s} is caught in a burst of {s}!	{s1}被困在了喷发的{s2}中！	unit,$term	0x140abb9a0+0x140abbd4c..0x140abbe85; material 0x1414d1920
+sentence	{s} is struck by a ball of flames!	{s1}被一团火球击中了！	unit	0x140eb3ad0+0x140eb4349..0x140eb4468
+sentence	{s} has become entangled in a hidden web!	{s1}被隐藏的蛛网缠住了！	unit	0x140da940c+0x140da9494
+sentence	{s} scramble away from the {s}!	{s1}连滚带爬地躲开了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+sentence	{s} scrambles away from the {s}!	{s1}连滚带爬地躲开了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+sentence	{s} roll away from the {s}!	{s1}翻滚躲开了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+sentence	{s} rolls away from the {s}!	{s1}翻滚躲开了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+sentence	{s} jump away from the {s}!	{s1}跳开躲过了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+sentence	{s} jumps away from the {s}!	{s1}跳开躲过了{s2}！	unit,$item	0x140eab966..0x140eabb6e+0x14141f9e3..0x14141fb86; item projectile dodging
+
+weapon-part	handle	柄		vanilla_items/objects/item_tool.txt:68 ATTACK strike/strikes:handle
+weapon-part	helve	斧柄		vanilla_items/objects/item_tool.txt:318; existing data/runtime/translations.tsv helve
+material	{s}	{s1}	$term	0x1414a3583+0x1414d1920; full material display phrase
+sentence	{s}! Drive it away!	{s1}！赶走它！	$term	0x1413637de..0x141363837; full caste/creature display name
+attack-verb	stick	刺入		vanilla_items/objects/item_ammo.txt:23 ATTACK:EDGE/BLUNT
+attack-verb	sticks	刺入		vanilla_items/objects/item_ammo.txt:23 ATTACK:EDGE/BLUNT
+attack-verb	drill	钻刺		vanilla_items/objects/item_trapcomp.txt:24 ATTACK:EDGE/BLUNT
+attack-verb	drills	钻刺		vanilla_items/objects/item_trapcomp.txt:24 ATTACK:EDGE/BLUNT
+attack-verb	saw	锯割		vanilla_items/objects/item_trapcomp.txt:45 ATTACK:EDGE/BLUNT
+attack-verb	saws	锯割		vanilla_items/objects/item_trapcomp.txt:45 ATTACK:EDGE/BLUNT
+
+# CDI:ADV_NAME belongs to an ability field, never to the global verb/noun dictionary.
+# Sources are the active vanilla objects and procedural scripts; interaction examples are not enabled RAW.
+ability	Pet animal	抚摸动物		vanilla_creatures/objects/c_variation_default.txt:195,366; existing Adventure action: Pet animal
+ability	Spit	吐唾沫		vanilla_creatures/objects/creature_standard.txt:108; existing Adventure action: Spit
+ability	Clean	清洁		vanilla_creatures/objects/creature_domestic.txt:253; existing Clean
+ability	Head bump	用头蹭蹭		vanilla_creatures/objects/creature_domestic.txt:264; existing complete RAW head-bump predicate
+ability	Spit molten rock	吐出熔岩		vanilla_creatures/objects/creature_next_underground.txt:478; existing RAW molten-rock sentence
+ability	Spray juice	喷出汁液		vanilla_creatures/objects/creature_next_underground.txt:2386
+ability	Squirt ink	喷出墨汁		vanilla_creatures/objects/creature_small_ocean.txt:1492
+ability	Hurl fireball	投掷火球		vanilla_creatures/objects/creature_subterranean.txt:893; vanilla_procedural/scripts/generators/creatures/shared_info.lua:4974,5126
+ability	Spray jet of fire	喷射火焰		vanilla_creatures/objects/creature_subterranean.txt:903; vanilla_procedural/scripts/generators/creatures/shared_info.lua:4983,5139
+ability	Spray web	喷射蛛网		vanilla_creatures/objects/creature_subterranean.txt:1017; vanilla_procedural/scripts/generators/creatures/shared_info.lua:6361; existing Shoot web
+ability	Breathe fire	喷火		vanilla_creatures/objects/creature_standard.txt:2228; existing Breathe fire
+ability	Launch ice bolt	发射冰箭		vanilla_procedural/scripts/generators/interactions.lua:22; generators/interactions/item_power.lua:11
+ability	Vanish	隐身		vanilla_procedural/scripts/generators/interactions.lua:67
+ability	Propel away	推开		vanilla_procedural/scripts/generators/interactions.lua:105; generators/interactions/item_power.lua:56
+ability	Raise fog	唤起浓雾		vanilla_procedural/scripts/generators/interactions.lua:147
+ability	Animate corpse	复活尸体		vanilla_procedural/scripts/generators/interactions/secret.lua:152; disturbance.lua:106; shared existing animated-by predicate
+ability	Summon bogeymen	召唤夜魔		vanilla_procedural/scripts/generators/interactions/secret.lua:192; existing bogeymen
+ability	Summon nightmare	召唤梦魇		vanilla_procedural/scripts/generators/interactions/secret.lua:202; generated creature nightmare
+ability	Create ghoul	创造食尸鬼		vanilla_procedural/scripts/generators/interactions/secret.lua:213; existing ghoul
+ability	Raise {s}	复生{s1}	$creature	vanilla_procedural/scripts/generators/interactions/secret.lua:163,177; disturbance.lua:63,115; necromancer_raise_adjectives+nouns shared creature vocabulary
+ability	Curse	诅咒		vanilla_procedural/scripts/generators/interactions/disturbance.lua:94
+ability	Transform	变形		vanilla_procedural/scripts/generators/creatures/shared_info.lua:5689
+ability	Spit glob	吐出团块		vanilla_procedural/scripts/generators/creatures/shared_info.lua:5199; LIQUID_GLOB/SOLID_GLOB
+ability	Spray dust	喷出粉尘		vanilla_procedural/scripts/generators/creatures/shared_info.lua:5171..5175,5218..5222; SOLID_POWDER branch
+ability	Spray vapor	喷出蒸气		vanilla_procedural/scripts/generators/creatures/shared_info.lua:5172,5219; LIQUID branch
+ability	Spray gas	喷出气体		vanilla_procedural/scripts/generators/creatures/shared_info.lua:5173,5220; GAS branch
+ability	Cause pain	引发疼痛		vanilla_procedural/scripts/init.lua:104; generators/interactions/item_power.lua:88
+ability	Blister	引发水疱		vanilla_procedural/scripts/init.lua:112; generators/interactions/item_power.lua:119
+ability	Paralyze	引发麻痹		vanilla_procedural/scripts/init.lua:120; generators/interactions/item_power.lua:149
+ability	Cause bleeding	引发出血		vanilla_procedural/scripts/init.lua:128; generators/interactions/item_power.lua:178
+ability	Sicken	致病		vanilla_procedural/scripts/init.lua:136,144,152; generators/interactions/item_power.lua:206,234,265; cough blood/vomit blood/nausea share one ADV_NAME
+ability	Rot	引发腐烂		vanilla_procedural/scripts/init.lua:160; generators/interactions/item_power.lua:294
+ability	Suffocate	引发窒息		vanilla_procedural/scripts/init.lua:184; generators/interactions/item_power.lua:368
+ability	Blind	致盲		vanilla_procedural/scripts/init.lua:192; generators/interactions/item_power.lua:336
+ability	Cause dizziness	引发眩晕		vanilla_procedural/scripts/init.lua:200; generators/interactions/item_power.lua:398
+
+# Whole written-work description helper appended by native creation announcements.
+# Existing Legends owns all style/quality/chapter-count predicates; these productions
+# add the other branches of 0x140cc5d50 without translating references as prose words.
+work-description	{s}	{s1}	$description	0x140cc635d..0x140cc67b9; shared data/runtime/legends-events.tsv style, quality and chapter-count clauses
+sentence	{s}	{s1}	work-description	0x1400b44ec/0x1400b4879: cc7020/cc6a10 append cc5d50; all writing description clauses share the same complete parser
+work-description	{s}	{s1}	work-sentence	0x140cc5d50..0x140cc6a0e; one complete native description sentence
+work-description	{s} {s}	{s1}{s2}	work-sentence,work-description	0x140cc5d50..0x140cc6a0e; append every complete description sentence
+work-sentence	{s}	{s1}	$description	0x140cc635d..0x140cc67b9; reuse reviewed complete Legends descriptions
+sentence	"{s}"	“{s1}”	inscription	0x1400b3f54/0x1400b404d/0x1400b42c8: item_slabst +0xe8 writing string; same field as The slab reads at 0x140c78f33
+inscription	{s}	{s1}	$inscription	data/runtime/item-description-translations.tsv:225-228; complete slab prose, not a book title or unrestricted name
+inscription	I am {s}, once of the Underworld. I bind myself to this place.	我是{s1}，曾来自地下世界。我将自身束缚于此地。	$person	0x140be19e2+0x140be19f8+0x140be1a2f+0x140be1a46->0x140be1a99; absent deity branch
+inscription	I am {s}, {s}, once of the Underworld. I bind myself to this place.	我是{s1}，又名{s2}，曾来自地下世界。我将自身束缚于此地。	$person,$person	0x140be19e2..0x140be1a2f+0x140be1a46->0x140be1a99; distinct native/translated name and absent deity
+work-reference	{s}	{s1}	$reference	0x140cc5e32..0x140cc6908; general_ref virtual display method +0x90
+work-reference	{s} in {s}	{s2}年的{s1}	$event,$digits	0x140cc5e32..0x140cc6908; historical general_ref; existing It concerns event in year grammar
+work-reference	the forest retreat {s}	森林聚落{s1}	$name	0x140cc5e32..0x140cc6908; site general_ref, shared Legends forest-retreat subject term
+work-reference	the mountain halls {s}	山地大厅{s1}	$name	0x140cc5e32..0x140cc6908; site general_ref, shared Legends mountain-halls subject term
+work-reference	the dark fortress {s}	黑暗要塞{s1}	$name	0x140cc5e32..0x140cc6908; site general_ref, shared Legends dark-fortress subject term
+work-reference	the important location {s}	重要地点{s1}	$name	0x140cc5e32..0x140cc6908; site general_ref, shared Legends important-location subject term
+work-reference	the {s} {s}	{s1}{s2}	reference-kind,$name	0x140cc5e32..0x140cc6908; bounded native named site/building/figure kind, complete name field
+work-reference-list	{s}, {s}	{s1}、{s2}	work-reference,work-reference-list	0x140cc5fba; native repeated subject separator
+work-reference-list	{s} and {s}	{s1}和{s2}	work-reference,work-reference-list	0x140cc5fcf; native final subject separator
+work-sentence	It asks the question, "What if {s} had unfolded differently?"	作品提出了这样的问题：“如果{s1}的发展有所不同，会怎样？”	work-reference	0x140cc5e0d+0x140cc5e32+0x140cc5e66
+work-sentence	It concerns the lineage of {s}.	内容涉及{s1}的家系。	work-reference	0x140cc5eb4+0x140cc5ee7; genealogy retains the complete general_ref +0x90 label, including species/deity/site prefixes
+work-sentence	It concerns {s}.	内容涉及{s1}。	work-reference-list	0x140cc5f31..0x140cc5fde; all native subject references
+work-sentence	The writing conveys a moral lesson regarding {s}.	文章阐述了有关{s1}的为人处世之道。	work-reference	0x140cc6045+0x140cc6064+0x140cc60d0
+work-sentence	The overall text emphasizes {s}.	全文着重强调{s1}。	work-reference	0x140cc60fd+0x140cc611c+0x140cc6188
+work-sentence	For lyrics, the composer has selected {s}.	作曲者选用{s1}作为歌词。	work-reference	0x140cc61b5+0x140cc61d4+0x140cc6240
+work-sentence	For musical accompaniment, the choreographer has selected {s}.	编舞者选用{s1}作为伴奏音乐。	work-reference	0x140cc626d+0x140cc628c+0x140cc62f8
+work-sentence	It covers {s}.	内容涵盖{s1}。	work-reference	0x140cc6861+0x140cc68f3+0x140cc6908+0x140cc693f
+work-sentence	The {s} chapter covers {s}.	第{s1}章的内容涵盖{s2}。	work-ordinal,work-reference	0x140cc6875+0x140cc688b..0x140cc68f3+0x140cc6908
+work-ordinal	zeroth	0		0x14052ecca; shared native ordinal formatter
+work-ordinal	first	1		0x14052ece9
+work-ordinal	second	2		0x14052ed08
+work-ordinal	third	3		0x14052ed27
+work-ordinal	fourth	4		0x14052ed46
+work-ordinal	fifth	5		0x14052ed65
+work-ordinal	sixth	6		0x14052ed84
+work-ordinal	seventh	7		0x14052eda3
+work-ordinal	eighth	8		0x14052edc2
+work-ordinal	ninth	9		0x14052ede1
+work-ordinal	tenth	10		0x14052ee00
+work-ordinal	eleventh	11		0x14052ee1f
+work-ordinal	twelfth	12		0x14052ee3e
+work-ordinal	thirteenth	13		0x14052ee5d
+work-ordinal	fourteenth	14		0x14052ee7c
+work-ordinal	fifteenth	15		0x14052ee9b
+work-ordinal	sixteenth	16		0x14052eeba
+work-ordinal	seventeenth	17		0x14052eed9
+work-ordinal	eighteenth	18		0x14052eef8
+work-ordinal	nineteenth	19		0x14052ef17
+work-ordinal	{s}st	{s1}	$digits	0x14052ef30..0x14052f03e; numeric ordinal suffix for numbers >=20
+work-ordinal	{s}nd	{s1}	$digits	0x14052ef30..0x14052f03e
+work-ordinal	{s}rd	{s1}	$digits	0x14052ef30..0x14052f03e
+work-ordinal	{s}th	{s1}	$digits	0x14052ef30..0x14052f03e
+
+# Native report display adds a repeat counter after the complete message.
+sentence	{s} x{s}	{s1} ×{s2}	$announcement,$digits	dwarfort 0x1674b73..0x1674bb7; report::repeat_count + 1, shared full-record parser

@@ -1,0 +1,2501 @@
+# Complete native UI messages: English<TAB>简体中文. Compiled as hP.
+# Sources reviewed against the installed game's native string data. Join fixed
+# native continuation lines into messages; never add resolution-sized fragments.
+# P owns whole visible sentences before word/name matching and uses the shared
+# paragraph layout. Terms follow data/runtime/translations.tsv and data/runtime/help-translations.tsv.
+# One paired [[optional fragment]] follows a verified native branch. The build
+# emits both complete forms, retaining capture identities and Chinese word order.
+# Single brackets such as [consumed] remain literal text.
+
+# Fortress revisit introduction: complete heading and semantic paragraphs.
+A Dwarven Outpost Revisited: You have returned.	[C:7:0:1]重访矮人前哨：[C:7:0:0]你回来了。
+How have your sturdy charges fared in your absence? Have they gone on adventures or moved on to richer delving at new frontier settlements? Perhaps they are all still here, unwilling to leave the magnificent fortress you prepared for them.	你不在的这段日子里，那些坚韧的子民过得如何？他们是否踏上冒险之旅，或已迁往新的边疆聚落，去开掘更丰饶的矿藏？也许他们全都还在这里，不愿离开你为他们建造的宏伟要塞。
+Deep underground, the promise of treasure and the thrill of overcoming danger have lured you back to this place. Will you strike the earth again?	对地底深处宝藏的憧憬，以及战胜险境的刺激，让你再次回到此地。你愿意再次开山掘地吗？
+
+# Display furniture states (53.16 PE draws at 0x18b391 / 0x18b3e8).
+On display	展出中
+Assigned	已指定
+
+# Legends initialization: the era, both counters and status are one addst
+# record. {v} reuses the historical-title grammar, including named/numbered
+# ages; never let the whole status become a procedural name.
+Sorting	正在排序
+{v} event sort {d}/{d} completed	{v}事件排序：已完成 {d1}/{d2}
+
+# Adventure movement modal: complete headings, controls and stealth factors.
+# Native source addresses are recorded in data/extracted/ui-message-sources.tsv. Ambiguous
+# one-word ratings, light/weather and gait labels use local-overrides context.
+How will you move?	你想如何移动？
+Visual Stealth (w/o Skill)	视觉隐蔽程度（不计技能）
+Visual Stealth Factors	视觉隐蔽因素
+Swimming Preference	游泳偏好
+When possible	尽可能
+When necessary	必要时
+Open Area	开阔地带
+By Obstacle	障碍物旁
+Fog/Rain/Snow	雾／雨／雪
+No Suitable Vegetation	没有适合隐蔽的植被
+In Vegetation	身处植被中
+Non-Prone In Vegetation	身处植被中（未卧倒）
+Too Large For Vegetation	体型过大，植被无法遮蔽
+Vanishing Profile	身形近乎不可见
+Minuscule Profile	身形极其微小
+Tiny Profile	身形微小
+Very Small Profile	身形很小
+Small Profile	身形较小
+Average Profile	身形一般
+Average Non-Prone Profile	身形一般（未卧倒）
+Large Profile	身形较大
+Large Non-Prone Profile	身形较大（未卧倒）
+Very Large Profile	身形很大
+Very Large Non-Prone Profile	身形很大（未卧倒）
+Huge Profile	身形巨大
+Huge Non-Prone Profile	身形巨大（未卧倒）
+Gigantic Profile	身形极其巨大
+Gargantuan Profile	身形庞大无比
+
+
+# Places: all six lists, not just the currently empty Locations screenshot.
+You do not have any zones.	你还没有任何区域。
+Zones can be added using the zone menu at the bottom of the screen.	可通过屏幕底部的区域菜单添加区域。
+You do not have any locations.	你还没有任何地点。
+Locations can be created from zones.	可通过区域创建地点。
+You do not have any stockpiles	你还没有任何储物堆。
+Stockpiles can be placed using the stockpile menu at the bottom of the screen.	可通过屏幕底部的储物堆菜单放置储物堆。
+You do not have any workshops.	你还没有任何工坊。
+Workshops are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置工坊。
+You do not have any farm plots.	你还没有任何耕地。
+Farm plots are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置耕地。
+You do not have any siege engines.	你还没有任何攻城器械。
+Siege engines are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置攻城器械。
+Locations such as taverns, temples and libraries can be created from meeting area zones, dining rooms and bedrooms. These larger associations of rooms can attract visitors from outside the fortress.	酒馆、神殿和图书馆等地点可由集会区、餐厅及卧室创建。这些由多个房间组成的地点可以吸引要塞外的访客。
+
+# Work orders and workshop assignment.
+A manager is required to coordinate work orders.	需要经理人来协调工单。
+There are no active work orders.	目前没有正在执行的工单。
+One-time order, conditions checked daily	一次性工单，每日检查条件。
+Restarts if completed, conditions checked daily	完成后重新开始，每日检查条件。
+Restarts if completed, conditions checked monthly	完成后重新开始，每月检查条件。
+Restarts if completed, conditions checked seasonally	完成后重新开始，每季检查条件。
+Restarts if completed, conditions checked yearly	完成后重新开始，每年检查条件。
+Restarts if completed, checked daily	完成后重新开始，每日检查。
+Restarts if completed, checked monthly	完成后重新开始，每月检查。
+Restarts if completed, checked seasonally	完成后重新开始，每季检查。
+Restarts if completed, checked yearly	完成后重新开始，每年检查。
+Workers cannot be assigned to this building.	无法为此建筑分配工人。
+This workshop is free for anybody to use.	任何人都可以使用此工坊。
+Only one master may be assigned to each workshop.	每个工坊只能指定一名大师。
+Work orders cannot be assigned to this building.	无法为此建筑分配工单。
+A manager is required to add work orders to the shop.	需要经理人才能向此工坊添加工单。
+Work orders can be added specifically for this shop.	可以添加专用于此工坊的工单。
+This furniture is a part of multiple rooms.	此家具属于多个房间。
+# Building details: the room link is a separate widget; the resting-place
+# message uses the shared unit label for the deceased's name and profession.
+# The resting-place label and identity are separate, fixed native rows (PE
+# 0x194f0f / 0x194f89), with the period drawn separately at 0x194fb9.
+This furniture is a part of	此家具属于：
+This is the resting place of {n}.	这里是{n1}的安息之所。
+
+# Objects: all four tabs, inventoried in data/extracted/ui-message-sources.tsv. These are
+# separate complete native draws, not fragments to merge across blank rows.
+# Artifacts.
+There aren't any crafted artifacts here.	这里还没有任何制作完成的造物。
+Your workers will rarely make them on their own.	你的工人偶尔会自行制作造物。
+You may also send a squad to obtain one.	你也可以派遣小队去获取一件造物。
+Symbol of the {s}	{s}的象征
+# Position symbols (also used by Nobles and Administrators).
+You haven't named any position symbols yet.	你尚未命名任何职位象征物。
+You can do this from the Nobles and Administrators menu.	可以在“贵族和管理员”菜单中为其命名。
+# Named objects.
+There are no named objects here.	这里还没有被命名的物品。
+Citizens, especially soldiers, will rarely name items.	市民，尤其是士兵，偶尔会为物品命名。
+# Written content. Preserve both the materials explanation and its next
+# sentence; paper/parchment sheets and scrolls/quires are distinct concepts.
+There is no written content here.	这里还没有书写内容。
+Prepare writing material and assign scholars to a library.	请准备书写材料，并为图书馆指派学者。
+Writing materials include paper and parchment sheets.	书写材料包括纸张和兽皮纸。
+Use these to make scrolls and quires.	用这些材料制作卷轴和稿纸。
+Libraries are a location that can be created at a zone.	图书馆是一种可以在区域中创建的地点。
+
+# Nobles and administrators: complete explanations, not screen-sized fragments.
+Members of the nobility have required rooms and can make demands. They cannot be reassigned.	贵族需要配备相应的房间，还可能提出要求。贵族职位不能重新指派。
+Administrators handle various aspects of your fortress and can be reassigned. Many administrators also require rooms.	管理员负责要塞的各项事务，可以重新指派。许多管理员也需要配备房间。
+The manager handles work orders. Once your fortress reaches a certain population, the manager must work in an office to validate work orders.	经理人负责工单。要塞人口达到一定数量后，经理人必须在办公室工作，才能批准工单。
+The chief medical dwarf allows you to see the overall health of dwarves in your fortress.	任命首席矮人医师后，你就能查看要塞内矮人的整体健康状况。
+The broker uses their appraisal skill to allow you to see the value of items in the fortress. They are also the default negotiator with visiting merchants.	交易员利用估价技能，让你能够查看要塞内物品的价值。他们也是与来访商人交涉的默认谈判代表。
+The bookkeeper keeps an accurate count of items in the fortress. They work in their office to improve the precision of the count.	簿记员负责准确统计要塞内的物品数量。他们在办公室工作，以提高计数的精确度。
+Choose symbols for the position holder to carry or wear.	选择由任职者携带或佩戴的职位象征物。
+Your bookkeeper needs to work in an office to improve precision	簿记员需要在办公室工作，才能提高记录的精确度。
+
+# Justice intelligence: complete native draws, shared paragraph ownership.
+There is no intelligence information yet.	目前还没有任何情报。
+If a crime involves a conspiracy, an interrogation may reveal the plot.	如果案件涉及阴谋，审讯可能揭露其内情。
+Associated Organization: Unidentified	关联组织：尚未查明
+Highest known in organization	组织中已知的最高层成员
+# Justice plot list: complete captions; organization/artifact names and years stay typed.
+A plot	一项阴谋
+Infiltrate {e}, agreed in {d}	渗透{e1}（第{d1}年商定）
+Steal {b}, agreed in {d}	窃取{b1}（第{d1}年商定）
+Corrupt {s} of {e}, agreed in {d}	拉拢{e1}的{s1}（第{d1}年商定）
+
+# Places zone list: a single assigned squad carries its complete generated name.
+{e} assigned	已分配：{e}
+
+# Location access, religious recognition, agreements and petitions.
+Only members can visit (if guild established)	仅成员可以到访（行会成立后）。
+Citizens and long-term residents only	仅限公民和长期居民。
+You can recognize a priesthood once this is a temple.	此处成为神殿后，即可认可祭司团。
+You can recognize a high priest when this is a temple complex.	此处成为神殿建筑群后，即可认可高阶祭司。
+Only organized religions can have recognized priesthoods.	只有有组织的宗教才能获得祭司团认可。
+There are no petitions that need your attention.	目前没有需要你处理的请愿。
+The location must be built and furnished, with the new position appointed by you.	必须建好并布置该地点，并由你任命新职位的人员。
+A priest must then be elevated.	随后必须擢升一名祭司。
+A high priest must then be elevated.	随后必须擢升一名高阶祭司。
+No temple location currently assigned to a zone.	目前没有区域被指定为神殿地点。
+No guildhall location currently assigned to a zone.	目前没有区域被指定为行会大厅地点。
+
+# Trade, siege operation and route explanations.
+There are no merchants trading right now.	目前没有商人进行交易。
+You do not have a broker.	你还没有交易员。
+You have no agreements with this land.	你与这片领地没有任何协议。
+# Civilization trade totals: the source name is dynamic, not a fixed world name.
+Imports from {e}:	从{e}进口：
+Exports to {e}:	向{e}出口：
+Offerings from {e}:	来自{e}的赠礼：
+# Agreement headers use the same dynamic entity/place name as the totals.
+Trade Agreement (Exports to {e})	贸易协议（向{e}出口）
+Requests (Imports from {e})	商品需求（从{e}进口）
+# Siege mode descriptions and training notes share the native left margin.
+Fire at enemies	向敌人射击
+Practice fire	进行训练射击
+Practice fire (uses many bolts!)	练习射击（会消耗大量弩箭！）
+Stand ready but do not fire	派人操控但不射击
+Keep loaded but do not stand ready	保持装填，但不待命。
+Not in use	暂不使用
+* Will also target enemies	* 也会向敌人射击
+* Place archery targets for better training	* 放置箭靶可改善训练效果。
+(Vehicle moved to next stop if any condition triggered.)	（任一条件触发时，车辆便会前往下一站。）
+Building track stops is recommended!	建议建造轨道停靠点！
+
+# Shared placement instructions: use complete native sentences across wraps.
+A catapult's orientation cannot be changed once it is placed.	投石机放置后无法改变朝向。
+A ballista's orientation cannot be changed once it is placed.	弩炮放置后无法改变朝向。
+A bolt thrower can be freely turned by the operator. Choose a resting orientation.	弩箭投射器可由操作员自由转向。请选择待命时的朝向。
+Horizontal axles can vary in length.	水平轴可设置不同长度。
+Set the liquid flow direction below.	在下方设置液体流动方向。
+Water flows from the adjacent input tile and from the tile below the input tile.	水会从相邻的输入格及输入格下方的格子流入。
+Minecart rollers can vary in length.	矿车滚轴可设置不同长度。
+Set the orientation and speed below.	在下方设置朝向和速度。
+Set the friction and auto-dump direction.	设置摩擦力和自动倾倒方向。
+Then select the corners of the bridge.	然后选择桥梁的各个角。
+Click an icon to set stockpile type.	点击图标设置储物堆类型。
+Warning: stockpile has no type.	注意：储物堆尚未设置类型。
+Click an existing stockpile to select it.	点击已有储物堆以选中它。
+Click an existing zone to select it.	点击已有区域以选中它。
+Select a type below to add a zone.	在下方选择类型以添加区域。
+Click an icon to add a new zone.	点击图标添加新区域。
+Click a tile to position the stop.	点击格子设置停靠点的位置。
+You can recenter on certain announcements. Right click to close.	部分公告可以定位到相关位置。右键点击关闭。
+Left click for recenter and expand options. Right click to dismiss.	左键点击可定位并展开选项。右键点击关闭。
+# Fortress report summaries: one typed unit label plus the complete status.
+# Keep the article inside {n}; shared unit parsing owns species, names and statuses.
+{n} is fighting!	{n1}正在战斗！
+{n} is sparring.	{n1}正在进行比武训练。
+{n} is hunting.	{n1}正在狩猎。
+
+# Windows native prompt families. Provenance is recorded in data/extracted/ui-message-sources.tsv.
+# construction.materials: independent native guidance rows, not wrap fragments.
+- mine rock underground	- 到地下开采岩石。
+- mine rock or chop trees	- 开采岩石或砍伐树木。
+- make at a workshop first	- 先在工坊制作。
+- chop down trees	- 砍伐树木。
+# world.missions: restrictions and actions surrounding the world-map controls.
+You can learn more about this visitor after they chat with a local.	这位访客与当地居民交谈后，你就能了解更多关于他们的信息。
+You can look at trade information once you have a broker with appraisal skill.	任命一名拥有估价技能的交易员后，即可查看贸易信息。
+This land has no important leaders.	这片领地没有重要领袖。
+Cannot raid your civilization	无法突袭自己的文明。
+Cannot make request without leader	没有领袖，无法提出请求。
+No workers available	没有可用的工人。
+Click to request workers	点击请求派遣工人。
+Inaccessible mission location	无法抵达任务地点。
+Cannot order mission without leader	没有领袖，无法下达任务。
+Click to explore this site (creates new mission)	点击探索此地点（创建新任务）。
+Click to contact/raid this site (creates new mission)	点击联系或突袭此地点（创建新任务）。
+Need civilization military leader	需要文明的军事领袖。
+Need military leader	需要军事领袖。
+No requestable workers	没有可以请求派遣的工人。
+Cannot communicate	无法联系。
+
+# reports.diplomacy: report controls, petition prerequisites and caravan requests.
+Select a report to view the full text. Right click to close.	选择一份报告查看全文。右键点击关闭。
+You can recenter on the locations of the announcements. You may also toggle pausing when there is a new announcement.	可以将视图定位到公告发生的位置，也可以切换收到新公告时是否暂停。
+No recent announcements.	最近没有公告。
+You do not have an official capable of handling these matters.	你没有能够处理这些事务的官员。
+Do you approve this request?	是否批准此请求？
+Make requests for next year's caravan. They'll charge more for these items.	向明年的商队提出商品需求。他们会对这些商品收取更高的价格。
+No recommendations available	没有可供参考的建议。
+No positions available	没有可任命的职位。
+Select a merchant group to trade with:	选择要与之交易的商队：
+There are no merchants present with which to trade.	这里没有可以交易的商人。
+My apologies, but we're still unloading.	抱歉，我们还在卸货。
+We'll be ready soon!	我们马上就准备好了！
+The merchants need a trade depot to unload their goods.	商人需要贸易站才能卸下货物。
+A trade depot is requiered for the delivery of the tribute.	运送贡品需要贸易站。
+
+# First caravan arrival: complete paragraphs, not resolution-sized wrap rows.
+# Entity names use {e}; the RAW plural profession or native craftsmen fallback uses {s}.
+Although it is a grim reminder of the winter hardships to come, the supply caravan from {e} is a welcome sight. Their eyes are alight with the anticipation of inspecting the splendid products of your industrious {s}.	虽然这也无情地提醒着你们，寒冬的艰难即将到来，但来自{e}的补给商队仍令人欣喜。商人们的眼中闪着期待的光芒，迫不及待地想要检视你们勤劳的{s}制作的精美商品。
+Take careful stock of your own stores. What these merchants offer might very well be the difference between a prosperous future and a slow and meaningless death.	仔细清点你们自己的储备。这些商人带来的货物，很可能决定你们迎来的是繁荣的未来，还是缓慢而毫无意义的死亡。
+
+# world.selection: both game-mode introductions and the complete embark guidance.
+Click the map to zoom in and choose your embark location.	点击地图放大并选择您的登陆地点。
+To recenter, press {k} or hold+drag the middle mouse button.	要重新居中，请按 {k}，或按住鼠标中键拖动。
+Embark with a group to start a settlement.	与一群人共同出发，建立一处聚落。
+Directly control a single individual or party.	可直接操控单个角色或是一支冒险小队。
+Explore and investigate the history of the world as it stands.	探索并研究这个世界迄今为止的历史。
+Events in other modes are incorporated here.	其他游戏模式下发生的各类事件都会整合并入当前模式中。
+Click "Embark" to place your fortress. Right click to zoom out.	点击“出发”确定要塞位置。右键点击缩小地图。
+Click on the map to embark! Right click to abort.	点击地图出发！右键点击取消。
+You have selected the largest possible area.	你已选中允许的最大区域。
+You can play a sequence of fortresses and adventurers in the same world. Uncover locations and artifacts for the benefit of your future fortresses.	你可以在同一世界中依次游玩多座要塞与多名冒险者。发现地点和造物，为未来的要塞助力。
+Follow destiny or strike out on your own. Explore, quest, fight, and perform. Visit your own retired and ruined settlements. Serve a deity or become a creature of the night.	遵循命运，或独自闯荡。探索、执行任务、战斗并表演。造访你已退役或毁灭的聚落。侍奉神明，或化为夜行生物。
+You can play a sequence of fortresses and adventurers in the same world. Migrants from retired and abandoned fortresses may come to visit, along with any surviving adventurers.	你可以在同一世界中依次游玩多座要塞与多名冒险者。来自退役或废弃要塞的移民可能会前来拜访，幸存的冒险者也可能同行。
+Your citizens will build, mine, craft, trade, fight, and manage as you guide your outpost through its history. Design the shape and purpose of the fortress by issuing orders for the residents to follow.	你将带领前哨站走过它的历史，居民则会建造、采矿、制造、贸易、战斗并管理事务。通过下达命令，让居民依照你的设计塑造要塞的形态与用途。
+
+# world.files: every destructive-action explanation stays explicit.
+Click Publish to upload a mod to Steam Workshop.	点击“发布”，将模组上传至 Steam 创意工坊。
+Are you sure you want to delete this active world?	确定要删除这个正在使用的世界吗？
+All active/manual/autosaves there will be deleted!	该世界中的所有当前存档、手动存档和自动存档都会被删除！
+(no other folders will be deleted)	（不会删除其他文件夹）
+Clicking delete will instantly delete this game!	点击“删除”会立即删除此游戏存档！
+
+# adventure.movement: all fixed movement, stance, climbing and tracking outcomes.
+You lie on the ground.	你趴在了地上。
+You stand up.	你起身了。
+{n} lies on the ground.	{n}趴在了地上。
+{n} stands up.	{n}起身了。
+The webs make it impossible to stand.	蛛网使你无法站起。
+You are riding and cannot lie down.	你正处于骑乘状态，无法趴下。
+You can't stand up -- somebody is in the way.	你无法站起——有人挡住了位置。
+You are too tired to stand.	你太累了，无法站起。
+You aren't wielding a ranged weapon.	你没有持用远程武器。
+You must move away from the river before you can travel.	必须先远离河流，才能开始旅行。
+You must move away from surrounding obstacles such as the site's walls and rivers before you can travel.	必须先远离周围的障碍物，例如聚落的围墙和河流，才能开始旅行。
+You can't travel until you emerge from underground or enter a tunnel.	必须先离开地下或进入隧道，才能开始旅行。
+You no longer assume a submissive posture.	你不再摆出投降姿态。
+You assume a submissive posture.	你摆出了投降姿态。
+You are too injured to climb.	你的伤势太重，无法攀爬。
+You need a free grasp to climb.	需要一个空闲的抓握部位才能攀爬。
+# Adventure tracking: the first slot uses the shared footwear/anatomy grammar;
+# the second resolves the complete terrain/material name. Depth is scoped here.
+There is a deep {s} imprint in the {s}.	{s2}中有一个{s1}留下的深压痕。
+There is a shallow {s} imprint in the {s}.	{s2}中有一个{s1}留下的浅压痕。
+There is a vague {s} imprint in the {s}.	{s2}中有一个{s1}留下的模糊压痕。
+There is a {s} imprint in the {s}.	{s2}中有一个{s1}留下的压痕。
+The signs lead north.	踪迹通向北方。
+The signs lead east.	踪迹通向东方。
+The signs lead south.	踪迹通向南方。
+The signs lead west.	踪迹通向西方。
+The signs lead northeast.	踪迹通向东北方。
+The signs lead northwest.	踪迹通向西北方。
+The signs lead southeast.	踪迹通向东南方。
+The signs lead southwest.	踪迹通向西南方。
+This is an unintelligible mess.	这里的踪迹杂乱无章，无法辨认。
+They belong to you or a companion.	这些踪迹属于你或一名同伴。
+The vegetation is bent here.	这里的植被被压弯了。
+The vegetation is heavily damaged here.	这里的植被受到严重破坏。
+The vegetation is broken here.	这里的植被被折断了。
+The vegetation has been slightly perturbed here.	这里的植被受到轻微扰动。
+
+# adventure.inventory: complete branches for every container/hand combination.
+# Shared social/knowledge announcements. Names, gifts and places retain their
+# native semantic boundaries instead of becoming a word-by-word sentence.
+{n} embraces {n}.	{n1}拥抱了{n2}。
+{n} has shared many tales from beyond {e}.	{n}分享了许多来自{e}之外的故事。
+{n} has shared a few rumors.	{n}分享了几则传闻。
+{n} has shared a rumor from abroad.	{n}分享了一则来自外地的传闻。
+{n} gives you {s}.	{n}给了你{s}。
+# Knowledge subjects use the shared historical prose vocabulary, including
+# complete method names; ordinary {s} UI nouns cannot read those scoped terms.
+{n} has discovered {q}.	{n}发现了{q}。
+{n} has become a student of {n}.	{n1}成为了{n2}的学生。
+# Appointment reports keep the office and its named place/entity in separate
+# typed slots; the ordinary profession-only message cannot resolve both.
+{p} has become a {s} of {e}.	{p}成为了{e}的{s}。
+It has no writing.	上面没有文字。
+The pages are blank.	书页是空白的。
+It has no pages.	它没有书页。
+
+# Equipment announcements own the complete sentence. Item articles, materials,
+# quality marks and body parts use the existing typed term grammar.
+# Pickup constructors include ground items, plant growths and grasp/container
+# destinations. Preserve the native NPC "put" variant as well as "puts".
+You pick up the {s} and put it in your {s}.	你拾起了{s1}，并将其放入你的{s2}中。
+You pick up the {s} with your {s}.	你用{s2}拾起了{s1}。
+You pick the {s} with your {s}.	你用{s2}采摘了{s1}。
+You pull off the {s} with your {s}.	你用{s2}扯下了{s1}。
+{n} picks up the {s} and puts it in his {s}.	{n}拾起了{s1}，并将其放入他的{s2}中。
+{n} picks up the {s} and puts it in her {s}.	{n}拾起了{s1}，并将其放入她的{s2}中。
+{n} picks up the {s} and puts it in its {s}.	{n}拾起了{s1}，并将其放入它的{s2}中。
+{n} picks up the {s} and put it in his {s}.	{n}拾起了{s1}，并将其放入他的{s2}中。
+{n} picks up the {s} and put it in her {s}.	{n}拾起了{s1}，并将其放入她的{s2}中。
+{n} picks up the {s} and put it in its {s}.	{n}拾起了{s1}，并将其放入它的{s2}中。
+{n} picks up the {s} with his {s}.	{n}用他的{s2}拾起了{s1}。
+{n} picks up the {s} with her {s}.	{n}用她的{s2}拾起了{s1}。
+{n} picks up the {s} with its {s}.	{n}用它的{s2}拾起了{s1}。
+{n} picks the {s} with his {s}.	{n}用他的{s2}采摘了{s1}。
+{n} picks the {s} with her {s}.	{n}用她的{s2}采摘了{s1}。
+{n} picks the {s} with its {s}.	{n}用它的{s2}采摘了{s1}。
+{n} pulls off the {s} with his {s}.	{n}用他的{s2}扯下了{s1}。
+{n} pulls off the {s} with her {s}.	{n}用她的{s2}扯下了{s1}。
+{n} pulls off the {s} with its {s}.	{n}用它的{s2}扯下了{s1}。
+You strap {s} to your {s}.	你把{s1}系在了{s2}上。
+You draw {s} with your {s}.	你用{s2}拔出了{s1}。
+You do not have a free grasp and your quivers and pack are full.	你没有空闲的抓握部位，而且所有箭筒和背包都已装满。
+You do not have a free grasp and your quiver and packs are full.	你没有空闲的抓握部位，而且箭筒和所有背包都已装满。
+You do not have a free grasp and your quivers are full.	你没有空闲的抓握部位，而且所有箭筒都已装满。
+You do not have a free grasp and your quiver and pack are full.	你没有空闲的抓握部位，而且箭筒和背包都已装满。
+You do not have a free grasp and your quiver is full.	你没有空闲的抓握部位，而且箭筒已装满。
+You do not have a free grasp and your pack is full.	你没有空闲的抓握部位，而且背包已装满。
+You do not have a free grasp.	你没有空闲的抓握部位。
+There is nothing to pick up here.	这里没有可拾取的物品。
+You have nothing to examine.	你没有可查看的物品。
+You have nothing left to eat or drink.	你已经没有可以吃喝的东西了。
+You have nothing to put inside a container or on a pack animal.	你没有可以放入容器或放到驮畜身上的物品。
+You have nothing left to throw.	你已经没有可以投掷的物品了。
+You have nothing with which to interact.	你没有可互动的物品。
+You have nothing left to drop.	你已经没有可以丢下的物品了。
+You have nothing left to remove.	你已经没有可以脱下的物品了。
+You have nothing left to wear.	你已经没有可以穿戴的物品了。
+What do you want to place?	你想放置什么？
+What do you want to remove?	你想脱下什么？
+What do you want to throw?	你想投掷什么？
+What do you want to eat or drink?	你想吃喝什么？
+What do you want to wear?	你想穿戴什么？
+What do you want to drop?	你想丢下什么？
+Where would you like to move?	你想移动到哪里？
+What do you want to do?	你想做什么？
+At whom or what would you like to throw?	你想向谁或什么目标投掷？
+Who or what would you like to shoot?	你想射击谁或什么目标？
+With what do you want to interact?	你想与什么互动？
+
+# adventure.performance: complete choices after the separately drawn hotkey.
+# Reuse the help text's story/poetry wording and the established sermon,
+# music-performance and Dance vocabulary.
+Tell a story	讲故事
+Give a sermon	布道
+Recite a poem	朗诵诗歌
+Perform music	演奏音乐
+Dance	舞蹈
+Compose a poem	创作诗歌
+
+# adventure.interaction: environmental prerequisites and complete fixed outcomes.
+# BP_BUMP greeting verb follows the existing RAW translation "头撞";
+# the actor uses the shared unit/native-name resolver, not a fixed pet name.
+{n} head-bumps you.	{n}用头蹭了蹭你。
+You've found a small creature.	你发现了一只小型生物。
+You've found some small creatures.	你发现了一些小型生物。
+Your intense search turns up nothing.	你仔细搜寻了一番，却一无所获。
+You've already searched this area recently.	你最近已经搜寻过此区域。
+The vegetation is submerged.	植被被水淹没了。
+The steam around the vegetation stops you from setting the fire.	植被周围的蒸汽使你无法点火。
+The vegetation is too wet.	植被太湿了。
+You need to be holding an axe with a sharp edge.	你需要手持一把刃口锋利的斧头。
+You need to be holding an axe.	你需要手持一把斧头。
+You make a campfire.	你生起了营火。
+You cannot fell the trees here.	你无法砍倒这里的树木。
+You cannot fell trees in the arena.	你无法在竞技场中砍树。
+You cannot read.	你无法阅读。
+The door is operated by a remote mechanism. You cannot proceed.	这扇门由远程机关控制，无法继续操作。
+The hatch is operated by a remote mechanism. You cannot proceed.	这个舱盖由远程机关控制，无法继续操作。
+You bash the door down!	你撞破了门！
+You topple the statue!	你推倒了雕像！
+You break the hatch in!	你砸破了舱盖！
+You pull the lever.	你拉动了拉杆。
+You pick the lock!	你撬开了锁！
+You lower the bucket.	你放下了水桶。
+You raise the bucket.	你提起了水桶。
+You need a free grasp to hold the terrain.	需要一个空闲的抓握部位才能抓住地形。
+There is no furniture, building, or vehicle to interact with here.	这里没有可互动的家具、建筑或车辆。
+You are too injured to hold the terrain.	你的伤势太重，无法抓住地形。
+There is nothing to hold here.	这里没有可以抓住的东西。
+You cannot climb or mount while prone.	俯卧时无法攀爬或骑乘。
+You are surrounded by incessant cackling.	你被持续不断的怪笑声包围了。
+The cackling fades away.	怪笑声渐渐消失。
+You are still surrounded by cackling.	你仍被怪笑声包围着。
+
+# adventure.conversation: every neighboring fixed question, including all replies.
+Toward you: Neutral attitude	对你的态度：中立
+What will you say?	你想说些什么？
+# Greeting choices exclude their separately drawn native letter hotkeys.
+Greet listener	向对方问候
+Bypass greeting (new menu)	跳过问候（打开新菜单）
+Nevermind	算了
+# Greeting keywords retain their original light-green color.
+Keywords: greet hello	关键词：[C:2:0:1]问候 你好
+Keywords: bypass skip	关键词：[C:2:0:1]略过 跳过
+Keywords: nevermind	关键词：[C:2:0:1]算了
+Click a creature to start a new conversation	点击一个生物，开始新的交谈。
+# Conversation chooser captions exclude the separately drawn native hotkey.
+# The optional named target reuses Start new conversation with {n} below.
+Shout out to everybody	向所有人喊话
+Assume an identity	采用一个身份
+What would you like to do?	你想做什么？
+Select memorized content or a form of prose.	选择已记住的内容或一种散文形式。
+Assume an appropriate identity first if you'd like to pretend.	如果想冒充他人，请先采用合适的身份。
+You don't believe anything relevant, unfortunately.	遗憾的是，你没有与此相关的信念。
+Choose a poetic form for the composition.	为这次创作选择一种诗歌形式。
+Choose a dance form for the choreography.	为这次编舞选择一种舞蹈形式。
+Choose a musical form for the composition.	为这次创作选择一种音乐形式。
+You must compose a piece first (or learn an improvisational form).	你必须先创作一部作品，或学会一种即兴表演形式。
+You don't know anything specific about this, unfortunately.	遗憾的是，你对此没有具体了解。
+Would like to sleep or wait a while?	你想睡觉，还是等待一段时间？
+How will you respond to the request for directions?	你将如何回应问路的请求？
+How will you respond to the request for information?	你将如何回应打听消息的请求？
+What will you say about the missing treasure?	关于失踪的宝物，你想说些什么？
+How will you respond to the request for a guide?	你将如何回应寻找向导的请求？
+How will you respond to the demand for tribute?	你将如何回应索要贡品的要求？
+How will you respond to the offer of peace?	你将如何回应和平提议？
+How will you respond to the demand to yield?	你将如何回应投降的要求？
+How will you respond to the request to cease hostilities?	你将如何回应停止敌对行动的请求？
+What will you say about your master?	关于你的师父，你想说些什么？
+How will you respond to the accusation?	你将如何回应指控？
+How will you respond about your profession?	你将如何回答关于你职业的问题？
+What will you say about your plots and scheming?	关于你的阴谋与谋划，你想说些什么？
+What will you say about the site?	关于这个地点，你想说些什么？
+What will you say about the surrounding area?	关于周围区域，你想说些什么？
+How will you respond to the invocation?	你将如何回应召唤？
+What will you say about the structure?	关于这座建筑，你想说些什么？
+What will you say about your family?	关于你的家人，你想说些什么？
+What will you say about how you are feeling?	关于你的感受，你想说些什么？
+How will you respond to the tribute cancellation?	你将如何回应停止进贡的决定？
+How will you respond to the offer of tribute?	你将如何回应进贡的提议？
+How will you respond to this flattery?	你将如何回应这番奉承？
+How will you respond to this passive reply?	你将如何回应这个消极的答复？
+How will you respond to this statement of values?	你将如何回应这番价值观表述？
+How will you respond to this dismissal?	你将如何回应这番打发？
+
+# adventure.combat: complete charge prerequisites, attack modifiers and prompts.
+Who will you attack?	你要攻击谁？
+Who will you wrestle?	你要与谁摔跤？
+Select your combat preferences.	选择你的战斗偏好。
+What do you want to aim for?	你想瞄准哪个部位？
+Quick movement and other actions decrease stealth.	快速移动和其他动作会降低隐蔽程度。
+Multi-attack: choose another simultaneous action afterward	多重攻击：随后再选择一个同时进行的动作。
+Charge attack: move toward your opponent	冲锋攻击：朝对手移动。
+No charge attack: target too far away	无法冲锋攻击：目标距离过远。
+No charge attack: target's location inaccessible	无法冲锋攻击：无法抵达目标位置。
+No charge attack: you are on a vehicle	无法冲锋攻击：你在车辆上。
+No charge attack: you are in uncontrolled flight	无法冲锋攻击：你正不受控制地在空中飞行。
+No charge attack: you are climbing	无法冲锋攻击：你正在攀爬。
+No charge attack: you are on a projectile	无法冲锋攻击：你在飞行物上。
+No charge attack: you are on the ground	无法冲锋攻击：你正倒在地上。
+No charge attack: no target	无法冲锋攻击：没有目标。
+No charge attack: you are chained	无法冲锋攻击：你被锁链束缚。
+No charge attack: you are mounted	无法冲锋攻击：你正处于骑乘状态。
+No charge attack: target is on a projectile	无法冲锋攻击：目标在飞行物上。
+No charge attack: target is on a vehicle	无法冲锋攻击：目标在车辆上。
+No charge attack: target shares your location	无法冲锋攻击：目标与你位于同一位置。
+No charge attack: target is climbing	无法冲锋攻击：目标正在攀爬。
+No charge attack: target is mounted	无法冲锋攻击：目标正处于骑乘状态。
+No charge attack: target is on the ground	无法冲锋攻击：目标正倒在地上。
+No charge attack: target is in uncontrolled flight	无法冲锋攻击：目标正不受控制地在空中飞行。
+No charge attack: target is chained	无法冲锋攻击：目标被锁链束缚。
+Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate	狂野攻击：出手快、恢复慢，打击有力，但会失去平衡且命中不准。
+Forced wild attack: enraged	被迫使用狂野攻击：怒不可遏。
+Precise attack: very slow to strike, improved accuracy	精准攻击：出手很慢，但命中更准。
+No precise attack: enraged	无法精准攻击：怒不可遏。
+Quick attack: faster to strike and recover, but not powerful	快速攻击：出手和恢复更快，但威力较弱。
+No quick attack: enraged	无法快速攻击：怒不可遏。
+Heavy attack: slower to strike and recover, but hits harder	重击：出手和恢复较慢，但打击更有力。
+No heavy attack: enraged	无法重击：怒不可遏。
+
+# adventure.log: fixed relationship, creature-knowledge and assigned-mission prose.
+You have known this person your entire life.	你从记事起就认识这个人。
+You have known each other your entire lives.	你们从记事起就彼此相识。
+You are beloved.	你深受爱戴。
+You are held in high regard.	你备受尊重。
+You have heard this name suggested as a potential guide to faraway places.	有人向你推荐过这个人，认为其可以带你前往遥远的地方。
+You worship this figure.	你信奉这位神明。
+You have attracted some positive interest.	你引起了一些善意的关注。
+This is your lover.	这是你的爱人。
+You are held in some esteem.	你受到一定的敬重。
+You have been favorably noticed.	你给对方留下了好印象。
+This is your master.	这是你的师父。
+This is your apprentice.	这是你的学徒。
+This is your prisoner.	这是你的囚犯。
+This is your jailor.	这是看管你的狱卒。
+This is your former apprentice.	这是你以前的学徒。
+This is your owner.	这是你的主人。
+This is your traveling companion.	这是你的旅伴。
+This is your former master.	这是你以前的师父。
+This is your former spouse.	这是你的前配偶。
+This is your deceased spouse.	这是你已故的配偶。
+You have recently encountered one of these creatures.	你最近遇到过这种生物。
+You have encountered these creatures in the past but not recently.	你以前遇到过这种生物，但最近没有遇到。
+You have only heard tell of these creatures.	你只是听说过这种生物。
+This creature dwells underground.	这种生物栖息在地下。
+You have been ordered to drive these forces out.	你受命驱逐这些势力。
+You have been ordered to clear the forces from this site.	你受命清除此地的敌对势力。
+You have been ordered to slay this creature.	你受命杀死这只生物。
+You have been ordered to cause trouble for these forces.	你受命给这些势力制造麻烦。
+This is common knowledge where you are from.	这在你的家乡是常识。
+
+# adventure.blocked: all seven native actions and their reachable fixed reasons.
+# Sources are reconstructed from the action switch and concatenation calls,
+# not guessed sentence fragments or open-ended replacement templates.
+You can't travel until you've stopped the bleeding.	你还没有止住流血，无法旅行。
+You can't travel because you can't breathe.	你无法呼吸，不能旅行。
+You can't travel because you are dying of thirst.	你快渴死了，无法旅行。
+You can't travel because you are starving to death.	你快饿死了，无法旅行。
+You can't travel because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法旅行。请购买这些货物，或先离此地点远一些。
+You can't travel because you are drowning.	你正在溺水，无法旅行。
+You can't travel because you are swimming.	你正在游泳，无法旅行。
+You can't travel until you are on a stable surface.	你必须先到达稳固的地面，才能旅行。
+You can't travel until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能旅行。
+You can't travel until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能旅行。
+You feel too watched to travel.	你感觉被人盯着，无法安心旅行。
+You don't feel safe enough to travel.	你觉得这里不够安全，无法旅行。
+You cannot travel until you leave this site.	你必须先离开此地点，才能旅行。
+You must move away from the water before you can travel.	你必须先远离水域，才能旅行。
+You must come down from the mountains before you can travel.	你必须先离开山地，才能旅行。
+You can't build until you've stopped the bleeding.	你还没有止住流血，无法建造。
+You can't build because you can't breathe.	你无法呼吸，不能建造。
+You can't build because you are dying of thirst.	你快渴死了，无法建造。
+You can't build because you are starving to death.	你快饿死了，无法建造。
+You can't build because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法建造。请购买这些货物，或先离此地点远一些。
+You can't build because you are drowning.	你正在溺水，无法建造。
+You can't build because you are swimming.	你正在游泳，无法建造。
+You can't build until you are on a stable surface.	你必须先到达稳固的地面，才能建造。
+You can't build until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能建造。
+You can't build until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能建造。
+You feel too watched to build.	你感觉被人盯着，无法安心建造。
+You don't feel safe enough to build.	你觉得这里不够安全，无法建造。
+You cannot build until you leave this site.	你必须先离开此地点，才能建造。
+You must move away from the water before you can build.	你必须先远离水域，才能建造。
+You can't build a fire until you've stopped the bleeding.	你还没有止住流血，无法生火。
+You can't build a fire because you can't breathe.	你无法呼吸，不能生火。
+You can't build a fire because you are dying of thirst.	你快渴死了，无法生火。
+You can't build a fire because you are starving to death.	你快饿死了，无法生火。
+You can't build a fire because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法生火。请购买这些货物，或先离此地点远一些。
+You can't build a fire because you are drowning.	你正在溺水，无法生火。
+You can't build a fire because you are swimming.	你正在游泳，无法生火。
+You can't build a fire until you are on a stable surface.	你必须先到达稳固的地面，才能生火。
+You can't build a fire until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能生火。
+You can't build a fire until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能生火。
+You feel too watched to build a fire.	你感觉被人盯着，无法安心生火。
+You don't feel safe enough to build a fire.	你觉得这里不够安全，无法生火。
+You cannot build a fire until you leave this site.	你必须先离开此地点，才能生火。
+You can't fell trees until you've stopped the bleeding.	你还没有止住流血，无法砍树。
+You can't fell trees because you can't breathe.	你无法呼吸，不能砍树。
+You can't fell trees because you are dying of thirst.	你快渴死了，无法砍树。
+You can't fell trees because you are starving to death.	你快饿死了，无法砍树。
+You can't fell trees because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法砍树。请购买这些货物，或先离此地点远一些。
+You can't fell trees because you are drowning.	你正在溺水，无法砍树。
+You can't fell trees because you are swimming.	你正在游泳，无法砍树。
+You can't fell trees until you are on a stable surface.	你必须先到达稳固的地面，才能砍树。
+You can't fell trees until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能砍树。
+You can't fell trees until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能砍树。
+You feel too watched to fell trees.	你感觉被人盯着，无法安心砍树。
+You don't feel safe enough to fell trees.	你觉得这里不够安全，无法砍树。
+You cannot fell trees until you leave this site.	你必须先离开此地点，才能砍树。
+You must move away from the water before you can fell trees.	你必须先远离水域，才能砍树。
+You can't rest until you've stopped the bleeding.	你还没有止住流血，无法休息。
+You can't rest because you can't breathe.	你无法呼吸，不能休息。
+You can't rest because you are dying of thirst.	你快渴死了，无法休息。
+You can't rest because you are starving to death.	你快饿死了，无法休息。
+You can't rest because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法休息。请购买这些货物，或先离此地点远一些。
+You can't rest because you are drowning.	你正在溺水，无法休息。
+You can't rest because you are swimming.	你正在游泳，无法休息。
+You can't rest until you are on a stable surface.	你必须先到达稳固的地面，才能休息。
+You can't rest until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能休息。
+You can't rest until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能休息。
+You feel too watched to rest.	你感觉被人盯着，无法安心休息。
+You don't feel safe enough to rest.	你觉得这里不够安全，无法休息。
+You cannot rest until you leave this site.	你必须先离开此地点，才能休息。
+You must move away from the water before you can rest.	你必须先远离水域，才能休息。
+You can't compose until you've stopped the bleeding.	你还没有止住流血，无法创作。
+You can't compose because you can't breathe.	你无法呼吸，不能创作。
+You can't compose because you are dying of thirst.	你快渴死了，无法创作。
+You can't compose because you are starving to death.	你快饿死了，无法创作。
+You can't compose because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法创作。请购买这些货物，或先离此地点远一些。
+You can't compose because you are drowning.	你正在溺水，无法创作。
+You can't compose because you are swimming.	你正在游泳，无法创作。
+You can't compose until you are on a stable surface.	你必须先到达稳固的地面，才能创作。
+You can't compose until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能创作。
+You can't compose until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能创作。
+You feel too watched to compose.	你感觉被人盯着，无法安心创作。
+You don't feel safe enough to compose.	你觉得这里不够安全，无法创作。
+You cannot compose until you leave this site.	你必须先离开此地点，才能创作。
+You must move away from the water before you can compose.	你必须先远离水域，才能创作。
+You can't write until you've stopped the bleeding.	你还没有止住流血，无法书写。
+You can't write because you can't breathe.	你无法呼吸，不能书写。
+You can't write because you are dying of thirst.	你快渴死了，无法书写。
+You can't write because you are starving to death.	你快饿死了，无法书写。
+You can't write because you are carrying someone else's goods. Purchase them or put some distance between yourself and the site.	你携带着他人的货物，无法书写。请购买这些货物，或先离此地点远一些。
+You can't write because you are drowning.	你正在溺水，无法书写。
+You can't write because you are swimming.	你正在游泳，无法书写。
+You can't write until you are on a stable surface.	你必须先到达稳固的地面，才能书写。
+You can't write until you stop riding this vehicle.	你必须先离开乘坐的车辆，才能书写。
+You can't write until you stop riding this projectile.	你必须先离开骑乘的飞行物，才能书写。
+You feel too watched to write.	你感觉被人盯着，无法安心书写。
+You don't feel safe enough to write.	你觉得这里不够安全，无法书写。
+You cannot write until you leave this site.	你必须先离开此地点，才能书写。
+You must move away from the water before you can write.	你必须先远离水域，才能书写。
+
+# Additional complete native UI instruction/limitation families.
+# Fixed continuations are joined; current key bindings remain native inputs.
+There are not enough dancers.	舞者人数不足。
+There is not enough room to perform here.	这里没有足够的表演空间。
+You cannot perform here.	你无法在这里表演。
+You could not find a partner.	你没能找到舞伴。
+Need accessible mechanisms.	需要能够取用的机件。
+You must designate a dungeon before this restraint will be used for imprisonment.	必须先划定监牢，才能用这件束缚器具关押囚犯。
+You must designate a tomb before this coffin will be used for burial.	必须先划定墓地，才能用这具灵柩安葬死者。
+Retake hatch to forbid it.	先夺回舱盖，才能将其禁用。
+Click for assignments and details	点击查看人员分配和详细信息。
+This mission cannot be altered now.	现在无法更改此任务。
+WARNING: If successful, your soldiers will join the occupation and not return. Your new holdings will be manageable from this screen.	警告：若行动成功，你的士兵将加入占领军，不再返回。可以在此界面管理新取得的领地。
+No messengers available	没有可派遣的信使。
+No squads available	没有可派遣的小队。
+Choose a proposal.	选择一项提议。
+Assign messengers.	指派信使。
+Assign squads.	指派小队。
+Click to view all news and rumors	点击查看所有消息和传闻。
+No reports available	没有可查看的报告。
+Click to rescue (creates new mission)	点击营救（创建新任务）。
+Click to recover (creates new mission)	点击取回（创建新任务）。
+Claimed by local family	当地家族宣称拥有
+No fullscreen resolutions detected.	未检测到可用的全屏分辨率。
+There is no specific information for this activity.	此活动没有具体信息。
+# Adventure butchery/crafting: complete native heading and reaction_other.txt
+# captions/requirements. Keep ground and consumed in their complete context.
+# Sharp rock follows the existing "Create a sharp rock with two rocks." entry;
+# helve/branch follow the established item vocabulary. Butcher is a scoped
+# action alias in data/runtime/local-overrides.tsv so profession captions retain their sense.
+What do you want to do? Items must be in a grasp or on the ground here.	你想做什么？物品必须拿在手中或放在此处的地面上。
+Make sharp rock	制作尖石
+Carve bone	雕刻骨制品
+Carve wooden helve from branch	用树枝雕刻木制斧柄
+Assemble stone axe	组装石斧
+Make crafts from bone using a sharp weapon or tool.	用锋利的武器或工具将骨制作成工艺品。
+Needs: Blunt small rock [consumed], Blunt small rock [not consumed]	需求：无刃小石块［消耗］、无刃小石块［不消耗］
+Needs: Unrotten bone body part [consumed], Edged item [not consumed]	需求：未腐烂的骨头组织［消耗］、有刃物品［不消耗］
+Needs: Plant branch [consumed], Edged item [not consumed]	需求：植物树枝［消耗］、有刃物品［不消耗］
+Needs: Helve [consumed], Edged small rock [consumed]	需求：斧柄［消耗］、有刃小石块［消耗］
+# Reagent selection uses a complete prompt, separate from the action caption
+# and the Needs row. Keep the material restriction and consumption together.
+Make sharp rock: select tool stone (Blunt small rock, consumed).	制作尖石：选择原料石（无刃小石块，消耗）。
+Make sharp rock: select hammerstone (Blunt small rock, not consumed).	制作尖石：选择锤石（无刃小石块，不消耗）。
+No carcass available.	没有可用的尸体。
+No butchery tool available.	没有可用的屠宰工具。
+What do you want to butcher?	你想屠宰什么？
+Select a butchery tool.	选择一件屠宰工具。
+You are not that hungry.	你还没有饿到那种程度。
+No available item.	没有可用物品。
+Where is your identity from?	你所采用的身份来自哪里？
+Click the map to add points.	点击地图添加路线点。
+Select or create a route.	选择或创建一条路线。
+Select which burrows to defend.	选择要防守的活动区。
+Select how squads will use this space.	选择小队如何使用此空间。
+Select the squads to train here.	选择在这里训练的小队。
+Must span multiple elevations	必须跨越多个高度层。
+Water wheels are 1x3 or 3x1. The long side should align with the water's flow.	水车占地为 1×3 或 3×1 格，长边应与水流方向一致。
+Set the orientation below.	在下方设置朝向。
+Click in the play area to paint the stockpile.	在游戏区域中点击，涂画储物堆。
+Click in the play area to paint the zone.	在游戏区域中点击，涂画区域。
+Click in the play area to paint the burrow.	在游戏区域中点击，涂画活动区。
+Auto-dumping is not required.	不必设置自动倾倒。
+Set the draw direction below.	在下方设置升起方向。
+Select another rectangle to continue.	选择另一个矩形以继续。
+# Room creation feedback is a complete message; matching only the room name
+# leaves the success suffix in English.
+Bedroom created.	卧室已创建。
+# Room selection joins the furniture name to a rejection reason (Windows
+# native string data near file offset 0x162EFF3). Match the complete warning
+# before the unrelated psychological sense of "rejected".
+Bed rejected (not enclosed.)	床未被选用（房间未封闭）
+Table rejected (not enclosed.)	桌子未被选用（房间未封闭）
+Chair rejected (not enclosed.)	椅子未被选用（房间未封闭）
+Coffin rejected (not enclosed.)	棺材未被选用（房间未封闭）
+Bed rejected (already in use.)	床未被选用（已被占用）
+Table rejected (already in use.)	桌子未被选用（已被占用）
+Chair rejected (already in use.)	椅子未被选用（已被占用）
+Coffin rejected (already in use.)	棺材未被选用（已被占用）
+You have no appropriate ingredients.	你没有合适的原料。
+Choose a symbol for the burrow.	为活动区选择一个符号。
+Choose a symbol for the squad.	为小队选择一个符号。
+Choose a symbol for the detail.	为劳动分组选择一个符号。
+Create which squad?	要创建哪支小队？
+Really delete this routine?	确定删除此例程吗？
+Select a squad or squad member to give orders, change equipment, and assign schedules.	选择一支小队或一名队员，以便下达命令、更换装备和分配日程。
+Choose a uniform for the squad.	为小队选择一套制式服装。
+Choose a uniform for the selected squads.	为所选小队选择一套制式服装。
+Choose a uniform for the {s}'s squad.	为{s1}的小队选择一套制式服装。
+No interrogation reports.	没有审讯报告。
+There are no creatures available.	没有可用的生物。
+You have nothing left to draw or put away.	你已经没有可以取出或收起的物品了。
+You should report the task as complete.	你应当报告此任务已经完成。
+Where will you jump?	你要跳到哪里？
+Delay warning: Ammo will be loaded/nocked before firing.	延迟提示：发射前需要先装填弹药或搭箭。
+Where will you aim?	你要瞄准哪里？
+Would you like to take an action?	你要采取行动吗？
+You cannot jump while prone.	俯卧时无法跳跃。
+You cannot jump while swimming.	游泳时无法跳跃。
+You are too injured to jump.	你的伤势太重，无法跳跃。
+You cannot jump while in the air.	身处空中时无法跳跃。
+You have nothing to fire with.	你没有可用于发射的武器。
+You have nothing left to fire.	你已经没有可以发射的弹药了。
+There is nowhere to jump.	没有可以跳到的位置。
+You cannot jump while wrestling.	摔跤时无法跳跃。
+You cannot speak.	你无法说话。
+You just can't fit any more.	你实在吃不下更多东西了。
+You haven't been able to act for a while.	你已经有一段时间无法行动了。
+
+# Native key inserts remain dynamic bindings, never default-key text.
+Move the cursor to view and press {k} to interact.	移动光标查看，按 {k} 进行互动。
+Click a target or move the cursor and press {k}.	点击一个目标，或移动光标后按 {k}。
+You can prepare in advance with {k} or from the inventory menu.	可以按 {k} 提前准备，也可以通过物品栏菜单准备。
+You can continue waiting, or save/quit from the settings menu.	你可以继续等待，也可以通过设置菜单保存或退出。
+
+# Native confirmation and restriction branches: military, barter, combat and expulsion.
+# Unit captures in combat confirmations retain the native named target.
+Really disband?	确定解散吗？
+Cannot appoint until commander is selected	必须先选定指挥官，才能进行任命。
+# Squad creation draws three fixed lines, with a live position title in the
+# middle (or "somebody first" if no title is available). Keep the whole prompt
+# together; {s} resolves the position through the existing terminology table.
+You must appoint a {s} to create a squad.	必须先任命一名{s}，才能创建小队。
+You must appoint somebody first to create a squad.	必须先任命人选，才能创建小队。
+Cannot trade currency	无法交易货币。
+Really start a conflict with {n}?	确定要与{n}发生冲突吗？
+Really attack {n}?	确定要攻击{n}吗？
+{n} has yielded. Attack anyway?	{n}已投降。仍要攻击吗？
+Cannot expel or send away:	无法驱逐或派走：
+Does the expelling	负责执行驱逐
+Nobility	贵族
+Holds elected office	担任民选职位
+Spouse does the expelling	配偶负责执行驱逐
+Spouse is not present	配偶不在此地
+Spouse is nobility	配偶是贵族
+Spouse is elected	配偶担任民选职位
+Child does the expelling	子女负责执行驱逐
+Child is not present	子女不在此地
+Child is nobility	子女是贵族
+Child is elected	子女担任民选职位
+
+# Complete native tracking headers, including the colon appended to directions.
+Freshest track	最新踪迹
+To the west:	西方：
+To the east:	东方：
+To the north:	北方：
+To the south:	南方：
+To the northwest:	西北方：
+To the northeast:	东北方：
+To the southwest:	西南方：
+To the southeast:	东南方：
+At your location:	你所在的位置：
+
+# Complete native selection and linking prompts from the whole-PE prompt audit.
+# Split native draws are joined through their final punctuation and branches.
+Choose dye color	选择染料颜色。
+Select an identity.	选择一个身份。
+Select bodywear.	选择躯干装备。
+Select headwear.	选择头部装备。
+Select legwear.	选择腿部装备。
+Select handwear.	选择手部装备。
+Select footwear.	选择足部装备。
+Select shield.	选择盾牌。
+Select weapon.	选择武器。
+Select material.	选择材料。
+Select color.	选择颜色。
+Select item.	选择物品。
+Choose your tone/tact	选择交谈的语气与策略。
+Select a stockpile to take from.	选择一个供货的储物堆。
+Select a stockpile to give to.	选择一个接收货物的储物堆。
+Select a stockpile to exchange with.	选择一个双向交换货物的储物堆。
+Select a stockpile or workshop to take from.	选择一个供货的储物堆或工坊。
+Select a stockpile or workshop to give to.	选择一个接收货物的储物堆或工坊。
+Select a rectangle which contains coffins in order to form tombs.	选择一个包含灵柩的矩形区域，以创建墓地。
+Select a rectangle which contains chairs in order to form throne rooms/studies.	选择一个包含椅子的矩形区域，以创建王座厅或书房。
+Select a rectangle which contains beds in order to form bedrooms.	选择一个包含床的矩形区域，以创建卧室。
+Select a rectangle which contains tables in order to form dining halls.	选择一个包含桌子的矩形区域，以创建餐厅。
+Rooms with multiple beds will be made into dormitories.	放有多张床的房间会被设为公共宿舍。
+You cannot see.	你看不见。
+You cannot see the sky clearly from here, but the available sunlight indicates the night.	从这里无法看清天空，但根据光照可以判断，现在是夜晚。
+You cannot see the sky clearly from here, but the available sunlight indicates the dawn.	从这里无法看清天空，但根据光照可以判断，现在是黎明。
+You cannot see the sky clearly from here, but the available sunlight indicates the day.	从这里无法看清天空，但根据光照可以判断，现在是白天。
+You cannot see the sky clearly from here, but the available sunlight indicates the sunset.	从这里无法看清天空，但根据光照可以判断，现在是日落时分。
+
+# Complete native selection templates; dynamic slots use shared typed parsers.
+# s=known building/site term, n=unit label, d=number, c=custom route name.
+Click a building to link to {s}.	点击一个建筑，将其连接到{s}。
+Select materials for the {s}.	为{s}选择材料。
+Click a tile to be one end of the {s}.	点击一个地格，作为{s}的一端。
+Click a tile to be a corner of the {s}.	点击一个地格，作为{s}的一个角。
+Select a trainer for {n}	为{n}选择训练员。
+Choose a vehicle for Route {d}.	为路线 {d} 选择车辆。
+Choose a vehicle for {c}.	为{c}选择车辆。
+You cannot travel through the {s}.	你无法穿过{s}。
+
+# Adventure right-click actions: complete native caption constructor families.
+# Labels retain native shortcuts; typed captures preserve existing terrain,
+# item, creature, name and direction terminology. Climb/hold wording follows
+# rulesets/zh-Hans/adv climb/hold; mount, lead and claim follow the existing tables.
+Start new conversation with {n}	与{n}开始新的交谈
+Continue conversation with {n}	继续与{n}交谈
+Continue shouting	继续喊话
+View {n}	查看{n}
+View yourself	查看你自己
+Get {s}[[ ({s})]]	拿取{s1}[[（{s2}）]]
+Get {s} from {n}[[ ({s})]]	从{n}处拿取{s1}[[（{s2}）]]
+Get {s} from {s}[[ ({s})]]	从{s2}处拿取{s1}[[（{s3}）]]
+Make Campfire[[ ({s})]]	搭建篝火[[（{s}）]]
+# Plant/item actions share complete names; location may be omitted, including underfoot.
+Pick {s}[[ ({s})]]	采摘{s1}[[（{s2}）]]
+Ignite[[ {s} ({s})]]	点燃[[{s1}（{s2}）]]
+Fell {s}[[ ({s})]]	砍倒{s1}[[（{s2}）]]
+Fell tree[[ ({s})]]	砍倒树木[[（{s}）]]
+Attack {n}[[ ({s})]]	攻击{n}[[（{s}）]]
+Combat {n}[[ ({s})]]	战斗：{n}[[（{s}）]]
+Push {s}[[ to {s}]]	推动{s1}[[至{s2}]]
+Ride {s}[[, push off toward {s}]]	乘坐{s1}[[，向{s2}蹬离]]
+Guide {s}[[ to {s}]]	引导{s1}[[至{s2}]]
+Raise {s} bucket[[ ({s})]]	升起{s1}的水桶[[（{s2}）]]
+Lower {s} bucket[[ ({s})]]	放下{s1}的水桶[[（{s2}）]]
+Pull {s}[[ ({s})]]	拉动{s1}[[（{s2}）]]
+Break in {s}[[ ({s})]]	撞破{s1}[[（{s2}）]]
+Pick {s} lock[[ ({s})]]	撬开{s1}的锁[[（{s2}）]]
+Bash down {s}[[ ({s})]]	撞倒{s1}[[（{s2}）]]
+Topple {s}[[ ({s})]]	推倒{s1}[[（{s2}）]]
+Mount {n}[[ ({s})]]	骑乘{n}[[（{s}）]]
+Dismount to {s}[[ ({s})]]	下坐骑至{s1}[[（{s2}）]]
+Release hold on {s}	松开抓住{s}的手
+Claim {n}[[ ({s})]] as pet	认领{n}[[（{s}）]]为宠物
+Lead {n}[[ ({s})]]	牵上{n}[[（{s}）]]
+Stop leading {n}	停止牵引{n}
+Climb down	向下攀爬
+Climb down from {s}	从{s}向下攀爬
+Move to {s}[[ ({s})]]	移动到{s1}[[（{s2}）]]
+Move to {n}[[ ({s})]]	移动到{n}[[（{s}）]]
+Charge {s}[[ ({s})]]	冲锋攻击{s1}[[（{s2}）]]
+Charge {n}[[ ({s})]]	冲锋攻击{n}[[（{s}）]]
+Climb to {s}[[ ({s} holding {s})]]	攀向{s1}[[（{s2}，抓着{s3}）]]
+Climb to {s}[[ ({s} releasing hold)]]	攀向{s1}[[（{s2}，松开抓住的手）]]
+Hold {s}[[ ({s})]]	抓住{s1}[[（{s2}）]]
+Hold {s}[[ ({s} from {s})]]	抓住{s1}[[（{s2}，从{s3}）]]
+Hang from {s}[[ ({s})]]	悬挂于{s1}[[（{s2}）]]
+Hang from {s}[[ ({s} from {s})]]	悬挂于{s1}[[（{s2}，从{s3}）]]
+Climb[[ ({s})]]	攀爬[[（{s}）]]
+Climb {s}[[ ({s})]]	攀爬{s1}[[（{s2}）]]
+Move to {s}[[ ({s}/Air)]]	移动到{s1}[[（{s2}／空气）]]
+Move to {n}[[ ({s}/Air)]]	移动到{n}[[（{s}／空气）]]
+Charge {s}[[ ({s}/Air)]]	冲锋攻击{s1}[[（{s2}／空气）]]
+Charge {n}[[ ({s}/Air)]]	冲锋攻击{n}[[（{s}／空气）]]
+Climb to {s}[[ ({s} holding {s}/Air)]]	攀向{s1}[[（{s2}，抓着{s3}／空气）]]
+Climb to {s}[[ ({s} releasing hold/Air)]]	攀向{s1}[[（{s2}，松开抓住的手／空气）]]
+Hold {s}[[ ({s}/Air)]]	抓住{s1}[[（{s2}／空气）]]
+Hold {s}[[ ({s} from {s}/Air)]]	抓住{s1}[[（{s2}，从{s3}／空气）]]
+Hang from {s}[[ ({s}/Air)]]	悬挂于{s1}[[（{s2}／空气）]]
+Hang from {s}[[ ({s} from {s}/Air)]]	悬挂于{s1}[[（{s2}，从{s3}／空气）]]
+Climb[[ ({s}/Air)]]	攀爬[[（{s}／空气）]]
+Climb {s}[[ ({s}/Air)]]	攀爬{s1}[[（{s2}／空气）]]
+Move to {s}[[ ({s}/Water)]]	移动到{s1}[[（{s2}／水）]]
+Move to {n}[[ ({s}/Water)]]	移动到{n}[[（{s}／水）]]
+Charge {s}[[ ({s}/Water)]]	冲锋攻击{s1}[[（{s2}／水）]]
+Charge {n}[[ ({s}/Water)]]	冲锋攻击{n}[[（{s}／水）]]
+Climb to {s}[[ ({s} holding {s}/Water)]]	攀向{s1}[[（{s2}，抓着{s3}／水）]]
+Climb to {s}[[ ({s} releasing hold/Water)]]	攀向{s1}[[（{s2}，松开抓住的手／水）]]
+Hold {s}[[ ({s}/Water)]]	抓住{s1}[[（{s2}／水）]]
+Hold {s}[[ ({s} from {s}/Water)]]	抓住{s1}[[（{s2}，从{s3}／水）]]
+Hang from {s}[[ ({s}/Water)]]	悬挂于{s1}[[（{s2}／水）]]
+Hang from {s}[[ ({s} from {s}/Water)]]	悬挂于{s1}[[（{s2}，从{s3}／水）]]
+Climb[[ ({s}/Water)]]	攀爬[[（{s}／水）]]
+Climb {s}[[ ({s}/Water)]]	攀爬{s1}[[（{s2}／水）]]
+Move to {s}[[ ({s}/Lava)]]	移动到{s1}[[（{s2}／熔岩）]]
+Move to {n}[[ ({s}/Lava)]]	移动到{n}[[（{s}／熔岩）]]
+Charge {s}[[ ({s}/Lava)]]	冲锋攻击{s1}[[（{s2}／熔岩）]]
+Charge {n}[[ ({s}/Lava)]]	冲锋攻击{n}[[（{s}／熔岩）]]
+Climb to {s}[[ ({s} holding {s}/Lava)]]	攀向{s1}[[（{s2}，抓着{s3}／熔岩）]]
+Climb to {s}[[ ({s} releasing hold/Lava)]]	攀向{s1}[[（{s2}，松开抓住的手／熔岩）]]
+Hold {s}[[ ({s}/Lava)]]	抓住{s1}[[（{s2}／熔岩）]]
+Hold {s}[[ ({s} from {s}/Lava)]]	抓住{s1}[[（{s2}，从{s3}／熔岩）]]
+Hang from {s}[[ ({s}/Lava)]]	悬挂于{s1}[[（{s2}／熔岩）]]
+Hang from {s}[[ ({s} from {s}/Lava)]]	悬挂于{s1}[[（{s2}，从{s3}／熔岩）]]
+Climb[[ ({s}/Lava)]]	攀爬[[（{s}／熔岩）]]
+Climb {s}[[ ({s}/Lava)]]	攀爬{s1}[[（{s2}／熔岩）]]
+Move to {s}[[ ({s}/Magma)]]	移动到{s1}[[（{s2}／岩浆）]]
+Move to {n}[[ ({s}/Magma)]]	移动到{n}[[（{s}／岩浆）]]
+Charge {s}[[ ({s}/Magma)]]	冲锋攻击{s1}[[（{s2}／岩浆）]]
+Charge {n}[[ ({s}/Magma)]]	冲锋攻击{n}[[（{s}／岩浆）]]
+Climb to {s}[[ ({s} holding {s}/Magma)]]	攀向{s1}[[（{s2}，抓着{s3}／岩浆）]]
+Climb to {s}[[ ({s} releasing hold/Magma)]]	攀向{s1}[[（{s2}，松开抓住的手／岩浆）]]
+Hold {s}[[ ({s}/Magma)]]	抓住{s1}[[（{s2}／岩浆）]]
+Hold {s}[[ ({s} from {s}/Magma)]]	抓住{s1}[[（{s2}，从{s3}／岩浆）]]
+Hang from {s}[[ ({s}/Magma)]]	悬挂于{s1}[[（{s2}／岩浆）]]
+Hang from {s}[[ ({s} from {s}/Magma)]]	悬挂于{s1}[[（{s2}，从{s3}／岩浆）]]
+Climb[[ ({s}/Magma)]]	攀爬[[（{s}／岩浆）]]
+Climb {s}[[ ({s}/Magma)]]	攀爬{s1}[[（{s2}／岩浆）]]
+Jump to the {s}	向{s}跳跃
+Path to here	寻路至此
+Path to here ({d} level up)	寻路至此（上方{d}层）
+Path to here ({d} level down)	寻路至此（下方{d}层）
+Path to here ({d} levels up)	寻路至此（上方{d}层）
+Path to here ({d} levels down)	寻路至此（下方{d}层）
+Path to here (no climbing/jumping)	寻路至此（不攀爬或跳跃）
+Path to here (no climbing/jumping) ({d} level up)	寻路至此（不攀爬或跳跃）（上方{d}层）
+Path to here (no climbing/jumping) ({d} level down)	寻路至此（不攀爬或跳跃）（下方{d}层）
+Path to here (no climbing/jumping) ({d} levels up)	寻路至此（不攀爬或跳跃）（上方{d}层）
+Path to here (no climbing/jumping) ({d} levels down)	寻路至此（不攀爬或跳跃）（下方{d}层）
+Go below hatch	前往活动盖板下方
+Go below hatch ({d} level up)	前往活动盖板下方（上方{d}层）
+Go below hatch ({d} level down)	前往活动盖板下方（下方{d}层）
+Go below hatch ({d} levels up)	前往活动盖板下方（上方{d}层）
+Go below hatch ({d} levels down)	前往活动盖板下方（下方{d}层）
+Go below hatch (no climbing/jumping)	前往活动盖板下方（不攀爬或跳跃）
+Go below hatch (no climbing/jumping) ({d} level up)	前往活动盖板下方（不攀爬或跳跃）（上方{d}层）
+Go below hatch (no climbing/jumping) ({d} level down)	前往活动盖板下方（不攀爬或跳跃）（下方{d}层）
+Go below hatch (no climbing/jumping) ({d} levels up)	前往活动盖板下方（不攀爬或跳跃）（上方{d}层）
+Go below hatch (no climbing/jumping) ({d} levels down)	前往活动盖板下方（不攀爬或跳跃）（下方{d}层）
+
+# Complete adventure conversation menus: native Windows caption inventory.
+Demand an item (barter screen)	索要物品（交易界面）
+Summarize the many troubles	概述各种烦恼
+Claim this site for yourself (group naming menu)	宣布此地归你所有（势力命名菜单）
+Create a performance troupe together (group naming menu)	共同成立表演团（势力命名菜单）
+Ask favor, place request, make demand or issue order (new menu)	请求帮助、提出请求、索求或下令（新菜单）
+Investigate or interrogate (new menu)	调查或审问（新菜单）
+State your values (new menu)	阐述你的价值观（新菜单）
+Express your emotions (new menu)	表达你的情绪（新菜单）
+Tell listener that nothing has changed	告诉对方一切如常
+Bring up the journey together	谈起共同的旅程
+Complain about the agreement	抱怨约定
+Cancel the agreement	取消约定
+Ask listener to follow you	请对方跟随你
+Ask listener to wait here	请对方在这里等候
+Bring up specific incident or rumor (new menu)	谈起某件事件或传闻（新菜单）
+Ask for directions (new menu)	问路（新菜单）
+Ask about somebody (new menu)	打听某个人（新菜单）
+Express thanks for the gift	感谢对方的礼物
+Express horror at the gift	对礼物表示惊恐
+Name pet (new menu)	为宠物命名（新菜单）
+Gift a (large) pet or mount (new menu)	赠送（大型）宠物或坐骑（新菜单）
+Offer your service	提出效力
+Inquire about any troubles	询问有什么烦恼
+List available services	列出可提供的服务
+Ask about available services, drinks, rooms, etc.	询问服务、饮品、客房等
+Trade or settle debts	交易或清偿债务
+Ask listener to join you (new menu)	邀请对方加入你（新菜单）
+Exchange, give, take or show personal items	交换、赠送、拿取或展示随身物品
+Extend use of free room	延长免费客房的使用时间
+Confirm service order	确认服务订单
+Request free room	请求免费客房
+Yell out service order	大声招呼点单
+Accuse the speaker of being a troublemaker	指责说话者是个惹事精
+Spread rumor of your abduction	传播你被绑架的传闻
+Spread rumor of the insurrection	传播起义的传闻
+Bring up your death	谈起你的死亡
+Demand the listener's identity	要求对方表明身份
+Brag about your past violent acts	吹嘘你过去的暴行
+Raise alarm	发出警报
+Welcome yourself to your new home	宣布你来到新家
+Demand that the listener yield	要求对方投降
+Make a flattering remark	说句恭维话
+Ask how listener is feeling	询问对方的心情
+Inquire about listener's profession	询问对方的职业
+Ask about the listener's schemes and plots	询问对方的阴谋与计划
+Ask about the listener's master or boss	询问对方的主人或上司
+Ask about the structure you are in	询问你所在的建筑
+Ask for a cease to hostilities	请求停止敌对行动
+Ask for permission to stay for a day	请求留宿一天
+Ask about listener's family	询问对方的家人
+Tell a joke	讲个笑话
+Try to calm the listener	尝试安抚对方
+Change the subject (new menu)	换个话题（新菜单）
+Say goodbye	道别
+Impatiently say goodbye	不耐烦地道别
+Invoke true name to compel service from listener	念出真名，强令对方效力
+Accuse listener of being a night creature	指控对方是夜行生物
+Invoke true name to banish listener	念出真名，驱逐对方
+Praise listener for completing the task	称赞对方完成了任务
+Ask listener to join you and be rescued	请对方跟你走，带其脱困
+Ask what happened	询问发生了什么
+Say that you have no family	表示你没有家人
+Say that you don't remember	表示你不记得了
+Refuse to share this information	拒绝透露这些信息
+Return to current topic (new menu)	返回当前话题（新菜单）
+Ask about other groups with a stake in this site	询问与此地有利益关系的其他势力
+Ask about the position of this group's forces	询问这个势力的部队位置
+Ask how strong this group's hold over its lands is	询问这个势力对其领土的控制有多牢固
+Ask listener why they are traveling	询问对方为何旅行
+Agree to the adoption	同意收养
+Refuse the adoption	拒绝收养
+Accept the position	接受职位
+Refuse the position	拒绝职位
+Ask about the surrounding area	询问周边地区
+Comment on natural surroundings	评论周围的自然环境
+Offer encouragement	给予鼓励
+Comment on weather	评论天气
+Ask about this site's neighbors and trade partners	询问此地的邻居和贸易伙伴
+Ask about the local ruler	询问当地统治者
+Ask if anybody fled from this site	询问是否有人逃离此地
+Refuse conversation	拒绝交谈
+Ask to be rescued	请求营救
+Reply to greeting	回应问候
+Offer condolences	表示慰问
+Tell listener to enjoy peace and remain vigilant	告诉对方享受和平并保持警惕
+State that you weren't acquainted	表示你并不认识对方
+Reply to greeting (impersonation)	回应问候（冒充身份）
+State that you enjoyed performing	表示你喜欢刚才的表演
+State that preaching is your calling	表示布道是你的天职
+State your general fear	表达你的恐惧
+State that it accords with your faith	表示这符合你的信仰
+State that you don't care	表示你不在乎
+State your general hatred	表达你的仇恨
+State that it is for the best	表示这样最好
+State that it is terrific	表示这太棒了
+State that you are conflicted	表示你内心矛盾
+State that this is okay	表示这还可以
+State that this is no good	表示这不行
+State that this is great	表示这很好
+State that this is good	表示这不错
+Agree completely	完全同意
+State that this is fantastic	表示这好极了
+State that it was okay	表示刚才还可以
+State that it was good	表示刚才不错
+State that it was great	表示刚才很好
+State that it was fantastic	表示刚才好极了
+State that it was legendary	表示刚才堪称传奇
+State opinion that it must be stopped with violent force	认为必须用武力制止此事
+Ask listener to join you in a rescue	邀请对方与你一同营救
+Ask listener to join you in an insurrection	邀请对方与你一同起义
+Respond to join request	回应加入请求
+Ask listener to guide you to a location	请对方带你前往某地
+Ask listener to join you on adventures	邀请对方与你一同冒险
+Request suggestion for course of action	请求建议下一步行动
+Ask listener to join you as entertainer	邀请对方以艺人身份加入你
+Ask listener's course of action	询问对方接下来打算怎么做
+State that you are right in all matters	声称你在所有事情上都是对的
+State that they are outlaws	表示他们是亡命之徒
+State that you don't know anything about it	表示你对此一无所知
+State opinion that it is terrifying	认为这令人恐惧
+State opinion that it is terrible	认为这太糟了
+State opinion that it is sad but not unexpected	认为这令人难过，但并不意外
+State opinion that this is the life for you	认为这正是你想要的生活
+State opinion that it is not your problem	认为这不关你的事
+State opinion that it was inevitable	认为这是不可避免的
+Refer listener to somebody older	让对方去问年长一些的人
+Agree to follow	同意跟随
+Apologize for being otherwise occupied	为无暇分身而道歉
+Comply with order	服从命令
+Deny sleep permission	拒绝留宿
+Grant sleep permission	允许留宿
+State that listener saved you from an enemy	表示对方从敌人手中救了你
+State that listener protected the defenseless from outlaws	表示对方保护了无力抵抗亡命之徒的人
+Ask listener to come to your store later	请对方稍后到你的商店来
+Initiate bartering	开始以物易物
+Ask listener to come to the trade depot later	请对方稍后到贸易站来
+Do business	做生意
+Ask listener to come closer	请对方靠近些
+Exhort to finish current quest	敦促完成当前任务
+State that you love raunchy poems	表示你喜欢粗俗的诗歌
+State your amusement	表示你觉得有趣
+State that you hate riddles	表示你讨厌谜语
+State that you are embarrassed by this kind of humor	表示这种幽默让你尴尬
+State that you love riddles	表示你喜欢谜语
+State that you hate reflective poetry	表示你讨厌沉思诗
+State that this is your favorite poetry	表示这是你最喜欢的诗歌
+State that you love reflective poetry	表示你喜欢沉思诗
+State that this is your favorite music	表示这是你最喜欢的音乐
+State that this is your favorite dance	表示这是你最喜欢的舞蹈
+State that listener had a good hunt	表示对方打了一场好猎
+State that you hate solemn poems	表示你讨厌庄严的诗歌
+State that listener's hunt saved you from an enemy	表示对方的狩猎使你免受敌人侵害
+State that you love solemn poems	表示你喜欢庄严的诗歌
+State that you hate light poems	表示你讨厌轻快的诗歌
+State that you disapprove of ribald poems	表示你不喜欢荤诗
+State that you love light poems	表示你喜欢轻快的诗歌
+State that you love ribald poems	表示你喜欢荤诗
+Yield	投降
+Agree to cease hostilities	同意停止敌对行动
+Yield in terror	惊恐地投降
+Hawk your wares	叫卖你的货物
+Prophesize	作出预言
+Say something about your family	谈谈你的家人
+Announce that you are hunting in your lair	宣布你正在自己的巢穴中狩猎
+Say something about your family's ancestor	谈谈你家族的祖先
+Reject the attempt to calm	拒绝安抚
+Deride the attempt to calm	嘲笑对方的安抚
+Reject the compliment	拒绝恭维
+Flatter the listener	恭维对方
+Deride flattery	嘲笑对方的奉承
+Acquiesce (changes your values)	默认接受（改变你的价值观）
+Refuse to comply with demand	拒绝服从要求
+Refuse to yield	拒绝投降
+Refuse to cease hostilities	拒绝停止敌对行动
+Agree to comply with demand	同意服从要求
+Profess total ignorance	声称完全不知情
+Tell listener to try a shopkeeper	让对方去问问店主
+Tell listener you don't work here	告诉对方你不在这里工作
+Mention services to listener	向对方介绍服务
+Tell listener both of you must be at location	告诉对方你们双方都必须到场
+Tell listener that no services are available	告诉对方目前不提供服务
+Ask listener to come to the market later	请对方稍后到市场来
+Remind listener of pending service	提醒对方还有待办的服务
+Say something general about your emotional state or thoughts	大致谈谈你的情绪或想法
+Ask listener to wait until you've returned home	请对方等你回家
+Grovel before your new master	向你的新主人卑躬屈膝
+Say something about the local area	谈谈当地情况
+Tell the listener that they've found you	告诉对方他们已经找到你了
+Say something about this site's trade partners	谈谈此地的贸易伙伴
+Explain your current journey	说明你当前的旅程
+Provide the location of specific place	告知某个具体地点的位置
+State your incredulity	表示难以置信
+Announce your night creature status	宣布你是夜行生物
+Fail the internal struggle, completely shaken	没能克服内心挣扎，彻底动摇
+Fail the struggle against existential crisis	没能克服存在危机
+Agree to drop the argument	同意停止争论
+Press the argument	继续争辩
+Reject the joke	不接受这个笑话
+Express outrage over dismissal	对被敷衍表示愤慨
+Approve of the joke	称赞这个笑话
+Accept calming	接受安抚
+State that calming was unneeded	表示不需要安抚
+Accept the compliment	接受恭维
+Say something about your profession	谈谈你的职业
+State your age emphatically	郑重强调你的年龄
+Refuse the interrogation	拒绝接受审问
+Mock the repeated failure of the interrogator	嘲笑审问者屡次失败
+Say something about your schemes	谈谈你的谋划
+State intention to flee conflict	表示打算逃离冲突
+Say something about your master(s)	谈谈你的主人
+Make terrified outburst regarding fleeing conflict	惊恐地喊着要逃离冲突
+Respond passively	消极回应
+Dismiss the listener's argument	不理会对方的论点
+Verbally struggle, greatly shaken	说出内心挣扎，受到极大震动
+Verbally struggle, greatly defeated	说出内心挣扎，深感挫败
+Verbally struggle, shaken	说出内心挣扎，受到震动
+Verbally struggle, defeated	说出内心挣扎，感到挫败
+State feelings, greatly expectant	表达强烈的期待
+State feelings, greatly enraptured	表示极为陶醉
+State feelings, greatly thrilled	表示激动万分
+State feelings, expectant	表达期待
+State feelings, thrilled	表示激动
+State feelings, enraptured	表示陶醉
+State feelings, somewhat expectant	表达些许期待
+State feelings, somewhat enraptured	表示有些陶醉
+State feelings, somewhat thrilled	表示有些激动
+Dismiss minor doubts	不在意些许疑虑
+Dismiss minor existential crisis	不在意轻微的存在危机
+Fail the struggle against great agony	没能克服强烈的极度痛苦
+Fail the struggle against great anguish	没能克服强烈的痛苦万分
+Fail the struggle against great sadness	没能克服强烈的悲伤
+Fail the struggle against great terror	没能克服强烈的恐惧
+Fail the struggle against great rage	没能克服强烈的狂怒
+Fail the struggle against great fear	没能克服强烈的恐惧
+Fail the struggle against great horror	没能克服强烈的恐怖
+Fail the struggle against great grief	没能克服强烈的悲伤
+Fail the struggle against great shock	没能克服强烈的震惊
+Fail the struggle against great alarm	没能克服强烈的惊慌
+State feelings of great triumph	表达强烈的得意
+State feelings of great grim satisfaction	表达强烈的冷酷的满足
+Verbally struggle against great horror	说出你与强烈恐怖的抗争
+Verbally struggle against great grief	说出你与强烈悲伤的抗争
+Verbally struggle against great shock	说出你与强烈震惊的抗争
+State feelings of great suspicion	表达强烈的怀疑
+Verbally struggle against great alarm	说出你与强烈惊慌的抗争
+Fail the struggle against great misery	没能克服强烈的悲惨
+Fail the struggle against great mortification	没能克服强烈的羞愧难当
+Fail the struggle against great distress	没能克服强烈的苦恼
+Fail the struggle against great fright	没能克服强烈的惊恐
+Fail the struggle against great despair	没能克服强烈的绝望
+Fail the struggle against great dismay	没能克服强烈的沮丧
+State feelings of great embarrassment	表达强烈的尴尬
+State feelings of great empathy	表达强烈的同理心
+State feelings of great displeasure	表达强烈的不满
+State feelings of great eagerness	表达强烈的渴望
+State feelings of great disillusionment	表达强烈的幻灭
+State feelings of great dislike	表达强烈的反感
+State feelings of great disappointment	表达强烈的失望
+State feelings of great disgust	表达强烈的厌恶
+State feelings of great contempt	表达强烈的轻蔑
+State feelings of great dejection	表达强烈的沮丧
+State feelings of great caring	表达强烈的关心
+State feelings of great confusion	表达强烈的困惑
+State feelings of great bitterness	表达强烈的苦涩
+State feelings of great boredom	表达强烈的无聊
+State feelings of great aversion	表达强烈的厌恶
+State feelings of great awe	表达强烈的敬畏
+State feelings of great insult	表达强烈的受辱感
+State feelings of great interest	表达强烈的兴趣
+State feelings of great hopelessness	表达强烈的绝望感
+State feelings of great humiliation	表达强烈的屈辱
+State feelings of great hatred	表达强烈的仇恨
+State feelings of great hope	表达强烈的希望
+State feelings of great grumpiness	表达强烈的暴躁
+State feelings of great guilt	表达强烈的内疚
+State feelings of great gratitude	表达强烈的感激
+State feelings of great grouchiness	表达强烈的暴躁
+State feelings of great gloom	表达强烈的阴郁
+State feelings of great glumness	表达强烈的忧郁
+State feelings of great ferocity	表达强烈的凶狠
+State feelings of great frustration	表达强烈的挫败
+State feelings of great emptiness	表达强烈的空虚
+State feelings of great exasperation	表达强烈的懊恼
+Verbally struggle against great distress	说出你与强烈苦恼的抗争
+Verbally struggle against great fright	说出你与强烈惊恐的抗争
+Verbally struggle against great despair	说出你与强烈绝望的抗争
+Verbally struggle against great dismay	说出你与强烈沮丧的抗争
+Verbally struggle against great agony	说出你与强烈极度痛苦的抗争
+Verbally struggle against great anguish	说出你与强烈痛苦万分的抗争
+State feelings of great vengefulness	表达强烈的复仇心
+Verbally struggle against great terror	说出你与强烈恐惧的抗争
+State feelings of great gaiety	表达强烈的欢快
+State feelings of great joy	表达强烈的喜悦
+State feelings of great bliss	表达强烈的极度幸福
+State feelings of great excitement	表达强烈的兴奋
+State feelings of great satisfaction	表达强烈的满意
+State feelings of great love	表达强烈的爱意
+Verbally struggle against great fear	说出你与强烈恐惧的抗争
+Verbally struggle against great sadness	说出你与强烈悲伤的抗争
+State feelings of great arousal	表达强烈的兴奋
+State feelings of great astonishment	表达强烈的惊讶
+State feelings of great anxiety	表达强烈的焦虑
+State feelings of great apathy	表达强烈的冷漠
+State feelings of great anger	表达强烈的愤怒
+State feelings of great annoyance	表达强烈的烦恼
+State feelings of great amazement	表达强烈的惊奇
+State feelings of great ambivalence	表示没什么特别的感觉
+State feelings of great aggravation	表达强烈的恼火
+State feelings of great alienation	表达强烈的疏离感
+State feelings of great admiration	表达强烈的钦佩
+State feelings of great agitation	表达强烈的焦躁
+State feelings of great acceptance	表达强烈的接受
+Verbally struggle against great misery	说出你与强烈悲惨的抗争
+Verbally struggle against great mortification	说出你与强烈羞愧难当的抗争
+State feelings of great pleasure	表达强烈的愉悦
+State feelings of great pride	表达强烈的自豪
+State feelings of great joviality	表达强烈的快乐开朗
+State feelings of great jubilation	表达强烈的欢腾
+State feelings of great happiness	表达强烈的快乐
+State feelings of great jolliness	表达强烈的开心
+State feelings of great freedom	表达强烈的自由感
+State feelings of great flee	表达强烈的欢喜
+State feelings of great exhilaration	表达强烈的欢腾
+State feelings of great fondness	表达强烈的喜欢
+State feelings of great elation	表达强烈的狂喜
+State feelings of great enjoyment	表达强烈的愉快
+State feelings of great contentment	表达强烈的满足
+State feelings of great delight	表达强烈的欣喜
+State feelings of great affection	表达强烈的喜爱
+State feelings of great amusement	表达强烈的趣味
+State feelings of triumph	表达得意
+Verbally struggle against rage	说出你与狂怒的抗争
+Verbally struggle against horror	说出你与恐怖的抗争
+Verbally struggle against grief	说出你与悲伤的抗争
+Verbally struggle against alarm	说出你与惊慌的抗争
+Verbally struggle against shock	说出你与震惊的抗争
+State feelings of great euphoria	表达强烈的欣快
+State feelings of suspicion	表达怀疑
+State feelings of great enthusiasm	表达强烈的热情
+Verbally struggle against great pessimism	说出你与强烈悲观的抗争
+Verbally struggle against great doubt	说出你与强烈怀疑的抗争
+Verbally struggle against looming existential crisis	说出你与迫近的存在危机的抗争
+State feelings of great regret	表达强烈的后悔
+State feelings of great remorse	表达强烈的懊悔
+State feelings of great rejection	表达强烈的被拒绝感
+State feelings of great relief	表达强烈的如释重负
+State feelings of great patience	表达强烈的耐心
+State feelings of great passion	表达强烈的热血沸腾
+State feelings of great outrage	表达强烈的愤慨
+State feelings of great panic	表达强烈的惊慌失措
+State feelings of great nostalgia	表达强烈的怀旧
+State feelings of great optimism	表达强烈的乐观
+State feelings of great lust	表达强烈的欲望
+State feelings of great nervousness	表达强烈的紧张
+State feelings of great loathing	表达强烈的憎恶
+State feelings of great loneliness	表达强烈的孤独
+State feelings of great irritation	表达强烈的恼怒
+State feelings of great isolation	表达强烈的孤立
+State feelings of great zeal	表达强烈的热忱
+State feelings of great adoration	表达强烈的崇拜
+State feelings of great worry	表达强烈的担心
+State feelings of great wrath	表达强烈的暴怒
+State feelings of great unhappiness	表达强烈的不快
+State feelings of great wonder	表达强烈的惊叹
+State feelings of great tenderness	表达强烈的温柔
+State feelings of great uneasiness	表达强烈的不安
+State feelings of great shame	表达强烈的羞愧
+State feelings of great sympathy	表达强烈的同情
+State feelings of great self-pity	表达强烈的自怜
+State feelings of great servility	表达强烈的卑躬屈膝
+State feelings of great restlessness	表达强烈的躁动不安
+State feelings of great righteous indignation	表达强烈的义愤
+State feelings of great repentance	表达强烈的忏悔
+State feelings of great resentment	表达强烈的怨恨
+State feelings of eagerness	表达渴望
+State feelings of embarassment	表达尴尬
+State feelings of dislike	表达反感
+State feelings of displeasure	表达不满
+State feelings of disgust	表达厌恶
+State feelings of disillusionment	表达幻灭
+State feelings of dejection	表达沮丧
+State feelings of disappointment	表达失望
+State feelings of confusion	表达困惑
+State feelings of contempt	表达轻蔑
+State feelings of boredom	表达无聊
+State feelings of caring	表达关心
+State feelings of awe	表达敬畏
+State feelings of bitterness	表达苦涩
+State feelings of astonishment	表达惊讶
+State feelings of aversion	表达厌恶
+State feelings of humiliation	表达屈辱
+State feelings of insult	表达受辱感
+State feelings of hope	表达希望
+State feelings of hopelessness	表达绝望感
+State feelings of guilt	表达内疚
+State feelings of hatred	表达仇恨
+State feelings of grouchiness	表达暴躁
+State feelings of grumpiness	表达暴躁
+State feelings of glumness	表达忧郁
+State feelings of gratitude	表达感激
+State feelings of frustration	表达挫败
+State feelings of gloom	表达阴郁
+State feelings of exasperation	表达懊恼
+State feelings of ferocity	表达凶狠
+State feelings of empathy	表达同理心
+State feelings of emptiness	表达空虚
+Verbally struggle against dismay	说出你与沮丧的抗争
+Verbally struggle against distress	说出你与苦恼的抗争
+Verbally struggle against anguish	说出你与痛苦万分的抗争
+Verbally struggle against despair	说出你与绝望的抗争
+Verbally struggle against terror	说出你与恐惧的抗争
+Verbally struggle against agony	说出你与极度痛苦的抗争
+State feelings of joy	表达喜悦
+State feelings of vengefulness	表达复仇心
+State feelings of excitement	表达兴奋
+State feelings of gaiety	表达欢快
+State feelings of love	表达爱意
+State feelings of bliss	表达极度幸福
+Verbally struggle against sadness	说出你与悲伤的抗争
+State feelings of satisfaction	表达满意
+State feelings of grim satisfaction	表达冷酷的满足
+Verbally struggle against fear	说出你与恐惧的抗争
+State feelings of apathy	表达冷漠
+State feelings of arousal	表达兴奋
+State feelings of annoyance	表达烦恼
+State feelings of anxiety	表达焦虑
+State feelings of ambivalence	表示没什么特别的感觉
+State feelings of anger	表达愤怒
+State feelings of alienation	表达疏离感
+State feelings of amazement	表达惊奇
+State feelings of agitation	表达焦躁
+State feelings of aggravation	表达恼火
+State feelings of acceptance	表达接受
+State feelings of admiration	表达钦佩
+Verbally struggle against mortification	说出你与羞愧难当的抗争
+Verbally struggle against fright	说出你与惊恐的抗争
+Verbally struggle against misery	说出你与悲惨的抗争
+State feelings of jubilation	表达欢腾
+State feelings of pleasure	表达愉悦
+State feelings of jolliness	表达开心
+State feelings of joviality	表达快乐开朗
+State feelings of glee	表达欢喜
+State feelings of happiness	表达快乐
+State feelings of fondness	表达喜欢
+State feelings of freedom	表达自由感
+State feelings of enjoyment	表达愉快
+State feelings of exhilaration	表达欢腾
+State feelings of delight	表达欣喜
+State feelings of elation	表达狂喜
+State feelings of amusement	表达趣味
+State feelings of contentment	表达满足
+State feelings of adoration	表达崇拜
+State feelings of affection	表达喜爱
+Dismiss minor feeling of grief	不在意些许悲伤
+State minor feeling of triumph	表达些许得意
+Dismiss minor feeling of shock	不在意些许震惊
+Dismiss minor feeling of horror	不在意些许恐怖
+State minor feeling of suspicion	表达些许怀疑
+Dismiss minor feeling of alarm	不在意些许惊慌
+Verbally struggle against pessimism	说出你与悲观的抗争
+State feelings of euphoria	表达欣快
+Verbally struggle against doubt	说出你与怀疑的抗争
+State feelings of enthusiasm	表达热情
+Verbally struggle against existential crisis	说出你与存在危机的抗争
+State feelings of pride	表达自豪
+State feelings of relief	表达如释重负
+State feelings of regret	表达后悔
+State feelings of passion	表达热血沸腾
+State feelings of rejection	表达被拒绝感
+State feelings of panic	表达惊慌失措
+State feelings of patience	表达耐心
+State feelings of optimism	表达乐观
+State feelings of outrage	表达愤慨
+State feelings of nervousness	表达紧张
+State feelings of nostalgia	表达怀旧
+State feelings of loneliness	表达孤独
+State feelings of lust	表达欲望
+State feelings of isolation	表达孤立
+State feelings of loathing	表达憎恶
+State feelings of interest	表达兴趣
+State feelings of irritation	表达恼怒
+State feelings of wrath	表达暴怒
+State feelings of zeal	表达热忱
+State feelings of wonder	表达惊叹
+State feelings of worry	表达担心
+State feelings of uneasiness	表达不安
+State feelings of unhappiness	表达不快
+State feelings of sympathy	表达同情
+State feelings of tenderness	表达温柔
+State feelings of servility	表达卑躬屈膝
+State feelings of shame	表达羞愧
+State feelings of righteous indignation	表达义愤
+State feelings of self-pity	表达自怜
+State feelings of resentment	表达怨恨
+State feelings of restlessness	表达躁动不安
+State feelings of remorse	表达懊悔
+State feelings of repentance	表达忏悔
+State minor feeling of displeasure	表达些许不满
+State minor feeling of eagerness	表达些许渴望
+State minor feeling of disillusionment	表达些许幻灭
+State minor feeling of dislike	表达些许反感
+State minor feeling of disappointment	表达些许失望
+State minor feeling of disgust	表达些许厌恶
+State minor feeling of contempt	表达些许轻蔑
+State minor feeling of dejection	表达些许沮丧
+State minor feeling of caring	表达些许关心
+State minor feeling of confusion	表达些许困惑
+State minor feeling of bitterness	表达些许苦涩
+State minor feeling of boredom	表达些许无聊
+State minor feeling of aversion	表达些许厌恶
+State minor feeling of awe	表达些许敬畏
+State minor feeling of arousal	表达些许兴奋
+State minor feeling of astonishment	表达些许惊讶
+State minor feeling of hopelessness	表达些许绝望感
+State minor feeling of humiliation	表达些许屈辱
+State minor feeling of hatred	表达些许仇恨
+State minor feeling of hope	表达些许希望
+State minor feeling of grumpiness	表达些许暴躁
+State minor feeling of guilt	表达些许内疚
+State minor feeling of gratitude	表达些许感激
+State minor feeling of grouchiness	表达些许暴躁
+State minor feeling of gloom	表达些许阴郁
+State minor feeling of glumness	表达些许忧郁
+State minor feeling of ferocity	表达些许凶狠
+State minor feeling of frustration	表达些许挫败
+State minor feeling of emptiness	表达些许空虚
+State minor feeling of exasperation	表达些许懊恼
+State minor feeling of embarrassment	表达些许尴尬
+State minor feeling of empathy	表达些许同理心
+Dismiss minor feeling of despair	不在意些许绝望
+Dismiss minor feeling of dismay	不在意些许沮丧
+Dismiss minor feeling of agony	不在意些许极度痛苦
+Dismiss minor feeling of anguish	不在意些许痛苦万分
+State minor feeling of vengefulness	表达些许复仇心
+Dismiss minor feeling of terror	不在意些许恐惧
+State minor feeling of gaiety	表达些许欢快
+State minor feeling of joy	表达些许喜悦
+State minor feeling of bliss	表达些许极度幸福
+State minor feeling of excitement	表达些许兴奋
+State minor feeling of satisfaction	表达些许满意
+State minor feeling of love	表达些许爱意
+Dismiss minor feeling of fear	不在意些许恐惧
+Dismiss minor feeling of sadness	不在意些许悲伤
+Dismiss minor feeling of rage	不在意些许狂怒
+State minor feeling of grim satisfaction	表达些许冷酷的满足
+State minor feeling of anxiety	表达些许焦虑
+State minor feeling of apathy	表达些许冷漠
+State minor feeling of anger	表达些许愤怒
+State minor feeling of annoyance	表达些许烦恼
+State minor feeling of amazement	表达些许惊奇
+State minor feeling of ambivalence	表示没什么特别的感觉
+State minor feeling of aggravation	表达些许恼火
+State minor feeling of alienation	表达些许疏离感
+State minor feeling of admiration	表达些许钦佩
+State minor feeling of agitation	表达些许焦躁
+Dismiss minor feeling of being shaken	不在意些许动摇
+State minor feeling of acceptance	表达些许接受
+Dismiss minor feeling of misery	不在意些许悲惨
+Dismiss minor feeling of mortification	不在意些许羞愧难当
+Dismiss minor feeling of distress	不在意些许苦恼
+Dismiss minor feeling of fright	不在意些许惊恐
+State minor feeling of joviality	表达些许快乐开朗
+State minor feeling of jubilation	表达些许欢腾
+State minor feeling of happiness	表达些许快乐
+State minor feeling of jolliness	表达些许开心
+State minor feeling of freedom	表达些许自由感
+State minor feeling of glee	表达些许欢喜
+State minor feeling of exhilaration	表达些许欢腾
+State minor feeling of fondness	表达些许喜欢
+State minor feeling of elation	表达些许狂喜
+State minor feeling of enjoyment	表达些许愉快
+State minor feeling of contentment	表达些许满足
+State minor feeling of delight	表达些许欣喜
+State minor feeling of affection	表达些许喜爱
+State minor feeling of amusement	表达些许趣味
+State minor feeling of zeal	表达些许热忱
+State minor feeling of adoration	表达些许崇拜
+Acknowledge lack of horror	表示没有恐怖
+Acknowledge lack of grief	表示没有悲伤
+Acknowledge lack of alarm	表示没有惊慌
+Acknowledge lack of shock	表示没有震惊
+State minor feeling of euphoria	表达些许欣快
+Acknowledge lack of suspicion	表示没有怀疑
+State minor feeling of enthusiasm	表达些许热情
+Dismiss minor feeling of pessimism	不在意些许悲观
+Dismiss minor feeling of defeat	不在意些许失败感
+State minor feeling of pleasure	表达些许愉悦
+State minor feeling of pride	表达些许自豪
+State minor feeling of rejection	表达些许被拒绝感
+State minor feeling of relief	表达些许如释重负
+State minor feeling of patience	表达些许耐心
+State minor feeling of passion	表达些许热血沸腾
+State minor feeling of outrage	表达些许愤慨
+State minor feeling of panic	表达些许惊慌失措
+State minor feeling of nostalgia	表达些许怀旧
+State minor feeling of optimism	表达些许乐观
+State minor feeling of lust	表达些许欲望
+State minor feeling of nervousness	表达些许紧张
+State minor feeling of loathing	表达些许憎恶
+State minor feeling of loneliness	表达些许孤独
+State minor feeling of irritation	表达些许恼怒
+State minor feeling of isolation	表达些许孤立
+State minor feeling of insult	表达些许受辱感
+State minor feeling of interest	表达些许兴趣
+State minor feeling of worry	表达些许担心
+State minor feeling of wrath	表达些许暴怒
+State minor feeling of unhappiness	表达些许不快
+State minor feeling of wonder	表达些许惊叹
+State minor feeling of tenderness	表达些许温柔
+State minor feeling of uneasiness	表达些许不安
+State minor feeling of shame	表达些许羞愧
+State minor feeling of sympathy	表达些许同情
+State minor feeling of self-pity	表达些许自怜
+State minor feeling of servility	表达些许卑躬屈膝
+State minor feeling of restlessness	表达些许躁动不安
+State minor feeling of righteous indignation	表达些许义愤
+State minor feeling of repentance	表达些许忏悔
+State minor feeling of resentment	表达些许怨恨
+State minor feeling of regret	表达些许后悔
+State minor feeling of remorse	表达些许懊悔
+Acknowledge lack of dislike	表示没有反感
+Acknowledge lack of displeasure	表示没有不满
+Acknowledge lack of disgust	表示没有厌恶
+Acknowledge lack of disillusionment	表示没有幻灭
+Acknowledge lack of dejection	表示没有沮丧
+Acknowledge lack of disappointment	表示没有失望
+Acknowledge lack of confusion	表示没有困惑
+Acknowledge lack of contempt	表示没有轻蔑
+Acknowledge lack of boredom	表示没有无聊
+Acknowledge lack of caring	表示没有关心
+Acknowledge lack of awe	表示没有敬畏
+Acknowledge lack of bitterness	表示没有苦涩
+Acknowledge lack of astonishment	表示没有惊讶
+Acknowledge lack of aversion	表示没有厌恶
+Acknowledge lack of apathy	表示没有冷漠
+Acknowledge lack of arousal	表示没有兴奋
+Acknowledge lack of hope	表示没有希望
+Acknowledge lack of hopelessness	表示没有绝望感
+Acknowledge lack of guilt	表示没有内疚
+Acknowledge lack of hatred	表示没有仇恨
+Acknowledge lack of grouchiness	表示没有暴躁
+Acknowledge lack of grumpiness	表示没有暴躁
+Acknowledge lack of glumness	表示没有忧郁
+Acknowledge lack of gratitude	表示没有感激
+Acknowledge lack of frustration	表示没有挫败
+Acknowledge lack of gloom	表示没有阴郁
+Acknowledge lack of exasperation	表示没有懊恼
+Acknowledge lack of ferocity	表示没有凶狠
+Acknowledge lack of empathy	表示没有同理心
+Acknowledge lack of emptiness	表示没有空虚
+Acknowledge lack of eagerness	表示没有渴望
+Acknowledge lack of embarrassment	表示没有尴尬
+Acknowledge lack of anguish	表示没有痛苦万分
+Acknowledge lack of despair	表示没有绝望
+Acknowledge lack of terror	表示没有恐惧
+Acknowledge lack of agony	表示没有极度痛苦
+Acknowledge lack of joy	表示没有喜悦
+Acknowledge lack of vengefulness	表示没有复仇心
+Acknowledge lack of excitement	表示没有兴奋
+Acknowledge lack of gaiety	表示没有欢快
+Acknowledge lack of love	表示没有爱意
+Acknowledge lack of bliss	表示没有极度幸福
+Acknowledge lack of sadness	表示没有悲伤
+Acknowledge lack of satisfaction	表示没有满意
+Acknowledge lack of grim satisfaction	表示没有冷酷的满足
+Acknowledge lack of fear	表示没有恐惧
+Acknowledge lack of triumph	表示没有得意
+Acknowledge lack of rage	表示没有狂怒
+Acknowledge lack of annoyance	表示没有烦恼
+Acknowledge lack of anxiety	表示没有焦虑
+Acknowledge lack of ambivalence	表示并非没什么特别的感觉
+Acknowledge lack of anger	表示没有愤怒
+Acknowledge lack of alienation	表示没有疏离感
+Acknowledge lack of amazement	表示没有惊奇
+Acknowledge lack of agitation	表示没有焦躁
+Acknowledge lack of aggravation	表示没有恼火
+Acknowledge lack of acceptance	表示没有接受
+Acknowledge lack of admiration	表示没有钦佩
+Acknowledge lack of mortification	表示没有羞愧难当
+Acknowledge lack of being shaken	表示没有动摇
+Acknowledge lack of fright	表示没有惊恐
+Acknowledge lack of misery	表示没有悲惨
+Acknowledge lack of dismay	表示没有沮丧
+Acknowledge lack of distress	表示没有苦恼
+Acknowledge lack of jolliness	表示没有开心
+Acknowledge lack of joviality	表示没有快乐开朗
+Acknowledge lack of glee	表示没有欢喜
+Acknowledge lack of happiness	表示没有快乐
+Acknowledge lack of fondness	表示没有喜欢
+Acknowledge lack of freedom	表示没有自由感
+Acknowledge lack of enjoyment	表示没有愉快
+Acknowledge lack of exhilaration	表示没有欢腾
+Acknowledge lack of delight	表示没有欣喜
+Acknowledge lack of elation	表示没有狂喜
+Acknowledge lack of amusement	表示没有趣味
+Acknowledge lack of contentment	表示没有满足
+Acknowledge lack of adoration	表示没有崇拜
+Acknowledge lack of affection	表示没有喜爱
+Acknowledge lack of wrath	表示没有暴怒
+Acknowledge lack of zeal	表示没有热忱
+Acknowledge lack of pessimism	表示没有悲观
+Acknowledge lack of euphoria	表示没有欣快
+Acknowledge lack of doubt	表示没有怀疑
+Acknowledge lack of enthusiasm	表示没有热情
+Acknowledge lack of defeat	表示没有失败感
+Acknowledge lack of expectancy	表示没有期待
+Acknowledge lack of a thrill	表示没有激动
+Acknowledge lack of existential crisis	表示没有存在危机
+Acknowledge lack of pride	表示没有自豪
+Acknowledge lack of rapture	表示没有陶醉
+Acknowledge lack of jubilation	表示没有欢腾
+Acknowledge lack of pleasure	表示没有愉悦
+Acknowledge lack of passion	表示没有热血沸腾
+Acknowledge lack of rejection	表示没有被拒绝感
+Acknowledge lack of panic	表示没有惊慌失措
+Acknowledge lack of patience	表示没有耐心
+Acknowledge lack of optimism	表示没有乐观
+Acknowledge lack of outrage	表示没有愤慨
+Acknowledge lack of nervousness	表示没有紧张
+Acknowledge lack of nostalgia	表示没有怀旧
+Acknowledge lack of loneliness	表示没有孤独
+Acknowledge lack of lust	表示没有欲望
+Acknowledge lack of isolation	表示没有孤立
+Acknowledge lack of loathing	表示没有憎恶
+Acknowledge lack of interest	表示没有兴趣
+Acknowledge lack of irritation	表示没有恼怒
+Acknowledge lack of humiliation	表示没有屈辱
+Acknowledge lack of insult	表示没有受辱感
+Acknowledge lack of wonder	表示没有惊叹
+Acknowledge lack of worry	表示没有担心
+Acknowledge lack of uneasiness	表示没有不安
+Acknowledge lack of unhappiness	表示没有不快
+Acknowledge lack of sympathy	表示没有同情
+Acknowledge lack of tenderness	表示没有温柔
+Acknowledge lack of servility	表示没有卑躬屈膝
+Acknowledge lack of shame	表示没有羞愧
+Acknowledge lack of righteous indignation	表示没有义愤
+Acknowledge lack of self-pity	表示没有自怜
+Acknowledge lack of resentment	表示没有怨恨
+Acknowledge lack of restlessness	表示没有躁动不安
+Acknowledge lack of remorse	表示没有懊悔
+Acknowledge lack of repentance	表示没有忏悔
+Acknowledge lack of relief	表示没有如释重负
+Acknowledge lack of regret	表示没有后悔
+Claim this site for yourself and {e}	宣布此地归你和{e}所有
+Ask for the whereabouts of {p}	询问{p}的下落
+Summarize the hold of {e} on its territory	概述{e}对其领土的控制
+Go into {e}'s relationship with {e}	详谈{e1}与{e2}的关系
+Give an order based on {q}	根据{q}下达命令
+Order listener to {q}	命令对方{q}
+Give {n}	赠送{n}
+Request a guide to {e}	请求向导带路前往{e}
+Ask for directions to {e}	询问前往{e}的路线
+Ask about {s}	询问{s}
+Spread rumor of your lack of possession of {i}	传播你未持有{i}的传闻
+Spread rumor of your possession of {i}	传播你持有{i}的传闻
+Extend room rental for {q}	续租客房，费用{q}
+Rent room for {q}	租用客房，费用{q}
+Order {i}	点单：{i}
+Discuss the missing artifact {i}	谈论失踪的造物{i}
+Summarize the conflict in which {v}	概述{v}这场冲突
+Summarize your views on {q}	概述你对{q}的看法
+Describe the refugees created by the attack of {e}	描述因{e}的袭击而流离失所的人
+Summarize your views on the opposition to {e}	概述你对反抗{e}的看法
+Summarize the local disposition of the forces of {e}	概述{e}的部队在当地的部署
+Spread rumor of the abduction of {p}	传播{p}被绑架的传闻
+Spread rumor of the reunion of {p}	传播与{p}团聚的传闻
+Spread rumor of the occupation of {e}	传播{e}被占领的传闻
+Spread rumor of your reunion with {p}	传播你与{p}团聚的传闻
+Spread rumor of the {v}	传播{v}的传闻
+Bring up the death of {p}	谈起{p}的死亡
+Spread rumor of {v}	传播{v}的传闻
+Bring up the reunion of {p}	谈起与{p}团聚的事
+Bring up your reunion with {p}	谈起你与{p}团聚的事
+Bring up {v}	谈起{v}
+Demand that the listener drop {i}	要求对方放下{i}
+Offer peace between {e} and {e}	提议让{e1}与{e2}停战
+Demand that {e} pay homage to {e}	要求{e1}向{e2}称臣纳贡
+Cancel tribute from {e}	取消{e}的贡赋
+Offer to have {e} pay homage to {e}	提议让{e1}向{e2}称臣纳贡
+Agree to make peace between {e} and {e}	同意让{e1}与{e2}停战
+Refuse to make peace between {e} and {e}	拒绝让{e1}与{e2}停战
+Refuse to have {e} pay homage to {e}	拒绝让{e1}向{e2}称臣纳贡
+Agree to have {e} pay homage to {e}	同意让{e1}向{e2}称臣纳贡
+Refuse to have {e} accept homage from {e}	拒绝让{e1}接受{e2}的臣服
+Agree to have {e} accept homage from {e}	同意让{e1}接受{e2}的臣服
+Ask the listener for the location of {e}	向对方询问{e}的位置
+Offer listener your position as {s}	提出将你的{s}职位交给对方
+Suggest that the listener trade {i}	建议对方交换{i}
+Accept that the listener will not trade {i}	接受对方不愿交换{i}的决定
+Give report pertaining to service as a {s}	汇报你担任{s}期间的事务
+Ask listener to adopt {n}	请对方收养{n}
+Invite listener to become a {s}	邀请对方成为{s}
+Ask to become a {s}	请求成为{s}
+Revoke listener's status as a {s}	撤销对方的{s}身份
+Refuse request to become a {s}	拒绝成为{s}的请求
+Accept as a {s}	接纳为{s}
+Refuse invitation to become a {s}	拒绝成为{s}的邀请
+Accept invitation to become a {s}	接受成为{s}的邀请
+Kick listener out of {e}	将对方逐出{e}
+Leave {e}	离开{e}
+Suggest traveling to {e} to find a relative	建议前往{e}寻找亲人
+Suggest traveling to {e} to offer condolences	建议前往{e}表示慰问
+Suggest traveling to {e}	建议前往{e}
+Suggest talking to {p}	建议与{p}交谈
+State {e}'s location	说明{e}的位置
+Ask for {s} to made {s}	请求将{s1}任命为{s2}
+Ask to be made a {s} for {e}	请求成为{e}的{s}
+Request duty or advice pertaining to service as a {s}	请求分派{s}的职责或给予建议
+Accept invitation to join {e}	接受加入{e}的邀请
+Refuse invitation to join {e}	拒绝加入{e}的邀请
+Invite listener to join {e}	邀请对方加入{e}
+Accept into {e}	接纳加入{e}
+Refuse request to join {e}	拒绝加入{e}的请求
+Refuse listener work as {s}	拒绝让对方从事{s}工作
+Ask to join {e}	请求加入{e}
+Grant {p} work as {s}	准许{p}从事{s}工作
+Grant listener work as {s}	准许对方从事{s}工作
+Charge to serve {e}	责令为{e}效力
+Lay quest to retrieve {i}	下达寻回{i}的任务
+Praise for returning {i}	称赞归还{i}之举
+Express astonishment at seeing {p}	对见到{p}表示惊讶
+Tell the listener that {p} is dead	告诉对方{p}已经去世
+Recommend {p}	推荐{p}
+Tell listener about {q}	向对方讲述{q}
+Provide directions to {e}	指明前往{e}的路线
+Provide the whereabouts of {p}	告知{p}的下落
+Provide the location of {e}	告知{e}的位置
+Give your opinion of {p}	说说你对{p}的看法
+
+# Conversation submenus, replies and storytelling choices.
+What do you want?	你想要什么？
+How will you respond to the adoption request?	你将如何回应收养请求？
+How will you respond to the position offer?	你将如何回应职位邀请？
+What will you say about the conflict?	关于这场冲突，你想说些什么？
+What will you say about the journey?	关于这段旅程，你想说些什么？
+Which pet will you gift?	你要赠送哪只宠物？
+What do you want to know?	你想了解什么？
+Where do you want to go?	你想去哪里？
+About whom do you ask?	你想打听谁？
+What will you say about services?	关于服务，你想说些什么？
+What will you say about the agreement?	关于这项约定，你想说些什么？
+What will you say about the trade?	关于这笔交易，你想说些什么？
+What will you say about the request?	关于这个请求，你想说些什么？
+How will you respond?	你将如何回应？
+How will you ask?	你将如何提出请求？
+What will you say about the conclusion of the agreement?	关于约定的结束，你想说些什么？
+What will you say about the rescue?	关于这次营救，你想说些什么？
+What will you say about the refusal to accept tribute?	关于拒收贡品，你想说些什么？
+What will you say about tribute agreement?	关于进贡协议，你想说些什么？
+What will you say about the peace agreement?	关于和平协议，你想说些什么？
+What will you say about the refusal to give tribute?	关于拒绝进贡，你想说些什么？
+What will you say about the new leadership?	关于新的领导者，你想说些什么？
+What will you say about the occupation?	关于占领行动，你想说些什么？
+What will you say about the trouble?	关于这个麻烦，你想说些什么？
+What will you say about the beast?	关于这头野兽，你想说些什么？
+What will you say about the artifact's destruction?	关于造物被毁，你想说些什么？
+What will you say about the refugees?	关于难民，你想说些什么？
+How will you respond to the offer of service?	你将如何回应效力的提议？
+What will you say about the artifact's location?	关于造物的下落，你想说些什么？
+What will you say about the tribute stoppage?	关于停止进贡，你想说些什么？
+What will you say about the failed peace agreement?	关于和平协议破裂，你想说些什么？
+What will you say about the gang?	关于这个帮派，你想说些什么？
+What will you say about the claim?	关于这项领地宣称，你想说些什么？
+What will you say about the insurrection?	关于这场起义，你想说些什么？
+What will you say about the failed occupation?	关于占领失败，你想说些什么？
+What will you say about the army?	关于这支军队，你想说些什么？
+What will you say about the incident?	关于这件事件，你想说些什么？
+What will you say about the abduction?	关于这次绑架，你想说些什么？
+What will you say about the site reclamation?	关于收复此地，你想说些什么？
+What will you say about the end of the insurrection?	关于起义结束，你想说些什么？
+What will you say about the group?	关于这个势力，你想说些什么？
+What will you say about the site's foundation?	关于此地的建立，你想说些什么？
+Tell a story about a region	讲述一个地区的故事
+Tell a story about a civilization or organization	讲述一个文明或组织的故事
+Give a sermon inveighing against a value	发表反对某种价值观的布道
+Give a sermon promoting a value	发表宣扬某种价值观的布道
+Tell a story about a site	讲述一个地点的故事
+Tell a story about a person or creature	讲述一个人物或生物的故事
+Toward you: Negative attitude	对你的态度：负面
+Toward you: Positive attitude	对你的态度：正面
+
+# State/Argue values: all native worthlessness/value/nuances branches,
+# including assertions which differ from the speaker's actual values.
+State the worthlessness of law	阐述法律毫无价值
+State the worthlessness of law (not your values)	阐述法律毫无价值（并非你的价值观）
+State the value of law	阐述法律的价值
+State the value of law (not your values)	阐述法律的价值（并非你的价值观）
+State nuances of law	阐述法律的复杂之处
+State nuances of law (not your values)	阐述法律的复杂之处（并非你的价值观）
+Argue the worthlessness of law	争辩法律毫无价值
+Argue the worthlessness of law (not your values)	争辩法律毫无价值（并非你的价值观）
+Argue the value of law	争辩法律的价值
+Argue the value of law (not your values)	争辩法律的价值（并非你的价值观）
+Argue nuances of law	争辩法律的复杂之处
+Argue nuances of law (not your values)	争辩法律的复杂之处（并非你的价值观）
+State the worthlessness of loyalty	阐述忠诚毫无价值
+State the worthlessness of loyalty (not your values)	阐述忠诚毫无价值（并非你的价值观）
+State the value of loyalty	阐述忠诚的价值
+State the value of loyalty (not your values)	阐述忠诚的价值（并非你的价值观）
+State nuances of loyalty	阐述忠诚的复杂之处
+State nuances of loyalty (not your values)	阐述忠诚的复杂之处（并非你的价值观）
+Argue the worthlessness of loyalty	争辩忠诚毫无价值
+Argue the worthlessness of loyalty (not your values)	争辩忠诚毫无价值（并非你的价值观）
+Argue the value of loyalty	争辩忠诚的价值
+Argue the value of loyalty (not your values)	争辩忠诚的价值（并非你的价值观）
+Argue nuances of loyalty	争辩忠诚的复杂之处
+Argue nuances of loyalty (not your values)	争辩忠诚的复杂之处（并非你的价值观）
+State the worthlessness of family	阐述家庭毫无价值
+State the worthlessness of family (not your values)	阐述家庭毫无价值（并非你的价值观）
+State the value of family	阐述家庭的价值
+State the value of family (not your values)	阐述家庭的价值（并非你的价值观）
+State nuances of family	阐述家庭的复杂之处
+State nuances of family (not your values)	阐述家庭的复杂之处（并非你的价值观）
+Argue the worthlessness of family	争辩家庭毫无价值
+Argue the worthlessness of family (not your values)	争辩家庭毫无价值（并非你的价值观）
+Argue the value of family	争辩家庭的价值
+Argue the value of family (not your values)	争辩家庭的价值（并非你的价值观）
+Argue nuances of family	争辩家庭的复杂之处
+Argue nuances of family (not your values)	争辩家庭的复杂之处（并非你的价值观）
+State the worthlessness of friendship	阐述友谊毫无价值
+State the worthlessness of friendship (not your values)	阐述友谊毫无价值（并非你的价值观）
+State the value of friendship	阐述友谊的价值
+State the value of friendship (not your values)	阐述友谊的价值（并非你的价值观）
+State nuances of friendship	阐述友谊的复杂之处
+State nuances of friendship (not your values)	阐述友谊的复杂之处（并非你的价值观）
+Argue the worthlessness of friendship	争辩友谊毫无价值
+Argue the worthlessness of friendship (not your values)	争辩友谊毫无价值（并非你的价值观）
+Argue the value of friendship	争辩友谊的价值
+Argue the value of friendship (not your values)	争辩友谊的价值（并非你的价值观）
+Argue nuances of friendship	争辩友谊的复杂之处
+Argue nuances of friendship (not your values)	争辩友谊的复杂之处（并非你的价值观）
+State the worthlessness of power	阐述权力毫无价值
+State the worthlessness of power (not your values)	阐述权力毫无价值（并非你的价值观）
+State the value of power	阐述权力的价值
+State the value of power (not your values)	阐述权力的价值（并非你的价值观）
+State nuances of power	阐述权力的复杂之处
+State nuances of power (not your values)	阐述权力的复杂之处（并非你的价值观）
+Argue the worthlessness of power	争辩权力毫无价值
+Argue the worthlessness of power (not your values)	争辩权力毫无价值（并非你的价值观）
+Argue the value of power	争辩权力的价值
+Argue the value of power (not your values)	争辩权力的价值（并非你的价值观）
+Argue nuances of power	争辩权力的复杂之处
+Argue nuances of power (not your values)	争辩权力的复杂之处（并非你的价值观）
+State the worthlessness of truth	阐述诚实毫无价值
+State the worthlessness of truth (not your values)	阐述诚实毫无价值（并非你的价值观）
+State the value of truth	阐述诚实的价值
+State the value of truth (not your values)	阐述诚实的价值（并非你的价值观）
+State nuances of truth	阐述诚实的复杂之处
+State nuances of truth (not your values)	阐述诚实的复杂之处（并非你的价值观）
+Argue the worthlessness of truth	争辩诚实毫无价值
+Argue the worthlessness of truth (not your values)	争辩诚实毫无价值（并非你的价值观）
+Argue the value of truth	争辩诚实的价值
+Argue the value of truth (not your values)	争辩诚实的价值（并非你的价值观）
+Argue nuances of truth	争辩诚实的复杂之处
+Argue nuances of truth (not your values)	争辩诚实的复杂之处（并非你的价值观）
+State the worthlessness of cunning	阐述谋略毫无价值
+State the worthlessness of cunning (not your values)	阐述谋略毫无价值（并非你的价值观）
+State the value of cunning	阐述谋略的价值
+State the value of cunning (not your values)	阐述谋略的价值（并非你的价值观）
+State nuances of cunning	阐述谋略的复杂之处
+State nuances of cunning (not your values)	阐述谋略的复杂之处（并非你的价值观）
+Argue the worthlessness of cunning	争辩谋略毫无价值
+Argue the worthlessness of cunning (not your values)	争辩谋略毫无价值（并非你的价值观）
+Argue the value of cunning	争辩谋略的价值
+Argue the value of cunning (not your values)	争辩谋略的价值（并非你的价值观）
+Argue nuances of cunning	争辩谋略的复杂之处
+Argue nuances of cunning (not your values)	争辩谋略的复杂之处（并非你的价值观）
+State the worthlessness of eloquence	阐述口才毫无价值
+State the worthlessness of eloquence (not your values)	阐述口才毫无价值（并非你的价值观）
+State the value of eloquence	阐述口才的价值
+State the value of eloquence (not your values)	阐述口才的价值（并非你的价值观）
+State nuances of eloquence	阐述口才的复杂之处
+State nuances of eloquence (not your values)	阐述口才的复杂之处（并非你的价值观）
+Argue the worthlessness of eloquence	争辩口才毫无价值
+Argue the worthlessness of eloquence (not your values)	争辩口才毫无价值（并非你的价值观）
+Argue the value of eloquence	争辩口才的价值
+Argue the value of eloquence (not your values)	争辩口才的价值（并非你的价值观）
+Argue nuances of eloquence	争辩口才的复杂之处
+Argue nuances of eloquence (not your values)	争辩口才的复杂之处（并非你的价值观）
+State the worthlessness of fairness	阐述公道毫无价值
+State the worthlessness of fairness (not your values)	阐述公道毫无价值（并非你的价值观）
+State the value of fairness	阐述公道的价值
+State the value of fairness (not your values)	阐述公道的价值（并非你的价值观）
+State nuances of fairness	阐述公道的复杂之处
+State nuances of fairness (not your values)	阐述公道的复杂之处（并非你的价值观）
+Argue the worthlessness of fairness	争辩公道毫无价值
+Argue the worthlessness of fairness (not your values)	争辩公道毫无价值（并非你的价值观）
+Argue the value of fairness	争辩公道的价值
+Argue the value of fairness (not your values)	争辩公道的价值（并非你的价值观）
+Argue nuances of fairness	争辩公道的复杂之处
+Argue nuances of fairness (not your values)	争辩公道的复杂之处（并非你的价值观）
+State the worthlessness of decorum	阐述礼仪毫无价值
+State the worthlessness of decorum (not your values)	阐述礼仪毫无价值（并非你的价值观）
+State the value of decorum	阐述礼仪的价值
+State the value of decorum (not your values)	阐述礼仪的价值（并非你的价值观）
+State nuances of decorum	阐述礼仪的复杂之处
+State nuances of decorum (not your values)	阐述礼仪的复杂之处（并非你的价值观）
+Argue the worthlessness of decorum	争辩礼仪毫无价值
+Argue the worthlessness of decorum (not your values)	争辩礼仪毫无价值（并非你的价值观）
+Argue the value of decorum	争辩礼仪的价值
+Argue the value of decorum (not your values)	争辩礼仪的价值（并非你的价值观）
+Argue nuances of decorum	争辩礼仪的复杂之处
+Argue nuances of decorum (not your values)	争辩礼仪的复杂之处（并非你的价值观）
+State the worthlessness of tradition	阐述传统毫无价值
+State the worthlessness of tradition (not your values)	阐述传统毫无价值（并非你的价值观）
+State the value of tradition	阐述传统的价值
+State the value of tradition (not your values)	阐述传统的价值（并非你的价值观）
+State nuances of tradition	阐述传统的复杂之处
+State nuances of tradition (not your values)	阐述传统的复杂之处（并非你的价值观）
+Argue the worthlessness of tradition	争辩传统毫无价值
+Argue the worthlessness of tradition (not your values)	争辩传统毫无价值（并非你的价值观）
+Argue the value of tradition	争辩传统的价值
+Argue the value of tradition (not your values)	争辩传统的价值（并非你的价值观）
+Argue nuances of tradition	争辩传统的复杂之处
+Argue nuances of tradition (not your values)	争辩传统的复杂之处（并非你的价值观）
+State the worthlessness of artwork	阐述艺术毫无价值
+State the worthlessness of artwork (not your values)	阐述艺术毫无价值（并非你的价值观）
+State the value of artwork	阐述艺术的价值
+State the value of artwork (not your values)	阐述艺术的价值（并非你的价值观）
+State nuances of artwork	阐述艺术的复杂之处
+State nuances of artwork (not your values)	阐述艺术的复杂之处（并非你的价值观）
+Argue the worthlessness of artwork	争辩艺术毫无价值
+Argue the worthlessness of artwork (not your values)	争辩艺术毫无价值（并非你的价值观）
+Argue the value of artwork	争辩艺术的价值
+Argue the value of artwork (not your values)	争辩艺术的价值（并非你的价值观）
+Argue nuances of artwork	争辩艺术的复杂之处
+Argue nuances of artwork (not your values)	争辩艺术的复杂之处（并非你的价值观）
+State the worthlessness of cooperation	阐述合作毫无价值
+State the worthlessness of cooperation (not your values)	阐述合作毫无价值（并非你的价值观）
+State the value of cooperation	阐述合作的价值
+State the value of cooperation (not your values)	阐述合作的价值（并非你的价值观）
+State nuances of cooperation	阐述合作的复杂之处
+State nuances of cooperation (not your values)	阐述合作的复杂之处（并非你的价值观）
+Argue the worthlessness of cooperation	争辩合作毫无价值
+Argue the worthlessness of cooperation (not your values)	争辩合作毫无价值（并非你的价值观）
+Argue the value of cooperation	争辩合作的价值
+Argue the value of cooperation (not your values)	争辩合作的价值（并非你的价值观）
+Argue nuances of cooperation	争辩合作的复杂之处
+Argue nuances of cooperation (not your values)	争辩合作的复杂之处（并非你的价值观）
+State the worthlessness of independence	阐述独立自主毫无价值
+State the worthlessness of independence (not your values)	阐述独立自主毫无价值（并非你的价值观）
+State the value of independence	阐述独立自主的价值
+State the value of independence (not your values)	阐述独立自主的价值（并非你的价值观）
+State nuances of independence	阐述独立自主的复杂之处
+State nuances of independence (not your values)	阐述独立自主的复杂之处（并非你的价值观）
+Argue the worthlessness of independence	争辩独立自主毫无价值
+Argue the worthlessness of independence (not your values)	争辩独立自主毫无价值（并非你的价值观）
+Argue the value of independence	争辩独立自主的价值
+Argue the value of independence (not your values)	争辩独立自主的价值（并非你的价值观）
+Argue nuances of independence	争辩独立自主的复杂之处
+Argue nuances of independence (not your values)	争辩独立自主的复杂之处（并非你的价值观）
+State the worthlessness of stoicism	阐述克制情感毫无价值
+State the worthlessness of stoicism (not your values)	阐述克制情感毫无价值（并非你的价值观）
+State the value of stoicism	阐述克制情感的价值
+State the value of stoicism (not your values)	阐述克制情感的价值（并非你的价值观）
+State nuances of stoicism	阐述克制情感的复杂之处
+State nuances of stoicism (not your values)	阐述克制情感的复杂之处（并非你的价值观）
+Argue the worthlessness of stoicism	争辩克制情感毫无价值
+Argue the worthlessness of stoicism (not your values)	争辩克制情感毫无价值（并非你的价值观）
+Argue the value of stoicism	争辩克制情感的价值
+Argue the value of stoicism (not your values)	争辩克制情感的价值（并非你的价值观）
+Argue nuances of stoicism	争辩克制情感的复杂之处
+Argue nuances of stoicism (not your values)	争辩克制情感的复杂之处（并非你的价值观）
+State the worthlessness of introspection	阐述自省毫无价值
+State the worthlessness of introspection (not your values)	阐述自省毫无价值（并非你的价值观）
+State the value of introspection	阐述自省的价值
+State the value of introspection (not your values)	阐述自省的价值（并非你的价值观）
+State nuances of introspection	阐述自省的复杂之处
+State nuances of introspection (not your values)	阐述自省的复杂之处（并非你的价值观）
+Argue the worthlessness of introspection	争辩自省毫无价值
+Argue the worthlessness of introspection (not your values)	争辩自省毫无价值（并非你的价值观）
+Argue the value of introspection	争辩自省的价值
+Argue the value of introspection (not your values)	争辩自省的价值（并非你的价值观）
+Argue nuances of introspection	争辩自省的复杂之处
+Argue nuances of introspection (not your values)	争辩自省的复杂之处（并非你的价值观）
+State the worthlessness of self-control	阐述自制毫无价值
+State the worthlessness of self-control (not your values)	阐述自制毫无价值（并非你的价值观）
+State the value of self-control	阐述自制的价值
+State the value of self-control (not your values)	阐述自制的价值（并非你的价值观）
+State nuances of self-control	阐述自制的复杂之处
+State nuances of self-control (not your values)	阐述自制的复杂之处（并非你的价值观）
+Argue the worthlessness of self-control	争辩自制毫无价值
+Argue the worthlessness of self-control (not your values)	争辩自制毫无价值（并非你的价值观）
+Argue the value of self-control	争辩自制的价值
+Argue the value of self-control (not your values)	争辩自制的价值（并非你的价值观）
+Argue nuances of self-control	争辩自制的复杂之处
+Argue nuances of self-control (not your values)	争辩自制的复杂之处（并非你的价值观）
+State the worthlessness of tranquility	阐述宁静毫无价值
+State the worthlessness of tranquility (not your values)	阐述宁静毫无价值（并非你的价值观）
+State the value of tranquility	阐述宁静的价值
+State the value of tranquility (not your values)	阐述宁静的价值（并非你的价值观）
+State nuances of tranquility	阐述宁静的复杂之处
+State nuances of tranquility (not your values)	阐述宁静的复杂之处（并非你的价值观）
+Argue the worthlessness of tranquility	争辩宁静毫无价值
+Argue the worthlessness of tranquility (not your values)	争辩宁静毫无价值（并非你的价值观）
+Argue the value of tranquility	争辩宁静的价值
+Argue the value of tranquility (not your values)	争辩宁静的价值（并非你的价值观）
+Argue nuances of tranquility	争辩宁静的复杂之处
+Argue nuances of tranquility (not your values)	争辩宁静的复杂之处（并非你的价值观）
+State the worthlessness of harmony	阐述和谐毫无价值
+State the worthlessness of harmony (not your values)	阐述和谐毫无价值（并非你的价值观）
+State the value of harmony	阐述和谐的价值
+State the value of harmony (not your values)	阐述和谐的价值（并非你的价值观）
+State nuances of harmony	阐述和谐的复杂之处
+State nuances of harmony (not your values)	阐述和谐的复杂之处（并非你的价值观）
+Argue the worthlessness of harmony	争辩和谐毫无价值
+Argue the worthlessness of harmony (not your values)	争辩和谐毫无价值（并非你的价值观）
+Argue the value of harmony	争辩和谐的价值
+Argue the value of harmony (not your values)	争辩和谐的价值（并非你的价值观）
+Argue nuances of harmony	争辩和谐的复杂之处
+Argue nuances of harmony (not your values)	争辩和谐的复杂之处（并非你的价值观）
+State the worthlessness of merriment	阐述玩乐毫无价值
+State the worthlessness of merriment (not your values)	阐述玩乐毫无价值（并非你的价值观）
+State the value of merriment	阐述玩乐的价值
+State the value of merriment (not your values)	阐述玩乐的价值（并非你的价值观）
+State nuances of merriment	阐述玩乐的复杂之处
+State nuances of merriment (not your values)	阐述玩乐的复杂之处（并非你的价值观）
+Argue the worthlessness of merriment	争辩玩乐毫无价值
+Argue the worthlessness of merriment (not your values)	争辩玩乐毫无价值（并非你的价值观）
+Argue the value of merriment	争辩玩乐的价值
+Argue the value of merriment (not your values)	争辩玩乐的价值（并非你的价值观）
+Argue nuances of merriment	争辩玩乐的复杂之处
+Argue nuances of merriment (not your values)	争辩玩乐的复杂之处（并非你的价值观）
+State the worthlessness of craftsmanship	阐述工艺毫无价值
+State the worthlessness of craftsmanship (not your values)	阐述工艺毫无价值（并非你的价值观）
+State the value of craftsmanship	阐述工艺的价值
+State the value of craftsmanship (not your values)	阐述工艺的价值（并非你的价值观）
+State nuances of craftsmanship	阐述工艺的复杂之处
+State nuances of craftsmanship (not your values)	阐述工艺的复杂之处（并非你的价值观）
+Argue the worthlessness of craftsmanship	争辩工艺毫无价值
+Argue the worthlessness of craftsmanship (not your values)	争辩工艺毫无价值（并非你的价值观）
+Argue the value of craftsmanship	争辩工艺的价值
+Argue the value of craftsmanship (not your values)	争辩工艺的价值（并非你的价值观）
+Argue nuances of craftsmanship	争辩工艺的复杂之处
+Argue nuances of craftsmanship (not your values)	争辩工艺的复杂之处（并非你的价值观）
+State the worthlessness of martial prowess	阐述武艺毫无价值
+State the worthlessness of martial prowess (not your values)	阐述武艺毫无价值（并非你的价值观）
+State the value of martial prowess	阐述武艺的价值
+State the value of martial prowess (not your values)	阐述武艺的价值（并非你的价值观）
+State nuances of martial prowess	阐述武艺的复杂之处
+State nuances of martial prowess (not your values)	阐述武艺的复杂之处（并非你的价值观）
+Argue the worthlessness of martial prowess	争辩武艺毫无价值
+Argue the worthlessness of martial prowess (not your values)	争辩武艺毫无价值（并非你的价值观）
+Argue the value of martial prowess	争辩武艺的价值
+Argue the value of martial prowess (not your values)	争辩武艺的价值（并非你的价值观）
+Argue nuances of martial prowess	争辩武艺的复杂之处
+Argue nuances of martial prowess (not your values)	争辩武艺的复杂之处（并非你的价值观）
+State the worthlessness of skill	阐述技艺毫无价值
+State the worthlessness of skill (not your values)	阐述技艺毫无价值（并非你的价值观）
+State the value of skill	阐述技艺的价值
+State the value of skill (not your values)	阐述技艺的价值（并非你的价值观）
+State nuances of skill	阐述技艺的复杂之处
+State nuances of skill (not your values)	阐述技艺的复杂之处（并非你的价值观）
+Argue the worthlessness of skill	争辩技艺毫无价值
+Argue the worthlessness of skill (not your values)	争辩技艺毫无价值（并非你的价值观）
+Argue the value of skill	争辩技艺的价值
+Argue the value of skill (not your values)	争辩技艺的价值（并非你的价值观）
+Argue nuances of skill	争辩技艺的复杂之处
+Argue nuances of skill (not your values)	争辩技艺的复杂之处（并非你的价值观）
+State the worthlessness of hard work	阐述勤勉毫无价值
+State the worthlessness of hard work (not your values)	阐述勤勉毫无价值（并非你的价值观）
+State the value of hard work	阐述勤勉的价值
+State the value of hard work (not your values)	阐述勤勉的价值（并非你的价值观）
+State nuances of hard work	阐述勤勉的复杂之处
+State nuances of hard work (not your values)	阐述勤勉的复杂之处（并非你的价值观）
+Argue the worthlessness of hard work	争辩勤勉毫无价值
+Argue the worthlessness of hard work (not your values)	争辩勤勉毫无价值（并非你的价值观）
+Argue the value of hard work	争辩勤勉的价值
+Argue the value of hard work (not your values)	争辩勤勉的价值（并非你的价值观）
+Argue nuances of hard work	争辩勤勉的复杂之处
+Argue nuances of hard work (not your values)	争辩勤勉的复杂之处（并非你的价值观）
+State the worthlessness of sacrifice	阐述牺牲毫无价值
+State the worthlessness of sacrifice (not your values)	阐述牺牲毫无价值（并非你的价值观）
+State the value of sacrifice	阐述牺牲的价值
+State the value of sacrifice (not your values)	阐述牺牲的价值（并非你的价值观）
+State nuances of sacrifice	阐述牺牲的复杂之处
+State nuances of sacrifice (not your values)	阐述牺牲的复杂之处（并非你的价值观）
+Argue the worthlessness of sacrifice	争辩牺牲毫无价值
+Argue the worthlessness of sacrifice (not your values)	争辩牺牲毫无价值（并非你的价值观）
+Argue the value of sacrifice	争辩牺牲的价值
+Argue the value of sacrifice (not your values)	争辩牺牲的价值（并非你的价值观）
+Argue nuances of sacrifice	争辩牺牲的复杂之处
+Argue nuances of sacrifice (not your values)	争辩牺牲的复杂之处（并非你的价值观）
+State the worthlessness of competition	阐述竞争毫无价值
+State the worthlessness of competition (not your values)	阐述竞争毫无价值（并非你的价值观）
+State the value of competition	阐述竞争的价值
+State the value of competition (not your values)	阐述竞争的价值（并非你的价值观）
+State nuances of competition	阐述竞争的复杂之处
+State nuances of competition (not your values)	阐述竞争的复杂之处（并非你的价值观）
+Argue the worthlessness of competition	争辩竞争毫无价值
+Argue the worthlessness of competition (not your values)	争辩竞争毫无价值（并非你的价值观）
+Argue the value of competition	争辩竞争的价值
+Argue the value of competition (not your values)	争辩竞争的价值（并非你的价值观）
+Argue nuances of competition	争辩竞争的复杂之处
+Argue nuances of competition (not your values)	争辩竞争的复杂之处（并非你的价值观）
+State the worthlessness of perseverance	阐述毅力毫无价值
+State the worthlessness of perseverance (not your values)	阐述毅力毫无价值（并非你的价值观）
+State the value of perseverance	阐述毅力的价值
+State the value of perseverance (not your values)	阐述毅力的价值（并非你的价值观）
+State nuances of perseverance	阐述毅力的复杂之处
+State nuances of perseverance (not your values)	阐述毅力的复杂之处（并非你的价值观）
+Argue the worthlessness of perseverance	争辩毅力毫无价值
+Argue the worthlessness of perseverance (not your values)	争辩毅力毫无价值（并非你的价值观）
+Argue the value of perseverance	争辩毅力的价值
+Argue the value of perseverance (not your values)	争辩毅力的价值（并非你的价值观）
+Argue nuances of perseverance	争辩毅力的复杂之处
+Argue nuances of perseverance (not your values)	争辩毅力的复杂之处（并非你的价值观）
+State the worthlessness of leisure time	阐述闲暇毫无价值
+State the worthlessness of leisure time (not your values)	阐述闲暇毫无价值（并非你的价值观）
+State the value of leisure time	阐述闲暇的价值
+State the value of leisure time (not your values)	阐述闲暇的价值（并非你的价值观）
+State nuances of leisure time	阐述闲暇的复杂之处
+State nuances of leisure time (not your values)	阐述闲暇的复杂之处（并非你的价值观）
+Argue the worthlessness of leisure time	争辩闲暇毫无价值
+Argue the worthlessness of leisure time (not your values)	争辩闲暇毫无价值（并非你的价值观）
+Argue the value of leisure time	争辩闲暇的价值
+Argue the value of leisure time (not your values)	争辩闲暇的价值（并非你的价值观）
+Argue nuances of leisure time	争辩闲暇的复杂之处
+Argue nuances of leisure time (not your values)	争辩闲暇的复杂之处（并非你的价值观）
+State the worthlessness of commerce	阐述商业毫无价值
+State the worthlessness of commerce (not your values)	阐述商业毫无价值（并非你的价值观）
+State the value of commerce	阐述商业的价值
+State the value of commerce (not your values)	阐述商业的价值（并非你的价值观）
+State nuances of commerce	阐述商业的复杂之处
+State nuances of commerce (not your values)	阐述商业的复杂之处（并非你的价值观）
+Argue the worthlessness of commerce	争辩商业毫无价值
+Argue the worthlessness of commerce (not your values)	争辩商业毫无价值（并非你的价值观）
+Argue the value of commerce	争辩商业的价值
+Argue the value of commerce (not your values)	争辩商业的价值（并非你的价值观）
+Argue nuances of commerce	争辩商业的复杂之处
+Argue nuances of commerce (not your values)	争辩商业的复杂之处（并非你的价值观）
+State the worthlessness of romance	阐述爱情毫无价值
+State the worthlessness of romance (not your values)	阐述爱情毫无价值（并非你的价值观）
+State the value of romance	阐述爱情的价值
+State the value of romance (not your values)	阐述爱情的价值（并非你的价值观）
+State nuances of romance	阐述爱情的复杂之处
+State nuances of romance (not your values)	阐述爱情的复杂之处（并非你的价值观）
+Argue the worthlessness of romance	争辩爱情毫无价值
+Argue the worthlessness of romance (not your values)	争辩爱情毫无价值（并非你的价值观）
+Argue the value of romance	争辩爱情的价值
+Argue the value of romance (not your values)	争辩爱情的价值（并非你的价值观）
+Argue nuances of romance	争辩爱情的复杂之处
+Argue nuances of romance (not your values)	争辩爱情的复杂之处（并非你的价值观）
+State the worthlessness of nature	阐述自然毫无价值
+State the worthlessness of nature (not your values)	阐述自然毫无价值（并非你的价值观）
+State the value of nature	阐述自然的价值
+State the value of nature (not your values)	阐述自然的价值（并非你的价值观）
+State nuances of nature	阐述自然的复杂之处
+State nuances of nature (not your values)	阐述自然的复杂之处（并非你的价值观）
+Argue the worthlessness of nature	争辩自然毫无价值
+Argue the worthlessness of nature (not your values)	争辩自然毫无价值（并非你的价值观）
+Argue the value of nature	争辩自然的价值
+Argue the value of nature (not your values)	争辩自然的价值（并非你的价值观）
+Argue nuances of nature	争辩自然的复杂之处
+Argue nuances of nature (not your values)	争辩自然的复杂之处（并非你的价值观）
+State the worthlessness of peace	阐述和平毫无价值
+State the worthlessness of peace (not your values)	阐述和平毫无价值（并非你的价值观）
+State the value of peace	阐述和平的价值
+State the value of peace (not your values)	阐述和平的价值（并非你的价值观）
+State nuances of peace	阐述和平的复杂之处
+State nuances of peace (not your values)	阐述和平的复杂之处（并非你的价值观）
+Argue the worthlessness of peace	争辩和平毫无价值
+Argue the worthlessness of peace (not your values)	争辩和平毫无价值（并非你的价值观）
+Argue the value of peace	争辩和平的价值
+Argue the value of peace (not your values)	争辩和平的价值（并非你的价值观）
+Argue nuances of peace	争辩和平的复杂之处
+Argue nuances of peace (not your values)	争辩和平的复杂之处（并非你的价值观）
+State the worthlessness of knowledge	阐述知识毫无价值
+State the worthlessness of knowledge (not your values)	阐述知识毫无价值（并非你的价值观）
+State the value of knowledge	阐述知识的价值
+State the value of knowledge (not your values)	阐述知识的价值（并非你的价值观）
+State nuances of knowledge	阐述知识的复杂之处
+State nuances of knowledge (not your values)	阐述知识的复杂之处（并非你的价值观）
+Argue the worthlessness of knowledge	争辩知识毫无价值
+Argue the worthlessness of knowledge (not your values)	争辩知识毫无价值（并非你的价值观）
+Argue the value of knowledge	争辩知识的价值
+Argue the value of knowledge (not your values)	争辩知识的价值（并非你的价值观）
+Argue nuances of knowledge	争辩知识的复杂之处
+Argue nuances of knowledge (not your values)	争辩知识的复杂之处（并非你的价值观）
+
+# Typed people/group targets and offices with their employing organization.
+Ask about {p}	打听{p}
+Ask about {e}	询问{e}
+Ask about {n}	询问{n}
+Give report pertaining to service as a {s} for {e}	汇报你为{e}担任{s}期间的事务
+Request duty or advice pertaining to service as a {s} for {e}	请求分派为{e}担任{s}的职责或给予建议
+Refuse listener work as {s} for {e}	拒绝让对方为{e}担任{s}
+Grant listener work as {s} for {e}	准许对方为{e}担任{s}
+Ask to be made a {s}	请求担任{s}
+Ask to become a soldier	请求成为士兵
+Ask to be made a performer for {e}	请求成为{e}的表演者
+Ask to be made a tavern keeper for {e}	请求成为{e}的酒保
+Ask to be made a monster slayer for {e}	请求成为{e}的怪物猎手
+Ask to be made a scholar for {e}	请求成为{e}的学者
+Ask to be made a mercenary for {e}	请求成为{e}的佣兵
+Ask to be made a doctor for {e}	请求成为{e}的医生
+Ask to be made a surgeon for {e}	请求成为{e}的外科医师
+Ask to be made a bone doctor for {e}	请求成为{e}的骨科医师
+Ask to be made a diagnostician for {e}	请求成为{e}的诊断医师
+Ask to be made a scribe for {e}	请求成为{e}的抄写员
+
+# Native incident/rumor constructions retain every named participant,
+# object and location. Shared templates cover every generated name.
+Bring up {p}'s self-identification to {p}	谈起{p1}向{p2}表明身份这件事
+Spread rumor of {p}'s self-identification to {p}	传播{p1}向{p2}表明身份的传闻
+Bring up {p}'s refusal to identify to {p}	谈起{p1}拒绝向{p2}表明身份这件事
+Spread rumor of {p}'s refusal to identify to {p}	传播{p1}拒绝向{p2}表明身份的传闻
+Bring up {p}'s demand of submission from {p}	谈起{p1}要求{p2}臣服这件事
+Spread rumor of {p}'s demand of submission from {p}	传播{p1}要求{p2}臣服的传闻
+Bring up {p}'s attack on {p}	谈起{p1}袭击{p2}这件事
+Spread rumor of {p}'s attack on {p}	传播{p1}袭击{p2}的传闻
+Bring up {p}'s escalated attack on {p}	谈起{p1}对{p2}加剧攻击这件事
+Spread rumor of {p}'s escalated attack on {p}	传播{p1}对{p2}加剧攻击的传闻
+Bring up {p}'s ascension to {s} of {e}	谈起{p}就任{e}的{s}这件事
+Spread rumor of {p}'s ascension to {s} of {e}	传播{p}就任{e}的{s}的传闻
+Bring up {p}'s presence in {e}	谈起{p}出现在{e}这件事
+Spread rumor of {p}'s presence in {e}	传播{p}出现在{e}的传闻
+Bring up {e}'s presence in {e}	谈起{e1}出现在{e2}这件事
+Spread rumor of {e}'s presence in {e}	传播{e1}出现在{e2}的传闻
+Bring up {e}'s cessation of tribute to {e}	谈起{e1}停止向{e2}进贡这件事
+Spread rumor of {e}'s cessation of tribute to {e}	传播{e1}停止向{e2}进贡的传闻
+Bring up {e}'s claim on {e}	谈起{e1}宣称拥有{e2}这件事
+Spread rumor of {e}'s claim on {e}	传播{e1}宣称拥有{e2}的传闻
+Bring up {e}'s harassment of {e}	谈起{e1}侵扰{e2}这件事
+Spread rumor of {e}'s harassment of {e}	传播{e1}侵扰{e2}的传闻
+Bring up {e}'s withdrawal from {e} of {e}	谈起{e1}从{e3}的{e2}撤离这件事
+Spread rumor of {e}'s withdrawal from {e} of {e}	传播{e1}从{e3}的{e2}撤离的传闻
+Bring up {e}'s flight from {e}	谈起{e1}逃离{e2}这件事
+Spread rumor of {e}'s flight from {e}	传播{e1}逃离{e2}的传闻
+Bring up {e}'s abandonment of {e}	谈起{e1}放弃{e2}这件事
+Spread rumor of {e}'s abandonment of {e}	传播{e1}放弃{e2}的传闻
+Bring up the insurrection in {e} against {e}	谈起{e1}反抗{e2}的起义这件事
+Spread rumor of the insurrection in {e} against {e}	传播{e1}反抗{e2}的起义的传闻
+Bring up the {e} insurrection crushed by {e}	谈起{e1}的起义被{e2}镇压这件事
+Spread rumor of the {e} insurrection crushed by {e}	传播{e1}的起义被{e2}镇压的传闻
+Bring up the failed insurrection {e} against {e}	谈起{e1}反抗{e2}的起义失败这件事
+Spread rumor of the failed insurrection {e} against {e}	传播{e1}反抗{e2}的起义失败的传闻
+Bring up the overthrow {e} of {e} in {e}	谈起{e1}在{e3}推翻{e2}这件事
+Spread rumor of the overthrow {e} of {e} in {e}	传播{e1}在{e3}推翻{e2}的传闻
+Bring up {e}'s reclamation of {e}	谈起{e1}收复{e2}这件事
+Spread rumor of {e}'s reclamation of {e}	传播{e1}收复{e2}的传闻
+Bring up {e}'s foundation of {e}	谈起{e1}建立{e2}这件事
+Spread rumor of {e}'s foundation of {e}	传播{e1}建立{e2}的传闻
+Bring up {e}'s march to reclaim {e}	谈起{e1}进军收复{e2}这件事
+Spread rumor of {e}'s march to reclaim {e}	传播{e1}进军收复{e2}的传闻
+Bring up {e}'s march to found a site in {e}	谈起{e1}进军{e2}建立新据点这件事
+Spread rumor of {e}'s march to found a site in {e}	传播{e1}进军{e2}建立新据点的传闻
+Bring up {e}'s march toward {e}	谈起{e1}向{e2}进军这件事
+Spread rumor of {e}'s march toward {e}	传播{e1}向{e2}进军的传闻
+Bring up the occupation of {e} by {e}	谈起{e1}被{e2}占领这件事
+Spread rumor of the occupation of {e} by {e}	传播{e1}被{e2}占领的传闻
+Bring up {p}'s giving of {e} to {p} in {e}	谈起{p1}在{e2}将作品{e1}交给{p2}这件事
+Spread rumor of {p}'s giving of {e} to {p} in {e}	传播{p1}在{e2}将作品{e1}交给{p2}的传闻
+Bring up {p}'s placement of {e} to {p} in {e}	谈起{p1}在{e2}将作品{e1}交由{p2}保管这件事
+Spread rumor of {p}'s placement of {e} to {p} in {e}	传播{p1}在{e2}将作品{e1}交由{p2}保管的传闻
+Bring up the destruction of {i}	谈起{i}被毁这件事
+Spread rumor of the destruction of {i}	传播{i}被毁的传闻
+Bring up {p}'s refusal to give {i}	谈起{p}拒绝交出{i}这件事
+Spread rumor of {p}'s refusal to give {i}	传播{p}拒绝交出{i}的传闻
+Bring up {p}'s giving of {i}	谈起{p}交出{i}这件事
+Spread rumor of {p}'s giving of {i}	传播{p}交出{i}的传闻
+Bring up {p}'s giving of {i} to {p}	谈起{p1}将{i}交给{p2}这件事
+Spread rumor of {p}'s giving of {i} to {p}	传播{p1}将{i}交给{p2}的传闻
+Bring up {p}'s gaining of {i}	谈起{p}获得{i}这件事
+Spread rumor of {p}'s gaining of {i}	传播{p}获得{i}的传闻
+Bring up {p}'s placement of {i}	谈起{p}安置{i}这件事
+Spread rumor of {p}'s placement of {i}	传播{p}安置{i}的传闻
+Bring up {p}'s placement of {i} to {p}	谈起{p1}将{i}交由{p2}保管这件事
+Spread rumor of {p}'s placement of {i} to {p}	传播{p1}将{i}交由{p2}保管的传闻
+Bring up {p}'s possession of {i}	谈起{p}持有{i}这件事
+Spread rumor of {p}'s possession of {i}	传播{p}持有{i}的传闻
+Bring up {p}'s lack of possession of {i}	谈起{p}未持有{i}这件事
+Spread rumor of {p}'s lack of possession of {i}	传播{p}未持有{i}的传闻
+Bring up the reunion of {p} and {p}	谈起{p1}与{p2}团聚这件事
+Spread rumor of the reunion of {p} and {p}	传播{p1}与{p2}团聚的传闻
+Bring up {p}'s death	谈起{p}死亡这件事
+Spread rumor of {p}'s death	传播{p}死亡的传闻
+Bring up your abduction	谈起你被绑架这件事
+Bring up the abduction of {p}	谈起{p}被绑架这件事
+Bring up {e}'s destruction	谈起{e}被毁这件事
+Spread rumor of {e}'s destruction	传播{e}被毁的传闻
+Bring up {i}'s presence in {e}	谈起{i}位于{e}这件事
+Spread rumor of {i}'s presence in {e}	传播{i}位于{e}的传闻
+Bring up {i}'s absence from {e}	谈起{i}已不在{e}这件事
+Spread rumor of {i}'s absence from {e}	传播{i}已不在{e}的传闻
+Bring up {e}'s acceptance of {e}'s offer of tribute	谈起{e1}接受{e2}的进贡提议这件事
+Spread rumor of {e}'s acceptance of {e}'s offer of tribute	传播{e1}接受{e2}的进贡提议的传闻
+Bring up {e}'s acceptance of {e}'s demand for tribute	谈起{e1}接受{e2}的进贡要求这件事
+Spread rumor of {e}'s acceptance of {e}'s demand for tribute	传播{e1}接受{e2}的进贡要求的传闻
+Bring up {e}'s acceptance of {e}'s offer of peace	谈起{e1}接受{e2}的和平提议这件事
+Spread rumor of {e}'s acceptance of {e}'s offer of peace	传播{e1}接受{e2}的和平提议的传闻
+Bring up {e}'s refusal of {e}'s offer of tribute	谈起{e1}拒绝{e2}的进贡提议这件事
+Spread rumor of {e}'s refusal of {e}'s offer of tribute	传播{e1}拒绝{e2}的进贡提议的传闻
+Bring up {e}'s refusal of {e}'s demand for tribute	谈起{e1}拒绝{e2}的进贡要求这件事
+Spread rumor of {e}'s refusal of {e}'s demand for tribute	传播{e1}拒绝{e2}的进贡要求的传闻
+Bring up {e}'s refusal of {e}'s offer of peace	谈起{e1}拒绝{e2}的和平提议这件事
+Spread rumor of {e}'s refusal of {e}'s offer of peace	传播{e1}拒绝{e2}的和平提议的传闻
+Bring up {p}'s production order violation	谈起{p}违反生产命令这件事
+Spread rumor of {p}'s production order violation	传播{p}违反生产命令的传闻
+Bring up {p}'s export prohibition violation	谈起{p}违反出口禁令这件事
+Spread rumor of {p}'s export prohibition violation	传播{p}违反出口禁令的传闻
+Bring up {p}'s job order violation	谈起{p}违反工作命令这件事
+Spread rumor of {p}'s job order violation	传播{p}违反工作命令的传闻
+Bring up {p}'s conspiracy to slow labor	谈起{p}合谋怠工这件事
+Spread rumor of {p}'s conspiracy to slow labor	传播{p}合谋怠工的传闻
+Bring up {p}'s crime of murder	谈起{p}犯下谋杀罪这件事
+Spread rumor of {p}'s crime of murder	传播{p}犯下谋杀罪的传闻
+Bring up {p}'s disorderly conduct	谈起{p}扰乱秩序这件事
+Spread rumor of {p}'s disorderly conduct	传播{p}扰乱秩序的传闻
+Bring up {p}'s building destruction	谈起{p}毁坏建筑这件事
+Spread rumor of {p}'s building destruction	传播{p}毁坏建筑的传闻
+Bring up {p}'s bribery	谈起{p}贿赂这件事
+Spread rumor of {p}'s bribery	传播{p}贿赂的传闻
+Bring up {p}'s embezzlement	谈起{p}挪用资金这件事
+Spread rumor of {p}'s embezzlement	传播{p}挪用资金的传闻
+Bring up {p}'s vandalism	谈起{p}蓄意破坏这件事
+Spread rumor of {p}'s vandalism	传播{p}蓄意破坏的传闻
+Bring up {p}'s crime of theft	谈起{p}犯下盗窃罪这件事
+Spread rumor of {p}'s crime of theft	传播{p}犯下盗窃罪的传闻
+Bring up {p}'s crime of robbery	谈起{p}犯下抢劫罪这件事
+Spread rumor of {p}'s crime of robbery	传播{p}犯下抢劫罪的传闻
+Bring up {p}'s crime of espionage	谈起{p}犯下间谍罪这件事
+Spread rumor of {p}'s crime of espionage	传播{p}犯下间谍罪的传闻
+Bring up {p}'s crime of treason	谈起{p}犯下叛国罪这件事
+Spread rumor of {p}'s crime of treason	传播{p}犯下叛国罪的传闻
+Bring up {p}'s crime of blood-drinking	谈起{p}犯下吸血罪这件事
+Spread rumor of {p}'s crime of blood-drinking	传播{p}犯下吸血罪的传闻
+Bring up {p}'s crime of attempted theft	谈起{p}犯下盗窃未遂罪这件事
+Spread rumor of {p}'s crime of attempted theft	传播{p}犯下盗窃未遂罪的传闻
+Bring up {p}'s crime of attempted murder	谈起{p}犯下谋杀未遂罪这件事
+Spread rumor of {p}'s crime of attempted murder	传播{p}犯下谋杀未遂罪的传闻
+Bring up {p}'s crime of kidnapping	谈起{p}犯下绑架罪这件事
+Spread rumor of {p}'s crime of kidnapping	传播{p}犯下绑架罪的传闻
+Bring up {p}'s crime of attempted kidnapping	谈起{p}犯下绑架未遂罪这件事
+Spread rumor of {p}'s crime of attempted kidnapping	传播{p}犯下绑架未遂罪的传闻
+
+# Complete native creature stress/strange-mood status family, including all grief pronouns.
+Has a horrible fell look!	露出可怕而凶险的神情！
+Brooding darkly...	阴郁地沉思着……
+Has the aspect of one fey!	显出神秘的神情！
+Peculiarly secretive...	异常地遮遮掩掩……
+Possessed by unknown forces!	被不明力量附身了！
+Stricken by melancholy...	陷入了忧郁……
+Crawling around babbling!	胡言乱语地四处爬行！
+Running around babbling!	胡言乱语地四处奔跑！
+Crawling around crazed!	发疯般四处爬行！
+Running around crazed!	发疯般四处奔跑！
+In a berserk rage!	陷入了狂暴！
+Staring off into space...	茫然地盯着空处……
+Corrupt Strange Mood: {d}	异常的怪异心情：{d}
+Overcome by terror!	被恐惧压垮了！
+In emotional shock!	受到了强烈的情绪冲击！
+Overwhelmed by horror!	被恐怖笼罩了！
+Experiencing mortal fear!	感到濒死般的恐惧！
+Beside himself with grief!	悲痛得无法自持！
+Beside herself with grief!	悲痛得无法自持！
+Beside itself with grief!	悲痛得无法自持！
+Drowning in sadness!	沉浸在悲伤之中！
+Writhing in agony!	痛苦得扭动着身体！
+Anguished!	痛苦不堪！
+Lost in despair!	陷入了绝望！
+Completely dismayed!	彻底灰心丧气了！
+Distressed!	心烦意乱！
+Taken by a fright!	受到了惊吓！
+Wallowing in misery!	沉溺于痛苦之中！
+Truly mortified!	感到无地自容！
+Shaken to the core!	内心受到了强烈震撼！
+In existential crisis!	陷入了存在危机！
+Emotionally overloaded!	情绪不堪重负！
+
+# Diplomatic meeting: complete titled participants and the dwarf liaison's
+# opening/farewell scripts. Names are typed fields, never per-save literals.
+# Keep each speech's sentences together, including its native speaker color.
+{n} meets with {n}	{n1}与{n2}会面
+{p}: I am your liaison from the Mountainhomes. Let's discuss your situation.	{p}：我是来自山国都城的联络员。让我们谈谈你们的近况。
+{p}: Farewell, {p}. I look forward to our meeting next year. Our fortunes rise and fall together.	{p1}：再见，{p2}。期待明年与你再次会面。我们的命运休戚与共。
+
+# Complete native diplomatic meeting topics, scripts, replies and dynamic clauses.
+# Evidence and branch scope: data/extracted/diplomacy-source-review.md.
+{p}: You have disrespected the trees in this area, but this is what we have come to expect from your stunted kind. Further abuse cannot be tolerated. Let this be a warning to you.	{p}：你们不敬这里的树木，不过我们早料到你们这些矮个子会这样。我们绝不会容忍进一步的摧残。好自为之。
+{p}: What a pleasant surprise! Not a single tree here weeps from the abuses meted out with such ease by your people. Joy! The dwarves have turned a page, not that we would make paper. A travesty! Perhaps it is better said that the dwarves have turned over a new leaf, and the springtime for our two races has only just begun.	{p}：真是令人惊喜！这里竟没有一棵树因你们族人随手施加的暴行而哭泣。太好了！矮人翻开了新的一页——当然，我们可不造纸，那简直是暴行！或许该说，矮人如新叶般焕然一新，我们两族的春天才刚刚开始。
+{p}: Although we do not always see eye to eye (ha!), I bid you farewell. May you someday embrace nature as you embrace the rocks and mud.	{p}：虽然我们不总能平视彼此（哈！），还是就此告别吧。愿你们有一天能像拥抱岩石和泥土那样拥抱自然。
+{p}: Greetings from the woodlands. We have much to discuss.	{p}：向你们致以林地的问候。我们有许多事要谈。
+{p}: It has been an honor, noble {p}. I bid you farewell.	{p1}：不胜荣幸，尊贵的{p2}。就此告别。
+{p}: Greetings, noble dwarf. There is much to discuss.	{p}：你好，尊贵的矮人。我们有许多事要谈。
+{p}: Again on behalf of the Merchants' Guild, let me bid farewell to you and your stout dwarves.	{p}：请允许我再次代表商人行会，向你和你健壮的矮人族人道别。
+{p}: On behalf of the Merchants' Guild, let me extend greetings to your people. There is much to discuss.	{p}：请允许我代表商人行会，向你们的族人致以问候。我们有许多事要谈。
+{p}: I don't know very much about the outside world. I wish I had more to tell you.	{p}：我对外面的世界所知不多。真希望能告诉你更多消息。
+{p}: There is much to share... (Information added to Civilizations/World Info)	{p}：有许多消息要分享……（信息已添加至文明／世界信息）
+{p}: The world is the same as ever.	{p}：世界一如往常。
+{p}: Peace is calling out to us. How do you respond?	{p}：和平正在呼唤我们。你们如何回应？
+{p}: It's such a pleasant place you've carved out for yourselves...	{p}：你们开辟的这片家园真是宜人……
+{p}: Let's discuss the state of our current agreements...	{p}：让我们谈谈现有协议的履行情况……
+{p}: The Mountainhomes have some need of the same goods you have requested, sadly, so there is no export agreement to be had. We will still try to fill your needs as best we can.	{p}：遗憾的是，山国都城也需要你们所求的那些货物，因此无法达成出口协议。不过，我们仍会尽力满足你们的需求。
+{p}: Remember, trade agreements strengthen bonds. Please consider an import agreement next year.	{p}：请记住，贸易协议能增进双方的情谊。请考虑在明年达成进口协议。
+{p}: You continue to impress! I have come empowered to elevate this land in the eyes of our realm.	{p}：你们的表现依然出色！我此次受命前来，提升这片领地在我国的地位。
+{p}: Well then, we have finalized the import agreement. Feel free to go over the documents.	{p}：那么，我们已经敲定进口协议了。请随意查阅相关文件。
+{p}: Merit deserves a reward, and I come empowered to establish this colony as an official land of our realm.	{p}：功绩理应得到嘉奖，我此次受命前来，将这处殖民地正式纳入我国领土。
+Can you imagine the trade wagons? Of course, there are responsibilities, and the nobility must live well.	你能想象那些贸易货车吗？当然，也有相应的责任，而且贵族必须享有优渥的生活。
+Do you have anyone suitable to recommend for elevation?	你有合适的人选推荐晋封吗？
+Elevate whom?	晋封谁？
+We will gladly do as you ask and strengthen our bonds of friendship.	我们很乐意照你们的请求去做，增进双方的友谊。
+Sadly, we do not possess this object. Best of luck in your search.	遗憾的是，我们并没有这件物品。祝你寻找顺利。
+Give up this childish errand. We do not part with our treasures lightly.	放弃这幼稚的差事吧。我们不会轻易交出自己的珍宝。
+Your claim is worthless here. Trade your lives if you must.	你们的要求在这里毫无分量。有本事就拿命来换。
+I hear the call. Let us stop this war.	我听到了呼唤。让我们结束这场战争。
+We will drown out the call with the screams of your dying. Begone.	我们会用你们临死的惨叫淹没那呼唤。滚吧。
+I can scarcely believe this good news! I have some recommendations.	简直不敢相信有这样的好消息！我有一些人选可以推荐。
+Flattering, but we'd rather maintain our distance from the homeland.	承蒙厚爱，但我们更愿意与故土保持距离。
+We can abide by this. Let us work toward mutual co-existence.	我们可以遵守。让我们为和平共处而努力。
+Our needs exceed your allowances. Relax. They're only trees.	我们的需求超出了你们的限额。放轻松，不过是些树罢了。
+We can grant this request. Let's discuss the specifics, though...	我们可以答应。不过，让我们先谈谈具体细节……
+We cannot stop production just because of your quaint sensibilities.	我们不会仅仅因为你们古怪的顾忌就停止生产。
+{p}: We elves are partial in particular to the trees in the forests surrounding your lands. Although we are loath to spare a single branch to your senseless slaughter, we are willing to ask that you cap your tree-fells at {u} until we next meet. I will try to return next year as I am able.	{p}：我们精灵尤其珍爱你们领地周围森林中的树木。虽然我们连一根树枝都不愿让你们肆意摧残，还是愿意请你们在下次会面前，将砍伐量限制在{u}棵以内。我会尽可能在明年回来。
+{p}: Whatever possessed you to brave these wilds, where our animal friends are even larger than your kind than usual, we do not know. But know that this land is sacred to us, these trees more than any others. Although we are loath to spare a single branch to your senseless slaughter, we are willing to ask that you cap your tree-fells at {u} until we next meet. I will try to return next year as I am able. And beware.	{p}：我们不明白是什么驱使你们勇闯这片荒野，这里的动物朋友比平常更加高大，远超你们这些小个子。但你们要知道，这片土地对我们而言是神圣的，这里的树木更胜其他。虽然我们连一根树枝都不愿让你们肆意摧残，还是愿意请你们在下次会面前，将砍伐量限制在{u}棵以内。我会尽可能在明年回来。还有，当心点。
+{p}: We can part with at most {d} trees, butcher.	{p}：最多只能让你们砍{d}棵树，刽子手。
+{p}: Let's discuss what we are willing to offer for your {s}ship.	{p}：让我们谈谈愿意为你们{s}的手艺出什么价。
+{p}: Let's discuss what we are willing to offer for your {s}ship. A need for {i} is expected, and if you are able to provide some, the caravan will offer {d}%. This export agreement only applies to trades next year, not with any merchants currently present.	{p}：让我们谈谈愿意为你们{s}的手艺出什么价。预计将需要{i}；如果你们能提供，商队将按{d}%的价格收购。[C:4:0:1]这份出口协议只适用于明年的贸易，不适用于目前在场的任何商人。
+{p}: Let's discuss what we are willing to offer for your {s}ship. A need for {i} and {i} is expected, and if you are able to provide some, the caravan will offer {d}% and {d}% respectively. This export agreement only applies to trades next year, not with any merchants currently present.	{p}：让我们谈谈愿意为你们{s}的手艺出什么价。预计将需要{i1}和{i2}；如果你们能提供，商队将分别按{d1}%和{d2}%的价格收购。[C:4:0:1]这份出口协议只适用于明年的贸易，不适用于目前在场的任何商人。
+{s} requested, priced at {d}%	已请求{s}，价格为{d}%
+{b} is an heirloom of our people.	{b}是我们族人的传家宝。
+{b} is the property of our people.	{b}属于我们族人。
+{b} is a sacred relic of our people.	{b}是我们族人的圣物。
+{b} is the symbol of our people	{b}是我们族人的象征。
+{b} is the symbol of the {s}	{b}是{s}的象征。
+Pass this treasure into our possession, and we shall depart in peace.	把这件珍宝交给我们，我们便会和平离去。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I can only rest when I've brought the prize safely to {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。只有将宝物安全带回{e1}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I can only rest when I've brought the prize safely to {s} in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。只有将宝物安全带回{e1}的{s3}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've already searched in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我已经搜寻过{e1}。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've already searched in {e}. I can only rest when I've brought the prize safely to {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我已经搜寻过{e1}。只有将宝物安全带回{e2}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've already searched in {e}. I can only rest when I've brought the prize safely to {s} in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我已经搜寻过{e1}。只有将宝物安全带回{e2}的{s3}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've boldly searched {e} and {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我勇敢地搜寻了{e1}和{e2}。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've boldly searched {e} and {e}. I can only rest when I've brought the prize safely to {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我勇敢地搜寻了{e1}和{e2}。只有将宝物安全带回{e3}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've boldly searched {e} and {e}. I can only rest when I've brought the prize safely to {s} in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我勇敢地搜寻了{e1}和{e2}。只有将宝物安全带回{e3}的{s3}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've searched nearly the whole world over.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我几乎已经搜遍了全世界。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've searched nearly the whole world over. I can only rest when I've brought the prize safely to {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我几乎已经搜遍了全世界。只有将宝物安全带回{e1}，我才能安心。
+{b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've searched nearly the whole world over. I can only rest when I've brought the prize safely to {s} in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我几乎已经搜遍了全世界。只有将宝物安全带回{e1}的{s3}，我才能安心。
+Play your role in this noble quest and become legendary!	投身这项崇高的使命，成就传奇吧！

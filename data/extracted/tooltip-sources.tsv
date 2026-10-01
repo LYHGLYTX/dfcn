@@ -1,0 +1,873 @@
+# call address or RAW path:line	paragraph address or RAW object	native width (- = runtime)	complete source
+# RAW building descriptions are loaded separately from the native initializer.
+# Report popup constructor: its checkbox hover text uses the shared widget
+# tooltip, not the text_multiline footer constructed at 0x2061279. The complete
+# literal at ELF 0x221e980 (also PE file offset 0x1785098) is assigned at
+# 0x2061437..0x2061470, with allocation fallback at 0x20618b0..0x20618c6.
+# Keep its whole source in this catalog; native wrapping is not source identity.
+0x2061437+0x20618bd	report-popup.auto-pause	-	Toggle auto-pause on new report.
+data/vanilla/vanilla_buildings/objects/building_custom.txt:41	BUILDING_WORKSHOP:SOAP_MAKER	-	Use tallow (rendered fat) or oil here with lye to make soap.
+data/vanilla/vanilla_buildings/objects/building_custom.txt:56	BUILDING_WORKSHOP:SCREW_PRESS	-	A useful workshop for pressing liquids from various sources. Some plants might need to be milled first before they can be used.  Empty jugs are required to store the liquid products.
+0x1648ceb	0x26fe370	24	Set digging orders.
+0x1648d62	0x26fe388	24	Finish setting dig orders.
+0x1648d9c	0x26fe3a0	24	Dig a regular hallway or room.  Assign a miner to the work detail if necessary.  The miner requires a pick.
+0x1648e69	0x26fe3b8	24	Designate constructed walls, floors, and other constructed tiles to be removed by miners.  This also designates all stairwells and ramps.
+0x1648f3e	0x26fe3d0	24	Dig a stairwell on this level, going up or down.  Your selection must span multiple elevations.  Click on a tile, change elevations, and click again.
+0x1648f78	0x26fe3e8	24	Dig a ramp on this level, going up.
+0x1648fb2	0x26fe400	24	Dig a channel, making a ramp on the level below.
+0x1649022	0x26fe418	24	Hold left button to draw.
+0x164905c	0x26fe430	24	Left click to choose corners of a rectangle.
+0x1649096	0x26fe448	24	Dig every tile selected.
+0x16490d0	0x26fe460	24	Dig only ore and gems selected, and automine any ore and gems of the same type which are uncovered.
+0x164910a	0x26fe478	24	Dig only ore and gems selected.
+0x1649144	0x26fe490	24	Dig only gems selected.
+0x16491c0	0x26fe4a8	24	Selected tiles are very high priority.
+0x16491fa	0x26fe4c0	24	Selected tiles are high priority.
+0x1649272	0x26fe4d8	24	Selected tiles are high-medium priority.
+0x16492af	0x26fe4f0	24	Selected tiles are medium priority. [DEFAULT]
+0x16492e9	0x26fe508	24	Selected tiles are medium-low priority.
+0x1649326	0x26fe520	24	Selected tiles are low priority.
+0x164939b	0x26fe538	24	Selected tiles are very low priority.
+0x164940e	0x26fe550	24	Change to standard dig mode.
+0x164944b	0x26fe568	24	Change to blueprint-only mode.
+0x16494c7	0x26fe580	24	Change blueprints to standard selections.
+0x1649543	0x26fe598	24	Change standard selections to blueprints.
+0x1649580	0x26fe5b0	24	Show advanced options.
+0x16495ba	0x26fe5c8	24	Hide advanced options.
+0x164962a	0x26fe5e0	24	Set tree chopping orders.
+0x1649664	0x26fe5f8	24	Set tree chopping orders.  Select the base of the tree so that the woodcutter can reach it.  Assign a woodcutter to the work detail if necessary.  The woodcutter requires an axe.
+0x164969e	0x26fe610	24	Finish setting tree chopping orders.
+0x164970e	0x26fe628	24	Hold left button to draw.
+0x164978d	0x26fe640	24	Left click to choose corners of a rectangle.
+0x16497c7	0x26fe658	24	Selected tiles are very high priority.
+0x1649835	0x26fe670	24	Selected tiles are high priority.
+0x16498ad	0x26fe688	24	Selected tiles are high-medium priority.
+0x16498e3	0x26fe6a0	24	Selected tiles are medium priority. [DEFAULT]
+0x1649963	0x26fe6b8	24	Selected tiles are medium-low priority.
+0x1649999	0x26fe6d0	24	Selected tiles are low priority.
+0x16499d3	0x26fe6e8	24	Selected tiles are very low priority.
+0x1649a0d	0x26fe700	24	Change to standard chop mode.
+0x1649a43	0x26fe718	24	Change to blueprint-only mode.
+0x1649a7d	0x26fe730	24	Change blueprints to standard selections.
+0x1649af9	0x26fe748	24	Change standard selections to blueprints.
+0x1649b2f	0x26fe760	24	Show advanced options.
+0x1649b9f	0x26fe778	24	Hide advanced options.
+0x1649c1a	0x26fe790	24	Set plant gathering orders.
+0x1649cb8	0x26fe7a8	24	Set plant gathering orders.  Some plants require fruit or other growths to be present.
+0x1649d32	0x26fe7c0	24	Finish setting plant gathering orders.
+0x1649d6c	0x26fe7d8	24	Hold left button to draw.
+0x1649da6	0x26fe7f0	24	Left click to choose corners of a rectangle.
+0x1649de0	0x26fe808	24	Selected tiles are very high priority.
+0x1649e4e	0x26fe820	24	Selected tiles are high priority.
+0x1649ec6	0x26fe838	24	Selected tiles are high-medium priority.
+0x1649efc	0x26fe850	24	Selected tiles are medium priority. [DEFAULT]
+0x1649f7a	0x26fe868	24	Selected tiles are medium-low priority.
+0x1649fe4	0x26fe880	24	Selected tiles are low priority.
+0x164a059	0x26fe898	24	Selected tiles are very low priority.
+0x164a0d9	0x26fe8b0	24	Change to standard gather mode.
+0x164a10f	0x26fe8c8	24	Change to blueprint-only mode.
+0x164a18b	0x26fe8e0	24	Change blueprints to standard selections.
+0x164a207	0x26fe8f8	24	Change standard selections to blueprints.
+0x164a23d	0x26fe910	24	Show advanced options.
+0x164a277	0x26fe928	24	Hide advanced options.
+0x164a30f	0x26fe940	24	Set wall smoothing, engraving, track carving, and fortification orders.
+0x164a3d2	0x26fe958	24	Smooth a rough wall to make it more pleasing to your citizens.  This also prepares the wall for engraving or fortification.
+0x164a44b	0x26fe970	24	Engrave artwork into a smooth wall.
+0x164a485	0x26fe988	24	Carve a track in a stone floor.  Tracks are used by minecarts with routes set in the hauling menu.
+0x164a519	0x26fe9a0	24	Carve a gap in a smooth wall to allow your archers to fire upon invaders.
+0x164a594	0x26fe9b8	24	Finish setting wall orders.
+0x164a5ce	0x26fe9d0	24	Hold left button to draw.
+0x164a64d	0x26fe9e8	24	Left click to choose corners of a rectangle.
+0x164a6c9	0x26fea00	24	Selected tiles are very high priority.
+0x164a703	0x26fea18	24	Selected tiles are high priority.
+0x164a77b	0x26fea30	24	Selected tiles are high-medium priority.
+0x164a7b1	0x26fea48	24	Selected tiles are medium priority. [DEFAULT]
+0x164a7eb	0x26fea60	24	Selected tiles are medium-low priority.
+0x164a821	0x26fea78	24	Selected tiles are low priority.
+0x164a896	0x26fea90	24	Selected tiles are very low priority.
+0x164a916	0x26feaa8	24	Change to standard orders mode.
+0x164a992	0x26feac0	24	Change to blueprint-only mode.
+0x164a9cc	0x26fead8	24	Change blueprints to standard selections.
+0x164aa48	0x26feaf0	24	Change standard selections to blueprints.
+0x164aa7e	0x26feb08	24	Show advanced options.
+0x164aaec	0x26feb20	24	Hide advanced options.
+0x164ab96	0x26feb38	24	Designate items for dumping and melting, claim forbidden items and buildings, and set item visibility.
+0x164ac19	0x26feb50	24	Finish setting item/building designations.
+0x164ac53	0x26feb68	24	Claim a forbidden item or building so it will be used by your citizens.
+0x164acd0	0x26feb80	24	Forbid your citizens from using an item or building.
+0x164ad0a	0x26feb98	24	Designate an item for dumping in a dumping zone.
+0x164ad7d	0x26febb0	24	Remove dumping designations.
+0x164adb7	0x26febc8	24	Designate an item for melting at any smelter.
+0x164adf1	0x26febe0	24	Remove melting designations.
+0x164ae2b	0x26febf8	24	Remove hidden designations.
+0x164aeb8	0x26fec10	24	Hide an item or building from your view.  Citizens will still use it.
+0x164aef2	0x26fec28	24	Hold left button to draw.
+0x164af71	0x26fec40	24	Left click to choose corners of a rectangle.
+0x164afab	0x26fec58	24	Set high and low traffic areas.
+0x164afe5	0x26fec70	24	Finish setting traffic areas.
+0x164b070	0x26fec88	24	Set a high traffic area.  Use this in wide central passages.
+0x164b0aa	0x26feca0	24	Set a normal traffic area, the default state.
+0x164b0e4	0x26fecb8	24	Set a low traffic area.  Citizens will look for better routes.
+0x164b11e	0x26fecd0	24	Set a restricted traffic area.  Citizens will look hard for better routes.  They will still use the area if other routes do not exist or are too long.
+0x164b18e	0x26fece8	24	Hold left button to draw.
+0x164b20d	0x26fed00	24	Left click to choose corners of a rectangle.
+0x164b283	0x26fed18	24	Set the exact weight in steps of a traffic type.
+0x164b2f3	0x26fed30	24	Show advanced options.
+0x164b363	0x26fed48	24	Hide advanced options.
+0x164b39d	0x26fed60	24	Remove mining, woodcutting, plant gathering, and smoothing orders.
+0x164b416	0x26fed78	24	Finish removing mining etc. orders.
+0x164b450	0x26fed90	24	Place structures and work areas that require construction materials.
+0x164b4c7	0x26feda8	24	Finish placing structures.
+0x164b53c	0x26fedc0	24	Place stockpiles for item storage.
+0x164b5b3	0x26fedd8	24	Finish placing stockpiles.
+0x164b661	0x26fedf0	24	Start painting a new stockpile.  Once the tiles are chosen, you'll be able to set the details.
+0x164b69b	0x26fee08	24	Left click to choose corners of a rectangle.
+0x164b70b	0x26fee20	24	Hold left button to draw.
+0x164b745	0x26fee38	24	Remove the stockpile being painted permanently.  Also removes existing zones!
+0x164b77f	0x26fee50	24	Repaint this stockpile.
+0x164b7b9	0x26fee68	24	Erase a portion of this stockpile.
+0x164b7f3	0x26fee80	24	Remove this stockpile permanently.
+0x164b89f	0x26fee98	24	Toggle whether the stockpile can take items from anywhere or only from specific workshops and stockpiles.
+0x164b8d9	0x26feeb0	24	Set from which workshops and stockpiles this stockpile gives and takes items.
+0x164b966	0x26feec8	24	Set how many barrerls, bins, and wheelbarrows this stockpile can use.
+0x164b9a0	0x26feee0	24	Place zones to establish meeting areas, pastures, and more.
+0x164b9da	0x26feef8	24	Finish placing zones.
+0x164ba7a	0x26fef10	24	Start painting a new zone.  Once the tiles are chosen, you'll be able to set the details.
+0x164bb02	0x26fef28	24	Go to the previous zone overlapping the tile you clicked.
+0x164bb83	0x26fef40	24	Go to the next zone overlapping the tile you clicked.
+0x164bbea	0x26fef58	24	Repaint this zone.
+0x164bc61	0x26fef70	24	Erase a portion of this zone.
+0x164bcf2	0x26fef88	24	Suspend activities in this zone.  Does not remove the zone.
+0x164bd69	0x26fefa0	24	Remove this zone permanently.
+0x164be02	0x26fefb8	24	Gather fruit in trees in and just above this zone.  Requires a stepladder.
+0x164be83	0x26fefd0	24	Gather fruit and vegetables from shrubs in this zone.
+0x164bef1	0x26fefe8	24	Gather fallen fruit in this zone.
+0x164bf93	0x26ff000	24	Select animals to be placed in this pasture zone.  They will stay after being led here.
+0x164c03a	0x26ff018	24	Designate this zone as the top of a pit.  Citizens will not fill the pit below with water.
+0x164c0f8	0x26ff030	24	Designate this zone as the top of a pond.  Citizens will bring buckets of water if the pond below isn't filled.
+0x164c1cc	0x26ff048	24	Select animals to be dropped into the pit or pond below this zone.  Animals will not feel obligated to stay if they can find a way out.
+0x164c2b7	0x26ff060	24	Assign a new or existing location to this zone.  Locations are groups of zones and rooms with a larger purpose, like a tavern, a temple, a library, or a craft guildhall.
+0x164c333	0x26ff078	24	Set details for the assigned location.
+0x164c36d	0x26ff090	24	Select this option and any unassigned deceased citizens will be buried here automatically.
+0x164c40d	0x26ff0a8	24	Select this option and any unassigned deceased pets will be buried here automatically.
+0x164c447	0x26ff0c0	24	Choose which squads will use this barracks.
+0x164c4c6	0x26ff0d8	24	Left click to choose corners of a rectangle.
+0x164c536	0x26ff0f0	24	Hold left button to draw.
+0x164c5c6	0x26ff108	24	Remove the zone being painted permanently.  Also removes existing zones!
+0x164c6cd	0x26ff120	24	Your citizens will drink at a water source zone or gather water using buckets for various tasks.  This is useful if you don't have a functioning well and you want to control exactly where the tasks take place.
+0x164c707	0x26ff138	24	Citizens assigned to the fishing work detail will fish in this zone if it exists.  Otherwise, they will fish everywhere.
+0x164c7c2	0x26ff150	24	Plant gathering zones are used in locations where plants will be gathered frequently.  Use the gather designation otherwise.
+0x164c8a3	0x26ff168	24	Items designated for dumping will be tossed into open air spaces included in this zone.  If no open air tiles are included, they will dump the items on the floor.
+0x164c94f	0x26ff180	24	Certain livestock need to graze on grass.  Assign these animals to a pasture zone.  No fencing is needed.
+0x164c989	0x26ff198	24	Animals assigned to pit/pond zones are dumped in the pit, but will leave the zone afterward if possible.  If the pit is designated as a pond, your citizens will attempt to fill it with water using buckets.
+0x164ca54	0x26ff1b0	24	Your citizens will fill sand bags at this zone if a sandy floor or sandy wall is included.  This task is initiated manually at the glass furnace.
+0x164cb13	0x26ff1c8	24	Your citizens will collect clay at this zone if a clay floor or clay wall is included.  This task is initiated manually at the kiln.
+0x164cc14	0x26ff1e0	24	This important zone is where your citizens will gather to socialize.  Crucially, the meeting area is where locations such as taverns, temples, hospitals, and the like are established.
+0x164cc4e	0x26ff1f8	24	Animals that are capable of being trained receive their training at this zone once they have been assigned a trainer from the Pets/Livestock menu.  Generally, a piece of meat is required.
+0x164cd25	0x26ff210	24	Your citizens will sleep in bedrooms.  It should include a bed!  Try to enclose it with walls and/or doors.  Do not overlap with other rooms.
+0x164ce1f	0x26ff228	24	Your citizens will eat at this zone.  When not assigned to a particular citizen, citizens without their own dining hall will eat here.  Tables and adjacent chairs should be included.
+0x164cf05	0x26ff240	24	An office or study is required for certain official tasks, such as approving work orders and bookkeeping.  A chair or throne is required for these functions.
+0x164cf3f	0x26ff258	24	Your archers can train in this zone if there is an archery target included.
+0x164cff0	0x26ff270	24	Squads should be assigned to a barracks.  The squad can be set to train, sleep, and store equipment there.
+0x164d089	0x26ff288	24	Dormitories should include multiple beds and will not belong to a particular citizen.
+0x164d135	0x26ff2a0	24	Prisoners convicted in the Justice menu can be incarcerated at a chain or metal cage in the dungeon zone.
+0x164d1ed	0x26ff2b8	24	Deceased citizens and pets can be laid to rest in a tomb.  It should include a coffin, casket, or sarcophagus.
+0x164d227	0x26ff2d0	24	Establish burrows to organize work and living spaces in larger fortresses.
+0x164d261	0x26ff2e8	24	Finish establishing burrows.
+0x164d2e0	0x26ff300	24	Left click to choose corners of a rectangle.
+0x164d350	0x26ff318	24	Hold left button to draw.
+0x164d38a	0x26ff330	24	Remove the burrow being painted permanently.  Also removes existing burrows!
+0x164d3ef	0x26ff348	24	Repaint this burrow.
+0x164d429	0x26ff360	24	Erase a portion of this burrow.
+0x164d4a9	0x26ff378	24	Remove this burrow permanently.
+0x164d515	0x26ff390	24	Recenter on this burrow.
+0x164d54f	0x26ff3a8	24	Toggle whether workshops can source materials from outside the burrow.
+0x164d63a	0x26ff3c0	24	Suspend this burrow.  Assigned citizens will not respect burrow restrictions while a burrow is suspended, but all tasks within the burrow will still function.
+0x164d6a8	0x26ff3d8	24	Set hauling routes for minecarts.
+0x164d726	0x26ff3f0	24	Finish setting hauling routes.
+0x164d7d1	0x26ff408	24	Add a stop to this route.  Minecarts will move between stops when conditions are satisfied.
+0x164d86c	0x26ff420	24	Assign a minecart to this route.  Only one vehicle can operate on each route.
+0x164d8ca	0x26ff438	24	Name this route.
+0x164d933	0x26ff450	24	Remove this route.
+0x164d9d3	0x26ff468	24	Set the items desired by the minecart at this stop.  Items must be in a linked stockpile.
+0x164da0d	0x26ff480	24	Link a stockpile to this stop.  Citizens will haul items to and from the minecart as you specify.  Items for the minecart must be specified using the desired items button to the left.
+0x164da98	0x26ff498	24	Set conditions for the minecart to move on to the next stop.
+0x164dafd	0x26ff4b0	24	Name this stop.
+0x164db5f	0x26ff4c8	24	Remove this stop.
+0x164db99	0x26ff4e0	24	The assigned vehicle is at this stop.
+0x164dc0f	0x26ff4f8	24	The assigned vehicle is moving toward this stop.
+0x164dcd5	0x26ff510	24	The assigned vehicle wants to be at this stop but is not currently there.  A worker may be bringing it, or it may be stranded.
+0x164dd4a	0x26ff528	24	Open the citizen information menu.
+0x164ddcc	0x26ff540	24	Open the task information menu.
+0x164de36	0x26ff558	24	Open the place information menu.
+0x164de9b	0x26ff570	24	Open the labor menu.
+0x164df12	0x26ff588	24	Open the work orders menu.
+0x164df8a	0x26ff5a0	24	Open the nobles and administrators menu.
+0x164dff8	0x26ff5b8	24	Open the objects menu.
+0x164e06a	0x26ff5d0	24	Open the squad sidebar.
+0x164e0d8	0x26ff5e8	24	Open the world screen.
+0x164e146	0x26ff600	24	Open the justice menu.
+0x164e180	0x26ff618	24	Toggle whether the stockpile allows plant and animal-based objects, regardless of other settings.
+0x164e225	0x26ff630	24	Toggle whether the stockpile allows non-plant-and-animal-based objects, regardless of other settings.
+0x164e2b4	0x26ff648	24	Toggle whether goods banned by export mandates are listed.
+0x164e31e	0x26ff660	24	Sort by distance from the depot.
+0x164e37e	0x26ff678	24	Sort by value.
+0x164e3b8	0x26ff690	24	(De)select all currently displayed items
+0x164e43b	0x26ff6a8	24	Leave menu and recenter the view on the time.
+0x164e475	0x26ff6c0	24	Leave menu and open the item's sheet.
+0x164e51c	0x26ff6d8	24	Toggle the forbidden status of the item.  Citizens will not use forbidden items or buildings.
+0x164e5b4	0x26ff6f0	24	Toggle the dump status of the item.  Items are dumped in dumping zones.
+0x164e641	0x26ff708	24	Toggle the melt status of the item.  Items are melted at any smelter.
+0x164e67b	0x26ff720	24	Toggle the visibility of the item.  Hidden items cannot be seen but citizens will still use them.
+0x164e75e	0x26ff738	24	Create a new work order.  Work orders are like workshop jobs but they are assigned to shops automatically and can be activated with various conditions.
+0x164e7d5	0x26ff750	24	This work order is active.
+0x164e859	0x26ff768	24	This work order is waiting for its next scheduled check.
+0x164e893	0x26ff780	24	This work order is checking its conditions for activation.
+0x164e908	0x26ff798	24	This work order is ready to activate.
+0x164e9a0	0x26ff7b0	24	Set the maximum number of workshops that can be used by the work order.
+0x164ea21	0x26ff7c8	24	This work order has been validated by the manager.
+0x164ea5b	0x26ff7e0	24	This work order has not been validated by the manager.  A manager can be employed in the nobles and administrators menu, and they must have an assigned office where they will work to validate orders.
+0x164eae3	0x26ff7f8	24	Change the number of times the task will be performed.
+0x164eb8a	0x26ff810	24	Change the work order priority.  Work orders at the top of the list will use workshops first.
+0x164ec5f	0x26ff828	24	Set the conditions for work order activation.  This can involve needed materials, the current stock of products, or the completion of other work orders.
+0x164ece2	0x26ff840	24	Set the material used or other details of the task.
+0x164ed54	0x26ff858	24	Remove this work order.
+0x164edd5	0x26ff870	24	Change the frequency that the conditions are checked.
+0x164ee67	0x26ff888	24	Add a condition to the work order that checks the amount of some item.
+0x164eea1	0x26ff8a0	24	Make the activation of the work order depend on the status of another work order.
+0x164eedb	0x26ff8b8	24	Change the amount of the item being checked.
+0x164ef59	0x26ff8d0	24	Change the inequality of the condition.
+0x164efdc	0x26ff8e8	24	Change the type of the item being checked.
+0x164f066	0x26ff900	24	Change the material of the item being checked.
+0x164f15f	0x26ff918	24	Change the properties of the item being checked.  Many of these are obscure and rely on specific tasks, but certain properties like 'empty' can be used in many conditions.
+0x164f203	0x26ff930	24	Change whether the work order must be activated or completed to satisfy this condition.
+0x164f23d	0x26ff948	24	Remove this condition.
+0x164f277	0x26ff960	24	Leave this menu and recenter on this creature.
+0x164f2b1	0x26ff978	24	Leave this menu and view this creature's sheet.
+0x164f2eb	0x26ff990	24	Leave this menu and recenter on this object.
+0x164f36e	0x26ff9a8	24	Leave this menu and view this object's sheet.
+0x164f3f5	0x26ff9c0	24	Leave this menu and recenter on this place.
+0x164f472	0x26ff9d8	24	Leave this menu and view this place's sheet or menu.
+0x164f4ef	0x26ff9f0	24	Leave this menu and recenter on the task's building.
+0x164f573	0x26ffa08	24	Set the details of this task, such as the material used.
+0x164f5f6	0x26ffa20	24	View a detailed description of this activity.
+0x164f67e	0x26ffa38	24	Toggle whether the task will be repeated indefinitely.
+0x164f6b8	0x26ffa50	24	Remove the current worker from the task.
+0x164f753	0x26ffa68	24	Suspend this task.  This removes the worker.  The task can be unsuspended.
+0x164f78d	0x26ffa80	24	Cancel this task.
+0x164f802	0x26ffa98	24	Assign a trainer to this creature.
+0x164f896	0x26ffab0	24	Assign this creature as a work animal for a specific citizen or resident.
+0x164f942	0x26ffac8	24	Toggle whether this creature will receive war training.  War animals have more lethal attacks.
+0x164f9e8	0x26ffae0	24	Toggle whether this creature will receive hunting training.  Hunting animals can move stealthfully during hunts.
+0x164fa8d	0x26ffaf8	24	Toggle whether this creature is available as a pet for any interested citizen or resident.
+0x164fafe	0x26ffb10	24	This creature is ecstatic right now.
+0x164fb6c	0x26ffb28	24	This creature is happy right now.
+0x164fbe3	0x26ffb40	24	This creature is pleased right now.
+0x164fc5a	0x26ffb58	24	This creature is content right now.
+0x164fcd6	0x26ffb70	24	This creature is displeased right now.
+0x164fd10	0x26ffb88	24	This creature is unhappy right now.
+0x164fd85	0x26ffba0	24	This creature is miserable right now.
+0x164fdbf	0x26ffbb8	24	This worker is specialized and will only do tasks that match their workshop assignments, work details, and occupations.  Click to toggle.
+0x164fdf9	0x26ffbd0	24	This worker is not specialized and will do any free tasks that become available.  Click to toggle.
+0x164fe67	0x26ffbe8	24	This creature is a tavern keeper.
+0x164fea1	0x26ffc00	24	This creature is a performer.
+0x164ff1c	0x26ffc18	24	This creature is a scholar.
+0x164ff93	0x26ffc30	24	This creature is a scribe.
+0x165000a	0x26ffc48	24	This creature is a mercenary.
+0x165007f	0x26ffc60	24	This creature is a monster slayer.
+0x16500f6	0x26ffc78	24	This creature is a doctor.
+0x1650170	0x26ffc90	24	This creature is assigned to a specific workshop.
+0x16501f7	0x26ffca8	24	This creature is assigned to a work detail.
+0x1650295	0x26ffcc0	24	Toggle whether this creature will be slaughtered at a butcher's shop when the opportunity arises.
+0x16502cf	0x26ffcd8	24	Toggle whether this creature will be gelded at a farmer's workshop when the opportunity arises.
+0x1650344	0x26ffcf0	24	This type is not relevant to brewing.
+0x16503b9	0x26ffd08	24	This type is restricted from brewing.
+0x165042e	0x26ffd20	24	This type is allowed to be brewed.
+0x1650468	0x26ffd38	24	This type is not relevant to cooking.
+0x16504a2	0x26ffd50	24	This type is restricted from cooking.
+0x1650517	0x26ffd68	24	This type is allowed to be cooked.
+0x1650593	0x26ffd80	24	Open the announcements screen.
+0x16505fc	0x26ffd98	24	Rename this location.
+0x1650697	0x26ffdb0	24	This option allows visitors from outside the fortress to enter this location.
+0x1650737	0x26ffdc8	24	This option allows long-term residents of the fortress to enter this location.
+0x1650771	0x26ffde0	24	This option indicates that the location is only open to fortress citizens.
+0x16507f3	0x26ffdf8	24	This option indicates that the location is only open to members.
+0x165082d	0x26ffe10	24	Remove this worker from this occupation.
+0x16508a4	0x26ffe28	24	Set the camera to follow this item.
+0x165092f	0x26ffe40	24	This item is tagged by a task and will not be used by other tasks.
+0x16509a8	0x26ffe70	24	See this creature's combat history.
+0x1650a3b	0x26ffe58	24	Customize this creature's nickname and profession nickname.
+0x1650abb	0x26ffe88	24	Set the camera to follow this creature.
+0x1650b48	0x26ffea0	24	Send this creature to a linked site, or expel this creature entirely.
+0x1650bc9	0x26ffeb8	24	This item is part of the assigned squad equipment.
+0x1650c03	0x26ffed0	24	This item is a tool assigned by a work detail.
+0x1650c84	0x26ffee8	24	This item is a symbol of a noble or administrator.
+0x1650cbe	0x26fff00	24	This item is part of the creature's regular clothing.
+0x1650d32	0x26fff18	24	View this item's sheet.
+0x1650dad	0x26fff30	24	View this creature's sheet.
+0x1650de7	0x26fff48	24	View details about this knowledge.
+0x1650e5e	0x26fff60	24	Recenter on this creature.
+0x1650ed7	0x26fff78	24	View this creature's sheet.
+0x1650f45	0x26fff90	24	Recenter on this item.
+0x1650fb0	0x26fffa8	24	Name this building.
+0x1651019	0x26fffc0	24	Remove this building.
+0x1651053	0x26fffd8	24	This task has been assigned and is active.
+0x16510c1	0x26ffff0	24	This task came from a work order.
+0x1651139	0x2700008	24	This task is set to repeat indefinitely.
+0x16511c1	0x2700020	24	Click to set this task to repeat indefinitely.
+0x16511fb	0x2700038	24	This task is highest priority among all tasks everywhere.
+0x1651235	0x2700050	24	Click to set this task as highest priority among all tasks everywhere.
+0x165126f	0x2700068	24	Increase the priority of the task in this workshop.
+0x16512d3	0x2700080	24	Set details for this task, such as the material to be used.
+0x1651337	0x2700098	24	This task has been suspended.
+0x165139b	0x27000b0	24	Click to suspend the task.  Assigned workers are removed from suspended tasks.
+0x16513fd	0x27000c8	24	Cancel this task.
+0x1651464	0x27000e0	24	Create a new work order for this workshop.  Work orders are tasks that can repeat specified numbers of times and which can be given start conditions.  This is useful for automation.
+0x16514ce	0x27000f8	24	Recenter on the linked building.
+0x1651532	0x2700110	24	Add stockpile links for this workshop.
+0x165156c	0x2700128	24	This item is a permanent part of the building.  Forbid and visibility tags set here affect the whole building.
+0x16515a6	0x2700140	24	This item is being traded.
+0x165160a	0x2700158	24	This is a small creature within the trap.
+0x165166e	0x2700170	24	This item is bait.
+0x16516d2	0x2700188	24	This item has been loaded.
+0x1651736	0x27001a0	24	This item is resting within the building.
+0x165179a	0x27001b8	24	This item is a semi-permanent part of the building, like an item on display.
+0x16517fe	0x27001d0	24	View this item's sheet.
+0x1651865	0x27001e8	24	Toggle the forbidden status of the item.  Citizens will not use forbidden items or buildings.  If a permanent building item is forbidden, citizens will not perform tasks there!
+0x16518c9	0x2700200	24	Toggle the dump status of the item.  Items are dumped in dumping zones.
+0x165192d	0x2700218	24	Toggle the melt status of the item.  Items are melted at any smelter.
+0x1651994	0x2700230	24	Toggle the visibility of the item.  Hidden items cannot be seen but citizens will still use them.  If a permanent building item is invisible, the building will be too!
+0x16519f8	0x2700248	24	The soldiers can either keep their equipment on at all times, or only when an order is active.
+0x1651a32	0x2700260	24	The soldiers can be allowed to sleep in their rooms whenever they way, or in the barracks either when they want or only when they must.
+0x1651a96	0x2700278	24	Cancel this scheduled order.
+0x1651afa	0x2700290	24	Cancel this position's scheduled orders.
+0x1651b5e	0x27002a8	24	Change the squad's symbol.
+0x1651bca	0x27002c0	24	View the leader's sheet.
+0x1651c04	0x27002d8	24	The squad leader is traveling or otherwise occupied off-site.
+0x1651c3e	0x27002f0	24	View the positions in this squad.
+0x1651ca2	0x2700308	24	Customize the squad's name.
+0x1651d06	0x2700320	24	Assign a station order.  The soldiers will stand near the point selected and engage any hostile creatures that come near.
+0x1651d6a	0x2700338	24	Assign a kill order.  The soldiers will attempt to kill a targeted creature.
+0x1651dce	0x2700350	24	Assign a patrol order.  The soldiers will walk a specified route repeatedly.
+0x1651e32	0x2700368	24	Assign a burrow defense order.  The soldiers will patrol the burrow and attack any hostile creatures.
+0x1651e96	0x2700380	24	Assign a training order.  The squad must be assigned to a barracks zone with the training option set.
+0x1651ed0	0x2700398	24	Cancel an order.  Does not affect scheduled orders.
+0x1651f34	0x27003b0	24	Disband the squad.
+0x1651f98	0x27003c8	24	Inspect the route.
+0x1651ffc	0x27003e0	24	Recenter on the announcement's location.
+0x1652060	0x27003f8	24	Recenter on the creature (at the time of the announcement.)
+0x16520c4	0x2700410	24	Recenter on the item (at the time of the announcement.)
+0x1652128	0x2700428	24	Toggle whether the squad will sleep here.
+0x165218c	0x2700440	24	Toggle whether the squad will train here.
+0x16521f0	0x2700458	24	Toggle whether the soldiers will store their individually assigned weapons and armor here.
+0x1652254	0x2700470	24	Toggle whether the squad will store squad-level equipment here, such as ammunition.
+0x16522b8	0x2700488	24	Choose a stockpile to which the track stop's vehicle will give items.
+0x165231c	0x27004a0	24	Choose a stockpile from which the track stop's vehicle will take items.
+0x1652383	0x27004b8	24	Choose a stockpile with which the track stop's vehicle will exchange items.  The vehicle will take desired items and offload any others.
+0x16523e7	0x27004d0	24	Choose a stockpile to which the workshop will give items.
+0x1652421	0x27004e8	24	Choose a stockpile from which the workshop will take items.
+0x1652485	0x2700500	24	Choose a stockpile to which the selected stockpile will give items.
+0x16524e9	0x2700518	24	Choose a stockpile from which the selected stockpile will take items.
+0x1652523	0x2700530	24	The track stop's vehicle will exchange items with this stockpile.  The vehicle will take desired items and offload any others.
+0x165255d	0x2700548	24	The track stop's vehicle will take items from this stockpile.
+0x16525c1	0x2700560	24	The track stop's vehicle will give items to this stockpile.
+0x16525fb	0x2700578	24	The selected workshop will take items from here.
+0x165265f	0x2700590	24	The selected workshop will give items to here.
+0x16526c3	0x27005a8	24	The selected stockpile will take items from here.
+0x1652727	0x27005c0	24	The selected stockpile will give items to here.
+0x1652793	0x27005d8	24	The creature is chained.
+0x16527cd	0x27005f0	24	The creature is caged.
+0x1652831	0x2700608	24	The creature is set to be chained.
+0x165289b	0x2700620	24	The creature is set to be caged.
+0x16528ff	0x2700638	24	The creature is assigned to a pasture.
+0x1652963	0x2700650	24	The creature is assigned to a pond.
+0x165299d	0x2700668	24	The creature is assigned to a pit.
+0x1652a01	0x2700680	24	Edit the recenter hotkey locations.
+0x1652a65	0x2700698	24	Recenter on the surface at this location.
+0x1652a9f	0x27006b0	24	Recenter on the deepest discovered area at this location.
+0x1652b03	0x27006c8	24	Recenter on this location.
+0x1652b67	0x27006e0	24	Set this entry to recenter on the current view.
+0x1652bcb	0x27006f8	24	Clear this recenter hotkey location.
+0x1652c05	0x2700710	24	Delete this recenter location.
+0x1652c69	0x2700728	24	Display water and magma depth numerically (1 to 7.)
+0x1652ccd	0x2700740	24	Show up and down arrows over ramps at the current elevation.
+0x1652d31	0x2700758	24	Zoom in on the play area.
+0x1652d95	0x2700770	24	Zoom out from the play area.
+0x1652df9	0x2700788	24	Open the stocks window, where you can see all of your fortress's items.
+0x1652e33	0x27007a0	24	View all alerts.
+0x1652e9a	0x27007d0	24	Most tasks in the fortress are started and completed at workshops.  Tasks generally require raw materials and most workshops are constructed from boulders, blocks, or wood.
+0x1652f01	0x27007e8	24	Furnaces are used for smelting, glassmaking, pottery, ashmaking, or to make fuel from wood or raw coal.  Furnaces require fuel to function, or they can be set above magma.
+0x1652f65	0x2700800	24	These workshops are used in the clothesmaking process, whether dyeing and weaving or using tanned hides.
+0x1652f9f	0x2700818	24	A wide variety of food-and-drink-related workshops can be found in this category.
+0x1653003	0x2700830	24	Use options in this category to place furniture that has already been constructed in a workshop.
+0x1653067	0x2700848	24	Place doors and hatches here after you have constructed them in an appropriate workshop.
+0x16530a1	0x2700860	24	Most terrain-altering constructions can be found here, from walls and floors to bridges, ramps, stairs, and more.
+0x1653105	0x2700878	24	More complicated buildings from wells to powered machine components to levers and floodgates are found here.
+0x165313f	0x2700890	24	Cages, ropes, and animal traps are found here.  Cages can be used in cage traps or to transport large animals.  Metal cages and chains are also used by the justice system.
+0x1653179	0x27008a8	24	Various mechanical traps can be found here.  The pressure plate is also found here, which has applications beyond traps.
+0x16531dd	0x27008c0	24	Archery targets, siege weapons, and some ornamental display items can be found in this category.
+0x1653244	0x27008d8	24	This crucial building is where all trading will be done.  Pack animals from distant civilizations will need to access this building from the edge of the map.  Later, wagons will need a clear 3-wide path to the depot.
+0x16532a8	0x27008f0	24	Used to make lye, potash, and milk of lime.  Construction requires blocks, barrel, and a bucket.
+0x165330f	0x2700908	24	Make crossbows here from wood or bone.  The metalsmith's forge can be used for metal crossbows and metal bolts, and the crafts workshop is used to make other bolts.
+0x1653373	0x2700920	24	Make beds and various furniture here, as well as bins, barrels, and more.
+0x16533ad	0x2700938	24	Make crafts for trade and your own citizens here, as well as a variety of tools, armor, and bolts.
+0x1653411	0x2700950	24	Cut rough gems here to increase their value, and improve the value of other objects by encrusting them with cut gems.
+0x1653478	0x2700968	24	Forge weapons and armor here, as well as most other metal objects from furniture to trap components.  Magma below the forge will power tasks.  You are responsible for placing the forge above the magma, but no other fuel is required.
+0x16534df	0x2700980	24	Make mechanisms here which are used to make levers, pressure plates, and gears.  You can also use mechanisms to link levers and pressure plates to other machinery.
+0x1653519	0x2700998	24	Forge weapons and armor here, as well as most other metal objects from furniture to trap components.  These tasks require fuel.
+0x165357d	0x27009b0	24	Here you can make parts for ballistae and catapults.  This workshop is also the place where ballista ammo is assembled.
+0x16535e1	0x27009c8	24	Make stone furniture here, as well as blocks which are used in constructions.
+0x1653645	0x27009f8	24	Use leather tanned at the tanner's shop here to make clothing and tools, such as bags and waterskins.
+0x16536a9	0x2700a10	24	Here you can turn thread into cloth, whether it is thread from the farmer's workshop or spider silk gathered underground.
+0x165370d	0x2700a28	24	Make cloth into clothing and tools here, such as bags and ropes.
+0x1653747	0x2700a40	24	Use dyes here to color thread and cloth.  Requires a barrel and bucket for construction.
+0x1653781	0x2700a58	24	Brew alcohol from plants, fruit, or honey.
+0x16537e5	0x2700a70	24	Slaughter livestock here in order to obtain meat, hides, bones, and other animal products.
+0x1653849	0x2700a88	24	Make leather from animal hides here.  You can also make parchment using milk of lime and a hide.
+0x16538ad	0x2700aa0	24	Process raw fish into edible food here.  Raw fish will not be eaten.
+0x16538e7	0x2700ab8	24	Cook meals here.  You can also render fat into tallow.
+0x165394b	0x2700ad0	24	Process plants and work with livestock here.  Milk and shear animals, make cheese, and spin thread.
+0x1653985	0x2700ae8	24	Make sugar, flour, and various useful slurries here.  Tasks are completed very slowly compared to the powered millstone.
+0x16539bf	0x2700b00	24	Capture and train small animals here.  Requires animal traps.
+0x1653a26	0x2700b18	24	Make sugar, flour, and various useful slurries here.  Powered version of the quern.  Must be hooked to a windmill or water wheel to function.
+0x1653a8d	0x2700b30	24	You can make a variety of objects using three different types of glass.  You can also collect sand in bags from a task originating here, if you have a sand collection zone.  Glassmaking requires fuel.
+0x1653ac7	0x2700b48	24	Bake clay objects here, as well as a few other useful materials.  Clay can also be collected here if you have a clay collection zone.  All tasks require fuel aside from clay collection.
+0x1653b5c	0x2700b60	24	You can make a variety of objects using three different types of glass.  You can also collect sand in bags from a task originating here, if you have a sand collection zone.  Magma below the furnace will power tasks.  You are responsible for placing the furnace above the magma, but no other fuel is required.
+0x1653bf1	0x2700b78	24	Bake clay objects here, as well as a few other useful materials.  Clay can also be collected here if you have a clay collection zone.  Magma below the kiln will power tasks.  You are responsible for placing the kiln above the magma, but no other fuel is required.
+0x1653c58	0x2700b90	24	Make metal bars from ore here.  Can also refine coal into usable fuel or make alloys.  Magma below the smelter will power tasks.  You are responsible for placing the smelter above the magma, but no other fuel is required.
+0x1653cbc	0x2700ba8	24	Make metal bars from ore here.  Can also refine coal into usable fuel or make alloys.  All tasks require fuel.
+0x1653d20	0x2700bc0	24	Make charcoal and ash from wood here.  Does not require fuel.
+0x1653d87	0x2700bf0	24	Plant crops at the farmplot.  You will need seeds or spawn and must select crops by season.  Crops can be fertilized with potash.  Soil is richer deeper underground.
+0x1653deb	0x2700c08	24	When placed, a female bird will claim the box and start laying eggs, if one is available.
+0x1653e25	0x2700c20	24	Keep a colony of insects at your hives.  A wild colony must be collected after the hive is placed, or a colony can be split from an existing hive colony.
+0x1653e5f	0x2700c38	24	Your citizens need a comfortable place to sleep.  A bed object must be made at the carpenter's shop before it can be placed.
+0x1653ec6	0x2700c50	24	Chairs are required for offices to function, and a chair next to a table is the preferred dining arrangement.  A chair/throne object must be made before it can be placed.
+0x1653f2d	0x2700c68	24	Tables are required for dining.  A chair should be placed adjacent to the table.  A table object must be made before it can be placed.
+0x1653f67	0x2700c80	24	Chests and coffers are used in personal bedrooms for storing non-clothing objects.  They are also used in some zone-based locations like taverns, hospitals, and libraries for storing useful materials.  A box object must be made before it can be placed.
+0x1653fcb	0x2700c98	24	Cabinets are used in personal bedrooms for storing clothing objects.  A cabinet object must be made before it can be placed.
+0x1654032	0x2700cb0	24	The dead are buried in coffins.  Coffins must be placed in their own tomb zone in order to work.  A coffin object must be made before it can be placed.
+0x1654099	0x2700cc8	24	Citizens that cannot be buried properly can still be memorialized on slabs.  Slabs are created and engraved at the stoneworker's shop.
+0x1654100	0x2700ce0	24	Statues can be used to decorate your fortress and add value to your rooms.  A statue object must be made at an appropriate workshop first.
+0x165413a	0x2700cf8	24	Certain injuries such as overlapping fractures require advanced medical contraptions like the traction bench for treatment.  A traction bench object must be made before it can be placed.
+0x165419e	0x2700d10	24	Codices and scrolls in your library can be stored in bookcases.  A bookcase object must be made before it can be placed.
+0x1654205	0x2700d28	24	Your most valuable objects can be placed for display in rooms to increase their value and to entertain passing citizens.  A pedestal or display case must be made before it can be placed.
+0x165426c	0x2700d40	24	These ornamental objects increase the value of rooms in which they are placed.  An offering place object must be made before it can be placed.
+0x16542d3	0x2700d58	24	Large instruments must be placed in taverns or temples before they will be used.  These instruments must be assembled at a workshop first.
+0x165430d	0x2700d70	24	Doors can be used along with walls to enclose rooms, which is especially important when placing multiple zones at once.  Doors can also be forbidden or attached to levers to control movement in the fort.
+0x1654374	0x2700d88	24	Hatches can be placed at the tops of stairwells or above ramps to control movement in the fort when they are forbidden or attached to levers.
+0x16543ae	0x2700da0	24	Bridges can be used to span open spaces or placed above water or magma.  Bridges can be connected to levers and raised to block access.
+0x1654412	0x2700db8	24	Paved roads use less materials than constructed floors and can be used to stop plants from growing over wagon trails.
+0x1654476	0x2700dd0	24	Dirt roads do not require materials, but the dirt road may quickly be overgrown by plants.
+0x16544b0	0x2700de8	24	Blocks creatures but allows the passage of fluids and items.  Can be built on any floor.  Grates unlike bars have a quality and enhance the value of rooms.  Grates can be connected to levers.
+0x1654517	0x2700e00	24	Blocks creatures but allows the passage of fluids and items.  Can be built over empty spaces, stairs, ramps, or above liquids.  Grates unlike bars have a quality and enhance the value of rooms.  Grates can be connected to levers.
+0x165457e	0x2700e18	24	Blocks creatures but allows the passage of fluids and items.  Can be built on any floor.  Bars unlike grates do not have a quality and so do not enhance the value of rooms significantly.  Bars can be connected to levers.
+0x1654613	0x2700e30	24	Blocks creatures but allows the passage of fluids and items.  Can be built over empty spaces, stairs, ramps, or above liquids.  Bars unlike grates do not have a quality and so do not enhance the value of rooms significantly.  Bars can be connected to levers.
+0x165467a	0x2700e48	24	This ornamental construction can enhance the value of rooms.  A window object must be made at a glass furnace before it can be placed.
+0x16546b4	0x2700e60	24	This ornamental construction can enhance the value of rooms.  Three cut gem objects must be made at a jeweler's shop before it can be placed.
+0x1654718	0x2700e78	24	Supports will stop cave-ins in the rare event you completely detach a piece of your fortress.  Otherwise, they are ornamental.
+0x165477f	0x2700e90	24	You can build walls aboveground, in caverns, or in spaces you have mined out in order to block the passage of creatures, objects, and fluids.  Requires boulder, block, or wood.
+0x16547e6	0x2700ea8	24	You can build reinforced walls aboveground, in caverns, or in spaces you have mined out in order to block the passage of creatures, objects, and fluids.  Requires two boulder, block, or wood, and metal bars.  Provides some resistance to invaders.
+0x165484a	0x2700ec0	24	You can place floors for functional reasons or to enhance the appearance of the fortress.  Requires boulder, block, or wood.
+0x16548b1	0x2700ed8	24	You can build a ramp next to a wall to provide access to the floor above.  The space above the ramp must also be empty.  Requires boulder, block, or wood.
+0x1654918	0x2700ef0	24	You can build staircases to connect different elevations.  Staircases must span at least two elevations.  Requires boulder, block, or wood.
+0x165497f	0x2700f08	24	Fortifications block creature movement but allow projectiles through.  Soldiers near fortifications are reasonably safe from incoming projectiles.  Requires boulder, block, or wood.
+0x16549e3	0x2700f20	24	Use minecart tracks in conjunction with the hauling menu.
+0x1654a4a	0x2700f38	24	Place the well in an open space above water to provide a relatively safe area for your citizens to draw water.  Requires mechanisms, blocks, a chain or rope, and a bucket.
+0x1654ab1	0x2700f50	24	Use floodgates to control the flow of fluids between spaces in your fortress.  Must be attached to a lever or pressure plate to function.  Requires a floodgate object to be built before it can be placed.
+0x1654aeb	0x2700f68	24	Use a screw pump to move liquids upward from the elevation below the pump to the same elevation as the pump.
+0x1654b4f	0x2700f80	24	Place the water wheel above flowing water to generate power for machines, such as the millstone or screw pump.
+0x1654bb6	0x2700f98	24	Place the windmill aboveground to generate power for machines, such as the millstone or screw pump.  Not all areas have strong winds.
+0x1654c1d	0x2700fb0	24	Use the gear assembly to connect axles and machinery together.  Gear assemblies can be disengaged temporarily by linking them to levers.
+0x1654c57	0x2700fc8	24	Horizontal axles transfer power on the same elevation.  Horizontal axles can be east-west or north-south.
+0x1654cbb	0x2700fe0	24	Vertical axles transfer power between two adjacent elevations.
+0x1654d1f	0x2700ff8	24	Rollers move minecarts on tracks without the need for a citizen to push or guide the minecart.
+0x1654d83	0x2701010	24	A chain can be placed for use in the justice system or for the restraint of an animal.
+0x1654dea	0x2701028	24	Cages can be used to contain an animal, and metal cages can be used by the justice system.  Glass cages can be filled with water and used as aquariums.
+0x1654e4e	0x2701040	24	Animal traps can be placed in the wild and baited with meat, plants, or gems, in order to catch small creatures.
+0x1654eb2	0x2701058	24	Track stops are used in conjunction with the hauling menu.  They can also be used to add friction to minecart tracks.
+0x1654f16	0x2701070	24	Levers are used with machines, doors, floodgates, bridges, cages, and other structures to change their state.
+0x1654f50	0x2701088	24	Pressure plates, like levers, are used with machines, doors, floodgates, bridges, cages, and other structures to change their state.  The trigger for pressure plates can be set by creature weight, fluid, or minecart passage.
+0x1654f8a	0x27010a0	24	Stone-fall traps drop a stone on intruders.  Must be loaded with boulders.
+0x1654ff1	0x27010b8	24	Weapon traps use a weapon or trap component to strike intruders.  Can be used with ranged weapons and loaded with ammo.  Can use multiple weapons at once.
+0x165502b	0x27010d0	24	Cage traps capture intruders in cages.  Must be loaded with a cage.
+0x1655092	0x27010e8	24	Upright weapons are a nasty place for intruders to fall upon.  Can also be linked to levers or pressure plates to raise them into intruders.
+0x16550f6	0x2701100	24	Archery targets are used in archery range zones for training archers.
+0x1655133	0x2701118	24	Ornamental.  Demanded by some nobles.
+0x1655169	0x2701130	24	Ornamental.  Demanded by some nobles.
+0x16551cd	0x2701148	24	A ballista fires a ballista arrow in a fixed direction.  The operator can adjust the aim freely within a cone.
+0x1655231	0x2701160	24	A catapult fires a boulder in a fixed direction.  The operator can adjust the aim freely within a cone.
+0x165526b	0x2701178	24	A bolt thrower fires a regular bolts rapidly.  The operator swivels the machine from any available adjacent tiles.
+0x16552cf	0x2701190	24	Create a creature to place in the arena.
+0x1655333	0x27011a8	24	Add or remove fluids.
+0x1655397	0x27011c0	24	Add water to the arena.
+0x16553d1	0x27011d8	24	Add magma to the arena.
+0x1655435	0x27011f0	24	Add snow to the arena.
+0x1655499	0x2701208	24	Add mud to the arena.
+0x16554fd	0x2701220	24	Remove fluids and spatter from the arena.
+0x1655561	0x2701238	24	Create a tree to place in the arena.
+0x165559b	0x2701250	24	Change the weather, temperature, and time.
+0x16555ff	0x2701268	24	Default attack is a strike without charging or wrestling.
+0x1655663	0x2701280	24	Default attack is a charging strike.
+0x165569d	0x2701298	24	Default attack is a wrestling move.
+0x1655701	0x27012b0	24	Choose default attack according to opponent.
+0x1655765	0x27012c8	24	Freely move between tiles when dodging if necessary
+0x16557c9	0x27012e0	24	Do not move from current tile when dodging even if it means being struck.
+0x165582d	0x27012f8	24	Dodge away from charging opponents to avoid being knocked over.
+0x1655891	0x2701310	24	Attempt to stop charging opponents, standing your ground.
+0x16558cb	0x2701328	24	Handle charging attacks according to the opponent.
+0x165592f	0x2701340	24	View all announcements.
+0x1655969	0x2701358	24	Recenter on yourself.
+0x16559bd	0x2701370	24	Move upward.
+0x1655a0b	0x2701388	24	Move downward.
+0x1655a6f	0x2701ce8	24	Move down to the north.
+0x1655aa9	0x2701d00	24	Move down to the south.
+0x1655b0d	0x2701d18	24	Move down to the west.
+0x1655b71	0x2701d30	24	Move down to the east.
+0x1655bab	0x2701d48	24	Move down to the northwest.
+0x1655c0f	0x2701d60	24	Move down to the northeast.
+0x1655c73	0x2701d78	24	Move down to the southwest.
+0x1655cad	0x2701d90	24	Move down to the southeast.
+0x1655cfb	0x27013a0	24	Travel.
+0x1655d62	0x27013b8	24	Sleep or wait a while.
+0x1655dc7	0x27013d0	24	Build. (coming soon)
+0x1655e29	0x27013e8	24	View your status.
+0x1655e66	0x2701400	24	View your log.
+0x1655ecb	0x2701418	24	Open your inventory.
+0x1655f2f	0x2701430	24	Set movement options.
+0x1655f93	0x2701448	24	Set combat options.
+0x1655ff7	0x2701460	24	Interact with nearby objects.
+0x1656031	0x2701478	24	Search for bugs.
+0x1656095	0x2701490	24	Climb or hold terrain.
+0x16560e3	0x27014a8	24	Jump somewhere.
+0x165611d	0x27014c0	24	Talk to somebody.
+0x1656181	0x27014d8	24	Start a performance.  This can take several turns to complete.
+0x16561e3	0x27014f0	24	Craft or butcher.
+0x1656237	0x2701508	24	Use ability.
+0x1656271	0x2701520	24	Strike somebody adjacent with a melee attack.  Also allows available parry, block, and dodge moves.
+0x16562d5	0x2701538	24	Wrestle somebody adjacent.  Also allows available parry, block, and dodge moves.
+0x165630f	0x2701550	24	Shoot.  Requires a ranged weapon and ammunition.
+0x1656373	0x2701568	24	Tactical mode is on.  You control everybody manually.  Click to control only this character (others will follow you.)
+0x16563ad	0x2701580	24	Tactical mode is off.  Companions are following you.  Click to control everybody.
+0x1656411	0x2701598	24	View your companions and tactical settings, or switch party members.
+0x1656475	0x27015b0	24	You are currently yielded.  Click to stop yielding.
+0x16564af	0x27015c8	24	You are not yielded.  Click to yield to opponents.
+0x1656513	0x27015e0	24	You have a weapon drawn.  Click to strap it.
+0x1656577	0x27015f8	24	You have a weapon available to draw.  Click to draw it.
+0x16565b1	0x2701610	24	You do not have a weapon.
+0x16565eb	0x2701628	24	You are a projectile.
+0x1656649	0x2701640	24	You are a rider.
+0x16566ad	0x2701658	24	You are prone.  Click to stand.
+0x16566e7	0x2701670	24	You are not prone.  Click to go prone.
+0x1656735	0x2701688	24	Close the map.
+0x1656788	0x27016a0	24	Go upward.
+0x16567c2	0x27016b8	24	Go downward.
+0x165680c	0x27016d0	24	View your log.
+0x165685a	0x27016e8	24	End travel.
+0x1656894	0x2701700	24	Toggle sneaking.
+0x16568e2	0x2701718	24	View the map.
+0x1656942	0x2701730	24	Sleep or wait a while.
+0x16569a6	0x2701748	24	Toggle cloud view.
+0x1656a0a	0x2701760	24	Toggle track view.
+0x1656a44	0x2701778	24	Drop an item.
+0x1656a92	0x2701790	24	Wear an item.
+0x1656ae0	0x27017a8	24	Remove an item.
+0x1656b44	0x27017c0	24	Put an item into a container.
+0x1656b7e	0x27017d8	24	Eat or drink an item.
+0x1656bb8	0x27017f0	24	Interact with an item in a different way.
+0x1656c06	0x2701808	24	View this item.
+0x1656c54	0x2701820	24	Drop this item.
+0x1656ca2	0x2701838	24	Wear this item.
+0x1656d04	0x2701850	24	Remove this item.
+0x1656d68	0x2701868	24	Put this item into a container.
+0x1656dcc	0x2701880	24	Eat or drink this item.
+0x1656e30	0x2701898	24	Interact with this item in a different way (opens menu.)
+0x1656e94	0x27018b0	24	This party member is currently automated in tactical mode.
+0x1656ef8	0x27018c8	24	This party member is manually controlled in tactical mode.
+0x1656f5c	0x27018e0	24	Assume control of this party member.
+0x1656fba	0x27018f8	24	Toggle sneaking.
+0x165701e	0x2701910	24	You are tangled in a web.
+0x1657080	0x2701928	24	You are sleeping.
+0x16570e5	0x2701940	24	You are unconscious.
+0x1657149	0x2701958	24	You are paralyzed.
+0x1657183	0x2701970	24	You are wrestling.
+0x16571bd	0x2701988	24	You are nauseated.
+0x16571f7	0x27019a0	24	You are stunned.
+0x1657245	0x27019b8	24	You are winded.
+0x16572a9	0x27019d0	24	You have are seriously injured.  View your status for more information.
+0x16572e3	0x27019e8	24	You have are injured.  View your status for more information.
+0x1657345	0x2701a00	24	You have a fever.
+0x16573a3	0x2701a18	24	You are thirsty.
+0x16573dd	0x2701a30	24	You are hungry.
+0x165742b	0x2701a48	24	You are drowsy.
+0x165748f	0x2701a60	24	You are stressed.  View your status for more information.
+0x16574f3	0x2701a78	24	You are distracted by unmet needs.  View your status for more information.
+0x1657551	0x2701a90	24	You are enraged.
+0x165758b	0x2701aa8	24	You are in a martial trance.
+0x16575ef	0x2701ac0	24	You are throwing a tantrum.
+0x1657653	0x2701ad8	24	You are depressed.
+0x16576b7	0x2701af0	24	You are oblivious.
+0x16576f1	0x2701b08	24	You are in a fell mood.
+0x1657755	0x2701b20	24	You are in a macabre mood.
+0x165778f	0x2701b38	24	You are in a fey mood.
+0x16577f3	0x2701b50	24	You are in a secretive mood.
+0x1657857	0x2701b68	24	You are possessed.
+0x1657891	0x2701b80	24	You are melancholy.
+0x16578df	0x2701b98	24	You are insane.
+0x1657919	0x2701bb0	24	You are berserk.
+0x1657953	0x2701bc8	24	You are catatonic.
+0x16579b7	0x2701be0	24	You are terrified.
+0x1657a1b	0x2701cd0	24	Toggle the display of spoor for tracking.
+
+# Dynamic unit-list widgets, installed Windows x64 Dwarf Fortress.exe.
+# For these rows the first column is an explicitly tagged PE file offset;
+# owner and width are dynamic rather than static initializer addresses.
+# All sort/filter siblings join the same complete-tooltip namespace.
+PE-file:0x17860f0	dynamic-unit-list	dynamic	Sort units by name.
+PE-file:0x17860c0	dynamic-unit-list	dynamic	Sort units by profession category.
+PE-file:0x1786130	dynamic-unit-list	dynamic	Sort units by profession name.
+PE-file:0x1786150	dynamic-unit-list	dynamic	Sort units by job.
+PE-file:0x1786110	dynamic-unit-list	dynamic	Sort units by stress level.
+PE-file:0x1786278	dynamic-unit-list	dynamic	Sort units by skills.
+PE-file:0x163dce8	dynamic-unit-list	dynamic	Sort units by how involved they are in the crime.
+PE-file:0x1786188	dynamic-unit-list	dynamic	Filter the unit list by name or job.
+
+# Adventure weather widgets, installed Windows x64 Dwarf Fortress.exe.
+# PE file offsets identify complete, NUL-terminated native descriptions.
+# These runtime tooltips share the toolbar's whole-source matching and layout.
+PE-file:0x16d0bc0	dynamic-weather	dynamic	There is no wind here.
+PE-file:0x166fdb0	dynamic-weather	dynamic	It is hot.
+PE-file:0x166fdc0	dynamic-weather	dynamic	It is cold.
+PE-file:0x16d0528	dynamic-weather	dynamic	It is cool.
+PE-file:0x16d0538	dynamic-weather	dynamic	It is freezing.
+PE-file:0x16d0588	dynamic-weather	dynamic	It is deathly cold.
+PE-file:0x16d05a0	dynamic-weather	dynamic	The temperature is pleasant.
+PE-file:0x16d05c0	dynamic-weather	dynamic	It is scorching.
+PE-file:0x16d05d8	dynamic-weather	dynamic	It is warm.
+PE-file:0x16d05e8	dynamic-weather	dynamic	Being dead is cold and clammy.
+PE-file:0x16d0608	dynamic-weather	dynamic	The temperature is as it has been and always will be.
+PE-file:0x16d0640	dynamic-weather	dynamic	The temperature cannot be judged.
+PE-file:0x16d0668	dynamic-weather	dynamic	It is burning.
+
+# Complete weather family from the installed Windows x64 image. PE-compose
+# marks the native builder's virtual address, not a file offset. Each row is a
+# complete submitted sentence; the native paragraph width is 24 columns.
+# Cloud / fog / ordinary precipitation builders: 0x140af285b-0x140af3341.
+# Wind builder 0x140af3488-0x140af35ad: There is a + four strengths +
+# blowing from the + eight directions + period. No global fragment rules.
+# Sun builder 0x140af374d-0x140af3995: eleven positions, optional behind the
+# clouds; seven complete night / obscured-sky / special-area alternatives.
+# Moon builder 0x140af3aff-0x140af3d7d: eight phases with eleven positions.
+# Obscured moon uses plain moon (not a phase) plus one of three cloud states.
+PE-file:0x16d0428	dynamic-weather	dynamic	There is a thin mist here.
+PE-file:0x16d0410	dynamic-weather	dynamic	Fog enshrouds the area.
+PE-file:0x16d03d8	dynamic-weather	dynamic	There is a heavy blanket of fog enveloping everything.
+PE-file:0x16d0378	dynamic-weather	dynamic	There is a thin mist outside.
+PE-file:0x166f640	dynamic-weather	dynamic	There is fog outside.
+PE-file:0x16d0448	dynamic-weather	dynamic	There is thick fog outside.
+PE-file:0x166f888	dynamic-weather	dynamic	It is raining.
+PE-file:0x16d0398	dynamic-weather	dynamic	It is raining outside.
+PE-file:0x166f898	dynamic-weather	dynamic	It is snowing.
+PE-file:0x16d03b0	dynamic-weather	dynamic	It is snowing outside.
+PE-file:0x16d0290	dynamic-weather	dynamic	The sky above you is nearly black, ripped through with towering clouds.
+PE-file:0x16d02e0	dynamic-weather	dynamic	The sky above you is completely gray, with dark cloud pillars pressing through it.
+PE-file:0x16d0338	dynamic-weather	dynamic	A towering gray cloud descends from the white sky above you.
+PE-file:0x16d01c8	dynamic-weather	dynamic	The sky above you is a uniform and dark gray.
+PE-file:0x16d01f8	dynamic-weather	dynamic	The sky above you is gray.
+PE-file:0x16d0218	dynamic-weather	dynamic	The sky above you is hazy and white.
+PE-file:0x16d0240	dynamic-weather	dynamic	A dark, towering cloud rises into a striped sky.
+PE-file:0x16d0be8	dynamic-weather	dynamic	Mounds of clouds are clustered through a striped sky.
+PE-file:0x16d0c20	dynamic-weather	dynamic	There are scattered clouds underneath a striped sky.
+PE-file:0x16d0c58	dynamic-weather	dynamic	The sky is striped with thin clouds.
+PE-file:0x16d0c80	dynamic-weather	dynamic	A dark, menacing cloud towers above you, crowned by an anvil.
+PE-file:0x16d0b30	dynamic-weather	dynamic	There are mounds of clouds above you, smooth on the bottom with prominent upward bulges.
+PE-file:0x16d0b90	dynamic-weather	dynamic	There are scattered puffy clouds above you.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the north.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the northwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the northeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the south.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the southwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the southeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the west.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a gentle breeze blowing from the east.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the north.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the northwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the northeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the south.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the southwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the southeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the west.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a strong breeze blowing from the east.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the north.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the northwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the northeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the south.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the southwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the southeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the west.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a heavy wind blowing from the east.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the north.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the northwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the northeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the south.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the southwest.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the southeast.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the west.
+PE-compose:0x140af3488	dynamic-weather	dynamic	There is a mighty wind blowing from the east.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is rising in the east.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is rising in the east behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is rising in the west.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is rising in the west behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is low in the eastern sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is low in the eastern sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is in the eastern sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is in the eastern sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is high in the eastern sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is high in the eastern sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is low in the western sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is low in the western sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is in the western sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is in the western sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is high in the western sky.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is high in the western sky behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is directly above you.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is directly above you behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is setting to the east.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is setting to the east behind the clouds.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is setting to the west.
+PE-compose:0x140af374d	dynamic-weather	dynamic	The sun is setting to the west behind the clouds.
+PE-compose:0x140af3925	dynamic-weather	dynamic	The stars are out.
+PE-compose:0x140af3925	dynamic-weather	dynamic	You cannot see the sky clearly from here, but the available sunlight indicates the night.
+PE-compose:0x140af3925	dynamic-weather	dynamic	You cannot see the sky clearly from here, but the available sunlight indicates the dawn.
+PE-compose:0x140af3925	dynamic-weather	dynamic	You cannot see the sky clearly from here, but the available sunlight indicates the day.
+PE-compose:0x140af3925	dynamic-weather	dynamic	You cannot see the sky clearly from here, but the available sunlight indicates the sunset.
+PE-compose:0x140af3925	dynamic-weather	dynamic	The sky is alive with vortices of purple light and dark, boiling clouds.
+PE-compose:0x140af3925	dynamic-weather	dynamic	The area gives off a sickly light.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The full moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing gibbous moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing half moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waxing crescent moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning gibbous moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning half moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The waning crescent moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is rising in the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is rising in the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is low in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is high in the eastern sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is low in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is high in the western sky.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is directly above you.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is setting to the east.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The new moon is setting to the west.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the east bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the west bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the eastern sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the eastern sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the eastern sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the western sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the western sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the western sky bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is directly above you bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the east bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the west bright behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the east pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the west pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the eastern sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the eastern sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the eastern sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the western sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the western sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the western sky pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is directly above you pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the east pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the west pale behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the east hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is rising in the west hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the eastern sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the eastern sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the eastern sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is low in the western sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is in the western sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is high in the western sky hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is directly above you hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the east hardly visible behind the clouds.
+PE-compose:0x140af3aff	dynamic-weather	dynamic	The moon is setting to the west hardly visible behind the clouds.
+
+# Native material precipitation builder 0x140af2ed9-0x140af2f72 appends the
+# complete generated material description, is falling, location and period.
+# {s} is resolved by the shared material vocabulary, never dropped or hidden.
+ELF-code:0xc860f8->0xc8524d	dynamic-weather	dynamic	The sky is otherwise clear above you.
+ELF-code:0xc861ec->0xc8524d	dynamic-weather	dynamic	The sky is clear above you.
+PE-compose:0x140af2f17	dynamic-weather	dynamic	{s} is falling outside.
+PE-compose:0x140af2f17	dynamic-weather	dynamic	{s} is falling from the sky.

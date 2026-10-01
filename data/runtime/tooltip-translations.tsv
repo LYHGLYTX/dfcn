@@ -1,0 +1,804 @@
+# Complete native hover / hotkey descriptions, Linux DF 53.16.
+# Source inventory: data/extracted/tooltip-sources.tsv (all 609 initializer calls), plus the
+# dynamic widget, weather and RAW building strings documented in both tables.
+# Whole sentences only; no English-wrap fragments and no empty deletion rules.
+# Report popup button: constructed by the widget, outside the toolbar initializer.
+# This is a hover document, not an ordinary UI message or separate wrapped rows.
+Toggle auto-pause on new report.	切换收到新报告时是否自动暂停。
+Set digging orders.	设置挖掘命令。
+Finish setting dig orders.	结束挖掘命令设置。
+Dig a regular hallway or room. Assign a miner to the work detail if necessary. The miner requires a pick.	挖掘普通走廊或房间。必要时将矿工分配到相应劳动分组。矿工需要一把镐。
+Designate constructed walls, floors, and other constructed tiles to be removed by miners. This also designates all stairwells and ramps.	指定由矿工拆除建造的墙壁、地板及其他人工建造的地格。此操作也可指定移除所有楼梯和斜坡。
+Dig a stairwell on this level, going up or down. Your selection must span multiple elevations. Click on a tile, change elevations, and click again.	挖掘向上或向下的楼梯。选区必须跨越多个高度层。先点击一个地格，切换高度，再次点击。
+Dig a ramp on this level, going up.	在本层挖掘通往上一层的斜坡。
+Dig a channel, making a ramp on the level below.	挖掘沟道，在下一层形成斜坡。
+Hold left button to draw.	按住鼠标左键涂画。
+Left click to choose corners of a rectangle.	点击鼠标左键选择矩形的角点。
+Dig every tile selected.	挖掘选中的全部地格。
+Dig only ore and gems selected, and automine any ore and gems of the same type which are uncovered.	仅挖掘选中的矿石和宝石，并自动挖掘由此发现的同类矿石和宝石。
+Dig only ore and gems selected.	仅挖掘选中的矿石和宝石。
+Dig only gems selected.	仅挖掘选中的宝石。
+Selected tiles are very high priority.	将选中地格设为很高优先级。
+Selected tiles are high priority.	将选中地格设为高优先级。
+Selected tiles are high-medium priority.	将选中地格设为中高优先级。
+Selected tiles are medium priority. [DEFAULT]	将选中地格设为中等优先级。【默认】
+Selected tiles are medium-low priority.	将选中地格设为中低优先级。
+Selected tiles are low priority.	将选中地格设为低优先级。
+Selected tiles are very low priority.	将选中地格设为很低优先级。
+Change to standard dig mode.	切换到普通挖掘模式。
+Change to blueprint-only mode.	切换到仅绘制蓝图模式。
+Change blueprints to standard selections.	将蓝图转为普通指定区域。
+Change standard selections to blueprints.	将普通指定区域转为蓝图。
+Show advanced options.	显示高级选项。
+Hide advanced options.	隐藏高级选项。
+Set tree chopping orders.	设置树木砍伐命令。
+Set tree chopping orders. Select the base of the tree so that the woodcutter can reach it. Assign a woodcutter to the work detail if necessary. The woodcutter requires an axe.	设置树木砍伐命令。选择树干底部，使樵夫能够到达。必要时将樵夫分配到相应劳动分组。樵夫需要一把斧头。
+Finish setting tree chopping orders.	结束树木砍伐命令设置。
+Change to standard chop mode.	切换到普通砍伐模式。
+Set plant gathering orders.	设置植物采集命令。
+Set plant gathering orders. Some plants require fruit or other growths to be present.	设置植物采集命令。某些植物需要长有果实或其他生长物才能采集。
+Finish setting plant gathering orders.	结束植物采集命令设置。
+Change to standard gather mode.	切换到普通采集模式。
+Set wall smoothing, engraving, track carving, and fortification orders.	设置墙壁打磨、雕刻、轨道雕凿和城防垛口开凿命令。
+Smooth a rough wall to make it more pleasing to your citizens. This also prepares the wall for engraving or fortification.	打磨粗糙墙壁，使居民更为喜爱。打磨后也可进行雕刻或开凿城防垛口。
+Engrave artwork into a smooth wall.	在平滑墙壁上雕刻艺术作品。
+Carve a track in a stone floor. Tracks are used by minecarts with routes set in the hauling menu.	在石地板上雕凿轨道。矿车沿轨道行驶，路线在搬运菜单中设置。
+Carve a gap in a smooth wall to allow your archers to fire upon invaders.	在平滑墙壁上开凿射击孔，让弓弩手向入侵者射击。
+Finish setting wall orders.	结束墙壁作业命令设置。
+Change to standard orders mode.	切换到普通命令模式。
+Designate items for dumping and melting, claim forbidden items and buildings, and set item visibility.	指定倾倒或熔化物品、解除物品和建筑的禁用状态，以及设置物品可见性。
+Finish setting item/building designations.	结束物品和建筑指定操作。
+Claim a forbidden item or building so it will be used by your citizens.	解除物品或建筑的禁用状态，使居民能够使用。
+Forbid your citizens from using an item or building.	禁止居民使用某件物品或建筑。
+Designate an item for dumping in a dumping zone.	指定将物品运到物品倾倒区。
+Remove dumping designations.	移除倾倒标记。
+Designate an item for melting at any smelter.	指定在任意熔炉中熔化物品。
+Remove melting designations.	移除熔化标记。
+Remove hidden designations.	移除隐藏标记。
+Hide an item or building from your view. Citizens will still use it.	隐藏物品或建筑。居民仍会使用它。
+Set high and low traffic areas.	设置高通行和低通行区域。
+Finish setting traffic areas.	结束通行区域设置。
+Set a high traffic area. Use this in wide central passages.	设置高通行区域。适用于宽阔的主要通道。
+Set a normal traffic area, the default state.	设置普通通行区域，这是默认状态。
+Set a low traffic area. Citizens will look for better routes.	设置低通行区域。居民会寻找更好的路线。
+Set a restricted traffic area. Citizens will look hard for better routes. They will still use the area if other routes do not exist or are too long.	设置限制通行区域。居民会尽力寻找更好的路线，但没有其他路线或绕路过远时，仍会通过这里。
+Set the exact weight in steps of a traffic type.	设置此通行类型的具体步数权重。
+Remove mining, woodcutting, plant gathering, and smoothing orders.	移除挖矿、伐木、植物采集和打磨命令。
+Finish removing mining etc. orders.	结束移除挖矿等命令。
+Place structures and work areas that require construction materials.	放置需要建造材料的建筑和工作区域。
+Finish placing structures.	结束放置建筑。
+Place stockpiles for item storage.	放置用于存储物品的储物堆。
+Finish placing stockpiles.	结束放置储物堆。
+Start painting a new stockpile. Once the tiles are chosen, you'll be able to set the details.	开始涂画新的储物堆。选好地格后即可设置详细信息。
+Remove the stockpile being painted permanently. Also removes existing zones!	永久移除正在涂画的储物堆。也会移除已有区域！
+Repaint this stockpile.	重新涂画此储物堆。
+Erase a portion of this stockpile.	擦除此储物堆的一部分。
+Remove this stockpile permanently.	永久移除此储物堆。
+Toggle whether the stockpile can take items from anywhere or only from specific workshops and stockpiles.	切换此储物堆是从任意地点取物，还是仅从指定工坊和储物堆取物。
+Set from which workshops and stockpiles this stockpile gives and takes items.	设置此储物堆向哪些工坊和储物堆供货，以及从哪些地方取货。
+Set how many barrerls, bins, and wheelbarrows this stockpile can use.	设置此储物堆可以使用的圆桶、储物箱和手推车数量。
+Place zones to establish meeting areas, pastures, and more.	划定区域，设置集会区、畜栏／牧场等。
+Finish placing zones.	结束放置区域。
+Start painting a new zone. Once the tiles are chosen, you'll be able to set the details.	开始涂画新的区域。选好地格后即可设置详细信息。
+Go to the previous zone overlapping the tile you clicked.	切换到与所点击地格重叠的上一个区域。
+Go to the next zone overlapping the tile you clicked.	切换到与所点击地格重叠的下一个区域。
+Repaint this zone.	重新涂画此区域。
+Erase a portion of this zone.	擦除此区域的一部分。
+Suspend activities in this zone. Does not remove the zone.	暂停此区域内的活动，但不移除区域。
+Remove this zone permanently.	永久移除此区域。
+Gather fruit in trees in and just above this zone. Requires a stepladder.	采集此区域内及其正上方树木上的果实。需要折梯。
+Gather fruit and vegetables from shrubs in this zone.	采集此区域灌木上的果实和蔬菜。
+Gather fallen fruit in this zone.	采集此区域内掉落的果实。
+Select animals to be placed in this pasture zone. They will stay after being led here.	选择安置在此畜栏／牧场的动物。动物被牵到这里后会留在区域内。
+Designate this zone as the top of a pit. Citizens will not fill the pit below with water.	将此区域设为坑洞模式。居民不会向下方的坑洞灌水。
+Designate this zone as the top of a pond. Citizens will bring buckets of water if the pond below isn't filled.	将此区域设为池塘模式。如果下方池塘尚未灌满，居民会提桶运水。
+Select animals to be dropped into the pit or pond below this zone. Animals will not feel obligated to stay if they can find a way out.	选择要投入此区域下方坑洞或池塘的动物。只要能找到出路，动物就可能离开。
+Assign a new or existing location to this zone. Locations are groups of zones and rooms with a larger purpose, like a tavern, a temple, a library, or a craft guildhall.	为此区域指定新地点或已有地点。地点由多个区域和房间组成，承担共同用途，例如酒馆、神殿、图书馆或工匠行会大厅。
+Set details for the assigned location.	设置所指定地点的详细信息。
+Select this option and any unassigned deceased citizens will be buried here automatically.	选中后，尚未分配墓地的已故居民会自动安葬在这里。
+Select this option and any unassigned deceased pets will be buried here automatically.	选中后，尚未分配墓地的已故宠物会自动安葬在这里。
+Choose which squads will use this barracks.	选择使用此兵营的小队。
+Remove the zone being painted permanently. Also removes existing zones!	永久移除正在涂画的区域。也会移除已有区域！
+Your citizens will drink at a water source zone or gather water using buckets for various tasks. This is useful if you don't have a functioning well and you want to control exactly where the tasks take place.	居民会在取水区饮水，或用桶取水以完成各项任务。如果没有可用的水井，又想指定取水地点，就可以设置取水区。
+Citizens assigned to the fishing work detail will fish in this zone if it exists. Otherwise, they will fish everywhere.	若设有捕鱼区，被分配到捕鱼劳动分组的居民会在这里捕鱼；否则会在各处捕鱼。
+Plant gathering zones are used in locations where plants will be gathered frequently. Use the gather designation otherwise.	植物采集区适合需要经常采集植物的地方。其他地方可直接指定采集。
+Items designated for dumping will be tossed into open air spaces included in this zone. If no open air tiles are included, they will dump the items on the floor.	标记为倾倒的物品会被投入物品倾倒区内的悬空地格。若没有悬空地格，则会放在地板上。
+Certain livestock need to graze on grass. Assign these animals to a pasture zone. No fencing is needed.	某些牲畜需要吃草。可划定畜栏／牧场，将这些动物分配到有草的区域，无需建造围栏。
+Animals assigned to pit/pond zones are dumped in the pit, but will leave the zone afterward if possible. If the pit is designated as a pond, your citizens will attempt to fill it with water using buckets.	分配到坑洞／池塘的动物会被投入下方的坑内，但只要找到出路就可能离开。若设为池塘模式，居民会尝试用桶向下方灌水。
+Your citizens will fill sand bags at this zone if a sandy floor or sandy wall is included. This task is initiated manually at the glass furnace.	采沙区若包含沙质地面或墙壁，居民就能在此装沙入袋。采沙任务须在玻璃窑手动发起。
+Your citizens will collect clay at this zone if a clay floor or clay wall is included. This task is initiated manually at the kiln.	黏土采集区若包含黏土地面或墙壁，居民就能在此采集黏土。采集任务须在黏土窑手动发起。
+This important zone is where your citizens will gather to socialize. Crucially, the meeting area is where locations such as taverns, temples, hospitals, and the like are established.	居民会聚集在这个重要区域进行社交。更重要的是，酒馆、神殿、医院等地点都在集会区建立。
+Animals that are capable of being trained receive their training at this zone once they have been assigned a trainer from the Pets/Livestock menu. Generally, a piece of meat is required.	可训练的动物会在驯兽区接受训练，须先在“宠物／牲畜”菜单中分配训练员。通常需要一块肉。
+Your citizens will sleep in bedrooms. It should include a bed! Try to enclose it with walls and/or doors. Do not overlap with other rooms.	居民会在卧室睡觉。卧室应放置床！尽量用墙壁和门围起来，不要与其他房间重叠。
+Your citizens will eat at this zone. When not assigned to a particular citizen, citizens without their own dining hall will eat here. Tables and adjacent chairs should be included.	居民会在此区域用餐。若未指定给某位居民，没有私人餐厅的居民就会在此用餐。应放置餐桌及相邻的椅子。
+An office or study is required for certain official tasks, such as approving work orders and bookkeeping. A chair or throne is required for these functions.	批准工单、记账等公务需要办公室或书房。必须放置椅子才能执行这些职务。
+Your archers can train in this zone if there is an archery target included.	此区域若包含射箭靶，弓弩手就可以在这里训练。
+Squads should be assigned to a barracks. The squad can be set to train, sleep, and store equipment there.	应将小队分配到兵营。可设置小队在此训练、睡觉和存放装备。
+Dormitories should include multiple beds and will not belong to a particular citizen.	公共宿舍应放置多张床，不属于某位特定居民。
+Prisoners convicted in the Justice menu can be incarcerated at a chain or metal cage in the dungeon zone.	在“司法”菜单中定罪的囚犯，可以用监牢内的锁链或金属笼关押。
+Deceased citizens and pets can be laid to rest in a tomb. It should include a coffin, casket, or sarcophagus.	已故居民和宠物可以安葬在墓地中。墓地应放置棺材、灵柩或石棺。
+Establish burrows to organize work and living spaces in larger fortresses.	建立活动区，以组织大型要塞内的工作和生活空间。
+Finish establishing burrows.	结束建立活动区。
+Remove the burrow being painted permanently. Also removes existing burrows!	永久移除正在涂画的活动区。也会移除已有活动区！
+Repaint this burrow.	重新涂画此活动区。
+Erase a portion of this burrow.	擦除此活动区的一部分。
+Remove this burrow permanently.	永久移除此活动区。
+Recenter on this burrow.	将视图重新居中到此活动区。
+Toggle whether workshops can source materials from outside the burrow.	切换工坊是否可以从活动区外获取材料。
+Suspend this burrow. Assigned citizens will not respect burrow restrictions while a burrow is suspended, but all tasks within the burrow will still function.	暂停此活动区。暂停期间，分配到这里的居民不受活动区限制，但活动区内的各项任务仍可正常进行。
+Set hauling routes for minecarts.	设置矿车运输路线。
+Finish setting hauling routes.	结束运输路线设置。
+Add a stop to this route. Minecarts will move between stops when conditions are satisfied.	为此路线添加站点。满足条件时，矿车会在站点之间移动。
+Assign a minecart to this route. Only one vehicle can operate on each route.	为此路线分配矿车。每条路线只能使用一辆车。
+Name this route.	为此路线命名。
+Remove this route.	移除此路线。
+Set the items desired by the minecart at this stop. Items must be in a linked stockpile.	设置矿车在此站点需要的物品。物品必须位于已连接的储物堆中。
+Link a stockpile to this stop. Citizens will haul items to and from the minecart as you specify. Items for the minecart must be specified using the desired items button to the left.	将储物堆连接到此站点。居民会按你的设置为矿车装卸物品。矿车需要的物品须通过左侧的“所需物品”按钮指定。
+Set conditions for the minecart to move on to the next stop.	设置矿车前往下一站的条件。
+Name this stop.	为此站点命名。
+Remove this stop.	移除此站点。
+The assigned vehicle is at this stop.	已分配的车辆停在此站点。
+The assigned vehicle is moving toward this stop.	已分配的车辆正在前往此站点。
+The assigned vehicle wants to be at this stop but is not currently there. A worker may be bringing it, or it may be stranded.	已分配的车辆应在此站点，但目前不在这里。可能正由工人运来，也可能被困住了。
+Open the citizen information menu.	打开居民信息菜单。
+Open the task information menu.	打开任务信息菜单。
+Open the place information menu.	打开地点信息菜单。
+Open the labor menu.	打开劳动菜单。
+Open the work orders menu.	打开工单菜单。
+Open the nobles and administrators menu.	打开贵族和管理员菜单。
+Open the objects menu.	打开物品菜单。
+Open the squad sidebar.	打开小队侧栏。
+Open the world screen.	打开世界界面。
+Open the justice menu.	打开司法菜单。
+Convict a suspect for this crime.	将嫌疑人判定为此案的罪犯。
+Interrogate suspects for wrongdoing.	审讯涉嫌违法行为的人。
+Toggle whether the stockpile allows plant and animal-based objects, regardless of other settings.	切换此储物堆是否允许存放动植物制品，不受其他设置影响。
+Toggle whether the stockpile allows non-plant-and-animal-based objects, regardless of other settings.	切换此储物堆是否允许存放非动植物制品，不受其他设置影响。
+Toggle whether goods banned by export mandates are listed.	切换是否列出被出口禁令禁止交易的货物。
+Sort by distance from the depot.	按距离贸易站的远近排序。
+Sort by value.	按价值排序。
+(De)select all currently displayed items	全选或取消选择当前显示的全部物品。
+Leave menu and recenter the view on the time.	离开菜单，并将视图重新居中到此物品。
+Leave menu and open the item's sheet.	离开菜单，并打开此物品的详情页。
+Toggle the forbidden status of the item. Citizens will not use forbidden items or buildings.	切换物品的禁用状态。居民不会使用被禁用的物品或建筑。
+Toggle the dump status of the item. Items are dumped in dumping zones.	切换物品的倾倒状态。物品会被运到物品倾倒区。
+Toggle the melt status of the item. Items are melted at any smelter.	切换物品的熔化状态。物品可在任意熔炉中熔化。
+Toggle the visibility of the item. Hidden items cannot be seen but citizens will still use them.	切换物品的可见性。隐藏物品不可见，但居民仍会使用。
+Create a new work order. Work orders are like workshop jobs but they are assigned to shops automatically and can be activated with various conditions.	创建新的工单。工单类似工坊任务，但会自动分配到工坊，也可设置各种启动条件。
+This work order is active.	此工单正在执行。
+This work order is waiting for its next scheduled check.	此工单正在等待下一次定期检查。
+This work order is checking its conditions for activation.	此工单正在检查启动条件。
+This work order is ready to activate.	此工单已准备好启动。
+Set the maximum number of workshops that can be used by the work order.	设置此工单最多可以使用多少座工坊。
+This work order has been validated by the manager.	此工单已由经理人批准。
+This work order has not been validated by the manager. A manager can be employed in the nobles and administrators menu, and they must have an assigned office where they will work to validate orders.	此工单尚未由经理人批准。可在“贵族和管理员”菜单任命经理人，并为其分配办公室，以便审批工单。
+Change the number of times the task will be performed.	修改此任务的执行次数。
+Change the work order priority. Work orders at the top of the list will use workshops first.	修改工单优先级。列表顶部的工单会优先使用工坊。
+Set the conditions for work order activation. This can involve needed materials, the current stock of products, or the completion of other work orders.	设置工单启动条件，例如所需材料、现有产品库存或其他工单的完成情况。
+Set the material used or other details of the task.	设置此任务使用的材料或其他详细信息。
+Remove this work order.	移除此工单。
+Change the frequency that the conditions are checked.	修改条件检查频率。
+Add a condition to the work order that checks the amount of some item.	为工单添加检查某种物品数量的条件。
+Make the activation of the work order depend on the status of another work order.	将此工单的启动条件设为取决于另一工单的状态。
+Change the amount of the item being checked.	修改要检查的物品数量。
+Change the inequality of the condition.	修改此条件的数量比较方式。
+Change the type of the item being checked.	修改要检查的物品类型。
+Change the material of the item being checked.	修改要检查的物品材料。
+Change the properties of the item being checked. Many of these are obscure and rely on specific tasks, but certain properties like 'empty' can be used in many conditions.	修改要检查的物品属性。其中许多属性只适用于特定任务，含义较为生僻；但“空”等属性可用于多种条件。
+Change whether the work order must be activated or completed to satisfy this condition.	切换满足此条件所需的工单状态：已启动或已完成。
+Remove this condition.	移除此条件。
+Leave this menu and recenter on this creature.	离开此菜单，并将视图重新居中到此生物。
+Leave this menu and view this creature's sheet.	离开此菜单，并查看此生物的详情页。
+Leave this menu and recenter on this object.	离开此菜单，并将视图重新居中到此物品。
+Leave this menu and view this object's sheet.	离开此菜单，并查看此物品的详情页。
+Leave this menu and recenter on this place.	离开此菜单，并将视图重新居中到此地点。
+Leave this menu and view this place's sheet or menu.	离开此菜单，并查看此地点的详情页或菜单。
+Leave this menu and recenter on the task's building.	离开此菜单，并将视图重新居中到此任务所在的建筑。
+Set the details of this task, such as the material used.	设置此任务的详细信息，例如使用的材料。
+View a detailed description of this activity.	查看此活动的详细说明。
+Toggle whether the task will be repeated indefinitely.	切换此任务是否无限重复。
+Remove the current worker from the task.	移除执行此任务的当前工人。
+Suspend this task. This removes the worker. The task can be unsuspended.	暂停此任务，同时移除已分配的工人。之后可以恢复任务。
+Cancel this task.	取消此任务。
+Assign a trainer to this creature.	为此生物分配训练员。
+Assign this creature as a work animal for a specific citizen or resident.	将此生物作为工作动物，分配给指定的公民或居民。
+Toggle whether this creature will receive war training. War animals have more lethal attacks.	切换此生物是否接受战争训练。战兽的攻击更具杀伤力。
+Toggle whether this creature will receive hunting training. Hunting animals can move stealthfully during hunts.	切换此生物是否接受狩猎训练。猎兽能够在狩猎时潜行。
+Toggle whether this creature is available as a pet for any interested citizen or resident.	切换是否允许有意愿的公民或居民将此生物认领为宠物。
+This creature is ecstatic right now.	此生物目前欣喜若狂。
+This creature is happy right now.	此生物目前很开心。
+This creature is pleased right now.	此生物目前很愉快。
+This creature is content right now.	此生物目前感到满足。
+This creature is displeased right now.	此生物目前有些不满。
+This creature is unhappy right now.	此生物目前不开心。
+This creature is miserable right now.	此生物目前痛苦不堪。
+This worker is specialized and will only do tasks that match their workshop assignments, work details, and occupations. Click to toggle.	此工人已设为专职，只会执行与其工坊分配、劳动分组和职务相符的任务。点击切换。
+This worker is not specialized and will do any free tasks that become available. Click to toggle.	此工人未设为专职，会执行任何可接手的空闲任务。点击切换。
+This creature is a tavern keeper.	此生物担任酒保。
+This creature is a performer.	此生物担任表演者。
+This creature is a scholar.	此生物担任学者。
+This creature is a scribe.	此生物担任抄写员。
+This creature is a mercenary.	此生物担任佣兵。
+This creature is a monster slayer.	此生物担任怪物杀手。
+This creature is a doctor.	此生物担任医生。
+This creature is assigned to a specific workshop.	此生物被分配到指定工坊。
+This creature is assigned to a work detail.	此生物被分配到某项劳动分组。
+Toggle whether this creature will be slaughtered at a butcher's shop when the opportunity arises.	切换是否在条件允许时，将此生物送到屠夫工坊宰杀。
+Toggle whether this creature will be gelded at a farmer's workshop when the opportunity arises.	切换是否在条件允许时，将此生物送到农夫工坊阉割。
+This type is not relevant to brewing.	此类型不适用于酿酒。
+This type is restricted from brewing.	此类型禁止用于酿酒。
+This type is allowed to be brewed.	此类型允许用于酿酒。
+This type is not relevant to cooking.	此类型不适用于烹饪。
+This type is restricted from cooking.	此类型禁止用于烹饪。
+This type is allowed to be cooked.	此类型允许用于烹饪。
+Open the announcements screen.	打开公告界面。
+Rename this location.	重命名此地点。
+This option allows visitors from outside the fortress to enter this location.	此选项允许来自要塞外的访客进入此地点。
+This option allows long-term residents of the fortress to enter this location.	此选项允许要塞的长期居民进入此地点。
+This option indicates that the location is only open to fortress citizens.	此选项表示此地点仅对要塞公民开放。
+This option indicates that the location is only open to members.	此选项表示此地点仅对成员开放。
+Remove this worker from this occupation.	解除此工人的这项职务。
+Set the camera to follow this item.	让镜头跟随此物品。
+This item is tagged by a task and will not be used by other tasks.	此物品已被某项任务占用，不会用于其他任务。
+See this creature's combat history.	查看此生物的战斗历史。
+Customize this creature's nickname and profession nickname.	自定义此生物的昵称和职业昵称。
+Set the camera to follow this creature.	让镜头跟随此生物。
+Send this creature to a linked site, or expel this creature entirely.	将此生物派往相连的聚居地，或将其彻底驱逐。
+This item is part of the assigned squad equipment.	此物品属于已分配的小队装备。
+This item is a tool assigned by a work detail.	此物品是由劳动分组分配的工具。
+This item is a symbol of a noble or administrator.	此物品是贵族或管理员的身份象征。
+This item is part of the creature's regular clothing.	此物品属于此生物平时穿着的衣物。
+View this item's sheet.	查看此物品的详情页。
+View this creature's sheet.	查看此生物的详情页。
+View details about this knowledge.	查看此项知识的详细信息。
+Recenter on this creature.	将视图重新居中到此生物。
+Recenter on this item.	将视图重新居中到此物品。
+Name this building.	为此建筑命名。
+Remove this building.	移除此建筑。
+This task has been assigned and is active.	此任务已分配工人，正在执行。
+This task came from a work order.	此任务来自工单。
+This task is set to repeat indefinitely.	此任务已设为无限重复。
+Click to set this task to repeat indefinitely.	点击将此任务设为无限重复。
+This task is highest priority among all tasks everywhere.	此任务在所有地点的全部任务中具有最高优先级。
+Click to set this task as highest priority among all tasks everywhere.	点击将此任务设为所有地点的全部任务中的最高优先级。
+Increase the priority of the task in this workshop.	提高此任务在本工坊内的优先级。
+Set details for this task, such as the material to be used.	设置此任务的详细信息，例如要使用的材料。
+This task has been suspended.	此任务已暂停。
+Click to suspend the task. Assigned workers are removed from suspended tasks.	点击暂停此任务。暂停任务会移除已分配的工人。
+Create a new work order for this workshop. Work orders are tasks that can repeat specified numbers of times and which can be given start conditions. This is useful for automation.	为此工坊创建新的工单。工单可按指定次数重复执行，并可设置启动条件，便于自动化生产。
+Recenter on the linked building.	将视图重新居中到已连接的建筑。
+Add stockpile links for this workshop.	为此工坊添加储物堆连接。
+This item is a permanent part of the building. Forbid and visibility tags set here affect the whole building.	此物品是建筑的永久组成部分。在此设置的禁用和可见性标记会影响整座建筑。
+This item is being traded.	此物品正在交易。
+This is a small creature within the trap.	这是陷阱内的一只小型生物。
+This item is bait.	此物品是诱饵。
+This item has been loaded.	此物品已装填。
+This item is resting within the building.	此物品放置在建筑内部。
+This item is a semi-permanent part of the building, like an item on display.	此物品是建筑的半固定组成部分，例如正在展示的物品。
+Toggle the forbidden status of the item. Citizens will not use forbidden items or buildings. If a permanent building item is forbidden, citizens will not perform tasks there!	切换物品的禁用状态。居民不会使用被禁用的物品或建筑。如果禁用建筑的永久组成物品，居民就不会在那里执行任务！
+Toggle the visibility of the item. Hidden items cannot be seen but citizens will still use them. If a permanent building item is invisible, the building will be too!	切换物品的可见性。隐藏物品不可见，但居民仍会使用。如果隐藏建筑的永久组成物品，整座建筑也会隐藏！
+The soldiers can either keep their equipment on at all times, or only when an order is active.	可让士兵始终穿戴装备，或仅在执行命令时穿戴。
+The soldiers can be allowed to sleep in their rooms whenever they way, or in the barracks either when they want or only when they must.	可允许士兵随时回自己的房间睡觉，或让他们在兵营睡觉；后者又可设为随时睡觉或仅在必须时睡觉。
+Cancel this scheduled order.	取消此日程命令。
+Cancel this position's scheduled orders.	取消此职位的日程命令。
+Change the squad's symbol.	修改小队标志。
+View the leader's sheet.	查看队长的详情页。
+The squad leader is traveling or otherwise occupied off-site.	小队队长正在旅行，或因其他事务不在此地。
+View the positions in this squad.	查看此小队的各个职位。
+Customize the squad's name.	自定义小队名称。
+Assign a station order. The soldiers will stand near the point selected and engage any hostile creatures that come near.	下达驻守命令。士兵会站在选定位置附近，与靠近的敌对生物交战。
+Assign a kill order. The soldiers will attempt to kill a targeted creature.	下达击杀命令。士兵会尝试杀死指定目标生物。
+Assign a patrol order. The soldiers will walk a specified route repeatedly.	下达巡逻命令。士兵会反复沿指定路线行进。
+Assign a burrow defense order. The soldiers will patrol the burrow and attack any hostile creatures.	下达活动区防卫命令。士兵会在活动区内巡逻并攻击敌对生物。
+Assign a training order. The squad must be assigned to a barracks zone with the training option set.	下达训练命令。小队必须已被分配到开启训练用途的兵营区域。
+Cancel an order. Does not affect scheduled orders.	取消命令，不影响日程命令。
+Disband the squad.	解散小队。
+Inspect the route.	查看路线。
+Recenter on the announcement's location.	将视图重新居中到公告发生地点。
+Recenter on the creature (at the time of the announcement.)	将视图重新居中到生物在公告发生时的位置。
+Recenter on the item (at the time of the announcement.)	将视图重新居中到物品在公告发生时的位置。
+Toggle whether the squad will sleep here.	切换此小队是否在这里睡觉。
+Toggle whether the squad will train here.	切换此小队是否在这里训练。
+Toggle whether the soldiers will store their individually assigned weapons and armor here.	切换士兵是否在这里存放各自分配到的武器和护甲。
+Toggle whether the squad will store squad-level equipment here, such as ammunition.	切换此小队是否在这里存放弹药等小队共用装备。
+Choose a stockpile to which the track stop's vehicle will give items.	选择轨道站点的车辆要向其卸货的储物堆。
+Choose a stockpile from which the track stop's vehicle will take items.	选择轨道站点的车辆要从其取货的储物堆。
+Choose a stockpile with which the track stop's vehicle will exchange items. The vehicle will take desired items and offload any others.	选择与轨道站点的车辆交换物品的储物堆。车辆会装载所需物品，并卸下其他物品。
+Choose a stockpile to which the workshop will give items.	选择此工坊要向其供货的储物堆。
+Choose a stockpile from which the workshop will take items.	选择此工坊要从其取货的储物堆。
+Choose a stockpile to which the selected stockpile will give items.	选择当前储物堆要向其供货的储物堆。
+Choose a stockpile from which the selected stockpile will take items.	选择当前储物堆要从其取货的储物堆。
+The track stop's vehicle will exchange items with this stockpile. The vehicle will take desired items and offload any others.	轨道站点的车辆会与此储物堆交换物品：装载所需物品，并卸下其他物品。
+The track stop's vehicle will take items from this stockpile.	轨道站点的车辆会从此储物堆取货。
+The track stop's vehicle will give items to this stockpile.	轨道站点的车辆会向此储物堆卸货。
+The selected workshop will take items from here.	所选工坊会从这里取货。
+The selected workshop will give items to here.	所选工坊会向这里供货。
+The selected stockpile will take items from here.	所选储物堆会从这里取货。
+The selected stockpile will give items to here.	所选储物堆会向这里供货。
+The creature is chained.	此生物已被拴住。
+The creature is caged.	此生物已被关入笼中。
+The creature is set to be chained.	此生物已被指定拴住。
+The creature is set to be caged.	此生物已被指定关入笼中。
+The creature is assigned to a pasture.	此生物已被分配到畜栏／牧场。
+The creature is assigned to a pond.	此生物已被分配到池塘。
+The creature is assigned to a pit.	此生物已被分配到坑洞。
+Edit the recenter hotkey locations.	编辑重新居中热键的位置。
+Recenter on the surface at this location.	将视图重新居中到此位置的地表。
+Recenter on the deepest discovered area at this location.	将视图重新居中到此位置已发现的最深区域。
+Recenter on this location.	将视图重新居中到此位置。
+Set this entry to recenter on the current view.	将此条目设为重新居中到当前视图的位置。
+Clear this recenter hotkey location.	清除此重新居中热键的位置。
+Delete this recenter location.	删除此重新居中位置。
+Display water and magma depth numerically (1 to 7.)	以数字显示水和岩浆深度（1 至 7）。
+Show up and down arrows over ramps at the current elevation.	在当前高度的斜坡上显示上下箭头。
+Zoom in on the play area.	放大游戏区域。
+Zoom out from the play area.	缩小游戏区域。
+Open the stocks window, where you can see all of your fortress's items.	打开库存窗口，查看要塞中的全部物品。
+View all alerts.	查看全部警报。
+Most tasks in the fortress are started and completed at workshops. Tasks generally require raw materials and most workshops are constructed from boulders, blocks, or wood.	要塞内的大部分任务都在工坊中开始并完成。任务通常需要原材料，多数工坊用巨石、砖块或木材建造。
+Furnaces are used for smelting, glassmaking, pottery, ashmaking, or to make fuel from wood or raw coal. Furnaces require fuel to function, or they can be set above magma.	炉窑用于冶炼、制作玻璃和陶器、烧灰，或将木材和原煤制成燃料。这些建筑需要燃料才能运作，也可以建在岩浆上方。
+These workshops are used in the clothesmaking process, whether dyeing and weaving or using tanned hides.	这些工坊用于制衣流程，包括染色、织布以及使用鞣制兽皮加工。
+A wide variety of food-and-drink-related workshops can be found in this category.	此类别包含各种与食物和饮品有关的工坊。
+Use options in this category to place furniture that has already been constructed in a workshop.	使用此类别中的选项，放置已在工坊制作好的家具。
+Place doors and hatches here after you have constructed them in an appropriate workshop.	先在相应工坊制作门和舱盖，再从这里放置。
+Most terrain-altering constructions can be found here, from walls and floors to bridges, ramps, stairs, and more.	大多数改变地形的建造选项都在这里，包括墙壁、地板、桥梁、斜坡和楼梯等。
+More complicated buildings from wells to powered machine components to levers and floodgates are found here.	这里包含较复杂的建筑，如水井、动力机械部件、控制杆和闸门。
+Cages, ropes, and animal traps are found here. Cages can be used in cage traps or to transport large animals. Metal cages and chains are also used by the justice system.	这里包含笼子、绳索和动物陷阱。笼子可用于笼陷阱或运输大型动物，金属笼和锁链也用于司法系统。
+Various mechanical traps can be found here. The pressure plate is also found here, which has applications beyond traps.	这里包含各种机械陷阱，也包含用途不局限于陷阱的压力板。
+Archery targets, siege weapons, and some ornamental display items can be found in this category.	此类别包含射箭靶、攻城武器和一些装饰展示物品。
+This crucial building is where all trading will be done. Pack animals from distant civilizations will need to access this building from the edge of the map. Later, wagons will need a clear 3-wide path to the depot.	所有交易都在这座关键建筑进行。远方文明的驮畜需要从地图边缘抵达这里。之后到来的货车还需要一条畅通的三格宽道路通往贸易站。
+Used to make lye, potash, and milk of lime. Construction requires blocks, barrel, and a bucket.	用于制作碱液、草碱和石灰乳。建造需要砖块、圆桶和水桶。
+Make crossbows here from wood or bone. The metalsmith's forge can be used for metal crossbows and metal bolts, and the crafts workshop is used to make other bolts.	在这里用木材或骨头制作弩。金属弩和金属弩箭可在金属锻造坊制作，其他弩箭则在工艺品工坊制作。
+Make beds and various furniture here, as well as bins, barrels, and more.	在这里制作床、各种家具、储物箱和圆桶等。
+Make crafts for trade and your own citizens here, as well as a variety of tools, armor, and bolts.	在这里制作供交易和居民使用的工艺品，以及各种工具、护甲和弩箭。
+Cut rough gems here to increase their value, and improve the value of other objects by encrusting them with cut gems.	在这里切割宝石原石以提高价值，也可将切割宝石镶嵌到其他物品上以提升其价值。
+Forge weapons and armor here, as well as most other metal objects from furniture to trap components. Magma below the forge will power tasks. You are responsible for placing the forge above the magma, but no other fuel is required.	在这里锻造武器、护甲，以及从家具到陷阱部件等大多数金属物品。下方岩浆会为作业供能。你需要将岩浆锻造坊建在岩浆上方，但无需其他燃料。
+Make mechanisms here which are used to make levers, pressure plates, and gears. You can also use mechanisms to link levers and pressure plates to other machinery.	在这里制作机械装置，用于制作控制杆、压力板和齿轮。机械装置也可将控制杆和压力板连接到其他机械。
+Forge weapons and armor here, as well as most other metal objects from furniture to trap components. These tasks require fuel.	在这里锻造武器、护甲，以及从家具到陷阱部件等大多数金属物品。这些任务需要燃料。
+Here you can make parts for ballistae and catapults. This workshop is also the place where ballista ammo is assembled.	在这里制作弩炮和投石机的部件，也可在此工坊组装弩炮弹药。
+Make stone furniture here, as well as blocks which are used in constructions.	在这里制作石制家具，以及用于建造的砖块。
+Use tallow (rendered fat) or oil here with lye to make soap.	在这里用脂油（熬制的脂肪）或油与碱液制作肥皂。
+A useful workshop for pressing liquids from various sources. Some plants might need to be milled first before they can be used. Empty jugs are required to store the liquid products.	一个用于从各种原料中压榨液体的实用工坊。有些植物可能需要先研磨才能使用。制成的液体需要用空壶储存。
+Use leather tanned at the tanner's shop here to make clothing and tools, such as bags and waterskins.	在这里使用制革工坊鞣制的皮革，制作衣物及袋子、水囊等工具。
+Here you can turn thread into cloth, whether it is thread from the farmer's workshop or spider silk gathered underground.	在这里将线织成布，既可使用农夫工坊生产的线，也可使用地下采集的蛛丝。
+Make cloth into clothing and tools here, such as bags and ropes.	在这里用布制作衣物及袋子、绳索等工具。
+Use dyes here to color thread and cloth. Requires a barrel and bucket for construction.	在这里使用染料为线和布染色。建造需要圆桶和水桶。
+Brew alcohol from plants, fruit, or honey.	用植物、果实或蜂蜜酿酒。
+Slaughter livestock here in order to obtain meat, hides, bones, and other animal products.	在这里屠宰牲畜，获取肉、兽皮、骨头及其他动物产品。
+Make leather from animal hides here. You can also make parchment using milk of lime and a hide.	在这里将兽皮制成皮革，也可用石灰乳和兽皮制作羊皮纸。
+Process raw fish into edible food here. Raw fish will not be eaten.	在这里将生鱼加工成可食用的食物。未经加工的生鱼不会被食用。
+Cook meals here. You can also render fat into tallow.	在这里烹饪饭菜，也可将脂肪熬制成脂油。
+Process plants and work with livestock here. Milk and shear animals, make cheese, and spin thread.	在这里加工植物和照料牲畜：挤奶、剪毛、制作奶酪和纺线。
+Make sugar, flour, and various useful slurries here. Tasks are completed very slowly compared to the powered millstone.	在这里制作糖、面粉和各种有用的浆料。与有动力的机械石磨相比，加工速度很慢。
+Capture and train small animals here. Requires animal traps.	在这里捕捉和训练小动物。需要动物陷阱。
+Make sugar, flour, and various useful slurries here. Powered version of the quern. Must be hooked to a windmill or water wheel to function.	在这里制作糖、面粉和各种有用的浆料。这是手推磨的动力版本，必须连接风车或水车才能运作。
+You can make a variety of objects using three different types of glass. You can also collect sand in bags from a task originating here, if you have a sand collection zone. Glassmaking requires fuel.	可用三种不同的玻璃制作各种物品。如果设有采沙区，也可从这里发起用袋子收集沙子的任务。制作玻璃需要燃料。
+Bake clay objects here, as well as a few other useful materials. Clay can also be collected here if you have a clay collection zone. All tasks require fuel aside from clay collection.	在这里烧制黏土物品及一些其他有用材料。如果设有黏土采集区，也可从这里发起采集黏土的任务。除采集黏土外，所有任务都需要燃料。
+You can make a variety of objects using three different types of glass. You can also collect sand in bags from a task originating here, if you have a sand collection zone. Magma below the furnace will power tasks. You are responsible for placing the furnace above the magma, but no other fuel is required.	可用三种不同的玻璃制作各种物品。如果设有采沙区，也可从这里发起用袋子收集沙子的任务。炉下方的岩浆会为作业供能。你需要将炉建在岩浆上方，但无需其他燃料。
+Bake clay objects here, as well as a few other useful materials. Clay can also be collected here if you have a clay collection zone. Magma below the kiln will power tasks. You are responsible for placing the kiln above the magma, but no other fuel is required.	在这里烧制黏土物品及一些其他有用材料。如果设有黏土采集区，也可从这里发起采集黏土的任务。窑下方的岩浆会为作业供能。你需要将窑建在岩浆上方，但无需其他燃料。
+Make metal bars from ore here. Can also refine coal into usable fuel or make alloys. Magma below the smelter will power tasks. You are responsible for placing the smelter above the magma, but no other fuel is required.	在这里将矿石熔炼成金属锭，也可将煤加工成可用燃料或制造合金。熔炉下方的岩浆会为作业供能。你需要将熔炉建在岩浆上方，但无需其他燃料。
+Make metal bars from ore here. Can also refine coal into usable fuel or make alloys. All tasks require fuel.	在这里将矿石熔炼成金属锭，也可将煤加工成可用燃料或制造合金。所有任务都需要燃料。
+Make charcoal and ash from wood here. Does not require fuel.	在这里用木材烧制木炭和灰。不需要额外燃料。
+Plant crops at the farmplot. You will need seeds or spawn and must select crops by season. Crops can be fertilized with potash. Soil is richer deeper underground.	在农田种植作物。需要种子或菌种，并须按季节选择作物。可用草碱施肥。地下深处的土壤更加肥沃。
+When placed, a female bird will claim the box and start laying eggs, if one is available.	放置巢箱后，如果有可用的雌鸟，它会占用巢箱并开始产卵。
+Keep a colony of insects at your hives. A wild colony must be collected after the hive is placed, or a colony can be split from an existing hive colony.	在蜂箱中饲养昆虫群体。放置蜂箱后，需要采集野生群体，或从现有蜂箱群体中分群。
+Your citizens need a comfortable place to sleep. A bed object must be made at the carpenter's shop before it can be placed.	居民需要舒适的睡眠场所。须先在木匠工坊制作床，才能放置。
+Chairs are required for offices to function, and a chair next to a table is the preferred dining arrangement. A chair/throne object must be made before it can be placed.	办公室需要椅子才能运作，用餐时最好将椅子放在餐桌旁。须先制作椅子，才能放置。
+Tables are required for dining. A chair should be placed adjacent to the table. A table object must be made before it can be placed.	用餐需要餐桌，旁边应放置椅子。须先制作餐桌，才能放置。
+Chests and coffers are used in personal bedrooms for storing non-clothing objects. They are also used in some zone-based locations like taverns, hospitals, and libraries for storing useful materials. A box object must be made before it can be placed.	箱子和石箱用于在私人卧室存放非衣物物品，也用于酒馆、医院和图书馆等区域型地点，储存所需物资。须先制作箱子，才能放置。
+Cabinets are used in personal bedrooms for storing clothing objects. A cabinet object must be made before it can be placed.	橱柜用于在私人卧室存放衣物。须先制作橱柜，才能放置。
+The dead are buried in coffins. Coffins must be placed in their own tomb zone in order to work. A coffin object must be made before it can be placed.	死者安葬于棺材中。棺材必须置于各自独立的墓地内才能使用。须先制作棺材，才能放置。
+Citizens that cannot be buried properly can still be memorialized on slabs. Slabs are created and engraved at the stoneworker's shop.	无法妥善安葬的居民仍可通过纪念石板悼念。石板在石匠工坊制作和刻写。
+Statues can be used to decorate your fortress and add value to your rooms. A statue object must be made at an appropriate workshop first.	雕像可以装饰要塞并提高房间价值。须先在相应工坊制作雕像。
+Certain injuries such as overlapping fractures require advanced medical contraptions like the traction bench for treatment. A traction bench object must be made before it can be placed.	重叠骨折等伤势需要牵引台之类的高级医疗器具治疗。须先制作牵引台，才能放置。
+Codices and scrolls in your library can be stored in bookcases. A bookcase object must be made before it can be placed.	图书馆中的书册和卷轴可以存放在书柜里。须先制作书柜，才能放置。
+Your most valuable objects can be placed for display in rooms to increase their value and to entertain passing citizens. A pedestal or display case must be made before it can be placed.	可在房间中展示最珍贵的物品，提高房间价值，并供路过的居民欣赏。须先制作基座或展示柜，才能放置。
+These ornamental objects increase the value of rooms in which they are placed. An offering place object must be made before it can be placed.	这些装饰物品可提高所在房间的价值。须先制作供奉处，才能放置。
+Large instruments must be placed in taverns or temples before they will be used. These instruments must be assembled at a workshop first.	大型乐器须放置在酒馆或神殿中才会被使用。必须先在工坊组装好这些乐器。
+Doors can be used along with walls to enclose rooms, which is especially important when placing multiple zones at once. Doors can also be forbidden or attached to levers to control movement in the fort.	门可配合墙壁围出房间，同时设置多个区域时尤为重要。也可禁用门或将门连接到控制杆，以控制要塞内的通行。
+Hatches can be placed at the tops of stairwells or above ramps to control movement in the fort when they are forbidden or attached to levers.	舱盖可放在楼梯井顶部或斜坡上方。禁用舱盖或将其连接到控制杆，即可控制要塞内的通行。
+Bridges can be used to span open spaces or placed above water or magma. Bridges can be connected to levers and raised to block access.	桥梁可跨越空隙，也可建在水或岩浆上方。桥梁可连接到控制杆，升起后阻断通路。
+Paved roads use less materials than constructed floors and can be used to stop plants from growing over wagon trails.	铺砌道路比建造地板耗材更少，还能防止植物长满货车通道。
+Dirt roads do not require materials, but the dirt road may quickly be overgrown by plants.	土路不需要材料，但可能很快被植物覆盖。
+Blocks creatures but allows the passage of fluids and items. Can be built on any floor. Grates unlike bars have a quality and enhance the value of rooms. Grates can be connected to levers.	阻挡生物，但允许液体和物品通过。可建在任何地板上。格栅与栅条不同，具有品质，可以提高房间价值。格栅可连接到控制杆。
+Blocks creatures but allows the passage of fluids and items. Can be built over empty spaces, stairs, ramps, or above liquids. Grates unlike bars have a quality and enhance the value of rooms. Grates can be connected to levers.	阻挡生物，但允许液体和物品通过。可建在空隙、楼梯、斜坡或液体上方。格栅与栅条不同，具有品质，可以提高房间价值。格栅可连接到控制杆。
+Blocks creatures but allows the passage of fluids and items. Can be built on any floor. Bars unlike grates do not have a quality and so do not enhance the value of rooms significantly. Bars can be connected to levers.	阻挡生物，但允许液体和物品通过。可建在任何地板上。栅条与格栅不同，没有品质，因此不会显著提高房间价值。栅条可连接到控制杆。
+Blocks creatures but allows the passage of fluids and items. Can be built over empty spaces, stairs, ramps, or above liquids. Bars unlike grates do not have a quality and so do not enhance the value of rooms significantly. Bars can be connected to levers.	阻挡生物，但允许液体和物品通过。可建在空隙、楼梯、斜坡或液体上方。栅条与格栅不同，没有品质，因此不会显著提高房间价值。栅条可连接到控制杆。
+This ornamental construction can enhance the value of rooms. A window object must be made at a glass furnace before it can be placed.	这种装饰建筑可提高房间价值。须先在玻璃窑制作窗户，才能放置。
+This ornamental construction can enhance the value of rooms. Three cut gem objects must be made at a jeweler's shop before it can be placed.	这种装饰建筑可提高房间价值。须先在珠宝匠工坊制作三颗切割宝石，才能放置。
+Supports will stop cave-ins in the rare event you completely detach a piece of your fortress. Otherwise, they are ornamental.	如果你挖断了要塞某部分的全部连接，支柱可防止其塌方。这种情况很少见，其余时候支柱主要用于装饰。
+You can build walls aboveground, in caverns, or in spaces you have mined out in order to block the passage of creatures, objects, and fluids. Requires boulder, block, or wood.	可在地表、洞窟或已经挖空的地方建造墙壁，阻挡生物、物品和液体通过。需要巨石、砖块或木材。
+You can build reinforced walls aboveground, in caverns, or in spaces you have mined out in order to block the passage of creatures, objects, and fluids. Requires two boulder, block, or wood, and metal bars. Provides some resistance to invaders.	可在地表、洞窟或已经挖空的地方建造加固墙壁，阻挡生物、物品和液体通过。需要两份巨石、砖块或木材，以及金属锭。能在一定程度上抵御入侵者。
+You can place floors for functional reasons or to enhance the appearance of the fortress. Requires boulder, block, or wood.	可因实际用途或美化要塞而铺设地板。需要巨石、砖块或木材。
+You can build a ramp next to a wall to provide access to the floor above. The space above the ramp must also be empty. Requires boulder, block, or wood.	可在墙边建造通往上一层的斜坡。斜坡上方也必须留空。需要巨石、砖块或木材。
+You can build staircases to connect different elevations. Staircases must span at least two elevations. Requires boulder, block, or wood.	可建造楼梯连接不同高度层。楼梯必须跨越至少两层。需要巨石、砖块或木材。
+Fortifications block creature movement but allow projectiles through. Soldiers near fortifications are reasonably safe from incoming projectiles. Requires boulder, block, or wood.	城防垛口阻挡生物移动，但允许投射物穿过。靠近垛口的士兵能较好地抵御来袭投射物。需要巨石、砖块或木材。
+Use minecart tracks in conjunction with the hauling menu.	矿车轨道须配合搬运菜单使用。
+Place the well in an open space above water to provide a relatively safe area for your citizens to draw water. Requires mechanisms, blocks, a chain or rope, and a bucket.	将水井建在水面上方的空格，为居民提供相对安全的取水地点。需要机械装置、砖块、锁链或绳索，以及水桶。
+Use floodgates to control the flow of fluids between spaces in your fortress. Must be attached to a lever or pressure plate to function. Requires a floodgate object to be built before it can be placed.	使用闸门控制要塞不同空间之间的液体流动。必须连接到控制杆或压力板才能运作。须先制作闸门，才能放置。
+Use a screw pump to move liquids upward from the elevation below the pump to the same elevation as the pump.	使用螺杆泵将下层的液体向上抽送到泵所在的高度层。
+Place the water wheel above flowing water to generate power for machines, such as the millstone or screw pump.	将水车建在流动的水上方，为机械石磨、螺杆泵等机械提供动力。
+Place the windmill aboveground to generate power for machines, such as the millstone or screw pump. Not all areas have strong winds.	将风车建在地表，为机械石磨、螺杆泵等机械提供动力。并非所有地区都有强风。
+Use the gear assembly to connect axles and machinery together. Gear assemblies can be disengaged temporarily by linking them to levers.	使用齿轮组连接传动轴和机械。将齿轮组连接到控制杆后，可以暂时断开传动。
+Horizontal axles transfer power on the same elevation. Horizontal axles can be east-west or north-south.	水平传动轴在同一高度层传递动力，可沿东西或南北方向放置。
+Vertical axles transfer power between two adjacent elevations.	垂直传动轴在相邻的两个高度层之间传递动力。
+Rollers move minecarts on tracks without the need for a citizen to push or guide the minecart.	滚动辊可让矿车沿轨道移动，无需居民推动或引导。
+A chain can be placed for use in the justice system or for the restraint of an animal.	可放置锁链，用于司法系统或拴住动物。
+Cages can be used to contain an animal, and metal cages can be used by the justice system. Glass cages can be filled with water and used as aquariums.	笼子可关押动物，金属笼也可用于司法系统。玻璃笼可以装水作为水族箱。
+Animal traps can be placed in the wild and baited with meat, plants, or gems, in order to catch small creatures.	可在野外放置动物陷阱，用肉、植物或宝石作诱饵，捕捉小型生物。
+Track stops are used in conjunction with the hauling menu. They can also be used to add friction to minecart tracks.	轨道站点配合搬运菜单使用，也可增加矿车轨道的摩擦力。
+Levers are used with machines, doors, floodgates, bridges, cages, and other structures to change their state.	控制杆可与机械、门、闸门、桥梁、笼子及其他建筑相连，用于改变其状态。
+Pressure plates, like levers, are used with machines, doors, floodgates, bridges, cages, and other structures to change their state. The trigger for pressure plates can be set by creature weight, fluid, or minecart passage.	压力板与控制杆类似，可与机械、门、闸门、桥梁、笼子及其他建筑相连，改变其状态。可设置按生物重量、液体或矿车经过来触发。
+Stone-fall traps drop a stone on intruders. Must be loaded with boulders.	落石陷阱会向入侵者投下石头。必须装填巨石。
+Weapon traps use a weapon or trap component to strike intruders. Can be used with ranged weapons and loaded with ammo. Can use multiple weapons at once.	武器陷阱用武器或陷阱部件攻击入侵者，可使用远程武器并装填弹药，也可同时使用多件武器。
+Cage traps capture intruders in cages. Must be loaded with a cage.	笼陷阱会将入侵者关进笼子。必须装填笼子。
+Upright weapons are a nasty place for intruders to fall upon. Can also be linked to levers or pressure plates to raise them into intruders.	直立武器能对跌落其上的入侵者造成伤害，也可连接控制杆或压力板，升起时刺伤入侵者。
+Archery targets are used in archery range zones for training archers.	射箭靶用于射箭场区域内的弓弩手训练。
+Ornamental. Demanded by some nobles.	用于装饰，某些贵族会要求放置。
+A ballista fires a ballista arrow in a fixed direction. The operator can adjust the aim freely within a cone.	弩炮沿固定方向发射弩炮箭矢，操作员可在锥形范围内自由调整瞄准方向。
+A catapult fires a boulder in a fixed direction. The operator can adjust the aim freely within a cone.	投石机沿固定方向发射巨石，操作员可在锥形范围内自由调整瞄准方向。
+A bolt thrower fires a regular bolts rapidly. The operator swivels the machine from any available adjacent tiles.	弩箭投射器可快速发射普通弩箭。操作员可站在任意可用的相邻地格上转动机器。
+Create a creature to place in the arena.	创建一只生物并将其放入竞技场。
+Add or remove fluids.	添加或移除流体。
+Add water to the arena.	向竞技场中添加水。
+Add magma to the arena.	向竞技场中添加岩浆。
+Add snow to the arena.	向竞技场中添加雪。
+Add mud to the arena.	向竞技场中添加淤泥。
+Remove fluids and spatter from the arena.	移除竞技场中的流体和飞溅污迹。
+Create a tree to place in the arena.	创建一棵树并将其放入竞技场。
+Change the weather, temperature, and time.	修改天气、温度和时间。
+Default attack is a strike without charging or wrestling.	默认使用普通打击，不冲锋或摔跤。
+Default attack is a charging strike.	默认使用冲锋打击。
+Default attack is a wrestling move.	默认使用摔跤招式。
+Choose default attack according to opponent.	根据对手选择默认攻击方式。
+Freely move between tiles when dodging if necessary	闪避时可按需要自由移动到其他地格。
+Do not move from current tile when dodging even if it means being struck.	闪避时留在当前地格，即使因此被击中也不移动。
+Dodge away from charging opponents to avoid being knocked over.	躲开冲锋的对手，以免被撞倒。
+Attempt to stop charging opponents, standing your ground.	坚守原地，尝试挡住冲锋的对手。
+Handle charging attacks according to the opponent.	根据对手决定如何应对冲锋。
+View all announcements.	查看全部公告。
+Recenter on yourself.	将视图重新居中到自己。
+Move upward.	向上移动。
+Move downward.	向下移动。
+Move down to the north.	向北下方移动。
+Move down to the south.	向南下方移动。
+Move down to the west.	向西下方移动。
+Move down to the east.	向东下方移动。
+Move down to the northwest.	向西北下方移动。
+Move down to the northeast.	向东北下方移动。
+Move down to the southwest.	向西南下方移动。
+Move down to the southeast.	向东南下方移动。
+Travel.	旅行。
+Sleep or wait a while.	睡觉或等待一段时间。
+Build. (coming soon)	建造。（即将推出）
+View your status.	查看自身状态。
+View your log.	查看日志。
+Open your inventory.	打开物品栏。
+Set movement options.	设置移动选项。
+Set combat options.	设置战斗选项。
+Interact with nearby objects.	与附近物品互动。
+Search for bugs.	寻找虫子。
+Climb or hold terrain.	攀爬或抓住地形。
+Jump somewhere.	跳到某个位置。
+Talk to somebody.	与某人交谈。
+Start a performance. This can take several turns to complete.	开始表演。可能需要多个回合才能完成。
+Craft or butcher.	制作物品或屠宰。
+Use ability.	使用能力。
+Strike somebody adjacent with a melee attack. Also allows available parry, block, and dodge moves.	近战打击相邻目标。也可选择当前可用的招架、格挡和闪避动作。
+Wrestle somebody adjacent. Also allows available parry, block, and dodge moves.	与相邻目标摔跤。也可选择当前可用的招架、格挡和闪避动作。
+Shoot. Requires a ranged weapon and ammunition.	射击。需要远程武器和弹药。
+Tactical mode is on. You control everybody manually. Click to control only this character (others will follow you.)	战术模式已开启，你需要手动控制所有成员。点击后仅控制此角色，其他人会跟随你。
+Tactical mode is off. Companions are following you. Click to control everybody.	战术模式已关闭，同伴正在跟随你。点击后可控制所有成员。
+View your companions and tactical settings, or switch party members.	查看同伴和战术设置，或切换队伍成员。
+You are currently yielded. Click to stop yielding.	你目前已投降。点击取消投降。
+You are not yielded. Click to yield to opponents.	你目前未投降。点击向对手投降。
+You have a weapon drawn. Click to strap it.	你已拔出武器。点击将武器收起并系好。
+You have a weapon available to draw. Click to draw it.	你有可拔出的武器。点击拔出。
+You do not have a weapon.	你没有武器。
+You are a projectile.	你正在空中飞行。
+You are a rider.	你正处于骑乘状态。
+You are prone. Click to stand.	你正俯卧。点击站起。
+You are not prone. Click to go prone.	你未俯卧。点击趴下。
+Close the map.	关闭地图。
+Go upward.	向上。
+Go downward.	向下。
+End travel.	结束旅行。
+Toggle sneaking.	切换潜行状态。
+View the map.	查看地图。
+Toggle cloud view.	切换云层显示。
+Toggle track view.	切换踪迹显示。
+Drop an item.	丢下一件物品。
+Wear an item.	穿戴一件物品。
+Remove an item.	脱下一件物品。
+Put an item into a container.	将一件物品放入容器。
+Eat or drink an item.	食用或饮用一件物品。
+Interact with an item in a different way.	以其他方式与物品互动。
+View this item.	查看此物品。
+Drop this item.	丢下此物品。
+Wear this item.	穿戴此物品。
+Remove this item.	脱下此物品。
+Put this item into a container.	将此物品放入容器。
+Eat or drink this item.	食用或饮用此物品。
+Interact with this item in a different way (opens menu.)	以其他方式与此物品互动，打开操作菜单。
+This party member is currently automated in tactical mode.	此队伍成员目前在战术模式中自动行动。
+This party member is manually controlled in tactical mode.	此队伍成员在战术模式中由你手动控制。
+Assume control of this party member.	接管此队伍成员。
+You are tangled in a web.	你被蛛网缠住了。
+You are sleeping.	你正在睡觉。
+You are unconscious.	你已失去意识。
+You are paralyzed.	你已瘫痪。
+You are wrestling.	你正在摔跤。
+You are nauseated.	你感到恶心。
+You are stunned.	你被击晕了。
+You are winded.	你气喘吁吁。
+You have are seriously injured. View your status for more information.	你受了重伤。打开状态页查看详情。
+You have are injured. View your status for more information.	你受伤了。打开状态页查看详情。
+You have a fever.	你发烧了。
+You are thirsty.	你口渴了。
+You are hungry.	你饥饿了。
+You are drowsy.	你困倦了。
+You are stressed. View your status for more information.	你感到压力。打开状态页查看详情。
+You are distracted by unmet needs. View your status for more information.	需求未得到满足，使你分心。请查看状态页了解详情。
+You are enraged.	你怒不可遏。
+You are in a martial trance.	你已进入战斗专注状态。
+You are throwing a tantrum.	你正在大发脾气。
+You are depressed.	你情绪低落。
+You are oblivious.	你对周围浑然不觉。
+You are in a fell mood.	你陷入了凶险的情绪。
+You are in a macabre mood.	你陷入了阴森心情。
+You are in a fey mood.	你陷入了神秘的情绪。
+You are in a secretive mood.	你陷入了隐秘的情绪。
+You are possessed.	你被附身了。
+You are melancholy.	你陷入了忧郁。
+You are insane.	你已精神失常。
+You are berserk.	你陷入了狂暴。
+You are catatonic.	你陷入了紧张性木僵。
+You are terrified.	你惊恐万分。
+Toggle the display of spoor for tracking.	切换追踪用的足迹显示。
+
+# Shared unit lists, also used in Justice. Complete dynamic widget tooltips,
+# not the static toolbar initializer catalog. Installed Linux 53.16 ELF
+# strings: 0x221cd63, 0x221cb38, 0x221cb60, 0x221cd7c, 0x221cd96,
+# 0x221cdb2; Justice's involvement sort uses 0x21afee0. The common tooltip
+# parser owns the entire source and wraps Chinese inside the current frame.
+Sort units by name.	按名称对单位排序。
+Sort units by profession category.	按职业类别对单位排序。
+Sort units by profession name.	按职业名称对单位排序。
+Sort units by job.	按工作对单位排序。
+Sort units by stress level.	按压力程度对单位排序。
+Sort units by skills.	按技能对单位排序。
+Sort units by how involved they are in the crime.	按涉案程度对单位排序。
+Filter the unit list by name or job.	按名称或工作筛选单位列表。
+
+# Adventure weather widgets use complete native descriptions. Keep the calm
+# wind sentence intact so its "no" cannot fall through to the Yes/No vocabulary.
+# Temperature terms follow the existing weather/temperature panel vocabulary.
+There is no wind here.	这里没有风。
+It is hot.	天气炎热。
+It is cold.	天气寒冷。
+It is cool.	天气凉爽。
+It is freezing.	气温已降至冰点。
+It is deathly cold.	这里的严寒足以致命。
+The temperature is pleasant.	气温宜人。
+It is scorching.	天气酷热。
+It is warm.	天气温暖。
+Being dead is cold and clammy.	死后的感觉阴冷潮湿。
+The temperature is as it has been and always will be.	气温始终如一，永远不会改变。
+The temperature cannot be judged.	无法判断气温。
+It is burning.	这里灼热难耐。
+
+# Complete adventure weather family, statically recovered from the installed
+# Windows x64 native builders recorded in data/extracted/tooltip-sources.tsv. Preserve the
+# strength, direction, position, moon phase and cloud visibility in each full
+# sentence; none of these rows is an English wrap fragment or deletion rule.
+There is a thin mist here.	这里有一层薄雾。
+Fog enshrouds the area.	雾气笼罩着这片区域。
+There is a heavy blanket of fog enveloping everything.	浓雾如厚毯般笼罩着一切。
+There is a thin mist outside.	外面有一层薄雾。
+There is fog outside.	外面有雾。
+There is thick fog outside.	外面有浓雾。
+It is raining.	正在下雨。
+It is raining outside.	外面正在下雨。
+It is snowing.	正在下雪。
+It is snowing outside.	外面正在下雪。
+The sky above you is nearly black, ripped through with towering clouds.	你头顶的天空近乎漆黑，高耸的云层从中穿过。
+The sky above you is completely gray, with dark cloud pillars pressing through it.	你头顶的天空一片灰暗，深色的云柱挤入其中。
+A towering gray cloud descends from the white sky above you.	一团高耸的灰云从你头顶的白色天空中向下延伸。
+The sky above you is a uniform and dark gray.	你头顶的天空是一片均匀的深灰色。
+The sky above you is gray.	你头顶的天空灰蒙蒙的。
+The sky above you is hazy and white.	你头顶的天空朦胧泛白。
+A dark, towering cloud rises into a striped sky.	一团深色的高耸云层伸入布满条纹的天空。
+Mounds of clouds are clustered through a striped sky.	成堆的云团聚集在布满条纹的天空中。
+There are scattered clouds underneath a striped sky.	布满条纹的天空下散布着云朵。
+The sky is striped with thin clouds.	薄云在天空中形成条纹。
+The sky is otherwise clear above you.	除此之外，你头顶的天空一片晴朗。
+The sky is clear above you.	你头顶的天空一片晴朗。
+A dark, menacing cloud towers above you, crowned by an anvil.	一团阴暗而险恶的云高耸在你头顶，顶部呈铁砧状。
+There are mounds of clouds above you, smooth on the bottom with prominent upward bulges.	你头顶有成堆的云团，底部平坦，顶部明显隆起。
+There are scattered puffy clouds above you.	你头顶散布着蓬松的云朵。
+There is a gentle breeze blowing from the north.	一阵微风从北方吹来。
+There is a gentle breeze blowing from the northwest.	一阵微风从西北方吹来。
+There is a gentle breeze blowing from the northeast.	一阵微风从东北方吹来。
+There is a gentle breeze blowing from the south.	一阵微风从南方吹来。
+There is a gentle breeze blowing from the southwest.	一阵微风从西南方吹来。
+There is a gentle breeze blowing from the southeast.	一阵微风从东南方吹来。
+There is a gentle breeze blowing from the west.	一阵微风从西方吹来。
+There is a gentle breeze blowing from the east.	一阵微风从东方吹来。
+There is a strong breeze blowing from the north.	一阵劲风从北方吹来。
+There is a strong breeze blowing from the northwest.	一阵劲风从西北方吹来。
+There is a strong breeze blowing from the northeast.	一阵劲风从东北方吹来。
+There is a strong breeze blowing from the south.	一阵劲风从南方吹来。
+There is a strong breeze blowing from the southwest.	一阵劲风从西南方吹来。
+There is a strong breeze blowing from the southeast.	一阵劲风从东南方吹来。
+There is a strong breeze blowing from the west.	一阵劲风从西方吹来。
+There is a strong breeze blowing from the east.	一阵劲风从东方吹来。
+There is a heavy wind blowing from the north.	一阵大风从北方吹来。
+There is a heavy wind blowing from the northwest.	一阵大风从西北方吹来。
+There is a heavy wind blowing from the northeast.	一阵大风从东北方吹来。
+There is a heavy wind blowing from the south.	一阵大风从南方吹来。
+There is a heavy wind blowing from the southwest.	一阵大风从西南方吹来。
+There is a heavy wind blowing from the southeast.	一阵大风从东南方吹来。
+There is a heavy wind blowing from the west.	一阵大风从西方吹来。
+There is a heavy wind blowing from the east.	一阵大风从东方吹来。
+There is a mighty wind blowing from the north.	一阵狂风从北方吹来。
+There is a mighty wind blowing from the northwest.	一阵狂风从西北方吹来。
+There is a mighty wind blowing from the northeast.	一阵狂风从东北方吹来。
+There is a mighty wind blowing from the south.	一阵狂风从南方吹来。
+There is a mighty wind blowing from the southwest.	一阵狂风从西南方吹来。
+There is a mighty wind blowing from the southeast.	一阵狂风从东南方吹来。
+There is a mighty wind blowing from the west.	一阵狂风从西方吹来。
+There is a mighty wind blowing from the east.	一阵狂风从东方吹来。
+The sun is rising in the east.	太阳正从东方升起。
+The sun is rising in the east behind the clouds.	太阳正从东方升起，被云层遮挡。
+The sun is rising in the west.	太阳正从西方升起。
+The sun is rising in the west behind the clouds.	太阳正从西方升起，被云层遮挡。
+The sun is low in the eastern sky.	太阳位于东方低空。
+The sun is low in the eastern sky behind the clouds.	太阳位于东方低空，被云层遮挡。
+The sun is in the eastern sky.	太阳位于东方天空。
+The sun is in the eastern sky behind the clouds.	太阳位于东方天空，被云层遮挡。
+The sun is high in the eastern sky.	太阳位于东方高空。
+The sun is high in the eastern sky behind the clouds.	太阳位于东方高空，被云层遮挡。
+The sun is low in the western sky.	太阳位于西方低空。
+The sun is low in the western sky behind the clouds.	太阳位于西方低空，被云层遮挡。
+The sun is in the western sky.	太阳位于西方天空。
+The sun is in the western sky behind the clouds.	太阳位于西方天空，被云层遮挡。
+The sun is high in the western sky.	太阳位于西方高空。
+The sun is high in the western sky behind the clouds.	太阳位于西方高空，被云层遮挡。
+The sun is directly above you.	太阳就在你的头顶正上方。
+The sun is directly above you behind the clouds.	太阳就在你的头顶正上方，被云层遮挡。
+The sun is setting to the east.	太阳正向东方落下。
+The sun is setting to the east behind the clouds.	太阳正向东方落下，被云层遮挡。
+The sun is setting to the west.	太阳正向西方落下。
+The sun is setting to the west behind the clouds.	太阳正向西方落下，被云层遮挡。
+The stars are out.	繁星已现。
+You cannot see the sky clearly from here, but the available sunlight indicates the night.	从这里看不清天空，但可见的天光表明现在是夜晚。
+You cannot see the sky clearly from here, but the available sunlight indicates the dawn.	从这里看不清天空，但可见的天光表明现在是黎明。
+You cannot see the sky clearly from here, but the available sunlight indicates the day.	从这里看不清天空，但可见的天光表明现在是白天。
+You cannot see the sky clearly from here, but the available sunlight indicates the sunset.	从这里看不清天空，但可见的天光表明现在正值日落。
+The sky is alive with vortices of purple light and dark, boiling clouds.	天空中紫光旋涡涌动，乌云翻滚。
+The area gives off a sickly light.	这片区域散发着病态的光芒。
+The full moon is rising in the east.	满月正从东方升起。
+The full moon is rising in the west.	满月正从西方升起。
+The full moon is low in the eastern sky.	满月位于东方低空。
+The full moon is in the eastern sky.	满月位于东方天空。
+The full moon is high in the eastern sky.	满月位于东方高空。
+The full moon is low in the western sky.	满月位于西方低空。
+The full moon is in the western sky.	满月位于西方天空。
+The full moon is high in the western sky.	满月位于西方高空。
+The full moon is directly above you.	满月就在你的头顶正上方。
+The full moon is setting to the east.	满月正向东方落下。
+The full moon is setting to the west.	满月正向西方落下。
+The waxing gibbous moon is rising in the east.	盈凸月正从东方升起。
+The waxing gibbous moon is rising in the west.	盈凸月正从西方升起。
+The waxing gibbous moon is low in the eastern sky.	盈凸月位于东方低空。
+The waxing gibbous moon is in the eastern sky.	盈凸月位于东方天空。
+The waxing gibbous moon is high in the eastern sky.	盈凸月位于东方高空。
+The waxing gibbous moon is low in the western sky.	盈凸月位于西方低空。
+The waxing gibbous moon is in the western sky.	盈凸月位于西方天空。
+The waxing gibbous moon is high in the western sky.	盈凸月位于西方高空。
+The waxing gibbous moon is directly above you.	盈凸月就在你的头顶正上方。
+The waxing gibbous moon is setting to the east.	盈凸月正向东方落下。
+The waxing gibbous moon is setting to the west.	盈凸月正向西方落下。
+The waxing half moon is rising in the east.	上弦月正从东方升起。
+The waxing half moon is rising in the west.	上弦月正从西方升起。
+The waxing half moon is low in the eastern sky.	上弦月位于东方低空。
+The waxing half moon is in the eastern sky.	上弦月位于东方天空。
+The waxing half moon is high in the eastern sky.	上弦月位于东方高空。
+The waxing half moon is low in the western sky.	上弦月位于西方低空。
+The waxing half moon is in the western sky.	上弦月位于西方天空。
+The waxing half moon is high in the western sky.	上弦月位于西方高空。
+The waxing half moon is directly above you.	上弦月就在你的头顶正上方。
+The waxing half moon is setting to the east.	上弦月正向东方落下。
+The waxing half moon is setting to the west.	上弦月正向西方落下。
+The waxing crescent moon is rising in the east.	蛾眉月正从东方升起。
+The waxing crescent moon is rising in the west.	蛾眉月正从西方升起。
+The waxing crescent moon is low in the eastern sky.	蛾眉月位于东方低空。
+The waxing crescent moon is in the eastern sky.	蛾眉月位于东方天空。
+The waxing crescent moon is high in the eastern sky.	蛾眉月位于东方高空。
+The waxing crescent moon is low in the western sky.	蛾眉月位于西方低空。
+The waxing crescent moon is in the western sky.	蛾眉月位于西方天空。
+The waxing crescent moon is high in the western sky.	蛾眉月位于西方高空。
+The waxing crescent moon is directly above you.	蛾眉月就在你的头顶正上方。
+The waxing crescent moon is setting to the east.	蛾眉月正向东方落下。
+The waxing crescent moon is setting to the west.	蛾眉月正向西方落下。
+The waning gibbous moon is rising in the east.	亏凸月正从东方升起。
+The waning gibbous moon is rising in the west.	亏凸月正从西方升起。
+The waning gibbous moon is low in the eastern sky.	亏凸月位于东方低空。
+The waning gibbous moon is in the eastern sky.	亏凸月位于东方天空。
+The waning gibbous moon is high in the eastern sky.	亏凸月位于东方高空。
+The waning gibbous moon is low in the western sky.	亏凸月位于西方低空。
+The waning gibbous moon is in the western sky.	亏凸月位于西方天空。
+The waning gibbous moon is high in the western sky.	亏凸月位于西方高空。
+The waning gibbous moon is directly above you.	亏凸月就在你的头顶正上方。
+The waning gibbous moon is setting to the east.	亏凸月正向东方落下。
+The waning gibbous moon is setting to the west.	亏凸月正向西方落下。
+The waning half moon is rising in the east.	下弦月正从东方升起。
+The waning half moon is rising in the west.	下弦月正从西方升起。
+The waning half moon is low in the eastern sky.	下弦月位于东方低空。
+The waning half moon is in the eastern sky.	下弦月位于东方天空。
+The waning half moon is high in the eastern sky.	下弦月位于东方高空。
+The waning half moon is low in the western sky.	下弦月位于西方低空。
+The waning half moon is in the western sky.	下弦月位于西方天空。
+The waning half moon is high in the western sky.	下弦月位于西方高空。
+The waning half moon is directly above you.	下弦月就在你的头顶正上方。
+The waning half moon is setting to the east.	下弦月正向东方落下。
+The waning half moon is setting to the west.	下弦月正向西方落下。
+The waning crescent moon is rising in the east.	残月正从东方升起。
+The waning crescent moon is rising in the west.	残月正从西方升起。
+The waning crescent moon is low in the eastern sky.	残月位于东方低空。
+The waning crescent moon is in the eastern sky.	残月位于东方天空。
+The waning crescent moon is high in the eastern sky.	残月位于东方高空。
+The waning crescent moon is low in the western sky.	残月位于西方低空。
+The waning crescent moon is in the western sky.	残月位于西方天空。
+The waning crescent moon is high in the western sky.	残月位于西方高空。
+The waning crescent moon is directly above you.	残月就在你的头顶正上方。
+The waning crescent moon is setting to the east.	残月正向东方落下。
+The waning crescent moon is setting to the west.	残月正向西方落下。
+The new moon is rising in the east.	新月正从东方升起。
+The new moon is rising in the west.	新月正从西方升起。
+The new moon is low in the eastern sky.	新月位于东方低空。
+The new moon is in the eastern sky.	新月位于东方天空。
+The new moon is high in the eastern sky.	新月位于东方高空。
+The new moon is low in the western sky.	新月位于西方低空。
+The new moon is in the western sky.	新月位于西方天空。
+The new moon is high in the western sky.	新月位于西方高空。
+The new moon is directly above you.	新月就在你的头顶正上方。
+The new moon is setting to the east.	新月正向东方落下。
+The new moon is setting to the west.	新月正向西方落下。
+The moon is rising in the east bright behind the clouds.	月亮正从东方升起，在云后仍显明亮。
+The moon is rising in the west bright behind the clouds.	月亮正从西方升起，在云后仍显明亮。
+The moon is low in the eastern sky bright behind the clouds.	月亮位于东方低空，在云后仍显明亮。
+The moon is in the eastern sky bright behind the clouds.	月亮位于东方天空，在云后仍显明亮。
+The moon is high in the eastern sky bright behind the clouds.	月亮位于东方高空，在云后仍显明亮。
+The moon is low in the western sky bright behind the clouds.	月亮位于西方低空，在云后仍显明亮。
+The moon is in the western sky bright behind the clouds.	月亮位于西方天空，在云后仍显明亮。
+The moon is high in the western sky bright behind the clouds.	月亮位于西方高空，在云后仍显明亮。
+The moon is directly above you bright behind the clouds.	月亮就在你的头顶正上方，在云后仍显明亮。
+The moon is setting to the east bright behind the clouds.	月亮正向东方落下，在云后仍显明亮。
+The moon is setting to the west bright behind the clouds.	月亮正向西方落下，在云后仍显明亮。
+The moon is rising in the east pale behind the clouds.	月亮正从东方升起，在云后显得黯淡。
+The moon is rising in the west pale behind the clouds.	月亮正从西方升起，在云后显得黯淡。
+The moon is low in the eastern sky pale behind the clouds.	月亮位于东方低空，在云后显得黯淡。
+The moon is in the eastern sky pale behind the clouds.	月亮位于东方天空，在云后显得黯淡。
+The moon is high in the eastern sky pale behind the clouds.	月亮位于东方高空，在云后显得黯淡。
+The moon is low in the western sky pale behind the clouds.	月亮位于西方低空，在云后显得黯淡。
+The moon is in the western sky pale behind the clouds.	月亮位于西方天空，在云后显得黯淡。
+The moon is high in the western sky pale behind the clouds.	月亮位于西方高空，在云后显得黯淡。
+The moon is directly above you pale behind the clouds.	月亮就在你的头顶正上方，在云后显得黯淡。
+The moon is setting to the east pale behind the clouds.	月亮正向东方落下，在云后显得黯淡。
+The moon is setting to the west pale behind the clouds.	月亮正向西方落下，在云后显得黯淡。
+The moon is rising in the east hardly visible behind the clouds.	月亮正从东方升起，在云后几乎不可见。
+The moon is rising in the west hardly visible behind the clouds.	月亮正从西方升起，在云后几乎不可见。
+The moon is low in the eastern sky hardly visible behind the clouds.	月亮位于东方低空，在云后几乎不可见。
+The moon is in the eastern sky hardly visible behind the clouds.	月亮位于东方天空，在云后几乎不可见。
+The moon is high in the eastern sky hardly visible behind the clouds.	月亮位于东方高空，在云后几乎不可见。
+The moon is low in the western sky hardly visible behind the clouds.	月亮位于西方低空，在云后几乎不可见。
+The moon is in the western sky hardly visible behind the clouds.	月亮位于西方天空，在云后几乎不可见。
+The moon is high in the western sky hardly visible behind the clouds.	月亮位于西方高空，在云后几乎不可见。
+The moon is directly above you hardly visible behind the clouds.	月亮就在你的头顶正上方，在云后几乎不可见。
+The moon is setting to the east hardly visible behind the clouds.	月亮正向东方落下，在云后几乎不可见。
+The moon is setting to the west hardly visible behind the clouds.	月亮正向西方落下，在云后几乎不可见。
+
+# Full material precipitation sentences; t marks the shared material capture.
+{s} is falling outside.	外面正有{s}落下。	t
+{s} is falling from the sky.	{s}正从天空落下。	t

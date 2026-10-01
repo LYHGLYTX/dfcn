@@ -1,0 +1,467 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# Indirect adventure dialogue helpers. Sources are reconstructed through complete native control flow, including shared tails before return.
+# Full names, directions, regions, institutions and historical descriptions reuse the shared dictionaries.
+# ELF 53.16 event-memory formatter: death switch 0x10182a0..0x10187d9,
+# conflict tails 0x1019125..0x1019187. These records are spoken with the
+# independently selected event/reaction sentences, not only in history pages.
+sentence	{s} {s}.	{s1}{s2}。	memory-person,memory-death	ELF 0x10182a0..0x10187d9; complete event-memory death record
+sentence	{s} attacked {s}.	{s1}攻击了{s2}。	memory-person,memory-person	ELF 0x1019187; both native participant names retained
+sentence	{s} demanded submission from {s}.	{s1}要求{s2}臣服。	memory-person,memory-person	ELF 0x1019125
+sentence	{s} escalated a conflict with {s}.	{s1}升级了与{s2}的冲突。	memory-person,memory-person	ELF 0x1019156
+memory-death	died in magma	死于岩浆		ELF 0x10182a0..0x10187d9
+memory-death	died	死了		ELF 0x10182a0..0x10187d9
+memory-death	was executed	被处决了		ELF 0x10182a0..0x10187d9
+memory-death	drowned	淹死了		ELF 0x10182a0..0x10187d9
+memory-death	leapt from a great height	从高处跳了下去		ELF 0x1018419
+memory-death	was slaughtered	被屠宰了		ELF 0x1018431
+memory-death	was drained of blood	被吸干了血		ELF 0x1018449
+memory-death	collapsed	倒下了		ELF 0x1018461
+memory-death	died in the dark	死于黑暗之中		ELF 0x1018479
+memory-death	was shot and killed	被射杀了		ELF 0x1018491
+memory-death	died of thirst	渴死了		ELF 0x10184a9
+memory-death	starved to death	饿死了		ELF 0x10184c1
+memory-death	fell to the passing years	寿终正寝了		ELF 0x10184d9
+memory-death	was scuttled	被凿沉了		ELF 0x10184f1
+memory-death	burned to death	被烧死了		ELF 0x1018509
+memory-death	burned in dragonfire	被龙焰烧死了		ELF 0x1018521
+memory-death	was slain	被杀死了		ELF 0x1018539
+memory-death	suffocated	窒息而死		ELF 0x1018551
+memory-death	bled to death	失血而死		ELF 0x1018569..0x10187d9
+memory-death	was buried alive	被活埋了		ELF 0x1018569..0x10187d9
+memory-death	was crucified	被钉死在十字架上		ELF 0x1018569..0x10187d9
+memory-death	was beheaded	被斩首了		ELF 0x1018569..0x10187d9
+memory-death	froze to death	被冻死了		ELF 0x1018569..0x10187d9
+memory-death	was killed by spikes	被尖刺刺死了		ELF 0x1018569..0x10187d9
+memory-death	died in the cold	死于严寒		ELF 0x1018569..0x10187d9
+memory-death	died in the heat	死于酷热		ELF 0x1018569..0x10187d9
+memory-death	vanished	消失了		ELF 0x1018569..0x10187d9
+memory-death	died in a trap	死在陷阱中		ELF 0x1018569..0x10187d9
+memory-death	was murdered	被谋杀了		ELF 0x1018569..0x10187d9
+memory-death	died in a cage	死在笼子里		ELF 0x1018569..0x10187d9
+memory-death	fell into a chasm	坠入了深渊		ELF 0x1018569..0x10187d9
+memory-death	was crushed by a rock	被岩石砸死了		ELF 0x1018569..0x10187d9
+memory-death	was crushed by a bridge	被桥压死了		ELF 0x1018569..0x10187d9
+memory-death	was crushed	被压死了		ELF 0x1018569..0x10187d9
+memory-death	was scalded to death	被烫死了		ELF 0x1018701
+memory-death	was scared to death	被吓死了		ELF 0x1018719
+memory-death	was put to rest	得以安息		ELF 0x1018731
+memory-death	died of an illness	病死了		ELF 0x1018749
+memory-death	was left out to suffocate	被丢在外面窒息而死		ELF 0x1018761
+memory-death	was hacked to pieces	被砍成了碎片		ELF 0x1018779
+memory-death	was fed to beasts	被喂给了野兽		ELF 0x1018791
+memory-death	was burned alive	被活活烧死了		ELF 0x10187a9
+memory-death	was executed by drowning	被执行了溺刑		ELF 0x10187c1
+# Shared weather announcements retain the complete native material name.
+sentence	{s} is falling outside.	外面正有{s1}落下。	material	ELF53.16 0xc838f4/0xc85a4f -> 0xc8399a -> 0x17ea070
+sentence	{s} is falling from the sky.	{s1}正从天空落下。	material	ELF53.16 0xc83bbc/0xc85a73 -> 0xc83c6d -> 0x17ea070
+sentence	We are in {s}.	我们在{s1}。	$name	0x140690328+0x140690358+0x140690363; main 0x1404aa381/0x1404aa718/0x1404c79a7/0x1404c8a8a -> 0x140690060
+sentence	{s} is very near.	{s1}近在咫尺。	$name	0x140690420..0x140690549 and 0x140690df2..0x140690eaf; 0x14147c4a0 zero-distance branch
+sentence	{s} is {s}.	{s1}位于{s2}。	$name,$distance	0x140690420..0x140690549 and 0x140690df2..0x140690eaf; full 0x14147c4a0 direction/distance grammar from data/runtime/announcement-world-fields.tsv
+sentence	[You receive a detailed description.]	【你听到了一番详细的介绍。】		0x140690554; native bracketed notice appended after direction sentence
+sentence	{s} is in {s}.	{s1}位于{s2}。	$name,$name	0x1406905de+0x14069060f+0x140690628+0x140690670; region helper 0x140b94a40, including an unknown region
+sentence	I've heard of a place called {s}.	我听说过一个叫{s1}的地方。	$name	0x14069064f+0x140690665+0x140690670
+sentence	The surrounding area is called {s}.	周边地区叫做{s1}。	$name	0x140690d51+0x140690d81+0x140690ea5; 0x140689ce0 -> 0x140690b40
+
+# The search-location helper has one finite building-kind switch and an optional native here/there location.
+description-building	{s}	{s1}	$reference	0x140694be8..0x140694d00; shared Legends building-term catalog
+description-building	the dungeon	地牢		0x140694ce7; shared a dungeon term
+sentence	I'm not sure exactly where to look.	我不确定究竟该去哪里找。		0x140694aa9+0x140694ab3; main 0x1404c8af0 -> 0x140694910
+sentence	Search first in {s}, {s} here.	先在这里的{s2}{s1}找找。	$name,description-building	0x140694b49+0x140694b82+0x140694bab+0x140694be8..0x140694d39
+sentence	Search first in {s}, {s} there.	先在那里的{s2}{s1}找找。	$name,description-building	0x140694b49+0x140694b82+0x140694bab+0x140694be8..0x140694d39
+sentence	Search first in {s}, here.	先在这里的{s1}找找。	$name	0x140694bc9 ->0x140694d05; unnamed building-kind switch default preserves the native comma
+sentence	Search first in {s}, there.	先在那里的{s1}找找。	$name	0x140694bc9 ->0x140694d05; unnamed building-kind switch default preserves the native comma
+
+# Joining, guiding and performance invitations. 0x140694dc0 returns at 0x1406953bb; the following bytes are a switch table, and 0x140695430 begins a separate function.
+sentence	Hey... that sounds like a great idea!	嘿……这听起来真是个好主意！		0x1406950e6; main 0x1404b224f/0x1404b3933/0x1404b449f -> 0x140694dc0
+sentence	Surely any place is better than this. Let's set off immediately!	去哪儿都比待在这里强。我们马上出发吧！		0x1406950f8
+sentence	I've always wanted to travel the world. Let us be off!	我一直想周游世界。我们出发吧！		0x140695117
+sentence	Nothing beats the open road. Let us be off!	再没有什么比在路上更痛快了。出发吧！		0x14069511e
+sentence	Excitement! Adventure! I am thrilled to join you.	刺激！冒险！能跟你们一起去，真让人兴奋！		0x140695134; this branch assigns, rather than appends, the whole response
+sentence	I will agree to travel with you if you lead me to glory and death.	只要能带我赢得荣耀、迎接死亡，我就跟你走。		0x14069515b
+sentence	I will agree to guide you if you lead me to glory and death.	只要能带我赢得荣耀、迎接死亡，我就为你带路。		0x140695162
+sentence	Take me away from here.	带我离开这里吧。		0x140695172
+sentence	Let us leave as soon as possible.	我们尽快离开吧。		0x140695184
+sentence	This is a cause worthy of struggle.	这件事值得为之奋斗。		0x140695196
+sentence	I'm sorry. My duty is here.	抱歉，我得在这里履行职责。		0x1406951a8
+sentence	That's such a fantastic idea. I can't wait to be off!	这个主意太棒了。我等不及要出发了！		0x1406951ba
+sentence	It's such a noble pursuit. Let's go immediately!	这是多么崇高的追求。我们马上走吧！		0x1406951cc
+sentence	It would be so great to perform and make people happy.	能靠演出带给大家快乐，那该多好。		0x1406951de
+sentence	I so love the performing arts. It's time to go!	我太喜欢表演艺术了。该出发了！		0x1406951f0
+sentence	I'd love to travel and create art.	我很想一边旅行，一边从事艺术创作。		0x140695202
+sentence	The performing arts are so important. Let's go!	表演艺术多重要啊。我们走吧！		0x140695214
+sentence	Let's spread the joy!	让我们传播欢乐吧！		0x140695226
+sentence	The performances will be great.	演出一定会很精彩。		0x140695238
+sentence	A demonstration of your skill might convince me.	展示一下你的技艺，也许就能说服我。		0x14069524a
+sentence	Keep practicing!	继续练习吧！		0x14069525c
+sentence	Maybe after you've improved. Prove you have what it takes. The life of the traveling performer is a hard one.	等你的本领长进些再说吧。先证明你能胜任，巡回艺人的日子可不好过。		0x14069526e
+sentence	Can you manage a troupe so large?	这么大的剧团，你管得过来吗？		0x140695280
+sentence	It is I that would lead you, but I have no need of your protection.	该由我来带领你才对，但我不需要你的保护。		0x140695292
+sentence	Ha! Such enthusiasm from one such as yourself.	哈！就凭你，也这么热心？		0x1406952a4
+sentence	With a band so large, what share of the glory would I have?	队伍这么大，我又能分得多少荣耀？		0x1406952b6
+sentence	I'm sorry. I can't go with you.	抱歉。我不能跟你走。		0x1406952c8
+sentence	I have no interest in your objectives.	我对你的目标毫无兴趣。		0x1406952da
+sentence	I cannot abandon my pilgrimage.	我不能放弃朝圣之旅。		0x140695317
+sentence	I cannot give up my quest for {s}.	我不能放弃寻找{s1}。	$book	0x14069532c+0x140695345+0x14069534a; full artifact/book identity from 0x140b94400
+sentence	I cannot, for I am on an important journey.	不行，我此行有要事在身。		0x140695359
+sentence	I am unfit to brave danger with you.	我不适合与你一同冒险。		0x140695373
+sentence	I would... rather not.	我……还是不去了。		0x14069537c
+
+# 0x14068d170 is the shared recursive location-fact dispatcher, also called by family and nearby-region dialogue.
+# Named institutions use the same terminology as data/runtime/legends-events.tsv; optional native ownership precedes the optional name.
+description-institution	a library	图书馆		0x14068d62f; shared a library term
+description-institution	a tavern	酒馆		0x14068d778; shared a tavern term
+description-institution	a great keep	雄伟的城堡主楼		0x14068de4c; shared a keep term
+description-institution	a tomb	陵墓		0x14068d88e; shared a tomb term
+description-institution	a tomb housing {s}	安葬着{s1}的陵墓	$person	0x14068d88e+0x14068d93e+0x14068d981
+description-institution	a temple	神殿		0x14068db05; shared a temple term
+description-institution	a temple to {s}	供奉{s1}的神殿	$person	0x14068db05+0x14068dbae+0x14068dbf1; deity field
+description-institution	a temple of {s}	属于{s1}的神殿	$name	0x14068db05+0x14068dcb4+0x14068dcf7; religious-entity field
+sentence	There is {s} there.	那里有一座{s1}。	description-institution	0x14068d62f/0x14068d778/0x14068d88e/0x14068db05/0x14068de4c -> 0x14068d726/0x14068dab3
+sentence	There is {s} there named {s}.	那里有一座名为{s2}的{s1}。	description-institution,$name	0x14068d66b/0x14068d7b0/0x14068da33/0x14068dd71/0x14068de88; complete generated institution name
+description-resident	{s} the {s}	{s2}{s1}	$person,$term	0x14068e00f..0x14068e247; profession helper 0x14132cc10 or creature caste from RAW
+description-resident	{s}	{s1}	$person	0x14068e00f+0x14068e252; absent profession/caste branch
+sentence	{s} is there.	{s1}在那里。	description-resident	0x14068e252; full person/profession-or-caste field
+sentence	It is a place of great evil.	那是个极其邪恶的地方。		0x14068e38a
+sentence	[{s} looks around nervously and leans forward, speaking quietly.]	【{s1}紧张地四下张望，探过身来压低了声音。】	$person	0x14068e64b+0x14068e689+0x14068e6ba+0x14068e6cf
+sentence	It is rumored that the dead rise and stalk the living!	据说死人会在那里复活，暗中追踪活人！		0x14068e731
+sentence	That place is blessed.	那里是受祝福之地。		0x14068e85a
+sentence	Savage beasts call it their home.	那里栖息着凶猛的野兽。		0x14068ea4e
+sentence	{s}! It's terrifying.	{s1}！太可怕了。	$creature	0x14068eeff..0x14068ef48+0x14068ef9b; full plural RAW caste name, capitalized by 0x14052d650
+sentence	{s} have been known to hunt out there.	听说{s1}会在那里狩猎。	$creature	0x14068eeff..0x14068ef48+0x14068efde
+sentence	{s} roam freely out there.	{s1}在那里自由游荡。	$creature	0x14068eeff..0x14068ef48+0x14068efed
+sentence	I don't know very much about it.	我对那里了解不多。		0x14068f285; shared unknown-information fallback
+# Forwarded text: 0x14068d498 -> 0x140685d00 substitutes speaker/audience/context in existing text; 0x14068e2e2 -> object virtual +0xd0 supplies an entire historical description, tracked separately from fixed branches.
+
+# Dynamic first-person memories from the same native formatter as fixed Overview sentences.
+sentence	{s}	{s1}	memory-sentence	Shared first-person event constructor; overview and announcement entry
+memory-person	{s}	{s1}	$unit	Native unit labels before bare historical figure names
+memory-person	{s}	{s1}	$person	Native historical figure field retains generated English surname
+memory-person	an unknown creature	不明生物		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	somebody	有人		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	someone	有人		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	I	我		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	me	我		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	you	你		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	spouse	伴侣		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	lover	恋人		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	child	孩子		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	father	父亲		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	mother	母亲		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	sibling	兄弟姐妹		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	friend	朋友		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	acquaintance	熟人		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	pet	宠物		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-relation	animal training partner	一起训练的动物伙伴		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	my {s}	我的{s1}	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	my own	我自己		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-person	the forces of {s}	{s1}的部队	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	Our time in {s} is so brief...	我们在{s1}能活的日子真短啊……	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} {s}.	{s1}{s2}。	memory-person,memory-death	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} attacked {s}.	{s1}袭击了{s2}。	memory-person,memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} demanded submission from {s}.	{s1}要{s2}服从。	memory-person,memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} escalated a conflict with {s}.	{s1}跟{s2}闹得更厉害了。	memory-person,memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} is dead.	{s1}死了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} is really dead.	{s1}真的死了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I can't believe {s} is dead.	真不敢相信，{s1}死了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} is dead?	{s1}死了？	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	Oh, {s}...	唉，{s1}……	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	Oh, where is {s}?	唉，{s1}在哪里啊？	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s}, slayer of {s}.	{s1}，就是杀死{s2}的那个。	memory-person,memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s}, slayer.	{s1}，杀人的家伙。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} has killed.	{s1}杀人了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} killed {s}.	{s1}杀死了{s2}。	memory-person,memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I murdered {s}.	我杀害了{s1}。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I abducted {s}.	我绑走了{s1}。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I defeated {s}.	我打败了{s1}。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was rejected by {s}.	{s1}拒绝了我。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have fallen for {s}.	我喜欢上{s1}了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am forming a grudge against {s}.	我开始记恨{s1}了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am separated from {s}.	我跟{s1}分开了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} and I are divorced.	我跟{s1}离婚了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	{s} and I broke up.	我跟{s1}分手了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am together with my {s}.	跟我的{s1}在一起了。	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am reunited with my {s}.	跟我的{s1}重逢了。	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was reunited with {s}.	我跟{s1}重逢了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I gave birth to {s}.	我生下了{s1}。	memory-offspring	PE 0x1406728df..0x140672926 -> 0x1406dd860 with human-count mode; sex and litter size, not a personal name
+memory-sentence	I have become a parent of {s}.	我有{s1}了。	memory-offspring	PE 0x14067295d..0x1406729d1 -> 0x1406dd860 with human-count mode; litter size, not a personal name
+memory-sentence	I shall name you {s}.	就给你起名叫{s1}吧。	$person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was attacked by my own dead {s}.	我死去的{s1}竟然袭击了我。	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	My {s} was expelled.	我的{s1}被赶走了。	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I got into an argument.	跟人吵了一架。		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I got into an argument with {s}.	跟{s1}吵了一架。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I made {s}.	交到了{s1}。	memory-made	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I played with {s}.	玩了玩{s1}。	memory-object	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I acquired {s}.	得到了{s1}。	memory-object	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I saw {s} on display.	看到了展出的{s1}。	memory-object	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I saw {s} in my personal museum.	在自己的博物馆里看到了{s1}。	memory-object	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I saw a {s} recite {s} at {s}.	我看到一名{s1}在{s3}朗诵《{s2}》。	$creature,memory-work,$name	Native Overview performance memory; observed a elf, work title and venue fields
+memory-sentence	I saw an {s} recite {s} at {s}.	我看到一名{s1}在{s3}朗诵《{s2}》。	$creature,memory-work,$name	Overview performance memory; alternate indefinite article
+memory-sentence	I told the story of {s} at {s}.	我在{s2}讲述了{s1}的故事。	$event,$name	Observed Overview storytelling memory; complete historical event title and performance venue
+memory-sentence	I saw {s}.	看到了{s1}。	memory-object	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was near to a caged {s}.	靠近过关在笼子里的{s1}。	$creature	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was near to {s}.	靠近过{s1}。	$creature	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was pestered by {s}.	被{s1}缠上了。	$creature	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was accosted by {s}.	{s1}来找我麻烦了。	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am now part of {s}.	我现在也是{s1}的一员了。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I can now reside in {s}.	现在能住在{s1}了。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was denied residency in {s}.	没获准住在{s1}。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	There was a performance in {s}.	{s1}办了场表演。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	There was a scholarly lecture in {s}.	{s1}办了场学术讲座。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I must pray to {s}.	得向{s1}祈祷了。	$person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have communed with {s}.	跟{s1}沟通过了。	$person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have communed with {s} in this holy place.	在这圣地跟{s1}沟通过了。	$person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have communed with {s} in this dubious place.	在这不太像样的地方跟{s1}沟通过了。	$person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have performed the rites of {s}.	参加了{s1}的仪式。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have performed the rites of {s} in this holy place.	在这圣地参加了{s1}的仪式。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have performed the rites of {s} in this dubious place.	在这不太像样的地方参加了{s1}的仪式。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I am awoken to {s}.	我领会了{s1}。	$sphere	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I read {s}.	读了{s1}。	memory-work	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I wrote {s}.	写了{s1}。	memory-work	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I learned {s}.	学会了{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I learned about {s}.	学到了关于{s1}的知识。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I taught {s}.	教了教{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I've been discussing {s}.	最近在跟人讨论{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I've been mulling over {s}.	最近一直在琢磨{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I've made a breakthrough regarding {s}.	对{s1}有了新的发现。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I realized {s}.	我想明白了{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I just don't understand {s}.	就是弄不懂{s1}。	memory-knowledge	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have improved my {s}.	我的{s1}进步了。	$term	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I have mastered {s}.	我已经精通{s1}了。	$term	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I conducted a meeting in {s}.	在一个{s1}的地方开了场会。	memory-setting	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	It was {s}.	那是{s1}。	$event	PE 0x14067307d..0x1406730e6; thought 233 HistEventCollection; world.history.event_collections.all at 0x1424f9d30, id +0x58, virtual getName +0x30
+memory-sentence	Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。	memory-room	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	I was {s} by {s}.	我被{s2}{s1}。	memory-ghost-action,memory-ghost	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	The temple petition for {s} was rejected.	为{s1}建神殿的申请被拒绝了。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	The guildhall petition for {s} was rejected.	为{s1}建公会大厅的申请被拒绝了。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	The agreement to establish a temple for {s} was abandoned.	说好为{s1}建神殿，后来却没建。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-sentence	The agreement to establish a guildhall for {s} was abandoned.	说好为{s1}建公会大厅，后来却没建。	$name	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-made	a new friend	一个新朋友		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-object	a piece	一件作品		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-object	a toy	一个玩具		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-work	an untitled composition	一部没起名的作品		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-knowledge	an untitled composition	一部没起名的作品		PE 0x1406724e4+0x1406724ed; learning a work uses the same absent-title fallback as reading
+memory-knowledge	powerful knowledge	强大的知识		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-made	friends with {s}	{s1}这个朋友	memory-person	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-object	{s}	{s1}	$item	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-work	{s}	{s1}	$book	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-knowledge	{s}	{s1}	$reference	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-knowledge	{s}	{s1}	work-reference	PE 0x1406722b8..0x140672442 and 0x1406726ee..0x1406728ab; shared complete general_ref wording, including form/value subjects
+memory-knowledge	{s}	{s1}	$book	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-room	sleeping	睡觉		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-room	dining	吃饭		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-room	office	办公		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-room	burial	安葬		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a setting worthy of legends	好得能让人说上好多年		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a fantastic setting	好极了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a great setting	很好		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a very good setting	相当好		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a good setting	挺好		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a poor setting	不太好		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a very poor setting	很差		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a horrible setting	差极了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	an awful setting	糟透了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-setting	a horribly substandard setting	差得实在不像样		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost-action	haunted	缠上了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost-action	tormented	折磨了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost-action	possessed	附身了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost-action	tortured	狠狠折磨了		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost	a ghost	一个鬼魂		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost	the ghost of a pet	一只宠物的鬼魂		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost	the ghost of an acquaintance	一个熟人的鬼魂		ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+memory-ghost	the ghost of my {s}	我的{s1}的鬼魂	memory-relation	ELF 53.16 0x101b7f0..0x1020794 event-memory constructor
+sentence	{s} pets {s}.	{s1}摸了摸{s2}。	$unit,memory-person	RAW creature_standard.txt PET action; native full actor and target fields
+
+memory-sentence	I put on a well-crafted item.	穿上了一件做得不错的衣物。		ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I put on a finely-crafted item.	穿上了一件做得很精致的衣物。		ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I put on a superior item.	穿上了一件品质上等的衣物。		ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I put on an exceptional item.	穿上了一件品质特别好的衣物。		ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I put on a truly splendid item.	穿上了一件品质好极了的衣物。		ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I am together with my {s} {s}.	跟我的{s1}{s2}在一起了。	memory-relation,memory-person	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I am reunited with my {s} {s}.	跟我的{s1}{s2}重逢了。	memory-relation,memory-person	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	I got into an argument with {s} {s}.	跟{s1}{s2}吵了一架。	memory-relation,memory-person	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-person	my {s} {s}	我的{s1}{s2}	memory-relation,$person	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	{s} was slain by {s}.	{s1}被{s2}杀死了。	memory-person,memory-person	ELF native event and battle-account death branches
+memory-sentence	The temple petition for {s} was ignored.	为{s1}建神殿的申请没人理。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	The guildhall petition for {s} was ignored.	为{s1}建公会大厅的申请没人理。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	The agreement to establish a temple for {s} was ignored.	说好为{s1}建神殿，却没人管了。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	The agreement to establish a guildhall for {s} was ignored.	说好为{s1}建公会大厅，却没人管了。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	{s} has been recognized.	{s1}得到了认可。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+memory-sentence	{s} will be recognized.	{s1}将得到认可。	$name	ELF 53.16 0x101b7f0..0x1020794 dynamic memory branches
+dialogue-battle-person	an unknown creature	不明生物		Native unknown historical figure label in battle accounts
+
+# Complete PE Overview event formatter 0x14066fe50..0x140673bb8 and its
+# incident formatter 0x14066ba00..0x14066fe48. Native literals and branch
+# ownership are retained in data/extracted/overview-event-sources.tsv. These productions
+# compose typed clauses; no event/reaction Cartesian product is required.
+memory-sentence	I realized {s}.	我明白了{s1}。	memory-value-insight	0x14066ff42..0x140670267; two lead-ins, three attitudes and all 33 value ids
+memory-sentence	I am awoken to {s}.	我领悟到了{s1}。	memory-value-insight	0x14066ff42..0x140670267
+memory-value-insight	the worthlessness of {s}	{s1}毫无价值	memory-value	0x14066ffc5 + 0x140670004
+memory-value-insight	the value of {s}	{s1}的价值	memory-value	0x14066ffd9 + 0x140670004
+memory-value-insight	nuances of {s}	{s1}的细微之处	memory-value	0x14066ffe8 + 0x140670004
+memory-value	law	法律		0x140670036
+memory-value	loyalty	忠诚		0x140670048
+memory-value	family	亲情		0x14067005a; shared reference-value wording
+memory-value	friendship	友情		0x14067006c; shared reference-value wording
+memory-value	power	权势		0x14067007e; shared reference-value wording
+memory-value	truth	诚实		0x140670090
+memory-value	cunning	谋略		0x1406700a2
+memory-value	eloquence	口才		0x1406700ae
+memory-value	fairness	公平		0x1406700c0
+memory-value	decorum	礼仪		0x1406700d2
+memory-value	tradition	传统		0x1406700de
+memory-value	artwork	艺术		0x1406700f0
+memory-value	cooperation	合作		0x140670102
+memory-value	independence	独立		0x140670114
+memory-value	stoicism	克制		0x140670126; shared reference-value wording
+memory-value	introspection	自省		0x140670138
+memory-value	self-control	自律		0x14067014a; shared reference-value wording
+memory-value	tranquility	宁静		0x14067015c
+memory-value	harmony	和谐		0x14067016e
+memory-value	merriment	欢庆		0x14067017a; shared reference-value wording
+memory-value	craftsmanship	工艺		0x14067018c
+memory-value	martial prowess	武艺		0x14067019b
+memory-value	skill	技艺		0x1406701ad
+memory-value	hard work	勤劳		0x1406701b9; shared reference-value wording
+memory-value	sacrifice	牺牲		0x1406701c2; shared reference-value wording
+memory-value	competition	竞争		0x1406701d1
+memory-value	perseverance	坚韧		0x1406701e0; shared reference-value wording
+memory-value	leisure time	闲暇		0x1406701ef
+memory-value	commerce	商业		0x1406701fe
+memory-value	romance	浪漫		0x14067020d; shared reference-value wording
+memory-value	nature	自然		0x14067021c
+memory-value	peace	和平		0x14067022b
+memory-value	knowledge	知识		0x140670234
+memory-sentence	I was near to a {s}.	靠近过一个{s1}。	memory-furniture	0x140670ecd..0x140670f94; building type formatter 0x14054d320
+memory-sentence	I was near to my own {s}.	靠近过自己的{s1}。	memory-furniture	0x140670efe..0x140670f94
+memory-sentence	I was near to a arranged {s}.	靠近过一个摆放好的{s1}。	memory-furniture	0x140670ef0+0x140670f30; native a arranged is intentional
+memory-sentence	I was near to my own arranged {s}.	靠近过自己摆放好的{s1}。	memory-furniture	0x140670efe+0x140670f30
+memory-furniture	{s}	{s1}	$term	0x14054d320..0x14054e7bc; complete building-kind label, including race-specific workshop title
+memory-sentence	I saw {s} on display.	看到了展出的{s1}。	agreement-item	0x140670dcb..0x140670ea7; named artifact or item description
+memory-sentence	I saw {s} on display in my personal museum.	在自己的博物馆里看到了展出的{s1}。	memory-exhibit	0x140670e9d+0x140670eb9; both native suffixes are appended
+memory-exhibit	{s}	{s1}	memory-object	0x140670e5e/0x140670e88; item description or a piece fallback
+memory-exhibit	{s}	{s1}	agreement-item	0x140670e4f; named artifact
+memory-sentence	I acquired {s}.	得到了{s1}。	agreement-item	0x140671f44..0x140671f61 -> artifact formatter 0x140b94400
+memory-sentence	{s} was given away.	{s1}被送人了。	agreement-item	0x140671ef8..0x140671f26 -> artifact formatter 0x140b94400
+memory-sentence	The forces of {s} have shattered against {s}.	{s1}的部队在{s2}溃败了。	$name,memory-location	0x1406726b6..0x1406726e9 -> entity 0x140b92900, then site 0x140671708 -> 0x140b93930
+memory-sentence	I have become a parent.	我有孩子了。		0x14067295d..0x140672974; singleton branch omits of
+memory-sentence	It was.	就是那样。		0x14067309d -> 0x14067055a; absent syndrome record
+memory-offspring	a girl	一个女孩		0x1406ddd45
+memory-offspring	a boy	一个男孩		0x1406ddd5c
+memory-offspring	a child	一个孩子		0x1406ddd6e
+memory-offspring	twins	双胞胎		0x1406ddd8b
+memory-offspring	triplets	三胞胎		0x1406ddda2
+memory-offspring	quadruplets	四胞胎		0x1406dddb3
+memory-offspring	quintuplets	五胞胎		0x1406dddc4
+memory-offspring	sextuplets	六胞胎		0x1406ddddb
+memory-offspring	septuplets	七胞胎		0x1406dddf2
+memory-offspring	octuplets	八胞胎		0x1406dde09
+memory-offspring	nonuplets	九胞胎		0x1406dde20
+memory-offspring	decaplets	十胞胎		0x1406dde34
+memory-offspring	undecaplets	十一胞胎		0x1406dde42
+memory-offspring	duodecaplets	十二胞胎		0x1406dde56
+memory-offspring	tredecaplets	十三胞胎		0x1406dde6a
+memory-offspring	quattuordecaplets	十四胞胎		0x1406dde7e
+memory-offspring	quindecaplets	十五胞胎		0x1406dde92
+memory-offspring	many babies	许多孩子		0x1406dde9b
+memory-death	drowned himself	投水自尽了		0x14066d2fe..0x14066d36d -> reflexive pronoun helper 0x140aa4800
+memory-death	drowned herself	投水自尽了		0x14066d2fe..0x14066d36d
+memory-death	drowned itself	投水自尽了		0x14066d2fe..0x14066d36d
+memory-sentence	I died.	我死了。		0x14066d037; death subject is the speaker
+
+# Incident performance type 6, all eight topic selectors. Every performance
+# can omit its venue or append at <native location name> before the period.
+memory-sentence	{s}.	{s1}。	memory-performance	0x14066d821..0x14066e912 -> common period 0x14066f1df
+memory-performance	{s}	{s1}	memory-performance-core	0x14066e857; absent venue
+memory-performance	{s} at {s}	在{s2}，{s1}	memory-performance-core,$name	0x14066e8e7; venue's generated English name
+memory-performance-core	I preached on {s}	我讲了关于{s1}的道理	memory-sermon-topic	0x14066d8dc..0x14066da8e
+memory-performance-core	I saw {s} preach on {s}	我听{s1}讲了关于{s2}的道理	memory-person,memory-sermon-topic	0x14066daa1..0x14066db62
+memory-performance-core	I saw a sermon on {s}	我听了一场关于{s1}的布道	memory-sermon-topic	0x14066db3a..0x14066db62
+memory-performance-core	{s} preached on {s}	{s1}讲了关于{s2}的道理	memory-person,memory-sermon-topic	0x14066db6c..0x14066dc4d
+memory-performance-core	A sermon on {s} was preached	有人做了一场关于{s1}的布道	memory-sermon-topic	0x14066dc54..0x14066dc9d
+memory-sermon-topic	{s}	{s1}	memory-value-insight	0x14066d91f -> general reference virtual 0x140ee0380
+memory-sermon-topic	{s}	{s1}	work-reference	0x14066d91f..0x14066da4d; value, sphere or historical figure reference
+memory-sermon-topic	{s}	{s1}	$sphere	0x14066d9af -> 0x140756690
+memory-sermon-topic	{s}	{s1}	memory-person	0x14066da08 -> 0x140b92f10
+memory-performance-core	I told the story of {s}	我讲了{s1}的故事	memory-story	0x14066dd70..0x14066dd89
+memory-performance-core	I saw {s} tell the story of {s}	我听{s1}讲了{s2}的故事	memory-person,memory-story	0x14066dd9c..0x14066de59
+memory-performance-core	I saw a telling of the story of {s}	我听了{s1}的故事	memory-story	0x14066de31..0x14066de59
+memory-performance-core	{s} told the story of {s}	{s1}讲了{s2}的故事	memory-person,memory-story	0x14066de63..0x14066df3d
+memory-performance-core	Thestory of {s} was told	有人讲了{s1}的故事	memory-story	0x14066df4e+0x14066df63+0x14066df81; native concatenates The and story without a space
+memory-story	history	往事		0x14066dd52; absent history event
+memory-story	{s}	{s1}	$event	0x14066dd4d -> history event virtual +0xd8
+memory-performance-core	I recited {s}	我朗诵了{s1}	memory-poem	0x14066e027
+memory-performance-core	I saw {s} recite {s}	我听{s1}朗诵了{s2}	memory-person,memory-poem	0x14066e053..0x14066e0fb
+memory-performance-core	I saw a recital of {s}	我听了{s1}的朗诵	memory-poem	0x14066e0ec
+memory-performance-core	{s} recited {s}	{s1}朗诵了{s2}	memory-person,memory-poem	0x14066e152..0x14066e1ff
+memory-performance-core	{s} was recited	有人朗诵了{s1}	memory-poem	0x14066e206..0x14066e231
+memory-poem	a poem	一首诗		0x14066e00e; absent form/work title
+memory-poem	{s}	{s1}	$book	0x14066dfb0..0x14066e00e; generated poetic form or written work title
+memory-performance-core	{s} {s} {s}	{s1}{s2}{s3}	memory-person,memory-performance-past,memory-performance-work	0x14066e2fc..0x14066e7eb; participant or speaker, exact role verb and work/form title
+memory-performance-core	I saw {s} {s} {s}	我看{s1}{s2}{s3}	memory-person,memory-performance-verb,memory-performance-work	0x14066e39b..0x14066e5d2; single performer only
+memory-performance-core	I saw a performance of {s}	我看了一场{s1}的表演	memory-performance-work	0x14066e4c3 and 0x14066e7f7; multiple performers/dance
+memory-performance-core	{s} was performed	有人表演了{s1}	memory-performance-work	0x14066e5d9..0x14066e607 and 0x14066e817..0x14066e845
+memory-performance-work	music	音乐		0x14066e2df
+memory-performance-work	dance	舞蹈		0x14066e6b2
+memory-performance-work	{s}	{s1}	$book	0x14066e272/0x14066e2a8/0x14066e645/0x14066e67b; musical/dance form name or written composition title
+memory-performance-past	played	演奏了		0x14066e354/0x14066e791
+memory-performance-past	sang	唱了		0x14066e367/0x14066e7a1
+memory-performance-past	chanted	吟唱了		0x14066e37a/0x14066e7b1
+memory-performance-past	spoke	念了		0x14066e386/0x14066e7ba
+memory-performance-past	performed	表演了		0x14066e5aa/0x14066e7c3
+memory-performance-past	danced	跳了		0x14066e747; dance participant type 3
+memory-performance-verb	play	演奏了		0x14066e479
+memory-performance-verb	sing	唱了		0x14066e48c
+memory-performance-verb	chant	吟唱了		0x14066e49f
+memory-performance-verb	speak	念了		0x14066e4ab
+memory-performance-verb	perform	表演了		0x14066e4b7
+
+# Incident artifact/work transfer (types 7/8), reunion (4), crime (1), and
+# naming/refusing identification (9/10). Location and credited helper remain
+# independently typed fields instead of being swallowed into personal names.
+memory-sentence	{s}.	{s1}。	memory-possession	0x14066bba3..0x14066c7a5; native possession event and shared location tail
+memory-possession	{s}	{s1}	memory-possession-core	0x14066c25c/0x14066c2c2; absent location
+memory-possession	{s} in {s}	在{s2}，{s1}	memory-possession-core,memory-location	0x14066c201..0x14066c3ed
+memory-possession	{s} in {s} in {s}	在{s3}的{s2}，{s1}	memory-possession-core,memory-location,memory-location	0x14066c232+0x14066c237; building inside site
+memory-possession-core	{s} gave {s} to {s}	{s1}把{s2}给了{s3}	memory-person,memory-transfer-object,memory-person	0x14066be9f/0x14066c690 + to tail
+memory-possession-core	{s} would not give {s}	{s1}不肯交出{s2}	memory-person,agreement-item	0x14066c687; no receiver is appended on this native branch
+memory-possession-core	{s} obtained {s}	{s1}得到了{s2}	memory-person,agreement-item	0x14066c699
+memory-possession-core	{s} placed {s}	{s1}放下了{s2}	memory-person,memory-transfer-object	0x14066bea8/0x14066c6a2
+memory-possession-core	{s} had {s}	{s1}拥有{s2}	memory-person,agreement-item	0x14066c6ab
+memory-possession-core	{s} was destroyed	{s1}被毁掉了	agreement-item	0x14066c2ca..0x14066c303
+memory-transfer-object	an untitled work	一部没有题名的作品		0x14066bf57
+memory-transfer-object	{s}	{s1}	agreement-item	0x14066bec9..0x14066bf67 and 0x14066c6dd; written work or artifact
+memory-location	{s}	{s1}	$name	0x140b94090/0x140b93930/0x140b94a40/0x140b94940; building, site, region or underground region
+memory-location	an unknown site	一个不知名的地点		Native site-name fallback
+memory-location	an unknown region	一个不知名的地区		Native region-name fallback
+memory-location	an unknown underground region	一个不知名的地下区域		Native underground-region fallback
+memory-sentence	{s}.	{s1}。	memory-reunion	0x14066c7a5..0x14066cf4f; native reunion and optional helper credit
+memory-reunion	{s}	{s1}	memory-reunion-core	0x14066ccfe; no credited helper
+memory-reunion	{s} and it is all thanks to {s}	{s1}，这全多亏了{s2}	memory-reunion-core,memory-person	0x14066cd4d..0x14066cd97
+memory-reunion	{s} due to your efforts	多亏你帮忙，{s1}	memory-reunion-core	0x14066cf38
+memory-reunion-core	{s} was reunited with {s}	{s1}跟{s2}重逢了	memory-person,memory-person	0x14066c841/0x14066c8a5
+memory-reunion-core	You were reunited with {s}	你跟{s1}重逢了	memory-person	0x14066c7d6+0x14066c85d
+memory-sentence	{s} perpetrated {s}.	{s1}犯下了{s2}。	memory-person,memory-crime	0x14066d3a4..0x14066d817; all native crime selectors
+memory-sentence	{s} attempted {s}.	{s1}企图犯下{s2}。	memory-person,memory-crime	0x14066d6b2
+memory-crime	a production order violation	违抗生产命令的罪		0x14066d6e1
+memory-crime	a export prohibition violation	违反出口禁令的罪		0x14066d6f5; native a export
+memory-crime	a job order violation	违抗工作命令的罪		0x14066d709
+memory-crime	a conspiracy to slow labor	合谋怠工的罪		0x14066d71d
+memory-crime	a murder	谋杀罪		0x14066d731
+memory-crime	disorderly conduct	扰乱秩序的罪		0x14066d745
+memory-crime	building destruction	毁坏建筑的罪		0x14066d759
+memory-crime	vandalism	破坏公物的罪		0x14066d76d
+memory-crime	a kidnapping	绑架罪		0x14066d781
+memory-crime	a theft	盗窃罪		0x14066d795
+memory-crime	a robbery	抢劫罪		0x14066d7a9
+memory-crime	blood-drinking	吸血的罪		0x14066d7bd
+memory-crime	embezzlement	侵吞公款的罪		0x14066d7d1
+memory-crime	treason	叛国罪		0x14066d7e5
+memory-crime	espionage	间谍罪		0x14066d7f9
+memory-crime	bribery	贿赂罪		0x14066d80d
+memory-sentence	You named yourself to {s}.	你向{s1}报上了自己的名字。	$name	0x14066eb00+0x14066ebbb
+memory-sentence	{s} self-identified to {s}.	{s1}向{s2}报上了自己的名字。	memory-person,$name	0x14066eb82+0x14066ebbb
+memory-sentence	Somebody named themself to {s}.	有人向{s1}报上了自己的名字。	$name	0x14066eba6+0x14066ebbb
+memory-sentence	You refused to name yourself to {s}.	你不肯向{s1}透露自己的名字。	$name	0x14066edc1 -> 0x14066ebb5
+memory-sentence	{s} refused to give a name to {s}.	{s1}不肯向{s2}透露自己的名字。	memory-person,$name	0x14066ee43 -> 0x14066ebb5
+memory-sentence	Somebody refused to name themself to {s}.	有人不肯向{s1}透露自己的名字。	$name	0x14066ee6a -> 0x14066ebb5

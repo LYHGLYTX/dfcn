@@ -1,0 +1,133 @@
+# scope	source	target	field scopes	native provenance
+# Saved creation-time memorial prose; root cc23e0..cc5384, death table cc5278,
+# preference table cc5354. See data/runtime/memorial-inscription-grammar.md and data/extracted/memorial-inscription-sources.tsv.
+# Delimiters propose boundaries; each typed field and the whole root must resolve.
+memorial-inscription	In memory of...	谨以此纪念……		cc2433; absent historical figure
+memorial-inscription	In memory of {s} / {s}	谨以此纪念{s1}／{s2}	memorial-name,memorial-clauses	cc2525..cc5278
+memorial-inscription	In memory of {s} / {s}.	谨以此纪念{s1}／{s2}。	memorial-name,memorial-clauses	cc2525..cc5278; punctuated item capture
+memorial-inscription	In memory of {s}	谨以此纪念{s1}	memorial-name	cc2525..cc2578
+memorial-inscription	In memory of {s}.	谨以此纪念{s1}。	memorial-name	cc2525..cc2578; punctuated item capture
+memorial-name	a {s}	一位{s1}	$creature	cc2578; unnamed historical figure
+memorial-name	{s}	{s1}	$memorial-actor	cc2525; original-language personal name
+memorial-clauses	{s} / {s}	{s1}／{s2}	memorial-clause,memorial-clauses	cc26a3..cc5278; complete native clause list
+memorial-clauses	{s}	{s1}	memorial-clause	cc26a3..cc5278
+memorial-clause	Born {s}	生于{s1}年	$digits	cc27d5/cc33d4
+memorial-clause	Went missing in the year {s}	于{s1}年失踪	$digits	cc27fa..cc2844
+memorial-clause	Went missing	失踪		cc27fa
+memorial-clause	{s} - {s}	{s1}年生，{s2}年卒	$digits,$digits	cc3587
+memorial-clause	b.{s} d.{s}	{s1}年生，{s2}年卒	$digits,$digits	cc35e7
+memorial-clause	Died {s}	卒于{s1}年	$digits	cc361b
+memorial-clause	d.{s}	卒于{s1}年	$digits	cc361b
+memorial-clause	{s} in {s} in the year {s}	于{s3}年的{s2}中{s1}	memorial-death,$event,$digits	cc3442..cc3549; collection owns its internal location
+memorial-clause	{s} in the year {s}	于{s2}年{s1}	memorial-death,$digits	cc351e
+memorial-clause	{s} in {s}	在{s2}中{s1}	memorial-death,$event	cc3442..cc3514
+memorial-clause	{s}	{s1}	memorial-death	cc2a58..cc3549
+memorial-clause	Creator of {s}	{s1}的创作者	$memorial-artifact	cc36a6..cc37b9
+memorial-clause	{s} of {s}, {s} to {s}	{s3}年至{s4}年担任{s2}的{s1}	$office,$name,$digits,$digits	cc3939..cc3b31
+memorial-clause	{s} of {s} in {s}	{s3}年担任{s2}的{s1}	$office,$name,$digits	cc3939..cc3b31
+memorial-clause	{s} of {s}	{s2}的{s1}	$office,$name	cc3939; position title plus entity/site
+memorial-clause	Slayer of the {s} {s}	斩杀{s1}·{s2}者	$creature,$memorial-actor	cc3cf6..cc3f16; species and generated victim name
+memorial-clause	Slayer of the {s}	斩杀{s1}者	$creature	cc3cf6..cc3f16; species only
+memorial-clause	Slayer of {s}	斩杀{s1}者	memorial-victim	cc3cf6/cc4029; figure or creature plural
+memorial-clause	Slayer of	斩杀者		cc3cf6; same species and no generated victim name
+memorial-clause	Hunter of {s}	{s1}猎手	$creature	cc4029; at least five unnamed kills
+memorial-victim	{s}	{s1}	$creature	cc4029
+memorial-victim	{s}	{s1}	$memorial-actor	cc3cf6..cc3f16
+memorial-clause	Loving {s}	慈爱的{s1}	memorial-family	cc40a8..cc4306
+memorial-clause	Devoted {s}	尽心尽责的{s1}	memorial-family	cc40a8..cc4306
+memorial-family	father and husband	父亲与丈夫		cc4124; male parent and spouse
+memorial-family	mother and wife	母亲与妻子		cc4124; female parent and spouse
+memorial-family	parent and spouse	家长与配偶		cc4124; neutral parent and spouse
+memorial-family	father	父亲		cc4124
+memorial-family	mother	母亲		cc4124
+memorial-family	parent	家长		cc4124
+memorial-family	husband	丈夫		cc4124
+memorial-family	wife	妻子		cc4124
+memorial-family	spouse	配偶		cc4124
+memorial-clause	United with {s}	与{s1}融为一体	$memorial-material	cc4492..cc47ca; preference 0
+memorial-clause	At one with {s}	与{s1}合而为一	$memorial-material	cc4492..cc47ca; preference 0
+memorial-clause	Lover of {s}	喜爱{s1}	memorial-liked-value	cc4306..cc5278; preferences 0/4/5/6/9/10/11
+memorial-clause	Admirer of {s}	钟爱{s1}	$memorial-preference	cc4306..cc5278; preferences 1/5/6/8
+memorial-clause	Friend of {s}	{s1}之友	$creature	cc4306..cc5278; preference 1
+memorial-clause	The color {s} made him happy	{s1}令他快乐	$memorial-preference	cc4306..cc5278; preference 7 male
+memorial-clause	The color {s} made her happy	{s1}令她快乐	$memorial-preference	cc4306..cc5278; preference 7 female
+memorial-clause	The color {s} made it happy	{s1}令它快乐	$memorial-preference	cc4306..cc5278; preference 7 neutral
+memorial-liked-value	{s}	{s1}	$memorial-material	cc4492..cc47ca
+memorial-liked-value	{s}	{s1}	$memorial-preference	cc4306..cc5278
+memorial-liked-value	{s}	《{s1}》	$memorial-form	cc4306..cc5278; named poetic/musical/dance forms
+memorial-death	Died peacefully	安详离世		cc5278 cause 0
+memorial-death	Starved to death	饥饿而死		cc5278 causes 1/23/24
+memorial-death	Died of thirst	渴死		cc5278 cause 2
+memorial-death	Drowned	溺亡		cc5278 causes 5/34/53
+memorial-death	Bled to death	失血而死		cc5278 cause 4
+memorial-death	Suffocated	窒息而死		cc5278 cause 6
+memorial-death	Scuttled	被凿沉		cc5278 cause 8
+memorial-death	Died after colliding with an obstacle	撞上障碍物而死		cc5278 cause 9
+memorial-death	Burned up in magma	在岩浆中焚毁		cc5278 cause 10
+memorial-death	Burned up in a magma mist	在岩浆雾中焚毁		cc5278 cause 11
+memorial-death	Burned up in dragon fire	被龙焰焚毁		cc5278 cause 12; no killer
+memorial-death	Burned up in {s} dragon fire	被{s1}的龙焰焚毁	memorial-possessive	cc2c31; cause 12 named or unnamed killer
+memorial-death	Burned to death	被烧死		cc5278 cause 13; no killer
+memorial-death	Burned to death by {s} fire	被{s1}的火焰烧死	memorial-possessive	cc2cd0; cause 13 named killer
+memorial-death	Burned to death by a {s} fire	被一只{s1}的火焰烧死	$creature	cc2cd0; cause 13 unnamed killer; native omits possessive
+memorial-possessive	{s}'s	{s1}	$memorial-actor	b92f10 mode 2 or a caste + possessive
+memorial-possessive	{s}'	{s1}	$memorial-actor	b92f10 mode 2; name ending in s
+memorial-death	Scalded to death	被烫死		cc5278 cause 14
+memorial-death	Crushed under a collapsing ceiling	被坍塌的天花板压死		cc5278 cause 15
+memorial-death	Crushed by a drawbridge	被吊桥碾死		cc5278 cause 16
+memorial-death	Killed by falling rocks	被落石砸死		cc5278 cause 17
+memorial-death	Fell into a deep chasm	坠入深渊而死		cc5278 cause 18
+memorial-death	Died in a cage	死于笼中		cc5278 cause 19
+memorial-death	Killed by a trap	死于陷阱		cc5278 cause 21
+memorial-death	Vanished	消失无踪		cc5278 cause 22
+memorial-death	Died in the heat	酷热而死		cc5278 cause 25
+memorial-death	Froze to death	冻死		cc5278 cause 26
+memorial-death	Impaled on spikes	被尖刺刺穿而死		cc5278 cause 27
+memorial-death	Encased in cooling lava	被封入冷却的熔岩		cc5278 cause 28
+memorial-death	Encased in cooling magma	被封入冷却的岩浆		cc5278 cause 29
+memorial-death	Encased in ice	被封入冰中		cc5278 cause 30
+memorial-death	Boiled	沸腾而亡		cc5278 cause 39
+memorial-death	Melted	熔化而亡		cc5278 cause 40
+memorial-death	Condensed	凝结而亡		cc5278 cause 41
+memorial-death	Solidified	凝固而亡		cc5278 cause 42
+memorial-death	Succumbed to infection	死于感染		cc5278 cause 43
+memorial-death	Put to rest	得以安息		cc5278 cause 44
+memorial-death	Died in the dark	死于黑暗		cc5278 cause 46
+memorial-death	Collapsed	倒地身亡		cc5278 cause 47
+memorial-death	Killed by a vehicle	被车辆撞死		cc5278 cause 50
+memorial-death	Killed by a flying object	被飞来之物击杀		cc5278 cause 51
+memorial-death	Leapt from a great height	从高处跃下而死		cc5278 cause 52
+memorial-death	{s}	{s1}	memorial-killer-death	cc2dff; optionally named killer
+memorial-killer-death	{s} by {s}	被{s2}{s1}	memorial-killer-verb,$memorial-actor	cc2dff; historical figure or a caste
+memorial-killer-death	{s}	被{s1}	memorial-killer-verb	cc2dff; absent killer
+memorial-killer-verb	Murdered	谋杀		cc5278 cause 20
+memorial-killer-verb	Beheaded	斩首		cc5278 cause 31
+memorial-killer-verb	Crucified	钉死在十字架上		cc5278 cause 32
+memorial-killer-verb	Buried alive	活埋		cc5278 cause 33
+memorial-killer-verb	Drowned	溺杀		cc5278 cause 34
+memorial-killer-verb	Burned alive	活活烧死		cc5278 cause 35
+memorial-killer-verb	Fed to beasts	喂给野兽		cc5278 cause 36
+memorial-killer-verb	Hacked to pieces	砍成碎片		cc5278 cause 37
+memorial-killer-verb	Left out in the air	弃于露天窒息而死		cc5278 cause 38
+memorial-killer-verb	Scared to death	吓死		cc5278 cause 45
+memorial-killer-verb	Drained of blood	吸干血液		cc5278 cause 48
+memorial-killer-verb	Executed	处决		cc5278 cause 54
+memorial-death	{s}	{s1}	memorial-weapon-death	cc2e39..cc33d4
+memorial-death	{s} with {s} from {s}	{s1}，凶器为由{s3}发射的{s2}	memorial-weapon-death,memorial-weapon,memorial-weapon	cc2e39; weapon and shooter
+memorial-death	{s} with {s}	{s1}，凶器为{s2}	memorial-weapon-death,memorial-weapon	cc2e39; weapon or shooter only
+memorial-weapon	{s}	{s1}	$memorial-item	cc23e0..cc26a3; material/item noun or named artifact
+memorial-weapon	{s}	{s1}	$memorial-artifact	cc23e0..cc26a3; b94400 artifact identity
+memorial-weapon-death	{s} by {s}	被{s2}{s1}	memorial-weapon-verb,$memorial-actor	cc2dff..cc2e39
+memorial-weapon-death	{s}	被{s1}	memorial-weapon-verb	cc2dff..cc2e39
+memorial-weapon-verb	Shot and killed	射杀		cc5278 cause 3
+memorial-weapon-verb	Struck down	击杀		cc5278 cause 7
+memorial-weapon-verb	Slaughtered	宰杀		cc5278 cause 49
+memorial-weapon-death	Bled to death, slain by {s}	被{s1}杀害，失血而死	$memorial-actor	cc2f8f; cause 4 killer
+memorial-weapon-death	Bled to death, slain	遇害后失血而死		cc2f8f; cause 4 weapons but no killer
+memorial-weapon-death	Suffocated, slain by {s}	被{s1}杀害，窒息而死	$memorial-actor	cc307d; cause 6 killer
+memorial-weapon-death	Suffocated, slain by	遇害后窒息而死		cc307d; native by plus doubled space before with
+memorial-weapon-death	Collapsed, struck down by {s}	被{s1}击杀，倒地身亡	$memorial-actor	cc3221; cause 47 killer
+memorial-weapon-death	Collapsed, struck down	遭击杀后倒地身亡		cc3221; native doubled space before with
+memorial-death	Died after colliding with an obstacle, slain by {s}	被{s1}杀害，撞上障碍物而死	$memorial-actor	cc2f26; cause 9
+memorial-death	Impaled on spikes, slain by {s}	被{s1}杀害，遭尖刺刺穿	$memorial-actor	cc2f26; cause 27
+memorial-death	Succumbed to infection, slain by {s}	被{s1}杀害，死于感染	$memorial-actor	cc2f26; cause 43

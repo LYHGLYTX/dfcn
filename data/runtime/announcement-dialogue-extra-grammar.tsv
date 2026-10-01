@@ -1,0 +1,134 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# Whole merchant calls and provenance descriptions. All optional adverbs, quoted aliases, populations, compass directions and customer addresses are retained.
+sentence	{s}!	{s1}！	merchant-hawk	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdf00 capitalization; terminal 0x1404ce34a
+sentence	{s}! Today only!	{s1}！仅限今天！	merchant-hawk	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce307/0x1404ce31e/0x1404ce335, native two-space boundary
+sentence	{s}! Limited supply!	{s1}！数量有限！	merchant-hawk	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce307/0x1404ce31e/0x1404ce335, native two-space boundary
+sentence	{s}! Best price in town!	{s1}！全镇最低价！	merchant-hawk	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce307/0x1404ce31e/0x1404ce335, native two-space boundary
+merchant-hawk	{s}	{s1}	merchant-hawk-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce24c optional here/right here
+merchant-hawk	{s} here	{s1}，就在这里	merchant-hawk-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce29b/0x1404ce2b2
+merchant-hawk	{s} right here	{s1}，就在此处	merchant-hawk-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce29b/0x1404ce2b2
+merchant-hawk-origin	{s}	{s1}	merchant-hawk-item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdf1a no known origin
+merchant-hawk-origin	{s} from {s}	来自{s2}的{s1}	merchant-hawk-item,merchant-advert-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdf6e..0x1404ce23c
+merchant-hawk-origin	{s} clear from {s}	远从{s2}运来的{s1}	merchant-hawk-item,merchant-advert-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdf6e..0x1404ce23c
+merchant-hawk-origin	{s} all the way from {s}	一路从{s2}运来的{s1}	merchant-hawk-item,merchant-advert-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdf6e..0x1404ce23c
+merchant-hawk-item	{s}	{s1}	merchant-genuine-item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cddc2 optional advertising imperative
+merchant-hawk-item	try {s}	来试试{s1}	merchant-genuine-item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cddfa/0x1404cde11/0x1404cde28
+merchant-hawk-item	get your {s}	快来买你的{s1}	merchant-genuine-item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cddfa/0x1404cde11/0x1404cde28
+merchant-hawk-item	your very own {s}	专属于你的{s1}	merchant-genuine-item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cddfa/0x1404cde11/0x1404cde28
+merchant-genuine-item	{s}	{s1}	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cdee6 complete native item description
+merchant-genuine-item	real {s}	货真价实的{s1}	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cde8c/0x1404cdea3
+merchant-genuine-item	authentic {s}	正宗的{s1}	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cde8c/0x1404cdea3
+merchant-advert-origin	the {s}	{s1}	$creature	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce048+0x1404ce06c race plural from 0x140aa3bd0 at 0x1404cdda0
+merchant-advert-origin	the {s} of {s}	{s2}的{s1}	$creature,$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce094+0x1404ce0b8
+merchant-advert-origin	{s}	{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce172/0x1404ce227; entity/site language_name
+merchant-advert-origin	distant {s}	遥远的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce129/0x1404ce140/0x1404ce1de/0x1404ce1f5
+merchant-advert-origin	faraway {s}	远方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce129/0x1404ce140/0x1404ce1de/0x1404ce1f5
+merchant-advert-origin	fair {s}	美丽的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce129/0x1404ce140/0x1404ce1de/0x1404ce1f5
+merchant-advert-origin	the great {s}	伟大的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce129/0x1404ce140/0x1404ce1de/0x1404ce1f5
+sentence	{s} was tanned right here in {s}.	{s1}就是在{s2}鞣制的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+sentence	{s} was cut right here in {s}.	{s1}就是在{s2}切割的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+sentence	{s} was made right here in {s}.	{s1}就是在{s2}制作的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+sentence	{s} were tanned right here in {s}.	{s1}就是在{s2}鞣制的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+sentence	{s} were cut right here in {s}.	{s1}就是在{s2}切割的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+sentence	{s} were made right here in {s}.	{s1}就是在{s2}制作的。	$item,merchant-town	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce525..0x1404ce6c0; complete item and named site/town fallback
+merchant-town	town	本镇		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce6ab
+merchant-town	{s}	{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce680
+sentence	{s} is from {s}.	{s1}来自{s2}。	$item,merchant-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce6fa..0x1404cf1fa; full production/settlement/civilization source
+sentence	{s} are from {s}.	{s1}来自{s2}。	$item,merchant-origin	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce6fa..0x1404cf1fa; full production/settlement/civilization source
+merchant-origin	the surrounding area	周边地区		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce7b3/0x1404ce7ca/0x1404ce7e1/0x1404ce941
+merchant-origin	just outside town	镇外不远处		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce7b3/0x1404ce7ca/0x1404ce7e1/0x1404ce941
+merchant-origin	a village nearby	附近的村庄		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce7b3/0x1404ce7ca/0x1404ce7e1/0x1404ce941
+merchant-origin	the settlements	那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce7b3/0x1404ce7ca/0x1404ce7e1/0x1404ce941
+merchant-origin	{s}	{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce916/0x1404ced2a/0x1404ced61
+merchant-origin	{s}, "{s}"	{s1}（“{s2}”）	$name,$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ced9b..0x1404cede6; original civilization name plus translated alias
+merchant-nation	{s}	{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ced2a/0x1404ced61
+merchant-nation	{s}, "{s}"	{s1}（“{s2}”）	$name,$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ced9b..0x1404cede6
+merchant-people	{s}	{s1}	$creature	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ceec6 race plural
+merchant-people	some of my kind	我的一些同族		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cef52
+merchant-people	some of our kind	我们的一些同族		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefd2
+merchant-origin	{s}, out to the west	西方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the west	西方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the west	西方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the west	西方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the east	东方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the east	东方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the east	东方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the east	东方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the north	北方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the north	北方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the north	北方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the north	北方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the south	南方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the south	南方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the south	南方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the south	南方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the northwest	西北方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the northwest	西北方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the northwest	西北方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the northwest	西北方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the northeast	东北方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the northeast	东北方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the northeast	东北方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the northeast	东北方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the southwest	西南方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the southwest	西南方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the southwest	西南方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the southwest	西南方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+merchant-origin	{s}, out to the southeast	东南方的{s1}	$name	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce9cb..0x1404cebf3 named settlement + direction
+merchant-origin	the settlements out to the southeast	东南方的那些定居点		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404ce941+0x1404ce9e0..0x1404cebf3 unknown settlement + direction
+merchant-origin	{s}, {s} out to the southeast	东南方的{s2}，也就是{s1}	merchant-nation,merchant-people	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cee65..0x1404cf1fa civilization, population, direction
+merchant-origin	{s}, out to the southeast	东南方的{s1}	merchant-nation	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cefB1/0x1404cefd0 ->0x1404cefe7 population phrase omitted
+sentence	Are you interested in {s}?	你对{s1}感兴趣吗？	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf2a8/0x1404cf2bf+0x1404cf2ea+0x1404cf304; question punctuation stored separately
+sentence	Are you interested in {s}, {s}?	{s2}，你对{s1}感兴趣吗？	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address before stored question mark
+sentence	Might I interest you in {s}?	我能让你对{s1}感兴趣吗？	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf2a8/0x1404cf2bf+0x1404cf2ea+0x1404cf304; question punctuation stored separately
+sentence	Might I interest you in {s}, {s}?	{s2}，我能让你对{s1}感兴趣吗？	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address before stored question mark
+sentence	Great {s}.	很棒的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Great {s}, {s}.	{s2}，很棒的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Great {s} there.	那里的很棒的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Great {s} there, {s}.	{s2}，那里的很棒的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Great {s} right there.	就那里的很棒的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Great {s} right there, {s}.	{s2}，就那里的很棒的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Splendid {s}.	出色的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Splendid {s}, {s}.	{s2}，出色的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Splendid {s} there.	那里的出色的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Splendid {s} there, {s}.	{s2}，那里的出色的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Splendid {s} right there.	就那里的出色的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Splendid {s} right there, {s}.	{s2}，就那里的出色的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Good {s}.	优质的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Good {s}, {s}.	{s2}，优质的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Good {s} there.	那里的优质的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Good {s} there, {s}.	{s2}，那里的优质的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Good {s} right there.	就那里的优质的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Good {s} right there, {s}.	{s2}，就那里的优质的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Decent {s}.	不错的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Decent {s}, {s}.	{s2}，不错的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Decent {s} there.	那里的不错的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Decent {s} there, {s}.	{s2}，那里的不错的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Decent {s} right there.	就那里的不错的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Decent {s} right there, {s}.	{s2}，就那里的不错的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Fantastic {s}.	绝妙的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Fantastic {s}, {s}.	{s2}，绝妙的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Fantastic {s} there.	那里的绝妙的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Fantastic {s} there, {s}.	{s2}，那里的绝妙的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Fantastic {s} right there.	就那里的绝妙的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Fantastic {s} right there, {s}.	{s2}，就那里的绝妙的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Excellent {s}.	上等的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Excellent {s}, {s}.	{s2}，上等的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Excellent {s} there.	那里的上等的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Excellent {s} there, {s}.	{s2}，那里的上等的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+sentence	Excellent {s} right there.	就那里的上等的{s1}。	$item	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf358..0x1404cf48e; stored terminal period 0x1404cf234
+sentence	Excellent {s} right there, {s}.	{s2}，就那里的上等的{s1}。	$item,merchant-address	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4b5..0x1404cf693 optional address retained
+merchant-address	my friend	朋友		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4f9/0x1404cf513/0x1404cf60f/0x1404cf667/0x1404cf67e
+merchant-address	my good man	好先生		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4f9/0x1404cf513/0x1404cf60f/0x1404cf667/0x1404cf67e
+merchant-address	my good woman	好女士		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4f9/0x1404cf513/0x1404cf60f/0x1404cf667/0x1404cf67e
+merchant-address	my good person	好心人		0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf4f9/0x1404cf513/0x1404cf60f/0x1404cf667/0x1404cf67e
+merchant-address	my good {s}	我亲爱的{s1}	$creature	0x1404cda5e..0x1404cf714; common complete merchant speech submit 0x1404cf70f; 0x1404cf59f race noun alternative to man/woman/person
+merchant-hawk-origin	try {s} from {s}	来试试来自{s2}的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	try {s} clear from {s}	来试试远从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	try {s} all the way from {s}	来试试一路从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	get your {s} from {s}	快来买你的来自{s2}的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	get your {s} clear from {s}	快来买你的远从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	get your {s} all the way from {s}	快来买你的一路从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	your very own {s} from {s}	专属于你的来自{s2}的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	your very own {s} clear from {s}	专属于你的远从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin
+merchant-hawk-origin	your very own {s} all the way from {s}	专属于你的一路从{s2}运来的{s1}	merchant-genuine-item,merchant-advert-origin	0x1404cddfa/0x1404cde11/0x1404cde28 ->0x1404cdfdb..0x1404ce23c; imperative scopes over item with origin

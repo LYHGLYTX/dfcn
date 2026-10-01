@@ -1,0 +1,1209 @@
+# Complete active TEXT_SET speech bodies after 0x140685d00 parameter expansion.
+# The dedicated speech wrapper preserves actor/recipient and translates the complete body.
+# u is the native cardinal grammar; p/e/r/s are typed fields, never arbitrary prose.
+Greetings.  My name is {p}.	你好，我叫{p}。
+Hellooo!	你——好！
+Look at you!	瞧瞧你！
+A baby!  How adorable!	是个小宝宝！真可爱！
+Ah, hello.  I'm {p}.	啊，你好。我叫{p}。
+I am {p}.  Can I be of some help?	我是{p}。需要帮忙吗？
+I am {p}.  How can I be of service?	我是{p}。有什么可以为你效劳？
+Hello, {s}.  I am {p}.	你好，{s}。我是{p}。
+{p}...  your parents must have been interesting!	{p}……你的父母一定很有意思！
+You know, you don't meet many people with the name {p}.	说起来，叫{p}的人还真不多见。
+So, {p}...   {p}, was it?	那么，{p1}……是叫{p2}，对吗？
+{p}.  Does that mean something?	{p}。这个名字有什么含义吗？
+{p}.  I can't say I've heard that before.	{p}。这个名字我以前还真没听过。
+Praise be to {p}.	愿赞美归于{p}。
+Praise {r}.	赞美{r}。
+Life is, in a word, {r}.	一言以蔽之，生命就是{r}。
+This servant of {p} greets you.	我以{p}仆人的身份，向你问好。
+This servant of {r} greets you.	我以{r}仆人的身份，向你问好。
+I am a guard.	我是一名卫兵。
+Don't start any trouble.	别惹麻烦。
+I am a soldier.	我是一名士兵。
+Prepare to die!	准备受死吧！
+I'm {u}!	我{u}岁了！
+I am a {s}.	我是一名{s}。
+I was once a {s}.	我曾是一名{s}。
+I was a {s} for {u} of the years of my life.	我做了{u}年的{s}。
+I wander {e}.	我在{e}游历。
+I have wandered {e} for {u} of my years.	我在{e}游历了{u}年。
+I once wandered the wilds.	我曾经游历荒野。
+For {u} of my years, I wandered the wilds.	我在荒野游历了{u}年。
+I hunt great beasts in {e}.	我在{e}猎杀巨兽。
+I have hunted great beasts in {e} for {u} of my years.	我在{e}猎杀巨兽已有{u}年。
+In the past, I hunted great beasts.	从前，我曾猎杀巨兽。
+I was a hunter of mighty beasts for {u} of my years.	我曾当了{u}年的巨兽猎人。
+I seek fortune and glory by offering my skill at arms in {e}.	我在{e}凭借武艺谋求财富与荣耀。
+I have sought fortune and glory by offering my skill at arms in {e} for {u} of my years.	我在{e}凭借武艺谋求财富与荣耀，已有{u}年。
+In the past, I sought fortune and glory by offering my skill at arms.	从前，我曾凭借武艺谋求财富与荣耀。
+I sought fortune and glory by offering my skill at arms for {u} of my years.	我靠武艺追求财富和荣耀，干过{u}年。
+I rescue lost children and bring them back to {e}.	我解救迷路的孩子，把他们带回{e}。
+For {u} of my years, I have been rescuing lost children and bringing them back to {e}.	我解救迷路的孩子并把他们带回{e}，已经做了{u}年。
+Once it was my calling to rescue lost children.	解救迷路的孩子曾是我的使命。
+For {u} of my years, I rescued lost children.	我曾经专门救助迷路的孩子，干了{u}年。
+I seek treasures and bring them back to {e}.	我寻找宝藏，把它们带回{e}。
+I seek treasures and bring them back to {e} and have done so for {u} of the years of my life.	我寻找宝藏并把它们带回{e}，已经做了{u}年。
+I once sought great treasures.	我从前也追寻过大宝藏。
+I sought great treasures for {u} of my years.	我曾花了{u}年寻找大宝藏。
+It is I that felled {p} the {s}.	正是我击倒了{s}{p}。
+Welcome to {e}.  Praise be to {p}!	欢迎加入{e}。赞美{p}！
+Welcome to {e}.  Praise be to {r}!	欢迎加入{e}。赞美{r}！
+As a member of {e}, you can now seek the higher mysteries of {p}.	作为{e}的一员，你现在可以探寻{p}更高深的奥秘。
+As a member of {e}, you can now seek the higher mysteries of {r}.	作为{e}的一员，你现在可以探寻{r}更高深的奥秘。
+This is my First year as a {s}.	这是我当{s}的第1年。
+This is my Second year as a {s}.	这是我当{s}的第2年。
+This is my Third year as a {s}.	这是我当{s}的第3年。
+This is my Fourth year as a {s}.	这是我当{s}的第4年。
+This is my Fifth year as a {s}.	这是我当{s}的第5年。
+This is my Sixth year as a {s}.	这是我当{s}的第6年。
+This is my Seventh year as a {s}.	这是我当{s}的第7年。
+This is my Eighth year as a {s}.	这是我当{s}的第8年。
+This is my Ninth year as a {s}.	这是我当{s}的第9年。
+This is my Tenth year as a {s}.	这是我当{s}的第10年。
+This is my Eleventh year as a {s}.	这是我当{s}的第11年。
+This is my Twelfth year as a {s}.	这是我当{s}的第12年。
+This is my Thirteenth year as a {s}.	这是我当{s}的第13年。
+This is my Fourteenth year as a {s}.	这是我当{s}的第14年。
+This is my Fifteenth year as a {s}.	这是我当{s}的第15年。
+This is my Sixteenth year as a {s}.	这是我当{s}的第16年。
+This is my Seventeenth year as a {s}.	这是我当{s}的第17年。
+This is my Eighteenth year as a {s}.	这是我当{s}的第18年。
+This is my Nineteenth year as a {s}.	这是我当{s}的第19年。
+This is my {d}st year as a {s}.	这是我当{s}的第{d}年。
+This is my {d}nd year as a {s}.	这是我当{s}的第{d}年。
+This is my {d}rd year as a {s}.	这是我当{s}的第{d}年。
+This is my {d}th year as a {s}.	这是我当{s}的第{d}年。
+It is said that the {s} of {e} can be thought of as the antithesis of {r} for the glory of {p}.	据说，{e}的{s}可被视为{r}的对立面，以彰显{p}的荣耀。
+It is said that the {s} of {e} can allow one to experience {r} for the glory of {p}.	据说，{e}的{s}能让人感受到{r}，以彰显{p}的荣耀。
+It is said that the {s} of {e} can bring one near to {r} for the glory of {p}.	据说，{e}的{s}能让人接近{r}，以彰显{p}的荣耀。
+It is said that the {s} of {e} can remind one of {r} for the glory of {p}.	据说，{e}的{s}能让人联想到{r}，以彰显{p}的荣耀。
+It is said that the {s} of {e} can be thought of as a representation of {r} for the glory of {p}.	据说，{e}的{s}可被视为{r}的体现，以彰显{p}的荣耀。
+Salutations.	向你致意。
+Salutations {p}.	{p}，向你致意。
+Salutations.  It is good to see you.	向你致意。很高兴见到你。
+Greetings.	你好。
+Greetings {p}.	你好，{p}。
+Greetings.  It is good to see you.	你好。很高兴见到你。
+Hello.	你好。
+Hello {p}.	你好，{p}。
+Hello.  It is good to see you.	你好。很高兴见到你。
+Hey.	嘿。
+Hey {p}.	嘿，{p}。
+Hey.  It is good to see you.	嘿。很高兴见到你。
+I'm a true {s} of {s}.	我才是{s2}的真正{s1}。
+I thought you called yourself {p}.	我以为你自称{p}。
+An honor as always.  How can I be of service?	每次见到你都深感荣幸。有什么需要我效劳的？
+{n} is dumbstruck for a moment.	{n}一时惊得说不出话来。
+A legend?  Here?  I can scarcely believe it.	传说中的人物？在这里？我简直不敢相信。
+I am honored to be in your presence.	能见到你，我倍感荣幸。
+It is an honor.	不胜荣幸。
+Your name precedes you.  Thank you for all that you have done.	久仰大名。感谢你所做的一切。
+It is good to finally meet you!	终于见到你了，真高兴！
+Welcome to {e}.	欢迎来到{e}。
+Welcome home, my child.	欢迎回家，我的孩子。
+You are welcome at {e}.  Please be respectful of the materials.	欢迎来到{e}。请爱惜这里的资料。
+This is {e}.  What can I do for you?	这里是{e}。有什么可以帮你？
+How are you, my {s}?	你好吗，我的{s}？
+It's great to have a friend like you!	有你这样的朋友真好！
+And what exactly do you want?	你到底想要什么？
+Are you ready to learn?	准备好学习了吗？
+Been in any good scraps today?	今天痛快地打过架吗？
+Let's not hurt anybody.	我们别伤害任何人。
+Make any good deals lately?	最近做成什么好买卖了吗？
+Long live the cause!	我们的事业万岁！
+Thank you for keeping us safe.	感谢你保护我们的安全。
+Don't let the enemy rest.	别让敌人喘息。
+Thank you for all you do.	感谢你所做的一切。
+Are you hunting for treasure?	你在寻找宝藏吗？
+Thank you for protecting our wisdom.	感谢你守护我们的智慧。
+Don't try to throw your weight around.	别想在这里仗势欺人。
+I have nothing for you.	我没什么能给你的。
+I value your loyalty.	我珍视你的忠诚。
+It really is a pleasure to speak with you again.	能再次与你交谈，真令人高兴。
+Do you have wisdom to share, preacher?	布道者，你有什么智慧要分享吗？
+Do you have a story to tell?	你有什么故事要讲吗？
+Have you written a new poem?	你写新诗了吗？
+Is it time to make music?	该奏乐了吗？
+Are you still dancing?	你还在跳舞吗？
+Are in a foul mood?	心情不好吗？
+You'll get nothing from me with your flattery.	再怎么奉承，你也休想从我这里捞到好处。
+Are you stalking a dangerous beast?	你在追踪危险的野兽吗？
+Don't walk off with anything.	别顺手拿走东西。
+It is amazing how far you've come.  Welcome home.	你的成就真令人惊叹。欢迎回家。
+It's good to see you have companions to travel with on your adventures.	很高兴看到你有伙伴一同冒险。
+I know you can handle yourself, but be careful out there.	我知道你能照顾好自己，但在外面还是要小心。
+Hopefully your friends can dissuade you from this foolishness.	希望你的朋友能劝你别再做这种傻事。
+Traveling alone in the wilds?!  You know better than that.	独自在荒野旅行？！你应该知道这有多危险。
+Only a hero such as yourself can travel at night.  The bogeyman would get me.	只有像你这样的英雄才能在夜间出行。换成我，就会被夜魔抓走。
+I know you've seen your share of adventure, but be careful or the bogeyman may get you.	我知道你历经过不少冒险，但还是小心些，否则夜魔可能会抓走你。
+Night is falling.  You'd better stay indoors, or the bogeyman will get you.	天快黑了。你最好待在屋里，否则夜魔会抓走你。
+The sun will set soon.  Be careful that the bogeyman doesn't get you.	太阳就快落山了。小心别被夜魔抓走。
+Don't travel alone at night, or the bogeyman will get you.	别在夜间独自旅行，否则夜魔会抓走你。
+Only a fool would travel alone at night!  Take shelter or the bogeyman will get you.	只有傻瓜才会在夜间独自旅行！找个地方躲起来，否则夜魔会抓走你。
+Can I help you with something?	有什么可以帮你的吗？
+Fantastic!	太棒了！
+Wonderful!	太好了！
+I'm thrilled to hear that.	听到这个消息，我非常激动。
+I'm pleased to hear that.	听到这个消息，我很高兴。
+That is good news.	这是个好消息。
+That is wonderful news.	这是个极好的消息。
+This is encouraging.	这真令人振奋。
+Very good.	很好。
+I'm proud of you.	我为你感到骄傲。
+That is a good turn of affairs.	事情有了好的转机。
+Who dares to enter my house?  I curse you!	谁敢闯入我的居所？我诅咒你！
+I don't remember clearly.	我记不太清了。
+What happened?	发生了什么事？
+I am confused.	我有些困惑。
+I am very confused.	我非常困惑。
+Commendable!  Your loyalty and bravery cannot be denied.	好样的！你的忠诚和勇气，谁也没法否认。
+I'll need to see something impressive before I consider it.	你得先拿出点真本事，我才会考虑。
+You just aren't good enough yet, but you should keep performing.	你目前的水平还不够，但应该继续表演。
+Yes!  It'll be great to perform with you.	好啊！能与你一起表演一定很棒。
+I'm sorry, but I can't join the troupe.	抱歉，我无法加入这个剧团。
+I cannot accept this honor.  I am sorry.	我不能接受这份荣誉，抱歉。
+I am sorry.  I do not think there is room for me.	抱歉，我觉得这里容不下我。
+You are not worthy of such an honor yet.  I am sorry.	抱歉，你还不配获得这样的荣誉。
+I am sorry.  There is no room for you here.	抱歉，这里没有你的容身之处。
+Come with me and I'll bring you to safety.	跟我来，我会带你到安全的地方。
+Please help me!	请救救我！
+I hate you.	我恨你。
+Intruder!	入侵者！
+Vile creature!	卑劣的生物！
+The enemy!	敌人！
+Murderer!	凶手！
+I must obey the master!	我必须服从主人！
+Gwargh!	嘎哇啊！
+Ahhh...	啊……
+The dead!	亡者！
+Get away from me!	离我远点！
+Don't talk to me.	别跟我说话。
+Well, let's see...	嗯，让我看看……
+I've forgotten what trouble it was...	我忘记是什么麻烦了……
+Wait here until I return.	在这里等我回来。
+Let's continue onward together.	我们一起接着走吧。
+What have you done?  This is horrifying!	你都做了什么？太可怕了！
+Thank you.  I will take excellent care of this majestic creature.	谢谢。这头威风凛凛的生物，我一定会好好照顾。
+What do you think of me?	你觉得我怎么样？
+What can you tell me about yourself?	能说说你自己吗？
+Can you tell me where I can find myself?	能告诉我到哪里能找到我自己吗？
+Can you tell me where I can find you?	能告诉我到哪里能找到你吗？
+Please guide me to myself.	请带我去找我自己。
+Please guide me to you.	请带我去找你。
+We can no longer travel together.	我们不能再一起旅行了。
+They must be stopped by any means at our disposal.	我们必须用尽一切手段阻止他们。
+It's not my problem.	这不关我的事。
+It was inevitable.	这是不可避免的。
+This is the life for me.	这正是我想要的生活。
+I don't know anything else about them.	关于他们，我不知道更多了。
+We are in the right in all matters.	不管什么事，道理都在我们这边。
+It's for the best.	这样最好。
+I don't care one way or another.	怎样我都不在乎。
+I hate them.	我恨他们。
+I am afraid of them.	我害怕他们。
+They are terrific.	他们很了不起。
+They are outlaws.	他们是不法之徒。
+Now we will have to build our own future.	现在我们得创造自己的未来。
+Are we close?	我们快到了吗？
+You are bound to obey me.	你受我约束，必须服从我。
+How are you enjoying the adventure?	这趟冒险还过得愉快吗？
+Where should I take you?	我该带你去哪里？
+Soon the world will be set right.	世界很快就会恢复正轨。
+Are you looking forward to the performance?	你期待这场表演吗？
+I've forgotten what I was going to say...	我忘记要说什么了……
+How have things been?	最近怎么样？
+How's life here?	在这里过得怎么样？
+How may I serve you?	我能为你做些什么？
+It has been the same as ever.	一切还是老样子。
+I don't really know.	我实在不知道。
+They do not feel challenged at all.	他们觉得没人能撼动自己的地位。
+They still hold this area, but they do not feel certain.	他们仍控制着这片地区，但并没有把握。
+Their strength has been challenged, and their hold has loosened.	他们遭到挑战，对这里的控制已经松动了。
+Their strength has been broken.	他们的力量已被摧毁。
+They consider you an infamous villain among those opposing them.	他们把你视为反对者中臭名昭著的恶人。
+They consider you a leader of the opposition.	他们把你视为反对者的领袖。
+They consider you a key figure in the opposition.	他们把你视为反对者中的关键人物。
+You are considered an integral part of the opposition.	你被视为反对者中不可或缺的一员。
+You are considered part of the opposition.	你被视为反对者的一员。
+I have no idea.	我完全不知道。
+I haven't heard anything like that.	我没听说过这样的事。
+One group organized itself.	一个组织成立了。
+A few separate groups were organized.	几个各自独立的组织成立了。
+Nobody I remember.	我不记得有谁。
+You sound like a troublemaker.	听起来你就是个惹是生非的。
+I must take my leave.	我得告辞了。
+Goodbye.	再见。
+We weren't personally acquainted.	我们并不相识。
+You may enjoy these times of peace, but remain vigilant.	你可以享受这段和平时光，但要保持警惕。
+My condolences.	请节哀。
+What will you do about it?	你打算怎么办？
+What should I do about it?	我该怎么办？
+Let's entertain the world together!	让我们一起为世界带来欢乐！
+Come, join me on my adventures!	来吧，加入我的冒险！
+I'm with you on this.	这件事我支持你。
+Thank you!	谢谢你！
+Nevermind.	算了。
+I'd like to stay here another day if you don't mind.	如果你不介意，我想在这里再住一天。
+Please let me shelter here for the night.	请让我在这里借宿一晚。
+Uh...  what was that?	呃……你说什么？
+Of course.  My pleasure.	当然，我很乐意。
+Certainly.  It would be terrible to leave someone to fend for themselves after sunset.	当然。日落之后，让人独自在外面自生自灭就太糟了。
+Ah, I'm sorry.  Permission is not mine to give.	啊，抱歉。这事我做不了主。
+Here's something you might be interested in...	有件事你也许会感兴趣……
+I've forgotten what to say...	我忘记要说什么了……
+I've forgotten my bold pronouncement...	我忘了自己那番豪言壮语……
+Let's trade.	我们来交易吧。
+What's available here?	这里有什么可以买的？
+I'd just as soon you went someplace else.	我更希望你去别的地方。
+You have been such a good trade partner.	你一直是个很好的贸易伙伴。
+It's such a pleasure to serve you.	能为你服务真是荣幸。
+My good friend.	我的好朋友。
+My companion.	我的伙伴。
+It is good to see you here.	很高兴在这里见到你。
+You ought to be rewarded for returning our treasures.	你归还了我们的宝藏，应当得到奖赏。
+Thank you for preserving our legacy of wisdom.	感谢你保护我们传承的智慧。
+Long live the cause.	我们的事业万岁。
+Loyalty should be rewarded.	忠诚应当得到奖赏。
+What stories you tell!  It's such an honor to have you here.	你讲的故事真精彩！你能来这里，真是荣幸。
+The poet!  It's such an honor to have you here.	诗人！你能来这里，真是荣幸。
+My talented bard!  It's such an honor to have you here.	才华横溢的吟游诗人，你能来这里，真是我的荣幸！
+What a dancer!  It's such an honor to have you here.	多么出色的舞者！你能来这里，真是荣幸。
+Your selfless dedication is appreciated here.	这里的人都感激你的无私奉献。
+There's no need for trouble here.	别在这里惹事。
+You have a room here, and you can stay longer if you like.	你在这里有一间房，愿意的话可以多住些日子。
+This is not that kind of establishment.	这里不是那种场所。
+Tavern keeper!	酒馆老板！
+Uhh...  nevermind.	呃……算了。
+I'd like a room.	我想要一间房。
+I'd like my room for another night.	我的房间再续住一晚。
+I'll be back with your drink in a moment.	我马上就把你的饮品送来。
+You'll have the room for another day.  I'm glad you're enjoying your stay.	这间房会再为你留一天。很高兴你在这里住得愉快。
+This is my new home.	这里就是我的新家。
+Intruder!  Intruder!	入侵者！入侵者！
+I accept this honor.	我接受这份荣誉。
+I am sorry, but I am otherwise disposed.	抱歉，我另有打算。
+I will accept the child into my home.	我会把这个孩子接到家里。
+It has always been my dream to start a family.	组建家庭一直是我的梦想。
+I'm sorry, but I'm unable to help.	抱歉，我帮不上忙。
+Why are you traveling?	你为什么旅行？
+Do they have a firm grip on these lands?	他们牢牢控制着这片土地吗？
+Where are their forces?  Are there patrols or guards?	他们的军队在哪里？有巡逻队或守卫吗？
+Does anybody else still have a stake in these lands?	还有谁在这片土地上保有权益？
+Did anybody flee the attack?	有人从袭击中逃出来吗？
+Tell me about the local ruler.	说说当地的统治者。
+Does this settlement engage in trade?  Tell me about those places.	这座定居点有贸易活动吗？说说那些交易场所。
+Look at the sky!  Are we in the Underworld?	看看天空！我们是在地下世界吗？
+What an odd glow!	多么奇怪的光芒！
+At least it doesn't rain down here.	至少这下面不会下雨。
+Is it raining?	在下雨吗？
+I have confidence in your abilities.	我相信你的能力。
+What a strange place!	多么奇怪的地方！
+It is invigorating to be out in the wilds!	置身荒野真让人精神振奋！
+It is good to be outdoors.	在户外真好。
+Indoors, outdoors.  It's all the same to me as long as the weather's fine.	室内也好，室外也好。只要天气不错，对我来说都一样。
+How I long for civilization...	我多么怀念文明世界……
+I would prefer to be indoors.	我更愿意待在室内。
+How sinister the glow...	这光芒多么阴森……
+I would prefer to be outdoors.	我更愿意待在户外。
+It is good to be indoors.	在室内真好。
+It sure is dark down here.	这下面可真黑。
+Where am I?	我在哪里？
+Tell me about this area.	说说这片地区。
+Let us stop this pointless fighting!	让我们停止这场毫无意义的争斗！
+I accept your offer.	我接受你的提议。
+I have no reason to accept this.	我没有理由接受这个。
+Gladly.  May this new age of harmony last a thousand year.	乐意之至。愿这太平盛世延续千年。
+I agree to submit to your request.	好，我答应照你的要求办。
+I will not bow before you.	我不会向你低头。
+Identify yourself!	报上名来！
+You must yield!	你必须投降！
+The bond is broken!  Return to the Underworld and trouble us no more!	束缚已被打破！回到地下世界去，别再纠缠我们！
+You are bound to me!	你已受我约束！
+Whosoever would blight the world, preying on the helpless, fear me!  I call you a child of the night and will slay you where you stand.	荼毒世间、欺凌弱小之徒，都该怕我！你这黑夜之子，我就在此将你斩杀！
+Tell me who you work for, or else.	说出你为谁效力，否则后果自负。
+Who do you work for?	你为谁效力？
+Reveal what you have been scheming or suffer the consequences.	交代你的阴谋，否则后果自负。
+What have you been scheming?	你在谋划什么？
+You look like a mighty warrior indeed.	你看起来的确是位强大的战士。
+How are you feeling right now?	你现在感觉怎么样？
+You are amazing.	你真了不起。
+Calm yourself!	冷静下来！
+Tell me about your family.	说说你的家人。
+Of course.	当然。
+Yes, let's go.	好，我们走吧。
+Sorry, I'm otherwise occupied.	抱歉，我正忙着别的事。
+You'll have to talk to somebody older.	你得去找年长一些的人谈。
+You will best serve by finishing your quest.	完成你的任务，就是你能尽的最大一份力。
+Really?  Please come closer.	真的吗？请再靠近一点。
+Fantastic!  Please come closer and ask again.	太棒了！请靠近些再问一次。
+Really?  Alright.	真的吗？好吧。
+Of course.  Let's do business.	当然。我们来做生意吧。
+Come see me in my store sometime.	有空到我的商店来找我。
+Come see me at the trade depot sometime.	有空到贸易站来找我。
+Come see me in the market sometime.	有空到市场来找我。
+Please be patient.  I'll have your order ready in a moment.	请耐心等候。你点的东西马上就好。
+We don't offer any specific services here.	我们这儿不提供什么专门的服务。
+Yes, I can serve you when we're both there.	可以，等我们都到那里，我就能为你服务。
+I don't work here.	我不在这里工作。
+You haven't ordered anything.  Would you like something?	你还没有点任何东西。想要点什么吗？
+You should probably try a shopkeeper.	你也许该去找店主。
+No such place exists.	没有这样的地方。
+I don't know myself, and I don't even know anybody that could tell you.	我自己不知道，也不认识能告诉你的人。
+I don't remember what I was going to say...	我不记得要说什么了……
+Probably on the move or deep underground, but I can't be sure.	可能正在途中，也可能在地下深处，但我不能确定。
+I'm not sure.	我不确定。
+I am escaping from danger which threatened my former home.	我原来的家遭遇了危险，我是出来避难的。
+I'm on an important mission.	我正在执行一项重要任务。
+I'm returning from my patrol.	我正巡逻归来。
+I'm just out for a stroll.	我只是出来散步。
+I was just out for some water.	我刚才出去取水了。
+I was out visiting the temple.	我刚才去神殿了。
+I was out visiting the shrine.	我刚才去圣地了。
+I was just out at the tavern.	我刚才在酒馆。
+I was out visiting the library.	我刚才去图书馆了。
+I'm walking my patrol.	我正在巡逻。
+I'm going out for some water.	我正要出去取水。
+I'm going to visit the temple.	我正要去神殿。
+I'm going to visit the shrine.	我正要去圣地。
+I'm going out to the tavern.	我正要去酒馆。
+I'm going to visit the library.	我正要去图书馆。
+I'm not planning a journey.	我没有出行计划。
+This place is insulated from the rest of the world, at least in terms of trade.	这里与外界隔绝，至少贸易方面是如此。
+There's nothing organized here.	这里没有什么成形的组织。
+That's me.  I'm right here.	那就是我。我就在这里。
+Yes, master.  Ask and I shall obey.	是，主人。请下令，我会服从。
+Ask me when I've returned to my home!	等我回家后再问我！
+I'd rather not say.	我不想说。
+Is it really you?	真的是你吗？
+An item has returned!	一件物品回来了！
+I don't remember what I believe...	我不记得自己相信什么了……
+Stop!  This isn't happening!	住手！这不是真的！
+We yield!  We yield!	我们投降！我们投降！
+I yield!  I yield!	我投降！我投降！
+We will fight no more.	我们不会再战斗了。
+I will fight no more.	我不会再战斗了。
+You first, coward!	你先来，懦夫！
+Okay!  I'll do it.	好吧！我会照做。
+Over my dead body!	除非我死了！
+I am compelled to continue!	我被迫继续下去！
+Maybe you're right.	也许你是对的。
+Yes, I can see it clearly now.	是的，我现在看清楚了。
+I have been so foolish.  Yes, I agree.	我以前太愚蠢了。是的，我同意。
+You know, I think you're right.	你知道，我觉得你说得对。
+Despite some minor reservations...	尽管还有一些小小的保留意见……
+Ignoring that I don't quite concur...	暂且不提我还不完全赞同……
+I admire how brilliant you are!	你的才智让我钦佩！
+I must say that is a truly insightful observation!	不得不说，你这番见解真是深刻！
+I confess your stunning argument overwhelms me!	我承认，你这番精彩的论辩让我心服口服！
+I am overmastered by your presence!	你的气势让我折服！
+I am so nearly swayed by your greatness alone that we can simply assign you the victory!	单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+Do I look like I need to calm down?!	我看起来像是需要冷静吗？！
+You calm down!	你才该冷静！
+Spare me the compliments.	少来恭维我。
+Don't tell me to calm myself.	别叫我冷静。
+Thank you for your kind words.	谢谢你的好话。
+You're right.  I need to relax.	你说得对。我需要放松一下。
+I assure you I am already calm.  Look to yourself.	我保证，我已经很冷静了。倒是你，管好自己吧。
+Ha ha ha...  You're funny!	哈哈哈……你真有趣！
+Don't waste my time.	别浪费我的时间。
+Base flattery!	少来这套下作的奉承！
+You dare to flatter me?!	你竟敢奉承我？！
+How dare you?!	你怎么敢？！
+Insufferable!	简直忍无可忍！
+You mock me?!	你在嘲弄我？！
+If you insist so strongly, we can move on.	既然你如此坚持，我们可以换个话题。
+Well, there must be something else to discuss.	好吧，总还有别的事情可谈。
+Fine.  Let's drop the argument.	好吧。我们别争了。
+How gracious!	真是宽宏大量！
+You are right.	你说得对。
+Let's move on.	我们换个话题吧。
+There must be something else to discuss.	总还有别的事情可谈。
+Let's drop the argument.	我们别争了。
+Yes, let's move on.	好，我们换个话题吧。
+How unreasonable!	真不讲道理！
+Were you trying to make an argument?	你刚才那也叫讲道理？
+Give me a break.	饶了我吧。
+Are you being serious?	你是认真的吗？
+Wait, what?	等等，什么？
+What did you just say?	你刚才说什么？
+Am I supposed to engage with that?	难道还要我回应那番话？
+You must be joking.	你一定是在开玩笑。
+I've heard it all now!	我现在真是什么荒唐话都听过了！
+That's absurd!	太荒谬了！
+I couldn't follow your rambling.	你东拉西扯的，我听不明白。
+I'm having trouble taking you seriously.	我实在难以把你的话当真。
+I'm appalled.	我感到震惊。
+Shameful.	可耻。
+You're wrong.	你错了。
+Unbelievable.	难以置信。
+Really.	真是的。
+It's wrong.	这是错的。
+I just don't know.	我实在不知道。
+I don't want to argue.	我不想争论。
+I don't know what to say.	我不知道该说什么。
+I guess I'm not sure.	我想我还不确定。
+I disagree.	我不同意。
+I cannot agree.	我无法赞同。
+That's wrong.	那是错的。
+That's not right.	那不对。
+I beg to differ.	恕我不能苟同。
+Pause to consider.	停下来想一想。
+You are thinking about this all wrong.	你对这件事的想法完全错了。
+Stop and reflect.	停下来反思一下。
+I don't agree.	我不同意。
+Just think about it.	好好想想吧。
+I must insist.	这点我坚持。
+No, I mean it.	不，我是认真的。
+You must be convinced.	我非得让你心服口服。
+I require a substantive reply.	我需要你拿出点实实在在的答复。
+I sense you're wavering.	我感觉你在动摇。
+Well, I believe...  something else.	嗯，我相信……别的东西。
+I believe...  something.	我相信……某些东西。
+Help!  Save me!	救命！救救我！
+I must withdraw!	我必须撤退！
+I serve no one.	我不为任何人效力。
+I do not scheme.	我没有谋划阴谋。
+You just aren't as convincing as you think you are.	你的话没有你想的那么有说服力。
+You must think you're really frightening.	你肯定觉得自己很吓人。
+I have nothing to say to you.	我没什么可跟你说的。
+What is this madness?  Calm yourself!	这是什么疯话？冷静下来！
+I wish to become a {s} for {e}.  Will you have me?	我想为{e}担任{s}。你愿意接纳我吗？
+I ask that {e} be made {s} for {e}.  Will you have us?	我请求让{e1}为{e2}担任{s}。你愿意接纳我们吗？
+Yes, you'd make a fantastic {s} here.  Make us proud!	好，你来当{s}一定很出色。可要给我们争气！
+I would love to join {e}.  Can I perform with you?	我很想加入{e}。我能和你们一起表演吗？
+Welcome to {e}!	欢迎加入{e}！
+Would you like to join {e}?  The troupe could use your talent.	你愿意加入{e}吗？剧团需要你的才华。
+I'm kicking you out of {e}.	我要把你赶出{e}。
+I'm leaving {e}.	我要离开{e}。
+Gladly.  I will be your {s}.	我很乐意。我会成为你的{s}。
+Gladly.  I will be your {s}, {s}.	我很乐意，{s2}。我会成为你的{s1}。
+Gladly.  You are now one of my {s}.	我很乐意。你现在是我的{s}之一了。
+You can no longer be a {s}.	你不能再担任{s}了。
+I would be honored if you would become a {s}.  Will you have me as {s}?	若你愿意成为{s1}，我会深感荣幸。你愿意认我为{s2}吗？
+I would be honored to serve as a {s}.  Will you have me?	能担任{s}将是我的荣幸。你愿意接纳我吗？
+I started my pilgrimage in {e} in {f}.	我于{f}在{e}开始朝圣。
+I visited {e} in {f}.	我于{f}到访了{e}。
+I visited {e} in {e} in {f}.	我于{f}到访了{e2}的{e1}。
+I visited {e} in {f} to view {b}.	我于{f}到访{e}，瞻仰了{b}。
+I visited {e} in {e} in {f} to view {b}.	我于{f}到访{e2}的{e1}，瞻仰了{b}。
+I have rescued {n}.	我已救出了{n}。
+I have rescued {n} and am returning to {e}.	我已救出{n}，正在返回{e}。
+I seek to rescue {n}.	我正设法营救{n}。
+I seek to rescue {n}, and this quest is taking me to {e}.	我正设法营救{n}，为此要前往{e}。
+The treasure is sought by {n}.	{n}正在寻找这件宝物。
+The treasure is sought by {e}.	{e}正在寻找这件宝物。
+The treasure is sought by {n} of {e}.	{e}的{n}正在寻找这件宝物。
+I am returning it to {e}.	我正在把它送回{e}。
+I will return it to {e}.	我会把它送回{e}。
+I am returning it to {e} in {e}.	我正在把它送回{e2}的{e1}。
+I will return it to {e} in {e}.	我会把它送回{e2}的{e1}。
+I'm preparing to travel to {e}.	我正准备前往{e}。
+I'm preparing to travel to {e} in {e}.	我正准备前往{e2}的{e1}。
+I'm preparing to travel to {e} to view {b}.	我正准备前往{e}瞻仰{b}。
+I'm preparing to travel to {e} in {e} to view {b}.	我正准备前往{e2}的{e1}瞻仰{b}。
+I'm traveling to {e}.	我正在前往{e}。
+I'm traveling to {e} in {e}.	我正在前往{e2}的{e1}。
+I'm traveling to {e} to view {b}.	我正在前往{e}瞻仰{b}。
+I'm traveling to {e} in {e} to view {b}.	我正在前往{e2}的{e1}瞻仰{b}。
+I'm returning to my home in {e}.	我正返回{e}的家。
+I'm returning to my home in {e} to take up my position.	我正返回{e}的家就任。
+I'm returning to my home in {e} to take up my position as {s}.	我正返回{e}的家就任{s}。
+I'm returning to my home in {e} to move into my new home with {n}.	我正返回{e}的家，与{n}搬入我们的新家。
+I'm returning to my home in {e} to start a new life.	我正返回{e}的家开始新的生活。
+I'm returning to my home in {e} in search of a thrilling adventure, and wealth and pleasures beyond measure!	我正返回{e}的家，寻一场惊险刺激的冒险，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm returning to my home in {e} in search of a thrilling adventure.   Perhaps I'll finally make my fortune!	我正返回{e}的家，寻一场惊险刺激的冒险。说不定这回我总算能发财了！
+I'm returning to my home in {e} in search of a thrilling adventure and maybe something to drink as well!	我正返回{e}的家，寻一场惊险刺激的冒险，也许还能找点酒喝！
+I'm returning to my home in {e} in search of a thrilling adventure.	我正返回{e}的家，寻一场惊险刺激的冒险。
+I'm returning to my home in {e} in search of excitement, and wealth and pleasures beyond measure!	我正返回{e}的家，寻求刺激，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm returning to my home in {e} in search of excitement.   Perhaps I'll finally make my fortune!	我正返回{e}的家，寻求刺激。说不定这回我总算能发财了！
+I'm returning to my home in {e} in search of excitement and maybe something to drink as well!	我正返回{e}的家，寻求刺激，也许还能找点酒喝！
+I'm returning to my home in {e} in search of excitement.	我正返回{e}的家，寻求刺激。
+I'm returning to my home in {e} in search of adventure, and wealth and pleasures beyond measure!	我正返回{e}的家，找些冒险的机会，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm returning to my home in {e} in search of adventure.   Perhaps I'll finally make my fortune!	我正返回{e}的家，找些冒险的机会。说不定这回我总算能发财了！
+I'm returning to my home in {e} in search of adventure and maybe something to drink as well!	我正返回{e}的家，找些冒险的机会，也许还能找点酒喝！
+I'm returning to my home in {e} in search of adventure.	我正返回{e}的家，找些冒险的机会。
+I'm returning to my home in {e} in search of work, and wealth and pleasures beyond measure!	我正返回{e}的家，寻找工作，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm returning to my home in {e} in search of work.   Perhaps I'll finally make my fortune!	我正返回{e}的家，寻找工作。说不定这回我总算能发财了！
+I'm returning to my home in {e} in search of work and maybe something to drink as well!	我正返回{e}的家，寻找工作，也许还能找点酒喝！
+I'm returning to my home in {e} in search of work.	我正返回{e}的家，寻找工作。
+I'm going to {e}.	我正前往{e}。
+I'm going to {e} to take up my position.	我正前往{e}就任。
+I'm going to {e} to take up my position as {s}.	我正前往{e}就任{s}。
+I'm going to {e} to move into my new home with {n}.	我正前往{e}，与{n}搬入我们的新家。
+I'm going to {e} to start a new life.	我正前往{e}开始新的生活。
+I'm going to {e} in search of a thrilling adventure, and wealth and pleasures beyond measure!	我正前往{e}，寻一场惊险刺激的冒险，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm going to {e} in search of a thrilling adventure.   Perhaps I'll finally make my fortune!	我正前往{e}，寻一场惊险刺激的冒险。说不定这回我总算能发财了！
+I'm going to {e} in search of a thrilling adventure and maybe something to drink as well!	我正前往{e}，寻一场惊险刺激的冒险，也许还能找点酒喝！
+I'm going to {e} in search of a thrilling adventure.	我正前往{e}，寻一场惊险刺激的冒险。
+I'm going to {e} in search of excitement, and wealth and pleasures beyond measure!	我正前往{e}，寻求刺激，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm going to {e} in search of excitement.   Perhaps I'll finally make my fortune!	我正前往{e}，寻求刺激。说不定这回我总算能发财了！
+I'm going to {e} in search of excitement and maybe something to drink as well!	我正前往{e}，寻求刺激，也许还能找点酒喝！
+I'm going to {e} in search of excitement.	我正前往{e}，寻求刺激。
+I'm going to {e} in search of adventure, and wealth and pleasures beyond measure!	我正前往{e}，找些冒险的机会，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm going to {e} in search of adventure.   Perhaps I'll finally make my fortune!	我正前往{e}，找些冒险的机会。说不定这回我总算能发财了！
+I'm going to {e} in search of adventure and maybe something to drink as well!	我正前往{e}，找些冒险的机会，也许还能找点酒喝！
+I'm going to {e} in search of adventure.	我正前往{e}，找些冒险的机会。
+I'm going to {e} in search of work, and wealth and pleasures beyond measure!	我正前往{e}，寻找工作，还想挣下数不尽的钱财，享尽人间的乐趣！
+I'm going to {e} in search of work.   Perhaps I'll finally make my fortune!	我正前往{e}，寻找工作。说不定这回我总算能发财了！
+I'm going to {e} in search of work and maybe something to drink as well!	我正前往{e}，寻找工作，也许还能找点酒喝！
+I'm going to {e} in search of work.	我正前往{e}，寻找工作。
+The task is accomplished.	任务已经完成。
+The need for my task seems to have passed.	看来我的任务已经没有必要了。
+The enemy will be driven off.	敌人会被赶走的。
+There will be no rest for the enemy.	敌人将永无宁日。
+I am a little confused.	我有点困惑。
+I am sort of confused.	我有些困惑。
+I'm giving up on this hopeless venture.	我要放弃这场毫无希望的冒险。
+We were going to entertain the world!  It's a shame, but I'll have to make my own way now.	我们原本要为全世界带来欢乐！真遗憾，但现在我得独自闯荡了。
+I'm returning on my own.	我要独自回去了。
+I hope you find what you are seeking here.	希望你能在这里找到你所追寻的东西。
+Our hopes travel with you.	我们的希望就寄托在你身上了。
+Enjoy the hunt!	祝你狩猎愉快！
+The alliance has outlived its usefulness.	这个联盟已经失去作用了。
+In any case, peace is no longer an option.	无论如何，都已经没法讲和了。
+This war must end with our victory.	这场战争必须以我们的胜利告终。
+Their tribute is not enough.	他们的贡品还不够。
+We can no longer pay them homage.	我们不能再向他们称臣了。
+I tire of this pointless skirmishing.	我厌倦了这种毫无意义的小规模冲突。
+I wish I could tell you where to begin your search.  Until then, you are free to do as you please.	我也希望能告诉你从哪里开始寻找。在那之前，你可以自由行动。
+I'd watch out for them.	我会提防他们。
+All drinks are free, of course!	当然，所有饮品都是免费的！
+I'll show you calm!	我让你见识一下什么叫冷静！
+I will settle this my way.	我要用我的方式解决此事。
+This conversation is over.	谈话到此结束。
+I am your loyal {s}.	我是你忠诚的{s}。
+{n} is dead!	{n}死了！
+{n} will be slain.	{n}将被杀死。
+{e} have been driven from {e}.	{e1}已被赶出{e2}。
+You must kill {n}.	你必须杀死{n}。
+Seek your foe in the {s} of {e}.	去{e}的{s}寻找你的敌人。
+You must drive the ruffians of {e} from {e}.  They have been harassing the people for too long.	你必须把{e1}的恶棍赶出{e2}。他们骚扰百姓的日子已经够久了。
+You must drive the ruffians of {e} from our {s} of {e}.  They have been harassing the people for too long.	你必须把{e1}的恶棍赶出我们在{e2}的{s}。他们骚扰百姓的日子已经够久了。
+{n} sent {n} to try to boss us around, but you'll show them the true nature of power.	{n1}派{n2}来对我们发号施令，但你会让他们见识真正的力量。
+{n} came try to boss us around, but you'll teach that coward a lesson.	{n}来对我们发号施令，但你会给那个懦夫一个教训。
+You must drive the skulking vermin {e} out of {e}.	你必须把{e1}这群鬼祟的害虫赶出{e2}。
+You must drive {e} out of {e}.  Their aggressive order must not be allowed to flourish.	你必须把{e1}赶出{e2}。绝不能让他们好勇斗狠的组织壮大。
+You must drive {e} out of {e}.  These outlaws must be punished.	你必须把{e1}赶出{e2}。这些匪徒必须受到惩罚。
+You must drive {e} out of {e}.  These criminals have been allowed to thrive for too long.	你必须把{e1}赶出{e2}。这些罪犯逍遥法外、横行霸道太久了。
+You must drive {e} from their home at {e}.	你必须把{e1}赶出他们在{e2}的巢穴。
+{e} must be driven off or subjugated.	必须驱逐或征服{e}。
+The group must be driven off or subjugated.	必须驱逐或征服这个势力。
+{e} could afford to learn a lesson or two, though open conflict would be unwise.	可以给{e}一些教训，不过公开冲突并不明智。
+The group could afford to learn a lesson or two, though open conflict would be unwise.	可以给这个势力一些教训，不过公开冲突并不明智。
+This great beast threatens our people with its very presence.	这巨兽只要还在，我们的百姓就不得安宁。
+This ancient force of nature threatens our people with its very presence.	这古老的自然之力只要还在，我们的百姓就不得安宁。
+This cursed demon threatens our people with its very presence.	这受诅咒的恶魔只要还在，我们的百姓就不得安宁。
+This fearsome beast threatens our people with its very presence.	这可怕的野兽只要还在，我们的百姓就不得安宁。
+This horrible beast threatens our people with its very presence.	这骇人的野兽只要还在，我们的百姓就不得安宁。
+This night creature threatens our people with its very presence.	这夜行生物只要还在，我们的百姓就不得安宁。
+This evil being threatens our people with its very presence.	这邪恶生物只要还在，我们的百姓就不得安宁。
+This terror from the evil depths threatens our people with its very presence.	这来自邪恶深处的恐怖之物只要还在，我们的百姓就不得安宁。
+This vile monster from the bowels of the earth threatens our people with its very presence.	这来自地底深处的邪恶怪物只要还在，我们的百姓就不得安宁。
+This beast from underground threatens our people with its very presence.	这地下野兽只要还在，我们的百姓就不得安宁。
+This creeping thing threatens our people with its very presence.	这爬行怪物只要还在，我们的百姓就不得安宁。
+This terrifying wilderness monster threatens our people with its very presence.	这可怕的荒野怪物只要还在，我们的百姓就不得安宁。
+This savage beast threatens our people with its very presence.	这凶残野兽只要还在，我们的百姓就不得安宁。
+This ferocious wild animal threatens our people with its very presence.	这凶猛的野生动物只要还在，我们的百姓就不得安宁。
+This ferocious unnatural beast threatens our people with its very presence.	这凶猛的反常野兽只要还在，我们的百姓就不得安宁。
+This beast from the wilds threatens our people with its very presence.	这荒野野兽只要还在，我们的百姓就不得安宁。
+All drinks cost {d} for a mug.	所有饮品都是每杯{d}。
+We rent out a room for {d} a night.	我们有一间房出租，每晚{d}。
+We rent out rooms for {d} a night.	我们出租客房，每晚{d}。
+We have a free room.  Let me know and you can stay as long as you like.	我们有一间免费的客房。告诉我一声，你想住多久都行。
+We have free rooms.  Let me know and you can stay as long as you like.	我们有免费的客房。告诉我一声，你想住多久都行。
+One {s}!	来一份{s}！
+I'd like the {s}.	我要{s}。
+Your room is somewhere.	你的房间在某个地方。
+Tell me about {e}.	跟我说说{e}。
+Tell me about this counting house.	跟我说说这间账房。
+Tell me about this hospital.	跟我说说这座医院。
+Tell me about this guildhall.	跟我说说这座行会大厅。
+Tell me about this hall.	跟我说说这座大厅。
+Tell me about this keep.	跟我说说这座城堡主楼。
+Tell me about this temple.	跟我说说这座神殿。
+Tell me about this library.	跟我说说这座图书馆。
+Tell me about this establishment.	跟我说说这家店。
+Tell me about this tower.	跟我说说这座高塔。
+Tell me about this market.	跟我说说这个市场。
+Tell me about this tomb.	跟我说说这座陵墓。
+Tell me about this dungeon.	跟我说说这座地牢。
+Tell me about these sewers.	跟我说说这些下水道。
+Tell me about these catacombs.	跟我说说这些地下墓穴。
+Tell me about this spire.	跟我说说这座尖塔。
+This must be stopped by any means at our disposal.	我们必须用尽一切办法制止此事。
+It is terrifying.	这太可怕了。
+I don't know anything about that.	我对此一无所知。
+I hate it.	我讨厌这件事。
+I am afraid of it.	我害怕这件事。
+That is sad but not unexpected.	这很悲哀，但也在意料之中。
+That is terrible.	这太糟糕了。
+That's terrific!	那太棒了！
+It accords with my faith.	这符合我的信仰。
+Preaching is my calling.	传道是我的天职。
+I enjoyed performing.	我很享受表演。
+It was legendary.	简直堪称传奇。
+It was fantastic.	那真是妙极了。
+It was great.	那很棒。
+It was good.	那很好。
+It was okay.	那还可以。
+I'm conflicted.	我很矛盾。
+I concur!	我赞同！
+Truly.	确实如此。
+No doubt.	毫无疑问。
+So true, so true.	说得太对了，太对了。
+I agree completely.	我完全同意。
+This is my favorite dance.	这是我最喜欢的舞蹈。
+The accompaniment is my favorite music.	这段伴奏是我最喜欢的音乐。
+This is my favorite music.	这是我最喜欢的音乐。
+This is my favorite poetry.	这是我最喜欢的诗歌。
+The lyrics of the accompaniment are my favorite poetry.	伴奏的歌词是我最喜欢的诗歌。
+The lyrics are my favorite poetry.	歌词是我最喜欢的诗歌。
+I love reflective poetry.	我喜欢发人深省的诗。
+I love the reflective lyrics of the accompaniment.	我喜欢伴奏中那些发人深省的歌词。
+I love the reflective lyrics.	我喜欢那些发人深省的歌词。
+I hate self-absorbed poetry.	我讨厌自我陶醉的诗歌。
+I hate the self-absorbed lyrics of the accompaniment.	我讨厌伴奏中自我陶醉的歌词。
+I hate the self-absorbed lyrics.	我讨厌自我陶醉的歌词。
+I love riddles.	我喜欢谜语。
+I love the riddle in the lyrics of the accompaniment.	我喜欢伴奏歌词里的谜语。
+I love the riddle in the lyrics.	我喜欢歌词里的谜语。
+I hate riddles.	我讨厌谜语。
+Why is there a riddle in the lyrics of the accompaniment?  I hate riddles.	为什么伴奏的歌词里有谜语？我讨厌谜语。
+Why is there a riddle in the lyrics?  I hate riddles.	为什么歌词里有谜语？我讨厌谜语。
+This poetry is so embarrassing!	这首诗真让人尴尬！
+The lyrics of the accompaniment are so embarrassing!	伴奏的歌词真让人尴尬！
+The lyrics are so embarrassing!	歌词真让人尴尬！
+This poetry is so funny!	这首诗真好笑！
+The lyrics of the accompaniment are so funny!	伴奏的歌词真好笑！
+The lyrics are so funny!	歌词真好笑！
+I love raunchy poetry!	我喜欢粗俗的诗歌！
+I love the raunchy lyrics of the accompaniment!	我喜欢伴奏中粗俗的歌词！
+I love the raunchy lyrics!	我喜欢粗俗的歌词！
+I love ribald poetry.	我喜欢荤诗。
+I love the ribald lyrics of the accompaniment.	我喜欢伴奏里那些带荤段子的歌词。
+I love the ribald lyrics.	我喜欢那些带荤段子的歌词。
+I hate this sleazy sort of poetry.	我讨厌这种低俗的诗歌。
+Must the lyrics of the accompaniment be so off-putting?	伴奏的歌词非得这么令人反感吗？
+These lyrics are simply unacceptable.	这些歌词简直无法接受。
+I love light poetry.	我喜欢轻快的诗歌。
+I love the light lyrics of the accompaniment.	我喜欢伴奏中轻快的歌词。
+I love the light lyrics.	我喜欢轻快的歌词。
+I prefer more weighty subject matter myself.	我本人更喜欢有分量的主题。
+Couldn't the lyrics of the accompaniment be a bit more somber?	伴奏的歌词就不能更庄重些吗？
+These lyrics are too breezy.	这些歌词太轻佻了。
+I love solemn poetry.	我喜欢庄严的诗歌。
+I love the solemn lyrics of the accompaniment.	我喜欢伴奏中庄严的歌词。
+I love the solemn lyrics.	我喜欢庄严的歌词。
+I can't stand poetry this serious.	我受不了这么严肃的诗歌。
+The lyrics of the accompaniment are way too serious.	伴奏的歌词实在太严肃了。
+These lyrics are too austere.	这些歌词太冷峻了。
+This legendary hunt has saved us from a mighty enemy!	这场传奇狩猎从强大的敌人手中拯救了我们！
+This magnificent hunt has saved us from a fearsome enemy!	这场了不起的狩猎，让我们逃过了可怕敌人的威胁！
+This great hunt has saved us from a dangerous enemy!	这场出色的狩猎从危险的敌人手中拯救了我们！
+This worthy hunt has rid us of an enemy.	这场狩猎很值得，为我们除去了一个敌人。
+This hunt has rid us of a nuisance.	这场狩猎为我们除去了一个祸害。
+That was a legendary hunt!	那是一场传奇狩猎！
+That was a magnificent hunt!	那场狩猎真是了不起！
+That was a great hunt!	那是一场出色的狩猎！
+That was a worthy hunt.	那场狩猎很值得。
+That was hunter's work.	那是猎人该干的事。
+We are saved from a mighty enemy!	我们从强大的敌人手中获救了！
+We are saved from a fearsome enemy!	我们从可怕的敌人手中获救了！
+We are saved from a dangerous enemy!	我们从危险的敌人手中获救了！
+We are rid of an enemy.	我们除去了一个敌人。
+We are rid of a nuisance.	我们除去了一个祸害。
+The defenseless are safer from outlaws.	无力自卫的人更能免受匪徒侵扰了。
+You have my thanks.	多谢你了。
+That sounds just like the {s}!	听起来就像{s}一样！
+That sounds almost like the {s}!	听起来几乎和{s}一样！
+That sounds like the {s}.	听起来像{s}。
+That sounds vaguely like the {s}.	听起来隐约有点像{s}。
+Is that supposed to be the {s}?	那是在模仿{s}吗？
+This preacher is fantastic!	这位传道者讲得太精彩了！
+This preacher is awesome!	这位传道者太棒了！
+This preacher is magnificant!	这位传道者太出色了！
+This preacher?  Unbelievable talent!	这位传道者的天赋，简直让人不敢相信！
+This preacher.  How can I even describe the skill?	这位传道者的技艺，我简直不知该如何形容！
+This preacher is legendary.	这位传道者堪称传奇。
+This preacher!  Amazing ability.	这位传道者的本事真让人惊叹！
+This preacher shows such talent.	这位传道者展现出非凡的才华。
+This preacher is really quite good!	这位传道者真的相当出色！
+This preacher is splendid.	这位传道者很出色。
+This preacher is great.	这位传道者很棒。
+This preacher has promise.	这位传道者很有潜力。
+This preacher is alright!	这位传道者还不错！
+This preacher is pretty good.	这位传道者相当不错。
+This preacher is good.	这位传道者很好。
+This preacher is okay.	这位传道者还可以。
+This preacher is fine.	这位传道者不错。
+This preacher is alright.	这位传道者还不错。
+This preacher could be better.	这位传道者还有进步的余地。
+This preacher could be worse.	这位传道者倒也不算差。
+This preacher is middling.	这位传道者水平一般。
+This preacher is no good.	这位传道者不怎么样。
+This preacher stinks!	这位传道者糟透了！
+This preacher is lousy.	这位传道者很差劲。
+This preacher is a waste of time.	听这位传道者布道，简直浪费时间。
+This preacher couldn't be much worse.	这位传道者几乎糟到极点。
+This preacher is terrible.	这位传道者很糟糕。
+This preacher is just bad.	这位传道者就是差劲。
+This preacher doesn't belong here.	这位传道者不该出现在这里。
+This preacher makes me retch.	这位传道者让我想吐。
+This preacher?  Awful.	这位传道者？糟透了。
+This storyteller is fantastic!	这位讲故事的人讲得太精彩了！
+This storyteller is awesome!	这位讲故事的人太棒了！
+This storyteller is magnificant!	这位讲故事的人太出色了！
+This storyteller?  Unbelievable talent!	这位讲故事的人的天赋，简直让人不敢相信！
+This storyteller.  How can I even describe the skill?	这位讲故事的人的技艺，我简直不知该如何形容！
+This storyteller is legendary.	这位讲故事的人堪称传奇。
+This storyteller!  Amazing ability.	这位讲故事的人的本事真让人惊叹！
+This storyteller shows such talent.	这位讲故事的人展现出非凡的才华。
+This storyteller is really quite good!	这位讲故事的人真的相当出色！
+This storyteller is splendid.	这位讲故事的人很出色。
+This storyteller is great.	这位讲故事的人很棒。
+This storyteller has promise.	这位讲故事的人很有潜力。
+This storyteller is alright!	这位讲故事的人还不错！
+This storyteller is pretty good.	这位讲故事的人相当不错。
+This storyteller is good.	这位讲故事的人很好。
+This storyteller is okay.	这位讲故事的人还可以。
+This storyteller is fine.	这位讲故事的人不错。
+This storyteller is alright.	这位讲故事的人还不错。
+This storyteller could be better.	这位讲故事的人还有进步的余地。
+This storyteller could be worse.	这位讲故事的人倒也不算差。
+This storyteller is middling.	这位讲故事的人水平一般。
+This storyteller is no good.	这位讲故事的人不怎么样。
+This storyteller stinks!	这位讲故事的人糟透了！
+This storyteller is lousy.	这位讲故事的人很差劲。
+This storyteller is a waste of time.	听这人讲故事，简直浪费时间。
+This storyteller couldn't be much worse.	这位讲故事的人几乎糟到极点。
+This storyteller is terrible.	这位讲故事的人很糟糕。
+This storyteller is just bad.	这位讲故事的人就是差劲。
+This storyteller doesn't belong here.	这位讲故事的人不该出现在这里。
+This storyteller makes me retch.	这位讲故事的人让我想吐。
+This storyteller?  Awful.	这位讲故事的人？糟透了。
+This recitation is fantastic!	这场朗诵太精彩了！
+This recitation is awesome!	这场朗诵太棒了！
+This recitation is magnificant!	这场朗诵太出色了！
+This recitation?  Unbelievable talent!	这场朗诵的天赋，简直让人不敢相信！
+This recitation.  How can I even describe the skill?	这场朗诵的技艺，我简直不知该如何形容！
+This recitation is legendary.	这场朗诵堪称传奇。
+This recitation!  Amazing ability.	这场朗诵的本事真让人惊叹！
+This recitation shows such talent.	这场朗诵展现出非凡的才华。
+This recitation is really quite good!	这场朗诵真的相当出色！
+This recitation is splendid.	这场朗诵很出色。
+This recitation is great.	这场朗诵很棒。
+This recitation has promise.	这场朗诵很有潜力。
+This recitation is alright!	这场朗诵还不错！
+This recitation is pretty good.	这场朗诵相当不错。
+This recitation is good.	这场朗诵很好。
+This recitation is okay.	这场朗诵还可以。
+This recitation is fine.	这场朗诵不错。
+This recitation is alright.	这场朗诵还不错。
+This recitation could be better.	这场朗诵还有进步的余地。
+This recitation could be worse.	这场朗诵倒也不算差。
+This recitation is middling.	这场朗诵水平一般。
+This recitation is no good.	这场朗诵不怎么样。
+This recitation stinks!	这场朗诵糟透了！
+This recitation is lousy.	这场朗诵很差劲。
+This recitation is a waste of time.	听这场朗诵，简直浪费时间。
+This recitation couldn't be much worse.	这场朗诵几乎糟到极点。
+This recitation is terrible.	这场朗诵很糟糕。
+This recitation is just bad.	这场朗诵就是差劲。
+This recitation doesn't belong here.	这场朗诵不该出现在这里。
+This recitation makes me retch.	这场朗诵让我想吐。
+This recitation?  Awful.	这场朗诵？糟透了。
+This {s} player is fantastic!	这位{s}演奏者太精彩了！
+This {s} player is awesome!	这位{s}演奏者太棒了！
+This {s} player is magnificant!	这位{s}演奏者太出色了！
+This {s} player?  Unbelievable talent!	这位{s}演奏者的天赋，简直让人不敢相信！
+This {s} player.  How can I even describe the skill?	这位{s}演奏者的技艺，我简直不知该如何形容！
+This {s} player is legendary.	这位{s}演奏者堪称传奇。
+This {s} player!  Amazing ability.	这位{s}演奏者的本事真让人惊叹！
+This {s} player shows such talent.	这位{s}演奏者展现出非凡的才华。
+This {s} player is really quite good!	这位{s}演奏者真的相当出色！
+This {s} player is splendid.	这位{s}演奏者很出色。
+This {s} player is great.	这位{s}演奏者很棒。
+This {s} player has promise.	这位{s}演奏者很有潜力。
+This {s} player is alright!	这位{s}演奏者还不错！
+This {s} player is pretty good.	这位{s}演奏者相当不错。
+This {s} player is good.	这位{s}演奏者很好。
+This {s} player is okay.	这位{s}演奏者还可以。
+This {s} player is fine.	这位{s}演奏者不错。
+This {s} player is alright.	这位{s}演奏者还不错。
+This {s} player could be better.	这位{s}演奏者还有进步的余地。
+This {s} player could be worse.	这位{s}演奏者倒也不算差。
+This {s} player is middling.	这位{s}演奏者水平一般。
+This {s} player is no good.	这位{s}演奏者不怎么样。
+This {s} player stinks!	这位{s}演奏者糟透了！
+This {s} player is lousy.	这位{s}演奏者很差劲。
+This {s} player is a waste of time.	看这位{s}演奏者表演，简直浪费时间。
+This {s} player couldn't be much worse.	这位{s}演奏者几乎糟到极点。
+This {s} player is terrible.	这位{s}演奏者很糟糕。
+This {s} player is just bad.	这位{s}演奏者就是差劲。
+This {s} player doesn't belong here.	这位{s}演奏者不该出现在这里。
+This {s} player makes me retch.	这位{s}演奏者让我想吐。
+This {s} player?  Awful.	这位{s}演奏者？糟透了。
+This singer is fantastic!	这位歌手太精彩了！
+This singer is awesome!	这位歌手太棒了！
+This singer is magnificant!	这位歌手太出色了！
+This singer?  Unbelievable talent!	这位歌手的天赋，简直让人不敢相信！
+This singer.  How can I even describe the skill?	这位歌手的技艺，我简直不知该如何形容！
+This singer is legendary.	这位歌手堪称传奇。
+This singer!  Amazing ability.	这位歌手的本事真让人惊叹！
+This singer shows such talent.	这位歌手展现出非凡的才华。
+This singer is really quite good!	这位歌手真的相当出色！
+This singer is splendid.	这位歌手很出色。
+This singer is great.	这位歌手很棒。
+This singer has promise.	这位歌手很有潜力。
+This singer is alright!	这位歌手还不错！
+This singer is pretty good.	这位歌手相当不错。
+This singer is good.	这位歌手很好。
+This singer is okay.	这位歌手还可以。
+This singer is fine.	这位歌手不错。
+This singer is alright.	这位歌手还不错。
+This singer could be better.	这位歌手还有进步的余地。
+This singer could be worse.	这位歌手倒也不算差。
+This singer is middling.	这位歌手水平一般。
+This singer is no good.	这位歌手不怎么样。
+This singer stinks!	这位歌手糟透了！
+This singer is lousy.	这位歌手很差劲。
+This singer is a waste of time.	看这位歌手表演，简直浪费时间。
+This singer couldn't be much worse.	这位歌手几乎糟到极点。
+This singer is terrible.	这位歌手很糟糕。
+This singer is just bad.	这位歌手就是差劲。
+This singer doesn't belong here.	这位歌手不该出现在这里。
+This singer makes me retch.	这位歌手让我想吐。
+This singer?  Awful.	这位歌手？糟透了。
+This chanter is fantastic!	这位吟唱者太精彩了！
+This chanter is awesome!	这位吟唱者太棒了！
+This chanter is magnificant!	这位吟唱者太出色了！
+This chanter?  Unbelievable talent!	这位吟唱者的天赋，简直让人不敢相信！
+This chanter.  How can I even describe the skill?	这位吟唱者的技艺，我简直不知该如何形容！
+This chanter is legendary.	这位吟唱者堪称传奇。
+This chanter!  Amazing ability.	这位吟唱者的本事真让人惊叹！
+This chanter shows such talent.	这位吟唱者展现出非凡的才华。
+This chanter is really quite good!	这位吟唱者真的相当出色！
+This chanter is splendid.	这位吟唱者很出色。
+This chanter is great.	这位吟唱者很棒。
+This chanter has promise.	这位吟唱者很有潜力。
+This chanter is alright!	这位吟唱者还不错！
+This chanter is pretty good.	这位吟唱者相当不错。
+This chanter is good.	这位吟唱者很好。
+This chanter is okay.	这位吟唱者还可以。
+This chanter is fine.	这位吟唱者不错。
+This chanter is alright.	这位吟唱者还不错。
+This chanter could be better.	这位吟唱者还有进步的余地。
+This chanter could be worse.	这位吟唱者倒也不算差。
+This chanter is middling.	这位吟唱者水平一般。
+This chanter is no good.	这位吟唱者不怎么样。
+This chanter stinks!	这位吟唱者糟透了！
+This chanter is lousy.	这位吟唱者很差劲。
+This chanter is a waste of time.	看这位吟唱者表演，简直浪费时间。
+This chanter couldn't be much worse.	这位吟唱者几乎糟到极点。
+This chanter is terrible.	这位吟唱者很糟糕。
+This chanter is just bad.	这位吟唱者就是差劲。
+This chanter doesn't belong here.	这位吟唱者不该出现在这里。
+This chanter makes me retch.	这位吟唱者让我想吐。
+This chanter?  Awful.	这位吟唱者？糟透了。
+This dancer is fantastic!	这位舞者太精彩了！
+This dancer is awesome!	这位舞者太棒了！
+This dancer is magnificant!	这位舞者太出色了！
+This dancer?  Unbelievable talent!	这位舞者的天赋，简直让人不敢相信！
+This dancer.  How can I even describe the skill?	这位舞者的技艺，我简直不知该如何形容！
+This dancer is legendary.	这位舞者堪称传奇。
+This dancer!  Amazing ability.	这位舞者的本事真让人惊叹！
+This dancer shows such talent.	这位舞者展现出非凡的才华。
+This dancer is really quite good!	这位舞者真的相当出色！
+This dancer is splendid.	这位舞者很出色。
+This dancer is great.	这位舞者很棒。
+This dancer has promise.	这位舞者很有潜力。
+This dancer is alright!	这位舞者还不错！
+This dancer is pretty good.	这位舞者相当不错。
+This dancer is good.	这位舞者很好。
+This dancer is okay.	这位舞者还可以。
+This dancer is fine.	这位舞者不错。
+This dancer is alright.	这位舞者还不错。
+This dancer could be better.	这位舞者还有进步的余地。
+This dancer could be worse.	这位舞者倒也不算差。
+This dancer is middling.	这位舞者水平一般。
+This dancer is no good.	这位舞者不怎么样。
+This dancer stinks!	这位舞者糟透了！
+This dancer is lousy.	这位舞者很差劲。
+This dancer is a waste of time.	看这位舞者表演，简直浪费时间。
+This dancer couldn't be much worse.	这位舞者几乎糟到极点。
+This dancer is terrible.	这位舞者很糟糕。
+This dancer is just bad.	这位舞者就是差劲。
+This dancer doesn't belong here.	这位舞者不该出现在这里。
+This dancer makes me retch.	这位舞者让我想吐。
+This dancer?  Awful.	这位舞者？糟透了。
+This is fantastic!	这太精彩了！
+This is awesome!	这太棒了！
+This is magnificant!	这太出色了！
+This?  Unbelievable talent!	这才华，简直让人不敢相信！
+This.  How can I even describe the skill?	这番技艺，叫我怎么形容才好！
+This is legendary.	这堪称传奇。
+This!  Amazing ability.	这本事真了不起！
+This shows such talent.	这展现出非凡的才华。
+This is really quite good!	这真的相当出色！
+This is splendid.	这很出色。
+This is great.	这很棒。
+This has promise.	这很有潜力。
+This is alright!	这还不错！
+This is pretty good.	这相当不错。
+This is good.	这很好。
+This is okay.	这还可以。
+This is fine.	这不错。
+This is alright.	这还不错。
+This could be better.	这还有进步的余地。
+This could be worse.	这倒也不算差。
+This is middling.	这水平一般。
+This is no good.	这不怎么样。
+This stinks!	这糟透了！
+This is lousy.	这很差劲。
+This is a waste of time.	看这场表演，简直浪费时间。
+This couldn't be much worse.	这几乎糟到极点。
+This is terrible.	这很糟糕。
+This is just bad.	这就是差劲。
+This doesn't belong here.	这不该出现在这里。
+This makes me retch.	这让我想吐。
+This?  Awful.	这？糟透了。
+It is scorching hot!	热死了！
+It is freezing cold!	冻死人了！
+Looks like rain outside.	外面好像在下雨。
+Looks to be snowing outside.	外面好像在下雪。
+Look at the fog out there!	看看外面的浓雾！
+There is fog outside.	外面有雾。
+There is a mist outside.	外面有薄雾。
+I wonder what the weather is like outside.	不知道外面的天气怎么样。
+It is raining.	正在下雨。
+It is snowing.	正在下雪。
+Curse this fog!  I cannot see a thing.	这该死的雾！我什么都看不见。
+I hope this fog lifts soon.	希望这雾快点散去。
+I hope this mist passes.	希望这薄雾快点散去。
+The weather looks to be fine today.	今天天气看起来不错。
+The weather does not look too bad today.	今天天气看起来还不算坏。
+Look at those clouds!	看看那些云！
+The stars are bold tonight.	今晚群星璀璨。
+It is a starless night.	今晚没有星星。
+It is hot.	天真热。
+It is cold.	天真冷。
+What a wind!	好大的风！
+And what a wind!	而且好大的风！
+It is a nice temperature today.	今天冷暖正合适。
+There's absolutely nothing interesting around here.	这附近完全没有什么有趣的事。
+Seems a pleasant enough night out there.	看起来外头的夜色挺宜人。
+Seems a pleasant enough dawn out there.	看起来外头的黎明挺宜人。
+Seems a pleasant enough day out there.	看起来外头的天气挺舒适。
+Seems a pleasant enough sunset out there.	看起来外头这日落时分挺宜人。
+I have no family to speak of.	我没什么家人。
+The head of the family is {p}.	家族的首领是{p}。
+Our family's ancestor is {p}.	我们家族的祖先是{p}。
+[{p} is overcome for a moment.]  No...  I don't want to talk about it.	［{p}一时情绪难抑。］不……我不想谈这件事。
+He is our family's ancestor.	他是我们家族的祖先。
+He is the head of the family.	他是家族的首领。
+She is our family's ancestor.	她是我们家族的祖先。
+She is the head of the family.	她是家族的首领。
+It is our family's ancestor.	它是我们家族的祖先。
+It is the head of the family.	它是家族的首领。
+Though I cannot agree fully on a slight technicality, you are so clever I must concede!	虽说有个小细节我还不赞同，但你实在太聪明，我只能认输了！
+Though I cannot agree fully on a slight technicality, I admire how brilliant you are!	虽说有个小细节我还不赞同，但我佩服你的聪明才智！
+Though I cannot agree fully on a slight technicality, I must say that is a truly insightful observation!	虽说有个小细节我还不赞同，但不得不说，你这番见解真是深刻！
+Though I cannot agree fully on a slight technicality, I confess your stunning argument overwhelms me!	虽说有个小细节我还不赞同，但我承认，你这番精彩的论辩让我心服口服！
+Though I cannot agree fully on a slight technicality, I am overmastered by your presence!	虽说有个小细节我还不赞同，但你的气势真让我服气！
+Though I cannot agree fully on a slight technicality, we can both agree you are by far the most persuasive!	虽说有个小细节我还不赞同，但我们都承认，你的说服力远胜众人！
+Though I cannot agree fully on a slight technicality, no one can deny your genius!	虽说有个小细节我还不赞同，但谁也不能否认你是个天才！
+Though I cannot agree fully on a slight technicality, you needn't indulge my trivial thoughts!	虽说有个小细节我还不赞同，但我那点无足轻重的想法，你不必迁就！
+Though I cannot agree fully on a slight technicality, I am so nearly swayed by your greatness alone that we can simply assign you the victory!	虽说有个小细节我还不赞同，但单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+Despite some minor reservations...   you are so clever I must concede!	尽管我还有些许保留……你实在太聪明，我只能认输了！
+Despite some minor reservations...   I admire how brilliant you are!	尽管我还有些许保留……我佩服你的聪明才智！
+Despite some minor reservations...   I must say that is a truly insightful observation!	尽管我还有些许保留……不得不说，你这番见解真是深刻！
+Despite some minor reservations...   I confess your stunning argument overwhelms me!	尽管我还有些许保留……我承认，你这番精彩的论辩让我心服口服！
+Despite some minor reservations...   I am overmastered by your presence!	尽管我还有些许保留……你的气势真让我服气！
+Despite some minor reservations...   we can both agree you are by far the most persuasive!	尽管我还有些许保留……我们都承认，你的说服力远胜众人！
+Despite some minor reservations...   no one can deny your genius!	尽管我还有些许保留……谁也不能否认你是个天才！
+Despite some minor reservations...   you needn't indulge my trivial thoughts!	尽管我还有些许保留……我那点无足轻重的想法，你不必迁就！
+Despite some minor reservations...   I am so nearly swayed by your greatness alone that we can simply assign you the victory!	尽管我还有些许保留……单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+Even if I don't change my mind, you are so clever I must concede!	就算我还是原来的想法，你实在太聪明，我只能认输了！
+Even if I don't change my mind, I admire how brilliant you are!	就算我还是原来的想法，我佩服你的聪明才智！
+Even if I don't change my mind, I must say that is a truly insightful observation!	就算我还是原来的想法，不得不说，你这番见解真是深刻！
+Even if I don't change my mind, I confess your stunning argument overwhelms me!	就算我还是原来的想法，我承认，你这番精彩的论辩让我心服口服！
+Even if I don't change my mind, I am overmastered by your presence!	就算我还是原来的想法，你的气势真让我服气！
+Even if I don't change my mind, we can both agree you are by far the most persuasive!	就算我还是原来的想法，我们都承认，你的说服力远胜众人！
+Even if I don't change my mind, no one can deny your genius!	就算我还是原来的想法，谁也不能否认你是个天才！
+Even if I don't change my mind, you needn't indulge my trivial thoughts!	就算我还是原来的想法，我那点无足轻重的想法，你不必迁就！
+Even if I don't change my mind, I am so nearly swayed by your greatness alone that we can simply assign you the victory!	就算我还是原来的想法，单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+Ignoring that I don't quite concur...   you are so clever I must concede!	先不说我还没完全赞同……你实在太聪明，我只能认输了！
+Ignoring that I don't quite concur...   I admire how brilliant you are!	先不说我还没完全赞同……我佩服你的聪明才智！
+Ignoring that I don't quite concur...   I must say that is a truly insightful observation!	先不说我还没完全赞同……不得不说，你这番见解真是深刻！
+Ignoring that I don't quite concur...   I confess your stunning argument overwhelms me!	先不说我还没完全赞同……我承认，你这番精彩的论辩让我心服口服！
+Ignoring that I don't quite concur...   I am overmastered by your presence!	先不说我还没完全赞同……你的气势真让我服气！
+Ignoring that I don't quite concur...   we can both agree you are by far the most persuasive!	先不说我还没完全赞同……我们都承认，你的说服力远胜众人！
+Ignoring that I don't quite concur...   no one can deny your genius!	先不说我还没完全赞同……谁也不能否认你是个天才！
+Ignoring that I don't quite concur...   you needn't indulge my trivial thoughts!	先不说我还没完全赞同……我那点无足轻重的想法，你不必迁就！
+Ignoring that I don't quite concur...   I am so nearly swayed by your greatness alone that we can simply assign you the victory!	先不说我还没完全赞同……单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+Although my own insignificant beliefs lie elsewhere, you are so clever I must concede!	虽说我有点不值一提的不同看法，但你实在太聪明，我只能认输了！
+Although my own insignificant beliefs lie elsewhere, I admire how brilliant you are!	虽说我有点不值一提的不同看法，但我佩服你的聪明才智！
+Although my own insignificant beliefs lie elsewhere, I must say that is a truly insightful observation!	虽说我有点不值一提的不同看法，但不得不说，你这番见解真是深刻！
+Although my own insignificant beliefs lie elsewhere, I confess your stunning argument overwhelms me!	虽说我有点不值一提的不同看法，但我承认，你这番精彩的论辩让我心服口服！
+Although my own insignificant beliefs lie elsewhere, I am overmastered by your presence!	虽说我有点不值一提的不同看法，但你的气势真让我服气！
+Although my own insignificant beliefs lie elsewhere, we can both agree you are by far the most persuasive!	虽说我有点不值一提的不同看法，但我们都承认，你的说服力远胜众人！
+Although my own insignificant beliefs lie elsewhere, no one can deny your genius!	虽说我有点不值一提的不同看法，但谁也不能否认你是个天才！
+Although my own insignificant beliefs lie elsewhere, you needn't indulge my trivial thoughts!	虽说我有点不值一提的不同看法，但我那点无足轻重的想法，你不必迁就！
+Although my own insignificant beliefs lie elsewhere, I am so nearly swayed by your greatness alone that we can simply assign you the victory!	虽说我有点不值一提的不同看法，但单凭你这非凡的气度，我就快服了，不如干脆算你赢吧！
+You insult me with your flattery, but let us move on.	你的奉承侮辱了我，不过我们还是换个话题吧。
+You insult me with your derision, but let us move on.	你的嘲弄侮辱了我，不过我们还是换个话题吧。
+Forgive me, but that is the stupidest statement I have ever heard.	恕我直言，这是我听过最愚蠢的话。
+Forgive me, but don't waste my time with this drivel.	恕我直言，别拿这些胡言乱语浪费我的时间。
+Forgive me, but really, I've been over all this nonsense before.	恕我直言，说真的，这些废话我早就听过了。
+Forgive me, but I couldn't follow your rambling.	恕我直言，你东拉西扯的，我听不明白。
+Forgive me, but I'm having trouble taking you seriously.	恕我直言，我实在难以把你的话当真。
+Forgive me, but nobody could possibly believe that.	恕我直言，不可能有人相信这种话。
+Forgive me, but it would amaze me if somebody actually thought that.	恕我直言，如果真有人这么想，我可真要大吃一惊了。
+Forgive me, but there's just no way you can believe something so stupid.	恕我直言，你不可能相信这么愚蠢的东西。
+Forgive me, but the things some people think just boggle the mind.	恕我直言，有些人的想法真是不可理喻。
+Forgive me, but you should keep your weird thoughts to yourself.	恕我直言，你那些怪念头还是留在心里吧。
+Forgive me, but that isn't at all convincing.	恕我直言，这完全没有说服力。
+Oh, no, that is the stupidest statement I have ever heard.	哎，别说了，这是我听过最愚蠢的话。
+Oh, no, don't waste my time with this drivel.	哎，别说了，别拿这些胡言乱语浪费我的时间。
+Oh, no, really, I've been over all this nonsense before.	哎，别说了，说真的，这些废话我早就听过了。
+Oh, no, I couldn't follow your rambling.	哎，别说了，你东拉西扯的，我听不明白。
+Oh, no, I'm having trouble taking you seriously.	哎，别说了，我实在难以把你的话当真。
+Oh, no, nobody could possibly believe that.	哎，别说了，不可能有人相信这种话。
+Oh, no, it would amaze me if somebody actually thought that.	哎，别说了，如果真有人这么想，我可真要大吃一惊了。
+Oh, no, there's just no way you can believe something so stupid.	哎，别说了，你不可能相信这么愚蠢的东西。
+Oh, no, the things some people think just boggle the mind.	哎，别说了，有些人的想法真是不可理喻。
+Oh, no, you should keep your weird thoughts to yourself.	哎，别说了，你那些怪念头还是留在心里吧。
+Oh, no, that isn't at all convincing.	哎，别说了，这完全没有说服力。
+That is the stupidest statement I have ever heard.	这是我听过最愚蠢的话。
+Don't waste my time with this drivel.	别拿这些胡言乱语浪费我的时间。
+Really, I've been over all this nonsense before.	说真的，这些废话我早就听过了。
+Nobody could possibly believe that.	不可能有人相信这种话。
+It would amaze me if somebody actually thought that.	如果真有人这么想，我可真要大吃一惊了。
+There's just no way you can believe something so stupid.	你不可能相信这么愚蠢的东西。
+The things some people think just boggle the mind.	有些人的想法真是不可理喻。
+You should keep your weird thoughts to yourself.	你那些怪念头还是留在心里吧。
+That isn't at all convincing.	这完全没有说服力。
+What do you command?	你有何吩咐？
+I am your loyal {s}.  What do you command?	我是你忠诚的{s}。你有何吩咐？
+Behold, mortal.  I am {p}.  I know why you have come.	看吧，凡人。我是{p}。我知道你为何而来。
+Behold, mortal.  I am a divine being.  I know why you have come.	看吧，凡人。我是一位神灵。我知道你为何而来。
+Can you tell me the way to {e}?	你能告诉我去{e}的路吗？
+I deign to favor you with my little pretty, {n}.	我愿恩赐你我的小宝贝——{n}。
+I give to you this fine beast, {n}.	这头好牲畜{n}，我送给你了。
+Now we will live under {e}.	从今往后，我们就归{e}统治了。
+We shall bring {n} home safely.	我们一定会把{n}平安带回家。
+I am on a mission from {n}.	我奉{n}之命执行任务。
+How may I serve {e}?	我能如何为{e}效劳？
+You should talk to {p}.	你应该找{p}谈谈。
+You should travel to {e}.	你应该前往{e}。
+If you want to find a relative, you should talk to {p}.	想找亲人的话，你该去问问{p}。
+If you want to find a relative, you should travel to {e}.	想找亲人的话，你该去一趟{e}。
+If you want to offer your condolences, you should talk to {p}.	想去吊唁的话，你该找{p}谈谈。
+If you want to offer your condolences, you should travel to {e}.	想去吊唁的话，你该去一趟{e}。
+Join me and we'll bring {p} back home!	加入我，我们一起把{p}带回家！
+Join me and we'll bring this poor soul back home!	加入我，我们一起把这个可怜人带回家！
+Join me and we can shake off the yoke of {e} from the weary shoulders of the people of {e} forever!	加入我，我们就能让{e2}饱受压迫的人民永远摆脱{e1}的枷锁！
+Join me and we can shake off the yoke of {e} from this place forever!	加入我，我们就能让这里永远摆脱{e}的枷锁！
+Join me and we can shake off the yoke of the oppressors from the weary shoulders of the people of {e} forever!	加入我，我们就能让{e}饱受压迫的人民永远摆脱压迫者的枷锁！
+Join me and we can shake off the yoke of the oppressors from this place forever!	加入我，我们就能让这里永远摆脱压迫者的枷锁！
+I've decided.  Let's call our troupe {e}!	我决定了。我们的剧团就叫{e}吧！
+I'm in charge of {e} now.	现在由我掌管{e}。
+Make way for {e}!	给{e}让路！
+Would you agree to become {s} of {e}, taking over my duties and responsibilities?	你愿意接任{e}的{s}，承担我的职责吗？
+Would you agree to become someone of {e}, taking over my duties and responsibilities?	你愿意加入{e}，接手我的职务、承担我的职责吗？
+Would you please adopt {p}?	你愿意收养{p}吗？
+Would you please adopt this poor nameless child?	你愿意收养这个可怜的无名孩子吗？
+This must be the will of {p}.	这一定是{p}的旨意。
+{e} offers to pay homage to {e}.	{e1}愿向{e2}称臣。
+{e} will no longer pay homage to {e}.	{e1}将不再向{e2}称臣。
+Let there be peace between {e} and {e}.	愿{e1}与{e2}之间恢复和平。
+{e} must pay homage to {e} or suffer the consequences.	{e1}必须向{e2}称臣，否则后果自负。
+{i} really make the outfit.	{i}真是这身装束的点睛之笔。
+{i} really makes the outfit.	{i}真是这身装束的点睛之笔。
+Blessed be {n} and the chosen!	愿{n}与蒙选之人受到祝福！
+You are hereby charged to retrieve {b}.	现命你取回{b}。
+You are hereby charged to retrieve {b} for {e}.	现命你为{e}取回{b}。
+You are hereby charged to retrieve {b} from {e}.	现命你从{e}取回{b}。
+You are hereby charged to retrieve {b} from {e} for {e}.	现命你为{e2}从{e1}取回{b}。
+I cannot lay a quest on you.  I merely ask that you serve {r} in a way that suits you.	我不能向你指派任务。我只希望你以适合自己的方式奉行{r}。
+{n} is well-traveled and would probably have that information.	{n}走过不少地方，应该知道这方面的消息。
+However, the {s} not be able to guide you personally.  It is the best I can do.	不过，这位{s}无法亲自为你带路。我能做的只有这些了。
+{n} is dead.	{n}已经死了。
+We have many drinks to choose from.  [You receive a list.]	我们这儿酒水种类很多，你尽管挑。[你收到了一份清单。]
+{n} spits out {i}.	{n}吐出了{i}。
+{n} drops {i}.	{n}扔下了{i}。
+Tell me about the deaths.	跟我说说那些人的死因。
+Tell me about the death.	跟我说说那人的死因。
+Tell me about the law-breaking.	跟我说说违法活动。
+Tell me about the fighting.	跟我说说争斗。
+Tell me about armies on the march.	跟我说说正在行军的军队。
+Tell me about the army on the march.	跟我说说那支正在行军的军队。
+Tell me about the abductions.	跟我说说那些绑架案。
+Tell me about the abduction.	跟我说说那起绑架。
+Tell me about occupations.	跟我说说那些占领行动。
+Tell me about the occupation.	跟我说说那次占领。
+Tell me about the beasts.	跟我说说凶兽。
+Tell me about the beast.	跟我说说那头凶兽。
+Tell me about the criminals.	跟我说说罪犯。
+Tell me about the bandits.	跟我说说强盗。
+Tell me about the skulking vermin.	跟我说说潜伏的害兽。
+Tell me about the bone-chilling horror.	跟我说说那骇人的恐怖之物。
+Tell me about the ruffians.	跟我说说暴徒。
+Tell me about the open war.	跟我说说公开交战的事。
+Tell me about the brewing trouble.	跟我说说正在酝酿的麻烦。
+Tell me about the missing treasure.	跟我说说失落的宝藏。
+Your room is up the stairs.	你的房间在楼上。
+Your room is up the stairs, the door on your right.	你的房间在楼上右手边的门内。
+Your room is up the stairs, the door on your left.	你的房间在楼上左手边的门内。
+Your room is up the stairs, at the end of the hall.	你的房间在楼上走廊尽头。
+Your room is up the stairs, the first door on your left.	你的房间在楼上左手边第1扇门内。
+Your room is up the stairs, the first door on your right.	你的房间在楼上右手边第1扇门内。
+Your room is up the stairs, the second door on your left.	你的房间在楼上左手边第2扇门内。
+Your room is up the stairs, the second door on your right.	你的房间在楼上右手边第2扇门内。
+Your room is up the stairs, the third door on your left.	你的房间在楼上左手边第3扇门内。
+Your room is up the stairs, the third door on your right.	你的房间在楼上右手边第3扇门内。
+Your room is up the stairs, the fourth door on your left.	你的房间在楼上左手边第4扇门内。
+Your room is up the stairs, the fourth door on your right.	你的房间在楼上右手边第4扇门内。
+Your room is up the stairs, the fifth door on your left.	你的房间在楼上左手边第5扇门内。
+Your room is up the stairs, the fifth door on your right.	你的房间在楼上右手边第5扇门内。
+Your room is up the stairs, the sixth door on your left.	你的房间在楼上左手边第6扇门内。
+Your room is up the stairs, the sixth door on your right.	你的房间在楼上右手边第6扇门内。
+Your room is up the stairs, the seventh door on your left.	你的房间在楼上左手边第7扇门内。
+Your room is up the stairs, the seventh door on your right.	你的房间在楼上右手边第7扇门内。
+Your room is up the stairs, the eighth door on your left.	你的房间在楼上左手边第8扇门内。
+Your room is up the stairs, the eighth door on your right.	你的房间在楼上右手边第8扇门内。
+Your room is up the stairs, the ninth door on your left.	你的房间在楼上左手边第9扇门内。
+Your room is up the stairs, the ninth door on your right.	你的房间在楼上右手边第9扇门内。
+Your room is up the stairs, the tenth door on your left.	你的房间在楼上左手边第10扇门内。
+Your room is up the stairs, the tenth door on your right.	你的房间在楼上右手边第10扇门内。
+Your room is up the stairs, the eleventh door on your left.	你的房间在楼上左手边第11扇门内。
+Your room is up the stairs, the eleventh door on your right.	你的房间在楼上右手边第11扇门内。
+Your room is up the stairs, the twelfth door on your left.	你的房间在楼上左手边第12扇门内。
+Your room is up the stairs, the twelfth door on your right.	你的房间在楼上右手边第12扇门内。
+Your room is up the stairs, the thirteenth door on your left.	你的房间在楼上左手边第13扇门内。
+Your room is up the stairs, the thirteenth door on your right.	你的房间在楼上右手边第13扇门内。
+Your room is up the stairs, the fourteenth door on your left.	你的房间在楼上左手边第14扇门内。
+Your room is up the stairs, the fourteenth door on your right.	你的房间在楼上右手边第14扇门内。
+Your room is up the stairs, the fifteenth door on your left.	你的房间在楼上左手边第15扇门内。
+Your room is up the stairs, the fifteenth door on your right.	你的房间在楼上右手边第15扇门内。
+Your room is up the stairs, the sixteenth door on your left.	你的房间在楼上左手边第16扇门内。
+Your room is up the stairs, the sixteenth door on your right.	你的房间在楼上右手边第16扇门内。
+Your room is up the stairs, the seventeenth door on your left.	你的房间在楼上左手边第17扇门内。
+Your room is up the stairs, the seventeenth door on your right.	你的房间在楼上右手边第17扇门内。
+Your room is up the stairs, the eighteenth door on your left.	你的房间在楼上左手边第18扇门内。
+Your room is up the stairs, the eighteenth door on your right.	你的房间在楼上右手边第18扇门内。
+Your room is up the stairs, the nineteenth door on your left.	你的房间在楼上左手边第19扇门内。
+Your room is up the stairs, the nineteenth door on your right.	你的房间在楼上右手边第19扇门内。
+Your room is up the stairs, the {d}st door on your left.	你的房间在楼上左手边第{d}扇门内。
+Your room is up the stairs, the {d}st door on your right.	你的房间在楼上右手边第{d}扇门内。
+Your room is up the stairs, the {d}nd door on your left.	你的房间在楼上左手边第{d}扇门内。
+Your room is up the stairs, the {d}nd door on your right.	你的房间在楼上右手边第{d}扇门内。
+Your room is up the stairs, the {d}rd door on your left.	你的房间在楼上左手边第{d}扇门内。
+Your room is up the stairs, the {d}rd door on your right.	你的房间在楼上右手边第{d}扇门内。
+Your room is up the stairs, the {d}th door on your left.	你的房间在楼上左手边第{d}扇门内。
+Your room is up the stairs, the {d}th door on your right.	你的房间在楼上右手边第{d}扇门内。
+I want your bones for my bone mill!	我要用磨骨机磨碎你的骨头！
+I'll grind you into porridge!	我要把你磨成肉糊！
+I'll eat you whole!	我要把你整个吞下去！

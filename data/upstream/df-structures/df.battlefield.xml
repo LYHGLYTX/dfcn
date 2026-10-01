@@ -1,0 +1,22 @@
+<data-definition>
+    <struct-type type-name='battlefield' key-field='id' instance-vector='$global.world.world_data.battlefields' original-name='battlefieldst'>
+        <int32_t name='id' original-name='global_id'/>
+
+        <compound type-name='location_deathst' name='location_death' comment="Seems to be by squad. Trolls/Blizzard Men not counted"/>
+
+        <int32_t name="x1" original-name='real_abs_mm_sx'/>
+        <int32_t name="y1" original-name='real_abs_mm_sy'/>
+        <int32_t name="x2" original-name='real_abs_mm_ex'/>
+        <int32_t name="y2" original-name='real_abs_mm_ey'/>
+        <int32_t name="flid" ref-target='world_underground_region'/>
+
+        <stl-vector type-name="int32_t" name='event_collections' original-name='hecid' ref-target='history_event_collection' comment='binary'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

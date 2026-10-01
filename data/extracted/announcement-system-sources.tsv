@@ -1,0 +1,290 @@
+# Complete strings reconstructed from installed Windows x64 Dwarf Fortress.exe.
+# Addresses are instruction VAs; last address is the native announcement submit call.
+# Names are semantic captures; material ownership and phase are part of the complete material slot.
+# This catalog is a shared-system superset, not a claim that every mode can reach every branch.
+native-announcement.pain-recovery	0x140d79ce0+0x140d79f6e+0x140d7a013	You feel less pain.
+native-announcement.pain-recovery	0x140d79ce0+0x140d79f7d+0x140d7a013	{n} looks less pained.
+native-announcement.bleeding-recovery	0x140d7af40+0x140d7b13d+0x140d7b168+0x140d7b1fc	You have less bleeding.
+native-announcement.bleeding-recovery	0x140d7af40+0x140d7b14c+0x140d7b168+0x140d7b1fc	{n} has less bleeding.
+native-announcement.cough-blood	0x140d7e7d0+0x140d7e98c+0x140d7e9b7+0x140d7ea4c	You cough up blood.
+native-announcement.cough-blood	0x140d7e7d0+0x140d7e99b+0x140d7e9b7+0x140d7ea4c	{n} coughs up blood.
+native-announcement.vomit-blood	0x140d7ece0+0x140d7ee99+0x140d7eeaf+0x140d7ef44	You vomit blood.
+native-announcement.vomit-blood	0x140d7ece0+0x140d7ee99+0x140d7eeaf+0x140d7ef44	{n} vomit blood.
+native-announcement.nausea-recovery	0x140d7f1d0+0x140d7f39e+0x140d7f3c9+0x140d7f45a	You feel less nauseated.
+native-announcement.nausea-recovery	0x140d7f1d0+0x140d7f3ad+0x140d7f3c9+0x140d7f45a	{n} looks less nauseated.
+native-announcement.temperature	0x14137cad0+0x14137ec84+0x14137ed52	You are blistering!
+native-announcement.temperature	0x14137cad0+0x14137ec98+0x14137ed52	You are burning!
+native-announcement.temperature	0x14137cad0+0x14137eca6+0x14137ed52	You are being incinerated!
+native-announcement.temperature	0x14137cad0+0x14137eddf+0x14137eea9	You are freezing!
+native-announcement.temperature	0x14137cad0+0x14137edf2+0x14137eea9	You are being frozen solid!
+native-announcement.temperature	0x14137cad0+0x14137ee00+0x14137eea9	You are freezing to death!
+native-announcement.temperature	0x14137cad0+0x14137ef0c+0x14137efd2	You are on fire!
+native-announcement.temperature	0x14137cad0+0x14137ef20+0x14137efd2	You are burning alive!
+native-announcement.temperature	0x14137cad0+0x14137ef2e+0x14137efd2	You are burning to death!
+native-announcement.temperature	0x14137cad0+0x14137f0ab+0x14137f0cb	You are melting!
+native-announcement.weather	0x14147ccdb+0x14147cd0c	A snow storm has come.
+native-announcement.weather	0x14147cdf9+0x14147ce34	It has started raining.
+native-announcement.weather	0x14147cf1e+0x14147cf48	The weather has cleared.
+native-announcement.evil-weather	0x1414478c3+0x141447b35+0x141447b40+0x141447bc0	It is raining {s}!
+native-announcement.evil-weather	0x141447c77+0x141447f6e	It is snowing {s}!
+native-announcement.evil-weather	0x141448326+0x1414489f2+0x141448a71	A cloud of {s} has drifted nearby!
+native-announcement.death	0x1413e5b20+0x1413e5e9e+0x1413e664a	You have died in a cage.
+native-announcement.death	0x1413e5b20+0x1413e5e9e+0x1413e664a	{n} has died in a cage.
+native-announcement.death	0x1413e5b20+0x1413e5eb0+0x1413e664a	You have died of old age.
+native-announcement.death	0x1413e5b20+0x1413e5eb0+0x1413e664a	{n} has died of old age.
+native-announcement.death	0x1413e5b20+0x1413e5f84+0x1413e664a	You have died in the dark.
+native-announcement.death	0x1413e5b20+0x1413e5f84+0x1413e664a	{n} has died in the dark.
+native-announcement.death	0x1413e5b20+0x1413e5f90+0x1413e664a	You have starved to death.
+native-announcement.death	0x1413e5b20+0x1413e5f90+0x1413e664a	{n} has starved to death.
+native-announcement.death	0x1413e5b20+0x1413e5fa2+0x1413e664a	You have died of thirst.
+native-announcement.death	0x1413e5b20+0x1413e5fa2+0x1413e664a	{n} has died of thirst.
+native-announcement.death	0x1413e5b20+0x1413e5fb4+0x1413e664a	You have burned up in magma.
+native-announcement.death	0x1413e5b20+0x1413e5fb4+0x1413e664a	{n} has burned up in magma.
+native-announcement.death	0x1413e5b20+0x1413e5fc6+0x1413e664a	You have burned up in dragon fire.
+native-announcement.death	0x1413e5b20+0x1413e5fc6+0x1413e664a	{n} has burned up in dragon fire.
+native-announcement.death	0x1413e5b20+0x1413e5fd8+0x1413e664a	You have boiled.
+native-announcement.death	0x1413e5b20+0x1413e5fd8+0x1413e664a	{n} has boiled.
+native-announcement.death	0x1413e5b20+0x1413e5fea+0x1413e664a	You have melted.
+native-announcement.death	0x1413e5b20+0x1413e5fea+0x1413e664a	{n} has melted.
+native-announcement.death	0x1413e5b20+0x1413e5ffc+0x1413e664a	You have condensed.
+native-announcement.death	0x1413e5b20+0x1413e5ffc+0x1413e664a	{n} has condensed.
+native-announcement.death	0x1413e5b20+0x1413e600e+0x1413e664a	You have solidified.
+native-announcement.death	0x1413e5b20+0x1413e600e+0x1413e664a	{n} has solidified.
+native-announcement.death	0x1413e5b20+0x1413e601a+0x1413e664a	You have died in the heat.
+native-announcement.death	0x1413e5b20+0x1413e601a+0x1413e664a	{n} has died in the heat.
+native-announcement.death	0x1413e5b20+0x1413e602c+0x1413e664a	You have been encased in cooling lava.
+native-announcement.death	0x1413e5b20+0x1413e602c+0x1413e664a	{n} has been encased in cooling lava.
+native-announcement.death	0x1413e5b20+0x1413e603e+0x1413e664a	You have been encased in cooling magma.
+native-announcement.death	0x1413e5b20+0x1413e603e+0x1413e664a	{n} has been encased in cooling magma.
+native-announcement.death	0x1413e5b20+0x1413e6050+0x1413e664a	You have been encased in ice.
+native-announcement.death	0x1413e5b20+0x1413e6050+0x1413e664a	{n} has been encased in ice.
+native-announcement.death	0x1413e5b20+0x1413e6062+0x1413e664a	You have frozen to death.
+native-announcement.death	0x1413e5b20+0x1413e6062+0x1413e664a	{n} has frozen to death.
+native-announcement.death	0x1413e5b20+0x1413e6074+0x1413e664a	You have burned to death.
+native-announcement.death	0x1413e5b20+0x1413e6074+0x1413e664a	{n} has burned to death.
+native-announcement.death	0x1413e5b20+0x1413e6086+0x1413e664a	You have been scalded to death.
+native-announcement.death	0x1413e5b20+0x1413e6086+0x1413e664a	{n} has been scalded to death.
+native-announcement.death	0x1413e5b20+0x1413e6098+0x1413e664a	You have burned up in a magma mist.
+native-announcement.death	0x1413e5b20+0x1413e6098+0x1413e664a	{n} has burned up in a magma mist.
+native-announcement.death	0x1413e5b20+0x1413e60aa+0x1413e664a	You have been crushed by a drawbridge.
+native-announcement.death	0x1413e5b20+0x1413e60aa+0x1413e664a	{n} has been crushed by a drawbridge.
+native-announcement.death	0x1413e5b20+0x1413e60bc+0x1413e664a	You have been crushed under the collapsing ceiling.
+native-announcement.death	0x1413e5b20+0x1413e60bc+0x1413e664a	{n} has been crushed under the collapsing ceiling.
+native-announcement.death	0x1413e5b20+0x1413e60ce+0x1413e664a	You have been killed by falling rocks.
+native-announcement.death	0x1413e5b20+0x1413e60ce+0x1413e664a	{n} has been killed by falling rocks.
+native-announcement.death	0x1413e5b20+0x1413e60e0+0x1413e664a	You have been shot and killed.
+native-announcement.death	0x1413e5b20+0x1413e60e0+0x1413e664a	{n} has been shot and killed.
+native-announcement.death	0x1413e5b20+0x1413e60f2+0x1413e664a	You have bled to death.
+native-announcement.death	0x1413e5b20+0x1413e60f2+0x1413e664a	{n} has bled to death.
+native-announcement.death	0x1413e5b20+0x1413e6104+0x1413e664a	You have succumbed to infection.
+native-announcement.death	0x1413e5b20+0x1413e6104+0x1413e664a	{n} has succumbed to infection.
+native-announcement.death	0x1413e5b20+0x1413e6116+0x1413e664a	You have suffocated.
+native-announcement.death	0x1413e5b20+0x1413e6116+0x1413e664a	{n} has suffocated.
+native-announcement.death	0x1413e5b20+0x1413e6122+0x1413e664a	You have been struck down.
+native-announcement.death	0x1413e5b20+0x1413e6122+0x1413e664a	{n} has been struck down.
+native-announcement.death	0x1413e5b20+0x1413e612e+0x1413e664a	You have been slaughtered.
+native-announcement.death	0x1413e5b20+0x1413e612e+0x1413e664a	{n} has been slaughtered.
+native-announcement.death	0x1413e5b20+0x1413e6140+0x1413e664a	You have been scuttled.
+native-announcement.death	0x1413e5b20+0x1413e6140+0x1413e664a	{n} has been scuttled.
+native-announcement.death	0x1413e5b20+0x1413e6152+0x1413e664a	You have been hacked to pieces.
+native-announcement.death	0x1413e5b20+0x1413e6152+0x1413e664a	{n} has been hacked to pieces.
+native-announcement.death	0x1413e5b20+0x1413e6164+0x1413e664a	You have been executed.
+native-announcement.death	0x1413e5b20+0x1413e6164+0x1413e664a	{n} has been executed.
+native-announcement.death	0x1413e5b20+0x1413e6176+0x1413e664a	You have been beheaded.
+native-announcement.death	0x1413e5b20+0x1413e6176+0x1413e664a	{n} has been beheaded.
+native-announcement.death	0x1413e5b20+0x1413e6188+0x1413e664a	You have been crucified.
+native-announcement.death	0x1413e5b20+0x1413e6188+0x1413e664a	{n} has been crucified.
+native-announcement.death	0x1413e5b20+0x1413e619a+0x1413e664a	You have been buried alive.
+native-announcement.death	0x1413e5b20+0x1413e619a+0x1413e664a	{n} has been buried alive.
+native-announcement.death	0x1413e5b20+0x1413e61ac+0x1413e664a	You have been executed by being left out in the air.
+native-announcement.death	0x1413e5b20+0x1413e61ac+0x1413e664a	{n} has been executed by being left out in the air.
+native-announcement.death	0x1413e5b20+0x1413e61be+0x1413e664a	You have been executed by drowning.
+native-announcement.death	0x1413e5b20+0x1413e61be+0x1413e664a	{n} has been executed by drowning.
+native-announcement.death	0x1413e5b20+0x1413e61d0+0x1413e664a	You have been burned alive.
+native-announcement.death	0x1413e5b20+0x1413e61d0+0x1413e664a	{n} has been burned alive.
+native-announcement.death	0x1413e5b20+0x1413e61e2+0x1413e664a	You have been fed to beasts.
+native-announcement.death	0x1413e5b20+0x1413e61e2+0x1413e664a	{n} has been fed to beasts.
+native-announcement.death	0x1413e5b20+0x1413e6330+0x1413e664a	You have been killed by a trap.
+native-announcement.death	0x1413e5b20+0x1413e6330+0x1413e664a	{n} has been killed by a trap.
+native-announcement.death	0x1413e5b20+0x1413e6342+0x1413e664a	You have been killed by a vehicle.
+native-announcement.death	0x1413e5b20+0x1413e6342+0x1413e664a	{n} has been killed by a vehicle.
+native-announcement.death	0x1413e5b20+0x1413e6354+0x1413e664a	You have been killed by a flying object.
+native-announcement.death	0x1413e5b20+0x1413e6354+0x1413e664a	{n} has been killed by a flying object.
+native-announcement.death	0x1413e5b20+0x1413e6366+0x1413e664a	You have vanished.
+native-announcement.death	0x1413e5b20+0x1413e6366+0x1413e664a	{n} has vanished.
+native-announcement.death	0x1413e5b20+0x1413e6378+0x1413e664a	You have collapsed.
+native-announcement.death	0x1413e5b20+0x1413e6378+0x1413e664a	{n} has collapsed.
+native-announcement.death	0x1413e5b20+0x1413e638a+0x1413e664a	You have died after colliding with an obstacle.
+native-announcement.death	0x1413e5b20+0x1413e638a+0x1413e664a	{n} has died after colliding with an obstacle.
+native-announcement.death	0x1413e5b20+0x1413e639c+0x1413e664a	You have been impaled on spikes.
+native-announcement.death	0x1413e5b20+0x1413e639c+0x1413e664a	{n} has been impaled on spikes.
+native-announcement.death	0x1413e5b20+0x1413e63ae+0x1413e664a	You have leapt from a great height.
+native-announcement.death	0x1413e5b20+0x1413e63ae+0x1413e664a	{n} has leapt from a great height.
+native-announcement.death	0x1413e5b20+0x1413e63c0+0x1413e664a	You have drowned.
+native-announcement.death	0x1413e5b20+0x1413e63c0+0x1413e664a	{n} has drowned.
+native-announcement.death	0x1413e5b20+0x1413e63e7+0x1413e664a	You have fallen into a deep chasm.
+native-announcement.death	0x1413e5b20+0x1413e63e7+0x1413e664a	{n} has fallen into a deep chasm.
+native-announcement.death	0x1413e5b20+0x1413e63f9+0x1413e664a	You have been found dead.
+native-announcement.death	0x1413e5b20+0x1413e63f9+0x1413e664a	{n} has been found dead.
+native-announcement.death	0x1413e5b20+0x1413e640b+0x1413e664a	You have been found dead, contorted in fear!
+native-announcement.death	0x1413e5b20+0x1413e640b+0x1413e664a	{n} has been found dead, contorted in fear!
+native-announcement.death	0x1413e5b20+0x1413e641d+0x1413e664a	You have been found, starved to death.
+native-announcement.death	0x1413e5b20+0x1413e641d+0x1413e664a	{n} has been found, starved to death.
+native-announcement.death	0x1413e5b20+0x1413e642f+0x1413e664a	You have been found dead, dehydrated.
+native-announcement.death	0x1413e5b20+0x1413e642f+0x1413e664a	{n} has been found dead, dehydrated.
+native-announcement.death	0x1413e5b20+0x1413e6441+0x1413e664a	You have been found dead, drowned.
+native-announcement.death	0x1413e5b20+0x1413e6441+0x1413e664a	{n} has been found dead, drowned.
+native-announcement.death	0x1413e5b20+0x1413e6453+0x1413e664a	You have been found dead, badly burned.
+native-announcement.death	0x1413e5b20+0x1413e6453+0x1413e664a	{n} has been found dead, badly burned.
+native-announcement.death	0x1413e5b20+0x1413e6465+0x1413e664a	You have been found boiled.
+native-announcement.death	0x1413e5b20+0x1413e6465+0x1413e664a	{n} has been found boiled.
+native-announcement.death	0x1413e5b20+0x1413e6474+0x1413e664a	You have been found melted.
+native-announcement.death	0x1413e5b20+0x1413e6474+0x1413e664a	{n} has been found melted.
+native-announcement.death	0x1413e5b20+0x1413e6483+0x1413e664a	You have been found condensed.
+native-announcement.death	0x1413e5b20+0x1413e6483+0x1413e664a	{n} has been found condensed.
+native-announcement.death	0x1413e5b20+0x1413e6492+0x1413e664a	You have been found solidified.
+native-announcement.death	0x1413e5b20+0x1413e6492+0x1413e664a	{n} has been found solidified.
+native-announcement.death	0x1413e5b20+0x1413e64a1+0x1413e664a	You have been found dead, frozen.
+native-announcement.death	0x1413e5b20+0x1413e64a1+0x1413e664a	{n} has been found dead, frozen.
+native-announcement.death	0x1413e5b20+0x1413e64b0+0x1413e664a	You have been found dead, badly crushed.
+native-announcement.death	0x1413e5b20+0x1413e64b0+0x1413e664a	{n} has been found dead, badly crushed.
+native-announcement.death	0x1413e5b20+0x1413e64bf+0x1413e664a	You have been found scuttled.
+native-announcement.death	0x1413e5b20+0x1413e64bf+0x1413e664a	{n} has been found scuttled.
+native-announcement.death	0x1413e5b20+0x1413e64ce+0x1413e664a	You have been found dead, completely drained of blood!
+native-announcement.death	0x1413e5b20+0x1413e64ce+0x1413e664a	{n} has been found dead, completely drained of blood!
+native-announcement.death	0x1413e5b20+0x1413e64d7+0x1413e664a	You have been put to rest.
+native-announcement.death	0x1413e5b20+0x1413e64d7+0x1413e664a	{n} has been put to rest.
+native-announcement.death	0x1413e5b20+0x1413e5ec2+0x1413e664a	You have been scared to death!
+native-announcement.death	0x1413e5b20+0x1413e5ec2+0x1413e664a	{n} has been scared to death!
+native-announcement.death	0x1413e5b20+0x1413e5ec2+0x1413e5ee1+0x1413e5f0f+0x1413e664a	You have been scared to death by {n}!
+native-announcement.death	0x1413e5b20+0x1413e5ec2+0x1413e5ee1+0x1413e5f0f+0x1413e664a	{n} has been scared to death by {n}!
+native-announcement.death	0x1413e5b20+0x1413e6206+0x1413e664a	You have been drained of blood!
+native-announcement.death	0x1413e5b20+0x1413e6206+0x1413e664a	{n} has been drained of blood!
+native-announcement.death	0x1413e5b20+0x1413e6218+0x1413e6250+0x1413e664a	You have been drained of blood by {p}!
+native-announcement.death	0x1413e5b20+0x1413e6218+0x1413e6250+0x1413e664a	{n} has been drained of blood by {p}!
+native-announcement.death	0x1413e5b20+0x1413e6218+0x1413e6302+0x1413e664a	You have been drained of blood by somebody!
+native-announcement.death	0x1413e5b20+0x1413e6218+0x1413e6302+0x1413e664a	{n} has been drained of blood by somebody!
+native-announcement.death	0x1413e5b20+0x1413e6292+0x1413e62c6+0x1413e664a	You have been murdered by {p}!
+native-announcement.death	0x1413e5b20+0x1413e6292+0x1413e62c6+0x1413e664a	{n} has been murdered by {p}!
+native-announcement.death	0x1413e5b20+0x1413e6292+0x1413e6302+0x1413e664a	You have been murdered by somebody!
+native-announcement.death	0x1413e5b20+0x1413e6292+0x1413e6302+0x1413e664a	{n} has been murdered by somebody!
+
+# State update function: complete direct-announcement builder branches, including optional arrival description.
+native-announcement.state.fall	0x1413547e0+0x1413584ac+0x1413584d5+0x1413584de+0x1413584f1+0x14135858e	You fall over.
+native-announcement.state.fall	0x1413547e0+0x1413584ac+0x1413584d5+0x1413584de+0x1413584f1+0x14135858e	{n} falls over.
+native-announcement.state.consciousness	0x1413547e0+0x14135877a+0x1413587a3+0x1413587ac+0x1413587bf+0x141358856	You regain consciousness.
+native-announcement.state.consciousness	0x1413547e0+0x14135877a+0x1413587a3+0x1413587ac+0x1413587bf+0x141358856	{n} regains consciousness.
+native-announcement.state.web	0x1413547e0+0x141358981+0x1413589aa+0x1413589b3+0x1413589c6+0x141358a5d	You are partially free of the web.
+native-announcement.state.web	0x1413547e0+0x141358981+0x1413589aa+0x1413589b3+0x1413589c6+0x141358a5d	{n} is partially free of the web.
+native-announcement.state.web	0x1413547e0+0x141358b83+0x141358bac+0x141358bb5+0x141358bc8+0x141358c5f	You are completely free of the web.
+native-announcement.state.web	0x1413547e0+0x141358b83+0x141358bac+0x141358bb5+0x141358bc8+0x141358c5f	{n} is completely free of the web.
+native-announcement.state.paralysis	0x1413547e0+0x141358d0f+0x141358d24+0x141358d2d+0x141358d40+0x141358dbe	You are completely paralyzed!
+native-announcement.state.paralysis	0x1413547e0+0x141358d0f+0x141358d24+0x141358d2d+0x141358d40+0x141358dbe	{n} is completely paralyzed!
+native-announcement.state.paralysis	0x1413547e0+0x141358e0b+0x141358e20+0x141358e29+0x141358e3c+0x141358eba	You have fully overcome the paralysis.
+native-announcement.state.paralysis	0x1413547e0+0x141358e0b+0x141358e20+0x141358e29+0x141358e3c+0x141358eba	{n} has fully overcome the paralysis.
+native-announcement.state.paralysis	0x1413547e0+0x141358f03+0x141358f18+0x141358f21+0x141358f34+0x141358fb2	You are partially paralyzed!
+native-announcement.state.paralysis	0x1413547e0+0x141358f03+0x141358f18+0x141358f21+0x141358f34+0x141358fb2	{n} is partially paralyzed!
+native-announcement.state.paralysis	0x1413547e0+0x141358ffb+0x141359010+0x141359019+0x14135902c+0x1413590aa	You are feeling sluggish!
+native-announcement.state.paralysis	0x1413547e0+0x141358ffb+0x141359010+0x141359019+0x14135902c+0x1413590aa	{n} is feeling sluggish!
+native-announcement.state.paralysis	0x1413547e0+0x1413590e6+0x1413590fb+0x141359117+0x141359195	You feel numb!
+native-announcement.state.paralysis	0x1413547e0+0x1413590e6+0x141359104+0x141359117+0x141359195	{n} looks numb!
+native-announcement.state.paralysis	0x1413547e0+0x1413591d2+0x1413591e7+0x1413591f0+0x141359203+0x141359293	You have partially overcome the paralysis.
+native-announcement.state.paralysis	0x1413547e0+0x1413591d2+0x1413591e7+0x1413591f0+0x141359203+0x141359293	{n} has partially overcome the paralysis.
+native-announcement.state.retch	0x1413547e0+0x1413593cc+0x1413593f5+0x1413593fe+0x141359411+0x1413594ae	You retch.
+native-announcement.state.retch	0x1413547e0+0x1413593cc+0x1413593f5+0x1413593fe+0x141359411+0x1413594ae	{n} retches.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359727+0x1413597c4	You vomit.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359727+0x1413597c4	{n} vomits.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359674+0x141359727+0x1413597c4	You vomit into the ocean wave.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359674+0x141359727+0x1413597c4	{n} vomits into the ocean wave.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359680+0x1413596c9+0x141359727+0x1413597c4	You vomit into the {s}.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359680+0x1413596c9+0x141359727+0x1413597c4	{n} vomits into the {s}.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x1413596f0+0x141359727+0x1413597c4	You vomit into the lava mist.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x1413596f0+0x141359727+0x1413597c4	{n} vomits into the lava mist.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x1413596f9+0x141359727+0x1413597c4	You vomit into the dragonfire.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x1413596f9+0x141359727+0x1413597c4	{n} vomits into the dragonfire.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359702+0x141359727+0x1413597c4	You vomit into the flames.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359702+0x141359727+0x1413597c4	{n} vomits into the flames.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x14135970b+0x141359727+0x1413597c4	You vomit and bits of it get stuck in the web.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x14135970b+0x141359727+0x1413597c4	{n} vomits and bits of it get stuck in the web.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359714+0x141359727+0x1413597c4	You vomit into the sea foam.
+native-announcement.state.vomit	0x1413547e0+0x14135960a+0x141359633+0x14135963c+0x141359714+0x141359727+0x1413597c4	{n} vomits into the sea foam.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413598b0+0x141359b2e	The rest of the vomit burns away in the lava.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413598b9+0x141359b2e	The vomit burns away in the lava.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413598c7+0x141359b2e	The rest of the vomit burns away in the magma.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413598d0+0x141359b2e	The vomit burns away in the magma.
+native-announcement.state.vomit-destination	0x1413547e0+0x14135995f+0x141359b2e	The rest of the vomit disappears into the water.
+native-announcement.state.vomit-destination	0x1413547e0+0x141359968+0x141359b2e	The vomit disappears into the water.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413599ca+0x141359b2e	The rest of the vomit falls away into the chasm.
+native-announcement.state.vomit-destination	0x1413547e0+0x1413599d3+0x141359b2e	The vomit falls away into the chasm.
+native-announcement.state.vomit-destination	0x1413547e0+0x141359a35+0x141359b2e	The rest of the vomit falls away into the underworld.
+native-announcement.state.vomit-destination	0x1413547e0+0x141359a3e+0x141359b2e	The vomit falls away into the underworld.
+native-announcement.state.vomit-destination	0x1413547e0+0x141359a9e+0x141359b2e	The rest of the vomit splatters into the shallow puddle of water.
+native-announcement.state.vomit-destination	0x1413547e0+0x141359aa7+0x141359b2e	The vomit splatters into the shallow puddle of water.
+native-announcement.state.stun	0x1413547e0+0x14135a03c+0x14135a065+0x14135a06e+0x14135a081+0x14135a103	You are no longer stunned.
+native-announcement.state.stun	0x1413547e0+0x14135a03c+0x14135a065+0x14135a06e+0x14135a081+0x14135a103	{n} is no longer stunned.
+native-announcement.state.exhaustion	0x1413547e0+0x14135a2fe+0x14135a327+0x14135a330+0x14135a343+0x14135a3de	You pass out from exhaustion.
+native-announcement.state.exhaustion	0x1413547e0+0x14135a2fe+0x14135a327+0x14135a330+0x14135a343+0x14135a3de	{n} passes out from exhaustion.
+native-announcement.state.exertion	0x1413547e0+0x14135a4e3+0x14135a50c+0x14135a515+0x14135a528+0x14135a5c3	You collapse and fall to the ground from over-exertion.
+native-announcement.state.exertion	0x1413547e0+0x14135a4e3+0x14135a50c+0x14135a515+0x14135a528+0x14135a5c3	{n} collapses and falls to the ground from over-exertion.
+native-announcement.state.pain	0x1413547e0+0x14135a6f5+0x14135a71e+0x14135a727+0x14135a73a+0x14135a7d5	You give in to pain.
+native-announcement.state.pain	0x1413547e0+0x14135a6f5+0x14135a71e+0x14135a727+0x14135a73a+0x14135a7d5	{n} gives in to pain.
+native-announcement.state.training	0x1413547e0+0x14135bb63+0x14135bb9e+0x14135bba7+0x14135bbba+0x14135bc47	You have reverted to a wild state!
+native-announcement.state.training	0x1413547e0+0x14135bb63+0x14135bb9e+0x14135bba7+0x14135bbba+0x14135bc47	{n} has reverted to a wild state!
+native-announcement.state.training	0x1413547e0+0x14135bd65+0x14135bda0+0x14135bdbc+0x14135bde1+0x14135be39+0x14135bec6	You have forgotten your training!
+native-announcement.state.training	0x1413547e0+0x14135bd65+0x14135bda9+0x14135bdbc+0x14135be14+0x140aa4850+0x14135be39+0x14135bec6	{n} has forgotten his training!
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d140+0x14135d171+0x140aa4850+0x14135d189+0x14135d250	{n} is aware of his surroundings again.
+native-announcement.state.training	0x1413547e0+0x14135bd65+0x14135bda9+0x14135bdbc+0x14135be14+0x140aa4850+0x14135be39+0x14135bec6	{n} has forgotten her training!
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d140+0x14135d171+0x140aa4850+0x14135d189+0x14135d250	{n} is aware of her surroundings again.
+native-announcement.state.training	0x1413547e0+0x14135bd65+0x14135bda9+0x14135bdbc+0x14135be14+0x140aa4850+0x14135be39+0x14135bec6	{n} has forgotten its training!
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d140+0x14135d171+0x140aa4850+0x14135d189+0x14135d250	{n} is aware of its surroundings again.
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d1b3+0x14135d250	{n} has climbed out of depression.
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d1bc+0x14135d250	{n} has calmed down.
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d1c5+0x14135d250	{n} is no longer enraged.
+native-announcement.state.mood	0x1413547e0+0x14135d10c+0x14135d1ce+0x14135d250	{n} has left the martial trance.
+native-announcement.state.resident-name	0x1413547e0+0x14135c22a+0x14135c261+0x14135c279+0x14135c299+0x14135c2b1+0x14135c2e1+0x14135c2f9+0x14135c387	The {s} have given a resident {s} the name {p}.
+native-announcement.state.growth	0x1413547e0+0x14135cf57+0x14135cf6a+0x14135cf97+0x14135cfaf+0x14135d031	An animal has grown to become a {s}.
+native-announcement.state.growth	0x1413547e0+0x14135cf50+0x14135cf6a+0x14135cf97+0x14135cfaf+0x14135d031	{p} has grown to become a {s}.
+native-announcement.state.birth	0x1413547e0+0x14135e0d7+0x14135e0dc+0x14135e13e+0x14135e15e+0x14135e228	{n} has given birth to {s}.
+native-announcement.state.arrival	0x1413547e0+0x14135493b+0x141354940+0x1413549aa+0x141354a98	{n} has come!
+native-announcement.state.arrival-description	0x1413547e0+0x14135493b+0x141354940+0x141354997+0x1413549ac+0x1413549cd+0x141354a98	{n} has come!  {q}
+
+# Complete direct-announcement branches of charge 0x140654d20 and player-shoot 0x14135f060.
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x1406559d3+0x140655a6b	You leap at {n}!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x1406559d3+0x140655a6b	{n} leaps at {n}!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x14065599e+0x1406559d3+0x140655a6b	You leap at {n} from behind!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x14065599e+0x1406559d3+0x140655a6b	{n} leaps at {n} from behind!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x1406559bd+0x1406559d3+0x140655a6b	You leap at {n} from the side!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655915+0x14065591e+0x140655972+0x1406559bd+0x1406559d3+0x140655a6b	{n} leaps at {n} from the side!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x1406559d3+0x140655a6b	You charge at {n}!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x1406559d3+0x140655a6b	{n} charges at {n}!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x14065599e+0x1406559d3+0x140655a6b	You charge at {n} from behind!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x14065599e+0x1406559d3+0x140655a6b	{n} charges at {n} from behind!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x1406559bd+0x1406559d3+0x140655a6b	You charge at {n} from the side!
+native-announcement.combat.charge-start	0x140654d20+0x140654e9e+0x140655225+0x140655937+0x140655940+0x140655972+0x1406559bd+0x1406559d3+0x140655a6b	{n} charges at {n} from the side!
+native-announcement.combat.charge-surprise	0x140654d20+0x140654e9e+0x140655225+0x140655ab6+0x140655acf+0x140655aea+0x140655aef+0x140655b5d	You are surprised by the ferocity of {n}'s onslaught!
+native-announcement.combat.charge-surprise	0x140654d20+0x140654e9e+0x140655225+0x140654eba+0x140655abf+0x140655acf+0x140655aea+0x140655aef+0x140655b5d	{n} looks surprised by the ferocity of Your onslaught!
+native-announcement.combat.charge-surprise	0x140654d20+0x140654e9e+0x140655225+0x140654efc+0x140655abf+0x140655acf+0x140655aea+0x140655aef+0x140655b5d	{n} looks surprised by the ferocity of {n}'s onslaught!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065622a+0x14065623c+0x1406562be+0x1406562d4+0x14065643e	You scramble away!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065622a+0x14065623c+0x1406562be+0x1406562d4+0x14065643e	{n} scrambles away!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065625e+0x140656267+0x1406562be+0x1406562d4+0x14065643e	You roll away!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065625e+0x140656267+0x1406562be+0x1406562d4+0x14065643e	{n} rolls away!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065628b+0x1406562a3+0x1406562be+0x1406562d4+0x14065643e	You jump away!
+native-announcement.combat.charge-dodge	0x140654d20+0x140654e9e+0x140655225+0x14065628b+0x1406562a3+0x1406562be+0x1406562d4+0x14065643e	{n} jumps away!
+native-announcement.combat.charge-collision	0x140654d20+0x140654e9e+0x140655225+0x140656634+0x14065665f+0x140656691+0x140656699+0x140656733	You collide with {n}!
+native-announcement.combat.charge-collision	0x140654d20+0x140654e9e+0x140655225+0x140656643+0x14065665f+0x140656691+0x140656699+0x140656733	{n} collides with {n}!
+native-announcement.combat.charge-knockover	0x140654d20+0x140654e9e+0x140655225+0x140656d1a+0x140656d4e+0x140656da7+0x14065719c	You are knocked over!
+native-announcement.combat.charge-knockover	0x140654d20+0x140654e9e+0x140655225+0x140656d2f+0x140656d4e+0x140656da7+0x14065719c	{n} is knocked over!
+native-announcement.combat.charge-tumble	0x140654d20+0x140654e9e+0x140655225+0x140656a24+0x140656a5b+0x140656a8d+0x140656abb+0x140656b6d+0x14065719c	You are knocked over and tumble backward!
+native-announcement.combat.charge-tumble	0x140654d20+0x140654e9e+0x140655225+0x140656a45+0x140656a5b+0x140656aa5+0x140656abb+0x140656b6d+0x14065719c	{n} is knocked over and tumbles backward!
+native-announcement.combat.charge-bounce	0x140654d20+0x140654e9e+0x140655225+0x140657215+0x140657243+0x140657259+0x140657497	You bounce backward!
+native-announcement.combat.charge-bounce	0x140654d20+0x140654e9e+0x140655225+0x14065722d+0x140657243+0x140657259+0x140657497	{n} bounces backward!
+native-announcement.combat.charge-tangle	0x140654d20+0x140654e9e+0x140655225+0x140657532+0x140657597	You tangle together and tumble forward!
+native-announcement.combat.charge-tangle	0x140654d20+0x140654e9e+0x140655225+0x14065753b+0x140657597	They tangle together and tumble forward!
+native-announcement.combat.charge-tangle	0x140654d20+0x140654e9e+0x140655225+0x1406576f8+0x14065779b	You tangle together and fall over!
+native-announcement.combat.charge-tangle	0x140654d20+0x140654e9e+0x140655225+0x140657701+0x14065779b	They tangle together and fall over!
+native-announcement.combat.shoot	0x14135f060+0x14135f48b+0x14135f4ab+0x14135f4ce+0x14135f52b+0x14135f54b+0x14135f571+0x14135f5e3	You shoot {s} from {s}.
+native-announcement.combat.shoot	0x14135f060+0x14135f48b+0x14135f4ab+0x14135f4d6+0x14135f505+0x14135f52b+0x14135f54b+0x14135f571+0x14135f5e3	You shoot {s} at {s} from {s}.
+
+# Grip builder 0x141361370: each independently selected object is anatomy (t) or a complete item (s).
+# Explicit Your/owner possessives retain the native capitalization and each action terminator.
+# Prefer complete anatomy captures to ordinary noun meanings; the s fallback includes native "body part".

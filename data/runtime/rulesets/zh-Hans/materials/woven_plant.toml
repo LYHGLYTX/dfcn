@@ -1,0 +1,14 @@
+base = "materials::woven_plant"
+
+# Established plant-fiber qualifiers for finished equipment and tools.
+# Raw material names remain in data/runtime/rulesets/zh-Hans/materials/state.toml; do not flatten these into word rules.
+[[rulesets]]
+[rulesets.rules]
+"rope reed" = "绳索苇布"
+"pig tail" = "猪尾草布"
+"linen" = "亚麻布"
+"cotton" = "棉布"
+"ramie" = "苎麻布"
+"kenaf" = "洋麻布"
+"hemp" = "大麻布"
+"jute" = "黄麻布"

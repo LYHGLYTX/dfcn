@@ -1,0 +1,541 @@
+# Native PE self-expression reactions reached by character overview owner 0x1401a5b70.
+# Binary identity: PE:6a70a6d9:02711000; selector calls 0x1401a6f47/54/61/6d/74.
+# Complete emotion switches: 169 slots each; intensity 101 subtracts 5 then uses 154 byte-indexed slots.
+# Sources follow reachable switch branches; strong annoyance includes all five randomized variants.
+# Each reference identifies its string-load instruction and literal address; untranslated default branches emit nothing.
+formatter	reference	source	translation
+0x140667f50 (intensity=101)	0x140667f86 -> 0x1416684b0	Somebody help!	谁来救救我！
+0x140667f50 (intensity=101)	0x140667f9b -> 0x1416684c0	Ah...  uh...	啊……呃……
+0x140667f50 (intensity=101)	0x140667fb0 -> 0x141668738	The horror...	太可怕了……
+0x140667f50 (intensity=101)	0x140667fc5 -> 0x141668748	Rawr!!!	嗷！！！
+0x140667f50 (intensity=101)	0x140667fda -> 0x141668718	Waaaaa...	哇啊啊……
+0x140667f50 (intensity=101)	0x140667fef -> 0x141668728	The pain!	痛死我了！
+0x140667f50 (intensity=101)	0x140668004 -> 0x1416686e0	How incredibly satisfying!	真是痛快极了！
+0x140667f50 (intensity=101)	0x140668019 -> 0x141668700	Oh joyous occasion!	啊，真是天大的喜事！
+0x140667f50 (intensity=101)	0x14066802e -> 0x1416686b0	The love overwhelms me!	我被爱意淹没了！
+0x140667f50 (intensity=101)	0x140668043 -> 0x1416686c8	Such sweet bliss!	多么甜蜜的幸福！
+0x140667f50 (intensity=101)	0x140668058 -> 0x141668670	Every last one of you will pay with your lives!	你们每个人都得拿命来偿还！
+0x140667f50 (intensity=101)	0x14066806d -> 0x1416686a0	Ahhhhhhh!  No!	啊啊啊啊！不！
+0x140667f50 (intensity=101)	0x140668082 -> 0x141668648	Eek!	呀！
+0x140667f50 (intensity=101)	0x140668097 -> 0x141668650	What is the meaning of it all?!	这一切到底有什么意义？！
+0x140667f50 (intensity=101)	0x1406680ac -> 0x141668600	I can't believe how great I feel!	我竟然能这么快活，简直难以置信！
+0x1406681a0 (intensity=100)	0x1406681d0 -> 0x141668628	That's incredibly suspicious!	这太可疑了！
+0x1406681a0 (intensity=100)	0x1406681ea -> 0x1416685d8	What's going on?!	这是怎么回事？！
+0x1406681a0 (intensity=100)	0x140668204 -> 0x1416685f0	What's that?!	那是什么？！
+0x1406681a0 (intensity=100)	0x14066821e -> 0x141668318	The horror consumes me!	太可怕了，我受不了了！
+0x1406681a0 (intensity=100)	0x140668238 -> 0x141668330	I cannot be overwhelmed by grief!	我不能被悲痛压垮！
+0x1406681a0 (intensity=100)	0x140668252 -> 0x1416682f0	Fantastic!	太棒了！
+0x1406681a0 (intensity=100)	0x14066826c -> 0x141668300	I am so enraged!	气死我了！
+0x1406681a0 (intensity=100)	0x140668286 -> 0x1416682b8	Yes!  It is done.	好！事情办成了。
+0x1406681a0 (intensity=100)	0x1406682a0 -> 0x1416682d0	I must not succumb to fear!	不能怕，绝对不能怕！
+0x1406681a0 (intensity=100)	0x1406682ba -> 0x141668270	I feel such unbearable sadness...	我悲伤得快受不了了……
+0x1406681a0 (intensity=100)	0x1406682d4 -> 0x141668298	That was very satisfying!	这下可满意了！
+0x1406681a0 (intensity=100)	0x1406682ee -> 0x141668248	I am so happy!	太好了，真高兴！
+0x1406681a0 (intensity=100)	0x140668308 -> 0x141668258	I feel such love!	真是爱得不得了！
+0x1406681a0 (intensity=100)	0x140668322 -> 0x141668220	How blissful!	真是幸福极了！
+0x1406681a0 (intensity=100)	0x140668336 -> 0x141668230	I will take revenge!	我一定要报仇！
+0x1406681a0 (intensity=100)	0x140668348 -> 0x1416681e0	I must press on!	我必须坚持下去！
+0x1406681a0 (intensity=100)	0x140668362 -> 0x1416681f8	I am in complete accord with this!	我完全赞同！
+0x1406681a0 (intensity=100)	0x14066837c -> 0x1416681b8	How admirable!	真叫人佩服！
+0x1406681a0 (intensity=100)	0x140668396 -> 0x1416681c8	Such adoration I feel!	真是太让人崇拜了！
+0x1406681a0 (intensity=100)	0x1406683b0 -> 0x141668488	How affectionate I am!	真想好好亲近一下！
+0x1406681a0 (intensity=100)	0x1406683ca -> 0x1416684a0	How agitating!	这叫人怎么静得下来！
+0x1406681a0 (intensity=100)	0x1406683e4 -> 0x141668458	This is so aggravating!	真是气人！
+0x1406681a0 (intensity=100)	0x1406683fe -> 0x141668470	The agony is too much!	太难受了，我受不了了！
+0x1406681a0 (intensity=100)	0x140668418 -> 0x141668428	I feel so alienated...	怎么就跟谁都合不来呢……
+0x1406681a0 (intensity=100)	0x140668432 -> 0x141668440	Wow!  That's amazing!	哇！真了不起！
+0x1406681a0 (intensity=100)	0x14066844c -> 0x1416683f0	I am so torn over this...	唉，说好也不是，说不好也不是，真是纠结……
+0x1406681a0 (intensity=100)	0x140668466 -> 0x141668410	Ha ha!  So amusing!	哈哈！真有趣！
+0x1406681a0 (intensity=100)	0x140668480 -> 0x1416683c0	I am so angry!	我气坏了！
+0x1406681a0 (intensity=100)	0x14066849a -> 0x1416683d0	The anguish is overwhelming...	这份痛苦让我承受不住了……
+0x1406681a0 (intensity=100)	0x140668504 -> 0x141668358	So annoying!	太烦人了！
+0x1406681a0 (intensity=100)	0x14066851e -> 0x141668388	That's annoying.	那可真烦人。
+0x1406681a0 (intensity=100)	0x140668538 -> 0x141668378	I'm annoyed.	烦得很。
+0x1406681a0 (intensity=100)	0x140668552 -> 0x1416683b0	It's annoying.	真烦人。
+0x1406681a0 (intensity=100)	0x14066856c -> 0x1416683a0	How annoying!	真烦人！
+0x1406681a0 (intensity=100)	0x140668586 -> 0x141668368	I'm so anxious!	真是急死我了！
+0x1406681a0 (intensity=100)	0x1406685a0 -> 0x141668c10	I could not care less.	随便吧，我才懒得管。
+0x1406681a0 (intensity=100)	0x1406685ba -> 0x141668c28	I am very aroused!	真想亲热，快忍不住了！
+0x1406681a0 (intensity=100)	0x1406685d4 -> 0x141668bd8	Astonishing!	真没想到！
+0x1406681a0 (intensity=100)	0x1406685ee -> 0x141668be8	I really need to get away from this.	我真得赶紧摆脱这一切。
+0x1406681a0 (intensity=100)	0x140668608 -> 0x141668ba0	I'm awe-struck!	太了不起了，真让人又敬又怕！
+0x1406681a0 (intensity=100)	0x140668622 -> 0x141668bb0	I'm terribly bitter about this...	这件事让我心里怨恨极了……
+0x1406681a0 (intensity=100)	0x14066863c -> 0x141668b78	This is so boring!	这太无聊了！
+0x1406681a0 (intensity=100)	0x140668656 -> 0x141668b90	I care so much!	这对我可太重要了！
+0x1406681a0 (intensity=100)	0x140668670 -> 0x141668b30	I'm so incredibly confused...	到底怎么回事，我全糊涂了……
+0x1406681a0 (intensity=100)	0x14066868a -> 0x141668b50	I can't describe the contempt I feel...	我心中的鄙夷简直无法形容……
+0x1406681a0 (intensity=100)	0x1406686a4 -> 0x141668af8	I am so content about this.	这样就好，真没什么可求的了。
+0x1406681a0 (intensity=100)	0x1406686be -> 0x141668b18	I feel so dejected...	唉，真是干什么都没劲了……
+0x1406681a0 (intensity=100)	0x1406686d2 -> 0x141668ac8	How very delightful!	太好了！
+0x1406681a0 (intensity=100)	0x1406686e4 -> 0x141668ae0	I despair at this!	这下真没指望了！
+0x1406681a0 (intensity=100)	0x1406686fe -> 0x141668a98	My disappointment is palpable!	我真是失望透顶！
+0x1406681a0 (intensity=100)	0x140668718 -> 0x141668ab8	How disgusting!	真恶心！
+0x1406681a0 (intensity=100)	0x140668732 -> 0x141668dc0	How naive I was...  this strikes me to the core.	我以前多么天真……这让我彻底醒悟了。
+0x1406681a0 (intensity=100)	0x14066874c -> 0x141668df8	I feel such an intense dislike...	我实在是厌恶极了……
+0x1406681a0 (intensity=100)	0x140668766 -> 0x141668d80	Everything is coming apart!	全乱套了！
+0x1406681a0 (intensity=100)	0x140668780 -> 0x141668da0	I am very, very displeased.	这可不行，我实在不满意。
+0x1406681a0 (intensity=100)	0x14066879a -> 0x141668d38	What shall I do?  This is a disaster!	我该怎么办？这简直是一场灾难！
+0x1406681a0 (intensity=100)	0x1406687b4 -> 0x141668d60	I can't wait to get to it!	我等不及要动手了！
+0x1406681a0 (intensity=100)	0x1406687c8 -> 0x141668d08	Such elation I feel!	真是太好了！
+0x1406681a0 (intensity=100)	0x1406687da -> 0x141668d20	How embarrassing!	真尴尬！
+0x1406681a0 (intensity=100)	0x1406687ee -> 0x141668cd0	I feel such empathy!	那种滋味，我太明白了！
+0x1406681a0 (intensity=100)	0x140668800 -> 0x141668ce8	I feel so empty inside...	怎么像是什么都没剩下呢……
+0x1406681a0 (intensity=100)	0x14066881a -> 0x141668ca8	How enjoyable!	真开心！
+0x1406681a0 (intensity=100)	0x140668834 -> 0x141668cb8	So exasperating!	真气人！
+0x1406681a0 (intensity=100)	0x14066884e -> 0x141668c70	How exhilarating!	真让人来劲！
+0x1406681a0 (intensity=100)	0x140668868 -> 0x141668c88	You will know my ferocity!	让你见识见识我的厉害！
+0x1406681a0 (intensity=100)	0x14066887c -> 0x141668c40	I'm feeling so fond!	我实在太喜欢了！
+0x1406681a0 (intensity=100)	0x140668888 -> 0x141668c58	Such freedom I feel!	想怎么样就怎么样，真自在！
+0x1406681a0 (intensity=100)	0x14066889a -> 0x1416688c0	Such a fright!	真吓人！
+0x1406681a0 (intensity=100)	0x1406688b4 -> 0x1416688d0	How frustrating!	真让人泄气！
+0x1406681a0 (intensity=100)	0x1406688ce -> 0x141668894	Glee!	真高兴！
+0x1406681a0 (intensity=100)	0x1406688e8 -> 0x1416688a0	The gloom blankets me...	唉，怎么也高兴不起来……
+0x1406681a0 (intensity=100)	0x140668902 -> 0x141668868	How glum I am...	唉，闷死了……
+0x1406681a0 (intensity=100)	0x14066891c -> 0x141668880	I am so grateful!	真是太感谢了！
+0x1406681a0 (intensity=100)	0x140668936 -> 0x141668828	It makes me so grouchy!	烦死了，真想发火！
+0x1406681a0 (intensity=100)	0x140668950 -> 0x141668840	Not that it's your business!  Harumph!	关你什么事！哼！
+0x1406681a0 (intensity=100)	0x14066896a -> 0x1416687f8	The guilt is almost unbearable!	这份内疚几乎让我承受不住了！
+0x1406681a0 (intensity=100)	0x140668984 -> 0x141668818	Such happiness!	真幸福！
+0x1406681a0 (intensity=100)	0x14066899e -> 0x1416687b8	I am consumed by hatred.	恨死了，除了恨还是恨。
+0x1406681a0 (intensity=100)	0x1406689b8 -> 0x1416687d8	I am filled with such hope!	这下可大有盼头了！
+0x1406681a0 (intensity=100)	0x1406689d2 -> 0x141668788	There is no hope!	没有希望了！
+0x1406681a0 (intensity=100)	0x1406689ec -> 0x1416687a0	The humiliation!	真丢脸！
+0x1406681a0 (intensity=100)	0x140668a06 -> 0x141668750	Such an offense!	太不把人当回事了！
+0x1406681a0 (intensity=100)	0x140668a20 -> 0x141668768	How incredibly interesting!	太有意思了！
+0x1406681a0 (intensity=100)	0x140668a3a -> 0x141668a70	How irritating!	真烦，静都静不下来！
+0x1406681a0 (intensity=100)	0x140668a54 -> 0x141668a80	I feel so isolated!	怎么所有人都把我当外人！
+0x1406681a0 (intensity=100)	0x140668a6e -> 0x141668a40	Such a jolly time!	这会儿真开心！
+0x1406681a0 (intensity=100)	0x140668a88 -> 0x141668a58	How jovial I feel!	真痛快！
+0x1406681a0 (intensity=100)	0x140668aa2 -> 0x141668a00	Such jubilation I feel!	好啊，太好了！
+0x1406681a0 (intensity=100)	0x140668abc -> 0x141668a18	I crawl with such unbearable loathing!	我浑身都充满了憎恶，简直无法忍受！
+0x1406681a0 (intensity=100)	0x140668ad6 -> 0x1416689d0	I'm so terribly lonely!	连个能陪我的人都没有，真难受！
+0x1406681a0 (intensity=100)	0x140668af0 -> 0x1416689e8	I'm overcome by lust!	满脑子都是亲热的事，什么都顾不上了！
+0x1406681a0 (intensity=100)	0x140668b0a -> 0x141668998	Such misery!	真是难受死了！
+0x1406681a0 (intensity=100)	0x140668b24 -> 0x1416689a8	The mortification overwhelms me!	这份羞辱让我无地自容！
+0x1406681a0 (intensity=100)	0x140668b3e -> 0x141668970	I am so nervous!	哎呀，紧张死了！
+0x1406681a0 (intensity=100)	0x140668b58 -> 0x141668988	Such nostalgia!	真怀念从前！
+0x1406681a0 (intensity=100)	0x140668b72 -> 0x141668930	My optimism is unshakeable!	肯定会好的，我相信！
+0x1406681a0 (intensity=100)	0x140668b8c -> 0x141668950	This is such an outrage!	简直太气人了！
+0x1406681a0 (intensity=100)	0x140668ba6 -> 0x1416688e8	I'm panicking!  I'm panicking!	我慌了！我真的慌了！
+0x1406681a0 (intensity=100)	0x140668bc0 -> 0x141668908	My patience is as the still waters.	我耐心十足，心如止水。
+0x1406681a0 (intensity=100)	0x140668bda -> 0x141669298	I burn with such passion!	越想越来劲，真是停不下来！
+0x1406681a0 (intensity=100)	0x140668bf4 -> 0x1416692b8	How pleasurable!	真舒服！
+0x1406681a0 (intensity=100)	0x140668c0e -> 0x141669270	I am so proud!	可真值得我骄傲一回！
+0x1406681a0 (intensity=100)	0x140668c28 -> 0x141669280	Such total rapture!	真叫人什么都忘了！
+0x1406681a0 (intensity=100)	0x140668c42 -> 0x141669238	Such rejection!  I cannot stand it.	竟这样拒绝我！我受不了。
+0x1406681a0 (intensity=100)	0x140668c5c -> 0x141669260	Such a relief!	这下总算能松口气了！
+0x1406681a0 (intensity=100)	0x140668c76 -> 0x141669200	I have so many regrets...	后悔的事，实在太多了……
+0x1406681a0 (intensity=100)	0x140668c8a -> 0x141669220	I feel such remorse!	我怎么就做了这种事！
+0x1406681a0 (intensity=100)	0x140668c96 -> 0x1416691c0	I repent!  I repent!	我错了！我真的错了！
+0x1406681a0 (intensity=100)	0x140668ca8 -> 0x1416691d8	I am overcome by such resentment...	我满心都是怨恨，无法自拔……
+0x1406681a0 (intensity=100)	0x140668cc2 -> 0x141669190	I feel so restless!	怎么坐都坐不住！
+0x1406681a0 (intensity=100)	0x140668cdc -> 0x1416691a8	I have been so wronged!	我受了天大的委屈！
+0x1406681a0 (intensity=100)	0x140668cf6 -> 0x141669138	Why does it keep happening to me?  Why me?!	为什么这种事总落在我头上？为什么偏偏是我？！
+0x1406681a0 (intensity=100)	0x140668d10 -> 0x141669168	I live to serve...  my dear master...	我活着就是为了侍奉您……我亲爱的主人……
+0x1406681a0 (intensity=100)	0x140668d2a -> 0x141669108	I can't take it!	我受不了了！
+0x1406681a0 (intensity=100)	0x140668d44 -> 0x141669120	I am so ashamed!	真是没脸见人了！
+0x1406681a0 (intensity=100)	0x140668d5e -> 0x141669430	I feel such sympathy!	唉，实在太可怜了！
+0x1406681a0 (intensity=100)	0x140668d78 -> 0x141669448	The tenderness I feel!	真是硬不起心肠来！
+0x1406681a0 (intensity=100)	0x140668d92 -> 0x141669400	It's so thrilling!	真让人心跳加速！
+0x1406681a0 (intensity=100)	0x140668dac -> 0x141669418	I feel so uneasy!	不对劲，怎么想都让人不安！
+0x1406681a0 (intensity=100)	0x140668dc6 -> 0x1416693d8	Such unhappiness!	真不开心！
+0x1406681a0 (intensity=100)	0x140668de0 -> 0x1416693f0	The wonder!	真是奇妙极了！
+0x1406681a0 (intensity=100)	0x140668dfa -> 0x1416693a8	I'm so worried!	这可怎么办，愁死我了！
+0x1406681a0 (intensity=100)	0x140668e14 -> 0x1416693b8	I am filled with such wrath!	真是气死我了！
+0x1406681a0 (intensity=100)	0x140668e2e -> 0x141669368	Nothing shall stand in my way!	什么也别想挡住我！
+0x1406681a0 (intensity=100)	0x140668e48 -> 0x141669388	What am I even doing here?	我到底在这里做什么？
+0x1406681a0 (intensity=100)	0x140668e62 -> 0x141669330	I feel so defeated...	完了，彻底输了……
+0x1406681a0 (intensity=100)	0x140668e7c -> 0x141669348	I know it will come to pass!	我知道这一定会实现！
+0x1406681a0 (intensity=100)	0x140668e96 -> 0x141669308	I am wracked by doubts!	这能信吗？怎么想都不放心！
+0x1406681a0 (intensity=100)	0x140668eb0 -> 0x141669320	Let's go!	出发吧！
+0x1406681a0 (intensity=100)	0x140668eca -> 0x1416692d0	This cannot possibly end well...	这绝不可能有好结果……
+0x1406681a0 (intensity=100)	0x140668ee4 -> 0x1416692f8	I feel so good!	感觉好极了！
+0x1406681a0 (intensity=100)	0x140668efe -> 0x141668f60	Such gaiety!	真快活！
+0x1406681a0 (intensity=100)	0x140668f12 -> 0x141668f70	This is so exciting!	这太令人兴奋了！
+0x1406691e0 (intensity>10)	0x14066920b -> 0x141668f30	That's suspicious!	那很可疑！
+0x1406691e0 (intensity>10)	0x140669220 -> 0x141668f48	That's alarming!	真让人心慌！
+0x1406691e0 (intensity>10)	0x140669235 -> 0x141668f00	Most shocking!	怎么会这样！
+0x1406691e0 (intensity>10)	0x14066924a -> 0x141668f10	This is truly horrifying.	这实在太可怕了。
+0x1406691e0 (intensity>10)	0x14066925f -> 0x141668ed0	I am almost overcome by grief.	难过得快受不了了。
+0x1406691e0 (intensity>10)	0x140669274 -> 0x141668ef0	This is great!	这太棒了！
+0x1406691e0 (intensity>10)	0x140669289 -> 0x141668ea8	I am about to lose it!	我快要失控了！
+0x1406691e0 (intensity>10)	0x14066929e -> 0x141668ec0	It is done.	办成了。
+0x1406691e0 (intensity>10)	0x1406692b3 -> 0x141668e78	Begone fear!	别怕！
+0x1406691e0 (intensity>10)	0x1406692c8 -> 0x141668e88	I cannot give in to sadness.	不能难过得什么都不管了。
+0x1406691e0 (intensity>10)	0x1406692dd -> 0x141668e48	I am very satisfied.	这下可满意了。
+0x1406691e0 (intensity>10)	0x1406692f2 -> 0x141668e60	This is a joyous time.	这段日子真开心。
+0x1406691e0 (intensity>10)	0x140669307 -> 0x141668e20	This is love.	这就是爱。
+0x1406691e0 (intensity>10)	0x14066931c -> 0x141668e30	How blissful I am.	能这样，真幸福啊。
+0x1406691e0 (intensity>10)	0x140669331 -> 0x1416690d8	I will have my revenge.	我一定会报仇。
+0x1406691e0 (intensity>10)	0x140669346 -> 0x1416690f0	I am not scared!	我不害怕！
+0x1406691e0 (intensity>10)	0x14066935b -> 0x1416690b8	I accept this.	这样也行，我接受。
+0x1406691e0 (intensity>10)	0x140669370 -> 0x1416690c8	I admire this.	真佩服。
+0x1406691e0 (intensity>10)	0x140669385 -> 0x141669088	I adore this.	真让人崇拜。
+0x1406691e0 (intensity>10)	0x14066939a -> 0x141669098	I'm feeling affectionate.	真想亲近亲近。
+0x1406691e0 (intensity>10)	0x1406693af -> 0x141669048	This is driving me to agitation.	真让人静不下心来。
+0x1406691e0 (intensity>10)	0x1406693c4 -> 0x141669070	I'm very aggravated.	可真够气人的。
+0x1406691e0 (intensity>10)	0x1406693d9 -> 0x141669018	The agony I feel...	真是难受……
+0x1406691e0 (intensity>10)	0x1406693ee -> 0x141669030	I feel alienated.	怎么就合不来呢。
+0x1406691e0 (intensity>10)	0x140669403 -> 0x141668fe0	That's amazing!	真了不起！
+0x1406691e0 (intensity>10)	0x140669418 -> 0x141668ff0	I have strong feelings of ambivalence.	说好也不是，说不好也不是，真纠结。
+0x1406691e0 (intensity>10)	0x14066942d -> 0x141668fb8	That's very amusing.	真是有趣极了。
+0x1406691e0 (intensity>10)	0x140669442 -> 0x141668fd0	I'm very angry.	气死我了。
+0x1406691e0 (intensity>10)	0x140669457 -> 0x141668f88	I feel so anguished...	真是难受死了……
+0x1406691e0 (intensity>10)	0x14066946c -> 0x141668fa0	That's very annoying.	那可真烦死了。
+0x1406691e0 (intensity>10)	0x140669481 -> 0x1416698c0	It makes me very anxious.	真急人，这可怎么办。
+0x1406691e0 (intensity>10)	0x140669496 -> 0x1416698e0	It would be hard to care less.	随便吧，跟我有什么关系。
+0x1406691e0 (intensity>10)	0x1406694ab -> 0x141669898	I'm aroused!	真想好好亲热一下！
+0x1406691e0 (intensity>10)	0x1406694c0 -> 0x1416698a8	It's quite astonishing.	这可真让人吃惊。
+0x1406691e0 (intensity>10)	0x1406694cf -> 0x141669860	I'm very averse to this.	真想躲得远远的。
+0x1406691e0 (intensity>10)	0x1406694ea -> 0x141669880	Awe-inspiring...	真了不起，叫人又敬又怕……
+0x1406691e0 (intensity>10)	0x1406694f9 -> 0x141669828	It makes me very bitter.	唉，这滋味可真不好受。
+0x1406691e0 (intensity>10)	0x140669514 -> 0x141669848	It's really boring.	这也太无聊了。
+0x1406691e0 (intensity>10)	0x140669529 -> 0x141669800	I really care.	我真的很在乎。
+0x1406691e0 (intensity>10)	0x14066953e -> 0x141669810	I'm so confused.	我都糊涂了。
+0x1406691e0 (intensity>10)	0x140669553 -> 0x1416697d8	Contemptible!	真让人看不起！
+0x1406691e0 (intensity>10)	0x140669568 -> 0x1416697e8	I'm very content.	这样就很好，没别的可求了。
+0x1406691e0 (intensity>10)	0x14066957d -> 0x1416697a0	I'm feeling very dejected.	唉，干什么都没劲了。
+0x1406691e0 (intensity>10)	0x140669592 -> 0x1416697c0	This is delightful!	真叫人高兴！
+0x1406691e0 (intensity>10)	0x1406695a7 -> 0x141669770	I feel such despair...	我彻底没指望了……
+0x1406691e0 (intensity>10)	0x1406695bc -> 0x141669788	I am very disappointed.	怎么会这样，白期待了。
+0x1406691e0 (intensity>10)	0x1406695d1 -> 0x141669a78	So disgusting...	太恶心了……
+0x1406691e0 (intensity>10)	0x1406695e6 -> 0x141669a90	I've become so disillusioned.  What now?	原来全不是那么回事。以后可怎么办？
+0x1406691e0 (intensity>10)	0x1406695fb -> 0x141669a40	I really don't like this.	我实在不喜欢这样。
+0x1406691e0 (intensity>10)	0x140669610 -> 0x141669a60	It has all gone wrong!	一切都出错了！
+0x1406691e0 (intensity>10)	0x140669625 -> 0x141669a00	This is quite displeasing.	这样可真不行。
+0x1406691e0 (intensity>10)	0x14066963a -> 0x141669a20	I'm so distressed about this!	这可真愁死人了！
+0x1406691e0 (intensity>10)	0x14066964f -> 0x1416699d0	I'm very eager to get started.	真想马上就开始。
+0x1406691e0 (intensity>10)	0x140669664 -> 0x1416699f0	I'm so elated.	这可真是太好了。
+0x1406691e0 (intensity>10)	0x140669679 -> 0x141669998	This is so embarrassing...	这太尴尬了……
+0x1406691e0 (intensity>10)	0x14066968e -> 0x1416699b8	I'm very empathetic.	这种滋味，我太明白了。
+0x1406691e0 (intensity>10)	0x1406696a3 -> 0x141669968	I feel such emptiness.	怎么就像什么都没剩下呢。
+0x1406691e0 (intensity>10)	0x1406696b8 -> 0x141669980	I really enjoyed that!	真是开心！
+0x1406691e0 (intensity>10)	0x1406696cd -> 0x141669930	I'm quite exasperated.	我真是气得不行。
+0x1406691e0 (intensity>10)	0x1406696e2 -> 0x141669948	That was very exhilarating!	这可真让人来劲！
+0x1406691e0 (intensity>10)	0x1406696f7 -> 0x141669900	I'm feeling so ferocious!	我可要发狠了！
+0x1406691e0 (intensity>10)	0x14066970c -> 0x141669920	I'm very fond.	我特别喜欢。
+0x1406691e0 (intensity>10)	0x140669721 -> 0x1416695a8	I feel so free.	没什么束缚，真自在。
+0x1406691e0 (intensity>10)	0x140669736 -> 0x1416695b8	That was so frightful.	那太可怕了。
+0x1406691e0 (intensity>10)	0x14066974b -> 0x141669578	This is very frustrating.	这真让人灰心。
+0x1406691e0 (intensity>10)	0x140669760 -> 0x141669598	I'm so gleeful.	我心里乐开了花。
+0x1406691e0 (intensity>10)	0x140669775 -> 0x141669550	It makes me so gloomy.	唉，怎么也高兴不起来。
+0x1406691e0 (intensity>10)	0x14066978a -> 0x141669568	I feel so glum.	唉，真闷得慌。
+0x1406691e0 (intensity>10)	0x14066979f -> 0x141669518	I'm very grateful.	实在太感谢了。
+0x1406691e0 (intensity>10)	0x1406697b4 -> 0x141669530	It makes me very grouchy.	烦死了，真想发火。
+0x1406691e0 (intensity>10)	0x1406697c9 -> 0x1416694f0	Harumph!	哼！
+0x1406691e0 (intensity>10)	0x1406697de -> 0x141669500	I feel so guilty.	这可叫我怎么过意得去。
+0x1406691e0 (intensity>10)	0x1406697f3 -> 0x1416694c0	I am so happy.	这可真让人高兴。
+0x1406691e0 (intensity>10)	0x140669808 -> 0x1416694d0	The hate burns within me.	真是越想越恨。
+0x1406691e0 (intensity>10)	0x14066981d -> 0x141669490	I am very hopeful.	大有盼头啊。
+0x1406691e0 (intensity>10)	0x140669832 -> 0x1416694a8	I feel hopeless.	看不到一点盼头。
+0x1406691e0 (intensity>10)	0x140669847 -> 0x141669460	This is so humiliating.	这也太丢脸了。
+0x1406691e0 (intensity>10)	0x14066985c -> 0x141669478	I am very insulted.	这也太不把我当人看了。
+0x1406691e0 (intensity>10)	0x140669871 -> 0x141669738	It's very interesting.	这可真有意思。
+0x1406691e0 (intensity>10)	0x140669886 -> 0x141669750	I'm very irritated by this.	烦死了，怎么也静不下来。
+0x1406691e0 (intensity>10)	0x14066989b -> 0x141669708	I feel very isolated.	怎么所有人都把我当外人了。
+0x1406691e0 (intensity>10)	0x1406698b0 -> 0x141669720	I'm feeling so jolly.	这下可高兴了。
+0x1406691e0 (intensity>10)	0x1406698c5 -> 0x1416696d8	I'm very jovial.	真是痛快极了。
+0x1406691e0 (intensity>10)	0x1406698da -> 0x1416696f0	I feel much jubilation.	好啊，真是太好了。
+0x1406691e0 (intensity>10)	0x1406698ef -> 0x1416696a0	I feel so much loathing...	讨厌死了，想想都受不了……
+0x1406691e0 (intensity>10)	0x140669904 -> 0x1416696c0	I'm very lonely.	唉，连个能陪我的人都没有。
+0x1406691e0 (intensity>10)	0x140669919 -> 0x141669670	I feel such lust.	真想跟人好好亲热一番。
+0x1406691e0 (intensity>10)	0x14066992e -> 0x141669688	I'm so miserable.	唉，真是难受死了。
+0x1406691e0 (intensity>10)	0x140669943 -> 0x141669640	I'm so mortified...	丢脸得真想躲起来……
+0x1406691e0 (intensity>10)	0x140669958 -> 0x141669658	I'm very nervous.	哎呀，紧张死了。
+0x1406691e0 (intensity>10)	0x14066996d -> 0x141669608	I'm feeling very nostalgic.	真想回到从前啊。
+0x1406691e0 (intensity>10)	0x140669982 -> 0x141669628	I'm quite optimistic.	往后肯定会好的。
+0x1406691e0 (intensity>10)	0x140669997 -> 0x1416695d0	This is an outrage!	这也太气人了！
+0x1406691e0 (intensity>10)	0x1406699ac -> 0x1416695e8	I'm really starting to panic.	这可怎么办，真慌了。
+0x1406691e0 (intensity>10)	0x1406699c1 -> 0x141669f28	I'm very patient.	慢慢来，我等得起。
+0x1406691e0 (intensity>10)	0x1406699d6 -> 0x141669f40	I feel such passion.	真是越想越来劲。
+0x1406691e0 (intensity>10)	0x1406699eb -> 0x141669ef8	I'm very pleased.	这可太合我意了。
+0x1406691e0 (intensity>10)	0x140669a00 -> 0x141669f10	I am very proud.	真值得我骄傲一回。
+0x1406691e0 (intensity>10)	0x140669a15 -> 0x141669ec0	I am so spiritually moved!	真是太感动了！
+0x1406691e0 (intensity>10)	0x140669a2a -> 0x141669ee0	I feel so rejected.	怎么就这么不肯接纳我呢。
+0x1406691e0 (intensity>10)	0x140669a3f -> 0x141669e90	I'm so relieved.	总算能好好松口气了。
+0x1406691e0 (intensity>10)	0x140669a54 -> 0x141669ea8	I'm so regretful.	唉，早知道就好了，真后悔。
+0x1406691e0 (intensity>10)	0x140669a69 -> 0x141669e68	I'm truly remorseful.	我真不该那么做。
+0x1406691e0 (intensity>10)	0x140669a7e -> 0x141669e80	I must repent.	得认错，不能再这样了。
+0x1406691e0 (intensity>10)	0x140669a93 -> 0x141669e38	I'm very resentful.	越想越不服，凭什么啊。
+0x1406691e0 (intensity>10)	0x140669aa8 -> 0x141669e50	I'm really restless.	我怎么也坐不住。
+0x1406691e0 (intensity>10)	0x140669abd -> 0x141669e00	I feel so wronged.	这也太冤枉我了。
+0x1406691e0 (intensity>10)	0x140669ad2 -> 0x141669e18	This is such a hardship for me!	这也太难熬了！
+0x1406691e0 (intensity>10)	0x140669ae7 -> 0x141669dc8	I live to serve.	我活着就是为了给人做事。
+0x1406691e0 (intensity>10)	0x140669afc -> 0x141669de0	This leaves me so shaken.	实在有点承受不住了。
+0x1406691e0 (intensity>10)	0x140669b11 -> 0x14166a0d0	I feel such shame.	真是没脸见人了。
+0x1406691e0 (intensity>10)	0x140669b26 -> 0x14166a0e8	I'm very sympathetic.	唉，实在太可怜了。
+0x1406691e0 (intensity>10)	0x140669b3b -> 0x14166a0a0	I feel such tenderness.	实在硬不起心肠来。
+0x1406691e0 (intensity>10)	0x140669b50 -> 0x14166a0b8	This is quite a thrill!	这可真刺激！
+0x1406691e0 (intensity>10)	0x140669b65 -> 0x14166a070	I feel very uneasy.	总觉得不太对劲……
+0x1406691e0 (intensity>10)	0x140669b7a -> 0x14166a088	I'm very unhappy.	实在高兴不起来。
+0x1406691e0 (intensity>10)	0x140669b89 -> 0x14166a038	I am filled with wonder.	这可真奇妙啊。
+0x1406691e0 (intensity>10)	0x140669ba4 -> 0x14166a058	I'm very worried.	这可怎么办，实在放心不下。
+0x1406691e0 (intensity>10)	0x140669bb9 -> 0x14166a008	I am wrathful.	真是气死人了。
+0x1406691e0 (intensity>10)	0x140669bc8 -> 0x14166a018	I shall accomplish much!	我肯定能干出一番事来！
+0x1406691e0 (intensity>10)	0x140669be3 -> 0x141669fd0	What is the meaning of life...	活着到底有什么意义……
+0x1406691e0 (intensity>10)	0x140669bf8 -> 0x141669ff0	I've been defeated.	我被打败了。
+0x1406691e0 (intensity>10)	0x140669c0d -> 0x141669f98	Things are going to happen.	眼看就要有事发生了。
+0x1406691e0 (intensity>10)	0x140669c22 -> 0x141669fb8	I'm very doubtful.	这真能信？我可不太信。
+0x1406691e0 (intensity>10)	0x140669c37 -> 0x141669f58	I feel enthusiastic!	好，来劲了！
+0x1406691e0 (intensity>10)	0x140669c4c -> 0x141669f70	I really don't see this working out.	怎么看都觉得这事成不了。
+0x1406691e0 (intensity>10)	0x140669c61 -> 0x141669c10	I'm feeling great!	我感觉棒极了！
+0x1406691e0 (intensity>10)	0x140669c76 -> 0x141669c28	The gaiety I'm feeling!	真痛快！
+0x1406691e0 (intensity>10)	0x140669c85 -> 0x141669bd8	This is really exciting!	这实在太让人兴奋了！
+0x140669f40 (intensity>0)	0x140669f6b -> 0x141669bf8	How suspicious...	真可疑……
+0x140669f40 (intensity>0)	0x140669f80 -> 0x141669ba8	That was alarming.	哎呀，吓了我一跳。
+0x140669f40 (intensity>0)	0x140669f95 -> 0x141669bc0	I will master myself.	稳住，得稳住。
+0x140669f40 (intensity>0)	0x140669faa -> 0x141669b70	This cannot horrify me.	这还吓不倒我。
+0x140669f40 (intensity>0)	0x140669fbf -> 0x141669b88	I must let grief pass me by.	不能再这么难过下去了。
+0x140669f40 (intensity>0)	0x140669fd4 -> 0x141669b40	I feel like a victor.	就跟打了胜仗一样。
+0x140669f40 (intensity>0)	0x140669fe9 -> 0x141669b58	I'm a little angry.	我有点生气。
+0x140669f40 (intensity>0)	0x140669ffe -> 0x141669b10	It has come to pass.	事情已经发生了。
+0x140669f40 (intensity>0)	0x14066a013 -> 0x141669b28	This doesn't scare me.	这吓不着我。
+0x140669f40 (intensity>0)	0x14066a028 -> 0x141669ae0	I feel somewhat sad.	唉，有点难过。
+0x140669f40 (intensity>0)	0x14066a03d -> 0x141669af8	That was satisfying.	这下满意了。
+0x140669f40 (intensity>0)	0x14066a052 -> 0x141669ac0	This is nice.	这很不错。
+0x140669f40 (intensity>0)	0x14066a067 -> 0x141669ad0	Is this love?	这就是爱吗？
+0x140669f40 (intensity>0)	0x14066a07c -> 0x141669d90	This could be bliss.	这大概就是幸福吧。
+0x140669f40 (intensity>0)	0x14066a091 -> 0x141669da8	This might require an answer.	这事得回应一下吧。
+0x140669f40 (intensity>0)	0x14066a0a6 -> 0x141669d60	I feel no terror.	我一点也不怕。
+0x140669f40 (intensity>0)	0x14066a0bb -> 0x141669d78	I can accept this.	这样我能接受。
+0x140669f40 (intensity>0)	0x14066a0d0 -> 0x141669d28	I find this somewhat admirable.	这倒有几分值得佩服。
+0x140669f40 (intensity>0)	0x14066a0e5 -> 0x141669d48	I can adore this.	真让人崇拜。
+0x140669f40 (intensity>0)	0x14066a0fa -> 0x141669cf0	That might be affection I feel.	心里这点感觉，也许就是喜爱吧。
+0x140669f40 (intensity>0)	0x14066a10f -> 0x141669d10	This is agitating.	真让人静不下来。
+0x140669f40 (intensity>0)	0x14066a124 -> 0x141669cc0	This is aggravating.	真气人。
+0x140669f40 (intensity>0)	0x14066a139 -> 0x141669cd8	This is agonizing.	真难熬。
+0x140669f40 (intensity>0)	0x14066a14e -> 0x141669c88	I feel somewhat alienated.	怎么有点合不来呢。
+0x140669f40 (intensity>0)	0x14066a163 -> 0x141669ca8	That is amazing.	那真了不起。
+0x140669f40 (intensity>0)	0x14066a178 -> 0x141669c68	I'm ambivalent.	说好也不是，说不好也不是。
+0x140669f40 (intensity>0)	0x14066a18d -> 0x141669c78	Amusing.	真有趣。
+0x140669f40 (intensity>0)	0x14066a1a2 -> 0x141669c40	That makes me angry.	真叫人生气。
+0x140669f40 (intensity>0)	0x14066a1b7 -> 0x141669c58	I'm anguished.	真不好受。
+0x140669f40 (intensity>0)	0x14066a1cc -> 0x1416683b0	It's annoying.	真烦人。
+0x140669f40 (intensity>0)	0x14066a1db -> 0x14166a4b8	I'm anxious.	真急人。
+0x140669f40 (intensity>0)	0x14066a1f6 -> 0x14166a4c8	Who cares?	谁在乎呢？
+0x140669f40 (intensity>0)	0x14066a20b -> 0x14166a488	Arousing...	真想亲热一下……
+0x140669f40 (intensity>0)	0x14066a220 -> 0x14166a498	It's astonishing, really.	真没想到会这样。
+0x140669f40 (intensity>0)	0x14066a235 -> 0x14166a450	I'd like to get away from it.	我想离这远点。
+0x140669f40 (intensity>0)	0x14066a24a -> 0x14166a470	It fills one with awe.	真了不起，让人又敬又怕。
+0x140669f40 (intensity>0)	0x14066a25f -> 0x14166a428	It makes me bitter.	唉，真不是滋味。
+0x140669f40 (intensity>0)	0x14066a26e -> 0x14166a440	It's boring.	这很无聊。
+0x140669f40 (intensity>0)	0x14066a289 -> 0x14166a408	I care.	我在乎。
+0x140669f40 (intensity>0)	0x14066a29e -> 0x14166a410	This is confusing.	这到底怎么回事。
+0x140669f40 (intensity>0)	0x14066a2b3 -> 0x14166a3e0	I feel only contempt.	哼，真让人看不起。
+0x140669f40 (intensity>0)	0x14066a2c2 -> 0x14166a3f8	I'm content.	这样就够了。
+0x140669f40 (intensity>0)	0x14066a2dd -> 0x14166a3b8	I'm dejected.	唉，提不起劲了。
+0x140669f40 (intensity>0)	0x14066a2f2 -> 0x14166a3c8	I feel some delight.	还挺高兴的。
+0x140669f40 (intensity>0)	0x14066a307 -> 0x14166a390	I feel despair.	没指望了。
+0x140669f40 (intensity>0)	0x14066a31c -> 0x14166a3a0	This is disappointing.	唉，白期待了。
+0x140669f40 (intensity>0)	0x14066a331 -> 0x14166a5f8	That's disgusting.	那真恶心。
+0x140669f40 (intensity>0)	0x14066a346 -> 0x14166a610	This makes me question it all.	这让我开始怀疑这一切。
+0x140669f40 (intensity>0)	0x14066a35b -> 0x14166a5d0	I dislike this.	我不喜欢这样。
+0x140669f40 (intensity>0)	0x14066a370 -> 0x14166a5e0	What has happened?	发生了什么？
+0x140669f40 (intensity>0)	0x14066a385 -> 0x14166a5a0	I am not pleased.	我不满意。
+0x140669f40 (intensity>0)	0x14066a39a -> 0x14166a5b8	This is distressing.	真让人苦恼。
+0x140669f40 (intensity>0)	0x14066a3af -> 0x14166a578	I'm eager to go.	真想赶紧出发。
+0x140669f40 (intensity>0)	0x14066a3c4 -> 0x14166a590	I'm elated.	真是太好了。
+0x140669f40 (intensity>0)	0x14066a3d9 -> 0x14166a550	I'm embarrassed.	这可叫人怎么好意思。
+0x140669f40 (intensity>0)	0x14066a3ee -> 0x14166a568	I feel empathy.	这种滋味，我明白。
+0x140669f40 (intensity>0)	0x14066a403 -> 0x14166a530	I feel empty.	总觉得少了点什么。
+0x140669f40 (intensity>0)	0x14066a418 -> 0x14166a540	I enjoyed that.	挺开心的。
+0x140669f40 (intensity>0)	0x14066a42d -> 0x14166a500	That was exasperating.	那可真气人。
+0x140669f40 (intensity>0)	0x14066a442 -> 0x14166a518	That's exhilarating.	真让人来劲。
+0x140669f40 (intensity>0)	0x14066a457 -> 0x14166a4d8	I burn with ferocity.	可别惹我发狠。
+0x140669f40 (intensity>0)	0x14066a466 -> 0x14166a4f0	I feel fond.	真喜欢啊。
+0x140669f40 (intensity>0)	0x14066a481 -> 0x14166a210	I'm free.	这下自在了。
+0x140669f40 (intensity>0)	0x14066a496 -> 0x14166a220	That was frightening.	那真吓人。
+0x140669f40 (intensity>0)	0x14066a4ab -> 0x14166a1e0	It's frustrating.	真让人泄气。
+0x140669f40 (intensity>0)	0x14066a4c0 -> 0x14166a1f8	There's some glee here!	还挺开心的！
+0x140669f40 (intensity>0)	0x14066a4d5 -> 0x14166a1b8	I'm a little gloomy.	唉，有点高兴不起来。
+0x140669f40 (intensity>0)	0x14066a4ea -> 0x14166a1d0	I'm glum.	唉，真闷。
+0x140669f40 (intensity>0)	0x14066a4ff -> 0x14166a190	I'm grateful.	真得谢谢了。
+0x140669f40 (intensity>0)	0x14066a514 -> 0x14166a1a0	I'm a little grouchy.	有点烦，真想发脾气。
+0x140669f40 (intensity>0)	0x14066a529 -> 0x14166a170	Harumph.	哼。
+0x140669f40 (intensity>0)	0x14066a53e -> 0x14166a180	I feel guilty.	这可真过意不去。
+0x140669f40 (intensity>0)	0x14066a553 -> 0x14166a150	I'm happy.	真高兴。
+0x140669f40 (intensity>0)	0x14066a562 -> 0x14166a160	I feel hate.	真可恨。
+0x140669f40 (intensity>0)	0x14066a577 -> 0x14166a128	I have hope.	还有盼头。
+0x140669f40 (intensity>0)	0x14066a592 -> 0x14166a138	I cannot find hope.	唉，指望不上了。
+0x140669f40 (intensity>0)	0x14066a5a7 -> 0x14166a100	This is humiliating.	这真丢脸。
+0x140669f40 (intensity>0)	0x14066a5bc -> 0x14166a118	I take offense.	怎么能这样对我。
+0x140669f40 (intensity>0)	0x14066a5d1 -> 0x14166a360	It's interesting.	挺有意思的。
+0x140669f40 (intensity>0)	0x14066a5e6 -> 0x14166a378	It's irritating.	真烦，静不下来。
+0x140669f40 (intensity>0)	0x14066a5fb -> 0x14166a330	I feel isolated.	怎么像是把我当外人了。
+0x140669f40 (intensity>0)	0x14066a610 -> 0x14166a348	It makes me jolly.	这下高兴了。
+0x140669f40 (intensity>0)	0x14066a625 -> 0x14166a308	I feel jovial.	真痛快。
+0x140669f40 (intensity>0)	0x14066a63a -> 0x14166a318	I feel jubilation.	好啊，真好。
+0x140669f40 (intensity>0)	0x14066a64f -> 0x14166a2e0	I feel loathing.	真是讨厌，想想都受不了。
+0x140669f40 (intensity>0)	0x14066a664 -> 0x14166a2f8	I'm lonely.	唉，连个伴儿都没有。
+0x140669f40 (intensity>0)	0x14066a673 -> 0x14166a2b8	I'm lustful.	真想跟人亲热。
+0x140669f40 (intensity>0)	0x14066a68e -> 0x14166a2c8	I feel miserable.	唉，真难受。
+0x140669f40 (intensity>0)	0x14066a6a3 -> 0x14166a290	This is mortifying.	真丢人，往哪儿躲才好。
+0x140669f40 (intensity>0)	0x14066a6b2 -> 0x14166a2a8	I'm nervous.	哎呀，真紧张。
+0x140669f40 (intensity>0)	0x14066a6cd -> 0x14166a268	I feel nostalgia.	还是怀念从前啊。
+0x140669f40 (intensity>0)	0x14066a6e2 -> 0x14166a280	I'm optimistic.	会好的。
+0x140669f40 (intensity>0)	0x14066a6f7 -> 0x14166a238	It is an outrage.	这实在气人。
+0x140669f40 (intensity>0)	0x14066a70c -> 0x14166a250	I feel a little panic.	这可怎么办，有点慌了。
+0x140669f40 (intensity>0)	0x14066a71b -> 0x14166ab20	I'm patient.	不急，慢慢来。
+0x140669f40 (intensity>0)	0x14066a736 -> 0x14166ab30	I feel passion.	越想越来劲。
+0x140669f40 (intensity>0)	0x14066a74b -> 0x14166ab00	It pleases me.	这就对了，挺好。
+0x140669f40 (intensity>0)	0x14066a760 -> 0x14166ab10	I'm proud.	挺值得骄傲的。
+0x140669f40 (intensity>0)	0x14066a775 -> 0x14166aad0	My spirit moves.	真叫人感动。
+0x140669f40 (intensity>0)	0x14066a78a -> 0x14166aae8	I feel rejected.	怎么就不愿意接纳我呢。
+0x140669f40 (intensity>0)	0x14066a79f -> 0x14166aab0	I'm relieved.	这下能松口气了。
+0x140669f40 (intensity>0)	0x14066a7b4 -> 0x14166aac0	I feel regret.	唉，早知道就好了。
+0x140669f40 (intensity>0)	0x14066a7c9 -> 0x14166aa88	I feel remorse.	真不该那么做。
+0x140669f40 (intensity>0)	0x14066a7de -> 0x14166aa98	I repent of my deeds.	是我做错了，我认。
+0x140669f40 (intensity>0)	0x14066a7f3 -> 0x14166aa58	I feel resentful.	越想越不服气。
+0x140669f40 (intensity>0)	0x14066a808 -> 0x14166aa70	I feel restless.	怎么都坐不住。
+0x140669f40 (intensity>0)	0x14066a81d -> 0x14166aa38	I've been wronged.	这可冤枉我了。
+0x140669f40 (intensity>0)	0x14066a832 -> 0x14166aa50	Why me?	为什么偏偏是我？
+0x140669f40 (intensity>0)	0x14066a847 -> 0x14166aa10	I will serve.	让我来为大家做事吧。
+0x140669f40 (intensity>0)	0x14066a85c -> 0x14166aa20	This has shaken me.	真有点受不了。
+0x140669f40 (intensity>0)	0x14066a871 -> 0x14166ac68	I am ashamed.	真没脸说。
+0x140669f40 (intensity>0)	0x14066a886 -> 0x14166ac78	I'm sympathetic.	唉，真可怜。
+0x140669f40 (intensity>0)	0x14066a89b -> 0x14166ac40	I feel tenderness.	忍不住就心软了。
+0x140669f40 (intensity>0)	0x14066a8b0 -> 0x14166ac58	Thrilling.	真刺激。
+0x140669f40 (intensity>0)	0x14066a8c5 -> 0x14166ac20	I'm uneasy.	好像有点不对劲。
+0x140669f40 (intensity>0)	0x14066a8d4 -> 0x14166ac30	I'm unhappy.	真高兴不起来。
+0x140669f40 (intensity>0)	0x14066a8ef -> 0x14166ac00	It's wondrous.	真奇妙。
+0x140669f40 (intensity>0)	0x14066a904 -> 0x14166ac10	It's worrisome.	这可叫人怎么放心。
+0x140669f40 (intensity>0)	0x14066a919 -> 0x14166abc8	The wrath rises within me...	越想越来气……
+0x140669f40 (intensity>0)	0x14066a92e -> 0x14166abe8	I am ready for this.	我已经准备好了。
+0x140669f40 (intensity>0)	0x14066a943 -> 0x141647a78	I just don't know.	我实在不知道。
+0x140669f40 (intensity>0)	0x14066a958 -> 0x14166aba0	I'm beat.	我输了。
+0x140669f40 (intensity>0)	0x14066a96d -> 0x14166abb0	It could happen!	这可能会发生！
+0x140669f40 (intensity>0)	0x14066a982 -> 0x14166ab78	I have my doubts.	这真能信吗。
+0x140669f40 (intensity>0)	0x14066a997 -> 0x14166ab90	Let's do this.	动手吧。
+0x140669f40 (intensity>0)	0x14066a9ac -> 0x14166ab40	Things usually don't work out	事情往往不会如愿。
+0x140669f40 (intensity>0)	0x14066a9c1 -> 0x14166ab60	I feel pretty good.	还挺舒服的。
+0x140669f40 (intensity>0)	0x14066a9d6 -> 0x14166a7f0	This is gaiety.	这才叫快活。
+0x140669f40 (intensity>0)	0x14066a9e5 -> 0x14166a800	I'm excited.	真让人兴奋。
+0x14066aca0 (intensity<=0)	0x14066accb -> 0x14166a7b8	Takes all kinds these days.	如今真是什么人都有。
+0x14066aca0 (intensity<=0)	0x14066acda -> 0x14166a7d8	What is it this time...	这次又是什么……
+0x14066aca0 (intensity<=0)	0x14066acf5 -> 0x14166a788	That did not shock me.	也没什么好吃惊的。
+0x14066aca0 (intensity<=0)	0x14066ad04 -> 0x14166a7a0	I am not upset by this.	这并没有让我难过。
+0x14066aca0 (intensity<=0)	0x14066ad19 -> 0x14166a748	Grief?  I feel nothing.	难过？我什么感觉也没有。
+0x14066aca0 (intensity<=0)	0x14066ad34 -> 0x14166a760	There is no need for celebration.	没什么好庆祝的。
+0x14066aca0 (intensity<=0)	0x14066ad49 -> 0x14166a6f0	I have no feelings of rage.	我一点也不生气。
+0x14066aca0 (intensity<=0)	0x14066ad5e -> 0x14166a710	I guess it could be considered grimly satisfying.	我想，这也算是一种冷酷的快意吧。
+0x14066aca0 (intensity<=0)	0x14066ad6d -> 0x14166a6b8	This does not scare me.	这吓不着我。
+0x14066aca0 (intensity<=0)	0x14066ad88 -> 0x14166a6d0	I am not feeling sad right now.	我现在并不觉得悲伤。
+0x14066aca0 (intensity<=0)	0x14066ad9d -> 0x14166a668	That was not satisfying.	这样还不满意。
+0x14066aca0 (intensity<=0)	0x14066adb2 -> 0x14166a688	I suppose this would be a joyous occasion.	我想，这该算是一件喜事吧。
+0x14066aca0 (intensity<=0)	0x14066adc7 -> 0x14166a630	There is no love.	谈不上什么爱。
+0x14066aca0 (intensity<=0)	0x14066addc -> 0x14166a648	I do not see the bliss in this.	我看不出这有什么幸福可言。
+0x14066aca0 (intensity<=0)	0x14066adf1 -> 0x14166a9c8	There is no need to feel vengeful.	没必要想着报复。
+0x14066aca0 (intensity<=0)	0x14066ae06 -> 0x14166a9f0	I laugh in the face of death!	死又怎么样，我照样笑！
+0x14066aca0 (intensity<=0)	0x14066ae1b -> 0x14166a988	I do not accept this.	这样我可不接受。
+0x14066aca0 (intensity<=0)	0x14066ae30 -> 0x14166a9a0	There's not much to admire here.	这没多少值得佩服的。
+0x14066aca0 (intensity<=0)	0x14066ae45 -> 0x14166a938	I suppose I should be feel adoration.	我想，我该感到崇敬才对。
+0x14066aca0 (intensity<=0)	0x14066ae5a -> 0x14166a960	I'm not feeling very affectionate.	我没觉得有多亲切。
+0x14066aca0 (intensity<=0)	0x14066ae6f -> 0x14166a900	I don't feel agitated.	还好，静得下来。
+0x14066aca0 (intensity<=0)	0x14066ae84 -> 0x14166a918	I'm not feeling aggravated.	倒也不气人。
+0x14066aca0 (intensity<=0)	0x14066ae99 -> 0x14166a8c0	I can take this.	我承受得住。
+0x14066aca0 (intensity<=0)	0x14066aeae -> 0x14166a8d8	I guess that would be alienating.	我想，那会让人觉得格格不入吧。
+0x14066aca0 (intensity<=0)	0x14066aec3 -> 0x14166a870	That wasn't amazing.	也没什么了不起。
+0x14066aca0 (intensity<=0)	0x14066aed8 -> 0x14166a888	I guess I should be feeling ambivalent right now.	我想，我现在该感到矛盾才对。
+0x14066aca0 (intensity<=0)	0x14066aeed -> 0x14166a848	That was not amusing.	那可没什么意思。
+0x14066aca0 (intensity<=0)	0x14066af02 -> 0x14166a860	I'm not angry.	我没有生气。
+0x14066aca0 (intensity<=0)	0x14066af17 -> 0x14166a810	This is nothing.	这不算什么。
+0x14066aca0 (intensity<=0)	0x14066af2c -> 0x14166a828	No, that's not annoying.	不，没什么可烦的。
+0x14066aca0 (intensity<=0)	0x14066af41 -> 0x14166b170	I'm not anxious.	我倒不着急。
+0x14066aca0 (intensity<=0)	0x14066af56 -> 0x14166b188	If I thought about it more, I guess I'd be apathetic.	再多想想，我大概也会无动于衷吧。
+0x14066aca0 (intensity<=0)	0x14066af6b -> 0x14166b130	That is not in the least bit arousing.	这丝毫没有勾起我的情欲。
+0x14066aca0 (intensity<=0)	0x14066af80 -> 0x14166b158	Astonished?  No.	吃惊？那倒没有。
+0x14066aca0 (intensity<=0)	0x14066af95 -> 0x14166b100	I'm not averse to it.	我倒不反感。
+0x14066aca0 (intensity<=0)	0x14066afaa -> 0x14166b118	I am not held in awe.	还不至于让我又敬又怕。
+0x14066aca0 (intensity<=0)	0x14066afbf -> 0x14166b0c0	That's nothing to be bitter about.	这没什么好怨恨的。
+0x14066aca0 (intensity<=0)	0x14066afd4 -> 0x14166b0e8	It isn't boring.	这并不无聊。
+0x14066aca0 (intensity<=0)	0x14066afe9 -> 0x14166b098	I don't care.	我不在乎。
+0x14066aca0 (intensity<=0)	0x14066affe -> 0x14166b0a8	This isn't confusing.	这没什么难懂的。
+0x14066aca0 (intensity<=0)	0x14066b013 -> 0x14166b068	I don't feel contempt.	倒也不至于看不起。
+0x14066aca0 (intensity<=0)	0x14066b028 -> 0x14166b080	I am not contented.	我还不满足。
+0x14066aca0 (intensity<=0)	0x14066b03d -> 0x14166b020	There's nothing to be dejected about.	这没什么好灰心的。
+0x14066aca0 (intensity<=0)	0x14066b052 -> 0x14166b048	I am not filled with delight.	也没多高兴。
+0x14066aca0 (intensity<=0)	0x14066b067 -> 0x14166aff0	I will not despair.	总还有指望。
+0x14066aca0 (intensity<=0)	0x14066b07c -> 0x14166b008	I'm not disappointed.	倒也没白期待。
+0x14066aca0 (intensity<=0)	0x14066b091 -> 0x14166b348	It'll take more than that to disgust me.	光凭这个，还不至于让我恶心。
+0x14066aca0 (intensity<=0)	0x14066b0a6 -> 0x14166b378	This won't make me lose faith.	这不会让我失去信念。
+0x14066aca0 (intensity<=0)	0x14066b0bb -> 0x14166b318	I don't dislike that.	我并不讨厌那件事。
+0x14066aca0 (intensity<=0)	0x14066b0d0 -> 0x14166b330	I'm not dismayed.	还不至于灰心。
+0x14066aca0 (intensity<=0)	0x14066b0e5 -> 0x14166b2e8	I feel no displeasure.	没什么不满意的。
+0x14066aca0 (intensity<=0)	0x14066b0f4 -> 0x14166b300	This isn't distressing.	这没什么可苦恼的。
+0x14066aca0 (intensity<=0)	0x14066b10f -> 0x14166b2c8	I am not eager.	我并不急着去做。
+0x14066aca0 (intensity<=0)	0x14066b124 -> 0x14166b2d8	I'm not elated.	我并没有那么高兴。
+0x14066aca0 (intensity<=0)	0x14066b139 -> 0x14166b288	This isn't embarrassing.	这并不尴尬。
+0x14066aca0 (intensity<=0)	0x14066b14e -> 0x14166b2a8	I don't feel very empathetic.	那种滋味，我可体会不来。
+0x14066aca0 (intensity<=0)	0x14066b163 -> 0x14166b240	What's inside me isn't emptiness exactly...	我心里这感觉，也不能说是空虚……
+0x14066aca0 (intensity<=0)	0x14066b178 -> 0x14166b270	I'm not enjoying this.	一点乐趣也没有。
+0x14066aca0 (intensity<=0)	0x14066b18d -> 0x14166b208	This isn't exasperating.	这没什么可气的。
+0x14066aca0 (intensity<=0)	0x14066b1a2 -> 0x14166b228	I am not exhilarated.	也没让人多来劲。
+0x14066aca0 (intensity<=0)	0x14066b1b7 -> 0x14166b1c0	I should be feeling ferocious right now.	我现在该凶狠起来才对。
+0x14066aca0 (intensity<=0)	0x14066b1cc -> 0x14166b1f0	I am not fond of this.	我不喜欢这个。
+0x14066aca0 (intensity<=0)	0x14066b1e1 -> 0x14166adf8	I don't feel free.	怎么都不自在。
+0x14066aca0 (intensity<=0)	0x14066b1f6 -> 0x14166ae10	I guess that could have given me a fright.	我想，那本来可能会吓我一跳。
+0x14066aca0 (intensity<=0)	0x14066b205 -> 0x14166adc8	This isn't frustrating.	这还不至于让人泄气。
+0x14066aca0 (intensity<=0)	0x14066b220 -> 0x14166ade0	I'm not gleeful.	也没多开心。
+0x14066aca0 (intensity<=0)	0x14066b22f -> 0x14166ad98	I'm not feeling gloomy.	倒也没什么不高兴的。
+0x14066aca0 (intensity<=0)	0x14066b24a -> 0x14166adb0	I don't feel glum.	倒也没什么郁闷的。
+0x14066aca0 (intensity<=0)	0x14066b25f -> 0x14166ad60	I'm not feeling very grateful.	我没觉得有多感激。
+0x14066aca0 (intensity<=0)	0x14066b274 -> 0x14166ad80	No, I'm not grouchy.	不，我没想发脾气。
+0x14066aca0 (intensity<=0)	0x14066b289 -> 0x14166ad20	That doesn't make me grumpy.	那还不至于让我发脾气。
+0x14066aca0 (intensity<=0)	0x14066b29e -> 0x14166ad40	I don't feel guilty about it.	没什么可内疚的。
+0x14066aca0 (intensity<=0)	0x14066b2b3 -> 0x14166acf8	I am not happy.	我并不高兴。
+0x14066aca0 (intensity<=0)	0x14066b2c8 -> 0x14166ad08	I feel no hatred.	倒也恨不起来。
+0x14066aca0 (intensity<=0)	0x14066b2dd -> 0x14166acc8	I am not hopeful.	不抱什么指望。
+0x14066aca0 (intensity<=0)	0x14066b2f2 -> 0x14166ace0	I will not lose hope.	总还会有希望的。
+0x14066aca0 (intensity<=0)	0x14066b307 -> 0x14166ac90	No, this isn't humiliating.	不，这没什么丢人的。
+0x14066aca0 (intensity<=0)	0x14066b316 -> 0x14166acb0	That doesn't insult me.	我不觉得那是在侮辱我。
+0x14066aca0 (intensity<=0)	0x14066b32b -> 0x14166afc0	No, I'm not interested.	不，我没有兴趣。
+0x14066aca0 (intensity<=0)	0x14066b346 -> 0x14166afd8	This isn't irritating.	这没什么可烦的。
+0x14066aca0 (intensity<=0)	0x14066b35b -> 0x14166af98	I don't feel isolated.	倒也没把我当外人。
+0x14066aca0 (intensity<=0)	0x14066b370 -> 0x14166afb0	I'm not jolly.	我并不开心。
+0x14066aca0 (intensity<=0)	0x14066b385 -> 0x14166af48	This doesn't put me in a jovial mood.	这没让我高兴起来。
+0x14066aca0 (intensity<=0)	0x14066b39a -> 0x14166af70	This isn't the time for jubilation.	现在不是欢庆的时候。
+0x14066aca0 (intensity<=0)	0x14066b3af -> 0x14166af18	I am not filled with loathing.	我并没有满心憎恶。
+0x14066aca0 (intensity<=0)	0x14066b3c4 -> 0x14166af38	I'm not lonely.	倒也不觉得孤单。
+0x14066aca0 (intensity<=0)	0x14066b3d9 -> 0x14166aee0	I am not burning with lust.	还没那么想亲热。
+0x14066aca0 (intensity<=0)	0x14066b3ee -> 0x14166af00	I'm not miserable.	我没觉得难受。
+0x14066aca0 (intensity<=0)	0x14066b403 -> 0x14166aeb0	I am not mortified.	我没觉得有什么丢脸的。
+0x14066aca0 (intensity<=0)	0x14066b418 -> 0x14166aec8	I don't feel nervous.	我并不紧张。
+0x14066aca0 (intensity<=0)	0x14066b42d -> 0x14166ae78	I'm not feeling nostalgic.	以前的事，没什么可想的。
+0x14066aca0 (intensity<=0)	0x14066b442 -> 0x14166ae98	I'm not optimistic.	恐怕好不了。
+0x14066aca0 (intensity<=0)	0x14066b457 -> 0x14166ae40	This doesn't outrage me.	这还不至于让我发怒。
+0x14066aca0 (intensity<=0)	0x14066b46c -> 0x14166ae60	I'm not panicking.	我还没慌。
+0x14066aca0 (intensity<=0)	0x14066b481 -> 0x14166b738	I am not feeling patient.	我可等不下去了。
+0x14066aca0 (intensity<=0)	0x14066b496 -> 0x14166b758	I'm not feeling passionate.	怎么都提不起热情。
+0x14066aca0 (intensity<=0)	0x14066b4ab -> 0x14166b708	I take no pleasure in this.	我没从中得到什么乐趣。
+0x14066aca0 (intensity<=0)	0x14066b4c0 -> 0x14166b728	I am not proud.	也没觉得多值得骄傲。
+0x14066aca0 (intensity<=0)	0x14066b4d5 -> 0x14166b6d8	This does not move me.	没什么感动的。
+0x14066aca0 (intensity<=0)	0x14066b4ea -> 0x14166b6f0	I don't feel rejected.	倒也没把我拒之门外。
+0x14066aca0 (intensity<=0)	0x14066b4ff -> 0x14166b6a8	I don't feel relieved.	我还是没能松口气。
+0x14066aca0 (intensity<=0)	0x14066b514 -> 0x14166b6c0	I have no regrets.	我不后悔。
+0x14066aca0 (intensity<=0)	0x14066b529 -> 0x14166b678	I feel no remorse.	没什么可后悔的。
+0x14066aca0 (intensity<=0)	0x14066b53e -> 0x14166b690	I am not repentant.	我可不认错。
+0x14066aca0 (intensity<=0)	0x14066b553 -> 0x14166b648	I do not resent this.	我没什么怨言。
+0x14066aca0 (intensity<=0)	0x14066b568 -> 0x14166b660	I don't feel restless.	我坐得住。
+0x14066aca0 (intensity<=0)	0x14066b57d -> 0x14166b600	There's nothing to be indignant about.	这没什么好愤愤不平的。
+0x14066aca0 (intensity<=0)	0x14066b592 -> 0x14166b628	I don't feel sorry for myself.	我并不自怜。
+0x14066aca0 (intensity<=0)	0x14066b5a7 -> 0x14166b5d0	I bow to no one.	我不向任何人低头。
+0x14066aca0 (intensity<=0)	0x14066b5b6 -> 0x14166b5e8	I can keep it together.	我能稳住自己。
+0x14066aca0 (intensity<=0)	0x14066b5d1 -> 0x14166b928	I have no shame.	没什么不好意思的。
+0x14066aca0 (intensity<=0)	0x14066b5e6 -> 0x14166b940	There will be no sympathy from me.	别指望我会同情。
+0x14066aca0 (intensity<=0)	0x14066b5fb -> 0x14166b8e8	I don't feel tenderness.	我可不心软。
+0x14066aca0 (intensity<=0)	0x14066b610 -> 0x14166b908	There was no thrill in it.	一点也不刺激。
+0x14066aca0 (intensity<=0)	0x14066b625 -> 0x14166b8b8	I'm not uneasy.	倒也没什么不对劲的。
+0x14066aca0 (intensity<=0)	0x14066b63a -> 0x14166b8c8	That doesn't make me unhappy.	我倒没觉得不开心。
+0x14066aca0 (intensity<=0)	0x14066b64f -> 0x14166b880	There is no sense of wonder.	没什么稀奇的。
+0x14066aca0 (intensity<=0)	0x14066b664 -> 0x14166b8a0	I'm not worried.	我并不担心。
+0x14066aca0 (intensity<=0)	0x14066b679 -> 0x14166b840	Wrath has not risen within me.	我心中并未燃起怒火。
+0x14066aca0 (intensity<=0)	0x14066b68e -> 0x14166b860	I have no zeal for this.	一点劲头都提不起来。
+0x14066aca0 (intensity<=0)	0x14066b6a3 -> 0x14166b7f8	I could be questioning my life right now.	我现在本来可能会怀疑自己的人生。
+0x14066aca0 (intensity<=0)	0x14066b6b8 -> 0x14166b828	This isn't a defeat.	这不是失败。
+0x14066aca0 (intensity<=0)	0x14066b6cd -> 0x14166b7c0	I'm not expecting anything.	我不指望什么。
+0x14066aca0 (intensity<=0)	0x14066b6e2 -> 0x14166b7e0	I have no doubts.	我一点也不怀疑。
+0x14066aca0 (intensity<=0)	0x14066b6f7 -> 0x14166b778	I'm just not enthusiastic.	我就是提不起劲。
+0x14066aca0 (intensity<=0)	0x14066b70c -> 0x14166b798	There's no reason to be pessimistic.	没什么理由悲观。
+0x14066aca0 (intensity<=0)	0x14066b721 -> 0x14166b480	I should be feeling great.	按理说，我该感觉很好才对。
+0x14066aca0 (intensity<=0)	0x14066b736 -> 0x14166b4a0	There is no gaiety.	也没什么好开心的。
+0x14066aca0 (intensity<=0)	0x14066b745 -> 0x14166b460	This doesn't excite me.	也没多让人兴奋。

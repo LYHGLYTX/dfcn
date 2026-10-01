@@ -1,0 +1,425 @@
+image	section	instruction_va	literal_va	source
+PE:6a70a6d9:02711000	current_wounds	0x14071247c	0x141602568	[C:4:0:1]
+PE:6a70a6d9:02711000	current_wounds	0x1407124ec	0x1415eebd0	 are
+PE:6a70a6d9:02711000	current_wounds	0x1407124f3	0x141684e60	slightly swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712550	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x14071256b	0x1416851b8	 is mangled beyond recognition.  
+PE:6a70a6d9:02711000	current_wounds	0x14071258c	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x1407125a7	0x1416851a8	 are spilled.  
+PE:6a70a6d9:02711000	current_wounds	0x1407125c8	0x141685198	 is gelded.  
+PE:6a70a6d9:02711000	current_wounds	0x1407125e9	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712604	0x141685170	 has been partially butchered.  
+PE:6a70a6d9:02711000	current_wounds	0x14071262f	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x14071264a	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x140712660	0x141685160	 broken.  
+PE:6a70a6d9:02711000	current_wounds	0x14071267b	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712696	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x1407126ac	0x141684e20	 fractured.  
+PE:6a70a6d9:02711000	current_wounds	0x1407126cd	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x1407126e8	0x141684e00	 has a compound fracture
+PE:6a70a6d9:02711000	current_wounds	0x1407126f2	0x141684de0	 have compound fractures
+PE:6a70a6d9:02711000	current_wounds	0x140712705	0x1415fd968	.  
+PE:6a70a6d9:02711000	current_wounds	0x14071272a	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712745	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x14071275b	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712771	0x141684dd0	cut open
+PE:6a70a6d9:02711000	current_wounds	0x14071277e	0x141684dc0	smashed open
+PE:6a70a6d9:02711000	current_wounds	0x14071278b	0x141684db0	broken open
+PE:6a70a6d9:02711000	current_wounds	0x140712792	0x141684da0	torn open
+PE:6a70a6d9:02711000	current_wounds	0x1407127a5	0x1415fd968	.  
+PE:6a70a6d9:02711000	current_wounds	0x1407127ca	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x1407127e5	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x1407127fb	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712812	0x141684d98	gouting
+PE:6a70a6d9:02711000	current_wounds	0x140712820	0x141684d90	gushing
+PE:6a70a6d9:02711000	current_wounds	0x14071282e	0x141684d80	spraying
+PE:6a70a6d9:02711000	current_wounds	0x14071283c	0x141684d70	running with
+PE:6a70a6d9:02711000	current_wounds	0x140712845	0x141684d60	dripping
+PE:6a70a6d9:02711000	current_wounds	0x14071284f	0x141684d54	oozing
+PE:6a70a6d9:02711000	current_wounds	0x140712862	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x14071287d	0x1415fd968	.  
+PE:6a70a6d9:02711000	current_wounds	0x1407128a8	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x1407128c3	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x1407128d9	0x141684d48	 dented.  
+PE:6a70a6d9:02711000	current_wounds	0x140712908	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712923	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x140712939	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712965	0x1415eeae8	bruised
+PE:6a70a6d9:02711000	current_wounds	0x14071296e	0x141684d38	frost-bitten
+PE:6a70a6d9:02711000	current_wounds	0x140712977	0x141662f88	burned
+PE:6a70a6d9:02711000	current_wounds	0x140712980	0x141684d30	melted
+PE:6a70a6d9:02711000	current_wounds	0x140712989	0x141684eec	boiled
+PE:6a70a6d9:02711000	current_wounds	0x140712992	0x141684ee4	frozen
+PE:6a70a6d9:02711000	current_wounds	0x14071299b	0x141684ed8	condensed
+PE:6a70a6d9:02711000	current_wounds	0x1407129a4	0x1415ee970	rotten
+PE:6a70a6d9:02711000	current_wounds	0x1407129ad	0x141684ec8	blistered
+PE:6a70a6d9:02711000	current_wounds	0x1407129bc	0x1415fd968	.  
+PE:6a70a6d9:02711000	current_wounds	0x1407129eb	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712a06	0x1415eebd8	 is
+PE:6a70a6d9:02711000	current_wounds	0x140712a1c	0x1415e873c	 
+PE:6a70a6d9:02711000	current_wounds	0x140712a33	0x141684eb0	completely swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712a41	0x141684ea0	heavily swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712a4f	0x141684e90	very swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712a5d	0x141684e80	quite swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712a66	0x141684e78	swollen
+PE:6a70a6d9:02711000	current_wounds	0x140712a7c	0x1415ee5e0	 with 
+PE:6a70a6d9:02711000	current_wounds	0x140712a97	0x1415fd968	.  
+PE:6a70a6d9:02711000	current_wounds	0x140712ac3	0x141684e58	[P]
+PE:6a70a6d9:02711000	current_wounds	0x140712ad2	0x141602430	[C:7:0:1]
+PE:6a70a6d9:02711000	body_build_dispatch	0x140712d14	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x140712d2f	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x140713041	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x14071305c	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x1407132cc	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x1407132e7	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x1407133c5	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x1407133e0	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x14071348f	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x1407134aa	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x14071355d	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x140713578	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_build_dispatch	0x14071362e	0x1415e873c	 
+PE:6a70a6d9:02711000	body_build_dispatch	0x140713649	0x1415fd968	.  
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713711	0x141684e50	tall
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071371b	0x141684e48	short
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071372b	0x141684e40	broad
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713735	0x141684e38	narrow
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713745	0x141684e30	long
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071374f	0x141684e48	short
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071375f	0x141649e00	high
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713769	0x141649e08	low
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713779	0x141685608	close-set
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713783	0x1416855f8	wide-set
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713793	0x1416855e8	large-irised
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071379d	0x1416855d8	small-irised
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137ad	0x1416855cc	sunken
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137b7	0x1416855c0	protruding
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137c7	0x1416855b0	wrinkled
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137d1	0x1416855a8	smooth
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137e1	0x1416855a0	convex
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137eb	0x141685598	concave
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407137fb	0x14168558c	curly
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713805	0x141685580	straight
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713815	0x141685578	dense
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071381f	0x141685570	sparse
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071382f	0x141685568	thick
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713839	0x141685560	thin
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713849	0x1416856f0	upturned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713853	0x1416856e4	hooked
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713863	0x1416856d8	splayed out
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071386d	0x1416856c8	flattened
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071387d	0x1416856b8	great-lobed
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713887	0x1416856a8	fuse-lobed
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713897	0x1416856a0	gapped
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138a1	0x141685698	crowded
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138b1	0x141685688	high-cheekboned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138bb	0x141685678	low-cheekboned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138cb	0x141685668	broad-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138d5	0x141685658	narrow-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407138fc	0x141685648	jutting-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713908	0x141685638	recess-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071392b	0x141685628	square-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713937	0x141685618	round-chinned
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071395a	0x141685448	round
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713966	0x141684e38	narrow
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713986	0x141685440	greasy
+PE:6a70a6d9:02711000	body_modifier_fallback	0x14071398f	0x14168543c	dry
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407139af	0x141685430	deep-voiced
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407139b8	0x141685420	high-voiced
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407139c4	0x141685410	raspy-voiced
+PE:6a70a6d9:02711000	body_modifier_fallback	0x1407139cd	0x141685400	clear-voiced
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713a48	0x1415e873c	 
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713a76	0x1415e873c	 
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713aa4	0x1415e873c	 
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713ab9	0x1416853f0	body is 
+PE:6a70a6d9:02711000	body_modifier_fallback	0x140713add	0x1415fd968	.  
+PE:6a70a6d9:02711000	missing_anatomy	0x140713b6a	0x1416023a0	[C:5:0:1]
+PE:6a70a6d9:02711000	missing_anatomy	0x140713bf3	0x1415e873c	 
+PE:6a70a6d9:02711000	missing_anatomy	0x140713c53	0x1415edb24	's 
+PE:6a70a6d9:02711000	missing_anatomy	0x140713c8c	0x1416853e0	 is gone.  
+PE:6a70a6d9:02711000	missing_anatomy	0x140713d0d	0x141602430	[C:7:0:1]
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140713f9a	0x1416860f8	has very high cheekbones
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071415b	0x1416860e0	has high cheekbones
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714169	0x1416860c8	has low cheekbones
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714177	0x1416860b0	has very low cheekbones
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407141b4	0x1416860a0	square chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407141ce	0x141686090	round chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407141dc	0x141686088	chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714205	0x141685c98	has a jutting
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071421f	0x141686078	has a massive
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714234	0x141686058	has a deeply recessed, broad
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714240	0x141685ce0	has a very broad
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071425a	0x141686040	has a narrow, jutting
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071426f	0x141686020	has a deeply recessed, narrow
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071427b	0x141685cb8	has a very narrow
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714295	0x141686008	has a broad, prominent
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142a7	0x141685ff0	has a broad, recessed
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142b0	0x141685cd0	has a broad
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142cb	0x141685fd8	has a narrow, prominent
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142dd	0x141685cf8	has a narrow, recessed
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142e6	0x141685ca8	has a narrow
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407142f4	0x141685c88	has a prominent
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714302	0x141685c78	has a recessed
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714310	0x141685c60	has a deeply recessed
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071432d	0x1415e873c	 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071435c	0x141685c48	has a square chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071436b	0x141685c30	has an angular chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071437a	0x141685c18	has a very round chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714389	0x141685c00	has a round chin
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407143bf	0x1415e873c	 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407143da	0x14162853c	, and 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x1407143fe	0x1415e873c	 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071441a	0x1415e873c	 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071443b	0x1415fd968	.  
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x140714464	0x1415e873c	 
+PE:6a70a6d9:02711000	cheekbones_and_chin	0x14071447f	0x1415fd968	.  
+PE:6a70a6d9:02711000	voice	0x1407146ae	0x141685f98	has a deep, guttural voice
+PE:6a70a6d9:02711000	voice	0x140714784	0x141685f50	has a high-pitched, grating voice
+PE:6a70a6d9:02711000	voice	0x14071479a	0x141685f78	has a high-pitched, clear voice
+PE:6a70a6d9:02711000	voice	0x1407147ac	0x141685f38	has a clear, deep voice
+PE:6a70a6d9:02711000	voice	0x1407147c3	0x141685f10	has a fairly deep and raspy voice
+PE:6a70a6d9:02711000	voice	0x1407147d5	0x141685ef0	has a high squeaky voice
+PE:6a70a6d9:02711000	voice	0x1407147ec	0x141685ed8	has a low, clear voice
+PE:6a70a6d9:02711000	voice	0x1407147fe	0x141685ec0	has a high, clear voice
+PE:6a70a6d9:02711000	voice	0x14071480c	0x141685ea8	has a very clear voice
+PE:6a70a6d9:02711000	voice	0x14071481a	0x141685e90	has a clear voice
+PE:6a70a6d9:02711000	voice	0x140714828	0x141685e70	has a grating, raspy voice
+PE:6a70a6d9:02711000	voice	0x140714836	0x141685e58	has a scratchy voice
+PE:6a70a6d9:02711000	voice	0x140714845	0x141685e38	has a very high-pitched voice
+PE:6a70a6d9:02711000	voice	0x140714854	0x141685e20	has a high voice
+PE:6a70a6d9:02711000	voice	0x140714863	0x141686128	has a very deep voice
+PE:6a70a6d9:02711000	voice	0x140714872	0x141686118	has a low voice
+PE:6a70a6d9:02711000	voice	0x1407148a0	0x1415e873c	 
+PE:6a70a6d9:02711000	voice	0x1407148c1	0x1415fd968	.  
+PE:6a70a6d9:02711000	feature_noun	0x140714add	0x1415edb24	's 
+PE:6a70a6d9:02711000	feature_modifiers	0x140714cb5	0x1416853d0	extremely tall
+PE:6a70a6d9:02711000	feature_modifiers	0x140714cc6	0x141684e50	tall
+PE:6a70a6d9:02711000	feature_modifiers	0x140714cd7	0x1416853c0	somewhat tall
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ce8	0x1416853b0	very short
+PE:6a70a6d9:02711000	feature_modifiers	0x140714cf9	0x141684e48	short
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d0e	0x1416853a0	somewhat short
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d1e	0x141684e50	tall
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d30	0x141684e48	short
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d47	0x141685388	extraordinarily broad
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d58	0x141684e40	broad
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d69	0x141685378	somewhat broad
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d7a	0x141685360	extremely narrow
+PE:6a70a6d9:02711000	feature_modifiers	0x140714d8b	0x141684e38	narrow
+PE:6a70a6d9:02711000	feature_modifiers	0x140714da0	0x141685550	somewhat narrow
+PE:6a70a6d9:02711000	feature_modifiers	0x140714db4	0x141684e40	broad
+PE:6a70a6d9:02711000	feature_modifiers	0x140714dcb	0x141685540	extremely long
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ddc	0x141685530	quite long
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ded	0x141685520	somewhat long
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e02	0x141685510	extremely short
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e16	0x141684e30	long
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e2d	0x141685500	incredibly high
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e3e	0x141649e00	high
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e4f	0x1416854f0	somewhat high
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e60	0x1416854e0	extremely low
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e71	0x141649e08	low
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e86	0x1416854d0	slightly low
+PE:6a70a6d9:02711000	feature_modifiers	0x140714e96	0x141649e00	high
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ea8	0x141649e08	low
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ebf	0x1416854b8	incredibly close-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ed0	0x141685608	close-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ee1	0x1416854a0	slightly close-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ef2	0x141685490	very wide-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f03	0x1416855f8	wide-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f18	0x141685478	slightly wide-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f28	0x141685608	close-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f3a	0x1416855f8	wide-set
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f51	0x141685468	deeply sunken
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f62	0x1416855cc	sunken
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f73	0x141685458	slightly sunken
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f84	0x141685450	bulging
+PE:6a70a6d9:02711000	feature_modifiers	0x140714f95	0x1416855c0	protruding
+PE:6a70a6d9:02711000	feature_modifiers	0x140714faa	0x141685aa8	slightly protruding
+PE:6a70a6d9:02711000	feature_modifiers	0x140714fba	0x1416855cc	sunken
+PE:6a70a6d9:02711000	feature_modifiers	0x140714fcb	0x141685450	bulging
+PE:6a70a6d9:02711000	feature_modifiers	0x140714fdf	0x1416855c0	protruding
+PE:6a70a6d9:02711000	feature_modifiers	0x140714ff9	0x141685a90	have very large irises
+PE:6a70a6d9:02711000	feature_modifiers	0x14071501b	0x141685a78	have large irises
+PE:6a70a6d9:02711000	feature_modifiers	0x14071503d	0x141685a58	have slightly large irises
+PE:6a70a6d9:02711000	feature_modifiers	0x14071505f	0x141685a40	have very thin irises
+PE:6a70a6d9:02711000	feature_modifiers	0x140715081	0x141685a28	have thin irises
+PE:6a70a6d9:02711000	feature_modifiers	0x1407150a3	0x141685a08	have slightly thin irises
+PE:6a70a6d9:02711000	feature_modifiers	0x1407150cf	0x1416859f0	very large-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x1407150e7	0x1416855e8	large-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x1407150ff	0x1416859d8	slightly large-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x140715117	0x1416859c0	very thin-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x14071512f	0x1416859b0	thin-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x14071514b	0x141685998	slightly thin-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x140715163	0x1416855e8	large-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x140715178	0x1416859b0	thin-irised
+PE:6a70a6d9:02711000	feature_modifiers	0x14071518f	0x141685980	extremely wrinkled
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151a0	0x1416855b0	wrinkled
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151b1	0x141685968	slightly wrinkled
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151c2	0x141685958	very smooth
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151d3	0x1416855a8	smooth
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151e8	0x141685948	slightly smooth
+PE:6a70a6d9:02711000	feature_modifiers	0x1407151f8	0x1416855b0	wrinkled
+PE:6a70a6d9:02711000	feature_modifiers	0x14071520a	0x1416855a8	smooth
+PE:6a70a6d9:02711000	feature_modifiers	0x140715221	0x141685bc4	coiled
+PE:6a70a6d9:02711000	feature_modifiers	0x140715232	0x14168558c	curly
+PE:6a70a6d9:02711000	feature_modifiers	0x140715243	0x141685bbc	wavy
+PE:6a70a6d9:02711000	feature_modifiers	0x140715254	0x141685ba8	incredibly straight
+PE:6a70a6d9:02711000	feature_modifiers	0x140715268	0x141685580	straight
+PE:6a70a6d9:02711000	feature_modifiers	0x140715279	0x141685bc4	coiled
+PE:6a70a6d9:02711000	feature_modifiers	0x14071528a	0x14168558c	curly
+PE:6a70a6d9:02711000	feature_modifiers	0x14071529b	0x141685bbc	wavy
+PE:6a70a6d9:02711000	feature_modifiers	0x1407152b2	0x141685b98	very convex
+PE:6a70a6d9:02711000	feature_modifiers	0x1407152c3	0x1416855a0	convex
+PE:6a70a6d9:02711000	feature_modifiers	0x1407152d4	0x141685b88	slightly convex
+PE:6a70a6d9:02711000	feature_modifiers	0x1407152e5	0x141685b70	incredibly concave
+PE:6a70a6d9:02711000	feature_modifiers	0x1407152f6	0x141685598	concave
+PE:6a70a6d9:02711000	feature_modifiers	0x14071530b	0x141685b58	somewhat concave
+PE:6a70a6d9:02711000	feature_modifiers	0x14071531b	0x1416855a0	convex
+PE:6a70a6d9:02711000	feature_modifiers	0x14071532d	0x141685598	concave
+PE:6a70a6d9:02711000	feature_modifiers	0x140715344	0x141685b48	extremely dense
+PE:6a70a6d9:02711000	feature_modifiers	0x140715355	0x141685b38	quite dense
+PE:6a70a6d9:02711000	feature_modifiers	0x140715366	0x141685b28	slightly dense
+PE:6a70a6d9:02711000	feature_modifiers	0x140715377	0x141685b10	extremely sparse
+PE:6a70a6d9:02711000	feature_modifiers	0x140715388	0x141685b00	quite sparse
+PE:6a70a6d9:02711000	feature_modifiers	0x14071539d	0x141685af0	slightly sparse
+PE:6a70a6d9:02711000	feature_modifiers	0x1407153ad	0x141685578	dense
+PE:6a70a6d9:02711000	feature_modifiers	0x1407153bf	0x141685570	sparse
+PE:6a70a6d9:02711000	feature_modifiers	0x1407153d6	0x141685ae0	very thick
+PE:6a70a6d9:02711000	feature_modifiers	0x1407153e7	0x141685568	thick
+PE:6a70a6d9:02711000	feature_modifiers	0x1407153f8	0x141685ad0	slightly thick
+PE:6a70a6d9:02711000	feature_modifiers	0x140715409	0x141685ac0	very thin
+PE:6a70a6d9:02711000	feature_modifiers	0x14071541a	0x141685560	thin
+PE:6a70a6d9:02711000	feature_modifiers	0x14071542f	0x141685848	somewhat thin
+PE:6a70a6d9:02711000	feature_modifiers	0x14071543f	0x141685568	thick
+PE:6a70a6d9:02711000	feature_modifiers	0x140715451	0x141685560	thin
+PE:6a70a6d9:02711000	feature_modifiers	0x140715468	0x141685830	incredibly upturned
+PE:6a70a6d9:02711000	feature_modifiers	0x140715479	0x1416856f0	upturned
+PE:6a70a6d9:02711000	feature_modifiers	0x14071548a	0x141685818	slightly upturned
+PE:6a70a6d9:02711000	feature_modifiers	0x14071549b	0x141685808	sharply hooked
+PE:6a70a6d9:02711000	feature_modifiers	0x1407154ac	0x1416856e4	hooked
+PE:6a70a6d9:02711000	feature_modifiers	0x1407154c1	0x1416857f8	slightly hooked
+PE:6a70a6d9:02711000	feature_modifiers	0x1407154d1	0x1416856f0	upturned
+PE:6a70a6d9:02711000	feature_modifiers	0x1407154e3	0x1416856e4	hooked
+PE:6a70a6d9:02711000	feature_modifiers	0x1407154fa	0x1416857e0	very splayed out
+PE:6a70a6d9:02711000	feature_modifiers	0x14071550b	0x1416856d8	splayed out
+PE:6a70a6d9:02711000	feature_modifiers	0x14071551c	0x1416857c8	somewhat splayed out
+PE:6a70a6d9:02711000	feature_modifiers	0x14071552d	0x1416857b8	very flattened
+PE:6a70a6d9:02711000	feature_modifiers	0x14071553e	0x1416856c8	flattened
+PE:6a70a6d9:02711000	feature_modifiers	0x140715553	0x1416857a0	slightly flattened
+PE:6a70a6d9:02711000	feature_modifiers	0x140715563	0x1416856d8	splayed out
+PE:6a70a6d9:02711000	feature_modifiers	0x140715575	0x1416856c8	flattened
+PE:6a70a6d9:02711000	feature_modifiers	0x14071558f	0x141685780	have great swinging lobes
+PE:6a70a6d9:02711000	feature_modifiers	0x1407155b1	0x141685760	have large hanging lobes
+PE:6a70a6d9:02711000	feature_modifiers	0x1407155d3	0x141685750	are free-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x1407155f5	0x141685740	are fuse-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x140715617	0x141685728	have nearly fused lobes
+PE:6a70a6d9:02711000	feature_modifiers	0x14071563d	0x141685710	have small lobes
+PE:6a70a6d9:02711000	feature_modifiers	0x140715669	0x1416856b8	great-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x140715681	0x141685700	hanging-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x140715699	0x141685938	free-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x1407156b1	0x1416856a8	fuse-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x1407156c9	0x141685920	nearly fuse-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x1407156e5	0x141685910	small-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x1407156fd	0x1416856b8	great-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x14071570d	0x141685938	free-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x14071571e	0x1416856a8	fuse-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x140715733	0x141685910	small-lobed
+PE:6a70a6d9:02711000	feature_modifiers	0x140715744	0x141685900	widely-spaced
+PE:6a70a6d9:02711000	feature_modifiers	0x140715755	0x1416856a0	gapped
+PE:6a70a6d9:02711000	feature_modifiers	0x140715766	0x1416858f8	tangled
+PE:6a70a6d9:02711000	feature_modifiers	0x14071577b	0x141685698	crowded
+PE:6a70a6d9:02711000	feature_modifiers	0x140715792	0x1416858e8	very round
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157a3	0x141685448	round
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157b4	0x1416858d0	slightly rounded
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157c9	0x1416858c8	slit
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157d6	0x141685448	round
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157e4	0x1416858c8	slit
+PE:6a70a6d9:02711000	feature_modifiers	0x1407157f1	0x141684e38	narrow
+PE:6a70a6d9:02711000	feature_modifiers	0x140715805	0x141685440	greasy
+PE:6a70a6d9:02711000	feature_modifiers	0x140715813	0x1416858b8	somewhat greasy
+PE:6a70a6d9:02711000	feature_modifiers	0x140715821	0x1416858b0	crinkly
+PE:6a70a6d9:02711000	feature_modifiers	0x14071582f	0x141685440	greasy
+PE:6a70a6d9:02711000	feature_modifiers	0x14071583d	0x14168543c	dry
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715a3e	0x1416858a0	striped 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715aab	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715ac2	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715af4	0x141685890	mottled 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715b6a	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715b81	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715be6	0x1415ee5e0	 with 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715c5b	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715c73	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715ca2	0x141685888	 spots
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d30	0x1415e873c	 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d49	0x141685878	with a touch of
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d57	0x141685868	with flecks of
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d63	0x141685858	with some
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d6c	0x141685fc8	mixed with
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715d7c	0x1415e873c	 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715e1b	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715e33	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715e5c	0x141685fb8	 stripes
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715e71	0x141685890	mottled 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715ee0	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715ef8	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715f5c	0x1415ee5e0	 with 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715fdb	0x1415e9110	 and 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140715ff3	0x1415e90d8	, 
+PE:6a70a6d9:02711000	color_and_age_mix	0x140716026	0x141685888	 spots
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x1407160b3	0x1415e873c	 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x1407160e1	0x1415e873c	 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x14071610f	0x1415e873c	 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x140716141	0x1415e873c	 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x140716162	0x1415e873c	 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x140716189	0x141602420	is 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x140716198	0x141662ebc	are 
+PE:6a70a6d9:02711000	feature_sentence_assembly	0x1407161c7	0x1415fd968	.  
+PE:6a70a6d9:02711000	hair_style	0x1407163a2	0x1415edb24	's 
+PE:6a70a6d9:02711000	hair_style	0x1407163fe	0x1415e873c	 
+PE:6a70a6d9:02711000	hair_style	0x140716446	0x141685540	extremely long
+PE:6a70a6d9:02711000	hair_style	0x140716465	0x141685bf0	very long
+PE:6a70a6d9:02711000	hair_style	0x140716481	0x141684e30	long
+PE:6a70a6d9:02711000	hair_style	0x140716497	0x141685be0	medium-length
+PE:6a70a6d9:02711000	hair_style	0x1407164a3	0x141684e48	short
+PE:6a70a6d9:02711000	hair_style	0x1407164ac	0x1416853b0	very short
+PE:6a70a6d9:02711000	hair_style	0x1407164c1	0x1415e873c	 
+PE:6a70a6d9:02711000	hair_style	0x1407164ec	0x1415e873c	 
+PE:6a70a6d9:02711000	hair_style	0x14071650c	0x141602420	is 
+PE:6a70a6d9:02711000	hair_style	0x14071651b	0x141662ebc	are 
+PE:6a70a6d9:02711000	hair_style	0x140716549	0x141685bd0	clean-shaven
+PE:6a70a6d9:02711000	hair_style	0x14071655b	0x141685e18	stubble
+PE:6a70a6d9:02711000	hair_style	0x14071658f	0x141685dc0	unkempt
+PE:6a70a6d9:02711000	hair_style	0x14071659e	0x141685dc8	tied in a pony tail
+PE:6a70a6d9:02711000	hair_style	0x1407165ad	0x141685de0	arranged in double braids
+PE:6a70a6d9:02711000	hair_style	0x1407165bc	0x141685e00	braided
+PE:6a70a6d9:02711000	hair_style	0x1407165cb	0x141685e08	neatly combed
+PE:6a70a6d9:02711000	hair_style	0x1407165e0	0x1415fd968	.  
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x14071665f	0x141602440	[C:7:0:0]
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407166e6	0x1415e873c	 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716741	0x141685db8	 bears
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716750	0x141685db0	 bear
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716770	0x141685d78	 the marks of numerous old wounds, the chief among them
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716784	0x141685d50	 the marks of old wounds, including
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716799	0x141685d4c	 a 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407167d1	0x141685d30	very long 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407167e6	0x141685d24	long 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716801	0x141685d1c	short 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716819	0x141685d10	very short 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716828	0x1416862f8	tiny 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716837	0x141685d40	massive 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716856	0x1416862e8	curving scar.  
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716868	0x1416862d0	straight scar.  
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716897	0x1416862b8	very large 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407168ac	0x14164a2c8	large 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407168c7	0x1416862ac	small 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407168df	0x1416862a0	very small 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407168ee	0x1416862f8	tiny 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407168fd	0x1416862c4	huge 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716912	0x141686298	dent.  
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716935	0x141685d30	very long 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x14071694a	0x141685d24	long 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716965	0x141685d1c	short 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x14071697d	0x141685d10	very short 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x14071698c	0x1416862f8	tiny 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x14071699b	0x141685d40	massive 
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x1407169b0	0x141686288	jagged scar.  
+PE:6a70a6d9:02711000	old_wounds_and_scars	0x140716a30	0x141602430	[C:7:0:1]

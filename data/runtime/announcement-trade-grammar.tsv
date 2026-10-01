@@ -1,0 +1,20 @@
+# scope	source	target	semantic field scopes	native construction evidence
+# Settlement trade dialogue, 0x1404caf1d..0x1404cc53d in the common NPC builder.
+# The settlement field always uses a946e0, counts use 52e360, and all lists retain their original members.
+# The two fixed fallback sentences already exist in data/runtime/announcement-dialogue-translations.tsv; repeated here with exact branch provenance.
+trade-places	{s}	{s1}	$name	0x1404cb950..0x1404cb98c/0x1404cbc14..0x1404cbc50/0x1404cc3e9..0x1404cc425; complete native site name
+trade-places	{s}, {s}	{s1}、{s2}	$name,trade-places	0x1404cb9ab/0x1404cbc6f/0x1404cc444; nonfinal members
+trade-places	{s} and {s}	{s1}与{s2}	$name,$name	0x1404cb9cc/0x1404cbc90/0x1404cc465; final pair, no Oxford comma
+sentence	{s} trades directly with no fewer than {s} other major settlements.	与{s1}直接做买卖的其他主要定居点，少说也有{s2}座。	$name,$number	0x1404caf5b+0x1404caf75+0x1404cafae+0x1404cafc8
+sentence	The largest of these is {s}.	其中最大的是{s1}。	$name	0x1404cb78a+0x1404cb7c5+0x1404cb7df; optional largest settlement after complete direct-trade sentence
+sentence	{s} engages in trade with {s}.	{s1}同{s2}有贸易往来。	$name,trade-places	0x1404cb861+0x1404cb87b+0x1404cb977..0x1404cb9f2; every listed settlement
+sentence	There are {s} villages which utilize the market here.	有{s1}座村庄来这里赶集。	$number	0x1404cba59+0x1404cba92+0x1404cbaac
+sentence	The village {s} is the only other settlement to utilize the market here.	只有{s1}这座村庄也来这里赶集。	$name	0x1404cbb3e+0x1404cbc3b+0x1404cbcba; single-village branch
+sentence	The villages {s} utilize the market here.	{s1}这些村庄都来这里赶集。	trade-places	0x1404cbb27+0x1404cbc3b..0x1404cbcd1; all village members
+sentence	The people of {s} go to {s} to trade.	{s1}的人会去{s2}做买卖。	$name,$name	0x1404cc12f+0x1404cc16a+0x1404cc184+0x1404cc1bf+0x1404cc1d9
+sentence	There are {s} other villages which utilize the market there.	还有{s1}座村庄去那里赶集。	$number	0x1404cc22e+0x1404cc267+0x1404cc281
+sentence	The village {s} is the only other settlement to utilize the market there.	只有{s1}这座村庄也去那里赶集。	$name	0x1404cc313+0x1404cc410+0x1404cc48f
+sentence	The villages {s} also utilize the market there.	{s1}这些村庄也去那里赶集。	trade-places	0x1404cc2fc+0x1404cc410..0x1404cc4a6
+sentence	This place is insulated from the rest of the world, at least in terms of trade.	这里与外界没有往来，至少做买卖是如此。		0x1404cbd1d/0x1404cc4ec; existing announcement-dialogue translation
+sentence	There's nothing organized here.	这里的买卖没人组织。		0x1404cc511; existing announcement-dialogue translation
+sentence	Where?	哪里？		0x1404cc528; missing settlement branch

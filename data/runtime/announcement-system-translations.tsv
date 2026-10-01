@@ -1,0 +1,288 @@
+# Complete native shared-system announcement branches. Sources are in data/extracted/announcement-system-sources.tsv.
+# The native vomit-blood builder deliberately uses " vomit" for all subjects.
+You feel less pain.	你感觉疼痛减轻了。
+{n} looks less pained.	{n1}看起来没那么痛苦了。
+You have less bleeding.	你流的血少了一些。
+{n} has less bleeding.	{n1}流的血少了一些。
+You cough up blood.	你咳出了血。
+{n} coughs up blood.	{n1}咳出了血。
+You vomit blood.	你吐出了血。
+{n} vomit blood.	{n1}吐出了血。
+You feel less nauseated.	你没那么恶心了。
+{n} looks less nauseated.	{n1}看起来没那么想吐了。
+You are blistering!	你身上起了水疱！
+You are burning!	你遭到了灼烧！
+You are being incinerated!	你正被烧成灰烬！
+You are freezing!	你冻伤了！
+You are being frozen solid!	你正被冻成冰块！
+You are freezing to death!	你快要被冻死了！
+You are on fire!	你着火了！
+You are burning alive!	你正被活活烧死！
+You are burning to death!	你快要被烧死了！
+You are melting!	你正在熔化！
+A snow storm has come.	暴风雪来了。
+It has started raining.	开始下雨了。
+The weather has cleared.	天气放晴了。
+It is raining {s}!	天空正降下{s1}雨！
+It is snowing {s}!	天空正降下{s1}雪！
+A cloud of {s} has drifted nearby!	一团{s1}云飘到了附近！
+You have died in a cage.	你死在了笼子里。
+{n} has died in a cage.	{n1}死在了笼子里。
+You have died of old age.	你老死了。
+{n} has died of old age.	{n1}老死了。
+You have died in the dark.	你死在了黑暗中。
+{n} has died in the dark.	{n1}死在了黑暗中。
+You have starved to death.	你饿死了。
+{n} has starved to death.	{n1}饿死了。
+You have died of thirst.	你渴死了。
+{n} has died of thirst.	{n1}渴死了。
+You have burned up in magma.	你在岩浆中被烧死了。
+{n} has burned up in magma.	{n1}在岩浆中被烧死了。
+You have burned up in dragon fire.	你被龙焰烧死了。
+{n} has burned up in dragon fire.	{n1}被龙焰烧死了。
+You have boiled.	你沸腾而死。
+{n} has boiled.	{n1}沸腾而死。
+You have melted.	你熔化而死。
+{n} has melted.	{n1}熔化而死。
+You have condensed.	你凝结而死。
+{n} has condensed.	{n1}凝结而死。
+You have solidified.	你凝固而死。
+{n} has solidified.	{n1}凝固而死。
+You have died in the heat.	你热死了。
+{n} has died in the heat.	{n1}热死了。
+You have been encased in cooling lava.	你被封在了冷却的熔岩中。
+{n} has been encased in cooling lava.	{n1}被封在了冷却的熔岩中。
+You have been encased in cooling magma.	你被封在了冷却的岩浆中。
+{n} has been encased in cooling magma.	{n1}被封在了冷却的岩浆中。
+You have been encased in ice.	你被封在了冰中。
+{n} has been encased in ice.	{n1}被封在了冰中。
+You have frozen to death.	你冻死了。
+{n} has frozen to death.	{n1}冻死了。
+You have burned to death.	你被烧死了。
+{n} has burned to death.	{n1}被烧死了。
+You have been scalded to death.	你被烫死了。
+{n} has been scalded to death.	{n1}被烫死了。
+You have burned up in a magma mist.	你在岩浆雾中被烧死了。
+{n} has burned up in a magma mist.	{n1}在岩浆雾中被烧死了。
+You have been crushed by a drawbridge.	你被吊桥压死了。
+{n} has been crushed by a drawbridge.	{n1}被吊桥压死了。
+You have been crushed under the collapsing ceiling.	你被坍塌的顶板压死了。
+{n} has been crushed under the collapsing ceiling.	{n1}被坍塌的顶板压死了。
+You have been killed by falling rocks.	你被落石砸死了。
+{n} has been killed by falling rocks.	{n1}被落石砸死了。
+You have been shot and killed.	你被射杀了。
+{n} has been shot and killed.	{n1}被射杀了。
+You have bled to death.	你失血而死。
+{n} has bled to death.	{n1}失血而死。
+You have succumbed to infection.	你因感染而死。
+{n} has succumbed to infection.	{n1}因感染而死。
+You have suffocated.	你窒息而死。
+{n} has suffocated.	{n1}窒息而死。
+You have been struck down.	你被击杀了。
+{n} has been struck down.	{n1}被击杀了。
+You have been slaughtered.	你被屠宰了。
+{n} has been slaughtered.	{n1}被屠宰了。
+You have been scuttled.	你被凿沉了。
+{n} has been scuttled.	{n1}被凿沉了。
+You have been hacked to pieces.	你被砍成了碎片。
+{n} has been hacked to pieces.	{n1}被砍成了碎片。
+You have been executed.	你被处决了。
+{n} has been executed.	{n1}被处决了。
+You have been beheaded.	你被斩首了。
+{n} has been beheaded.	{n1}被斩首了。
+You have been crucified.	你被钉死在十字架上了。
+{n} has been crucified.	{n1}被钉死在十字架上了。
+You have been buried alive.	你被活埋了。
+{n} has been buried alive.	{n1}被活埋了。
+You have been executed by being left out in the air.	你被丢在空气中处死了。
+{n} has been executed by being left out in the air.	{n1}被丢在空气中处死了。
+You have been executed by drowning.	你被以溺水之刑处死了。
+{n} has been executed by drowning.	{n1}被以溺水之刑处死了。
+You have been burned alive.	你被活活烧死了。
+{n} has been burned alive.	{n1}被活活烧死了。
+You have been fed to beasts.	你被喂给了野兽。
+{n} has been fed to beasts.	{n1}被喂给了野兽。
+You have been killed by a trap.	你被陷阱杀死了。
+{n} has been killed by a trap.	{n1}被陷阱杀死了。
+You have been killed by a vehicle.	你被载具杀死了。
+{n} has been killed by a vehicle.	{n1}被载具杀死了。
+You have been killed by a flying object.	你被飞来的物体砸死了。
+{n} has been killed by a flying object.	{n1}被飞来的物体砸死了。
+You have vanished.	你消失了。
+{n} has vanished.	{n1}消失了。
+You have collapsed.	你倒下了。
+{n} has collapsed.	{n1}倒下了。
+You have died after colliding with an obstacle.	你撞上障碍物后死了。
+{n} has died after colliding with an obstacle.	{n1}撞上障碍物后死了。
+You have been impaled on spikes.	你被尖刺刺穿了。
+{n} has been impaled on spikes.	{n1}被尖刺刺穿了。
+You have leapt from a great height.	你从高处跳了下去。
+{n} has leapt from a great height.	{n1}从高处跳了下去。
+You have drowned.	你溺水而死。
+{n} has drowned.	{n1}溺水而死。
+You have fallen into a deep chasm.	你掉进了深渊。
+{n} has fallen into a deep chasm.	{n1}掉进了深渊。
+You have been found dead.	你的尸体被发现了。
+{n} has been found dead.	{n1}的尸体被发现了。
+You have been found dead, contorted in fear!	你的尸体被发现了，因恐惧而扭曲着！
+{n} has been found dead, contorted in fear!	{n1}的尸体被发现了，因恐惧而扭曲着！
+You have been found, starved to death.	你被发现时，已经饿死了。
+{n} has been found, starved to death.	{n1}被发现时，已经饿死了。
+You have been found dead, dehydrated.	你被发现时，已经因脱水而死。
+{n} has been found dead, dehydrated.	{n1}被发现时，已经因脱水而死。
+You have been found dead, drowned.	你被发现时，已经溺死了。
+{n} has been found dead, drowned.	{n1}被发现时，已经溺死了。
+You have been found dead, badly burned.	你的尸体被发现了，上面有严重的烧伤。
+{n} has been found dead, badly burned.	{n1}的尸体被发现了，上面有严重的烧伤。
+You have been found boiled.	你被发现时，已经沸腾而死。
+{n} has been found boiled.	{n1}被发现时，已经沸腾而死。
+You have been found melted.	你被发现时，已经熔化而死。
+{n} has been found melted.	{n1}被发现时，已经熔化而死。
+You have been found condensed.	你被发现时，已经凝结而死。
+{n} has been found condensed.	{n1}被发现时，已经凝结而死。
+You have been found solidified.	你被发现时，已经凝固而死。
+{n} has been found solidified.	{n1}被发现时，已经凝固而死。
+You have been found dead, frozen.	你被发现时，已经冻死了。
+{n} has been found dead, frozen.	{n1}被发现时，已经冻死了。
+You have been found dead, badly crushed.	你的尸体被发现了，已被严重压碎。
+{n} has been found dead, badly crushed.	{n1}的尸体被发现了，已被严重压碎。
+You have been found scuttled.	你被发现时，已经遭到凿沉。
+{n} has been found scuttled.	{n1}被发现时，已经遭到凿沉。
+You have been found dead, completely drained of blood!	你的尸体被发现了，血已被吸得一干二净！
+{n} has been found dead, completely drained of blood!	{n1}的尸体被发现了，血已被吸得一干二净！
+You have been put to rest.	你安息了。
+{n} has been put to rest.	{n1}安息了。
+You have been scared to death!	你被吓死了！
+{n} has been scared to death!	{n1}被吓死了！
+You have been scared to death by {n}!	你被{n1}吓死了！
+{n} has been scared to death by {n}!	{n1}被{n2}吓死了！
+You have been drained of blood!	你被吸干了血！
+{n} has been drained of blood!	{n1}被吸干了血！
+You have been drained of blood by {p}!	你被{p1}吸干了血！
+{n} has been drained of blood by {p}!	{n1}被{p1}吸干了血！
+You have been drained of blood by somebody!	你被人吸干了血！
+{n} has been drained of blood by somebody!	{n1}被人吸干了血！
+You have been murdered by {p}!	你被{p1}谋杀了！
+{n} has been murdered by {p}!	{n1}被{p1}谋杀了！
+You have been murdered by somebody!	你被人谋杀了！
+{n} has been murdered by somebody!	{n1}被人谋杀了！
+
+# State update function: complete direct-announcement builder branches, including optional arrival description.
+You fall over.	你摔倒了。
+{n} falls over.	{n1}摔倒了。
+You regain consciousness.	你恢复了意识。
+{n} regains consciousness.	{n1}恢复了意识。
+You are partially free of the web.	你已经挣开了部分蛛网。
+{n} is partially free of the web.	{n1}已经挣开了部分蛛网。
+You are completely free of the web.	你完全挣脱了蛛网。
+{n} is completely free of the web.	{n1}完全挣脱了蛛网。
+You are completely paralyzed!	你完全麻痹了！
+{n} is completely paralyzed!	{n1}完全麻痹了！
+You have fully overcome the paralysis.	你的麻痹完全消退了。
+{n} has fully overcome the paralysis.	{n1}的麻痹完全消退了。
+You are partially paralyzed!	你部分麻痹了！
+{n} is partially paralyzed!	{n1}部分麻痹了！
+You are feeling sluggish!	你感觉行动迟缓！
+{n} is feeling sluggish!	{n1}感觉行动迟缓！
+You feel numb!	你感觉麻木！
+{n} looks numb!	{n1}看起来麻木了！
+You have partially overcome the paralysis.	你的麻痹消退了一些。
+{n} has partially overcome the paralysis.	{n1}的麻痹消退了一些。
+You retch.	你干呕起来。
+{n} retches.	{n1}干呕起来。
+You vomit.	你呕吐了。
+{n} vomits.	{n1}呕吐了。
+You vomit into the ocean wave.	你吐进了海浪里。
+{n} vomits into the ocean wave.	{n1}吐进了海浪里。
+You vomit into the {s}.	你吐进了{s1}里。
+{n} vomits into the {s}.	{n1}吐进了{s1}里。
+You vomit into the lava mist.	你吐进了熔岩雾里。
+{n} vomits into the lava mist.	{n1}吐进了熔岩雾里。
+You vomit into the dragonfire.	你吐进了龙焰里。
+{n} vomits into the dragonfire.	{n1}吐进了龙焰里。
+You vomit into the flames.	你吐进了火焰里。
+{n} vomits into the flames.	{n1}吐进了火焰里。
+You vomit and bits of it get stuck in the web.	你呕吐了，一些呕吐物粘在了网上。
+{n} vomits and bits of it get stuck in the web.	{n1}呕吐了，一些呕吐物粘在了网上。
+You vomit into the sea foam.	你吐进了海沫里。
+{n} vomits into the sea foam.	{n1}吐进了海沫里。
+The rest of the vomit burns away in the lava.	其余呕吐物在熔岩中烧尽了。
+The vomit burns away in the lava.	呕吐物在熔岩中烧尽了。
+The rest of the vomit burns away in the magma.	其余呕吐物在岩浆中烧尽了。
+The vomit burns away in the magma.	呕吐物在岩浆中烧尽了。
+The rest of the vomit disappears into the water.	其余呕吐物消失在了水中。
+The vomit disappears into the water.	呕吐物消失在了水中。
+The rest of the vomit falls away into the chasm.	其余呕吐物掉进了深渊。
+The vomit falls away into the chasm.	呕吐物掉进了深渊。
+The rest of the vomit falls away into the underworld.	其余呕吐物掉进了地下世界。
+The vomit falls away into the underworld.	呕吐物掉进了地下世界。
+The rest of the vomit splatters into the shallow puddle of water.	其余呕吐物溅进了浅水洼。
+The vomit splatters into the shallow puddle of water.	呕吐物溅进了浅水洼。
+You are no longer stunned.	你不再眩晕了。
+{n} is no longer stunned.	{n1}不再眩晕了。
+You pass out from exhaustion.	你精疲力竭，昏倒了。
+{n} passes out from exhaustion.	{n1}精疲力竭，昏倒了。
+You collapse and fall to the ground from over-exertion.	你因过度劳累而瘫倒在地。
+{n} collapses and falls to the ground from over-exertion.	{n1}因过度劳累而瘫倒在地。
+You give in to pain.	你痛得支撑不住了。
+{n} gives in to pain.	{n1}痛得支撑不住了。
+You have reverted to a wild state!	你恢复了野性！
+{n} has reverted to a wild state!	{n1}恢复了野性！
+You have forgotten your training!	你忘掉了所受的训练！
+{n} has forgotten his training!	{n1}忘掉了所受的训练！
+{n} is aware of his surroundings again.	{n1}重新感知到了周围的环境。
+{n} has forgotten her training!	{n1}忘掉了所受的训练！
+{n} is aware of her surroundings again.	{n1}重新感知到了周围的环境。
+{n} has forgotten its training!	{n1}忘掉了所受的训练！
+{n} is aware of its surroundings again.	{n1}重新感知到了周围的环境。
+{n} has climbed out of depression.	{n1}摆脱了抑郁。
+{n} has calmed down.	{n1}平静下来了。
+{n} is no longer enraged.	{n1}不再暴怒了。
+{n} has left the martial trance.	{n1}脱离了战斗专注状态。
+The {s} have given a resident {s} the name {p}.	{s1}给一只常住的{s2}起名为{p1}。
+An animal has grown to become a {s}.	一只动物长成了{s1}。
+{p} has grown to become a {s}.	{p1}长成了{s1}。
+{n} has given birth to {s}.	{n1}生下了{s1}。
+{n} has come!	{n1}来了！
+{n} has come!  {q}	{n1}来了！{q1}
+
+# Complete direct-announcement branches of charge 0x140654d20 and player-shoot 0x14135f060.
+You leap at {n}!	你扑向{n1}！
+{n} leaps at {n}!	{n1}扑向{n2}！
+You leap at {n} from behind!	你从背后扑向{n1}！
+{n} leaps at {n} from behind!	{n1}从背后扑向{n2}！
+You leap at {n} from the side!	你从侧面扑向{n1}！
+{n} leaps at {n} from the side!	{n1}从侧面扑向{n2}！
+You charge at {n}!	你冲向{n1}！
+{n} charges at {n}!	{n1}冲向{n2}！
+You charge at {n} from behind!	你从背后冲向{n1}！
+{n} charges at {n} from behind!	{n1}从背后冲向{n2}！
+You charge at {n} from the side!	你从侧面冲向{n1}！
+{n} charges at {n} from the side!	{n1}从侧面冲向{n2}！
+You are surprised by the ferocity of {n}'s onslaught!	你被{n1}的凶猛攻势惊到了！
+{n} looks surprised by the ferocity of Your onslaught!	{n1}看起来被你的凶猛攻势惊到了！
+{n} looks surprised by the ferocity of {n}'s onslaught!	{n1}看起来被{n2}的凶猛攻势惊到了！
+You scramble away!	你连滚带爬地躲开了！
+{n} scrambles away!	{n1}连滚带爬地躲开了！
+You roll away!	你翻滚着躲开了！
+{n} rolls away!	{n1}翻滚着躲开了！
+You jump away!	你跳开了！
+{n} jumps away!	{n1}跳开了！
+You collide with {n}!	你与{n1}撞在了一起！
+{n} collides with {n}!	{n1}与{n2}撞在了一起！
+You are knocked over!	你被撞倒了！
+{n} is knocked over!	{n1}被撞倒了！
+You are knocked over and tumble backward!	你被撞倒，向后翻滚！
+{n} is knocked over and tumbles backward!	{n1}被撞倒，向后翻滚！
+You bounce backward!	你被弹得往后退！
+{n} bounces backward!	{n1}被弹得往后退！
+You tangle together and tumble forward!	你们纠缠在一起，向前翻滚！
+They tangle together and tumble forward!	双方纠缠在一起，向前翻滚！
+You tangle together and fall over!	你们纠缠在一起，摔倒了！
+They tangle together and fall over!	双方纠缠在一起，摔倒了！
+You shoot {s} from {s}.	你用{s2}射出{s1}。
+You shoot {s} at {s} from {s}.	你用{s3}向{s2}射出{s1}。
+
+# Grip builder 0x141361370: each independently selected object is anatomy (t) or a complete item (s).
+# Explicit Your/owner possessives retain the native capitalization and each action terminator.
+# Prefer complete anatomy captures to ordinary noun meanings; the s fallback includes native "body part".

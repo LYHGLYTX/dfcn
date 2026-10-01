@@ -1,0 +1,224 @@
+# Installed vanilla item subtype title vocabulary. RAW ADJECTIVE precedes optional material and NAME; dynamic wrappers belong to native 0x140a82c10 / 0x140c65450.
+# Literal translations identify existing vocabulary only; full phrase composition is supplied by data/runtime/rulesets/zh-Hans/items/*.toml and data/runtime/item-description-translations.tsv.
+raw_file	line	owner	form	adjective	name	literal_translation	translation_source
+../data/vanilla/vanilla_items/objects/item_ammo.txt	6	ITEM_AMMO:ITEM_AMMO_BOLTS	singular		bolt	弩矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_ammo.txt	6	ITEM_AMMO:ITEM_AMMO_BOLTS	plural		bolts	弩矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_ammo.txt	13	ITEM_AMMO:ITEM_AMMO_ARROWS	singular		arrow	箭矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_ammo.txt	13	ITEM_AMMO:ITEM_AMMO_ARROWS	plural		arrows	箭矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_ammo.txt	20	ITEM_AMMO:ITEM_AMMO_BLOWDARTS	singular		blowdart	吹箭箭矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_ammo.txt	20	ITEM_AMMO:ITEM_AMMO_BLOWDARTS	plural		blowdarts	吹箭箭矢	data/runtime/rulesets/zh-Hans/items/ammo.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	6	ITEM_ARMOR:ITEM_ARMOR_BREASTPLATE	singular		breastplate	板甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	6	ITEM_ARMOR:ITEM_ARMOR_BREASTPLATE	plural		breastplates	板甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	20	ITEM_ARMOR:ITEM_ARMOR_MAIL_SHIRT	singular		mail shirt	链甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	20	ITEM_ARMOR:ITEM_ARMOR_MAIL_SHIRT	plural		mail shirts	链甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	34	ITEM_ARMOR:ITEM_ARMOR_LEATHER	singular		armor	盔甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	34	ITEM_ARMOR:ITEM_ARMOR_LEATHER	plural		armor	盔甲	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	49	ITEM_ARMOR:ITEM_ARMOR_COAT	singular		coat	大衣	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	49	ITEM_ARMOR:ITEM_ARMOR_COAT	plural		coats	大衣	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	62	ITEM_ARMOR:ITEM_ARMOR_SHIRT	singular		shirt	衬衫	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	62	ITEM_ARMOR:ITEM_ARMOR_SHIRT	plural		shirts	衬衫	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	75	ITEM_ARMOR:ITEM_ARMOR_CLOAK	singular		cloak	斗篷	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	75	ITEM_ARMOR:ITEM_ARMOR_CLOAK	plural		cloaks	斗篷	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	88	ITEM_ARMOR:ITEM_ARMOR_TUNIC	singular		tunic	短袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	88	ITEM_ARMOR:ITEM_ARMOR_TUNIC	plural		tunics	短袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	101	ITEM_ARMOR:ITEM_ARMOR_TOGA	singular		toga	宽袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	101	ITEM_ARMOR:ITEM_ARMOR_TOGA	plural		togas	宽袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	114	ITEM_ARMOR:ITEM_ARMOR_CAPE	singular		cape	披风	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	114	ITEM_ARMOR:ITEM_ARMOR_CAPE	plural		capes	披风	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	127	ITEM_ARMOR:ITEM_ARMOR_VEST	singular		vest	背心	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	127	ITEM_ARMOR:ITEM_ARMOR_VEST	plural		vests	背心	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	140	ITEM_ARMOR:ITEM_ARMOR_DRESS	singular		dress	裙装	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	140	ITEM_ARMOR:ITEM_ARMOR_DRESS	plural		dresses	裙装	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	153	ITEM_ARMOR:ITEM_ARMOR_ROBE	singular		robe	长袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_armor.txt	153	ITEM_ARMOR:ITEM_ARMOR_ROBE	plural		robes	长袍	data/runtime/rulesets/zh-Hans/items/armor.toml
+../data/vanilla/vanilla_items/objects/item_food.txt	6	ITEM_FOOD:ITEM_FOOD_BISCUITS	singular		biscuits	饼干	data/runtime/rulesets/zh-Hans/items/food.toml
+../data/vanilla/vanilla_items/objects/item_food.txt	10	ITEM_FOOD:ITEM_FOOD_STEW	singular		stew	炖菜	data/runtime/rulesets/zh-Hans/items/food.toml
+../data/vanilla/vanilla_items/objects/item_food.txt	14	ITEM_FOOD:ITEM_FOOD_ROAST	singular		roast	烤菜	data/runtime/rulesets/zh-Hans/items/food.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	6	ITEM_GLOVES:ITEM_GLOVES_GAUNTLETS	singular		gauntlet	护手	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	6	ITEM_GLOVES:ITEM_GLOVES_GAUNTLETS	plural		gauntlets	护手	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	21	ITEM_GLOVES:ITEM_GLOVES_GLOVES	singular		glove	手套	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	21	ITEM_GLOVES:ITEM_GLOVES_GLOVES	plural		gloves	手套	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	32	ITEM_GLOVES:ITEM_GLOVES_MITTENS	singular		mitten	连指手套	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_gloves.txt	32	ITEM_GLOVES:ITEM_GLOVES_MITTENS	plural		mittens	连指手套	data/runtime/rulesets/zh-Hans/items/gloves.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	6	ITEM_HELM:ITEM_HELM_HELM	singular		helm	头盔	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	6	ITEM_HELM:ITEM_HELM_HELM	plural		helms	头盔	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	22	ITEM_HELM:ITEM_HELM_CAP	singular		cap	帽子	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	22	ITEM_HELM:ITEM_HELM_CAP	plural		caps	帽子	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	37	ITEM_HELM:ITEM_HELM_HOOD	singular		hood	兜帽	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	37	ITEM_HELM:ITEM_HELM_HOOD	plural		hoods	兜帽	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	48	ITEM_HELM:ITEM_HELM_TURBAN	singular		turban	头巾	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	48	ITEM_HELM:ITEM_HELM_TURBAN	plural		turbans	头巾	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	59	ITEM_HELM:ITEM_HELM_MASK	singular		mask	面罩	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	59	ITEM_HELM:ITEM_HELM_MASK	plural		masks	面罩	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	75	ITEM_HELM:ITEM_HELM_VEIL_HEAD	singular		head veil	头纱	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	75	ITEM_HELM:ITEM_HELM_VEIL_HEAD	plural		head veils	头纱	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	86	ITEM_HELM:ITEM_HELM_VEIL_FACE	singular		face veil	面纱	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	86	ITEM_HELM:ITEM_HELM_VEIL_FACE	plural		face veils	面纱	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	97	ITEM_HELM:ITEM_HELM_SCARF_HEAD	singular		headscarf	丝巾	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_helm.txt	97	ITEM_HELM:ITEM_HELM_SCARF_HEAD	plural		headscarves	丝巾	data/runtime/rulesets/zh-Hans/items/helm.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	7	ITEM_PANTS:ITEM_PANTS_PANTS	singular		trousers	长裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	7	ITEM_PANTS:ITEM_PANTS_PANTS	plural		trousers	长裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	20	ITEM_PANTS:ITEM_PANTS_GREAVES	singular		greaves	胫甲	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	20	ITEM_PANTS:ITEM_PANTS_GREAVES	plural		greaves	胫甲	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	34	ITEM_PANTS:ITEM_PANTS_LEGGINGS	singular		leggings	护腿	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	34	ITEM_PANTS:ITEM_PANTS_LEGGINGS	plural		leggings	护腿	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	52	ITEM_PANTS:ITEM_PANTS_LOINCLOTH	singular		loincloth	缠腰布	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	52	ITEM_PANTS:ITEM_PANTS_LOINCLOTH	plural		loincloths	缠腰布	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	63	ITEM_PANTS:ITEM_PANTS_THONG	singular		thong	内裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	63	ITEM_PANTS:ITEM_PANTS_THONG	plural		thongs	内裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	74	ITEM_PANTS:ITEM_PANTS_SKIRT	singular		skirt	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	74	ITEM_PANTS:ITEM_PANTS_SKIRT	plural		skirts	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	86	ITEM_PANTS:ITEM_PANTS_SKIRT_SHORT	singular	short	skirt	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	86	ITEM_PANTS:ITEM_PANTS_SKIRT_SHORT	plural	short	skirts	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	98	ITEM_PANTS:ITEM_PANTS_SKIRT_LONG	singular	long	skirt	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	98	ITEM_PANTS:ITEM_PANTS_SKIRT_LONG	plural	long	skirts	裙	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	112	ITEM_PANTS:ITEM_PANTS_BRAIES	singular		braies	短裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_pants.txt	112	ITEM_PANTS:ITEM_PANTS_BRAIES	plural		braies	短裤	data/runtime/rulesets/zh-Hans/items/pants.toml
+../data/vanilla/vanilla_items/objects/item_shield.txt	6	ITEM_SHIELD:ITEM_SHIELD_SHIELD	singular		shield	盾牌	data/runtime/rulesets/zh-Hans/items/shield.toml
+../data/vanilla/vanilla_items/objects/item_shield.txt	6	ITEM_SHIELD:ITEM_SHIELD_SHIELD	plural		shields	盾牌	data/runtime/rulesets/zh-Hans/items/shield.toml
+../data/vanilla/vanilla_items/objects/item_shield.txt	13	ITEM_SHIELD:ITEM_SHIELD_BUCKLER	singular		buckler	小盾	data/runtime/rulesets/zh-Hans/items/shield.toml
+../data/vanilla/vanilla_items/objects/item_shield.txt	13	ITEM_SHIELD:ITEM_SHIELD_BUCKLER	plural		bucklers	小盾	data/runtime/rulesets/zh-Hans/items/shield.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	6	ITEM_SHOES:ITEM_SHOES_SHOES	singular		shoe	鞋	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	6	ITEM_SHOES:ITEM_SHOES_SHOES	plural		shoes	鞋	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	17	ITEM_SHOES:ITEM_SHOES_BOOTS	singular		high boot	高筒靴	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	17	ITEM_SHOES:ITEM_SHOES_BOOTS	plural		high boots	高筒靴	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	31	ITEM_SHOES:ITEM_SHOES_BOOTS_LOW	singular		low boot	短筒靴	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	31	ITEM_SHOES:ITEM_SHOES_BOOTS_LOW	plural		low boots	短筒靴	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	44	ITEM_SHOES:ITEM_SHOES_SANDAL	singular		sandal	凉鞋	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	44	ITEM_SHOES:ITEM_SHOES_SANDAL	plural		sandals	凉鞋	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	55	ITEM_SHOES:ITEM_SHOES_CHAUSSE	singular		chausse	马裤	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	55	ITEM_SHOES:ITEM_SHOES_CHAUSSE	plural		chausses	马裤	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	67	ITEM_SHOES:ITEM_SHOES_SOCKS	singular		sock	袜	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_shoes.txt	67	ITEM_SHOES:ITEM_SHOES_SOCKS	plural		socks	袜	data/runtime/rulesets/zh-Hans/items/shoes.toml
+../data/vanilla/vanilla_items/objects/item_siegeammo.txt	6	ITEM_SIEGEAMMO:ITEM_SIEGEAMMO_BALLISTA	singular		ballista arrow	弩炮箭矢	data/runtime/rulesets/zh-Hans/items/siegeammo.toml
+../data/vanilla/vanilla_items/objects/item_siegeammo.txt	6	ITEM_SIEGEAMMO:ITEM_SIEGEAMMO_BALLISTA	plural		ballista arrows	弩炮箭矢	data/runtime/rulesets/zh-Hans/items/siegeammo.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	6	ITEM_TOOL:ITEM_TOOL_CAULDRON	singular		cauldron	大锅	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	6	ITEM_TOOL:ITEM_TOOL_CAULDRON	plural		cauldrons	大锅	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	16	ITEM_TOOL:ITEM_TOOL_LADLE	singular		ladle	汤勺	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	16	ITEM_TOOL:ITEM_TOOL_LADLE	plural		ladles	汤勺	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	25	ITEM_TOOL:ITEM_TOOL_BOWL	singular		bowl	碗	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	25	ITEM_TOOL:ITEM_TOOL_BOWL	plural		bowls	碗	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	35	ITEM_TOOL:ITEM_TOOL_MORTAR	singular		mortar	研钵	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	35	ITEM_TOOL:ITEM_TOOL_MORTAR	plural		mortars	研钵	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	45	ITEM_TOOL:ITEM_TOOL_PESTLE	singular		pestle	研杵	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	45	ITEM_TOOL:ITEM_TOOL_PESTLE	plural		pestles	研杵	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	54	ITEM_TOOL:ITEM_TOOL_KNIFE_CARVING	singular		carving knife	切肉刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	54	ITEM_TOOL:ITEM_TOOL_KNIFE_CARVING	plural		carving knives	切肉刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	72	ITEM_TOOL:ITEM_TOOL_KNIFE_BONING	singular		boning knife	剔骨刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	72	ITEM_TOOL:ITEM_TOOL_KNIFE_BONING	plural		boning knives	剔骨刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	90	ITEM_TOOL:ITEM_TOOL_KNIFE_SLICING	singular		slicing knife	切片刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	90	ITEM_TOOL:ITEM_TOOL_KNIFE_SLICING	plural		slicing knives	切片刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	108	ITEM_TOOL:ITEM_TOOL_KNIFE_MEAT_CLEAVER	singular		meat cleaver	砍肉刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	108	ITEM_TOOL:ITEM_TOOL_KNIFE_MEAT_CLEAVER	plural		meat cleavers	砍肉刀	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	126	ITEM_TOOL:ITEM_TOOL_FORK_CARVING	singular		carving fork	切肉叉	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	126	ITEM_TOOL:ITEM_TOOL_FORK_CARVING	plural		carving forks	切肉叉	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	142	ITEM_TOOL:ITEM_TOOL_NEST_BOX	singular		nest box	巢箱	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	142	ITEM_TOOL:ITEM_TOOL_NEST_BOX	plural		nest boxes	巢箱	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	152	ITEM_TOOL:ITEM_TOOL_JUG	singular		jug	壶	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	152	ITEM_TOOL:ITEM_TOOL_JUG	plural		jugs	壶	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	162	ITEM_TOOL:ITEM_TOOL_LARGE_POT	singular	large	pot	罐	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	162	ITEM_TOOL:ITEM_TOOL_LARGE_POT	plural	large	pots	罐	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	173	ITEM_TOOL:ITEM_TOOL_HIVE	singular		hive	蜂箱	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	173	ITEM_TOOL:ITEM_TOOL_HIVE	plural		hives	蜂箱	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	183	ITEM_TOOL:ITEM_TOOL_HONEYCOMB	singular		honeycomb	蜜脾	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	183	ITEM_TOOL:ITEM_TOOL_HONEYCOMB	plural		honeycombs	蜜脾	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	191	ITEM_TOOL:ITEM_TOOL_POUCH	singular		pouch	小袋	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	191	ITEM_TOOL:ITEM_TOOL_POUCH	plural		pouches	小袋	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	201	ITEM_TOOL:ITEM_TOOL_MINECART	singular		minecart	矿车	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	201	ITEM_TOOL:ITEM_TOOL_MINECART	plural		minecarts	矿车	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	214	ITEM_TOOL:ITEM_TOOL_WHEELBARROW	singular		wheelbarrow	手推车	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	214	ITEM_TOOL:ITEM_TOOL_WHEELBARROW	plural		wheelbarrows	手推车	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	226	ITEM_TOOL:ITEM_TOOL_STEPLADDER	singular		stepladder	折梯	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	226	ITEM_TOOL:ITEM_TOOL_STEPLADDER	plural		stepladders	折梯	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	237	ITEM_TOOL:ITEM_TOOL_SCROLL_ROLLERS	singular		scroll rollers	卷筒	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	237	ITEM_TOOL:ITEM_TOOL_SCROLL_ROLLERS	plural		scroll rollers	卷筒	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	248	ITEM_TOOL:ITEM_TOOL_BOOK_BINDING	singular		book binding	书壳	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	248	ITEM_TOOL:ITEM_TOOL_BOOK_BINDING	plural		book bindings	书壳	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	259	ITEM_TOOL:ITEM_TOOL_SCROLL	singular		scroll	卷轴	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	259	ITEM_TOOL:ITEM_TOOL_SCROLL	plural		scrolls	卷轴	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	269	ITEM_TOOL:ITEM_TOOL_QUIRE	singular		quire	稿纸	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	269	ITEM_TOOL:ITEM_TOOL_QUIRE	plural		quires	稿纸	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	281	ITEM_TOOL:ITEM_TOOL_BOOKCASE	singular		bookcase	书架	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	281	ITEM_TOOL:ITEM_TOOL_BOOKCASE	plural		bookcases	书架	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	293	ITEM_TOOL:ITEM_TOOL_HELVE	singular		helve	斧柄	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	293	ITEM_TOOL:ITEM_TOOL_HELVE	plural		helves	斧柄	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	304	ITEM_TOOL:ITEM_TOOL_STONE_AXE	singular		axe	斧头	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	304	ITEM_TOOL:ITEM_TOOL_STONE_AXE	plural		axes	斧头	data/runtime/rulesets/zh-Hans/items/tool.toml
+../data/vanilla/vanilla_items/objects/item_tool.txt	322	ITEM_TOOL:ITEM_TOOL_PEDESTAL	singular		pedestal	基座	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	322	ITEM_TOOL:ITEM_TOOL_PEDESTAL	plural		pedestals	基座	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	332	ITEM_TOOL:ITEM_TOOL_DISPLAY_CASE	singular		display case	展示柜	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	332	ITEM_TOOL:ITEM_TOOL_DISPLAY_CASE	plural		display cases	展示柜	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	343	ITEM_TOOL:ITEM_TOOL_ALTAR	singular		altar	圣坛	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	343	ITEM_TOOL:ITEM_TOOL_ALTAR	plural		altars	圣坛	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	353	ITEM_TOOL:ITEM_TOOL_DIE	singular		die	骰子	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_tool.txt	353	ITEM_TOOL:ITEM_TOOL_DIE	plural		dice	骰子	translations.tsv; complete item subtype grammar
+../data/vanilla/vanilla_items/objects/item_toy.txt	6	ITEM_TOY:ITEM_TOY_PUZZLEBOX	singular		puzzlebox	解谜盒	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	6	ITEM_TOY:ITEM_TOY_PUZZLEBOX	plural		puzzleboxes	解谜盒	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	10	ITEM_TOY:ITEM_TOY_BOAT	singular		toy boat	玩具船	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	10	ITEM_TOY:ITEM_TOY_BOAT	plural		toy boats	玩具船	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	14	ITEM_TOY:ITEM_TOY_HAMMER	singular		toy hammer	玩具锤	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	14	ITEM_TOY:ITEM_TOY_HAMMER	plural		toy hammers	玩具锤	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	18	ITEM_TOY:ITEM_TOY_AXE	singular		toy axe	玩具斧	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	18	ITEM_TOY:ITEM_TOY_AXE	plural		toy axes	玩具斧	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	22	ITEM_TOY:ITEM_TOY_MINIFORGE	singular		mini-forge	迷你锻砧	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_toy.txt	22	ITEM_TOY:ITEM_TOY_MINIFORGE	plural		mini-forges	迷你锻砧	data/runtime/rulesets/zh-Hans/items/toy.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	6	ITEM_TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE	singular	giant	axe blade	斧刃	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	6	ITEM_TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE	plural	giant	axe blades	斧刃	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	16	ITEM_TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW	singular	enormous	corkscrew	螺杆	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	16	ITEM_TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW	plural	enormous	corkscrews	螺杆	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	28	ITEM_TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL	singular	spiked	ball	圆球	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	28	ITEM_TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL	plural	spiked	balls	圆球	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	39	ITEM_TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC	singular	large, serrated	disc	锯盘	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	39	ITEM_TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC	plural	large, serrated	discs	锯盘	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	49	ITEM_TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE	singular	menacing	spike	尖刺	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_trapcomp.txt	49	ITEM_TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE	plural	menacing	spikes	尖刺	data/runtime/rulesets/zh-Hans/items/trapcomp.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	6	ITEM_WEAPON:ITEM_WEAPON_WHIP	singular		whip	长鞭	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	6	ITEM_WEAPON:ITEM_WEAPON_WHIP	plural		whips	长鞭	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	17	ITEM_WEAPON:ITEM_WEAPON_AXE_BATTLE	singular		battle axe	战斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	17	ITEM_WEAPON:ITEM_WEAPON_AXE_BATTLE	plural		battle axes	战斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	35	ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR	singular		war hammer	战锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	35	ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR	plural		war hammers	战锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	45	ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT	singular		short sword	短剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	45	ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT	plural		short swords	短剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	62	ITEM_WEAPON:ITEM_WEAPON_SPEAR	singular		spear	矛	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	62	ITEM_WEAPON:ITEM_WEAPON_SPEAR	plural		spears	矛	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	74	ITEM_WEAPON:ITEM_WEAPON_MACE	singular		mace	页锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	74	ITEM_WEAPON:ITEM_WEAPON_MACE	plural		maces	页锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	84	ITEM_WEAPON:ITEM_WEAPON_CROSSBOW	singular		crossbow	十字弩	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	84	ITEM_WEAPON:ITEM_WEAPON_CROSSBOW	plural		crossbows	十字弩	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	102	ITEM_WEAPON:ITEM_WEAPON_PICK	singular		pick	鹤嘴锄	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	102	ITEM_WEAPON:ITEM_WEAPON_PICK	plural		picks	鹤嘴锄	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	112	ITEM_WEAPON:ITEM_WEAPON_BOW	singular		bow	弓	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	112	ITEM_WEAPON:ITEM_WEAPON_BOW	plural		bows	弓	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	131	ITEM_WEAPON:ITEM_WEAPON_BLOWGUN	singular		blowgun	吹管	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	131	ITEM_WEAPON:ITEM_WEAPON_BLOWGUN	plural		blowguns	吹管	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	150	ITEM_WEAPON:ITEM_WEAPON_PIKE	singular		pike	长枪	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	150	ITEM_WEAPON:ITEM_WEAPON_PIKE	plural		pikes	长枪	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	162	ITEM_WEAPON:ITEM_WEAPON_HALBERD	singular		halberd	斧枪	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	162	ITEM_WEAPON:ITEM_WEAPON_HALBERD	plural		halberds	斧枪	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	176	ITEM_WEAPON:ITEM_WEAPON_SWORD_2H	singular		two-handed sword	双手剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	176	ITEM_WEAPON:ITEM_WEAPON_SWORD_2H	plural		two-handed swords	双手剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	192	ITEM_WEAPON:ITEM_WEAPON_SWORD_LONG	singular		long sword	长剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	192	ITEM_WEAPON:ITEM_WEAPON_SWORD_LONG	plural		long swords	长剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	208	ITEM_WEAPON:ITEM_WEAPON_MAUL	singular		maul	大锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	208	ITEM_WEAPON:ITEM_WEAPON_MAUL	plural		mauls	大锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	218	ITEM_WEAPON:ITEM_WEAPON_AXE_GREAT	singular		great axe	巨斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	218	ITEM_WEAPON:ITEM_WEAPON_AXE_GREAT	plural		great axes	巨斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	232	ITEM_WEAPON:ITEM_WEAPON_DAGGER_LARGE	singular	large	dagger	刺剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	232	ITEM_WEAPON:ITEM_WEAPON_DAGGER_LARGE	plural	large	daggers	刺剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	247	ITEM_WEAPON:ITEM_WEAPON_SCOURGE	singular		scourge	散鞭	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	247	ITEM_WEAPON:ITEM_WEAPON_SCOURGE	plural		scourges	散鞭	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	258	ITEM_WEAPON:ITEM_WEAPON_FLAIL	singular		flail	连枷	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	258	ITEM_WEAPON:ITEM_WEAPON_FLAIL	plural		flails	连枷	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	268	ITEM_WEAPON:ITEM_WEAPON_MORNINGSTAR	singular		morningstar	钉头锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	268	ITEM_WEAPON:ITEM_WEAPON_MORNINGSTAR	plural		morningstars	钉头锤	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	280	ITEM_WEAPON:ITEM_WEAPON_SCIMITAR	singular		scimitar	短弯刀	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	280	ITEM_WEAPON:ITEM_WEAPON_SCIMITAR	plural		scimitars	短弯刀	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	296	ITEM_WEAPON:ITEM_WEAPON_AXE_TRAINING	singular		training axe	训练斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	296	ITEM_WEAPON:ITEM_WEAPON_AXE_TRAINING	plural		training axes	训练斧	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	311	ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING	singular		training sword	训练剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	311	ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING	plural		training swords	训练剑	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	328	ITEM_WEAPON:ITEM_WEAPON_SPEAR_TRAINING	singular		training spear	训练矛	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	328	ITEM_WEAPON:ITEM_WEAPON_SPEAR_TRAINING	plural		training spears	训练矛	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	341	ITEM_WEAPON:ITEM_WEAPON_PICK_GREAT	singular		great pick	大鹤嘴锄	data/runtime/rulesets/zh-Hans/items/weapon.toml
+../data/vanilla/vanilla_items/objects/item_weapon.txt	341	ITEM_WEAPON:ITEM_WEAPON_PICK_GREAT	plural		great picks	大鹤嘴锄	data/runtime/rulesets/zh-Hans/items/weapon.toml

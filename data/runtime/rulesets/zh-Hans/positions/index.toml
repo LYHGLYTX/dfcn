@@ -1,0 +1,26 @@
+base = "positions"
+
+[[rulesets]]
+[rulesets.rules]
+"{singular}" = "{singular}"
+"{plural}" = "{plural}"
+
+[[rulesets]]
+name = "singular"
+[rulesets.rules]
+"{mountain::singular}" = "{mountain::singular}"
+"{forest::singular}" = "{forest::singular}"
+
+[[rulesets]]
+name = "plural"
+[rulesets.rules]
+"{mountain::plural}" = "{mountain::plural}"
+"{forest::plural}" = "{forest::plural}"
+
+# Groups binds a complete native office or spouse title, including generated
+# court/civic/religious titles resolved through the shared office vocabulary.
+# Former member/mercenary/slave/prisoner/worker are separate relation labels.
+[[rulesets]]
+name = "former"
+[rulesets.rules]
+"Former {::positions::singular}" = "前任{::positions::singular}"

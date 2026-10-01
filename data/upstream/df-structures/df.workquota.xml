@@ -1,0 +1,114 @@
+<data-definition>
+    <enum-type type-name='logic_condition_type' base-type='int32_t'> bay12: LogicConditionType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='AtLeast' original-name='GREATER_EQUAL'/>
+        <enum-item name='AtMost' original-name='LESSER_EQUAL'/>
+        <enum-item name='GreaterThan' original-name='GREATER'/>
+        <enum-item name='LessThan' original-name='LESSER'/>
+        <enum-item name='Exactly' original-name='EQUAL'/>
+        <enum-item name='Not' original-name='NOT_EQUAL'/>
+    </enum-type>
+
+    <struct-type type-name='manager_order_condition_item' original-name='workquota_item_conditionst'>
+        <enum type-name='logic_condition_type' name="compare_type" original-name='logic_condition'/>
+        <int32_t name='compare_val' original-name='logic_number'/>
+        <enum type-name='item_type' name='item_type' original-name='itemneeded' init-value='NONE'/>
+        <int16_t name='item_subtype' original-name='itemneeded_subtype' refers-to='(item-subtype-target $$._parent.item_type $)' init-value='-1'/>
+        <int16_t name="mat_type" original-name='itemneeded_material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name="mat_index" original-name='itemneeded_matgloss' init-value='-1'/>
+        <bitfield type-name='job_item_flags1' name='flags1' original-name='itemneeded_flag'/>
+        <bitfield type-name='job_item_flags2' name='flags2' original-name='itemneeded_flag2'/>
+        <bitfield type-name='job_item_flags3' name='flags3' original-name='itemneeded_flag3'/>
+        <uint32_t name='flags4' original-name='itemneeded_flag4'/>
+        <uint32_t name='flags5' original-name='itemneeded_flag5'/>
+        <stl-string name='reaction_class' original-name='itemneeded_reaction_class'/>
+        <stl-string name='has_material_reaction_product' original-name='itemneeded_reaction_product_class'/>
+        <int32_t name='metal_ore' original-name='itemneeded_metal_ore' ref-target='inorganic_raw'/>
+        <int32_t name="min_dimension" original-name='min_dimension_taken' init-value='-1'/>
+        <stl-vector type-name='int32_t' name='contains' original-name='itemneeded_contains_reagent_index'/>
+        <int32_t name="reaction_id" original-name='itemneeded_contains_reaction_index' ref-target='reaction'/>
+        <enum type-name='tool_uses' name='has_tool_use' original-name='itemneeded_tool_use'/>
+        <int32_t name='dye_color' original-name='itemneeded_dye_color' ref-target='descriptor_color'/>
+    </struct-type>
+
+    <enum-type type-name='workquota_order_condition_type' base-type='int32_t'> bay12: WQOrderConditionType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='Activated' original-name='ON_ACTIVE'/>
+        <enum-item name='Completed' original-name='ON_COMPLETE'/>
+    </enum-type>
+
+    <bitfield-type type-name='workquota_order_condition_flag' base-type='uint32_t'> bay12: WQ_ORDER_CONDITION_FLAG_*
+        <flag-bit name='satisfied' original-name='SATISFIED'/>
+    </bitfield-type>
+
+    <struct-type type-name='manager_order_condition_order' original-name='workquota_order_conditionst'>
+        <int32_t name='order_id' original-name='workquota_id' ref-target='manager_order'/>
+        <enum type-name='workquota_order_condition_type' name="condition" original-name='type' init-value='Completed'/>
+        <bitfield base-type='uint32_t' type-name='workquota_order_condition_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <enum-type type-name='workquota_frequency_type' base-type='int32_t'> bay12: WorkQuotaFrequencyType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='OneTime' original-name='ONE_TIME'/>
+        <enum-item name='Daily' original-name='DAILY'/>
+        <enum-item name='Monthly' original-name='MONTHLY'/>
+        <enum-item name='Seasonally' original-name='SEASONAL'/>
+        <enum-item name='Yearly' original-name='YEARLY'/>
+    </enum-type>
+
+    <bitfield-type type-name='manager_order_status' original-name='workquota_flag' base-type='uint32_t'> bay12: WORKQUOTA_FLAG_*
+        <flag-bit name="validated" original-name='VALIDATED'/>
+        <flag-bit name="active" original-name='ACTIVE'/>
+    </bitfield-type>
+
+    <struct-type type-name='manager_order' original-name='workquotast'>
+        <int32_t name='id' original-name='global_id'/>
+
+        <enum base-type='int16_t' type-name='job_type' name='job_type' original-name='jobtype'/>
+        <enum type-name='item_type' name='item_type' original-name='itemtype' init-value='NONE'/>
+        <int16_t name='item_subtype' original-name='subtype' refers-to='(item-subtype-target $$._parent.item_type $)' init-value='-1'/>
+
+        <stl-string name="reaction_name" original-name='mstring'/>
+
+        <int16_t name="mat_type" original-name='material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name="mat_index" original-name='matgloss' init-value='-1'/>
+
+        <compound type-name='job_spec_flags' name='specflag'/>
+        <compound type-name='job_spec_data' name='specdata' original-name='spec_id'/>
+        <bitfield type-name='job_material_category' name="material_category" original-name='job_item_flag'/>
+
+        <compound name='art_spec'> not a compound
+            <enum type-name='job_art_specifier_type' name='type' original-name='art_specifier'/>
+            <int32_t name='id' original-name='art_specifier_id1' init-value='-1'/>
+            <int32_t name='subid' original-name='art_specifier_id2' init-value='-1'/>
+        </compound>
+
+        <int16_t name="amount_left" original-name='numberleft'/>
+        <int16_t name="amount_total" original-name='numbermax'/>
+        <bitfield type-name='manager_order_status' name="status" original-name='flag'/>
+
+        <enum type-name='workquota_frequency_type' name="frequency"/>
+        <int32_t name="finished_year" original-name='next_check_year' init-value='-1'/>
+        <int32_t name="finished_year_tick" original-name='next_check_season_count' init-value='-1'/>
+
+        <int32_t name="workshop_id" original-name='forced_bld_id' ref-target='building'/>
+        <int32_t name="max_workshops" original-name='maximum_active_bld' comment='0 is unlimited'/>
+
+        <stl-vector pointer-type='manager_order_condition_item' name="item_conditions" original-name='item_condition'/>
+        <stl-vector pointer-type='manager_order_condition_order' name='order_conditions' original-name='order_condition'/>
+
+        <pointer type-name='job_reqst' name='items' original-name='jbr'/>
+    </struct-type>
+
+    <struct-type type-name='workquota_handlerst'>
+        <stl-vector pointer-type='manager_order' name='all' original-name='play'/>
+        <int32_t name='manager_order_next_id' original-name='next_workquota_id'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

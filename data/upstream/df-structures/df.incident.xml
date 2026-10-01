@@ -1,0 +1,169 @@
+<data-definition>
+    <struct-type type-name='incident_hfid' original-name='incident_hfst'>
+        <int32_t name="hfid" init-value='-1' ref-target='historical_figure' since='v0.40.01' comment="bay12: true hf of incident"/>
+        <int32_t name='visual_hfid' init-value='-1' ref-target='historical_figure' since='v0.44.01' comment="bay12: basic visual id"/>
+        <int32_t name='historical_hfid' init-value='-1' ref-target='historical_figure' since='v0.44.01' comment="bay12: if any witness knew actual name"/>
+        <stl-vector type-name='int32_t' name='all_witnessed_ident' original-name='all_witnessed_ident_id' ref-target='identity' since='v0.44.01'/>
+    </struct-type>
+
+    <struct-type type-name='incident_gave_identification_identifierst'>
+        <compound type-name='incident_hfid' name='hf'/>
+    </struct-type>
+
+    <struct-type type-name='incident_data_identity' original-name='incident_gave_identificationst'>
+        <stl-vector pointer-type='incident_gave_identification_identifierst' name='identifier'/>
+    </struct-type>
+
+    <struct-type type-name='incident_refused_to_identify_refuserst'>
+        <compound type-name='incident_hfid' name='hf'/>
+    </struct-type>
+
+    <struct-type type-name='incident_data_refused_identify' original-name='incident_refused_to_identifyst'>
+        <stl-vector pointer-type='incident_refused_to_identify_refuserst' name='refuser'/>
+    </struct-type>
+
+    <struct-type type-name='incident_performance_rolest'>
+        <enum type-name='performance_participant_type' name='performance_event' original-name='type' comment='can e.g. be music for a dance musician'/>
+        <int32_t name='role_index' original-name='index' comment='index into the instruments vector for music, with corresponding roles for other forms, possibly a dance_form_sub1 entry for dances'/>
+        <compound type-name='incident_hfid' name='hf'/>
+        <int32_t name='roll'/>
+    </struct-type>
+
+    <struct-type type-name='incident_data_performance' original-name='incident_performancest'>
+        <enum type-name='performance_event_type' name='performance_event' original-name='type'/>
+        <stl-vector pointer-type='incident_performance_rolest' name='participants' original-name='role'/>
+        <int32_t name='reference_id' original-name='main_form_id' comment='history_event id/poetic_form id/musical_form id/dance_form_id or -1'/>
+        <int32_t name='written_content_id' original-name='main_wc_id' ref-target='written_content' comment='-1 if not used'/>
+        <int32_t name='abstract_location' original-name='ab_id' ref-target='abstract_building' comment="location at which the performance was held"/>
+        <int32_t name='poetic_form_id' original-name='skill_poetic_form_id' ref-target='poetic_form' comment='More than one form can be used in a performance, e.g. dance to music'/>
+        <int32_t name='musical_form_id' original-name='skill_musical_form_id' ref-target='musical_form'/>
+        <int32_t name='dance_form_id' original-name='skill_dance_form_id' ref-target='dance_form'/>
+    </struct-type>
+
+    <enum-type type-name='incident_artifact_location_type' base-type='int32_t'> bay12: IncidentArtifactLocationType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='Held' original-name='HF_HOLDING'/>
+        <enum-item name='Dropped' original-name='HF_DROPS'/>
+        <enum-item name='Gained' original-name='HF_PICKS_UP'/>
+        <enum-item name='Given' original-name='HF_GIVES'/>
+        <enum-item name='Denied' original-name='HF_REFUSES_TO_GIVE'/>
+        <enum-item name='Destroyed' original-name='DESTROYED'/>
+    </enum-type>
+
+    --  There ought to be either a type specific reference or a written content one. Not both.
+    --  Story has only been seen with a history event id, not a written content one, but the sample was small.
+    --  Poem has been seen with either a poetic form or a written content reference.
+    --  Music has been seen only with a music form reference, but the sample was small.
+    --    Music has been seen to be "sang" and "spoke" in DF displayed thoughts, but no instrument playing
+    --    or simulation. It's still unknown how to determine what action participants took.
+    --  Dance has been seen only with a dance form reference, but the sample was small.
+
+    <struct-type type-name='incident_data_artifact' original-name='incident_artifact_locationst'>
+        <enum type-name='incident_artifact_location_type' name='state' original-name='type'/>
+        <int32_t name='artifact_id' ref-target='artifact_record'/>
+        <compound type-name='incident_hfid' name='hf'/>
+        <compound type-name='incident_hfid' name='second_hf'/>
+        <int32_t name='site_id' original-name='stid' ref-target='world_site'/>
+        <int32_t name='site_bld' original-name='abid' ref-target='abstract_building'/>
+        <int32_t name='subregion' original-name='srid' ref-target='world_region'/>
+        <int32_t name='layer' original-name='flid' ref-target='world_underground_region'/>
+        <stl-vector type-name='int32_t' name='affected_enid' ref-target='historical_entity'/>
+        <int32_t name='dominant_st_enid' ref-target='historical_entity'/>
+    </struct-type>
+
+    <enum-type type-name='incident_written_content_location_type' base-type='int32_t'> bay12: IncidentWrittenContentLocationType
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='Dropped' original-name='HF_DROPS'/>
+        <enum-item name='Given' original-name='HF_GIVES'/>
+    </enum-type>
+
+    <struct-type type-name='incident_data_writing' original-name='incident_written_content_locationst'>
+        <enum type-name='incident_written_content_location_type' name='state' original-name='type'/>
+        <int32_t name='content_id' original-name='wcid' ref-target='written_content'/>
+        <compound type-name='incident_hfid' name='hf'/>
+        <compound type-name='incident_hfid' name='second_hf'/>
+        <int32_t name='site_id' original-name='stid' ref-target='world_site'/>
+        <int32_t name='site_bld' original-name='abid' ref-target='abstract_building'/>
+        <int32_t name='subregion' original-name='srid' ref-target='world_region'/>
+        <int32_t name='layer' original-name='flid' ref-target='world_underground_region'/>
+        <stl-vector type-name='int32_t' name='affected_enid' ref-target='historical_entity'/>
+        <int32_t name='dominant_st_enid' ref-target='historical_entity'/>
+    </struct-type>
+
+    <bitfield-type type-name='incident_flag' base-type='uint32_t'> bay12: INCIDENT_FLAG_*
+        <flag-bit name='announced_missing' original-name='MISSING_ANNOUNCED'/>
+        <flag-bit name='discovered' original-name='DEATH_ANNOUNCED'/>
+        <flag-bit name='stale' original-name='STALE' since='v0.40.01'/>
+    </bitfield-type>
+
+    <struct-type type-name='incident' original-name='incidentst'
+                 instance-vector='$global.world.incidents.all' key-field='id'>
+        dtor 0x8C1AE10
+
+        <int32_t name='id' original-name='global_id'/>
+        <enum type-name='incident_type' name='type'/>
+
+        <stl-vector type-name='int32_t' name="witnesses" original-name='witness_unid' ref-target='unit'/>
+
+        <int32_t name='last_witness_year'/>
+        <int32_t name='last_witness_year_tick' original-name='last_witness_season_count'/>
+
+        <int32_t name="victim" original-name='target_unid' ref-target='unit'/>
+        <compound type-name='incident_hfid' name='victim_hf' original-name='target_hf'/>
+        <int32_t name="victim_race" original-name='target_race' ref-target='creature_raw' since='v0.40.01'/>
+        <int32_t name="victim_caste" original-name='target_caste' ref-target='caste_raw' aux-value='$$.victim_race' since='v0.40.01'/>
+        <int32_t name='victim_entity' original-name='target_entity_id' ref-target='historical_entity' since='v0.40.01' comment="Seen with Crime"/>
+        <int32_t name='victim_item' original-name='target_item_id' ref-target='item' since='v0.40.01'/>
+
+        <int32_t name='criminal' original-name='actor_unid' ref-target='unit'/>
+        <compound type-name='incident_hfid' name='criminal_hf' original-name='actor_hf'/>
+        <int32_t name='criminal_race' original-name='actor_race' ref-target='creature_raw' since='v0.40.01'/>
+        <int32_t name='criminal_caste' original-name='actor_caste' ref-target='caste_raw' aux-value='$$.killer_race' since='v0.40.01'/>
+        <int32_t name='criminal_entity' original-name='actor_entity_id' ref-target='historical_entity' since='v0.40.01'/>
+
+        <compound type-name='incident_hfid' name='facilitator' original-name='facilitator_hf'/>
+
+        <int32_t name="crime_id" ref-target='crime'/>
+
+        <int32_t name='site' original-name='site_id' ref-target='world_site'/>
+        <int32_t name='subregion' original-name='srid' ref-target='world_region' since='v0.40.01'/>
+        <int32_t name='layer' original-name='flid' ref-target='world_underground_region' since='v0.40.01'/>
+        <int32_t name='entity' original-name='entity_id' ref-target='historical_entity'/>
+
+        <int32_t name='event_year' original-name='year'/>
+        <int32_t name='event_time' original-name='season_count'/>
+
+        <bitfield base-type='uint32_t' type-name='incident_flag' name='flags' original-name='flag'/>
+
+        <enum type-name='death_type' name='death_cause' original-name='kill_cause'/>
+
+        -- v0.40.01
+        <enum type-name='conflict_level' name='conflict_level' original-name='conflict_state'/>
+        <int32_t name='activity_id' ref-target='activity_entry'/>
+        <int32_t name='world_x' original-name='abs_tile_x' comment="Location appears to be in in-game tiles world wide"/>
+        <int32_t name='world_y' original-name='abs_tile_y'/>
+        <int32_t name='world_z' original-name='abs_tile_z'/>
+        <int32_t name='eventcol' original-name='hecid' ref-target='history_event_collection'/>
+        <int32_t name='implied_incident_id' ref-target='incident'/>
+
+        <compound name='data' is-union='true'>
+            <pointer type-name='incident_data_performance' name='Performance' original-name='performance'/>
+            <pointer type-name='incident_data_artifact' name='Artifact' original-name='artifact_location'/>
+            <pointer type-name='incident_data_writing' name='Writing' original-name='written_content_location'/>
+            <pointer type-name='incident_data_identity' name='SelfID' original-name='gave_identification'/>
+            <pointer type-name='incident_data_refused_identify' name='RefusedID' original-name='refused_to_identify'/>
+        </compound>
+    </struct-type>
+
+    <struct-type type-name='incident_handlerst'>
+        <stl-vector pointer-type='incident' name='all' original-name='global'/>
+        <stl-vector pointer-type='incident' name='order_load' has-bad-pointers='true'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

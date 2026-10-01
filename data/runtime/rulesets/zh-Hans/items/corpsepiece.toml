@@ -1,0 +1,86 @@
+base = "items::corpsepiece"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{::items::corpse::mangled}{main}" = "{^0}{::items::corpse::mangled}{main}"
+"{named}" = "{named}"
+
+[[rulesets]]
+name = "named"
+[rulesets.rules]
+# The native body-component formatter shares the corpse's owner and damage
+# branches. Its dynamic final noun is a RAW body-part name or a tissue's
+# material STATE_NAME; a detached part can prefix that material with its
+# body-part name (0x140ca21ee..0x140ca226d).
+"{^0}{::creatures::caste::name} {::items::corpse::mangled}{part}" = "{^0}{::creatures::caste::name}{::items::corpse::mangled}{part}"
+"{::items::corpse::owner}{^0}{::items::corpse::mangled}{part}" = "{::items::corpse::owner}{^0}{::items::corpse::mangled}{part}"
+
+[[rulesets]]
+name = "with_number"
+[rulesets.rules]
+# All three native dead-body item classes share this early typed entry.
+# Bare anatomy/material labels still require an owner; corpse/remains nouns
+# identify their role without one. Preserve native quantities and wrappers.
+"{named}{::items::$number}" = "{named}{::items::$number}"
+"{::items::corpse}{::items::$number}" = "{::items::corpse}{::items::$number}"
+"{::items::remains}{::items::$number}" = "{::items::remains}{::items::$number}"
+
+[[rulesets]]
+name = "part"
+[rulesets.rules]
+"{main}" = "{main}"
+"{component}" = "{component}"
+"{::health::bodypart::bodypart_main} {material}" = "{::health::bodypart::bodypart_main}{material}"
+"{material}" = "{material}"
+
+[[rulesets]]
+name = "component"
+[rulesets.rules]
+# Direct corpse-piece nouns take precedence over the more deeply referenced
+# health tissue sense (bone -> 骨头 here, not 骨骼 or the qualifier 骨质).
+"{::health::bodypart::bodypart_main}" = "{::health::bodypart::bodypart_main}"
+"{::health::bodypart::tissue}" = "{::health::bodypart::tissue}"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+# Resolve a complete material noun, never the finished-equipment qualifier.
+# `material` is the formatter's explicit fallback for a missing material RAW.
+"{::materials::state}" = "{::materials::state}"
+"material" = "物质"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"rotten " = "腐烂的"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"body part" = "身体部位"
+"body parts" = "身体部位"
+"wooden body part" = "木制身体部位"
+"wooden body parts" = "木制身体部位"
+"plant part" = "植物部位"
+"plant parts" = "植物部位"
+"silk body part" = "丝绸身体部位"
+"silk body parts" = "丝绸身体部位"
+"leather body part" = "皮革身体部位"
+"leather body parts" = "皮革身体部位"
+"bone" = "骨头"
+"bones" = "骨头"
+"shell" = "壳"
+"shells" = "壳"
+"soap body part" = "肥皂身体部位"
+"soap body parts" = "肥皂身体部位"
+"tooth" = "牙齿"
+"teeth" = "牙齿"
+"horn" = "角"
+"horns" = "角"
+"pearl" = "珍珠"
+"pearls" = "珍珠"
+"yarn body part" = "纱线身体部位"
+"yarn body parts" = "纱线身体部位"
+"strand body part" = "丝状身体部位"
+"strand body parts" = "丝状身体部位"

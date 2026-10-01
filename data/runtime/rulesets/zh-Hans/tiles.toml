@@ -1,0 +1,393 @@
+base = "tiles"
+
+# Native terrain compositor: PE 0x140e7d330..0x140e8482c. Text-producing
+# branches end at 0x140e834ce; the tail includes switch tables. It emits plant, floor,
+# stair, slope, track and wall-family productions; spaces belong to the
+# adjacent literal, not to an independently translated screen fragment.
+# Plant parts: 0x1413ffd20. Construction materials: 0x140a46f20.
+# The complete native literal inventory is kept in data/extracted/tile-hover-sources.tsv.
+# Used by the complete terrain-caption compositor. Growth names and tree
+# parts continue to come from the existing plant/tile namespaces below.
+[[rulesets]]
+name = "growth_separator"
+[rulesets.rules]
+", " = "、"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{^1}{^2}{^3}{^4}{main}" = "{^0}{^1}{^2}{^3}{^4}{main}"
+# Info-sheet terrain titles pass false for the native growth-list flag, but
+# named trees, saplings and shrubs retain their typed name/species prefix.
+# Keep that production reachable from the same tile root as ordinary terrain.
+"{named_plant}" = "{named_plant}"
+
+# Named trees, saplings and shrubs prepend their name before the species
+# description; subsequent comma entries still belong to the growth list.
+# 0x140e7d749, 0x140e7f9b5, 0x140e7fb10 call the native name formatter.
+[[rulesets]]
+name = "named_plant"
+[rulesets.rules]
+"{^2}{^3}{^4}{::text::name}, {named_plant::kind}" = "{::text::name}（{^2}{^3}{^4}{named_plant::kind}）"
+
+# Only the native tree/shrub/sapling branches can own this leading name.
+# Standalone foliage belongs to a following growth list, not to this field.
+[[rulesets]]
+name = "named_plant::kind"
+[rulesets.rules]
+"{prefix::may_dead}Tree" = "{prefix::may_dead}树"
+"{prefix::may_dead}Shrub" = "{prefix::may_dead}灌木"
+"{prefix::may_dead}Sapling" = "{prefix::may_dead}树苗"
+"{prefix::may_dead}{plants::tile}" = "{prefix::may_dead}{plants::tile}"
+"{prefix::may_dead}Young {plants::tile}" = "{prefix::may_dead}幼体{plants::tile}"
+"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}树苗"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"Warm " = "温暖"
+
+[[rulesets]]
+name = "^1"
+optional = true
+[rulesets.rules]
+"Damp " = "潮湿"
+
+[[rulesets]]
+name = "^2"
+optional = true
+[rulesets.rules]
+"Muddy " = "泥泞"
+
+[[rulesets]]
+name = "^3"
+optional = true
+[rulesets.rules]
+"Snow-covered " = "雪覆"
+
+[[rulesets]]
+name = "^4"
+optional = true
+[rulesets.rules]
+"Mossy " = "生苔"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"Murky Pool" = "泥塘"
+"{prefix::may_unusable}Murky Pool Slope" = "{prefix::may_unusable}泥塘斜坡"
+"Underworld Gate" = "冥界之门"
+"Driftwood" = "浮木"
+"Open Space" = "开放空间"
+"Chasm" = "裂口"
+"Eerie Glowing Pit" = "诡异发光的深坑"
+"Ashes" = "灰烬"
+"Waterfall" = "瀑布"
+"River Source" = "河源"
+"Ice" = "冰"
+"Semi-molten Rock" = "半熔的岩石"
+"Lava Flow" = "熔岩流"
+"Magma Flow" = "未凝熔岩"
+"Glowing Barrier" = "发光的屏障"
+"Glowing Floor" = "发光的地板"
+"River" = "河流"
+"Brook" = "溪流"
+"Unknown" = "未知地形"
+"Furrowed {material}" = "沟壑纵横的{material}"
+"{material} Boulder" = "{material}巨石"
+"{material} Pebbles" = "{material}砾石地面"
+"{plants}" = "{plants}"
+"{floors}" = "{floors}"
+"{stairways}" = "{stairways}"
+"{slopes}" = "{slopes}"
+"{walls}" = "{walls}"
+"{pillar_fortifications}" = "{pillar_fortifications}"
+"{tracks}" = "{tracks}"
+
+[[rulesets]]
+name = "plants"
+[rulesets.rules]
+"{prefix::may_dead}Tree" = "{prefix::may_dead}树"
+"{prefix::may_dead}Shrub" = "{prefix::may_dead}灌木"
+"{prefix::may_dead}Sapling" = "{prefix::may_dead}树苗"
+"{prefix::may_dead}{plants::tile}" = "{prefix::may_dead}{plants::tile}"
+"{prefix::may_dead}Young {plants::tile}" = "{prefix::may_dead}幼体{plants::tile}"
+"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}树苗"
+"{prefix::may_dead_dry}Grass" = "{prefix::may_dead_dry}草"
+"{prefix::may_sparse_dense}{prefix::may_dead_dry}{plants::tile}" = "{prefix::may_sparse_dense}{prefix::may_dead_dry}{plants::tile}"
+"{::plants::growth::plural}" = "{::plants::growth::plural}"
+
+[[rulesets]]
+name = "plants::tile"
+[rulesets.rules]
+"{::plants::name::plural}" = "{::plants::name::plural}"
+"{::plants::name::singular}" = "{::plants::name::singular}"
+"{::plants::name::singular} roots" = "{::plants::name::singular}根"
+"{::plants::name::singular} trunk" = "{::plants::name::singular}干"
+"thick {::plants::name::singular} branches" = "{::plants::name::singular}粗枝"
+# Match existing compounds such as oak branches = 橡树枝 and peach tree
+# branches = 桃树枝; the plant name may already end in 树.
+"{::plants::name::singular} branches" = "{::plants::name::singular}枝"
+"smooth {::plants::name::singular} branches" = "光滑{::plants::name::singular}枝"
+"{::plants::name::singular} twigs" = "{::plants::name::singular}细枝"
+"{::plants::name::singular} cap" = "{::plants::name::singular}冠"
+
+[[rulesets]]
+name = "floors"
+[rulesets.rules]
+"{prefix::may_smooth_detailed}{material}" = "{prefix::may_smooth_detailed}{material}"
+"{prefix::may_smooth_detailed}{constructed} Floor" = "{prefix::may_smooth_detailed}{constructed}地板"
+"Sculpted Ice Floor" = "浮刻装饰的冰地板"
+"Level Ice Floor" = "平整的冰地板"
+"{material} Cavern Floor" = "{material}洞窟地板"
+"Wet {material} Cavern Floor" = "湿润{material}洞窟地板"
+"Wet {material}" = "湿润{material}"
+
+[[rulesets]]
+name = "stairways"
+[rulesets.rules]
+"{prefix::updownboth} Stairway" = "{prefix::updownboth}楼梯"
+"{stairways::main} {prefix::updownboth} Stairway" = "{stairways::main}{prefix::updownboth}楼梯"
+
+[[rulesets]]
+name = "stairways::main"
+[rulesets.rules]
+"Grassy" = "被草覆盖的"
+"{prefix::may_sparse_dense}{::plants::name::adjective}" = "{prefix::may_sparse_dense}{::plants::name::adjective}"
+"{constructed}" = "{constructed}"
+
+[[rulesets]]
+name = "slopes"
+[rulesets.rules]
+"{slopes::^0}{slopes::main}{slopes::$0}" = "{slopes::^0}{slopes::main}{slopes::$0}"
+"{prefix::may_unusable}{prefix::updown} Slope" = "{prefix::may_unusable}{prefix::updown}斜坡"
+
+[[rulesets]]
+name = "slopes::^0"
+[rulesets.rules]
+"{prefix::may_unusable}" = "{prefix::may_unusable}"
+
+[[rulesets]]
+name = "slopes::main"
+[rulesets.rules]
+"Glacial" = "冰川"
+"Grassy" = "被草覆盖的"
+"{prefix::may_dead_dry}Grass" = "{prefix::may_dead_dry}草壤"
+"{prefix::may_sparse_dense}{prefix::may_dead_dry}{::plants::name::adjective}" = "{prefix::may_sparse_dense}{prefix::may_dead_dry}{::plants::name::adjective}"
+"{constructed}" = "{constructed}"
+
+[[rulesets]]
+name = "slopes::$0"
+[rulesets.rules]
+" {prefix::updown} Slope" = "{prefix::updown}斜坡"
+
+[[rulesets]]
+name = "walls"
+[rulesets.rules]
+"{walls::^0}{walls::main}{walls::$0}" = "{walls::^0}{walls::main}{walls::$0}"
+
+[[rulesets]]
+name = "walls::^0"
+optional = true
+[rulesets.rules]
+"Smooth " = "光滑"
+"Rough-hewn " = "粗糙"
+"Straight " = "平滑"
+"Exposed " = "裸露"
+"{prefix::may_engrave}" = "{prefix::may_engrave}"
+
+[[rulesets]]
+name = "walls::main"
+[rulesets.rules]
+"{constructed}" = "{constructed}"
+
+[[rulesets]]
+name = "walls::$0"
+[rulesets.rules]
+" Wall" = "墙体"
+" Cluster" = "矿簇"
+
+[[rulesets]]
+name = "pillar_fortifications"
+[rulesets.rules]
+"{pillar_fortifications::^0}{pillar_fortifications::main}{pillar_fortifications::$0}" = "{pillar_fortifications::^0}{pillar_fortifications::main}{pillar_fortifications::$0}"
+
+[[rulesets]]
+name = "pillar_fortifications::^0"
+[rulesets.rules]
+"{walls::^0}" = "{walls::^0}"
+
+[[rulesets]]
+name = "pillar_fortifications::main"
+[rulesets.rules]
+"{constructed}" = "{constructed}"
+
+[[rulesets]]
+name = "pillar_fortifications::$0"
+[rulesets.rules] 
+" Fortification" = "垛墙"
+" Pillar" = "柱子"
+
+[[rulesets]]
+name = "tracks"
+[rulesets.rules]
+# Every one of the 15 connections has the same space before the bracket
+# in each flat/upward/downward material, construction and ice branch.
+"{tracks::main} {tracks::$0}" = "{tracks::main}{tracks::$0}"
+
+[[rulesets]]
+name = "tracks::main"
+[rulesets.rules]
+"{constructed} Track" = "{constructed}轨道"
+"{prefix::may_unusable}{constructed} {prefix::updown} Track" = "{prefix::may_unusable}{constructed}{prefix::updown}轨道"
+
+[[rulesets]]
+name = "tracks::$0"
+[rulesets.rules]
+"(N)" = "（北）"
+"(S)" = "（南）"
+"(E)" = "（东）"
+"(W)" = "（西）"
+"(NS)" = "（南北）"
+"(NE)" = "（东北）"
+"(NW)" = "（西北）"
+"(SE)" = "（东南）"
+"(SW)" = "（西南）"
+"(EW)" = "（东西）"
+"(NSE)" = "（南北东）"
+"(NSW)" = "（南北西）"
+"(NEW)" = "（北东西）"
+"(SEW)" = "（南东西）"
+"(NSEW)" = "（南北东西）"
+
+[[rulesets]]
+name = "prefix::may_dead"
+optional = true
+[rulesets.rules]
+"Dead " = "枯萎"
+
+[[rulesets]]
+name = "prefix::may_dead_dry"
+[rulesets.rules]
+"Dry " = "干枯"
+"{prefix::may_dead}" = "{prefix::may_dead}"
+
+[[rulesets]]
+name = "prefix::may_sparse_dense"
+optional = true
+[rulesets.rules]
+"Sparse " = "稀疏"
+"Dense " = "茂密"
+
+[[rulesets]]
+name = "prefix::may_smooth_detailed"
+optional = true
+[rulesets.rules]
+"Smooth " = "光滑"
+"{prefix::detailed} " = "{prefix::detailed}"
+
+[[rulesets]]
+name = "prefix::may_engrave"
+optional = true
+[rulesets.rules]
+"{prefix::detailed} " = "{prefix::detailed}"
+"{prefix::sculpted} " = "{prefix::sculpted}"
+
+[[rulesets]]
+name = "prefix::may_unusable"
+optional = true
+[rulesets.rules]
+"Unusable " = "无效"
+
+[[rulesets]]
+name = "prefix::detailed"
+[rulesets.rules]
+"Detailed" = "雕刻装饰的"
+"-Detailed-" = "-雕刻装饰-的"
+"+Detailed+" = "+雕刻装饰+的"
+"*Detailed*" = "*雕刻装饰*的"
+"≡Detailed≡" = "≡雕刻装饰≡的"
+"☼Detailed☼" = "☼雕刻装饰☼的"
+
+[[rulesets]]
+name = "prefix::sculpted"
+[rulesets.rules]
+"Sculpted" = "浮刻装饰的"
+"-Sculpted-" = "-浮刻装饰-的"
+"+Sculpted+" = "+浮刻装饰+的"
+"*Sculpted*" = "*浮刻装饰*的"
+"≡Sculpted≡" = "≡浮刻装饰≡的"
+"☼Sculpted☼" = "☼浮刻装饰☼的"
+
+[[rulesets]]
+name = "prefix::updownboth"
+[rulesets.rules]
+"Up/Down" = "上/下行"
+"{prefix::updown}" = "{prefix::updown}"
+
+[[rulesets]]
+name = "prefix::updown"
+[rulesets.rules]
+"Upward" = "上行"
+"Downward" = "下行"
+
+[[rulesets]]
+name = "constructed"
+[rulesets.rules]
+# Shoddy is emitted by the tile switch before the helper's independent
+# rough prefix; rough, reinforcement and material suffixes can coexist.
+"{constructed::^0}{constructed::^rough}{constructed::^1}{constructed::main}{constructed::$0}" = "{constructed::^0}{constructed::^rough}{constructed::^1}{constructed::main}{constructed::$0}"
+
+[[rulesets]]
+name = "constructed::^0"
+optional = true
+[rulesets.rules]
+"Shoddy " = "劣质"
+
+[[rulesets]]
+name = "constructed::^rough"
+optional = true
+[rulesets.rules]
+"rough " = "粗糙"
+
+[[rulesets]]
+name = "constructed::^1"
+optional = true
+[rulesets.rules]
+"{constructed::^1::prefix}Reinforced " = "{constructed::^1::prefix}加固的"
+
+[[rulesets]]
+name = "constructed::^1::prefix"
+optional = true
+[rulesets.rules]
+"{constructed::main}-" = "{constructed::main}"
+
+[[rulesets]]
+name = "constructed::main"
+[rulesets.rules]
+"unknown material" = "未知物质"
+"{::materials::state::adjective}" = "{::materials::state::adjective}"
+"{::materials::^prefix}{::materials::state::adjective}" = "{::materials::^prefix}{::materials::state::adjective}"
+# Natural tiles call the material noun formatter (0x1414d1920), while
+# constructions use its adjective. Both can contain a named figure owner.
+"{material}" = "{material}"
+"{::text::person}'s {::materials::adjective}" = "{::text::person}的{::materials::adjective}"
+
+[[rulesets]]
+name = "constructed::$0"
+optional = true
+[rulesets.rules]
+" block" = "方块"
+" log" = "原木"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+"{material::base}" = "{material::base}"
+"{::text::person}'s {material::base}" = "{::text::person}的{material::base}"
+
+[[rulesets]]
+name = "material::base"
+[rulesets.rules]
+"unknown material" = "未知物质"
+"{::materials}" = "{::materials}"

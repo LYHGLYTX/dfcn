@@ -1,0 +1,1123 @@
+token	source	line	english	raw
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	7	body	UB:body:bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	7	bodies	UB:body:bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	21	upper body	UB:upper body:upper bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	21	upper bodies	UB:upper body:upper bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	23	lower body	LB:lower body:lower bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	23	lower bodies	LB:lower body:lower bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	27	right upper arm	RUA:right upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	29	left upper arm	LUA:left upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	31	right lower arm	RLA:right lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	33	left lower arm	LLA:left lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	35	right hand	RH:right hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	37	left hand	LH:left hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	41	right upper leg	RUL:right upper leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	43	left upper leg	LUL:left upper leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	45	right lower leg	RLL:right lower leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	47	left lower leg	LLL:left lower leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	49	right foot	RF:right foot:right feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	49	right feet	RF:right foot:right feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	51	left foot	LF:left foot:left feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	51	left feet	LF:left foot:left feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	55	right front leg	RA:right front leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	57	left front leg	LA:left front leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	59	right front foot	RH:right front foot:right front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	59	right front feet	RH:right front foot:right front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	61	left front foot	LH:left front foot:left front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	61	left front feet	LH:left front foot:left front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	65	right rear leg	RL:right rear leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	67	left rear leg	LL:left rear leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	69	right rear foot	RF:right rear foot:right rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	69	right rear feet	RF:right rear foot:right rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	71	left rear foot	LF:left rear foot:left rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	71	left rear feet	LF:left rear foot:left rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	89	first neck	NK1:first neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	91	second neck	NK2:second neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	93	third neck	NK3:third neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	95	fourth neck	NK4:fourth neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	97	fifth neck	NK5:fifth neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	99	sixth neck	NK6:sixth neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	101	seventh neck	NK7:seventh neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	103	first head	HD1:first head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	105	second head	HD2:second head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	107	third head	HD3:third head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	109	fourth head	HD4:fourth head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	111	fifth head	HD5:fifth head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	113	sixth head	HD6:sixth head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	115	seventh head	HD7:seventh head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	119	head	HD:head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	123	neck	NK:neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	133	body	HD:body:bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	133	bodies	HD:body:bodies
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	195	right hoof	RF:right hoof:right hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	195	right hooves	RF:right hoof:right hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	197	left hoof	LF:left hoof:left hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	197	left hooves	LF:left hoof:left hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	357	right wing	RWING:right wing:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	359	left wing	LWING:left wing:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	409	first right upper arm	RUA1:first right upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	411	first left upper arm	LUA1:first left upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	413	first right lower arm	RLA1:first right lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	415	first left lower arm	LLA1:first left lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	417	first right hand	RH1:first right hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	419	first left hand	LH1:first left hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	421	second right upper arm	RUA2:second right upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	423	second left upper arm	LUA2:second left upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	425	second right lower arm	RLA2:second right lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	427	second left lower arm	LLA2:second left lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	429	second right hand	RH2:second right hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	431	second left hand	LH2:second left hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	477	third right upper arm	RUA3:third right upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	479	third left upper arm	LUA3:third left upper arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	481	third right lower arm	RLA3:third right lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	483	third left lower arm	LLA3:third left lower arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	485	third right hand	RH3:third right hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	487	third left hand	LH3:third left hand:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	655	right head	RHD:right head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	657	left head	LHD:left head:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	689	right neck	RNK:right neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	691	left neck	LNK:left neck:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	729	right arm	RA:right arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	731	left arm	LA:left arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	737	right leg	RL:right leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	739	left leg	LL:left leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	835	right front hoof	RH:right front hoof:right front hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	835	right front hooves	RH:right front hoof:right front hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	837	left front hoof	LH:left front hoof:left front hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	837	left front hooves	LH:left front hoof:left front hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	843	right rear hoof	RF:right rear hoof:right rear hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	843	right rear hooves	RF:right rear hoof:right rear hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	845	left rear hoof	LF:left rear hoof:left rear hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	845	left rear hooves	LF:left rear hoof:left rear hooves
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	849	thorax	UB:thorax:thoraxes
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	849	thoraxes	UB:thorax:thoraxes
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	853	abdomen	LB:abdomen:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	855	right first leg	RA1:right first leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	857	left first leg	LA1:left first leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	859	right first foot	RF1:right first foot:right first feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	859	right first feet	RF1:right first foot:right first feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	861	left first foot	LF1:left first foot:left first feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	861	left first feet	LF1:left first foot:left first feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	863	right second leg	RA2:right second leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	865	left second leg	LA2:left second leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	867	right second foot	RF2:right second foot:right second feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	867	right second feet	RF2:right second foot:right second feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	869	left second foot	LF2:left second foot:left second feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	869	left second feet	LF2:left second foot:left second feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	871	right third leg	RA3:right third leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	873	left third leg	LA3:left third leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	875	right third foot	RF3:right third foot:right third feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	875	right third feet	RF3:right third foot:right third feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	877	left third foot	LF3:left third foot:left third feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	877	left third feet	LF3:left third foot:left third feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	887	right upper foreleg	RUA:right upper foreleg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	889	left upper foreleg	LUA:left upper foreleg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	891	right lower foreleg	RLA:right lower foreleg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	893	left lower foreleg	LLA:left lower foreleg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	895	right forefoot	RF1:right forefoot:right forefeet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	895	right forefeet	RF1:right forefoot:right forefeet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	897	left forefoot	LF1:left forefoot:left forefeet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	897	left forefeet	LF1:left forefoot:left forefeet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	917	cephalothorax	UB:cephalothorax:cephalothoraxes
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	917	cephalothoraxes	UB:cephalothorax:cephalothoraxes
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	945	right fourth leg	RA4:right fourth leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	947	left fourth leg	LA4:left fourth leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	949	right fourth foot	RF4:right fourth foot:right fourth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	949	right fourth feet	RF4:right fourth foot:right fourth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	951	left fourth foot	LF4:left fourth foot:left fourth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	951	left fourth feet	LF4:left fourth foot:left fourth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	991	right tentacle	RUT:right tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	993	left tentacle	LUT:left tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	997	mouth	MOUTH:mouth:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1001	tooth	TOOTH:tooth:teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1001	teeth	TOOTH:tooth:teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1005	first arm	ARM1:first arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1007	second arm	ARM2:second arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1009	third arm	ARM3:third arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1011	fourth arm	ARM4:fourth arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1013	fifth arm	ARM5:fifth arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1015	sixth arm	ARM6:sixth arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1017	seventh arm	ARM7:seventh arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1019	eighth arm	ARM8:eighth arm:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1023	right tentacle	RT:right tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1025	left tentacle	LT:left tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1027	right tentacle club	RTC:right tentacle club:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1029	left tentacle club	LTC:left tentacle club:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1033	right upper tentacle	RUT:right upper tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1035	left upper tentacle	LUT:left upper tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1037	right upper claw	RUTC:right upper claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1039	left upper claw	LUTC:left upper claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1041	right lower tentacle	RLT:right lower tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1043	left lower tentacle	LLT:left lower tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1045	right lower claw	RLTC:right lower claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1047	left lower claw	LLTC:left lower claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1059	right middle tentacle	RMT:right middle tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1061	left middle tentacle	LMT:left middle tentacle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1063	right middle claw	RMTC:right middle claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1065	left middle claw	LMTC:left middle claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1077	front	FRONT:front:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1079	back	BACK:back:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1081	right front wheel	RFW:right front wheel:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1083	left front wheel	LFW:left front wheel:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1085	right rear wheel	RRW:right rear wheel:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1087	left rear wheel	LRW:left rear wheel:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1091	tail	TAIL:tail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1095	shell	SHELL:shell:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1100	upper carapace	UB_CARAPACE:upper carapace:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1102	lower carapace	LB_CARAPACE:lower carapace:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1110	stinger	TAIL_STINGER:stinger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1114	right pincer	R_UB_PINCER:right pincer:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1116	left pincer	L_UB_PINCER:left pincer:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1120	right pincer	R_HD_PINCER:right pincer:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1122	left pincer	L_HD_PINCER:left pincer:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1126	right frontal appendage	R_HD_PINCER:right frontal appendage:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1128	left frontal appendage	L_HD_PINCER:left frontal appendage:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1153	right eye	REYE:right eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1155	left eye	LEYE:left eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1163	center eye	EYE:center eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1167	first eye	EYE1:first eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1169	second eye	EYE2:second eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1171	third eye	EYE3:third eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1173	fourth eye	EYE4:fourth eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1185	fifth eye	EYE5:fifth eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1189	right eyestalk	REYE:right eyestalk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1191	left eyestalk	LEYE:left eyestalk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1195	right tusk	RTUSK:right tusk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1197	left tusk	LTUSK:left tusk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1201	nose	NOSE:nose:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1205	snout	SNOUT:snout:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1209	trunk	TRUNK:trunk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1213	right ear	R_EAR:right ear:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1215	left ear	L_EAR:left ear:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1219	right lung	RLUNG:right lung:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1221	left lung	LLUNG:left lung:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1229	proboscis	PROBOSCIS:proboscis:proboscises
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1229	proboscises	PROBOSCIS:proboscis:proboscises
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1233	beak	BEAK:beak:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1237	heart	HEART:heart:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1241	guts	GUTS:guts:guts
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1246	gizzard	GIZZARD:gizzard:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1250	liver	LIVER:liver:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1252	stomach	STOMACH:stomach:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1254	pancreas	PANCREAS:pancreas:pancreases
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1254	pancreases	PANCREAS:pancreas:pancreases
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1256	spleen	SPLEEN:spleen:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1258	right kidney	RKIDNEY:right kidney:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1260	left kidney	LKIDNEY:left kidney:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1264	right shoulder	RUA_J:right shoulder:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1266	left shoulder	LUA_J:left shoulder:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1268	right elbow	RLA_J:right elbow:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1270	left elbow	LLA_J:left elbow:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1272	right wrist	RH_J:right wrist:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1274	left wrist	LH_J:left wrist:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1276	right hip	RUL_J:right hip:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1278	left hip	LUL_J:left hip:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1280	right knee	RLL_J:right knee:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1282	left knee	LLL_J:left knee:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1284	right ankle	RF_J:right ankle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1286	left ankle	LF_J:left ankle:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1290	throat	THROAT:throat:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1294	upper spine	NECK:upper spine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1299	middle spine	UPPERSPINE:middle spine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1302	lower spine	LOWERSPINE:lower spine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1307	brain	BRAIN:brain:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1315	skull	SKULL:skull:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1326	casque	CASQUE:casque:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1330	crest	CREST:crest:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1334	horn	HEAD_HORN:horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1338	right horn	RHORN:right horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1340	left horn	LHORN:left horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1344	first horn	RHORN:first horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1346	second horn	LHORN:second horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1350	front horn	RHORN:front horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1358	right upper horn	RHORN:right upper horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1360	left upper horn	LHORN:left upper horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1362	right lower horn	RHORN:right lower horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1364	left lower horn	LHORN:left lower horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1368	right antler	RHORN:right antler:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1370	left antler	LHORN:left antler:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1374	eye	EYE:eye:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1382	eyelid	EYELID:eyelid:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1386	thumb	FINGER1:thumb:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1388	first finger	FINGER2:first finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1390	second finger	FINGER3:second finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1392	third finger	FINGER4:third finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1394	fourth finger	FINGER5:fourth finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1416	first finger	FINGER1:first finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1418	second finger	FINGER2:second finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1422	finger	FINGER1:finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1426	first toe	TOE1:first toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1428	second toe	TOE2:second toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1430	third toe	TOE3:third toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1432	fourth toe	TOE4:fourth toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1434	fifth toe	TOE5:fifth toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1462	first right front toe	RFTOE1:first right front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1464	second right front toe	RFTOE2:second right front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1466	third right front toe	RFTOE3:third right front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1468	fourth right front toe	RFTOE4:fourth right front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1470	fifth right front toe	RFTOE5:fifth right front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1472	first left front toe	LFTOE1:first left front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1474	second left front toe	LFTOE2:second left front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1476	third left front toe	LFTOE3:third left front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1478	fourth left front toe	LFTOE4:fourth left front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1480	fifth left front toe	LFTOE5:fifth left front toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1516	first right rear toe	RRTOE1:first right rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1518	second right rear toe	RRTOE2:second right rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1520	third right rear toe	RRTOE3:third right rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1522	fourth right rear toe	RRTOE4:fourth right rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1524	fifth right rear toe	RRTOE5:fifth right rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1526	first left rear toe	LRTOE1:first left rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1528	second left rear toe	LRTOE2:second left rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1530	third left rear toe	LRTOE3:third left rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1532	fourth left rear toe	LRTOE4:fourth left rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1534	fifth left rear toe	LRTOE5:fifth left rear toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1570	first right toe	RRTOE1:first right toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1572	second right toe	RRTOE2:second right toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1574	third right toe	RRTOE3:third right toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1576	fourth right toe	RRTOE4:fourth right toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1578	fifth right toe	RRTOE5:fifth right toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1580	first left toe	LRTOE1:first left toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1582	second left toe	LRTOE2:second left toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1584	third left toe	LRTOE3:third left toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1586	fourth left toe	LRTOE4:fourth left toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1588	fifth left toe	LRTOE5:fifth left toe:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1592	first right finger	RFTOE1:first right finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1594	second right finger	RFTOE2:second right finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1596	third right finger	RFTOE3:third right finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1598	fourth right finger	RFTOE4:fourth right finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1600	fifth right finger	RFTOE5:fifth right finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1602	first left finger	LFTOE1:first left finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1604	second left finger	LFTOE2:second left finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1606	third left finger	LFTOE3:third left finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1608	fourth left finger	LFTOE4:fourth left finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1610	fifth left finger	LFTOE5:fifth left finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1632	right fin	R_FIN:right fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1634	left fin	L_FIN:left fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1638	dorsal fin	DORSAL_FIN:dorsal fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1642	right flipper	R_FLIP:right flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1644	left flipper	L_FLIP:left flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1648	right front flipper	RFFLIP:right front flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1650	left front flipper	LFFLIP:left front flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1654	right rear flipper	RRFLIP:right rear flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1656	left rear flipper	LRFLIP:left rear flipper:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1660	right front fin	RFFIN:right front fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1662	left front fin	LFFIN:left front fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1666	right rear fin	RRFIN:right rear fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1668	left rear fin	LRFIN:left rear fin:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1672	hump	HUMP1:hump:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1676	front hump	HUMP1:front hump:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1678	rear hump	HUMP2:rear hump:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1682	left cheek	L_CHEEK:left cheek:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1684	right cheek	R_CHEEK:right cheek:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1688	left eyelid	L_EYELID:left eyelid:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1690	right eyelid	R_EYELID:right eyelid:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1694	tongue	TONGUE:tongue:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1698	forked tongue	TONGUE:forked tongue:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1702	lower lip	L_LIP:lower lip:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1704	upper lip	U_LIP:upper lip:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1727	left true rib	L_TRUE_RIB:left true rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1729	right true rib	R_TRUE_RIB:right true rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1731	left false rib	L_FALSE_RIB:left false rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1733	right false rib	R_FALSE_RIB:right false rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1735	left floating rib	L_FLOATING_RIB:left floating rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1737	right floating rib	R_FLOATING_RIB:right floating rib:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1743	right eye tooth	R_EYE_TOOTH:right eye tooth:right eye teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1743	right eye teeth	R_EYE_TOOTH:right eye tooth:right eye teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1745	left eye tooth	L_EYE_TOOTH:left eye tooth:left eye teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1745	left eye teeth	L_EYE_TOOTH:left eye tooth:left eye teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1751	right fang	R_FANG:right fang:right fangs
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1751	right fangs	R_FANG:right fang:right fangs
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1753	left fang	L_FANG:left fang:left fangs
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1753	left fangs	L_FANG:left fang:left fangs
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1759	right upper incisor	RU_INCISOR:right upper incisor:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1761	left upper incisor	LU_INCISOR:left upper incisor:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1763	right lower incisor	RL_INCISOR:right lower incisor:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1765	left lower incisor	LL_INCISOR:left lower incisor:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1769	right tooth	RU_INCISOR:right tooth:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1771	left tooth	LU_INCISOR:left tooth:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1779	upper front tooth	U_F_TOOTH:upper front tooth:upper front teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1779	upper front teeth	U_F_TOOTH:upper front tooth:upper front teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1782	first upper right incisor	first upper right incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1783	first upper left incisor	first upper left incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1784	second upper right incisor	second upper right incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1785	second upper left incisor	second upper left incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1786	right eye tooth	right eye tooth:right eye teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1786	right eye teeth	right eye tooth:right eye teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1787	left eye tooth	left eye tooth:left eye teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1787	left eye teeth	left eye tooth:left eye teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1788	lower front tooth	L_F_TOOTH:lower front tooth:lower front teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1788	lower front teeth	L_F_TOOTH:lower front tooth:lower front teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1790	first lower right incisor	first lower right incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1791	first lower left incisor	first lower left incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1792	second lower right incisor	second lower right incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1793	second lower left incisor	second lower left incisor:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1794	lower right canine	lower right canine:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1795	lower left canine	lower left canine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1796	upper right back tooth	U_R_B_TOOTH:upper right back tooth:upper right back teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1796	upper right back teeth	U_R_B_TOOTH:upper right back tooth:upper right back teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1798	first upper right premolar	first upper right premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1799	second upper right premolar	second upper right premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1800	first upper right molar	first upper right molar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1801	second upper right molar	second upper right molar:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1802	lower right back tooth	L_R_B_TOOTH:lower right back tooth:lower right back teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1802	lower right back teeth	L_R_B_TOOTH:lower right back tooth:lower right back teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1804	first lower right premolar	first lower right premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1805	second lower right premolar	second lower right premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1806	first lower right molar	first lower right molar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1807	second lower right molar	second lower right molar:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1808	upper left back tooth	U_L_B_TOOTH:upper left back tooth:upper left back teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1808	upper left back teeth	U_L_B_TOOTH:upper left back tooth:upper left back teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1810	first upper left premolar	first upper left premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1811	second upper left premolar	second upper left premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1812	first upper left molar	first upper left molar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1813	second upper left molar	second upper left molar:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1814	lower left back tooth	L_L_B_TOOTH:lower left back tooth:lower left back teeth
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1814	lower left back teeth	L_L_B_TOOTH:lower left back tooth:lower left back teeth
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1816	first lower left premolar	first lower left premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1817	second lower left premolar	second lower left premolar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1818	first lower left molar	first lower left molar:STP
+INDIVIDUAL_NAME	../data/vanilla/vanilla_bodies/objects/body_default.txt	1819	second lower left molar	second lower left molar:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1846	right front foot	RFF:right front foot:right front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1846	right front feet	RFF:right front foot:right front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1848	left front foot	LFF:left front foot:left front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1848	left front feet	LFF:left front foot:left front feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1854	right rear foot	RRF:right rear foot:right rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1854	right rear feet	RRF:right rear foot:right rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1856	left rear foot	LRF:left rear foot:left rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1856	left rear feet	LRF:left rear foot:left rear feet
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1860	right mandible	R_MAND:right mandible:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1862	left mandible	L_MAND:left mandible:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1866	bill	BILL:bill:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1892	tusk	TUSK:tusk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1896	right frontal endite	RF_ENDITE:right frontal endite:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1898	left frontal endite	LF_ENDITE:left frontal endite:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1902	head sclerite	HEAD_SCLERITE:head sclerite:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1906	tooth whorl	TOOTH_WHORL:tooth whorl:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1910	right antenna	R_ANT:right antenna:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1912	left antenna	L_ANT:left antenna:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1916	thagomizer	TAIL_THAGOMIZER:thagomizer:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1920	tail club	TAIL_CLUB:tail club:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1924	sail	SAIL:sail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1928	right shoulder spine	R_SHOULDER_SPINE:right shoulder spine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_default.txt	1930	left shoulder spine	L_SHOULDER_SPINE:left shoulder spine:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	62	right claw	R_UB_PINCER:right claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	64	left claw	L_UB_PINCER:left claw:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	118	right fifth leg	RA5:right fifth leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	120	left fifth leg	LA5:left fifth leg:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	122	right fifth foot	RF5:right fifth foot:right fifth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	122	right fifth feet	RF5:right fifth foot:right fifth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	124	left fifth foot	LF5:left fifth foot:left fifth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	124	left fifth feet	LF5:left fifth foot:left fifth feet
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	200	left tail	TAIL_1:left tail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	202	right tail	TAIL_2:right tail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	208	center tail	TAIL_2:center tail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	210	right tail	TAIL_3:right tail:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	218	stinger	LOWER_BODY_STINGER:stinger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	222	trunk	PROBOSCIS:trunk:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	245	left horn	HEAD_HORN_1:left horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	247	right horn	HEAD_HORN_2:right horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	251	first horn	HEAD_HORN_1:first horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	253	second horn	HEAD_HORN_2:second horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	255	third horn	HEAD_HORN_3:third horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	265	fourth horn	HEAD_HORN_4:fourth horn:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	423	third finger	FINGER3:third finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	425	fourth finger	FINGER4:fourth finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	427	fifth finger	FINGER5:fifth finger:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	601	center eyelid	EYELID:center eyelid:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	613	left antler	HEAD_ANTLER_1:left antler:STP
+BP	../data/vanilla/vanilla_bodies/objects/body_rcp.txt	615	right antler	HEAD_ANTLER_2:right antler:STP
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	68	chitin	chitin:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	71	eyes	eyes:PLURAL
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	140		LENGTH:90:95:98:100:102:105:110
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	141		HEIGHT:90:95:98:100:102:105:110
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	142		BROADNESS:90:95:98:100:102:105:110
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cambrian.txt	165	skin	skin:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	214	hair	hair:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	836	wool	wool:SINGULAR
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	837		LENGTH:0:0:0:0:0:0:0
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	838	wool	wool:SINGULAR
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	840		10:50:100:150:200:300
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	1481	feathers	feathers:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cenozoic.txt	1979	scales	scales:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cretaceous.txt	77	shell	shell:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cretaceous.txt	1224	scales	scales:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_cretaceous.txt	2341	hair	hair:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures_extinct/objects/creature_permian.txt	195	skin	skin:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_birds.txt	888	belly	belly:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_birds.txt	1602	tail feathers	tail feathers:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_birds.txt	1606	head and neck down	head and neck down:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	89	ears	ears:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	92	tail	tail:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	95	head	head:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	106	front paws	front paws:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	117	rear paws	rear paws:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_domestic.txt	1106	beard	beard:SINGULAR
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	392		CLOSE_SET:0:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	393	eyes	eyes:PLURAL
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	394		DEEP_SET:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	396		ROUND_VS_NARROW:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	398		LARGE_IRIS:25:70:90:100:110:130:200
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	400		30:60:90:110:150:190
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	403		THICKNESS:50:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	404	lips	lips:PLURAL
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	405		55:70:90:110:150:190
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	408		BROADNESS:25:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	410		LENGTH:25:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	412		UPTURNED:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	413		CONVEX:0:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	414	nose bridge	nose bridge:SINGULAR
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	417		SPLAYED_OUT:0:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	418	ears	ears:PLURAL
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	419		HANGING_LOBES:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	421		BROADNESS:90:95:98:100:102:105:110
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	424		91:94:98:102:106:109
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	425		HEIGHT:90:95:98:100:102:105:110
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	431		GAPS:0:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	432	teeth	teeth:PLURAL
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	433		LENGTH:100:100:100:100:100:100:100
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	439		HIGH_CHEEKBONES:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	440		BROAD_CHIN:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	441		JUTTING_CHIN:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	442		SQUARE_CHIN:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	445		DEEP_VOICE:0:70:90:100:110:130:200
+BP_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	446		RASPY_VOICE:0:70:90:100:110:130:200
+TLCM_TIMING	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	511		ROOT:80:0:130:0
+TLCM_TIMING	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	514		ROOT:130:0:150:0
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	516		LENGTH:50:80:90:100:110:120:150
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	517	eyebrows	eyebrows:PLURAL
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	518		55:70:90:110:130:145
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	519		DENSE:50:80:90:100:110:120:150
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	522		HIGH_POSITION:0:70:90:100:110:130:200
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	526	eyelashes	eyelashes:PLURAL
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	534	hair	hair:SINGULAR
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	536		10:25:75:125:200:300
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	537		CURLY:0:70:90:100:110:130:200
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_large_mountain.txt	539		GREASY:0:70:90:100:110:130:200
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_temperate.txt	1788	hair around the eyes	hair around the eyes:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_temperate.txt	1798	legs	legs:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_temperate.txt	1801	upper body	upper body:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_temperate.txt	1806	other hair	other hair:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_large_temperate.txt	2565	head and tail	head and tail:PLURAL
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_next_underground.txt	54	fat	fat:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_next_underground.txt	203	eye	eye:SINGULAR
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_next_underground.txt	250		LENGTH:80:95:98:100:102:105:120
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_next_underground.txt	499	exterior	exterior:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_next_underground.txt	743	flesh	flesh:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_ocean_new.txt	742	body	body:SINGULAR
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_other.txt	306	fluff	fluff:SINGULAR
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	139		HEIGHT:75:95:98:100:102:105:125
+BODY_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	141		BROADNESS:75:95:98:100:102:105:125
+TISSUE_STYLE_UNIT	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	410		HAIR:STANDARD_HAIR_SHAPINGS
+TSU_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	411	hair	hair:SINGULAR
+TISSUE_STYLE_UNIT	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	415		BEARD:STANDARD_BEARD_SHAPINGS
+TSU_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	416	beard	beard:SINGULAR
+TISSUE_STYLE_UNIT	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	419		MOUSTACHE:STANDARD_MOUSTACHE_SHAPINGS
+TSU_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	420	moustache	moustache:SINGULAR
+TISSUE_STYLE_UNIT	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	423		SIDEBURNS:STANDARD_SIDEBURNS_SHAPINGS
+TSU_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	424	sideburns	sideburns:PLURAL
+TISSUE_LAYER_APPEARANCE_MODIFIER	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	441		WRINKLY:0:0:0:0:0:0:0
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	443	skin	skin:SINGULAR
+APP_MOD_DESC_RANGE	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	444		0:0:0:1:25:50
+TLCM_TIMING	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	677		ROOT:40:0:70:0
+TLCM_TIMING	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	680		ROOT:70:0:90:0
+TLCM_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	1908	fur	fur:SINGULAR
+TLCM_TIMING	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	1911		ROOT:700:0:900:0
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	1913	fur	fur:SINGULAR
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	3023	eye	eye:SINGULAR
+APP_MOD_NOUN	../data/vanilla/vanilla_creatures/objects/creature_standard.txt	3135	eyebrow	eyebrow:SINGULAR
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	8	amber	amber
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	13	amethyst	amethyst
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	18	aqua	aqua
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	23	aquamarine	aquamarine
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	28	ash gray	ash gray
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	33	auburn	auburn
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	38	azure	azure
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	43	beige	beige
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	48	black	black
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	53	blue	blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	58	brass	brass
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	63	bronze	bronze
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	68	brown	brown
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	73	buff	buff
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	78	burnt sienna	burnt sienna
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	83	burnt umber	burnt umber
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	88	cardinal	cardinal
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	93	carmine	carmine
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	98	cerulean	cerulean
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	103	charcoal	charcoal
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	108	chartreuse	chartreuse
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	113	chestnut	chestnut
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	118	chocolate	chocolate
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	123	cinnamon	cinnamon
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	128	clear	clear
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	133	cobalt	cobalt
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	138	copper	copper
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	143	cream	cream
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	148	crimson	crimson
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	153	dark blue	dark blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	158	dark brown	dark brown
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	163	dark chestnut	dark chestnut
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	168	dark green	dark green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	173	dark indigo	dark indigo
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	178	dark olive	dark olive
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	183	dark peach	dark peach
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	188	dark pink	dark pink
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	193	dark scarlet	dark scarlet
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	198	dark tan	dark tan
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	203	dark violet	dark violet
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	208	ecru	ecru
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	213	eggplant	eggplant
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	217	emerald	emerald
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	222	fern green	fern green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	227	flax	flax
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	232	fuchsia	fuchsia
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	237	gold	gold
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	242	golden yellow	golden yellow
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	248	goldenrod	goldenrod
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	253	gray	gray
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	258	green	green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	263	green-yellow	green-yellow
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	269	heliotrope	heliotrope
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	274	indigo	indigo
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	279	ivory	ivory
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	284	jade	jade
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	289	lavender	lavender
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	294	lavender blush	lavender blush
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	299	lemon	lemon
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	304	light blue	light blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	309	light brown	light brown
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	314	lilac	lilac
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	319	lime	lime
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	324	mahogany	mahogany
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	329	maroon	maroon
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	334	mauve	mauve
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	339	mauve taupe	mauve taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	345	midnight blue	midnight blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	350	mint green	mint green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	355	moss green	moss green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	360	ochre	ochre
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	365	olive	olive
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	370	orange	orange
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	375	pale blue	pale blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	380	pale brown	pale brown
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	385	pale chestnut	pale chestnut
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	390	pale pink	pale pink
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	395	peach	peach
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	400	pearl	pearl
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	405	periwinkle	periwinkle
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	410	pine green	pine green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	416	pink	pink
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	421	plum	plum
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	426	puce	puce
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	431	pumpkin	pumpkin
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	436	purple	purple
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	441	raw umber	raw umber
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	446	red	red
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	451	red-purple	red-purple
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	457	rose	rose
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	462	russet	russet
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	467	rust	rust
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	472	saffron	saffron
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	477	scarlet	scarlet
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	482	sea green	sea green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	489	sepia	sepia
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	494	silver	silver
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	499	sky blue	sky blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	504	slate gray	slate gray
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	509	spring green	spring green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	514	tan	tan
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	519	dark taupe	dark taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	524	taupe gray	taupe gray
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	530	taupe	taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	535	purple taupe	purple taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	541	pale taupe	pale taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	546	rose taupe	rose taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	551	sandy taupe	sandy taupe
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	556	teal	teal
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	561	turquoise	turquoise
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	566	vermilion	vermilion
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	571	violet	violet
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	576	white	white
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	581	yellow	yellow
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	586	yellow-green	yellow-green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	592	blue-gray	blue-gray
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	597	apple green	apple green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	602	bright green	bright green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	607	leaf green	leaf green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	612	zesty green	zesty green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	617	woodland green	woodland green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	622	grass green	grass green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	627	vibrant green	vibrant green
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	632	eucalyptus	eucalyptus
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	636	sea foam	sea foam
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	640	glacier blue	glacier blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	645	river blue	river blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	650	cornflower	cornflower
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	654	deep sea blue	deep sea blue
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	659	dark azure	dark azure
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	664	ultramarine	ultramarine
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	668	sapphire	sapphire
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	672	crocus purple	crocus purple
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	676	foxglove	foxglove
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	680	orchid pink	orchid pink
+COLOR_NAME	../data/vanilla/vanilla_descriptors/objects/descriptor_color_standard.txt	684	raspberry pink	raspberry pink
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	5		IRIS_EYE_AMBER
+PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	6		IRIS_EYE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	7		WHITE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	8		BLACK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	9		AMBER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	11		IRIS_EYE_AMETHYST
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	15		AMETHYST
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	17		IRIS_EYE_AQUA
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	21		AQUA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	23		IRIS_EYE_AQUAMARINE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	27		AQUAMARINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	29		IRIS_EYE_ASH_GRAY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	33		ASH_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	35		IRIS_EYE_AUBURN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	39		AUBURN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	41		IRIS_EYE_AZURE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	45		AZURE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	47		IRIS_EYE_BEIGE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	51		BEIGE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	53		IRIS_EYE_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	59		IRIS_EYE_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	63		BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	65		IRIS_EYE_BRASS
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	69		BRASS
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	71		IRIS_EYE_BRONZE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	75		BRONZE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	77		IRIS_EYE_BROWN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	81		BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	83		IRIS_EYE_BUFF
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	87		BUFF
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	89		IRIS_EYE_BURNT_SIENNA
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	93		BURNT_SIENNA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	95		IRIS_EYE_BURNT_UMBER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	99		BURNT_UMBER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	101		IRIS_EYE_CARDINAL
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	105		CARDINAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	107		IRIS_EYE_CARMINE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	111		CARMINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	113		IRIS_EYE_CERULEAN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	117		CERULEAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	119		IRIS_EYE_CHARCOAL
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	123		CHARCOAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	125		IRIS_EYE_CHARTREUSE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	129		CHARTREUSE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	131		IRIS_EYE_CHESTNUT
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	135		CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	137		IRIS_EYE_CHOCOLATE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	141		CHOCOLATE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	143		IRIS_EYE_CINNAMON
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	147		CINNAMON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	149		IRIS_EYE_COBALT
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	153		COBALT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	155		IRIS_EYE_COPPER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	159		COPPER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	161		IRIS_EYE_CREAM
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	165		CREAM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	167		IRIS_EYE_CRIMSON
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	171		CRIMSON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	173		IRIS_EYE_DARK_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	177		DARK_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	179		IRIS_EYE_DARK_BROWN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	183		DARK_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	185		IRIS_EYE_DARK_CHESTNUT
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	189		DARK_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	191		IRIS_EYE_DARK_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	195		DARK_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	197		IRIS_EYE_DARK_INDIGO
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	201		DARK_INDIGO
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	203		IRIS_EYE_DARK_OLIVE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	207		DARK_OLIVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	209		IRIS_EYE_DARK_PEACH
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	213		DARK_PEACH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	215		IRIS_EYE_DARK_PINK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	219		DARK_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	221		IRIS_EYE_DARK_SCARLET
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	225		DARK_SCARLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	227		IRIS_EYE_DARK_TAN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	231		DARK_TAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	233		IRIS_EYE_DARK_VIOLET
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	237		DARK_VIOLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	239		IRIS_EYE_ECRU
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	243		ECRU
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	245		IRIS_EYE_EMERALD
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	249		EMERALD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	251		IRIS_EYE_FERN_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	255		FERN_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	257		IRIS_EYE_FLAX
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	261		FLAX
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	263		IRIS_EYE_FUCHSIA
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	267		FUCHSIA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	269		IRIS_EYE_GOLD
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	273		GOLD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	275		IRIS_EYE_GOLDEN_YELLOW
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	279		GOLDEN_YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	281		IRIS_EYE_GOLDENROD
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	285		GOLDENROD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	287		IRIS_EYE_GRAY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	291		GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	293		IRIS_EYE_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	297		GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	299		IRIS_EYE_GREEN-YELLOW
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	303		GREEN-YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	305		IRIS_EYE_HELIOTROPE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	309		HELIOTROPE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	311		IRIS_EYE_INDIGO
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	315		INDIGO
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	317		IRIS_EYE_IVORY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	321		IVORY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	323		IRIS_EYE_JADE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	327		JADE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	329		IRIS_EYE_LAVENDER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	333		LAVENDER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	335		IRIS_EYE_LAVENDER_BLUSH
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	339		LAVENDER_BLUSH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	341		IRIS_EYE_LEMON
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	345		LEMON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	347		IRIS_EYE_LIGHT_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	351		LIGHT_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	353		IRIS_EYE_LIGHT_BROWN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	357		LIGHT_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	359		IRIS_EYE_LILAC
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	363		LILAC
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	365		IRIS_EYE_LIME
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	369		LIME
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	371		IRIS_EYE_MAHOGANY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	375		MAHOGANY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	377		IRIS_EYE_MAROON
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	381		MAROON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	383		IRIS_EYE_MAUVE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	387		MAUVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	389		IRIS_EYE_MAUVE_TAUPE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	393		MAUVE_TAUPE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	395		IRIS_EYE_MIDNIGHT_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	399		MIDNIGHT_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	401		IRIS_EYE_MINT_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	405		MINT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	407		IRIS_EYE_MOSS_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	411		MOSS_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	413		IRIS_EYE_OCHRE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	417		OCHRE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	419		IRIS_EYE_OLIVE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	423		OLIVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	425		IRIS_EYE_ORANGE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	429		ORANGE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	431		IRIS_EYE_PALE_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	435		PALE_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	437		IRIS_EYE_PALE_BROWN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	441		PALE_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	443		IRIS_EYE_PALE_CHESTNUT
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	447		PALE_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	449		IRIS_EYE_PALE_PINK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	453		PALE_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	455		IRIS_EYE_PEACH
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	459		PEACH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	461		IRIS_EYE_PEARL
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	465		PEARL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	467		IRIS_EYE_PERIWINKLE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	471		PERIWINKLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	473		IRIS_EYE_PINE_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	477		PINE_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	479		IRIS_EYE_PINK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	483		PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	485		IRIS_EYE_PLUM
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	489		PLUM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	491		IRIS_EYE_PUCE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	495		PUCE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	497		IRIS_EYE_PUMPKIN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	501		PUMPKIN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	503		IRIS_EYE_PURPLE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	507		PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	509		IRIS_EYE_RAW_UMBER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	513		RAW_UMBER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	515		IRIS_EYE_RED
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	519		RED
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	521		IRIS_EYE_RUSSET
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	525		RUSSET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	527		IRIS_EYE_RUST
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	531		RUST
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	533		IRIS_EYE_SAFFRON
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	537		SAFFRON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	539		IRIS_EYE_SCARLET
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	543		SCARLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	545		IRIS_EYE_SEA_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	549		SEA_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	551		IRIS_EYE_SEPIA
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	555		SEPIA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	557		IRIS_EYE_SILVER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	561		SILVER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	563		IRIS_EYE_SKY_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	567		SKY_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	569		IRIS_EYE_SLATE_GRAY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	573		SLATE_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	575		IRIS_EYE_SPRING_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	579		SPRING_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	581		IRIS_EYE_TAN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	585		TAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	587		IRIS_EYE_TAUPE_DARK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	591		TAUPE_DARK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	593		IRIS_EYE_TAUPE_GRAY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	597		TAUPE_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	599		IRIS_EYE_TAUPE_MEDIUM
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	603		TAUPE_MEDIUM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	605		IRIS_EYE_TAUPE_PURPLE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	609		TAUPE_PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	611		IRIS_EYE_TAUPE_PALE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	615		TAUPE_PALE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	617		IRIS_EYE_TAUPE_ROSE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	621		TAUPE_ROSE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	623		IRIS_EYE_TAUPE_SANDY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	627		TAUPE_SANDY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	629		IRIS_EYE_TEAL
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	633		TEAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	635		IRIS_EYE_TURQUOISE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	639		TURQUOISE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	641		IRIS_EYE_VERMILION
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	645		VERMILION
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	647		IRIS_EYE_VIOLET
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	651		VIOLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	653		IRIS_EYE_WHITE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	659		IRIS_EYE_YELLOW
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	663		YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	665		IRIS_EYE_YELLOW_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	669		YELLOW_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	671		IRIS_EYE_BLUE-GRAY
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	675		BLUE-GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	677		IRIS_EYE_APPLE_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	681		APPLE_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	683		IRIS_EYE_BRIGHT_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	687		BRIGHT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	689		IRIS_EYE_LEAF_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	693		LEAF_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	695		IRIS_EYE_ZESTY_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	699		ZESTY_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	701		IRIS_EYE_WOODLAND_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	705		WOODLAND_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	707		IRIS_EYE_GRASS_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	711		GRASS_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	713		IRIS_EYE_VIBRANT_GREEN
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	717		VIBRANT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	719		IRIS_EYE_EUCALYPTUS
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	723		EUCALYPTUS
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	725		IRIS_EYE_SEA_FOAM
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	729		SEA_FOAM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	731		IRIS_EYE_GLACIER_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	735		GLACIER_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	737		IRIS_EYE_RIVER_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	741		RIVER_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	743		IRIS_EYE_CORNFLOWER
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	747		CORNFLOWER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	749		IRIS_EYE_DEEP_SEA_BLUE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	753		DEEP_SEA_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	755		IRIS_EYE_DARK_AZURE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	759		DARK_AZURE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	761		IRIS_EYE_ULTRAMARINE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	765		ULTRAMARINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	767		IRIS_EYE_SAPPHIRE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	771		SAPPHIRE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	773		IRIS_EYE_CROCUS_PURPLE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	777		CROCUS_PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	779		IRIS_EYE_FOXGLOVE
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	783		FOXGLOVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	785		IRIS_EYE_ORCHID_PINK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	789		ORCHID_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	791		IRIS_EYE_RASPBERRY_PINK
+CP_COLOR	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_iris_eye.txt	795		RASPBERRY_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	5		PUPIL_EYE_AMBER
+PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	6		PUPIL_EYE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	10		PUPIL_EYE_AMETHYST
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	15		PUPIL_EYE_AQUA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	20		PUPIL_EYE_AQUAMARINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	25		PUPIL_EYE_ASH_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	30		PUPIL_EYE_AUBURN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	35		PUPIL_EYE_AZURE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	40		PUPIL_EYE_BEIGE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	45		PUPIL_EYE_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	50		PUPIL_EYE_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	55		PUPIL_EYE_BRASS
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	60		PUPIL_EYE_BRONZE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	65		PUPIL_EYE_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	70		PUPIL_EYE_BUFF
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	75		PUPIL_EYE_BURNT_SIENNA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	80		PUPIL_EYE_BURNT_UMBER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	85		PUPIL_EYE_CARDINAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	90		PUPIL_EYE_CARMINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	95		PUPIL_EYE_CERULEAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	100		PUPIL_EYE_CHARCOAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	105		PUPIL_EYE_CHARTREUSE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	110		PUPIL_EYE_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	115		PUPIL_EYE_CHOCOLATE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	120		PUPIL_EYE_CINNAMON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	125		PUPIL_EYE_COBALT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	130		PUPIL_EYE_COPPER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	135		PUPIL_EYE_CREAM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	140		PUPIL_EYE_CRIMSON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	145		PUPIL_EYE_DARK_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	150		PUPIL_EYE_DARK_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	155		PUPIL_EYE_DARK_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	160		PUPIL_EYE_DARK_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	165		PUPIL_EYE_DARK_INDIGO
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	170		PUPIL_EYE_DARK_OLIVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	175		PUPIL_EYE_DARK_PEACH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	180		PUPIL_EYE_DARK_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	185		PUPIL_EYE_DARK_SCARLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	190		PUPIL_EYE_DARK_TAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	195		PUPIL_EYE_DARK_VIOLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	200		PUPIL_EYE_ECRU
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	205		PUPIL_EYE_EMERALD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	210		PUPIL_EYE_FERN_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	215		PUPIL_EYE_FLAX
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	220		PUPIL_EYE_FUCHSIA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	225		PUPIL_EYE_GOLD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	230		PUPIL_EYE_GOLDEN_YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	235		PUPIL_EYE_GOLDENROD
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	240		PUPIL_EYE_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	245		PUPIL_EYE_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	250		PUPIL_EYE_GREEN-YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	255		PUPIL_EYE_HELIOTROPE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	260		PUPIL_EYE_INDIGO
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	265		PUPIL_EYE_IVORY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	270		PUPIL_EYE_JADE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	275		PUPIL_EYE_LAVENDER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	280		PUPIL_EYE_LAVENDER_BLUSH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	285		PUPIL_EYE_LEMON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	290		PUPIL_EYE_LIGHT_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	295		PUPIL_EYE_LIGHT_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	300		PUPIL_EYE_LILAC
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	305		PUPIL_EYE_LIME
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	310		PUPIL_EYE_MAHOGANY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	315		PUPIL_EYE_MAROON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	320		PUPIL_EYE_MAUVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	325		PUPIL_EYE_MAUVE_TAUPE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	330		PUPIL_EYE_MIDNIGHT_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	335		PUPIL_EYE_MINT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	340		PUPIL_EYE_MOSS_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	345		PUPIL_EYE_OCHRE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	350		PUPIL_EYE_OLIVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	355		PUPIL_EYE_ORANGE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	360		PUPIL_EYE_PALE_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	365		PUPIL_EYE_PALE_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	370		PUPIL_EYE_PALE_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	375		PUPIL_EYE_PALE_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	380		PUPIL_EYE_PEACH
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	385		PUPIL_EYE_PEARL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	390		PUPIL_EYE_PERIWINKLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	395		PUPIL_EYE_PINE_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	400		PUPIL_EYE_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	405		PUPIL_EYE_PLUM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	410		PUPIL_EYE_PUCE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	415		PUPIL_EYE_PUMPKIN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	420		PUPIL_EYE_PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	425		PUPIL_EYE_RAW_UMBER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	430		PUPIL_EYE_RED
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	435		PUPIL_EYE_RUSSET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	440		PUPIL_EYE_RUST
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	445		PUPIL_EYE_SAFFRON
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	450		PUPIL_EYE_SCARLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	455		PUPIL_EYE_SEA_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	460		PUPIL_EYE_SEPIA
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	465		PUPIL_EYE_SILVER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	470		PUPIL_EYE_SKY_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	475		PUPIL_EYE_SLATE_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	480		PUPIL_EYE_SPRING_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	485		PUPIL_EYE_TAN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	490		PUPIL_EYE_TAUPE_DARK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	495		PUPIL_EYE_TAUPE_GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	500		PUPIL_EYE_TAUPE_MEDIUM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	505		PUPIL_EYE_TAUPE_PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	510		PUPIL_EYE_TAUPE_PALE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	515		PUPIL_EYE_TAUPE_ROSE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	520		PUPIL_EYE_TAUPE_SANDY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	525		PUPIL_EYE_TEAL
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	530		PUPIL_EYE_TURQUOISE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	535		PUPIL_EYE_VERMILION
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	540		PUPIL_EYE_VIOLET
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	545		PUPIL_EYE_WHITE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	550		PUPIL_EYE_YELLOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	555		PUPIL_EYE_YELLOW_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	560		PUPIL_EYE_BLUE-GRAY
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	565		PUPIL_EYE_APPLE_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	570		PUPIL_EYE_BRIGHT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	575		PUPIL_EYE_LEAF_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	580		PUPIL_EYE_ZESTY_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	585		PUPIL_EYE_WOODLAND_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	590		PUPIL_EYE_GRASS_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	595		PUPIL_EYE_VIBRANT_GREEN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	600		PUPIL_EYE_EUCALYPTUS
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	605		PUPIL_EYE_SEA_FOAM
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	610		PUPIL_EYE_GLACIER_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	615		PUPIL_EYE_RIVER_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	620		PUPIL_EYE_CORNFLOWER
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	625		PUPIL_EYE_DEEP_SEA_BLUE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	630		PUPIL_EYE_DARK_AZURE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	635		PUPIL_EYE_ULTRAMARINE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	640		PUPIL_EYE_SAPPHIRE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	645		PUPIL_EYE_CROCUS_PURPLE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	650		PUPIL_EYE_FOXGLOVE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	655		PUPIL_EYE_ORCHID_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_pupil_eye.txt	660		PUPIL_EYE_RASPBERRY_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	5		SPOTS_ORANGE_BLACK
+PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	6		SPOTS
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	10		SPOTS_TAN_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	15		SPOTS_WHITE_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	20		SPOTS_YELLOW_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	25		SPOTS_BROWN_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	30		STRIPES_ORANGE_BLACK
+PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	31		STRIPES
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	35		STRIPES_RAINBOW
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	45		STRIPES_BROWN_WHITE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	50		STRIPES_BROWN_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	55		STRIPES_TAN_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	60		STRIPES_BLACK_WHITE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	65		STRIPES_ORANGE_WHITE
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	70		STRIPES_WHITE_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	75		STRIPES_GREEN_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	80		STRIPES_COPPER_CHESTNUT
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	85		MOTTLED_BLACK_WHITE
+PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	86		MOTTLED
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	90		MOTTLED_GRAY_PINK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	95		MOTTLED_BROWN_BLACK
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	100		MOTTLED_GRAY_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	105		MOTTLED_WHITE_BROWN
+COLOR_PATTERN	../data/vanilla/vanilla_descriptors/objects/descriptor_pattern_special.txt	110		MOTTLED_TAN_DARK_BROWN
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2578		NONE
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2579		NEATLY_COMBED
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2580		BRAIDED
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2581		DOUBLE_BRAIDS
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2582		PONY_TAIL
+tissue_style_type	data/upstream/df-structures/df.d_basics.xml	2583		CLEAN_SHAVEN
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2971		NONE
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2972		MONOTONE
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2973		STRIPES
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2974		IRIS_EYE
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2975		SPOTS
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2976		PUPIL_EYE
+pattern_type	data/upstream/df-structures/df.d_basics.xml	2977		MOTTLED
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3004		NONE
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3005		HEIGHT
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3006		BROADNESS
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3007		LENGTH
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3008		CLOSE_SET
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3009		DEEP_SET
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3010		HIGH_POSITION
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3011		LARGE_IRIS
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3012		WRINKLY
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3014		CURLY
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3015		CONVEX
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3016		DENSE
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3017		THICKNESS
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3018		UPTURNED
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3019		SPLAYED_OUT
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3020		HANGING_LOBES
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3021		GAPS
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3023		HIGH_CHEEKBONES
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3024		BROAD_CHIN
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3025		JUTTING_CHIN
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3026		SQUARE_CHIN
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3027		ROUND_VS_NARROW
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3028		GREASY
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3029		DEEP_VOICE
+appearance_modifier_type	data/upstream/df-structures/df.d_basics.xml	3030		RASPY_VOICE

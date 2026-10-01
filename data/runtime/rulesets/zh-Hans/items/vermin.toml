@@ -1,0 +1,23 @@
+base = "items::vermin"
+
+[[rulesets]]
+[rulesets.rules]
+"{main}" = "{main}"
+# Native item_critterst 0xca2a80 prepends its complete personal name and
+# comma before the shared live-animal description. Keep the fields typed.
+"{::text::person}, {main}" = "{::text::person}，{main}"
+
+[[rulesets]]
+name = "with_number"
+[rulesets.rules]
+# The Other creature list uses complete live-animal item names with counts.
+"{::items::vermin}{::items::$number}" = "{::items::vermin}{::items::$number}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"small live animal" = "活的小动物"
+"small live animals" = "活的小动物"
+"live {::creatures::caste::singular}" = "活{::creatures::caste::singular}"
+# Swarms use the species plural rather than an individual caste name.
+"live {::creatures::name}" = "活{::creatures::name}"

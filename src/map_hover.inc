@@ -1,0 +1,846 @@
+// A map hover is ONE native widget. Its live frame, not a known
+// terrain word or the coverage of a dictionary entry, owns every text row.
+// Translation remains in the shared phrase/matching machinery; this layer
+// only captures the widget and composes its translated/native inline runs.
+std::optional<NativeTextCard> Overlay::capture_map_hover_card(
+        std::vector<std::string> &rows, const unsigned char *screen_override) const {
+    if (gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return std::nullopt;
+    int header_y = -1, population_x = -1, stocks_x = -1;
+    for (int y = 0; y < std::min(3, gps_->dimy); ++y) {
+        std::string context(gps_->dimx, ' ');
+        for (int x = 0; x < gps_->dimx; ++x) {
+            const unsigned char ch = visible_char_at(x, y);
+            context[x] = ch ? ch : ' ';
+        }
+        for (std::string_view label : {"Pop", "Population", "Stocks"}) {
+            const size_t at = context.find(label);
+            if (at == std::string::npos ||
+                !has_word_boundaries(context, at, at + label.size())) continue;
+            if (label == "Stocks") stocks_x = static_cast<int>(at);
+            else { header_y = y; population_x = static_cast<int>(at); }
+        }
+    }
+    // Arena uses the same map captions but has neither the fortress counters
+    // nor the adventure gait/time footer. Read its actual game type and active
+    // map screen so its map card reaches the shared whole-row layout.
+    const bool arena = native_arena_map_screen();
+    const bool fortress = !arena && header_y >= 0 && stocks_x > population_x;
+    const bool adventure = !fortress && !arena;
+    const auto current_row = [&](int y) {
+        std::string source(gps_->dimx, ' ');
+        for (int x = 0; x < gps_->dimx; ++x) {
+            const unsigned char ch = visible_char_at(x, y);
+            source[x] = ch ? static_cast<char>(ch) : ' ';
+        }
+        return source;
+    };
+    int adventure_footer = -1;
+    int adventure_footer_left = -1, adventure_footer_right = -1;
+    if (adventure) {
+        // The live adventure HUD pairs a gait caption with its decimal time
+        // multiplier directly below it. Gaits come from creature definitions;
+        // do not restrict this to a glossary of Walk/Crawl or screenshot pixels.
+        for (int y = std::max(0, gps_->dimy - 4); y + 1 < gps_->dimy; ++y) {
+            const auto captions = split_text_fields(current_row(y));
+            const auto values = split_text_fields(current_row(y + 1));
+            for (const auto &caption : captions) {
+                if (caption.start >= gps_->dimx / 2 || caption.text.empty() ||
+                    !std::isalpha(static_cast<unsigned char>(caption.text.front())) ||
+                    !std::all_of(caption.text.begin(), caption.text.end(), [](unsigned char ch) {
+                        return std::isalpha(ch) || ch == ' ' || ch == '-' || ch == '\'';
+                    })) continue;
+                for (const auto &value : values) {
+                    const size_t dot = value.text.find('.');
+                    if (value.start != caption.start || dot == std::string::npos ||
+                        dot == 0 || value.text.size() != dot + 4 ||
+                        !std::all_of(value.text.begin(), value.text.end(), [](unsigned char ch) {
+                            return std::isdigit(ch) || ch == '.';
+                        }) || value.text.find('.', dot + 1) != std::string::npos) continue;
+                    adventure_footer = y;
+                    adventure_footer_left = caption.start;
+                    adventure_footer_right = std::max(caption.end, value.end);
+                    break;
+                }
+            }
+        }
+        if (adventure_footer < 0) return std::nullopt;
+    }
+
+    std::optional<NativeToolbarTooltip> tooltip;
+    if (!fortress) {
+        std::vector<std::string> context;
+        context.reserve(gps_->dimy);
+        for (int y = 0; y < gps_->dimy; ++y) {
+            context.push_back(current_row(y));
+            // These interactive screens can leave the map HUD visible. Their
+            // own complete-row/document handlers retain layout and hit targets.
+            // Arena's environment picker also uses the hover frame skin, but
+            // its weather, temperature and time columns are independent fields.
+            for (std::string_view title : {"What do you want to do?", "What would you like to do?",
+                    "Set the weather, temperature, and time.",
+                    "Select memorized content or a form of prose.",
+                    "Choose a poetic form for the composition.",
+                    "Choose a dance form for the choreography.",
+                    "Choose a musical form for the composition.",
+                    "Interactive tutorial", "Information and guides"})
+                if (context.back().find(title) != std::string::npos) return std::nullopt;
+        }
+        tooltip = find_toolbar_tooltip(context);
+    }
+
+    const NativePanelBorders borders(*gps_);
+    const auto ui_settings = native_ui_settings();
+    // Arena has both floating and HUD-attached cards. Require their actual
+    // hover skin for the wider search, rather than generic panel frames.
+    const auto floating_border = [&](int x, int y, int part) {
+        return arena ? ui_settings && native_ui_skin_at(*gps_, x, y,
+            native_texture_hover_rectangle(*gps_)[part % 3][part / 3], ui_settings->classic)
+            : borders.at(x, y, part);
+    };
+    int hud_right = gps_->dimx - 1;
+    if (fortress) {
+        // Stocks and the calendar have three-row button frames in classic
+        // mode. Their middle right edge is not the HUD edge: only the outer
+        // panel continues vertically through all three HUD content rows.
+        hud_right = stocks_x + static_cast<int>(std::string_view("Stocks").size());
+        while (hud_right < gps_->dimx) {
+            bool edge = true;
+            for (int y = header_y; y < header_y + 3; ++y)
+                edge = edge && borders.at(hud_right, y, 5, std::nullopt,
+                    std::pair{0, hud_right + 1});
+            if (edge) break;
+            ++hud_right;
+        }
+        if (hud_right >= gps_->dimx) return std::nullopt;
+    }
+    std::optional<SDL_Rect> interior;
+    // Fortress hover hangs below the three-row HUD and shares its right border.
+    // Its left edge may cross Stocks at a different UI scale/window width;
+    // the actual HUD edge, not a minimum text x, identifies this attachment.
+    // Its top can be open into the HUD: the HUD bottom turns down at the
+    // hover's left edge, while the outer right side continues unbroken.
+    // Validate that whole connection as well as the sides/bottom. A closed
+    // horizontal edge remains valid for separate native skins. Adventure and
+    // Arena also use freestanding frames. A long item stack can extend beside the
+    // bottom HUD and have its bottom edge clipped by the viewport; the HUD is context,
+    // not a full-width boundary. All modes share the same row composition.
+    const int first_top = fortress ? header_y + 2 : arena ? 0 : 1;
+    const int last_top = fortress ? header_y + 5 : arena ? gps_->dimy - 3 : adventure_footer - 3;
+    const int bottom_limit = gps_->dimy;
+    for (int top = first_top; top <= last_top && top + 2 < bottom_limit; ++top) {
+        for (int left = 0; left + 2 <= hud_right; ++left) {
+            // The arena shares dwarfmode's 0x3f9594 hover renderer. Its
+            // attached form starts with JOIN_W_S, not an ordinary NW corner;
+            // requiring NW here discarded the entire card before translation.
+            const bool arena_join = arena && ui_settings && native_ui_skin_at(
+                *gps_, left, top, native_texture_hover_rectangle_join_w_s(*gps_),
+                ui_settings->classic);
+            if (!fortress && !arena_join && !floating_border(left, top, 0)) continue;
+            if (!(arena ? floating_border(left, top + 1, 3)
+                    : borders.at(left, top + 1, 3, std::nullopt,
+                        std::pair{left, gps_->dimx}))) continue;
+            int right = fortress ? hud_right : left + 2;
+            if (!fortress)
+                while (right < gps_->dimx && !floating_border(right, top + 1, 5)) ++right;
+            const auto border = [&](int x, int y, int part) {
+                return arena ? floating_border(x, y, part)
+                    : borders.at(x, y, part, std::nullopt, std::pair{left, right + 1});
+            };
+            if (right >= gps_->dimx || !border(right, top + 1, 5)) continue;
+            if (arena_join) {
+                if (!native_ui_skin_at(*gps_, right, top,
+                        native_texture_hover_rectangle_join_e_se(*gps_),
+                        ui_settings->classic)) continue;
+            } else if (!fortress && !floating_border(right, top, 2)) continue;
+            bool closed = true;
+            for (int x = left + 1; x < right; ++x)
+                if (!border(x, top, 1) && !border(x, top, 7)) {
+                    // The attached renderer leaves this band to the HUD.
+                    // Both dedicated joins plus the current sides/bottom
+                    // establish ownership even when the top band is open.
+                    const unsigned char ch = visible_char_at(x, top);
+                    if (arena_join && (!ch || ch == ' ')) continue;
+                    closed = false;
+                    break;
+                }
+            // Native fortress hover (53.16 Windows 0x3f9594) uses the
+            // dedicated join_w_s / join_e_se skins here, not ordinary NE/E.
+            // In classic mode these are packed glyph+palette values; in
+            // graphics mode they are texture IDs on the current UI layer.
+            if (!closed && fortress && ui_settings && top == header_y + 3 &&
+                native_ui_skin_at(*gps_, left, top,
+                    native_texture_hover_rectangle_join_w_s(*gps_), ui_settings->classic) &&
+                native_ui_skin_at(*gps_, right, top,
+                    native_texture_hover_rectangle_join_e_se(*gps_), ui_settings->classic)) {
+                // The open top is proved by the CURRENT HUD bottom, not by
+                // a terrain word, translated width, or a previous frame.
+                int hud_left = left - 1;
+                while (hud_left >= 0 && borders.at(hud_left, top, 7)) --hud_left;
+                closed = hud_left >= 0 && hud_left < population_x &&
+                    borders.at(hud_left, top, 6, std::nullopt,
+                        std::pair{hud_left, right + 1});
+                for (int y = header_y; closed && y < top; ++y)
+                    closed = borders.at(hud_left, y, 3, std::nullopt,
+                        std::pair{hud_left, right + 1});
+                for (int x = left + 1; closed && x < right; ++x) {
+                    const unsigned char ch = visible_char_at(x, top);
+                    closed = !ch || ch == ' ';
+                }
+            }
+            if (!closed) continue;
+            // Adventure spoor appends direction/party ownership after sizing
+            // the hover frame. The resulting draw can overwrite its right
+            // edge. Accept that edge only when the captured native caption
+            // and every current visible byte prove the overflowing row;
+            // the top, left edge and closed bottom still delimit the card.
+            const auto spoor_overwrites_right = [&](int y) {
+                if (!adventure) return false;
+                const auto native = current_row(y);
+                const auto band = std::string_view(native).substr(left + 1, right - left - 1);
+                const auto visible = trim_view(band);
+                if (!visible.starts_with("Track/Spoor: ")) return false;
+                const int x = left + 1 + static_cast<int>(visible.data() - band.data());
+                const auto drawn = native_drawn_text_for_row(
+                    Match{x, y, static_cast<int>(visible.size()),
+                        kMapHoverPhraseRule, {}, std::string(visible)}, right);
+                if (!drawn || x + static_cast<int>(drawn->size()) <= right) return false;
+                const size_t count = std::min(drawn->size(),
+                    static_cast<size_t>(gps_->dimx - x));
+                return native.compare(x, count, *drawn, 0, count) == 0;
+            };
+            int bottom = top + 2;
+            for (; bottom < bottom_limit; ++bottom) {
+                if (border(left, bottom, 6) && border(right, bottom, 8)) {
+                    for (int x = left + 1; x < right; ++x)
+                        if (!border(x, bottom, 7)) { closed = false; break; }
+                    break;
+                }
+                if (!border(left, bottom, 3) ||
+                    (!border(right, bottom, 5) && !spoor_overwrites_right(bottom))) {
+                    closed = false;
+                    break;
+                }
+            }
+            if (!closed) continue;
+            if (bottom == bottom_limit) {
+                // An offscreen bottom is valid only for the actual hover
+                // skin, with its entire visible top and both sides intact.
+                // The generic border reader also accepts ordinary panels
+                // and classic map glyphs; those cannot prove a clipped card.
+                if (fortress || !ui_settings) continue;
+                const auto &skin = native_texture_hover_rectangle(*gps_);
+                const auto hover_border = [&](int x, int y, int part) {
+                    return native_ui_skin_at(*gps_, x, y,
+                        skin[part % 3][part / 3], ui_settings->classic);
+                };
+                // The paired arena joins and their HUD band were established
+                // above; a clipped bottom does not turn them into NW/NE.
+                closed = arena_join ||
+                    (hover_border(left, top, 0) && hover_border(right, top, 2));
+                for (int x = left + 1; closed && !arena_join && x < right; ++x)
+                    closed = hover_border(x, top, 1);
+                for (int y = top + 1; closed && y < bottom; ++y)
+                    closed = hover_border(left, y, 3) && hover_border(right, y, 5);
+                if (!closed) continue;
+            }
+            SDL_Rect candidate{left + 1, top + 1, right - left - 1, bottom - top - 1};
+            // The surviving gait and time multiplier remain HUD fields even
+            // when a tall card reaches the same rows elsewhere on screen.
+            if (adventure && bottom > adventure_footer &&
+                candidate.x < adventure_footer_right && right > adventure_footer_left)
+                continue;
+            if (tooltip && tooltip->left <= right && tooltip->right >= left &&
+                tooltip->top <= bottom && tooltip->bottom >= top) continue;
+            // A foreground subwindow invalidates this background card. Never
+            // replay a hidden card just because two outer sides survive.
+            for (int y = candidate.y; closed && y < bottom; ++y)
+                for (int x = candidate.x; x < right; ++x)
+                    if (borders.at(x, y, 0) || borders.at(x, y, 2) ||
+                        borders.at(x, y, 3) || borders.at(x, y, 5) ||
+                        borders.at(x, y, 6) || borders.at(x, y, 8) ||
+                        native_picture_box_right(*gps_, x, y) > x ||
+                        native_item_action_at(*gps_, x, y) ||
+                        native_textbox_rect_at(*gps_, x, y)) {
+                        // Building/item detail panels also attach below the
+                        // HUD and share its right edge. Their picture boxes
+                        // and action strips make them interactive panels, not
+                        // map hover prose. In particular retain the native
+                        // caption inset after the wagon/item picture. Filter
+                        // and name fields also make a panel interactive, even
+                        // with no query/results. Never move their placeholder,
+                        // edited text or cursor to the outer panel's left edge.
+                        closed = false;
+                        break;
+                    }
+            if (!closed) continue;
+            // Fortress selectors can share the HUD edge just like Adventure
+            // dialogs. Reject each complete button, not only a whole-row span
+            // that can accidentally join two neighbouring controls.
+            for (int y = candidate.y; closed && y < bottom; ++y) {
+                const auto source = current_row(y).substr(candidate.x, candidate.w);
+                for (const auto &field : split_text_fields(source)) {
+                    if (native_button_text_rect(*gps_, candidate.x + field.start,
+                            candidate.x + field.end, y)) {
+                        closed = false;
+                        break;
+                    }
+                }
+            }
+            if (!closed) continue;
+            if (!interior || candidate.w * candidate.h < interior->w * interior->h)
+                interior = candidate;
+        }
+    }
+    if (!interior) return std::nullopt;
+
+    NativeTextCard card;
+    card.interior = *interior;
+    const auto clipped_captions = captured_clipped_captions();
+    for (int y = interior->y; y < interior->y + interior->h; ++y) {
+        std::string source(interior->w, ' ');
+        std::vector<int> colors(interior->w, 0xffffff);
+        for (int column = 0; column < interior->w; ++column) {
+            const int x = interior->x + column;
+            bool top = false;
+            const auto *active = cell_at(x, y, &top);
+            const auto *cell = screen_override
+                ? screen_override + (static_cast<size_t>(x) * gps_->dimy + y) * 8
+                : active;
+            // The native frame establishes current logical text ownership,
+            // even when its graphical background obscures a few final-grid
+            // cells. A raw-layer suppression pass may own only matching bytes
+            // from that layer, never the inactive map or an older popup.
+            const unsigned char ch = cell && active && cell[0] == active[0] ? cell[0] : 0;
+            source[column] = ch ? ch : ' ';
+            if (active) colors[column] = (active[1] << 16) | (active[2] << 8) | active[3];
+            rows[y][x] = source[column];
+        }
+        const size_t first = source.find_first_not_of(' ');
+        if (first == std::string::npos) continue;
+        size_t end = source.find_last_not_of(' ') + 1;
+        const int first_x = interior->x + static_cast<int>(first);
+        const int edge_x = interior->x + interior->w;
+        std::string complete_source;
+        // Hover names are drawn before the graphical frame. Recover the
+        // actual complete draw at this position, rather than treating the
+        // last word inside the frame as a complete personal name. Verify
+        // the prefix and every surviving suffix byte before owning it.
+        const std::string visible = source.substr(first, end - first);
+        const auto drawn = native_drawn_text_for_row(
+            Match{first_x, y, static_cast<int>(visible.size()),
+                  kMapHoverPhraseRule, {}, visible}, edge_x);
+        auto drawn_source = drawn ? std::string_view(*drawn) : std::string_view{};
+        // Native wrapped lines retain trailing padding. It is not clipped
+        // text: restoring it would change the identity of an already-owned
+        // paragraph row and allow the same prose to be laid out twice.
+        while (!drawn_source.empty() && drawn_source.back() == ' ')
+            drawn_source.remove_suffix(1);
+        bool uniform = true;
+        for (size_t i = first; i < end; ++i)
+            if (source[i] != ' ' && colors[i] != colors[first]) uniform = false;
+        if (uniform && drawn_source.size() > visible.size() &&
+            drawn_source.starts_with(visible) && !drawn_source.ends_with("...")) {
+            const size_t physical_end = std::min(
+                first + drawn_source.size(), static_cast<size_t>(gps_->dimx - interior->x));
+            std::string tail;
+            std::vector<int> tail_colors;
+            bool current = true;
+            for (size_t i = end; i < physical_end; ++i) {
+                const int x = interior->x + static_cast<int>(i);
+                const unsigned char expected = drawn_source[i - first];
+                bool top = false;
+                const auto *active = cell_at(x, y, &top);
+                const auto *cell = screen_override
+                    ? screen_override + (static_cast<size_t>(x) * gps_->dimy + y) * 8
+                    : active;
+                const int color = active
+                    ? (active[1] << 16) | (active[2] << 8) | active[3] : -1;
+                if (active && (active[0] ? active[0] : ' ') == expected &&
+                    (expected == ' ' || color == colors[first])) {
+                    // A raw-layer pass may suppress only its own matching
+                    // bytes; a different layer still gets the full meaning.
+                    tail += cell && (cell[0] ? cell[0] : ' ') == expected
+                        ? static_cast<char>(expected) : ' ';
+                } else if (x == edge_x && borders.at(x, y, 5)) {
+                    // The frame may overwrite one original letter. A blank
+                    // in the physical mask leaves that border untouched.
+                    tail += ' ';
+                } else {
+                    current = false;
+                    break;
+                }
+                tail_colors.push_back(colors[first]);
+            }
+            if (current) {
+                source.resize(end);
+                colors.resize(end);
+                source += tail;
+                colors.insert(colors.end(), tail_colors.begin(), tail_colors.end());
+                end = source.size();
+                complete_source = drawn_source;
+                for (size_t i = first; i < end; ++i)
+                    rows[y][interior->x + static_cast<int>(i)] = source[i];
+            }
+        }
+        // The native spoor caption can fill the card and put its final byte
+        // on the graphical right border. Own that actual current glyph only
+        // when it completes the structured source; never invent a missing
+        // suffix or enlarge the translated text box beyond the inner frame.
+        const std::string_view caption(source.data() + first, end - first);
+        if (complete_source.empty() && end == static_cast<size_t>(interior->w) &&
+            edge_x < gps_->dimx &&
+            caption.starts_with("Track/Spoor: ") && !translate_map_track(caption)) {
+            bool top = false;
+            const auto *active = cell_at(edge_x, y, &top);
+            const auto *edge = screen_override
+                ? screen_override + (static_cast<size_t>(edge_x) * gps_->dimy + y) * 8
+                : active;
+            if (active && edge && edge[0] == active[0] &&
+                ((edge[0] >= 'a' && edge[0] <= 'z') || (edge[0] >= 'A' && edge[0] <= 'Z'))) {
+                const int color = (active[1] << 16) | (active[2] << 8) | active[3];
+                const std::string complete = std::string(caption) + static_cast<char>(edge[0]);
+                if (color == colors[end - 1] && translate_map_track(complete)) {
+                    source.push_back(static_cast<char>(edge[0]));
+                    colors.push_back(color);
+                    rows[y][edge_x] = static_cast<char>(edge[0]);
+                    ++end;
+                }
+            }
+        }
+        // The spoor formatter shortens the noun before it appends directions.
+        // Its captured original is not a prefix expansion: the native helper
+        // deletes vowels. Pair it with this current draw's physical bytes,
+        // including any suffix recovered around the frame above.
+        if (uniform) {
+            const std::string semantic = complete_source.empty()
+                ? source.substr(first, end - first) : complete_source;
+            for (const auto &capture : clipped_captions) {
+                if (capture.x == first_x && capture.y == y &&
+                    capture.visible == semantic && !capture.complete.empty()) {
+                    complete_source = capture.complete;
+                    break;
+                }
+            }
+        }
+        card.rows.push_back({first_x, y,
+            source.substr(first, end - first),
+            std::vector<int>(colors.begin() + first, colors.begin() + end),
+            std::move(complete_source)});
+    }
+    if (adventure) {
+        // The adventure HUD also uses these closed frames for centered
+        // announcements. Read the live row before translation, including in
+        // raw-layer suppression passes, so both paths keep the same alignment.
+        // One grid cell of asymmetry is the native integer-centering roundoff.
+        // Edge-filling hover labels provide no evidence of centered layout.
+        for (auto &row : card.rows) {
+            const std::string native = current_row(row.y);
+            const std::string_view band(native.data() + interior->x, interior->w);
+            const auto text = trim_view(band);
+            if (text.empty()) continue;
+            const int inset_left = static_cast<int>(text.data() - band.data());
+            const int inset_right = interior->w - inset_left - static_cast<int>(text.size());
+            row.centered = inset_left > 1 && inset_right > 1 &&
+                std::abs(inset_left - inset_right) <= 1;
+        }
+    }
+    return card.rows.empty() ? std::nullopt : std::optional(std::move(card));
+}
+
+// Both the compact spoor caption and the tracking paragraph carry the same
+// footwear/anatomy noun. Keep their sizes, species and body sides in the
+// existing typed grammars, outside generic prose/voice adjective matching.
+std::optional<std::string> Overlay::translate_map_track_noun(std::string_view source) const {
+    if (!config_.compositional_rules) return std::nullopt;
+    source = trim_view(source);
+    const auto scoped = [&](std::string_view text, const char *ns) {
+        std::vector<size_t> origins;
+        return RULESETS.translate_with_origins(native_text_to_utf8(text), ns, origins);
+    };
+    const auto part = [&](std::string_view text) -> std::optional<std::string> {
+        const std::string noun = native_text_to_utf8(text);
+        auto name = RULESETS.translate_anatomy(noun);
+        if (!name) name = RULESETS.translate_equipment_name(noun, true);
+        if (!name) name = translate_inventory_item_name(text, -1, -1);
+        return name;
+    };
+    const auto sided_part = [&](std::string_view text) -> std::optional<std::string> {
+        if (auto name = part(text)) return name;
+        const size_t space = text.find(' ');
+        if (space == std::string_view::npos) return std::nullopt;
+        auto side = scoped(text.substr(0, space), "::map_hover::track_side");
+        if (!side) return std::nullopt;
+        auto name = part(trim_view(text.substr(space + 1)));
+        return name ? std::optional(*side + *name) : std::nullopt;
+    };
+    const auto marked_part = [&](std::string_view text) -> std::optional<std::string> {
+        if (auto name = sided_part(text)) return name;
+        // Native 0x407b33..0x407e92 and 0x408254..0x40839a prepend
+        // a complete liquid material to an item or anatomical part. Try
+        // semantic word boundaries, never translate those words separately.
+        for (size_t at = text.rfind(' '); at != std::string_view::npos;
+             at = at ? text.rfind(' ', at - 1) : std::string_view::npos) {
+            const auto name = sided_part(trim_view(text.substr(at + 1)));
+            if (!name) continue;
+            const auto material = translate_material_name(text.substr(0, at));
+            if (material) return *material + *name;
+        }
+        return std::nullopt;
+    };
+    if (auto name = marked_part(source)) return name;
+    for (size_t at = source.find("'s "); at != std::string_view::npos;
+         at = source.find("'s ", at + 3)) {
+        const auto owner = scoped(source.substr(0, at + 2), "::map_hover::track_owner");
+        if (!owner) continue;
+        if (auto name = marked_part(trim_view(source.substr(at + 3)))) return *owner + *name;
+    }
+    return std::nullopt;
+}
+
+// The native adventure formatter emits one description followed by compass
+// components and optional ownership. A slash inside Track/Spoor is part of
+// the label; only the suffix fields carry directions. Resolve complete item
+// and anatomy names before composing the reviewed display templates.
+std::optional<std::string> Overlay::translate_map_track(std::string_view source) const {
+    constexpr std::string_view prefix = "Track/Spoor: ";
+    if (!source.starts_with(prefix)) return std::nullopt;
+    source.remove_prefix(prefix.size());
+    const auto term = [&](std::string_view key) -> std::optional<std::string> {
+        const auto found = map_track_translations_.find(std::string(key));
+        if (found == map_track_translations_.end() || found->second.empty()) return std::nullopt;
+        return found->second;
+    };
+    const auto wrap = [&](std::string_view key, const std::string &value)
+            -> std::optional<std::string> {
+        auto target = term(key);
+        if (!target) return std::nullopt;
+        const size_t at = target->find("{s}");
+        if (at == std::string::npos || target->find("{s}", at + 3) != std::string::npos)
+            return std::nullopt;
+        target->replace(at, 3, value);
+        return target;
+    };
+    const size_t first_slash = source.find('/');
+    const auto description = trim_view(source.substr(0, first_slash));
+    auto translated = term(description);
+    if (!translated && config_.compositional_rules) {
+        for (std::string_view suffix : {" imprint", " print"}) {
+            if (!description.ends_with(suffix)) continue;
+            // Both footwear and bare feet can leave impressions or liquid
+            // prints. Existing scoped grammars retain size, side and species
+            // anatomy without guessing names from generic English fragments.
+            auto name = translate_map_track_noun(
+                description.substr(0, description.size() - suffix.size()));
+            if (name) translated = wrap(std::string("{s}") + std::string(suffix), *name);
+            break;
+        }
+    }
+    if (!translated) return std::nullopt;
+    size_t slash = first_slash;
+    while (slash != std::string_view::npos) {
+        const size_t next = source.find('/', slash + 1);
+        const auto field = trim_view(source.substr(slash + 1,
+            next == std::string_view::npos ? next : next - slash - 1));
+        std::optional<std::string> value;
+        if (field == "yours or companion's") {
+            // Ownership is the final optional native component.
+            if (next != std::string_view::npos) return std::nullopt;
+            value = term(field);
+        } else {
+            // Expand abbreviations to existing dictionary keys, never add
+            // global translations for the single-letter keyboard labels.
+            static constexpr std::array<std::pair<std::string_view, std::string_view>, 8>
+                compass = {{{"N", "north"}, {"S", "south"}, {"E", "east"}, {"W", "west"},
+                    {"NE", "NE"}, {"NW", "NW"}, {"SE", "SE"}, {"SW", "SW"}}};
+            for (const auto &[native, key] : compass)
+                if (field == native) { value = exact_literal_translation(key); break; }
+        }
+        if (!value || value->empty()) return std::nullopt;
+        *translated += "/" + *value;
+        slash = next;
+    }
+    return wrap("Track/Spoor: {s}", *translated);
+}
+
+std::optional<std::string> Overlay::translate_arena_numbered_creature(
+        std::string_view source) const {
+    if (!config_.compositional_rules) return std::nullopt;
+    source = trim_view(source);
+    // Arena assigns a species/caste followed by its decimal instance number.
+    // Its name formatter can preserve that whole string as a language-less
+    // name. Share this grammar with the earlier formatter-owned draw pass.
+    // A dead unit's caption keeps the same numbered identity as an owner.
+    // Parse that identity before handing the complete body noun to the typed
+    // grammar; a personal-name parser cannot own "Alligator 8" and a generic
+    // word matcher would scatter "fifth left front toe" across the grid.
+    const size_t owner_at = source.find("'s ");
+    const auto identity = source.substr(0, owner_at);
+    const size_t number_at = identity.rfind(' ');
+    if (number_at == std::string_view::npos || number_at == 0 ||
+            number_at + 1 == identity.size() ||
+            !std::all_of(identity.begin() + number_at + 1, identity.end(),
+                [](unsigned char ch) { return ch >= '0' && ch <= '9'; }) ||
+            !native_arena_map_screen()) return std::nullopt;
+    const auto species = translate_creature_descriptor(identity.substr(0, number_at), true);
+    if (!species) return std::nullopt;
+    const std::string unit = *species + std::string(identity.substr(number_at));
+    if (owner_at == std::string_view::npos) return unit;
+
+    auto body_source = trim_view(source.substr(owner_at + 3));
+    if (body_source.empty()) return std::nullopt;
+    // Whole corpses/remains already own their damage and quantity wrappers.
+    if (auto body = translate_corpsepiece_item_name(body_source))
+        return unit + "的" + *body;
+
+    const auto scoped = [](std::string_view text, const char *context) {
+        std::vector<size_t> origins;
+        return RULESETS.translate_with_origins(native_text_to_utf8(text), context, origins);
+    };
+    std::string condition;
+    for (const auto &[prefix, context] : {
+            std::pair<std::string_view, const char *>{"rotten ", "::items::corpsepiece::^0"},
+            {"mangled ", "::items::corpse::mangled"}}) {
+        if (!body_source.starts_with(prefix)) continue;
+        const auto target = scoped(prefix, context);
+        if (!target) return std::nullopt;
+        condition += *target;
+        body_source.remove_prefix(prefix.size());
+    }
+    // Anatomy owns side/ordinal/owner-chain order. The body-component grammar
+    // also admits complete tissue/material names without treating their words
+    // as independent UI labels.
+    auto body = RULESETS.translate_anatomy(native_text_to_utf8(body_source));
+    if (!body) body = scoped(body_source, "::items::corpsepiece::part");
+    return body ? std::optional(unit + "的" + condition + *body) : std::nullopt;
+}
+
+// Recovered from the installed PE 53.16 constructor at RVA 0x406860.
+// Its 16-way table at 0x4084e0 selects item, terrain, unit, building,
+// vermin, flow, campfire, item/deposit, item, fire, water, magma, spoor,
+// sound, remembered and sensed. Static branches live in local-overrides;
+// dynamic fields use complete, typed grammars shared with their other views.
+std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view source) const {
+    source = trim_view(source);
+    if (source.empty()) return std::nullopt;
+    if (auto target = exact_literal_translation(source)) return target;
+    // The hover owns the whole caption, including its untranslated fallback,
+    // before the grid matcher runs. Resolve default stockpile names through
+    // the same TSV templates/category resolver as task destinations here.
+    // Require the complete caption; unrelated templates must not reinterpret
+    // item, terrain or unit names. TSV rules do not depend on TOML composition.
+    for (int index : candidate_template_rules(source)) {
+        const Rule &rule = rules_[static_cast<size_t>(index)];
+        if (rule.source != "Stockpile #{d}" && rule.source != "{s} Stockpile #{d}")
+            continue;
+        size_t end = 0;
+        std::vector<std::string> captures;
+        if (!match_template(rule, source, 0, &end, &captures) ||
+            end != source.size()) continue;
+        bool complete = false;
+        auto target = translate_template_captures(rule, captures, &complete);
+        if (complete && !target.empty()) return target;
+    }
+    if (auto target = translate_map_track(source)) return target;
+
+    // Both liquid branches append a single native depth and the fixed /7].
+    // Keep the measurement intact and translate only its complete type label.
+    const size_t depth = source.rfind(" [");
+    if (depth != std::string_view::npos && source.substr(depth).size() == 6 &&
+        source[depth + 2] >= '0' && source[depth + 2] <= '7' &&
+        source.substr(depth + 3) == "/7]") {
+        const auto kind = source.substr(0, depth);
+        for (std::string_view liquid : {"Water", "Stagnant water", "Salt water",
+                "Stagnant salt water", "Lava", "Magma"}) {
+            if (kind != liquid) continue;
+            if (auto target = exact_literal_translation(kind))
+                return *target + std::string(source.substr(depth));
+        }
+    }
+    if (!config_.compositional_rules) return std::nullopt;
+    if (auto target = translate_arena_numbered_creature(source)) return target;
+    const std::string utf8 = native_text_to_utf8(source);
+    std::vector<size_t> origins;
+    if (auto target = RULESETS.translate_with_origins(utf8, "::map_hover", origins))
+        return target;
+    // Unit captions put the species/office before the complete identity.
+    // Resolve that identity before generic item/word grammars can split it.
+    if (source.size() > 4 && (source.starts_with("The ") || source.starts_with("the ")) &&
+            source[4] >= 'a' && source[4] <= 'z') {
+        std::string identity(source);
+        identity.front() = 't';
+        if (auto target = translate_legends_actor(identity, 0, true)) return target;
+    }
+    // Fortress units use the roster's complete "name, profession" caption.
+    // Resolve it before terrain/items and the whole-row untranslated fallback
+    // consume the field; reuse the shared name, office and caste grammar.
+    if (source.find(',') != std::string_view::npos) {
+        auto target = translate_procedural_fragment(std::string(source));
+        if (item_description_translation_complete(target)) return target;
+    }
+    auto terrain = RULESETS.translate_tile_description(utf8);
+    // A plant cap and a cloth cap share a suffix; only a complete equipment
+    // production licenses the finished-material interpretation.
+    if (terrain && RULESETS.translate_equipment_name(utf8, true))
+        if (auto target = translate_inventory_item_name(source, -1, -1)) return target;
+    if (terrain) return terrain;
+    if (auto target = translate_creature_label(source)) return target;
+    if (auto target = translate_inventory_item_name(source, -1, -1)) return target;
+    if (auto target = translate_compositional(std::string(source))) return target;
+    // A named unit can contribute only its given name to the hover card,
+    // followed by a separate terrain row. Require a real native T_WORD and
+    // reuse the personal-name renderer; title case alone is not evidence
+    // that an unknown item or terrain label is a name.
+    if (source.find(' ') == std::string_view::npos &&
+            native_name_language_masks_.contains(lower_native_name(std::string(source))))
+        return translate_legends_name(source, true);
+    return std::nullopt;
+}
+
+void Overlay::append_map_hover_phrases(const NativeTextCard &card,
+        std::vector<std::string> &rows, std::vector<Match> &matches, int only_y) const {
+    // The tracking popup wraps its description and compass sentences before
+    // drawing. Resolve connected prose through the shared complete UI catalog
+    // BEFORE a material or item row consumes one fragment of the sentence.
+    // Blank lines, margins and the live frame bound each candidate; headings
+    // and compact item/unit captions retain their ordinary row layout.
+    std::unordered_set<int> paragraph_rows;
+    const int right = card.interior.x + card.interior.w;
+    // Card capture restores the active layer after the earlier document pass.
+    // Keep paragraphs that pass already owns, including empty reflow tails,
+    // instead of laying them out again or restoring their original English.
+    for (const auto &row : card.rows)
+        if (std::any_of(matches.begin(), matches.end(), [&](const Match &match) {
+                return native_paragraph_owns_card_row(match, row);
+            })) {
+            paragraph_rows.insert(row.y);
+            std::fill_n(rows[row.y].begin() + row.x, row.source.size(), ' ');
+        }
+    for (size_t begin = 0; begin < card.rows.size(); ++begin) {
+        const auto &first = card.rows[begin];
+        if (paragraph_rows.contains(first.y)) continue;
+        // Fortress engraving cards recover their complete logical rows here,
+        // after the visible-grid item pass. These are artwork paragraphs,
+        // not independent hover nouns or ordinary help-catalog messages.
+        const bool engraving = first.source.starts_with("Engraved on the wall is ") ||
+            first.source.starts_with("Engraved on the floor is ") ||
+            first.source.starts_with("Engraved is ");
+        std::string source, best_target;
+        std::vector<int> colors, best_colors;
+        std::vector<Match> spans, best_spans;
+        size_t best_end = begin;
+        for (size_t end = begin; end < card.rows.size(); ++end) {
+            const auto &row = card.rows[end];
+            if (row.x != first.x || row.y != first.y + static_cast<int>(end - begin) ||
+                row.centered || row.x + static_cast<int>(row.source.size()) > right ||
+                (!row.complete_source.empty() && row.complete_source != row.source) ||
+                rows[row.y].compare(row.x, row.source.size(), row.source) != 0) break;
+            if (!source.empty()) {
+                source += ' ';
+                colors.push_back(colors.back());
+            }
+            source += row.source;
+            colors.insert(colors.end(), row.foregrounds.begin(), row.foregrounds.end());
+            spans.push_back({row.x, row.y, static_cast<int>(row.source.size()),
+                kUiMessageRule, {}, row.source});
+            // A terminal sentence mark is required even for single-line
+            // messages. Native draws can retain spaces after the full stop;
+            // those still belong to the physical span, not the sentence end.
+            // A short title must not absorb the following label.
+            const auto sentence_source = trim_view(source);
+            if (sentence_source.empty() || std::string_view(".!?").find(sentence_source.back()) ==
+                    std::string_view::npos) continue;
+            std::vector<int> target_colors;
+            const auto target = engraving ? translate_item_description_source(source, true)
+                : translate_help_paragraph(source, colors, target_colors, true);
+            if (!target || target->empty()) continue;
+            best_target = *target;
+            best_colors = std::move(target_colors);
+            best_spans = spans;
+            best_end = end;
+        }
+        // An engraving owns the whole connected description; an unfinished
+        // historical tail must not be reinterpreted as independent hover nouns.
+        if ((engraving && best_spans.size() != spans.size()) || best_spans.empty() ||
+                !append_bounded_paragraph(std::move(best_spans),
+                best_target, rows, matches, only_y, right, right, best_colors)) continue;
+        for (size_t end = begin; end <= best_end; ++end)
+            paragraph_rows.insert(card.rows[end].y);
+        begin = best_end;
+    }
+    for (const auto &row : card.rows) {
+        if (paragraph_rows.contains(row.y)) continue;
+        // A submitted message may already own this complete physical row,
+        // including a continuation whose translated output is now empty.
+        if (rows[row.y].compare(row.x, row.source.size(), row.source) != 0) continue;
+        // Whole-row translations precede fragment matching. Color changes
+        // remain semantic boundaries unless the ordinary matcher knows how
+        // to map them: do not flatten an item's colored quality/status runs.
+        bool uniform = true;
+        for (size_t i = 0; i < row.source.size(); ++i)
+            if (row.source[i] != ' ' && row.foregrounds[i] != row.foregrounds.front())
+                uniform = false;
+        if (!uniform) continue;
+        std::string normalized;
+        bool space = false;
+        for (unsigned char ch : row.complete_source.empty() ? row.source : row.complete_source) {
+            if (ch == ' ') { space = true; continue; }
+            if (space && !normalized.empty()) normalized += ' ';
+            normalized += static_cast<char>(ch);
+            space = false;
+        }
+        auto target = translate_map_hover_phrase(normalized);
+        std::string knowledge_state;
+        constexpr std::string_view remembered_suffix = " (remembered)";
+        if (!target && normalized.ends_with(remembered_suffix)) {
+            // This state qualifies the whole remembered caption. Resolve its
+            // noun through the same terrain/item grammar as a visible tile;
+            // the full-row match otherwise hides later suffix/template rules.
+            if (auto state = exact_literal_translation(trim_view(remembered_suffix))) {
+                knowledge_state = std::move(*state);
+                normalized.resize(normalized.size() - remembered_suffix.size());
+                target = translate_map_hover_phrase(normalized);
+            }
+        }
+        if (target && !target->empty()) *target += knowledge_state;
+        const bool untranslated = !item_description_translation_complete(target);
+        if (untranslated) {
+            // Every native caption owns the complete row, even when a mod
+            // introduces unknown vocabulary. Preserve it visibly as one noun
+            // rather than declaring a translated prefix to be a success.
+            target = native_text_to_utf8(row.complete_source.empty()
+                ? row.source : row.complete_source);
+        }
+        if (!target || target->empty() || target->find("[C:") != std::string::npos ||
+            target->find_first_of("\r\n") != std::string::npos) continue;
+        Match match{row.x, row.y, static_cast<int>(row.source.size()),
+            kMapHoverPhraseRule, std::move(*target), row.source};
+        match.layout_foreground_rgb = row.foregrounds.front();
+        match.native_hover_untranslated = untranslated;
+        if (untranslated) match.native_help_review_source = row.complete_source.empty()
+            ? row.source : row.complete_source;
+        std::fill_n(rows[row.y].begin() + row.x, row.source.size(), ' ');
+        if (only_y < 0 || only_y == row.y) matches.push_back(std::move(match));
+    }
+}
+
+void Overlay::layout_map_hover(SDL_Renderer *renderer) {
+    if (!gps_ || !face_ || !renderer || gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
+    std::vector<std::vector<Match *>> rows;
+    int left = -1, right = -1;
+    for (Match &match : prepared_matches_) {
+        if (match.rule != kMapHoverRowRule || match.target.empty()) continue;
+        left = match.layout_x;
+        right = left + match.layout_length;
+        rows.push_back({&match});
+    }
+    if (rows.empty()) return;
+    layout_fortress_text_rows(renderer, rows, left, right, true, true);
+    static bool logged = false;
+    if (!logged) {
+        log_line("INFO", "Activated whole map hover layout: columns=" +
+            std::to_string(left) + ".." + std::to_string(right) + "; rows=" +
+            std::to_string(rows.size()) + "; fixed font=" +
+            std::to_string(rows.front().front()->layout_font_pixels) + "px");
+        logged = true;
+    }
+}

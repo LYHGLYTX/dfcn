@@ -1,0 +1,253 @@
+# Complete native Justice interrogation report grammar; typed identity fields and all response/concession branches.
+# Scope<TAB>source<TAB>translation<TAB>capture scopes<TAB>native evidence
+justice-interrogation-paragraph	{s}	{s1}	justice-interrogation-unit	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+# Sentence sequences are partitioned at complete punctuation boundaries by the report owner; historical descriptions must never be tried one word at a time.
+justice-interrogation-unit	{s}	{s1}	justice-interrogation-sentence	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-unit	{s}	{s1}	historical-event-paragraph	0x1402c1582 history event lookup;0x1402c166f virtual describe +0xd0;upstream types75/128/129
+justice-interrogation-unit	{s}	{s1}	justice-intrigue-paragraph	0x1402c1582 history event lookup;0x1402c166f virtual describe +0xd0;types128/129
+justice-interrogation-unit	{s}	{s1}	$description	0x1402c166f;revealed history event virtual description +0xd0
+justice-interrogation-sentence	Subject {s}.	受审者{s1}。	justice-interrogation-response	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Subject {s}, despite {s}.	尽管{s2}，受审者仍{s1}。	justice-interrogation-response,justice-interrogation-factors	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factors	{s}	{s1}	justice-interrogation-factor	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factors	{s} and {s}	{s1}，且{s2}	justice-interrogation-factor,justice-interrogation-factor	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors;native two adverse factors
+justice-interrogation-factor	{s}'s {s}	{s1}{s2}	$unit,justice-interrogation-relationship-factor	0x1402c1c73..1d24;0x1402c1f25..1fd0;0x1402c2483..2531;subject identity 0x140b92f10
+justice-interrogation-factor	{s}	{s1}	justice-interrogation-relationship-factor	0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Appealed to shared worship of {s} in order to elicit information.	以共同信奉{s1}为由规劝受审者，试图获取情报。	$unit	0x1402c1883..18f6;deity identity 0x140b92f10
+justice-interrogation-sentence	Attempted to appeal to shared worship of {s} in order to elicit information.	试图以共同信奉{s1}为由规劝受审者，以获取情报。	$unit	0x1402c1883..18f6;deity identity 0x140b92f10
+justice-interrogation-sentence	Subject confessed to {s}.	受审者承认了{s1}。	justice-interrogation-crime	0x1402c0d90..1086;crime type switch
+justice-interrogation-sentence	Subject revealed that "{s}" is in fact an assumed identity.	受审者交代，“{s1}”实际上是假身份。	$person	0x1402c1213..12f4;identity name 0x140a946e0
+justice-interrogation-sentence	Subject revealed that being nameless is in fact an assumed identity.	受审者交代，所谓没有姓名实际上是在掩饰身份。		0x1402c12d4..12f4;unnamed assumed identity
+justice-interrogation-sentence	Subject's true name is {s}.	受审者的真名是{s1}。	$unit	0x1402c12e6..133c;true name 0x140b92f10
+justice-interrogation-sentence	Subject has used "{s}" as an alias in the past.	受审者过去曾使用“{s1}”这个化名。	$person	0x1402c13ab..14a5;identity name 0x140a946e0
+justice-interrogation-sentence	Met with subject.	与受审者会面。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Unfortunately, no new pertinent information was revealed.	遗憾的是，未能获取新的相关情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Made intimidating remarks in order to elicit information.	以言语恐吓受审者，试图获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Attempted to make intimidating remarks in order to elicit information.	试图以言语恐吓受审者，以获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Made flattering remarks in order to elicit information.	以奉承的话讨好受审者，试图获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Attempted to make flattering remarks in order to elicit information.	试图以奉承的话讨好受审者，以获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Appealed to subject's belief in harmony.	以受审者对和谐的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value18 at 0x1402c1952;direct period, no elicit-information suffix
+justice-interrogation-sentence	Attempted to appeal to subject's belief in harmony.	试图以受审者对和谐的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value18 at 0x1402c1952;direct period, no elicit-information suffix
+justice-interrogation-sentence	Appealed to subject's belief in cooperation.	以受审者对合作的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value12 at 0x1402c195b;direct period, no elicit-information suffix
+justice-interrogation-sentence	Attempted to appeal to subject's belief in cooperation.	试图以受审者对合作的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value12 at 0x1402c195b;direct period, no elicit-information suffix
+justice-interrogation-sentence	Appealed to subject's belief in the truth.	以受审者对真相的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value5 at 0x1402c197b;direct period, no elicit-information suffix
+justice-interrogation-sentence	Attempted to appeal to subject's belief in the truth.	试图以受审者对真相的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value5 at 0x1402c197b;direct period, no elicit-information suffix
+justice-interrogation-sentence	Appealed to subject's belief in the law.	以受审者对法律的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value0 at 0x1402c1998;direct period, no elicit-information suffix
+justice-interrogation-sentence	Attempted to appeal to subject's belief in the law.	试图以受审者对法律的重视为由进行劝说。		0x1402c1902..0x1402c1a1b;value0 at 0x1402c1998;direct period, no elicit-information suffix
+justice-interrogation-sentence	Built rapport in order to elicit information.	与受审者建立融洽关系，试图获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Attempted to build rapport in order to elicit information.	试图与受审者建立融洽关系，以获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Misrepresented facts surrounding case in order to elicit information.	歪曲案件相关事实，试图获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Attempted to misrepresent facts surrounding case in order to elicit information.	试图歪曲案件相关事实，以获取情报。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Subject naively complied.	受审者毫无戒心地配合了审讯。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Subject was cagey and refused to comply.	受审者十分警惕，拒绝配合审讯。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	In retrospect, interrogator may have completely misjudged subject's character.	事后看来，审讯者可能完全误判了受审者的性格。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	acquiesced to the argument	接受了这番论证		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was naturally inclined to speak	天性健谈		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	had a trusting nature and agreed	天性轻信，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too afraid not to comply	过于恐惧，不敢不从		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	gave in to fear of death	因惧怕死亡而屈服		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	succumbed to vanity	受虚荣心驱使而屈服		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too vain to accept death and agreed	虚荣心太强，无法接受死亡，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was overcome by greed	被贪欲压倒了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was swayed by the emotional appeal	被情感上的劝说打动了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	desired vengeance and willingly complied	渴望复仇，因而自愿配合		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too envious of others to face death and agreed	太过嫉妒他人，无法面对死亡，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too ambitious to accept death and agreed	野心太大，无法接受死亡，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too proud to accept death and agreed	太过骄傲，无法接受死亡，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was too unsettled by death to face it and agreed	对死亡太过不安，无法面对，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	could not accept the uncertainty following death and agreed	无法接受死后的未知，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	valued harmony	重视和谐		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	believed in the value of cooperation	相信合作的价值		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	valued honesty	重视诚实		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	value the law	重视法律		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	respected interrogator and agreed	出于对审讯者的尊重而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	complied out of fear of interrogator	出于对审讯者的恐惧而配合		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	agreed for love of interrogator	出于对审讯者的爱而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	accepted out of loyalty to interrogator	出于对审讯者的忠诚而接受了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	trusted interrogator and agreed	信任审讯者，因而答应了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was intellectually stubborn and refused to listen	固执己见，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was a natural loner and refused to listen	天性孤僻，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	had a distrustful nature and refused to listen	天性多疑，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was unafraid in the moment	当时毫不畏惧		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	did not fear death and refused	不惧死亡，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was not afraid and refused	毫不畏惧，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was unaffected by the comments and refused	未受那些话影响，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	felt no avarice and refused	毫无贪欲，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was unswayed by the emotional appeal and refused	未被情感上的劝说打动，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	lacked a desire for vengeance and refused	没有复仇的欲望，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was willing to accept eventual death and refused	愿意接受最终的死亡，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	spurned harmony and refused to listen	轻视和谐，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	spurning the value of cooperation and refused to listen	轻视合作的价值，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	spurning the truth and refused to listen	轻视真相，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	spurned the law and refused to listen	轻视法律，拒绝听取劝说		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	had no respect for interrogator and refused	不尊重审讯者，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	was unafraid of interrogator and refused	不怕审讯者，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	hated interrogator and refused	憎恨审讯者，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	felt no loyalty to interrogator and refused	对审讯者毫无忠诚，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-response	distrusted interrogator and refused	不信任审讯者，因而拒绝了		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	spurning the value of harmony	轻视和谐的价值		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	spurning the value of cooperation	轻视合作的价值		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	spurning the value of honesty	轻视诚实的价值		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	spurning the truth	轻视真相		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	spurning the law	轻视法律		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being intellectually stubborn	固执己见		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being a natural loner	天性孤僻		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	a distrustful nature	天性多疑		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being unafraid in the moment	当时毫不畏惧		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being unafraid of death	不惧死亡		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being unafraid	毫不畏惧		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being unaffected by the comments	未受那些话影响		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	feeling no avarice	毫无贪欲		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being unswayed by the emotional appeal	未被情感上的劝说打动		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	a lack of desire for vengeance	没有复仇的欲望		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being willing to accept death	愿意接受死亡		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	valuing harmony	重视和谐		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	a belief in the value of cooperation	相信合作的价值		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	valuing the truth	重视真相		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	valuing the law	重视法律		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	an acquiescing nature	天性顺从		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being inclined to converse	天性健谈		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being trusting by nature	天性轻信		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being afraid	感到害怕		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	fearing of death	惧怕死亡		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	an unwillingness to accept death	不愿接受死亡		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	feelings of vanity	怀有虚荣心		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	feelings of greed	怀有贪欲		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	being swayed by the emotional appeal	被情感上的劝说打动		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-factor	a desire for vengeance	渴望复仇		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	lack of respect of interrogator	不尊重审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	lack of fear toward interrogator	不怕审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	hatred of interrogator	憎恨审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	lack of loyalty toward interrogator	对审讯者毫无忠诚		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	distrust of interrogator	不信任审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	respect of interrogator	尊重审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	fear of interrogator	惧怕审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	love of interrogator	爱着审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	loyalty toward interrogator	忠于审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-relationship-factor	trust of interrogator	信任审讯者		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	multiple crimes	多项罪行		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the crime	该罪行		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the production order violation	违反生产命令		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the export prohibition violation	违反出口禁令		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the job order violation	违反工作命令		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the conspiracy to slow labor	合谋怠工		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	attempted murder	谋杀未遂		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the murder	谋杀		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	disorderly conduct	扰乱秩序		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	building destruction	破坏建筑		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	vandalism	蓄意破坏		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	attempted kidnapping	绑架未遂		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the kidnapping	绑架		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	attempted theft	盗窃未遂		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the theft	盗窃		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	the robbery	抢劫		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	blood-drinking	吸血		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	embezzlement	侵吞公款		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	treason	叛国		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	espionage	间谍活动		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-crime	bribery	贿赂		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-interrogation-sentence	Subject has used a nameless identity in the past.	受审者过去曾使用过无名身份。		0x1402c0c20..0x1402c1768;0x1402c1770..0x1402c2c36;native report constructors
+justice-intrigue-paragraph	{s}	{s1}	justice-intrigue-sentence	0x1402a9e40..0x1402aa524;0x1402aa700..0x1402aad8a;0x1402a81f0..0x1402a9c5b
+justice-intrigue-paragraph	{s} {s}	{s1}{s2}	justice-intrigue-sentence,justice-intrigue-paragraph	0x1402aa3a3;0x1402aa425;0x1402aac09;0x1402aac8b;native sentences joined by spaces
+# Historical intrigue in reports: complete native constructor branches, extracted from PE.
+# Native actor fields retain their relationship/assumed-identity structure; generated names remain typed fields.
+justice-intrigue-sentence	In {s}, {s}.	{s1}，{s2}。	$date,justice-intrigue-recruitment	0x1402a9e96..0x1402aa502;0x1402aa756..0x1402aad68
+justice-intrigue-recruitment	{s} in order to {s}	{s1}，目的是{s2}	justice-intrigue-predicate,justice-intrigue-motive	0x1402aa21e..0x1402aa276;0x1402aaa84..0x1402aaadc
+justice-intrigue-recruitment	{s} as a member of {s} toward the fulfillment of plots and schemes in {s}	{s1}，让其作为{s2}的成员，在{s3}实施阴谋	justice-intrigue-predicate,$name,justice-intrigue-place	0x1402aa278..0x1402aa2ba;0x1402aaade..0x1402aab20
+justice-intrigue-recruitment	{s}	{s1}	justice-intrigue-predicate	0x1402aa278..0x1402aa33f;0x1402aaade..0x1402aaba5;no motive when support circumstance/action absent
+justice-intrigue-predicate	{s} corrupted {s}	{s1}拉拢了{s2}	justice-intrigue-actor,justice-intrigue-actor	0x1402a9faf;target figure 0x1402aa1b0
+justice-intrigue-predicate	{s} attempted to corrupt {s}	{s1}试图拉拢{s2}	justice-intrigue-actor,justice-intrigue-actor	0x1402a9f73;0x1402aa811
+justice-intrigue-predicate	{s} subordinated {s}	{s1}使{s2}成为部下	justice-intrigue-actor,justice-intrigue-actor	0x1402a9f84..0x1402a9fa2;support circumstance=257
+justice-intrigue-actor	subject	受审者		0x140b92f10;report context figure substitution
+justice-intrigue-actor	{s}, as "{s}",	{s1}以“{s2}”的身份	justice-intrigue-actor,$unit	0x1402a9f03..0x1402a9f46;0x1402aa1c1..0x1402aa208;identity formatter 0x140c3a590
+justice-intrigue-actor	{s}, as {s},	{s1}以{s2}的身份	justice-intrigue-actor,$unit	0x1402aa7c3..0x1402aa806;0x1402aaa27..0x1402aaa6e;unquoted contextual identity branch
+justice-intrigue-actor	spouse {s}	配偶{s1}	justice-intrigue-actor	0x1402a9ffb;0x1402aa861;relationship=17
+justice-intrigue-actor	lover {s}	爱人{s1}	justice-intrigue-actor	0x1402aa00d;0x1402aa873;relationship=4
+justice-intrigue-actor	childhood friend {s}	童年好友{s1}	justice-intrigue-actor	0x1402aa01f;0x1402aa885;relationship=0
+justice-intrigue-actor	comrade-in-arms {s}	战友{s1}	justice-intrigue-actor	0x1402aa031;0x1402aa897;relationship=1
+justice-intrigue-actor	fellow scholar {s}	学者同侪{s1}	justice-intrigue-actor	0x1402aa043;0x1402aa8a9;relationship=6
+justice-intrigue-actor	fellow artist {s}	艺术家同侪{s1}	justice-intrigue-actor	0x1402aa055;0x1402aa8bb;relationship=7
+justice-intrigue-actor	fellow athlete {s}	运动员同侪{s1}	justice-intrigue-actor	0x1402aa067;0x1402aa8cd;relationship=8
+justice-intrigue-actor	mother {s}	母亲{s1}	justice-intrigue-actor	0x1402aa079;0x1402aa8df;relationship=18
+justice-intrigue-actor	father {s}	父亲{s1}	justice-intrigue-actor	0x1402aa08b;0x1402aa8f1;relationship=19
+justice-intrigue-actor	master {s}	师父{s1}	justice-intrigue-actor	0x1402aa09d;0x1402aa903;relationship=20
+justice-intrigue-actor	apprentice {s}	学徒{s1}	justice-intrigue-actor	0x1402aa0af;0x1402aa915;relationship=21
+justice-intrigue-actor	companion {s}	伙伴{s1}	justice-intrigue-actor	0x1402aa0c1;0x1402aa927;relationship=22
+justice-intrigue-actor	ex-spouse {s}	前配偶{s1}	justice-intrigue-actor	0x1402aa0d3;0x1402aa939;relationship=23
+justice-intrigue-actor	neighbor {s}	邻居{s1}	justice-intrigue-actor	0x1402aa183;0x1402aa9e9;relationship=24
+justice-intrigue-actor	fellow believer {s}	教友{s1}	justice-intrigue-actor	0x1402aa174;0x1402aa9da;relationship=25;entity_type=5
+justice-intrigue-actor	fellow order member {s}	同一教团的成员{s1}	justice-intrigue-actor	0x1402aa165;0x1402aa9cb;relationship=25;entity_type=6
+justice-intrigue-actor	troupemate {s}	剧团同伴{s1}	justice-intrigue-actor	0x1402aa156;0x1402aa9bc;relationship=25;entity_type=8
+justice-intrigue-actor	fellow company member {s}	同一公司的成员{s1}	justice-intrigue-actor	0x1402aa147;0x1402aa9ad;relationship=25;entity_type=9
+justice-intrigue-actor	guildmate {s}	行会同伴{s1}	justice-intrigue-actor	0x1402aa138;0x1402aa99e;relationship=25;entity_type=10
+justice-intrigue-actor	{s}	{s1}	$unit	0x140b92f10;complete contextual figure identity
+justice-intrigue-motive	have someone to act on plots and schemes in {s}	让对方在{s1}为自己的阴谋效力	justice-intrigue-place	0x1402aa260;0x1402aaac6;action=1
+justice-intrigue-motive	have an agent in {s}	在{s1}安插代理人	justice-intrigue-place	0x1402aa251;0x1402aa463;0x1402aaab7;0x1402aacc9;action=2 or absent support
+justice-intrigue-motive	have law enforcement look the other way in {s}	让{s1}的执法者睁一只眼闭一只眼	justice-intrigue-place	0x1402aa26f;0x1402aaad5;action=0
+justice-intrigue-motive	secure embezzled funds in {s}	拿到{s1}被挪用的资金	justice-intrigue-place	0x1402aa242;0x1402aaaa8;action=3
+justice-intrigue-place	the wilds	荒野		0x1402aa330;0x1402aa4e3;0x1402aab96;0x1402aad49
+justice-intrigue-place	{s}	{s1}	$name	0x140b93930;0x140b94940;0x140b94a40;native site/layer/region field
+# Methods have independent meeting/luring and failed-situation prefixes, so every native method composes with either path.
+justice-intrigue-sentence	{s} met with {s} and {s}.	{s1}与{s2}会面，并{s3}。	justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-method	0x1402a8365..0x1402a87ca;lurer=-1
+justice-intrigue-sentence	{s} met with {s} and, while completely misreading the situation, {s}.	{s1}与{s2}会面，却完全误判了局势，进而{s3}。	justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-method	0x1402a8365..0x1402a87ca;flags bit0=0 and bit1=1
+justice-intrigue-sentence	{s} lured {s} to a meeting with {s}, where the latter {s}.	{s1}诱使{s2}与{s3}会面，后者{s4}。	justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-method	0x1402a8251..0x1402a87ca;lurer!=-1
+justice-intrigue-sentence	{s} lured {s} to a meeting with {s}, where the latter, while completely misreading the situation, {s}.	{s1}诱使{s2}与{s3}会面，后者完全误判了局势，进而{s4}。	justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-actor,justice-intrigue-method	0x1402a8251..0x1402a87ca;lurer!=-1;flags bit0=0 and bit1=1
+justice-intrigue-method	made a threat	出言威胁		0x1402a8491;method=0
+justice-intrigue-method	made flattering remarks	说了些奉承的话		0x1402a84a8;method=1
+justice-intrigue-method	pulled rank	以权势压人		0x1402a84c2;method=2;absent position
+justice-intrigue-method	pulled rank as {s} of {s}	以担任{s2}{s1}的权势压人	$office,$name	0x1402a8544..0x1402a8594;method=2;position+0x98 title and record+0x4c entity
+justice-intrigue-method	made a blackmail threat, due to embezzlement	以侵吞公款的把柄进行勒索		0x1402a85a4;method=3;absent position
+justice-intrigue-method	made a blackmail threat, due to embezzlement using the position {s} of {s}	以利用{s2}{s1}的职位侵吞公款的把柄进行勒索	$office,$name	0x1402a8626->0x1402a854b..0x1402a8594;method=3
+justice-intrigue-method	offered a bribe	提出行贿		0x1402a8638;method=4
+justice-intrigue-method	played for sympathy	博取同情		0x1402a8652;method=5
+justice-intrigue-method	played for sympathy by appealing to a shared worship of {s}	以共同信奉{s1}为由博取同情	justice-intrigue-actor	0x1402a8661..0x1402a86d0;method=5;offered_relationship=16
+justice-intrigue-method	offered revenge upon {s}	承诺向{s1}复仇	justice-intrigue-revenge-target	0x1402a86da..0x1402a879a;method=6
+justice-intrigue-method	offered immortality	许诺赐予永生		0x1402a87a7;method=7
+justice-intrigue-revenge-target	a jealous grudge, {s}	因嫉妒而结怨的{s1}	justice-intrigue-actor	0x1402a8715;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	a business rival, {s}	商业对手{s1}	justice-intrigue-actor	0x1402a8724;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	the tormentor {s}	折磨人的{s1}	justice-intrigue-actor	0x1402a8733;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	the persecutor {s}	迫害者{s1}	justice-intrigue-actor	0x1402a8742;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	a grudge, {s}	仇人{s1}	justice-intrigue-actor	0x1402a874e;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	the sacrilegious {s}	亵渎神灵的{s1}	justice-intrigue-actor	0x1402a875d;offered_relationship switch 0x1402a9c7c
+justice-intrigue-revenge-target	{s}	{s1}	justice-intrigue-actor	0x1402a876c..0x1402a879a;default relationship
+# Personality, value and relationship responses share the complete opposition-factor list, including the optional allies factor.
+justice-intrigue-sentence	{s} {s}, despite {s}.	尽管{s3}，{s1}仍{s2}。	justice-intrigue-actor,justice-intrigue-response,justice-intrigue-factors	0x1402a87cf..0x1402a9bc4;success/failure factor branches
+justice-intrigue-sentence	{s} {s}.	{s1}{s2}。	justice-intrigue-actor,justice-intrigue-response	0x1402a87cf..0x1402a9bc4;response without opposing factors
+justice-intrigue-response	{s}	{s1}	justice-interrogation-response	0x1402a88b9..0x1402a898a;0x1402a9328..0x1402a93a4;shared native personality responses
+justice-intrigue-response	spurned the law and agreed willingly	不把法律放在眼里，欣然答应了		0x1402a8c4d;value=0
+justice-intrigue-response	accepted in admiration of power	因崇拜权力而接受了		0x1402a8c3e;value=4
+justice-intrigue-response	valued the law and refused	重视法律，因而拒绝了		0x1402a966b;value=0
+justice-intrigue-response	loathed abuses of power and refused	厌恶滥用权力，因而拒绝了		0x1402a965c;value=4
+justice-intrigue-response	respected {s} and agreed	出于对{s1}的尊重而答应了	justice-intrigue-actor	0x1402a8f72..0x1402a9005;emotion=4
+justice-intrigue-response	complied out of fear of {s}	出于对{s1}的恐惧而配合	justice-intrigue-actor	0x1402a8f7e..0x1402a8fe7;emotion=3
+justice-intrigue-response	agreed for love of {s}	出于对{s1}的爱而答应了	justice-intrigue-actor	0x1402a8f8d..0x1402a8fe7;emotion=2
+justice-intrigue-response	accepted out of loyalty to {s}	出于对{s1}的忠诚而接受了	justice-intrigue-actor	0x1402a8f9c..0x1402a8fe7;emotion=1
+justice-intrigue-response	trusted {s} and agreed	信任{s1}，因而答应了	justice-intrigue-actor	0x1402a8fab..0x1402a9005;emotion=0
+justice-intrigue-response	had no respect for {s} and refused	不尊重{s1}，因而拒绝了	justice-intrigue-actor	0x1402a997f..0x1402a9a35;emotion=4
+justice-intrigue-response	was unafraid of {s} and refused	不怕{s1}，因而拒绝了	justice-intrigue-actor	0x1402a998e..0x1402a9a35;emotion=3
+justice-intrigue-response	hated {s} and refused	憎恨{s1}，因而拒绝了	justice-intrigue-actor	0x1402a999a..0x1402a9a35;emotion=2
+justice-intrigue-response	felt no loyalty to {s} and refused	对{s1}毫无忠诚，因而拒绝了	justice-intrigue-actor	0x1402a99a9..0x1402a9a35;emotion=1
+justice-intrigue-response	distrusted {s} and refused	不信任{s1}，因而拒绝了	justice-intrigue-actor	0x1402a99b5..0x1402a9a35;emotion=0
+justice-intrigue-factors	{s} and {s} and {s}	{s1}，且{s2}，以及{s3}	justice-intrigue-factor,justice-intrigue-factor,justice-intrigue-factor	0x1402a8999..0x1402a8b38;0x1402a8c5f..0x1402a8e9e;0x1402a900d..0x1402a919c;maximum three opposing factors
+justice-intrigue-factors	{s} and {s}	{s1}，且{s2}	justice-intrigue-factor,justice-intrigue-factor	0x1402a8999..0x1402a9bb2;two opposing factors
+justice-intrigue-factors	{s}	{s1}	justice-intrigue-factor	0x1402a8999..0x1402a9bb2;one opposing factor
+justice-intrigue-factor	{s}	{s1}	justice-interrogation-factor	0x1402a8cb0..0x1402a8d38;0x1402a96d6..0x1402a9745;shared native personality/value factors
+justice-intrigue-factor	loathing the powerful	厌恶权贵		0x1402a89c9;0x1402a913c
+justice-intrigue-factor	admiration of power	崇拜权力		0x1402a93e8;0x1402a9b52
+justice-intrigue-factor	disdaining the law	蔑视法律		0x1402a93f7;0x1402a9b61
+justice-intrigue-factor	the efforts of surrounding allies to stop the plot	身边的盟友竭力阻止这场阴谋		0x1402a8b2e;0x1402a8e94;0x1402a9192
+justice-intrigue-factor	the efforts of co-conspirators to further the plot	同谋竭力推动这场阴谋		0x1402a954a;0x1402a989b;0x1402a9ba8
+justice-intrigue-factor	{s}'s {s}	{s1}{s2}	justice-intrigue-actor,justice-intrigue-relationship-factor	0x1402a8a3a..0x1402a8af1;0x1402a9464..0x1402a950d;contextual target possessive
+justice-intrigue-relationship-factor	lack of respect of {s}	不尊重{s1}	justice-intrigue-actor	0x1402a8a75;0x1402a8ddb
+justice-intrigue-relationship-factor	lack of fear toward {s}	不怕{s1}	justice-intrigue-actor	0x1402a8a84;0x1402a8dea
+justice-intrigue-relationship-factor	hatred of {s}	憎恨{s1}	justice-intrigue-actor	0x1402a8a93;0x1402a8df9
+justice-intrigue-relationship-factor	lack of loyalty toward {s}	对{s1}毫无忠诚	justice-intrigue-actor	0x1402a8aa2;0x1402a8e08
+justice-intrigue-relationship-factor	distrust of {s}	不信任{s1}	justice-intrigue-actor	0x1402a8ab1;0x1402a8e17
+justice-intrigue-relationship-factor	respect of {s}	尊重{s1}	justice-intrigue-actor	0x1402a9491;0x1402a97e2
+justice-intrigue-relationship-factor	fear of {s}	惧怕{s1}	justice-intrigue-actor	0x1402a94a0;0x1402a97f1
+justice-intrigue-relationship-factor	love of {s}	爱着{s1}	justice-intrigue-actor	0x1402a94af;0x1402a9800
+justice-intrigue-relationship-factor	loyalty toward {s}	忠于{s1}	justice-intrigue-actor	0x1402a94be;0x1402a980f
+justice-intrigue-relationship-factor	trust of {s}	信任{s1}	justice-intrigue-actor	0x1402a94cd;0x1402a981e
+justice-intrigue-sentence	Effective pressure to comply came from co-conspirators surrounding {s}.	{s1}身边的同谋施压，促使其服从。	justice-intrigue-actor	0x1402a91f9..0x1402a923c;corruptor_ally_roll>0
+justice-intrigue-sentence	Allies surrounding {s} raised their suspicions and the plan was foiled.	{s1}身边的盟友生出了疑心，挫败了这一计划。	justice-intrigue-actor	0x1402a9bd5..0x1402a9c30;target_ally_roll>0
+justice-intrigue-sentence	The plan worked.	计划成功了。		0x1402a9247
+justice-intrigue-sentence	The plan failed.	计划失败了。		0x1402a9c26

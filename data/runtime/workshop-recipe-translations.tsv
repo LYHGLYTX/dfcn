@@ -1,0 +1,268 @@
+# Complete workshop recipe grammar. Lookup-only keys, never global fragments.
+# Native source: Windows x64 job-item describer 0x140a2adb0–0x140a2c60c.
+# It appends independent flag prefixes, material-reaction aliases, tool-use
+# labels and the shared item formatter at 0x140a82c10. Keep every constraint.
+# Chinese item/material terminology follows data/runtime/local-overrides.tsv and the
+# existing items/materials/require namespaces in rulesets.
+# No t/h flags: these literal metadata keys are read by the recipe parser;
+# its own typed captures retain every number and resolve complete item names.
+
+# Grammar wrappers; displayed quantities have already been dimension-scaled.
+Workshop recipe: format requirement	[需要{s}]	l
+Workshop recipe: format quantity	{d} {s}	l
+Workshop recipe: format quantity with unit	{d} {u}{s}	l
+Workshop recipe: format exclude bin	{s}（不含储物箱）	l
+Workshop recipe: format -bearing	含{s1}的{s2}	l
+Workshop recipe: format -producing	可产出{s1}的{s2}	l
+Workshop recipe: format -containing	装有{s1}的{s2}	l
+Workshop recipe: format color	{s1}的{s2}	l
+Workshop recipe: format -bound	{s1}装订的{s2}	l
+Workshop recipe: format laced with	掺有{s2}的{s1}	l
+Workshop recipe: format dye mix	{s}混合染料	l
+Workshop recipe: format paste	{s}糊	l
+Workshop recipe: format powder	{s}粉末	l
+Workshop recipe: format join ,	{s1}、{s2}	l
+Workshop recipe: format join or	{s1}或{s2}	l
+Workshop recipe: format join and	{s1}和{s2}	l
+Workshop recipe: format join /	{s1}/{s2}	l
+Workshop recipe: unit cloth	块	l
+Workshop recipe: unit sheet	张	l
+Workshop recipe: unit sheets	张	l
+
+# Native prefix entries carry state, material or kind roles.
+# Material and category roles select the noun before states are attached.
+Workshop recipe: state unused	未使用	l
+Workshop recipe: state improvable	可改良	l
+Workshop recipe: state butcherable	可屠宰	l
+Workshop recipe: state millable	可研磨	l
+Workshop recipe: state possibly buriable	可能可安葬	l
+Workshop recipe: state unrotten	未腐烂	l
+Workshop recipe: state undisturbed	未受扰动	l
+Workshop recipe: state collected	已收集	l
+Workshop recipe: state sharpenable	可磨利	l
+Workshop recipe: state murdered	遭谋杀	l
+Workshop recipe: state empty	空	l
+Workshop recipe: state processable	可加工	l
+Workshop recipe: state cookable	可烹饪	l
+Workshop recipe: state solid	固态	l
+Workshop recipe: state extract-bearing plant	含可提取物	l
+Workshop recipe: kind extract-bearing plant	植物	l
+Workshop recipe: state extract-bearing fish	含可提取物	l
+Workshop recipe: kind extract-bearing fish	鱼	l
+Workshop recipe: state extract-bearing small creature	含可提取物	l
+Workshop recipe: kind extract-bearing small creature	小型生物	l
+Workshop recipe: state processable (to vial)	可加工并装入小瓶	l
+Workshop recipe: state processable (to barrel)	可加工并装入桶	l
+Workshop recipe: state tameable small creature	可驯服	l
+Workshop recipe: kind tameable small creature	小型生物	l
+Workshop recipe: state nearby	附近	l
+Workshop recipe: state sand-bearing	含沙	l
+Workshop recipe: material glass	玻璃	l
+Workshop recipe: state lye-bearing	含碱液	l
+Workshop recipe: material milk	奶	l
+Workshop recipe: state milkable	可挤奶	l
+Workshop recipe: kind finished good	成品	l
+Workshop recipe: kind ammo	弹药	l
+Workshop recipe: kind furniture	家具	l
+Workshop recipe: kind dye	染料	l
+Workshop recipe: state dyeable	可染色	l
+Workshop recipe: state totemable	可制作图腾	l
+Workshop recipe: state glass-making	可制作玻璃	l
+Workshop recipe: state dyed	已染色	l
+Workshop recipe: state melt-designated	已指定熔化	l
+Workshop recipe: kind deep material	深层材料	l
+Workshop recipe: state sewn-imageless	未绣图案	l
+Workshop recipe: kind screw	螺旋	l
+Workshop recipe: state fire-safe	耐火	l
+Workshop recipe: state magma-safe	耐岩浆	l
+Workshop recipe: kind building material	建筑材料	l
+Workshop recipe: state non-economic	非经济	l
+Workshop recipe: material plant	植物	l
+Workshop recipe: material silk	丝质	l
+Workshop recipe: material yarn	纱线	l
+Workshop recipe: material strand	丝状	l
+Workshop recipe: material leather	皮革	l
+Workshop recipe: material bone	骨质	l
+Workshop recipe: material hair/wool	毛发或羊毛	l
+Workshop recipe: material shell	壳	l
+# HOOF_TEMPLATE carries HORN for use and HOOF for display. This flag is a
+# category, not the concrete horn material used in an animal's item name.
+Workshop recipe: material category horn	角／蹄	l
+Workshop recipe: material pearl	珍珠	l
+Workshop recipe: state plaster-containing	装有石膏	l
+Workshop recipe: material soap	肥皂	l
+Workshop recipe: material ivory/tooth	长牙或牙齿	l
+Workshop recipe: state lye/milk-free	不含碱液和奶	l
+Workshop recipe: state blunt	钝头	l
+Workshop recipe: state unengraved	未雕刻	l
+Workshop recipe: state unimproved	未改良	l
+Workshop recipe: state written-on	已书写	l
+Workshop recipe: state non-absorbent	不吸水	l
+Workshop recipe: state food storage	用于储存食物	l
+Workshop recipe: state non-pressed	未压榨	l
+Workshop recipe: state woven	编织	l
+Workshop recipe: state hard	硬质	l
+Workshop recipe: material metal	金属	l
+Workshop recipe: material sand	沙	l
+Workshop recipe: state edged	有刃	l
+Workshop recipe: state on-ground	在地上	l
+Workshop recipe: state divine	神圣	l
+Workshop recipe: kind artifact	造物	l
+Workshop recipe: state non-artifact	非造物	l
+Workshop recipe: material wooden	木制	l
+Workshop recipe: material stone	石材	l
+Workshop recipe: material gem	宝石	l
+Workshop recipe: state grown	生长而成	l
+
+# a2b854–a2c17d: material identity, reaction classes/products and CONTAINS.
+# Unknown RAW class/product identifiers use the typed -bearing/-producing
+# grammar; vanilla special aliases are listed here exactly as emitted.
+Workshop recipe: material calcite/limestone/chalk/marble	方解石/石灰岩/白垩岩/大理石	l
+Workshop recipe: state glazable	可上釉	l
+Workshop recipe: material fat	脂肪	l
+Workshop recipe: material flux	熔剂	l
+Workshop recipe: material gypsum	石膏	l
+Workshop recipe: state paper-making	可造纸	l
+Workshop recipe: material paper-slurry	纸浆	l
+Workshop recipe: material tallow	脂油	l
+Workshop recipe: material wax	蜂蜡	l
+Workshop recipe: state bag-processable	可加工并装袋	l
+Workshop recipe: state fermentable	可发酵	l
+Workshop recipe: material clay	黏土	l
+Workshop recipe: material glaze	釉料	l
+Workshop recipe: state honey-bearing	含蜂蜜	l
+Workshop recipe: state parchment-producing	可制作兽皮纸	l
+Workshop recipe: state oil-bearing	含油	l
+Workshop recipe: state paper-slurryable	可制纸浆	l
+Workshop recipe: state renderable	可炼制	l
+Workshop recipe: state fatty	可制皂	l
+Workshop recipe: state tannable	可鞣制	l
+
+# a2c1f6–a2c38e: every native tool-use requirement, before the item noun.
+Workshop recipe: state liquid cooking	用于烹煮液体	l
+Workshop recipe: state liquid scoop	用于舀取液体	l
+Workshop recipe: state powder grinding receptacle	用于盛装待磨粉末	l
+Workshop recipe: state powder grinding	用于研磨粉末	l
+Workshop recipe: state meat carving	用于切肉	l
+Workshop recipe: state meat boning	用于剔骨	l
+Workshop recipe: state meat slicing	用于切肉片	l
+Workshop recipe: state meat cleaving	用于劈肉	l
+Workshop recipe: state meat-carving holder	用于切肉时承托	l
+Workshop recipe: state meal container	用于盛装餐食	l
+Workshop recipe: state liquid container	用于盛装液体	l
+Workshop recipe: state hive	用作蜂箱	l
+Workshop recipe: state nest box	用作巢箱	l
+Workshop recipe: state small object container	用于盛装小件物品	l
+Workshop recipe: state track cart	用于轨道运输	l
+Workshop recipe: state heavy object hauler	用于搬运重物	l
+Workshop recipe: state stand-and-work	用于站立作业	l
+Workshop recipe: state sheet roller	用于卷纸	l
+Workshop recipe: state folded sheet protector	用于保护折叠纸张	l
+Workshop recipe: state writing container	用于存放文字内容	l
+Workshop recipe: state bookcase	用作书柜	l
+Workshop recipe: state display object	用于展示物品	l
+Workshop recipe: state offering placement	用于摆放供品	l
+Workshop recipe: state divination	用于占卜	l
+Workshop recipe: state games of chance	用于博戏	l
+
+# Native NONE/TOOL requirements may end at the tool-use label itself.
+Workshop recipe: liquid cooking	液体烹煮用具	l
+Workshop recipe: liquid scoop	舀液用具	l
+Workshop recipe: powder grinding receptacle	粉末研磨容器	l
+Workshop recipe: powder grinding	粉末研磨用具	l
+Workshop recipe: meat carving	切肉用具	l
+Workshop recipe: meat boning	剔骨用具	l
+Workshop recipe: meat slicing	切肉片用具	l
+Workshop recipe: meat cleaving	劈肉用具	l
+Workshop recipe: meat-carving holder	切肉承托用具	l
+Workshop recipe: meal container	餐食容器	l
+Workshop recipe: liquid container	液体容器	l
+Workshop recipe: food storage	食物储存容器	l
+Workshop recipe: small object container	小件物品容器	l
+Workshop recipe: track cart	轨道运输车	l
+Workshop recipe: heavy object hauler	重物搬运车	l
+Workshop recipe: stand-and-work	站立作业用具	l
+Workshop recipe: sheet roller	卷筒	l
+Workshop recipe: folded sheet protector	书壳	l
+Workshop recipe: writing container	文字载体	l
+Workshop recipe: display object	展示用具	l
+Workshop recipe: offering placement	供品摆放用具	l
+Workshop recipe: divination	占卜用具	l
+Workshop recipe: games of chance	博戏用具	l
+
+# Native a82c10 noun aliases and shared material/item compounds that otherwise
+# meet UI homonyms or missing bare forms. Existing names remain authoritative.
+Workshop recipe: item	物品	l
+Workshop recipe: items	物品	l
+# The native MILK flag with a generic item head denotes milk itself.
+# Outer states and quantities are still resolved by the shared grammar.
+Workshop recipe: milk item	奶	l
+Workshop recipe: milk items	奶	l
+Workshop recipe: cloth	布匹	l
+Workshop recipe: stone boulders	石块	l
+Workshop recipe: stone boulder	石块	l
+Workshop recipe: body part	身体部位	l
+Workshop recipe: body parts	身体部位	l
+Workshop recipe: leaf or fruit	叶或果实	l
+Workshop recipe: leaves and fruit	叶和果实	l
+Workshop recipe: hair/wool	毛发/羊毛	l
+Workshop recipe: silk	丝质布	l
+Workshop recipe: paper-slurry	纸浆	l
+Workshop recipe: glaze	釉料	l
+Workshop recipe: gypsum	石膏	l
+Workshop recipe: flux	熔剂	l
+Workshop recipe: wax	蜂蜡	l
+Workshop recipe: dye mix	混合染料	l
+Workshop recipe: crafts	工艺品	l
+Workshop recipe: suits of armor	套护甲	l
+Workshop recipe: shield/buckler	盾牌/小圆盾	l
+
+# a82c10 can place these item-state prefixes outside the material noun.
+Workshop recipe: state unglazed	未上釉	l
+Workshop recipe: state rough	粗糙	l
+Workshop recipe: state rotten	腐烂	l
+Workshop recipe: state withered	枯萎	l
+Workshop recipe: state raw	生	l
+Workshop recipe: state live	活	l
+Workshop recipe: state tame	已驯服	l
+Workshop recipe: state preserved	腌制	l
+Workshop recipe: state filthy	污秽	l
+Workshop recipe: state sticky	黏稠	l
+Workshop recipe: state vomitous	含呕吐物	l
+Workshop recipe: state slimy	黏滑	l
+Workshop recipe: state stagnant	死水般	l
+Workshop recipe: state dirty	脏	l
+Workshop recipe: state gooey	黏糊糊	l
+Workshop recipe: state purulent	含脓液	l
+Workshop recipe: state ichorous	含体液	l
+Workshop recipe: state bloody	含血	l
+# Typed noun assembly. These are noun classes, independent of complete
+# sentences, quantities, states, capabilities and the native line wrapping.
+Workshop recipe: format qualified noun	{s1}的{s2}	l
+Workshop recipe: format join states	{s1}、{s2}	l
+Workshop recipe: format material noun	{s1}{s2}	l
+Workshop recipe: format kind noun	{s1}类{s2}	l
+Workshop recipe: format material body part	由{s}构成的身体部位	l
+Workshop recipe: format body substance state	由{s}构成	l
+Workshop recipe: format state -bearing	含{s}	l
+Workshop recipe: format state -producing	可产出{s}	l
+Workshop recipe: format state -containing	装有{s}	l
+# Concrete component names follow data/runtime/rulesets/zh-Hans/items/corpsepiece.toml's noun structure.
+# Other material-bodied creatures keep their body-component meaning.
+Workshop recipe: body noun bone	骨头	l
+Workshop recipe: body noun shell	壳	l
+Workshop recipe: body noun horn	角／蹄	l
+Workshop recipe: body noun pearl	珍珠	l
+Workshop recipe: body noun ivory/tooth	长牙或牙齿	l
+Workshop recipe: body noun hair/wool	毛发或羊毛	l
+Workshop recipe: body substance silk	丝绸	l
+Workshop recipe: body substance yarn	纱线	l
+Workshop recipe: body substance strand	丝	l
+Workshop recipe: body substance wooden	木头	l
+Workshop recipe: body substance plant	植物组织	l
+Workshop recipe: body substance stone	石材	l
+Workshop recipe: bulk noun paper-slurry	纸浆	l
+# TAN_MAT/PARCHMENT_MAT on SKIN_TEMPLATE identify raw skin, not finished
+# leather. Keep the requested ability in the surrounding state list.
+Workshop recipe: body capability tannable	生皮	l
+Workshop recipe: body capability parchment-producing	生皮	l

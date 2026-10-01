@@ -1,0 +1,67 @@
+# Native PE identity PE:6a70a6d9:02711000; Windows Dwarf Fortress.exe, image base 0x140000000.
+# Source reconstruction from native objdump disassembly and installed vanilla RAW files. This is source/grammar data, not a runtime observation or test report.
+# building_weaponst caption entry 0x140554270, vtable base 0x141648f10, virtual caption slot (+0x188) 0x141649098, function end 0x140554459.
+# Pseudocode: if (!building.name.empty()) return building.name; out = (building.flags_148 & 1) ? "Retracted " : "Upright "; if (contained_items.empty()) return out + "Weapon";
+# Pseudocode: spears = spikes = 0; for (entry : contained_items) if (entry.use_mode == 2 && entry.item.vfunc_1a8()) { if (entry.item.getType() == 0x18) ++spears; if (entry.item.getType() == 0x44) ++spikes; }
+# Pseudocode: if (spears + spikes > 1) return out + (spears == 0 ? "Spikes" : spikes == 0 ? "Spears" : "Spears/Spikes"); return out + get_item_caption(contained_items[0].item, false, -1);
+# The low-count branch uses contained_items[0], not the last qualifying item. A custom building name bypasses the status/type formatter entirely and must be preserved verbatim.
+# The item-caption branch includes its existing complete item grammar, quality/wear/designation glyphs, and artifact-name branch. It is not restricted to a literal Spear/Spike noun.
+# The finite vanilla spear/spike RAW names below are the entries selected by the two item predicates; mod/save RAW names remain dynamic and cannot be exhaustively enumerated as binary literals.
+# Translation mapping: the six fixed building fragments and complete item branch use data/runtime/rulesets/zh-Hans/map_hover/building.toml (weapon_state/weapon_contents).
+# Translation mapping: the eight finite composed building captions also live in data/runtime/local-overrides.tsv and data/runtime/translations.tsv for the selected-building title path.
+# Translation mapping: spear/training spear RAW singular/plural forms use data/runtime/rulesets/zh-Hans/items/weapon.toml; menacing/spike RAW forms use data/runtime/rulesets/zh-Hans/items/trapcomp.toml and scoped terms in data/runtime/item-description-translations.tsv and data/runtime/translations.tsv.
+# Translation mapping: materials use data/runtime/rulesets/zh-Hans/materials; custom building names preserve the supplied name; item artifact names use the existing artifact-name grammar; designation glyphs are preserved by src/item_designation.h.
+kind	owner	entry_va	data_or_source	code_va	branch_or_grammar	text
+literal	building_weaponst	0x140554270	0x1416521d8	0x1405542e2	flags_148 bit 0 clear; 8 bytes including trailing space	Upright 
+literal	building_weaponst	0x140554270	0x141652120	0x1405542e9	flags_148 bit 0 set; 10 bytes including trailing space	Retracted 
+literal	building_weaponst	0x140554270	0x14161580c	0x1405543ba	spears + spikes > 1 and spears == 0	Spikes
+literal	building_weaponst	0x140554270	0x1416521d0	0x1405543c7	spears + spikes > 1 and spikes == 0	Spears
+literal	building_weaponst	0x140554270	0x1416521c0	0x1405543d0	spears + spikes > 1 and both counts nonzero	Spears/Spikes
+literal	building_weaponst	0x140554270	0x14162cbd4	0x140554417	contained_items vector empty	Weapon
+dynamic	building_weaponst	0x140554270	this+0xd0 std::string; length at +0xe0	0x140554297	custom name takes precedence over every state/type branch; preserve user text	{custom_building_name}
+dynamic	building_weaponst	0x140554270	contained_items vector this+0x128..+0x130; entry.item at +0	0x1405543fa	count <= 1 calls 0x140c65450(item,out,false,-1)	{weapon_state}{complete_item_caption}
+predicate	building_weaponst	0x140554270	entry.use_mode word at +0x8; item vtable+0x1a8	0x14055435b	count only use_mode == 2 and item predicate true	installed spear/spike count
+predicate	item_weaponst	0x1400fd1f0	vtable slot 0x1415f7658; item.definition at +0xe8	0x1400fd1f7	definition word +0xd0 == 0x2a; vanilla RAW SKILL:SPEAR	SPEAR
+predicate	item_trapcompst	0x140c620a0	vtable slot 0x1416f0490; item.definition at +0xe8	0x140c620b7	definition flag vector size +0xe0 > 0 and first byte at pointer +0xd8 has bit 1; vanilla RAW IS_SPIKE	IS_SPIKE
+dynamic	item_caption	0x140c65450	general reference type 1; referenced artifact at virtual +0x40	0x140c654b9	artifact byte +0x7a set and caption mode false; format artifact name through 0x140a94030	{artifact_name}
+dynamic	item_caption	0x140c65450	item vtable+0x5e8	0x140c65a34	shared full description; repeated quality-dependent call sites; spear and spike both resolve to 0x140ca5bb0	{complete_item_description}
+dynamic	item_description	0x140ca5bb0	item type/subtype/material/quantity virtual fields	0x140ca5d45	calls 0x140a82c10; type 0x18 selects 0x140a87584; type 0x44 selects 0x140a85b0d	{raw_adjective}[ ]{material_adjective}[ ]{raw_singular_or_plural}
+dispatch	item_type_constructor	0x140a82c10	jump table 0x140a880e0; entry 0x18 at 0x140a88140	0x140a82dd9	type 0x18 goes to 0x140a87584	WEAPON
+dispatch	item_type_constructor	0x140a82c10	jump table 0x140a880e0; entry 0x44 at 0x140a881f0	0x140a82dd9	type 0x44 goes to 0x140a85b0d	TRAPCOMP
+dynamic	weapon_raw_name	0x140a87584	RAW definition +0xa8 std::string; length +0xb8	0x140a8762c	optional RAW ADJECTIVE followed by space, before material	{raw_adjective} 
+dynamic	weapon_raw_name	0x140a87584	material formatter 0x1414d1920	0x140a8767f	optional complete material adjective followed by space	{material_adjective} 
+dynamic	weapon_raw_name	0x140a87584	RAW definition name +0x68 or name_plural +0x88	0x140a8769b	quantity == 1 selects singular, otherwise plural	{raw_singular_or_plural}
+dynamic	trapcomp_raw_name	0x140a85b0d	RAW definition +0xa8 std::string; length +0xb8	0x140a85bb9	optional RAW ADJECTIVE followed by space, before material	{raw_adjective} 
+dynamic	trapcomp_raw_name	0x140a85b0d	material formatter 0x1414d1920	0x140a85c0c	optional complete material adjective followed by space	{material_adjective} 
+dynamic	trapcomp_raw_name	0x140a85b0d	RAW definition name +0x68 or name_plural +0x88	0x140a85c28	quantity == 1 selects singular, otherwise plural	{raw_singular_or_plural}
+literal	weapon_raw_fallback	0x140a87584	0x1416c1ecc	0x140a87602	subtype RAW lookup fails; optional material precedes noun; plural adds s at common tail	weapon
+literal	trapcomp_raw_fallback	0x140a85b0d	0x1416ceb00	0x140a85b97	subtype RAW lookup fails; optional material precedes noun; plural adds s at common tail	trap component
+literal	item_type_constructor	0x140a82c10	0x1416cbf50	0x140a82d8c	grown item flag prefixes selected type formatter	grown 
+raw-singular	ITEM_WEAPON_SPEAR	0x140a87584	../data/vanilla/vanilla_items/objects/item_weapon.txt:62	0x140a876ac	SKILL:SPEAR at RAW line 64	spear
+raw-plural	ITEM_WEAPON_SPEAR	0x140a87584	../data/vanilla/vanilla_items/objects/item_weapon.txt:62	0x140a8769f	SKILL:SPEAR at RAW line 64	spears
+raw-singular	ITEM_WEAPON_SPEAR_TRAINING	0x140a87584	../data/vanilla/vanilla_items/objects/item_weapon.txt:328	0x140a876ac	SKILL:SPEAR at RAW line 330; TRAINING flag	training spear
+raw-plural	ITEM_WEAPON_SPEAR_TRAINING	0x140a87584	../data/vanilla/vanilla_items/objects/item_weapon.txt:328	0x140a8769f	SKILL:SPEAR at RAW line 330; TRAINING flag	training spears
+raw-adjective	ITEM_TRAPCOMP_MENACINGSPIKE	0x140a85b0d	../data/vanilla/vanilla_items/objects/item_trapcomp.txt:50	0x140a85bb9	ADJECTIVE:menacing; IS_SPIKE at RAW line 54; adjective occurs before material	menacing
+raw-singular	ITEM_TRAPCOMP_MENACINGSPIKE	0x140a85b0d	../data/vanilla/vanilla_items/objects/item_trapcomp.txt:49	0x140a85c35	IS_SPIKE at RAW line 54	spike
+raw-plural	ITEM_TRAPCOMP_MENACINGSPIKE	0x140a85b0d	../data/vanilla/vanilla_items/objects/item_trapcomp.txt:49	0x140a85c2c	IS_SPIKE at RAW line 54	spikes
+dynamic	vanilla_single_spike	0x140a85b0d	RAW ADJECTIVE + material formatter + RAW NAME	0x140a85bb9;0x140a85c0c;0x140a85c35	complete designation may wrap this phrase; building prepends independent state	menacing {material_adjective} spike
+dynamic	vanilla_single_spear	0x140a87584	material formatter + RAW NAME	0x140a8767f;0x140a876ac	complete designation may wrap this phrase; building prepends independent state	{material_adjective} spear
+dynamic	vanilla_single_training_spear	0x140a87584	material formatter + RAW NAME	0x140a8767f;0x140a876ac	complete designation may wrap this phrase; building prepends independent state	{material_adjective} training spear
+glyph	item_caption	0x140c65450	virtual wear value +0x1d8	0x140c657dc	wear 1 wraps x, wear 2 wraps X, wear >= 3 wraps XX; retain exact case	x/X/XX
+glyph	item_caption	0x140c65450	quality virtual values +0x508 and +0x518	0x140c659fa	quality 1/2/3/4/5 wraps -/+/asterisk/CP437 F0/CP437 0F respectively; retain original visible glyphs	-/+/*/≡/☼
+glyph	item_caption	0x140c65450	item flags at +0x10; mode global 0x14189c298	0x140c65866;0x140c65db6	fortress mode designation wrappers, bit 0x4000 parentheses and bit 0x80000 braces	()/{}
+glyph	item_caption	0x140c65450	item flags bit 0x400000	0x140c657b7;0x140c65ea8	CP437 0x13 at both ends	‼
+glyph	item_caption	0x140c65450	improvement-related virtual +0x5d8	0x140c659a6	CP437 AE/AF decoration wrappers, optional improvement quality glyphs retained	«/»
+glyph	item_caption	0x140c65450	virtual +0x5e0 nonzero	0x140c659d9	CP437 0x11/0x10 wrappers	◄/►
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e2;0x140554417	empty items and bit 0 clear	Upright Weapon => 直立的武器
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e2;0x1405543c7	multiple spears and bit 0 clear	Upright Spears => 直立的长矛
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e2;0x1405543ba	multiple spikes and bit 0 clear	Upright Spikes => 直立的尖刺
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e2;0x1405543d0	mixed spears/spikes and bit 0 clear	Upright Spears/Spikes => 直立的长矛/尖刺
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e9;0x140554417	empty items and bit 0 set	Retracted Weapon => 缩回的武器
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e9;0x1405543c7	multiple spears and bit 0 set	Retracted Spears => 缩回的长矛
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e9;0x1405543ba	multiple spikes and bit 0 set	Retracted Spikes => 缩回的尖刺
+translation	building_weaponst	0x140554270	data/runtime/local-overrides.tsv;data/runtime/translations.tsv	0x1405542e9;0x1405543d0	mixed spears/spikes and bit 0 set	Retracted Spears/Spikes => 缩回的长矛/尖刺
+translation	building_weaponst	0x140554270	data/runtime/rulesets/zh-Hans/map_hover/building.toml	0x1405543fa	complete item designation preserves quality/wear/artifact grammar	Upright {item} => 直立的{物品}; Retracted {item} => 缩回的{物品}
+translation	vanilla_spear	0x140a87584	data/runtime/rulesets/zh-Hans/items/weapon.toml	0x140a8769b	RAW names, optional material adjective and designation wrappers	spear/spears => 矛; training spear/training spears => 训练矛
+translation	vanilla_spike	0x140a85b0d	data/runtime/rulesets/zh-Hans/items/trapcomp.toml;data/runtime/item-description-translations.tsv;data/runtime/translations.tsv	0x140a85bb9;0x140a85c0c;0x140a85c35	RAW adjective precedes translated material; same noun for singular/plural	menacing {material} spike/spikes => 险恶{材料}尖刺; menacing spike/spikes => 险恶尖刺
+translation	fallback_item	0x140a82c10	data/runtime/rulesets/zh-Hans/items/weapon.toml;data/runtime/rulesets/zh-Hans/items/trapcomp.toml	0x140a87602;0x140a85b97	missing subtype RAW fallback	weapon/weapons => 武器; trap component/trap components => 陷阱组件

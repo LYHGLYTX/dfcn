@@ -1,0 +1,3017 @@
+<data-definition>
+    -- Unknown enum
+    <enum-type type-name='building_extents_type' base-type='int8_t'> bay12: ???
+        <enum-item name='None' value='0'/>
+        <enum-item name='Stockpile'/>
+        <enum-item name='Wall'/>
+        <enum-item name='Interior'/>
+        <enum-item name='DistanceBoundary'/>
+    </enum-type>
+
+    <enum-type type-name='stockpile_list' original-name='stockpile_view_mode' base-type='int32_t'> bay12: StockPileViewMode
+        <enum-attr name='is_category' type-name='bool'/>
+
+        <enum-item name='Animals' original-name='ANIMAL'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+
+        <enum-item name='Food' original-name='FOOD'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='FoodMeat' original-name='FOOD_MEAT'/>
+        <enum-item name='FoodFish' original-name='FOOD_FISH'/>
+        <enum-item name='FoodUnpreparedFish' original-name='FOOD_FISH_RAW'/>
+        <enum-item name='FoodEgg' original-name='FOOD_EGG'/>
+        <enum-item name='FoodPlants' original-name='FOOD_PLANT'/>
+        <enum-item name='FoodDrinkPlant' original-name='FOOD_DRINK_PLANT'/>
+        <enum-item name='FoodDrinkAnimal' original-name='FOOD_DRINK_ANIMAL'/>
+        <enum-item name='FoodCheesePlant' original-name='FOOD_CHEESE_PLANT'/>
+        <enum-item name='FoodCheeseAnimal' original-name='FOOD_CHEESE_ANIMAL'/>
+        <enum-item name='FoodSeeds' original-name='FOOD_SEEDS'/>
+        <enum-item name='FoodLeaves' original-name='FOOD_PLANT_GROWTH'/>
+        <enum-item name='FoodMilledPlant' original-name='FOOD_POWDER_MISC_PLANT'/>
+        <enum-item name='FoodBoneMeal' original-name='FOOD_POWDER_MISC_ANIMAL'/>
+        <enum-item name='FoodFat' original-name='FOOD_GLOB_SOLID'/>
+        <enum-item name='FoodPaste' original-name='FOOD_GLOB_PASTE'/>
+        <enum-item name='FoodPressedMaterial' original-name='FOOD_GLOB_PRESSED'/>
+        <enum-item name='FoodExtractPlant' original-name='FOOD_EXTRACT_PLANT'/>
+        <enum-item name='FoodExtractAnimal' original-name='FOOD_EXTRACT_ANIMAL'/>
+        <enum-item name='FoodMiscLiquid' original-name='FOOD_LIQUID_MISC'/>
+
+        <enum-item name='Furniture' original-name='FURNITURE'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='FurnitureType' original-name='FURNITURE_TYPE'/>
+        <enum-item name='FurnitureStoneClay' original-name='FURNITURE_MAT_STONE'/>
+        <enum-item name='FurnitureMetal' original-name='FURNITURE_MAT_METAL'/>
+        <enum-item name='FurnitureOtherMaterials' original-name='FURNITURE_MAT_OTHER'/>
+        <enum-item name='FurnitureCoreQuality' original-name='FURNITURE_QUALITY'/>
+        <enum-item name='FurnitureTotalQuality' original-name='FURNITURE_IMP_QUALITY'/>
+
+        <enum-item name='Corpses' original-name='GRAVEYARD'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+
+        <enum-item name='Refuse' original-name='REFUSE'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='RefuseItems' original-name='REFUSE_TYPE'/>
+        <enum-item name='RefuseCorpses' original-name='REFUSE_CORPSE'/>
+        <enum-item name='RefuseParts' original-name='REFUSE_CORPSEPIECE'/>
+        <enum-item name='RefuseSkulls' original-name='REFUSE_SKULL'/>
+        <enum-item name='RefuseBones' original-name='REFUSE_BONE'/>
+        <enum-item name='RefuseShells' original-name='REFUSE_SHELL'/>
+        <enum-item name='RefuseTeeth' original-name='REFUSE_TOOTH'/>
+        <enum-item name='RefuseHorns' original-name='REFUSE_HORN'/>
+        <enum-item name='RefuseHair' original-name='REFUSE_STRAND_TISSUE'/>
+
+        <enum-item name='Stone' original-name='STONE'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='StoneOres' original-name='STONE_METAL_ORE'/>
+        <enum-item name='StoneEconomic' original-name='STONE_ECONOMIC'/>
+        <enum-item name='StoneOther' original-name='STONE_OTHER_STONE'/>
+        <enum-item name='StoneClay' original-name='STONE_CLAY'/>
+
+        <enum-item name='Ammo' original-name='AMMO'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='AmmoType' original-name='AMMO_TYPE'/>
+        <enum-item name='AmmoOther' original-name='AMMO_MATERIAL'/>
+        <enum-item name='AmmoMetal' original-name='AMMO_MATGLOSS_METAL'/>
+        <enum-item name='AmmoCoreQuality' original-name='AMMO_QUALITY'/>
+        <enum-item name='AmmoTotalQuality' original-name='AMMO_IMP_QUALITY'/>
+
+        <enum-item name='Coins' original-name='COINS'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+
+        <enum-item name='BarsBlocks' original-name='BARBLOCK'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='BarsMetal' original-name='BARBLOCK_BARS_METAL'/>
+        <enum-item name='BarsOther' original-name='BARBLOCK_BARS_OTHER'/>
+        <enum-item name='BlocksStone' original-name='BARBLOCK_BLOCKS_STONE'/>
+        <enum-item name='BlocksMetal' original-name='BARBLOCK_BLOCKS_METAL'/>
+        <enum-item name='BlocksOther' original-name='BARBLOCK_BLOCKS_OTHER'/>
+
+        <enum-item name='Gems' original-name='GEM'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='RoughGlass' original-name='GEM_ROUGH_GLASS'/>
+        <enum-item name='CutGlass' original-name='GEM_SMALLGEM_GLASS'/>
+        <enum-item name='RoughGem' original-name='GEM_ROUGH_MIN'/>
+        <enum-item name='CutGem' original-name='GEM_SMALLGEM_MIN'/>
+        <enum-item name='CutStone' original-name='GEM_SMALLGEM_STONE'/>
+
+        <enum-item name='Goods' original-name='FINISHED'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='GoodsType' original-name='FINISHED_TYPE'/>
+        <enum-item name='GoodsStone' original-name='FINISHED_MAT_STONE'/>
+        <enum-item name='GoodsMetal' original-name='FINISHED_MAT_METAL'/>
+        <enum-item name='GoodsGem' original-name='FINISHED_MAT_GEM'/>
+        <enum-item name='GoodsOther' original-name='FINISHED_MAT_OTHER'/>
+        <enum-item name='GoodsCoreQuality' original-name='FINISHED_QUALITY'/>
+        <enum-item name='GoodsTotalQuality' original-name='FINISHED_IMP_QUALITY'/>
+        <enum-item name='GoodsColor' original-name='FINISHED_COLOR'/>
+
+        <enum-item name='Leather' original-name='LEATHER'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='LeatherType' original-name='LEATHER_TYPE'/>
+        <enum-item name='LeatherColor' original-name='LEATHER_COLOR'/>
+
+        <enum-item name='Cloth' original-name='CLOTH'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='ThreadSilk' original-name='CLOTH_THREAD_SILK'/>
+        <enum-item name='ThreadPlant' original-name='CLOTH_THREAD_PLANT'/>
+        <enum-item name='ThreadYarn' original-name='CLOTH_THREAD_YARN'/>
+        <enum-item name='ThreadMetal' original-name='CLOTH_THREAD_METAL'/>
+        <enum-item name='ClothSilk' original-name='CLOTH_CLOTH_SILK'/>
+        <enum-item name='ClothPlant' original-name='CLOTH_CLOTH_PLANT'/>
+        <enum-item name='ClothYarn' original-name='CLOTH_CLOTH_YARN'/>
+        <enum-item name='ClothMetal' original-name='CLOTH_CLOTH_METAL'/>
+        <enum-item name='ClothColor' original-name='CLOTH_COLOR'/>
+
+        <enum-item name='Wood' original-name='WOOD'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+
+        <enum-item name='Weapons' original-name='WEAPON'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='WeaponsType' original-name='WEAPON_TYPE'/>
+        <enum-item name='WeaponsTrapcomp' original-name='TRAPCOMP_TYPE'/>
+        <enum-item name='WeaponsMetal' original-name='WEAPON_MAT_METAL'/>
+        <enum-item name='WeaponsStone' original-name='WEAPON_MAT_STONE'/>
+        <enum-item name='WeaponsOther' original-name='WEAPON_MAT_OTHER'/>
+        <enum-item name='WeaponsCoreQuality' original-name='WEAPON_QUALITY'/>
+        <enum-item name='WeaponsTotalQuality' original-name='WEAPON_IMP_QUALITY'/>
+
+        <enum-item name='Armor' original-name='ARMOR'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='ArmorBody' original-name='ARMOR_ARMOR'/>
+        <enum-item name='ArmorHead' original-name='ARMOR_HELM'/>
+        <enum-item name='ArmorFeet' original-name='ARMOR_SHOES'/>
+        <enum-item name='ArmorHands' original-name='ARMOR_GLOVES'/>
+        <enum-item name='ArmorLegs' original-name='ARMOR_PANTS'/>
+        <enum-item name='ArmorShield' original-name='ARMOR_SHIELD'/>
+        <enum-item name='ArmorMetal' original-name='ARMOR_MAT_METAL'/>
+        <enum-item name='ArmorOther' original-name='ARMOR_MAT_OTHER'/>
+        <enum-item name='ArmorCoreQuality' original-name='ARMOR_QUALITY'/>
+        <enum-item name='ArmorTotalQuality' original-name='ARMOR_IMP_QUALITY'/>
+        <enum-item name='ArmorColor' original-name='ARMOR_COLOR'/>
+
+        <enum-item name='Sheet' original-name='SHEET'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+        <enum-item name='SheetPaper' original-name='SHEET_PAPER_PLANT'/>
+        <enum-item name='SheetParchment' original-name='SHEET_PARCHMENT'/>
+
+        <enum-item name='AdditionalOptions' original-name='MISC'>
+            <item-attr name='is_category' value='true'/>
+        </enum-item>
+    </enum-type>
+
+    <enum-type type-name='building_use_type' base-type='int16_t'> bay12: BuildingUseType
+        <enum-item name="NONE" value='-1'/>
+        <enum-item name="SitForEat" original-name='SIT_FOR_EAT'/>
+        <enum-item name="PlaceFoodForEat" original-name='PLACE_FOOD_FOR_EAT'/>
+        <enum-item name="Sleep" original-name='SLEEP'/>
+        <enum-item name="Rest" original-name='REST'/>
+        <enum-item name="BedCarry" original-name='BED_CARRY'/>
+        <enum-item name="Surgery" original-name='SURGERY'/>
+        <enum-item name="RestInTraction" original-name='REST_IN_TRACTION'/>
+        <enum-item name="SitForRead" original-name='SIT_FOR_READ'/>
+        <enum-item name="SitForWrite" original-name='SIT_FOR_WRITE'/>
+        <enum-item name="PlaceWritingMaterials" original-name='PLACE_WRITING_MATERIALS'/>
+    </enum-type>
+
+    <struct-type type-name='building_users' original-name='building_use_infost'>
+        <stl-vector type-name='int32_t' name='unit' original-name='unid' ref-target='unit'/>
+        <stl-vector type-name='building_use_type' name='mode' original-name='use'/>
+    </struct-type>
+
+    <struct-type type-name='building_activity_infost'>
+        <int32_t name='activity_id' ref-target='activity_entry'/>
+        <int32_t name='event_id' original-name='activity_event_id' ref-target='activity_event' aux-value='$$.activity_id'/>
+    </struct-type>
+
+    <struct-type type-name='building_squad_infost'>
+        <int32_t name='squad_id' original-name='sqid' comment='or global id, inside a union'/>
+        <bitfield base-type='uint32_t' type-name='squad_use_flags' name='mode' original-name='sbi_flag'/>
+    </struct-type>
+
+    <struct-type type-name='power_info' original-name='machine_power_profilest'>
+        <int32_t name='produced' original-name='power_generated'/>
+        <int32_t name='consumed' original-name='power_needed'/>
+    </struct-type>
+
+    <struct-type type-name='building_drawbuffer' original-name='building_printinfost'>
+        <static-array name='signpost_texpos' type-name='int32_t' count='31'/>
+        <static-array name='building_one_texpos' count='31'>
+            <static-array count='31' type-name='int32_t'/>
+        </static-array>
+        <static-array name='item_texpos' count='31'>
+            <static-array count='31' type-name='int32_t'/>
+        </static-array>
+        <static-array name='building_two_texpos' count='31'>
+            <static-array count='31' type-name='int32_t'/>
+        </static-array>
+        <static-array name='tile' original-name='bch' count='31'>
+            <static-array count='31' type-name='uint8_t'/>
+        </static-array>
+        <static-array name='fore' original-name='bcol' count='31'>
+            <static-array count='31' type-name='int8_t'/>
+        </static-array>
+        <static-array name='back' original-name='bcol_b' count='31'>
+            <static-array count='31' type-name='int8_t'/>
+        </static-array>
+        <static-array name='bright' original-name='bcol_br' count='31'>
+            <static-array count='31' type-name='int8_t'/>
+        </static-array>
+
+        <int16_t name='x1' original-name='appsx'/>
+        <int16_t name='x2' original-name='appex'/>
+        <int16_t name='y1' original-name='appsy'/>
+        <int16_t name='y2' original-name='appey'/>
+    </struct-type>
+
+    <bitfield-type type-name='machine_conn_modes' original-name='building_machine_hookup_dir' base-type='uint8_t'> bay12: BUILDING_MACHINE_HOOKUP_DIR_*
+        <flag-bit name='up' original-name='N'/>
+        <flag-bit name='down' original-name='S'/>
+        <flag-bit name='right' original-name='E'/>
+        <flag-bit name='left' original-name='W'/>
+        <flag-bit name='z_up' original-name='U'/>
+        <flag-bit name='z_down' original-name='D'/>
+    </bitfield-type>
+
+    <struct-type type-name='machine_tile_set' original-name='building_machine_hookup_listst'>
+        <compound type-name='coord_path' name='tiles'/>
+        <stl-vector type-name='machine_conn_modes' name='can_connect' original-name='dir'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_machine_info_flag' base-type='uint32_t'> bay12: BUILDING_MACHINE_INFO_FLAG_*
+        <flag-bit name='frozen' original-name='FROZEN'/>
+    </bitfield-type>
+
+    <struct-type type-name='machine_info' original-name='building_machine_informationst'>
+        <int32_t name="machine_id" original-name='machine_global_id' ref-target='machine'/>
+        <bitfield base-type='uint32_t' type-name='building_machine_info_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_archflag' base-type='uint32_t'> bay12: BUILDING_ARCHFLAG_*
+        <flag-bit name='rough' original-name='ROUGHSTONE' comment='rough gabbro road'/>
+        <flag-bit name='built' original-name='FIRSTTIMEDONE'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_design' original-name='building_archinfost'>
+        <int32_t name='worker' original-name='worker_hfid' ref-target='historical_figure'/>
+        <int32_t name='worker_create_event' original-name='worker_creation_heid' ref-target='history_event'/>
+        <int16_t name='build_skill' original-name='wskill_at_time'/>
+        <int16_t name='build_timer1' original-name='wduration' comment='+1 per 10 frames while building'/>
+        <int32_t name='curworker' original-name='curworker_hfid' ref-target='historical_figure'/>
+        <int16_t name='build_timer2' original-name='wcurdur'/>
+        <enum base-type='int16_t' type-name='item_quality' name='quality1' original-name='workval'/>
+        <bitfield base-type='uint32_t' type-name='building_archflag' name='flags' original-name='flag'/>
+        <int32_t name='hitpoints' original-name='damageleft'/>
+        <int32_t name='max_hitpoints' original-name='maxdamageleft'/>
+        <int16_t name='damage_mat'/>
+        <int32_t name='damage_matg'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_flags' original-name='building_flag'> bay12: BUILDINGFLAG_*
+        <flag-bit name='exists' original-name='DONEFIRSTBUILD' comment='actually built, not just ordered'/>
+        <flag-bit name='site_blocked' original-name='CLEANSITE' comment='items on ground on site'/>
+        <flag-bit name='room_collision' original-name='SHAREDROOM' comment='major intersection with another room?'/>
+        <flag-bit name='mastering_pile' original-name='MASTERINGPILE'/>
+        <flag-bit name='almost_deleted' original-name='BEING_BLASTED' comment='when requesting delete while in_update'/>
+        <flag-bit name='in_update' original-name='SKIP_FINALIZE_BLAST'/>
+        <flag-bit name='from_worldgen' original-name='DO_NOT_RETAIN_IN_CREATION_ZONE'/>
+        <flag-bit name='did_location_value' original-name='DID_LOCATION_VALUE'/>
+    </bitfield-type>
+
+    <struct-type type-name='job_restrictionst'>
+        <pointer type-name='unit' name='unit'/>
+        <int32_t name='timer' original-name='count'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_links' original-name='stockpile_link_infost'>
+        <stl-vector pointer-type='building_stockpilest' name='give_to_pile' original-name='give_to_stockpile'/>
+        <stl-vector pointer-type='building_stockpilest' name='take_from_pile' original-name='take_from_stockpile'/>
+        <stl-vector pointer-type='building' name='give_to_workshop'/>
+        <stl-vector pointer-type='building' name='take_from_workshop'/>
+    </struct-type>
+
+    <bitfield-type type-name='workshop_profile_flag' base-type='uint32_t'> bay12: WORKSHOP_PROFILE_FLAG_*
+        <flag-bit name='block_general_orders' original-name='GENERAL_WORK_ORDER_BAN'/>
+    </bitfield-type>
+
+    <struct-type type-name='workshop_profile' original-name='workshop_profilest'>
+        <stl-vector type-name='int32_t' name='permitted_workers' original-name='worker_unit_id' ref-target='unit'/>
+        <int32_t name='min_level'/>
+        <int32_t name='max_level' init-value='3000'/>
+        <compound type-name='stockpile_links' name='links' original-name='stockpile_link_info'/>
+        <int32_t name='max_general_orders' original-name='maximum_allowed_general_work_orders'/>
+        <bitfield base-type='uint32_t' type-name='workshop_profile_flag' name='flags' original-name='flag'/>
+        <static-array name='blocked_labors' original-name='general_work_order_ban_profession' type-name='bool' index-enum='unit_labor'/>
+    </struct-type>
+
+    <class-type type-name='building' original-name='buildingst'
+                instance-vector='$global.world.buildings.all' key-field='id'>
+
+        <int32_t name='x1' original-name='sx' comment='top left'/>
+        <int32_t name='y1' original-name='sy'/>
+        <int32_t name='centerx' original-name='midx' comment='work location'/>
+        <int32_t name='x2' original-name='ex' comment='bottom right'/>
+        <int32_t name='y2' original-name='ey'/>
+        <int32_t name='centery' original-name='midy'/>
+        <int32_t name='z' original-name='bldz'/>
+
+        <bitfield type-name='building_flags' name='flags' original-name='flag'/>
+
+        <int16_t name='mat_type' original-name='material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='matgloss' init-value='-1'/>
+
+        <compound name='room'> not a compound
+            <pointer name='extents' original-name='occmap' is-array='true'>
+                <enum type-name='building_extents_type'/>
+            </pointer>
+            <int32_t name='x' original-name='occx'/>
+            <int32_t name='y' original-name='occy'/>
+            <int32_t name='width' original-name='occdx'/>
+            <int32_t name='height' original-name='occdy'/>
+        </compound>
+
+        <int32_t name='age'/>
+        <int16_t name='race' original-name='racemaker' ref-target='creature_raw'/>
+        <int32_t name='id' original-name='global_id' init-value='-1'/>
+
+        <stl-vector pointer-type='job' name='jobs' original-name='currentjob'/>
+        <stl-vector pointer-type='specific_ref' name='specific_refs' original-name='basic_ref'/>
+        <stl-vector pointer-type='general_ref' name='general_refs' original-name='gen_ref'/>
+
+        <stl-vector pointer-type='building_civzonest' name='relations' original-name='master' comment='zone(s) this building is in; **not sorted**'/>
+
+        <stl-vector pointer-type='job_restrictionst' name='job_claim_suppress' original-name='restrict_list'/>
+        <stl-string name='name' original-name='nick_name'/>
+
+        <stl-vector pointer-type='building_activity_infost' name='activities' original-name='activity'/>
+
+        <int32_t name='world_data_id' original-name='creation_zone_id' ref-target='world_object_data' since='v0.34.01'/>
+        <int32_t name='world_data_subid' original-name='creation_zone_alt_id' init-value='-1' since='v0.34.01'/>
+        <int32_t name='creation_bld_num' init-value='-1' since='v0.40.01'/>
+        <int32_t name='site_id' original-name='location_stid' ref-target='world_site' since='v0.42.01'/>
+        <int32_t name='location_id' original-name='location_abid' ref-target='abstract_building' aux-value='$$.site_id' since='v0.42.01'/>
+
+        <virtual-methods>
+            <vmethod ret-type='int32_t' name='getCustomType' original-name='get_custom_building_id'/>
+            <vmethod name='setCustomType' original-name='set_custom_building_id'> <int32_t name='cbid'/> </vmethod>
+            <vmethod name='countHospitalSupplies' original-name='add_location_information'>
+                <pointer type-name='abstract_building_contents' name='li'/>
+            </vmethod>
+            <vmethod name='getStockpileLinks' original-name='get_stockpile_link_info'>
+                <ret-type><pointer type-name='stockpile_links'/></ret-type>
+            </vmethod>
+            <vmethod name='detachWorldData' original-name='remove_as_creation_zone_alteration'/>
+            <vmethod ret-type='bool' name='canLinkToStockpile' original-name='can_inv_link'
+                     comment='used by the give to building ui of stockpile'/>
+            <vmethod name='getUsers' original-name='get_building_use_info'>
+                <ret-type><pointer type-name='building_users'/></ret-type>
+            </vmethod>
+            <vmethod name='moveBuilding' original-name='shift_locations'>
+                <int16_t name='shiftx'/>
+                <int16_t name='shifty'/>
+                <int16_t name='shiftz'/>
+            </vmethod>
+
+            <vmethod name='initOccupancy' original-name='add_standard_occupancy'>
+                <int32_t name='bx'/> <int32_t name='by'/>
+            </vmethod>
+            <vmethod name='setFillTimer' original-name='set_offtimer'>
+                <enum base-type='int32_t' type-name='job_type' name='type'/>
+                <int16_t name='newoff'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='isOnFire' original-name='on_fire'/>
+            <vmethod ret-type='bool' name='isUnpowered' original-name='power_failure' comment='from magma OR machine power'/>
+            <vmethod ret-type='bool' name='canCollapse' original-name='safe_on_unfreeze_floor'/>
+
+            -- 14
+
+            <vmethod ret-type='tile_building_occ' name='getPassableOccupancy' original-name='open_occ_type'/>
+            <vmethod ret-type='tile_building_occ' name='getImpassableOccupancy' original-name='closed_occ_type'/>
+            <vmethod ret-type='bool' name='isPowerSource' original-name='check_down_for_frozen_machine_rect'/>
+            <vmethod name='updateFromWeather' original-name='weather_advance'/>
+            <vmethod name='updateTemperature' original-name='temperature_advance'/>
+
+            <vmethod name='updateItems' original-name='contaminant_advance'/>
+            <vmethod name='updateTempFromTile' original-name='environment_temperature'><uint16_t name='tmp'/><bool name='main_turn'/><int32_t name='amp'/></vmethod>
+            <vmethod ret-type='bool' name='isNormalFurniture' original-name='item_determines_building_pic'/>
+            <vmethod ret-type='bool' name='isFarmPlot' original-name='destroy_not_topple'/>
+            <vmethod name='getWorkshopProfile' original-name='get_workshop_profile'>
+                <ret-type><pointer type-name='workshop_profile'/></ret-type>
+            </vmethod>
+
+            -- 24
+
+            <vmethod name='getMachineInfo' original-name='get_machine_info'>
+                <ret-type><pointer type-name='machine_info'/></ret-type>
+            </vmethod>
+            <vmethod name='getPowerInfo' original-name='get_power_profile'>
+                <pointer type-name='power_info' name='mpro'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='canConnectToMachine' original-name='valid_hookup'>
+                <pointer type-name='machine_tile_set' name='bmhl'/>
+            </vmethod>
+            <vmethod ret-type='building_type' name='getType' original-name='type'/>
+            <vmethod ret-type='int16_t' name='getSubtype' original-name='subtype'/>
+
+            <vmethod name='setSubtype' original-name='set_subtype'> <int16_t name='news'/> </vmethod>
+            <vmethod ret-type='bool' name='isActual' original-name='is_actual'/>
+            <vmethod ret-type='bool' name='keepsOwnerAfterDeath' original-name='deathpersist_owner_building'/>
+            <vmethod name='updateAction' original-name='advance'/>
+            <vmethod ret-type='bool' name='isStatueOrRestraint' original-name='owned_party_spot'/>
+
+            -- 34
+
+            <vmethod name='setMaterialAmount' original-name='set_amount'> <int32_t name='newa'/> </vmethod>
+            <vmethod name='setBuildStage' original-name='set_buildstage'> <int16_t name='bs'/> </vmethod>
+            <vmethod ret-type='int32_t' name='getBuildStage' original-name='get_buildstage'/>
+            <vmethod ret-type='int32_t' name='getMaxBuildStage' original-name='maxbuildstage'/>
+            <vmethod ret-type='int32_t' name='getBuildDuration' original-name='buildduration'/>
+            <vmethod ret-type='bool' name='isSettingOccupancy' original-name='has_building_flag'/>
+            <vmethod ret-type='bool' name='trampleOnBuild' original-name='trample_on_build'/>
+            <vmethod ret-type='bool' name='isExtentShaped' original-name='only_occupies_occmap'/>
+            <vmethod name='updateOccupancy' original-name='enddestruction_square'>
+                <int32_t name='bx'/> <int32_t name='by'/>
+            </vmethod>
+
+            -- 44
+
+            <vmethod ret-type='int32_t' name='getPersonalValue' original-name='basicvaluation'> <pointer type-name='unit' name='un'/> </vmethod>
+            <vmethod ret-type='bool' name='canBeRoom' original-name='free_on_reclaim'/>
+            <vmethod ret-type='int32_t' name='getDestroyDuration' original-name='destroyduration'/>
+            <vmethod name='queueDestroy' original-name='preparedestruction' comment='same as querying and pressing X'/>
+            <vmethod ret-type='bool' name='isImpassableTile' original-name='blockocc'>
+                <int32_t name='x'/> <int32_t name='y'/>
+            </vmethod>
+
+            <vmethod ret-type='int32_t' name='getFreeCapacity' original-name='free_container_space'>
+                <bool name='checkjobs'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='canStoreItem' original-name='canstore'>
+                <pointer type-name='item' name='it'/> <bool name='checkjobs'/>
+            </vmethod>
+            <vmethod name='getName' original-name='getname'> <pointer type-name='stl-string' name='str'/> </vmethod>
+            <vmethod name='getNameColor' original-name='setcolor'/>
+            <vmethod name='initFarmSeasons' original-name='setdefaults'/>
+
+            -- 54
+
+            <vmethod ret-type='int32_t' name='getClutterLevel' original-name='clutter_amount' comment='1..10'/>
+            <vmethod ret-type='bool' name='needsDesign' original-name='hasarchinfo'/>
+
+            <vmethod ret-type='bool' name='canUseForMood' original-name='moodmatch'>
+                <enum base-type='int16_t' type-name='job_type' name='jtype'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='canBeRoomSubset' original-name='ownablebuilding'/>
+            <vmethod ret-type='bool' name='isCoffin' original-name='uniqueownablebuilding' comment='cannot have more than one room'/>
+            <vmethod ret-type='bool' name='canUseSpouseRoom' original-name='spousesharedbuilding'/>
+            <vmethod ret-type='bool' name='canMakeRoom' original-name='masterablebuilding' comment='false if already, or cannot be'/>
+            <vmethod ret-type='bool' name='isAssigned' original-name='ownedbuilding' comment='building is assigned to a unit (if a zone) or is in a zone that is assigned to a unit'/>
+
+            -- 64
+
+            <vmethod ret-type='bool' name='isJusticeRestraint' original-name='justice_building'/>
+            <vmethod name='detachRestrainedUnit' original-name='remove_attachments'> <pointer type-name='unit' name='un'/> </vmethod>
+            <vmethod name='write_file'> <pointer type-name='file_compressorst' name='filecomp'/> </vmethod>
+            <vmethod name='read_file'>
+                <pointer type-name='file_compressorst' name='filecomp'/>
+                <enum type-name='save_version' name='loadversion'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='isImpassableAtCreation' original-name='perimdestroyer'
+                     comment='the true set looks like things where the unit should stand aside'/>
+
+            <vmethod name='categorize' original-name='add_to_arrays' comment='Add to world.buildings.other.*'> <bool name='play'/> </vmethod>
+            <vmethod name='uncategorize' original-name='remove_from_arrays' comment='Remove from world.buildings.other.*'/>
+            <vmethod ret-type='int32_t' name='getArchValue' original-name='archvalue'/>
+            <vmethod name='setTriggerState' original-name='spring_trigger'> <int32_t name='t_loaddelay' comment='0 = active/open, 1 = inactive/closed'/> </vmethod>
+
+            -- 74
+
+            <vmethod ret-type='bool' name='needsMagma' original-name='skips_coal'/>
+            <vmethod name='removeUses' original-name='blastbuilding_spec'> <bool name='destitem'/> <bool name='insanify'/> </vmethod>
+            <vmethod name='deconstructItems' original-name='blastbuilding_handle_items'> <bool name='destitem'/> <bool name='insanify'/> <bool name='is_from_damage'/> </vmethod>
+
+            <vmethod name='cleanupMap' original-name='initial_destroy_spec'/>
+            <vmethod ret-type='bool' name='isFireSafe' original-name='flammable' comment='checks contained_items[0] for FIREIMMUNE'><int8_t name='level'/></vmethod>
+            <vmethod name='fillSidebarMenu' original-name='prepare_interface'/>
+            <vmethod ret-type='bool' name='isForbidden' original-name='unclaimed'/>
+            <vmethod ret-type='bool' name='isInvisibleToPlayer' original-name='invisible_to_player'/>
+            <vmethod ret-type='bool' name='isHidden' original-name='interface_invisible'/>
+
+            -- 85
+
+            <vmethod ret-type='bool' name='isVisibleInUI' original-name='visible'
+                     comment='not hidden, or hide/unhide UI mode'/>
+            <vmethod ret-type='bool' name='isVisibleInViewport' original-name='printable_main_view' comment='checks coordinates, calls isVisibleInUI and checks window_xy'>
+                <pointer type-name='map_viewport' name='rparam'/>
+            </vmethod>
+            <vmethod name='getDrawExtents' original-name='prep_print_information'>
+                <pointer type-name='building_drawbuffer' name='pi'/>
+            </vmethod>
+            <vmethod name='drawBuilding' original-name='get_print_information'>
+                <uint32_t name='curtick'/>
+                <pointer type-name='building_drawbuffer' name='pi'/>
+                <int16_t name='bz' comment='building_wellst only'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='isValidSquadAssignment' original-name='is_good_bsi_assignment_including_master'>
+                <int32_t name='sqid'/>
+                <uint32_t name='force_flag'/>
+            </vmethod>
+
+            <vmethod ret-type='int32_t' name='getSpecificSquad' original-name='get_using_sqid'/>
+            <vmethod ret-type='int32_t' name='getSpecificPosition' original-name='get_using_sqp'/>
+            <vmethod name='setSpecificSquadPos' original-name='set_using_sqid'><int32_t name='n_sqid'/><int32_t name='n_sqp'/></vmethod>
+            <vmethod name='clearSpecificSquad' original-name='reset_using_info'/>
+            <vmethod name='removeLocationInfo' original-name='remove_location_information' since='v0.42.01' comment='related to tavern beds'/>
+
+            -- 95
+
+            <vmethod is-destructor='true'/>
+        </virtual-methods>
+    </class-type>
+
+    <enum-type type-name='stockpile_category' original-name='default_stockpiles' base-type='int16_t'> bay12: DefaultStockPiles
+        <enum-item name='Remove' original-name='NONE' value='-1'/>
+        <enum-item name='Animals' original-name='ANIMAL'/>
+        <enum-item name='Food' original-name='FOOD'/>
+        <enum-item name='Furniture' original-name='FURNITURE'/>
+        <enum-item name='Corpses' original-name='GRAVEYARD'/>
+        <enum-item name='Refuse' original-name='REFUSE'/>
+        <enum-item name='Stone' original-name='STONE'/>
+        <enum-item name='Ore' original-name='ORE'/>
+        <enum-item name='Ammo' original-name='AMMO'/>
+        <enum-item name='Coins' original-name='COINS'/>
+        <enum-item name='Bars' original-name='BARBLOCK'/>
+        <enum-item name='Gems' original-name='GEM'/>
+        <enum-item name='Goods' original-name='FINISHED'/>
+        <enum-item name='Leather' original-name='LEATHER'/>
+        <enum-item name='Cloth' original-name='CLOTH'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Weapons' original-name='WEAPON'/>
+        <enum-item name='Armor' original-name='ARMOR'/>
+        <enum-item name='Sheets' original-name='SHEET'/>
+        <enum-item name='Custom' original-name='CUSTOM'/>
+        <enum-item name='ALL'/>
+    </enum-type>
+
+    <bitfield-type type-name='stockpile_group_set' original-name='stockpile_flag' base-type='uint32_t'> bay12: STOCKPILE_FLAG_*
+        <flag-bit name='animals' original-name='ANIMAL'/>
+        <flag-bit name='food' original-name='FOOD'/>
+        <flag-bit name='furniture' original-name='FURNITURE'/>
+        <flag-bit name='corpses' original-name='GRAVEYARD'/>
+        <flag-bit name='refuse' original-name='REFUSE'/>
+        <flag-bit name='stone' original-name='STONE'/>
+        <flag-bit name='ammo' original-name='AMMO'/>
+        <flag-bit name='coins' original-name='COINS'/>
+
+        <flag-bit name='bars_blocks' original-name='BARBLOCK'/>
+        <flag-bit name='gems' original-name='GEM'/>
+        <flag-bit name='finished_goods' original-name='FINISHED'/>
+        <flag-bit name='leather' original-name='LEATHER'/>
+        <flag-bit name='cloth' original-name='CLOTH'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='weapons' original-name='WEAPON'/>
+        <flag-bit name='armor' original-name='ARMOR'/>
+
+        <flag-bit name='sheet' original-name='SHEET'/>
+    </bitfield-type>
+
+    <struct-type type-name='stockpile_parameter_animalst'>
+        <bool name='empty_cages'/>
+        <bool name='empty_traps' original-name='empty_animal_traps'/>
+        <stl-vector type-name='bool' name='enabled' original-name='race'
+                    index-refers-to='(find-creature $)'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_foodst'>
+        <stl-vector type-name='bool' name='meat'
+                    index-refers-to='(food-mat-by-idx $Meat $)'/>
+        <stl-vector type-name='bool' name='fish'
+                    index-refers-to='(food-mat-by-idx $Fish $)'/>
+        <stl-vector type-name='bool' name='unprepared_fish' original-name='fish_raw'
+                    index-refers-to='(food-mat-by-idx $UnpreparedFish $)'/>
+        <stl-vector type-name='bool' name='egg'
+                    index-refers-to='(food-mat-by-idx $Eggs $)'/>
+        <stl-vector type-name='bool' name='plants' original-name='plant'
+                    index-refers-to='(food-mat-by-idx $Plants $)'/>
+        <stl-vector type-name='bool' name='drink_plant'
+                    index-refers-to='(food-mat-by-idx $PlantDrink $)'/>
+        <stl-vector type-name='bool' name='drink_animal'
+                    index-refers-to='(food-mat-by-idx $CreatureDrink $)'/>
+        <stl-vector type-name='bool' name='cheese_plant'
+                    index-refers-to='(food-mat-by-idx $PlantCheese $)'/>
+        <stl-vector type-name='bool' name='cheese_animal'
+                    index-refers-to='(food-mat-by-idx $CreatureCheese $)'/>
+        <stl-vector type-name='bool' name='seeds'
+                    index-refers-to='(food-mat-by-idx $Seed $)'/>
+        <stl-vector type-name='bool' name='leaves' original-name='plant_growth'
+                    index-refers-to='(food-mat-by-idx $PlantGrowth $)'/>
+        <stl-vector type-name='bool' name='powder_plant' original-name='powder_misc_plant'
+                    index-refers-to='(food-mat-by-idx $PlantPowder $)'/>
+        <stl-vector type-name='bool' name='powder_creature' original-name='powder_misc_animal'
+                    index-refers-to='(food-mat-by-idx $CreaturePowder $)'/>
+        <stl-vector type-name='bool' name='glob' original-name='glob_solid'
+                    index-refers-to='(food-mat-by-idx $Glob $)'/>
+        <stl-vector type-name='bool' name='glob_paste'
+                    index-refers-to='(food-mat-by-idx $Paste $)'/>
+        <stl-vector type-name='bool' name='glob_pressed'
+                    index-refers-to='(food-mat-by-idx $Pressed $)'/>
+        <stl-vector type-name='bool' name='liquid_plant' original-name='liquid_misc_plant'
+                    index-refers-to='(food-mat-by-idx $PlantLiquid $)'/>
+        <stl-vector type-name='bool' name='liquid_animal' original-name='liquid_misc_animal'
+                    index-refers-to='(food-mat-by-idx $CreatureLiquid $)'/>
+        <stl-vector type-name='bool' name='liquid_misc' original-name='liquid_misc_other'
+                    index-refers-to='(food-mat-by-idx $MiscLiquid $)'/>
+        <bool name='prepared_meals' original-name='prepare_food'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_furniture_mat' original-name='stockpile_furniture_storage_type' base-type='int16_t'> bay12: StockpileFurnitureStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Plant' original-name='PLANT'/>
+        <enum-item name='Bone' original-name='BONE'/>
+        <enum-item name='Tooth' original-name='TOOTH'/>
+        <enum-item name='Horn' original-name='HORN'/>
+        <enum-item name='Pearl' original-name='PEARL'/>
+        <enum-item name='Shell' original-name='SHELL'/>
+        <enum-item name='Leather' original-name='LEATHER'/>
+        <enum-item name='Silk' original-name='SILK'/>
+        <enum-item name='Amber' original-name='AMBER'/>
+        <enum-item name='Coral' original-name='CORAL'/>
+        <enum-item name='GlassGreen' original-name='GLASS_GREEN'/>
+        <enum-item name='GlassClear' original-name='GLASS_CLEAR'/>
+        <enum-item name='GlassCrystal' original-name='GLASS_CRYSTAL'/>
+        <enum-item name='Yarn' original-name='YARN'/>
+    </enum-type>
+
+    <enum-type type-name='furniture_type' original-name='stockpile_furniture_item_type' base-type='int32_t'> bay12: StockpileFurnitureItemType
+        <enum-item name='NONE' value='-1'/>
+        subset of item_type
+        <enum-item name='FLOODGATE'/>
+        <enum-item name='HATCH_COVER'/>
+        <enum-item name='GRATE'/>
+        <enum-item name='DOOR'/>
+        <enum-item name='CATAPULTPARTS'/>
+        <enum-item name='BALLISTAPARTS'/>
+        <enum-item name='TRAPPARTS'/>
+        <enum-item name='BED'/>
+        <enum-item name='TRACTION_BENCH'/>
+        <enum-item name='WINDOW'/>
+        <enum-item name='CHAIR'/>
+        <enum-item name='TABLE'/>
+        <enum-item name='COFFIN'/>
+        <enum-item name='STATUE'/>
+        <enum-item name='SLAB'/>
+        <enum-item name='QUERN'/>
+        <enum-item name='MILLSTONE'/>
+        <enum-item name='ARMORSTAND'/>
+        <enum-item name='WEAPONRACK'/>
+        <enum-item name='CABINET'/>
+        <enum-item name='ANVIL'/>
+        <enum-item name='BUCKET'/>
+        <enum-item name='BIN'/>
+        <enum-item name='BOX'/>
+        <enum-item name='BAG'/>
+        <enum-item name='SIEGEAMMO'/>
+        <enum-item name='BARREL'/>
+        <enum-item name='BALLISTAARROWHEAD'/>
+        <enum-item name='PIPE_SECTION'/>
+
+        tool types
+        <enum-item name='FOOD_STORAGE' original-name='TOOL_LARGE_POTS_FOOD_STORAGE'/>
+        <enum-item name='MINECART' original-name='TOOL_TRACK_CART'/>
+        <enum-item name='WHEELBARROW' original-name='TOOL_HEAVY_OBJECT_HAULING'/>
+        <enum-item name='OTHER_LARGE_TOOLS' original-name='TOOL_OTHER_FURNITURE'/>
+
+        <enum-item name='SAND_BAG'/>
+        <enum-item name='BOLT_THROWER_PARTS'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_furniturest'>
+        <stl-vector type-name='bool' name='type' original-name='item_type' index-enum='furniture_type'/>
+        <stl-vector type-name='bool' name='other_mats' original-name='material' index-enum='stockpile_furniture_mat'/>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal' index-refers-to='(material-by-id 0 $)'/>
+        <static-array type-name='bool' name='quality_core' original-name='quality' count='7' index-enum='item_quality'/>
+        <static-array type-name='bool' name='quality_total' original-name='imp_quality' count='7' index-enum='item_quality'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_graveyardst'>
+        <stl-vector type-name='bool' name='corpses' original-name='race' index-refers-to='(find-creature $)'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_refusest'>
+        <stl-vector type-name='bool' name='type' original-name='item_type' index-enum='item_type'/>
+        <stl-vector type-name='bool' name='corpses' original-name='corpse'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='body_parts' original-name='corpsepiece'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='skulls' original-name='skull'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='bones' original-name='bone'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='hair' original-name='strand_tissue'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='shells' original-name='shell'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='teeth' original-name='tooth'
+                    index-refers-to='(find-creature $)'/>
+        <stl-vector type-name='bool' name='horns' original-name='horn'
+                    index-refers-to='(find-creature $)'/>
+        <bool name='fresh_raw_hide' original-name='unrotten_raw_hide'/>
+        <bool name='rotten_raw_hide'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_stonest'>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss'
+                    index-refers-to='(material-by-id 0 $)'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_orest'>
+        <stl-vector type-name='bool' name='mats' original-name='material' comment='unused'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_ammo_mat' original-name='stockpile_ammo_storage_type' base-type='int16_t'> bay12: StockpileAmmoStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Bone' original-name='BONE'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_ammost'>
+        <stl-vector type-name='bool' name='type' original-name='ammo_type'
+                    index-refers-to='$global.world.raws.itemdefs.ammo[$]'/>
+        <stl-vector type-name='bool' name='other_mats' original-name='material' index-enum='stockpile_ammo_mat'/>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <static-array type-name='bool' name='quality_core' original-name='quality' count='7' index-enum='item_quality'/>
+        <static-array type-name='bool' name='quality_total' original-name='imp_quality' count='7' index-enum='item_quality'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_miscst'>
+        <bool name='allow_organic' original-name='organic' init-value='true'/>
+        <bool name='allow_inorganic' original-name='inorganic' init-value='true'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_coinsst'>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_bar_mat' original-name='stockpile_bar_storage_type' base-type='int16_t'> bay12: StockpileBarStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Coal' original-name='COAL'/>
+        <enum-item name='Potash' original-name='POTASH'/>
+        <enum-item name='Ash' original-name='ASH'/>
+        <enum-item name='Pearlash' original-name='PEARLASH'/>
+        <enum-item name='Soap' original-name='SOAP'/>
+    </enum-type>
+
+    <enum-type type-name='stockpile_block_mat' original-name='stockpile_block_storage_type' base-type='int16_t'> bay12: StockpileBlockStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='GlassGreen' original-name='GLASS_GREEN'/>
+        <enum-item name='GlassClear' original-name='GLASS_CLEAR'/>
+        <enum-item name='GlassCrystal' original-name='GLASS_CRYSTAL'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_barblockst'>
+        <stl-vector type-name='bool' name='bars_other_mats' original-name='material_bar' index-enum='stockpile_bar_mat'/>
+        <stl-vector type-name='bool' name='blocks_other_mats' original-name='material_block' index-enum='stockpile_block_mat'/>
+        <stl-vector type-name='bool' name='bars_mats' original-name='matgloss_metal_bar'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <stl-vector type-name='bool' name='blocks_mats' original-name='matgloss_metal_block'
+                    index-refers-to='(material-by-id 0 $)'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_gemst'>
+        <stl-vector type-name='bool' name='rough_other_mats' original-name='material_rough'
+                    index-refers-to='(material-by-id $ -1)'/>
+        <stl-vector type-name='bool' name='cut_other_mats' original-name='material_smallgem'
+                    index-refers-to='(material-by-id $ -1)'/>
+        <stl-vector type-name='bool' name='rough_mats' original-name='matgloss_stone_rough'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <stl-vector type-name='bool' name='cut_mats' original-name='matgloss_stone_smallgem'
+                    index-refers-to='(material-by-id 0 $)'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_finished_mat' original-name='stockpile_finished_storage_type' base-type='int16_t'> bay12: StockpileFinishedStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Plant' original-name='PLANT'/>
+        <enum-item name='Bone' original-name='BONE'/>
+        <enum-item name='Tooth' original-name='TOOTH'/>
+        <enum-item name='Horn' original-name='HORN'/>
+        <enum-item name='Pearl' original-name='PEARL'/>
+        <enum-item name='Shell' original-name='SHELL'/>
+        <enum-item name='Leather' original-name='LEATHER'/>
+        <enum-item name='Silk' original-name='SILK'/>
+        <enum-item name='Amber' original-name='AMBER'/>
+        <enum-item name='Coral' original-name='CORAL'/>
+        <enum-item name='GlassGreen' original-name='GLASS_GREEN'/>
+        <enum-item name='GlassClear' original-name='GLASS_CLEAR'/>
+        <enum-item name='GlassCrystal' original-name='GLASS_CRYSTAL'/>
+        <enum-item name='Yarn' original-name='YARN'/>
+        <enum-item name='Wax' original-name='WAX'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_finishedst'>
+        <stl-vector type-name='bool' name='type' original-name='item_type' index-enum='item_type'/>
+        <stl-vector type-name='bool' name='other_mats' original-name='material' index-enum='stockpile_finished_mat'/>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <stl-vector type-name='bool' name='color'/>
+        <bool name='dyed'/>
+        <bool name='undyed'/>
+        <static-array type-name='bool' name='quality_core' original-name='quality' count='7' index-enum='item_quality'/>
+        <static-array type-name='bool' name='quality_total' original-name='imp_quality' count='7' index-enum='item_quality'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_leatherst'>
+        <stl-vector type-name='bool' name='mats' original-name='leather'
+                    index-refers-to='(food-mat-by-idx $Leather $)'/>
+        <stl-vector type-name='bool' name='color'/>
+        <bool name='dyed'/>
+        <bool name='undyed'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_clothst'>
+        <stl-vector type-name='bool' name='thread_silk' original-name='matgloss_thread_silk'
+                    index-refers-to='(food-mat-by-idx $Silk $)'/>
+        <stl-vector type-name='bool' name='thread_plant' original-name='matgloss_thread_plant'
+                    index-refers-to='(food-mat-by-idx $PlantFiber $)'/>
+        <stl-vector type-name='bool' name='thread_yarn' original-name='matgloss_thread_yarn'
+                    index-refers-to='(food-mat-by-idx $Yarn $)'/>
+        <stl-vector type-name='bool' name='thread_metal' original-name='matgloss_thread_metal'
+                    index-refers-to='(food-mat-by-idx $MetalThread $)'/>
+        <stl-vector type-name='bool' name='cloth_silk' original-name='matgloss_cloth_silk'
+                    index-refers-to='(food-mat-by-idx $Silk $)'/>
+        <stl-vector type-name='bool' name='cloth_plant' original-name='matgloss_cloth_plant'
+                    index-refers-to='(food-mat-by-idx $PlantFiber $)'/>
+        <stl-vector type-name='bool' name='cloth_yarn' original-name='matgloss_cloth_yarn'
+                    index-refers-to='(food-mat-by-idx $Yarn $)'/>
+        <stl-vector type-name='bool' name='cloth_metal' original-name='matgloss_cloth_metal'
+                    index-refers-to='(food-mat-by-idx $MetalThread $)'/>
+        <stl-vector type-name='bool' name='color'/>
+        <bool name='dyed'/>
+        <bool name='undyed'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_sheetst'>
+        <stl-vector type-name='bool' name='paper' original-name='matgloss_paper_plant'/>
+        <stl-vector type-name='bool' name='parchment' original-name='matgloss_parchment'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_parameter_woodst'>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss'
+                    index-refers-to='(find-plant-raw $)'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_weapon_mat' original-name='stockpile_weapon_storage_type' base-type='int16_t'> bay12: StockpileWeaponStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Plant' original-name='PLANT'/>
+        <enum-item name='Bone' original-name='BONE'/>
+        <enum-item name='Shell' original-name='SHELL'/>
+        <enum-item name='Leather' original-name='LEATHER'/>
+        <enum-item name='Silk' original-name='SILK'/>
+        <enum-item name='GlassGreen' original-name='GLASS_GREEN'/>
+        <enum-item name='GlassClear' original-name='GLASS_CLEAR'/>
+        <enum-item name='GlassCrystal' original-name='GLASS_CRYSTAL'/>
+        <enum-item name='Yarn' original-name='YARN'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_weaponst'>
+        <stl-vector type-name='bool' name='weapon_type'
+                    index-refers-to='$global.world.raws.itemdefs.weapons[$]'/>
+        <stl-vector type-name='bool' name='trapcomp_type'
+                    index-refers-to='$global.world.raws.itemdefs.trapcomps[$]'/>
+        <stl-vector type-name='bool' name='other_mats' original-name='material' index-enum='stockpile_weapon_mat'/>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <static-array type-name='bool' name='quality_core' original-name='quality' count='7' index-enum='item_quality'/>
+        <static-array type-name='bool' name='quality_total' original-name='imp_quality' count='7' index-enum='item_quality'/>
+        <bool name='usable'/>
+        <bool name='unusable' original-name='non_usable'/>
+    </struct-type>
+
+    <enum-type type-name='stockpile_armor_mat' original-name='stockpile_armor_storage_type' base-type='int16_t'> bay12: StockpileArmorStorageType
+        <enum-item name='None' original-name='NONE' value='-1'/>
+        <enum-item name='Wood' original-name='WOOD'/>
+        <enum-item name='Plant' original-name='PLANT'/>
+        <enum-item name='Bone' original-name='BONE'/>
+        <enum-item name='Shell' original-name='SHELL'/>
+        <enum-item name='Leather' original-name='LEATHER'/>
+        <enum-item name='Silk' original-name='SILK'/>
+        <enum-item name='GlassGreen' original-name='GLASS_GREEN'/>
+        <enum-item name='GlassClear' original-name='GLASS_CLEAR'/>
+        <enum-item name='GlassCrystal' original-name='GLASS_CRYSTAL'/>
+        <enum-item name='Yarn' original-name='YARN'/>
+    </enum-type>
+
+    <struct-type type-name='stockpile_parameter_armorst'>
+        <stl-vector type-name='bool' name='body' original-name='armor_type'
+                    index-refers-to='$global.world.raws.itemdefs.armor[$]'/>
+        <stl-vector type-name='bool' name='head' original-name='helm_type'
+                    index-refers-to='$global.world.raws.itemdefs.helms[$]'/>
+        <stl-vector type-name='bool' name='feet' original-name='shoes_type'
+                    index-refers-to='$global.world.raws.itemdefs.shoes[$]'/>
+        <stl-vector type-name='bool' name='hands' original-name='gloves_type'
+                    index-refers-to='$global.world.raws.itemdefs.gloves[$]'/>
+        <stl-vector type-name='bool' name='legs' original-name='pants_type'
+                    index-refers-to='$global.world.raws.itemdefs.pants[$]'/>
+        <stl-vector type-name='bool' name='shield' original-name='shield_type'
+                    index-refers-to='$global.world.raws.itemdefs.shields[$]'/>
+        <stl-vector type-name='bool' name='other_mats' original-name='material' index-enum='stockpile_armor_mat'/>
+        <stl-vector type-name='bool' name='mats' original-name='matgloss_metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+        <stl-vector type-name='bool' name='color'/>
+        <static-array type-name='bool' name='quality_core' original-name='quality' count='7' index-enum='item_quality'/>
+        <static-array type-name='bool' name='quality_total' original-name='imp_quality' count='7' index-enum='item_quality'/>
+        <bool name='usable'/>
+        <bool name='unusable' original-name='non_usable'/>
+        <bool name='dyed'/>
+        <bool name='undyed'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_settings' original-name='stockpile_parameterst'>
+        <bitfield base-type='uint32_t' type-name='stockpile_group_set' name='flags' original-name='sp_flag'/>
+        <compound type-name='stockpile_parameter_animalst' name='animals' original-name='animal'/>
+        <compound type-name='stockpile_parameter_foodst' name='food'/>
+        <compound type-name='stockpile_parameter_furniturest' name='furniture'/>
+        <compound type-name='stockpile_parameter_graveyardst' name='corpses' original-name='graveyard'/>
+        <compound type-name='stockpile_parameter_refusest' name='refuse'/>
+        <compound type-name='stockpile_parameter_stonest' name='stone'/>
+        <compound type-name='stockpile_parameter_orest' name='ore'/>
+        <compound type-name='stockpile_parameter_ammost' name='ammo'/>
+        <compound type-name='stockpile_parameter_coinsst' name='coins'/>
+        <compound type-name='stockpile_parameter_barblockst' name='bars_blocks' original-name='barblock'/>
+        <compound type-name='stockpile_parameter_gemst' name='gems' original-name='gem'/>
+        <compound type-name='stockpile_parameter_finishedst' name='finished_goods' original-name='finished'/>
+        <compound type-name='stockpile_parameter_leatherst' name='leather'/>
+        <compound type-name='stockpile_parameter_clothst' name='cloth'/>
+        <compound type-name='stockpile_parameter_woodst' name='wood'/>
+        <compound type-name='stockpile_parameter_weaponst' name='weapons' original-name='weapon'/>
+        <compound type-name='stockpile_parameter_armorst' name='armor'/>
+        <compound type-name='stockpile_parameter_sheetst' name='sheet'/>
+        <compound type-name='stockpile_parameter_miscst' name='misc'/>
+    </struct-type>
+
+    <struct-type type-name='stockpile_storage_infost'>
+        <int16_t name='max_barrels' original-name='barrel_seek_num'/>
+        <int16_t name='max_bins' original-name='bin_seek_num'/>
+        <int16_t name='max_wheelbarrows' original-name='wheelbarrow_seek_num'/>
+
+        <stl-vector name='container_type' original-name='b_type'>
+            <enum base-type='int16_t' type-name='item_type'/>
+        </stl-vector>
+        <stl-vector type-name='int32_t' name='container_item_id' original-name='b_id' ref-target='item'/>
+        <stl-vector type-name='int16_t' name='container_x' original-name='b_x'/>
+        <stl-vector type-name='int16_t' name='container_y' original-name='b_y'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_stockpile_flag' base-type='uint32_t'> bay12: BUILDINGFLAG_STOCKPILE_FLAG_*
+        <flag-bit name='use_links_only' original-name='LINKS_ONLY'/>
+    </bitfield-type>
+
+    <class-type type-name='building_stockpilest' inherits-from='building'>
+        <compound type-name='stockpile_settings' name='settings' original-name='stockpile'/>
+        <compound type-name='stockpile_storage_infost' name='storage'/>
+        <compound type-name='stockpile_links' name='links' original-name='stockpile_link_info'/>
+
+        <bitfield base-type='uint32_t' type-name='building_stockpile_flag' name='stockpile_flag'/>
+        <int32_t name='stockpile_number' original-name='id_number' init-value='-1'/>
+
+        <stl-vector pointer-type='hauling_stop' name='linked_stops' original-name='hauling_stop'/>
+    </class-type>
+
+    <bitfield-type type-name='civzone_pen_flag' base-type='uint32_t'> bay12: CIVZONE_PEN_FLAG_*
+        <flag-bit name='check_occupants' original-name='CHECK_OCCUPANTS'/>
+    </bitfield-type>
+
+    <struct-type type-name='civzone_penst'>
+        <bitfield base-type='uint32_t' type-name='civzone_pen_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <bitfield-type type-name='civzone_pond_flag' base-type='uint32_t'> bay12: CIVZONE_POND_FLAG_*
+        <flag-bit name='keep_filled' original-name='KEEP_FILLED'/>
+        <flag-bit name='check_occupants' original-name='CHECK_OCCUPANTS'/>
+    </bitfield-type>
+
+    <struct-type type-name='civzone_pondst'>
+        <bitfield base-type='uint32_t' type-name='civzone_pond_flag' name='flag'/>
+        <int16_t name='fill_timer'/>
+    </struct-type>
+
+    <bitfield-type type-name='civzone_tomb_flag' base-type='uint32_t'> bay12: CIVZONE_TOMB_FLAG_*
+        <flag-bit name='no_pets' original-name='NOPET'/>
+        <flag-bit name='no_citizens' original-name='NOCIV'/>
+    </bitfield-type>
+
+    <struct-type type-name='civzone_tombst'>
+        <bitfield base-type='uint32_t' type-name='civzone_tomb_flag' name='flags' original-name='flag'/>
+    </struct-type>
+
+    <bitfield-type type-name='civzone_gather_flag' base-type='uint32_t'> bay12: CIVZONE_GATHER_FLAG_*
+        <flag-bit name='pick_trees' original-name='PICK_TREES'/>
+        <flag-bit name='pick_shrubs' original-name='PICK_SHRUBS'/>
+        <flag-bit name='gather_fallen' original-name='GATHER_FALLEN'/>
+    </bitfield-type>
+
+    <struct-type type-name='civzone_gatherst'>
+        <bitfield base-type='uint32_t' type-name='civzone_gather_flag' name='flags' original-name='flag'/>
+        <int32_t name='timer' original-name='delay_counter'/>
+    </struct-type>
+
+    <struct-type type-name='civzone_archery_rangest'>
+        <int32_t name='dir_x'/>
+        <int32_t name='dir_y'/>
+    </struct-type>
+
+    <bitfield-type type-name='civzone_activity_flag' base-type='uint32_t'> bay12: CIVZONE_ACTIVITY_FLAG_*
+        <flag-bit name='unused_01' original-name='UNUSED_01'/>
+        <flag-bit name='unused_02' original-name='UNUSED_02'/>
+        <flag-bit name='unused_03' original-name='UNUSED_03'/>
+        <flag-bit name='active' original-name='ACTIVE'/>
+        <flag-bit name='unused_05' original-name='UNUSED_05'/>
+        <flag-bit name='unused_06' original-name='UNUSED_06'/>
+        <flag-bit name='unused_07' original-name='UNUSED_07'/>
+        <flag-bit name='unused_08' original-name='UNUSED_08'/>
+        <flag-bit name='unused_09' original-name='UNUSED_09'/>
+        <flag-bit name='unused_10' original-name='UNUSED_10'/>
+        <flag-bit name='unused_11' original-name='UNUSED_11'/>
+        <flag-bit name='unused_12' original-name='UNUSED_12'/>
+    </bitfield-type>
+
+    <class-type type-name='building_civzonest' inherits-from='building'>
+        <stl-vector type-name='int32_t' name='assigned_units' original-name='assigned_u' ref-target='unit'/>
+        <stl-vector type-name='int32_t' name='assigned_items' original-name='assigned_i' ref-target='item'/>
+        <enum type-name='civzone_type' name="type" original-name='civzone_type' comment='only saved as int16'/>
+        <bitfield base-type='uint32_t' type-name='civzone_activity_flag' name='spec_sub_flag'/>
+        <int32_t name='site_realization_building_id'/>
+        <int32_t name='site_realization_sul_id'/>
+        <int32_t name='zone_num' original-name='id_number'/>
+        <compound name='zone_settings' is-union='true'>
+            <compound name='whole'>
+                <int32_t name='i1'/>
+                <int32_t name='i2'/>
+            </compound>
+            <compound type-name='civzone_penst' name='pen'/>
+            <compound type-name='civzone_pondst' name='pond'/>
+            <compound type-name='civzone_gatherst' name='gather'/>
+            <compound type-name='civzone_archery_rangest' name='archery' original-name='archery_range'/>
+            <compound type-name='civzone_tombst' name='tomb'/>
+        </compound>
+
+        <stl-vector type-name='int32_t' name='home_general_hf' original-name='home_general_hfid' ref-target='historical_figure' comment='binary'/>
+        <stl-vector pointer-type='building' name='contained_buildings' original-name='subord' comment='includes eg workshops and beds; **not sorted**'/>
+        <int32_t name='assigned_unit_id' original-name='owner_unid' ref-target='unit' init-value='-1'/>
+        <int32_t name='owner_unit_cached_index' init-value='-1'/>
+        <stl-vector pointer-type='building_squad_infost' name='squad_room_info' original-name='squad_info'/>
+        <int32_t name='retained_owner' original-name='retained_owner_unid' ref-target='unit' comment='only used during save'/>
+    </class-type>
+
+    <enum-type type-name='building_item_role_type' base-type='int16_t'> bay12: BuildingItemRoles, no base type
+        <enum-item name='TEMP'/>
+        <enum-item name='TEMP_PRINTHIDDEN'/>
+        <enum-item name='PERM'/>
+    </enum-type>
+
+    <struct-type type-name='buildingitemst'>
+        <pointer type-name='item' name='item' original-name='it'/>
+        <enum type-name='building_item_role_type' name='use_mode' original-name='role'/>
+    </struct-type>
+
+    <class-type type-name='building_actual' inherits-from='building'
+                original-name='building_actualst'>
+        <int16_t name='construction_stage' original-name='buildstage'
+                 comment='0 not started, then 1 or 3 max depending on type'/>
+
+        <stl-vector pointer-type='buildingitemst' name='contained_items' original-name='inv'/>
+
+        <pointer type-name='building_design' name='design' original-name='archinfo'/>
+
+        <virtual-methods>
+            <vmethod ret-type='bool' name='isDestroyedByItemRemoval' original-name='perm_loss_destroys'/>
+            <vmethod ret-type='bool' name='scatter_items_on_load'/>
+            <vmethod ret-type='bool' name='converts_to_dungeon_container'/>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='building_boxst' inherits-from='building_actual'>
+        <uint16_t name='box_flag' comment='unused'/>
+        <int32_t name='specific_squad' original-name='using_sqid' ref-target='squad'/>
+        <int32_t name='specific_position' original-name='using_sqp' init-value='-1'/>
+    </class-type>
+
+    <class-type type-name='building_cabinetst' inherits-from='building_actual'>
+        <uint16_t name='cabinet_flag'/>
+        <int32_t name='specific_squad' original-name='using_sqid' ref-target='squad'/>
+        <int32_t name='specific_position' original-name='using_sqp' init-value='-1'/>
+    </class-type>
+
+    <class-type type-name='building_weaponrackst' inherits-from='building_actual'>
+        <uint16_t name='rack_flags' original-name='rack_flag'/>
+        <int32_t name='specific_squad' original-name='using_sqid' ref-target='squad'/>
+    </class-type>
+
+    <class-type type-name='building_armorstandst' inherits-from='building_actual'>
+        <uint16_t name='stand_flag' comment='unused'/>
+
+        <int32_t name='specific_squad' original-name='using_sqid' ref-target='squad'/>
+        <int32_t name='specific_position' original-name='using_sqp' init-value='-1'/>
+    </class-type>
+
+    <bitfield-type type-name='building_door_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_DOOR_*
+        <flag-bit name='forbidden' original-name='FORBIDDEN'/>
+        <flag-bit name='unused_02' original-name='UNUSED_02'/>
+        <flag-bit name='taken_by_invaders' original-name='SIEGED'/>
+        <flag-bit name='used_by_intruder' original-name='THIEVED'/>
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='operated_by_mechanisms' original-name='MECHANISM'/>
+    </bitfield-type>
+
+    <class-type type-name='building_doorst' inherits-from='building_actual'>
+        <bitfield type-name='building_door_flag' name='door_flags' original-name='door_flag' init-value='0x10'/>
+        <int16_t name='close_timer' original-name='opentime'/>
+    </class-type>
+
+    <bitfield-type type-name='building_hatch_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_HATCH_*
+        <flag-bit name='forbidden' original-name='FORBIDDEN'/>
+        <flag-bit name='unused_02' original-name='UNUSED_02'/>
+        <flag-bit name='taken_by_invaders' original-name='SIEGED'/>
+        <flag-bit name='used_by_intruder' original-name='THIEVED'/>
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='operated_by_mechanisms' original-name='MECHANISM'/>
+    </bitfield-type>
+
+    <class-type type-name='building_hatchst' inherits-from='building_actual'>
+        <bitfield type-name='building_hatch_flag' name='door_flags' original-name='hatch_flag' init-value='0x50'/>
+        <int16_t name='close_timer' original-name='opentime'/>
+    </class-type>
+
+    <bitfield-type type-name='building_bridge_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_BRIDGE_*
+        <flag-bit name='raised' original-name='UP'/>
+        <flag-bit name='raising' original-name='GOINGUP'/>
+        <flag-bit name='lowering' original-name='GOINGDOWN'/>
+        <flag-bit name='collapsing' original-name='COMING_DOWN'/>
+        <flag-bit name='has_support' original-name='EARTH_BOUNDARY'/>
+    </bitfield-type>
+
+    <class-type type-name='building_bridgest' inherits-from='building_actual'>
+        <bitfield type-name='building_bridge_flag' name='gate_flags' original-name='bridge_flag' init-value='1'/>
+        <int8_t name='timer' original-name='bridgedist'/>
+        <enum base-type='int8_t' name='direction' original-name='anchor'>
+            <enum-item name='Retracting' value='-1'/>
+            <enum-item name='Left'/>
+            <enum-item name='Right'/>
+            <enum-item name='Up'/>
+            <enum-item name='Down'/>
+        </enum>
+        <int32_t name='material_amount' original-name='amount'/>
+    </class-type>
+
+    <bitfield-type type-name='building_floodgate_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_FLOODGATE_*
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='closing' original-name='CLOSING'/>
+        <flag-bit name='opening' original-name='OPENING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_floodgatest' inherits-from='building_actual'>
+        <bitfield type-name='building_floodgate_flag' name='gate_flags' original-name='floodgate_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <bitfield-type type-name='building_grate_wall_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_GRATE_WALL_*
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='closing' original-name='CLOSING'/>
+        <flag-bit name='opening' original-name='OPENING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_grate_wallst' inherits-from='building_actual'>
+        <bitfield type-name='building_grate_wall_flag' name='gate_flags' original-name='grate_wall_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <bitfield-type type-name='building_grate_floor_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_GRATE_FLOOR_*
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='closing' original-name='CLOSING'/>
+        <flag-bit name='opening' original-name='OPENING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_grate_floorst' inherits-from='building_actual'>
+        <bitfield type-name='building_grate_floor_flag' name='gate_flags' original-name='grate_floor_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <bitfield-type type-name='building_bars_vertical_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_BARS_VERTICAL_*
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='closing' original-name='CLOSING'/>
+        <flag-bit name='opening' original-name='OPENING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_bars_verticalst' inherits-from='building_actual'>
+        <bitfield type-name='building_bars_vertical_flag' name='gate_flags' original-name='bars_vertical_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <bitfield-type type-name='building_bars_floor_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_BARS_FLOOR_*
+        <flag-bit name='closed' original-name='CLOSED'/>
+        <flag-bit name='closing' original-name='CLOSING'/>
+        <flag-bit name='opening' original-name='OPENING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_bars_floorst' inherits-from='building_actual'>
+        <bitfield type-name='building_bars_floor_flag' name='gate_flags' original-name='bars_floor_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <bitfield-type type-name='building_trap_trigger_flag' base-type='uint32_t'> bay12: BUILDINGFLAG_TRAP_TRIGGER_*
+        <flag-bit name='units' original-name='ENABLED_CREATURE'/>
+        <flag-bit name='water' original-name='ENABLED_WATER'/>
+        <flag-bit name='magma' original-name='ENABLED_MAGMA'/>
+        <flag-bit name='citizens' original-name='LOCALS_TRIGGER'/>
+        <flag-bit name='resets' original-name='RESETS'/>
+        <flag-bit name='track' original-name='ENABLED_TRACK_CART'/>
+    </bitfield-type>
+
+    <struct-type type-name='pressure_plate_info' original-name='trigger_profilest'>
+        <int32_t name='unit_min' original-name='min_size' init-value='50000'/>
+        <int32_t name='unit_max' original-name='max_size' init-value='200000'/>
+        <int8_t name='water_min' original-name='min_water' init-value='1'/>
+        <int8_t name='water_max' original-name='max_water' init-value='7'/>
+        <int8_t name='magma_min' original-name='min_magma' init-value='1'/>
+        <int8_t name='magma_max' original-name='max_magma' init-value='7'/>
+        <int32_t name='track_min' original-name='min_track_weight' init-value='1' since='v0.34.08'/>
+        <int32_t name='track_max' original-name='max_track_weight' init-value='2000' since='v0.34.08'/>
+
+        <bitfield base-type='uint32_t' type-name='building_trap_trigger_flag' name='flags' original-name='flag' init-value='0x10'/>
+    </struct-type>
+
+    <bitfield-type type-name='track_stop_profile_flag' base-type='uint32_t'> bay12: TRACK_STOP_PROFILE_FLAG_*
+        <flag-bit name='use_dump' original-name='DUMP_ON_ENTRY'/>
+    </bitfield-type>
+
+    <struct-type type-name='track_stop_profilest'>
+        <int32_t name='friction' init-value='50000' since='v0.34.08'/>
+        <bitfield base-type='uint32_t' type-name='track_stop_profile_flag' name='track_flags' original-name='flag'/>
+        <int32_t name='dump_x_shift' original-name='dump_dir_x' since='v0.34.08'/>
+        <int32_t name='dump_y_shift' original-name='dump_dir_y' since='v0.34.08'/>
+    </struct-type>
+
+    <enum-type type-name='trap_type' original-name='building_trap_type' base-type='int16_t'> bay12: BuildingTrapType
+        <enum-item name="NONE" value='-1'/>
+        <enum-item name="Lever" original-name='LEVER'/>
+        <enum-item name="PressurePlate" original-name='TRIGGER'/>
+        <enum-item name="CageTrap" original-name='CAGE'/>
+        <enum-item name="StoneFallTrap" original-name='STONE'/>
+        <enum-item name="WeaponTrap" original-name='WEAPON'/>
+        <enum-item name="TrackStop" original-name='TRACK_STOP'/>
+    </enum-type>
+
+    <bitfield-type type-name='building_trap_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_TRAP_*
+        <flag-bit name='disabled' original-name='RETRACTED'/>
+        <flag-bit name='disabling' original-name='RETRACTING'/>
+        <flag-bit name='enabling' original-name='UNRETRACTING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_trapst' inherits-from='building_actual'>
+        <enum base-type='int16_t' type-name='trap_type' name='trap_type'/>
+        <int8_t name='state' original-name='loaddelay' comment='!=0 = pulled, tripped/needs reloading'/>
+        <int16_t name='ready_timeout' original-name='initial_delay' comment='plate not active if > 0'/>
+        <int16_t name='fill_timer' original-name='offtimer'/>
+        <bitfield base-type='uint16_t' type-name='building_trap_flag' name='stop_flags' original-name='trap_flag'/>
+        <stl-vector pointer-type='item' name='linked_mechanisms' original-name='mech'/>
+        <stl-vector type-name='int32_t' name='observed_by_civs' original-name='safe_entity_id' ref-target='historical_entity'/>
+
+        <compound type-name='workshop_profile' name='profile' original-name='workshop_profile'/>
+
+        <compound type-name='pressure_plate_info' name='plate_info' original-name='trigger_profile'/>
+
+        <compound type-name='track_stop_profilest' name='track_stop_info' original-name='track_stop_profile'/>
+        <int8_t name='stop_trigger_timer' original-name='gatedist' since='v0.34.08'/>
+    </class-type>
+
+    <bitfield-type type-name='building_gear_assembly_flag' base-type='uint32_t'> bay12: BUILDINGFLAG_GEAR_ASSEMBLY_*
+        <flag-bit name='disengaged' original-name='DISENGAGED'/>
+    </bitfield-type>
+
+    <class-type type-name='building_gear_assemblyst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+        <bitfield base-type='uint32_t' type-name='building_gear_assembly_flag' name='gear_flags' original-name='gear_assembly_flag'/>
+    </class-type>
+
+    <class-type type-name='building_rollersst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+        <enum base-type='int32_t' type-name='screw_pump_direction' name='direction' original-name='dir'/>
+        <int32_t name='speed' init-value='50000'/>
+    </class-type>
+
+    <class-type type-name='building_axle_horizontalst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+        <bool name='is_vertical' original-name='dir'/>
+    </class-type>
+
+    <class-type type-name='building_axle_verticalst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+    </class-type>
+
+    <bitfield-type type-name='building_support_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_SUPPORT_*
+        <flag-bit name='triggered' original-name='COMINGDOWN'/>
+    </bitfield-type>
+
+    <class-type type-name='building_supportst' inherits-from='building_actual'>
+        <bitfield base-type='uint16_t' type-name='building_support_flag' name='support_flags' original-name='support_flag'/>
+    </class-type>
+
+    <bitfield-type type-name='building_weapon_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_WEAPON_*
+        <flag-bit name='retracted' original-name='RETRACTED'/>
+        <flag-bit name='retracting' original-name='RETRACTING'/>
+        <flag-bit name='unretracting' original-name='UNRETRACTING'/>
+    </bitfield-type>
+
+    <class-type type-name='building_weaponst' inherits-from='building_actual'>
+        <bitfield type-name='building_weapon_flag' name='gate_flags' original-name='weapon_flag' init-value='1'/>
+        <int8_t name='timer' original-name='gatedist'/>
+    </class-type>
+
+    <class-type type-name='building_instrumentst' inherits-from='building_actual'>
+        <uint32_t name='instrument_flag' comment='unused'/>
+    </class-type>
+
+    <class-type type-name='building_archerytargetst' inherits-from='building_actual'/>
+
+    <enum-type type-name='screw_pump_direction' original-name='building_screw_pump_dir'> bay12: BUILDING_SCREW_PUMP_DIR_*
+        <enum-item name='FromNorth' original-name='GET_FROM_NORTH'/>
+        <enum-item name='FromEast' original-name='GET_FROM_EAST'/>
+        <enum-item name='FromSouth' original-name='GET_FROM_SOUTH'/>
+        <enum-item name='FromWest' original-name='GET_FROM_WEST'/>
+    </enum-type>
+
+    <class-type type-name='building_screw_pumpst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+
+        <int8_t name='pump_energy' original-name='turning' comment='decreases by 1 every frame. powering or manually pumping maintains near 100'/>
+
+        <enum base-type='int8_t' type-name='screw_pump_direction' name='direction' original-name='dir'/>
+
+        <bool name='pump_manually' original-name='wants_to_pump'/>
+    </class-type>
+
+    <class-type type-name='building_water_wheelst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+        <bool name='is_vertical' original-name='dir'/>
+        <bool name='gives_power' original-name='in_flow'/>
+    </class-type>
+
+    <class-type type-name='building_windmillst' inherits-from='building_actual'>
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+
+        <int16_t name="orient_x" original-name='facing_sx' init-value='-1'/>
+        <int16_t name="orient_y" original-name='facing_sy'/>
+
+        <int16_t name="is_working" original-name='in_flow'/>
+        <int8_t name="rotation" original-name='position'/>
+        <int16_t name="rotate_timer" original-name='position_counter'/>
+        <int16_t name="orient_timer" original-name='turn_counter'/>
+    </class-type>
+
+    <bitfield-type type-name='building_chain_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_CHAIN_*
+        <flag-bit name='triggered' original-name='COMINGLOOSE'/>
+    </bitfield-type>
+
+    <class-type type-name='building_chainst' inherits-from='building_actual'>
+        <pointer type-name='unit' name='assigned' original-name='chainee'/>
+        <pointer type-name='unit' name='chained'/>
+        <bitfield base-type='uint16_t' type-name='building_chain_flag' name='chain_flags' original-name='chain_flag'/>
+    </class-type>
+
+    <bitfield-type type-name='building_cage_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_CAGE_*
+        <flag-bit name='triggered' original-name='OPENINGUP'/>
+        <flag-bit name='aquarium' original-name='WATER'/>
+        <flag-bit name='check_occupants' original-name='CHECKOCCUPANTS'/>
+    </bitfield-type>
+
+    <class-type type-name='building_cagest' inherits-from='building_actual'>
+        <stl-vector type-name='int32_t' name='assigned_units' original-name='assigned_u' ref-target='unit'/>
+        <stl-vector type-name='int32_t' name='assigned_items' original-name='assigned_i' ref-target='item'/>
+        <bitfield base-type='uint16_t' type-name='building_cage_flag' name='cage_flags' original-name='cage_flag'/>
+        <int16_t name='fill_timer'/>
+    </class-type>
+
+    <enum-type type-name='siegeengine_type' original-name='building_siegeengine_type' base-type='int16_t'> bay12: BuildingSiegeEngineType, no base type
+        <enum-item name="NONE" value='-1'/>
+        <enum-item name="Catapult" original-name='CATAPULT'/>
+        <enum-item name="Ballista" original-name='BALLISTA'/>
+        <enum-item name="BoltThrower" original-name='BOLT_THROWER'/>
+    </enum-type>
+
+    <enum-type type-name='siegeengine_orientation' base-type='int8_t'> no bay12 enum
+        <enum-item name='North'/>
+        <enum-item name='Northeast'/>
+        <enum-item name='East'/>
+        <enum-item name='Southeast'/>
+        <enum-item name='South'/>
+        <enum-item name='Southwest'/>
+        <enum-item name='West'/>
+        <enum-item name='Northwest'/>
+    </enum-type>
+
+    <enum-type type-name='siegeengine_action' base-type='int8_t'> no bay12 enum
+        <enum-item name='NotInUse'/>
+        <enum-item name='KeepLoaded'/>
+        <enum-item name='PrepareToFire'/>
+        <enum-item name='FireAtWill'/>
+        <enum-item name='PracticeFire'/>
+    </enum-type>
+
+    <class-type type-name='building_siegeenginest' inherits-from='building_actual'>
+        <enum base-type='int16_t' type-name='siegeengine_type' name="type" original-name='siegeengine_type'/>
+        <enum base-type='int8_t' type-name='siegeengine_orientation' name='facing' original-name='orientation'/>
+        <enum base-type='int8_t' type-name='siegeengine_orientation' name='resting_orientation'/>
+        <enum base-type='int8_t' type-name='siegeengine_action' name='action' original-name='firing'/>
+        <int8_t name='fire_timer' original-name='firestate'/>
+        <int16_t name='fill_timer' original-name='offtimer'/>
+        <int8_t name='rotate_delay'/>
+    </class-type>
+
+    <class-type type-name='building_traction_benchst' inherits-from='building_actual'>
+        <uint16_t name='traction_flag' original-name='traction_bench_flag' comment='unused'/>
+        <compound type-name='building_users' name='users' original-name='building_use_info'/>
+    </class-type>
+
+    <class-type type-name='building_bedst' inherits-from='building_actual'>
+        <int32_t name='specific_squad' original-name='using_sqid' ref-target='squad'/>
+        <int32_t name='specific_position' original-name='using_sqp' init-value='-1'/>
+        <compound type-name='building_users' name='users' original-name='building_use_info'/>
+    </class-type>
+
+    <bitfield-type type-name='building_table_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_TABLE_*
+        <flag-bit name='meeting_hall' original-name='MEETINGHALL'/>
+    </bitfield-type>
+
+    <class-type type-name='building_tablest' inherits-from='building_actual'>
+        <bitfield base-type='uint16_t' type-name='building_table_flag' name='table_flags' original-name='table_flag'/>
+        <compound type-name='building_users' name='users' original-name='building_use_info'/>
+    </class-type>
+
+    <class-type type-name='building_chairst' inherits-from='building_actual'>
+        <uint16_t name='chair_flag' comment='unused'/>
+        <compound type-name='building_users' name='users' original-name='building_use_info'/>
+    </class-type>
+
+    <bitfield-type type-name='building_shop_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_SHOP_*
+        <flag-bit name='for_sale' original-name='FORSALE'/>
+    </bitfield-type>
+
+    <enum-type type-name='shop_type' original-name='building_shop_type' base-type='int16_t'> bay12: BuildingShopType
+        <enum-item name="GeneralStore" original-name='GENERAL'/>
+        <enum-item name="CraftsMarket" original-name='CRAFTS'/>
+        <enum-item name="ClothingShop" original-name='CLOTHING'/>
+        <enum-item name="ExoticClothingShop" original-name='CLOTHING_EXOTIC'/>
+    </enum-type>
+
+    <class-type type-name='building_shopst' inherits-from='building_actual'>
+        <pointer type-name='unit' name='owner' original-name='shopkeeper'/>
+        <int32_t name='timer' original-name='shoptimer' comment='increments until reaching 200,000,000'/>
+        <bitfield base-type='uint16_t' type-name='building_shop_flag' name='shop_flags' original-name='shop_flag' init-value='1'/>
+        <enum base-type='int16_t' type-name='shop_type' name="type" original-name='shop_type'/>
+    </class-type>
+
+    <class-type type-name='building_coffinst' inherits-from='building_actual'/>
+
+    <bitfield-type type-name='well_tag' base-type='uint8_t'> bay12: WELLTAG_*
+        <flag-bit name='north' original-name='N'/>
+        <flag-bit name='south' original-name='S'/>
+        <flag-bit name='east' original-name='E'/>
+        <flag-bit name='west' original-name='W'/>
+        <flag-bit name='northeast' original-name='NE'/>
+        <flag-bit name='northwest' original-name='NW'/>
+        <flag-bit name='southeast' original-name='SE'/>
+        <flag-bit name='southwest' original-name='SW'/>
+    </bitfield-type>
+
+    <bitfield-type type-name='building_well_flag' base-type='uint16_t'> bay12: BUILDINGFLAG_WELL_*
+        <flag-bit name='lowering' original-name='FREE_DROP'/>
+        <flag-bit name='just_raised' original-name='JUST_RAISED'/>
+    </bitfield-type>
+
+    <class-type type-name='building_wellst' inherits-from='building_actual'>
+        <bitfield base-type='uint16_t' type-name='building_well_flag' name='well_flags' original-name='well_flag'/>
+        <bitfield base-type='uint8_t' type-name='well_tag' name='well_tag'/>
+        <int16_t name='bucket_z'/>
+        <int8_t name='bucket_timer' original-name='bucket_micro_z' comment='0-9; counts up when raising, down when lowering'/>
+        <int16_t name='check_water_timer' original-name='useless_timer'/>
+    </class-type>
+
+    <class-type type-name='building_statuest' inherits-from='building_actual'>
+        <uint16_t name='statue_flag' comment='unused'/>
+    </class-type>
+
+    <class-type type-name='building_slabst' inherits-from='building_actual'>
+        <uint16_t name='slab_flag' comment='unused'/>
+    </class-type>
+
+    <class-type type-name='building_windowst' inherits-from='building_actual'>
+        <uint16_t name='window_flag' comment='unused'/>
+    </class-type>
+
+    <class-type type-name='building_window_glassst' inherits-from='building_windowst'/>
+
+    <class-type type-name='building_window_gemst' inherits-from='building_windowst'/>
+
+    <bitfield-type type-name='building_farmplot_flag' base-type='uint32_t'> bay12: BUILDINGFLAG_FARMPLOT_*
+        <flag-bit name='seasonal_fertilize' original-name='SEASONAL_FERT'/>
+    </bitfield-type>
+
+    <class-type type-name='building_farmplotst' inherits-from='building_actual'>
+        <static-array name='plant_id' original-name='plant' index-enum='season'>
+            <int16_t ref-target='plant_raw'/>
+        </static-array>
+        <int32_t name='material_amount' original-name='amount'/>
+        <bitfield base-type='uint32_t' type-name='building_farmplot_flag' name='farm_flags' original-name='farmplot_flag'/>
+        <enum type-name='season' name='last_season' original-name='fertilize_attempt_season' init-value='None'/>
+        <int32_t name='current_fertilization' original-name='fertilize_amount'/>
+        <int32_t name='max_fertilization' original-name='fertilize_needed'/>
+        <int16_t name='terrain_purge_timer' original-name='trample_count' init-value='500'/>
+    </class-type>
+
+    <class-type type-name='building_animaltrapst' inherits-from='building_actual'>
+        <int16_t name='bait_type' original-name='bait' init-value='-1'/>
+        <int16_t name='fill_timer' original-name='offtimer'/>
+    </class-type>
+
+    <enum-type type-name='furnace_type' original-name='building_furnace_type' base-type='int16_t'> bay12: BuildingFurnaceType
+        <enum-attr name='name' use-key-name='true'/>
+
+        <enum-item name="NONE" value='-1'/>
+
+        <enum-item name="WoodFurnace" original-name='WOOD'>
+            <item-attr name='name' value='Wood Furnace'/>
+        </enum-item>
+        <enum-item name="Smelter" original-name='SMELTER'/>
+        <enum-item name="GlassFurnace" original-name='GLASS'>
+            <item-attr name='name' value='Glass Furnace'/>
+        </enum-item>
+        <enum-item name="Kiln" original-name='KILN'/>
+        <enum-item name="MagmaSmelter" original-name='SMELTER_LAVA'>
+            <item-attr name='name' value='Magma Smelter'/>
+        </enum-item>
+        <enum-item name="MagmaGlassFurnace" original-name='GLASS_LAVA'>
+            <item-attr name='name' value='Magma Glass Furnace'/>
+        </enum-item>
+        <enum-item name="MagmaKiln" original-name='KILN_LAVA'>
+            <item-attr name='name' value='Magma Kiln'/>
+        </enum-item>
+        <enum-item name="Custom" original-name='CUSTOM'>
+            <item-attr name='name' value='Custom Furnace'/>
+        </enum-item>
+    </enum-type>
+
+    <class-type type-name='building_furnacest' inherits-from='building_actual'>
+        <stl-vector type-name='int32_t' name='melt_remainder' original-name='metal'
+                    index-refers-to='(material-by-id 0 $)'/>
+
+        <uint16_t name="furnace_flag" comment='unused'/>
+
+        <enum base-type='int16_t' type-name='furnace_type' name="type" original-name='furnace_type'/>
+
+        <compound type-name='workshop_profile' name='profile' original-name='workshop_profile'/>
+
+        <int32_t name="custom_type" original-name='custom_building_id' ref-target='building_def'/>
+        <int32_t name='times_used'/>
+    </class-type>
+
+    <enum-type type-name='workshop_type' original-name='building_workshop_type' base-type='int16_t'> bay12: BuildingWorkshopType
+        <enum-attr name='name' use-key-name='true'/>
+
+        <enum-item name="NONE" value='-1'/>
+
+        <enum-item name="Carpenters" original-name='CARPENTER'>
+            <item-attr name='name' value="Carpenter's Workshop"/>
+        </enum-item>
+        <enum-item name="Farmers" original-name='FARMER'>
+            <item-attr name='name' value="Farmer's Workshop"/>
+        </enum-item>
+        <enum-item name="Masons" original-name='MASON'>
+            <item-attr name='name' value="Mason's Workshop"/>
+        </enum-item>
+        <enum-item name="Craftsdwarfs" original-name='CRAFTSMAN'>
+            <item-attr name='name' value="Craftsdwarf's Workshop"/>
+        </enum-item>
+        <enum-item name="Jewelers" original-name='JEWELER'>
+            <item-attr name='name' value="Jeweler's Workshop"/>
+        </enum-item>
+
+        <enum-item name="MetalsmithsForge" original-name='METALSMITH'>
+            <item-attr name='name' value="Metalsmith's Forge"/>
+        </enum-item>
+        <enum-item name="MagmaForge" original-name='LAVAMILL'>
+            <item-attr name='name' value="Magma Forge"/>
+        </enum-item>
+        <enum-item name="Bowyers" original-name='BOWYER'>
+            <item-attr name='name' value="Bowyer's Workshop"/>
+        </enum-item>
+        <enum-item name="Mechanics" original-name='MECHANIC'>
+            <item-attr name='name' value="Mechanic's Workshop"/>
+        </enum-item>
+        <enum-item name="Siege" original-name='SIEGE'>
+            <item-attr name='name' value="Siege Workshop"/>
+        </enum-item>
+
+        <enum-item name="Butchers" original-name='BUTCHER'>
+            <item-attr name='name' value="Butcher's Shop"/>
+        </enum-item>
+        <enum-item name="Leatherworks" original-name='LEATHER'>
+            <item-attr name='name' value="Leather Works"/>
+        </enum-item>
+        <enum-item name="Tanners" original-name='TANNER'>
+            <item-attr name='name' value="Tanner's Shop"/>
+        </enum-item>
+        <enum-item name="Clothiers" original-name='CLOTHES'>
+            <item-attr name='name' value="Clothier's Shop"/>
+        </enum-item>
+        <enum-item name="Fishery" original-name='FISHERY'/>
+
+        <enum-item name="Still" original-name='STILL'/>
+        <enum-item name="Loom" original-name='LOOM'/>
+        <enum-item name="Quern" original-name='QUERN'/>
+        <enum-item name="Kennels" original-name='KENNEL'/>
+        <enum-item name="Kitchen" original-name='KITCHEN'/>
+
+        <enum-item name="Ashery" original-name='ASHERY'/>
+        <enum-item name="Dyers" original-name='DYER'>
+            <item-attr name='name' value="Dyer's Shop"/>
+        </enum-item>
+        <enum-item name="Millstone" original-name='MILLSTONE'/>
+        <enum-item name="Custom" original-name='CUSTOM'>
+            <item-attr name='name' value="Custom Workshop"/>
+        </enum-item>
+        <enum-item name="Tool" original-name='TOOL'/>
+    </enum-type>
+
+    <class-type type-name='building_workshopst' inherits-from='building_actual'>
+        <enum base-type='int16_t' type-name='workshop_type' name="type" original-name='workshop_type'/>
+
+        <compound type-name='workshop_profile' name='profile' original-name='workshop_profile'/>
+
+        <compound type-name='machine_info' name='machine' original-name='machine_info'/>
+
+        <int32_t name="custom_type" original-name='custom_building_id' ref-target='building_def'/>
+        <int32_t name='times_used'/>
+    </class-type>
+
+    <bitfield-type type-name='building_tradedepot_flag' base-type='uint32_t'> bay12: BUILDINGFLAG_DEPOT_*
+        <flag-bit name='trader_requested' original-name='TRADER_REQUESTED'/>
+        <flag-bit name='anyone_can_trade' original-name='ANYONE_MAY_TRADE'/>
+    </bitfield-type>
+
+    <class-type type-name='building_tradedepotst' inherits-from='building_actual'>
+        <bitfield base-type='uint32_t' type-name='building_tradedepot_flag' name='trade_flags' original-name='depot_flag'/>
+        <int32_t name='times_used' original-name='times_traded_in'/>
+        <int32_t name='times_wagon_completed_dropoff'/>
+        <bool name='accessible' original-name='have_access'/>
+    </class-type>
+
+    <class-type type-name='building_nestst' inherits-from='building_actual'/>
+
+    <class-type type-name='building_nest_boxst' inherits-from='building_actual'>
+        <int32_t name='claimed_by' original-name='layer_unid' ref-target='unit'/>
+        <int32_t name='claim_timeout' original-name='layer_idle_timer' comment='counts up if the nest box is claimed but empty. when it hits 8400 ticks, the nest box is unclaimed.'/>
+    </class-type>
+
+    <class-type type-name='building_bookcasest' inherits-from='building_actual'/>
+
+    <class-type type-name='building_offering_placest' inherits-from='building_actual'/>
+
+    <class-type type-name='building_display_furniturest' inherits-from='building_actual'>
+        <stl-vector type-name='int32_t' name='displayed_items' original-name='display_item_id' ref-target='item'/>
+    </class-type>
+
+    <bitfield-type type-name='building_hive_flag' base-type='uint32_t'> bay12: BUILDING_HIVE_FLAG_*
+        <flag-bit name='do_install' original-name='INSTALL_COLONY'/>
+        <flag-bit name='do_gather' original-name='GATHER_PRODUCTS'/>
+        <flag-bit name='ready_split' original-name='READY_TO_SPLIT'/>
+    </bitfield-type>
+
+    <class-type type-name='building_hivest' inherits-from='building_actual'>
+        <bitfield type-name='building_hive_flag' name='hive_flags' original-name='hive_flag'/>
+        <int32_t name='split_timer' comment='up to 100800'/>
+        <int32_t name='activity_timer' original-name='product_timer' comment='up to 100800000; checks timer%hive_product.time[i]==0'/>
+        <int32_t name='install_timer' comment='down from 1200'/>
+        <int32_t name='gather_timer' original-name='collect_timer' comment='down from 1200'/>
+    </class-type>
+
+    <class-type type-name='building_wagonst' inherits-from='building_actual'/>
+
+
+    <class-type type-name='building_roadst' inherits-from='building_actual'>
+        <int32_t name='material_amount' original-name='amount'/>
+    </class-type>
+
+    <class-type type-name='building_road_dirtst' inherits-from='building_roadst'/>
+
+    <class-type type-name='building_road_pavedst' inherits-from='building_roadst'>
+        <int16_t name='terrain_purge_timer' original-name='trample_count' init-value='500'/>
+    </class-type>
+
+    <enum-type type-name='construction_type' original-name='building_construction_type'> bay12: BuildingConstructionType
+        <enum-item name="NONE" value='-1' comment='unused'/>
+        <enum-item name="Fortification" original-name='FORTIFICATION'/>
+        <enum-item name="Wall" original-name='WALL'/>
+        <enum-item name="Floor" original-name='FLOOR'/>
+        <enum-item name="UpStair" original-name='STAIR_UP'/>
+        <enum-item name="DownStair" original-name='STAIR_DOWN'/>
+        <enum-item name="UpDownStair" original-name='STAIR_UPDOWN'/>
+        <enum-item name="Ramp" original-name='RAMP'/>
+        <enum-item name="TrackN" original-name='TRACK_N'/>
+        <enum-item name="TrackS" original-name='TRACK_S'/>
+        <enum-item name="TrackE" original-name='TRACK_E'/>
+        <enum-item name="TrackW" original-name='TRACK_W'/>
+        <enum-item name="TrackNS" original-name='TRACK_NS'/>
+        <enum-item name="TrackNE" original-name='TRACK_NE'/>
+        <enum-item name="TrackNW" original-name='TRACK_NW'/>
+        <enum-item name="TrackSE" original-name='TRACK_SE'/>
+        <enum-item name="TrackSW" original-name='TRACK_SW'/>
+        <enum-item name="TrackEW" original-name='TRACK_EW'/>
+        <enum-item name="TrackNSE" original-name='TRACK_NSE'/>
+        <enum-item name="TrackNSW" original-name='TRACK_NSW'/>
+        <enum-item name="TrackNEW" original-name='TRACK_NEW'/>
+        <enum-item name="TrackSEW" original-name='TRACK_SEW'/>
+        <enum-item name="TrackNSEW" original-name='TRACK_NSEW'/>
+        <enum-item name="TrackRampN" original-name='TRACK_RN'/>
+        <enum-item name="TrackRampS" original-name='TRACK_RS'/>
+        <enum-item name="TrackRampE" original-name='TRACK_RE'/>
+        <enum-item name="TrackRampW" original-name='TRACK_RW'/>
+        <enum-item name="TrackRampNS" original-name='TRACK_RNS'/>
+        <enum-item name="TrackRampNE" original-name='TRACK_RNE'/>
+        <enum-item name="TrackRampNW" original-name='TRACK_RNW'/>
+        <enum-item name="TrackRampSE" original-name='TRACK_RSE'/>
+        <enum-item name="TrackRampSW" original-name='TRACK_RSW'/>
+        <enum-item name="TrackRampEW" original-name='TRACK_REW'/>
+        <enum-item name="TrackRampNSE" original-name='TRACK_RNSE'/>
+        <enum-item name="TrackRampNSW" original-name='TRACK_RNSW'/>
+        <enum-item name="TrackRampNEW" original-name='TRACK_RNEW'/>
+        <enum-item name="TrackRampSEW" original-name='TRACK_RSEW'/>
+        <enum-item name="TrackRampNSEW" original-name='TRACK_RNSEW'/>
+        <enum-item name="ReinforcedWall" original-name='REINFORCED_WALL'/>
+    </enum-type>
+
+    <class-type type-name='building_constructionst' inherits-from='building_actual'>
+        <enum type-name='construction_type' name='type' original-name='construction_type' comment='saved as int16'/>
+    </class-type>
+
+    -- Helper type for building_handlerst
+    <enum-type type-name='buildings_other_id'>
+        <enum-attr name='building' type-name='building_type' default-value='NONE'/>
+        <enum-attr name='generic_building' type-name='building_type' is-list='true'/>
+        <enum-attr name='workshop' type-name='workshop_type' is-list='true'/>
+        <enum-attr name='furnace' type-name='furnace_type' is-list='true'/>
+        <enum-attr name='civzone' type-name='civzone_type' is-list='true'/>
+
+        <enum-item name='ANY' value='-1'/>
+
+        -- 0
+
+        <enum-item name='IN_PLAY' original-name='play' comment='actually on the map, as opposed to in an offloaded fortress elsewhere'/>
+        <enum-item name='STOCKPILE' original-name='stockpile'>
+            <item-attr name='building' value='Stockpile'/>
+        </enum-item>
+        <enum-item name='ANY_ZONE' original-name='civzone'>
+            <item-attr name='building' value='Civzone'/>
+        </enum-item>
+        <enum-item name='ACTIVITY_ZONE' original-name='civzone_activity'>
+            <item-attr name='building' value='Civzone'/>
+            <!-- <item-attr name='civzone' value='ActivityZone'/> -->
+        </enum-item>
+
+        -- 98 different civzone subtypes: array of length BUILDING_CIVZONENUM
+        <enum-item name='ZONE_HOME' original-name='civzone_by_type_HOME'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Home'/>
+        </enum-item>
+        <enum-item name='ZONE_DEPOT' original-name='civzone_by_type_DEPOT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Depot'/>
+        </enum-item>
+        <enum-item name='ZONE_STOCKPILE' original-name='civzone_by_type_STOCKPILE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Stockpile'/>
+        </enum-item>
+        <enum-item name='ZONE_NOBLE_QUARTERS' original-name='civzone_by_type_NOBLE_QUARTERS'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='NobleQuarters'/>
+        </enum-item>
+        <enum-item name='ZONE_SHOP' original-name='civzone_by_type_SHOP'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Shop'/>
+        </enum-item>
+        <enum-item name='ZONE_INVALID5' original-name='civzone_by_type_UNUSED_06'/>
+        <enum-item name='ZONE_INVALID6' original-name='civzone_by_type_UNUSED_07'/>
+        <enum-item name='ZONE_MEAD_HALL' original-name='civzone_by_type_MEAD_HALL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MeadHall'/>
+        </enum-item>
+        <enum-item name='ZONE_THRONE_ROOM' original-name='civzone_by_type_KEEP_THRONEROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ThroneRoom'/>
+        </enum-item>
+        <enum-item name='ZONE_INVALID9' original-name='civzone_by_type_UNUSED_10'/>
+
+        <enum-item name='ZONE_TEMPLE' original-name='civzone_by_type_TEMPLE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Temple'/>
+        </enum-item>
+        <enum-item name='ZONE_KITCHEN' original-name='civzone_by_type_LAIR_KITCHEN'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Kitchen'/>
+        </enum-item>
+        <enum-item name='ZONE_CAPTIVE_ROOM' original-name='civzone_by_type_LAIR_CAPTIVE_ROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CaptiveRoom'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_TOP' original-name='civzone_by_type_TOWER_TOP'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerTop'/>
+        </enum-item>
+        <enum-item name='ZONE_COURTYARD' original-name='civzone_by_type_COURTYARD'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Courtyard'/>
+        </enum-item>
+        <enum-item name='ZONE_TREASURY' original-name='civzone_by_type_TREASURE_ROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Treasury'/>
+        </enum-item>
+        <enum-item name='ZONE_GUARD_POST' original-name='civzone_by_type_GUARD_ROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='GuardPost'/>
+        </enum-item>
+        <enum-item name='ZONE_ENTRANCE' original-name='civzone_by_type_ENTRANCE_ROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Entrance'/>
+        </enum-item>
+        <enum-item name='ZONE_SECRET_LIBRARY' original-name='civzone_by_type_SECRET_LIBRARY'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='SecretLibrary'/>
+        </enum-item>
+        <enum-item name='ZONE_LIBRARY' original-name='civzone_by_type_LIBRARY'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Library'/>
+        </enum-item>
+
+        <enum-item name='ZONE_PLOT' original-name='civzone_by_type_PLOT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Plot'/>
+        </enum-item>
+        <enum-item name='ZONE_MARKET_STALL' original-name='civzone_by_type_MARKET_STALL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MarketStall'/>
+        </enum-item>
+        <enum-item name='ZONE_ROAD_CENTER' original-name='civzone_by_type_ROAD_CENTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='RoadCenter'/>
+        </enum-item>
+        <enum-item name='ZONE_CAMPGROUND' original-name='civzone_by_type_CAMPGROUND'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Campground'/>
+        </enum-item>
+        <enum-item name='ZONE_COMMAND_TENT' original-name='civzone_by_type_TENT_COMMAND'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CommandTent'/>
+        </enum-item>
+        <enum-item name='ZONE_TENT' original-name='civzone_by_type_TENT_REGULAR'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Tent'/>
+        </enum-item>
+        <enum-item name='ZONE_COMMAND_TENT_BLD' original-name='civzone_by_type_COOPTED_ARMY_BLD_COMMAND'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CommandTentBld'/>
+        </enum-item>
+        <enum-item name='ZONE_TENT_BLD' original-name='civzone_by_type_COOPTED_ARMY_BLD_REGULAR'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TentBld'/>
+        </enum-item>
+        <enum-item name='ZONE_MECHANISM_ROOM' original-name='civzone_by_type_LEVER_ROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MechanismRoom'/>
+        </enum-item>
+        <enum-item name='ZONE_DUNGEON_CELL' original-name='civzone_by_type_DUNGEON_CELL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='DungeonCell'/>
+        </enum-item>
+
+        <enum-item name='ZONE_ANIMAL_PIT' original-name='civzone_by_type_PIT_ANIMALS'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='AnimalPit'/>
+        </enum-item>
+        <enum-item name='ZONE_CLOTH_PIT' original-name='civzone_by_type_PIT_CLOTH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ClothPit'/>
+        </enum-item>
+        <enum-item name='ZONE_TANNING_PIT' original-name='civzone_by_type_PIT_TANNING'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TanningPit'/>
+        </enum-item>
+        <enum-item name='ZONE_CLOTH_CLOTHING_PIT' original-name='civzone_by_type_PIT_CLOTHING_CLOTH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ClothClothingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_LEATHER_CLOTHING_PIT' original-name='civzone_by_type_PIT_CLOTHING_LEATHER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='LeatherClothingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_BONE_CARVING_PIT' original-name='civzone_by_type_PIT_CRAFTS_BONE_CARVER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BoneCarvingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_GEM_CUTTING_PIT' original-name='civzone_by_type_PIT_GEM_CUTTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='GemCuttingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_WEAPONSMITHING_PIT' original-name='civzone_by_type_PIT_METAL_WEAPON_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='WeaponsmithingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_BOWMAKING_PIT' original-name='civzone_by_type_PIT_WOOD_WEAPON_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BowmakingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_BLACKSMITHING_PIT' original-name='civzone_by_type_PIT_BLACK_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BlacksmithingPit'/>
+        </enum-item>
+
+        <enum-item name='ZONE_ARMORSMITHING_PIT' original-name='civzone_by_type_PIT_METAL_ARMOR_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ArmorsmithingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_METAL_CRAFTING_PIT' original-name='civzone_by_type_PIT_METAL_CRAFTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MetalCraftingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_LEATHERWORKING_PIT' original-name='civzone_by_type_PIT_LEATHER_ACCESSORIES'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='LeatherworkingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_CARPENTRY_PIT' original-name='civzone_by_type_PIT_FURNITURE_WOOD'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CarpentryPit'/>
+        </enum-item>
+        <enum-item name='ZONE_STONEWORKING_PIT' original-name='civzone_by_type_PIT_FURNITURE_STONE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='StoneworkingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_FORGING_PIT' original-name='civzone_by_type_PIT_FURNITURE_METAL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ForgingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_FIGHTING_PIT' original-name='civzone_by_type_PIT_FIGHTING'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='FightingPit'/>
+        </enum-item>
+        <enum-item name='ZONE_WELL' original-name='civzone_by_type_WELL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Well'/>
+        </enum-item>
+        <enum-item name='ZONE_ROAD_EXIT_NORTH' original-name='civzone_by_type_ROAD_NORTH_EXIT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='RoadExitNorth'/>
+        </enum-item>
+        <enum-item name='ZONE_ROAD_EXIT_SOUTH' original-name='civzone_by_type_ROAD_SOUTH_EXIT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='RoadExitSouth'/>
+        </enum-item>
+
+        <enum-item name='ZONE_ROAD_EXIT_EAST' original-name='civzone_by_type_ROAD_EAST_EXIT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='RoadExitEast'/>
+        </enum-item>
+        <enum-item name='ZONE_ROAD_EXIT_WEST' original-name='civzone_by_type_ROAD_WEST_EXIT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='RoadExitWest'/>
+        </enum-item>
+        <enum-item name='ZONE_TUNNEL_CENTER' original-name='civzone_by_type_TUNNEL_CENTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TunnelCenter'/>
+        </enum-item>
+        <enum-item name='ZONE_ANIMAL_WORKSHOP' original-name='civzone_by_type_CIVLAYER_ANIMALS'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='AnimalWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_CLOTH_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ClothWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_TANNING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_TANNING'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TanningWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_CLOTH_CLOTHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTHING_CLOTH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ClothClothingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_LEATHER_CLOTHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTHING_LEATHER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='LeatherClothingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_BONE_CARVING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CRAFTS_BONE_CARVER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BoneCarvingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_GEM_CUTTING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_GEM_CUTTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='GemCuttingWorkshop'/>
+        </enum-item>
+
+        <enum-item name='ZONE_WEAPONSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_WEAPON_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='WeaponsmithingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_BOWMAKING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_WOOD_WEAPON_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BowmakingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_BLACKSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_BLACK_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='BlacksmithingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_ARMORSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_ARMOR_SMITH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ArmorsmithingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_METAL_CRAFTING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_CRAFTER'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MetalCraftingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_LEATHERWORKING_SHOP' original-name='civzone_by_type_CIVLAYER_LEATHER_ACCESSORIES'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='LeatherworkingShop'/>
+        </enum-item>
+        <enum-item name='ZONE_CARPENTRY_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_WOOD'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CarpentryWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_STONEWORKING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_STONE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='StoneworkingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_FORGING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_METAL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ForgingWorkshop'/>
+        </enum-item>
+        <enum-item name='ZONE_COUNTING_HOUSE_OFFICES' original-name='civzone_by_type_COUNTING_HOUSE_OFFICE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CountingHouseOffices'/>
+        </enum-item>
+
+        <enum-item name='ZONE_COUNTING_HOUSE_STORAGE' original-name='civzone_by_type_COUNTING_HOUSE_STORAGE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='CountingHouseStorage'/>
+        </enum-item>
+        <enum-item name='ZONE_GUILDHALL_OFFICES' original-name='civzone_by_type_GUILDHALL_OFFICE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='GuildhallOffices'/>
+        </enum-item>
+        <enum-item name='ZONE_GUILDHALL_STORAGE' original-name='civzone_by_type_GUILDHALL_STORAGE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='GuildhallStorage'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_ENTRANCE' original-name='civzone_by_type_TOWER_ENTRANCE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerEntrance'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_FEASTHALL' original-name='civzone_by_type_TOWER_FEASTHALL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerFeasthall'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_BEDROOM' original-name='civzone_by_type_TOWER_BEDROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerBedroom'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_TREASURY' original-name='civzone_by_type_TOWER_TREASURY'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerTreasury'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_DUNGEON' original-name='civzone_by_type_TOWER_DUNGEON'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerDungeon'/>
+        </enum-item>
+        <enum-item name='ZONE_TOWER_ATTIC' original-name='civzone_by_type_TOWER_ATTIC'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='TowerAttic'/>
+        </enum-item>
+        <enum-item name='ZONE_DORMITORY' original-name='civzone_by_type_DORMITORY'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Dormitory'/>
+        </enum-item>
+
+        <enum-item name='ZONE_DINING_HALL' original-name='civzone_by_type_DINING_HALL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='DiningHall'/>
+        </enum-item>
+        <enum-item name='ZONE_SHRINE' original-name='civzone_by_type_SHRINE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Shrine'/>
+        </enum-item>
+        <enum-item name='ZONE_WATER_SOURCE' original-name='civzone_by_type_WATER_SOURCE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='WaterSource'/>
+        </enum-item>
+        <enum-item name='ZONE_DUMP' original-name='civzone_by_type_DUMP'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Dump'/>
+        </enum-item>
+        <enum-item name='ZONE_SAND_COLLECTION' original-name='civzone_by_type_SAND_COLLECT'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='SandCollection'/>
+        </enum-item>
+        <enum-item name='ZONE_FISHING_AREA' original-name='civzone_by_type_FISH'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='FishingArea'/>
+        </enum-item>
+        <enum-item name='ZONE_POND' original-name='civzone_by_type_POND'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Pond'/>
+        </enum-item>
+        <enum-item name='ZONE_MEETING_HALL' original-name='civzone_by_type_MEETING_HALL'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='MeetingHall'/>
+        </enum-item>
+        <enum-item name='ZONE_PEN' original-name='civzone_by_type_PEN'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Pen'/>
+        </enum-item>
+        <enum-item name='ZONE_CLAY_COLLECTION' original-name='civzone_by_type_CLAY_COLLECTION'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ClayCollection'/>
+        </enum-item>
+
+        <enum-item name='ZONE_ANIMAL_TRAINING' original-name='civzone_by_type_ANIMAL_TRAINING'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='AnimalTraining'/>
+        </enum-item>
+        <enum-item name='ZONE_PLANT_GATHERING' original-name='civzone_by_type_PLANT_GATHERING'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='PlantGathering'/>
+        </enum-item>
+        <enum-item name='ZONE_BEDROOM' original-name='civzone_by_type_BEDROOM'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Bedroom'/>
+        </enum-item>
+        <enum-item name='ZONE_OFFICE' original-name='civzone_by_type_OFFICE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Office'/>
+        </enum-item>
+        <enum-item name='ZONE_ARCHERY_RANGE' original-name='civzone_by_type_ARCHERY_RANGE'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='ArcheryRange'/>
+        </enum-item>
+        <enum-item name='ZONE_BARRACKS' original-name='civzone_by_type_BARRACKS'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Barracks'/>
+        </enum-item>
+        <enum-item name='ZONE_DUNGEON' original-name='civzone_by_type_DUNGEON'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Dungeon'/>
+        </enum-item>
+        <enum-item name='ZONE_TOMB' original-name='civzone_by_type_TOMB'>
+            <item-attr name='building' value='Civzone'/>
+            <item-attr name='civzone' value='Tomb'/>
+        </enum-item>
+
+        <enum-item name='LOCATION_ASSIGNED' original-name='ab_bld_zone'>
+            <item-attr name='generic_building' value='Bed'/>
+            <item-attr name='generic_building' value='Civzone'/>
+        </enum-item>
+        <enum-item name='ANY_ACTUAL' original-name='actual'>
+            -- everything but stockpile and civzone
+        </enum-item>
+
+        <enum-item name='ANY_MACHINE' original-name='machine_component'>
+            <item-attr name='generic_building' value='ScrewPump'/>
+            <item-attr name='generic_building' value='GearAssembly'/>
+            <item-attr name='generic_building' value='AxleHorizontal'/>
+            <item-attr name='generic_building' value='AxleVertical'/>
+            <item-attr name='generic_building' value='WaterWheel'/>
+            <item-attr name='generic_building' value='Windmill'/>
+
+            <item-attr name='generic_building' value='Workshop'/>
+            <item-attr name='workshop' value='Millstone'/>
+        </enum-item>
+        <enum-item name='ANY_HOSPITAL_STORAGE' original-name='chestcheck'>
+            -- speculated
+            <item-attr name='generic_building' value='Box'/>
+            <item-attr name='generic_building' value='Cabinet'/>
+        </enum-item>
+        <enum-item name='ANY_STORAGE' original-name='storecheck'>
+            -- speculated
+            <item-attr name='generic_building' value='Box'/>
+            <item-attr name='generic_building' value='Cabinet'/>
+            <item-attr name='generic_building' value='Weaponrack'/>
+            <item-attr name='generic_building' value='Armorstand'/>
+        </enum-item>
+        <enum-item name='ANY_BARRACKS' original-name='barracksable'>
+            <item-attr name='generic_building' value='Bed'/>
+            <item-attr name='generic_building' value='Box'/>
+            <item-attr name='generic_building' value='Cabinet'/>
+            <item-attr name='generic_building' value='Weaponrack'/>
+            <item-attr name='generic_building' value='Armorstand'/>
+        </enum-item>
+
+        -- 11
+
+        <enum-item name='ANY_HOSPITAL' original-name='rest_building'>
+            <item-attr name='generic_building' value='Bed'/>
+            <item-attr name='generic_building' value='TractionBench'/>
+        </enum-item>
+        <enum-item name='BOX' original-name='box'>
+            <item-attr name='building' value='Box'/>
+        </enum-item>
+        <enum-item name='CABINET' original-name='cabinet'>
+            <item-attr name='building' value='Cabinet'/>
+        </enum-item>
+        <enum-item name='TRAP' original-name='trap'>
+            <item-attr name='building' value='Trap'/>
+        </enum-item>
+        <enum-item name='DOOR' original-name='door'>
+            <item-attr name='building' value='Door'/>
+        </enum-item>
+
+        <enum-item name='FLOODGATE' original-name='floodgate'>
+            <item-attr name='building' value='Floodgate'/>
+        </enum-item>
+        <enum-item name='HATCH' original-name='hatch'>
+            <item-attr name='building' value='Hatch'/>
+        </enum-item>
+        <enum-item name='GRATE_WALL' original-name='grate_wall'>
+            <item-attr name='building' value='GrateWall'/>
+        </enum-item>
+        <enum-item name='GRATE_FLOOR' original-name='grate_floor'>
+            <item-attr name='building' value='GrateFloor'/>
+        </enum-item>
+        <enum-item name='BARS_VERTICAL' original-name='bars_vertical'>
+            <item-attr name='building' value='BarsVertical'/>
+        </enum-item>
+
+        -- 21
+
+        <enum-item name='BARS_FLOOR' original-name='bars_floor'>
+            <item-attr name='building' value='BarsFloor'/>
+        </enum-item>
+        <enum-item name='WINDOW_ANY' original-name='window'>
+            <item-attr name='generic_building' value='WindowGlass'/>
+            <item-attr name='generic_building' value='WindowGem'/>
+        </enum-item>
+        <enum-item name='WELL' original-name='well'>
+            <item-attr name='building' value='Well'/>
+        </enum-item>
+        <enum-item name='TABLE' original-name='table'>
+            <item-attr name='building' value='Table'/>
+        </enum-item>
+        <enum-item name='BRIDGE' original-name='bridge'>
+            <item-attr name='building' value='Bridge'/>
+        </enum-item>
+
+        <enum-item name='CHAIR' original-name='chair'>
+            <item-attr name='building' value='Chair'/>
+        </enum-item>
+        <enum-item name='TRADE_DEPOT' original-name='tradedepot'>
+            <item-attr name='building' value='TradeDepot'/>
+        </enum-item>
+        <enum-item name='NEST' original-name='nest'>
+            <item-attr name='building' value='Nest'/>
+        </enum-item>
+        <enum-item name='NEST_BOX' original-name='nest_box'>
+            <item-attr name='building' value='NestBox'/>
+        </enum-item>
+        <enum-item name='BOOKCASE' original-name='bookcase'>
+            <item-attr name='building' value='Bookcase'/>
+        </enum-item>
+
+        <enum-item name='DISPLAY_CASE' original-name='display_furniture' since='v0.44.01'>
+            <item-attr name='building' value='DisplayFurniture'/>
+        </enum-item>
+        <enum-item name='HIVE' original-name='hive'>
+            <item-attr name='building' value='Hive'/>
+        </enum-item>
+
+        -- 33
+
+        <enum-item name='WAGON' original-name='wagon'>
+            <item-attr name='building' value='Wagon'/>
+        </enum-item>
+        <enum-item name='SHOP' original-name='shop'>
+            <item-attr name='building' value='Shop'/>
+        </enum-item>
+        <enum-item name='BED' original-name='bed'>
+            <item-attr name='building' value='Bed'/>
+        </enum-item>
+        <enum-item name='TRACTION_BENCH' original-name='traction_bench'>
+            <item-attr name='building' value='TractionBench'/>
+        </enum-item>
+        <enum-item name='ANY_ROAD' original-name='road'>
+            <item-attr name='generic_building' value='RoadDirt'/>
+            <item-attr name='generic_building' value='RoadPaved'/>
+        </enum-item>
+
+        <enum-item name='FARM_PLOT' original-name='farmplot'>
+            <item-attr name='building' value='FarmPlot'/>
+        </enum-item>
+        <enum-item name='GEAR_ASSEMBLY' original-name='gear_assembly'>
+            <item-attr name='building' value='GearAssembly'/>
+        </enum-item>
+        <enum-item name='ROLLERS' original-name='rollers'>
+            <item-attr name='building' value='Rollers'/>
+        </enum-item>
+        <enum-item name='AXLE_HORIZONTAL' original-name='axle_horizontal'>
+            <item-attr name='building' value='AxleHorizontal'/>
+        </enum-item>
+        <enum-item name='AXLE_VERTICAL' original-name='axle_vertical'>
+            <item-attr name='building' value='AxleVertical'/>
+        </enum-item>
+        <enum-item name='SUPPORT' original-name='support'>
+            <item-attr name='building' value='Support'/>
+        </enum-item>
+
+        -- 43
+
+        <enum-item name='ARCHERY_TARGET' original-name='archerytarget'>
+            <item-attr name='building' value='ArcheryTarget'/>
+        </enum-item>
+        <enum-item name='SCREW_PUMP' original-name='screw_pump'>
+            <item-attr name='building' value='ScrewPump'/>
+        </enum-item>
+        <enum-item name='WATER_WHEEL' original-name='water_wheel'>
+            <item-attr name='building' value='WaterWheel'/>
+        </enum-item>
+        <enum-item name='WINDMILL' original-name='windmill'>
+            <item-attr name='building' value='Windmill'/>
+        </enum-item>
+        <enum-item name='CHAIN' original-name='chain'>
+            <item-attr name='building' value='Chain'/>
+        </enum-item>
+
+        <enum-item name='CAGE' original-name='cage'>
+            <item-attr name='building' value='Cage'/>
+        </enum-item>
+        <enum-item name='STATUE' original-name='statue'>
+            <item-attr name='building' value='Statue'/>
+        </enum-item>
+        <enum-item name='SLAB' original-name='slab'>
+            <item-attr name='building' value='Slab'/>
+        </enum-item>
+        <enum-item name='COFFIN' original-name='coffin'>
+            <item-attr name='building' value='Coffin'/>
+        </enum-item>
+        <enum-item name='WEAPON_RACK' original-name='rack'>
+            <item-attr name='building' value='Weaponrack'/>
+        </enum-item>
+
+        -- 53
+
+        <enum-item name='ARMOR_STAND' original-name='stand'>
+            <item-attr name='building' value='Armorstand'/>
+        </enum-item>
+        <enum-item name='FURNACE_ANY' original-name='furnace'>
+            <item-attr name='building' value='Furnace'/>
+        </enum-item>
+        <enum-item name='FURNACE_WOOD' original-name='furnace_wood'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='WoodFurnace'/>
+        </enum-item>
+        <enum-item name='FURNACE_SMELTER_ANY' original-name='furnace_smelter'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='Smelter'/>
+            <item-attr name='furnace' value='MagmaSmelter'/>
+        </enum-item>
+        <enum-item name='FURNACE_SMELTER_MAGMA' original-name='furnace_smelter_lava'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='MagmaSmelter'/>
+        </enum-item>
+
+        <enum-item name='FURNACE_KILN_ANY' original-name='furnace_kiln'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='Kiln'/>
+            <item-attr name='furnace' value='MagmaKiln'/>
+        </enum-item>
+        <enum-item name='FURNACE_GLASS_ANY' original-name='furnace_glass'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='GlassFurnace'/>
+            <item-attr name='furnace' value='MagmaGlassFurnace'/>
+        </enum-item>
+        <enum-item name='FURNACE_CUSTOM' original-name='furnace_custom'>
+            <item-attr name='building' value='Furnace'/>
+            <item-attr name='furnace' value='Custom'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_ANY' original-name='workshop'>
+            <item-attr name='building' value='Workshop'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_BUTCHER' original-name='workshop_butcher'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Butchers'/>
+        </enum-item>
+
+        -- 63
+
+        <enum-item name='WORKSHOP_MASON' original-name='workshop_mason'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Masons'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_KENNEL' original-name='kennel'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Kennels'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_FISHERY' original-name='workshop_fishery'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Fishery'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_JEWELER' original-name='workshop_jeweler'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Jewelers'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_LOOM' original-name='loom'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Loom'/>
+        </enum-item>
+
+        <enum-item name='WORKSHOP_TANNER' original-name='workshop_tanner'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Tanners'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_DYER' original-name='workshop_dyer'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Dyers'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_MILL_ANY' original-name='workshop_mill'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Quern'/>
+            <item-attr name='workshop' value='Millstone'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_QUERN' original-name='workshop_quern'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Quern'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_TOOL' original-name='workshop_tool'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Tool'/>
+        </enum-item>
+
+        -- 73
+
+        <enum-item name='WORKSHOP_MILLSTONE' original-name='workshop_millstone'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Millstone'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_KITCHEN' original-name='kitchen'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Kitchen'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_STILL' original-name='still'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Still'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_FARMER' original-name='workshop_farmer'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Farmers'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_ASHERY' original-name='workshop_ashery'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Ashery'/>
+        </enum-item>
+
+        <enum-item name='WORKSHOP_CARPENTER' original-name='workshop_carpenter'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Carpenters'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_CRAFTSDWARF' original-name='workshop_craftsman'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Craftsdwarfs'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_MECHANIC' original-name='workshop_mechanic'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Mechanics'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_SIEGE' original-name='workshop_siege'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Siege'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_CLOTHIER' original-name='workshop_clothes'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Clothiers'/>
+        </enum-item>
+
+        -- 83
+
+        <enum-item name='WORKSHOP_LEATHER' original-name='workshop_leather'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Leatherworks'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_BOWYER' original-name='workshop_bowyer'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Bowyers'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_MAGMA_FORGE' original-name='workshop_lavamill'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='MagmaForge'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_FORGE_ANY' original-name='workshop_metalsmith'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='MetalsmithsForge'/>
+            <item-attr name='workshop' value='MagmaForge'/>
+        </enum-item>
+        <enum-item name='WORKSHOP_CUSTOM' original-name='workshop_custom'>
+            <item-attr name='building' value='Workshop'/>
+            <item-attr name='workshop' value='Custom'/>
+        </enum-item>
+
+        <enum-item name='WEAPON_UPRIGHT' original-name='weapon'>
+            <item-attr name='building' value='Weapon'/>
+        </enum-item>
+        <enum-item name='INSTRUMENT_STATIONARY' original-name='instrument'>
+            <item-attr name='building' value='Instrument'/>
+        </enum-item>
+        <enum-item name='OFFERING_PLACE' original-name='offering_place' since='v0.47.01'>
+            <item-attr name='building' value='OfferingPlace'/>
+        </enum-item>
+    </enum-type>
+
+    -- Helper type for building_handlerst
+    <df-other-vectors-type type-name='buildings_other' index-enum='buildings_other_id' item-type='building'>
+        <stl-vector pointer-type='building_stockpilest' name='STOCKPILE' original-name='stockpile'/>
+        <stl-vector pointer-type='building_civzonest' name='ANY_ZONE' original-name='civzone'/>
+        <stl-vector pointer-type='building_civzonest' name='ACTIVITY_ZONE' original-name='civzone_activity'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_HOME' original-name='civzone_by_type_HOME'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DEPOT' original-name='civzone_by_type_DEPOT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_STOCKPILE' original-name='civzone_by_type_STOCKPILE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_NOBLE_QUARTERS' original-name='civzone_by_type_NOBLE_QUARTERS'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_SHOP' original-name='civzone_by_type_SHOP'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_INVALID5' original-name='civzone_by_type_UNUSED_06'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_INVALID6' original-name='civzone_by_type_UNUSED_07'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_MEAD_HALL' original-name='civzone_by_type_MEAD_HALL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_THRONE_ROOM' original-name='civzone_by_type_KEEP_THRONEROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_INVALID9' original-name='civzone_by_type_UNUSED_10'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TEMPLE' original-name='civzone_by_type_TEMPLE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_KITCHEN' original-name='civzone_by_type_LAIR_KITCHEN'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CAPTIVE_ROOM' original-name='civzone_by_type_LAIR_CAPTIVE_ROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_TOP' original-name='civzone_by_type_TOWER_TOP'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_COURTYARD' original-name='civzone_by_type_COURTYARD'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TREASURY' original-name='civzone_by_type_TREASURE_ROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_GUARD_POST' original-name='civzone_by_type_GUARD_ROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ENTRANCE' original-name='civzone_by_type_ENTRANCE_ROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_SECRET_LIBRARY' original-name='civzone_by_type_SECRET_LIBRARY'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_LIBRARY' original-name='civzone_by_type_LIBRARY'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_PLOT' original-name='civzone_by_type_PLOT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_MARKET_STALL' original-name='civzone_by_type_MARKET_STALL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ROAD_CENTER' original-name='civzone_by_type_ROAD_CENTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CAMPGROUND' original-name='civzone_by_type_CAMPGROUND'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_COMMAND_TENT' original-name='civzone_by_type_TENT_COMMAND'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TENT' original-name='civzone_by_type_TENT_REGULAR'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_COMMAND_TENT_BLD' original-name='civzone_by_type_COOPTED_ARMY_BLD_COMMAND'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TENT_BLD' original-name='civzone_by_type_COOPTED_ARMY_BLD_REGULAR'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_MECHANISM_ROOM' original-name='civzone_by_type_LEVER_ROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DUNGEON_CELL' original-name='civzone_by_type_DUNGEON_CELL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ANIMAL_PIT' original-name='civzone_by_type_PIT_ANIMALS'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CLOTH_PIT' original-name='civzone_by_type_PIT_CLOTH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TANNING_PIT' original-name='civzone_by_type_PIT_TANNING'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CLOTH_CLOTHING_PIT' original-name='civzone_by_type_PIT_CLOTHING_CLOTH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_LEATHER_CLOTHING_PIT' original-name='civzone_by_type_PIT_CLOTHING_LEATHER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BONE_CARVING_PIT' original-name='civzone_by_type_PIT_CRAFTS_BONE_CARVER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_GEM_CUTTING_PIT' original-name='civzone_by_type_PIT_GEM_CUTTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_WEAPONSMITHING_PIT' original-name='civzone_by_type_PIT_METAL_WEAPON_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BOWMAKING_PIT' original-name='civzone_by_type_PIT_WOOD_WEAPON_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BLACKSMITHING_PIT' original-name='civzone_by_type_PIT_BLACK_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ARMORSMITHING_PIT' original-name='civzone_by_type_PIT_METAL_ARMOR_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_METAL_CRAFTING_PIT' original-name='civzone_by_type_PIT_METAL_CRAFTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_LEATHERWORKING_PIT' original-name='civzone_by_type_PIT_LEATHER_ACCESSORIES'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CARPENTRY_PIT' original-name='civzone_by_type_PIT_FURNITURE_WOOD'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_STONEWORKING_PIT' original-name='civzone_by_type_PIT_FURNITURE_STONE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_FORGING_PIT' original-name='civzone_by_type_PIT_FURNITURE_METAL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_FIGHTING_PIT' original-name='civzone_by_type_PIT_FIGHTING'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_WELL' original-name='civzone_by_type_WELL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ROAD_EXIT_NORTH' original-name='civzone_by_type_ROAD_NORTH_EXIT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ROAD_EXIT_SOUTH' original-name='civzone_by_type_ROAD_SOUTH_EXIT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ROAD_EXIT_EAST' original-name='civzone_by_type_ROAD_EAST_EXIT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ROAD_EXIT_WEST' original-name='civzone_by_type_ROAD_WEST_EXIT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TUNNEL_CENTER' original-name='civzone_by_type_TUNNEL_CENTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ANIMAL_WORKSHOP' original-name='civzone_by_type_CIVLAYER_ANIMALS'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CLOTH_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TANNING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_TANNING'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CLOTH_CLOTHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTHING_CLOTH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_LEATHER_CLOTHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CLOTHING_LEATHER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BONE_CARVING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_CRAFTS_BONE_CARVER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_GEM_CUTTING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_GEM_CUTTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_WEAPONSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_WEAPON_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BOWMAKING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_WOOD_WEAPON_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BLACKSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_BLACK_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ARMORSMITHING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_ARMOR_SMITH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_METAL_CRAFTING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_METAL_CRAFTER'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_LEATHERWORKING_SHOP' original-name='civzone_by_type_CIVLAYER_LEATHER_ACCESSORIES'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CARPENTRY_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_WOOD'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_STONEWORKING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_STONE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_FORGING_WORKSHOP' original-name='civzone_by_type_CIVLAYER_FURNITURE_METAL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_COUNTING_HOUSE_OFFICES' original-name='civzone_by_type_COUNTING_HOUSE_OFFICE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_COUNTING_HOUSE_STORAGE' original-name='civzone_by_type_COUNTING_HOUSE_STORAGE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_GUILDHALL_OFFICES' original-name='civzone_by_type_GUILDHALL_OFFICE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_GUILDHALL_STORAGE' original-name='civzone_by_type_GUILDHALL_STORAGE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_ENTRANCE' original-name='civzone_by_type_TOWER_ENTRANCE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_FEASTHALL' original-name='civzone_by_type_TOWER_FEASTHALL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_BEDROOM' original-name='civzone_by_type_TOWER_BEDROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_TREASURY' original-name='civzone_by_type_TOWER_TREASURY'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_DUNGEON' original-name='civzone_by_type_TOWER_DUNGEON'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOWER_ATTIC' original-name='civzone_by_type_TOWER_ATTIC'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DORMITORY' original-name='civzone_by_type_DORMITORY'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DINING_HALL' original-name='civzone_by_type_DINING_HALL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_SHRINE' original-name='civzone_by_type_SHRINE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_WATER_SOURCE' original-name='civzone_by_type_WATER_SOURCE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DUMP' original-name='civzone_by_type_DUMP'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_SAND_COLLECTION' original-name='civzone_by_type_SAND_COLLECT'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_FISHING_AREA' original-name='civzone_by_type_FISH'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_POND' original-name='civzone_by_type_POND'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_MEETING_HALL' original-name='civzone_by_type_MEETING_HALL'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_PEN' original-name='civzone_by_type_PEN'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_CLAY_COLLECTION' original-name='civzone_by_type_CLAY_COLLECTION'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ANIMAL_TRAINING' original-name='civzone_by_type_ANIMAL_TRAINING'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_PLANT_GATHERING' original-name='civzone_by_type_PLANT_GATHERING'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BEDROOM' original-name='civzone_by_type_BEDROOM'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_OFFICE' original-name='civzone_by_type_OFFICE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_ARCHERY_RANGE' original-name='civzone_by_type_ARCHERY_RANGE'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_BARRACKS' original-name='civzone_by_type_BARRACKS'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_DUNGEON' original-name='civzone_by_type_DUNGEON'/>
+        <stl-vector pointer-type='building_civzonest' name='ZONE_TOMB' original-name='civzone_by_type_TOMB'/>
+        <stl-vector pointer-type='building_civzonest' name='LOCATION_ASSIGNED' original-name='ab_bld_zone'/>
+        <stl-vector pointer-type='building_actual' name='ANY_ACTUAL' original-name='actual'/>
+        <stl-vector pointer-type='building_actual' name='ANY_MACHINE' original-name='machine_component'/>
+        <stl-vector pointer-type='building_actual' name='ANY_HOSPITAL_STORAGE' original-name='chestcheck'/>
+        <stl-vector pointer-type='building_actual' name='ANY_STORAGE' original-name='storecheck'/>
+        <stl-vector pointer-type='building_actual' name='ANY_BARRACKS' original-name='barracksable'/>
+        <stl-vector pointer-type='building_actual' name='ANY_HOSPITAL' original-name='rest_building'/>
+        <stl-vector pointer-type='building_boxst' name='BOX' original-name='box'/>
+        <stl-vector pointer-type='building_cabinetst' name='CABINET' original-name='cabinet'/>
+        <stl-vector pointer-type='building_trapst' name='TRAP' original-name='trap'/>
+        <stl-vector pointer-type='building_doorst' name='DOOR' original-name='door'/>
+        <stl-vector pointer-type='building_floodgatest' name='FLOODGATE' original-name='floodgate'/>
+        <stl-vector pointer-type='building_hatchst' name='HATCH' original-name='hatch'/>
+        <stl-vector pointer-type='building_grate_wallst' name='GRATE_WALL' original-name='grate_wall'/>
+        <stl-vector pointer-type='building_grate_floorst' name='GRATE_FLOOR' original-name='grate_floor'/>
+        <stl-vector pointer-type='building_bars_verticalst' name='BARS_VERTICAL' original-name='bars_vertical'/>
+        <stl-vector pointer-type='building_bars_floorst' name='BARS_FLOOR' original-name='bars_floor'/>
+        <stl-vector pointer-type='building_windowst' name='WINDOW_ANY' original-name='window'/>
+        <stl-vector pointer-type='building_wellst' name='WELL' original-name='well'/>
+        <stl-vector pointer-type='building_tablest' name='TABLE' original-name='table'/>
+        <stl-vector pointer-type='building_bridgest' name='BRIDGE' original-name='bridge'/>
+        <stl-vector pointer-type='building_chairst' name='CHAIR' original-name='chair'/>
+        <stl-vector pointer-type='building_tradedepotst' name='TRADE_DEPOT' original-name='tradedepot'/>
+        <stl-vector pointer-type='building_nestst' name='NEST' original-name='nest'/>
+        <stl-vector pointer-type='building_nest_boxst' name='NEST_BOX' original-name='nest_box'/>
+        <stl-vector pointer-type='building_bookcasest' name='BOOKCASE' original-name='bookcase'/>
+        <stl-vector pointer-type='building_display_furniturest' name='DISPLAY_CASE' original-name='display_furniture' since='v0.44.01'/>
+        <stl-vector pointer-type='building_hivest' name='HIVE' original-name='hive'/>
+        <stl-vector pointer-type='building_wagonst' name='WAGON' original-name='wagon'/>
+        <stl-vector pointer-type='building_shopst' name='SHOP' original-name='shop'/>
+        <stl-vector pointer-type='building_bedst' name='BED' original-name='bed'/>
+        <stl-vector pointer-type='building_traction_benchst' name='TRACTION_BENCH' original-name='traction_bench'/>
+        <stl-vector pointer-type='building_roadst' name='ANY_ROAD' original-name='road'/>
+        <stl-vector pointer-type='building_farmplotst' name='FARM_PLOT' original-name='farmplot'/>
+        <stl-vector pointer-type='building_gear_assemblyst' name='GEAR_ASSEMBLY' original-name='gear_assembly'/>
+        <stl-vector pointer-type='building_rollersst' name='ROLLERS' original-name='rollers'/>
+        <stl-vector pointer-type='building_axle_horizontalst' name='AXLE_HORIZONTAL' original-name='axle_horizontal'/>
+        <stl-vector pointer-type='building_axle_verticalst' name='AXLE_VERTICAL' original-name='axle_vertical'/>
+        <stl-vector pointer-type='building_supportst' name='SUPPORT' original-name='support'/>
+        <stl-vector pointer-type='building_archerytargetst' name='ARCHERY_TARGET' original-name='archerytarget'/>
+        <stl-vector pointer-type='building_screw_pumpst' name='SCREW_PUMP' original-name='screw_pump'/>
+        <stl-vector pointer-type='building_water_wheelst' name='WATER_WHEEL' original-name='water_wheel'/>
+        <stl-vector pointer-type='building_windmillst' name='WINDMILL' original-name='windmill'/>
+        <stl-vector pointer-type='building_chainst' name='CHAIN' original-name='chain'/>
+        <stl-vector pointer-type='building_cagest' name='CAGE' original-name='cage'/>
+        <stl-vector pointer-type='building_statuest' name='STATUE' original-name='statue'/>
+        <stl-vector pointer-type='building_slabst' name='SLAB' original-name='slab'/>
+        <stl-vector pointer-type='building_coffinst' name='COFFIN' original-name='coffin'/>
+        <stl-vector pointer-type='building_weaponrackst' name='WEAPON_RACK' original-name='rack'/>
+        <stl-vector pointer-type='building_armorstandst' name='ARMOR_STAND' original-name='stand'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_ANY' original-name='furnace'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_WOOD' original-name='furnace_wood'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_SMELTER_ANY' original-name='furnace_smelter'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_SMELTER_MAGMA' original-name='furnace_smelter_lava'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_KILN_ANY' original-name='furnace_kiln'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_GLASS_ANY' original-name='furnace_glass'/>
+        <stl-vector pointer-type='building_furnacest' name='FURNACE_CUSTOM' original-name='furnace_custom'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_ANY' original-name='workshop'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_BUTCHER' original-name='workshop_butcher'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_MASON' original-name='workshop_mason'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_KENNEL' original-name='kennel'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_FISHERY' original-name='workshop_fishery'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_JEWELER' original-name='workshop_jeweler'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_LOOM' original-name='loom'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_TANNER' original-name='workshop_tanner'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_DYER' original-name='workshop_dyer'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_MILL_ANY' original-name='workshop_mill'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_QUERN' original-name='workshop_quern'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_TOOL' original-name='workshop_tool'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_MILLSTONE' original-name='workshop_millstone'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_KITCHEN' original-name='kitchen'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_STILL' original-name='still'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_FARMER' original-name='workshop_farmer'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_ASHERY' original-name='workshop_ashery'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_CARPENTER' original-name='workshop_carpenter'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_CRAFTSDWARF' original-name='workshop_craftsman'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_MECHANIC' original-name='workshop_mechanic'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_SIEGE' original-name='workshop_siege'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_CLOTHIER' original-name='workshop_clothes'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_LEATHER' original-name='workshop_leather'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_BOWYER' original-name='workshop_bowyer'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_MAGMA_FORGE' original-name='workshop_lavamill'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_FORGE_ANY' original-name='workshop_metalsmith'/>
+        <stl-vector pointer-type='building_workshopst' name='WORKSHOP_CUSTOM' original-name='workshop_custom'/>
+        <stl-vector pointer-type='building_weaponst' name='WEAPON_UPRIGHT' original-name='weapon'/>
+        <stl-vector pointer-type='building_instrumentst' name='INSTRUMENT_STATIONARY' original-name='instrument'/>
+        <stl-vector pointer-type='building_offering_placest' name='OFFERING_PLACE' original-name='offering_place'/>
+    </df-other-vectors-type>
+
+    <class-type type-name='building_handler' original-name='building_handlerst' custom-methods='true'>
+        <stl-vector pointer-type='building' name='all' original-name='global'/>
+
+        <compound type-name='buildings_other' name='other' comment='not a compound in bay12'/>
+
+        <stl-vector pointer-type='building' name='temp_save' has-bad-pointers='true'/>
+
+        <bool name='check_bridge_collapse' original-name='evaluate_bridge_stability'/>
+        <bool name='check_machine_collapse' original-name='evaluate_machine_stability'/>
+
+        <virtual-methods>
+            <vmethod name='get_machine_hookup_list'>
+                <pointer type-name='machine_tile_set' name='bhml'/>
+                <int16_t name='type'/>
+                <int16_t name='subtype'/>
+                <int16_t name='sx'/>
+                <int16_t name='sy'/>
+                <int16_t name='ex'/>
+                <int16_t name='ey'/>
+                <int16_t name='z'/>
+                <bool name='dir'/>
+            </vmethod>
+        </virtual-methods>
+    </class-type>
+
+    <struct-type type-name='job_item_filter' original-name='itemsearchst'>
+        <enum type-name='item_type' name="item_type" original-name='itemneeded'/>
+        <int16_t name='item_subtype' original-name='itemneeded_subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+        <int16_t name='mat_type' original-name='itemneeded_material' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='itemneeded_matgloss' init-value='-1'/>
+
+        <bitfield type-name='job_item_flags1' name="flags1" original-name='itemneeded_flag'/>
+
+        <pointer name="item_vector" original-name='itemneeded_array'>
+            <stl-vector pointer-type='item'/>
+        </pointer>
+
+        <bool name="use_mat_index" original-name='forcematglossprefs'/>
+
+        <bitfield type-name='job_item_flags2' name="flags2" original-name='itemneeded_flag2'/>
+        <bool name="use_flags2" original-name='use_itemneeded_flag2'/>
+
+        <bitfield type-name='job_item_flags3' name="flags3" original-name='itemneeded_flag3'/>
+        <bool name="use_flags3" original-name='use_itemneeded_flag3'/>
+
+        <uint32_t name='flags4' original-name='itemneeded_flag4'/>
+        <bool name="use_flags4" original-name='use_itemneeded_flag4'/>
+
+        <uint32_t name='flags5' original-name='itemneeded_flag5'/>
+        <bool name="use_flags5" original-name='use_itemneeded_flag5'/>
+
+        <stl-string name='reaction_class'/>
+        <stl-string name='has_material_reaction_product' original-name='reaction_product_class'/>
+        <int32_t name="metal_ore" ref-target='inorganic_raw'/>
+
+        <bool name="use_metal_ore" original-name='use_metal_ores'/>
+        <bool name="use_reaction_class" original-name='use_reaction_classes'/>
+        <bool name="use_reaction_product" original-name='use_reaction_product_classes'/>
+
+        <int32_t name="min_dimension" original-name='min_dimension_taken' init-value='-1'/>
+        <int32_t name="reaction_id" original-name='contains_reaction_index' ref-target='reaction'/>
+
+        <stl-vector type-name='int32_t' name='contains' original-name='contains_reagent_index'/>
+        <bool name="use_contains" original-name='use_contains_reagent_index'/>
+
+        <enum type-name='tool_uses' name='has_tool_use' original-name='tool_use'/>
+        <int32_t name='dye_color' ref-target='descriptor_color'/>
+        <enum type-name='job_skill' name='has_melee_skill' original-name='weapon_skill_needed' since='v0.34.01'/>
+
+        <bool name='can_steal_haul_items' comment='noticed in v0.40.24'/>
+
+        <compound type-name='coord' name='pos' original-name='search'/>
+
+        <pointer type-name='unit' name="unit" original-name='un'/>
+        <pointer type-name='job' name="job" original-name='jb'/>
+        <pointer type-name='building' name="building" original-name='bld'/>
+
+        <pointer type-name='world_site' name="site" original-name='in_broad_st'/>
+
+        <int32_t name='total_dim_count' since='v0.43.05'/>
+
+        <stl-vector type-name='int32_t' name='burrows' original-name='burrow_id' ref-target='burrow'/>
+        <bool name="use_burrows"/>
+
+        <pointer name='take_from' original-name='required_stockpile' since='v0.34.08'>
+            <stl-vector pointer-type='building_stockpilest'/>
+        </pointer>
+    </struct-type>
+
+    <struct-type type-name='ui_build_item_req' original-name='build_req_stagest'>
+        <comment>
+            When creating a building, one record per required item type.
+            E.g. Soap Maker's workshop requires a bucket and a building material.
+        </comment>
+
+        <compound type-name='job_item_filter' name='filter' original-name='itemsearch'/>
+
+        <stl-vector pointer-type='item' name='candidates' original-name='item'/>
+        <stl-vector type-name='bool' name='candidate_selected' original-name='selected'/>
+        <stl-vector type-name='int32_t' name='level_map' comment='map_block.walkable'/>
+        <stl-vector type-name='bool' name='candidate_enabled' original-name='valid_for_placement'/>
+
+        <int16_t name="count_required" original-name='number_needed'/>
+        <int16_t name="count_max" original-name='number_max' comment='if 0, fixed at required'/>
+        <int16_t name="count_provided" original-name='number_obtained'/>
+    </struct-type>
+
+    <enum-type type-name='build_req_mode'> bay12: BuildReqMode
+        <enum-item name='INITIAL_FAILURE'/>
+        <enum-item name='PLACING'/>
+        <enum-item name='STAGES'/>
+    </enum-type>
+
+    <enum-type type-name='build_square_type'> bay12: BuildSquare
+        <enum-item name='FINE'/>
+        <enum-item name='FINE_BLOCKED'/>
+        <enum-item name='FINE_WATER'/>
+        <enum-item name='FINE_MAGMA'/>
+        <enum-item name='SKIP'/>
+        <enum-item name='BAD_ANCHOR'/>
+        <enum-item name='BLOCKED'/>
+        <enum-item name='HIDDEN'/>
+        <enum-item name='NEED_WALL'/>
+        <enum-item name='OFF_MAP'/>
+        <enum-item name='WATER'/>
+        <enum-item name='MAGMA'/>
+        <enum-item name='BUILDING_PRESENT'/>
+        <enum-item name='OUTSIDE'/>
+        <enum-item name='CLOSE_TO_EDGE'/>
+        <enum-item name='INSIDE'/>
+        <enum-item name='NEED_OPEN_AIR'/>
+        <enum-item name='SURROUNDED_BY_AIR'/>
+        <enum-item name='TOO_HIGH'/>
+        <enum-item name='CONSTRUCTION_PRESENT'/>
+        <enum-item name='NEEDS_SOIL_OR_MUD'/>
+        <enum-item name='NEED_SOIL'/>
+    </enum-type>
+
+    <enum-type type-name='build_req_choice_type'> bay12: BuildReqChoice
+        <enum-item name='NONE' value='-1'/>
+        <enum-item name='General' original-name='GEN'/>
+        <enum-item name='Specific' original-name='SPEC'/>
+    </enum-type>
+
+    <class-type type-name='build_req_choicest'>
+        <comment>One choice in the build item selector.</comment>
+        <int32_t name="distance" original-name='dist'/>
+        <bool name='on'/>
+        <stl-string name='compstr'/>
+
+        <virtual-methods>
+            <vmethod is-destructor='true'/>
+            <vmethod ret-type='build_req_choice_type' name='getType' original-name='type'/>
+            <vmethod name='getName' original-name='get_name'>
+                <pointer type-name='stl-string' name='str'/>
+            </vmethod>
+            <vmethod ret-type='int32_t' name='select'/>
+            <vmethod ret-type='bool' name='isCandidate' original-name='contains_index'>
+                <int32_t name='ind'/>
+            </vmethod>
+            <vmethod ret-type='bool' name='deselect'/>
+            <vmethod ret-type='int32_t' name='getUsedCount' original-name='get_number_selected'/>
+            <vmethod ret-type='int32_t' name='getNumCandidates' original-name='get_total'/>
+            <vmethod ret-type='bool' name='expandable'/>
+            <vmethod ret-type='bool' name='is_expanded'/>
+            <vmethod name='expand'/>
+            <vmethod name='unexpand'/>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='build_req_choice_genst' inherits-from='build_req_choicest'>
+        <enum type-name='item_type' name="item_type" original-name='itype'/>
+        <int16_t name='item_subtype' original-name='isubtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+
+        <int16_t name='mat_type' original-name='isc1' ref-target='material' aux-value='$$.mat_index'/>
+        <int32_t name='mat_index' original-name='isc2'/>
+
+        <stl-vector name="candidates" original-name='index'>
+            <int32_t>
+                <code-helper name='refers-to'>
+                    (let* ((selector $global.buildreq)
+                           (req $selector.requirements[$selector.req_index]))
+                      $req.candidates[$])
+                </code-helper>
+            </int32_t>
+        </stl-vector>
+
+        <int32_t name="used_count" original-name='number_selected'/>
+        <bool name='expanded'/>
+    </class-type>
+
+    <class-type type-name='build_req_choice_specst' inherits-from='build_req_choicest'>
+        <pointer type-name='item' name='candidate' original-name='it'/>
+        <int32_t name='candidate_id' original-name='index'>
+            <code-helper name='refers-to'>
+                (let* ((selector $global.buildreq)
+                       (req $selector.requirements[$selector.req_index]))
+                  $req.candidates[$])
+            </code-helper>
+        </int32_t>
+    </class-type>
+
+    <class-type type-name='buildreq' original-name='buildreqst'>
+        <stl-vector pointer-type='ui_build_item_req' name='requirements' original-name='stage'/>
+        <stl-vector pointer-type='build_req_choicest' name='choices' original-name='choice'/>
+
+        <enum base-type='int32_t' type-name='building_type' name="building_type" original-name='btype' comment='if -1, in Build menu; otherwise select item'/> Toady used the actual enum rather than the matching typedef
+        <int16_t name="building_subtype" original-name='bsubtype'/>
+        <int32_t name="custom_type" original-name='bcustom_id' ref-target='building_def'/>
+        <enum type-name='build_req_mode' name="stage" original-name='mode'/>
+        <int16_t name="req_index" original-name='current_stage'/>
+        <int16_t name="sel_index" original-name='selected'/>
+
+        <bool name="general_choices"/>
+
+        <stl-vector pointer-type='stl-string' name='errors' original-name='failure_string'/>
+        <stl-vector pointer-type='stl-string' name='warnings' original-name='warning_string'/>
+
+        <static-array name='tiles' original-name='build_square' count='31'>
+            <static-array type-name='build_square_type' count='31'/>
+        </static-array>
+
+        <int32_t name='cur_walk_tag' original-name='choice_level_map'/>
+
+        <compound type-name='pressure_plate_info' name='plate_info' original-name='trigger_profile'/>
+        <stl-vector type-name='int16_t' name='min_weight_races' original-name='trigger_low_example' ref-target='creature_raw'/>
+        <stl-vector type-name='int16_t' name='max_weight_races' original-name='trigger_high_example' ref-target='creature_raw'/>
+
+        <stl-vector type-name='int32_t' name='trigger_track_weight'/>
+        <stl-vector type-name='int16_t' name='trigger_race_example' ref-target='creature_raw'/>
+        <stl-vector type-name='int32_t' name='trigger_race_size'/>
+        <int32_t name='scroll_position_race'/>
+        <bool name='scrolling_race'/>
+
+        <compound type-name='track_stop_profilest' name='track_stop' original-name='track_stop_profile'/>
+
+        <int32_t name='speed' original-name='roller_speed' init-value='50000' since='v0.34.08'/>
+
+        <compound type-name='coord' name='pos' original-name='last_check_m' since='v0.50.01'/>
+        <int32_t name='direction' original-name='last_check_orientation' since='v0.50.01'/>
+
+        <bool name='first_stage_pass'/>
+
+        <compound type-name='coord' name='selection_pos' original-name='chosen_m' since='v0.50.01'/>
+
+        <int32_t name='selection_area' original-name='fine_square_count' since='v0.50.01'/>
+        <int32_t name='total_sq'/>
+        <stl-vector type-name='int32_t' name='total_sq_level_map' since='v0.50.01'/>
+
+        <bool name='use_last_material'/>
+        <bool name='set_last_item_search'/>
+        <compound type-name='job_item_filter' name='last_item_search'/>
+        <int32_t name='last_itype'/>
+        <int32_t name='last_isubtype'/>
+        <int32_t name='last_mat'/>
+        <int32_t name='last_matg'/>
+
+        <bool name='use_closest_material'/>
+        <bool name='use_same_material'/>
+        <bool name='build_after_placement'/>
+
+        <virtual-methods>
+            <vmethod name='evaluate_buildability'><int16_t name='mx'/><int16_t name='my'/><int16_t name='mz'/><int32_t name='orientation'/></vmethod>
+            <vmethod name='evaluate_items_vs_placement'/>
+            <vmethod name='old_evaluate_buildability'/>
+        </virtual-methods>
+    </class-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

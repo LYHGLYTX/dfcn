@@ -1,0 +1,60 @@
+base = "items::corpse"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{mangled}{main}" = "{^0}{mangled}{main}"
+"{named}" = "{named}"
+
+[[rulesets]]
+name = "named"
+[rulesets.rules]
+# PE 53.16: item_corpsest and item_corpsepiecest share the description at
+# 0x140ca1aa0 and short description at 0x140ca10e0. Both choose a possessive
+# identity instead of the species, then append rotten, mangled and the body
+# outcome. The short path can additionally produce a partial skeleton.
+# The skeleton literal is an immediate at 0x140ca17fd / 0x140ca22d9, rather
+# than a NUL-terminated string referenced by LEA.
+"{owner}{^0}{mangled}{main}" = "{owner}{^0}{mangled}{main}"
+"{^0}{::creatures::caste::name} {mangled}{main}" = "{^0}{::creatures::caste::name}{mangled}{main}"
+
+[[rulesets]]
+name = "owner"
+[rulesets.rules]
+# Unnamed animals can use a numbered unit label (Alligator 6). Reuse the
+# complete roster label resolver before composing either corpse or body part.
+"{::creatures::caste::name}'s " = "{::creatures::caste::name}的"
+"{::text::person}'s " = "{::text::person}的"
+"your " = "你的"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"rotten " = "腐烂的"
+
+[[rulesets]]
+name = "mangled"
+optional = true
+[rulesets.rules]
+"mangled " = "破碎的"
+
+[[rulesets]]
+name = "partial"
+optional = true
+[rulesets.rules]
+"partial " = "部分"
+
+[[rulesets]]
+name = "mutilated"
+optional = true
+[rulesets.rules]
+"mutilated " = "残缺不全的"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"{mutilated}corpse" = "{mutilated}尸体"
+"{mutilated}corpses" = "{mutilated}尸体"
+"{partial}skeleton" = "{partial}骨架"
+"{partial}skeletons" = "{partial}骨架"
+"partial remains" = "残缺遗骸"

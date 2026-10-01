@@ -1,0 +1,450 @@
+# Native ordinary overview self-remarks, extracted from PE:6a70a6d9:02711000
+# Function 0x140666470..0x140667f50: baby syllables, facets, prayer/reflection, stress.
+# Function 0x140664be0..0x140666470: all value-motto branches.
+# Sphere formatter 0x140756500..0x140756688; leaf table 0x140756690..0x140757174 (130 values plus fallback).
+# Hissing voice 0x14067b6c0..0x14067bc4d; inline syllable immediates recorded separately.
+# This is a native source inventory, not a test or game-display result. Fixed translations reuse the existing quoted local glossary.
+# formatter	reference	source	translation	handler
+0x140666470	0x1406664c5 -> 0x1416672c8	"Uhh..."	“呃……”	overview-quote-literal
+0x140666470	0x1406666c9 -> 0x141642164	as		grammar:babble
+0x140666470	0x14066670e -> 0x1415ee438	!		grammar:babble
+0x140666470	0x140666715 -> 0x1415ec860	...		grammar:babble
+0x140666470	0x1406667f4 -> 0x141642160	in		grammar:babble
+0x140666470	0x140666800 -> 0x14164215c	er		grammar:babble
+0x140666470	0x14066680c -> 0x141642184	us		grammar:babble
+0x140666470	0x140666818 -> 0x1415e8ca4	is		grammar:babble
+0x140666470	0x140666b3a -> 0x141667788	"It's a great day to fall in love all over again."	“今天真是重新坠入爱河的好日子。”	overview-quote-literal
+0x140666470	0x140666b41 -> 0x1416677c0	"People do get so carried away sometimes, but not I."	“人有时会忘乎所以，但我不会。”	overview-quote-literal
+0x140666470	0x140666b59 -> 0x141667738	"Sometimes I just don't like somebody."	“有时我就是不喜欢某个人。”	overview-quote-literal
+0x140666470	0x140666b65 -> 0x141667760	"How can someone be so consumed by hate?"	“一个人怎么会被仇恨吞噬到这种地步？”	overview-quote-literal
+0x140666470	0x140666b75 -> 0x1416676c0	"I get so jealous sometimes."	“有时我真是嫉妒得厉害。”	overview-quote-literal
+0x140666470	0x140666b81 -> 0x1416676e0	"I don't understand how somebody can become so obsessed by what somebody else has."	“我不明白，一个人怎么会如此执着于别人拥有的东西。”	overview-quote-literal
+0x140666470	0x140666ba1 -> 0x141667688	"Be happy!"	“开心一点！”	overview-quote-literal
+0x140666470	0x140666bb2 -> 0x141667698	"Is there something to be happy about?"	“有什么值得高兴的事吗？”	overview-quote-literal
+0x140666470	0x140666bbe -> 0x141667640	"It really gets me down sometimes."	“有时我真为此感到沮丧。”	overview-quote-literal
+0x140666470	0x140666bca -> 0x141667668	"How can people be so glum?"	“人为什么会这么不快乐？”	overview-quote-literal
+0x140666470	0x140666bda -> 0x1416675e0	"I have trouble controlling my temper."	“我很难控制自己的脾气。”	overview-quote-literal
+0x140666470	0x140666be6 -> 0x141667608	"People can be so angry, and I just don't understand it."	“人怎么会有那么大的怒气，我实在不理解。”	overview-quote-literal
+0x140666470	0x140666c06 -> 0x141667008	"W... worried?  Do I look worried?"	“担……担心？我看起来很担心吗？”	overview-quote-literal
+0x140666470	0x140666c17 -> 0x141667030	"There's nothing to be upset about."	“没有什么值得烦心的。”	overview-quote-literal
+0x140666470	0x140666c33 -> 0x141666f98	"I'm feeling randy today!"	“我今天很想与人亲热！”	overview-quote-literal
+0x140666470	0x140666c44 -> 0x141666fc0	"I just don't understand these flames of passion people go on about."	“人们总说欲火难耐，我实在无法理解。”	overview-quote-literal
+0x140666470	0x140666c60 -> 0x141666f58	"I don't handle pressure well."	“我难以承受压力。”	overview-quote-literal
+0x140666470	0x140666c71 -> 0x141666f78	"I'm at my best under pressure."	“有压力时，我反而发挥得最好。”	overview-quote-literal
+0x140666470	0x140666c8d -> 0x141666f00	"Yes, I want more.  Is that so bad?"	“是，我想要更多。这有那么糟吗？”	overview-quote-literal
+0x140666470	0x140666c9e -> 0x141666f28	"Why are they so fixated on these baubles?"	“他们为什么如此痴迷这些小玩意？”	overview-quote-literal
+0x140666470	0x140666ced -> 0x141666ec0	"I could really use a drink."	“我真想喝一杯。”	overview-quote-literal
+0x140666470	0x140666cf7 -> 0x141666ee0	"So I overindulge sometimes."	“我偶尔也会放纵自己。”	overview-quote-literal
+0x140666470	0x140666d17 -> 0x141666e60	"Sometimes I think I need a drink, but I can control myself."	“有时我觉得该喝一杯，但我能克制自己。”	overview-quote-literal
+0x140666470	0x140666d24 -> 0x141666ea0	"I am not governed by urges."	“我不会任由冲动左右自己。”	overview-quote-literal
+0x140666470	0x140666d30 -> 0x141666e18	"There's nothing like a good brawl."	“没有什么比得上痛快打上一架。”	overview-quote-literal
+0x140666470	0x140666d3c -> 0x141666e40	"Why must they be so violent?"	“他们为何非要诉诸暴力？”	overview-quote-literal
+0x140666470	0x140666d4c -> 0x141666dc0	"Get me going and I won't stop for anything."	“只要我行动起来，就没有什么能让我停下。”	overview-quote-literal
+0x140666470	0x140666d58 -> 0x141666df0	"Maybe I give up too early sometimes."	“也许有时我放弃得太早了。”	overview-quote-literal
+0x140666470	0x140666d68 -> 0x141667248	"I don't always do things in the most efficient way."	“我做事并不总是那么有效率。”	overview-quote-literal
+0x140666470	0x140666d74 -> 0x141667280	"We must be careful not to waste."	“我们必须留心，不能浪费。”	overview-quote-literal
+0x140666470	0x140666d94 -> 0x1416671f0	"I don't mind stirring things up."	“我不介意挑起点事端。”	overview-quote-literal
+0x140666470	0x140666da5 -> 0x141667218	"It's so great when everybody just gets along."	“大家和睦相处，真是美好。”	overview-quote-literal
+0x140666470	0x140666dc1 -> 0x1416671b8	"You're so perceptive!"	“你看得真透彻！”	overview-quote-literal
+0x140666470	0x140666dd2 -> 0x1416671d0	"You don't care, so don't ask."	“既不关心，就不必过问。”	overview-quote-literal
+0x140666470	0x140666dee -> 0x141667168	"I try to live and behave properly."	“我尽量让生活和言行合乎规矩。”	overview-quote-literal
+0x140666470	0x140666dff -> 0x141667190	"What's this about proper living?"	“所谓合乎规矩的生活，究竟是什么？”	overview-quote-literal
+0x140666470	0x140666e1b -> 0x141667118	"I was never one to follow advice."	“我从来不是听得进劝的人。”	overview-quote-literal
+0x140666470	0x140666e2c -> 0x141667140	"I'm not much of a decision maker."	“我不太擅长拿主意。”	overview-quote-literal
+0x140666470	0x140666e48 -> 0x1416670e0	"Have no fear."	“不必畏惧。”	overview-quote-literal
+0x140666470	0x140666e59 -> 0x1416670f0	"Bravery is not a strength of mine."	“勇敢不是我的长处。”	overview-quote-literal
+0x140666470	0x140666e75 -> 0x1416670a0	"We will be successful."	“我们一定会成功。”	overview-quote-literal
+0x140666470	0x140666e86 -> 0x1416670b8	"I don't think I'm cut out for this."	“我觉得自己不适合做这件事。”	overview-quote-literal
+0x140666470	0x140666ea2 -> 0x141667058	"I look splendid today."	“我今天真是光彩照人。”	overview-quote-literal
+0x140666470	0x140666eb3 -> 0x141667070	"Some people are so wrapped up in themselves."	“有些人眼里实在只有自己。”	overview-quote-literal
+0x140666470	0x140666ecf -> 0x141667f00	"My goals are important to me."	“我很看重自己的目标。”	overview-quote-literal
+0x140666470	0x140666ee0 -> 0x141667f20	"I don't feel like I need to chase anything."	“我觉得自己没有什么非追求不可的东西。”	overview-quote-literal
+0x140666470	0x140666efc -> 0x141667ea0	"One should always return a favor."	“受人恩惠，就应当回报。”	overview-quote-literal
+0x140666470	0x140666f0d -> 0x141667ec8	"It's not a gift if you expect something in return."	“若是指望回报，那就不算馈赠。”	overview-quote-literal
+0x140666470	0x140666f29 -> 0x141667e50	"I like to dress well."	“我喜欢衣着得体。”	overview-quote-literal
+0x140666470	0x140666f3a -> 0x141667e68	"I wouldn't feel comfortable getting all dressed up."	“打扮得太讲究，会让我不自在。”	overview-quote-literal
+0x140666470	0x140666ff6 -> 0x141667e18	Did you hear the one about the 		grammar:creature-joke
+0x140666470	0x1406670c3 -> 0x1415e94b8	 and the 		grammar:creature-joke
+0x140666470	0x140667188 -> 0x141614d50	?		grammar:creature-joke
+0x140666470	0x1406671ab -> 0x141667e38	"That isn't funny."	“这并不好笑。”	overview-quote-literal
+0x140666470	0x1406671b7 -> 0x141667dc8	"Don't get on my bad side."	“别惹我。”	overview-quote-literal
+0x140666470	0x1406671c3 -> 0x141667de8	"You shouldn't waste your life on revenge."	“不该把一生浪费在复仇上。”	overview-quote-literal
+0x140666470	0x1406671d3 -> 0x141667d80	"I am a very, very important person."	“我是个非常、非常重要的人物。”	overview-quote-literal
+0x140666470	0x1406671df -> 0x141667da8	"Oh, I'm nothing special."	“我没什么过人之处。”	overview-quote-literal
+0x140666470	0x1406671ff -> 0x141667d30	"There's no room for mercy in this world."	“这世界容不下仁慈。”	overview-quote-literal
+0x140666470	0x140667210 -> 0x141667d60	"Show some mercy now and again."	“偶尔也发发慈悲。”	overview-quote-literal
+0x140666470	0x14066722c -> 0x141667cf8	"I'm concentrating on something."	“我正专心想一件事。”	overview-quote-literal
+0x140666470	0x14066723d -> 0x141667d18	"Huh?  What was that?"	“嗯？刚才说什么？”	overview-quote-literal
+0x140666470	0x140667249 -> 0x141668170	"I'm feeling optimistic about the future."	“我对未来充满希望。”	overview-quote-literal
+0x140666470	0x140667255 -> 0x1416681a0	"It won't turn out well."	“这事不会有好结果。”	overview-quote-literal
+0x140666470	0x140667265 -> 0x141668128	"I'm curious.  Tell me everything!"	“我很好奇，把一切都告诉我！”	overview-quote-literal
+0x140666470	0x140667271 -> 0x141668150	"I don't really want to know."	“我其实并不想知道。”	overview-quote-literal
+0x140666470	0x140667291 -> 0x1416680e8	"I wonder what they think."	“不知道他们会怎么想。”	overview-quote-literal
+0x140666470	0x1406672a2 -> 0x141668108	"Who cares what they think?"	“何必在意他们怎么想？”	overview-quote-literal
+0x140666470	0x1406672ae -> 0x1416680a0	"I don't feel like telling you about it."	“我不想和你谈这件事。”	overview-quote-literal
+0x140666470	0x1406672ba -> 0x1416680c8	"I could tell you all about it!"	“我可以把来龙去脉都告诉你！”	overview-quote-literal
+0x140666470	0x1406672da -> 0x141668038	"If you have a task, do it properly."	“有事要做，就把它做好。”	overview-quote-literal
+0x140666470	0x1406672eb -> 0x141668060	"It's not perfect, but it's good enough.  Why fret about it?"	“虽然不完美，但已经够好了，何必为此烦恼？”	overview-quote-literal
+0x140666470	0x1406672f7 -> 0x141667ff0	"I'm not going to change my mind."	“我不会改变主意。”	overview-quote-literal
+0x140666470	0x140667303 -> 0x141668018	"Try to keep an open mind."	“不妨多听听不同的见解。”	overview-quote-literal
+0x140666470	0x140667313 -> 0x141667f90	"Everybody has their own way of life."	“人人都有自己的活法。”	overview-quote-literal
+0x140666470	0x14066731f -> 0x141667fb8	"I don't understand why they have to be that way."	“我不理解，他们为什么非要那样。”	overview-quote-literal
+0x140666470	0x14066733f -> 0x141667f50	"Friendship is forever."	“友谊长存。”	overview-quote-literal
+0x140666470	0x140667350 -> 0x141667f68	"I don't really get attached to people."	“我不太会对别人产生依恋。”	overview-quote-literal
+0x140666470	0x14066736c -> 0x141667a28	"I go with the flow sometimes."	“我有时也会随大流。”	overview-quote-literal
+0x140666470	0x14066737d -> 0x141667a48	"Don't bother trying to play on my emotions."	“别费心利用我的感情。”	overview-quote-literal
+0x140666470	0x140667399 -> 0x1416679f8	"I'm happy to help."	“我很乐意帮忙。”	overview-quote-literal
+0x140666470	0x1406673aa -> 0x141667a10	"Why should I help?"	“我为什么要帮忙？”	overview-quote-literal
+0x140666470	0x1406673c6 -> 0x1416679b8	"Do your duty."	“尽好自己的本分。”	overview-quote-literal
+0x140666470	0x1406673d7 -> 0x1416679c8	"I don't like being obligated to anybody."	“我不喜欢欠任何人的情。”	overview-quote-literal
+0x140666470	0x1406673f3 -> 0x141667950	"Oh, I don't usually think much."	“我平时不怎么多想。”	overview-quote-literal
+0x140666470	0x140667404 -> 0x141667970	"One must always carefully consider the correct course of action."	“做事之前，总应慎重考虑怎样才妥当。”	overview-quote-literal
+0x140666470	0x140667420 -> 0x141667918	"Everything just so in its proper place!"	“一切都井井有条，各归其位！”	overview-quote-literal
+0x140666470	0x140667431 -> 0x141667940	"It's my mess."	“是我自己弄乱的。”	overview-quote-literal
+0x140666470	0x14066744d -> 0x1416678c8	"People are basically trustworthy."	“人总的来说是值得信任的。”	overview-quote-literal
+0x140666470	0x14066745e -> 0x1416678f0	"My trust is earned, and not by many."	“想得到我的信任，得有真凭实据，而做到的人不多。”	overview-quote-literal
+0x140666470	0x14066747a -> 0x141667880	"It's such a joy to be with people."	“与人相伴，真是快乐。”	overview-quote-literal
+0x140666470	0x14066748b -> 0x1416678a8	"I prefer to be by myself."	“我更喜欢独处。”	overview-quote-literal
+0x140666470	0x1406674a7 -> 0x141667838	"People should listen to what I have to say."	“人们应该听听我要说的话。”	overview-quote-literal
+0x140666470	0x1406674b8 -> 0x141667868	"I try not to interrupt."	“我尽量不打断别人说话。”	overview-quote-literal
+0x140666470	0x1406674c4 -> 0x141667cc0	"There's so much to be done!"	“还有许多事要做！”	overview-quote-literal
+0x140666470	0x1406674d0 -> 0x141667ce0	"What's the rush?"	“何必着急？”	overview-quote-literal
+0x140666470	0x1406674dd -> 0x141667c58	"I need some more excitement in my life."	“我的生活需要多一点刺激。”	overview-quote-literal
+0x140666470	0x1406674e9 -> 0x141667c80	"I'd just as soon not have anything too exciting happen today."	“我倒希望今天别发生什么太刺激的事。”	overview-quote-literal
+0x140666470	0x1406674f6 -> 0x141667bf8	"Do you have dreams?  Tell me a story!"	“你有梦境吗？给我讲个故事！”	overview-quote-literal
+0x140666470	0x140667502 -> 0x141667c20	"Try to focus on the practical side of the matter."	“尽量多考虑事情实际的一面。”	overview-quote-literal
+0x140666470	0x14066750f -> 0x141667b98	"I encountered a fascinating conundrum recently."	“我最近遇到了一个引人入胜的难题。”	overview-quote-literal
+0x140666470	0x140667525 -> 0x141667bc8	"A great piece of art is one that moves me."	“能打动我的，才是好艺术。”	overview-quote-literal
+0x140666470	0x140667536 -> 0x141667b48	"I guess I just don't appreciate art."	“看来我就是不懂欣赏艺术。”	overview-quote-literal
+0x140666470	0x1406675a3 -> 0x1416672b8	I have		grammar:worship-reflection
+0x140666470	0x1406675b2 -> 0x1416672d0	I've		grammar:worship-reflection
+0x140666470	0x1406675c7 -> 0x1416672c0	 been 		grammar:worship-reflection
+0x140666470	0x140667616 -> 0x1415fd960	praying		grammar:worship-reflection
+0x140666470	0x140667630 -> 0x1416672a8	considering		grammar:worship-reflection
+0x140666470	0x14066763f -> 0x1415fdb18	contemplating		grammar:worship-reflection
+0x140666470	0x140667657 -> 0x1415e873c	 		grammar:worship-reflection
+0x140666470	0x1406676d0 -> 0x1416672b4	on 		grammar:worship-reflection
+0x140666470	0x140667726 -> 0x141667808	the theme of 		grammar:worship-reflection
+0x140666470	0x140667735 -> 0x1416677f8	the idea of 		grammar:worship-reflection
+0x140666470	0x14066773e -> 0x141667828	the concept of 		grammar:worship-reflection
+0x140666470	0x140667747 -> 0x141667818	the subject of 		grammar:worship-reflection
+0x140666470	0x140667846 -> 0x141662f00	to 		grammar:worship-reflection
+0x140666470	0x140667ac8 -> 0x141667ab8	"I just don't care anymore..."	“我已经什么都不在乎了……”	overview-quote-literal
+0x140666470	0x140667ae2 -> 0x141667b20	"I'm feel like I'm about to snap."	“我觉得自己就要崩溃了。”	overview-quote-literal
+0x140666470	0x140667afc -> 0x141667af8	"Everything is all piling up at once!"	“所有事情一下子全压过来了！”	overview-quote-literal
+0x140666470	0x140667b16 -> 0x141667b70	"I cannot stand the world any longer..."	“我再也受不了这个世界了……”	overview-quote-literal
+0x140666470	0x140667b4b -> 0x141668590	"I'm feeling really worn down."	“我真的很疲惫。”	overview-quote-literal
+0x140666470	0x140667b65 -> 0x141667a98	"I feel angry all the time."	“我心里总有一股怒气。”	overview-quote-literal
+0x140666470	0x140667b7f -> 0x141667a78	"I can't take much more of this!"	“这样下去，我就要撑不住了！”	overview-quote-literal
+0x140666470	0x140667b99 -> 0x141667ad8	"I feel so tired of everything."	“我对一切都感到厌倦。”	overview-quote-literal
+0x140666470	0x140667bce -> 0x141668528	"I've been under some pressure."	“我最近有些压力。”	overview-quote-literal
+0x140666470	0x140667be8 -> 0x141668578	"I get fed up sometimes."	“有时我也觉得受够了。”	overview-quote-literal
+0x140666470	0x140667c02 -> 0x141668558	"I've been feeling anxious."	“我最近一直心神不宁。”	overview-quote-literal
+0x140666470	0x140667c1c -> 0x1416685b0	"It's all starting to get me down."	“这一切开始让我消沉了。”	overview-quote-literal
+0x140666470	0x140667c8b -> 0x1416684dc	I'm 		grammar:low-stress-status
+0x140666470	0x140667ce4 -> 0x14164ba84	good		grammar:low-stress-status
+0x140666470	0x140667cf6 -> 0x1416684f8	I feel 		grammar:low-stress-status
+0x140666470	0x140667d5c -> 0x1416684d0	just fine		grammar:low-stress-status
+0x140666470	0x140667d68 -> 0x141668520	well		grammar:low-stress-status
+0x140666470	0x140667d74 -> 0x1416684e8	I've been 		grammar:low-stress-status
+0x140666470	0x140667dce -> 0x141668500	alright		grammar:low-stress-status
+0x140666470	0x140667ddd -> 0x141668508	Everything's 		grammar:low-stress-status
+0x140666470	0x140667e28 -> 0x141668548	I'm doing 		grammar:low-stress-status
+0x140666470	0x140667e34 -> 0x141668518	fine		grammar:low-stress-status
+0x140666470	0x140667e4c -> 0x1415e85b4	.		grammar:low-stress-status
+0x140664be0	0x140664c4b -> 0x141664828	"Society flourishes when law breakers are punished."	“违法者受到惩罚，社会才能兴盛。”	overview-quote-literal
+0x140664be0	0x140664c65 -> 0x141664800	"One should always respect the law."	“人应当始终尊重法律。”	overview-quote-literal
+0x140664be0	0x140664cbc -> 0x1416647c8	"No law can do justice to the complexity of life."	“生活如此复杂，没有哪条法律能面面俱到。”	overview-quote-literal
+0x140664be0	0x140664cd6 -> 0x141664790	"Nothing gives them the right to establish these laws."	“他们根本无权制定这些法律。”	overview-quote-literal
+0x140664be0	0x140664d32 -> 0x141664680	"I consider laws to be more of a suggestion than anything."	“在我看来，法律更像是一种建议。”	overview-quote-literal
+0x140664be0	0x140664d4c -> 0x141664740	"Rules are there to be bent, but they shouldn't be flouted thoughtlessly."	“规矩可以变通，却不该不加思索地违背。”	overview-quote-literal
+0x140664be0	0x140664d66 -> 0x1416646f8	"Some laws are just, while others were made to be broken."	“有些法律公正合理，有些却注定要被打破。”	overview-quote-literal
+0x140664be0	0x140664dcb -> 0x1416658f0	"One must always be loyal to their cause and the ones they serve."	“忠于自己的事业，也忠于自己追随的人。”	overview-quote-literal
+0x140664be0	0x140664de5 -> 0x141665890	"How can society function without loyalty?  We must be able to have faith in each other."	“没有忠诚，社会如何维系？我们必须彼此信任。”	overview-quote-literal
+0x140664be0	0x140664dff -> 0x1416646c0	"You must never forget true loyalty.  Repay it in full."	“真正的忠诚不可辜负，应当全心回报。”	overview-quote-literal
+0x140664be0	0x140664e64 -> 0x141665730	"Never lose yourself in loyalty.  You know what is best for yourself."	“不要因忠诚迷失自己。你自己知道什么对你最好。”	overview-quote-literal
+0x140664be0	0x140664e7e -> 0x141665810	"The whole idea of loyalty is pointless.  Acting purely out of loyalty implies acting against one's own best interest."	“忠诚这个念头毫无意义。只凭忠诚行事，就意味着违背自己的最大利益。”	overview-quote-literal
+0x140664be0	0x140664e98 -> 0x1416657d0	"Don't serve anyone blindly.  You'll only get into trouble."	“不要盲目效忠任何人，那只会惹祸上身。”	overview-quote-literal
+0x140664be0	0x140664ef4 -> 0x1416656c0	"Consider your loyalties carefully, adhere to them while they last, and abandon them when you must."	“慎重选择效忠的对象，该坚守时坚守，必须放弃时就放弃。”	overview-quote-literal
+0x140664be0	0x140664f0e -> 0x141665660	"You should only maintain loyalty so long as something more important is not at stake."	“忠诚应当坚守，但不能为此危及更重要的事。”	overview-quote-literal
+0x140664be0	0x140664f28 -> 0x141665780	"Loyalty has value, but you should always keep the broader picture in mind."	“忠诚固然可贵，但也要顾全大局。”	overview-quote-literal
+0x140664be0	0x140664f8d -> 0x141665578	"Family is the true bond that keeps society thriving."	“家庭才是维系社会兴盛的纽带。”	overview-quote-literal
+0x140664be0	0x140664fa7 -> 0x141665610	"You can always rely on your family when everything else falls away."	“纵然失去一切，你仍然可以依靠家人。”	overview-quote-literal
+0x140664be0	0x140664fc1 -> 0x1416655d8	"How great it is to be surrounded by family!"	“家人在身边，真是幸福！”	overview-quote-literal
+0x140664be0	0x140665026 -> 0x141665520	"I hold the relationships I've forged myself over family ties I had no part in creating."	“比起生来就有的亲缘，我更看重自己建立的关系。”	overview-quote-literal
+0x140664be0	0x140665040 -> 0x1416654e0	"We cannot choose our families, but we can choose to avoid them."	“我们无法选择家人，却可以选择远离他们。”	overview-quote-literal
+0x140664be0	0x14066505a -> 0x1416655b0	"I was always irritated by family."	“家人总让我心烦。”	overview-quote-literal
+0x140664be0	0x1406650ac -> 0x141665490	"You can't always rely on your family, but it's good to know somebody is there."	“家人未必总能靠得住，但知道有人在，总是好的。”	overview-quote-literal
+0x140664be0	0x1406650c6 -> 0x141665430	"Family is complicated and those ties be both a boon and a curse.  Sometimes both at once!"	“家庭关系复杂，可能是福，也可能是祸，有时两者兼有！”	overview-quote-literal
+0x140664be0	0x14066512b -> 0x141665c70	"When all other bonds wither, friendship will remain."	“纵使其他情分都淡去，友谊仍会长存。”	overview-quote-literal
+0x140664be0	0x140665145 -> 0x141665d00	"Surround yourself with friends you can trust and you will be unstoppable."	“有值得信赖的朋友相伴，就没有什么能阻挡你。”	overview-quote-literal
+0x140664be0	0x14066515f -> 0x141665cd0	"There's nothing like a good friend."	“没有什么比得上一个好朋友。”	overview-quote-literal
+0x140664be0	0x1406651c4 -> 0x141665c00	"Building friendships is a waste.  There is no bond that can withstand distance or a change of circumstance."	“结交朋友是白费心力。没有哪份情谊经得起相隔遥远或境遇变迁。”	overview-quote-literal
+0x140664be0	0x1406651de -> 0x141665ba0	"Friends are future enemies.  I don't see the difference.  People do as they must."	“朋友终会成为敌人，两者并无区别。人各有不得已。”	overview-quote-literal
+0x140664be0	0x1406651f8 -> 0x141665ca8	"Be careful of your so-called friends."	“要提防那些所谓的朋友。”	overview-quote-literal
+0x140664be0	0x140665212 -> 0x141665b40	"Friends are nice, but you should keep your priorities straight."	“有朋友是好事，但也要分清轻重。”	overview-quote-literal
+0x140664be0	0x140665277 -> 0x141665ae0	"You can be powerful or powerless.  The choice is yours, until somebody makes it for you."	“你可以掌握权力，也可以任人摆布。在别人替你决定之前，选择权在你手中。”	overview-quote-literal
+0x140664be0	0x140665291 -> 0x141665aa0	"Power over others is the only true measure of worth."	“能支配多少人，才是衡量价值的唯一标准。”	overview-quote-literal
+0x140664be0	0x1406652ab -> 0x141665b80	"Strive for power."	“权力要靠争取。”	overview-quote-literal
+0x140664be0	0x140665302 -> 0x141665a68	"It is abhorrent to seek power over other people."	“谋求支配他人的权力，令人不齿。”	overview-quote-literal
+0x140664be0	0x14066531c -> 0x141665a30	"There's nothing admirable about bullying others."	“欺凌他人，没有什么值得称道的。”	overview-quote-literal
+0x140664be0	0x140665336 -> 0x1416659c0	"The struggle for power must be balanced by other considerations."	“争取权力时，也必须顾及其他事情。”	overview-quote-literal
+0x140664be0	0x14066539b -> 0x141665978	"Everything is so much easier when you just tell the truth."	“坦诚相待，事情就简单多了。”	overview-quote-literal
+0x140664be0	0x1406653b5 -> 0x141665938	"There is nothing so important that it is worth telling a lie."	“没有什么事重要到值得为它说谎。”	overview-quote-literal
+0x140664be0	0x1406653cf -> 0x141665a08	"You should always tell the truth."	“无论何时，都应当说实话。”	overview-quote-literal
+0x140664be0	0x140665434 -> 0x141664f30	"Don't think about the truth, whatever that is.  Just say what needs to be said."	“不必琢磨什么才是真相，说该说的话就好。”	overview-quote-literal
+0x140664be0	0x14066544e -> 0x141665030	"Is there ever a time when honesty by itself overrides other considerations?  Say what is right, not what is true."	“难道诚实就能凌驾于一切考量之上？要说合适的话，而不只是真话。”	overview-quote-literal
+0x140664be0	0x140665468 -> 0x141664fc0	"There is no value in telling the truth thoughtlessly.  Consider the circumstances and say what is best."	“不假思索地说实话没有意义。要看清情形，说最合适的话。”	overview-quote-literal
+0x140664be0	0x1406654c4 -> 0x141664ec0	"Sometimes the blunt truth just does more damage.  Think about how the situation will unfold before you speak."	“有时直言实情只会造成更大伤害。开口之前，先想想后果。”	overview-quote-literal
+0x140664be0	0x1406654de -> 0x141664e60	"It is best not to complicate your life with lies, sure, but the truth also has its problems."	“最好别让谎言把生活弄复杂，但实话也有实话的麻烦。”	overview-quote-literal
+0x140664be0	0x1406654f8 -> 0x141664f80	"There are times when it is alright not to tell the whole truth."	“有时候，不把实情全说出来也无妨。”	overview-quote-literal
+0x140664be0	0x140665511 -> 0x141664df8	"I do admire a clever trap."	“我欣赏巧妙的圈套。”	overview-quote-literal
+0x140664be0	0x140665530 -> 0x141664e18	"There's no value in all of this scheming I see these days."	“眼下这些勾心斗角，在我看来毫无价值。”	overview-quote-literal
+0x140664be0	0x14066554a -> 0x141664da0	"Be shrewd, but do not lose yourself in guile."	“处世要精明，却别迷失于算计。”	overview-quote-literal
+0x140664be0	0x1406655a7 -> 0x141664d38	"I can appreciate the right turn of phrase."	“恰到好处的措辞，我是懂得欣赏的。”	overview-quote-literal
+0x140664be0	0x1406655c1 -> 0x141664dd0	"I do admire a clever turn of phrase."	“我欣赏巧妙的措辞。”	overview-quote-literal
+0x140664be0	0x140665618 -> 0x141664cb8	"They are so full of all those big words."	“他们满口都是装腔作势的大词。”	overview-quote-literal
+0x140664be0	0x140665632 -> 0x141664d68	"Who are these mealy-mouthed cowards trying to impress?"	“这些说话拐弯抹角的懦夫，究竟想讨好谁？”	overview-quote-literal
+0x140664be0	0x14066564c -> 0x141664cf0	"There is a time for artful speech, and a time for blunt speech as well."	“有时说话需要技巧，有时也该直言不讳。”	overview-quote-literal
+0x140664be0	0x140665665 -> 0x141664c60	"Always deal fairly."	“待人处事，要讲公道。”	overview-quote-literal
+0x140664be0	0x140665684 -> 0x141664c78	"Don't be afraid to do anything to get ahead in this world."	“要在这世上出人头地，就别怕不择手段。”	overview-quote-literal
+0x140664be0	0x14066569e -> 0x141665390	"Life isn't fair, and sometimes you have to do what you have to do, but working toward a balance isn't a bad thing."	“生活并不公平，有时也不得不如此，但尽力求个公道总不是坏事。”	overview-quote-literal
+0x140664be0	0x1406656bd -> 0x141665408	"Please maintain your dignity."	“做人要守住尊严。”	overview-quote-literal
+0x140664be0	0x1406656dc -> 0x1416652f8	"What do you care how I speak or how I live?"	“我怎么说话、怎么生活，关你什么事？”	overview-quote-literal
+0x140664be0	0x1406656f6 -> 0x141665330	"I can see a place for maintaining decorum, but it's exhausting to live that way."	“我明白守礼有它的道理，但那样生活实在太累。”	overview-quote-literal
+0x140664be0	0x140665753 -> 0x1416652c8	"It's admirable when the traditions are upheld."	“坚守传统，值得敬重。”	overview-quote-literal
+0x140664be0	0x14066576d -> 0x1416652a0	"Some things should never change."	“有些东西永远不该改变。”	overview-quote-literal
+0x140664be0	0x1406657c4 -> 0x141665278	"We need to move beyond traditions."	“我们需要走出传统的束缚。”	overview-quote-literal
+0x140664be0	0x1406657de -> 0x141665240	"We need to find a better way than those of before."	“我们需要找到比前人更好的办法。”	overview-quote-literal
+0x140664be0	0x1406657f8 -> 0x1416651e0	"Some traditions are worth keeping, but we should consider their overall value."	“有些传统值得保留，但也应衡量它们整体的价值。”	overview-quote-literal
+0x140664be0	0x14066584f -> 0x141665198	"The creative impulse is so valuable."	“创作的冲动如此珍贵。”	overview-quote-literal
+0x140664be0	0x140665869 -> 0x141665230	"Art is life."	“艺术就是生活。”	overview-quote-literal
+0x140664be0	0x1406658c0 -> 0x141665120	"Art?  More like wasted opportunity."	“艺术？倒不如说是在浪费大好机会。”	overview-quote-literal
+0x140664be0	0x1406658da -> 0x1416651c0	"What's so special about art?"	“艺术有什么特别的？”	overview-quote-literal
+0x140664be0	0x1406658f4 -> 0x141665150	"Art is complicated.  I know what I like, but some I can do without."	“艺术很复杂。我知道自己喜欢什么，有些则有也好，没有也罢。”	overview-quote-literal
+0x140664be0	0x14066590d -> 0x1416650a8	"We should all work together."	“大家应当齐心协力。”	overview-quote-literal
+0x140664be0	0x14066592c -> 0x1416650d0	"It's better to work alone when possible, I think.  Cooperation breeds weakness."	“我觉得能独自做事就独自做，合作只会让人软弱。”	overview-quote-literal
+0x140664be0	0x140665946 -> 0x141666990	"You should think carefully before embarking on a joint enterprise, though there is some value in working together."	“合作虽有益处，但与人共事之前，还是应当仔细考虑。”	overview-quote-literal
+0x140664be0	0x140665965 -> 0x141666a08	"I treasure my freedom."	“我珍视自由。”	overview-quote-literal
+0x140664be0	0x140665984 -> 0x141666910	"Nobody is free, and it is pointless to act as if you are."	“没有人是自由的，装作自由也毫无意义。”	overview-quote-literal
+0x140664be0	0x14066599e -> 0x141666950	"Personal freedom must be tempered by other considerations."	“个人自由也必须有所节制，兼顾其他事情。”	overview-quote-literal
+0x140664be0	0x1406659bd -> 0x1416668b0	"One should not complain or betray any feeling."	“人不应抱怨，也不应流露任何情绪。”	overview-quote-literal
+0x140664be0	0x1406659dc -> 0x1416668e0	"Do not hide yourself behind an unfeeling mask."	“不要把自己藏在冷漠的面具后面。”	overview-quote-literal
+0x140664be0	0x1406659f6 -> 0x141666820	"There are times when it is best to keep your feelings to yourself, but I wouldn't want to force it."	“有时把感受留在心里更好，但我不愿勉强。”	overview-quote-literal
+0x140664be0	0x140665a15 -> 0x141666888	"The quest for knowledge never ends."	“求知永无止境。”	overview-quote-literal
+0x140664be0	0x140665a34 -> 0x141666790	"All of that so-called knowledge doesn't mean a thing."	“那些所谓的知识，全都毫无意义。”	overview-quote-literal
+0x140664be0	0x140665a4e -> 0x1416667d0	"Knowledge can be useful, but it can also be pointless or even dangerous."	“知识可以有用，也可能毫无意义，甚至带来危险。”	overview-quote-literal
+0x140664be0	0x140665a6d -> 0x141666738	"It is important to discover yourself."	“认识自己，是件重要的事。”	overview-quote-literal
+0x140664be0	0x140665a8c -> 0x141666760	"Why would I waste time thinking about myself?"	“我为什么要浪费时间琢磨自己？”	overview-quote-literal
+0x140664be0	0x140665aa6 -> 0x1416666b0	"Some time spent in reflection is admirable, but you must not forget to live your life."	“花些时间自省值得称道，但也别忘了好好生活。”	overview-quote-literal
+0x140664be0	0x140665ac5 -> 0x141666708	"I think self-control is key.  Master yourself."	“我认为自制最为关键，要能掌控自己。”	overview-quote-literal
+0x140664be0	0x140665ae4 -> 0x141666610	"Why deny yourself your heart's desire?"	“何必压抑自己心中的渴望？”	overview-quote-literal
+0x140664be0	0x140665afe -> 0x141666640	"People should be able to control themselves, but it's fine to follow impulses that aren't too harmful."	“人应当懂得自制，但顺从一些无伤大雅的冲动也无妨。”	overview-quote-literal
+0x140664be0	0x140665b1d -> 0x141666d58	"The mind thinks best when the world is at rest."	“周遭安静时，头脑最清明。”	overview-quote-literal
+0x140664be0	0x140665b3c -> 0x141666d88	"Give me the bustle and noise over all that quiet!"	“比起一片寂静，我更喜欢喧闹与忙碌！”	overview-quote-literal
+0x140664be0	0x140665b56 -> 0x141666ce8	"I like a balance of tranquility and commotion myself."	“我喜欢宁静与热闹各占几分。”	overview-quote-literal
+0x140664be0	0x140665b75 -> 0x141666d20	"We should all be as one.  Why all the struggling?"	“我们本应同心同德，何必争斗不休？”	overview-quote-literal
+0x140664be0	0x140665b94 -> 0x141666c50	"We grow through debate and struggle, even chaos and discord."	“我们在辩论与抗争中成长，甚至混乱与不和也能促人成长。”	overview-quote-literal
+0x140664be0	0x140665bae -> 0x141666c90	"Some discord is a healthy part of society, but we must also try to live together."	“社会中有些分歧未必是坏事，但我们也得努力相处。”	overview-quote-literal
+0x140664be0	0x140665c0b -> 0x141666c10	"It's great when we all get a chance to be merry together."	“大家能聚在一起欢乐，真是美好！”	overview-quote-literal
+0x140664be0	0x140665c25 -> 0x141666c00	"Be merry!"	“尽情欢乐吧！”	overview-quote-literal
+0x140664be0	0x140665c7c -> 0x141666be8	"Merriment is worthless."	“玩乐毫无意义。”	overview-quote-literal
+0x140664be0	0x140665c96 -> 0x141666bb8	"Bah!  I hope you aren't celebrating something."	“哼！但愿你不是在庆祝什么。”	overview-quote-literal
+0x140664be0	0x140665cb0 -> 0x141666b20	"I can take or leave merrymaking myself, but I don't begrudge people their enjoyment."	“我对玩乐可有可无，但也不反对别人享受快乐。”	overview-quote-literal
+0x140664be0	0x140665cc9 -> 0x141666b78	"An artisan, their materials and the tools to shape them!"	“工匠、材料，还有将材料塑造成形的工具，多么美妙！”	overview-quote-literal
+0x140664be0	0x140665ce8 -> 0x141666ab0	"Masterwork?  Why should I care?"	“杰作？我为什么要在意？”	overview-quote-literal
+0x140664be0	0x140665d02 -> 0x141666ad0	"A tool should get the job done, but one shouldn't obsess over the details."	“工具能把活干好就行，不必执着于细枝末节。”	overview-quote-literal
+0x140664be0	0x140665d21 -> 0x141666a20	"A skilled warrior is a beautiful sight to behold."	“武艺高强的战士，令人赏心悦目。”	overview-quote-literal
+0x140664be0	0x140665d40 -> 0x141666a60	"Why this obsession with weapons and battle?  I don't understand some people."	“为什么如此痴迷武器与战斗？有些人真让我不理解。”	overview-quote-literal
+0x140664be0	0x140665d5a -> 0x141666160	"The world isn't always safe.  I can see the value in martial training, the beauty even, but it shouldn't be exalted."	“这世界并不总是安全的。我明白习武的价值，甚至它的美，但不该将它奉为至高。”	overview-quote-literal
+0x140664be0	0x140665db7 -> 0x1416660b0	"The amount of practice that goes into mastering a skill is so impressive."	“精通一门技艺所付出的磨炼，实在令人敬佩。”	overview-quote-literal
+0x140664be0	0x140665dd1 -> 0x1416661d8	"We should all be so lucky as to truly master a skill."	“但愿我们都能有幸真正精通一门技艺。”	overview-quote-literal
+0x140664be0	0x140665e28 -> 0x141666000	"All of that practice is misspent effort."	“那些练习全是白费力气。”	overview-quote-literal
+0x140664be0	0x140665e42 -> 0x141666100	"Everyone should broaden their horizons.  Any work beyond learning the basics is just a waste."	“人人都应拓宽眼界。掌握基础之后再花功夫，只是浪费。”	overview-quote-literal
+0x140664be0	0x140665e94 -> 0x141665f60	"There's more to life than becoming great at just one thing, but being good at several isn't bad!"	“人生不只有精通一件事，多擅长几样也不错！”	overview-quote-literal
+0x140664be0	0x140665eae -> 0x141666030	"I think people should hone their skills, but it's possible to take it too far and lose sight of the breadth of life."	“人应当磨炼技艺，但太过投入，也会忽略生活的广阔。”	overview-quote-literal
+0x140664be0	0x140665f13 -> 0x141665f10	"The best way to get what you want out of life is to work for it."	“想过上自己要的生活，最好的办法就是为之努力。”	overview-quote-literal
+0x140664be0	0x140665f2d -> 0x141665ed8	"Hard work is the true sign of character."	“勤勉才是真正品格的体现。”	overview-quote-literal
+0x140664be0	0x140665f47 -> 0x141665fc8	"In life, you should work hard.  Then work harder."	“人生在世，应当努力，再更加努力。”	overview-quote-literal
+0x140664be0	0x140665fac -> 0x141665df0	"Hard work is bested by luck, connections and wealth every time."	“苦干从来比不上运气、人脉与财富。”	overview-quote-literal
+0x140664be0	0x140665fc6 -> 0x141665ea0	"You shouldn't whittle your life away on working."	“不该把一生都消磨在劳作上。”	overview-quote-literal
+0x140664be0	0x140665fe0 -> 0x141665e78	"It's foolish to work hard for anything."	“为任何事辛苦劳作，都是愚蠢的。”	overview-quote-literal
+0x140664be0	0x14066603c -> 0x141665da0	"Hard work is great.  Finding a way to work half as hard is even better."	“勤劳固然好，找到省一半力气的办法更好。”	overview-quote-literal
+0x140664be0	0x140666056 -> 0x141665d50	"I only work so hard, but sometimes you have to do what you have to do."	“我干活只肯出这么多力，但有些事该做还是得做。”	overview-quote-literal
+0x140664be0	0x140666070 -> 0x141665e30	"An earnest effort at any required tasks.  That's all that's needed."	“把该做的事认真做完，就够了。”	overview-quote-literal
+0x140664be0	0x140666089 -> 0x1416665a8	"We must be ready to sacrifice when the time comes."	“到了需要的时候，我们必须甘愿牺牲。”	overview-quote-literal
+0x140664be0	0x1406660a8 -> 0x1416665e0	"Why harm yourself for anybody else's benefit?"	“何必为了别人的好处损害自己？”	overview-quote-literal
+0x140664be0	0x1406660c2 -> 0x1416664f0	"Some self-sacrifice is worthy, but do not forget yourself in devotion to the well-being of others."	“适当牺牲自己值得敬重，但为他人谋福祉，也别忘了自己。”	overview-quote-literal
+0x140664be0	0x1406660e1 -> 0x141666560	"It's a competitive world, and you'd be a fool to think otherwise."	“这世界处处都是竞争，不承认这一点才是愚蠢。”	overview-quote-literal
+0x140664be0	0x140666100 -> 0x141666470	"All of this striving against one another is so foolish."	“这些相互争胜的举动，实在愚蠢。”	overview-quote-literal
+0x140664be0	0x14066611a -> 0x1416664a8	"There is value in a good rivalry, but such danger as well."	“有个好对手固然可贵，但竞争也暗藏危险。”	overview-quote-literal
+0x140664be0	0x140666139 -> 0x1416663f8	"Keep going and never quit."	“坚持下去，永不放弃。”	overview-quote-literal
+0x140664be0	0x140666158 -> 0x141666420	"Anybody that sticks to something a moment longer than they have to is an idiot."	“没必要再坚持，却还多耗一刻的人，都是傻子。”	overview-quote-literal
+0x140664be0	0x140666172 -> 0x141666340	"It's good to keep pushing forward, but sometimes you just have to know when it's time to stop."	“不断向前固然好，但有时也要懂得适可而止。”	overview-quote-literal
+0x140664be0	0x1406661cf -> 0x1416662f8	"It's best to slow down and just relax."	“最好放慢脚步，好好放松。”	overview-quote-literal
+0x140664be0	0x1406661e9 -> 0x1416663a0	"Wouldn't it be grand to just take my life off and do nothing for the rest of my days?"	“若能从此歇下，余生什么也不做，岂不美好？”	overview-quote-literal
+0x140664be0	0x140666240 -> 0x141666278	"Time spent in leisure is such a waste."	“闲暇实在是浪费光阴。”	overview-quote-literal
+0x140664be0	0x14066625a -> 0x141666320	"There's work to be done!"	“还有事要做！”	overview-quote-literal
+0x140664be0	0x140666274 -> 0x1416662a0	"There's some value in leisure, but one also has to engage with other aspects of life."	“闲暇有其益处，但生活的其他方面也不能荒废。”	overview-quote-literal
+0x140664be0	0x14066628d -> 0x141666210	"Trade is the life-blood of a thriving society."	“贸易是繁荣社会的命脉。”	overview-quote-literal
+0x140664be0	0x1406662ac -> 0x141666240	"All of this buying and selling isn't honest work."	“这些买进卖出的营生，算不上踏实劳动。”	overview-quote-literal
+0x140664be0	0x1406662c6 -> 0x141667540	"There's something to be said for trade as a necessity, but there are better things in life to do with one's time."	“贸易确有必要，但人生还有更值得花时间的事。”	overview-quote-literal
+0x140664be0	0x1406662e5 -> 0x1416675b8	"There's nothing like a great romance!"	“没有什么比得上一场美好的爱情！”	overview-quote-literal
+0x140664be0	0x140666304 -> 0x1416674a0	"These people carrying on about romance should be more practical."	“这些满口爱情的人，该实际一点。”	overview-quote-literal
+0x140664be0	0x14066631e -> 0x1416674f0	"You shouldn't get too carried away with romance, but it's fine in moderation."	“别为爱情过于忘形，适度就好。”	overview-quote-literal
+0x140664be0	0x14066633d -> 0x141667418	"It's wonderful to be out exploring the wilds!"	“到野外探索，真是美妙！”	overview-quote-literal
+0x140664be0	0x14066635c -> 0x141667450	"I could do without all of those creatures and that tangled greenery."	“那些生物和纠缠的草木，我宁可都不要。”	overview-quote-literal
+0x140664be0	0x140666376 -> 0x141667370	"Nature can be enjoyed and used for myriad purposes, but there must always be respect and even fear of its power."	“自然可供欣赏，也有无数用途，但对它的力量，始终要怀有尊重，乃至畏惧。”	overview-quote-literal
+0x140664be0	0x14066639b -> 0x1416673e8	"Let there be peace throughout the world."	“愿世界处处安宁。”	overview-quote-literal
+0x140664be0	0x1406663ba -> 0x1416672d8	"How I long for the beautiful spectacle of war!"	“我多么向往战争那壮美的景象！”	overview-quote-literal
+0x140664be0	0x1406663d4 -> 0x141667310	"War is sometimes necessary, but peace must be valued as well, when we can have it."	“战争有时不可避免，但能享有和平时，也应当珍惜。”	overview-quote-literal
+0x140756690	0x1407566b5 -> 0x1416a1b08	agriculture	农业	grammar:worship-sphere; typed-r
+0x140756690	0x1407566ca -> 0x1416a1250	animals	动物	grammar:worship-sphere; typed-r
+0x140756690	0x1407566df -> 0x1416a1258	art	艺术	grammar:worship-sphere; typed-r
+0x140756690	0x1407566f4 -> 0x1416a1260	balance	平衡	grammar:worship-sphere; typed-r
+0x140756690	0x140756709 -> 0x1416a1268	beauty	美	grammar:worship-sphere; typed-r
+0x140756690	0x14075671e -> 0x1416a1270	birth	诞生	grammar:worship-sphere; typed-r
+0x140756690	0x140756733 -> 0x1416a1278	blight	枯萎	grammar:worship-sphere; typed-r
+0x140756690	0x140756748 -> 0x1416a1280	boundaries	边界	grammar:worship-sphere; typed-r
+0x140756690	0x14075675d -> 0x1416a1290	caverns	洞窟	grammar:worship-sphere; typed-r
+0x140756690	0x140756772 -> 0x1416a1298	chaos	混沌	grammar:worship-sphere; typed-r
+0x140756690	0x140756787 -> 0x1416a12a0	charity	慈善	grammar:worship-sphere; typed-r
+0x140756690	0x14075679c -> 0x1416a12a8	children	儿童	grammar:worship-sphere; typed-r
+0x140756690	0x1407567b1 -> 0x1416a12b4	coasts	海岸	grammar:worship-sphere; typed-r
+0x140756690	0x1407567c6 -> 0x1416a12c0	consolation	慰藉	grammar:worship-sphere; typed-r
+0x140756690	0x1407567db -> 0x1416a12d0	courage	勇气	grammar:worship-sphere; typed-r
+0x140756690	0x1407567f0 -> 0x1416a12d8	crafts	工艺	grammar:worship-sphere; typed-r
+0x140756690	0x140756805 -> 0x1416a12e0	creation	创造	grammar:worship-sphere; typed-r
+0x140756690	0x14075681a -> 0x1415edfc0	dance	舞蹈	grammar:worship-sphere; typed-r
+0x140756690	0x14075682f -> 0x1416a1530	darkness	黑暗	grammar:worship-sphere; typed-r
+0x140756690	0x140756844 -> 0x1416706fc	dawn	黎明	grammar:worship-sphere; typed-r
+0x140756690	0x140756859 -> 0x141670704	day	白昼	grammar:worship-sphere; typed-r
+0x140756690	0x14075686e -> 0x1415eddb4	death	死亡	grammar:worship-sphere; typed-r
+0x140756690	0x140756883 -> 0x1416a1540	deformity	畸形	grammar:worship-sphere; typed-r
+0x140756690	0x140756898 -> 0x1416a1550	depravity	堕落	grammar:worship-sphere; typed-r
+0x140756690	0x1407568ad -> 0x1416a1560	discipline	自律	grammar:worship-sphere; typed-r
+0x140756690	0x1407568c2 -> 0x1416a1570	disease	疾病	grammar:worship-sphere; typed-r
+0x140756690	0x1407568d7 -> 0x1416a1578	dreams	梦境	grammar:worship-sphere; typed-r
+0x140756690	0x1407568ec -> 0x1416a1580	dusk	黄昏	grammar:worship-sphere; typed-r
+0x140756690	0x140756901 -> 0x141674c00	duty	责任	grammar:worship-sphere; typed-r
+0x140756690	0x140756916 -> 0x1416a1588	earth	大地	grammar:worship-sphere; typed-r
+0x140756690	0x14075692b -> 0x1416415fc	family	家庭	grammar:worship-sphere; typed-r
+0x140756690	0x140756940 -> 0x1416a1590	fame	名望	grammar:worship-sphere; typed-r
+0x140756690	0x140756955 -> 0x1416a1598	fate	命运	grammar:worship-sphere; typed-r
+0x140756690	0x14075696a -> 0x1416a15a0	fertility	生育	grammar:worship-sphere; typed-r
+0x140756690	0x14075697f -> 0x1416a15b0	festivals	节庆	grammar:worship-sphere; typed-r
+0x140756690	0x140756994 -> 0x1416a15bc	fire	火	grammar:worship-sphere; typed-r
+0x140756690	0x1407569a9 -> 0x1416a11f0	fish	鱼	grammar:worship-sphere; typed-r
+0x140756690	0x1407569be -> 0x1416a15c8	fishing	捕鱼	grammar:worship-sphere; typed-r
+0x140756690	0x1407569d3 -> 0x1416a15d0	food	食物	grammar:worship-sphere; typed-r
+0x140756690	0x1407569e8 -> 0x1416a15d8	forgiveness	宽恕	grammar:worship-sphere; typed-r
+0x140756690	0x1407569fd -> 0x1416a1470	fortresses	堡垒	grammar:worship-sphere; typed-r
+0x140756690	0x140756a12 -> 0x1416a1480	freedom	自由	grammar:worship-sphere; typed-r
+0x140756690	0x140756a27 -> 0x1416a11f8	gambling	赌博	grammar:worship-sphere; typed-r
+0x140756690	0x140756a3c -> 0x1416a1488	games	游戏	grammar:worship-sphere; typed-r
+0x140756690	0x140756a51 -> 0x1416a1490	generosity	慷慨	grammar:worship-sphere; typed-r
+0x140756690	0x140756a66 -> 0x141670a58	happiness	幸福	grammar:worship-sphere; typed-r
+0x140756690	0x140756a7b -> 0x1416a1208	healing	医治	grammar:worship-sphere; typed-r
+0x140756690	0x140756a90 -> 0x1416a14a0	hospitality	待客之道	grammar:worship-sphere; typed-r
+0x140756690	0x140756aa5 -> 0x1416a1210	hunting	狩猎	grammar:worship-sphere; typed-r
+0x140756690	0x140756aba -> 0x1416a14b0	inspiration	灵感	grammar:worship-sphere; typed-r
+0x140756690	0x140756acf -> 0x1416a14c0	jealousy	嫉妒	grammar:worship-sphere; typed-r
+0x140756690	0x140756ae4 -> 0x1416a14cc	jewels	宝石	grammar:worship-sphere; typed-r
+0x140756690	0x140756af9 -> 0x1416a14d8	justice	正义	grammar:worship-sphere; typed-r
+0x140756690	0x140756b0e -> 0x1415ede6c	labor	劳动	grammar:worship-sphere; typed-r
+0x140756690	0x140756b23 -> 0x1416a14e0	lakes	湖泊	grammar:worship-sphere; typed-r
+0x140756690	0x140756b38 -> 0x1416a14e8	laws	法律	grammar:worship-sphere; typed-r
+0x140756690	0x140756b4d -> 0x1416a14f0	lies	谎言	grammar:worship-sphere; typed-r
+0x140756690	0x140756b62 -> 0x14167607c	light	光明	grammar:worship-sphere; typed-r
+0x140756690	0x140756b77 -> 0x1416a14f8	lightning	闪电	grammar:worship-sphere; typed-r
+0x140756690	0x140756b8c -> 0x1416a1508	longevity	长寿	grammar:worship-sphere; typed-r
+0x140756690	0x140756ba1 -> 0x1416025ec	love	爱情	grammar:worship-sphere; typed-r
+0x140756690	0x140756bb6 -> 0x1416415b0	loyalty	忠诚	grammar:worship-sphere; typed-r
+0x140756690	0x140756bcb -> 0x1416a1514	luck	运气	grammar:worship-sphere; typed-r
+0x140756690	0x140756be0 -> 0x141670fac	lust	情欲	grammar:worship-sphere; typed-r
+0x140756690	0x140756bf5 -> 0x1416a1520	marriage	婚姻	grammar:worship-sphere; typed-r
+0x140756690	0x140756c0a -> 0x1416a13bc	mercy	仁慈	grammar:worship-sphere; typed-r
+0x140756690	0x140756c1f -> 0x1416a13c4	metals	金属	grammar:worship-sphere; typed-r
+0x140756690	0x140756c34 -> 0x1416a13d0	minerals	矿物	grammar:worship-sphere; typed-r
+0x140756690	0x140756c49 -> 0x141670f84	misery	苦难	grammar:worship-sphere; typed-r
+0x140756690	0x140756c5e -> 0x1416a13dc	mist	薄雾	grammar:worship-sphere; typed-r
+0x140756690	0x140756c73 -> 0x1416a13e4	moon	月亮	grammar:worship-sphere; typed-r
+0x140756690	0x140756c88 -> 0x14164c4a8	mountains	山峦	grammar:worship-sphere; typed-r
+0x140756690	0x140756c9d -> 0x1416a13ec	muck	污泥	grammar:worship-sphere; typed-r
+0x140756690	0x140756cb2 -> 0x1415ede54	murder	谋杀	grammar:worship-sphere; typed-r
+0x140756690	0x140756cc7 -> 0x1415eb50c	music	音乐	grammar:worship-sphere; typed-r
+0x140756690	0x140756cdc -> 0x1416416ec	nature	自然	grammar:worship-sphere; typed-r
+0x140756690	0x140756cf1 -> 0x141670434	night	夜晚	grammar:worship-sphere; typed-r
+0x140756690	0x140756d06 -> 0x1416a13f8	nightmares	噩梦	grammar:worship-sphere; typed-r
+0x140756690	0x140756d1b -> 0x1416a1404	oaths	誓言	grammar:worship-sphere; typed-r
+0x140756690	0x140756d30 -> 0x1416a140c	oceans	海洋	grammar:worship-sphere; typed-r
+0x140756690	0x140756d45 -> 0x1415eddcc	order	秩序	grammar:worship-sphere; typed-r
+0x140756690	0x140756d5a -> 0x1416a1418	painting	绘画	grammar:worship-sphere; typed-r
+0x140756690	0x140756d6f -> 0x1415ee0cc	peace	和平	grammar:worship-sphere; typed-r
+0x140756690	0x140756d84 -> 0x1416a1428	persuasion	说服	grammar:worship-sphere; typed-r
+0x140756690	0x140756d99 -> 0x1416a1434	plants	植物	grammar:worship-sphere; typed-r
+0x140756690	0x140756dae -> 0x14161b6dc	poetry	诗歌	grammar:worship-sphere; typed-r
+0x140756690	0x140756dc3 -> 0x1416a1440	pregnancy	怀孕	grammar:worship-sphere; typed-r
+0x140756690	0x140756dd8 -> 0x14164bfac	rain	雨	grammar:worship-sphere; typed-r
+0x140756690	0x140756ded -> 0x1416a1450	rainbows	彩虹	grammar:worship-sphere; typed-r
+0x140756690	0x140756e02 -> 0x1416a1460	rebirth	重生	grammar:worship-sphere; typed-r
+0x140756690	0x140756e17 -> 0x1416a1468	revelry	狂欢	grammar:worship-sphere; typed-r
+0x140756690	0x140756e2c -> 0x1416a1320	revenge	复仇	grammar:worship-sphere; typed-r
+0x140756690	0x140756e41 -> 0x1416a1328	rivers	河流	grammar:worship-sphere; typed-r
+0x140756690	0x140756e56 -> 0x1416a1330	rulership	统治	grammar:worship-sphere; typed-r
+0x140756690	0x140756e6b -> 0x1416a133c	rumors	传闻	grammar:worship-sphere; typed-r
+0x140756690	0x140756e80 -> 0x141641708	sacrifice	牺牲	grammar:worship-sphere; typed-r
+0x140756690	0x140756e95 -> 0x1416a1344	salt	盐	grammar:worship-sphere; typed-r
+0x140756690	0x140756eaa -> 0x1416a1350	scholarship	学问	grammar:worship-sphere; typed-r
+0x140756690	0x140756ebf -> 0x1416a1360	seasons	四季	grammar:worship-sphere; typed-r
+0x140756690	0x140756ed4 -> 0x1416a1368	silence	寂静	grammar:worship-sphere; typed-r
+0x140756690	0x140756ee9 -> 0x14164c52c	sky	天空	grammar:worship-sphere; typed-r
+0x140756690	0x140756efe -> 0x1415e9510	song	歌唱	grammar:worship-sphere; typed-r
+0x140756690	0x140756f13 -> 0x1416a1370	speech	言语	grammar:worship-sphere; typed-r
+0x140756690	0x140756f28 -> 0x1416a1378	stars	星辰	grammar:worship-sphere; typed-r
+0x140756690	0x140756f3d -> 0x1416a1380	storms	风暴	grammar:worship-sphere; typed-r
+0x140756690	0x140756f52 -> 0x141661fd8	strength	力量	grammar:worship-sphere; typed-r
+0x140756690	0x140756f67 -> 0x1416a1388	suicide	自杀	grammar:worship-sphere; typed-r
+0x140756690	0x140756f7c -> 0x1416a1390	sun	太阳	grammar:worship-sphere; typed-r
+0x140756690	0x140756f91 -> 0x1415edefc	theft	盗窃	grammar:worship-sphere; typed-r
+0x140756690	0x140756fa6 -> 0x1416a1398	thralldom	奴役	grammar:worship-sphere; typed-r
+0x140756690	0x140756fbb -> 0x1416a13a8	thunder	雷鸣	grammar:worship-sphere; typed-r
+0x140756690	0x140756fd0 -> 0x141643a58	torture	折磨	grammar:worship-sphere; typed-r
+0x140756690	0x140756fe5 -> 0x14164fbc4	trade	贸易	grammar:worship-sphere; typed-r
+0x140756690	0x140756ffa -> 0x1416a13b0	travelers	旅人	grammar:worship-sphere; typed-r
+0x140756690	0x14075700f -> 0x1416a1aa0	treachery	背叛	grammar:worship-sphere; typed-r
+0x140756690	0x140757024 -> 0x1416a1aac	trees	树木	grammar:worship-sphere; typed-r
+0x140756690	0x140757039 -> 0x1416a1ab8	trickery	诡计	grammar:worship-sphere; typed-r
+0x140756690	0x14075704e -> 0x1416415dc	truth	真理	grammar:worship-sphere; typed-r
+0x140756690	0x140757063 -> 0x1416a12f8	twilight	暮光	grammar:worship-sphere; typed-r
+0x140756690	0x140757078 -> 0x1416a1ac4	valor	英勇	grammar:worship-sphere; typed-r
+0x140756690	0x14075708d -> 0x1416a1ad0	victory	胜利	grammar:worship-sphere; typed-r
+0x140756690	0x1407570a2 -> 0x1416a1ad8	volcanos	火山	grammar:worship-sphere; typed-r
+0x140756690	0x1407570b7 -> 0x141649be4	war	战争	grammar:worship-sphere; typed-r
+0x140756690	0x1407570cc -> 0x14164b874	water	水	grammar:worship-sphere; typed-r
+0x140756690	0x1407570e1 -> 0x1416a1ae4	wealth	财富	grammar:worship-sphere; typed-r
+0x140756690	0x1407570f6 -> 0x141674ef0	weather	天气	grammar:worship-sphere; typed-r
+0x140756690	0x14075710b -> 0x1416a1aec	wind	风	grammar:worship-sphere; typed-r
+0x140756690	0x140757120 -> 0x1416a1af4	wisdom	智慧	grammar:worship-sphere; typed-r
+0x140756690	0x140757135 -> 0x1415edca0	writing	写作	grammar:worship-sphere; typed-r
+0x140756690	0x14075714a -> 0x1416a1afc	youth	青春	grammar:worship-sphere; typed-r
+0x140756690	0x14075715f -> 0x1416a1310	no sphere	无神域	grammar:worship-sphere; typed-r
+0x140666470	0x1406665b7 inline immediate	m		grammar:babble
+0x140666470	0x1406665bb inline immediate	d		grammar:babble
+0x140666470	0x1406665bf inline immediate	b		grammar:babble
+0x140666470	0x1406665c3 inline immediate	g		grammar:babble
+0x140666470	0x14066679d inline immediate	a		grammar:babble
+0x140666470	0x140666512..0x140666818	[g|b|d|m]a repeated 1..3; final a optionally replaced by as|is|us|er|in; suffix !|...		grammar:babble; preserve native syllables and punctuation
+0x140666470	0x140666ff6..0x140667192	Did you hear the one about the {creature.singular|creature.plural} and the {creature.singular|creature.plural}?		grammar:creature-joke; two distinct raw creature indices when available; translate_creature_descriptor
+0x140666470	0x1406675a3..0x1406677ec	[I have|I've] been [considering|contemplating] [the subject of |the concept of |the idea of |the theme of |]{sphere}.		grammar:worship-reflection; translate_deity_spheres
+0x140666470	0x1406675a3..0x1406677ec	[I have|I've] been praying on [the subject of |the concept of |the idea of |the theme of |]{sphere}.		grammar:worship-reflection; translate_deity_spheres
+0x140666470	0x1406675a3..0x14066788d	[I have|I've] been [considering|contemplating] {deity-name}.		grammar:worship-reflection; native entity-name formatter 0x140b92f10
+0x140666470	0x1406675a3..0x14066788d	[I have|I've] been praying to {deity-name}.		grammar:worship-reflection; native entity-name formatter 0x140b92f10
+0x140756500	0x14075653d..0x1407565b3	[the ]{sphere}		grammar:worship-sphere; article dispatch for sphere indices 0x13..0x7e; names from 0x140756690
+0x140666470	0x140667c85..0x140667e56	I'm [fine|well|alright|good].		grammar:low-stress-status; 4 native choices
+0x140666470	0x140667cf0..0x140667e56	I feel [fine|well|alright|good|just fine].		grammar:low-stress-status; 5 native choices
+0x140666470	0x140667d74..0x140667e56	I've been [fine|well|alright].		grammar:low-stress-status; 3 native choices
+0x140666470	0x140667dd7..0x140667e56	Everything's [fine|good|alright].		grammar:low-stress-status; 3 native choices
+0x140666470	0x140667e28..0x140667e56	I'm doing [fine|well|alright].		grammar:low-stress-status; 3 native choices
+0x14067b6c0	0x1401a6cfb..0x1401a6d4a; 0x1401a6fd2..0x1401a705d	ordinary/baby remark -> optionally stretch each S to Ss|Sss|Ssss and each s to ss|sss|ssss -> add enclosing quotes		grammar:hissing-voice; creature flag 0x77; memory-event/reaction branch bypasses this formatter
+0x14067b6c0	0x14067b935..0x14067b9a3; 0x14067bb26..0x14067bb94	original consecutive s run of n letters -> 2n..4n letters; initial S retains uppercase		grammar:hissing-voice; native_announcement_hooks.inc captures the exact source before expansion; overview reuses native_original_speech_source without collapsing names or genuine double s

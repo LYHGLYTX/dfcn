@@ -1,0 +1,77 @@
+base = "items::ammo"
+
+[[rulesets]]
+[rulesets.rules]
+"{default}" = "{default}"
+"{singular}" = "{singular}"
+"{plural}" = "{plural}"
+
+[[rulesets]]
+name = "default"
+[rulesets.rules]
+"{default::^0}{default::main}" = "{default::^0}{default::main}"
+
+[[rulesets]]
+name = "default::^0"
+optional = true
+[rulesets.rules]
+"{::materials::adjective} " = "{::materials::adjective}"
+
+[[rulesets]]
+name = "default::main"
+[rulesets.rules]
+"ammunition" = "弹药"
+
+[[rulesets]]
+name = "singular"
+[rulesets.rules]
+"{^material}{singular::main}" = "{^material}{singular::main}"
+
+[[rulesets]]
+name = "plural"
+[rulesets.rules]
+"{^material}{plural::main}" = "{^material}{plural::main}"
+
+[[rulesets]]
+name = "^material"
+optional = true
+[rulesets.rules]
+"{::materials::adjective} " = "{::materials::adjective}"
+
+[[rulesets]]
+name = "singular::main"
+[rulesets.rules]
+"bolt" = "弩矢"
+"arrow" = "箭矢"
+"blowdart" = "吹箭箭矢"
+# Complete procedural types from vanilla_procedural/scripts/generators/entities.lua.
+# These are item shapes, not material adjectives (or the stature sense of short).
+"short bolt" = "短弩矢"
+"long bolt" = "长弩矢"
+"jagged bolt" = "锯齿状弩矢"
+"thin bolt" = "纤细弩矢"
+"thin arrow" = "纤细箭矢"
+"jagged arrow" = "锯齿状箭矢"
+"wide-headed arrow" = "宽头箭矢"
+"cone-headed arrow" = "锥头箭矢"
+"narrow blowdart" = "狭窄吹箭箭矢"
+"thick blowdart" = "厚实吹箭箭矢"
+"double-tipped blowdart" = "双尖头吹箭箭矢"
+
+[[rulesets]]
+name = "plural::main"
+[rulesets.rules]
+"bolts" = "弩矢"
+"arrows" = "箭矢"
+"blowdarts" = "吹箭箭矢"
+"short bolts" = "短弩矢"
+"long bolts" = "长弩矢"
+"jagged bolts" = "锯齿状弩矢"
+"thin bolts" = "纤细弩矢"
+"thin arrows" = "纤细箭矢"
+"jagged arrows" = "锯齿状箭矢"
+"wide-headed arrows" = "宽头箭矢"
+"cone-headed arrows" = "锥头箭矢"
+"narrow blowdarts" = "狭窄吹箭箭矢"
+"thick blowdarts" = "厚实吹箭箭矢"
+"double-tipped blowdarts" = "双尖头吹箭箭矢"

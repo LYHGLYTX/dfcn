@@ -1,0 +1,41 @@
+base = "items::food"
+
+[[rulesets]]
+[rulesets.rules]
+"{::items::meat::^0}{main}" = "{::items::meat::^0}{main}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+# Native filled-container captions use this category instead of a meal name.
+# Keep it in the shared food vocabulary for containers and item descriptions.
+"prepared food" = "熟食"
+"prepared foods" = "熟食"
+"prepared meal" = "预备的餐点"
+"prepared meals" = "预备的餐点"
+"{type}" = "{type}"
+"{ingredient} {type}" = "{ingredient}{type}"
+
+# ITEM_FOOD names come from vanilla_items/objects/item_food.txt. The final
+# ingredient supplies the prefix; it is a food/material noun, not a finished
+# equipment qualifier. Quantities and quality marks stay in data/runtime/rulesets/zh-Hans/items/index.toml.
+[[rulesets]]
+name = "type"
+[rulesets.rules]
+"biscuit" = "饼干"
+"biscuits" = "饼干"
+"stew" = "炖菜"
+"stews" = "炖菜"
+"roast" = "烤菜"
+"roasts" = "烤菜"
+
+[[rulesets]]
+name = "ingredient"
+[rulesets.rules]
+"{::items::plant}" = "{::items::plant}"
+"{::items::plant_growth}" = "{::items::plant_growth}"
+"{::items::meat}" = "{::items::meat}"
+"{::items::fish}" = "{::items::fish}"
+"{::items::egg}" = "{::items::egg}"
+"{::items::seeds}" = "{::items::seeds}"
+"{::materials}" = "{::materials}"

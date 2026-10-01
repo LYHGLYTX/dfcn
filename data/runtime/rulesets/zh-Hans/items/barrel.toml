@@ -1,0 +1,13 @@
+base = "items::barrel"
+
+[[rulesets]]
+[rulesets.rules]
+# Contents, vessel material and empty barrels share the item-caption resolver.
+# Designation marks and counts remain in items::with_number, outside this noun.
+"{::items::storage_container}" = "{::items::storage_container}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"barrel" = "圆桶"
+"barrels" = "圆桶"

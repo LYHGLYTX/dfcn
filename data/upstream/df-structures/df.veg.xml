@@ -1,0 +1,110 @@
+<data-definition>
+    <bitfield-type type-name='plant_tree_tile' original-name='multi_tile_flag' base-type='uint16_t'> bay12: MULTI_TILE_FLAG_*
+        <flag-bit name='trunk' original-name='TRUNK'/>
+        <flag-bit name='branch_w' original-name='DIR_BRANCH_W'/>
+        <flag-bit name='branch_n' original-name='DIR_BRANCH_N'/>
+        <flag-bit name='branch_e' original-name='DIR_BRANCH_E'/>
+        <flag-bit name='branch_s' original-name='DIR_BRANCH_S' comment='also CAP_WALL'/>
+        <flag-bit name='branches' original-name='BRANCHES' comment='also CAP_RAMP'/>
+        <flag-bit name='leaves' original-name='LEAVES' comment='also CAP_FLOOR'/>
+        <flag-bit name='blocked' original-name='BLOCKED_BY_OTHER_VEG' comment='e.g. by other tree'/>
+        <flag-bit name='parent_dir' original-name='PARENT' count='3' type-name='plant_tree_tile_parent_dir'/>
+        <flag-bit name='trunk_is_thick' original-name='TRUNK_IS_THICK'/>
+    </bitfield-type>
+
+    <enum-type type-name='plant_tree_tile_parent_dir' original-name='multt_tile_flag_parent' base-type='uint16_t'> bay12: MULTI_TILE_FLAG_PARENT_*
+        <enum-item name='NONE'/>
+        <enum-item name='PARENT_IS_N'/>
+        <enum-item name='PARENT_IS_S'/>
+        <enum-item name='PARENT_IS_W'/>
+        <enum-item name='PARENT_IS_E'/>
+        <enum-item name='PARENT_IS_UP'/>
+        <enum-item name='PARENT_IS_DOWN'/>
+    </enum-type>
+
+    <bitfield-type type-name='plant_root_tile' original-name='multi_tile_root_flag' base-type='uint8_t'> bay12: MULTI_TILE_ROOT_FLAG_*
+        <flag-bit name='regular' original-name='REGULAR'/>
+        <flag-bit count='6' comment='unused'/>
+        <flag-bit name='blocked' original-name='BLOCKED_BY_OTHER_VEG'/>
+    </bitfield-type>
+
+    <struct-type type-name='plant_tree_info' original-name='multi_tile_vegst'>
+        <pointer name='body' original-name='tree_shape' is-array='true' comment='dimension body_height'>
+            <pointer type-name='plant_tree_tile' is-array='true' comment='dimension dim_x*dim_y'/>
+        </pointer>
+        <pointer type-name='int16_t' name='extent_x1' original-name='trunk_sx' is-array='true' comment='dimension body_height'/>
+        <pointer type-name='int16_t' name='extent_x2' original-name='trunk_ex' is-array='true' comment='dimension body_height'/>
+        <pointer type-name='int16_t' name='extent_y1' original-name='trunk_sy' is-array='true' comment='dimension body_height'/>
+        <pointer type-name='int16_t' name='extent_y2' original-name='trunk_ey' is-array='true' comment='dimension body_height'/>
+        <int32_t name='body_height' original-name='tree_dim_z'/>
+        <int32_t name='dim_x' original-name='dx'/>
+        <int32_t name='dim_y' original-name='dy'/>
+        <pointer name='roots' original-name='root_shape' is-array='true' comment='dimension roots_depth'>
+            <pointer type-name='plant_root_tile' is-array='true' comment='dimension dim_x*dim_y'/>
+        </pointer>
+        <int32_t name='roots_depth' original-name='root_dim_z'/>
+        <int16_t name='local_trunk_height'/>
+    </struct-type>
+
+    <enum-type type-name='plant_type' original-name='veg_type'> bay12: VegType
+        <enum-attr name='watery' type-name='bool' default-value='false' comment='near surface water feature'/>
+        <enum-attr name='is_shrub' type-name='bool' default-value='false'/>
+
+        <enum-item name='DRY_TREE'>
+            <item-attr name='watery' value='false'/>
+            <item-attr name='is_shrub' value='false'/>
+        </enum-item>
+        <enum-item name='WET_TREE'>
+            <item-attr name='watery' value='true'/>
+            <item-attr name='is_shrub' value='false'/>
+        </enum-item>
+        <enum-item name='DRY_PLANT'>
+            <item-attr name='watery' value='false'/>
+            <item-attr name='is_shrub' value='true'/>
+        </enum-item>
+        <enum-item name='WET_PLANT'>
+            <item-attr name='watery' value='true'/>
+            <item-attr name='is_shrub' value='true'/>
+        </enum-item>
+    </enum-type>
+
+    <bitfield-type type-name='veg_flag' base-type='uint32_t'> bay12: VEGFLAG_*
+        <flag-bit name='unused_01' original-name='UNUSED_01'/>
+        <flag-bit name='season_dead' original-name='SEASON_DEAD'/>
+        <flag-bit name='dead' original-name='DEAD'/>
+    </bitfield-type>
+
+    <struct-type type-name='plant' original-name='vegst' instance-vector='$global.world.plants.all'>
+        <enum base-type='int16_t' type-name='plant_type' name='type'/>
+        <int16_t name='material' original-name='gloss' ref-target='plant_raw'/>
+        <compound type-name='coord' name='pos'/>
+
+        <int32_t name='grow_counter' original-name='age'/>
+        <bitfield base-type='uint32_t' type-name='veg_flag' name='damage_flags' original-name='flag'/>
+        <int32_t name='hitpoints' original-name='structure'/>
+        <int16_t name='update_order' original-name='move_stage'/>
+
+        <int32_t name='site_id' original-name='stid' ref-target='world_site'/>
+        <int32_t name='srb_id' original-name='srbid' ref-target='site_realization_building' aux-value='$$.site_id'/>
+
+        <stl-vector pointer-type='plant_spatter' name='contaminants' original-name='contaminant'/>
+
+        <pointer type-name='plant_tree_info' name='tree_info' original-name='multi_tile' comment='Sapling if NULL'/>
+    </struct-type>
+
+    <struct-type type-name='veg_handlerst'>
+        <stl-vector pointer-type='plant' name='all' original-name='play'/>
+        <stl-vector pointer-type='plant' name='shrub_dry' original-name='dry_plant'/>
+        <stl-vector pointer-type='plant' name='shrub_wet' original-name='wet_plant'/>
+        <stl-vector pointer-type='plant' name='tree_dry' original-name='dry_tree'/>
+        <stl-vector pointer-type='plant' name='tree_wet' original-name='wet_tree'/>
+        <stl-vector pointer-type='plant' name='temp_save' has-bad-pointers='true'/>
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->

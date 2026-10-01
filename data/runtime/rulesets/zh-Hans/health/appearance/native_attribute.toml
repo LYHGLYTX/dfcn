@@ -1,0 +1,69 @@
+base = "health::appearance::native_attribute"
+
+# Complete physical-attribute predicates from Dwarf Fortress.exe PE:6a70a6d9:02711000.
+# Native formatter 0x141380480..0x1413811a8 has 6 attributes with 8 displayed tiers each.
+# Source instruction and literal addresses: data/extracted/appearance-attribute-sources.tsv.
+# The native formatter supplies pronouns, conjunctions and positive/negative colours.
+# Keep the complete predicate scoped to character descriptions.
+[[rulesets]]
+[rulesets.rules]
+
+# strength
+"is unbelievably strong" = "强壮得不可思议"
+"is mighty" = "力大无穷"
+"is very strong" = "非常强壮"
+"is strong" = "很强壮"
+"is unfathomably weak" = "虚弱得难以想象"
+"is unquestionably weak" = "十分虚弱"
+"is very weak" = "非常虚弱"
+"is weak" = "很虚弱"
+
+# agility
+"is amazingly agile" = "敏捷得惊人"
+"is extremely agile" = "极为敏捷"
+"is very agile" = "非常敏捷"
+"is agile" = "很敏捷"
+"is abysmally clumsy" = "笨拙至极"
+"is totally clumsy" = "十分笨拙"
+"is quite clumsy" = "颇为笨拙"
+"is clumsy" = "很笨拙"
+
+# toughness
+"is basically unbreakable" = "几乎坚不可摧"
+"is incredibly tough" = "体魄强健得惊人"
+"is quite durable" = "身体相当结实"
+"is tough" = "体魄强健"
+"is shockingly fragile" = "脆弱得惊人"
+"is remarkably flimsy" = "十分脆弱"
+"is very flimsy" = "非常脆弱"
+"is flimsy" = "很脆弱"
+
+# endurance
+"is absolutely inexhaustible" = "精力仿佛永不枯竭"
+"is indefatigable" = "不知疲倦"
+"is very slow to tire" = "非常不易疲倦"
+"is slow to tire" = "不易疲倦"
+"is truly quick to tire" = "非常容易疲倦"
+"is extremely quick to tire" = "极易疲倦"
+"is very quick to tire" = "很容易疲倦"
+"is quick to tire" = "容易疲倦"
+
+# recuperation
+"is possessed of amazing recuperative powers" = "恢复能力惊人"
+"is incredibly quick to heal" = "伤口愈合快得惊人"
+"is quite quick to heal" = "伤口愈合相当快"
+"is quick to heal" = "伤口愈合较快"
+"is shockingly slow to heal" = "伤口愈合慢得惊人"
+"is really slow to heal" = "伤口愈合非常慢"
+"is very slow to heal" = "伤口愈合很慢"
+"is slow to heal" = "伤口愈合较慢"
+
+# disease_resistance
+"is virtually never sick" = "几乎从不生病"
+"is almost never sick" = "极少生病"
+"is very rarely sick" = "很少生病"
+"is rarely sick" = "不常生病"
+"is stunningly susceptible to disease" = "极其容易生病"
+"is really susceptible to disease" = "极易生病"
+"is quite susceptible to disease" = "很容易生病"
+"is susceptible to disease" = "容易生病"

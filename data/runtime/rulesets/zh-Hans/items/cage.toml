@@ -1,0 +1,63 @@
+base = "items::cage"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{main}" = "{^0}{main}"
+# Native item getDescription (0x140ca4420) and building getName
+# (0x140551cb0) share the same cage/occupant/material arrangement.
+"{material} {main}" = "{material}{main}"
+"{occupants} {main} ({material})" = "{occupants}{main}（{material}）"
+"{::text::activity_place} ({occupants})" = "{::text::activity_place}（{occupants}）"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"{::materials::adjective} " = "{::materials::adjective}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"cage" = "笼子"
+"cages" = "笼子"
+"terrarium" = "玻璃缸"
+"terrariums" = "玻璃缸"
+# The native item cage formatter (0xca4420) also constructs this noun with
+# immediate stores, just like the building cage caption.
+"aquarium" = "水族缸"
+"aquariums" = "水族缸"
+
+[[rulesets]]
+name = "material"
+[rulesets.rules]
+"unknown material" = "未知物质"
+"{::materials}" = "{::materials}"
+"{::materials::adjective}" = "{::materials::adjective}"
+"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"
+"{::text::person}'s {::materials::adjective}" = "{::text::person}的{::materials::adjective}"
+# Native generated materials are resolved by the same complete qualifier as
+# other item titles; retain the ordinary RAW material productions above.
+"{::materials::item_qualifier}" = "{::materials::item_qualifier}"
+
+# Shared means multiple occupants. Parentheses beside an individual hold
+# gender/castration markers, never a count. Authored cage names remain intact.
+[[rulesets]]
+name = "occupants"
+[rulesets.rules]
+"Shared" = "合住"
+"{creature}{gender}" = "{creature}{gender}"
+
+[[rulesets]]
+name = "creature"
+[rulesets.rules]
+"{::creatures::name::singular}" = "{::creatures::name::singular}"
+"{::creatures::caste::singular}" = "{::creatures::caste::singular}"
+
+[[rulesets]]
+name = "gender"
+optional = true
+[rulesets.rules]
+" (♂)" = "（♂）"
+" (♀)" = "（♀）"
+" (x♂x)" = "（♂，已阉割）"
+" (x♀x)" = "（♀，已绝育）"

@@ -1,0 +1,10 @@
+# Complete workshop category and recipe headings. Native provenance is in
+# data/extracted/workshop-tooltip-sources.tsv; quantities/items and generated descriptions
+# are resolved by the shared recipe and instrument grammars.
+Make instrument pieces which can be used to assemble complete musical instruments.	制作可用于组装完整乐器的部件。
+Assemble complete musical instruments and construct single-piece instruments.	组装完整乐器，并制作一体式乐器。
+Make furniture at a carpenter's workshop using logs and a sharp tool.	使用原木和锋利的工具，在木匠工坊制作家具。
+Make dyes from plants and plant parts that don't require a mill.	用植物及其部位制作无需研磨的染料。
+Make crafts from bone using a sharp weapon or tool.	使用锋利的武器或工具，将骨头制成工艺品。
+Produces:	产出：
+Requires:	需要：

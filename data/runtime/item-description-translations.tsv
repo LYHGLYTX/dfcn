@@ -1,0 +1,428 @@
+# Scoped item-description grammar; never global substring replacements.
+# scope<TAB>English pattern<TAB>Chinese translation
+# Captures: s=recursive item phrase, e=recursive predicate,
+# i=shared item/material vocabulary, m=finished-material qualifier,
+# f=complete non-liquid food ingredient, l=complete liquid food ingredient,
+# v=descriptor color, j=complete dye-material list, o=craft profession,
+# n=personal name, u=native unit label (name/species/profession),
+# p=generated name, r=native currency identity,
+# c=count, a=shared image elements, k=printed procedural WORD,
+# b=artifact/book identity (including native-name/quoted-gloss pairs),
+# q=complete quoted prose. Repeated captures are numbered in target order.
+# Generator evidence: data/extracted/item-description-sources.tsv and data/extracted/item-description-sources.md
+# retain the native producer graph, RTTI owners, switches, RAW leaves and
+# dependent artwork/writing/instrument generators for the installed PE.
+# Material, gem-cut, creature and item names remain in the existing tables.
+
+# Whole descriptions and quantity wrappers.
+sentence	This is {s}.	这是{s1}。
+sentence	These are {s}.	这些是{s1}。
+sentence	It is {s}.	它是{s1}。
+sentence	It {e}.	它{e1}。
+sentence	This object {e}.	这件物品{e1}。
+sentence	The object {e}.	这件物品{e1}。
+sentence	The item {e}.	这件物品{e1}。
+# The item, object and artwork builders share nominal predicates as well as
+# decoration predicates. This includes every image/rendition quality and
+# material combination, and the object's color/quality description.
+predicate	is {s}	是{s1}
+predicate	are {s}	是{s1}
+# Location captions, used only inside an identified item detail panel.
+sentence	In {i}	位于{i1}内
+sentence	On {i}	位于{i1}上
+sentence	With {u}	由{u1}携带
+sentence	Owner: {u}	拥有者：{u1}
+term	a {s}	{s1}
+term	an {s}	{s1}
+term	the {s}	{s1}
+term	a bundle of {s}	一捆{s1}
+term	a stack of {s}	一叠{s1}
+term	{c} bundles of {s}	{c1}捆{s1}
+term	{c} stacks of {s}	{c1}叠{s1}
+term	{c} {s}	{c1} × {s1}
+term	{s} (copy)	{s1}（抄本）
+term	grown {s}	生长的{s1}
+term	unglazed {s}	未上釉的{s1}
+
+# Statue and figurine captions share the artwork subject grammar, including named
+# creatures, their trailing species, quantities and multiple depicted figures.
+# Order is material qualifier + depicted subject + item noun. The shared
+# qualifier owns the material suffix, including bone and wood conventions.
+term	{m} statue of {a}	{m1}{a1}雕像
+term	statue of {a}	{a1}雕像
+term	{m} statues of {a}	{m1}{a1}雕像
+term	statues of {a}	{a1}雕像
+term	{m} figurine of {a}	{m1}{a1}小塑像
+term	figurine of {a}	{a1}小塑像
+term	{m} figurines of {a}	{m1}{a1}小塑像
+term	figurines of {a}	{a1}小塑像
+
+# Memorial captions and the noun in "This is a memorial to ..." share the
+# same person slot. The item parser unwraps quality/wear marks before these
+# terms, so a closing mark cannot become part of the commemorated name.
+term	{m} memorial to {n}	纪念{n1}的{m1}纪念碑
+term	memorial to {n}	纪念{n1}的纪念碑
+term	{m} memorials to {n}	纪念{n1}的{m1}纪念碑
+term	memorials to {n}	纪念{n1}的纪念碑
+
+# Native item quality and maker suffixes, shared by ordinary items and artifacts.
+sentence	All craftsmanship is of the highest quality.	各处工艺均为最高品质。
+sentence	All craftsdwarfship is of the highest quality.	各处矮人工艺均为最高品质。
+term	masterful {s}	杰作级的{s1}
+term	exceptional {s}	卓越品质的{s1}
+term	superior quality {s}	优质的{s1}
+term	masterfully worked {s}	工艺精湛的{s1}
+term	exceptionally worked {s}	工艺卓越的{s1}
+term	finely-crafted {s}	精制的{s1}
+term	well-crafted {s}	制作良好的{s1}
+term	masterfully prepared {s}	杰作级的{s1}
+term	exceptionally prepared {s}	卓越品质的{s1}
+term	exceptional prepared {s}	卓越品质的{s1}
+term	superiorly prepared {s}	优质的{s1}
+term	finely-prepared {s}	精心烹制的{s1}
+term	well-prepared {s}	烹制良好的{s1}
+term	{s} created by an unknown artisan	由无名工匠制作的{s1}
+term	{s} created by {n}	由{n1}制作的{s1}
+term	{s} by an unknown artist	由无名艺术家制作的{s1}
+term	{s} by {n}	由{n1}制作的{s1}
+term	{s} woven by {n}	由{n1}织成的{s1}
+predicate	is masterfully crafted by {n}	由{n1}以精湛工艺制成
+predicate	is exceptionally crafted by {n}	由{n1}以卓越工艺制成
+predicate	is finely-crafted by {n}	由{n1}精心制成
+predicate	is well-crafted by {n}	由{n1}以良好工艺制成
+predicate	is crafted by {n}	由{n1}制成
+predicate	is masterfully woven by {n}	由{n1}以精湛工艺织成
+predicate	is exceptionally woven by {n}	由{n1}以卓越工艺织成
+predicate	is superiorly woven by {n}	由{n1}以高超工艺织成
+predicate	is finely woven by {n}	由{n1}精心织成
+predicate	is well-woven by {n}	由{n1}以良好工艺织成
+predicate	is woven by {n}	由{n1}织成
+predicate	is created by an unknown artisan	由无名工匠制成
+predicate	is created by {n}	由{n1}制成
+
+# Equipment fit and all decoration families. Lists retain every material.
+predicate	is sized for {i}	尺寸适合{i1}
+predicate	is encrusted with {s}	镶嵌着{s1}
+predicate	is studded with {s}	镶有{s1}饰钉
+predicate	is decorated with {s}	饰有{s1}
+predicate	is glazed with {s}	施有{s1}釉
+predicate	is encircled with bands of {s}	环绕着{s1}镶条
+predicate	is adorned with hanging rings of {s}	饰有{s1}挂环
+predicate	menaces with spikes of {s}	带有{s1}尖刺，显得十分凶险
+predicate	encrusted with {s}	镶嵌着{s1}
+predicate	studded with {s}	镶有{s1}饰钉
+predicate	decorated with {s}	饰有{s1}
+predicate	glazed with {s}	施有{s1}釉
+predicate	encircled with bands of {s}	环绕着{s1}镶条
+predicate	adorned with hanging rings of {s}	饰有{s1}挂环
+predicate	is made from {s}	由{s1}制成
+predicate	are made from {s}	由{s1}制成
+predicate	is made of {s}	由{s1}制成
+predicate	are made of {s}	由{s1}制成
+sentence	The handle is made from {s}.	把手由{s1}制成。
+sentence	The rollers are made from {s}.	滚轮由{s1}制成。
+sentence	The chain is {s}.	链条由{s1}制成。
+sentence	The rope is {s}.	绳索由{s1}制成。
+sentence	The {i} is made from {s}.	{i1}由{s1}制成。
+sentence	The {i} are made from {s}.	{i1}由{s1}制成。
+
+# Condition and contamination are meaningful description details.
+predicate	is showing some wear	已有轻微磨损
+predicate	is heavily worn	已严重磨损
+predicate	is threadbare	已磨得十分单薄
+predicate	is in tatters	已破烂不堪
+predicate	is mangled	已残破变形
+predicate	is spattered with {s}	溅有{s1}
+predicate	is coated with {s}	覆有{s1}
+predicate	spattered with {s}	溅有{s1}
+predicate	coated with {s}	覆有{s1}
+
+# Prepared ingredients, thread/material coloration and dye output.
+sentence	The ingredients are {s}.	所用食材为{s1}。
+term	masterfully minced {l}	以精湛技艺搅匀的{l1}
+term	masterfully minced {f}	以精湛技艺切碎的{f1}
+term	exceptionally minced {l}	以卓越技艺搅匀的{l1}
+term	exceptionally minced {f}	以卓越技艺切碎的{f1}
+term	superiorly minced {l}	以高超技艺搅匀的{l1}
+term	superiorly minced {f}	以高超技艺切碎的{f1}
+term	finely minced {l}	精细搅匀的{l1}
+term	finely minced {f}	精细切碎的{f1}
+term	well-minced {l}	妥善搅匀的{l1}
+term	well-minced {f}	妥善切碎的{f1}
+term	minced {l}	搅匀的{l1}
+term	minced {f}	切碎的{f1}
+term	masterfully cooked {s}	以精湛技艺烹制的{s1}
+term	exceptionally cooked {s}	以卓越技艺烹制的{s1}
+term	superiorly cooked {s}	以高超技艺烹制的{s1}
+term	finely cooked {s}	精心烹制的{s1}
+term	well-cooked {s}	妥善烹制的{s1}
+term	cooked {s}	烹熟的{s1}
+# Native item color producers CAD270..CADCAC and CADCB0..CAE6EC share
+# every quality/material branch. Their COLOR_NAME is a descriptor color,
+# never a material noun. Quality zero omits both comma and "colored";
+# material count one omits "a mixture of"; quality five may add a maker.
+# Dye-list leaves use RAW prefix + solid/powder state, including named owners.
+predicate	is {v} with a mixture of {j}	用{j1}混合染成{v1}
+predicate	is {v} with {j}	用{j1}染成{v1}
+sentence	The thread is {v} with {j} by {n}.	纺线由{n1}用{j1}染成{v1}。
+sentence	The material is {v} with {j} by {n}.	材料由{n1}用{j1}染成{v1}。
+sentence	The object is {v} with {j} by {n}.	这件物品由{n1}用{j1}染成{v1}。
+sentence	The thread is {v} with {j}.	纺线用{j1}染成{v1}。
+sentence	The material is {v} with {j}.	材料用{j1}染成{v1}。
+sentence	The object is {v} with {j}.	这件物品用{j1}染成{v1}。
+sentence	The thread is {v}, {s}.	纺线呈{v1}，{s1}。
+sentence	The material is {v}, {s}.	材料呈{v1}，{s1}。
+sentence	The object is {v}, {s}.	这件物品呈{v1}，{s1}。
+sentence	The thread is {v} by {n}.	纺线由{n1}染成{v1}。
+sentence	The material is {v} by {n}.	材料由{n1}染成{v1}。
+sentence	The object is {v} by {n}.	这件物品由{n1}染成{v1}。
+sentence	The thread is {v}.	纺线呈{v1}。
+sentence	The material is {v}.	材料呈{v1}。
+sentence	The object is {v}.	这件物品呈{v1}。
+# Compound quality/maker phrases remain recursive; prefer the typed color
+# productions above to these generic fallbacks of the same literal shape.
+sentence	The thread is {s}.	纺线{s1}。
+sentence	The material is {s}.	材料{s1}。
+sentence	When used as a dye, it produces {v}.	用作染料时，它会染出{v1}。
+sentence	All {o}ship is of the highest quality.	各处{o1}均为最高品质。
+term	a mixture of {j}	{j1}混合物
+term	{v} with a mixture of {j}	用{j1}混合染成{v1}
+term	{v} with {j}	用{j1}染成{v1}
+term	{v} colored	呈{v1}
+term	{v}-colored	呈{v1}
+term	{v} colored with {j}	用{j1}染成{v1}
+term	{v}-colored with {j}	用{j1}染成{v1}
+term	colored {v}	染成{v1}
+term	colored with {j}	用{j1}染色
+term	well-colored	染色工艺良好
+term	finely colored	染色工艺精细
+term	superbly colored	染色工艺出色
+term	exceptionally colored	染色工艺卓越
+term	masterfully colored	染色工艺精湛
+term	masterfully colored with {j}	以精湛技艺用{j1}染色
+term	superbly colored with {j}	以出色技艺用{j1}染色
+term	exceptionally colored with {j}	以卓越技艺用{j1}染色
+term	superiorly colored with {j}	以高超技艺用{j1}染色
+term	finely colored with {j}	精心用{j1}染色
+term	well-colored with {j}	妥善用{j1}染色
+term	masterfully colored {v}	以精湛技艺染成{v1}
+term	superbly colored {v}	以出色技艺染成{v1}
+term	exceptionally colored {v}	以卓越技艺染成{v1}
+term	superiorly colored {v}	以高超技艺染成{v1}
+term	finely colored {v}	精心染成{v1}
+term	well-colored {v}	妥善染成{v1}
+term	masterfully {v} colored	以精湛技艺染成{v1}
+term	superbly {v} colored	以出色技艺染成{v1}
+term	exceptionally {v} colored	以卓越技艺染成{v1}
+term	superiorly {v} colored	以高超技艺染成{v1}
+term	finely {v} colored	精心染成{v1}
+term	well-{v} colored	妥善染成{v1}
+term	dyed {v}	染成{v1}
+term	masterfully dyed {v}	以精湛技艺染成{v1}
+term	superbly dyed {v}	以出色技艺染成{v1}
+term	exceptionally dyed {v}	以卓越技艺染成{v1}
+term	superiorly dyed {v}	以高超技艺染成{v1}
+term	finely dyed {v}	精心染成{v1}
+term	well-dyed {v}	妥善染成{v1}
+
+# Dice: face contents and upward result, including unreadable script.
+sentence	On the faces of the object are {s}.	这件物品各面上标有{s1}。
+sentence	The upward face is {s}.	朝上的一面是{s1}。
+# Native get_number() also supplies a bare upward-face result. Resolve it as
+# one atomic count, never as a word from the material/name dictionaries.
+term	{c}	{c1}
+# Native face renderer 0x14085DA20 prints either one WORD or several copies
+# of the same WORD; use the shared language vocabulary for its quoted text.
+term	the word "{k}"	“{k1}”字样
+term	{c} "{k}"s	{c1}个“{k1}”字样
+term	a series of {s}	一系列{s1}
+term	{s}, ranging from {c} to {c}	{s1}，范围从{c1}到{c2}
+term	{s} ranging from {c} to {c}	{s1}，范围从{c1}到{c2}
+term	{s} which you cannot read	你无法读懂的{s1}
+term	{c} dots	{c1}个圆点
+term	{c} symbols	{c1}个符号
+term	{c} words	{c1}个文字
+term	{c} images	{c1}幅图像
+term	{c} images and symbols	共{c1}个图像和符号
+term	numbers	数字
+term	dots	圆点
+term	symbols	符号
+term	words	文字
+term	images	图像
+term	images and symbols	图像和符号
+# RAW ITEM_TRAPCOMP_MENACINGSPIKE uses menacing as its item adjective,
+# not the depicted subject's pose. Bind the complete spike noun first;
+# material is a typed qualifier, and outer quality/wear/count marks remain.
+term	menacing {m} spikes	险恶{m1}尖刺
+term	menacing {m} spike	险恶{m1}尖刺
+term	menacing spikes	险恶尖刺
+term	menacing spike	险恶尖刺
+# The same native face renderer abbreviates image actions as these fifteen
+# modifiers (0x14085DF53..0x14085E03B). Keep every subject/material token in
+# the shared noun parser; wording follows the existing symbol action labels.
+term	laboring {s}	正在劳动的{s1}
+term	menacing {s}	摆出威胁姿态的{s1}
+term	traveling {s}	正在旅行的{s1}
+term	confused {s}	困惑的{s1}
+term	terrified {s}	极度恐惧的{s1}
+term	burning {s}	正在燃烧的{s1}
+term	weeping {s}	正在哭泣的{s1}
+term	screaming {s}	正在尖叫的{s1}
+term	submitting {s}	做出顺从手势的{s1}
+term	dead {s}	已死亡的{s1}
+term	laughing {s}	正在大笑的{s1}
+term	offended {s}	受到冒犯的{s1}
+term	plaintive {s}	做出哀求手势的{s1}
+term	praying {s}	正在祈祷的{s1}
+term	triumphant {s}	摆出胜利姿态的{s1}
+
+# Written items and slabs. Quoted inscriptions are whole prose captures.
+sentence	There is writing on the slab, but you cannot read.	石板上刻有文字，但你无法阅读。
+sentence	There is writing in the book, but you cannot read.	书中写有文字，但你无法阅读。
+sentence	There is writing on this item, but you cannot read.	这件物品上写有文字，但你无法阅读。
+sentence	There is writing on this item which you have not read.	这件物品上有你尚未阅读的文字。
+sentence	You have not read this book.	你尚未读过这本书。
+sentence	The slab reads "{q}".	石板上刻着：“{q1}”
+sentence	I am {n}, once of the Underworld. By {n}, I bind myself to this place.	我是{n1}，曾来自地下世界。凭借{n2}之力，我将自身束缚于此地。
+sentence	I am {n}, {n}, once of the Underworld. By {n}, I bind myself to this place.	我是{n1}，又名{n2}，曾来自地下世界。凭借{n3}之力，我将自身束缚于此地。
+sentence	I am {n}, once of the Underworld. I bind myself to this place.	我是{n1}，曾来自地下世界。我将自身束缚于此地。
+sentence	I am {n}, {n}, once of the Underworld. I bind myself to this place.	我是{n1}，又名{n2}，曾来自地下世界。我将自身束缚于此地。
+sentence	In memory of {n}.	谨以此纪念{n1}。
+sentence	In memory of {n}	谨以此纪念{n1}。
+
+# Item/coin artwork reuses the symbol editor's complete subject/action parser.
+sentence	This is the {i} currency of {r} under {r}.	这是「{r1}」在{r2}统治时期使用的{i1}币。
+sentence	This is the {i} currency of {r} from the year {c}.	这是「{r1}」第{c1}年使用的{i1}币。
+sentence	This is the {i} currency of {r}.	这是「{r1}」使用的{i1}币。
+sentence	On the item is {s}.	物品上有{s1}。
+sentence	On the front of the coin is {s}.	硬币正面刻有{s1}。
+sentence	On the coin's back is {s}.	硬币背面刻有{s1}。
+# Native artwork placement and engraving descriptions share this image noun
+# grammar. Site names and artifact/book titles keep their established parsers.
+sentence	Engraved on the floor is {s}.	地面上刻有{s1}。
+sentence	Engraved on the wall is {s}.	墙上刻有{s1}。
+# PE 53.16 0x1aa00b calls 0x1451b10 for every selected engraving. A reused
+# entity image (0x1486720 -> 0x8f9820) retains ENTITY_ART_IMAGE instead of
+# MAPSQUARE, so 0x14522ab omits the wall/floor location in this same window.
+sentence	Engraved is {s}.	刻画的是{s1}。
+sentence	This engraving appears on a floor in {p}.	这幅雕刻位于「{p1}」的地面上。
+sentence	This engraving appears on a wall in {p}.	这幅雕刻位于「{p1}」的墙上。
+sentence	This engraving appears on a floor somewhere.	这幅雕刻位于某处的地面上。
+sentence	This engraving appears on a wall somewhere.	这幅雕刻位于某处的墙上。
+sentence	This artwork appears on the front of {i}.	这件艺术品位于{i1}的正面。
+sentence	This artwork appears on the back of {i}.	这件艺术品位于{i1}的背面。
+sentence	This work of art is a {i} and was crafted in {p}.	这件艺术品是{i1}，在「{p1}」制成。
+sentence	This artwork appears on a {i} and was crafted in {p}.	这件艺术品位于{i1}上，在「{p1}」制成。
+sentence	This artwork appears on a {i}.	这件艺术品位于{i1}上。
+sentence	This artwork appears on an unknown artifact.	这件艺术品位于未知造物上。
+sentence	This artwork appears on {b}.	这件艺术品位于「{b1}」上。
+# Keep design quality and depicted subjects in separate clauses. The {a}
+# capture owns the entire subject list, including repeated groups of creatures.
+sentence	On the front of the coin is a {s} image of {a}.	硬币正面图案{s1}，描绘了{a1}。
+sentence	On the front of the coin is an {s} image of {a}.	硬币正面图案{s1}，描绘了{a1}。
+sentence	On the coin's back is a {s} image of {a}.	硬币背面图案{s1}，描绘了{a1}。
+sentence	On the coin's back is an {s} image of {a}.	硬币背面图案{s1}，描绘了{a1}。
+sentence	On the front of the coin is an image of {a}.	硬币正面的图案描绘了{a1}。
+sentence	On the coin's back is an image of {a}.	硬币背面的图案描绘了{a1}。
+sentence	This artwork is {s}.	这件艺术品是{s1}。
+sentence	This work of art is {s}.	这件艺术品是{s1}。
+sentence	The image is the symbol of {p}.	这幅图像是{p1}的象征。
+sentence	It is the symbol of {p}.	它是{p1}的象征。
+# A civilization's species is an appositive, outside its generated name.
+# Reuse the existing species vocabulary and name resolver for both articles.
+sentence	The image is the symbol of {p}, a {s} civilization.	这幅图像是{s1}文明「{p1}」的象征。
+sentence	The image is the symbol of {p}, an {s} civilization.	这幅图像是{s1}文明「{p1}」的象征。
+sentence	It is the symbol of {p}, a {s} civilization.	它是{s1}文明「{p1}」的象征。
+sentence	It is the symbol of {p}, an {s} civilization.	它是{s1}文明「{p1}」的象征。
+# Historical artwork subjects use Legends' shared {e} event grammar below
+# the item sentence rules; they are not quoted multi-sentence inscriptions.
+sentence	The artwork relates to the ascension of {n} to the position of {s} of {p} in {d}.	图案描绘了{n1}于第{d1}年就任「{p1}」的{s1}的情景。
+sentence	The artwork relates to the ascension of {n} to the position of {s} of {p}.	图案描绘了{n1}就任「{p1}」的{s1}的情景。
+sentence	The artwork was commissioned by {n}.	这件艺术品由{n1}委托创作。
+sentence	This artwork was commissioned by {n}.	这件艺术品由{n1}委托创作。
+sentence	The image was commissioned by {p}.	这幅图像由「{p1}」委托创作。
+# The native symbol owner formatter emits an optional group status, species,
+# and one of these institution types. These nouns are description-only;
+# the UI label Groups continues to use its separate established override.
+sentence	The image is the symbol of {p}, a {s}.	这幅图像是{s1}「{p1}」的象征。
+sentence	The image is the symbol of {p}, an {s}.	这幅图像是{s1}「{p1}」的象征。
+sentence	It is the symbol of {p}, a {s}.	它是{s1}「{p1}」的象征。
+sentence	It is the symbol of {p}, an {s}.	它是{s1}「{p1}」的象征。
+predicate	is the symbol of {p}, a {s}	是{s1}「{p1}」的象征
+predicate	is the symbol of {p}, an {s}	是{s1}「{p1}」的象征
+term	outcast {s}	流亡的{s1}
+term	nomadic {s}	游牧的{s1}
+term	migrating {s}	迁徙中的{s1}
+term	local {s}	当地的{s1}
+term	{s} civilization	{s1}文明
+term	{s} merchant company	{s1}商贸公司
+term	{s} craft guild	{s1}工艺行会
+term	{s} performance troupe	{s1}演出团
+term	{s} government	{s1}政府
+term	{s} vessel	{s1}船
+term	{s} religion	{s1}宗教
+term	{s} military organization	{s1}军事组织
+term	{s} group	{s1}势力
+term	civilization	文明
+term	merchant company	商贸公司
+term	craft guild	工艺行会
+term	performance troupe	演出团
+term	government	政府
+term	vessel	船
+term	religion	宗教
+term	military organization	军事组织
+term	group	势力
+term	an image of {a} in {i}	以{i1}制作、描绘{a1}的图像
+term	an image of {a}	描绘{a1}的图像
+term	image of {a} in {i}	以{i1}制作、描绘{a1}的图像
+term	image of {a}	描绘{a1}的图像
+term	image	图像
+term	image in {i}	以{i1}制作的图像
+# ENTITY_ART_IMAGE at 0x1452357..0x145261e: the optional rendering artist
+# precedes "rendition of" directly. The original image can have its own name,
+# design quality, material and creator; retain that complete recursive noun.
+term	rendition of {p}, {s}	名为「{p1}」的{s1}的摹作
+term	{n} rendition of {p}, {s}	由{n1}制作、原图名为「{p1}」的{s1}摹作
+term	rendition of {s}	{s1}的摹作
+term	{n} rendition of {s}	由{n1}制作的{s1}摹作
+term	rendition of {a} in {i}	以{i1}制作、描绘{a1}的作品
+term	rendition of {a}	描绘{a1}的作品
+term	well-designed	设计良好
+term	finely-designed	设计精巧
+term	superiorly designed	设计出色
+term	exceptionally designed	设计卓越
+term	masterfully designed	设计精湛
+term	well-designed {s}	设计良好的{s1}
+term	fine {s}	精美的{s1}
+term	superior {s}	优质的{s1}
+term	finely-designed {s}	设计精巧的{s1}
+term	superiorly designed {s}	设计出色的{s1}
+term	exceptionally designed {s}	设计卓越的{s1}
+term	masterfully designed {s}	设计精湛的{s1}
+predicate	is the symbol of {p}	是{p1}的象征
+predicate	is the symbol of {p}, a {s} civilization	是{s1}文明「{p1}」的象征
+predicate	is the symbol of {p}, an {s} civilization	是{s1}文明「{p1}」的象征
+predicate	was commissioned by {n}	由{n1}委托创作
+
+# Typed artwork/currency metadata, read directly from native source records.
+term	{s} from the year {c}	{s1}（第{c1}年）
+term	{s} from an unknown year	{s1}（年份不详）
+term	{s} under an obscure ruler	{s1}（统治者不详）
+term	{s} from a period of no rule	{s1}（无统治者时期）
+sentence	The artwork relates to {s}.	图案描绘了{s1}。
+term	{s} during {s}	{s1}（发生于{s2}期间）
+term	{n}, the deity of {s}, depicted as a {s}	{s1}之神{n1}（以{s2}形象出现）
+term	the deity of {s}, depicted as a {s}	{s1}之神（以{s2}形象出现）
+sentence	The image was commissioned by {p}, a {s}.	这幅图像由{s1}「{p1}」委托创作。
+sentence	The image was commissioned by a {s}.	这幅图像由{s1}委托创作。
+sentence	The image is the symbol of a {s}.	这幅图像是{s1}的象征。
+term	{s} guild	{s1}行会
+
+# Coordination is scoped to item descriptions, so connectors never overwrite
+# normal English words or the established multiword material/creature names.
+term	{s}, and {s}	{s1}和{s2}
+term	{s} and {s}	{s1}和{s2}
+term	{s}, {s}	{s1}、{s2}
+predicate	{e}, and {e}	{e1}，并{e2}
+predicate	{e} and {e}	{e1}，并{e2}
+predicate	{e}, {e}	{e1}，{e2}

@@ -1,0 +1,23 @@
+base = "items::thread"
+
+[[rulesets]]
+[rulesets.rules]
+"{^0}{main}" = "{^0}{main}"
+
+[[rulesets]]
+name = "^0"
+optional = true
+[rulesets.rules]
+"{::materials::adjective} " = "{::materials::adjective}"
+
+[[rulesets]]
+name = "main"
+[rulesets.rules]
+"web" = "网"
+"webs" = "网"
+"strand" = "缕"
+"strands" = "缕"
+"thread" = "线"
+"threads" = "线"
+"yarn" = "纱线"
+"yarns" = "纱线"

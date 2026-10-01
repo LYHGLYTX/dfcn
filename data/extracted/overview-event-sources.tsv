@@ -1,0 +1,1228 @@
+# Native source catalog for the complete Overview event and incident constructors.
+# Image PE:6a70a6d9:02711000; installed Dwarf Fortress.exe. Read-only PE disassembly, not a runtime capture or a test result.
+# The event switch covers ids 0x0..0x118; helper incident kinds 0..10 include deaths, crimes, conflict, reunions, performances, artifacts and identity disclosure.
+# Columns preserve all RIP-relative string references, including repeated punctuation and branch-local fragments. Source strings retain native spaces.
+# Runtime sentence/field grammar lives in data/runtime/announcement-description-grammar.tsv; fixed event sentences live in data/runtime/local-overrides.tsv.
+# Offspring mode at both Overview call sites is true, so only human sex/litter-count fallback strings are reachable; creature baby names are outside this mode.
+# Death discovery strings require a nonnull optional argument; both Overview helper calls pass null. They are retained below with their branch constraint.
+# HistEventCollection 233 formats event_collections.all via virtual getName +0x30; Syndrome 187 returns without event text. These are distinct native selectors.
+# owner	function_start	function_end	instruction_va	literal_va	source	semantic_owner	translation_or_template
+event	0x14066fe50	0x140673bb8	0x14066ff75	0x14166c138	I am awoken to 	memory-sentence: I am awoken to {s}.	我领会了{s1}。 | 我领悟到了{s1}。
+event	0x14066fe50	0x140673bb8	0x14066ff7e	0x14166c128	I realized 	memory-sentence: I realized {s}.	我想明白了{s1}。 | 我明白了{s1}。
+event	0x14066fe50	0x140673bb8	0x14066ffc5	0x141737550	the worthlessness	memory-value-insight: the worthlessness of {s}	{s1}毫无价值
+event	0x14066fe50	0x140673bb8	0x14066ffd9	0x141737540	the value	memory-value-insight: the value of {s}	{s1}的价值
+event	0x14066fe50	0x140673bb8	0x14066ffe8	0x141670b50	nuances	memory-value-insight: nuances of {s}	{s1}的细微之处
+event	0x14066fe50	0x140673bb8	0x140670004	0x1415eb518	 of 	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140670036	0x1416415b8	law	memory-value: law	法律
+event	0x14066fe50	0x140673bb8	0x140670048	0x1416415b0	loyalty	memory-value: loyalty	忠诚
+event	0x14066fe50	0x140673bb8	0x14067005a	0x1416415fc	family	memory-value: family	亲情
+event	0x14066fe50	0x140673bb8	0x14067006c	0x1416415f0	friendship	memory-value: friendship	友情
+event	0x14066fe50	0x140673bb8	0x14067007e	0x1416415e4	power	memory-value: power	权势
+event	0x14066fe50	0x140673bb8	0x140670090	0x1416415dc	truth	memory-value: truth	诚实
+event	0x14066fe50	0x140673bb8	0x1406700a2	0x141641570	cunning	memory-value: cunning	谋略
+event	0x14066fe50	0x140673bb8	0x1406700ae	0x141641560	eloquence	memory-value: eloquence	口才
+event	0x14066fe50	0x140673bb8	0x1406700c0	0x141641550	fairness	memory-value: fairness	公平
+event	0x14066fe50	0x140673bb8	0x1406700d2	0x141641548	decorum	memory-value: decorum	礼仪
+event	0x14066fe50	0x140673bb8	0x1406700de	0x1416415a0	tradition	memory-value: tradition	传统
+event	0x14066fe50	0x140673bb8	0x1406700f0	0x141641598	artwork	memory-value: artwork	艺术
+event	0x14066fe50	0x140673bb8	0x140670102	0x141641588	cooperation	memory-value: cooperation	合作
+event	0x14066fe50	0x140673bb8	0x140670114	0x141641578	independence	memory-value: independence	独立
+event	0x14066fe50	0x140673bb8	0x140670126	0x141641500	stoicism	memory-value: stoicism	克制
+event	0x14066fe50	0x140673bb8	0x140670138	0x1416414f0	introspection	memory-value: introspection	自省
+event	0x14066fe50	0x140673bb8	0x14067014a	0x1416414e0	self-control	memory-value: self-control	自律
+event	0x14066fe50	0x140673bb8	0x14067015c	0x1416414d0	tranquility	memory-value: tranquility	宁静
+event	0x14066fe50	0x140673bb8	0x14067016e	0x141641540	harmony	memory-value: harmony	和谐
+event	0x14066fe50	0x140673bb8	0x14067017a	0x141641530	merriment	memory-value: merriment	欢庆
+event	0x14066fe50	0x140673bb8	0x14067018c	0x141641520	craftsmanship	memory-value: craftsmanship	工艺
+event	0x14066fe50	0x140673bb8	0x14067019b	0x141641510	martial prowess	memory-value: martial prowess	武艺
+event	0x14066fe50	0x140673bb8	0x1406701ad	0x141641724	skill	memory-value: skill	技艺
+event	0x14066fe50	0x140673bb8	0x1406701b9	0x141641718	hard work	memory-value: hard work	勤劳
+event	0x14066fe50	0x140673bb8	0x1406701c2	0x141641708	sacrifice	memory-value: sacrifice	牺牲
+event	0x14066fe50	0x140673bb8	0x1406701d1	0x1416416f8	competition	memory-value: competition	竞争
+event	0x14066fe50	0x140673bb8	0x1406701e0	0x141641758	perseverance	memory-value: perseverance	坚韧
+event	0x14066fe50	0x140673bb8	0x1406701ef	0x141641748	leisure time	memory-value: leisure time	闲暇
+event	0x14066fe50	0x140673bb8	0x1406701fe	0x141641738	commerce	memory-value: commerce	商业
+event	0x14066fe50	0x140673bb8	0x14067020d	0x141641730	romance	memory-value: romance	浪漫
+event	0x14066fe50	0x140673bb8	0x14067021c	0x1416416ec	nature	memory-value: nature	自然
+event	0x14066fe50	0x140673bb8	0x14067022b	0x1415ee0cc	peace	memory-value: peace	和平
+event	0x14066fe50	0x140673bb8	0x140670234	0x1416416e0	knowledge	memory-value: knowledge	知识
+event	0x14066fe50	0x140673bb8	0x140670267	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067028c	0x14166c100	I played make believe.	Overview sentence: I played make believe.	玩了会儿过家家。
+event	0x14066fe50	0x140673bb8	0x1406702a6	0x14166c118	I played with 	memory-sentence: I played with {s}.	玩了玩{s1}。
+event	0x14066fe50	0x140673bb8	0x1406702d0	0x1415ed620	a 	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406702fb	0x1415e8cf8	a toy	memory-object: a toy	一个玩具
+event	0x14066fe50	0x140673bb8	0x140670315	0x14166c0c8	I have performed the rites of 	memory-sentence: I have performed the rites of {s}. | memory-sentence: I have performed the rites of {s} in this holy place. | memory-sentence: I have performed the rites of {s} in this dubious place.	参加了{s1}的仪式。 | 在这圣地参加了{s1}的仪式。 | 在这不太像样的地方参加了{s1}的仪式。
+event	0x14066fe50	0x140673bb8	0x140670344	0x14166c388	 in this dubious place	memory-sentence: I have communed with {s} in this dubious place. | memory-sentence: I have performed the rites of {s} in this dubious place.	在这不太像样的地方跟{s1}沟通过了。 | 在这不太像样的地方参加了{s1}的仪式。
+event	0x14066fe50	0x140673bb8	0x14067035b	0x14166c3a0	I have communed with 	memory-sentence: I have communed with {s}. | memory-sentence: I have communed with {s} in this holy place. | memory-sentence: I have communed with {s} in this dubious place.	跟{s1}沟通过了。 | 在这圣地跟{s1}沟通过了。 | 在这不太像样的地方跟{s1}沟通过了。
+event	0x14066fe50	0x140673bb8	0x1406703a4	0x14166c0e8	 in this holy place	memory-sentence: I have communed with {s} in this holy place. | memory-sentence: I have performed the rites of {s} in this holy place.	在这圣地跟{s1}沟通过了。 | 在这圣地参加了{s1}的仪式。
+event	0x14066fe50	0x140673bb8	0x1406703b6	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670401	0x14166c378	Children.	Overview sentence: Children.	孩子啊。
+event	0x14066fe50	0x140673bb8	0x14067040d	0x14166c368	I am a parent.	Overview sentence: I am a parent.	我有孩子了。
+event	0x14066fe50	0x140673bb8	0x14067044a	0x14166c338	 and I broke up.	memory-sentence: {s} and I broke up.	我跟{s1}分手了。
+event	0x14066fe50	0x140673bb8	0x14067048f	0x14166c350	 and I are divorced.	memory-sentence: {s} and I are divorced.	我跟{s1}离婚了。
+event	0x14066fe50	0x140673bb8	0x1406704da	0x14166c32c	Oh, 	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140670514	0x1415ec860	...	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670520	0x14166c318	I have fallen for 	memory-sentence: I have fallen for {s}.	我喜欢上{s1}了。
+event	0x14066fe50	0x140673bb8	0x14067055a	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067057c	0x14166c300	Is this an attack?	Overview sentence: Is this an attack?	有人来袭击了？
+event	0x14066fe50	0x140673bb8	0x140670588	0x14166c2e8	Is that a weapon?	Overview sentence: Is that a weapon?	那是武器吗？
+event	0x14066fe50	0x140673bb8	0x1406705aa	0x14166c2c8	Somebody up to no good...	Overview sentence: Somebody up to no good...	有人想干坏事……
+event	0x14066fe50	0x140673bb8	0x1406705b6	0x14166c2a8	Who's skulking around there?	Overview sentence: Who's skulking around there?	谁在那里鬼鬼祟祟的？
+event	0x14066fe50	0x140673bb8	0x1406705d8	0x14166c290	There's fighting!	Overview sentence: There's fighting!	有人在打斗！
+event	0x14066fe50	0x140673bb8	0x1406705e4	0x14166c280	A battle!	Overview sentence: A battle!	打起来了！
+event	0x14066fe50	0x140673bb8	0x1406705f0	0x14166c250	I have improved my 	memory-sentence: I have improved my {s}.	我的{s1}进步了。
+event	0x14066fe50	0x140673bb8	0x14067062a	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670648	0x14166c268	I have mastered 	memory-sentence: I have mastered {s}.	我已经精通{s1}了。
+event	0x14066fe50	0x140673bb8	0x140670682	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406706c0	0x14166bf60	I shall name you 	memory-sentence: I shall name you {s}.	就给你起名叫{s1}吧。
+event	0x14066fe50	0x140673bb8	0x1406706ee	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067070c	0x14166bf78	This is a true masterpiece.	Overview sentence: This is a true masterpiece.	这是真正的杰作。
+event	0x14066fe50	0x140673bb8	0x140670718	0x14166bf38	This is a masterpiece.	Overview sentence: This is a masterpiece.	这是一件杰作。
+event	0x14066fe50	0x140673bb8	0x14067073a	0x14166bf08	I can't believe 	memory-sentence: I can't believe {s} is dead.	真不敢相信，{s1}死了。
+event	0x14066fe50	0x140673bb8	0x140670774	0x141645f18	 is dead.	memory-sentence: {s} is dead. | memory-sentence: I can't believe {s} is dead.	{s1}死了。 | 真不敢相信，{s1}死了。
+event	0x14066fe50	0x140673bb8	0x1406707ab	0x14166bf50	 is dead?	memory-sentence: {s} is dead?	{s1}死了？
+event	0x14066fe50	0x140673bb8	0x1406707cd	0x14166bec8	It is drinking the blood of the living.	Overview sentence: It is drinking the blood of the living.	它正在吸活物的血。
+event	0x14066fe50	0x140673bb8	0x1406707d9	0x14166bf20	It feeds on blood.	Overview sentence: It feeds on blood.	它以血为食。
+event	0x14066fe50	0x140673bb8	0x140670803	0x14166be60	Has the tide turned?	Overview sentence: Has the tide turned?	局势要变了吗？
+event	0x14066fe50	0x140673bb8	0x14067080f	0x14166bea8	In the midst of conflict...	Overview sentence: In the midst of conflict...	卷进争斗里了……
+event	0x14066fe50	0x140673bb8	0x14067081b	0x14166be90	This is a fight!	Overview sentence: This is a fight!	这是打起来了！
+event	0x14066fe50	0x140673bb8	0x140670827	0x14166bef0	The battle rages...	Overview sentence: The battle rages...	打得正激烈……
+event	0x14066fe50	0x140673bb8	0x14067085b	0x14166be78	How fragile we are...	Overview sentence: How fragile we are...	我们原来这么不堪一击……
+event	0x14066fe50	0x140673bb8	0x140670867	0x14166be30	How fleeting life is...	Overview sentence: How fleeting life is...	人活着的日子真短啊……
+event	0x14066fe50	0x140673bb8	0x140670873	0x14166be48	Gruesome wounds!	Overview sentence: Gruesome wounds!	这伤口，太惨了！
+event	0x14066fe50	0x140673bb8	0x14067087f	0x14166be00	So easily broken...	Overview sentence: So easily broken...	这么容易就垮了……
+event	0x14066fe50	0x140673bb8	0x14067088b	0x14166be18	Those injuries...	Overview sentence: Those injuries...	伤成这样……
+event	0x14066fe50	0x140673bb8	0x140670897	0x14166c098	Can it all end so quickly?	Overview sentence: Can it all end so quickly?	一切就这么结束了？
+event	0x14066fe50	0x140673bb8	0x1406708a3	0x14166c0b8	Our time in 	memory-sentence: Our time in {s} is so brief...	我们在{s1}能活的日子真短啊……
+event	0x14066fe50	0x140673bb8	0x1406708de	0x14166c070	 is so brief...	memory-sentence: Our time in {s} is so brief...	我们在{s1}能活的日子真短啊……
+event	0x14066fe50	0x140673bb8	0x140670933	0x14166c048	Death...	Overview sentence: Death...	死亡……
+event	0x14066fe50	0x140673bb8	0x14067093f	0x14166c080	Death is all around us.	Overview sentence: Death is all around us.	到处都有人死去。
+event	0x14066fe50	0x140673bb8	0x140670a52	0x14166c058	 is really dead.	memory-sentence: {s} is really dead.	{s1}真的死了。
+event	0x14066fe50	0x140673bb8	0x140670acf	0x141664638	 killed 	memory-death: was shot and killed | memory-death: was killed by spikes | memory-sentence: {s} has killed. | memory-sentence: {s} killed {s}.	被射杀了 | 被尖刺刺死了 | {s1}杀人了。 | {s1}杀死了{s2}。
+event	0x14066fe50	0x140673bb8	0x140670b13	0x14166c028	, slayer of 	memory-sentence: {s}, slayer of {s}.	{s1}，就是杀死{s2}的那个。
+event	0x14066fe50	0x140673bb8	0x140670b69	0x14166c010	 has killed.	memory-sentence: {s} has killed.	{s1}杀人了。
+event	0x14066fe50	0x140673bb8	0x140670ba1	0x14166c038	, slayer.	memory-sentence: {s}, slayer.	{s1}，杀人的家伙。
+event	0x14066fe50	0x140673bb8	0x140670bad	0x14166c020	Slayer.	Overview sentence: Slayer.	杀人的家伙。
+event	0x14066fe50	0x140673bb8	0x140670bcf	0x14166c000	Oh, where is 	memory-sentence: Oh, where is {s}?	唉，{s1}在哪里啊？
+event	0x14066fe50	0x140673bb8	0x140670c09	0x141614d50	?	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670c15	0x14166bfe8	I am separated from 	memory-sentence: I am separated from {s}.	我跟{s1}分开了。
+event	0x14066fe50	0x140673bb8	0x140670c37	0x14166bfd0	I am reunited with my 	memory-sentence: I am reunited with my {s}. | memory-sentence: I am reunited with my {s} {s}.	跟我的{s1}重逢了。 | 跟我的{s1}{s2}重逢了。
+event	0x14066fe50	0x140673bb8	0x140670c43	0x14166bfb8	I am together with my 	memory-sentence: I am together with my {s}. | memory-sentence: I am together with my {s} {s}.	跟我的{s1}在一起了。 | 跟我的{s1}{s2}在一起了。
+event	0x14066fe50	0x140673bb8	0x140670c4f	0x14166bf98	I defeated 	memory-sentence: I defeated {s}.	我打败了{s1}。
+event	0x14066fe50	0x140673bb8	0x140670c5b	0x14166bfa8	I abducted 	memory-sentence: I abducted {s}.	我绑走了{s1}。
+event	0x14066fe50	0x140673bb8	0x140670c67	0x14166ca00	I murdered 	memory-sentence: I murdered {s}.	我杀害了{s1}。
+event	0x14066fe50	0x140673bb8	0x140670c8d	0x14166c9e8	I have a part in this.	Overview sentence: I have a part in this.	这事我也参与了。
+event	0x14066fe50	0x140673bb8	0x140670c99	0x14166c9d0	I cannot just stand by.	Overview sentence: I cannot just stand by.	我不能光在一边看着。
+event	0x14066fe50	0x140673bb8	0x140670ca5	0x14166ca10	This is my fight too.	Overview sentence: This is my fight too.	这一仗也有我的份。
+event	0x14066fe50	0x140673bb8	0x140670cc7	0x14166c9b0	You can't take me alive!	Overview sentence: You can't take me alive!	你们休想活捉我！
+event	0x14066fe50	0x140673bb8	0x140670cd3	0x14166c988	I won't go down without a fight!	Overview sentence: I won't go down without a fight!	我不会束手就擒！
+event	0x14066fe50	0x140673bb8	0x140670d02	0x14166c938	I asked to become a citizen.	Overview sentence: I asked to become a citizen.	我申请在这里入籍了。
+event	0x14066fe50	0x140673bb8	0x140670d0e	0x14166c958	I brought up the lack of jobs in a meeting.	Overview sentence: I brought up the lack of jobs in a meeting.	开会时，我提了没活可干的问题。
+event	0x14066fe50	0x140673bb8	0x140670d1a	0x14166c8c0	I made a suggestion about work allocations in a meeting.	Overview sentence: I made a suggestion about work allocations in a meeting.	开会时，我提了该怎么分派活计。
+event	0x14066fe50	0x140673bb8	0x140670d26	0x14166c900	I requested that more weapons be produced in a meeting.	Overview sentence: I requested that more weapons be produced in a meeting.	开会时，我请他们多造些武器。
+event	0x14066fe50	0x140673bb8	0x140670d32	0x14166c888	I complained to my priest.	Overview sentence: I complained to my priest.	找祭司诉了诉苦。
+event	0x14066fe50	0x140673bb8	0x140670d3e	0x14166c8a8	I cried on my priest.	Overview sentence: I cried on my priest.	找祭司哭诉了一通。
+event	0x14066fe50	0x140673bb8	0x140670d4a	0x14166c848	I yelled at somebody in charge.	Overview sentence: I yelled at somebody in charge.	我冲管事的人大喊大叫了一通。
+event	0x14066fe50	0x140673bb8	0x140670d56	0x14166c868	I cried on somebody in charge.	Overview sentence: I cried on somebody in charge.	找管事的人哭诉了一通。
+event	0x14066fe50	0x140673bb8	0x140670d62	0x14166c7e0	I told somebody that I am being prevented from leaving.	Overview sentence: I told somebody that I am being prevented from leaving.	我跟人说了，这里不让我走。
+event	0x14066fe50	0x140673bb8	0x140670d89	0x14166cb90	I was cried on by an unhappy worshipper.	Overview sentence: I was cried on by an unhappy worshipper.	有个不高兴的信徒找我哭诉了一通。
+event	0x14066fe50	0x140673bb8	0x140670d95	0x14166c818	I was yelled at by an unhappy worshipper.	Overview sentence: I was yelled at by an unhappy worshipper.	有个不满的信徒冲我大喊大叫。
+event	0x14066fe50	0x140673bb8	0x140670da1	0x14166cb50	A visitor complained about being prevented from leaving.	Overview sentence: A visitor complained about being prevented from leaving.	有个访客抱怨说，这里不让人走。
+event	0x14066fe50	0x140673bb8	0x140670dad	0x14166cb28	I was cried on by an unhappy citizen.	Overview sentence: I was cried on by an unhappy citizen.	有个不高兴的居民找我哭诉了一通。
+event	0x14066fe50	0x140673bb8	0x140670db9	0x14166cbc0	I was yelled at by an unhappy citizen.	Overview sentence: I was yelled at by an unhappy citizen.	有个不满的居民冲我大喊大叫。
+event	0x14066fe50	0x140673bb8	0x140670dcb	0x14166b9c4	I saw 	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-sentence: I saw {s}. | memory-sentence: I saw {s} on display in my personal museum. | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: I saw a sermon on {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: I saw a recital of {s} | memory-performance-core: I saw {s} {s} {s} | memory-performance-core: I saw a performance of {s}	看到了展出的{s1}。 | 在自己的博物馆里看到了{s1}。 | 我看到一名{s1}在{s3}朗诵《{s2}》。 | 看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。 | 我听{s1}讲了关于{s2}的道理 | 我听了一场关于{s1}的布道 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | 我听{s1}朗诵了{s2} | 我听了{s1}的朗诵 | 我看{s1}{s2}{s3} | 我看了一场{s1}的表演
+event	0x14066fe50	0x140673bb8	0x140670e88	0x14166cb10	a piece	memory-object: a piece	一件作品
+event	0x14066fe50	0x140673bb8	0x140670e9d	0x14166cb18	 on display	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} on display in my personal museum.	看到了展出的{s1}。 | 在自己的博物馆里看到了展出的{s1}。
+event	0x14066fe50	0x140673bb8	0x140670eb9	0x14166cae8	 in my personal museum	memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw {s} on display in my personal museum.	在自己的博物馆里看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。
+event	0x14066fe50	0x140673bb8	0x140670ed3	0x14166cb00	I was near to 	memory-sentence: I was near to a caged {s}. | memory-sentence: I was near to {s}. | memory-sentence: I was near to a {s}. | memory-sentence: I was near to my own {s}. | memory-sentence: I was near to a arranged {s}. | memory-sentence: I was near to my own arranged {s}.	靠近过关在笼子里的{s1}。 | 靠近过{s1}。 | 靠近过一个{s1}。 | 靠近过自己的{s1}。 | 靠近过一个摆放好的{s1}。 | 靠近过自己摆放好的{s1}。
+event	0x14066fe50	0x140673bb8	0x140670ef0	0x141602db4	a	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670f04	0x14166cacc	my own	memory-person: my own	我自己
+event	0x14066fe50	0x140673bb8	0x140670f13	0x1415e873c	 	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670f30	0x14166cad8	arranged 	memory-sentence: I was near to a arranged {s}. | memory-sentence: I was near to my own arranged {s}.	靠近过一个摆放好的{s1}。 | 靠近过自己摆放好的{s1}。
+event	0x14066fe50	0x140673bb8	0x140670f94	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140670fea	0x14166caa8	I lost a pet.	Overview sentence: I lost a pet.	我养的一只宠物没了。
+event	0x14066fe50	0x140673bb8	0x140670ff6	0x14166cab8	I threw something.	Overview sentence: I threw something.	我扔了东西。
+event	0x14066fe50	0x140673bb8	0x140671002	0x14166ca68	I was released from confinement.	Overview sentence: I was released from confinement.	我被放出来了。
+event	0x14066fe50	0x140673bb8	0x14067100e	0x14166ca90	I lost the baby.	Overview sentence: I lost the baby.	我流产了。
+event	0x14066fe50	0x140673bb8	0x14067101a	0x14166ca28	My spouse lost the baby.	Overview sentence: My spouse lost the baby.	伴侣流产了。
+event	0x14066fe50	0x140673bb8	0x140671026	0x14166ca48	I am wearing old clothes.	Overview sentence: I am wearing old clothes.	身上穿的都是旧衣服。
+event	0x14066fe50	0x140673bb8	0x140671032	0x14166c600	My clothes are in tatters.	Overview sentence: My clothes are in tatters.	身上的衣服都破得不成样子了。
+event	0x14066fe50	0x140673bb8	0x14067103e	0x14166c620	My clothes actually rotted right off of my body.	Overview sentence: My clothes actually rotted right off of my body.	衣服穿在身上，竟然就这么烂掉了。
+event	0x14066fe50	0x140673bb8	0x14067106c	0x14166c5a0	I had a nightmare about my deceased pet.	Overview sentence: I had a nightmare about my deceased pet.	做了个噩梦，梦见了死去的宠物。
+event	0x14066fe50	0x140673bb8	0x140671078	0x14166c5d0	I had a nightmare about my deceased spouse.	Overview sentence: I had a nightmare about my deceased spouse.	做了个噩梦，梦见了死去的伴侣。
+event	0x14066fe50	0x140673bb8	0x140671084	0x14166c540	I had a nightmare about my deceased lover.	Overview sentence: I had a nightmare about my deceased lover.	做了个噩梦，梦见了死去的恋人。
+event	0x14066fe50	0x140673bb8	0x140671090	0x14166c570	I had a nightmare about my deceased sibling.	Overview sentence: I had a nightmare about my deceased sibling.	做了个噩梦，梦见了死去的兄弟姐妹。
+event	0x14066fe50	0x140673bb8	0x14067109c	0x14166c4e0	I had a nightmare about my deceased mother.	Overview sentence: I had a nightmare about my deceased mother.	做了个噩梦，梦见了死去的母亲。
+event	0x14066fe50	0x140673bb8	0x1406710a8	0x14166c510	I had a nightmare about my deceased father.	Overview sentence: I had a nightmare about my deceased father.	做了个噩梦，梦见了死去的父亲。
+event	0x14066fe50	0x140673bb8	0x1406710b4	0x14166c470	I had a nightmare about my deceased child.	Overview sentence: I had a nightmare about my deceased child.	做了个噩梦，梦见了死去的孩子。
+event	0x14066fe50	0x140673bb8	0x1406710c0	0x14166c4a0	I had a nightmare about my deceased animal training partner.	Overview sentence: I had a nightmare about my deceased animal training partner.	做了个噩梦，梦见了以前一起训练、后来死去的那只动物。
+event	0x14066fe50	0x140673bb8	0x1406710cc	0x14166c408	I had a nightmare about my deceased friend.	Overview sentence: I had a nightmare about my deceased friend.	做了个噩梦，梦见了死去的朋友。
+event	0x14066fe50	0x140673bb8	0x1406710d8	0x14166c438	I had a nightmare about my deceased acquaintance.	Overview sentence: I had a nightmare about my deceased acquaintance.	做了个噩梦，梦见了死去的熟人。
+event	0x14066fe50	0x140673bb8	0x1406710e4	0x14166c3d8	I had a nightmare about the dead.	Overview sentence: I had a nightmare about the dead.	做了个噩梦，梦见了死人。
+event	0x14066fe50	0x140673bb8	0x140671113	0x14166c7c8	tortured	memory-ghost-action: tortured	狠狠折磨了
+event	0x14066fe50	0x140673bb8	0x14067111c	0x14166c3c8	possessed	memory-ghost-action: possessed	附身了
+event	0x14066fe50	0x140673bb8	0x140671125	0x14166c3b8	tormented	memory-ghost-action: tormented	折磨了
+event	0x14066fe50	0x140673bb8	0x14067112e	0x14166c400	haunted	memory-ghost-action: haunted	缠上了
+event	0x14066fe50	0x140673bb8	0x14067113e	0x14166c7d4	I was 	memory-sentence: I was rejected by {s}. | memory-sentence: I was reunited with {s}. | memory-sentence: I was attacked by my own dead {s}. | memory-sentence: I was near to a caged {s}. | memory-sentence: I was near to {s}. | memory-sentence: I was pestered by {s}. | memory-sentence: I was accosted by {s}. | memory-sentence: I was denied residency in {s}. | memory-sentence: I was {s} by {s}. | memory-sentence: I was near to a {s}. | memory-sentence: I was near to my own {s}. | memory-sentence: I was near to a arranged {s}. | memory-sentence: I was near to my own arranged {s}.	{s1}拒绝了我。 | 我跟{s1}重逢了。 | 我死去的{s1}竟然袭击了我。 | 靠近过关在笼子里的{s1}。 | 靠近过{s1}。 | 被{s1}缠上了。 | {s1}来找我麻烦了。 | 没获准住在{s1}。 | 我被{s2}{s1}。 | 靠近过一个{s1}。 | 靠近过自己的{s1}。 | 靠近过一个摆放好的{s1}。 | 靠近过自己摆放好的{s1}。
+event	0x14066fe50	0x140673bb8	0x140671159	0x1415eda08	 by 	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x14067118d	0x14166c798	the ghost of a pet	memory-ghost: the ghost of a pet	一只宠物的鬼魂
+event	0x14066fe50	0x140673bb8	0x140671196	0x14166c7b0	the ghost of my spouse	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x14067119f	0x14166c768	the ghost of my lover	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711a8	0x14166c780	the ghost of my sibling	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711b1	0x14166c738	the ghost of my mother	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711ba	0x14166c750	the ghost of my father	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711c3	0x14166c6f8	the ghost of my child	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711cc	0x14166c710	the ghost of my animal training partner	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711d5	0x14166c6c0	the ghost of my friend	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406711de	0x14166c6d8	the ghost of an acquaintance	memory-ghost: the ghost of an acquaintance	一个熟人的鬼魂
+event	0x14066fe50	0x140673bb8	0x1406711e7	0x14166c6a0	a ghost	memory-ghost: a ghost	一个鬼魂
+event	0x14066fe50	0x140673bb8	0x1406711f6	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671214	0x14166c6a8	I did my combat drills.	Overview sentence: I did my combat drills.	练了练打斗。
+event	0x14066fe50	0x140673bb8	0x140671220	0x14166c658	I practiced at the archery target.	Overview sentence: I practiced at the archery target.	对着箭靶练了练射箭。
+event	0x14066fe50	0x140673bb8	0x14067122c	0x14166c680	I had a sparring session.	Overview sentence: I had a sparring session.	跟人比划了一场。
+event	0x14066fe50	0x140673bb8	0x14067125b	0x14166d268	I was not able to petition for citizenship.	Overview sentence: I was not able to petition for citizenship.	没能申请在这里入籍。
+event	0x14066fe50	0x140673bb8	0x140671267	0x14166d298	I was not able to bring up the lack of jobs.	Overview sentence: I was not able to bring up the lack of jobs.	没能提一提没活可干的事。
+event	0x14066fe50	0x140673bb8	0x140671273	0x14166d1f8	I was not able to make suggestions about work allocations.	Overview sentence: I was not able to make suggestions about work allocations.	没能说说该怎么分派活儿。
+event	0x14066fe50	0x140673bb8	0x14067127f	0x14166d238	I was unable to request weapon production.	Overview sentence: I was unable to request weapon production.	没能提出让他们多造些武器。
+event	0x14066fe50	0x140673bb8	0x14067128b	0x14166d198	I could not find a priest to complain at.	Overview sentence: I could not find a priest to complain at.	想找祭司诉诉苦，却找不到人。
+event	0x14066fe50	0x140673bb8	0x140671297	0x14166d1c8	I could not find a priest to comfort me.	Overview sentence: I could not find a priest to comfort me.	想找祭司安慰安慰我，却找不到人。
+event	0x14066fe50	0x140673bb8	0x1406712a3	0x14166d128	I could not find anybody in charge to complain at.	Overview sentence: I could not find anybody in charge to complain at.	想找管事的人诉诉苦，却找不到人。
+event	0x14066fe50	0x140673bb8	0x1406712af	0x14166d160	I could not find anybody in charge to comfort me.	Overview sentence: I could not find anybody in charge to comfort me.	想找个管事的人安慰安慰我，却找不到人。
+event	0x14066fe50	0x140673bb8	0x1406712bb	0x14166d0e8	I've been on a long patrol.	Overview sentence: I've been on a long patrol.	这一趟巡逻走了好久。
+event	0x14066fe50	0x140673bb8	0x1406712c7	0x14166d108	I was nauseated by the sun.	Overview sentence: I was nauseated by the sun.	阳光晒得我反胃。
+event	0x14066fe50	0x140673bb8	0x1406712d3	0x14166d098	I've been out in the sunshine again after a long time away.	Overview sentence: I've been out in the sunshine again after a long time away.	隔了好久，才又见到阳光。
+event	0x14066fe50	0x140673bb8	0x1406712df	0x14166d0d8	I'm sleepy.	Overview sentence: I'm sleepy.	我困了。
+event	0x14066fe50	0x140673bb8	0x1406712eb	0x14166d060	I haven't slept for a very long time.	Overview sentence: I haven't slept for a very long time.	已经好久没合眼了。
+event	0x14066fe50	0x140673bb8	0x1406712f7	0x14166d088	I'm thirsty.	Overview sentence: I'm thirsty.	我渴了。
+event	0x14066fe50	0x140673bb8	0x140671303	0x14166d040	I'm dehydrated.	Overview sentence: I'm dehydrated.	我脱水了。
+event	0x14066fe50	0x140673bb8	0x14067130f	0x14166d050	I'm hungry.	Overview sentence: I'm hungry.	我饿了。
+event	0x14066fe50	0x140673bb8	0x14067131b	0x14166d4b0	I'm starving.	Overview sentence: I'm starving.	我快饿死了。
+event	0x14066fe50	0x140673bb8	0x14067133c	0x14166d4c0	I have been away from people for a long time.	Overview sentence: I have been away from people for a long time.	好久没跟人打交道了。
+event	0x14066fe50	0x140673bb8	0x140671348	0x14166d490	I need a drink.	Overview sentence: I need a drink.	我想喝一杯酒。
+event	0x14066fe50	0x140673bb8	0x140671362	0x14166d4a0	I must pray to 	memory-sentence: I must pray to {s}.	得向{s1}祈祷了。
+event	0x14066fe50	0x140673bb8	0x14067136e	0x14166d458	I need time to contemplate.	Overview sentence: I need time to contemplate.	得静下来好好想想了。
+event	0x14066fe50	0x140673bb8	0x14067137a	0x14166d478	I need something to do.	Overview sentence: I need something to do.	得找点事做。
+event	0x14066fe50	0x140673bb8	0x140671386	0x14166d3f8	It has been long time since I've done something creative.	Overview sentence: It has been long time since I've done something creative.	好久没动手创作点东西了。
+event	0x14066fe50	0x140673bb8	0x140671392	0x14166d438	I miss having art in my life.	Overview sentence: I miss having art in my life.	真想欣赏点艺术作品。
+event	0x14066fe50	0x140673bb8	0x14067139e	0x14166d3b0	I need some excitement in my life.	Overview sentence: I need some excitement in my life.	日子该过得刺激些才好。
+event	0x14066fe50	0x140673bb8	0x1406713aa	0x14166d3d8	I need to learn something new.	Overview sentence: I need to learn something new.	该学点新东西了。
+event	0x14066fe50	0x140673bb8	0x1406713b6	0x14166d368	I want to spend some time with family.	Overview sentence: I want to spend some time with family.	想多陪陪家人。
+event	0x14066fe50	0x140673bb8	0x1406713c2	0x14166d390	I want to see my friends.	Overview sentence: I want to see my friends.	我想见见朋友。
+event	0x14066fe50	0x140673bb8	0x1406713ce	0x14166d318	I'd like to hear somebody eloquent.	Overview sentence: I'd like to hear somebody eloquent.	想听听口才好的人讲讲话。
+event	0x14066fe50	0x140673bb8	0x1406713da	0x14166d340	I long to uphold the traditions.	Overview sentence: I long to uphold the traditions.	真想为老传统出份力。
+event	0x14066fe50	0x140673bb8	0x1406713e6	0x14166d2c8	I need to pause and reflect upon myself.	Overview sentence: I need to pause and reflect upon myself.	该静下来，好好想想自己的事了。
+event	0x14066fe50	0x140673bb8	0x1406713f2	0x14166d2f8	We must make merry again.	Overview sentence: We must make merry again.	咱们得再好好乐一场。
+event	0x14066fe50	0x140673bb8	0x1406713fe	0x14166cdf8	I wish to make something.	Overview sentence: I wish to make something.	想动手做点东西。
+event	0x14066fe50	0x140673bb8	0x14067140a	0x14166ce18	I must practice the fighting arts.	Overview sentence: I must practice the fighting arts.	得练练打斗的本事了。
+event	0x14066fe50	0x140673bb8	0x140671416	0x14166cda0	I need to perfect my skills.	Overview sentence: I need to perfect my skills.	这本事还得再练练。
+event	0x14066fe50	0x140673bb8	0x140671422	0x14166cdc0	I just want to slow down and take it easy for a while.	Overview sentence: I just want to slow down and take it easy for a while.	只想歇一歇，过几天清闲日子。
+event	0x14066fe50	0x140673bb8	0x14067142e	0x14166cd48	I long to make romance.	Overview sentence: I long to make romance.	真想谈场恋爱。
+event	0x14066fe50	0x140673bb8	0x14067143a	0x14166cd60	It would nice to get out in nature and see some creatures.	Overview sentence: It would nice to get out in nature and see some creatures.	要是能去野外走走，看看那里的动物就好了。
+event	0x14066fe50	0x140673bb8	0x140671446	0x14166cd18	I want to see a great beast.	Overview sentence: I want to see a great beast.	我想看看巨兽。
+event	0x14066fe50	0x140673bb8	0x140671452	0x14166cd38	I need more.	Overview sentence: I need more.	这些还不够，我还想要。
+event	0x14066fe50	0x140673bb8	0x14067145e	0x14166ccd8	I could really use a good meal.	Overview sentence: I could really use a good meal.	我真想好好吃上一顿。
+event	0x14066fe50	0x140673bb8	0x14067146a	0x14166ccf8	I just want to fight somebody.	Overview sentence: I just want to fight somebody.	我就是想找个人打一架。
+event	0x14066fe50	0x140673bb8	0x140671476	0x14166cc88	This place could really use some more trouble.	Overview sentence: This place could really use some more trouble.	这地方还得多闹点乱子才好。
+event	0x14066fe50	0x140673bb8	0x140671482	0x14166ccb8	I'm feeling argumentative.	Overview sentence: I'm feeling argumentative.	就想找人争上几句。
+event	0x14066fe50	0x140673bb8	0x14067148e	0x14166cc30	I need to wear fine things.	Overview sentence: I need to wear fine things.	我想穿得讲究些。
+event	0x14066fe50	0x140673bb8	0x14067149a	0x14166cc50	I need to get away from here and wander the world.	Overview sentence: I need to get away from here and wander the world.	该离开这里，到世界各地走走了。
+event	0x14066fe50	0x140673bb8	0x1406714a6	0x14166cbe8	I just wish to help somebody.	Overview sentence: I just wish to help somebody.	我只是想帮帮别人。
+event	0x14066fe50	0x140673bb8	0x1406714b2	0x14166cc08	I want to puzzle over something.	Overview sentence: I want to puzzle over something.	我想钻研点难题。
+event	0x14066fe50	0x140673bb8	0x1406714be	0x14166d008	I have unmet needs.	Overview sentence: I have unmet needs.	想要的还没都满足呢。
+event	0x14066fe50	0x140673bb8	0x1406714ca	0x14166d020	I've been injured badly.	Overview sentence: I've been injured badly.	我受了重伤。
+event	0x14066fe50	0x140673bb8	0x1406714d6	0x14166cfc0	I've been wounded.	Overview sentence: I've been wounded.	我受伤了。
+event	0x14066fe50	0x140673bb8	0x1406714f8	0x14166cf90	I couldn't sleep at all with all the noise.	Overview sentence: I couldn't sleep at all with all the noise.	吵得我根本睡不着。
+event	0x14066fe50	0x140673bb8	0x140671504	0x14166cf60	It was very hard to sleep with the noise.	Overview sentence: It was very hard to sleep with the noise.	这么吵，实在难以入睡。
+event	0x14066fe50	0x140673bb8	0x140671510	0x14166cfd8	I didn't sleep soundly due to the noise.	Overview sentence: I didn't sleep soundly due to the noise.	吵得我觉都睡不踏实。
+event	0x14066fe50	0x140673bb8	0x14067151c	0x14166cf20	I was able to rest up.	Overview sentence: I was able to rest up.	好好歇了一歇。
+event	0x14066fe50	0x140673bb8	0x140671528	0x14166cf38	I was caught in freakish weather.	Overview sentence: I was caught in freakish weather.	遇上了怪得出奇的天气。
+event	0x14066fe50	0x140673bb8	0x14067154e	0x14166cec0	It was raining on me.	Overview sentence: It was raining on me.	雨就这么淋在身上。
+event	0x14066fe50	0x140673bb8	0x14067155a	0x14166cf08	I've been rained on.	Overview sentence: I've been rained on.	我淋了雨。
+event	0x14066fe50	0x140673bb8	0x140671566	0x14166cef0	I was out in the rain.	Overview sentence: I was out in the rain.	出门淋了雨。
+event	0x14066fe50	0x140673bb8	0x14067158c	0x14166cea8	It was snowing on me.	Overview sentence: It was snowing on me.	雪都落到了身上。
+event	0x14066fe50	0x140673bb8	0x140671598	0x14166ce88	I was out in a blizzard.	Overview sentence: I was out in a blizzard.	出门碰上了暴风雪。
+event	0x14066fe50	0x140673bb8	0x1406715a4	0x14166ced8	I was in a snow storm.	Overview sentence: I was in a snow storm.	我遇上了暴风雪。
+event	0x14066fe50	0x140673bb8	0x1406715b0	0x14166ce40	I got caught in a miasma.	Overview sentence: I got caught in a miasma.	碰上了一团瘴气。
+event	0x14066fe50	0x140673bb8	0x1406715bc	0x14166ce60	I was caught in smoke underground.	Overview sentence: I was caught in smoke underground.	在地下遇上了浓烟。
+event	0x14066fe50	0x140673bb8	0x1406715c8	0x14166d9e8	I was close to a waterfall.	Overview sentence: I was close to a waterfall.	我到过一处瀑布旁。
+event	0x14066fe50	0x140673bb8	0x1406715d4	0x14166da08	I got caught in dust underground.	Overview sentence: I got caught in dust underground.	在地下遇上了漫天的粉尘。
+event	0x14066fe50	0x140673bb8	0x1406715e0	0x14166d988	I was considering the demands I've made.	Overview sentence: I was considering the demands I've made.	想了想自己提过的要求。
+event	0x14066fe50	0x140673bb8	0x1406715ec	0x14166d9b8	A criminal could not be properly punished.	Overview sentence: A criminal could not be properly punished.	有个罪犯没能受到应有的惩罚。
+event	0x14066fe50	0x140673bb8	0x1406715f8	0x14166d950	My punishment was reduced.	Overview sentence: My punishment was reduced.	给我的处罚减轻了。
+event	0x14066fe50	0x140673bb8	0x140671604	0x14166d970	I won the election.	Overview sentence: I won the election.	我当选了。
+event	0x14066fe50	0x140673bb8	0x140671610	0x14166d920	I was re-elected.	Overview sentence: I was re-elected.	我连任了。
+event	0x14066fe50	0x140673bb8	0x14067166b	0x14166d938	 has been recognized.	memory-sentence: {s} has been recognized.	{s1}得到了认可。
+event	0x14066fe50	0x140673bb8	0x1406716d8	0x14166d8f0	 will be recognized.	memory-sentence: {s} will be recognized.	{s1}将得到认可。
+event	0x14066fe50	0x140673bb8	0x1406716f6	0x14166d908	I can now reside in 	memory-sentence: I can now reside in {s}.	现在能住在{s1}了。
+event	0x14066fe50	0x140673bb8	0x140671713	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067171f	0x14166d8b8	I am now part of 	memory-sentence: I am now part of {s}.	我现在也是{s1}的一员了。
+event	0x14066fe50	0x140673bb8	0x14067173c	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671748	0x14166d8d0	I was denied residency in 	memory-sentence: I was denied residency in {s}.	没获准住在{s1}。
+event	0x14066fe50	0x140673bb8	0x140671751	0x14166d888	The temple petition for 	memory-sentence: The temple petition for {s} was rejected. | memory-sentence: The temple petition for {s} was ignored.	为{s1}建神殿的申请被拒绝了。 | 为{s1}建神殿的申请没人理。
+event	0x14066fe50	0x140673bb8	0x14067176e	0x14166d8a8	 was rejected.	memory-sentence: The temple petition for {s} was rejected. | memory-sentence: The guildhall petition for {s} was rejected.	为{s1}建神殿的申请被拒绝了。 | 为{s1}建公会大厅的申请被拒绝了。
+event	0x14066fe50	0x140673bb8	0x14067177a	0x14166d888	The temple petition for 	memory-sentence: The temple petition for {s} was rejected. | memory-sentence: The temple petition for {s} was ignored.	为{s1}建神殿的申请被拒绝了。 | 为{s1}建神殿的申请没人理。
+event	0x14066fe50	0x140673bb8	0x140671797	0x14166d848	 was ignored.	memory-sentence: The temple petition for {s} was ignored. | memory-sentence: The guildhall petition for {s} was ignored. | memory-sentence: The agreement to establish a temple for {s} was ignored. | memory-sentence: The agreement to establish a guildhall for {s} was ignored.	为{s1}建神殿的申请没人理。 | 为{s1}建公会大厅的申请没人理。 | 说好为{s1}建神殿，却没人管了。 | 说好为{s1}建公会大厅，却没人管了。
+event	0x14066fe50	0x140673bb8	0x1406717a3	0x14166d858	The agreement to establish a temple for 	memory-sentence: The agreement to establish a temple for {s} was abandoned. | memory-sentence: The agreement to establish a temple for {s} was ignored.	说好为{s1}建神殿，后来却没建。 | 说好为{s1}建神殿，却没人管了。
+event	0x14066fe50	0x140673bb8	0x1406717c0	0x14166dc30	 was abandoned.	memory-sentence: The agreement to establish a temple for {s} was abandoned. | memory-sentence: The agreement to establish a guildhall for {s} was abandoned.	说好为{s1}建神殿，后来却没建。 | 说好为{s1}建公会大厅，后来却没建。
+event	0x14066fe50	0x140673bb8	0x1406717cc	0x14166dc40	The guildhall petition for 	memory-sentence: The guildhall petition for {s} was rejected. | memory-sentence: The guildhall petition for {s} was ignored.	为{s1}建公会大厅的申请被拒绝了。 | 为{s1}建公会大厅的申请没人理。
+event	0x14066fe50	0x140673bb8	0x1406717d5	0x14166dc40	The guildhall petition for 	memory-sentence: The guildhall petition for {s} was rejected. | memory-sentence: The guildhall petition for {s} was ignored.	为{s1}建公会大厅的申请被拒绝了。 | 为{s1}建公会大厅的申请没人理。
+event	0x14066fe50	0x140673bb8	0x1406717de	0x14166dbe8	The agreement to establish a guildhall for 	memory-sentence: The agreement to establish a guildhall for {s} was abandoned. | memory-sentence: The agreement to establish a guildhall for {s} was ignored.	说好为{s1}建公会大厅，后来却没建。 | 说好为{s1}建公会大厅，却没人管了。
+event	0x14066fe50	0x140673bb8	0x1406717e7	0x14166dc18	I was rejected by 	memory-sentence: I was rejected by {s}.	{s1}拒绝了我。
+event	0x14066fe50	0x140673bb8	0x1406717f3	0x14166dbb0	My request was approved.	Overview sentence: My request was approved.	我提的请求答应下来了。
+event	0x14066fe50	0x140673bb8	0x1406717ff	0x14166dbd0	My request was ignored.	Overview sentence: My request was ignored.	我提的请求没人理。
+event	0x14066fe50	0x140673bb8	0x14067180b	0x14166db50	Nobody could be punished for failing to obey my commands.	Overview sentence: Nobody could be punished for failing to obey my commands.	我的命令没人听，却连个能罚的人都找不出。
+event	0x14066fe50	0x140673bb8	0x140671817	0x14166db90	My punishment was delayed.	Overview sentence: My punishment was delayed.	给我的刑罚迟迟没执行。
+event	0x14066fe50	0x140673bb8	0x140671823	0x14166db00	A criminal's punishment was delayed.	Overview sentence: A criminal's punishment was delayed.	有个罪犯的刑罚迟迟没有执行。
+event	0x14066fe50	0x140673bb8	0x14067182f	0x14166db28	There are not enough cages and chains.	Overview sentence: There are not enough cages and chains.	笼子和锁链都不够用。
+event	0x14066fe50	0x140673bb8	0x14067183b	0x14166dac8	My mandate was ignored.	Overview sentence: My mandate was ignored.	我的命令没人理会。
+event	0x14066fe50	0x140673bb8	0x140671847	0x14166dae0	A mandate deadline was missed.	Overview sentence: A mandate deadline was missed.	到了期限，命令还没办妥。
+event	0x14066fe50	0x140673bb8	0x140671853	0x14166da80	There wasn't enough work last season.	Overview sentence: There wasn't enough work last season.	上个季节没多少活可干。
+event	0x14066fe50	0x140673bb8	0x14067185f	0x14166daa8	I smashed up a building.	Overview sentence: I smashed up a building.	我砸毁了一座建筑。
+event	0x14066fe50	0x140673bb8	0x14067186b	0x14166da30	I toppled something over.	Overview sentence: I toppled something over.	我推倒了东西。
+event	0x14066fe50	0x140673bb8	0x140671877	0x14166da50	I have attained a higher rank of nobility.	Overview sentence: I have attained a higher rank of nobility.	我的爵位升了。
+event	0x14066fe50	0x140673bb8	0x140671883	0x14166d6b8	I have entered the nobility.	Overview sentence: I have entered the nobility.	我成为贵族了。
+event	0x14066fe50	0x140673bb8	0x14067188f	0x14166d6d8	I was knocked out by a cave-in.	Overview sentence: I was knocked out by a cave-in.	塌方把我砸昏了。
+event	0x14066fe50	0x140673bb8	0x14067189b	0x14166d690	My deadline was met.	Overview sentence: My deadline was met.	我吩咐的事按时办好了。
+event	0x14066fe50	0x140673bb8	0x1406718a7	0x14166d6a8	I am uncovered.	Overview sentence: I am uncovered.	连件遮身的衣服都没有。
+event	0x14066fe50	0x140673bb8	0x1406718b3	0x14166d660	I don't have a shirt.	Overview sentence: I don't have a shirt.	连件上衣都没得穿。
+event	0x14066fe50	0x140673bb8	0x1406718bf	0x14166d678	I have no shoes.	Overview sentence: I have no shoes.	连双鞋都没得穿。
+event	0x14066fe50	0x140673bb8	0x1406718cb	0x14166d600	I had to eat my beloved pet to survive.	Overview sentence: I had to eat my beloved pet to survive.	为了活命，我把心爱的宠物都吃了。
+event	0x14066fe50	0x140673bb8	0x1406718d7	0x14166d628	I had to eat one of my favorite animals to survive.	Overview sentence: I had to eat one of my favorite animals to survive.	为了活命，我把一只很喜欢的动物吃了。
+event	0x14066fe50	0x140673bb8	0x1406718e3	0x14166d5c8	I had to eat vermin to survive.	Overview sentence: I had to eat vermin to survive.	为了活命，连虫鼠都得吃。
+event	0x14066fe50	0x140673bb8	0x1406718ef	0x14166d5e8	I started a fist fight.	Overview sentence: I started a fist fight.	我先动手跟人打了一架。
+event	0x14066fe50	0x140673bb8	0x1406718fb	0x14166d580	I beat somebody as a punishment.	Overview sentence: I beat somebody as a punishment.	我打了人一顿，算是处罚。
+event	0x14066fe50	0x140673bb8	0x140671907	0x14166d5a8	I was beaten as a punishment.	Overview sentence: I was beaten as a punishment.	我挨了一顿打，算是受罚。
+event	0x14066fe50	0x140673bb8	0x140671913	0x14166d538	I was beat somebody with the hammer.	Overview sentence: I was beat somebody with the hammer.	我用锤子给人行了刑。
+event	0x14066fe50	0x140673bb8	0x14067191f	0x14166d560	I was beaten with the hammer.	Overview sentence: I was beaten with the hammer.	我受了锤刑。
+event	0x14066fe50	0x140673bb8	0x14067192b	0x14166d4f0	I could not find the hammer.	Overview sentence: I could not find the hammer.	行刑用的锤子找不到了。
+event	0x14066fe50	0x140673bb8	0x140671937	0x14166d510	I have been eating the same old food.	Overview sentence: I have been eating the same old food.	吃来吃去，总是那一种饭食。
+event	0x14066fe50	0x140673bb8	0x140671943	0x14166d820	I ate rotten food.	Overview sentence: I ate rotten food.	吃了些烂掉的食物。
+event	0x14066fe50	0x140673bb8	0x14067194f	0x14166d838	I put on a	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x140671977	0x14166d7c8	 truly splendid	memory-sentence: I put on a truly splendid item.	穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x140671983	0x14166d7d8	 item.	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x14067198f	0x14166d7f0	n exceptional	memory-sentence: I put on an exceptional item.	穿上了一件品质特别好的衣物。
+event	0x14066fe50	0x140673bb8	0x14067199b	0x14166d7d8	 item.	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719a7	0x14166d7e0	 superior	memory-sentence: I put on a superior item.	穿上了一件品质上等的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719b6	0x14166d7d8	 item.	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719c2	0x14166d810	 finely-crafted	memory-sentence: I put on a finely-crafted item.	穿上了一件做得很精致的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719d1	0x14166d7d8	 item.	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719dd	0x14166d800	 well-crafted	memory-sentence: I put on a well-crafted item.	穿上了一件做得不错的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719ec	0x14166d7d8	 item.	memory-sentence: I put on a well-crafted item. | memory-sentence: I put on a finely-crafted item. | memory-sentence: I put on a superior item. | memory-sentence: I put on an exceptional item. | memory-sentence: I put on a truly splendid item.	穿上了一件做得不错的衣物。 | 穿上了一件做得很精致的衣物。 | 穿上了一件品质上等的衣物。 | 穿上了一件品质特别好的衣物。 | 穿上了一件品质好极了的衣物。
+event	0x14066fe50	0x140673bb8	0x1406719f8	0x14166d7a8	I ate a meal.	Overview sentence: I ate a meal.	我吃了一顿饭。
+event	0x14066fe50	0x140673bb8	0x140671a04	0x14166d7b8	I had a drink.	Overview sentence: I had a drink.	我喝了一杯。
+event	0x14066fe50	0x140673bb8	0x140671a10	0x14166d768	I don't have enough chests.	Overview sentence: I don't have enough chests.	箱子不够用。
+event	0x14066fe50	0x140673bb8	0x140671a1c	0x14166d788	I don't have enough cabinets.	Overview sentence: I don't have enough cabinets.	橱柜不够用。
+event	0x14066fe50	0x140673bb8	0x140671a28	0x14166d718	I don't have enough weapon racks.	Overview sentence: I don't have enough weapon racks.	武器架不够用。
+event	0x14066fe50	0x140673bb8	0x140671a34	0x14166d740	I don't have enough armor stands.	Overview sentence: I don't have enough armor stands.	盔甲架不够用。
+event	0x14066fe50	0x140673bb8	0x140671a40	0x14166d6f8	Somebody has better 	memory-sentence: Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。
+event	0x14066fe50	0x140673bb8	0x140671a5f	0x14166d710	burial	memory-room: burial	安葬
+event	0x14066fe50	0x140673bb8	0x140671a6e	0x14166e1b0	 arrangements than I do.	memory-sentence: Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。
+event	0x14066fe50	0x140673bb8	0x140671a7a	0x14166e1f4	dining	memory-room: dining	吃饭
+event	0x14066fe50	0x140673bb8	0x140671a89	0x14166e1b0	 arrangements than I do.	memory-sentence: Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。
+event	0x14066fe50	0x140673bb8	0x140671a95	0x14166e200	sleeping	memory-room: sleeping	睡觉
+event	0x14066fe50	0x140673bb8	0x140671aa4	0x14166e1b0	 arrangements than I do.	memory-sentence: Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。
+event	0x14066fe50	0x140673bb8	0x140671ab0	0x14162fa44	office	memory-room: office	办公
+event	0x14066fe50	0x140673bb8	0x140671abf	0x14166e1b0	 arrangements than I do.	memory-sentence: Somebody has better {s} arrangements than I do.	别人的{s1}安排得比我的好。
+event	0x14066fe50	0x140673bb8	0x140671acb	0x14166e1d0	There aren't enough dining tables.	Overview sentence: There aren't enough dining tables.	餐桌不够用。
+event	0x14066fe50	0x140673bb8	0x140671ad7	0x14166e178	I ate at a crowded table.	Overview sentence: I ate at a crowded table.	跟人挤着一张桌子吃了饭。
+event	0x14066fe50	0x140673bb8	0x140671ae3	0x14166e198	I ate in a dining room.	Overview sentence: I ate in a dining room.	在餐厅吃了顿饭。
+event	0x14066fe50	0x140673bb8	0x140671aef	0x14166e138	I didn't have a dining room.	Overview sentence: I didn't have a dining room.	连个吃饭的餐厅都没有。
+event	0x14066fe50	0x140673bb8	0x140671afb	0x14166e158	There aren't enough chairs.	Overview sentence: There aren't enough chairs.	椅子不够用。
+event	0x14066fe50	0x140673bb8	0x140671b07	0x14166e0f0	I formed a bond with my animal training partner.	Overview sentence: I formed a bond with my animal training partner.	我跟一起训练的动物处出感情了。
+event	0x14066fe50	0x140673bb8	0x140671b13	0x14166e128	I was rescued.	Overview sentence: I was rescued.	有人救了我。
+event	0x14066fe50	0x140673bb8	0x140671b1f	0x14166e0b0	I brought somebody to rest in bed.	Overview sentence: I brought somebody to rest in bed.	我把人送到床上休息去了。
+event	0x14066fe50	0x140673bb8	0x140671b4d	0x14166e0d8	I felled a tree.	Overview sentence: I felled a tree.	我砍倒了一棵树。
+event	0x14066fe50	0x140673bb8	0x140671b59	0x14166e070	I slaughtered an animal.	Overview sentence: I slaughtered an animal.	我屠宰了一只动物。
+event	0x14066fe50	0x140673bb8	0x140671b65	0x14166e090	I put a creature in a cage.	Overview sentence: I put a creature in a cage.	我把一只生物关进了笼子。
+event	0x14066fe50	0x140673bb8	0x140671b71	0x14166e038	I chained up a creature.	Overview sentence: I chained up a creature.	我用链条拴住了一只生物。
+event	0x14066fe50	0x140673bb8	0x140671b7d	0x14166e058	I gelded a creature.	Overview sentence: I gelded a creature.	我阉割了一只生物。
+event	0x14066fe50	0x140673bb8	0x140671b89	0x14166e3d8	I put a piece on display.	Overview sentence: I put a piece on display.	把一件作品摆出来供人欣赏了。
+event	0x14066fe50	0x140673bb8	0x140671b95	0x14166e3f8	I finished up some work.	Overview sentence: I finished up some work.	手头的活做完了一些。
+event	0x14066fe50	0x140673bb8	0x140671ba1	0x14166e388	The tax collector's escorts stole my property.	Overview sentence: The tax collector's escorts stole my property.	跟着税吏来的护卫偷了我的东西。
+event	0x14066fe50	0x140673bb8	0x140671bad	0x14166e3b8	I lost some property to taxes.	Overview sentence: I lost some property to taxes.	缴税交出去一些财物。
+event	0x14066fe50	0x140673bb8	0x140671bb9	0x14166e328	I do not have adequate protection.	Overview sentence: I do not have adequate protection.	身上的防护还不够。
+event	0x14066fe50	0x140673bb8	0x140671bc5	0x14166e350	I was unable to reach a room during tax collection.	Overview sentence: I was unable to reach a room during tax collection.	收税时，有间房怎么也进不去。
+event	0x14066fe50	0x140673bb8	0x140671bd7	0x14166e2d8	I was misinformed about a room during tax collection.	Overview sentence: I was misinformed about a room during tax collection.	收税时，有人把房间的情况报错了。
+event	0x14066fe50	0x140673bb8	0x140671bf1	0x14166e310	I pleased the nobility.	Overview sentence: I pleased the nobility.	贵族对我做的事很满意。
+event	0x14066fe50	0x140673bb8	0x140671c0b	0x14166e298	Tax collection went smoothly.	Overview sentence: Tax collection went smoothly.	税收得很顺利。
+event	0x14066fe50	0x140673bb8	0x140671c25	0x14166e2b8	I disappointed the nobility.	Overview sentence: I disappointed the nobility.	贵族对我做的事很失望。
+event	0x14066fe50	0x140673bb8	0x140671c3f	0x14166e268	The tax collection did not go smoothly.	Overview sentence: The tax collection did not go smoothly.	税收得不顺利。
+event	0x14066fe50	0x140673bb8	0x140671c59	0x14166e290	I made 	memory-sentence: I made {s}.	交到了{s1}。
+event	0x14066fe50	0x140673bb8	0x140671c70	0x14166e248	friends with 	memory-made: friends with {s}	{s1}这个朋友
+event	0x14066fe50	0x140673bb8	0x140671c79	0x14166e258	a new friend	memory-made: a new friend	一个新朋友
+event	0x14066fe50	0x140673bb8	0x140671c90	0x14166e210	I got into an argument	memory-sentence: I got into an argument. | memory-sentence: I got into an argument with {s}. | memory-sentence: I got into an argument with {s} {s}.	跟人吵了一架。 | 跟{s1}吵了一架。 | 跟{s1}{s2}吵了一架。
+event	0x14066fe50	0x140673bb8	0x140671ca8	0x1415ee5e0	 with 	memory-sentence: {s} escalated a conflict with {s}. | memory-sentence: I am together with my {s}. | memory-sentence: I am reunited with my {s}. | memory-sentence: I was reunited with {s}. | memory-sentence: The body of {s} decayed without burial. | memory-sentence: I got into an argument with {s}. | memory-sentence: I played with {s}. | memory-sentence: I have communed with {s}. | memory-sentence: I have communed with {s} in this holy place. | memory-sentence: I have communed with {s} in this dubious place. | memory-made: friends with {s} | memory-sentence: I am together with my {s} {s}. | memory-sentence: I am reunited with my {s} {s}. | memory-sentence: I got into an argument with {s} {s}. | memory-reunion-core: {s} was reunited with {s} | memory-reunion-core: You were reunited with {s}	{s1}跟{s2}闹得更厉害了。 | 跟我的{s1}在一起了。 | 跟我的{s1}重逢了。 | 我跟{s1}重逢了。 | {s1}的尸体没人埋，都烂了。 | 跟{s1}吵了一架。 | 玩了玩{s1}。 | 跟{s1}沟通过了。 | 在这圣地跟{s1}沟通过了。 | 在这不太像样的地方跟{s1}沟通过了。 | {s1}这个朋友 | 跟我的{s1}{s2}在一起了。 | 跟我的{s1}{s2}重逢了。 | 跟{s1}{s2}吵了一架。 | {s1}跟{s2}重逢了 | 你跟{s1}重逢了
+event	0x14066fe50	0x140673bb8	0x140671ced	0x14166e228	I am forming a grudge against 	memory-sentence: I am forming a grudge against {s}.	我开始记恨{s1}了。
+event	0x14066fe50	0x140673bb8	0x140671d01	0x1415ed578	somebody	memory-person: somebody	有人
+event	0x14066fe50	0x140673bb8	0x140671d1b	0x14166de10	I was accosted by 	memory-sentence: I was accosted by {s}.	{s1}来找我麻烦了。
+event	0x14066fe50	0x140673bb8	0x140671dce	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671e2f	0x14166cb00	I was near to 	memory-sentence: I was near to a caged {s}. | memory-sentence: I was near to {s}. | memory-sentence: I was near to a {s}. | memory-sentence: I was near to my own {s}. | memory-sentence: I was near to a arranged {s}. | memory-sentence: I was near to my own arranged {s}.	靠近过关在笼子里的{s1}。 | 靠近过{s1}。 | 靠近过一个{s1}。 | 靠近过自己的{s1}。 | 靠近过一个摆放好的{s1}。 | 靠近过自己摆放好的{s1}。
+event	0x14066fe50	0x140673bb8	0x140671e82	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671ea0	0x14166de28	I was pestered by 	memory-sentence: I was pestered by {s}.	被{s1}缠上了。
+event	0x14066fe50	0x140673bb8	0x140671eda	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671f26	0x14166dde8	 was given away.	memory-sentence: {s} was given away.	{s1}被送人了。
+event	0x14066fe50	0x140673bb8	0x140671f44	0x14166de00	I acquired 	memory-sentence: I acquired {s}.	得到了{s1}。
+event	0x14066fe50	0x140673bb8	0x140671f61	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140671f6d	0x14166ddb8	I acquired something.	Overview sentence: I acquired something.	我得到了些东西。
+event	0x14066fe50	0x140673bb8	0x140671f79	0x14166ddd0	I adopted a new pet.	Overview sentence: I adopted a new pet.	我收养了一只新宠物。
+event	0x14066fe50	0x140673bb8	0x140671f85	0x14166dd90	I played with my pet.	Overview sentence: I played with my pet.	跟宠物玩了一会儿。
+event	0x14066fe50	0x140673bb8	0x140671f91	0x14166dda8	I was confined.	Overview sentence: I was confined.	我被关起来了。
+event	0x14066fe50	0x140673bb8	0x140671f9d	0x14166dd48	There was a scholarly lecture in 	memory-sentence: There was a scholarly lecture in {s}.	{s1}办了场学术讲座。
+event	0x14066fe50	0x140673bb8	0x140671fa9	0x14166dd70	There was a performance in 	memory-sentence: There was a performance in {s}.	{s1}办了场表演。
+event	0x14066fe50	0x140673bb8	0x140671fb5	0x14166dd28	I was expelled.	Overview sentence: I was expelled.	我被赶走了。
+event	0x14066fe50	0x140673bb8	0x140671fc1	0x1416442d8	My 	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140671ff8	0x14166dd38	 was expelled.	memory-sentence: My {s} was expelled.	我的{s1}被赶走了。
+event	0x14066fe50	0x140673bb8	0x140672016	0x14166dcd8	A child was turned away from sanctuary.	Overview sentence: A child was turned away from sanctuary.	有个孩子想寻求庇护，却被赶了出去。
+event	0x14066fe50	0x140673bb8	0x140672022	0x14166dd00	Somebody dead was convicted of a crime.	Overview sentence: Somebody dead was convicted of a crime.	给一个死者定了罪。
+event	0x14066fe50	0x140673bb8	0x14067202e	0x14166dc60	An animal was convicted of a crime.	Overview sentence: An animal was convicted of a crime.	给一只动物定了罪。
+event	0x14066fe50	0x140673bb8	0x14067203a	0x14166dc90	The victim of a crime was somehow convicted of that very offense.	Overview sentence: The victim of a crime was somehow convicted of that very offense.	明明是受害者，反倒被判成了犯人。
+event	0x14066fe50	0x140673bb8	0x140672046	0x14166dfc0	The criminal was convicted and I received justice.	Overview sentence: The criminal was convicted and I received justice.	罪犯定了罪，我也讨回了公道。
+event	0x14066fe50	0x140673bb8	0x140672052	0x14166dff8	My family received justice when the criminal was convicted.	Overview sentence: My family received justice when the criminal was convicted.	罪犯定了罪，家里也讨回了公道。
+event	0x14066fe50	0x140673bb8	0x14067205e	0x14166df98	I had a bath.	Overview sentence: I had a bath.	我洗了澡。
+event	0x14066fe50	0x140673bb8	0x14067206a	0x14166dfa8	I had a bath with soap!	Overview sentence: I had a bath with soap!	洗澡还用上了肥皂！
+event	0x14066fe50	0x140673bb8	0x140672076	0x14166df58	I killed somebody in a sparring accident.	Overview sentence: I killed somebody in a sparring accident.	切磋时失了手，把人打死了。
+event	0x14066fe50	0x140673bb8	0x140672082	0x14166df88	I was attacked.	Overview sentence: I was attacked.	有人袭击我了。
+event	0x14066fe50	0x140673bb8	0x140672096	0x14166df18	I was attacked by the dead.	Overview sentence: I was attacked by the dead.	死尸来袭击我了。
+event	0x14066fe50	0x140673bb8	0x1406720a2	0x14166df38	I was attacked by my own dead 	memory-sentence: I was attacked by my own dead {s}.	我死去的{s1}竟然袭击了我。
+event	0x14066fe50	0x140673bb8	0x1406720d6	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406720f4	0x14166ded0	I have been drinking the same old booze.	Overview sentence: I have been drinking the same old booze.	喝来喝去，总是那一种酒。
+event	0x14066fe50	0x140673bb8	0x140672100	0x14166df00	I drank bloody water.	Overview sentence: I drank bloody water.	喝的水里带着血。
+event	0x14066fe50	0x140673bb8	0x14067210c	0x14166deb0	I drank slime.	Overview sentence: I drank slime.	我喝了粘液。
+event	0x14066fe50	0x140673bb8	0x140672118	0x14166dec0	I drank vomit.	Overview sentence: I drank vomit.	我喝了呕吐物。
+event	0x14066fe50	0x140673bb8	0x140672124	0x14166de78	I drank gooey water.	Overview sentence: I drank gooey water.	喝的水黏糊糊的。
+event	0x14066fe50	0x140673bb8	0x140672130	0x14166de90	I drank water mixed with ichor.	Overview sentence: I drank water mixed with ichor.	喝的水里混着异血。
+event	0x14066fe50	0x140673bb8	0x14067213c	0x14166de40	I drank water mixed with pus.	Overview sentence: I drank water mixed with pus.	喝的水里混着脓。
+event	0x14066fe50	0x140673bb8	0x140672148	0x14166de60	I drank foul water.	Overview sentence: I drank foul water.	我喝了污水。
+event	0x14066fe50	0x140673bb8	0x140672154	0x14166e9c0	I had a drink, but it had gone bad.	Overview sentence: I had a drink, but it had gone bad.	喝的酒已经变质了。
+event	0x14066fe50	0x140673bb8	0x140672160	0x14166e9e8	I drank water without a well.	Overview sentence: I drank water without a well.	没有井水，只能找别处的水喝。
+event	0x14066fe50	0x140673bb8	0x14067216c	0x14166e980	I had a drink without using a goblet.	Overview sentence: I had a drink without using a goblet.	喝酒连个酒杯都没用上。
+event	0x14066fe50	0x140673bb8	0x140672178	0x14166e9a8	I was near to a caged 	memory-sentence: I was near to a caged {s}.	靠近过关在笼子里的{s1}。
+event	0x14066fe50	0x140673bb8	0x1406721b2	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406721d0	0x14166e9a8	I was near to a caged 	memory-sentence: I was near to a caged {s}.	靠近过关在笼子里的{s1}。
+event	0x14066fe50	0x140673bb8	0x14067220a	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672228	0x14166e948	I slept without a proper room.	Overview sentence: I slept without a proper room.	睡觉连间像样的房都没有。
+event	0x14066fe50	0x140673bb8	0x140672234	0x14166e968	I slept in a bedroom.	Overview sentence: I slept in a bedroom.	在卧室里睡了一觉。
+event	0x14066fe50	0x140673bb8	0x140672240	0x14166e918	I slept on the floor.	Overview sentence: I slept on the floor.	我睡在地板上。
+event	0x14066fe50	0x140673bb8	0x14067224c	0x14166e930	I slept in the mud.	Overview sentence: I slept in the mud.	我睡在泥浆里。
+event	0x14066fe50	0x140673bb8	0x140672258	0x14166e8e0	I slept in the grass.	Overview sentence: I slept in the grass.	我睡在草丛里。
+event	0x14066fe50	0x140673bb8	0x140672264	0x14166e8f8	I slept on a rough cave floor.	Overview sentence: I slept on a rough cave floor.	睡在洞穴里，地上坑坑洼洼的。
+event	0x14066fe50	0x140673bb8	0x140672270	0x14166e8b8	I slept on rocks.	Overview sentence: I slept on rocks.	我睡在石头上。
+event	0x14066fe50	0x140673bb8	0x14067227c	0x14166e8d0	I slept on ice.	Overview sentence: I slept on ice.	我睡在冰上。
+event	0x14066fe50	0x140673bb8	0x140672288	0x14166e880	I slept in the dirt.	Overview sentence: I slept in the dirt.	我睡在泥地上。
+event	0x14066fe50	0x140673bb8	0x140672294	0x14166e898	I slept on a pile of driftwood.	Overview sentence: I slept on a pile of driftwood.	睡觉的地方是一堆浮木。
+event	0x14066fe50	0x140673bb8	0x1406722a0	0x14166e858	My artwork was defaced.	Overview sentence: My artwork was defaced.	我的作品被糟蹋了。
+event	0x14066fe50	0x140673bb8	0x1406722ac	0x14166e870	I was evicted.	Overview sentence: I was evicted.	我被赶了出去。
+event	0x14066fe50	0x140673bb8	0x1406722b8	0x14166eb48	I taught 	memory-sentence: I taught {s}.	教了教{s1}。
+event	0x14066fe50	0x140673bb8	0x14067230a	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672334	0x14166eb48	I taught 	memory-sentence: I taught {s}.	教了教{s1}。
+event	0x14066fe50	0x140673bb8	0x14067236e	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067238c	0x14166eb58	I learned about 	memory-sentence: I learned about {s}.	学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x1406723de	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672408	0x14166eb58	I learned about 	memory-sentence: I learned about {s}.	学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x140672442	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067247a	0x14166eb20	I wrote 	memory-sentence: I wrote {s}.	写了{s1}。
+event	0x14066fe50	0x140673bb8	0x14067249b	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406724c1	0x14166eb08	I read 	memory-sentence: I read {s}.	读了{s1}。
+event	0x14066fe50	0x140673bb8	0x1406724e4	0x14166eb10	I learned 	memory-sentence: I learned {s}. | memory-sentence: I learned about {s}.	学会了{s1}。 | 学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x1406724ed	0x14166eb30	an untitled composition	memory-work: an untitled composition	一部没起名的作品
+event	0x14066fe50	0x140673bb8	0x1406724f9	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672510	0x14166eb10	I learned 	memory-sentence: I learned {s}. | memory-sentence: I learned about {s}.	学会了{s1}。 | 学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x140672542	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067254e	0x14166eae0	powerful knowledge	memory-knowledge: powerful knowledge	强大的知识
+event	0x14066fe50	0x140673bb8	0x14067255a	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672580	0x14166eb10	I learned 	memory-sentence: I learned {s}. | memory-sentence: I learned about {s}.	学会了{s1}。 | 学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x1406725b8	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406725f0	0x14166eb10	I learned 	memory-sentence: I learned {s}. | memory-sentence: I learned about {s}.	学会了{s1}。 | 学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x140672628	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672660	0x14166eb10	I learned 	memory-sentence: I learned {s}. | memory-sentence: I learned about {s}.	学会了{s1}。 | 学到了关于{s1}的知识。
+event	0x14066fe50	0x140673bb8	0x140672698	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406726b6	0x14166eaf8	The forces of 	memory-sentence [$name,memory-location]: The forces of {s} have shattered against {s}.; entity 0x140b92900 then site 0x140b93930	{s1}的部队在{s2}溃败了。
+event	0x14066fe50	0x140673bb8	0x1406726d3	0x14166ea98	 have shattered against 	memory-sentence [$name,memory-location]: The forces of {s} have shattered against {s}.; entity 0x140b92900 then site 0x140b93930	{s1}的部队在{s2}溃败了。
+event	0x14066fe50	0x140673bb8	0x1406726ee	0x14166eab8	I've made a breakthrough regarding 	memory-sentence: I've made a breakthrough regarding {s}.	对{s1}有了新的发现。
+event	0x14066fe50	0x140673bb8	0x140672740	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067276a	0x14166ea60	I just don't understand 	memory-sentence: I just don't understand {s}.	就是弄不懂{s1}。
+event	0x14066fe50	0x140673bb8	0x1406727b9	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406727e3	0x14166ea80	I've been discussing 	memory-sentence: I've been discussing {s}.	最近在跟人讨论{s1}。
+event	0x14066fe50	0x140673bb8	0x140672832	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067285c	0x14166ea30	I've been mulling over 	memory-sentence: I've been mulling over {s}.	最近一直在琢磨{s1}。
+event	0x14066fe50	0x140673bb8	0x1406728ab	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406728df	0x14166ea48	I gave birth to 	memory-sentence: I gave birth to {s}.	我生下了{s1}。
+event	0x14066fe50	0x140673bb8	0x140672926	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067295d	0x14166e540	I have become a parent	memory-sentence: I have become a parent of {s}. | memory-sentence: I have become a parent.	我有{s1}了。 | 我有孩子了。
+event	0x14066fe50	0x140673bb8	0x14067297a	0x1415eb518	 of 	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x1406729d1	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406729e8	0x14166ea18	I have new siblings.	Overview sentence: I have new siblings.	家里又添了弟弟妹妹。
+event	0x14066fe50	0x140673bb8	0x1406729f4	0x14166e528	I have a new sibling.	Overview sentence: I have a new sibling.	家里新添了个弟弟或妹妹。
+event	0x14066fe50	0x140673bb8	0x140672a00	0x14166ea08	I got married.	Overview sentence: I got married.	我结婚了。
+event	0x14066fe50	0x140673bb8	0x140672a0c	0x14166e4f8	I received water.	Overview sentence: I received water.	有人给我送水了。
+event	0x14066fe50	0x140673bb8	0x140672a18	0x14166e510	I gave somebody water.	Overview sentence: I gave somebody water.	我给人送水了。
+event	0x14066fe50	0x140673bb8	0x140672a24	0x14166e4c8	I received food.	Overview sentence: I received food.	有人给我送饭了。
+event	0x14066fe50	0x140673bb8	0x140672a30	0x14166e4e0	I gave somebody food.	Overview sentence: I gave somebody food.	我给人送饭了。
+event	0x14066fe50	0x140673bb8	0x140672a6f	0x14166e4a0	There was an incident.	Overview sentence: There was an incident.	出了一件事。
+event	0x14066fe50	0x140673bb8	0x140672a7b	0x14166e4b8	The body of 	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672ab3	0x14166e484	my pet	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672ac2	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672ace	0x14166e490	my spouse	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672add	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672ae9	0x14166e468	my lover	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672af8	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b04	0x14166e478	my sibling	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b13	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b1f	0x14166e448	my mother	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b2e	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b3a	0x14166e458	my father	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b49	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b55	0x14166e418	my child	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b64	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b70	0x14166e428	my animal training partner	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b7f	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672b8b	0x141647048	my friend	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672b9a	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672ba6	0x14166e828	my acquaintance	memory-sentence native assembly	
+event	0x14066fe50	0x140673bb8	0x140672bb5	0x14166e838	 decayed without burial.	memory-sentence: The body of {s} decayed without burial.	{s1}的尸体没人埋，都烂了。
+event	0x14066fe50	0x140673bb8	0x140672bd7	0x14166e7c0	I had an intellectual discussion with my spouse.	Overview sentence: I had an intellectual discussion with my spouse.	和伴侣聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672be3	0x14166e7f8	I had an intellectual discussion with my lover.	Overview sentence: I had an intellectual discussion with my lover.	和恋人聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672bef	0x14166e750	I had an intellectual discussion with my sibling.	Overview sentence: I had an intellectual discussion with my sibling.	和兄弟姐妹聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672bfb	0x14166e788	I had an intellectual discussion with my mother.	Overview sentence: I had an intellectual discussion with my mother.	和母亲聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c07	0x14166e6e8	I had an intellectual discussion with my father.	Overview sentence: I had an intellectual discussion with my father.	和父亲聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c13	0x14166e720	I had an intellectual discussion with my child.	Overview sentence: I had an intellectual discussion with my child.	和孩子聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c1f	0x14166e678	I had an intellectual discussion with my friend.	Overview sentence: I had an intellectual discussion with my friend.	和朋友聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c2b	0x14166e6b0	I had an intellectual discussion with an acquaintance.	Overview sentence: I had an intellectual discussion with an acquaintance.	和一个熟人聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c37	0x14166e618	I had an intellectual discussion with somebody.	Overview sentence: I had an intellectual discussion with somebody.	和别人聊了聊学问。
+event	0x14066fe50	0x140673bb8	0x140672c59	0x14166e648	I shared a personal insight with my spouse.	Overview sentence: I shared a personal insight with my spouse.	把自己的一点体会讲给伴侣听了。
+event	0x14066fe50	0x140673bb8	0x140672c65	0x14166e5b8	I shared a personal insight with my lover.	Overview sentence: I shared a personal insight with my lover.	把自己的一点体会讲给恋人听了。
+event	0x14066fe50	0x140673bb8	0x140672c71	0x14166e5e8	I shared a personal insight with my sibling.	Overview sentence: I shared a personal insight with my sibling.	把自己的一点体会讲给兄弟姐妹听了。
+event	0x14066fe50	0x140673bb8	0x140672c7d	0x14166e558	I shared a personal insight with my mother.	Overview sentence: I shared a personal insight with my mother.	把自己的一点体会讲给母亲听了。
+event	0x14066fe50	0x140673bb8	0x140672c89	0x14166e588	I shared a personal insight with my father.	Overview sentence: I shared a personal insight with my father.	把自己的一点体会讲给父亲听了。
+event	0x14066fe50	0x140673bb8	0x140672c95	0x14166f1d0	I shared a personal insight with my child.	Overview sentence: I shared a personal insight with my child.	把自己的一点体会讲给孩子听了。
+event	0x14066fe50	0x140673bb8	0x140672ca1	0x14166f200	I shared a personal insight with my friend.	Overview sentence: I shared a personal insight with my friend.	把自己的一点体会讲给朋友听了。
+event	0x14066fe50	0x140673bb8	0x140672cad	0x14166f168	I shared a personal insight with an acquaintance.	Overview sentence: I shared a personal insight with an acquaintance.	把自己的一点体会讲给一个熟人听了。
+event	0x14066fe50	0x140673bb8	0x140672cb9	0x14166f1a0	I shared a personal insight with somebody.	Overview sentence: I shared a personal insight with somebody.	把自己的一点体会讲给别人听了。
+event	0x14066fe50	0x140673bb8	0x140672cdb	0x14166f108	My spouse shared a personal insight with me.	Overview sentence: My spouse shared a personal insight with me.	伴侣跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672ce7	0x14166f138	My lover shared a personal insight with me.	Overview sentence: My lover shared a personal insight with me.	恋人跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672cf3	0x14166f0a8	My sibling shared a personal insight with me.	Overview sentence: My sibling shared a personal insight with me.	兄弟姐妹跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672cff	0x14166f0d8	My mother shared a personal insight with me.	Overview sentence: My mother shared a personal insight with me.	母亲跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d0b	0x14166f048	My father shared a personal insight with me.	Overview sentence: My father shared a personal insight with me.	父亲跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d17	0x14166f078	My child shared a personal insight with me.	Overview sentence: My child shared a personal insight with me.	孩子跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d23	0x14166efe0	My friend shared a personal insight with me.	Overview sentence: My friend shared a personal insight with me.	朋友跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d2f	0x14166f010	An acquaintance shared a personal insight with me.	Overview sentence: An acquaintance shared a personal insight with me.	有个熟人跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d3b	0x14166ef88	Somebody shared a personal insight with me.	Overview sentence: Somebody shared a personal insight with me.	有人跟我讲了讲自己的体会。
+event	0x14066fe50	0x140673bb8	0x140672d5d	0x14166efb8	I discussed my problems with my spouse.	Overview sentence: I discussed my problems with my spouse.	跟伴侣聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672d69	0x14166ef30	I discussed my problems with my lover.	Overview sentence: I discussed my problems with my lover.	跟恋人聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672d75	0x14166ef58	I discussed my problems with my sibling.	Overview sentence: I discussed my problems with my sibling.	跟兄弟姐妹聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672d81	0x14166f4a8	I discussed my problems with my mother.	Overview sentence: I discussed my problems with my mother.	跟母亲聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672d8d	0x14166f4d0	I discussed my problems with my father.	Overview sentence: I discussed my problems with my father.	跟父亲聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672d99	0x14166f458	I discussed my problems with my child.	Overview sentence: I discussed my problems with my child.	跟孩子聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672da5	0x14166f480	I discussed my problems with my friend.	Overview sentence: I discussed my problems with my friend.	跟朋友聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672db1	0x14166f400	I discussed my problems with an acquaintance.	Overview sentence: I discussed my problems with an acquaintance.	跟一个熟人聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672dbd	0x14166f430	I discussed my problems with somebody.	Overview sentence: I discussed my problems with somebody.	跟别人聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672ddf	0x14166f3a0	My spouse discussed their problems with me.	Overview sentence: My spouse discussed their problems with me.	伴侣跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672deb	0x14166f3d0	My lover discussed their problems with me.	Overview sentence: My lover discussed their problems with me.	恋人跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672df7	0x14166f340	My sibling discussed their problems with me.	Overview sentence: My sibling discussed their problems with me.	兄弟姐妹跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e03	0x14166f370	My mother discussed their problems with me.	Overview sentence: My mother discussed their problems with me.	母亲跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e0f	0x14166f2e0	My father discussed their problems with me.	Overview sentence: My father discussed their problems with me.	父亲跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e1b	0x14166f310	My child discussed their problems with me.	Overview sentence: My child discussed their problems with me.	孩子跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e27	0x14166f278	My friend discussed their problems with me.	Overview sentence: My friend discussed their problems with me.	朋友跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e33	0x14166f2a8	An acquaintance discussed their problems with me.	Overview sentence: An acquaintance discussed their problems with me.	有个熟人跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e3f	0x14166f230	Somebody discussed their problems with me.	Overview sentence: Somebody discussed their problems with me.	有人跟我聊了聊自己的烦恼。
+event	0x14066fe50	0x140673bb8	0x140672e6d	0x14166f260	I visited with my pet.	Overview sentence: I visited with my pet.	我陪了陪宠物。
+event	0x14066fe50	0x140673bb8	0x140672e79	0x14166ece0	I talked to my spouse.	Overview sentence: I talked to my spouse.	和伴侣聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672e85	0x14166ecf8	I talked to my lover.	Overview sentence: I talked to my lover.	和恋人聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672e91	0x14166ecb0	I talked to my sibling.	Overview sentence: I talked to my sibling.	和兄弟姐妹聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672e9d	0x14166ecc8	I talked to my mother.	Overview sentence: I talked to my mother.	和母亲聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672ea9	0x14166ec80	I talked to my father.	Overview sentence: I talked to my father.	和父亲聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672eb5	0x14166ec98	I talked to my child.	Overview sentence: I talked to my child.	和孩子聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672ec1	0x14166ec38	I visited with my animal training partner.	Overview sentence: I visited with my animal training partner.	跟一起训练的动物待了一会儿。
+event	0x14066fe50	0x140673bb8	0x140672ecd	0x14166ec68	I talked to my friend.	Overview sentence: I talked to my friend.	和朋友聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672ed9	0x14166ec00	I talked to an acquaintance.	Overview sentence: I talked to an acquaintance.	和一位熟人聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672ee5	0x14166ec20	I talked to somebody.	Overview sentence: I talked to somebody.	找人聊了聊。
+event	0x14066fe50	0x140673bb8	0x140672ef1	0x14166ebc0	I conducted a meeting in 	memory-sentence: I conducted a meeting in {s}.	在一个{s1}的地方开了场会。
+event	0x14066fe50	0x140673bb8	0x140672f27	0x14166ebe0	a setting worthy of legends	memory-setting: a setting worthy of legends	好得能让人说上好多年
+event	0x14066fe50	0x140673bb8	0x140672f36	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672f42	0x14166eb98	a fantastic setting	memory-setting: a fantastic setting	好极了
+event	0x14066fe50	0x140673bb8	0x140672f51	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672f5d	0x14166ebb0	a great setting	memory-setting: a great setting	很好
+event	0x14066fe50	0x140673bb8	0x140672f6c	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672f78	0x14166eb70	a very good setting	memory-setting: a very good setting	相当好
+event	0x14066fe50	0x140673bb8	0x140672f87	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672f93	0x14166eb88	a good setting	memory-setting: a good setting	挺好
+event	0x14066fe50	0x140673bb8	0x140672fa2	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672fae	0x14166eef8	a horribly substandard setting	memory-setting: a horribly substandard setting	差得实在不像样
+event	0x14066fe50	0x140673bb8	0x140672fbd	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672fc9	0x14166ef18	a horrible setting	memory-setting: a horrible setting	差极了
+event	0x14066fe50	0x140673bb8	0x140672fd8	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672fe4	0x14166eec8	an awful setting	memory-setting: an awful setting	糟透了
+event	0x14066fe50	0x140673bb8	0x140672ff3	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140672fff	0x14166eee0	a very poor setting	memory-setting: a very poor setting	很差
+event	0x14066fe50	0x140673bb8	0x14067300e	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x14067301a	0x14166ee88	a poor setting	memory-setting: a poor setting	不太好
+event	0x14066fe50	0x140673bb8	0x140673029	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x140673035	0x14166ee98	I conducted an official meeting in a bedroom.	Overview sentence: I conducted an official meeting in a bedroom.	在卧室里开了场正式的会。
+event	0x14066fe50	0x140673bb8	0x140673041	0x14166ee28	I conducted an official meeting in a dining room.	Overview sentence: I conducted an official meeting in a dining room.	在餐厅里开了场正式的会。
+event	0x14066fe50	0x140673bb8	0x14067304d	0x14166ee60	I had no room for an official meeting.	Overview sentence: I had no room for an official meeting.	要正式开个会，连间房都没有。
+event	0x14066fe50	0x140673bb8	0x140673059	0x14166edf0	I thought about my tomb.	Overview sentence: I thought about my tomb.	想到了自己的坟墓。
+event	0x14066fe50	0x140673bb8	0x140673065	0x14166ee10	I do not have a tomb.	Overview sentence: I do not have a tomb.	我连座坟墓都没有。
+event	0x14066fe50	0x140673bb8	0x140673071	0x14166edb0	I talked to somebody important to our traditions.	Overview sentence: I talked to somebody important to our traditions.	我跟一位在我们传统中很有分量的人聊了聊。
+event	0x14066fe50	0x140673bb8	0x14067307d	0x14166ede4	It was	memory-sentence [$event]: It was {s}. | memory-sentence: It was.; HistEventCollection 233 -> event_collections.all id -> getName virtual +0x30	那是{s1}。 | 就是那样。
+event	0x14066fe50	0x140673bb8	0x1406730a6	0x1415e873c	 	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406730e6	0x1415e85b4	.	memory-sentence native assembly; native spacing/article/punctuation, owned by enclosing production	
+event	0x14066fe50	0x140673bb8	0x1406730ef	0x14166ed60	I prey on the blood of civilized creatures.	Overview sentence: I prey on the blood of civilized creatures.	我靠吸食文明生物的血为生。
+event	0x14066fe50	0x140673bb8	0x1406730f8	0x14166ed90	I am unnaturally ageless.	Overview sentence: I am unnaturally ageless.	靠着超自然的力量，我不会再变老了。
+event	0x14066fe50	0x140673bb8	0x140673101	0x14166ed10	I accepted bribed in exchange for offering leniency.	Overview sentence: I accepted bribed in exchange for offering leniency.	收了钱，就给人从轻发落了。
+event	0x14066fe50	0x140673bb8	0x14067310a	0x14166ed48	I embezzled funds.	Overview sentence: I embezzled funds.	我侵吞了公款。
+event	0x14066fe50	0x140673bb8	0x140673113	0x14166f940	I received a cut of corruptly-obtained funds.	Overview sentence: I received a cut of corruptly-obtained funds.	贪来的钱，我也分到了一份。
+event	0x14066fe50	0x140673bb8	0x14067311c	0x14166f970	I was far away.	Overview sentence: I was far away.	我当时在很远的地方。
+event	0x14066fe50	0x140673bb8	0x140673125	0x14166f8e0	I was on an infiltration mission.	Overview sentence: I was on an infiltration mission.	出去执行潜入任务了。
+incident	0x14066ba00	0x14066fe48	0x14066bd8b	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066be7f	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066be9f	0x14166b448	gave	memory-sentence: I gave birth to {s}. | memory-possession-core: {s} gave {s} to {s}	我生下了{s1}。 | {s1}把{s2}给了{s3}
+incident	0x14066ba00	0x14066fe48	0x14066bea8	0x14166b478	placed	memory-possession-core: {s} placed {s}	{s1}放下了{s2}
+incident	0x14066ba00	0x14066fe48	0x14066beba	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066bf57	0x1415ed5a0	an untitled work	memory-transfer-object: an untitled work	一部没有题名的作品
+incident	0x14066ba00	0x14066fe48	0x14066bf81	0x1415ed5b4	 to 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c19a	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066c201	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c237	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c26a	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c29d	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c2f9	0x14166b450	 was destroyed	memory-possession-core: {s} was destroyed	{s1}被毁掉了
+incident	0x14066ba00	0x14066fe48	0x14066c315	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c34a	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c36f	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066c389	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c3ae	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066c3c8	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c3ed	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066c5c3	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c65b	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066c687	0x14166b410	would not give	memory-possession-core: {s} would not give {s}	{s1}不肯交出{s2}
+incident	0x14066ba00	0x14066fe48	0x14066c690	0x14166b448	gave	memory-sentence: I gave birth to {s}. | memory-possession-core: {s} gave {s} to {s}	我生下了{s1}。 | {s1}把{s2}给了{s3}
+incident	0x14066ba00	0x14066fe48	0x14066c699	0x14166b438	obtained	memory-possession-core: {s} obtained {s}	{s1}得到了{s2}
+incident	0x14066ba00	0x14066fe48	0x14066c6a2	0x14166b478	placed	memory-possession-core: {s} placed {s}	{s1}放下了{s2}
+incident	0x14066ba00	0x14066fe48	0x14066c6ab	0x14166b444	had	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c6bd	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066c6f4	0x1415ed5b4	 to 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c71c	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066c772	0x1415ecfb4	 in 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c7d6	0x14166b3f8	You were	memory-reunion-core: You were reunited with {s}	你跟{s1}重逢了
+incident	0x14066ba00	0x14066fe48	0x14066c841	0x14166b404	 was	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066c85d	0x14166b3d0	 reunited with 	memory-sentence: I am reunited with my {s}. | memory-sentence: I was reunited with {s}. | memory-sentence: I am reunited with my {s} {s}. | memory-reunion-core: {s} was reunited with {s} | memory-reunion-core: You were reunited with {s}	跟我的{s1}重逢了。 | 我跟{s1}重逢了。 | 跟我的{s1}{s2}重逢了。 | {s1}跟{s2}重逢了 | 你跟{s1}重逢了
+incident	0x14066ba00	0x14066fe48	0x14066c8a5	0x14166b420	I was reunited with 	memory-sentence: I was reunited with {s}.	我跟{s1}重逢了。
+incident	0x14066ba00	0x14066fe48	0x14066ca98	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066cb04	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066cd4d	0x14166b398	 and it is all thanks to 	memory-reunion: {s} and it is all thanks to {s}	{s1}，这全多亏了{s2}
+incident	0x14066ba00	0x14066fe48	0x14066cf38	0x14166b3e0	 due to your efforts	memory-reunion: {s} due to your efforts	多亏你帮忙，{s1}
+incident	0x14066ba00	0x14066fe48	0x14066cf87	0x14166b3b8	I found myself dead.	unreachable from Overview: optional discovery pointer is null at 0x1406709eb and 0x140672a54	
+incident	0x14066ba00	0x14066fe48	0x14066cf9b	0x14166b5b8	I found 	unreachable from Overview: optional discovery pointer is null at 0x1406709eb and 0x140672a54	
+incident	0x14066ba00	0x14066fe48	0x14066cfbb	0x1415ec550	you	unreachable from Overview: optional discovery pointer is null at 0x1406709eb and 0x140672a54	你
+incident	0x14066ba00	0x14066fe48	0x14066cfca	0x14166b5c4	 dead.	unreachable from Overview: optional discovery pointer is null at 0x1406709eb and 0x140672a54	{s1}死了。 | {s1}真的死了。 | 真不敢相信，{s1}死了。
+incident	0x14066ba00	0x14066fe48	0x14066d012	0x14166b5c4	 dead.	unreachable from Overview: optional discovery pointer is null at 0x1406709eb and 0x140672a54	{s1}死了。 | {s1}真的死了。 | 真不敢相信，{s1}死了。
+incident	0x14066ba00	0x14066fe48	0x14066d037	0x14166b590	I died.	memory-sentence: I died.	我死了。
+incident	0x14066ba00	0x14066fe48	0x14066d05c	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066d0d3	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066d106	0x14166b598	fell to the passing years	memory-death: fell to the passing years	寿终正寝了
+incident	0x14066ba00	0x14066fe48	0x14066d112	0x14166b568	starved to death	memory-death: starved to death	饿死了
+incident	0x14066ba00	0x14066fe48	0x14066d11e	0x14166b580	died of thirst	memory-death: died of thirst	渴死了
+incident	0x14066ba00	0x14066fe48	0x14066d12a	0x14166b540	was shot and killed	memory-death: was shot and killed	被射杀了
+incident	0x14066ba00	0x14066fe48	0x14066d136	0x14166b558	bled to death	memory-death: bled to death	失血而死
+incident	0x14066ba00	0x14066fe48	0x14066d142	0x14166b528	drowned	memory-death: drowned	淹死了
+incident	0x14066ba00	0x14066fe48	0x14066d14e	0x14166b530	suffocated	memory-death: suffocated	窒息而死
+incident	0x14066ba00	0x14066fe48	0x14066d15a	0x14166b508	was slain	memory-death: was slain	被杀死了
+incident	0x14066ba00	0x14066fe48	0x14066d166	0x14166b518	was scuttled	memory-death: was scuttled	被凿沉了
+incident	0x14066ba00	0x14066fe48	0x14066d172	0x14166b4e0	died in magma	memory-death: died in magma	死于岩浆
+incident	0x14066ba00	0x14066fe48	0x14066d17e	0x14166b4f0	burned in dragonfire	memory-death: burned in dragonfire	被龙焰烧死了
+incident	0x14066ba00	0x14066fe48	0x14066d18a	0x14166b4b8	burned to death	memory-death: burned to death	被烧死了
+incident	0x14066ba00	0x14066fe48	0x14066d196	0x14166b4c8	was scalded to death	memory-death: was scalded to death	被烫死了
+incident	0x14066ba00	0x14066fe48	0x14066d1a2	0x14166bc78	was crushed	memory-death: was crushed	被压死了
+incident	0x14066ba00	0x14066fe48	0x14066d1ae	0x14166bc88	was crushed by a bridge	memory-death: was crushed by a bridge	被桥压死了
+incident	0x14066ba00	0x14066fe48	0x14066d1ba	0x14166bc48	was crushed by a rock	memory-death: was crushed by a rock	被岩石砸死了
+incident	0x14066ba00	0x14066fe48	0x14066d1c6	0x14166bc60	fell into a chasm	memory-death: fell into a chasm	坠入了深渊
+incident	0x14066ba00	0x14066fe48	0x14066d1d2	0x14166bc28	died in a cage	memory-death: died in a cage	死在笼子里
+incident	0x14066ba00	0x14066fe48	0x14066d1de	0x14166bc38	was murdered	memory-death: was murdered	被谋杀了
+incident	0x14066ba00	0x14066fe48	0x14066d1ea	0x14166bc08	died in a trap	memory-death: died in a trap	死在陷阱中
+incident	0x14066ba00	0x14066fe48	0x14066d1f6	0x14166bc18	vanished	memory-death: vanished	消失了
+incident	0x14066ba00	0x14066fe48	0x14066d202	0x14166bbd8	died in the heat	memory-death: died in the heat	死于酷热
+incident	0x14066ba00	0x14066fe48	0x14066d20e	0x14166bbf0	died in the cold	memory-death: died in the cold	死于严寒
+incident	0x14066ba00	0x14066fe48	0x14066d21a	0x14166bbb0	was killed by spikes	memory-death: was killed by spikes	被尖刺刺死了
+incident	0x14066ba00	0x14066fe48	0x14066d226	0x14166bbc8	froze to death	memory-death: froze to death	被冻死了
+incident	0x14066ba00	0x14066fe48	0x14066d232	0x14166bb90	was executed	memory-death: was executed	被处决了
+incident	0x14066ba00	0x14066fe48	0x14066d23e	0x14166bba0	was beheaded	memory-death: was beheaded	被斩首了
+incident	0x14066ba00	0x14066fe48	0x14066d24a	0x14166bb68	was crucified	memory-death: was crucified	被钉死在十字架上
+incident	0x14066ba00	0x14066fe48	0x14066d256	0x14166bb78	was buried alive	memory-death: was buried alive	被活埋了
+incident	0x14066ba00	0x14066fe48	0x14066d262	0x14166bdc8	was executed by drowning	memory-death: was executed by drowning	被执行了溺刑
+incident	0x14066ba00	0x14066fe48	0x14066d26e	0x14166bde8	was burned alive	memory-death: was burned alive	被活活烧死了
+incident	0x14066ba00	0x14066fe48	0x14066d27a	0x14166bd98	was fed to beasts	memory-death: was fed to beasts	被喂给了野兽
+incident	0x14066ba00	0x14066fe48	0x14066d286	0x14166bdb0	was hacked to pieces	memory-death: was hacked to pieces	被砍成了碎片
+incident	0x14066ba00	0x14066fe48	0x14066d292	0x14166bd60	was left out to suffocate	memory-death: was left out to suffocate	被丢在外面窒息而死
+incident	0x14066ba00	0x14066fe48	0x14066d29e	0x14166bd80	died of an illness	memory-death: died of an illness	病死了
+incident	0x14066ba00	0x14066fe48	0x14066d2aa	0x14166bd38	was put to rest	memory-death: was put to rest	得以安息
+incident	0x14066ba00	0x14066fe48	0x14066d2b6	0x14166bd48	was scared to death	memory-death: was scared to death	被吓死了
+incident	0x14066ba00	0x14066fe48	0x14066d2c2	0x14166bd10	died in the dark	memory-death: died in the dark	死于黑暗之中
+incident	0x14066ba00	0x14066fe48	0x14066d2ce	0x14166bd28	collapsed	memory-death: collapsed	倒下了
+incident	0x14066ba00	0x14066fe48	0x14066d2da	0x14166bce8	was drained of blood	memory-death: was drained of blood	被吸干了血
+incident	0x14066ba00	0x14066fe48	0x14066d2e6	0x14166bd00	was slaughtered	memory-death: was slaughtered	被屠宰了
+incident	0x14066ba00	0x14066fe48	0x14066d2f2	0x14166bcc0	leapt from a great height	memory-death: leapt from a great height	从高处跳了下去
+incident	0x14066ba00	0x14066fe48	0x14066d2fe	0x14166b528	drowned	memory-death: drowned	淹死了
+incident	0x14066ba00	0x14066fe48	0x14066d325	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066d36d	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066d381	0x14166bcdc	died	memory-death: died	死了
+incident	0x14066ba00	0x14066fe48	0x14066d390	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066d57c	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066d6a9	0x14166bcb0	 perpetrated 	memory-sentence: {s} perpetrated {s}.	{s1}犯下了{s2}。
+incident	0x14066ba00	0x14066fe48	0x14066d6b2	0x14166bca0	 attempted 	memory-sentence: {s} attempted {s}.	{s1}企图犯下{s2}。
+incident	0x14066ba00	0x14066fe48	0x14066d6e1	0x14166ba38	a production order violation	memory-crime: a production order violation	违抗生产命令的罪
+incident	0x14066ba00	0x14066fe48	0x14066d6f5	0x14166ba58	a export prohibition violation	memory-crime: a export prohibition violation	违反出口禁令的罪
+incident	0x14066ba00	0x14066fe48	0x14066d709	0x14166ba10	a job order violation	memory-crime: a job order violation	违抗工作命令的罪
+incident	0x14066ba00	0x14066fe48	0x14066d71d	0x141628930	a conspiracy to slow labor	memory-crime: a conspiracy to slow labor	合谋怠工的罪
+incident	0x14066ba00	0x14066fe48	0x14066d731	0x14166ba28	a murder	memory-crime: a murder	谋杀罪
+incident	0x14066ba00	0x14066fe48	0x14066d745	0x1415ed6a0	disorderly conduct	memory-crime: disorderly conduct	扰乱秩序的罪
+incident	0x14066ba00	0x14066fe48	0x14066d759	0x1415ed6b8	building destruction	memory-crime: building destruction	毁坏建筑的罪
+incident	0x14066ba00	0x14066fe48	0x14066d76d	0x1415ed700	vandalism	memory-crime: vandalism	破坏公物的罪
+incident	0x14066ba00	0x14066fe48	0x14066d781	0x14166b9f8	a kidnapping	memory-crime: a kidnapping	绑架罪
+incident	0x14066ba00	0x14066fe48	0x14066d795	0x14166ba08	a theft	memory-crime: a theft	盗窃罪
+incident	0x14066ba00	0x14066fe48	0x14066d7a9	0x14166b9d8	a robbery	memory-crime: a robbery	抢劫罪
+incident	0x14066ba00	0x14066fe48	0x14066d7bd	0x141628950	blood-drinking	memory-crime: blood-drinking	吸血的罪
+incident	0x14066ba00	0x14066fe48	0x14066d7d1	0x1415ed728	embezzlement	memory-crime: embezzlement	侵吞公款的罪
+incident	0x14066ba00	0x14066fe48	0x14066d7e5	0x1415edf10	treason	memory-crime: treason	叛国罪
+incident	0x14066ba00	0x14066fe48	0x14066d7f9	0x1415edf28	espionage	memory-crime: espionage	间谍罪
+incident	0x14066ba00	0x14066fe48	0x14066d80d	0x1415ed720	bribery	memory-crime: bribery	贿赂罪
+incident	0x14066ba00	0x14066fe48	0x14066d91f	0x1416672b4	on 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066d9af	0x1416672b4	on 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066da08	0x1416672b4	on 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066da5e	0x14166b9e8	I preached 	memory-performance-core: I preached on {s}	我讲了关于{s1}的道理
+incident	0x14066ba00	0x14066fe48	0x14066daa1	0x14166b9c4	I saw 	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-sentence: I saw {s}. | memory-sentence: I saw {s} on display in my personal museum. | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: I saw a sermon on {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: I saw a recital of {s} | memory-performance-core: I saw {s} {s} {s} | memory-performance-core: I saw a performance of {s}	看到了展出的{s1}。 | 在自己的博物馆里看到了{s1}。 | 我看到一名{s1}在{s3}朗诵《{s2}》。 | 看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。 | 我听{s1}讲了关于{s2}的道理 | 我听了一场关于{s1}的布道 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | 我听{s1}朗诵了{s2} | 我听了{s1}的朗诵 | 我看{s1}{s2}{s3} | 我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066dae0	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066daef	0x14166b9d0	 preach	memory-performance-core: I preached on {s} | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: {s} preached on {s} | memory-performance-core: A sermon on {s} was preached	我讲了关于{s1}的道理 | 我听{s1}讲了关于{s2}的道理 | {s1}讲了关于{s2}的道理 | 有人做了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066db31	0x14166b9d0	 preach	memory-performance-core: I preached on {s} | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: {s} preached on {s} | memory-performance-core: A sermon on {s} was preached	我讲了关于{s1}的道理 | 我听{s1}讲了关于{s2}的道理 | {s1}讲了关于{s2}的道理 | 有人做了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066db3a	0x14166b9a8	a sermon	memory-performance-core: I saw a sermon on {s}	我听了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066db49	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066dba0	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066dc34	0x14166b9b8	 preached 	memory-performance-core: I preached on {s} | memory-performance-core: {s} preached on {s} | memory-performance-core: A sermon on {s} was preached	我讲了关于{s1}的道理 | {s1}讲了关于{s2}的道理 | 有人做了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066dc54	0x141602db4	a	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066dc5b	0x14166b990	A	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066dc75	0x14166b998	 sermon 	memory-performance-core: I saw a sermon on {s} | memory-performance-core: A sermon on {s} was preached	我听了一场关于{s1}的布道 | 有人做了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066dc93	0x14166b968	 was preached	memory-performance-core: A sermon on {s} was preached	有人做了一场关于{s1}的布道
+incident	0x14066ba00	0x14066fe48	0x14066dd52	0x141663d68	history	memory-story: history	往事
+incident	0x14066ba00	0x14066fe48	0x14066dd70	0x14166b978	I told the story of 	memory-sentence: I told the story of {s} at {s}. | memory-performance-core: I told the story of {s}	我在{s2}讲述了{s1}的故事。 | 我讲了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066dd9c	0x14166b9c4	I saw 	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-sentence: I saw {s}. | memory-sentence: I saw {s} on display in my personal museum. | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: I saw a sermon on {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: I saw a recital of {s} | memory-performance-core: I saw {s} {s} {s} | memory-performance-core: I saw a performance of {s}	看到了展出的{s1}。 | 在自己的博物馆里看到了{s1}。 | 我看到一名{s1}在{s3}朗诵《{s2}》。 | 看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。 | 我听{s1}讲了关于{s2}的道理 | 我听了一场关于{s1}的布道 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | 我听{s1}朗诵了{s2} | 我听了{s1}的朗诵 | 我看{s1}{s2}{s3} | 我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066dddb	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066ddea	0x1415e935c	 tell	memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s}	我听{s1}讲了{s2}的故事 | 我听了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066de28	0x1415e935c	 tell	memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s}	我听{s1}讲了{s2}的故事 | 我听了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066de31	0x14166bb48	a telling of	memory-performance-core: I saw a telling of the story of {s}	我听了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066de40	0x14166bb58	 the story of 	memory-sentence: I told the story of {s} at {s}. | memory-performance-core: I told the story of {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: {s} told the story of {s}	我在{s2}讲述了{s1}的故事。 | 我讲了{s1}的故事 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | {s1}讲了{s2}的故事
+incident	0x14066ba00	0x14066fe48	0x14066de97	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066df24	0x14166bb20	 told the story of 	memory-sentence: I told the story of {s} at {s}. | memory-performance-core: I told the story of {s} | memory-performance-core: {s} told the story of {s}	我在{s2}讲述了{s1}的故事。 | 我讲了{s1}的故事 | {s1}讲了{s2}的故事
+incident	0x14066ba00	0x14066fe48	0x14066df4e	0x14164a188	The	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066df57	0x141663d84	the	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066df63	0x14166bb38	story of 	memory-sentence: I told the story of {s} at {s}. | memory-performance-core: I told the story of {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: {s} told the story of {s} | memory-performance-core: Thestory of {s} was told	我在{s2}讲述了{s1}的故事。 | 我讲了{s1}的故事 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | {s1}讲了{s2}的故事 | 有人讲了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066df81	0x14166bb00	 was told	memory-performance-core: Thestory of {s} was told	有人讲了{s1}的故事
+incident	0x14066ba00	0x14066fe48	0x14066e00e	0x1415edfb8	a poem	memory-poem: a poem	一首诗
+incident	0x14066ba00	0x14066fe48	0x14066e027	0x14166bb10	I recited 	memory-performance-core: I recited {s}	我朗诵了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e053	0x14166b9c4	I saw 	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-sentence: I saw {s}. | memory-sentence: I saw {s} on display in my personal museum. | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: I saw a sermon on {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: I saw a recital of {s} | memory-performance-core: I saw {s} {s} {s} | memory-performance-core: I saw a performance of {s}	看到了展出的{s1}。 | 在自己的博物馆里看到了{s1}。 | 我看到一名{s1}在{s3}朗诵《{s2}》。 | 看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。 | 我听{s1}讲了关于{s2}的道理 | 我听了一场关于{s1}的布道 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | 我听{s1}朗诵了{s2} | 我听了{s1}的朗诵 | 我看{s1}{s2}{s3} | 我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066e092	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066e0a1	0x1415e93f8	 recite	memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-performance-core: I recited {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: {s} recited {s} | memory-performance-core: {s} was recited	我看到一名{s1}在{s3}朗诵《{s2}》。 | 我朗诵了{s1} | 我听{s1}朗诵了{s2} | {s1}朗诵了{s2} | 有人朗诵了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e0e3	0x1415e93f8	 recite	memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-performance-core: I recited {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: {s} recited {s} | memory-performance-core: {s} was recited	我看到一名{s1}在{s3}朗诵《{s2}》。 | 我朗诵了{s1} | 我听{s1}朗诵了{s2} | {s1}朗诵了{s2} | 有人朗诵了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e0ec	0x14166bae0	a recital of	memory-performance-core: I saw a recital of {s}	我听了{s1}的朗诵
+incident	0x14066ba00	0x14066fe48	0x14066e0fb	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e152	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066e1e6	0x14166baf0	 recited 	memory-performance-core: I recited {s} | memory-performance-core: {s} recited {s} | memory-performance-core: {s} was recited	我朗诵了{s1} | {s1}朗诵了{s2} | 有人朗诵了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e22a	0x14166bac8	 was recited	memory-performance-core: {s} was recited	有人朗诵了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e2df	0x1415eb50c	music	memory-performance-work: music	音乐
+incident	0x14066ba00	0x14066fe48	0x14066e2fc	0x141663a64	I 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e354	0x14166bad8	played	memory-performance-past: played	演奏了
+incident	0x14066ba00	0x14066fe48	0x14066e367	0x14166bab8	sang	memory-performance-past: sang	唱了
+incident	0x14066ba00	0x14066fe48	0x14066e37a	0x14166bac0	chanted	memory-performance-past: chanted	吟唱了
+incident	0x14066ba00	0x14066fe48	0x14066e386	0x141662f9c	spoke	memory-performance-past: spoke	念了
+incident	0x14066ba00	0x14066fe48	0x14066e39b	0x14166b9c4	I saw 	memory-sentence: I saw {s} on display. | memory-sentence: I saw {s} in my personal museum. | memory-sentence: I saw a {s} recite {s} at {s}. | memory-sentence: I saw an {s} recite {s} at {s}. | memory-sentence: I saw {s}. | memory-sentence: I saw {s} on display in my personal museum. | memory-performance-core: I saw {s} preach on {s} | memory-performance-core: I saw a sermon on {s} | memory-performance-core: I saw {s} tell the story of {s} | memory-performance-core: I saw a telling of the story of {s} | memory-performance-core: I saw {s} recite {s} | memory-performance-core: I saw a recital of {s} | memory-performance-core: I saw {s} {s} {s} | memory-performance-core: I saw a performance of {s}	看到了展出的{s1}。 | 在自己的博物馆里看到了{s1}。 | 我看到一名{s1}在{s3}朗诵《{s2}》。 | 看到了{s1}。 | 在自己的博物馆里看到了展出的{s1}。 | 我听{s1}讲了关于{s2}的道理 | 我听了一场关于{s1}的布道 | 我听{s1}讲了{s2}的故事 | 我听了{s1}的故事 | 我听{s1}朗诵了{s2} | 我听了{s1}的朗诵 | 我看{s1}{s2}{s3} | 我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066e3df	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066e429	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e479	0x141602d34	play	memory-performance-verb: play	演奏了
+incident	0x14066ba00	0x14066fe48	0x14066e48c	0x1415e957c	sing	memory-performance-verb: sing	唱了
+incident	0x14066ba00	0x14066fe48	0x14066e49f	0x1415e9518	chant	memory-performance-verb: chant	吟唱了
+incident	0x14066ba00	0x14066fe48	0x14066e4ab	0x14165131c	speak	memory-performance-verb: speak	念了
+incident	0x14066ba00	0x14066fe48	0x14066e4b7	0x14166bab0	perform	memory-performance-verb: perform	表演了
+incident	0x14066ba00	0x14066fe48	0x14066e4c3	0x14166ba78	a performance of	memory-performance-core: I saw a performance of {s}	我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066e503	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066e512	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e59e	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e5aa	0x14166baa0	performed	memory-performance-past: performed	表演了
+incident	0x14066ba00	0x14066fe48	0x14066e5b9	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e5fd	0x14166ba90	 was performed	memory-performance-core: {s} was performed	有人表演了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e6b2	0x1415edfc0	dance	memory-performance-work: dance	舞蹈
+incident	0x14066ba00	0x14066fe48	0x14066e732	0x141663a64	I 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e747	0x14166c22c	danced	memory-performance-past: danced	跳了
+incident	0x14066ba00	0x14066fe48	0x14066e791	0x14166bad8	played	memory-performance-past: played	演奏了
+incident	0x14066ba00	0x14066fe48	0x14066e7a1	0x14166bab8	sang	memory-performance-past: sang	唱了
+incident	0x14066ba00	0x14066fe48	0x14066e7b1	0x14166bac0	chanted	memory-performance-past: chanted	吟唱了
+incident	0x14066ba00	0x14066fe48	0x14066e7ba	0x141662f9c	spoke	memory-performance-past: spoke	念了
+incident	0x14066ba00	0x14066fe48	0x14066e7c3	0x14166baa0	performed	memory-performance-past: performed	表演了
+incident	0x14066ba00	0x14066fe48	0x14066e7d2	0x1415e873c	 	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066e7f7	0x14166c238	I saw a performance of 	memory-performance-core: I saw a performance of {s}	我看了一场{s1}的表演
+incident	0x14066ba00	0x14066fe48	0x14066e83b	0x14166ba90	 was performed	memory-performance-core: {s} was performed	有人表演了{s1}
+incident	0x14066ba00	0x14066fe48	0x14066e8e7	0x14160205c	 at 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066eb00	0x14166c200	You named yourself	memory-sentence: You named yourself to {s}.	你向{s1}报上了自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066eb82	0x14166c218	 self-identified	memory-sentence: {s} self-identified to {s}.	{s1}向{s2}报上了自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066eba6	0x14166c1c8	Somebody named themself	memory-sentence: Somebody named themself to {s}.	有人向{s1}报上了自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066ebbb	0x1415ed5b4	 to 	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066edc1	0x14166c1e0	You refused to name yourself	memory-sentence: You refused to name yourself to {s}.	你不肯向{s1}透露自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066ee43	0x14166c188	 refused to give a name	memory-sentence: {s} refused to give a name to {s}.	{s1}不肯向{s2}透露自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066ee6a	0x14166c1a0	Somebody refused to name themself	memory-sentence: Somebody refused to name themself to {s}.	有人不肯向{s1}透露自己的名字。
+incident	0x14066ba00	0x14066fe48	0x14066f039	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066f12a	0x14166c148	 demanded submission from 	memory-sentence: {s} demanded submission from {s}.	{s1}要{s2}服从。
+incident	0x14066ba00	0x14066fe48	0x14066f17b	0x1415ec550	you	memory-person: you	你
+incident	0x14066ba00	0x14066fe48	0x14066f1df	0x1415e85b4	.	memory-sentence incident assembly; native spacing/article/punctuation, owned by enclosing production	
+incident	0x14066ba00	0x14066fe48	0x14066f55c	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066f64d	0x141664b00	 attacked 	memory-sentence: {s} attacked {s}. | memory-sentence: I was attacked by my own dead {s}.	{s1}袭击了{s2}。 | 我死去的{s1}竟然袭击了我。
+incident	0x14066ba00	0x14066fe48	0x14066f9ec	0x1415e8ca0	You	memory-sentence incident assembly	
+incident	0x14066ba00	0x14066fe48	0x14066fadd	0x14166c168	 escalated a conflict with 	memory-sentence: {s} escalated a conflict with {s}.	{s1}跟{s2}闹得更厉害了。
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddd45	0x14167da98	a girl	memory-offspring: a girl	一个女孩
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddd5c	0x14167da90	a boy	memory-offspring: a boy	一个男孩
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddd6e	0x14167da88	a child	memory-offspring: a child	一个孩子
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddd8b	0x14167da7c	twins	memory-offspring: twins	双胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddda2	0x14167da70	triplets	memory-offspring: triplets	三胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dddb3	0x14167da60	quadruplets	memory-offspring: quadruplets	四胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dddc4	0x14167da50	quintuplets	memory-offspring: quintuplets	五胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406ddddb	0x14167da40	sextuplets	memory-offspring: sextuplets	六胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dddf2	0x14167da30	septuplets	memory-offspring: septuplets	七胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde09	0x14167dc30	octuplets	memory-offspring: octuplets	八胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde20	0x14167dc20	nonuplets	memory-offspring: nonuplets	九胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde34	0x14167dc10	decaplets	memory-offspring: decaplets	十胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde42	0x14167dc00	undecaplets	memory-offspring: undecaplets	十一胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde56	0x14167dbf0	duodecaplets	memory-offspring: duodecaplets	十二胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde6a	0x14167dbe0	tredecaplets	memory-offspring: tredecaplets	十三胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde7e	0x14167dbc8	quattuordecaplets	memory-offspring: quattuordecaplets	十四胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde92	0x14167dbb8	quindecaplets	memory-offspring: quindecaplets	十五胞胎
+offspring-human-count	0x1406ddd3c	0x1406ddeb0	0x1406dde9b	0x14167dba8	many babies	memory-offspring: many babies	许多孩子
+building-kind	0x14054d320	0x14054e7c0	0x14054d36b	0x141651c2c	Shop	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d387	0x141651c20	Trade Depot	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d3a3	0x141651cac	Nest	memory-furniture -> $term	巢穴
+building-kind	0x14054d320	0x14054e7c0	0x14054d3bf	0x141651ca0	Nest Box	memory-furniture -> $term	巢箱
+building-kind	0x14054d320	0x14054e7c0	0x14054d3db	0x14162cad0	Bookcase	memory-furniture -> $term	书架
+building-kind	0x14054d320	0x14054e7c0	0x14054d3f7	0x141651c90	Offering Place	memory-furniture -> $term	供奉处
+building-kind	0x14054d320	0x14054e7c0	0x14054d413	0x14162cb1c	Hive	memory-furniture -> $term	蜂箱
+building-kind	0x14054d320	0x14054e7c0	0x14054d42f	0x141651c88	Wagon	memory-furniture -> $term	货车
+building-kind	0x14054d320	0x14054e7c0	0x14054d464	0x141651c70	Carpenter's Workshop	memory-furniture -> $term	木匠工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d47d	0x141651c58	Farmer's Workshop	memory-furniture -> $term	农夫工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d492	0x14162c9d0	Ashery	memory-furniture -> $term	灰坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d4ee	0x14162c958	Stoneworker	memory-furniture -> $term	石工
+building-kind	0x14054d320	0x14054e7c0	0x14054d53d	0x141651c38	Craftsman	memory-furniture -> $term	工匠
+building-kind	0x14054d320	0x14054e7c0	0x14054d58c	0x14162c930	Jeweler	memory-furniture -> $term	宝石匠
+building-kind	0x14054d320	0x14054e7c0	0x14054d633	0x14162c938	Metalsmith	memory-furniture -> $term	金工
+building-kind	0x14054d320	0x14054e7c0	0x14054d648	0x141651d18	's Forge	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d667	0x141651d08	Magma Forge	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d6c0	0x14162c9c8	Bowyer	memory-furniture -> $term	弓弩匠
+building-kind	0x14054d320	0x14054e7c0	0x14054d767	0x14162c948	Mechanic	memory-furniture -> $term	机械师
+building-kind	0x14054d320	0x14054e7c0	0x14054d77c	0x141651c48	's Workshop	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d79b	0x141651cf8	Siege Workshop	memory-furniture -> $term	攻城器械工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d7f7	0x14161be28	Butcher	memory-furniture -> $term	屠夫
+building-kind	0x14054d320	0x14054e7c0	0x14054d809	0x141651ce0	Leather Works	memory-furniture -> $term	皮革工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d865	0x14162cb80	Tanner	memory-furniture -> $term	制革工
+building-kind	0x14054d320	0x14054e7c0	0x14054d8b1	0x14162c910	Dyer	memory-furniture -> $term	染色工
+building-kind	0x14054d320	0x14054e7c0	0x14054d958	0x141651cd0	Clothier	memory-furniture -> $term	裁缝
+building-kind	0x14054d320	0x14054e7c0	0x14054d96d	0x141651cf0	's Shop	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054d98c	0x14162cb78	Fishery	memory-furniture -> $term	渔业工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d9ab	0x14162cb60	Still	memory-furniture -> $term	蒸馏工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054d9ca	0x14162c8f8	Loom	memory-furniture -> $term	织布机
+building-kind	0x14054d320	0x14054e7c0	0x14054d9e9	0x14162cbb0	Quern	memory-furniture -> $term	手推磨
+building-kind	0x14054d320	0x14054e7c0	0x14054da08	0x14162cc80	Millstone	memory-furniture -> $term	机械石磨
+building-kind	0x14054d320	0x14054e7c0	0x14054da27	0x14162cb98	Vermin Catcher's Shop	memory-furniture -> $term	害虫捕坊
+building-kind	0x14054d320	0x14054e7c0	0x14054da46	0x14162cb90	Kitchen	memory-furniture -> $term	厨房
+building-kind	0x14054d320	0x14054e7c0	0x14054da65	0x141651cc4	Tool	memory-furniture -> $term	工具
+building-kind	0x14054d320	0x14054e7c0	0x14054dafa	0x141651cb8	Workshop	memory-furniture -> $term	工坊
+building-kind	0x14054d320	0x14054e7c0	0x14054db52	0x141651f94	Zone	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054db6e	0x141651f88	Farm Plot	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dba3	0x14162c8e0	Smelter	memory-furniture -> $term	熔炉
+building-kind	0x14054d320	0x14054e7c0	0x14054dbc2	0x141651f78	Glass Furnace	memory-furniture -> $term	玻璃窑
+building-kind	0x14054d320	0x14054e7c0	0x14054dbe1	0x141651f68	Wood Furnace	memory-furniture -> $term	烧木窑
+building-kind	0x14054d320	0x14054e7c0	0x14054dc00	0x14162c96c	Kiln	memory-furniture -> $term	黏土窑
+building-kind	0x14054d320	0x14054e7c0	0x14054dc1f	0x141651f58	Magma Smelter	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dc3e	0x141651f40	Magma Glass Furnace	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dc5d	0x141651f30	Magma Kiln	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dd0c	0x141651f28	Furnace	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dd3e	0x14162ccb8	Lever	memory-furniture -> $term	控制杆
+building-kind	0x14054d320	0x14054e7c0	0x14054dd5d	0x141652008	Pressure Plate	memory-furniture -> $term	压力板
+building-kind	0x14054d320	0x14054e7c0	0x14054dd7c	0x141651ff8	Cage Trap	memory-furniture -> $term	笼式陷阱
+building-kind	0x14054d320	0x14054e7c0	0x14054dd9b	0x141651fe8	Stone-Fall Trap	memory-furniture -> $term	落石陷阱
+building-kind	0x14054d320	0x14054e7c0	0x14054ddba	0x141651fd8	Weapon Trap	memory-furniture -> $term	武器陷阱
+building-kind	0x14054d320	0x14054e7c0	0x14054ddd9	0x141651fc8	Track Stop	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054ddf8	0x141651fc0	Trap	memory-furniture -> $term	陷阱
+building-kind	0x14054d320	0x14054e7c0	0x14054de2f	0x141651fa0	Siege Engine	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054de48	0x141651fb0	Bolt Thrower	memory-furniture -> $term	弩箭投射器
+building-kind	0x14054d320	0x14054e7c0	0x14054de61	0x14162cf80	Ballista	memory-furniture -> $term	弩炮
+building-kind	0x14054d320	0x14054e7c0	0x14054de80	0x14162cf70	Catapult	memory-furniture -> $term	投石机
+building-kind	0x14054d320	0x14054e7c0	0x14054dea5	0x14162cb08	Door	memory-furniture -> $term	门
+building-kind	0x14054d320	0x14054e7c0	0x14054dec1	0x141652088	Floor Hatch	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dedd	0x141652078	Wall Grate	memory-furniture -> $term	墙壁格栅
+building-kind	0x14054d320	0x14054e7c0	0x14054def9	0x141652068	Floor Grate	memory-furniture -> $term	地板格栅
+building-kind	0x14054d320	0x14054e7c0	0x14054df15	0x141652058	Vertical Bars	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054df31	0x141652048	Floor Bars	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054df4d	0x14162ccd0	Floodgate	memory-furniture -> $term	水闸
+building-kind	0x14054d320	0x14054e7c0	0x14054df69	0x141652038	Restraint	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054df85	0x14162cc8c	Cage	memory-furniture -> $term	笼子
+building-kind	0x14054d320	0x14054e7c0	0x14054dfa1	0x14162ccb0	Support	memory-furniture -> $term	支柱
+building-kind	0x14054d320	0x14054e7c0	0x14054dfbd	0x141652028	Gear Assembly	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054dfd9	0x14162cc78	Rollers	memory-furniture -> $term	滚动辊
+building-kind	0x14054d320	0x14054e7c0	0x14054dff5	0x141652018	Horizontal Axle	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e011	0x141652110	Vertical Axle	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e02d	0x1416520f8	Upright Spear/Spike	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e049	0x14162cb10	Instrument	memory-furniture -> $term	乐器
+building-kind	0x14054d320	0x14054e7c0	0x14054e065	0x1416520e8	Archery Target	memory-furniture -> $term	箭靶
+building-kind	0x14054d320	0x14054e7c0	0x14054e081	0x1416520d8	Screw Pump	memory-furniture -> $term	螺杆泵
+building-kind	0x14054d320	0x14054e7c0	0x14054e09d	0x1416520c8	Water Wheel	memory-furniture -> $term	水车
+building-kind	0x14054d320	0x14054e7c0	0x14054e0b9	0x14162cc48	Windmill	memory-furniture -> $term	风车
+building-kind	0x14054d320	0x14054e7c0	0x14054e0cf	0x1416520b0	Burial Receptacle	memory-furniture -> $term	棺椁
+building-kind	0x14054d320	0x14054e7c0	0x14054e0e1	0x1416520a4	Seat	memory-furniture -> $term	座位
+building-kind	0x14054d320	0x14054e7c0	0x14054e0fd	0x141652098	Animal Trap	memory-furniture -> $term	动物陷阱
+building-kind	0x14054d320	0x14054e7c0	0x14054e119	0x14162cb48	Table	memory-furniture -> $term	桌子
+building-kind	0x14054d320	0x14054e7c0	0x14054e135	0x14162cb58	Cabinet	memory-furniture -> $term	橱柜
+building-kind	0x14054d320	0x14054e7c0	0x14054e151	0x141651d98	Weapon Rack	memory-furniture -> $term	兵器架
+building-kind	0x14054d320	0x14054e7c0	0x14054e16d	0x141651d88	Armor Stand	memory-furniture -> $term	盔甲架
+building-kind	0x14054d320	0x14054e7c0	0x14054e189	0x141651d78	Container	memory-furniture -> $term	容器
+building-kind	0x14054d320	0x14054e7c0	0x14054e1a5	0x14162cb3c	Bed	memory-furniture -> $term	床
+building-kind	0x14054d320	0x14054e7c0	0x14054e1c1	0x141651d68	Traction Bench	memory-furniture -> $term	牵引台
+building-kind	0x14054d320	0x14054e7c0	0x14054e1dd	0x141651d58	Dirt Road	memory-furniture -> $term	土路
+building-kind	0x14054d320	0x14054e7c0	0x14054e1f9	0x141651d48	Paved Road	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e215	0x14162cab4	Bridge	memory-furniture -> $term	桥
+building-kind	0x14054d320	0x14054e7c0	0x14054e231	0x14162ccdc	Well	memory-furniture -> $term	井
+building-kind	0x14054d320	0x14054e7c0	0x14054e24d	0x14162cabc	Statue	memory-furniture -> $term	雕像
+building-kind	0x14054d320	0x14054e7c0	0x14054e269	0x14162cac4	Slab	memory-furniture -> $term	石板
+building-kind	0x14054d320	0x14054e7c0	0x14054e285	0x141651d38	Glass Window	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e2a1	0x141651d28	Gem Window	memory-furniture -> $term	宝石窗
+building-kind	0x14054d320	0x14054e7c0	0x14054e2bd	0x141651e18	Stockpile	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e2ec	0x14162ca6c	Wall	memory-furniture -> $term	墙
+building-kind	0x14054d320	0x14054e7c0	0x14054e30b	0x14162ca88	Reinforced Wall	memory-furniture -> $term	加固墙体
+building-kind	0x14054d320	0x14054e7c0	0x14054e32a	0x14162ca7c	Floor	memory-furniture -> $term	地板
+building-kind	0x14054d320	0x14054e7c0	0x14054e349	0x141651e08	Up Stair	memory-furniture -> $term	上行楼梯
+building-kind	0x14054d320	0x14054e7c0	0x14054e368	0x141651df8	Down Stair	memory-furniture -> $term	下行楼梯
+building-kind	0x14054d320	0x14054e7c0	0x14054e387	0x141651de8	Up/Down Stair	memory-furniture -> $term	上下行楼梯
+building-kind	0x14054d320	0x14054e7c0	0x14054e3a6	0x14162caa0	Ramp	memory-furniture -> $term	斜坡
+building-kind	0x14054d320	0x14054e7c0	0x14054e3c5	0x14162cd08	Fortification	memory-furniture -> $term	城防垛口
+building-kind	0x14054d320	0x14054e7c0	0x14054e3e4	0x141651dd8	Track (N)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e403	0x141651dc8	Track (S)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e422	0x141651db8	Track (E)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e441	0x141651da8	Track (W)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e460	0x141651e98	Track (NS)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e47f	0x141651e88	Track (NE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e49e	0x141651e78	Track (NW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e4bd	0x141651e68	Track (SE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e4dc	0x141651e58	Track (SW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e4fb	0x141651e48	Track (EW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e51a	0x141651e38	Track (NSE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e539	0x141651e28	Track (NSW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e558	0x141651f18	Track (NEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e577	0x141651f08	Track (SEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e596	0x141651ef8	Track (NSEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e5b5	0x141651ee8	Track/Ramp (N)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e5d4	0x141651ed8	Track/Ramp (S)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e5f3	0x141651ec8	Track/Ramp (E)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e612	0x141651eb8	Track/Ramp (W)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e631	0x141651ea8	Track/Ramp (NS)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e650	0x141652310	Track/Ramp (NE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e66f	0x141652300	Track/Ramp (NW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e68e	0x1416522f0	Track/Ramp (SE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e6ad	0x1416522e0	Track/Ramp (SW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e6cc	0x1416522d0	Track/Ramp (EW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e6eb	0x1416522b8	Track/Ramp (NSE)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e70a	0x1416522a0	Track/Ramp (NSW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e729	0x141652288	Track/Ramp (NEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e748	0x1416523a0	Track/Ramp (SEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e767	0x141652388	Track/Ramp (NSEW)	memory-furniture -> $term	
+building-kind	0x14054d320	0x14054e7c0	0x14054e786	0x141652378	Construction	memory-furniture -> $term	构筑物
+building-kind	0x14054d320	0x14054e7c0	0x14054e7a5	0x141652360	Display Furniture	memory-furniture -> $term	展示家具
+death-reflexive	0x140aa4800	0x140aa484b	0x140aa4808	0x1415fe520	himself	memory-death: drowned himself	投水自尽了
+death-reflexive	0x140aa4800	0x140aa484b	0x140aa4821	0x1415fe528	herself	memory-death: drowned herself	投水自尽了
+death-reflexive	0x140aa4800	0x140aa484b	0x140aa4836	0x1415fe518	itself	memory-death: drowned itself	投水自尽了
+# Complete event switch from 0x140673160: source is enum id/name, literal_va column is the branch target. Empty-return branches produce no event sentence.
+event-switch	0x14066fe50	0x140673bb8	0x140673160	0x1406707e5	0 Conflict	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673164	0x140670833	1 Trauma	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673168	0x1406708fc	2 WitnessDeath	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067316c	0x140670724	3 UnexpectedDeath	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673170	0x140670a0d	4 Death	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673174	0x140670a5e	5 Kill	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673178	0x140670bb9	6 LoveSeparated	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067317c	0x140670c21	7 LoveReunited	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673180	0x140670c73	8 JoinConflict	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673184	0x140670718	9 MakeMasterwork	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673188	0x1406706a0	10 MadeArtifact	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067318c	0x140670648	11 MasterSkill	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673190	0x1406704a3	12 NewRomance	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673194	0x1406703ca	13 BecomeParent	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673198	0x1406705c2	14 NearConflict	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067319c	0x140673134	15 CancelAgreement	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731a0	0x140673134	16 JoinTravel	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731a4	0x140673134	17 SiteControlled	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731a8	0x140673134	18 TributeCancel	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731ac	0x140672a3c	19 Incident	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731b0	0x140673134	20 HearRumor	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731b4	0x140673134	21 MilitaryRemoved	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406731b8	0x140670566	22 StrangerWeapon	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731bc	0x140670594	23 StrangerSneaking	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731c0	0x1406707b7	24 SawDrinkBlood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731c4	0x140670cdf	25 Complained	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731c8	0x140670d6e	26 ReceivedComplaint	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731cc	0x140670ecd	27 AdmireBuilding	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731d0	0x140670ecd	28 AdmireOwnBuilding	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731d4	0x140670ecd	29 AdmireArrangedBuilding	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731d8	0x140670ecd	30 AdmireOwnArrangedBuilding	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731dc	0x140670fea	31 LostPet	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731e0	0x140670ff6	32 ThrownStuff	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731e4	0x140671002	33 JailReleased	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731e8	0x14067100e	34 Miscarriage	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731ec	0x14067101a	35 SpouseMiscarriage	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731f0	0x140671026	36 OldClothing	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731f4	0x140671032	37 TatteredClothing	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731f8	0x14067103e	38 RottedClothing	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406731fc	0x14067104a	39 GhostNightmare	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673200	0x1406710f0	40 GhostHaunt	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673204	0x14067122c	41 Spar	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673208	0x140671238	42 UnableComplain	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067320c	0x1406712bb	43 LongPatrol	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673210	0x1406712c7	44 SunNausea	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673214	0x1406712d3	45 SunIrritated	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673218	0x1406712df	46 Drowsy	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067321c	0x1406712eb	47 VeryDrowsy	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673220	0x1406712f7	48 Thirsty	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673224	0x140671303	49 Dehydrated	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673228	0x14067130f	50 Hungry	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067322c	0x14067131b	51 Starving	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673230	0x1406714ca	52 MajorInjuries	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673234	0x1406714d6	53 MinorInjuries	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673238	0x1406714e2	54 SleepNoise	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067323c	0x14067151c	55 Rest	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673240	0x140671528	56 FreakishWeather	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673244	0x140671534	57 Rain	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673248	0x140671572	58 SnowStorm	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067324c	0x1406715b0	59 Miasma	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673250	0x1406715bc	60 Smoke	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673254	0x1406715c8	61 Waterfall	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673258	0x1406715d4	62 Dust	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067325c	0x1406715e0	63 Demands	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673260	0x1406715ec	64 ImproperPunishment	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673264	0x1406715f8	65 PunishmentReduced	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673268	0x140671604	66 Elected	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067326c	0x140671610	67 Reelected	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673270	0x1406717f3	68 RequestApproved	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673274	0x1406717ff	69 RequestIgnored	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673278	0x14067180b	70 NoPunishment	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067327c	0x140671817	71 PunishmentDelayed	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673280	0x140671823	72 DelayedPunishment	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673284	0x14067182f	73 ScarceCageChain	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673288	0x14067183b	74 MandateIgnored	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067328c	0x140671847	75 MandateDeadlineMissed	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673290	0x140671853	76 LackWork	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673294	0x14067185f	77 SmashedBuilding	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673298	0x14067186b	78 ToppledStuff	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067329c	0x140671877	79 NoblePromotion	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732a0	0x140671883	80 BecomeNoble	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732a4	0x14067188f	81 Cavein	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732a8	0x14067189b	82 MandateDeadlineMet	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732ac	0x1406718a7	83 Uncovered	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732b0	0x1406718b3	84 NoShirt	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732b4	0x1406718bf	85 NoShoes	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732b8	0x1406718cb	86 EatPet	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732bc	0x1406718d7	87 EatLikedCreature	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732c0	0x1406718e3	88 EatVermin	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732c4	0x1406718ef	89 FistFight	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732c8	0x1406718fb	90 GaveBeating	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732cc	0x140671907	91 GotBeaten	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732d0	0x140671913	92 GaveHammering	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732d4	0x14067191f	93 GotHammered	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732d8	0x14067192b	94 NoHammer	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732dc	0x140671937	95 SameFood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732e0	0x140671943	96 AteRotten	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732e4	0x1406719f8	97 GoodMeal	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732e8	0x140671a04	98 GoodDrink	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732ec	0x140671a10	99 MoreChests	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732f0	0x140671a1c	100 MoreCabinets	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732f4	0x140671a28	101 MoreWeaponRacks	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732f8	0x140671a34	102 MoreArmorStands	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406732fc	0x140671a40	103 RoomPretension	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673300	0x140671acb	104 LackTables	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673304	0x140671ad7	105 CrowdedTables	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673308	0x140671ae3	106 DiningQuality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067330c	0x140671aef	107 NoDining	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673310	0x140671afb	108 LackChairs	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673314	0x140671b07	109 TrainingBond	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673318	0x140671b13	110 Rescued	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067331c	0x140671b1f	111 RescuedOther	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673320	0x140671b2b	112 SatisfiedAtWork	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673324	0x140671ba1	113 TaxedLostProperty	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673328	0x140671bad	114 Taxed	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067332c	0x140671bb9	115 LackProtection	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673330	0x140671bc5	116 TaxRoomUnreachable	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673334	0x140671bd1	117 TaxRoomMisinformed	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673338	0x140671beb	118 PleasedNoble	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067333c	0x140671c05	119 TaxCollectionSmooth	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673340	0x140671c1f	120 DisappointedNoble	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673344	0x140671c39	121 TaxCollectionRough	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673348	0x140671c53	122 MadeFriend	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067334c	0x140671ce7	123 FormedGrudge	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673350	0x140671d15	124 AnnoyedVermin	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673354	0x140671e29	125 NearVermin	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673358	0x140671ea0	126 PesteredVermin	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067335c	0x140671f6d	127 AcquiredItem	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673360	0x140671f79	128 AdoptedPet	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673364	0x140671f91	129 Jailed	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673368	0x14067205e	130 Bath	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067336c	0x14067206a	131 SoapyBath	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673370	0x140672076	132 SparringAccident	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673374	0x140672082	133 Attacked	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673378	0x14067208e	134 AttackedByDead	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067337c	0x1406720f4	135 SameBooze	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673380	0x140672100	136 DrinkBlood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673384	0x14067210c	137 DrinkSlime	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673388	0x140672118	138 DrinkVomit	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067338c	0x140672124	139 DrinkGoo	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673390	0x140672130	140 DrinkIchor	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673394	0x14067213c	141 DrinkPus	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673398	0x140672148	142 NastyWater	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067339c	0x140672154	143 DrankSpoiled	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733a0	0x140672160	144 LackWell	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733a4	0x140672178	145 NearCaged	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733a8	0x1406721d0	146 NearCagedHated	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733ac	0x140672228	147 LackBedroom	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733b0	0x140672234	148 BedroomQuality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733b4	0x140672240	149 SleptFloor	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733b8	0x14067224c	150 SleptMud	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733bc	0x140672258	151 SleptGrass	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733c0	0x140672264	152 SleptRoughFloor	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733c4	0x140672270	153 SleptRocks	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733c8	0x14067227c	154 SleptIce	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733cc	0x140672288	155 SleptDirt	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733d0	0x140672294	156 SleptDriftwood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733d4	0x1406722a0	157 ArtDefacement	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733d8	0x1406722ac	158 Evicted	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733dc	0x1406728d5	159 GaveBirth	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733e0	0x140672944	160 SpouseGaveBirth	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733e4	0x140672a0c	161 ReceivedWater	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733e8	0x140672a18	162 GaveWater	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733ec	0x140672a24	163 ReceivedFood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733f0	0x140672a30	164 GaveFood	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733f4	0x140672e4b	165 Talked	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733f8	0x140672ef1	166 OfficeQuality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406733fc	0x140673035	167 MeetingInBedroom	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673400	0x140673041	168 MeetingInDiningRoom	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673404	0x14067304d	169 NoRooms	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673408	0x140673059	170 TombQuality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067340c	0x140673065	171 TombLack	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673410	0x140673071	172 TalkToNoble	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673414	0x140671f85	173 InteractPet	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673418	0x140672022	174 ConvictionCorpse	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067341c	0x14067202e	175 ConvictionAnimal	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673420	0x14067203a	176 ConvictionVictim	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673424	0x140672046	177 ConvictionJusticeSelf	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673428	0x140672052	178 ConvictionJusticeFamily	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067342c	0x140672a7b	179 Decay	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673430	0x140671327	180 NeedsUnfulfilled	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673434	0x140670355	181 Prayer	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673438	0x14067216c	182 DrinkWithoutCup	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067343c	0x1406726ee	183 ResearchBreakthrough	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673440	0x14067276a	184 ResearchStalled	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673444	0x14067285c	185 PonderTopic	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673448	0x1406727e3	186 DiscussTopic	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067344c	0x140673134	187 Syndrome	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673450	0x14067094b	188 Perform	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673454	0x14067094b	189 WatchPerform	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673458	0x140673134	190 RemoveTroupe	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x14067345c	0x14067238c	191 LearnTopic	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673460	0x140672408	192 LearnSkill	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673464	0x1406724ca	193 LearnBook	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673468	0x140672505	194 LearnInteraction	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067346c	0x140672566	195 LearnPoetry	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673470	0x1406725d6	196 LearnMusic	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673474	0x140672646	197 LearnDance	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673478	0x1406722b8	198 TeachTopic	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067347c	0x140672334	199 TeachSkill	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673480	0x1406724a7	200 ReadBook	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673484	0x140672460	201 WriteBook	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673488	0x1406716f6	202 BecomeResident	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067348c	0x14067171f	203 BecomeCitizen	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673490	0x140671748	204 DenyResident	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673494	0x1406717e7	205 DenyCitizen	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673498	0x140673134	206 LeaveTroupe	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x14067349c	0x140670286	207 MakeBelieve	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734a0	0x1406702a0	208 PlayToy	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734a4	0x140673134	209 DreamAbout	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734a8	0x140673134	210 Dream	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734ac	0x140673134	211 Nightmare	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734b0	0x140671c8a	212 Argument	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734b4	0x140671214	213 CombatDrills	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734b8	0x140671220	214 ArcheryPractice	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734bc	0x1406705f0	215 ImproveSkill	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734c0	0x14067194f	216 WearItem	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734c4	0x14066ff42	217 RealizeValue	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734c8	0x140673134	218 OpinionStoryteller	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734cc	0x140673134	219 OpinionRecitation	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734d0	0x140673134	220 OpinionInstrumentSimulation	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734d4	0x140673134	221 OpinionInstrumentPlayer	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734d8	0x140673134	222 OpinionSinger	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734dc	0x140673134	223 OpinionChanter	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734e0	0x140673134	224 OpinionDancer	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734e4	0x140673134	225 OpinionStory	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734e8	0x140673134	226 OpinionPoetry	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734ec	0x140673134	227 OpinionMusic	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734f0	0x140673134	228 OpinionDance	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734f4	0x140670c4f	229 Defeated	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406734f8	0x140673134	230 FavoritePossession	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x1406734fc	0x140673134	231 PreserveBody	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673500	0x140670c67	232 Murdered	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673504	0x14067307d	233 HistEventCollection	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673508	0x140670dc5	234 ViewOwnDisplay	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067350c	0x140670dc5	235 ViewDisplay	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673510	0x140671f44	236 AcquireArtifact	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673514	0x140672016	237 DenySanctuary	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673518	0x140670cb1	238 CaughtSneaking	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067351c	0x140671ef8	239 GaveArtifact	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673520	0x1406708fc	240 SawDeadBody	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673524	0x140671fb5	241 Expelled	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673528	0x140671fc1	242 RelativeExpelled	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067352c	0x1406730ef	243 PromisedVampireImmortality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673530	0x1406730f8	244 PromisedNecroImmortality	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673534	0x140671f9d	245 SiteLecture	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673538	0x140671fa9	246 SitePerformance	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067353c	0x140673101	247 AcceptedBribe	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673540	0x14067310a	248 EmbezzledFunds	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673544	0x140673113	249 CutOfCorruptFunds	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673548	0x140670c5b	250 Abducted	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067354c	0x14067311c	251 FromAfar	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673550	0x140671689	252 AcceptedTemplePetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673554	0x14067161c	253 EstablishedTemple	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673558	0x140671751	254 RejectedTemplePetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067355c	0x14067177a	255 IgnoredTemplePetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673560	0x1406717a3	256 AbandonedTemplePetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673564	0x140673134	257 DeferredToSuperior	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673568	0x140671689	258 AcceptedGuildhallPetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067356c	0x14067161c	259 EstablishedGuildhallRecognition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673570	0x1406717cc	260 RejectedGuildhallPetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673574	0x1406717d5	261 IgnoredGuildhallPetition	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673578	0x1406717de	262 AbandonedGuildhallAgreement	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x14067357c	0x140673125	263 InfiltrationMission	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673580	0x140670419	264 BreakUp	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673584	0x14067045e	265 Divorce	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x140673588	0x140673134	266 ActivePreacherPerformance	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x14067358c	0x140673134	267 ActiveSermonWorship	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673590	0x140673134	268 ActiveSermonSphere	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673594	0x140673134	269 ActiveSermonPromoteValue	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x140673598	0x140673134	270 ActiveSermonRefuseValue	No event text; native return	
+event-switch	0x14066fe50	0x140673bb8	0x14067359c	0x140672bc1	271 IntellectualDiscussion	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735a0	0x140672c43	272 SharePersonalInsight	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735a4	0x140672cc5	273 ShareOthersPersonalInsight	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735a8	0x140672d47	274 DiscussProblems	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735ac	0x140672dc9	275 DiscussOthersProblems	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735b0	0x14067030f	276 PerformedRiteDedicatedTemple	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735b4	0x14067030f	277 PerformedRiteImproperlyDedicatedTemple	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735b8	0x14067030f	278 PerformedRiteUndedicatedTemple	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735bc	0x140670355	279 PrayedDedicatedTemple	Event branch; literals and field constructors above	
+event-switch	0x14066fe50	0x140673bb8	0x1406735c0	0x1406726b6	280 DefendedSiteAgainstInvaders	Event branch; literals and field constructors above	
+# Complete incident-kind switch from 0x14066fcbc; all 11 branch targets are part of the same helper.
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcbc	0x14066cf54	0 death	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcc0	0x14066d3a4	1 crime	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcc4	0x14066f399	2 attack	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcc8	0x14066f829	3 escalated conflict	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fccc	0x14066c7a5	4 reunion	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcd0	0x14066ee76	5 demand submission	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcd4	0x14066d821	6 performance	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcd8	0x14066c2ca	7 artifact action	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fcdc	0x14066bba3	8 written-work action	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fce0	0x14066e917	9 self-identification	memory-sentence; complete incident branch	
+incident-switch	0x14066ba00	0x14066fe48	0x14066fce4	0x14066ebde	10 refused identification	memory-sentence; complete incident branch	

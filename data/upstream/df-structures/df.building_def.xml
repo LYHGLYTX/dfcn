@@ -1,0 +1,498 @@
+<data-definition>
+    <struct-type type-name='building_def_item' original-name='building_def_build_itemst'>
+        <enum base-type='int16_t' type-name='item_type' name='item_type' original-name='type'/>
+        <int16_t name='item_subtype' original-name='subtype' refers-to='(item-subtype-target $$._parent.item_type $)'/>
+        <int16_t name='mat_type' original-name='subcat1' ref-target='material' aux-value='$$.mat_index'/>
+        <int16_t name='mat_index' original-name='subcat2' init-value='-1' comment='actually int16, not int32 as used in other places'/>
+
+        <stl-string name='reaction_class' original-name='class_token'/>
+        <stl-string name='has_material_reaction_product' original-name='reaction_product_class'/>
+
+        <bitfield type-name='job_item_flags1' name='flags1' original-name='itemneeded_flag'/>
+        <bitfield type-name='job_item_flags2' name='flags2' original-name='itemneeded_flag2'/>
+        <bitfield type-name='job_item_flags3' name='flags3' original-name='itemneeded_flag3'/>
+        <uint32_t name='flags4' original-name='itemneeded_flag4'/>
+        <uint32_t name='flags5' original-name='itemneeded_flag5'/>
+
+        <int32_t name='metal_ore' ref-target='inorganic_raw'/>
+        <int32_t name='min_dimension' original-name='min_dimension_taken'/>
+
+        <int32_t name='quantity' original-name='number_needed'/>
+        <enum base-type='int16_t' type-name='tool_uses' name='has_tool_use' original-name='tool_use'/>
+
+        <static-array type-name='stl-string' name='item_str' original-name='item_token_string' count='2'/>
+        <static-array type-name='stl-string' name='material_str' original-name='item_token_string3' count='3'/>
+        <stl-string name='metal_ore_str' original-name='metal_ore_string'/>
+    </struct-type>
+
+    <class-type type-name='building_def' original-name='building_defst'
+                instance-vector='$global.world.raws.buildings.all' key-field='id'>
+        <stl-string name="code" original-name='token'/>
+
+        <code-helper name='describe'>$.code</code-helper>
+
+        <int32_t name="id" original-name='global_id'/>
+        <stl-string name="name"/>
+
+        <enum base-type='int32_t' type-name='building_type' name='building_type'/>
+        <int32_t name='building_subtype'/>
+        <static-array name='name_color' count='3' type-name='int16_t'/>
+
+        <static-array name='tile' original-name='bch' count='4'>
+            <static-array count='31'>
+                <static-array count='31' type-name='uint8_t'/>
+            </static-array>
+        </static-array>
+
+        <static-array name='tile_color' original-name='bcol' count='3'>
+            <static-array count='4'>
+                <static-array count='31'>
+                    <static-array count='31' type-name='uint8_t'/>
+                </static-array>
+            </static-array>
+        </static-array>
+
+        <static-array name='tile_block' original-name='block' count='31'>
+            <static-array count='31' type-name='uint8_t'/>
+        </static-array>
+
+        <static-array name='graphics_normal' original-name='texpos' count='4'>
+            <static-array count='31'>
+                <static-array count='32' type-name='int32_t'/>
+            </static-array>
+        </static-array>
+
+        <static-array name='graphics_overlay' original-name='texpos_overlay' count='4'>
+            <static-array count='31'>
+                <static-array count='32' type-name='int32_t'/>
+            </static-array>
+        </static-array>
+
+        <enum type-name='interface_key' name='build_key'/>
+        <bool name='needs_magma'/>
+
+        <stl-vector pointer-type='building_def_item' name="build_items" original-name='build_item'/>
+
+        <int32_t name="dim_x"/>
+        <int32_t name="dim_y"/>
+        <int32_t name="workloc_x" original-name='work_x'/>
+        <int32_t name="workloc_y" original-name='work_y'/>
+
+        <stl-vector name="build_labors" original-name='build_profession'>
+            <enum base-type='int32_t' type-name='unit_labor'/>
+        </stl-vector>
+        <stl-string name="labor_description" original-name='profession_build_string'/>
+
+        <int32_t name="build_stages" original-name='max_build_stage'/>
+
+        <compound type-name='curses_text_boxst' name='tooltip'/>
+
+        <virtual-methods>
+            <vmethod name='parseRaws' original-name='adopt_line'>
+                <pointer type-name='stl-string' name='str'/>
+                <pointer type-name='stl-string' name='maintok'/>
+                <int32_t name='pos'/>
+                <pointer pointer-type='building_def_item' name='bi'/>
+            </vmethod>
+            <vmethod name='categorize' original-name='sort_into_subtype' comment='add to world.raws.buildings.whatever'/>
+            <vmethod name='finalize'/>
+            <vmethod is-destructor='true'/>
+        </virtual-methods>
+    </class-type>
+
+    <class-type type-name='building_def_workshopst' inherits-from='building_def'>
+        <int32_t name='list_icon_texpos'/>
+    </class-type>
+
+    <class-type type-name='building_def_furnacest' inherits-from='building_def'>
+        <int32_t name='list_icon_texpos'/>
+    </class-type>
+
+    <bitfield-type type-name='building_bridge_graphics_flag' base-type='int32_t'> bay12: BUILDING_BRIDGE_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='tile_index' original-name='TILE_INDEX' count='8'/>
+        <flag-bit name='material' original-name='MATERIAL' count='2' type-name='building_bridge_graphics_flag_material'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_bridge_graphics_flag_material' base-type='int32_t'> bay12: BUILDING_BRIDGE_GRAPHICS_FLAG_MATERIAL_*
+        <enum-item name='WOOD'/>
+        <enum-item name='STONE'/>
+        <enum-item name='METAL'/>
+        <enum-item name='GLASS'/>
+    </enum-type>
+
+    <struct-type type-name='building_bridge_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_bridge_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_wagon_graphics_flag' base-type='int32_t'> bay12: BUILDING_WAGON_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='direction' original-name='DIRECTION' count='3' type-name='building_wagon_graphics_flag_direction'/>
+        <flag-bit name='x' original-name='X' count='2'/>
+        <flag-bit name='y' original-name='Y' count='2'/>
+        <flag-bit name='goods' original-name='GOODS' count='3'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_wagon_graphics_flag_direction' base-type='int32_t'> bay12: BUILDING_WAGON_GRAPHICS_FLAG_DIRECTION_*
+        <enum-item name='BLD'/>
+        <enum-item name='N'/>
+        <enum-item name='S'/>
+        <enum-item name='W'/>
+        <enum-item name='E'/>
+    </enum-type>
+
+    <struct-type type-name='building_wagon_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_wagon_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_trap_graphics_flag' base-type='int32_t'> bay12: BUILDING_TRAP_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='type' original-name='TYPE' count='5' type-name='building_trap_graphics_flag_type'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_trap_graphics_flag_type' base-type='int32_t'> bay12: BUILDING_TRAP_GRAPHICS_FLAG_TYPE_*
+        <enum-item name='CAGE_DELAYED'/>
+        <enum-item name='STONE_DELAYED'/>
+        <enum-item name='PLATE_DELAYED_MAGMA'/>
+        <enum-item name='PLATE_DELAYED_WATER'/>
+        <enum-item name='PLATE_DELAYED_MINECART'/>
+        <enum-item name='PLATE_DELAYED'/>
+        <enum-item name='CAGE'/>
+        <enum-item name='STONE'/>
+        <enum-item name='PLATE_MAGMA'/>
+        <enum-item name='PLATE_WATER'/>
+        <enum-item name='PLATE_MINECART'/>
+        <enum-item name='PLATE'/>
+        <enum-item name='CAGE_TOP'/>
+        <enum-item name='STONE_TOP'/>
+        <enum-item name='LEVER_1'/>
+        <enum-item name='LEVER_2'/>
+    </enum-type>
+
+    <struct-type type-name='building_trap_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_trap_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_axle_graphics_flag' base-type='int32_t'> bay12: BUILDING_AXLE_GRAPHICS_FLAG_*
+        <flag-bit name='animation' original-name='ANIMATION'/>
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_axle_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_axle_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_gear_assembly_graphics_flag' base-type='int32_t'> bay12: BUILDING_GEAR_ASSEMBLY_GRAPHICS_FLAG_*
+        <flag-bit name='animation' original-name='ANIMATION'/>
+        <flag-bit name='gear_color_index' original-name='GEAR_COLOR_INDEX' count='8'/>
+        <flag-bit name='s_axle_color_index' original-name='S_AXLE_COLOR_INDEX' count='8'/>
+        <flag-bit name='w_axle_color_index' original-name='W_AXLE_COLOR_INDEX' count='8'/>
+        <flag-bit name='has_s_axle' original-name='HAS_S_AXLE'/>
+        <flag-bit name='has_w_axle' original-name='HAS_W_AXLE'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_gear_assembly_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_gear_assembly_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_screwpump_graphics_flag' base-type='int32_t'> bay12: BUILDING_SCREWPUMP_GRAPHICS_FLAG_*
+        <flag-bit name='animation' original-name='ANIMATION'/>
+        <flag-bit name='pump_color_index' original-name='PUMP_COLOR_INDEX' count='8'/>
+        <flag-bit name='s_axle_color_index' original-name='S_AXLE_COLOR_INDEX' count='8'/>
+        <flag-bit name='has_s_axle' original-name='HAS_S_AXLE'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='dir' original-name='DIR' count='2' type-name='building_screwpump_graphics_flag_dir'/>
+        <flag-bit name='second_tile' original-name='SECOND_TILE'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_screwpump_graphics_flag_dir' base-type='int32_t'> bay12: BUILDING_SCREWPUMP_GRAPHICS_FLAG_DIR_*
+        <enum-item name='N'/>
+        <enum-item name='S'/>
+        <enum-item name='W'/>
+        <enum-item name='E'/>
+    </enum-type>
+
+    <struct-type type-name='building_screwpump_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_screwpump_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_windmill_graphics_flag' base-type='int32_t'> bay12: BUILDING_WINDMILL_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='second_frame' original-name='SECOND_FRAME'/>
+        <flag-bit name='sx_bits' original-name='SX' count='2'/>
+        <flag-bit name='sy_bits' original-name='SY' count='2'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='facing' original-name='FACING' count='3' type-name='building_windmill_graphics_flag_facing'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_windmill_graphics_flag_facing' base-type='int32_t'> bay12: BUILDING_WINDMILL_GRAPHICS_FLAG_FACING_*
+        <enum-item name='S'/>
+        <enum-item name='SW'/>
+        <enum-item name='W'/>
+        <enum-item name='NW'/>
+        <enum-item name='N'/>
+        <enum-item name='NE'/>
+        <enum-item name='E'/>
+        <enum-item name='SE'/>
+    </enum-type>
+
+    <struct-type type-name='building_windmill_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_windmill_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_water_wheel_graphics_flag' base-type='int32_t'> bay12: BUILDING_WATER_WHEEL_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='second_frame' original-name='SECOND_FRAME'/>
+        <flag-bit name='sx_bits' original-name='SX' count='2'/>
+        <flag-bit name='sy_bits' original-name='SY' count='2'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='ns' original-name='NS'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_water_wheel_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_water_wheel_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_ballista_graphics_flag' base-type='int32_t'> bay12: BUILDING_BALLISTA_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit comment='unused'/>
+        <flag-bit name='sx_bits' original-name='SX' count='2'/>
+        <flag-bit name='sy_bits' original-name='SY' count='2'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='facing' original-name='FACING' count='4' type-name='building_ballista_graphics_flag_facing'/>
+        <flag-bit name='firing' original-name='FIRING'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_ballista_graphics_flag_facing' base-type='int32_t'> bay12: BUILDING_BALLISTA_GRAPHICS_FLAG_FACING_*
+        <enum-item name='N'/>
+        <enum-item name='NE'/>
+        <enum-item name='E'/>
+        <enum-item name='SE'/>
+        <enum-item name='S'/>
+        <enum-item name='SW'/>
+        <enum-item name='W'/>
+        <enum-item name='NW'/>
+        <enum-item name='CONST0'/>
+        <enum-item name='CONST1'/>
+        <enum-item name='CONST2'/>
+        <enum-item name='CONST3'/>
+    </enum-type>
+
+    <struct-type type-name='building_ballista_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_ballista_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_catapult_graphics_flag' base-type='int32_t'> bay12: BUILDING_CATAPULT_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit comment='unused'/>
+        <flag-bit name='sx_bits' original-name='SX' count='2'/>
+        <flag-bit name='sy_bits' original-name='SY' count='2'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='facing' original-name='FACING' count='4' type-name='building_catapult_graphics_flag_facing'/>
+        <flag-bit name='firing' original-name='FIRING'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_catapult_graphics_flag_facing' base-type='int32_t'> bay12: BUILDING_CATAPULT_GRAPHICS_FLAG_FACING_*
+        <enum-item name='N'/>
+        <enum-item name='NE'/>
+        <enum-item name='E'/>
+        <enum-item name='SE'/>
+        <enum-item name='S'/>
+        <enum-item name='SW'/>
+        <enum-item name='W'/>
+        <enum-item name='NW'/>
+        <enum-item name='CONST0'/>
+        <enum-item name='CONST1'/>
+        <enum-item name='CONST2'/>
+        <enum-item name='CONST3'/>
+    </enum-type>
+
+    <struct-type type-name='building_catapult_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_catapult_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_bolt_thrower_graphics_flag' base-type='int64_t'> bay12: BUILDING_BOLT_THROWER_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='facing' original-name='FACING' count='3' type-name='building_bolt_thrower_graphics_flag_facing'/>
+        <flag-bit name='ammo_level' original-name='AMMO_LEVEL' count='3'/>
+        <flag-bit name='ammo_color_index' original-name='AMMO_COLOR_INDEX' count='8'/>
+        <flag-bit name='firing' original-name='FIRING'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_bolt_thrower_graphics_flag_facing' base-type='int64_t'> bay12: BUILDING_BOLT_THROWER_GRAPHICS_FLAG_FACING_*
+        <enum-item name='N'/>
+        <enum-item name='NE'/>
+        <enum-item name='E'/>
+        <enum-item name='SE'/>
+        <enum-item name='S'/>
+        <enum-item name='SW'/>
+        <enum-item name='W'/>
+        <enum-item name='NW'/>
+    </enum-type>
+
+    <struct-type type-name='building_bolt_thrower_graphics_infost'>
+        <bitfield base-type='int64_t' type-name='building_bolt_thrower_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_rollers_graphics_flag' base-type='int32_t'> bay12: BUILDING_ROLLERS_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='track_n' original-name='TRACK_N'/>
+        <flag-bit name='track_s' original-name='TRACK_S'/>
+        <flag-bit name='track_w' original-name='TRACK_W'/>
+        <flag-bit name='track_e' original-name='TRACK_E'/>
+        <flag-bit name='second_frame' original-name='SECOND_FRAME'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_rollers_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_rollers_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_track_stop_graphics_flag' base-type='int32_t'> bay12: BUILDING_TRACK_STOP_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='track_n' original-name='TRACK_N'/>
+        <flag-bit name='track_s' original-name='TRACK_S'/>
+        <flag-bit name='track_w' original-name='TRACK_W'/>
+        <flag-bit name='track_e' original-name='TRACK_E'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_track_stop_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_track_stop_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_weapon_rack_graphics_flag' base-type='int32_t'> bay12: BUILDING_WEAPON_RACK_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='metal' original-name='METAL'/>
+        <flag-bit name='full' original-name='FULL'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_weapon_rack_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_weapon_rack_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_armor_stand_graphics_flag' base-type='int32_t'> bay12: BUILDING_ARMOR_STAND_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='metal' original-name='METAL'/>
+        <flag-bit name='full' original-name='FULL'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_armor_stand_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_armor_stand_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_support_graphics_flag' base-type='int32_t'> bay12: BUILDING_SUPPORT_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='wood' original-name='WOOD'/>
+        <flag-bit name='metal' original-name='METAL'/>
+    </bitfield-type>
+
+    <struct-type type-name='building_support_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_support_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_bars_vertical_graphics_flag' base-type='int32_t'> bay12: BUILDING_BARS_VERTICAL_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='planned' original-name='PLANNED'/>
+        <flag-bit name='type' original-name='TYPE' count='4' type-name='building_bars_vertical_graphics_flag_type'/>
+    </bitfield-type>
+
+    <enum-type type-name='building_bars_vertical_graphics_flag_type' base-type='int32_t'> bay12: BUILDING_BARS_VERTICAL_GRAPHICS_FLAG_TYPE_*
+        <enum-item name='N_SIGNPOST'/>
+        <enum-item name='SWE'/>
+        <enum-item name='NWE'/>
+        <enum-item name='NSE'/>
+        <enum-item name='NSW'/>
+        <enum-item name='NW'/>
+        <enum-item name='NE'/>
+        <enum-item name='SW'/>
+        <enum-item name='SE'/>
+        <enum-item name='NS'/>
+        <enum-item name='WE'/>
+        <enum-item name='FLOOR'/>
+    </enum-type>
+
+    <struct-type type-name='building_bars_vertical_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_bars_vertical_graphics_flag' name='flags' original-name='local_id'/>
+        <int32_t name='texpos'/>
+    </struct-type>
+
+    <bitfield-type type-name='building_workshop_graphics_flag' base-type='int32_t'> bay12: BUILDING_WORKSHOP_GRAPHICS_FLAG_*
+        <flag-bit name='color_index' original-name='COLOR_INDEX' count='8'/>
+        <flag-bit name='subtype' original-name='SUBTYPE' count='16'/>
+        <flag-bit name='is_furnace' original-name='IS_FURNACE'/>
+        <flag-bit name='is_tradedepot' original-name='IS_TRADEDEPOT'/>
+        <flag-bit name='planned_only' original-name='PLANNED_ONLY'/>
+        <flag-bit name='second_frame' original-name='SECOND_FRAME'/>
+    </bitfield-type>
+
+    <struct-type type-name='workshop_graphics_infost'>
+        <bitfield base-type='int32_t' type-name='building_workshop_graphics_flag' name='flags' original-name='local_id'/>
+        <static-array name='texpos' count='4'>
+            <static-array count='31'>
+                <static-array count='32' type-name='int32_t'/>
+            </static-array>
+        </static-array>
+    </struct-type>
+
+    <struct-type type-name='building_def_handlerst'>
+        <stl-vector pointer-type='building_def' name='all' original-name='global'/>
+        <stl-vector pointer-type='building_def_workshopst' name='workshops' original-name='workshop'/>
+        <stl-vector pointer-type='building_def_furnacest' name='furnaces' original-name='furnace'/>
+        <int32_t name='next_id' original-name='next_global_id'/>
+
+        <stl-vector pointer-type='building_axle_graphics_infost' name='axle_horizontal_ns_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_axle_graphics_infost' name='axle_horizontal_we_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_axle_graphics_infost' name='axle_vertical_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_trap_graphics_infost' name='trap_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_wagon_graphics_infost' name='wagon_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_gear_assembly_graphics_infost' name='gear_assembly_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_bridge_graphics_infost' name='bridge_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_windmill_graphics_infost' name='windmill_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_water_wheel_graphics_infost' name='water_wheel_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_rollers_graphics_infost' name='rollers_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_track_stop_graphics_infost' name='track_stop_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='workshop_graphics_infost' name='workshop_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_ballista_graphics_infost' name='ballista_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_catapult_graphics_infost' name='catapult_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_bolt_thrower_graphics_infost' name='bolt_thrower_graphics_info'/> 0.53.01
+        <stl-vector pointer-type='building_support_graphics_infost' name='support_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_bars_vertical_graphics_infost' name='bars_vertical_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_screwpump_graphics_infost' name='screwpump_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_weapon_rack_graphics_infost' name='weapon_rack_graphics_info'/> 0.50.01
+        <stl-vector pointer-type='building_armor_stand_graphics_infost' name='armor_stand_graphics_info'/> 0.50.01
+    </struct-type>
+</data-definition>
+
+<!--
+Local Variables:
+indent-tabs-mode: nil
+nxml-child-indent: 4
+End:
+-->
