@@ -123,9 +123,11 @@ Reconstructed main renderer
       // RAW attack names remain data, not a finite hardcoded English noun list.
       // Specific comparisons stab/slash/slap/hack/bash/lash/pommel/punch/kick/bite/sting/snatch
       // select artwork; the visible label still comes from RAW strings.
-      label draws from L+7 with native cap 36; summary starts at L+45 on the next text baseline.
+      label draws from L+7 with native cap 36; summary starts at L+45 on the same text baseline.
+      // Normal is omitted when speed_class != 3; the speed starts the caption instead.
       text(chance<=-3 ? "Impossible" : chance==-2 ? "Difficult" : chance==-1 ? "Tricky"
-          : chance==0 ? "Normal" : chance==1 ? "Easy" : chance==2 ? "Easier" : "Simple");
+          : chance==0 ? (speed_class==3 ? "Normal" : "")
+          : chance==1 ? "Easy" : chance==2 ? "Easier" : "Simple");
       if speed_class != 3: text(" "); text(speed_class>=6 ? "VVSlow" : speed_class==5 ? "V Slow"
           : speed_class==4 ? "Slow" : speed_class==2 ? "Fast" : speed_class<=1 ? "V Fast" : "");
       text(" strike, "); text(contact_quality(entry.contact));
@@ -305,3 +307,27 @@ Native owner, layer writes and exact control geometry (additional reverse-engine
     anchored portrait [0xad7db0,0xad80d2); lower tile [0xad7b10,0xad7c5c).
   Their full machine code is retained in helper-classic-*-draw.asm and
   helper-classic-*-tile.asm, and paired ranges in helper-edition-function-ranges.tsv.
+
+Complete authored dynamic display leaves (additional source extraction)
+  helper-reference-raw-display-fields.tsv and helper-classic-raw-display-fields.tsv
+  retain both configured installations' vanilla and installed_mods object fields,
+  including BODY BP, INDIVIDUAL_NAME/BP_NAME variants, all creature/caste/juvenile
+  identity names, weapon/tool/natural attack names, item nouns/adjectives and
+  material state names/adjectives/prefixes. The source rows retain RAW owners,
+  caste/material context, exact file/line and the native expanded field.
+  STP expands to that token's singular name; NO_SUB is omitted by native code.
+  helper-raw-display-productions.tsv retains the native Lua source expressions
+  that create these fields, without executing procedural generation.
+  Runtime authored nicknames, generated history/procedural names and mod/save
+  content remain semantic getter fields; no finite fixed English list describes
+  them. Material/item naming uses the shared item-description source catalogs
+  item-description-sources.tsv, item-raw-title-sources.tsv, corpse-caption-sources.tsv
+  and the virtual/RAW formatter dependencies recorded in helper-decompiled.txt.
+
+Stage 3 and 4 selectable record geometry from native renderer operands
+  Both stages use inclusive outer record x=[L+1,E], E=R-1 ordinarily and
+  E=R-3 when the scrollbar shortens records. Record pitch is three text rows.
+  The attack/bodypart icon occupies [L+1,L+5) across three rows; key is at L+5.
+  Dot/name begins at L+7 with a 36-character native cap. Name and statistics
+  are both at recordTop+1; statistics begin at L+45. Native + and - markers
+  occupy E-2, while ! occupies E-1; these fields have independent native draws.

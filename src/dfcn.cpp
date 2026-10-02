@@ -28609,6 +28609,9 @@ void Overlay::normalize_native_split_text() {
     std::vector<Caption> captions;
     for (size_t index = 0; index < prepared_matches_.size(); ++index) {
         Match &match = prepared_matches_[index];
+        // The decompiled adventure combat renderer uses ordinary addst,
+        // which retains underlying half-font flags without drawing halves.
+        if (match.rule == kAdventureCombatFieldRule) continue;
         // Tooltip wrapping owns its physical source rows and output lines.
         // Flags retained from a covered picture caption cannot turn those
         // lines into duplicate halves or move their final Chinese baseline.

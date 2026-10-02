@@ -141,7 +141,8 @@ static bool adventure_combat_header_at(const graphicst &gps,
 }
 
 static std::optional<SDL_Rect> adventure_combat_action_box_at(
-        const graphicst &gps, const SDL_Rect &panel, int top, bool classic) {
+        const graphicst &gps, const SDL_Rect &panel, int top, bool classic,
+        bool picture = false) {
     const int left = panel.x;
     const int maximum_right = panel.x + panel.w - 1;
     if (top < panel.y || top + 3 > panel.y + panel.h || left < 0 ||
@@ -149,7 +150,10 @@ static std::optional<SDL_Rect> adventure_combat_action_box_at(
     const auto *rectangle = native_texture_button_rectangle(gps);
     // Native scrolling shortens the right edge by two columns when its
     // scrollbar is present. Discover that edge from the actual upper rail.
-    int right = left + 1;
+    // A body-part/attack record replaces its first four columns with a
+    // four-by-three lower-tile icon. The remaining rails still belong to
+    // the same rectangle; never use its artwork as caption ownership.
+    int right = left + (picture ? 4 : 1);
     while (right <= maximum_right && native_ui_skin_at(gps,
             right, top, rectangle[1][0], classic)) ++right;
     if ((right != maximum_right && right != maximum_right - 2) ||
@@ -164,6 +168,7 @@ static std::optional<SDL_Rect> adventure_combat_action_box_at(
     }
     for (int dy = 0; dy < 3; ++dy) {
         for (int x = left; x <= right; ++x) {
+            if (picture && x < left + 4) continue;
             const int column = x == left ? 0 : x == right ? 2 : 1;
             const bool caption = dy == 1 && x < right;
             // A complete child selector can replace the parent's middle
@@ -183,7 +188,8 @@ static std::optional<SDL_Rect> adventure_combat_action_box_at(
             return std::nullopt;
         }
     }
-    return SDL_Rect{left + 2, top, right - left - 2, 3};
+    const int caption_left = left + (picture ? 6 : 2);
+    return SDL_Rect{caption_left, top, right - caption_left, 3};
 }
 
 static std::optional<NativeAdventureCombatPanel> capture_adventure_combat_panel(

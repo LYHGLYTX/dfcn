@@ -84,7 +84,19 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
             }
             return finish(translate_ui_message_capture(trim_view(original), true));
         }
-        if (kind == 'i') return finish(translate_legends_item(trim_view(original)));
+        if (kind == 'i') {
+            if (source.ends_with(" (copy)")) {
+                const auto item = resolve(std::string_view(source).substr(0, source.size() - 7), 'i');
+                const auto suffix = adventure_target_literals_.find("(copy)");
+                if (item && suffix != adventure_target_literals_.end())
+                    return finish(*item + suffix->second);
+                return finish(std::nullopt);
+            }
+            return finish(translate_legends_item(trim_view(original)));
+        }
+        if (kind == 't') {
+            if (const auto anatomy = translate_legends_anatomy(source)) return finish(anatomy);
+        }
         if (const auto found = adventure_target_literals_.find(source);
                 found != adventure_target_literals_.end()) return finish(found->second);
         if (const auto rating = translate_skill_rating(source)) return finish(rating);
@@ -140,7 +152,10 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
         // Wrestling's native held-object union can name a body part or an
         // item. Ordinal body-part prefixes above recurse in this same scope
         // before either typed leaf is asked to resolve its complete noun.
-        if (const auto item = translate_legends_item(source)) return finish(item);
+        if (kind != 't') {
+            if (const auto item = resolve(source, 'i')) return finish(item);
+        }
+        if (kind == 't') return finish(std::nullopt);
         if (const auto term = translate_ui_message_capture(source, false)) return finish(term);
         return finish(std::nullopt);
     };
@@ -153,6 +168,7 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
     const bool classic = native_ui_classic().value_or(false);
     std::vector<NativeAdventureCombatPanel> panels;
     std::vector<SDL_Rect> prompt_panels;
+    std::map<std::pair<int, int>, int> prompt_stages;
     std::set<std::pair<int, int>> confirmation_panels;
     const auto retain_prompt = [&](const SDL_Rect &bounds) {
         if (std::none_of(prompt_panels.begin(), prompt_panels.end(),
@@ -190,7 +206,13 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                     for (const std::string_view prefix : {"Who will you attack?", "Who will you wrestle?",
                             "What do you want to aim for?", "Really start a conflict with ",
                             "Really attack ", "Attack ", "Wrestle "})
-                        if (text.starts_with(prefix)) { combat_prompt = true; break; }
+                        if (text.starts_with(prefix)) {
+                            combat_prompt = true;
+                            prompt_stages[{bounds->x, bounds->y}] =
+                                prefix == "What do you want to aim for?" ? 3 :
+                                prefix == "Attack " ? 4 : prefix == "Wrestle " ? 8 : 0;
+                            break;
+                        }
                     if (!combat_prompt && text.ends_with("has yielded.  Attack anyway?")) combat_prompt = true;
                 }
                 if (combat_prompt) retain_prompt(*bounds);
@@ -231,7 +253,7 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
     const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
     const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
     const auto append = [&](const SDL_Rect &box, int display_left, char kind,
-                            bool centered = false) {
+                            bool centered = false, bool combat_quality = false) {
         for (int y = box.y; y < box.y + box.h && y < gps_->dimy; ++y) {
             int first = box.x, end = box.x + box.w;
             std::string native_row(gps_->dimx, ' ');
@@ -266,19 +288,29 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 source += cell[0] ? static_cast<char>(cell[0]) : ' ';
             }
             if (!current) continue;
+            // The renderer first paints CP437 0xFA dots, then overwrites only the
+            // name's prefix. Own the whole native field (including its dots)
+            // while translating the formatter's complete anatomy/attack.
+            std::string lookup_source = source;
+            if (kind == 't' || kind == 'a') {
+                const auto tail = lookup_source.find_last_not_of("\xfa. ");
+                if (tail == std::string::npos) continue;
+                lookup_source.resize(tail + 1);
+            }
             std::optional<std::string> target;
             // Use the exact native formatter's identity before a lexical
             // fallback. A shortened name retains its complete translation.
             const auto &layer_draws = layer ? top_draws : draws;
             for (auto draw = layer_draws.rbegin(); draw != layer_draws.rend(); ++draw) {
                 if (draw->x != first || draw->y != y ||
-                        !std::string_view(draw->source).starts_with(source)) continue;
-                if (kind == 'n' && draw->unit_identity_target) target = draw->unit_identity_target;
+                        !std::string_view(draw->source).starts_with(lookup_source)) continue;
+                if ((kind == 'n' || kind == 's') && draw->unit_identity_target)
+                    target = draw->unit_identity_target;
                 if (!target && !draw->complete_source.empty())
                     target = translate_adventure_target_text(draw->complete_source, kind);
                 break;
             }
-            if (!target) target = translate_adventure_target_text(source, kind);
+            if (!target) target = translate_adventure_target_text(lookup_source, kind);
             // The native renderer positions several independently formatted
             // values on one record. Double-space gaps are field boundaries;
             // translation still requires every nonblank field to resolve.
@@ -306,13 +338,9 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
             match.native_adventure_target_row = true;
             match.native_picture_caption_box = SDL_Rect{display_left, box.y,
                 box.x + box.w - display_left, box.h};
-            const auto *source_flags = layer ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
-            const uint32_t half = source_flags ? source_flags[static_cast<size_t>(first) * gps_->dimy + y]
-                & ((1u << 3) | (1u << 4)) : 0;
-            if (box.h == 1 && (half == (1u << 3) || half == (1u << 4))) {
-                match.native_picture_caption_box->y = y - (half == (1u << 4) ? 1 : 0);
-                match.native_picture_caption_box->h = 2;
-            }
+            // AttackCreature and its status/identity helpers call ordinary
+            // addst. That writer leaves old half-font flags untouched.
+            match.layout_fixed_baseline = true;
             match.layout_reflowed_control = true;
             match.layout_x = display_left;
             match.layout_length = box.x + box.w - display_left;
@@ -323,18 +351,51 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 match.layout_length * tile_w, match.native_picture_caption_box->h * tile_h};
             match.layout_foreground_rgb =
                 (first_cell[1] << 16) | (first_cell[2] << 8) | first_cell[3];
+            if (combat_quality) {
+                // Difficulty and contact quality are separate native color
+                // runs. Compose their complete Chinese fields as one line
+                // so punctuation and color changes cannot shift baselines.
+                const size_t comma = lookup_source.find(", ");
+                if (comma != std::string::npos) {
+                    const auto difficulty = translate_adventure_target_text(
+                        std::string_view(lookup_source).substr(0, comma));
+                    const auto contact = translate_adventure_target_text(
+                        std::string_view(lookup_source).substr(comma + 2));
+                    const auto punctuation = adventure_target_literals_.find(",");
+                    if (difficulty && contact && punctuation != adventure_target_literals_.end()) {
+                        match.target = *difficulty + punctuation->second + *contact;
+                        const auto color_at = [&](int x) {
+                            bool color_layer = false;
+                            const auto *cell = cell_at(x, y, &color_layer);
+                            return cell ? (cell[1] << 16) | (cell[2] << 8) | cell[3]
+                                : match.layout_foreground_rgb;
+                        };
+                        const auto color = [&](std::string_view text, int rgb) {
+                            std::vector<uint32_t> codepoints;
+                            if (decode_utf8(text, codepoints))
+                                match.layout_glyph_foreground_rgb.insert(
+                                    match.layout_glyph_foreground_rgb.end(), codepoints.size(), rgb);
+                        };
+                        color(*difficulty, match.layout_foreground_rgb);
+                        // Stage four switches to white for " strike, ".
+                        // Stage three draws its entire difficulty caption
+                        // with one color. The current source preserves both.
+                        if (difficulty->ends_with("攻击") && comma > 0 &&
+                                match.layout_glyph_foreground_rgb.size() >= 2) {
+                            std::fill(match.layout_glyph_foreground_rgb.end() - 2,
+                                match.layout_glyph_foreground_rgb.end(),
+                                color_at(first + static_cast<int>(comma) - 1));
+                        }
+                        color(punctuation->second, color_at(first + static_cast<int>(comma)));
+                        color(*contact, color_at(first + static_cast<int>(comma) + 2));
+                    }
+                }
+            }
             matches.push_back(std::move(match));
         }
     };
     for (const auto &panel : panels) {
-        SDL_Rect name = panel.name;
-        // A native half-font name occupies two physical source rows.
-        bool layer = false;
-        cell_at(name.x, name.y, &layer);
-        const auto *flags = layer ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
-        if (flags && (flags[static_cast<size_t>(name.x) * gps_->dimy + name.y] & (1u << 3)))
-            name.h = 2;
-        append(name, panel.name.x, 'n');
+        append(panel.name, panel.name.x, 'n');
         append(panel.status, panel.name.x, 's');
         append(panel.done, panel.done.x, 's', true);
         for (size_t index = 0; index < panel.rows.size(); ++index) {
@@ -368,7 +429,51 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
             continue;
         }
         append({right - 7, panel.y, 6, 3}, right - 7, 's', true);
-        for (int y = panel.y + 3; y < panel.y + panel.h; ++y) {
+        const int stage = prompt_stages[{panel.x, panel.y}];
+        int picture_end = panel.y + 3;
+        if (stage == 3 || stage == 4) {
+            const int list_end = panel.y + panel.h - (stage == 4 ? 18 : 0);
+            for (int top = panel.y + 3; top + 3 <= list_end; top += 3) {
+                const auto box = adventure_combat_action_box_at(*gps_, panel, top, classic, true);
+                if (!box) break;
+                // Native L+7 has a 36-byte name cap and a dotted tail; L+45
+                // begins the quality field. E-2/E-1 hold independent marks.
+                const int summary_left = panel.x + 44;
+                const int summary_right = box->x + box->w - 2;
+                if (summary_right <= summary_left) break;
+                append({box->x, top + 1, summary_left - box->x, 1},
+                    box->x, stage == 3 ? 't' : 'a');
+                append({summary_left, top + 1, summary_right - summary_left, 1},
+                    summary_left, 's', false, true);
+                picture_end = top + 3;
+            }
+            if (stage == 3) continue;
+            picture_end = list_end;
+        }
+        for (int y = picture_end; y < panel.y + panel.h; ++y) {
+            if (stage == 4 && (y - picture_end) % 3 == 1) {
+                // Six three-row style controls remain below the attack
+                // list. Their full explanations are one addst, after the
+                // artwork/status strip and optional native shortcut.
+                std::string row(gps_->dimx, ' ');
+                for (int x = panel.x + 8; x < right - 1; ++x) {
+                    const auto ch = visible_char_at(x, y);
+                    row[x] = ch ? static_cast<char>(ch) : ' ';
+                }
+                bool explanation = false;
+                for (const std::string_view prefix : {"Quick attack:", "Heavy attack:",
+                        "Wild attack:", "Precise attack:", "No quick attack:",
+                        "No heavy attack:", "Forced wild attack:", "No precise attack:",
+                        "No charge attack:", "Charge attack:", "Multi-attack:"}) {
+                    const auto at = row.find(prefix, panel.x + 8);
+                    if (at == std::string::npos) continue;
+                    append({static_cast<int>(at), y, right - 1 - static_cast<int>(at), 1},
+                        static_cast<int>(at), 's');
+                    explanation = true;
+                    break;
+                }
+                if (explanation) continue;
+            }
             // Stage zero's eight-row portrait record owns a name and status
             // column. It is not a three-row caption despite its large skin.
             bool target_record = false;

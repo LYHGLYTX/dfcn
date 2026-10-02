@@ -337,7 +337,7 @@ Here	原地
 {s}/Below	{s1}／下方
 {s}/Above	{s1}／上方
 body parts	身体部位
-{t} (copy)	{t1}（副本）
+{i} (copy)	{i1}（副本）
 # The body-part helper can prepend a positive ordinal when its named variant is unavailable.
 First {t}	第一{t1}
 Second {t}	第二{t1}
@@ -389,6 +389,7 @@ snatches at	抓取
 stabs	刺击
 stab at	刺向
 stabs at	刺向
+stings	螫刺
 stick	刺扎
 sticks	刺扎
 strikes	攻击
