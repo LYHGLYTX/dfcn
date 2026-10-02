@@ -9669,7 +9669,8 @@ Crossbows, leather armor	十字弩（皮甲）	wli
 Crossbows, metal armor	十字弩（金属甲）	wli
 No uniform	无制式服装	wli
 
-# Military squad roster: complete navigation label and numbered member slots.
+# Military squad roster: window title, navigation and numbered member slots.
+Squads	小队	w
 Back to squads	返回小队	w
 Assign position {d}	指派第{d}名队员	wt
 
