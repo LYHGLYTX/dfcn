@@ -40157,6 +40157,7 @@ Conversation keyword: state values	阐述 价值观	l
 Conversation keyword: surroundings	周边	l
 Conversation keyword: troublemaker	惹事精	l
 Conversation keyword: vengefulness	复仇心	l
+DFHack stocks hint: remove empties	移除空分类	l
 Designate, Dig Remove Stairs Ramps	指定：移除楼梯与坡道	w
 Designate, Toggle Advanced Options	指定：切换高级选项	w
 Despite some minor reservations...	尽管还有一些小小的保留意见……	hP
@@ -43451,6 +43452,7 @@ Conversation keyword: terrifying	骇人	l
 Conversation keyword: uneasiness	不安	l
 Conversation keyword: withdrawal	撤军	l
 Converting to chopping blueprint	将砍伐指定区域转为蓝图	wo
+DFHack stocks hint: collapse all	全部折叠	l
 Default normal traffic path cost	默认正常交通路径成本	w
 Demander unconditional surrender	要求对方无条件投降	wli
 Designate, Blueprint to Standard	指定：蓝图转标准	w
@@ -45079,6 +45081,7 @@ Conversation keyword: vandalism	蓄意破坏	l
 Conversation keyword: violation	违反	l
 Credits: Premium DF Playtesting	《矮人要塞》高级版试玩测试	wl
 Current top guildhall location:	当前等级最高的行会大厅地点：	wl
+DFHack stocks hint: fast scroll	快速滚动	l
 Dance Competition in the wilds.	在荒野中，舞蹈比赛。	hEi
 Dance Performance in the wilds.	在荒野中，舞蹈表演。	hEi
 Destruction of {p} in the wilds	在荒野中，{p1}毁灭事件	htEi
@@ -46935,6 +46938,7 @@ Conversation keyword: withdraw	撤离	l
 Converting mining to blueprint	将挖掘指定区域转为蓝图	wo
 Credits: Lead Audio Programmer	首席音频程序员	wl
 Credits: Lots of HTML/IT stuff	大量 HTML 与信息技术工作	wl
+DFHack stocks hint: expand all	全部展开	l
 Dance Competition in the wilds	在荒野中，舞蹈比赛	hEi
 Dance Performance in the wilds	在荒野中，舞蹈表演	hEi
 Default high traffic path cost	默认高交通路径成本	w

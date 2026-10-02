@@ -9836,3 +9836,9 @@ Adventure item action: Heat {s} ({p})	加热{s}（{p}）	h
 Adventure item action: A {s} ({p})	一只{s}（{p}）	h
 Adventure item action: A ({p})	小生物（{p}）	h
 Adventure vermin: A	小生物	l
+
+# DFHack plugins/stocks.lua: action fields, separate from keys and frame brand.
+DFHack stocks hint: collapse all	全部折叠	l
+DFHack stocks hint: expand all	全部展开	l
+DFHack stocks hint: remove empties	移除空分类	l
+DFHack stocks hint: fast scroll	快速滚动	l
