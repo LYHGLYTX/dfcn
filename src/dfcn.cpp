@@ -44743,6 +44743,15 @@ void Overlay::render(SDL_Renderer *renderer) {
     help_layout.reset();
     tooltip_page_layout.reset();
     if (background_help_frames) g_native_toolbar_tooltip = std::move(foreground_tooltip);
+    if (background_help_frames) {
+        // Assignment lists remain foreground while the covered page is laid
+        // out. Their sort meanings and identity columns need the live controls
+        // after restoring that read view, independently of background layout.
+        prepared_matches_.swap(help_foreground);
+        layout_fortress_sort_captions();
+        layout_fortress_unit_chooser(renderer);
+        prepared_matches_.swap(help_foreground);
+    }
     prepared_matches_.insert(prepared_matches_.end(),
         std::make_move_iterator(help_foreground.begin()),
         std::make_move_iterator(help_foreground.end()));

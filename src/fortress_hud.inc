@@ -477,6 +477,17 @@ void Overlay::append_hover_text_captions(std::vector<std::string> &rows,
         if (!intact || !hidden || foreground < 0) continue;
         const auto complete = draw.complete_source.empty() ? source : trim_view(draw.complete_source);
         auto target = exact_literal_translation(complete);
+        std::vector<int> target_foregrounds;
+        bool ui_message = false;
+        if (!target) {
+            // hP literals belong to the UI-message catalog, not the ordinary
+            // exact capture index. Require this complete native draw to match
+            // one message; an exposed suffix cannot complete it by itself.
+            target = translate_help_paragraph(complete,
+                std::vector<int>(complete.size(), foreground), target_foregrounds,
+                true, -1, true);
+            ui_message = target.has_value();
+        }
         if (!target) target = translate_ui_message_capture(complete, false);
         if (!target || target->empty() || !contains_cjk_utf8(*target)) continue;
         // Recovery exists precisely because covered source cells may no
@@ -485,16 +496,18 @@ void Overlay::append_hover_text_captions(std::vector<std::string> &rows,
         const bool split = half == (1u << 3) || half == (1u << 4);
         const int top_y = draw.y - (half == (1u << 4) ? 1 : 0);
         const bool owner = owners.emplace(first, top_y, std::string(source)).second;
-        Match match{first, draw.y, last - first, -2,
+        Match match{first, draw.y, last - first, ui_message ? kUiMessageRule : -2,
             owner ? *target : std::string{}, std::string(source)};
         match.native_hover_background = true;
         match.native_help_background_frames = occluders;
         match.layout_x = first;
         match.layout_y = std::max(0, top_y);
         match.layout_length = last - first;
+        match.layout_left = ui_message;
         match.layout_pixel_y = split ? (top_y < 0
             ? -((gps_->tile_pixel_y + 1) / 2) : gps_->tile_pixel_y / 2) : 0;
         match.layout_foreground_rgb = foreground;
+        if (owner) match.layout_glyph_foreground_rgb = std::move(target_foregrounds);
         match.native_split_text = split;
         match.native_split_top_y = split ? top_y : -1;
         match.native_split_duplicate = !owner;

@@ -2073,12 +2073,15 @@ static std::vector<SDL_Rect> native_help_overlay_frames(const graphicst &gps) {
 // In particular, short picture-button tips need the same layer separation as
 // multi-line help, even when their text has no tooltip-catalog entry.
 static std::vector<SDL_Rect> native_announcement_overlay_frames(const graphicst &gps);
+static std::vector<SDL_Rect> native_unit_chooser_overlay_frames(const graphicst &gps);
 static std::vector<SDL_Rect> native_text_overlay_frames(const graphicst &gps) {
     auto *cache = NativePanelReadScope::active;
     if (cache && cache->gps == &gps && cache->overlay_frames) return *cache->overlay_frames;
     auto frames = native_help_overlay_frames(gps);
     const auto announcements = native_announcement_overlay_frames(gps);
     frames.insert(frames.end(), announcements.begin(), announcements.end());
+    const auto choosers = native_unit_chooser_overlay_frames(gps);
+    frames.insert(frames.end(), choosers.begin(), choosers.end());
     if (const auto widget = captured_native_tooltip_widget(gps)) frames.push_back(widget->bounds);
     // HOVER_RECTANGLE is also used for ordinary floating panels. Its skin
     // alone does not establish an occluder or authorize clipping page text.
