@@ -144,6 +144,11 @@
                         native_rows ? native_rows->first : heading_y + 1);
                     const int prose_bottom = std::min(bottom,
                         native_rows ? native_rows->second : bottom);
+                    const int chronicle_pixel_top =
+                        (gps_->screen_pixel_y - gps_->dimy * gps_->tile_pixel_y) / 2 +
+                        prose_top * gps_->tile_pixel_y;
+                    const int chronicle_pixel_height =
+                        (prose_bottom - prose_top) * gps_->tile_pixel_y;
                     const auto history = capture_history_viewport(
                         context, left, right, prose_top, prose_bottom, screen_override);
                     const auto &history_rows = history.rows;
@@ -250,6 +255,15 @@
                                 if (!row.target.empty()) {
                                     row.layout_y = next_y;
                                     row.layout_pixel_y = 0;
+                                    // Reflow moves this event above its native
+                                    // source rows. Its vertical clip must follow
+                                    // the chronicle viewport, not the old event
+                                    // origin, or the moved Chinese is discarded.
+                                    // Keep the fitter's horizontal boundaries.
+                                    if (row.layout_native_clip) {
+                                        row.layout_native_clip->y = chronicle_pixel_top;
+                                        row.layout_native_clip->h = chronicle_pixel_height;
+                                    }
                                     next_y += (std::max(gps_->tile_pixel_y,
                                         row.layout_line_height_pixels) + gps_->tile_pixel_y - 1) /
                                         gps_->tile_pixel_y;
