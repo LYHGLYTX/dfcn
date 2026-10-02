@@ -1880,16 +1880,29 @@ static std::shared_ptr<const NativeHistoryDocument> native_embark_reclaim_histor
     }
     return {};
 }
+struct NativeTextGridOrigin {
+    const unsigned char *grid = nullptr;
+    bool top_layer = false;
+};
+static NativeTextGridOrigin native_text_grid_origin(
+    const graphicst &gps, size_t at, bool top_layer);
+
 struct NativeTooltipPage {
     using Texture = std::remove_pointer_t<decltype(graphicst::screentexpos)>;
     std::vector<unsigned char> screen;
     std::vector<Texture> texture, lower, anchored, anchor_x, anchor_y;
     std::vector<uint32_t> flags;
     std::vector<uint8_t> cells;
+    // Copied/composed pages retain the native draw identity of every cell.
+    // The source pointers are identities only; reads use this page's bytes.
+    std::vector<NativeTextGridOrigin> origins;
     SDL_Rect bounds{};
     explicit NativeTooltipPage(const graphicst &gps) {
         const size_t count = static_cast<size_t>(gps.dimx) * gps.dimy;
         screen.assign(gps.screen, gps.screen + count * 8);
+        origins.reserve(count);
+        for (size_t at = 0; at < count; ++at)
+            origins.push_back(native_text_grid_origin(gps, at, false));
         const auto copy = [count](auto &out, const auto *in) {
             if (in) out.assign(in, in + count);
         };
@@ -1916,6 +1929,7 @@ struct NativeTooltipPage {
                 const bool top = !covered_top && native_ui_top_layer_at(gps, at);
                 const auto *source = top ? gps.screen_top : gps.screen;
                 if (source) std::memcpy(screen.data() + at * 8, source + at * 8, 8);
+                origins[at] = native_text_grid_origin(gps, at, top);
                 const auto copy = [at](auto &out, const auto *in) {
                     if (!out.empty()) out[at] = in ? in[at] : 0;
                 };
@@ -1942,7 +1956,7 @@ public:
     inline static thread_local bool active = false;
     NativeTooltipPageScope(graphicst *&slot, const std::shared_ptr<NativeTooltipPage> &page,
             const std::vector<SDL_Rect> *top_occluders = nullptr, bool activate = true)
-        : slot_(slot), original_(slot), previous_(active) {
+        : slot_(slot), original_(slot), previous_(active), previous_scope_(current_) {
         if (!page) return;
         // A restored help page already covers the entire grid. It is a
         // read-only snapshot; only partial widget pages need composition.
@@ -1969,34 +1983,53 @@ public:
         view->screen_top = nullptr;
         slot_ = view;
         if (activate) active = true;
+        current_ = this;
         installed_ = true;
     }
     // Borrow a view prepared for this draw pass. Its owner outlives each
     // row scope, so neither the grid nor the ABI view is copied per caption.
     NativeTooltipPageScope(graphicst *&slot, graphicst *prepared_view)
-        : slot_(slot), original_(slot), previous_(active) {
+        : slot_(slot), original_(slot), previous_(active), previous_scope_(current_) {
         if (!prepared_view) return;
         slot_ = prepared_view;
         active = true;
+        current_ = this;
         installed_ = true;
+    }
+    static std::optional<NativeTextGridOrigin> grid_origin(const graphicst &gps, size_t at) {
+        // Foreground scopes can install a copy with activate=false. Track
+        // installed views separately from the background-layout flag.
+        for (auto *scope = current_; scope; scope = scope->previous_scope_)
+            if (scope->view_ && scope->view_->get() == &gps && scope->contents_ &&
+                    at < scope->contents_->origins.size())
+                return scope->contents_->origins[at];
+        return std::nullopt;
     }
     ~NativeTooltipPageScope() { reset(); }
     void reset() {
         if (installed_) {
             slot_ = original_;
             active = previous_;
+            current_ = previous_scope_;
             installed_ = false;
             view_.reset();
         }
     }
 private:
+    inline static thread_local const NativeTooltipPageScope *current_ = nullptr;
     graphicst *&slot_;
     graphicst *original_;
     bool previous_;
+    const NativeTooltipPageScope *previous_scope_;
     bool installed_ = false;
     std::unique_ptr<View> view_;
     std::shared_ptr<NativeTooltipPage> contents_;
 };
+static NativeTextGridOrigin native_text_grid_origin(
+        const graphicst &gps, size_t at, bool top_layer) {
+    if (const auto origin = NativeTooltipPageScope::grid_origin(gps, at)) return *origin;
+    return {top_layer ? gps.screen_top : gps.screen, top_layer};
+}
 // Help lives above an intact native base page. Use one complete logical page
 // for both semantic matching and layout, rather than combining base cells
 // inside the help rectangle with final-composite cells everywhere else.
@@ -2055,6 +2088,7 @@ static std::shared_ptr<NativeTooltipPage> native_help_background_page(const grap
                     const size_t at = static_cast<size_t>(x) * gps.dimy + y;
                     if (!saved.cells[at]) continue;
                     std::memcpy(page->screen.data() + at * 8, saved.screen.data() + at * 8, 8);
+                    page->origins[at] = saved.origins[at];
                     const auto copy = [at](auto &out, const auto &in) {
                         if (!out.empty()) out[at] = in.empty() ? 0 : in[at];
                     };
@@ -2069,6 +2103,7 @@ static std::shared_ptr<NativeTooltipPage> native_help_background_page(const grap
                 const size_t at = static_cast<size_t>(x) * gps.dimy + y;
                 if (!saved.cells[at]) continue;
                 std::memcpy(page->screen.data() + at * 8, saved.screen.data() + at * 8, 8);
+                page->origins[at] = saved.origins[at];
                 const auto copy = [at](auto &out, const auto &in) {
                     if (!out.empty()) out[at] = in.empty() ? 0 : in[at];
                 };
@@ -2405,17 +2440,19 @@ static std::optional<NativeDrawnTextRow> native_map_hover_draw_for_row(
     if (row.x < 0 || row.x >= gps.dimx || row.y < 0 || row.y >= gps.dimy ||
             row.source.empty() || row.source.size() > static_cast<size_t>(gps.dimx - row.x) ||
             clip_right <= row.x) return std::nullopt;
-    const bool top_layer = native_ui_top_layer_at(gps,
-        static_cast<size_t>(row.x) * gps.dimy + row.y);
-    const auto *grid = top_layer ? gps.screen_top : gps.screen;
+    const size_t first = static_cast<size_t>(row.x) * gps.dimy + row.y;
+    const bool read_top_layer = native_ui_top_layer_at(gps, first);
+    const auto *grid = read_top_layer ? gps.screen_top : gps.screen;
     if (!grid) return std::nullopt;
+    const auto origin = native_text_grid_origin(gps, first, read_top_layer);
+    const bool top_layer = origin.top_layer;
     std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
     const auto &draws = top_layer ? g_native_drawn_top_text_rows : g_native_drawn_text_rows;
     for (auto it = draws.rbegin(); it != draws.rend(); ++it) {
         const auto &draw = *it;
         if (draw.map_hover.kind == NativeMapHoverKind::None ||
                 draw.x > row.x || draw.x < 0 || draw.y != row.y || draw.top_layer != top_layer ||
-                draw.draw_grid != grid || draw.draw_dimx != gps.dimx ||
+                draw.draw_grid != origin.grid || draw.draw_dimx != gps.dimx ||
                 draw.draw_dimy != gps.dimy) continue;
         const size_t offset = static_cast<size_t>(row.x - draw.x);
         if (offset > draw.source.size() || std::any_of(draw.source.begin(),
@@ -2427,7 +2464,10 @@ static std::optional<NativeDrawnTextRow> native_map_hover_draw_for_row(
         for (size_t byte = 0; byte < row.source.size(); ++byte) {
             const size_t at = (static_cast<size_t>(row.x) + byte) * gps.dimy + row.y;
             const unsigned char ch = grid[at * 8];
-            if (native_ui_top_layer_at(gps, at) != top_layer ||
+            const bool read_top = native_ui_top_layer_at(gps, at);
+            const auto byte_origin = native_text_grid_origin(gps, at, read_top);
+            if (read_top != read_top_layer || byte_origin.grid != origin.grid ||
+                    byte_origin.top_layer != top_layer ||
                     (ch ? ch : ' ') != static_cast<unsigned char>(row.source[byte])) {
                 current = false;
                 break;
@@ -10798,6 +10838,16 @@ std::optional<std::string> Overlay::translate_ui_message_capture(
     };
     std::optional<std::string> target;
     if (unit_label) {
+        // A resolved caste/profession owns the adjacent personal-name field.
+        // Player-authored CJK (including digits or Latin text) stays literal;
+        // it is not a generated name and must not fail its Latin-only grammar.
+        const auto personal_name = [&](std::string_view person) -> std::optional<std::string> {
+            if (contains_cjk_utf8(person) && person.find('`') == std::string_view::npos)
+                return native_text_to_utf8(person);
+            const auto name = translate_legends_name(person, true);
+            return translation_complete_with_native_nicknames(name, person)
+                ? name : std::nullopt;
+        };
         // Typed identities may retain the exact native nickname. Validate
         // those fields with the shared nickname-aware completeness rule;
         // professions, species prefixes and ordinary terms remain strict.
@@ -10863,8 +10913,8 @@ std::optional<std::string> Overlay::translate_ui_message_capture(
                     if (!complete(descriptor)) descriptor = translate_unit_profession(suffix);
                     if (complete(descriptor)) {
                         const auto person = label.substr(0, comma);
-                        const auto name = translate_legends_name(person, true);
-                        if (translation_complete_with_native_nicknames(name, person))
+                        const auto name = personal_name(person);
+                        if (name)
                             return *name + "，" + *descriptor + status;
                     }
                 } else {
@@ -10883,11 +10933,19 @@ std::optional<std::string> Overlay::translate_ui_message_capture(
                         const auto caste = translate_creature_descriptor(label.substr(0, at), true);
                         if (!complete(caste)) continue;
                         const auto person = label.substr(at + 1);
-                        const auto name = translate_legends_name(person, true);
-                        if (translation_complete_with_native_nicknames(name, person))
+                        const auto name = personal_name(person);
+                        if (name)
                             return *caste + *name + status;
                     }
                 }
+            }
+            // A bare authored Chinese name can itself occupy the unit slot.
+            // Keep article-led identities, role fields and unit lists on the
+            // structured branches above so their prose cannot become a name.
+            if (!definite_identity && !unnamed_identity && !quoted_identity &&
+                    label.find(',') == std::string_view::npos &&
+                    label.find(" and ") == std::string_view::npos && contains_cjk_utf8(label)) {
+                if (const auto name = personal_name(label)) return *name + status;
             }
             // Nicknames can replace the given name entirely. Their native
             // quoting still establishes one person field, not UI prose.
