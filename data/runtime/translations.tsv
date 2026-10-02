@@ -9167,6 +9167,7 @@ Announcement combat sentence [unit,owner]: {s} jumps out of {s} flight path!	{s1
 Announcement combat sentence [unit,owner]: {s} rolls out of {s} flight path!	{s1}翻滚着避开了{s2}飞行路线！	l
 Announcement combat site-rumor-event [site-rumor-person]: {s} was kidnapped.	{s1}被绑架了。	l
 Assign a minecart to this route. Only one vehicle can operate on each route.	为此路线分配矿车。每条路线只能使用一辆车。	hj
+DFHack hotkeys hint: Remove all contaminants from the tile under the cursor.	清除光标所在格子的全部污物。	l
 I sought fortune and glory by offering my skill at arms for {u} of my years.	我靠武艺追求财富和荣耀，干过{u1}年。	hPt
 I'm going to {e} in search of work, and wealth and pleasures beyond measure!	我正前往{e1}，寻找工作，还想挣下数不尽的钱财，享尽人间的乐趣！	hPt
 It started at {p} and returned there after following its route in the wilds.	在荒野中，从{p1}出发，沿游行路线行进后返回起点。	ht
@@ -9592,6 +9593,7 @@ Announcement combat sentence [unit,$term]: {s} has transformed into a {s}!	{s1}�
 Announcement combat sentence [unit-list]: {s} are stunned by divine power!	{s1}被神力震慑了！	l
 Announcement combat sentence [unit]: {s} is having more trouble breathing!	{s1}呼吸更加困难了！	l
 Announcement combat sentence [work,$item]: You have written {s} on to {s}.	你将{s1}写到了{s2}上。	l
+DFHack hotkeys hint: In-game DFHack command launcher with integrated help.	集成帮助的游戏内 DFHack 命令启动器。	l
 Despite the interrogation, {a} refused to reveal anything and was released	尽管受到了审讯，{a1}仍拒绝交代任何事情，随后被释放了	ht
 Establish burrows to organize work and living spaces in larger fortresses.	建立活动区，以组织大型要塞内的工作和生活空间。	hj
 Farm plots are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置耕地。	hP
@@ -9845,6 +9847,7 @@ Carve a gap in a smooth wall to allow your archers to fire upon invaders.	在平
 Conversation prompt: How will you respond to the request for information?	你将如何回应打听消息的请求？	l
 Conversation prompt: What will you say about the end of the insurrection?	关于起义结束，你想说些什么？	l
 Conversation prompt: What will you say about the refusal to give tribute?	关于拒绝进贡，你想说些什么？	l
+DFHack hotkeys hint: Show all DFHack keybindings for the current context.	显示当前界面可用的全部 DFHack 快捷键。	l
 Do not move from current tile when dodging even if it means being struck.	闪避时留在当前地格，即使因此被击中也不移动。	hj
 Gather fruit in trees in and just above this zone. Requires a stepladder.	采集此区域内及其正上方树木上的果实。需要折梯。	hj
 He personally sees friendship as one of the finer things in life and sees	他本人认为友谊是生活中较美好的事物之一，并且认为	l
@@ -10634,6 +10637,8 @@ Before you can create a military, you must appoint a Militia Commander	[C:7:0:0]
 Click to set this task as highest priority among all tasks everywhere.	点击将此任务设为所有地点的全部任务中的最高优先级。	hj
 Conversation prompt: How will you respond to the tribute cancellation?	你将如何回应停止进贡的决定？	l
 Conversation prompt: How will you respond to this statement of values?	你将如何回应这番价值观表述？	l
+DFHack hotkeys hint: In-game quickstart guide for new users of DFHack.	供 DFHack 新用户阅读的游戏内快速入门指南。	l
+DFHack hotkeys hint: List and zoom to people, locations, or artifacts.	列出人物、场所和神器，并定位查看。	l
 Despite some minor reservations... I am overmastered by your presence!	尽管我还有些许保留……你的气势真让我服气！	hP
 However, skill is the most important determiner of hits versus misses.	不过，技能是决定命中与否的最重要因素。	hq
 I am {n}, once of the Underworld. By {n}, I bind myself to this place.	我是{n1}，曾来自地下世界。凭借{n2}之力，我将自身束缚于此地。	hHt
@@ -10925,6 +10930,7 @@ Choose a stockpile to which the track stop's vehicle will give items.	选择轨�
 Conversation prompt: How will you respond to the request for a guide?	你将如何回应寻找向导的请求？	l
 Conversation prompt: What will you say about the artifact's location?	关于造物的下落，你想说些什么？	l
 Conversation prompt: What will you say about your plots and scheming?	关于你的阴谋与谋划，你想说些什么？	l
+DFHack hotkeys hint: Configure DFHack and manage active DFHack tools.	配置 DFHack 并管理已启用的工具。	l
 Do this by selecting the building in Workshops -> Farming -> Butcher.	[C:7:0:0]依次选择“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]屠夫工坊[C:7:0:0]”，放置该建筑。	hq
 Eventually the Clothing that your residents start with will rot away.	[C:7:0:0]居民启程时穿的[C:6:0:1]衣服[C:7:0:0]，最终会腐烂损坏。	hq
 Fully randomize appearance, without respecting population information	完全随机生成外貌，不考虑人口特征	l
@@ -11210,6 +11216,7 @@ Announcement combat work-reference []: the fiery bowels of the earth	大地的�
 Announcement combat work-reference [reference-value]: nuances of {s}	{s1}的微妙之处	l
 Announcement music passage: a recapitulation of the previous passage	前一乐段再现部	w
 Conversation prompt: How will you respond to the demand for tribute?	你将如何回应索要贡品的要求？	l
+DFHack hotkeys hint: Designate all of the selected vein for digging.	将选中的整条矿脉标记为挖掘。	l
 Despite some minor reservations... you are so clever I must concede!	尽管我还有些许保留……你实在太聪明，我只能认输了！	hP
 Flattering, but we'd rather maintain our distance from the homeland.	承蒙厚爱，但我们更愿意与故土保持距离。	hP
 Forgive me, but it would amaze me if somebody actually thought that.	恕我直言，如果真有人这么想，我可真要大吃一惊了。	hP
@@ -11834,6 +11841,7 @@ Conversation prompt: What will you say about the missing treasure?	关于失踪�
 Conversation prompt: What will you say about the site reclamation?	关于收复此地，你想说些什么？	l
 Conversation prompt: What will you say about the surrounding area?	关于周围区域，你想说些什么？	l
 Conversation prompt: What will you say about the tribute stoppage?	关于停止进贡，你想说些什么？	l
+DFHack hotkeys hint: Teleport your adventurer to the mouse cursor.	将冒险者传送到鼠标光标所在位置。	l
 Despite some minor reservations... I admire how brilliant you are!	尽管我还有些许保留……我佩服你的聪明才智！	hP
 Forgive me, but that is the stupidest statement I have ever heard.	恕我直言，这是我听过最愚蠢的话。	hP
 Forgive me, but the things some people think just boggle the mind.	恕我直言，有些人的想法真是不可理喻。	hP
@@ -12415,6 +12423,8 @@ Conversation prompt: How will you respond to the position offer?	你将如何回
 Conversation prompt: How will you respond to this passive reply?	你将如何回应这个消极的答复？	l
 Conversation prompt: What will you say about the new leadership?	关于新的领导者，你想说些什么？	l
 Creating Elathu Inala, \\"The Domain of Portents\\" ({d} rejected)	创建埃拉苏·伊纳拉,"预兆之域\\"({d}个被拒绝)	wt
+DFHack hotkeys hint: Fort journal with a multi-line text editor.	要塞日志，支持多行文本编辑。	l
+DFHack hotkeys hint: Virtual keyboard for typing with the mouse.	使用鼠标输入文字的虚拟键盘。	l
 Don't you know that {p} is a jealous deity? Why consult another?	难道你不知道{p1}是位善妒的神祇吗？为什么要向别的神问卜？	hPt
 Forgive me, but really, I've been over all this nonsense before.	恕我直言，说真的，这些废话我早就听过了。	hP
 Forgive me, but you should keep your weird thoughts to yourself.	恕我直言，你那些怪念头还是留在心里吧。	hP
@@ -12781,6 +12791,7 @@ Ask favor, place request, make demand or issue order (new menu)	请求帮助、�
 Click "Embark" to place your fortress. Right click to zoom out.	点击“出发”确定要塞位置。右键点击缩小地图。	hP
 Conversation prompt: Choose a musical form for the composition.	为这次创作选择一种音乐形式。	l
 Conversation prompt: What will you say about tribute agreement?	关于进贡协议，你想说些什么？	l
+DFHack hotkeys hint: Adventure as any living historical figure.	扮演任意仍存活的历史人物进行冒险。	l
 Despite some minor reservations... no one can deny your genius!	尽管我还有些许保留……谁也不能否认你是个天才！	hP
 Dodge away from charging opponents to avoid being knocked over.	躲开冲锋的对手，以免被撞倒。	hj
 Even if I don't change my mind, I admire how brilliant you are!	就算我还是原来的想法，我佩服你的聪明才智！	hP
@@ -13187,6 +13198,8 @@ Conversation prompt: Choose a dance form for the choreography.	为这次编舞�
 Conversation prompt: Choose a poetic form for the composition.	为这次创作选择一种诗歌形式。	l
 Conversation prompt: What will you say about the insurrection?	关于这场起义，你想说些什么？	l
 Couldn't the lyrics of the accompaniment be a bit more somber?	伴奏的歌词就不能更庄重些吗？	hP
+DFHack hotkeys hint: Export displayed text to a Markdown file.	将当前文本导出为 Markdown 文件。	l
+DFHack hotkeys hint: Invoke hotkeys from the interactive menu.	从交互菜单执行快捷键命令。	l
 Explore and investigate the history of the world as it stands.	探索并研究这个世界迄今为止的历史。	hP
 Explore and investigate the history of the world as it stands.	探索并探寻这个世界现存的历史原貌。	w
 Hopefully your friends can dissuade you from this foolishness.	希望你的朋友能劝你别再做这种傻事。	hP
@@ -14027,6 +14040,7 @@ Conversation prompt: How will you respond to the invocation?	你将如何回应�
 Conversation prompt: How will you respond to this dismissal?	你将如何回应这番打发？	l
 Conversation prompt: What will you say about the occupation?	关于占领行动，你想说些什么？	l
 Crafts are an easy way to make a lot of trade goods quickly.	[C:7:0:0]制作[C:6:0:1]工艺品[C:7:0:0]，是快速获得大量贸易商品的简单办法。	hq
+DFHack hotkeys hint: Design designation utility with shapes.	使用各种形状进行区域规划。	l
 Even if I don't change my mind, no one can deny your genius!	就算我还是原来的想法，谁也不能否认你是个天才！	hP
 I engaged {n} to infiltrate {e} in order to steal treasures.	我雇{n1}渗透{e1}，以窃取宝藏。	hPt
 Invader deconstruction aversion (smaller = more deconstruct)	入侵者拆除规避度（越低越倾向拆除）
@@ -15045,6 +15059,7 @@ Conversation prompt: What will you say about the incident?	关于这件事件，
 Conversation prompt: What will you say about the refugees?	关于难民，你想说些什么？	l
 Conversations occur over time, like movements and attacks.	与移动和攻击一样，交谈也需要时间。	hq
 Credits: and everybody who has helped out on the forum and	也感谢所有在论坛及其他地方伸出援手、	wl
+DFHack hotkeys hint: Apply layout blueprints to your fort.	将布局蓝图应用到你的要塞。	l
 Don't travel alone at night, or the bogeyman will get you.	别在夜间独自旅行，否则夜魔会抓走你。	hP
 Flashes of energy pulse across its surface intermittently.	它的体表不时闪过能量的脉动。	h
 I am escaping from danger which threatened my former home.	我原来的家遭遇了危险，我是出来避难的。	hP
@@ -15605,6 +15620,7 @@ Conversation prompt: What will you say about the request?	关于这个请求，�
 Conversation prompt: What will you say about the trouble?	关于这个麻烦，你想说些什么？	l
 Conversation prompt: What will you say about your family?	关于你的家人，你想说些什么？	l
 Conversation prompt: What will you say about your master?	关于你的师父，你想说些什么？	l
+DFHack hotkeys hint: Clean the map tile under the cursor.	清理光标所在的地图格子。	l
 Default attack is a strike without charging or wrestling.	默认使用普通打击，不冲锋或摔跤。	hj
 First you need building materials, like Wood or Boulders.	[C:7:0:0]首先，你需要[C:6:0:1]木头[C:7:0:0]或[C:6:0:1]石材[C:7:0:0]等建筑材料。	hq
 For instance, you can create an order to Make Wooden Bins	例如，你可以创建“制作木箱”命令，	wl
@@ -19619,6 +19635,7 @@ Argue the worthlessness of nature (not your values)	争辩自然毫无价值（�
 Behold, mortal. I am {p}. I know why you have come.	看吧，凡人。我是{p1}。我知道你为何而来。	hPt
 Bring up {e}'s acceptance of {e}'s offer of tribute	谈起{e1}接受{e2}的进贡提议这件事	hPt
 Conversation keyword: crime of attempted kidnapping	绑架未遂罪	l
+DFHack hotkeys hint: Immediately autosave the game.	立即自动保存游戏。	l
 Display water and magma depth numerically (1 to 7.)	以数字显示水和岩浆深度（1 至 7）。	hj
 Display water and magma depth numerically (1 to 7.)	以数字显示水和岩浆深度（1 至 7）。	wl
 Forgive me, but nobody could possibly believe that.	恕我直言，不可能有人相信这种话。	hP
@@ -20410,6 +20427,7 @@ Bring up {e}'s refusal of {e}'s demand for tribute	谈起{e1}拒绝{e2}的进贡
 Cancel an order. Does not affect scheduled orders.	取消命令，不影响日程命令。	hj
 Click it now, and this tutorial will be concluded.	现在点击它，本教程便告结束。	hq
 Conversation keyword: export prohibition violation	违反出口禁令	l
+DFHack hotkeys hint: Mass select things to remove.	批量选择要移除的对象。	l
 Describe the refugees created by the attack of {e}	描述因{e1}的袭击而流离失所的人	hPt
 Digging designation cancelled: damp stone located.	挖掘指定已取消：发现潮湿的岩石。	hP
 Digging designation cancelled: warm stone located.	挖掘指定已取消：发现温热的岩石。	hP
@@ -21258,6 +21276,7 @@ Bring up {e}'s acceptance of {e}'s offer of peace	谈起{e1}接受{e2}的和平�
 Click on the map to embark! Right click to abort.	点击地图出发！右键点击取消。	hP
 Copyright (C) {d}-{d} by Tarn Adams, Bay 12 Games	版权所有 (C) {d}-{d} Tarn Adams，Bay 12 Games	wtl
 Creating Elathu Inala, \\"The Domain of Portents\\"	创建埃拉苏·伊纳拉,"预兆之域\\"	w
+DFHack hotkeys hint: Toggles the keyboard cursor.	开启或关闭键盘光标。	l
 ENABLE ONE! Entities in Dwarvemon use all Pokemon	只能启用一个！Dwarvemon 的实体包含所有宝可梦	l
 Feel free to pause and check out the information.	你随时可以暂停，仔细查看信息。	hq
 Guide {s} immediately when empty of desired items	未装载所需物品时，立即引导矿车向{s1}行驶	hPt
@@ -22188,6 +22207,7 @@ Conversation keyword: agree yes cease stop peace	同意 是 停战 停止 和平
 Conversation keyword: favor request demand order	帮忙 请求 要求 命令	l
 Conversation keyword: looming existential crisis	迫近的存在危机	l
 Conversation keyword: production order violation	违反生产命令	l
+DFHack hotkeys hint: Quickly run saved commands.	快速执行已保存的命令。	l
 Designate an item for dumping in a dumping zone.	指定将物品运到物品倾倒区。	hj
 Dig a channel, making a ramp on the level below.	挖掘沟道，在下一层形成斜坡。	hj
 Forgive me, but I couldn't follow your rambling.	恕我直言，你东拉西扯的，我听不明白。	hP
@@ -23197,6 +23217,8 @@ Click two corners of a rectangle somewhere safe	在安全地点点击矩形的�
 Conversation keyword: crime of attempted murder	谋杀未遂罪	l
 Conversation keyword: guide site place location	向导 地点 地方 位置	l
 Conversation keyword: item accept refusal trade	物品 接受 拒绝 交易	l
+DFHack hotkeys hint: Destroy the selected item.	销毁选中的物品。	l
+DFHack hotkeys hint: Teleport or destroy items.	传送或销毁物品。	l
 Desired grid height for scaling (default = {d})	缩放的目标网格高度 (默认 = {d})	wt
 Fortress activity: Agitated Wilderness Creature	躁动的野生生物	li
 Fortress activity: suffix (cannot follow order)	（无法执行命令）	li
@@ -24240,6 +24262,8 @@ Conversation keyword: crime of attempted theft	盗窃未遂罪	l
 Conversation keyword: invoke true name service	念出 真名 效力	l
 Conversation keyword: monster slayer join work	怪物猎手 加入 工作	l
 Conversation prompt: What do you want to know?	你想了解什么？	l
+DFHack hotkeys hint: Automated spectator mode.	自动切换视角的观战模式。	l
+DFHack hotkeys hint: Embark wherever you want.	在任意地点开始要塞。	l
 Desired Evil Square Count in Medium Subregions	中型子区域的邪恶方格目标数量
 Desired Good Square Count in Medium Subregions	中型子区域的善良方格目标数量
 Desired grid width for scaling (default = {d})	缩放的目标网格宽度 (默认 = {d})	wt
@@ -25330,6 +25354,7 @@ Conversation keyword: offer transfer position	提议 转让 职位	l
 Conversation keyword: tavern keeper join work	酒保 加入 工作	l
 Conversation prompt: Where do you want to go?	你想去哪里？	l
 Conversation prompt: Which pet will you gift?	你要赠送哪只宠物？	l
+DFHack hotkeys hint: Teleport units anywhere.	将单位传送到任意位置。	l
 Designate an item for melting at any smelter.	指定在任意熔炉中熔化物品。	hj
 Desired Evil Square Count in Large Subregions	大型子区域的邪恶方格目标数量
 Desired Evil Square Count in Small Subregions	小型子区域的邪恶方格目标数量
@@ -32664,6 +32689,7 @@ Conversation keyword: scholar join work	学者 加入 工作	l
 Conversation keyword: surgeon join work	外科医师 加入 工作	l
 Conversation keyword: surroundings area	周边 地区	l
 Conversation prompt: What will you say?	你想说些什么？	l
+DFHack hotkeys hint: No help available.	暂无帮助信息。	l
 Equipment and pet points remaining: {d}	剩余装备与宠物点数：{d}	wt
 Fail the struggle against great anguish	没能克服强烈的痛苦万分	hP
 Fail the struggle against great despair	没能克服强烈的绝望	hP
@@ -34056,6 +34082,8 @@ Conversation keyword: scribe join work	抄写员 加入 工作	l
 Conversation prompt: How will you ask?	你将如何提出请求？	l
 Conversation prompt: What do you want?	你想要什么？	l
 Converting mining blueprint to regular	将挖掘蓝图转为普通指定区域	wo
+DFHack hotkeys hint: Command not found	未找到命令	l
+DFHack hotkeys hint: Dig a whole vein.	挖掘整条矿脉。	l
 Dismiss minor feeling of mortification	不在意些许羞愧难当	hP
 Display worn clothing dyes (fort mode)	显示穿着服装染料(要塞模式)	w
 Displays an indicator on fertile eggs.	在受精蛋上显示一个标识.	w
@@ -35496,6 +35524,7 @@ Conversation keyword: yield surrender	屈服 投降	l
 Credits: Nathan Miller aka Rainseeker	Nathan Miller aka Rainseeker	wl
 Credits: SDL port, additional changes	SDL 移植及其他改进	wl
 Curse this fog! I cannot see a thing.	这该死的雾！我什么都看不见。	hP
+DFHack hotkeys hint: Quickstart guide	快速入门指南	l
 Dismiss minor feeling of being shaken	不在意些许动摇	hP
 Display worn clothing dyes (adv mode)	显示穿着服装染料(冒险模式)	w
 Don't waste my time with this drivel.	别拿这些胡言乱语浪费我的时间。	hP

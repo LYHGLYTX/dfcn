@@ -773,6 +773,7 @@ static constexpr int kFortressScheduleCaptionRule = -136;
 static constexpr int kFortressLocationListRule = -138;
 static constexpr int kFortressUnitChooserRule = -139;
 static constexpr int kDfhackStocksHintRule = -140;
+static constexpr int kDfhackHotkeysHintRule = -141;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -20304,6 +20305,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
 #include "dfhack_stocks_hint.inc"
+#include "dfhack_hotkeys_menu.inc"
     // Native chooser callers own these whole fields even when the map has
     // replaced the live outer frame by the time SDL presents its captions.
     const bool classic_location_fields = native_ui_classic().value_or(false);
@@ -20735,6 +20737,17 @@ std::vector<Match> Overlay::find_matches(int only_y,
         });
         result.insert(result.end(), std::make_move_iterator(dfhack_stocks_hint_matches.begin()),
             std::make_move_iterator(dfhack_stocks_hint_matches.end()));
+        // The hotkeys card owns command strings and complete short help;
+        // independent native readers must not translate command fragments.
+        std::erase_if(result, [&](const Match &match) {
+            return std::any_of(dfhack_hotkeys_regions.begin(),
+                dfhack_hotkeys_regions.end(), [&](const SDL_Rect &owned) {
+                    return match.y >= owned.y && match.y < owned.y + owned.h &&
+                        match.x < owned.x + owned.w && owned.x < match.x + match.length;
+                });
+        });
+        result.insert(result.end(), std::make_move_iterator(dfhack_hotkeys_matches.begin()),
+            std::make_move_iterator(dfhack_hotkeys_matches.end()));
         return std::move(result);
     };
 
@@ -28168,7 +28181,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 if (help_background_covered(match, x, match_y)) continue;
                 const unsigned char ch = raw[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
-                     match.rule == kDfhackStocksHintRule ||
+                     match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
                      match.rule == kCharacterOverviewRowRule ||
                      match.rule == kCharacterGroupRowRule || match.rule == kCharacterKillRowRule ||
@@ -28236,7 +28249,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 const unsigned char top_ch = raw[tile * 8];
                 const unsigned char base_ch = gps_->screen[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
-                     match.rule == kDfhackStocksHintRule ||
+                     match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
                      match.rule == kCharacterOverviewRowRule ||
                      match.rule == kCharacterGroupRowRule || match.rule == kCharacterKillRowRule ||
@@ -35633,7 +35646,7 @@ void Overlay::prepare_frame() {
                 // transition from suppressing unrelated text at the same cell.
                 if (cell && cell[0] != 0 && cell[0] != ' ') {
                     if ((match.native_hover_background || is_help_text(match) ||
-                         match.rule == kDfhackStocksHintRule ||
+                         match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                          match.rule == kCharacterHeaderRule ||
                          match.rule == kCharacterOverviewRowRule ||
                          match.rule == kCharacterGroupRowRule || match.rule == kCharacterKillRowRule ||
@@ -41932,7 +41945,7 @@ void Overlay::layout_multiline_matches() {
             continue;
         }
         if (match.layout_ellipsize || is_fortress_justice_field(match) ||
-            match.rule == kDfhackStocksHintRule ||
+            match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
             match.rule == kCharacterHeaderRule || match.rule == kCharacterRoomStatusRule ||
             match.rule == kFortressStandingOrderRule ||
             match.rule == kFortressScheduleCaptionRule ||

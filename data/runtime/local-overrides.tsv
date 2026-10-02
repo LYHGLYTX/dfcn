@@ -9842,3 +9842,34 @@ DFHack stocks hint: collapse all	全部折叠	l
 DFHack stocks hint: expand all	全部展开	l
 DFHack stocks hint: remove empties	移除空分类	l
 DFHack stocks hint: fast scroll	快速滚动	l
+
+# DFHack plugins/hotkeys.lua: complete help fields; command names stay native.
+DFHack hotkeys hint: In-game DFHack command launcher with integrated help.	集成帮助的游戏内 DFHack 命令启动器。	l
+DFHack hotkeys hint: Quickly run saved commands.	快速执行已保存的命令。	l
+DFHack hotkeys hint: Design designation utility with shapes.	使用各种形状进行区域规划。	l
+DFHack hotkeys hint: Configure DFHack and manage active DFHack tools.	配置 DFHack 并管理已启用的工具。	l
+DFHack hotkeys hint: List and zoom to people, locations, or artifacts.	列出人物、场所和神器，并定位查看。	l
+DFHack hotkeys hint: Teleport or destroy items.	传送或销毁物品。	l
+DFHack hotkeys hint: Fort journal with a multi-line text editor.	要塞日志，支持多行文本编辑。	l
+DFHack hotkeys hint: Virtual keyboard for typing with the mouse.	使用鼠标输入文字的虚拟键盘。	l
+DFHack hotkeys hint: Toggles the keyboard cursor.	开启或关闭键盘光标。	l
+DFHack hotkeys hint: Mass select things to remove.	批量选择要移除的对象。	l
+DFHack hotkeys hint: Apply layout blueprints to your fort.	将布局蓝图应用到你的要塞。	l
+DFHack hotkeys hint: Immediately autosave the game.	立即自动保存游戏。	l
+DFHack hotkeys hint: Automated spectator mode.	自动切换视角的观战模式。	l
+DFHack hotkeys hint: Teleport units anywhere.	将单位传送到任意位置。	l
+DFHack hotkeys hint: Embark wherever you want.	在任意地点开始要塞。	l
+DFHack hotkeys hint: Export displayed text to a Markdown file.	将当前文本导出为 Markdown 文件。	l
+DFHack hotkeys hint: Designate all of the selected vein for digging.	将选中的整条矿脉标记为挖掘。	l
+DFHack hotkeys hint: Dig a whole vein.	挖掘整条矿脉。	l
+DFHack hotkeys hint: Remove all contaminants from the tile under the cursor.	清除光标所在格子的全部污物。	l
+DFHack hotkeys hint: Clean the map tile under the cursor.	清理光标所在的地图格子。	l
+DFHack hotkeys hint: Destroy the selected item.	销毁选中的物品。	l
+DFHack hotkeys hint: Adventure as any living historical figure.	扮演任意仍存活的历史人物进行冒险。	l
+DFHack hotkeys hint: Teleport your adventurer to the mouse cursor.	将冒险者传送到鼠标光标所在位置。	l
+DFHack hotkeys hint: Show all DFHack keybindings for the current context.	显示当前界面可用的全部 DFHack 快捷键。	l
+DFHack hotkeys hint: Invoke hotkeys from the interactive menu.	从交互菜单执行快捷键命令。	l
+DFHack hotkeys hint: In-game quickstart guide for new users of DFHack.	供 DFHack 新用户阅读的游戏内快速入门指南。	l
+DFHack hotkeys hint: Command not found	未找到命令	l
+DFHack hotkeys hint: No help available.	暂无帮助信息。	l
+DFHack hotkeys hint: Quickstart guide	快速入门指南	l
