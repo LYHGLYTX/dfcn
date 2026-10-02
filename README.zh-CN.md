@@ -1526,9 +1526,9 @@ ELF BuildID，版本不符时停止提取，不能把旧地址套到新版本。
 不将 `Of` 音译为姓名。截断字段复用本帧完整字符串捕获；未知状态保留完整原文并
 记入漏译队列，不按词拆译或假装为程序生成姓名。
 
-地点类型遵循既有术语：`Hamlet` 为“村庄”，`Hillock` / `Hillocks` 为“丘区”，
-包括无种族前缀、废弃及废墟标签；例如 `Dwarven hillocks` 为“矮人丘区”，
-`Abandoned hillocks` 为“废弃丘区”。地图、历史、公告及人物背景使用相同定义。
+地点类型遵循既有术语：`Hamlet` 为“村庄”，`Hillock` / `Hillocks` 为“丘堡”，
+包括无种族前缀、废弃及废墟标签；例如 `Dwarven hillocks` 为“矮人丘堡”，
+`Abandoned hillocks` 为“废弃丘堡”。地图、历史、公告及人物背景使用相同定义。
 `data/extracted/world-site-type-sources.tsv` 保存从 Steam 版及官网版 PE 提取的
 11 个类型枚举分支、24 个基础名称及其子类型条件。共享类型入口按最长完整类型
 匹配，并通过 `World site type:` 引用原有词条；完整复合标签优先使用已有译名。

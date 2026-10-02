@@ -151,13 +151,13 @@ hall	大厅
 halls	大厅
 hamlet	村庄
 hamlets	村庄
-# Settlement hillock(s) retain the established 丘区 definition with or without
+# Settlement hillock(s) retain the established 丘堡 definition with or without
 # a race prefix. Natural terrain hill(s) remain 丘陵.
 # Individual buildings (a hillock) use the scoped building vocabulary instead.
 hill	丘陵
 hills	丘陵
-hillock	丘区
-hillocks	丘区
+hillock	丘堡
+hillocks	丘堡
 important	重要
 location	地点
 locations	地点

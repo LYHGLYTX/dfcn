@@ -4051,8 +4051,8 @@ World site modifier: dark	黑暗	hi
 # Complete compound labels are case-insensitive: map captions capitalize the
 # first word, while Legends name/gloss/type headings use lowercase kinds.
 Mountain halls	山地大厅	wi
-Hillock	丘区	wi
-Hillocks	丘区	wi
+Hillock	丘堡	wi
+Hillocks	丘堡	wi
 Dark fortress	黑暗要塞	wi
 Dark pits	黑暗深坑	wi
 Pits	深坑
@@ -4084,13 +4084,13 @@ Mythical palace	神话宫殿	wi
 Mythical dungeon	神话地牢	wi
 Dwarven fortress	矮人要塞
 # Only a complete species/adjective prefix selects this lookup-only sense.
-World site racial type: hillock	丘区	hi
-Dwarven hillock	矮人丘区	wi
-Dwarven hillocks	矮人丘区	wi
-Abandoned hillock	废弃丘区	wi
-Abandoned hillocks	废弃丘区	wi
-Ruined hillock	丘区废墟	wi
-Ruined hillocks	丘区废墟	wi
+World site racial type: hillock	丘堡	hi
+Dwarven hillock	矮人丘堡	wi
+Dwarven hillocks	矮人丘堡	wi
+Abandoned hillock	废弃丘堡	wi
+Abandoned hillocks	废弃丘堡	wi
+Ruined hillock	丘堡废墟	wi
+Ruined hillocks	丘堡废墟	wi
 Abandoned house	废弃房屋
 Abandoned houses	废弃房屋
 Abandoned shop	废弃商店

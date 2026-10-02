@@ -23164,7 +23164,7 @@ Announcement combat memory-sentence []: I died.	我死了。	l
 Announcement combat memory-sentence []: It was.	就是那样。	l
 Announcement combat memory-value []: friendship	友情	l
 Announcement combat reference-kind []: fortress	要塞	l
-Announcement combat reference-kind []: hillocks	丘区	l
+Announcement combat reference-kind []: hillocks	丘堡	l
 Announcement combat reference-kind []: monument	纪念碑	l
 Announcement combat reference-value []: artwork	艺术	l
 Announcement combat reference-value []: cunning	谋略	l
@@ -45378,7 +45378,7 @@ Workshop recipe: stone boulders	石块	l
 Workshop recipe: suits of armor	套护甲	l
 World mission: Diplomacy at {p}	在{p}开展外交	ht
 World site action: Inaccessible	无法抵达	hi
-World site racial type: hillock	丘区	hi
+World site racial type: hillock	丘堡	hi
 World site type: forest retreat	Forest retreat	hi
 World site type: mountain halls	Mountain halls	hi
 Written objects (incl. copies):	书面作品（含副本）：	wl
@@ -70104,7 +70104,7 @@ A caravan from {p}	来自{p1}的商队	htu
 A murderous ghost.	一个嗜杀的鬼魂。	lP
 A wide variety of 	此类别包含多种与食品和酒水相	w
 A {s} cannot jump.	{s1}无法跳跃。	hPt
-Abandoned hillocks	废弃丘区	wi
+Abandoned hillocks	废弃丘堡	wi
 Accept personality	接受人格
 Act quickly today.	今天要迅速行动。	hP
 Adamantine strands	精金缕	wi
@@ -73882,7 +73882,7 @@ A Dwarven Outpost	一座矮人前哨:	w
 A Treatise on {b}	{b}论述	hbti
 A gigantic shark.	一条体型极其庞大的鲨鱼。	lP
 A sadistic ghost.	一个虐待成性的鬼魂。	lP
-Abandoned hillock	废弃丘区	wi
+Abandoned hillock	废弃丘堡	wi
 Abduction of {a}.	对{a1}的绑架。	htEi
 Accept appearance	接受外貌
 Accept background	接受背景
@@ -78244,7 +78244,7 @@ Don't show again	不再显示	hq
 Don't show again	不再显示	w
 Doubts About {b}	对{b}的疑问	hbti
 Dwarven fortress	矮人要塞
-Dwarven hillocks	矮人丘区	wi
+Dwarven hillocks	矮人丘堡	wi
 Elite Bowdwarves	精英矮人弓手	wi
 Elite Marksdwarf	精英矮人弩手	wi
 Endgame event 1B	终局事件 1B	w
@@ -82736,7 +82736,7 @@ Disillusionment	幻灭	w
 Dismount to {s}	下坐骑至{s1}	hPt
 Drop this item.	丢下此物品。	hj
 Dwarf, Ordinary	矮人，普通
-Dwarven hillock	矮人丘区	wi
+Dwarven hillock	矮人丘堡	wi
 Dyer's Workshop	染坊	wi
 Early afternoon	午后
 Easily stressed	不耐压力	w
@@ -82901,7 +82901,7 @@ Right upper leg	右大腿	w
 Rocky Wasteland	岩石荒漠
 Rotten raw hide	腐烂生皮	wi
 Royal Mausoleum	皇家陵寝	w
-Ruined hillocks	丘区废墟	wi
+Ruined hillocks	丘堡废墟	wi
 Ruled the World	已经统治世界	w
 Saving items...	保存物品......	w
 Saving units...	保存单位......	w
@@ -87664,7 +87664,7 @@ Regular mining	常规挖掘	wo
 Remove hidden 	移除隐藏的指定。	w
 Return to game	返回游戏	w
 Right shoulder	右肩	w
-Ruined hillock	丘区废墟	wi
+Ruined hillock	丘堡废墟	wi
 Rule the World	统治世界	w
 SMALLER ISLAND	非常小的岛屿	w
 SMALLER REGION	较小的地区	w
@@ -110299,7 +110299,7 @@ Harrowed	耙	w
 He finds	他能够
 Hellooo!	你——好！	hP
 Hey {p}.	嘿，{p1}。	hPt
-Hillocks	丘区	wi
+Hillocks	丘堡	wi
 Hold {s}	抓住{s1}	hPt
 Hopeless	毫无希望	w
 Hospital	医院	wi
@@ -110821,7 +110821,7 @@ high wax	高阶蜡	hi
 high way	高阶路	hi
 high web	高阶网	hi
 highwood	极树	wi
-hillocks	丘区	hv
+hillocks	丘堡	hv
 holy ace	神圣王牌	hi
 holy act	神圣行动	hi
 holy age	神圣年龄	hi
@@ -111388,7 +111388,7 @@ Haulers	搬运工	w
 Hauling	搬运	w
 He does	他确实
 Healthy	健康的	w
-Hillock	丘区	wi
+Hillock	丘堡	wi
 History	历史	w
 Hopeful	乐观向上	w
 Hubris!	狂妄！	hP
