@@ -64,7 +64,7 @@ void Overlay::draw_work_order_buttons(SDL_Renderer *renderer) {
                 if (!glyph || !glyph->texture) continue;
 
                 std::vector<Uint8> pixels(static_cast<size_t>(inner.w) * inner.h * 4);
-                if (SDL_RenderReadPixels(renderer, &inner, SDL_PIXELFORMAT_RGBA32,
+                if (native_capture_read_pixels(gps_, renderer, &inner, SDL_PIXELFORMAT_RGBA32,
                         pixels.data(), inner.w * 4) != 0) continue;
                 const auto pixel_key = [&](size_t offset) {
                     return (static_cast<uint32_t>(pixels[offset]) << 16) |

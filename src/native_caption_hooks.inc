@@ -182,6 +182,7 @@ static size_t capture_native_announcement_page_rows(const void *paragraph) {
 
 static void capture_native_help_cell(graphicst *gps) {
     try {
+        NativeCaptureMaskScope capture_mask(gps);
         const auto settings = native_ui_settings();
         if (settings && settings->classic && gps && gps->screen &&
             gps->dimx > 0 && gps->dimx <= 1000 && gps->dimy > 0 && gps->dimy <= 1000 &&

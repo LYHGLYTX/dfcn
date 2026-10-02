@@ -59,6 +59,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_rich_hooks.inc"
 #include "native_adventure_hover_hooks.inc"
 #include "native_announcement_hooks.inc"
+#include "native_dfhack_capture_hooks.inc"
 
 static NativeProcessGuard g_process_instance_guard{NativeGuardRole::Core};
 static bool acquire_process_instance_guard() { return g_process_instance_guard.acquire(log_line); }
@@ -106,6 +107,9 @@ static bool install_sdl_hooks() {
             return false;
         }
     }
+    // DFHack may be loaded after this core. Present retries this optional
+    // observer until its exported tile hook is available.
+    (void)install_native_dfhack_capture_hook();
     for (auto &hook : g_render_hooks) {
         if (!hook.install("SDL render/mouse binding")) return false;
     }
@@ -116,6 +120,7 @@ static bool install_sdl_hooks() {
 }
 
 static void uninstall_sdl_hooks() {
+    uninstall_native_dfhack_capture_hook();
     g_legends_mouse_hook_active = false;
     for (auto it = g_render_hooks.rbegin(); it != g_render_hooks.rend(); ++it)
         it->uninstall("SDL render/mouse binding");
@@ -155,6 +160,7 @@ static void uninstall_sdl_hooks() {
 static bool native_hooks_detached() {
     return std::none_of(g_render_hooks.begin(), g_render_hooks.end(),
                        [](const auto &hook) { return hook.active(); }) &&
+        !native_dfhack_capture_hook_active() &&
         !g_native_stone_use_guard.active() &&
         !g_native_mouse_click_hook.active() &&
         !native_history_hooks_active() && !native_announcement_hook_active() && !native_adventure_hover_hook_active() &&

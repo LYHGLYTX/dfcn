@@ -7,6 +7,7 @@ void Overlay::capture_adventure_background(graphicst *graphics) {
     if (!config_.enabled || graphics != gps_ || !graphics || !graphics->screen ||
         graphics->dimx <= 0 || graphics->dimx > 1000 ||
         graphics->dimy <= 0 || graphics->dimy > 1000) return;
+    NativeCaptureMaskScope capture_mask(graphics);
     const size_t cells = static_cast<size_t>(graphics->dimx) * graphics->dimy;
     bool same_source = adventure_before_hover_matches_valid_ &&
         adventure_before_hover_dimx_ == graphics->dimx &&
@@ -121,6 +122,7 @@ void Overlay::prepare_adventure_hover_suppression() {
         adventure_before_hover_grid_.size() != static_cast<size_t>(gps_->dimx) * gps_->dimy * 8)
         return;
     adventure_hover_scan_epoch_ = draw_epoch_;
+    NativeCaptureMaskScope capture_mask(gps_);
     adventure_hover_suppress_epoch_ = 0;
     std::vector<std::string> rows(static_cast<size_t>(gps_->dimy),
         std::string(static_cast<size_t>(gps_->dimx), ' '));

@@ -1891,6 +1891,9 @@ struct NativeTextGridOrigin {
 static NativeTextGridOrigin native_text_grid_origin(
     const graphicst &gps, size_t at, bool top_layer);
 
+#include "native_dfhack_artwork.inc"
+#include "native_capture_mask.inc"
+
 struct NativeTooltipPage {
     using Texture = std::remove_pointer_t<decltype(graphicst::screentexpos)>;
     std::vector<unsigned char> screen;
@@ -1902,6 +1905,7 @@ struct NativeTooltipPage {
     std::vector<NativeTextGridOrigin> origins;
     SDL_Rect bounds{};
     explicit NativeTooltipPage(const graphicst &gps) {
+        NativeCaptureMaskScope capture_mask(&gps);
         const size_t count = static_cast<size_t>(gps.dimx) * gps.dimy;
         screen.assign(gps.screen, gps.screen + count * 8);
         origins.reserve(count);
@@ -1920,6 +1924,7 @@ struct NativeTooltipPage {
     }
     void compose_outside(const graphicst &gps,
             const std::vector<SDL_Rect> *top_occluders = nullptr) {
+        NativeCaptureMaskScope capture_mask(&gps);
         for (int x = 0; x < gps.dimx; ++x) {
             for (int y = 0; y < gps.dimy; ++y) {
                 if (x >= bounds.x && x < bounds.x + bounds.w &&
@@ -6864,6 +6869,7 @@ void Overlay::maybe_reload() {
 const unsigned char *Overlay::cell_at(int x, int y, bool *top) const {
     *top = false;
     if (!gps_ || x < 0 || y < 0 || x >= gps_->dimx || y >= gps_->dimy) return nullptr;
+    if (native_capture_ignored_cell(gps_, x, y)) return nullptr;
     const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
     if (gps_->screen_top && native_ui_top_layer_at(*gps_, tile)) {
         *top = true;
@@ -20046,6 +20052,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     RenderTimingScope match_timing(render_timings_, config_.trace_render_timing, RenderTimingStage::Match);
     RenderTimingScope context_timing(render_timings_, config_.trace_render_timing, RenderTimingStage::Context);
     RenderTimingScope context_detail(render_timings_, config_.trace_render_timing, RenderTimingStage::Ownership);
+    NativeCaptureMaskScope capture_mask(gps_);
     NativeHistoryFrameScope history_frame(gps_);
     std::vector<Match> result;
     if (!gps_ || !gps_->screen || gps_->dimx <= 0 || gps_->dimx > 1000 ||
@@ -28023,6 +28030,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
         ? immediate_top_full_scan_epoch_
         : immediate_base_full_scan_epoch_;
     if (epochs[static_cast<size_t>(y)] == draw_epoch_) return true;
+    NativeCaptureMaskScope capture_mask(gps_);
     NativeHistoryFrameScope history_frame(gps_);
     const bool has_cached_row = epochs[static_cast<size_t>(y)] != 0;
     epochs[static_cast<size_t>(y)] = draw_epoch_;
@@ -34716,6 +34724,7 @@ static bool should_shift_resolution_glyph(bool dropdown_active,
 void Overlay::refresh_resolution_dropdown_geometry_for_copy() {
     if (resolution_geometry_scan_epoch_ == draw_epoch_) return;
     resolution_geometry_scan_epoch_ = draw_epoch_;
+    NativeCaptureMaskScope capture_mask(gps_);
 
     int left = INT32_MAX;
     int right = INT32_MIN;
@@ -35017,6 +35026,7 @@ void Overlay::recover_embark_knowledge_list() {
 
 void Overlay::prepare_frame() {
     if (frame_prepared_) return;
+    NativeCaptureMaskScope capture_mask(gps_);
     RenderTimingScope prepare_timing(render_timings_, config_.trace_render_timing, RenderTimingStage::Prepare);
     maybe_reload();
     prepared_matches_.clear();
@@ -35678,6 +35688,7 @@ void Overlay::note_graphic_copy(SDL_Renderer *renderer, SDL_Texture *texture,
         relative_x % tile_w == 0 && relative_y % tile_h == 0 &&
         copy_right <= grid_right && copy_bottom <= grid_bottom) {
         const int x = relative_x / tile_w, y = relative_y / tile_h;
+        if (native_capture_ignored_cell(gps_, x, y)) return;
         const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
         const bool top = native_ui_top_layer_at(*gps_, tile);
         const auto *primary = top ? gps_->screentexpos_top : gps_->screentexpos;
@@ -35754,6 +35765,7 @@ void Overlay::note_graphic_copy(SDL_Renderer *renderer, SDL_Texture *texture,
     const int last_y = std::clamp((clipped_bottom - 1 - origin_y) / tile_h, 0, gps_->dimy - 1);
     for (int x = first_x; x <= last_x; ++x) {
         for (int y = first_y; y <= last_y; ++y) {
+            if (native_capture_ignored_cell(gps_, x, y)) continue;
             const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
             cell_composite_state_[tile] = 2;
             cell_composite_epoch_[tile] = draw_epoch_;
@@ -36082,7 +36094,7 @@ void Overlay::capture_embark_pre_pause_snapshot(SDL_Renderer *renderer) {
     embark_pre_pause_snapshot_signature_ = 0;
     embark_pre_pause_upload_signature_ = 0;
     embark_pre_pause_pixels_.resize(static_cast<size_t>(width) * height * 4);
-    if (SDL_RenderReadPixels(renderer, nullptr, SDL_PIXELFORMAT_RGBA32,
+    if (native_capture_read_pixels(gps_, renderer, nullptr, SDL_PIXELFORMAT_RGBA32,
                              embark_pre_pause_pixels_.data(), width * 4) != 0) {
         log_line("WARN", std::string(
             "Cannot cache translated prepare-for-embark frame: ") +
@@ -36338,7 +36350,7 @@ void Overlay::refine_embark_pause_pixel_bounds(SDL_Renderer *renderer) {
 
     std::vector<Uint8> pixels(
         static_cast<size_t>(search.w) * search.h * 4);
-    if (SDL_RenderReadPixels(renderer, &search, SDL_PIXELFORMAT_RGBA32,
+    if (native_capture_read_pixels(gps_, renderer, &search, SDL_PIXELFORMAT_RGBA32,
                              pixels.data(), search.w * 4) != 0) {
         log_line("WARN", std::string(
             "Cannot inspect Escape menu gold frame: ") + SDL_GetError());
@@ -36664,7 +36676,7 @@ void Overlay::clear_embark_pause_foreground(SDL_Renderer *renderer,
     if (SDL_IntersectRect(&band, &interior, &bounded) &&
         SDL_IntersectRect(&bounded, &screen, &clipped)) {
         std::vector<Uint8> pixels(static_cast<size_t>(clipped.w) * clipped.h * 4);
-        if (SDL_RenderReadPixels(renderer, &clipped, SDL_PIXELFORMAT_RGBA32,
+        if (native_capture_read_pixels(gps_, renderer, &clipped, SDL_PIXELFORMAT_RGBA32,
                                  pixels.data(), clipped.w * 4) == 0) {
             SDL_BlendMode saved_blend = SDL_BLENDMODE_NONE;
             Uint8 saved_r = 0, saved_g = 0, saved_b = 0, saved_a = 0;
@@ -36781,7 +36793,7 @@ void Overlay::restore_embark_pause_edge_patch(SDL_Renderer *renderer) {
 
         std::vector<Uint8> search_pixels(
             static_cast<size_t>(search_width) * patch_height * 4);
-        if (SDL_RenderReadPixels(renderer, &search_rect,
+        if (native_capture_read_pixels(gps_, renderer, &search_rect,
                                  SDL_PIXELFORMAT_RGBA32,
                                  search_pixels.data(), search_width * 4) != 0) {
             log_line("WARN", std::string(
@@ -36795,7 +36807,7 @@ void Overlay::restore_embark_pause_edge_patch(SDL_Renderer *renderer) {
         };
         std::vector<Uint8> destination_pixels(
             static_cast<size_t>(patch_width) * patch_height * 4);
-        if (SDL_RenderReadPixels(renderer, &destination_read_rect,
+        if (native_capture_read_pixels(gps_, renderer, &destination_read_rect,
                                  SDL_PIXELFORMAT_RGBA32,
                                  destination_pixels.data(), patch_width * 4) != 0) {
             log_line("WARN", std::string(
@@ -42432,6 +42444,10 @@ int Overlay::intercept_glyph_copy(SDL_Renderer *renderer, SDL_Texture *texture,
     if (x < 0 || x >= gps_->dimx || y < 0 || y >= gps_->dimy) {
         return real_copy(renderer, texture, source, dest);
     }
+    // The DFHack button remains native artwork. Its characters must never
+    // become observed text or enter the translation suppression caches.
+    if (native_capture_ignored_cell(gps_, x, y))
+        return real_copy(renderer, texture, source, dest);
     const size_t observed_cells =
         static_cast<size_t>(gps_->dimx) * gps_->dimy;
     if (observed_glyph_chars_.size() != observed_cells ||
@@ -43314,10 +43330,10 @@ std::vector<int> Overlay::colored_match_foregrounds(const Match &match, int fore
 int Overlay::read_overlay_pixels(SDL_Renderer *renderer, const SDL_Rect &rect,
         void *pixels, int pitch, std::string_view kind, const Match *match) {
     if (!config_.trace_render_timing)
-        return SDL_RenderReadPixels(renderer, &rect, SDL_PIXELFORMAT_RGBA32, pixels, pitch);
+        return native_capture_read_pixels(gps_, renderer, &rect, SDL_PIXELFORMAT_RGBA32, pixels, pitch);
     const auto start = RenderTimings::Clock::now();
-    const int status = SDL_RenderReadPixels(
-        renderer, &rect, SDL_PIXELFORMAT_RGBA32, pixels, pitch);
+    const int status = native_capture_read_pixels(
+        gps_, renderer, &rect, SDL_PIXELFORMAT_RGBA32, pixels, pitch);
     const double elapsed = std::chrono::duration<double, std::milli>(
         RenderTimings::Clock::now() - start).count();
     auto &sample = render_timings_.current;
@@ -44033,6 +44049,7 @@ static bool is_shortcut_label(std::string_view text) {
 
 void Overlay::dump_screen() {
     if (!gps_ || !gps_->screen) return;
+    NativeCaptureMaskScope capture_mask(gps_);
     std::error_code ec;
     const auto dump_directory = runtime::path("data/extracted/dumps");
     fs::create_directories(dump_directory, ec);
@@ -44150,6 +44167,7 @@ void Overlay::dump_screen() {
 }
 
 void Overlay::collect_untranslated_fragments() {
+    NativeCaptureMaskScope capture_mask(gps_);
     if (!config_.collect_untranslated || config_.untranslated_path.empty() || !gps_ || !gps_->screen) {
         return;
     }
@@ -44378,7 +44396,7 @@ void Overlay::capture(SDL_Renderer *renderer) {
     SDL_Surface *surface = SDL_CreateRGBSurfaceWithFormat(0, width, height, 32,
                                                           SDL_PIXELFORMAT_ARGB8888);
     if (!surface) return;
-    if (SDL_RenderReadPixels(renderer, nullptr, SDL_PIXELFORMAT_ARGB8888,
+    if (native_capture_read_pixels(gps_, renderer, nullptr, SDL_PIXELFORMAT_ARGB8888,
                              surface->pixels, surface->pitch) != 0) {
         log_line("ERROR", std::string("SDL_RenderReadPixels failed: ") + SDL_GetError());
         SDL_FreeSurface(surface);
@@ -44395,6 +44413,7 @@ void Overlay::capture(SDL_Renderer *renderer) {
 }
 
 SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
+    NativeCaptureMaskScope capture_mask(gps_);
     SDL_Rect region{0, 0, gps_->screen_pixel_x, gps_->screen_pixel_y};
     const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
     const int origin_x = (gps_->screen_pixel_x - tile_w * gps_->dimx) / 2;
@@ -44456,6 +44475,7 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
 }
 
 SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) const {
+    NativeCaptureMaskScope capture_mask(gps_);
     if (rows.empty()) return {};
     Match owner = rows.front();
     owner.layout_reflowed_paragraph = true;
@@ -44493,6 +44513,8 @@ SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) c
 }
 void Overlay::render(SDL_Renderer *renderer) {
     TranslationStateScope translation_scope;
+    (void)install_native_dfhack_capture_hook();
+    NativeCaptureMaskScope capture_mask(gps_);
     struct EndKnowledgeFrame {
         std::optional<std::vector<Match>> &matches;
         bool &transition;
@@ -44906,6 +44928,9 @@ void Overlay::render(SDL_Renderer *renderer) {
         }
     }
     layout_timing.stop();
+    // Restore the native buffers before any draw call. Matching, snapshots
+    // and layout above all used the same temporary capture exclusion.
+    capture_mask.reset();
     RenderTimingScope draw_timing(render_timings_, config_.trace_render_timing, RenderTimingStage::Draw);
     g_drawing_overlay = true;
     {
