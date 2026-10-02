@@ -534,54 +534,8 @@ void Overlay::layout_fortress_build_menu(SDL_Renderer *renderer) {
     // The zone location picker has two-line picture records whose right
     // cap is covered by LOCATION_DETAILS (main[181]). Keep that exception
     // inside the current prompt's closed panel, including in classic mode.
-    std::optional<SDL_Rect> location_panel;
     int location_prompt_y = -1;
-    constexpr std::string_view location_prompt = "Add or choose a location.";
-    const NativePanelBorders borders(*gps_);
-    for (const Match &match : prepared_matches_) {
-        if (match.source != location_prompt || match.native_split_duplicate ||
-            match.x < 0 || match.y < 0 || match.y >= gps_->dimy ||
-            match.length <= 0 || match.length > gps_->dimx - match.x) continue;
-        bool current = true;
-        for (size_t i = 0; i < location_prompt.size(); ++i)
-            if (visible_char_at(match.x + static_cast<int>(i), match.y) !=
-                    static_cast<unsigned char>(location_prompt[i])) {
-                current = false;
-                break;
-            }
-        if (!current) continue;
-        location_panel = native_panel_interior(borders, *gps_,
-            match.x, match.x + match.length, match.y);
-        if (location_panel) { location_prompt_y = match.y; break; }
-    }
-
-    if (location_panel) {
-        // Creation actions are independent horizontal-option buttons, not
-        // picture records. Preserve the native left-aligned text origin at
-        // left + 1 (PE 53.16: 0x3bb4e2); the complete three-row skin supplies
-        // the available width, independently of the English caption length.
-        constexpr std::string_view actions[] = {"New inn/tavern", "New temple",
-            "New library", "New guildhall", "New hospital"};
-        for (Match &match : prepared_matches_) {
-            if (match.target.empty() || match.native_split_duplicate ||
-                std::find(std::begin(actions), std::end(actions), match.source) ==
-                    std::end(actions)) continue;
-            const auto button = native_button_text_rect(*gps_, match.x,
-                match.x + match.length, match.y);
-            if (!button || button->x < location_panel->x ||
-                button->x + button->w > location_panel->x + location_panel->w ||
-                button->y <= location_prompt_y ||
-                button->y + button->h > location_panel->y + location_panel->h) continue;
-            match.layout_left = true;
-            match.layout_right = false;
-            match.layout_y = button->y + 1;
-            match.layout_pixel_y = 0;
-            match.layout_fixed_baseline = true;
-            match.layout_clip_right = button->x + button->w;
-            layout_fortress_text_rows(renderer, {{&match}}, button->x,
-                button->x + button->w);
-        }
-    }
+    const auto location_panel = capture_fortress_location_picker(location_prompt_y);
 
     std::optional<SDL_Rect> places_panel;
     int places_tabs_y = -1;

@@ -1245,7 +1245,7 @@ static std::optional<SDL_Rect> native_nineslice_button_text_rect(
         const graphicst &gps, int first, int last, int y,
         const std::array<int32_t, 9> &skin, bool classic = false,
         bool bottom_caption = false, bool left_caption = false,
-        bool picture_artwork = false) {
+        bool picture_artwork = false, bool native_draw = false) {
     if (first < 0 || last <= first || last > gps.dimx ||
         y < 0 || y >= gps.dimy) return std::nullopt;
     const int32_t middle = skin[4];
@@ -1255,7 +1255,7 @@ static std::optional<SDL_Rect> native_nineslice_button_text_rect(
     // the current glyphs, palette and complete frame still have to match.
     const auto has_skin = [&](int x, int row, int32_t part, bool caption = false) {
         return native_ui_skin_at(gps, x, row, part, classic, caption,
-            false, picture_artwork);
+            native_draw, picture_artwork);
     };
     for (int caption_row = 0; caption_row < 3; ++caption_row) {
         const int top = y - caption_row;
@@ -1349,7 +1349,8 @@ static std::optional<SDL_Rect> native_intro_button_text_rect(
 static std::optional<SDL_Rect> native_button_text_rect(
         const graphicst &gps, int first, int last, int y,
         bool bottom_caption = false, std::array<int32_t, 9> *matched_skin = nullptr,
-        bool allow_caption_strip = false, bool left_caption = false) {
+        bool allow_caption_strip = false, bool left_caption = false,
+        bool native_draw = false) {
     if (first < 0 || last <= first || last > gps.dimx ||
         y < 0 || y >= gps.dimy) return std::nullopt;
     const auto settings = native_ui_settings();
@@ -1370,7 +1371,7 @@ static std::optional<SDL_Rect> native_button_text_rect(
         Probe probe;
         if (x < 0 || x >= gps.dimx || row < 0 || row >= gps.dimy) return probe;
         const size_t at = static_cast<size_t>(x) * gps.dimy + row;
-        const bool top = native_ui_top_layer_at(gps, at);
+        const bool top = !native_draw && native_ui_top_layer_at(gps, at);
         const auto *screen = top ? gps.screen_top : gps.screen;
         const auto *primary = top ? gps.screentexpos_top : gps.screentexpos;
         const auto *lower = top ? gps.screentexpos_top_lower : gps.screentexpos_lower;
@@ -1423,7 +1424,8 @@ static std::optional<SDL_Rect> native_button_text_rect(
             if (!possible_frame((*skin)[0], (*skin)[1], (*skin)[3], (*skin)[4], (*skin)[5]))
                 continue;
             if (const auto intro = native_nineslice_button_text_rect(
-                    gps, first, last, y, *skin, classic, bottom_caption, left_caption)) {
+                    gps, first, last, y, *skin, classic, bottom_caption, left_caption,
+                    false, native_draw)) {
                 if (matched_skin) *matched_skin = *skin;
                 return intro;
             }
@@ -1471,7 +1473,8 @@ static std::optional<SDL_Rect> native_button_text_rect(
             // reader, or button text gets merged with the prose below it.
             if (frame_candidate) {
                 if (const auto rect = native_nineslice_button_text_rect(
-                        gps, first, last, y, normalized, classic, bottom_caption, left_caption)) {
+                        gps, first, last, y, normalized, classic, bottom_caption, left_caption,
+                        false, native_draw)) {
                     if (matched_skin) *matched_skin = normalized;
                     return rect;
                 }

@@ -1773,6 +1773,10 @@ enum class NativeCivilizationField {
     None, TradePrefix, TradeEntity, TradeValue, OfficialName, OfficialPosition
 };
 
+enum class NativeLocationPickerField {
+    None, Prompt, Action, Name, Faith, Guild, Kind
+};
+
 struct NativeDrawnTextRow {
     int x = 0, y = 0;
     std::string source;
@@ -1793,6 +1797,10 @@ struct NativeDrawnTextRow {
     bool info_title_authored = false;
     int info_title_right = -1; // exclusive native draw clip boundary
     NativeCivilizationField civilization_field = NativeCivilizationField::None;
+    // The chooser redraws over the map. Save its typed caller and allocated
+    // caption span during that draw, before a later native grid replaces it.
+    NativeLocationPickerField location_picker_field = NativeLocationPickerField::None;
+    std::optional<SDL_Rect> location_picker_box{};
     // The mission formatter's actual addst caller owns this whole title,
     // including action and destination, before any generic name matching.
     bool mission_title = false;
@@ -2194,7 +2202,9 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
         bool mission_title = false, int mission_title_right = -1,
         std::optional<std::array<long, 4>> original_clip = std::nullopt,
-        uint64_t original_epoch = 0, NativeMapHoverContext map_hover = {}) {
+        uint64_t original_epoch = 0, NativeMapHoverContext map_hover = {},
+        NativeLocationPickerField location_picker_field = NativeLocationPickerField::None,
+        std::optional<SDL_Rect> location_picker_box = std::nullopt) {
     std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
     const auto epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
     if (original_epoch && original_epoch != epoch) return;
@@ -2296,12 +2306,15 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         row.info_title_authored = info_title_authored;
         row.info_title_right = info_title_right;
         row.civilization_field = civilization_field;
+        row.location_picker_field = location_picker_field;
+        row.location_picker_box = location_picker_box;
         row.mission_title = mission_title;
         row.mission_title_right = mission_title_right;
         row.map_hover = map_hover;
         if (map_hover.kind != NativeMapHoverKind::None) row.caption_source = true;
         if (info_title_kind != NativeInfoTitleKind::None) row.caption_source = true;
         if (civilization_field != NativeCivilizationField::None) row.caption_source = true;
+        if (location_picker_field != NativeLocationPickerField::None) row.caption_source = true;
         if (mission_title) row.caption_source = true;
         if (const auto identity = native_unit_identity_source_binding(
                 complete_source.empty() ? source : complete_source, address)) {
@@ -3684,8 +3697,9 @@ private:
         std::vector<Match> &matches, int only_y, bool raw_layer) const;
     void layout_fortress_location(SDL_Renderer *renderer);
     void append_fortress_location_list_matches(std::vector<std::string> &rows,
-        std::vector<Match> &matches, int only_y, bool raw_layer) const;
+        std::vector<Match> &matches, int only_y, bool raw_layer, bool picker_only = false) const;
     void layout_fortress_location_list(SDL_Renderer *renderer);
+    std::optional<SDL_Rect> capture_fortress_location_picker(int &prompt_y) const;
     void append_fortress_zone_drawing_matches(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y, bool raw_layer) const;
     void append_fortress_zone_holder_matches(std::vector<std::string> &rows,
@@ -20205,6 +20219,12 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    // Native chooser callers own these whole fields even when the map has
+    // replaced the live outer frame by the time SDL presents its captions.
+    const bool classic_location_fields = native_ui_classic().value_or(false);
+    if (classic_location_fields)
+        append_fortress_location_list_matches(screen_rows, result, only_y,
+            screen_override != nullptr, true);
     // A foreground document owns its ink before item/roster/map readers see
     // this work buffer. Those readers otherwise consume tooltip words using
     // the background page's grammar, leaving no body for the tooltip pass.
@@ -20218,6 +20238,13 @@ std::vector<Match> Overlay::find_matches(int only_y,
         append_hover_picture_captions(screen_rows, hover_matches, only_y, screen_override);
         append_hover_text_captions(screen_rows, hover_matches, only_y, screen_override);
     }
+    // Graphical captions retain their existing closed-frame ownership.
+    // Classic fields above use their original typed draws instead.
+    int location_picker_prompt_y = -1;
+    const bool location_picker = capture_fortress_location_picker(location_picker_prompt_y).has_value();
+    if (location_picker && !classic_location_fields)
+        append_fortress_location_list_matches(screen_rows, result, only_y,
+            screen_override != nullptr, true);
     // Terrain glyphs occupy this same grid in classic mode. Establish UI
     // ownership before any message template, name grammar or UTF-8 recovery
     // sees those bytes, for both immediate suppression and the final scan.
@@ -20295,6 +20322,9 @@ std::vector<Match> Overlay::find_matches(int only_y,
             screen_override != nullptr);
         append_fortress_location_matches(screen_rows, result, only_y,
             screen_override != nullptr);
+        if (!location_picker)
+            append_fortress_location_list_matches(screen_rows, result, only_y,
+                screen_override != nullptr);
     }
     // Fixed catalog records own their bound person fields before the generic
     // item reader sees "This is". That reader reserves unresolved descriptions
@@ -20354,8 +20384,6 @@ std::vector<Match> Overlay::find_matches(int only_y,
     append_adventure_compass_matches(screen_rows, result, only_y);
     context_detail.checkpoint(RenderTimingStage::Places);
     if (!announcement_panel_only) {
-    append_fortress_location_list_matches(screen_rows, result, only_y,
-        screen_override != nullptr);
     append_fortress_place_names(screen_rows, result, only_y,
         screen_override != nullptr);
     append_fortress_stockpile_types(screen_rows, result, only_y,

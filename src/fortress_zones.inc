@@ -635,13 +635,17 @@ void Overlay::layout_fortress_zone_details(SDL_Renderer *renderer) {
             const int left = panel->x + 5;
             if (left >= controls) continue;
 
+            // Tooltip layout restores the complete background page before
+            // this pass. Its matches still carry the background flag even
+            // when the card is beside the zone and covers none of its text.
             const auto layout_rows = [&](int first, int right, int top, int bottom) {
                 struct Part { Match *match; int first, last; };
                 std::map<int, std::vector<Part>> candidates;
                 for (Match &match : prepared_matches_) {
                     const int row = match.native_split_text ? match.native_split_top_y : match.y;
                     if (match.target.empty() || match.native_split_duplicate ||
-                        match.native_help_source_only || match.native_hover_background ||
+                        match.native_help_source_only ||
+                        (match.native_hover_background && !NativeTooltipPageScope::active) ||
                         match.legends_flow || row < top || row >= bottom ||
                         match.x < 0 || match.y < 0 || match.y >= gps_->dimy ||
                         match.length <= 0 || match.length > gps_->dimx - match.x ||
@@ -767,7 +771,8 @@ void Overlay::layout_fortress_zone_menu(SDL_Renderer *renderer) {
             int source_y = -1;
             for (Match &match : prepared_matches_) {
                 if (match.target.empty() || match.native_split_duplicate ||
-                    match.native_help_source_only || match.native_hover_background ||
+                    match.native_help_source_only ||
+                    (match.native_hover_background && !NativeTooltipPageScope::active) ||
                     match.legends_flow || match.y < picture.y ||
                     match.y >= picture.y + picture.h || match.x >= source_right ||
                     match.x + match.length <= left) continue;

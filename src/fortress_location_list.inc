@@ -1,23 +1,55 @@
+// Read the chooser from the current native page before paragraph matching
+// can detach its prompt. Matching and layout must share the same scope in
+// classic and graphical modes, including a restored tooltip background.
+std::optional<SDL_Rect> Overlay::capture_fortress_location_picker(int &prompt_y) const {
+    prompt_y = -1;
+    if (!gps_ || gps_->dimx <= 0 || gps_->dimy <= 0) return std::nullopt;
+    constexpr std::string_view prompt = "Add or choose a location.";
+    const NativePanelBorders borders(*gps_);
+    const bool classic = native_ui_classic().value_or(false);
+    std::string row(gps_->dimx, ' ');
+    for (int y = 1; y + 1 < gps_->dimy; ++y) {
+        for (int x = 0; x < gps_->dimx; ++x) {
+            bool top = false;
+            const auto *cell = classic ? cell_at(x, y, &top) : nullptr;
+            // Classic controls and their closed frame share this native
+            // glyph view, including during early raw-layer suppression.
+            const auto ch = classic ? (cell ? cell[0] : 0) : visible_char_at(x, y);
+            row[x] = ch ? static_cast<char>(ch) : ' ';
+        }
+        const auto start = row.find(prompt);
+        if (start == std::string::npos) continue;
+        if (const auto panel = native_panel_interior(borders, *gps_,
+                static_cast<int>(start), static_cast<int>(start + prompt.size()), y)) {
+            prompt_y = y;
+            return panel;
+        }
+    }
+    return std::nullopt;
+}
+
 // Places/Locations emits one complete name, one complete type/faith caption,
 // and an optional occupation count per picture record (PE 53.16 39d1f9).
 // Own those native fields before generic templates split an identity and
 // centre its translated fragments in unrelated English spans.
 void Overlay::append_fortress_location_list_matches(std::vector<std::string> &rows,
-        std::vector<Match> &matches, int only_y, bool raw_layer) const {
+        std::vector<Match> &matches, int only_y, bool raw_layer, bool picker_only) const {
     if (!gps_ || rows.size() != static_cast<size_t>(gps_->dimy)) return;
     auto context = rows;
     if (raw_layer) {
+        const bool classic = native_ui_classic().value_or(false);
         for (int y = 0; y < gps_->dimy; ++y)
             for (int x = 0; x < gps_->dimx; ++x) {
-                const auto ch = visible_char_at(x, y);
+                bool top = false;
+                const auto *cell = classic ? cell_at(x, y, &top) : nullptr;
+                const auto ch = classic ? (cell ? cell[0] : 0) : visible_char_at(x, y);
                 context[y][x] = ch ? static_cast<char>(ch) : ' ';
             }
     }
     int tabs_y = -1;
-    const auto panel = capture_fortress_places_panel(context, tabs_y);
-    if (!panel) return;
-    const int panel_right = panel->x + panel->w;
-    const int panel_bottom = panel->y + panel->h;
+    auto panel = capture_fortress_location_picker(tabs_y);
+    const bool picker = panel.has_value();
+    if (!panel && !picker_only) panel = capture_fortress_places_panel(context, tabs_y);
     const auto drawn = captured_native_drawn_text_rows();
     const auto top_drawn = captured_native_drawn_text_rows(true);
     const auto clipped = captured_clipped_captions();
@@ -120,6 +152,15 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
         return complete && !target.empty() ? std::optional<std::string>(std::move(target))
             : std::nullopt;
     };
+    const auto translate_identity = [&](const std::string &source)
+            -> std::optional<std::string> {
+        if (contains_cjk_utf8(source)) return native_text_to_utf8(source);
+        auto name = translate_legends_name(source, true);
+        if (!name) name = translate_legends_name(source, false);
+        if (!name) name = translate_procedural_fragment(source, false, false, {},
+            ProceduralFragmentContext::generated_name);
+        return name;
+    };
     const auto translate_description = [&](const Description &value)
             -> std::optional<std::string> {
         if (value.profession) {
@@ -138,12 +179,7 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
         // A faith may name either an entity or a deity. Both are complete
         // generated/native identities; never feed isolated title words to
         // the dictionary or phoneticize the type prefix with the name.
-        auto name = contains_cjk_utf8(value.name)
-            ? std::optional<std::string>(native_text_to_utf8(value.name))
-            : translate_legends_name(value.name, true);
-        if (!name) name = translate_legends_name(value.name, false);
-        if (!name) name = translate_procedural_fragment(value.name, false, false, {},
-            ProceduralFragmentContext::generated_name);
+        const auto name = translate_identity(value.name);
         if (!name) return std::nullopt;
         return (value.dedication ? "供奉" : "") + *name + "的" + *kind;
     };
@@ -151,7 +187,9 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
                             int left) {
         const auto target = translated ? *translated : native_text_to_utf8(field.complete);
         const int length = field.end - field.x;
-        if (length <= 0 || left >= field.right || target.empty() ||
+        if (field.y < 0 || field.y >= gps_->dimy || field.x < 0 ||
+            field.end > gps_->dimx || left < 0 || field.right > gps_->dimx ||
+            length <= 0 || left >= field.right || target.empty() ||
             target.find("[C:") != std::string::npos || target.find_first_of("\r\n") != std::string::npos)
             return;
         if (rows[field.y].compare(field.x, length, field.source) == 0) {
@@ -184,12 +222,108 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
         }
     };
 
+    if (native_ui_classic().value_or(false)) {
+        // The typed addst caller identifies the chooser, independently of
+        // when the outer frame survives in the live glyph grid. Its saved
+        // allocation reserves the later Inspect action and both row baselines.
+        for (const auto *layer : {&drawn, &top_drawn}) {
+            for (const auto &draw : *layer) {
+                const auto kind = draw.location_picker_field;
+                if (kind == NativeLocationPickerField::None ||
+                    kind == NativeLocationPickerField::Prompt || !draw.location_picker_box ||
+                    draw.draw_grid != (draw.top_layer ? gps_->screen_top : gps_->screen) ||
+                    draw.draw_dimx != gps_->dimx || draw.draw_dimy != gps_->dimy ||
+                    draw.source.empty() || draw.x < 0 || draw.x >= gps_->dimx ||
+                    draw.y < 0 || draw.y >= gps_->dimy ||
+                    draw.source.size() > static_cast<size_t>(gps_->dimx - draw.x) ||
+                    (only_y >= 0 && only_y != draw.y)) continue;
+                // A retained draw may survive a cached frame. Its semantic
+                // allocation belongs only to the same complete current ink;
+                // partial raw-layer suppression uses that composite proof.
+                const auto &current = raw_layer ? context[draw.y] : rows[draw.y];
+                if (current.compare(draw.x, draw.source.size(), draw.source) != 0) continue;
+                const int end = draw.x + static_cast<int>(draw.source.size());
+                if (std::any_of(layer->begin(), layer->end(), [&](const auto &later) {
+                        return later.sequence > draw.sequence && later.y == draw.y &&
+                            later.x < end && draw.x < later.x + static_cast<int>(later.source.size());
+                    })) continue;
+                const auto &box = *draw.location_picker_box;
+                int left = box.x, right = box.x + box.w;
+                if (draw.draw_clip) {
+                    const auto &clip = *draw.draw_clip;
+                    if (draw.y < clip.y || draw.y >= clip.y + clip.h) continue;
+                    left = std::max(left, clip.x);
+                    right = std::min(right, clip.x + clip.w);
+                }
+                if (box.y != draw.y || left < 0 || left > draw.x ||
+                    right <= draw.x || right > gps_->dimx) continue;
+                const std::string complete = draw.complete_source.empty()
+                    ? draw.source : draw.complete_source;
+                std::optional<std::string> target;
+                switch (kind) {
+                case NativeLocationPickerField::Name:
+                    target = contains_cjk_utf8(complete)
+                        ? std::optional<std::string>(native_text_to_utf8(complete))
+                        : translate_procedural_fragment(complete, false, false, {},
+                            ProceduralFragmentContext::generated_name);
+                    if (!target) target = exact_literal_translation(complete);
+                    break;
+                case NativeLocationPickerField::Faith:
+                    target = complete == "No particular deity"
+                        ? exact_literal_translation(complete) : translate_identity(complete);
+                    break;
+                case NativeLocationPickerField::Guild:
+                    if (const auto type = description(complete))
+                        target = translate_description(*type);
+                    else {
+                        target = translate_unit_profession(complete, true);
+                        if (!target) target = exact_literal_translation(complete);
+                        if (!target) target = translate_compositional(complete);
+                    }
+                    break;
+                default:
+                    target = exact_literal_translation(complete);
+                    break;
+                }
+                append(Field{draw.x, draw.y, end, right, draw.source, complete}, target, left);
+            }
+        }
+    }
+
+    if (!panel || (picker_only && !picker)) return;
+    const int panel_right = panel->x + panel->w;
+    const int panel_bottom = panel->y + panel->h;
+
+    if (picker) {
+        // Own creation actions with the records. UI-message matching may
+        // otherwise detach them before the build-menu layout can align them.
+        constexpr std::string_view actions[] = {"New inn/tavern", "New temple",
+            "New library", "New guildhall", "New hospital"};
+        for (int y = tabs_y + 1; y < panel_bottom; ++y) {
+            if (only_y >= 0 && only_y != y) continue;
+            for (const auto action : actions) {
+                const auto at = context[y].find(action, panel->x);
+                if (at == std::string::npos || at + action.size() >
+                        static_cast<size_t>(panel_right)) continue;
+                const int left = static_cast<int>(at);
+                const int end = left + static_cast<int>(action.size());
+                const auto box = native_button_text_rect(*gps_, left, end, y);
+                if (!box || box->x < panel->x || box->x + box->w > panel_right ||
+                    box->y <= tabs_y || box->y + box->h > panel_bottom) continue;
+                const std::string source(action);
+                append(Field{left, y, end, box->x + box->w, source, source},
+                    exact_literal_translation(source), box->x);
+            }
+        }
+    }
+
     for (int y = tabs_y + 1; y + 1 < panel_bottom; ++y) {
         if (only_y >= 0 && only_y != y && only_y != y + 1) continue;
         for (const auto &start : split_text_fields(context[y])) {
             if (start.start < panel->x || start.end > panel_right) continue;
             const auto box = native_picture_caption_rect(
-                *gps_, start.start, y, false, nullptr, true, nullptr, true);
+                *gps_, start.start, y, false, nullptr, true, nullptr, !picker,
+                false, picker ? 181 : -1);
             if (!box || box->x < panel->x || box->x + box->w > panel_right ||
                 box->y <= tabs_y || box->y + box->h > panel_bottom ||
                 y != box->y + 1 || start.start < box->x ||
@@ -211,14 +345,22 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
             const auto detail = field_at(left, second_count ? second_count->x : right, y + 1);
             if (!name || !detail || name->x != left || detail->x != left) continue;
             const auto type = description(detail->complete);
-            if (!type) continue;
+            if (!type && !picker) continue;
             auto title = contains_cjk_utf8(name->complete)
                 ? std::optional<std::string>(native_text_to_utf8(name->complete))
                 : translate_procedural_fragment(name->complete, false, false, {},
                     ProceduralFragmentContext::generated_name);
             if (!title) title = exact_literal_translation(name->complete);
             append(*name, title, left);
-            append(*detail, translate_description(*type), left);
+            // The chooser draws a bare faith/deity identity below temples;
+            // Places instead prefixes it with Temple/Shrine. Own either
+            // complete source before generic matching splits a native given
+            // name from an English compound surname or clipped epithet.
+            const auto detail_target = type ? translate_description(*type)
+                : detail->complete == "No particular deity"
+                    ? exact_literal_translation(detail->complete)
+                    : translate_identity(detail->complete);
+            append(*detail, detail_target, left);
             for (const auto *count : {&first_count, &second_count})
                 if (*count) {
                     const auto digits = (*count)->source.substr(0, (*count)->source.find(' '));

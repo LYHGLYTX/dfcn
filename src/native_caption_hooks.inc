@@ -46,6 +46,10 @@ struct NativeCivilizationCaptionSite {
     uintptr_t return_address = 0;
     NativeCivilizationField field = NativeCivilizationField::None;
 };
+struct NativeLocationPickerSite {
+    uintptr_t return_address = 0;
+    NativeLocationPickerField field = NativeLocationPickerField::None;
+};
 struct NativeInfoTitleBinding {
     std::vector<NativeInfoTitleSite> sites;
     // Offsets from the exact title NativeString to live caller-frame slots.
@@ -101,6 +105,7 @@ struct NativeCaptionProfile {
     std::vector<uintptr_t> map_hover_returns;
     NativeInfoTitleBinding info_titles;
     std::vector<NativeCivilizationCaptionSite> civilization_fields;
+    std::vector<NativeLocationPickerSite> location_picker_fields;
     std::vector<uintptr_t> mission_title_returns;
     NativeAnnouncementPageBinding announcement_page;
 };
@@ -294,6 +299,7 @@ static void capture_native_tooltip_container(void *widget, uint32_t tick) {
 }
 static NativeInfoTitleBinding g_native_info_title_binding;
 static std::vector<NativeCivilizationCaptionSite> g_native_civilization_caption_sites;
+static std::vector<NativeLocationPickerSite> g_native_location_picker_sites;
 static std::vector<uintptr_t> g_native_mission_title_returns;
 static std::vector<uintptr_t> g_native_map_hover_returns;
 static size_t g_native_map_hover_text_offset = 0;
@@ -308,6 +314,50 @@ static NativeCivilizationField native_civilization_caption_field(uintptr_t calle
     for (const auto &site : g_native_civilization_caption_sites)
         if (site.return_address == caller) return site.field;
     return NativeCivilizationField::None;
+}
+
+static NativeLocationPickerField native_location_picker_field(uintptr_t caller) {
+    for (const auto &site : g_native_location_picker_sites)
+        if (site.return_address == caller) return site.field;
+    return NativeLocationPickerField::None;
+}
+
+static std::optional<SDL_Rect> native_location_picker_draw_box(
+        const graphicst *graphics, const NativeString *source,
+        NativeLocationPickerField field) {
+    if (field == NativeLocationPickerField::None ||
+            field == NativeLocationPickerField::Prompt ||
+            !graphics || !graphics->screen || !native_ui_classic().value_or(false))
+        return std::nullopt;
+    const int x = graphics->screenx, y = graphics->screeny;
+    if (graphics->dimx <= 0 || graphics->dimx > 1000 ||
+            graphics->dimy <= 0 || graphics->dimy > 1000 ||
+            x < 0 || x >= graphics->dimx || y < 0 || y >= graphics->dimy)
+        return std::nullopt;
+    NativePanelReadScope panel_scope(graphics);
+    if (field == NativeLocationPickerField::Action) {
+        std::string_view text;
+        if (!native_string_view(source, &text, 4096) || text.empty() ||
+                text.size() > static_cast<size_t>(graphics->dimx - x))
+            return std::nullopt;
+        if (auto box = native_button_text_rect(*graphics, x,
+                x + static_cast<int>(text.size()), y,
+                false, nullptr, false, false, true)) {
+            box->y = y;
+            box->h = 1;
+            return box;
+        }
+        return std::nullopt;
+    }
+    const int middle = field == NativeLocationPickerField::Name ? y : y - 1;
+    if (const auto frame = native_picture_caption_rect(
+            *graphics, x, middle, true, nullptr, true)) {
+        // This caller paints main[181] after both captions. Reserve its
+        // four columns while the complete underlying strip still exists.
+        const int right = frame->x + frame->w - 4;
+        if (right > x) return SDL_Rect{x, y, right - x, 1};
+    }
+    return std::nullopt;
 }
 
 static bool native_mission_title_caller(uintptr_t caller) {
@@ -988,7 +1038,9 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
         bool info_title_authored = false, int info_title_right = -1,
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
         bool mission_title = false, int mission_title_right = -1,
-        NativeMapHoverContext map_hover = {}) {
+        NativeMapHoverContext map_hover = {},
+        NativeLocationPickerField location_picker_field = NativeLocationPickerField::None,
+        std::optional<SDL_Rect> location_picker_box = std::nullopt) {
     PendingNativeField captured;
     auto &state = native_clipped_pending();
     // Both supported addst implementations draw at the current cursor and
@@ -1034,7 +1086,7 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
                         reinterpret_cast<uintptr_t>(source), graphics,
                         top_layer, complete, info_title_kind, info_title_authored, info_title_right,
                         civilization_field, mission_title, mission_title_right, std::nullopt, epoch,
-                        map_hover);
+                        map_hover, location_picker_field, location_picker_box);
                     if (!complete.empty())
                         remember_clipped_caption(graphics->screenx, graphics->screeny,
                             visible, complete);
@@ -1059,7 +1111,8 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         bool reclaim_history_draw = false,
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
         bool mission_title = false,
-        NativeMapHoverContext map_hover = {}) {
+        NativeMapHoverContext map_hover = {},
+        NativeLocationPickerField location_picker_field = NativeLocationPickerField::None) {
     const std::array<long, 4> draw_clip = graphics
         ? std::array<long, 4>{graphics->clipx[0], graphics->clipx[1],
                               graphics->clipy[0], graphics->clipy[1]}
@@ -1093,9 +1146,15 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         if (info_title_kind != NativeInfoTitleKind::None) info_title_right = right;
         if (mission_title) mission_title_right = right;
     }
+    std::optional<SDL_Rect> location_picker_box;
+    try {
+        if (!top_layer) location_picker_box = native_location_picker_draw_box(
+            graphics, source, location_picker_field);
+    } catch (...) {}
     const auto captured_source = remember_native_clipped_draw(graphics, source, just, width, top_layer,
         info_title_kind, info_title_authored, info_title_right, civilization_field,
-        mission_title, mission_title_right, map_hover);
+        mission_title, mission_title_right, map_hover,
+        location_picker_field, location_picker_box);
     std::string complete;
     int x = -1, y = -1, dimx = 0, dimy = 0;
     const unsigned char *screen = nullptr;
@@ -1179,14 +1238,15 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         // paragraph recovery; the clipped-caption registry independently
         // proves the visible prefix to the map text filter.
         if (width > 0 || first != x || info_title_kind != NativeInfoTitleKind::None ||
-                civilization_field != NativeCivilizationField::None || mission_title)
+                civilization_field != NativeCivilizationField::None || mission_title ||
+                location_picker_field != NativeLocationPickerField::None)
             remember_native_drawn_text_row(first, y, visible,
                 reinterpret_cast<uintptr_t>(source), graphics, top_layer,
                 first == x ? std::string_view(complete) : std::string_view{},
                 first == x ? info_title_kind : NativeInfoTitleKind::None,
                 info_title_authored, info_title_right, civilization_field,
                 first == x && mission_title, mission_title_right, draw_clip, epoch,
-                map_hover);
+                map_hover, location_picker_field, location_picker_box);
         if (first == x && visible != complete)
             remember_clipped_caption(x, y, visible, complete);
     } catch (...) {}
@@ -1198,6 +1258,7 @@ static void capture_native_clipped_draw(graphicst *graphics, const NativeString 
     const auto kind = native_info_title_kind(caller);
     const bool authored = native_info_title_authored(kind, source, caller);
     const auto civilization_field = native_civilization_caption_field(caller);
+    const auto location_picker_field = native_location_picker_field(caller);
     const bool mission_title = native_mission_title_caller(caller);
     const auto map_hover = native_map_hover_context(caller, source);
     std::shared_ptr<const NativeEmbarkReclaimHistoryParagraph> reclaim_history;
@@ -1230,7 +1291,7 @@ static void capture_native_clipped_draw(graphicst *graphics, const NativeString 
         if (g_native_clipped_caption_hooks.draw)
             g_native_clipped_caption_hooks.draw(graphics, source, just, width);
     }, false, kind, authored, std::move(reclaim_history), history_lock.owns_lock(),
-        civilization_field, mission_title, map_hover);
+        civilization_field, mission_title, map_hover, location_picker_field);
 }
 
 static void capture_native_clipped_flag_draw(graphicst *graphics, const NativeString *source,
@@ -1407,6 +1468,7 @@ static bool install_native_caption_hooks() {
     g_native_map_track_caption_hooks.text_offset = profile.map_caption_text_offset;
     g_native_info_title_binding = std::move(profile.info_titles);
     g_native_civilization_caption_sites = std::move(profile.civilization_fields);
+    g_native_location_picker_sites = std::move(profile.location_picker_fields);
     g_native_mission_title_returns = std::move(profile.mission_title_returns);
     g_native_map_hover_returns = std::move(profile.map_hover_returns);
     g_native_map_hover_text_offset = profile.map_caption_text_offset;
@@ -1596,6 +1658,7 @@ static bool uninstall_native_caption_hooks() {
     hooks.draw = nullptr;
     g_native_info_title_binding = {};
     g_native_civilization_caption_sites.clear();
+    g_native_location_picker_sites.clear();
     g_native_mission_title_returns.clear();
     g_native_caption_hooks.resize = nullptr;
     g_native_caption_hooks.draw = nullptr;
