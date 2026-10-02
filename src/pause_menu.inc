@@ -1,4 +1,4 @@
-// Both Escape menus use one font group. English captions describe
+// Escape menus and their timeline choices use one font group. English captions describe
 // suppression spans, not the width or centre of the underlying buttons.
 bool Overlay::layout_pause_menu(SDL_Renderer *renderer) {
     if (!gps_ || !face_ || !renderer || gps_->tile_pixel_x <= 0 ||
@@ -11,13 +11,30 @@ bool Overlay::layout_pause_menu(SDL_Renderer *renderer) {
         });
     };
     const bool compact = has_caption("Return to title menu") && has_caption("Continue");
+    const bool timeline_choices = has_caption("Save to new timeline") &&
+        has_caption("Save to new folder (same timeline)");
     const auto is_action = [compact](std::string_view source) {
         if (compact) return is_embark_pause_action(source);
+        // Native action 7 selects one of three end-game captions. Only the
+        // non-night branch can append the ownership warning (PE 0x1e1ddb).
+        constexpr std::string_view goods = " (holding another's goods)";
+        if (source.ends_with(goods)) {
+            source.remove_suffix(goods.size());
+            return source == "Finish Game" || source == "Give in to Starvation";
+        }
         return source == "Save and return to title menu" ||
             source == "Save and continue playing" ||
             source == "Retire the fortress (for the time being)" ||
             source == "Retire at this location (or rest a while)" ||
             source == "Abandon the fortress to ruin" ||
+            source == "Succumb to the invasion" ||
+            source == "Finish Game" || source == "Give in to the Night" ||
+            source == "Give in to Starvation" ||
+            source == "Save world and return to title menu" ||
+            source == "Save to this timeline" ||
+            source.starts_with("Save to timeline folder: ") ||
+            source == "Save to new timeline" ||
+            source == "Save to new folder (same timeline)" ||
             source == "Quit without saving" || source == "Settings" ||
             source == "Return to game";
     };
@@ -29,7 +46,8 @@ bool Overlay::layout_pause_menu(SDL_Renderer *renderer) {
         if (match.target.empty() || match.native_split_duplicate ||
             !is_action(match.source)) continue;
         actions.push_back(i);
-        save |= match.source == "Save and return to title menu";
+        save |= match.source == "Save and return to title menu" ||
+            match.source == "Save world and return to title menu";
         resume |= match.source == "Return to game";
         settings |= match.source == "Settings";
         first_y = std::min(first_y, match.y);
@@ -41,6 +59,8 @@ bool Overlay::layout_pause_menu(SDL_Renderer *renderer) {
     if (compact) {
         if (!embark_pause_menu_active_ || !embark_pause_pixel_bounds_valid_)
             return false;
+    } else if (timeline_choices) {
+        if (actions.size() < 3) return false;
     } else if (!save || !resume || !settings || actions.size() < 4) return false;
 
     const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;

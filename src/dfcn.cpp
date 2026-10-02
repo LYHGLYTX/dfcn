@@ -8907,6 +8907,14 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
     if (!name_only && is_were_creature_name(screen_text))
         return translate_creature_descriptor(screen_text, true);
 
+    constexpr std::string_view timeline_folder_prefix = "Save to timeline folder: ";
+    if (!name_only && screen_text.starts_with(timeline_folder_prefix)) {
+        const auto label = capture_translations_.find(std::string(timeline_folder_prefix));
+        if (label != capture_translations_.end())
+            return label->second + native_text_to_utf8(
+                std::string_view(screen_text).substr(timeline_folder_prefix.size()));
+    }
+
     // Music status rows are assembled dynamically from a finite title table
     // and an artist table. Whole-row translation prevents the ordinary word
     // matcher from producing hybrids such as `打击 the Earth!`, and covers
@@ -8921,7 +8929,7 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
                 {"Last interlude: ", "上一首间奏："},
                 {"Combat music: ", "战斗音乐："},
             }};
-        static constexpr std::array<std::pair<std::string_view, std::string_view>, 53>
+        static constexpr std::array<std::pair<std::string_view, std::string_view>, 54>
             titles = {{
                 {"Dwarf Fortress", "矮人要塞"},
                 {"Koganusan", "科加努桑"},
@@ -8970,6 +8978,7 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
                 {"Toady Six", "托迪六号"},
                 {"Haunted Lands", "闹鬼之地"},
                 {"Cages & Chains", "笼与链"},
+                {"Mountainhome", "山之家"},
                 {"df9", "战斗曲 9"},
                 {"df3", "战斗曲 3"},
                 {"df15", "战斗曲 15"},
@@ -9001,16 +9010,23 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
             if (separator != std::string_view::npos) {
                 title = details.substr(0, separator);
                 artist = details.substr(separator + 3);
+            } else if (details.ends_with(" -")) {
+                // Native custom metadata can have an empty artist. Row
+                // trimming removes the last space of its " - " separator.
+                title = details.substr(0, details.size() - 2);
             }
             const auto translated_title = lookup(title, titles);
-            if (!translated_title) return std::nullopt;
             std::string result(target_prefix);
-            result += *translated_title;
+            // The native fallback reads arbitrary music-pack metadata.
+            // Keep authored titles/credits intact while translating status;
+            // unknown metadata must not send the whole row to word matching.
+            result += translated_title ? std::string(*translated_title)
+                : native_text_to_utf8(title);
             if (!artist.empty()) {
                 const auto translated_artist = lookup(artist, artists);
-                if (!translated_artist) return std::nullopt;
                 result += " — ";
-                result += *translated_artist;
+                result += translated_artist ? std::string(*translated_artist)
+                    : native_text_to_utf8(artist);
             }
             return result;
         }
@@ -10675,6 +10691,17 @@ std::string Overlay::translate_template_captures(
                 *all_string_captures_translated = false;
             return {};
         }
+    }
+    if (rule.source == "Save to timeline folder: {s}") {
+        // Pause action 13 appends a literal save-folder identifier. It is
+        // opaque data, even when its words also occur in the dictionary.
+        if (captures.size() != 1) {
+            if (all_string_captures_translated)
+                *all_string_captures_translated = false;
+            return {};
+        }
+        resolved.resize(1);
+        resolved[0] = native_text_to_utf8(captures[0]);
     }
     if (rule.source == "{s} Stockpile #{d}") {
         // Default stockpile names carry a complete type caption, not a
@@ -20304,6 +20331,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+#include "pause_menu_fields.inc"
 #include "dfhack_stocks_hint.inc"
 #include "dfhack_hotkeys_menu.inc"
     // Native chooser callers own these whole fields even when the map has

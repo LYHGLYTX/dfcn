@@ -3831,6 +3831,7 @@ Legends speak of an ancient vault, {e}, where {p} wrested her power from the Und
 Legends speak of an ancient vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.	传说中有一座古老的秘库{e1}，{p1}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	hqt
 Legends speak of an ancient vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.	传说中有一座古老的秘库{e1}，{p1}曾在那里呼唤自己的真名，由此从冥界夺得了自身的力量。	hqt
 Make sure your parameters and presets can support mid-elevation, high rainfall, high drainage, non-freezing areas.	请确保参数和预设支持中等海拔、高降雨量、高排水且不冻结的区域。	l
+Really retire? The world will be saved but you will need to unretire or recruit this character to play them again.	确定要退役吗？世界将会保存，但若想再次操控这个角色，你需要先让其复出，或将其招入队伍。	P
 The view is dark underground. You can recenter on yourself with the {k} hotkey or by clicking the recenter button.	地下视野是黑暗的。要将视角重新对准自己，可以按{k1}热键，或点击重新居中按钮。	hqt
 This night creature was first created by {n} through the fiend's chaotic power unleashed upon {s} in the year {d}.	第{d1}年，{n1}对{s1}释放邪魔的混沌力量后，首次创造出了这种夜行生物。	ht
 This night creature was first created by {n} through the fiend's twisted power unleashed upon {s} in the year {d}.	第{d1}年，{n1}对{s1}释放邪魔的扭曲力量后，首次创造出了这种夜行生物。	ht
@@ -4031,6 +4032,7 @@ There is a random element to outcomes and some body parts will be easier or hard
 This night creature was first created accidentally by {n} after horrible experiments gone wrong in the year {d}.	第{d1}年，{n1}进行的可怕实验失控后，首次意外创造出了这种夜行生物。	ht
 This night creature was first created by {n} of {p} through the fiend's terrifying power in {p} in the year {d}.	第{d1}年，来自{p1}的{n1}在{p2}释放邪魔的可怕力量后，首次创造出了这种夜行生物。	ht
 To make sure they spend their free time down there you will need to use the Zones menu to create a Meeting Area.	[C:7:0:0]要让居民在闲暇时待在地下，你还需要通过“[C:5:0:1]区域[C:7:0:0]”菜单设置一个[C:3:0:0]集会区[C:7:0:0]。	hq
+What would you like to name this manual save? It will never be overwritten, but you can delete it while loading.	你想将这个手动存档命名为什么？它不会被自动覆盖，但你可以在加载界面将其删除。	P
 and received the title of {s} after attaining sufficient skill with {s} and being a member for a year during {e}	并在{e1}期间在{s2}方面达到足够的技艺水平及入会满一年后，获得了{s1}头衔	ht
 and received the title of {s} after attaining sufficient skill with {s} and being a member for a year within {p}	并在{p1}在{s2}方面达到足够的技艺水平及入会满一年后，获得了{s1}头衔	ht
 and received the title of {s} after attaining sufficient skill with {s} and participating in {d} battles at {p}.	并在{p1}在{s2}方面达到足够的技艺水平及参加{d1}场战斗后，获得了{s1}头衔。	ht
@@ -5722,6 +5724,7 @@ I wish I could tell you where to begin your search. Until then, you are free to 
 I'm returning to my home in {e} in search of excitement, and wealth and pleasures beyond measure!	我正返回{e1}的家，寻求刺激，还想挣下数不尽的钱财，享尽人间的乐趣！	hPt
 It is said that the {s} of {e} can be thought of as a representation of {r} for the glory of {p}.	据说，{e1}的{s1}可被视为{r1}的体现，以彰显{p1}的荣耀。	hPt
 Make sure to leave the ceiling above intact so the underground soil doesn't receive any sunlight.	确保保留完整的顶层，不让地下土壤受到阳光照射。	hq
+Really retire? The world will be saved but you will need to unretire the fort to play here again.	确定要退役吗？世界将会保存，但若想再次游玩这座要塞，你需要先将它重新启用。	P
 The inhabitants also like to drink from Goblets, Cups, or Mugs. These must be stored in Chests or	[C:7:0:0]居民也喜欢用[C:6:0:1]高脚杯[C:7:0:0]、[C:6:0:1]杯子[C:7:0:0]或[C:6:0:1]马克杯[C:7:0:0]喝酒。这些器皿必须存放在[C:1:0:1]酒馆[C:7:0:0]里的[C:6:0:0]箱子[C:7:0:0]或	hq
 The world generator is having trouble placing rainfall in the manner specified by the parameters.	世界生成器无法按参数要求分布降雨量。	l
 The world generator is having trouble placing savagery in the manner specified by the parameters.	世界生成器无法按参数要求分布野性。	l
@@ -6046,6 +6049,7 @@ It has {s} and it alternates from instant to instant between sluggishness and ex
 It is said that the {s} of {e} can be thought of as the antithesis of {r} for the glory of {p}.	据说，{e1}的{s1}可被视为{r1}的对立面，以彰显{p1}的荣耀。	hPt
 Make leather from animal hides here. You can also make parchment using milk of lime and a hide.	在这里将兽皮制成皮革，也可用石灰乳和兽皮制作羊皮纸。	hj
 Once the shop is built, open the Creatures info menu. From there select the Pets/Livestock tab.	[C:7:0:0]工坊建成后，打开“[C:5:0:1]生物[C:7:0:0]”信息菜单，再选择“[C:5:0:1]宠物／牲畜[C:7:0:0]”标签页。	hq
+Really quit? The character will live on through their legend but will not be available to play.	确定要结束吗？这个角色的事迹将留存于传说之中，但你将无法再操控这个角色。	P
 Routines are individual orders given to a squad or individual members of a squad. From here you	例程是向小队或其个别成员下达的一组命令。在这里，你	hq
 This is the first step to completing the game. Next, you'll need to satisfy your ruler's needs,	这是通关的第一步。接下来，需要满足统治者的需求，	hq
 This night creature was first created by {n} after horrible experiments in {p} in the year {d}.	第{d1}年，{n1}在{p1}进行了可怕的实验后，首次创造出了这种夜行生物。	ht
@@ -6059,6 +6063,7 @@ Using Mining orders, you'll need to carve out a rectangular area underground for
 When you are ready, open the Woodcutting menu and designate the trunk of a tree on the surface.	[C:7:0:0]准备好后，打开“[C:5:0:1]伐木[C:7:0:0]”菜单，指定地表上一棵树的树干。	hq
 You must have at least as many of these highest volcanism points as you are requiring volcanos.	最高火山活动度点的数量至少应与所需火山数相同。	l
 Your fortress has settled into the rhythm of day-to-day living, beyond your meticulous concern.	你的要塞已步入日复一日的生活，不再需要你事无巨细地照料。	hq
+Your fortress has settled into the rhythm of day-to-day living, beyond your meticulous concern.	你的要塞已步入日常生活，不再需要你事无巨细地照料。	w
 a group calling itself {p} founded {p} after a long journey from the lands of {p} in the wilds.	在荒野中，自称{p1}的势力从{p3}的领土长途跋涉而来，建立了{p2}。	ht
 and confessed and was convicted as a go-between in a conspiracy to commit {s} by {a} during {e}	并在{e1}期间认罪并被{a1}判定是实施{s1}的阴谋中的中间人	ht
 and confessed and was convicted as a go-between in a conspiracy to commit {s} by {a} within {p}	并在{p1}认罪并被{a1}判定是实施{s1}的阴谋中的中间人	ht
@@ -6335,6 +6340,7 @@ I'm returning to my home in {e} in search of excitement and maybe something to d
 Important and sometimes urgent information is given as alerts on the left side of the screen.	重要信息，有时也是紧急信息，会通过屏幕左侧的警报显示。	hq
 It has {s} and it always seems to have its attention on the most valuable object in the area.	它长有{s1}，它似乎总在留意周围最值钱的物件。	ht
 It has {s} and the details of its form are easily forgotten without deliberate concentration.	它长有{s1}，若不刻意集中注意力，它的外形细节很容易被遗忘。	ht
+Really quit? The fort will be saved but you will need to reclaim the fort to play here again.	确定要放弃吗？要塞将会保存，但若想再次游玩这座要塞，你需要先将它收复。	P
 Start painting a new stockpile. Once the tiles are chosen, you'll be able to set the details.	开始涂画新的储物堆。选好地格后即可设置详细信息。	hj
 The slab reads "I am {n}, {n}, once of the Underworld. By {n}, I bind myself to this place.".	石板上刻着：“我是{n1}，又名{n2}，曾来自地下世界。凭借{n3}之力，我将自身束缚于此地。”	ht
 This can be done either from the Item's Info Sheet or by dragging a rectangle over everything	[C:7:0:0]可以从[C:5:0:1]物品信息面板[C:7:0:0]进行指定，也可以使用“[C:5:0:1]倾倒指定[C:7:0:0]”工具，拖出一个矩形，覆盖所有	hq
@@ -7730,6 +7736,7 @@ It is recommended that you prepare a squad and get them training as soon as you 
 It is said that the {s} of {e} can allow one to experience {r} for the glory of {p}.	据说，{e1}的{s1}能让人感受到{r1}，以彰显{p1}的荣耀。	hPt
 Left click on an alert for recentering options, and right click to dismiss an alert.	左键点击警报可选择定位相关地点，右键点击则将其关闭。	hq
 Overview sentence: The victim of a crime was somehow convicted of that very offense.	明明是受害者，反倒被判成了犯人。	l
+Saves starting here will be grouped on the title screen, with their own active save.	从此处开始的存档将在标题菜单中归为一组，并拥有独立的当前存档。	P
 The Schedule menu is a powerful tool to give automatic orders to the selected squad.	[C:7:0:0]“[C:5:0:1]日程[C:7:0:0]”菜单是向所选小队自动下达命令的强大工具。	hq
 With a Bed placed, your workers will have somewhere to sleep. Later you can create a	[C:7:0:0]放好[C:6:0:0]床[C:7:0:0]后，工人就有地方睡觉了。之后可以建造	hq
 You can also compose poems, songs, and choreography if you know a relevant art form.	如果掌握了相关艺术形式，还可以创作诗歌、歌曲或舞蹈编排。	hq
@@ -9879,6 +9886,7 @@ The army is commanded by {n}, a competent commander and middling warrior.	这支
 The army is commanded by {n}, a competent commander and true warrior. {v}	这支军队的统领是{n1}，是一位称职的统帅，也是真正的勇士。{v1}	hPt
 The performers are in the middle of a sermon on the worthlessness of {s}.	表演者们正在布道，宣讲{s1}毫无价值。	hPt
 The written portion consists of a {d} page untitled {s}, authored by {n}.	文字部分为{n1}撰写的无题{s1}，共{d1}页。	ht
+There is a folder with this name already. Would you like to overwrite it?	已存在同名文件夹。是否覆盖？	P
 This ancient force of nature threatens our people with its very presence.	这古老的自然之力只要还在，我们的百姓就不得安宁。	hP
 Why is there a riddle in the lyrics of the accompaniment? I hate riddles.	为什么伴奏的歌词里有谜语？我讨厌谜语。	hP
 Workshops are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置工坊。	hP
@@ -17412,6 +17420,7 @@ Adventure item action: Heat {s} near burning cap ({p})	在燃烧的菌盖旁加�
 Adventurer log reputation: infamous information source	臭名昭著的情报来源	h
 Adventurer log reputation: known protector of the weak	众所周知的庇护者	h
 Adventurer log reputation: noted protector of the weak	著名的庇护者	h
+All of your progress since the last save will be lost.	自上次保存以来的所有进度都将丢失。	P
 All of your progress since the last save will be lost.	你上次之后的所有进展存档将会丢失.	w
 An obvious material to use to make the crafts is rock.	石头自然是制作工艺品的好材料。	hq
 Announcement combat agreement-crime []: blood-drinking	吸血	l
@@ -23223,6 +23232,7 @@ Desired grid height for scaling (default = {d})	缩放的目标网格高度 (默
 Fortress activity: Agitated Wilderness Creature	躁动的野生生物	li
 Fortress activity: suffix (cannot follow order)	（无法执行命令）	li
 Fortress activity: suffix (not following order)	（未执行命令）	li
+Give in to Starvation (holding another's goods)	任由自己饿死（持有他人物品）	w
 Guide {s} in {d} day when full of desired items	等待{d1}天且所需物品装满矿车时，引导矿车向{s1}行驶	hPt
 Hotkey: Building, Machine Component, Screw Pump	热键：建筑，机械组件，螺旋泵	w
 How will you respond to the demand for tribute?	你将如何回应索要贡品的要求？	hP
@@ -27643,6 +27653,7 @@ Overview sentence: This isn't embarrassing.	这并不尴尬。	l
 Overview sentence: This isn't exasperating.	这没什么可气的。	l
 Overview sentence: This poetry is so funny!	这诗歌真有趣！	l
 Overview sentence: You can't take me alive!	你们休想活捉我！	l
+Really retire?  The world will be saved but	确定要退役吗？世界将会保存，	w
 Ride {s} immediately when full of any items	矿车满载时，立即乘坐矿车向{s1}行驶	hPt
 Ride {s} in {d} day when empty of any items	等待{d1}天且矿车空载时，乘坐矿车向{s1}行驶	hPt
 Ride {s} in {d} days when full of any items	等待{d1}天且矿车满载时，乘坐矿车向{s1}行驶	hPt
@@ -28850,6 +28861,7 @@ Required to swim well without floundering.	使游泳顺畅，避免在水中挣�
 Ride {s} immediately always (at most 100%)	立即乘坐矿车向{s1}行驶（不限装载量，至多100%）	hPt
 Ride {s} in {d} day when full of any items	等待{d1}天且矿车满载时，乘坐矿车向{s1}行驶	hPt
 Ride {s} in {d} days always (at most 100%)	等待{d1}天后乘坐矿车向{s1}行驶（不限装载量，至多100%）	hPt
+Saves starting here will be grouped on the	从此处开始的存档将在标题菜单中	w
 Say something about your family's ancestor	谈谈你家族的祖先	hP
 Select a stockpile or workshop to give to.	选择一个接收货物的储物堆或工坊。	hP
 Spread rumor of the reunion of {p} and {p}	传播{p1}与{p2}团聚的传闻	hPt
@@ -28889,6 +28901,7 @@ This task has been assigned and is active.	此任务已分配工人，正在执�
 Vanilla Extinct Creatures Graphics {d}.{d}	原版灭绝生物图像 {d}.{d}	wt
 We don't offer any specific services here.	我们这儿不提供什么专门的服务。	hP
 What will you say about tribute agreement?	关于进贡协议，你想说些什么？	hP
+What would you like to name this timeline?	你想将这条时间线命名为什么？	w
 Whatever happens, it will be for the best.	无论发生什么，都会是最好的安排。	hP
 Wilderness irritation decay (more = safer)	荒野激怒值衰减（越高越安全）
 With them comes a {s} from the {s} of {e}!	随军而来的还有一只{s1}，来自{e1}的{s2}！	hPt
@@ -29625,6 +29638,7 @@ witnessing a night creature drinking blood	目睹夜行生物吸血	wi
 wrongfully convicted {n} of {s} during {e}	在{e1}期间错误地判定{n1}犯有{s1}	ht
 wrongfully convicted {n} of {s} within {p}	在{p1}错误地判定{n1}犯有{s1}	ht
 you will need to keep your citizens happy.	就需要让居民保持快乐。	hq
+you will need to unretire the fort to play	但你需要先重新启用这座要塞，	w
 {a} abandoned the settlement of {p} at {p}	{a1}在{p2}放弃了{p1}聚落	ht
 {a} abandoned the settlement of {p} in {p}	{a1}在{p2}放弃了{p1}聚落	ht
 {a} accepted in admiration of power at {p}	{a1}在{p1}崇拜权力，因此答应了	ht
@@ -30089,7 +30103,7 @@ Conversation keyword: prophecy prophesize	预言 作出预言	l
 Converting gathering blueprint to regular	将采集蓝图转为普通指定区域	wo
 Converting smoothing blueprint to regular	将打磨蓝图转为普通指定区域	wo
 Diplomacy tree-fell count (untamed wilds)	外交砍树限额（蛮荒之地）
-Do this if you want to keep the old save.	点击保存旧存档.	w
+Do this if you want to keep the old save.	若想保留旧存档，请选择此项。	w
 Five hundred or more people were expelled	至少五百人遭到驱逐	h
 Follow destiny or strike out on your own.	顺从天意，还是自己闯出一条路？	w
 Fortress activity: suffix (invalid order)	（命令无效）	li
@@ -30252,6 +30266,7 @@ The world has passed into {e} within {p}.	在{p1}，世界已进入{e1}。	ht
 The world has passed into {s} during {e}.	在{e1}期间，世界已进入{s1}。	ht
 The world has passed into {s} within {p}.	在{p1}，世界已进入{s1}。	ht
 There are no merchants trading right now.	目前没有商人进行交易。	hP
+There is a folder with this name already.	已存在同名文件夹。	w
 There is no intelligence information yet.	目前还没有任何情报。	hP
 There is not enough room to perform here.	这里没有足够的表演空间。	hP
 They are only found in the untamed wilds.	它们只会出现在蛮荒之地。	l
@@ -30863,6 +30878,7 @@ the wrongful conviction of {a} during {e}	在{e1}期间，{a1}被错判有罪	ht
 the wrongful conviction of {a} within {p}	在{p1}，{a1}被错判有罪	htEi
 threw {a} into a pit of spikes during {e}	在{e1}期间将{a1}扔进了尖刺坑	ht
 threw {a} into a pit of spikes within {p}	在{p1}将{a1}扔进了尖刺坑	ht
+title screen, with their own active save.	归为一组，并拥有独立的当前存档。	w
 toppled the government of {a} during {e}.	在{e1}期间推翻了{a1}的政府。	ht
 toppled the government of {a} within {p}.	在{p1}推翻了{a1}的政府。	ht
 toppled the government of {p} during {e}.	在{e1}期间推翻了{p1}的政府。	ht
@@ -30955,6 +30971,7 @@ weaving of a masterful sewn image in {p}.	在{p1}，织出杰作级的刺绣图�
 were a population within {p} in the wilds	在荒野中是生活在{p1}的族群	ht
 were the first to reach the summit of {p}	率先登上了{p1}的顶峰	ht
 wove a masterful sewn image in the wilds.	在荒野中织出了一幅杰作级的刺绣图像。	h
+you will need to reclaim the fort to play	但你需要先收复这座要塞，	w
 {a} Native history held story {e} at {p}.	{a1}在{p1}讲述了以下往事：「{e1}」。	ht
 {a} Native history held story {e} in {p}.	{a1}在{p1}讲述了以下往事：「{e1}」。	ht
 {a} accepted out of loyalty to {a} at {p}	{a1}在{p1}忠于{a2}，因此答应了	ht
@@ -31505,11 +31522,13 @@ Overview sentence: That's very annoying.	那可真烦死了。	l
 Overview sentence: This is my fight too.	这一仗也有我的份。	l
 Overview sentence: This isn't confusing.	这没什么难懂的。	l
 Overview sentence: Wow!  That's amazing!	哇！真了不起！	l
+Really quit?  The character will live on	确定要结束吗？这个角色的事迹	w
+Really quit?  The fort will be saved but	确定要放弃吗？要塞将会保存，	w
 Recenter on the announcement's location.	将视图重新居中到公告发生地点。	hj
 Refuse to make peace between {e} and {e}	拒绝让{e1}与{e2}停战	hPt
 Remove the current worker from the task.	移除执行此任务的当前工人。	hj
 Remove this worker from this occupation.	解除此工人的这项职务。	hj
-Retire the fortress (for the time being)	放弃要塞(暂时)	w
+Retire the fortress (for the time being)	暂时退役要塞	w
 Ride {s} in {d} day always (at least 0%)	等待{d1}天后乘坐矿车向{s1}行驶（不限装载量，至少0%）	hPt
 Scale interface to fit grid height/width	缩放界面以适应网格高度/宽度	w
 Seems a pleasant enough night out there.	看起来外头的夜色挺宜人。	hP
@@ -31609,6 +31628,7 @@ You have nothing with which to interact.	你没有可互动的物品。	hP
 You may also send a squad to obtain one.	你也可以派遣小队去获取一件造物。	hP
 You sound vaguely like the intended {s}.	你发出的声音隐约像是想模仿的{s1}。	hPt
 Your settlement has crumbled to its end.	你的聚居地已衰败覆灭。	hq
+Your settlement has crumbled to its end.	你的聚居地已衰败至终。	w
 a competition involving {b} in the wilds	在荒野中，以《{b1}》为内容的比赛	htEi
 a lack of abstract thinking for too long	太久没有进行抽象思考	wi
 a scuffle between {a} and {a} during {e}	在{e1}期间，{a1}与{a2}的扭打	htEi
@@ -32851,6 +32871,7 @@ Verbally struggle against mortification	说出你与羞愧难当的抗争	hP
 Werebeast Attack Exported Wealth Rating	狂化生物来袭出口财富阈值
 What have you done? This is horrifying!	你都做了什么？太可怕了！	hP
 What will you say about the occupation?	关于占领行动，你想说些什么？	hP
+What would you like to name this manual	你想将这个手动存档命名为什么？	w
 With them come {s} from the {s} of {e}!	随军而来的还有{s1}，来自{e1}的{s2}！	hPt
 Workshop recipe: bulk noun paper-slurry	纸浆	l
 Workshop recipe: folded sheet protector	书壳	l
@@ -34141,6 +34162,7 @@ Minimum Number of Mid-Savagery Squares	中等野蛮度方格最少数量
 Minimum raids between sieges (per civ)	两次围城间的最少突袭次数（每个文明）
 Mouse initial scroll repeat delay (ms)	鼠标初始滚动重复延迟（毫秒）	w
 Move keyboard cursor up and left, fast	键盘光标向上和向左移动,快速	w
+Multiple copies of the timeline found.	发现此时间线的多个副本。	w
 Native Legends age was a time {s}: {s}	{s1}是这样一个时代：{s2}。	ht
 Native Legends collection occurred {s}	发生了{s1}。	ht
 Native Legends final battles of powers	最后的强大势力进行了它们最后的战斗	h
@@ -35534,6 +35556,7 @@ Fail the struggle against great agony	没能克服强烈的极度痛苦	hP
 Fail the struggle against great alarm	没能克服强烈的惊慌	hP
 Fail the struggle against great grief	没能克服强烈的悲伤	hP
 Fail the struggle against great shock	没能克服强烈的震惊	hP
+Finish Game (holding another's goods)	结束游戏（持有他人物品）	w
 Forbid your death items during sieges	围城期间禁用己方死者遗物	wi
 Fortress activity: Skillfully trained	训练娴熟	li
 Fortress activity: suffix (no burrow)	（没有活动区）	li
@@ -37652,6 +37675,7 @@ burned up in {s} dragon fire at {p}.	在{p1}被{s1}的龙焰烧死了。	ht
 burned up in {s} dragon fire in {p}.	在{p1}被{s1}的龙焰烧死了。	ht
 burned {a} in dragon fire during {e}	在{e1}期间用龙焰烧死了{a1}	ht
 burned {a} in dragon fire within {p}	在{p1}用龙焰烧死了{a1}	ht
+but you can delete it while loading.	但你可以在加载界面将其删除。	w
 came back from the dead in the wilds	在荒野中死而复生了	h
 ceased to be a member of {p} at {p}.	在{p2}不再是{p1}的成员。	ht
 ceased to be a member of {p} in {p}.	在{p2}不再是{p1}的成员。	ht
@@ -37794,6 +37818,7 @@ respected {a} and agreed during {e}.	在{e1}期间尊重{a1}，答应了。	ht
 respected {a} and agreed within {p}.	在{p1}尊重{a1}，答应了。	ht
 respected {a} and refused during {e}	在{e1}期间尊重{a1}，拒绝了对方	ht
 respected {a} and refused within {p}	在{p1}尊重{a1}，拒绝了对方	ht
+save?  It will never be overwritten,	它不会被自动覆盖，	w
 secured tribute from {a} during {e}.	在{e1}期间迫使{a1}进贡。	ht
 secured tribute from {a} within {p}.	在{p1}迫使{a1}进贡。	ht
 secured tribute from {p} during {e}.	在{e1}期间迫使{p1}进贡。	ht
@@ -37979,6 +38004,7 @@ the use of plants as surgical models	使用植物作为外科练习模型	h
 there was a competition in the wilds	在荒野中，举行了一场比赛	h
 there was a performance in the wilds	在荒野中，举行了一场表演	h
 there was a procession in the wilds.	在荒野中，举行了一场游行。	h
+through their legend but will not be	将留存于传说之中，但你将	w
 took up residence in {p} during {e}.	在{e1}期间在{p1}住了下来。	ht
 took up residence in {p} within {p}.	在{p2}在{p1}住了下来。	ht
 toppled the government of {a} at {p}	在{p1}推翻了{a1}的政府	ht
@@ -38062,6 +38088,7 @@ with the possible involvement of {a}	{a1}可能也参与其中	ht
 wove a masterful sewn image to a {i}	为{i1}织出了一幅杰作级的刺绣图像	ht
 writing of a masterpiece during {e}.	在{e1}期间，书写杰作。	htEi
 writing of a masterpiece within {p}.	在{p1}，书写杰作。	htEi
+you will need to unretire or recruit	但你需要让这个角色复出或将其	w
 {a} abandoned the settlement of {p}.	{a1}放弃了{p1}聚落。	ht
 {a} abducted {a} from {p} during {e}	{a1}在{e1}期间从{p1}绑架了{a2}	ht
 {a} abducted {a} from {p} within {p}	{a1}在{p2}从{p1}绑架了{a2}	ht
@@ -38460,7 +38487,7 @@ A small amphibian with a flat body.	一种身体扁平的小型两栖动物。	l
 Acknowledge lack of disillusionment	表示没有幻灭	hP
 Adventure item action: Name the {s}	为{s}命名	h
 Agree to have {e} pay homage to {e}	同意让{e1}向{e2}称臣纳贡	hPt
-All of your progress since the last	自上次存档以来的所有进度	wl
+All of your progress since the last	自上次保存以来的所有进度	w
 Announce your night creature status	宣布你是夜行生物	hP
 Announcement combat ability []: Rot	引发腐烂	l
 Announcement combat decay []: fetid	恶臭的	l
@@ -38645,8 +38672,8 @@ Rebuilding temporary information...	重建临时信息......	w
 Refuse listener work as {s} for {e}	拒绝让对方为{e1}担任{s1}	hPt
 Requires an item with a sharp edge.	需要一件带利刃的物品。	w
 Salutations. It is good to see you.	向你致意。很高兴见到你。	hP
-Save world and return to title menu	保存世界并返回标题菜单	w
-Saving active historical figures...	保存活跃的历史人物......	w
+Save world and return to title menu	保存世界并返回游戏主菜单	w
+Saving active historical figures...	正在保存活跃历史人物……	w
 Say something about your profession	谈谈你的职业	hP
 See this creature's combat history.	查看此生物的战斗历史。	hj
 Select to use in non-economic jobs.	勾选后允许用于非经济用途。	w
@@ -38811,7 +38838,7 @@ You maintain possession of the {s}.	你仍控制着{s1}。	hPt
 You pull off the {s} with your {s}.	你用{s2}扯下了{s1}。	hPt
 You tell the story in vivid detail.	你绘声绘色地讲述着故事的细节。	hP
 Your settlement has been abandoned.	你的定居点已被废弃。	hq
-Your settlement has been abandoned.	你的定居点已被废弃	w
+Your settlement has been abandoned.	你的聚居地已被放弃。	w
 Your wanderings have led you to {n}	漫游使你来到{n}	atl
 a ceremony held by {a} in the wilds	在荒野中，{a1}举办的仪式	htEi
 a competition involving {b} at {p}.	在{p1}，以《{b1}》为内容的比赛。	htEi
@@ -40258,7 +40285,7 @@ Land holder population trigger {d}	封地贵族人口阈值 {d}	wt
 Land holder production trigger {d}	封地贵族创造财富阈值 {d}	wt
 Look to another for what you need.	向他人寻求你需要的东西。	hP
 Loud vocalization (heard recently)	响亮叫声（刚刚听到）	wl
-May interfere with existing saves.	可能会影响现有存档.	w
+May interfere with existing saves.	可能影响现有存档。	w
 Minimum Final Glacier Region Count	最终冰川区域最少数量
 Minimum Final Wetland Region Count	最终湿地区域最少数量
 Minimum Initial Hills Region Count	初始丘陵区域最少数量
@@ -40334,8 +40361,8 @@ Remove current location assignment	取消当前地点分配	wli
 Remove this stockpile permanently.	永久移除此储物堆。	hj
 Removing stairs/ramp/constructions	移除楼梯、斜坡和建筑物	wo
 Return to current topic (new menu)	返回当前话题（新菜单）	hP
-Save to new folder (same timeline)	在新的目录保存(时间线不变)	w
-Saving local animal populations...	保存当地动物种群......	w
+Save to new folder (same timeline)	保存到新文件夹（时间线不变）	w
+Saving local animal populations...	正在保存当地动物种群……	w
 Say something about the local area	谈谈当地情况	hP
 Say something about your master(s)	谈谈你的主人	hP
 Select a type below to add a zone.	在下方选择类型以添加区域。	hP
@@ -40504,6 +40531,7 @@ You tangle together and fall over!	你们纠缠在一起，摔倒了！	hP
 You've found some small creatures.	你发现了一些小型生物。	hP
 You've lost possession of the {s}.	你失去了{s1}。	hPt
 Your adventure has come to an end.	你的冒险已经结束。	hq
+Your adventure has come to an end.	你的冒险已告终。	w
 Your chant is absolutely flawless.	你的吟唱完美无瑕。	hP
 a ceremony held by {a} during {e}.	在{e1}期间，{a1}举办的仪式。	htEi
 a ceremony held by {a} within {p}.	在{p1}，{a1}举办的仪式。	htEi
@@ -41275,6 +41303,7 @@ there was a performance during {e}	在{e1}期间，举行了一场表演	ht
 there was a performance within {p}	在{p1}，举行了一场表演	ht
 there was a procession during {e}.	在{e1}期间，举行了一场游行。	ht
 there was a procession within {p}.	在{p1}，举行了一场游行。	ht
+this character to play them again.	招入队伍，才能再次操控该角色。	w
 tragic tribute delivery during {e}	在{e1}期间，酿成悲剧的贡品运送	htEi
 tragic tribute delivery within {p}	在{p1}，酿成悲剧的贡品运送	htEi
 tragic visit of merchants from {p}	来自{p1}的商人来访，酿成悲剧	htEi
@@ -45036,6 +45065,7 @@ Can you tell me the way to {e}?	你能告诉我去{e1}的路吗？	hPt
 Change dream/goal (if possible)	更改梦想/目标（如果可以）
 Change to standard gather mode.	切换到普通采集模式。	hj
 Change to standard orders mode.	切换到普通命令模式。	hj
+Checking directory structure...	正在检查文件夹结构……	w
 Choose a symbol for the burrow.	为活动区选择一个符号。	hP
 Choose a symbol for the detail.	为劳动分组选择一个符号。	hP
 Choose a uniform for the squad.	为小队选择一套制式服装。	hP
@@ -45440,6 +45470,7 @@ World site action: Inaccessible	无法抵达	hi
 World site racial type: hillock	丘堡	hi
 World site type: forest retreat	Forest retreat	hi
 World site type: mountain halls	Mountain halls	hi
+Would you like to overwrite it?	是否覆盖？	w
 Written objects (incl. copies):	书面作品（含副本）：	wl
 X is making a plaintive gesture	X正做出哀求的手势	wl
 X is striking a triumphant pose	X正摆出胜利的姿态	wl
@@ -47100,8 +47131,8 @@ Provide the whereabouts of {p}	告知{p1}的下落	hPt
 Rainfall And Rivers And Beyond	降雨与河流及更远之处	wli
 Refuse request to become a {s}	拒绝成为{s1}的请求	hPt
 Respected for hunting treasure	因狩猎宝物而受人尊敬	w
-Saving fortress information...	保存堡垒信息......	w
-Saving tracking information...	保存跟踪信息......	w
+Saving fortress information...	正在保存要塞信息……	w
+Saving tracking information...	正在保存追踪信息……	w
 Select a stockpile to give to.	选择一个接收货物的储物堆。	hP
 She has an active imagination.	她想象力活跃。	l
 She is somewhat fearful in the	她在面对迫在眉睫的	l
@@ -47302,6 +47333,7 @@ You heat the {s} to no effect.	你加热了{s1}，但没有效果。	hPt
 You leap at {n} from the side!	你从侧面扑向{n1}！	hPt
 You need to be holding an axe.	你需要手持一把斧头。	hP
 You settle in this location...	你在此地定居下来……	hq
+You settle in this location...	你在此地安顿下来……	w
 You shoot {s} at {s} from {s}.	你用{s3}向{s2}射出{s1}。	hPt
 You shudder and begin to move!	你颤抖着开始移动！	hP
 You sound like a troublemaker.	听起来你就是个惹是生非的。	hP
@@ -47310,6 +47342,7 @@ You vomit into the ocean wave.	你吐进了海浪里。	hP
 You're right. I need to relax.	你说得对。我需要放松一下。	hP
 You've found a small creature.	你发现了一只小型生物。	hP
 Your strength has been broken.	你的力量已被摧毁。	hq
+Your strength has been broken.	你的力量已被击溃。	w
 a ceremony held by {a} at {p}.	在{p1}，{a1}举办的仪式。	htEi
 a ceremony held by {a} in {d}.	{d1}年的{a1}举办的仪式。	htEi
 a ceremony held by {a} in {p}.	在{p1}，{a1}举办的仪式。	htEi
@@ -48947,8 +48980,8 @@ Removing melting designations	移除熔化标记	wo
 Removing traffic designations	清除通行设置	wo
 Ride {s}, push off toward {s}	乘坐{s1}，向{s2}蹬离	hPt
 Save and return to title menu	保存并返回游戏主菜单	w
-Saving cultural identities...	保存文化身份......	w
-Saving general information...	保存一般信息......	w
+Saving cultural identities...	正在保存文化身份……	w
+Saving general information...	正在保存基本信息……	w
 See to your responsibilities.	履行你的责任。	hP
 Select materials for the {s}.	为{s1}选择材料。	hPt
 Set the draw direction below.	在下方设置升起方向。	hP
@@ -50335,7 +50368,7 @@ you can succumb to invasions.	入侵就可能让你覆灭。	hq
 .Partially impaired function	·功能部分受损
 A huge hippo-shaped monster.	一个巨大的河马怪兽。	lP
 A very small flying reptile.	一种很小的飞行爬行动物。	lP
-Abandon the fortress to ruin	遗弃此要塞	w
+Abandon the fortress to ruin	任由要塞荒废	w
 Abduction of {a} during {e}.	在{e1}期间，对{a1}的绑架。	htEi
 Abduction of {a} within {p}.	在{p1}，对{a1}的绑架。	htEi
 Accept attributes and skills	接受属性与技能	l
@@ -50619,6 +50652,7 @@ Remove dumping designations.	移除倾倒标记。	hj
 Remove melting designations.	移除熔化标记。	hj
 Reveal All Historical Events	显示全部历史事件
 Roughly a hundred live there	那里住着约一百人	al
+Save to timeline folder: {s}	保存到时间线文件夹：{s}	wt
 Select a game type to begin!	选择一种游戏模式开始！	wi
 Select material at placement	放置时选择材料	wli
 Set conditions for Stop {d}.	设置站点 {d} 的发车条件。	wtl
@@ -52325,7 +52359,7 @@ Room completed ({d} of {d})	房间建设完成 ({d} of {d})	wt
 Sanctuary petitions: accept	庇护申请：接受	wi
 Sanctuary petitions: prompt	庇护申请：询问	wi
 Sanctuary petitions: reject	庇护申请：拒绝	wi
-Saving world information...	保存世界信息......	w
+Saving world information...	正在保存世界信息……	w
 Say that you don't remember	表示你不记得了	hP
 Say that you have no family	表示你没有家人	hP
 See to the simple comforts.	照顾好日常起居。	hP
@@ -53818,6 +53852,7 @@ wove a masterful sewn image	织出了一幅杰作级的刺绣图像	h
 {s} was made to {a} at {p}.	在{p1}，向{a1}提出了{s1}。	ht
 {s} was made to {a} by {a}.	{a2}向{a1}提出了{s1}。	ht
 {s} was made to {a} in {p}.	在{p1}，向{a1}提出了{s1}。	ht
+ (holding another's goods)	（持有他人物品）	w
 "I'm feeling randy today!"	“我今天很想与人亲热！”	l
 "Oh, I'm nothing special."	“我没什么过人之处。”	l
 "There's work to be done!"	“还有事要做！”	l
@@ -53902,7 +53937,7 @@ Cannot expel or send away:	无法驱逐或派走：	hP
 Cannot travel through site	无法穿过地点旅行	w
 Change the squad's symbol.	修改小队标志。	hj
 Character overview: Spouse	伴侣	l
-Characterizing raw data...	分析原始数据...	w
+Characterizing raw data...	正在整理原始数据……	w
 Charge {n} ({s}/Air/Magma)	冲锋攻击{n1}（{s1}／空气／岩浆）	hPt
 Charge {n} ({s}/Air/Water)	冲锋攻击{n1}（{s1}／空气／水）	hPt
 Charge {s} ({s}/Air/Magma)	冲锋攻击{s1}（{s2}／空气／岩浆）	hPt
@@ -54139,8 +54174,8 @@ Retake hatch to forbid it.	先夺回舱盖，才能将其禁用。	hP
 Routine:Staggered training	日程：轮换训练	wl
 Save list mode: Adventurer	冒险模式	h
 Save list status: Portable	便携模式	h
-Saving army controllers...	保存军队控制......	w
-Saving coin information...	保存货币信息...	w
+Saving army controllers...	正在保存军队控制信息……	w
+Saving coin information...	正在保存钱币信息……	w
 Set the orientation below.	在下方设置朝向。	hP
 Several hundred live there	那里住着数百人	al
 She likes to take it easy.	她喜欢轻松度日。	l
@@ -54249,7 +54284,7 @@ The Thirteenth {e} in {d}.	{d1}年的第十三次{e1}。	htEi
 The Thirteenth {e} in {p}.	在{p1}，第十三次{e1}。	htEi
 The Twelfth {e} during {e}	在{e2}期间，第十二次{e1}	htEi
 The Twelfth {e} within {p}	在{p1}，第十二次{e1}	htEi
-The fort will be saved but	要塞会被保存, 但是您需要收复要塞才能玩.	w
+The fort will be saved but	要塞将会保存，但	w
 The miner requires a pick.	矿工需要一把鹤嘴锄。	w
 The most important buttons	最重要的按钮	hq
 The sky above you is gray.	你头顶的天空灰蒙蒙的。	hP
@@ -55737,10 +55772,10 @@ Rampage of {a} within {p}	在{p1}，{a1}的肆虐事件	htEi
 Related Historical Events	相关历史事件	h
 Respected for heroic acts	因为英雄之举被尊敬	w
 Routine:Constant training	日程：持续训练	wl
-Save and continue playing	保存并继续
-Save to timeline folder: 	保存到时间线目录: 	w
-Saving divination sets...	保存预言集	w
-Saving written content...	保存书写内容......	w
+Save and continue playing	保存并继续	w
+Save to timeline folder: 	保存到时间线文件夹：	w
+Saving divination sets...	正在保存占卜数据……	w
+Saving written content...	正在保存著作内容……	w
 Scholar petitions: accept	学者申请：接受	wi
 Scholar petitions: prompt	学者申请：询问	wi
 Scholar petitions: reject	学者申请：拒绝	wi
@@ -57125,6 +57160,7 @@ Do not take any chances.	不要冒险。	hP
 Don't start any trouble.	别惹麻烦。	hP
 Doors can be used along 	门可与墙壁结合使用以封闭房间，	w
 Dwarf Fortress Adventure	矮人要塞：冒险	hq
+Dwarf Fortress Adventure	矮人要塞　冒险	w
 Enemy moved out of range	敌人离开射程	w
 Erase a portion of this 	擦除一部分此处的储物处。	w
 Export of {s} Prohibited	禁止出口{s}	wtlx
@@ -57229,6 +57265,7 @@ Pillaging of {p} in {d}.	{d1}年的{p1}劫掠事件。	htEi
 Pillaging of {p} in {p}.	在{p2}，{p1}劫掠事件。	htEi
 Place doors and hatches 	在相应的工坊建造好门和活板门	w
 Popup: Butcher and craft	弹窗：屠宰与制作	hq
+Popup: Butcher and craft	弹窗：屠宰与制作	w
 Praise for returning {i}	称赞归还{i1}之举	hPt
 Preaching is my calling.	传道是我的天职。	hP
 Prefer zones for fishing	优先在指定区域捕鱼	wi
@@ -57246,8 +57283,8 @@ Return Colony To Install	带回蜂巢用于安装	w
 Running around babbling!	胡言乱语地四处奔跑！	hP
 Satisfied for next check	下次检查条件已满足	wl
 Save list mode: Fortress	要塞模式	h
-Saving adventure data...	保存冒险数据......	w
-Saving belief systems...	保存信仰体系......	w
+Saving adventure data...	正在保存冒险数据……	w
+Saving belief systems...	正在保存信仰体系……	w
 Select a trainer for {n}	为{n1}选择训练员。	hPt
 Selected tiles are high 	所选区域将被设为高优先级。	w
 Servant's Burial Chamber	仆役墓室	w
@@ -58758,7 +58795,7 @@ Below average willpower	意志力低于平均	wil
 Beware its deadly dust!	小心它的致命粉尘！	h
 Beware their elite {s}!	小心他们那些精锐{s1}！	hPt
 Bins, bags, and barrels	箱子, 袋子和圆桶	hq
-Bins, bags, and barrels	箱子, 袋子和圆桶	w
+Bins, bags, and barrels	箱子、袋子与桶	w
 Blocks: other materials	块：其他材料	wi
 Bring up your abduction	谈起你被绑架这件事	hP
 Broker can access depot	交易员可以到达贸易站	wi
@@ -58951,7 +58988,10 @@ Please guide me to you.	请带我去找你。	hP
 Poem recitation (heard)	诗歌朗诵声（听到）	wl
 Poor analytical ability	分析能力差	w
 Popup: Adventurer's log	弹窗：冒险者日志	hq
+Popup: Adventurer's log	弹窗：冒险者日志	w
 Popup: Movement options	弹窗：移动选项	hq
+Popup: Movement options	弹窗：移动选项	w
+Preliminary cleaning...	正在进行初步清理……	w
 Preparing graphics...  	准备图形...... 	w
 Press liquid from fruit	从果实中压出液体	wi
 Press liquid from paste	从浆糊中压出液体	wi
@@ -58975,7 +59015,7 @@ Retracted Spears/Spikes	缩回的长矛/尖刺	w
 Right click to dismiss.	右键点击可以解散.	w
 Rumor spread by citizen	居民传播传闻	w
 Running rivers... ({d})	正在生成河流……（{d}）	wt
-Saving announcements...	保存公告......	w
+Saving announcements...	正在保存公告……	w
 Saving tracking info...	保存追踪信息...	w
 Select a butchery tool.	选择一件屠宰工具。	hP
 Selected tiles are low 	所选区域将被设为低优先级。	w
@@ -59020,6 +59060,7 @@ Stream: Dwellingletters	溪流: 居住文字	w
 Stream: Saffronsnarling	溪流:藏红花咆哮	w
 Stream: Watchworshipped	溪流:观看崇拜	w
 Struck economic mineral	发现经济矿物	w
+Succumb to the invasion	败于入侵	w
 Surrender of {p} at {p}	在{p2}，{p1}的投降	htEi
 Surrender of {p} in {d}	{d1}年的{p1}的投降	htEi
 Surrender of {p} in {p}	在{p2}，{p1}的投降	htEi
@@ -59066,6 +59107,7 @@ The dead are buried in 	死者被安葬在棺材中。棺材必须	w
 The defenders hired {a}	防守方雇佣了{a1}	ht
 The object is {v}, {s}.	这件物品呈{v1}，{s1}。	hHt
 The party and followers	队伍与追随者	hq
+The party and followers	队伍与追随者	w
 The thread is {v}, {s}.	纺线呈{v1}，{s1}。	hHt
 The upward face is {s}.	朝上的一面是{s1}。	hHt
 This dancer is alright!	这位舞者还不错！	hP
@@ -60697,6 +60739,7 @@ Poetry Recital in {d}.	{d1}年的诗歌朗诵。	htEi
 Poetry Recital in {p}.	在{p1}，诗歌朗诵。	htEi
 Poor kinesthetic sense	糟糕的身体感知能力	w
 Popup: Shoot and throw	弹窗：射击与投掷	hq
+Popup: Shoot and throw	弹窗：射击与投掷	w
 Preparing elevation...	正在生成地形高度……
 Preserver of knowledge	博学大师	w
 Pressure plates, like 	压力板与杠杆类似，用于与机器、	w
@@ -60723,8 +60766,8 @@ Request a guide to {e}	请求向导带路前往{e1}	hPt
 Rethink your approach.	重新考虑你的方法。	hP
 Revealing hidden items	显示隐藏物品	wo
 Running around crazed!	发疯般四处奔跑！	hP
-Saving interactions...	保存互动......	w
-Saving world events...	保存世界事件......	w
+Saving interactions...	正在保存交互数据……	w
+Saving world events...	正在保存世界事件……	w
 Search found something	搜索有所发现	w
 Second eldest daughter	次女	w
 Seed cap (per species)	种子上限(每物种)	w
@@ -62388,6 +62431,7 @@ Finish placing zones.	结束放置区域。	hj
 Finish placing zones.	结束放置功能区。	w
 Finish setting plant 	结束设置植物采集任务	w
 Forbid your citizens 	禁止你的居民使用某个物品或建	w
+Give in to Starvation	任由自己饿死	w
 Glassmaking requires 	玻璃制造需要燃料。	w
 Gold-bearing boulders	含金矿石	wi
 Grant {p} work as {s}	准许{p1}从事{s1}工作	hPt
@@ -62506,7 +62550,9 @@ Poetry Recital in {d}	{d1}年的诗歌朗诵	htEi
 Poetry Recital in {p}	在{p1}，诗歌朗诵	htEi
 Poor social awareness	弱共情能力	w
 Popup: Hold and climb	弹窗：抓握与攀爬	hq
+Popup: Hold and climb	弹窗：抓握与攀爬	w
 Popup: Sleep and rest	弹窗：睡眠与休息	hq
+Popup: Sleep and rest	弹窗：睡眠与休息	w
 Preparing graphics...	准备图形...	w
 Priesthood unit count	祭司团人数要求
 Process plants (vial)	加工植物(小瓶)	wi
@@ -62514,6 +62560,7 @@ Procession during {e}	在{e1}期间，游行	htEi
 Procession within {p}	在{p1}，游行	htEi
 Protector of the weak	庇护者	w
 Quests and reputation	任务与声望	hq
+Quests and reputation	任务与声望	w
 Ramp mining blueprint	挖掘斜坡蓝图	wo
 Rampage of {a} at {p}	在{p1}，{a1}的肆虐事件	htEi
 Rampage of {a} in {d}	{d1}年的{a1}的肆虐事件	htEi
@@ -62539,11 +62586,11 @@ Respected for loyalty	因忠诚而受人尊敬	w
 Right click to close.	点击右键关闭.	w
 Right click when done	完成后单击右键	w
 Righteous Indignation	义愤填膺	w
-Save to this timeline	保存到此时间线	w
-Saving flow guides...	保存流体指引......	w
-Saving occupations...	保存职业......	w
-Saving projectiles...	保存投射物......	w
-Saving work quotas...	保存工作配额......	w
+Save to this timeline	保存到当前时间线	w
+Saving flow guides...	正在保存流体信息……	w
+Saving occupations...	正在保存职业……	w
+Saving projectiles...	正在保存飞射物……	w
+Saving work quotas...	正在保存工作配额……	w
 Set a normal traffic 	设置正常交通区域，此为默认状	w
 Set hunter ammunition	设置猎人弹药	wi
 Set movement options.	设置移动选项。	hj
@@ -64460,6 +64507,7 @@ Forbid trap rearming	禁止重装陷阱	wi
 Furniture/siege ammo	家具／攻城弹药	wi
 Gem mining blueprint	挖掘宝石蓝图	wo
 Generating plants...	生成植物......	w
+Give in to the Night	向黑夜屈服	w
 Glaze clay/stone jug	为黏土/石质壶上釉	wi
 Gremlin pulled lever	小精怪拉动拉杆	w
 Happiness and stress	幸福与压力	hq
@@ -64554,6 +64602,7 @@ Number of sites: {d}	地点数量：{d}	wt
 Object testing arena	对象测试竞技场
 Occasion during {e}.	在{e1}期间，庆典。	htEi
 Occasion within {p}.	在{p1}，庆典。	htEi
+Offloading units... 	正在卸载单位数据……	w
 Only farmers harvest	仅农民参与收获	wi
 Open the labor menu.	打开劳动菜单。	hj
 Open the labor menu.	打开工作目录。	w
@@ -64598,12 +64647,12 @@ Religious persecutor	宗教迫害者	w
 Repaint this burrow.	重新涂画此活动区。	hj
 Return to title menu	返回标题菜单
 Sand-containing item	装有沙子的物品	wi
-Save to new timeline	保存到新的时间线	w
-Saving activities...	保存活动......	w
+Save to new timeline	保存到新时间线	w
+Saving activities...	正在保存活动……	w
 Saving agreements...	保存协议...	w
-Saving formations...	保存编队......	w
-Saving identities...	保存身份......	w
-Saving image sets...	保存图像集	w
+Saving formations...	正在保存阵型……	w
+Saving identities...	正在保存身份……	w
+Saving image sets...	正在保存图像集……	w
 Saving parameters...	保存参数...	w
 Search found nothing	搜索无发现	w
 Secondary Option {d}	次要选项 {d}	wt
@@ -67026,7 +67075,7 @@ Air Race during {e}	在{e1}期间，飞行竞赛	htEi
 Air Race within {p}	在{p1}，飞行竞赛	htEi
 Alerts ({d} of {d})	警报 ({d} of {d})	wt
 All counts accurate	所有数量均准确	wi
-Allocating space...	分配空间...	w
+Allocating space...	正在分配空间……	w
 Allow trap cleaning	允许清洁陷阱	wi
 Allow trap rearming	允许重装陷阱	wi
 And She Sang '{b}!'	而她唱道：“{b}！”	hbti
@@ -67278,12 +67327,12 @@ Resume construction	恢复建造	wli
 Right click to move	点击鼠标右键移动	hqO
 Savagery X-Variance	野蛮度 X 轴差异
 Savagery Y-Variance	野蛮度 Y 轴差异
-Saving agreement...	保存协议......	w
-Saving art forms...	保存艺术表格......	w
-Saving artifacts...	保存造物......	w
-Saving buildings...	保存建筑......	w
-Saving incidents...	保存事故......	w
-Saving schedules...	保存时间表......	w
+Saving agreement...	正在保存协议……	w
+Saving art forms...	正在保存艺术形式……	w
+Saving artifacts...	正在保存造物……	w
+Saving buildings...	正在保存建筑……	w
+Saving incidents...	正在保存事件记录……	w
+Saving schedules...	正在保存日程……	w
 Saw Natural Wonders	已经看过自然奇景	w
 Second eldest child	第二个孩子	w
 See Natural Wonders	看看自然奇景	w
@@ -70434,7 +70483,7 @@ Poetry Competition	诗歌比赛	hEi
 Pokemon available.	可用宝可梦。	wl
 Poor spatial sense	空间感差	w
 Popup: Work orders	弹窗:工作清单	hq
-Popup: Work orders	弹窗:工作清单	w
+Popup: Work orders	弹窗：工作指令	w
 Prehistory init...	正在初始化史前历史……
 Prepare a raw fish	处理一条生鱼	wi
 Press the argument	继续争辩	hP
@@ -70475,10 +70524,10 @@ Remove this route.	移除此路线。	hj
 Repaint this zone.	重新涂画此区域。	hj
 Salt water [{d}/7]	咸水 [{d}/7]	wtl
 Savagery Mesh Size	野蛮度网格尺寸
-Saving entities...	保存实体......	w
-Saving machines...	保存机器......	w
-Saving mandates...	保存任务......	w
-Saving vehicles...	保存载具......	w
+Saving entities...	正在保存组织……	w
+Saving machines...	正在保存机械……	w
+Saving mandates...	正在保存命令……	w
+Saving vehicles...	正在保存载具……	w
 Scale interface to	缩放界面以适应网格高度/宽度	w
 Sculpted Ice Floor	浮刻装饰的冰地板	wi
 Set tree chopping 	设置树木砍伐任务。	w
@@ -70914,6 +70963,7 @@ arthropleura women	节胸人	wi
 as a member of {p}	以{p1}成员的身份	ht
 as an enemy of {p}	以{p1}敌人的身份	ht
 attending a sermon	聆听布道	wi
+available to play.	无法再操控这个角色。	w
 awe-inspiring size	令人敬畏的体型	wi
 baby giant opossum	巨型负鼠幼崽	wi
 bambara groundnuts	班巴拉花生	wi
@@ -73679,7 +73729,7 @@ sacred vulgarities	神圣粗俗	hi
 sacred whitenesses	神圣白	hi
 sacred worshippers	神圣信徒	hi
 sand pear wood log	沙梨树原木	wi
-save will be lost.	都将丢失。	wl
+save will be lost.	都将丢失。	w
 second left finger	左手中指	wi
 settlement of {p}.	在{p1}的定居。	htEi
 seventh eldest son	第七个儿子	h
@@ -74175,6 +74225,7 @@ Normal difficulty	普通难度
 Object of worship	崇拜对象	w
 Offer condolences	表示慰问	hP
 Office: {d} + {d}	办公室：{d1} + {d2}	wti
+Offloading art...	正在卸载艺术数据……	w
 Okay! I'll do it.	好吧！我会照做。	hP
 Open the citizen 	打开居民信息目录	w
 Opening Ceremony.	开幕仪式。	hEi
@@ -74190,6 +74241,7 @@ Population: ~ {d}	人口：约 {d}	ht
 Population: ~ {d}	人口：约 {d}	wt
 Population: \xF7 {d}	人口：约 {d}	ht
 Popup: Companions	弹窗：同伴	hq
+Popup: Companions	弹窗：同伴	w
 Praise be to {p}.	愿赞美归于{p1}。	hPt
 Praise the miners	赞美矿工	w
 Preaching (heard)	传道声（听到）	wl
@@ -74232,7 +74284,7 @@ Royal Dining Room	皇家餐厅	w
 Royal Throne Room	皇家王座厅	w
 Running rivers...	正在生成河流……
 Satisfied monarch	君主感到满意	w
-Saving effects...	保存效果......	w
+Saving effects...	正在保存效果……	w
 Saving history...	保存历史...	w
 Scattered cumulus	零散积云
 Second eldest son	次子	w
@@ -78489,9 +78541,11 @@ Population: ~{d}	人口：约 {d}	wt
 Population: \xF7{d}	人口：约 {d}	ht
 Population: \xF7{d}	人口：约 {d}	wt
 Popup: Abilities	弹窗：能力	hq
+Popup: Abilities	弹窗：能力	w
 Popup: Inventory	弹窗：物品栏	hq
+Popup: Inventory	弹窗：物品栏	w
 Popup: The world	弹窗:世界	hq
-Popup: The world	弹窗:世界	w
+Popup: The world	弹窗：世界	w
 Preparing map...	正在准备地图...	w
 Pressed material	压制材料	wi
 Prone to discord	喜欢挑事	w
@@ -78517,10 +78571,10 @@ Retracted Spikes	缩回的尖刺	w
 Retracted Weapon	缩回的武器	w
 Routine:Off duty	日程：休息	wl
 Salutations {p}.	{p1}，向你致意。	hPt
-Saving armies...	保存军队......	w
-Saving crimes...	保存罪行......	w
-Saving events...	保存活动......	w
-Saving squads...	保存小队......	w
+Saving armies...	正在保存军队……	w
+Saving crimes...	正在保存犯罪记录……	w
+Saving events...	正在保存事件……	w
+Saving squads...	正在保存小队……	w
 Search for bugs.	寻找虫子。	hj
 Second Adjective	第二形容词	w
 Secondary Select	次要选择	w
@@ -82796,7 +82850,7 @@ Civilization...	文明……
 Claim your dead	解除己方尸体禁用	wi
 Climb ({s}/Air)	攀爬（{s1}／空气）	hPt
 Climb {s} ({s})	攀爬{s1}（{s2}）	hPt
-Closing file...	关闭文件中...	w
+Closing file...	正在关闭文件……	w
 Clothier's Shop	裁缝工坊	wi
 Codices, scr...	典籍、卷轴……
 Combat creature	与生物战斗	hP
@@ -82947,7 +83001,7 @@ Occasion in {p}	在{p1}，庆典	htEi
 On this mission	已加入此任务	wli
 Open Combat Log	打开战斗日志	w
 Open the place 	打开地点信息目录。	w
-Opening file...	正在打开文件...	w
+Opening file...	正在打开文件……	w
 Optics Engineer	光学工程师	wi
 Other materials	其他材料	wi
 Page {d} of {d}	页面 {d} of {d}	wt
@@ -82997,8 +83051,8 @@ Rotten raw hide	腐烂生皮	wi
 Royal Mausoleum	皇家陵寝	w
 Ruined hillocks	丘堡废墟	wi
 Ruled the World	已经统治世界	w
-Saving items...	保存物品......	w
-Saving units...	保存单位......	w
+Saving items...	正在保存物品……	w
+Saving units...	正在保存单位……	w
 See great beast	见到巨兽	w
 Select crow man	选择乌鸦人
 Select legwear.	选择腿部装备。	hP
@@ -87733,13 +87787,15 @@ Poetry Recital	诗歌朗诵	hEi
 Poor intuition	贫乏的直觉	w
 Population cap	人口上限	w
 Popup: Burrows	弹窗:活动区	hq
-Popup: Burrows	弹窗:活动区	w
+Popup: Burrows	弹窗：活动区	w
 Popup: Hauling	弹窗:运输	hq
-Popup: Hauling	弹窗:运输	w
+Popup: Hauling	弹窗：搬运	w
 Popup: Justice	弹窗:司法	hq
-Popup: Justice	弹窗:司法	w
+Popup: Justice	弹窗：司法	w
 Popup: Perform	弹窗：表演	hq
+Popup: Perform	弹窗：表演	w
 Popup: Wrestle	弹窗：摔跤	hq
+Popup: Wrestle	弹窗：摔跤	w
 Practice skill	练习技能	w
 Pressure Plate	压力板	wi
 Pressure plate	压力板	w
@@ -87750,7 +87806,7 @@ Pump Operation	泵机操作	wi
 Pump Operators	泵机操作员	wi
 Rain Mesh Size	降雨量网格尺寸
 Rampage of {a}	{a1}的肆虐事件	htEi
-Really retire?	真的累了?	w
+Really retire?	确定要退役吗？	w
 Record Keeping	记录	wi
 Records of {b}	{b}记录	hbti
 Refuse Hauling	搬运垃圾	wi
@@ -87762,7 +87818,7 @@ Ruined hillock	丘堡废墟	wi
 Rule the World	统治世界	w
 SMALLER ISLAND	非常小的岛屿	w
 SMALLER REGION	较小的地区	w
-Saving jobs...	保存工作......	w
+Saving jobs...	正在保存工作……	w
 Scatterbrained	容易分心	w
 Select shield.	选择盾牌。	hP
 Select weapon.	选择武器。	hP
@@ -92432,6 +92488,7 @@ Concentration	专注	wi
 Constructions	建筑物	w
 Control panel	控制面板	w
 Conversations	交谈	hq
+Conversations	交谈	w
 Counterstrike	反击	w
 Crafts Market	工艺品市场	wi
 Credits: Dabu	Dabu	wl
@@ -92490,6 +92547,7 @@ Forming lakes	正在生成湖泊
 Fortification	城防垛口	w
 Fortress Name	要塞名称
 Fortress mode	要塞模式	hq
+Fortress mode	要塞模式	w
 Fourth finger	小指	w
 Free from web	挣脱蛛网	w
 From {s}, {s}	来自{s}，{s}	wt
@@ -92560,6 +92618,7 @@ Masterful dye	杰作级染色	w
 Mastering {b}	精通{b}	hbti
 Mathematician	数学家	wi
 Menu overview	菜单概览	hq
+Menu overview	菜单概览	w
 Metal Crafter	金属工匠	wi
 Metalcrafters	金属工匠	wi
 Metalsmithing	金属加工	wi
@@ -92600,13 +92659,15 @@ Placing trees	正在放置树木	wo
 Platinum Lead	铂金铅	w
 Polish stones	打磨石头	wi
 Popup: Nobles	弹窗:贵族	hq
-Popup: Nobles	弹窗:贵族	w
+Popup: Nobles	弹窗：贵族	w
 Popup: Squads	弹窗:小队	hq
-Popup: Squads	弹窗:小队	w
+Popup: Squads	弹窗：小队	w
 Popup: Stocks	弹窗:库存	hq
-Popup: Stocks	弹窗:库存	w
+Popup: Stocks	弹窗：库存	w
 Popup: Strike	弹窗：打击	hq
+Popup: Strike	弹窗：攻击	w
 Popup: Travel	弹窗：旅行	hq
+Popup: Travel	弹窗：旅行	w
 Portable mode	便携模式	w
 Potash Makers	制草碱者	wi
 Potash Making	制草碱	wi
@@ -97045,6 +97106,7 @@ Exhilaration	欢腾	w
 Extreme pain	极度疼痛
 Fall in Love	谈恋爱	w
 Fell in Love	已经恋爱	w
+Finishing...	正在完成保存……	w
 First finger	食指	w
 Fish Cleaner	洗鱼工	wi
 Fisherdwarfs	捕鱼矮人	wi
@@ -97148,7 +97210,7 @@ Performance.	表演。	hEi
 Philosophers	哲学家	wi
 Poor empathy	缺乏同情	w
 Popup: Zones	弹窗:区域	hq
-Popup: Zones	弹窗:区域	w
+Popup: Zones	弹窗：区域	w
 Position {d}	第{d}名队员	wt
 Potash Maker	制草碱者	wi
 Professional	内行的	wi
@@ -97161,7 +97223,7 @@ Race in {p}.	在{p1}，赛跑。	htEi
 Raid of {p}.	{p1}袭击事件。	htEi
 Reached peak	达到巅峰	w
 Really quit?	确定要退出吗?	w
-Recommended!	推荐!	w
+Recommended!	推荐！	w
 Recuperation	恢复能力	wi
 Report crime	报告罪行	wi
 Right eyelid	右眼睑	w
@@ -101279,6 +101341,7 @@ Extravagant	打扮张扬	w
 Factual {b}	{b}实录	hbti
 Fast repeat	快速重复按键	w
 Felsite {d}	第{d}年 霏细岩月	wt
+Finish Game	结束游戏	w
 Fisherdwarf	捕鱼矮人	hq
 Fisherdwarf	捕鱼矮人	w
 Floor grate	地板格栅	w
@@ -101405,6 +101468,7 @@ Plural Noun	复数名词	w
 Poetic form	诗歌形式	w
 Poor memory	健忘	w
 Popup: Talk	弹窗：交谈	hq
+Popup: Talk	弹窗：交谈	w
 Praise {r}.	赞美{r1}。	hPt
 Pray to {s}	向{s}祷告	wt
 Preferences	偏好	w
@@ -101430,7 +101494,7 @@ Rock Desert	岩石荒漠
 Rough glass	粗糙玻璃	wi
 Rough-hewn 	粗糙	wi
 Sand Desert	沙漠
-Saving game	保存	w
+Saving game	正在保存游戏	w
 Say goodbye	道别	hP
 Screw Press	螺旋压榨机	wi
 Seek infant	寻找婴儿	wi
@@ -102760,6 +102824,7 @@ held by {a}	由{a1}举办	ht
 helicoprion	旋齿鲨	wi
 hemp leaves	大麻叶	wi
 hemp plants	大麻植株	wi
+here again.	才能再次在这里游玩。	w
 high abbeys	高阶修道院	hi
 high action	高阶行动	hi
 high allies	高阶同盟者	hi
@@ -105282,6 +105347,7 @@ Render fat	将脂肪熬制成脂油	wi
 Repentance	忏悔	w
 Resentment	怨恨	w
 Retirement	退役	hq
+Retirement	退役	w
 Retracted 	缩回的	wi
 Right foot	右脚	w
 Right hand	右手	w
@@ -108252,7 +108318,7 @@ zombie {s}	僵尸{s1}	htv
 .Cut open	·切开
 A hundred	一百
 Abandoned	废弃	hq
-Abandoned	废弃	w
+Abandoned	已放弃	w
 Abilities	能力	hq
 About {b}	关于{b}	hbti
 Accepting	接纳	w
@@ -108291,6 +108357,7 @@ Companion	伴侣	w
 Competent	合格的	wi
 Confusion	困惑	w
 Conquered	被征服	hq
+Conquered	已被征服	w
 Consoling	安慰	wi
 Container	容器	wi
 Craftsman	工匠	wi
@@ -110456,6 +110523,7 @@ More {b}	更多{b}	hbti
 Mothdast	莫斯达	wi
 Mountain	山地
 Movement	移动	hq
+Movement	移动	w
 Music By	音乐	w
 Musician	音乐家	wi
 NE/Above	东北／上方	hP
@@ -110608,6 +110676,7 @@ Windmill	风车	w
 Windowed	窗口化	w
 With {u}	由{u1}携带	hHt
 Withered	衰亡	hq
+Withered	已衰败	w
 Workshop	工坊	wi
 Wrestler	摔跤手	wi
 Year {d}	第{d}年	wti
@@ -111361,7 +111430,7 @@ yourself	你自己	wi
 .Gelded	·遭到阉割
 .Nausea	·恶心
 A duchy	公爵领	w
-Abandon	废弃	w
+Abandon	放弃	w
 Abshoth	埃布索	wi
 Agility	敏捷	wi
 Ahhh...	啊……	hP
@@ -111617,6 +111686,7 @@ Regions	区域
 Remorse	懊悔	w
 Reports	报告	wi
 Retired	退役	hq
+Retired	已退役	w
 Rithz\x83m	利萨姆	wi
 Rollers	滚动辊	w
 Ronstiz	龙斯蒂兹	wi
@@ -111716,6 +111786,7 @@ Thukkan	索坎	wi
 Tracker	追踪者	wi
 Traders	交易者	wi
 Trading	交易	hq
+Trading	交易	w
 Trapper	诱捕者	wi
 Travel.	旅行。	hj
 Triumph	得意	w
@@ -112610,6 +112681,7 @@ Report	报告	w
 Rerras	雷拉斯	wi
 Rers\x8Cr	雷尔锡尔	wi
 Rethal	雷萨尔	wi
+Retire	退役	w
 Riding	骑术	wi
 Rikkir	利基尔	wi
 Rilbet	利贝特	wi
@@ -114674,6 +114746,7 @@ Copy	复制	w
 Dast	达斯特	wi
 Dawn	黎明
 Dead	死亡	hq
+Dead	已死亡	w
 Done	完成	hq
 Done	完成	w
 Door	门	w

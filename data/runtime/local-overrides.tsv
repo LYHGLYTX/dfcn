@@ -758,7 +758,7 @@ About DF	关于 DF
 Create New World	创建新世界
 Continue Playing	继续游戏
 More	更多	w
-Save and continue playing	保存并继续
+Save and continue playing	保存并继续	w
 Retire at this location (or rest a while)	在此地退役（或休息一阵）	w
 Quit without saving	不保存并退出
 Really quit without saving?	确定不保存就退出？
@@ -1530,7 +1530,7 @@ Artifact	造物	wi
 Artifacts	造物	wi
 Enable artifact moods	启用造物情绪	w
 Loading artifacts...	加载造物......	w
-Saving artifacts...	保存造物......	w
+Saving artifacts...	正在保存造物……	w
 Export XML	导出 XML
 Exporting!	正在导出！	w
 Explore the history of {s}.	探索{s}的历史。	wtl
@@ -4242,8 +4242,8 @@ Main: Burrows	主界面：活动区	w
 # Standalone captions are complete UI messages, not animal burrow words.
 Burrow	活动区	hP
 Burrows	活动区	hP
-Popup: Burrows	弹窗:活动区	w
-Popup: Zones	弹窗:区域	w
+Popup: Burrows	弹窗：活动区	w
+Popup: Zones	弹窗：区域	w
 Overlay for burrow list	活动区列表覆盖层	w
 Assigned residents will only perform tasks in any of their active assigned burrows.	已分配的居民只会在分配给他们且已启用的任一活动区内执行任务。	hP
 Assigned residents will only	已分配的居民只会	wl
@@ -9873,3 +9873,158 @@ DFHack hotkeys hint: In-game quickstart guide for new users of DFHack.	供 DFHac
 DFHack hotkeys hint: Command not found	未找到命令	l
 DFHack hotkeys hint: No help available.	暂无帮助信息。	l
 DFHack hotkeys hint: Quickstart guide	快速入门指南	l
+
+# Complete Windows 53.16 Escape-menu branches, both Steam and classic.
+# Native source/branch inventory: data/extracted/pause-menu-sources.tsv.
+# All action-7 captions and the two non-night ownership-warning combinations.
+Succumb to the invasion	败于入侵	w
+Give in to the Night	向黑夜屈服	w
+Give in to Starvation	任由自己饿死	w
+Finish Game	结束游戏	w
+Give in to Starvation (holding another's goods)	任由自己饿死（持有他人物品）	w
+Finish Game (holding another's goods)	结束游戏（持有他人物品）	w
+ (holding another's goods)	（持有他人物品）	w
+Retire the fortress (for the time being)	暂时退役要塞	w
+Abandon the fortress to ruin	任由要塞荒废	w
+Save and return to title menu	保存并返回游戏主菜单	w
+Save world and return to title menu	保存世界并返回游戏主菜单	w
+Save to this timeline	保存到当前时间线	w
+Save to timeline folder: 	保存到时间线文件夹：	w
+Save to timeline folder: {s}	保存到时间线文件夹：{s}	wt
+Save to new timeline	保存到新时间线	w
+Save to new folder (same timeline)	保存到新文件夹（时间线不变）	w
+Recommended!	推荐！	w
+Multiple copies of the timeline found.	发现此时间线的多个副本。	w
+Do this if you want to keep the old save.	若想保留旧存档，请选择此项。	w
+May interfere with existing saves.	可能影响现有存档。	w
+What would you like to name this timeline?	你想将这条时间线命名为什么？	w
+Saves starting here will be grouped on the	从此处开始的存档将在标题菜单中	w
+title screen, with their own active save.	归为一组，并拥有独立的当前存档。	w
+What would you like to name this manual	你想将这个手动存档命名为什么？	w
+save?  It will never be overwritten,	它不会被自动覆盖，	w
+but you can delete it while loading.	但你可以在加载界面将其删除。	w
+There is a folder with this name already.	已存在同名文件夹。	w
+Would you like to overwrite it?	是否覆盖？	w
+# Native confirmation rows are separate draws. Whole normalized paragraphs
+# also serve the existing bounded UI-message path when rows are joined.
+Retire	退役	w
+Retired	已退役	w
+Retirement	退役	w
+Abandon	放弃	w
+Abandoned	已放弃	w
+Conquered	已被征服	w
+Withered	已衰败	w
+Dead	已死亡	w
+Really retire?	确定要退役吗？	w
+Really retire?  The world will be saved but	确定要退役吗？世界将会保存，	w
+you will need to unretire the fort to play	但你需要先重新启用这座要塞，	w
+here again.	才能再次在这里游玩。	w
+you will need to unretire or recruit	但你需要让这个角色复出或将其	w
+this character to play them again.	招入队伍，才能再次操控该角色。	w
+Really quit?  The fort will be saved but	确定要放弃吗？要塞将会保存，	w
+The fort will be saved but	要塞将会保存，但	w
+you will need to reclaim the fort to play	但你需要先收复这座要塞，	w
+Really quit?  The character will live on	确定要结束吗？这个角色的事迹	w
+through their legend but will not be	将留存于传说之中，但你将	w
+available to play.	无法再操控这个角色。	w
+All of your progress since the last	自上次保存以来的所有进度	w
+save will be lost.	都将丢失。	w
+Really retire? The world will be saved but you will need to unretire the fort to play here again.	确定要退役吗？世界将会保存，但若想再次游玩这座要塞，你需要先将它重新启用。	P
+Really retire? The world will be saved but you will need to unretire or recruit this character to play them again.	确定要退役吗？世界将会保存，但若想再次操控这个角色，你需要先让其复出，或将其招入队伍。	P
+Really quit? The fort will be saved but you will need to reclaim the fort to play here again.	确定要放弃吗？要塞将会保存，但若想再次游玩这座要塞，你需要先将它收复。	P
+Really quit? The character will live on through their legend but will not be available to play.	确定要结束吗？这个角色的事迹将留存于传说之中，但你将无法再操控这个角色。	P
+All of your progress since the last save will be lost.	自上次保存以来的所有进度都将丢失。	P
+There is a folder with this name already. Would you like to overwrite it?	已存在同名文件夹。是否覆盖？	P
+Saves starting here will be grouped on the title screen, with their own active save.	从此处开始的存档将在标题菜单中归为一组，并拥有独立的当前存档。	P
+What would you like to name this manual save? It will never be overwritten, but you can delete it while loading.	你想将这个手动存档命名为什么？它不会被自动覆盖，但你可以在加载界面将其删除。	P
+# Native constructor headings and all end-state messages also draw directly.
+Dwarf Fortress Adventure	矮人要塞　冒险	w
+Your fortress has settled into the rhythm of day-to-day living, beyond your meticulous concern.	你的要塞已步入日常生活，不再需要你事无巨细地照料。	w
+Your settlement has been abandoned.	你的聚居地已被放弃。	w
+Your settlement has crumbled to its end.	你的聚居地已衰败至终。	w
+Your strength has been broken.	你的力量已被击溃。	w
+Your adventure has come to an end.	你的冒险已告终。	w
+You settle in this location...	你在此地安顿下来……	w
+# All native save-stage captions, including the previously absent stages.
+Checking directory structure...	正在检查文件夹结构……	w
+Allocating space...	正在分配空间……	w
+Opening file...	正在打开文件……	w
+Saving game	正在保存游戏	w
+Saving tracking information...	正在保存追踪信息……	w
+Preliminary cleaning...	正在进行初步清理……	w
+Saving general information...	正在保存基本信息……	w
+Saving announcements...	正在保存公告……	w
+Saving units...	正在保存单位……	w
+Saving items...	正在保存物品……	w
+Saving jobs...	正在保存工作……	w
+Saving buildings...	正在保存建筑……	w
+Saving machines...	正在保存机械……	w
+Saving projectiles...	正在保存飞射物……	w
+Saving local animal populations...	正在保存当地动物种群……	w
+Saving effects...	正在保存效果……	w
+Saving fortress information...	正在保存要塞信息……	w
+Saving army controllers...	正在保存军队控制信息……	w
+Saving flow guides...	正在保存流体信息……	w
+Saving world information...	正在保存世界信息……	w
+Saving adventure data...	正在保存冒险数据……	w
+Offloading units... 	正在卸载单位数据……	w
+Offloading art...	正在卸载艺术数据……	w
+Saving written content...	正在保存著作内容……	w
+Saving activities...	正在保存活动……	w
+Saving divination sets...	正在保存占卜数据……	w
+Saving image sets...	正在保存图像集……	w
+Saving cultural identities...	正在保存文化身份……	w
+Saving crimes...	正在保存犯罪记录……	w
+Saving incidents...	正在保存事件记录……	w
+Saving vehicles...	正在保存载具……	w
+Saving armies...	正在保存军队……	w
+Saving belief systems...	正在保存信仰体系……	w
+Saving art forms...	正在保存艺术形式……	w
+Saving occupations...	正在保存职业……	w
+Saving schedules...	正在保存日程……	w
+Saving squads...	正在保存小队……	w
+Saving formations...	正在保存阵型……	w
+Saving interactions...	正在保存交互数据……	w
+Saving agreement...	正在保存协议……	w
+Saving identities...	正在保存身份……	w
+Saving entities...	正在保存组织……	w
+Saving work quotas...	正在保存工作配额……	w
+Saving world events...	正在保存世界事件……	w
+Saving events...	正在保存事件……	w
+Saving mandates...	正在保存命令……	w
+Saving active historical figures...	正在保存活跃历史人物……	w
+Saving coin information...	正在保存钱币信息……	w
+Characterizing raw data...	正在整理原始数据……	w
+Closing file...	正在关闭文件……	w
+Finishing...	正在完成保存……	w
+# Help-menu title rows must remain ordinary captions, alongside the complete
+# help prose already in help-translations.tsv, rather than prose-only lookups.
+Fortress mode	要塞模式	w
+Menu overview	菜单概览	w
+Movement	移动	w
+Conversations	交谈	w
+The party and followers	队伍与追随者	w
+Quests and reputation	任务与声望	w
+Trading	交易	w
+Popup: Inventory	弹窗：物品栏	w
+Popup: Companions	弹窗：同伴	w
+Popup: Adventurer's log	弹窗：冒险者日志	w
+Popup: Talk	弹窗：交谈	w
+Popup: Perform	弹窗：表演	w
+Popup: Abilities	弹窗：能力	w
+Popup: Sleep and rest	弹窗：睡眠与休息	w
+Popup: Travel	弹窗：旅行	w
+Popup: Strike	弹窗：攻击	w
+Popup: Wrestle	弹窗：摔跤	w
+Popup: Butcher and craft	弹窗：屠宰与制作	w
+Popup: Hold and climb	弹窗：抓握与攀爬	w
+Popup: Movement options	弹窗：移动选项	w
+Popup: Shoot and throw	弹窗：射击与投掷	w
+Popup: Hauling	弹窗：搬运	w
+Popup: Nobles	弹窗：贵族	w
+Popup: Squads	弹窗：小队	w
+Popup: Stocks	弹窗：库存	w
+Popup: Justice	弹窗：司法	w
+Popup: Work orders	弹窗：工作指令	w
+Popup: The world	弹窗：世界	w
+Bins, bags, and barrels	箱子、袋子与桶	w
