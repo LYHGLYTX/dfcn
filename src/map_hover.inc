@@ -326,9 +326,11 @@ std::optional<NativeTextCard> Overlay::capture_map_hover_card(
         // last word inside the frame as a complete personal name. Verify
         // the prefix and every surviving suffix byte before owning it.
         const std::string visible = source.substr(first, end - first);
-        const auto drawn = native_drawn_text_for_row(
-            Match{first_x, y, static_cast<int>(visible.size()),
-                  kMapHoverPhraseRule, {}, visible}, edge_x);
+        const Match physical{first_x, y, static_cast<int>(visible.size()),
+            kMapHoverPhraseRule, {}, visible};
+        const auto map_drawn = native_map_hover_draw_for_row(*gps_, physical, edge_x);
+        const auto drawn = map_drawn ? std::optional<std::string>(map_drawn->source)
+            : native_drawn_text_for_row(physical, edge_x);
         auto drawn_source = drawn ? std::string_view(*drawn) : std::string_view{};
         // Native wrapped lines retain trailing padding. It is not clipped
         // text: restoring it would change the identity of an already-owned
@@ -387,7 +389,8 @@ std::optional<NativeTextCard> Overlay::capture_map_hover_card(
         // when it completes the structured source; never invent a missing
         // suffix or enlarge the translated text box beyond the inner frame.
         const std::string_view caption(source.data() + first, end - first);
-        if (complete_source.empty() && end == static_cast<size_t>(interior->w) &&
+        if (map_drawn && map_drawn->map_hover.kind == NativeMapHoverKind::Spoor &&
+            complete_source.empty() && end == static_cast<size_t>(interior->w) &&
             edge_x < gps_->dimx &&
             caption.starts_with("Track/Spoor: ") && !translate_map_track(caption)) {
             bool top = false;
@@ -426,6 +429,15 @@ std::optional<NativeTextCard> Overlay::capture_map_hover_card(
             source.substr(first, end - first),
             std::vector<int>(colors.begin() + first, colors.begin() + end),
             std::move(complete_source)});
+        if (map_drawn) {
+            auto &row = card.rows.back();
+            row.map_hover = map_drawn->map_hover;
+            row.unit_identity_target = map_drawn->unit_identity_target;
+            if (!map_drawn->complete_source.empty())
+                row.complete_source = map_drawn->complete_source;
+            else if (drawn_source.size() > visible.size())
+                row.complete_source = drawn_source;
+        }
     }
     if (adventure) {
         // The adventure HUD also uses these closed frames for centered
@@ -619,80 +631,111 @@ std::optional<std::string> Overlay::translate_arena_numbered_creature(
 // vermin, flow, campfire, item/deposit, item, fire, water, magma, spoor,
 // sound, remembered and sensed. Static branches live in local-overrides;
 // dynamic fields use complete, typed grammars shared with their other views.
-std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view source) const {
+std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view source,
+        const NativeMapHoverContext &context,
+        const std::optional<std::string> &unit_target) const {
     source = trim_view(source);
     if (source.empty()) return std::nullopt;
-    if (auto target = exact_literal_translation(source)) return target;
-    // The hover owns the whole caption, including its untranslated fallback,
-    // before the grid matcher runs. Resolve default stockpile names through
-    // the same TSV templates/category resolver as task destinations here.
-    // Require the complete caption; unrelated templates must not reinterpret
-    // item, terrain or unit names. TSV rules do not depend on TOML composition.
-    for (int index : candidate_template_rules(source)) {
-        const Rule &rule = rules_[static_cast<size_t>(index)];
-        if (rule.source != "Stockpile #{d}" && rule.source != "{s} Stockpile #{d}")
-            continue;
-        size_t end = 0;
-        std::vector<std::string> captures;
-        if (!match_template(rule, source, 0, &end, &captures) ||
-            end != source.size()) continue;
-        bool complete = false;
-        auto target = translate_template_captures(rule, captures, &complete);
-        if (complete && !target.empty()) return target;
+    const auto scoped = [&](std::string_view text, const char *ns) -> std::optional<std::string> {
+        if (!config_.compositional_rules) return std::nullopt;
+        std::vector<size_t> origins;
+        return RULESETS.translate_with_origins(native_text_to_utf8(text), ns, origins);
+    };
+    const auto item = [&] { return translate_fortress_item_caption(source); };
+    // A successful native kind owns both success and failure. An unknown
+    // term cannot switch from terrain/material into a personal-name parser.
+    switch (context.kind) {
+    case NativeMapHoverKind::None:
+    case NativeMapHoverKind::Unknown:
+        return std::nullopt;
+    case NativeMapHoverKind::Item:
+    case NativeMapHoverKind::BuildingItem:
+        return item();
+    case NativeMapHoverKind::Terrain:
+        if (config_.compositional_rules)
+            if (auto target = RULESETS.translate_tile_description(native_text_to_utf8(source)))
+                return target;
+        return exact_literal_translation(source);
+    case NativeMapHoverKind::Unit:
+        if (unit_target) return unit_target;
+        if (auto target = translate_arena_numbered_creature(source)) return target;
+        if (auto target = scoped(source, "::map_hover::unit")) return target;
+        return translate_unit_identity(source, true);
+    case NativeMapHoverKind::Building:
+        return translate_info_panel_title(NativeInfoTitleKind::Building, source);
+    case NativeMapHoverKind::Vermin: {
+        // Native lookinfo_verminst::item_id, colony flag and count select
+        // the same finite productions used by the game's formatter.
+        if (context.data[1] != -1) return item();
+        std::string_view prefix;
+        if (static_cast<uint32_t>(context.data[2]) & 2u) prefix = "a colony of ";
+        else if (context.data[3] >= 50) prefix = "a swarm of ";
+        else if (context.data[3] >= 10) prefix = "many ";
+        if (!prefix.empty()) {
+            if (!source.starts_with(prefix)) return std::nullopt;
+            auto species = scoped(source.substr(prefix.size()), "::creatures::name::plural");
+            if (!species) return std::nullopt;
+            if (auto literal = exact_literal_translation(source)) return literal;
+            return RULESETS.compose_bound_rule("::map_hover",
+                std::string(prefix) + "{::creatures::name::plural}",
+                {{"::creatures::name::plural", *species}});
+        }
+        if (context.data[3] > 1) return scoped(source, "::creatures::name::plural");
+        if (auto target = scoped(source, "::creatures::caste::singular")) return target;
+        return scoped(source, "::creatures::name::singular");
     }
-    if (auto target = translate_map_track(source)) return target;
-
-    // Both liquid branches append a single native depth and the fixed /7].
-    // Keep the measurement intact and translate only its complete type label.
-    const size_t depth = source.rfind(" [");
-    if (depth != std::string_view::npos && source.substr(depth).size() == 6 &&
-        source[depth + 2] >= '0' && source[depth + 2] <= '7' &&
-        source.substr(depth + 3) == "/7]") {
-        const auto kind = source.substr(0, depth);
-        for (std::string_view liquid : {"Water", "Stagnant water", "Salt water",
-                "Stagnant salt water", "Lava", "Magma"}) {
-            if (kind != liquid) continue;
-            if (auto target = exact_literal_translation(kind))
-                return *target + std::string(source.substr(depth));
+    case NativeMapHoverKind::Flow: {
+        const int16_t flow = static_cast<int16_t>(static_cast<uint32_t>(context.data[0]) & 0xffffu);
+        switch (flow) {
+        case 3: // MaterialDust: native matter-state powder noun.
+        case 9: // MaterialGas: native gaseous material noun.
+            return config_.compositional_rules ? translate_material_name(source) : std::nullopt;
+        case 10: { // MaterialVapor: native liquid noun followed by vapor.
+            constexpr std::string_view suffix = " vapor";
+            if (!source.ends_with(suffix)) return std::nullopt;
+            const auto material = scoped(source.substr(0, source.size() - suffix.size()), "::materials");
+            if (!material) return std::nullopt;
+            return RULESETS.compose_bound_rule("::map_hover", "{::materials} vapor",
+                {{"::materials", *material}});
+        }
+        case 13: // ItemCloud can contain a typed item's complete caption.
+            if (auto literal = exact_literal_translation(source)) return literal;
+            return context.data[2] >= 0 ? item() : std::nullopt;
+        case 0: case 1: case 2: case 4: case 5: case 6: case 7: case 8: case 11: case 12:
+            return exact_literal_translation(source);
+        default:
+            return std::nullopt;
         }
     }
-    if (!config_.compositional_rules) return std::nullopt;
-    if (auto target = translate_arena_numbered_creature(source)) return target;
-    const std::string utf8 = native_text_to_utf8(source);
-    std::vector<size_t> origins;
-    if (auto target = RULESETS.translate_with_origins(utf8, "::map_hover", origins))
-        return target;
-    // Unit captions put the species/office before the complete identity.
-    // Resolve that identity before generic item/word grammars can split it.
-    if (source.size() > 4 && (source.starts_with("The ") || source.starts_with("the ")) &&
-            source[4] >= 'a' && source[4] <= 'z') {
-        std::string identity(source);
-        identity.front() = 't';
-        if (auto target = translate_legends_actor(identity, 0, true)) return target;
+    case NativeMapHoverKind::Spatter:
+        if (context.data[0] != -1) return item();
+        if (auto target = scoped(source, "::health::contaminant")) return target;
+        return exact_literal_translation(source);
+    case NativeMapHoverKind::Water:
+    case NativeMapHoverKind::Magma: {
+        const uint32_t flags = static_cast<uint32_t>(context.data[0]);
+        const int16_t amount = static_cast<int16_t>(static_cast<uint32_t>(context.data[1]) & 0xffffu);
+        if (amount < 0 || amount > 7) return std::nullopt;
+        std::string_view liquid;
+        if (context.kind == NativeMapHoverKind::Water) {
+            if (flags & 2u) liquid = flags & 1u ? "Stagnant salt water" : "Salt water";
+            else liquid = flags & 1u ? "Stagnant water" : "Water";
+        } else liquid = flags & 1u ? "Magma" : "Lava";
+        const std::string measurement = " [" + std::to_string(amount) + "/7]";
+        if (source != std::string(liquid) + measurement) return std::nullopt;
+        if (auto target = exact_literal_translation(liquid)) return *target + measurement;
+        return std::nullopt;
     }
-    // Fortress units use the roster's complete "name, profession" caption.
-    // Resolve it before terrain/items and the whole-row untranslated fallback
-    // consume the field; reuse the shared name, office and caste grammar.
-    if (source.find(',') != std::string_view::npos) {
-        auto target = translate_procedural_fragment(std::string(source));
-        if (item_description_translation_complete(target)) return target;
+    case NativeMapHoverKind::Spoor:
+        if (auto target = translate_map_track(source)) return target;
+        return exact_literal_translation(source);
+    case NativeMapHoverKind::Campfire:
+    case NativeMapHoverKind::Fire:
+    case NativeMapHoverKind::Sound:
+    case NativeMapHoverKind::MemoryMap:
+    case NativeMapHoverKind::ExtraSense:
+        return exact_literal_translation(source);
     }
-    auto terrain = RULESETS.translate_tile_description(utf8);
-    // A plant cap and a cloth cap share a suffix; only a complete equipment
-    // production licenses the finished-material interpretation.
-    if (terrain && RULESETS.translate_equipment_name(utf8, true))
-        if (auto target = translate_inventory_item_name(source, -1, -1)) return target;
-    if (terrain) return terrain;
-    if (auto target = translate_creature_label(source)) return target;
-    if (auto target = translate_inventory_item_name(source, -1, -1)) return target;
-    if (auto target = translate_compositional(std::string(source))) return target;
-    // A named unit can contribute only its given name to the hover card,
-    // followed by a separate terrain row. Require a real native T_WORD and
-    // reuse the personal-name renderer; title case alone is not evidence
-    // that an unknown item or terrain label is a name.
-    if (source.find(' ') == std::string_view::npos &&
-            native_name_language_masks_.contains(lower_native_name(std::string(source))))
-        return translate_legends_name(source, true);
     return std::nullopt;
 }
 
@@ -709,7 +752,8 @@ void Overlay::append_map_hover_phrases(const NativeTextCard &card,
     // Keep paragraphs that pass already owns, including empty reflow tails,
     // instead of laying them out again or restoring their original English.
     for (const auto &row : card.rows)
-        if (std::any_of(matches.begin(), matches.end(), [&](const Match &match) {
+        if (row.map_hover.kind == NativeMapHoverKind::None &&
+            std::any_of(matches.begin(), matches.end(), [&](const Match &match) {
                 return native_paragraph_owns_card_row(match, row);
             })) {
             paragraph_rows.insert(row.y);
@@ -717,6 +761,7 @@ void Overlay::append_map_hover_phrases(const NativeTextCard &card,
         }
     for (size_t begin = 0; begin < card.rows.size(); ++begin) {
         const auto &first = card.rows[begin];
+        if (first.map_hover.kind != NativeMapHoverKind::None) continue;
         if (paragraph_rows.contains(first.y)) continue;
         // Fortress engraving cards recover their complete logical rows here,
         // after the visible-grid item pass. These are artwork paragraphs,
@@ -730,7 +775,8 @@ void Overlay::append_map_hover_phrases(const NativeTextCard &card,
         size_t best_end = begin;
         for (size_t end = begin; end < card.rows.size(); ++end) {
             const auto &row = card.rows[end];
-            if (row.x != first.x || row.y != first.y + static_cast<int>(end - begin) ||
+            if (row.map_hover.kind != NativeMapHoverKind::None ||
+                row.x != first.x || row.y != first.y + static_cast<int>(end - begin) ||
                 row.centered || row.x + static_cast<int>(row.source.size()) > right ||
                 (!row.complete_source.empty() && row.complete_source != row.source) ||
                 rows[row.y].compare(row.x, row.source.size(), row.source) != 0) break;
@@ -772,14 +818,8 @@ void Overlay::append_map_hover_phrases(const NativeTextCard &card,
         // A submitted message may already own this complete physical row,
         // including a continuation whose translated output is now empty.
         if (rows[row.y].compare(row.x, row.source.size(), row.source) != 0) continue;
-        // Whole-row translations precede fragment matching. Color changes
-        // remain semantic boundaries unless the ordinary matcher knows how
-        // to map them: do not flatten an item's colored quality/status runs.
-        bool uniform = true;
-        for (size_t i = 0; i < row.source.size(); ++i)
-            if (row.source[i] != ' ' && row.foregrounds[i] != row.foregrounds.front())
-                uniform = false;
-        if (!uniform) continue;
+        // Native kind owns colored captions too. A color change cannot send
+        // the remaining words back into generic item/person matching.
         std::string normalized;
         bool space = false;
         for (unsigned char ch : row.complete_source.empty() ? row.source : row.complete_source) {
@@ -788,21 +828,21 @@ void Overlay::append_map_hover_phrases(const NativeTextCard &card,
             normalized += static_cast<char>(ch);
             space = false;
         }
-        auto target = translate_map_hover_phrase(normalized);
-        std::string knowledge_state;
-        constexpr std::string_view remembered_suffix = " (remembered)";
-        if (!target && normalized.ends_with(remembered_suffix)) {
-            // This state qualifies the whole remembered caption. Resolve its
-            // noun through the same terrain/item grammar as a visible tile;
-            // the full-row match otherwise hides later suffix/template rules.
-            if (auto state = exact_literal_translation(trim_view(remembered_suffix))) {
-                knowledge_state = std::move(*state);
-                normalized.resize(normalized.size() - remembered_suffix.size());
-                target = translate_map_hover_phrase(normalized);
-            }
-        }
-        if (target && !target->empty()) *target += knowledge_state;
-        const bool untranslated = !item_description_translation_complete(target);
+        auto target = translate_map_hover_phrase(normalized, row.map_hover,
+            row.unit_identity_target);
+        // Typed item/unit parsers can preserve an authored name or nickname
+        // in Latin letters. Their field binding remains a complete result.
+        const bool authored_field = row.map_hover.kind == NativeMapHoverKind::Unit ||
+            row.map_hover.kind == NativeMapHoverKind::Item ||
+            row.map_hover.kind == NativeMapHoverKind::BuildingItem ||
+            row.map_hover.kind == NativeMapHoverKind::Building ||
+            (row.map_hover.kind == NativeMapHoverKind::Spatter && row.map_hover.data[0] != -1) ||
+            (row.map_hover.kind == NativeMapHoverKind::Vermin && row.map_hover.data[1] != -1) ||
+            (row.map_hover.kind == NativeMapHoverKind::Flow &&
+                (static_cast<uint32_t>(row.map_hover.data[0]) & 0xffffu) == 13u &&
+                row.map_hover.data[2] >= 0);
+        const bool untranslated = !target || target->empty() ||
+            (!authored_field && !item_description_translation_complete(target));
         if (untranslated) {
             // Every native caption owns the complete row, even when a mod
             // introduces unknown vocabulary. Preserve it visibly as one noun

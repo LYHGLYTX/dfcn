@@ -785,6 +785,19 @@ static bool is_fortress_task_field(const Match &match) {
         match.rule == kFortressTaskWorkerRule || match.rule == kFortressTaskContextRule;
 }
 
+// lookinfost::type/data are copied from the actual native map-caption draw.
+// The enum follows df.d_interface.xml's look_info_type, independent of text.
+enum class NativeMapHoverKind : int32_t {
+    None = -2, Unknown = -1, Item = 0, Terrain = 1, Unit = 2,
+    Building = 3, Vermin = 4, Flow = 5, Campfire = 6, Spatter = 7,
+    BuildingItem = 8, Fire = 9, Water = 10, Magma = 11, Spoor = 12,
+    Sound = 13, MemoryMap = 14, ExtraSense = 15
+};
+struct NativeMapHoverContext {
+    NativeMapHoverKind kind = NativeMapHoverKind::None;
+    std::array<int32_t, 6> data{};
+};
+
 struct NativeTextCardRow {
     int x = 0, y = 0;
     std::string source;
@@ -795,6 +808,8 @@ struct NativeTextCardRow {
     // Alignment belongs to the current native frame, not the translated width.
     bool centered = false;
     bool civilization_official = false;
+    NativeMapHoverContext map_hover{};
+    std::optional<std::string> unit_identity_target{};
 };
 struct NativeTextCard {
     SDL_Rect interior{};
@@ -1750,6 +1765,7 @@ struct NativeDrawnTextRow {
     const unsigned char *draw_grid = nullptr;
     int draw_dimx = 0, draw_dimy = 0;
     uint64_t draw_epoch = 0;
+    NativeMapHoverContext map_hover{};
 };
 static std::mutex g_native_drawn_text_mutex;
 static std::vector<NativeDrawnTextRow> g_native_drawn_text_rows;
@@ -2134,7 +2150,7 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
         bool mission_title = false, int mission_title_right = -1,
         std::optional<std::array<long, 4>> original_clip = std::nullopt,
-        uint64_t original_epoch = 0) {
+        uint64_t original_epoch = 0, NativeMapHoverContext map_hover = {}) {
     std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
     const auto epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
     if (original_epoch && original_epoch != epoch) return;
@@ -2238,6 +2254,8 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         row.civilization_field = civilization_field;
         row.mission_title = mission_title;
         row.mission_title_right = mission_title_right;
+        row.map_hover = map_hover;
+        if (map_hover.kind != NativeMapHoverKind::None) row.caption_source = true;
         if (info_title_kind != NativeInfoTitleKind::None) row.caption_source = true;
         if (civilization_field != NativeCivilizationField::None) row.caption_source = true;
         if (mission_title) row.caption_source = true;
@@ -2321,6 +2339,51 @@ static std::optional<std::string> native_drawn_text_for_row(const Match &row,
         const auto visible = trim_view(std::string_view(draw.source).substr(
             0, static_cast<size_t>(clip_right - row.x)));
         if (visible == row.source) return draw.source;
+    }
+    return std::nullopt;
+}
+
+static std::optional<NativeDrawnTextRow> native_map_hover_draw_for_row(
+        const graphicst &gps, const Match &row, int clip_right) {
+    if (row.x < 0 || row.x >= gps.dimx || row.y < 0 || row.y >= gps.dimy ||
+            row.source.empty() || row.source.size() > static_cast<size_t>(gps.dimx - row.x) ||
+            clip_right <= row.x) return std::nullopt;
+    const bool top_layer = native_ui_top_layer_at(gps,
+        static_cast<size_t>(row.x) * gps.dimy + row.y);
+    const auto *grid = top_layer ? gps.screen_top : gps.screen;
+    if (!grid) return std::nullopt;
+    std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
+    const auto &draws = top_layer ? g_native_drawn_top_text_rows : g_native_drawn_text_rows;
+    for (auto it = draws.rbegin(); it != draws.rend(); ++it) {
+        const auto &draw = *it;
+        if (draw.map_hover.kind == NativeMapHoverKind::None ||
+                draw.x > row.x || draw.x < 0 || draw.y != row.y || draw.top_layer != top_layer ||
+                draw.draw_grid != grid || draw.draw_dimx != gps.dimx ||
+                draw.draw_dimy != gps.dimy) continue;
+        const size_t offset = static_cast<size_t>(row.x - draw.x);
+        if (offset > draw.source.size() || std::any_of(draw.source.begin(),
+                draw.source.begin() + offset, [](unsigned char ch) { return ch != ' '; })) continue;
+        const auto visible = trim_view(std::string_view(draw.source).substr(
+            offset, static_cast<size_t>(clip_right - row.x)));
+        if (visible != row.source) continue;
+        bool current = true;
+        for (size_t byte = 0; byte < row.source.size(); ++byte) {
+            const size_t at = (static_cast<size_t>(row.x) + byte) * gps.dimy + row.y;
+            const unsigned char ch = grid[at * 8];
+            if (native_ui_top_layer_at(gps, at) != top_layer ||
+                    (ch ? ch : ' ') != static_cast<unsigned char>(row.source[byte])) {
+                current = false;
+                break;
+            }
+        }
+        if (current) {
+            auto captured = draw;
+            captured.x = row.x;
+            captured.source.erase(0, offset);
+            if (offset <= captured.complete_source.size())
+                captured.complete_source.erase(0, offset);
+            return captured;
+        }
     }
     return std::nullopt;
 }
@@ -3447,7 +3510,9 @@ private:
     std::optional<std::string> translate_map_track_noun(std::string_view source) const;
     std::optional<std::string> translate_map_track(std::string_view source) const;
     std::optional<std::string> translate_arena_numbered_creature(std::string_view source) const;
-    std::optional<std::string> translate_map_hover_phrase(std::string_view source) const;
+    std::optional<std::string> translate_map_hover_phrase(std::string_view source,
+        const NativeMapHoverContext &context,
+        const std::optional<std::string> &unit_target = {}) const;
     void append_map_hover_phrases(const NativeTextCard &card,
         std::vector<std::string> &rows, std::vector<Match> &matches, int only_y) const;
     void compose_native_text_rows(const NativeTextCard &card,
@@ -20258,6 +20323,10 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         untranslated_help_rows.end(), owns_row))
                 std::fill_n(screen_rows[row.y].begin() + row.x, row.source.size(), ' ');
         }
+        // Native type ownership precedes every item, person and dictionary
+        // pass. A missing translation still reserves this complete caption.
+#include "map_announcements.inc"
+        append_map_hover_phrases(*map_hover, screen_rows, result, only_y);
     }
     auto embark_site = map_hover ? std::optional<NativeTextCard>{}
         : capture_embark_site_card(screen_rows);
@@ -20530,11 +20599,6 @@ std::vector<Match> Overlay::find_matches(int only_y,
     context_detail.checkpoint(RenderTimingStage::Tooltips);
     append_embark_introduction_matches(screen_rows, result, only_y, screen_override != nullptr);
     append_fortress_economy_matches(screen_rows, result, only_y, screen_override != nullptr);
-    // Submitted dialogue owns complete wrapped records before hover labels
-    // or ordinary UI phrases can consume an isolated continuation.
-#include "map_announcements.inc"
-    if (map_hover)
-        append_map_hover_phrases(*map_hover, screen_rows, result, only_y);
 
     context_detail.checkpoint(RenderTimingStage::Choices);
     // Adventure action and conversation choices are whole clickable rows. Native drawing can

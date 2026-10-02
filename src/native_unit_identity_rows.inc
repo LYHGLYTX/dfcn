@@ -4,6 +4,11 @@
 std::set<std::pair<int, int>> native_unit_header_captions;
 for (bool top_layer : {false, true}) {
     for (const auto &draw : captured_native_drawn_text_rows(top_layer)) {
+        if (map_hover && std::any_of(map_hover->rows.begin(), map_hover->rows.end(),
+                [&](const NativeTextCardRow &row) {
+                    return row.x == draw.x && row.y == draw.y &&
+                        row.map_hover.kind != NativeMapHoverKind::Unit;
+                })) continue;
         if (draw.unit_identity_header && draw.unit_identity_target &&
                 draw.x >= 0 && draw.x < gps_->dimx && draw.y >= 0 && draw.y < gps_->dimy) {
             // The formatter already owns this gloss. Emit its current quoted

@@ -14,6 +14,7 @@
         bool dialogue_card = false;
         for (size_t begin = 0; begin < card.rows.size(); ++begin) {
             const auto &first = card.rows[begin];
+            if (first.map_hover.kind != NativeMapHoverKind::None) continue;
             std::vector<Match> spans;
             std::vector<int> colors;
             std::string source;
@@ -24,7 +25,8 @@
             size_t end = begin;
             for (; end < card.rows.size(); ++end) {
                 const auto &row = card.rows[end];
-                if (row.y != first.y + static_cast<int>(end - begin) ||
+                if (row.map_hover.kind != NativeMapHoverKind::None ||
+                    row.y != first.y + static_cast<int>(end - begin) ||
                     row.x + static_cast<int>(row.source.size()) > right ||
                     (!row.complete_source.empty() && row.complete_source != row.source) ||
                     screen_rows[row.y].compare(row.x, row.source.size(), row.source) != 0)

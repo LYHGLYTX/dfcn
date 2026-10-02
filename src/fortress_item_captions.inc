@@ -188,8 +188,23 @@ std::optional<std::string> Overlay::translate_info_panel_title(
             if (kind == NativeInfoTitleKind::Building) {
                 std::vector<size_t> origins;
                 target = RULESETS.translate_with_origins(utf8, "::map_hover::building", origins);
-                if (!target && source.find("Stockpile #") != std::string_view::npos)
-                    target = translate_map_hover_phrase(source);
+                if (!target && source.find("Stockpile #") != std::string_view::npos) {
+                    for (int index : candidate_template_rules(source)) {
+                        const Rule &rule = rules_[static_cast<size_t>(index)];
+                        if (rule.source != "Stockpile #{d}" &&
+                                rule.source != "{s} Stockpile #{d}") continue;
+                        size_t end = 0;
+                        std::vector<std::string> captures;
+                        if (!match_template(rule, source, 0, &end, &captures) ||
+                                end != source.size()) continue;
+                        bool complete = false;
+                        auto stockpile = translate_template_captures(rule, captures, &complete);
+                        if (complete && !stockpile.empty()) {
+                            target = std::move(stockpile);
+                            break;
+                        }
+                    }
+                }
                 if (!target) {
                     // Weapon furniture describes its single installed item
                     // after the native state. The item may own a complete

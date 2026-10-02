@@ -98,6 +98,7 @@ struct NativeCaptionProfile {
     NativeCaptionBuildFn map_caption_build = nullptr;
     size_t map_caption_text_offset = 0;
     std::vector<unsigned char> map_caption_build_prefix;
+    std::vector<uintptr_t> map_hover_returns;
     NativeInfoTitleBinding info_titles;
     std::vector<NativeCivilizationCaptionSite> civilization_fields;
     std::vector<uintptr_t> mission_title_returns;
@@ -294,6 +295,8 @@ static void capture_native_tooltip_container(void *widget, uint32_t tick) {
 static NativeInfoTitleBinding g_native_info_title_binding;
 static std::vector<NativeCivilizationCaptionSite> g_native_civilization_caption_sites;
 static std::vector<uintptr_t> g_native_mission_title_returns;
+static std::vector<uintptr_t> g_native_map_hover_returns;
+static size_t g_native_map_hover_text_offset = 0;
 
 static NativeInfoTitleKind native_info_title_kind(uintptr_t caller) {
     for (const auto &site : g_native_info_title_binding.sites)
@@ -335,6 +338,29 @@ static bool native_info_title_memory_readable(const void *pointer, size_t size) 
     // No ELF caller-frame layout is bound by the current title profile.
     return false;
 #endif
+}
+
+static NativeMapHoverContext native_map_hover_context(uintptr_t caller,
+        const NativeString *source) {
+    NativeMapHoverContext context;
+    if (std::find(g_native_map_hover_returns.begin(),
+            g_native_map_hover_returns.end(), caller) == g_native_map_hover_returns.end())
+        return context;
+    context.kind = NativeMapHoverKind::Unknown;
+    // Only the two native map loops pass lookinfost::display_str directly.
+    // Copy its enum and union payload while that exact record owns this draw;
+    // later card routing retains values, never a borrowed native pointer.
+    const uintptr_t address = reinterpret_cast<uintptr_t>(source);
+    if (!g_native_map_hover_text_offset || address < g_native_map_hover_text_offset)
+        return context;
+    const auto *record = reinterpret_cast<const void *>(address - g_native_map_hover_text_offset);
+    std::array<int32_t, 7> fields{};
+    if (!native_info_title_memory_readable(record, sizeof(fields))) return context;
+    std::memcpy(fields.data(), record, sizeof(fields));
+    if (fields.front() < 0 || fields.front() > 15) return context;
+    context.kind = static_cast<NativeMapHoverKind>(fields.front());
+    std::copy_n(fields.begin() + 1, context.data.size(), context.data.begin());
+    return context;
 }
 
 static bool native_info_title_authored(NativeInfoTitleKind kind,
@@ -819,7 +845,8 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
         NativeInfoTitleKind info_title_kind = NativeInfoTitleKind::None,
         bool info_title_authored = false, int info_title_right = -1,
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
-        bool mission_title = false, int mission_title_right = -1) {
+        bool mission_title = false, int mission_title_right = -1,
+        NativeMapHoverContext map_hover = {}) {
     PendingNativeField captured;
     auto &state = native_clipped_pending();
     // Both supported addst implementations draw at the current cursor and
@@ -864,7 +891,8 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
                     remember_native_drawn_text_row(graphics->screenx, graphics->screeny, visible,
                         reinterpret_cast<uintptr_t>(source), graphics,
                         top_layer, complete, info_title_kind, info_title_authored, info_title_right,
-                        civilization_field, mission_title, mission_title_right, std::nullopt, epoch);
+                        civilization_field, mission_title, mission_title_right, std::nullopt, epoch,
+                        map_hover);
                     if (!complete.empty())
                         remember_clipped_caption(graphics->screenx, graphics->screeny,
                             visible, complete);
@@ -888,7 +916,8 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         std::shared_ptr<const NativeEmbarkReclaimHistoryParagraph> reclaim_history = {},
         bool reclaim_history_draw = false,
         NativeCivilizationField civilization_field = NativeCivilizationField::None,
-        bool mission_title = false) {
+        bool mission_title = false,
+        NativeMapHoverContext map_hover = {}) {
     const std::array<long, 4> draw_clip = graphics
         ? std::array<long, 4>{graphics->clipx[0], graphics->clipx[1],
                               graphics->clipy[0], graphics->clipy[1]}
@@ -924,7 +953,7 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
     }
     const auto captured_source = remember_native_clipped_draw(graphics, source, just, width, top_layer,
         info_title_kind, info_title_authored, info_title_right, civilization_field,
-        mission_title, mission_title_right);
+        mission_title, mission_title_right, map_hover);
     std::string complete;
     int x = -1, y = -1, dimx = 0, dimy = 0;
     const unsigned char *screen = nullptr;
@@ -1014,7 +1043,8 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
                 first == x ? std::string_view(complete) : std::string_view{},
                 first == x ? info_title_kind : NativeInfoTitleKind::None,
                 info_title_authored, info_title_right, civilization_field,
-                first == x && mission_title, mission_title_right, draw_clip, epoch);
+                first == x && mission_title, mission_title_right, draw_clip, epoch,
+                map_hover);
         if (first == x && visible != complete)
             remember_clipped_caption(x, y, visible, complete);
     } catch (...) {}
@@ -1027,6 +1057,7 @@ static void capture_native_clipped_draw(graphicst *graphics, const NativeString 
     const bool authored = native_info_title_authored(kind, source, caller);
     const auto civilization_field = native_civilization_caption_field(caller);
     const bool mission_title = native_mission_title_caller(caller);
+    const auto map_hover = native_map_hover_context(caller, source);
     std::shared_ptr<const NativeEmbarkReclaimHistoryParagraph> reclaim_history;
     std::unique_lock<std::mutex> history_lock(g_native_embark_reclaim_history_mutex,
         std::defer_lock);
@@ -1057,7 +1088,7 @@ static void capture_native_clipped_draw(graphicst *graphics, const NativeString 
         if (g_native_clipped_caption_hooks.draw)
             g_native_clipped_caption_hooks.draw(graphics, source, just, width);
     }, false, kind, authored, std::move(reclaim_history), history_lock.owns_lock(),
-        civilization_field, mission_title);
+        civilization_field, mission_title, map_hover);
 }
 
 static void capture_native_clipped_flag_draw(graphicst *graphics, const NativeString *source,
@@ -1121,6 +1152,8 @@ static void capture_native_caption_draw(graphicst *graphics, const NativeString 
 }
 
 static void reset_native_caption_capture() {
+    g_native_map_hover_returns.clear();
+    g_native_map_hover_text_offset = 0;
     {
         std::lock_guard<std::mutex> lock(g_native_map_track_caption_mutex);
         g_native_map_track_captions.clear();
@@ -1232,6 +1265,8 @@ static bool install_native_caption_hooks() {
     g_native_info_title_binding = std::move(profile.info_titles);
     g_native_civilization_caption_sites = std::move(profile.civilization_fields);
     g_native_mission_title_returns = std::move(profile.mission_title_returns);
+    g_native_map_hover_returns = std::move(profile.map_hover_returns);
+    g_native_map_hover_text_offset = profile.map_caption_text_offset;
     g_native_announcement_page_binding = std::move(profile.announcement_page);
     g_native_announcement_page_rows = g_native_announcement_page_binding.rows_target
         ? reinterpret_cast<NativeAnnouncementRowsFn>(profile.base +

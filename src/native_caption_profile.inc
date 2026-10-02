@@ -135,6 +135,10 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
     profile.roster_shorten_calls = {0x14239b9, 0x1423b20, 0x1423c24, 0x1423e8c};
     profile.map_caption_build = reinterpret_cast<NativeCaptionBuildFn>(native_pe_address(profile.base, 0x406860));
     profile.map_caption_text_offset = 0x28;
+    // Both native hover loops draw this record's own display_str at +0x28.
+    // The return address establishes that owner before reading its enum.
+    profile.map_hover_returns = {
+        native_pe_address(profile.base, 0x3f9558), native_pe_address(profile.base, 0x3f977a)};
     // Three complete stores to the incoming shadow space; no relative
     // address or branch is displaced by the shared entry-hook trampoline.
     profile.map_caption_build_prefix = {
