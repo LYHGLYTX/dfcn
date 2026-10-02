@@ -417,7 +417,7 @@ Windows x64 环境使用以下命令：
 首次构建、核心或加载器修改及代码构建失败修复后均执行同一命令；从任意目录均可执行：
 
 ```powershell
-& "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File 'D:\program\steam\steamapps\common\Dwarf Fortress\dfcn\build-deploy.ps1'
+& "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File 'D:\workspace\dfcn\build-deploy.ps1'
 ```
 
 Windows 脚本固定使用以下已安装依赖，隔离外部编译变量，不搜索、下载或回退其他工具链：
@@ -426,8 +426,15 @@ Windows 脚本固定使用以下已安装依赖，隔离外部编译变量，不
 - w64devkit 2.9.1：`C:\Users\WIN11\AppData\Local\Programs\dfcn-toolchains\w64devkit-2.9.1\w64devkit`。
 - SDL2 2.30.11 SDK：`C:\Users\WIN11\AppData\Local\Programs\dfcn-toolchains\SDL2-2.30.11\x86_64-w64-mingw32`，使用持久目录，不依赖 `%TEMP%`。
 
+当前 Windows 源码工作区为 `D:\workspace\dfcn`，无需放进游戏目录。
+入口读取本机 `data/runtime/native-pe-images.json` 中的 `reference`、`classic`
+和 `deploy_classic`，显示并部署到配置的游戏目录；相对路径仍以源码根目录为基准。
+首次安装缺少的 `dfhooks.dll` 使用配置中 `bootstrap` 指定的本机现有文件，
+`dfhooks_dfcn.ini` 统一指向游戏目录内的 `dfcn/dfhooks_dfcn.dll`。
+
 Windows 入口内部调用现有 `tools/build.py` 完成数据生成、核心及驻留加载器编译，自动部署
-`dfcn/dfcn_core.dll`、`dfcn/dfhooks_dfcn.dll` 和游戏根目录的 `dfhooks_dfcn.dll`。
+`dfcn/dfcn_core.dll` 和 `dfcn/dfhooks_dfcn.dll`。Windows 游戏根目录只保留引导用的
+`dfhooks.dll` 和 `dfhooks_dfcn.ini`，入口清理旧版遗留的根目录 `dfhooks_dfcn.dll`。
 无需单独生成数据或复制 DLL，也不要绕过入口直接调用构建工具。固定参数会重建核心
 和加载器；依赖缺失或构建失败时，按明确错误修复固定路径或入口配置，再执行同一命令。
 完整执行约定以 `AGENTS.md` 为准，旧文档和历史对话中的其他构建命令不能替代本入口。

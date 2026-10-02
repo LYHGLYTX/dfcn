@@ -12,9 +12,9 @@
 Linux 使用 Linux 原生工具和 `.so` 部署；Windows 使用 Windows 原生工具和 DLL 部署，不交叉调用另一系统的入口。
 两个入口均无须参数，内部调用同一 `tools/build.py`，完成数据生成、核心与加载器编译及正式部署；不另行复制产物或单独运行生成器。
 
-### Linux（当前环境）
+### Linux
 
-当前工作区为 `/home/lulika/.local/share/Steam/steamapps/common/Dwarf Fortress/dfcn`。
+Linux 工作区为 `/home/lulika/.local/share/Steam/steamapps/common/Dwarf Fortress/dfcn`。
 任务确需构建代码时，直接执行根目录 `build-deploy.sh`；仅修改数据文件时不执行。从任意目录均可执行：
 
 ```bash
@@ -28,17 +28,21 @@ Linux 使用 Linux 原生工具和 `.so` 部署；Windows 使用 Windows 原生�
 
 ### Windows
 
-Windows 工作区为 `D:\program\steam\steamapps\common\Dwarf Fortress\dfcn`。
+Windows 当前源码工作区为 `D:\workspace\dfcn`，游戏目录与源码分开。
+本机游戏及官网版映像、官网版部署开关和首次安装用的 `dfhooks.dll` 来源由
+`data/runtime/native-pe-images.json` 配置；Steam 游戏目录为
+`D:\program\steam\steamapps\common\Dwarf Fortress`。
 任务确需构建代码且宿主为 Windows 时，执行根目录 `build-deploy.ps1`；仅修改数据文件时不执行。从任意目录均可执行：
 
 ```powershell
-& "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File 'D:\program\steam\steamapps\common\Dwarf Fortress\dfcn\build-deploy.ps1'
+& "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File 'D:\workspace\dfcn\build-deploy.ps1'
 ```
 
 - 固定 Python：`C:\Users\WIN11\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe`。
 - 固定工具链：`C:\Users\WIN11\AppData\Local\Programs\dfcn-toolchains\w64devkit-2.9.1\w64devkit`，使用其中的 `bin\g++.exe`。
 - 固定 SDL2 SDK：`C:\Users\WIN11\AppData\Local\Programs\dfcn-toolchains\SDL2-2.30.11\x86_64-w64-mingw32`。已从当前可用 SDK 安装到此持久目录，不依赖 `%TEMP%`。
-- 正式产物固定为 `dfcn\dfcn_core.dll`、`dfcn\dfhooks_dfcn.dll`、游戏根目录 `dfhooks_dfcn.dll`。现有配置、词表和规则资源原地使用。
+- 正式产物固定为 `dfcn\dfcn_core.dll`、`dfcn\dfhooks_dfcn.dll`。Windows 游戏根目录只放引导所需的 `dfhooks.dll` 和 `dfhooks_dfcn.ini`，不再部署 `dfhooks_dfcn.dll`；入口清理旧版遗留的根目录同名 DLL。现有配置、词表和规则资源原地使用。
+- 源码工作区保留本机编译产物；独立游戏安装所需的运行数据和 DLL 由同一入口部署到其 `dfcn`。首次安装缺少的 `dfhooks.dll` 从本机配置来源安装，`dfhooks_dfcn.ini` 指向该游戏安装的 `dfcn/dfhooks_dfcn.dll`。
 
 ### 所有结果都继续使用当前系统的同一入口
 
