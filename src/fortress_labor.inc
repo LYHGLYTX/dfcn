@@ -198,7 +198,6 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
     const auto band = fortress_labor_band(rows);
     if (!band) return;
     if (band->header_y < 0 && band->standing_tabs_y < 0) return;
-    const NativePanelBorders borders(*gps_);
     const auto settings = native_ui_settings();
     const bool classic = settings && settings->classic;
     const auto captures = captured_clipped_captions();
@@ -279,36 +278,22 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
             if (right > x && right <= band->name_x) { picture = x; left = right; }
         }
         if (picture < 0) continue;
-        // The resident's own picture+caption strip is the text widget. The
-        // outer fortress frame has tabs joined into its edges and need not
-        // satisfy a plain, closed nine-slice panel. Requiring that outer
-        // rectangle rejected valid records before their wrapped fields were
-        // even examined, leaving generic per-fragment centering in control.
-        int probe = left;
-        while (probe < gps_->dimx && probe <= band->name_x + 4 && rows[y][probe] == ' ') ++probe;
+        // The complete portrait and worker-policy control own this record
+        // in both modes. The control can replace the caption's right cap,
+        // and a wrapped profession can replace its bottom edge; neither a
+        // closed caption rectangle nor the outer fortress frame is required.
         int right = -1;
-        if (classic) {
-            // 53.16 InterfaceButtonMainType: WORKER_ONLY_DO_ASSIGNED_JOBS
-            // and WORKER_DO_ANY_AVAILABLE_JOB are the same four-cell slot.
-            for (int x = left; x + 4 <= gps_->dimx; ++x) {
-                if (!native_main_button_at(*gps_, x, y, 357) &&
-                    !native_main_button_at(*gps_, x, y, 358)) continue;
-                if (fortress_labor_classic_caption_skin(*gps_, rows, left, x, y)) {
-                    right = x;
-                    break;
-                }
+        // 53.16 InterfaceButtonMainType: WORKER_ONLY_DO_ASSIGNED_JOBS
+        // and WORKER_DO_ANY_AVAILABLE_JOB are the same four-cell slot.
+        for (int x = left; x + 4 <= gps_->dimx; ++x) {
+            if (!native_main_button_at(*gps_, x, y, 357) &&
+                !native_main_button_at(*gps_, x, y, 358)) continue;
+            if (!classic || fortress_labor_classic_caption_skin(*gps_, rows, left, x, y)) {
+                right = x;
+                break;
             }
-            if (right < 0) continue;
-        } else if (probe < gps_->dimx && probe <= band->name_x + 4) {
-            const auto caption = native_button_text_span(*gps_, probe, probe + 1, y);
-            if (caption && caption->first >= left && caption->first <= probe)
-                right = caption->second;
         }
-        if (right < 0) {
-            const auto panel = native_panel_interior(borders, *gps_, picture, band->name_x + 4, y);
-            if (!panel || band->tabs_y < panel->y) continue;
-            right = panel->x + panel->w;
-        }
+        if (right < 0) continue;
         // Native text can extend under the first control cell (for example
         // the final 'r' in Wound Dresser). Preserve that byte for translation;
         // only the Chinese display box must end before the control graphic.
@@ -385,16 +370,92 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
             const size_t tile = static_cast<size_t>(field.x) * gps_->dimy + field.y;
             return flags ? flags[tile] & ((1u << 3) | (1u << 4)) : 0u;
         };
+        // The worker control is drawn after the skill and can overwrite its
+        // final letters even in classic mode. Such a draw no longer matches
+        // the map-text mask, which removes the entire skill from rows. Read
+        // its complete source from the shared draw capture, but claim only
+        // the surviving prefix inside this proven portrait/control record.
+        // This also owns skills written over the record's lower border.
+        const std::array draw_layers{&draws, &top_draws};
+        for (const auto *layer : draw_layers) for (const auto &draw : *layer) {
+            if (!draw.caption_source || draw.x <= left || draw.x >= right ||
+                draw.y < y - 1 || draw.y > y + 1 || draw.source.empty()) continue;
+            std::string source = draw.complete_source.empty()
+                ? draw.source : draw.complete_source;
+            for (const auto &capture : captures)
+                if (capture.x == draw.x && capture.y == draw.y &&
+                    capture.visible == draw.source) {
+                    source = capture.complete;
+                    break;
+                }
+            const std::string normalized = normalize_utterance(source);
+            const auto skill = translate_rated_skill_list(normalized);
+            if (!skill || skill->size() != 1) continue;
+            int end = std::min(right, draw.x + static_cast<int>(draw.source.size()));
+            if (draw.draw_clip) {
+                const auto &clip = *draw.draw_clip;
+                if (draw.x < clip.x || draw.y < clip.y || draw.y >= clip.y + clip.h)
+                    continue;
+                end = std::min(end, clip.x + clip.w);
+            }
+            const int length = end - draw.x;
+            if (length <= 0) continue;
+            const std::string visible = draw.source.substr(0, length);
+            const auto claim_skill = [&](int row_y) {
+                for (int offset = 0; offset < length; ++offset) {
+                    const int x = draw.x + offset;
+                    const auto ch = visible_char_at(x, row_y);
+                    bool top_layer = false;
+                    cell_at(x, row_y, &top_layer);
+                    if (top_layer != draw.top_layer ||
+                        (ch ? ch : ' ') != static_cast<unsigned char>(visible[offset]) ||
+                        (ch && ch < ' ') || is_cp437_box_separator(visible, offset))
+                        return false;
+                }
+                // Adjacent columns may have only one space, so the grid
+                // splitter can merge a name and skill. Cut at this actual
+                // skill draw before resolving any identity or profession.
+                std::vector<Field> separated;
+                for (const Field &field : fields) {
+                    if (field.y != row_y || field.x >= end || field.end <= draw.x) {
+                        separated.push_back(field);
+                        continue;
+                    }
+                    const auto retain = [&](int first, int last) {
+                        while (first < last && field.source[first - field.x] == ' ') ++first;
+                        while (last > first && field.source[last - field.x - 1] == ' ') --last;
+                        if (first < last)
+                            separated.push_back({first, row_y, last,
+                                field.source.substr(first - field.x, last - first), {}, {}});
+                    };
+                    retain(field.x, std::min(field.end, draw.x));
+                    retain(std::max(field.x, end), field.end);
+                }
+                separated.push_back({draw.x, row_y, end, visible, normalized,
+                    skill->front().target, true});
+                fields = std::move(separated);
+                return true;
+            };
+            if (!claim_skill(draw.y)) continue;
+            const Field drawn{draw.x, draw.y, end, visible, {}, {}};
+            const auto half = half_at(drawn);
+            const int mate = half == (1u << 3) ? draw.y + 1
+                : half == (1u << 4) ? draw.y - 1 : -1;
+            if (mate < y - 1 || mate > y + 1) continue;
+            const Field paired{draw.x, mate, end, visible, {}, {}};
+            if (half_at(paired) == (half == (1u << 3) ? (1u << 4) : (1u << 3)))
+                claim_skill(mate);
+        }
         for (Field &field : fields) {
+            if (field.skill) continue;
             std::string source = field.source;
             for (const auto &capture : captures)
                 if (capture.x == field.x && capture.y == field.y && capture.visible == source) {
                     source = capture.complete;
                     break;
                 }
-            // Resolve the formatter's own field before combining wrapped
-            // names and professions. A later per-draw replacement would
-            // discard the combined target or revive a suppressed continuation.
+            // A later skill can overwrite the identity's suffix. The
+            // surviving prefix still belongs to that formatter/string owner.
             bool top_layer = false;
             cell_at(field.x, field.y, &top_layer);
             for (const auto &draw : top_layer ? top_draws : draws) {
@@ -409,7 +470,7 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
                         visible = capture.visible;
                         break;
                     }
-                if (visible != field.source) continue;
+                if (!visible.starts_with(field.source)) continue;
                 field.identity_target = draw.unit_identity_target;
                 source = complete;
                 break;
@@ -423,50 +484,10 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
                 }
             }
         }
-        // The worker control is drawn after the skill and can overwrite its
-        // final letters even in classic mode. Such a draw no longer matches
-        // the map-text mask, which removes the entire skill from rows. Read
-        // its complete source from the shared draw capture, but claim only
-        // the surviving prefix inside this proven portrait/control record.
-        // This also owns skills written over the record's lower border.
-        for (const auto &draw : draws) {
-            if (!draw.caption_source || draw.x <= left || draw.x >= right ||
-                draw.y < y - 1 || draw.y > y + 1 || draw.source.empty()) continue;
-            std::string source = draw.source;
-            for (const auto &capture : captures)
-                if (capture.x == draw.x && capture.y == draw.y &&
-                    capture.visible == source) {
-                    source = capture.complete;
-                    break;
-                }
-            const std::string normalized = normalize_utterance(source);
-            const auto skill = translate_rated_skill_list(normalized);
-            if (!skill || skill->size() != 1) continue;
-            const int length = static_cast<int>(std::min(draw.source.size(),
-                static_cast<size_t>(right - draw.x)));
-            const std::string visible = draw.source.substr(0, length);
-            bool current = true;
-            for (int offset = 0; offset < length; ++offset) {
-                const auto ch = visible_char_at(draw.x + offset, draw.y);
-                if ((ch ? ch : ' ') != static_cast<unsigned char>(visible[offset]) ||
-                    (ch && ch < ' ') || is_cp437_box_separator(visible, offset)) {
-                    current = false;
-                    break;
-                }
-            }
-            if (!current) continue;
-            const int end = draw.x + length;
-            const auto overlaps = std::find_if(fields.begin(), fields.end(),
-                [&](const Field &field) {
-                    return field.y == draw.y && field.x < end && field.end > draw.x;
-                });
-            Field field{draw.x, draw.y, end, visible, normalized,
-                skill->front().target, true};
-            if (overlaps == fields.end()) fields.push_back(std::move(field));
-            else if (overlaps->x == draw.x && overlaps->end == end)
-                *overlaps = std::move(field);
-        }
         if (fields.empty()) continue;
+        std::sort(fields.begin(), fields.end(), [](const Field &a, const Field &b) {
+            return a.y != b.y ? a.y < b.y : a.x < b.x;
+        });
         for (Field &field : fields) {
             // Another column can lie between the two native half-font
             // copies in this vector. Pair by source geometry, not adjacency.
@@ -507,12 +528,21 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
                     if (!profession.empty()) profession += ' ';
                     profession += sources[index];
                 }
-                const auto role = identity_fields.size() == 2 &&
-                    identity_fields.back()->identity_target
-                    ? identity_fields.back()->identity_target
-                    : translate_unit_profession(profession);
-                if (role)
-                    target = *first_field->identity_target + "，" + *role;
+                // A shortened first draw can retain the complete comma-
+                // delimited identity. Its visible continuation then repeats
+                // an office already present in the formatter-owned target.
+                const size_t comma = sources.front().find(',');
+                if (comma != std::string::npos && normalize_utterance(
+                        std::string_view(sources.front()).substr(comma + 1)) == profession) {
+                    target = first_field->identity_target;
+                } else {
+                    const auto role = identity_fields.size() == 2 &&
+                        identity_fields.back()->identity_target
+                        ? identity_fields.back()->identity_target
+                        : translate_unit_profession(profession);
+                    if (role)
+                        target = *first_field->identity_target + "，" + *role;
+                }
             }
         }
         if (!target && !complete.empty())

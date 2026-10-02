@@ -85,6 +85,15 @@ std::vector<uint8_t> Overlay::capture_map_text_cells() const {
         for (const auto &field : chooser_fields)
             for (int x = field.x; x < field.x + field.length; ++x)
                 cells[static_cast<size_t>(x) * gps_->dimy + field.y] = 1;
+        // The chooser excludes Labor because its worker controls coexist
+        // with a separate skill column. Retain that page through the same
+        // dedicated reader that will later translate and lay out its rows.
+        auto labor_rows = context;
+        std::vector<Match> labor_fields;
+        append_fortress_labor_rows(labor_rows, labor_fields, -1);
+        for (const auto &field : labor_fields)
+            for (int x = field.x; x < field.x + field.length; ++x)
+                cells[static_cast<size_t>(x) * gps_->dimy + field.y] = 1;
         std::vector<NativeClippedCaption> covered_video_captions;
         {
             std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);

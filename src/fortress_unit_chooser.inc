@@ -11,6 +11,11 @@ struct FortressUnitChooser {
 static std::optional<FortressUnitChooser> fortress_unit_chooser(
         const graphicst &gps, const std::vector<std::string> &rows,
         bool closed_frame_only = false) {
+    // Labor owns this same sorter/portrait/worker-toggle combination, plus
+    // its separate rated-skill column. The workshop chooser deliberately
+    // treats worker-toggle records as identities without skills, so it must
+    // never consume the Labor source before that page's own reader runs.
+    if (fortress_labor_band(rows)) return std::nullopt;
     const auto settings = native_ui_settings();
     if (!settings) return std::nullopt;
     if (settings->classic && !closed_frame_only) {
