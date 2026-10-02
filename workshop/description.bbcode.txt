@@ -4,6 +4,8 @@ DFCN 是 Byayoi 同人社区的《Dwarf Fortress（矮人要塞）》汉化作�
 
 [b]当前适配游戏版本：53.16。本工坊项目提供 Windows x64 运行文件，支持 Steam 版与官网免费版。[/b]项目同时提供 Linux 原生适配，相关说明见 GitHub。
 
+[b]当前汉化版本：53.16-20261002.2（2026-10-02）。[/b]完整逐条更新日志见本项目的改动说明及订阅目录中的 CHANGELOG.txt。
+
 [url=https://github.com/pokemonchw/dfcn]GitHub 项目主页[/url]
 [url=https://github.com/pokemonchw/dfcn/releases]GitHub Releases[/url]
 [url=https://byayoi.org/]Byayoi 同人社区[/url]
