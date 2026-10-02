@@ -2,13 +2,21 @@ base = "health::contaminant"
 
 [[rulesets]]
 [rulesets.rules]
+# Native unit-contaminant name constructor: Steam RVA 0x657f90,
+# classic RVA 0x6559b0. Powder state 3 and amounts <25 / 25..49 / >=50
+# select six suffixes; material types 219..418 use five "of" prefixes.
+# All twelve native branch combinations share these eleven productions.
+"{material} specks" = "少量{material}"
+"{material} dusting" = "薄薄一层{material}"
+"{material} coating" = "覆有{material}"
 "{material} spatter" = "{material}飞溅物"
 "{material} smear" = "{material}污迹"
-"spatter of {material}" = "{material}飞溅物"
 "{material} covering" = "被{material}覆盖"
-# Body deposits have no item picture or action buttons. The quantity is
-# part of the complete caption, not an untranslated standalone prefix.
+"specks of {material}" = "少量{material}"
+"dusting of {material}" = "薄薄一层{material}"
 "coating of {material}" = "覆有{material}"
+"spatter of {material}" = "{material}飞溅物"
+"smear of {material}" = "{material}污迹"
 
 # Native map look/hover captions: the quantity precedes a complete material
 # name, including creature/plant prefixes and material phases. Keep all
@@ -25,10 +33,9 @@ base = "health::contaminant"
 [[rulesets]]
 name = "material"
 [rulesets.rules]
-"{::materials}" = "{::materials}"
-# The native owner precedes the complete species/material name. Keep this
-# personal-name role scoped to deposits, not ordinary material adjectives.
-"{::text::person}'s {::materials}" = "{::text::person}的{::materials}"
+# The shared complete material noun resolver includes native phase/prefix
+# names, personal owners and generated substances from the existing glossary.
+"{::text::material}" = "{::text::material}"
 
 [[rulesets]]
 name = "inventory"

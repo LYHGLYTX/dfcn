@@ -12,7 +12,8 @@ int Overlay::caption_diagnostic(std::string_view route, std::string_view source,
     if (source.empty() || (route != "item" && route != "inventory" &&
             route != "building" && route != "tile" && route != "term" &&
             route != "subject" && route != "person" && route != "composition" &&
-            route != "engraving" && route != "planned_engraving")) {
+            route != "engraving" && route != "planned_engraving" &&
+            route != "contaminant" && route != "contaminant_material")) {
         output = "Invalid diagnostic route or empty source";
         return -4;
     }
@@ -64,6 +65,14 @@ int Overlay::caption_diagnostic(std::string_view route, std::string_view source,
         else if (route == "subject") target = translate_symbol_elements(*native);
         else if (route == "person") target = translate_legends_name(*native, true);
         else if (route == "composition") target = translate_compositional(*native);
+        else if (route == "contaminant" || route == "contaminant_material") {
+            // Use the unit Items panel's exact namespace. Generic item and
+            // root composition can instead parse a deposit as a named item.
+            std::vector<size_t> origins;
+            target = RULESETS.translate_with_origins(native_text_to_utf8(*native),
+                route == "contaminant" ? "::health::contaminant::inventory"
+                    : "::health::contaminant::material", origins);
+        }
         else if (route == "tile")
             target = translate_info_panel_title(NativeInfoTitleKind::Terrain, *native);
         else if (route == "engraving")
