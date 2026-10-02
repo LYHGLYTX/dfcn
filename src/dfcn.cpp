@@ -776,6 +776,9 @@ static constexpr int kFortressLocationListRule = -138;
 static constexpr int kFortressUnitChooserRule = -139;
 static constexpr int kDfhackStocksHintRule = -140;
 static constexpr int kDfhackHotkeysHintRule = -141;
+// Complete fields in the native adventure combat chooser, including its
+// independently drawn unit summary and action ratings.
+static constexpr int kAdventureCombatFieldRule = -142;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -3232,6 +3235,9 @@ private:
     std::unordered_map<std::string, std::vector<std::string>> native_word_ids_;
     std::unordered_map<std::string, std::string> name_editor_translations_;
     fs::file_time_type name_editor_mtime_{};
+    std::unordered_map<std::string, std::string> adventure_target_literals_;
+    std::vector<Rule> adventure_target_templates_;
+    fs::file_time_type adventure_target_mtime_{};
     uint64_t name_editor_search_revision_ = 0;
     // Embark instruments are named with one or more native Dwarven words, and
     // the Tools list can append an English instrument-piece noun. The value is
@@ -3602,6 +3608,12 @@ private:
     bool load_procedural_name_grammar();
     bool load_procedural_terms();
     void load_name_editor_translations();
+    void load_adventure_target_translations();
+    std::optional<std::string> translate_adventure_target_text(
+        std::string_view source, char kind = 's') const;
+    void append_adventure_combat_fields(std::vector<std::string> &rows,
+        std::vector<Match> &matches, int only_y, const unsigned char *raw) const;
+    void layout_adventure_combat_fields(SDL_Renderer *renderer);
     std::optional<std::string> translate_name_editor_meaning(std::string_view source,
         std::string_view native_word, ProceduralNamePartOfSpeech part,
         std::string_view word_id = {}) const;
@@ -5012,6 +5024,7 @@ bool Overlay::load_rules() {
     build_trie();
     rebuild_announcement_combat_rules();
     load_name_editor_translations();
+    load_adventure_target_translations();
     load_raw_material_names();
     load_symbol_shape_forms();
     std::error_code ec;
@@ -6852,14 +6865,17 @@ void Overlay::maybe_reload() {
     const auto now = std::chrono::steady_clock::now();
     if (!reload && config_.hot_reload && now - last_reload_check_ >= std::chrono::seconds(1)) {
         last_reload_check_ = now;
-        std::error_code ec1, ec2, ec3, ec4;
+        std::error_code ec1, ec2, ec3, ec4, ec5;
         const auto cm = fs::last_write_time(runtime::config_path(), ec1);
         const auto mm = fs::last_write_time(fs::u8path(config_.mapping_path), ec2);
         const auto nm = fs::last_write_time(
             fs::u8path(config_.mapping_path).parent_path() / "name-editor.tsv", ec3);
         const auto im = fs::last_write_time(
             fs::u8path(config_.mapping_path).parent_path() / "instrument-translations.tsv", ec4);
-        reload = (!ec4 && im != instrument_translations_mtime_) ||
+        const auto am = fs::last_write_time(
+            fs::u8path(config_.mapping_path).parent_path() / "adventure-target-translations.tsv", ec5);
+        reload = (!ec5 && am != adventure_target_mtime_) ||
+            (!ec4 && im != instrument_translations_mtime_) ||
             (!ec1 && cm != config_mtime_) || (!ec2 && mm != mapping_mtime_) ||
             (!ec3 && nm != name_editor_mtime_);
     }
@@ -19842,6 +19858,8 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "embark_introduction.inc"
 #include "fortress_hud.inc"
 #include "adventure_target_rows.inc"
+#include "adventure_combat_geometry.inc"
+#include "adventure_combat_panel.inc"
 #include "fortress_squads.inc"
 #include "fortress_zones.inc"
 #include "fortress_stockpiles.inc"
@@ -20665,6 +20683,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
 
     context_detail.checkpoint(RenderTimingStage::Captions);
     append_fortress_machine_power_rows(screen_rows, result, only_y);
+    if (!announcement_panel_only)
+        append_adventure_combat_fields(screen_rows, result, only_y, screen_override);
 #include "native_unit_identity_rows.inc"
     // A roster shortens both names and separately drawn professions. Resolve
     // the complete captured field, including roles whose compressed spelling
@@ -44783,6 +44803,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     // Tall attack-target records retain their complete text column before
     // generic page layout can center names and statuses independently.
     layout_adventure_target_rows(renderer);
+    layout_adventure_combat_fields(renderer);
     // Resolve native half-font rows before detaching a whole information card.
     // Empty duplicate spans still own suppression, but cannot become new rows.
     if (std::any_of(prepared_matches_.begin(), prepared_matches_.end(),

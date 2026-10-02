@@ -1,0 +1,355 @@
+OFFLINE DECOMPILATION: adventure attack / wrestling panel helper dependencies
+Source: local Windows 53.16 Steam/reference and official/classic PE files named
+by data/runtime/native-pe-images.json. Addresses below are reference RVAs;
+helper-edition-function-ranges.tsv records the corresponding classic ranges.
+This is source reconstruction, not an executed game display or a test report.
+All pointer loads, SSE copies, integer copies and printable movabs constants
+are recorded in helper-reference-literals.tsv and helper-classic-literals.tsv.
+The .pdata table splits some functions into adjacent fragments; the complete
+skill-rating and item-name helpers include these fragments explicitly.
+
+1. SELECTED TARGET HEADER: 0x872f10..0x8733a4
+
+render_selected_target(unit, S, right, top):
+    # Caller 0x878acf..0x878aeb passes S=panel_left+2,
+    # right=panel_right-10 and top=panel_top+2.
+    draw_texture_rectangle(S, right, top, top+7)
+    draw_portrait_frame(S, S+11, top, top+5)
+    draw_native_unit_portrait_or_character(unit)
+    # 0x8732b9..0x87331c, mode=1, r9b=1, stack byte=1:
+    draw_text(S+13, top+1, unit_identity_132e430(unit, mode=1), white)
+    y = top+2
+    for action in unit.actions_at_7d0:
+        if action.type == -1: continue
+        # 0x87333f..0x873355; maximum six status rows:
+        draw_cursor(S+16, y)
+        render_action_status_852640(action, unit)
+        y += 1
+        if y >= top+8: break
+
+The screenshot's cyan Talking field belongs to status enum 7, not a Talk
+button. The name and status therefore have different native x anchors.
+The multiple-target list branch in 0x878600 uses the same identity and status
+helpers, key at L+13, name at L+15, status at L+18, eight rows per record.
+0x872d70..0x872ed9 only calculates panel bounds; it formats no text.
+
+2. ACTION STATUS: 0x852640..0x8540fc
+
+render_action_status(action, owner):
+    # type=int32(action+0), dispatch table 0x8540fc, valid range 0..27.
+    switch action.type:
+        0 at 0x852691: movement()
+        1 at 0x852b5e: attack()
+        2 at 0x853124: emit("Jumping")
+        3 at 0x853238: emit("Holding terrain")
+        4 at 0x8532a7: emit("Releasing hold on terrain")
+        5 at 0x853642: emit("Climbing")
+        6 at 0x8536f8: emit("Working")
+        7 at 0x853792: emit("Talking")
+        8 at 0x8535e5: emit("Regaining balance")
+        9 at 0x8537f5: emit("Parrying")
+       10 at 0x853847: emit("Blocking")
+       11 at 0x853899: dodge()
+       12 at 0x853bf6: deflection_recovery()
+       13 at 0x853d19: emit("Standing Up")
+       14 at 0x853d7f: emit("Lying Down")
+       15 at 0x8536f8: emit("Working")
+       16 at 0x8531dc: emit("Pushing Object")
+       17 at 0x853694: emit("Sucking Blood")
+       18 at 0x8534a8: emit("Holding item")
+       19 at 0x853502: emit("Releasing hold on item")
+       20 at 0x85331a: emit("Mounting")
+       21 at 0x85336c: emit("Dismounting")
+       22 at 0x8533d2: emit("Leading animal")
+       23 at 0x853437: emit("Stop leading animal")
+       24 at 0x853ddb: load_ammo()
+       25 at 0x853fbb: emit("Shooting weapon")
+       26 at 0x85405f: emit("Throwing item")
+       27 at 0x853572: emit("Recovering after shooting")
+    default at 0x8531b4: return # no native text
+
+movement():
+    # 0x8526a2, action+0x1c bit0:
+    emit("Charging" if action.flags_1c & 1 else "Moving")
+    if owner.path_x_at_c8 is empty: return
+    # owner current x/y/z are int16 at +a8/+aa/+ac. For a carried rider
+    # (owner+110 bit0x02000000), reference type 11 obtains carrier coords
+    # through virtual calls and 0xc8baa0 instead.
+    origin = owner_or_carrier_position
+    destination = first(owner.path_x_c8, owner.path_y_e0, owner.path_z_f8)
+    emit(" ")
+    emit_lowercase_direction(origin, destination)
+
+dodge():
+    # 0x8538f7..0x853912: int16 triples at action+08/+0a/+0c and
+    # action+14/+16/+18 are the source and destination.
+    emit("Dodging")
+    emit(" ")
+    emit_lowercase_direction(action.source_position, action.destination_position)
+
+emit_lowercase_direction(origin, destination):
+    if destination.y > origin.y:
+        emit("southeast" if destination.x > origin.x else
+             "southwest" if destination.x < origin.x else "south")
+    elif destination.y < origin.y:
+        emit("northeast" if destination.x > origin.x else
+             "northwest" if destination.x < origin.x else "north")
+    elif destination.x > origin.x: emit("east")
+    elif destination.x < origin.x: emit("west")
+    elif destination.z > origin.z: emit("upward"); return
+    elif destination.z < origin.z: emit("downward"); return
+    else: return
+    if destination.z > origin.z: emit(" (above)")
+    elif destination.z < origin.z: emit(" (below)")
+
+attack():
+    target = unit_by_id(action+08) # lookup global unit vector 0x23e50b0
+    active = int32(action+48) > 0
+    if target is missing:
+        text = "Attacking" if active else "Recovering from attacking"
+        emit_attack_text(text)
+        return
+    reveal = 0
+    if target == player_unit:
+        target_text = "you"
+        # Search player fields +dfc, +e24 and +e9c for this owner's unit
+        # id (+130) and action id (+04); selected int32 supplies reveal.
+        reveal = player_reveal_flags_for(owner.id, action.id)
+    else:
+        target_text = reference_1331500(target)
+    text = ""
+    if active and reveal & 4:
+        stage = int32(action+48)
+        text += "Remote: " if stage >= 5 else "Distant: " if stage == 4 else
+                "Starting: " if stage == 3 else "Incoming: " if stage == 2 else
+                "IMMINENT: " if stage == 1 else ""
+    text += ("Attacking" if active else "Recovering from attacking")
+    text += " " + target_text
+    method = int32(action+0c)
+    if method == 0: text += " with wrestling"
+    elif method == 1: text += " with grab"
+    elif int32(action+24) != -1:
+        weapon = item_by_id(action+24)
+        if weapon exists:
+            text += " with "
+            if active and reveal & 8: text += attack_style_flags(action+3c)
+            text += item_name_c65450(weapon, mode=0, argument=-1)
+            if active and reveal & 1:
+                text += " "
+                attacks = weapon.virtual_at_438()
+                if attacks exists and not attacks.empty:
+                    raw_attack = attacks[int32(action+2c)]
+                    if raw_attack.sub_name_at_50 != "NO_SUB":
+                        text += raw_attack.sub_name_at_50 + " "
+                    text += raw_attack.name_at_10
+                else: text += "strike"
+    elif reveal & 1:
+        text += " with "
+        if active and reveal & 8: text += attack_style_flags(action+3c)
+        natural_attack_index = int32(action+2c)
+        if natural_attack_index == -1: text += "push"
+        else:
+            natural_attack = owner.body_at_5f8.attacks_at_18[natural_attack_index]
+            text += bodypart_13345d0(owner, natural_attack.bodypart_at_08,
+                                   ordinal=0, grammatical_number=2)
+            text += " " + natural_attack.name_at_40
+    if active and reveal & 2 and int16(action+28) != -1:
+        text += ", aiming for "
+        text += bodypart_13345d0(target, int16(action+28), 0, 2)
+    emit_attack_text(text)
+
+attack_style_flags(flags):
+    # Independent bits, appended in this order; combinations are possible.
+    result = ""
+    if flags & 0x20: result += "quick"
+    if flags & 0x40: result += "heavy"
+    if flags & 0x80: result += "wild"
+    if flags & 0x100: result += "precise"
+    if result != "": result += " "
+    return result
+
+emit_attack_text(text):
+    # 0x8530e2..0x853110 uses the ordinary native string renderer.
+    # 0x52d910 is called only if text.size exceeds global dimx 0x23cd784.
+    if text.size > native_screen_dimx: native_string_helper_52d910(text)
+    emit(text, color=4, background=0, bright=1)
+
+deflection_recovery():
+    text = "Recovering from deflection"
+    # Optional item id=int32(action+0c), global item vector 0x23e5450.
+    if item_by_id(action+0c) exists:
+        text += " with " + item_name_c65450(item, 0, -1)
+    emit(text)
+
+load_ammo():
+    item = item_by_id(int32(action+0c))
+    # 0x853e5f..0x853e88, virtual item type equals 24 and
+    # its raw subtype (item+e8) int32+1cc equals 0 selects Nocking.
+    text = "Nocking" if item and item.virtual_type() == 24 and
+                         int32(item.raw_subtype_at_e8+1cc) == 0 else "Loading"
+    text += " ammo"
+    emit(text)
+
+3. DEFENSIVE SKILL RATINGS, not arbitrary skill-name labels
+
+rating_text_7737c0(destination, rating):
+    destination = ""
+    # unsigned comparison at 0x7737db and table 0x77394c:
+    if uint32(rating) > 14: return "Legendary"
+    return ["Dabbling", "Novice", "Adequate", "Competent", "Skilled",
+            "Proficient", "Talented", "Adept", "Expert", "Professional",
+            "Accomplished", "Great", "Master", "High Master", "Grand Master"][rating]
+
+The native panel calls this helper rather than the general ranked-skill
+formatter. It emits neither a skill name nor Legendary+N, rust markers,
+or Not. All sixteen native outcomes use the existing text::skill_rating
+resolver, which returns an ability rating instead of a generic adjective.
+
+defensive_labels_in_renderer():
+    # Stage 2 root Dodge at 0x879d1e/0x879d2a:
+    "Dodge (" + rating_text(effective_skill(player, 0x67)) + ")"
+    # Stage 2 root Block at 0x879d82/0x879d8e:
+    "Block (" + rating_text(effective_skill(player, 0x2c)) + ")"
+    # Stage 6 selected shield at 0x879977:
+    "Block " + optional_attack_item_name + " with " + item_name(shield) +
+        " (" + rating_text(effective_skill(player, 0x2c)) + ")"
+    # Selected parry 0x879c68..0x879c9a, then max /4 Fighter 0x61:
+    "Parry " + optional_attack_item_name + " with " + item_name(weapon) +
+        " (" + rating_text(max(weapon_skill(player, weapon, true),
+                              effective_skill(player, 0x61) / 4)) + ")"
+    # Root Parry 0x879e26..0x879e99 scans all available weapon pointers:
+    "Parry (" + rating_text(max_over_weapons(max(weapon_skill(player, w, true),
+                              effective_skill(player, 0x61) / 4))) + ")"
+
+weapon_skill_133e700(player, weapon, use_primary):
+    if weapon is null: skill_id = 0x63
+    elif use_primary: skill_id = weapon.virtual_at_4f0()
+    else: skill_id = weapon.virtual_at_4f8()
+    return effective_skill_133e7a0(player, skill_id)
+
+effective_skill_133e7a0(unit, skill_id):
+    if unit.current_soul_at_a98 is null or uint16(skill_id) == 0xffff: return 0
+    skill = lookup_skill_0ba1a0(skill_id, unit.current_soul+218)
+    rating = max(0, skill.rating_at_04 - skill.rust_penalty_at_10) if skill else 0
+    # The remaining numeric-only branches adjust rating for unit state.
+    # Five independent half penalties: +81c/+7fc/+7fe/+820/+980 if >0
+    # and unit+814==-1. 0x13835e0()==0 quarters this result.
+    # +818>=100 with +814!=0 and +360==-1 halves; +984>=2000/4000/6000
+    # repeatedly multiplies by 3/4 when +814!=0. +828/+82c flags and
+    # unit+9a8 curse/status enum0x2e may apply 1/2 or 3/4.
+    # Mode global 0x189c298==0: +98c>=50000, +988>=75000,
+    # +990>=150000 each halves. Other mode uses stepped thresholds:
+    # +98c: 115200=>9/10,172800=>3/4,345600=>1/2;
+    # +988: 172800=>9/10,1209600=>3/4,2592000=>1/2;
+    # +990: 172800=>9/10,259200=>3/4,345600=>1/2,864000=>1/4.
+    return native_state_adjusted_rating
+
+4. COMPACT DIRECTION CAPTION: 0x74f220..0x74f3a9
+
+append_direction(origin_x, origin_y, origin_z, destination_x, destination_y,
+                 destination_z, string):
+    if destination_x < origin_x:
+        string += "NW" if destination_y < origin_y else
+                  "SW" if destination_y > origin_y else "West"
+    elif destination_x > origin_x:
+        string += "NE" if destination_y < origin_y else
+                  "SE" if destination_y > origin_y else "East"
+    elif destination_y < origin_y: string += "North"
+    elif destination_y > origin_y: string += "South"
+    elif destination_z < origin_z: string += "Below"; return
+    elif destination_z > origin_z: string += "Above"; return
+    else: string += "Here"; return
+    if destination_z < origin_z: string += "/Below"
+    elif destination_z > origin_z: string += "/Above"
+
+Thus all eleven base strings and both optional suffixes belong to the Dodge
+destination label; a complete grammar must accept NW/Above etc. independently
+of the lowercase movement/status direction grammar.
+
+5. BODYPART: 0x13345d0..0x1334819
+
+bodypart(unit, bodypart_index, ordinal, number):
+    # index=int16(R8), ordinal=int32(R9), number=int16(stack argument).
+    # number==0 selects plural names; other values select singular names,
+    # except number==2 can use plural for the root of a multi-count part.
+    if index < 0 or index >= unit.body_at_5f8.bodyparts.size:
+        return "body parts" if number == 0 else "body part"
+    part = unit.body_at_5f8.bodyparts[index]
+    # part+90 is singular-name vector, part+a8 plural-name vector.
+    if part.singular_names is empty:
+        return optional_ordinal_prefix(ordinal) +
+               ("body parts" if number == 0 or
+                (ordinal == 0 and part.count_at_84 > 1 and number == 2)
+                else "body part")
+    if ordinal > 0 and ordinal < part.singular_names.size:
+        return part.plural_names[ordinal] if number == 0 else part.singular_names[ordinal]
+    result = optional_ordinal_prefix(ordinal)
+    if number == 0 or (ordinal == 0 and part.count_at_84 > 1 and number == 2):
+        return result + part.plural_names[0]
+    return result + part.singular_names[0]
+
+optional_ordinal_prefix(n):
+    return ordinal_52eb70(n, numeric=false) + " " if n > 0 else ""
+
+ordinal_52eb70(n, numeric):
+    if numeric: return decimal(n) + English_ordinal_suffix(n)
+    if n < 0: return "Negative " + ordinal_52eb70(-n, false)
+    if n <= 19:
+        return ["Zeroth", "First", "Second", "Third", "Fourth", "Fifth",
+                "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh",
+                "Twelfth", "Thirteenth", "Fourteenth", "Fifteenth",
+                "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth"][n]
+    return decimal(n) + English_ordinal_suffix(n)
+
+Bodypart labels originate in loaded RAW BODY/BP and creature
+INDIVIDUAL_NAME/singular/plural data, not a fixed English enum. The installed
+health::bodypart::bodypart_main and raw_names grammars own these labels.
+The existing bodypart source vocabulary therefore remains the source of
+all anatomy labels, including unusual creatures, singular/plural names and
+numbered parts. The fallback body part/body parts is also native text.
+
+6. IDENTITY / REFERENCE / ITEM NAME DYNAMIC FIELDS
+
+unit_identity_132e430(unit, mode=1, r9=1, final_byte=1):
+    # Full assembler: helper-reference-identity.asm and classic counterpart.
+    # This is a semantic native unit-identity formatter; same-spelled names
+    # cannot be translated as generic words. Existing native formatter hooks
+    # preserve unit owner, RAW species/caste, profession, nick/given/surname,
+    # curse/ghost/tame/captive/slave/prisoner states and grammatical form.
+    return native_unit_identity_caption
+
+reference_1331500(unit):
+    # Full assembler: helper-reference-reference.asm and classic counterpart.
+    # All 135 profession dispatch entries and additional name/role/literal
+    # branches are already enumerated in adventure-unit-reference-sources.tsv.
+    # Profession table at 0x1333508, ordinary branch 0x1331df2..0x13331cc.
+    # unit+0xa0 profession can be overridden by linked identity+0xac.
+    # Species, curse, appearance, entity title and given/generated names are
+    # dynamic RAW/history fields; authored custom names remain authored.
+    return native_unit_reference_caption
+
+item_name_c65450(item, mode=0, argument=-1):
+    # Full adjacent fragments 0xc65450..0xc65f0a. Apart from " (copy)",
+    # visible text is virtual/RAW/authored data rather than fixed constants.
+    # Existing ordinary item grammar/native item capture owns complete
+    # material, quality, wear, stack/count, improvements and artifact names.
+    # Virtual methods +508/+518/+5d8/+5e0/+5e8/+5f0/+1d8 provide item
+    # adornments, names and base nouns. Item copies can use written-content
+    # title from global0x24e7cb8 + " (copy)" (0xc656cf..0xc6570a).
+    return complete_native_item_name
+
+weapon_attack_name(weapon, attack_index):
+    attacks = weapon.virtual_at_438()
+    attack = attacks[attack_index]
+    return (attack.sub_name_at_50 + " " if attack.sub_name_at_50 not in
+            ["", "NO_SUB"] else "") + attack.name_at_10
+
+natural_attack_name(unit, attack_index):
+    attack = unit.body_at_5f8.attacks_at_18[attack_index]
+    return bodypart(unit, attack.bodypart_at_08, 0, 2) + " " + attack.name_at_40
+
+NO_SUB is a RAW sentinel examined by branch predicates, not visible text.
+The attack names originate in ITEM_WEAPON attack records and CREATURE_ATTACK
+verbs; the panel's fixed verb/type labels are separately reconstructed in
+decompiled-panel.txt. New generated personal names are not a finite static
+word list; NativeUnitIdentity remains their complete semantic source.

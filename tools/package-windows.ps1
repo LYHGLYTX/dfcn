@@ -56,7 +56,7 @@ try {
         'dfcn_core.dll', 'dfhooks_dfcn.dll', 'data/runtime/config.ini',
         'data/runtime/translations.tsv', 'data/runtime/name-editor.tsv',
         'data/runtime/instrument-translations.tsv', 'data/runtime/procedural-terms.tsv',
-        'data/runtime/procedural-word-senses.tsv'
+        'data/runtime/procedural-word-senses.tsv', 'data/runtime/adventure-target-translations.tsv'
     )) {
         Add-RuntimeFile (Join-Path $projectRoot $name) ('dfcn/' + $name)
     }

@@ -1,0 +1,307 @@
+Native attack/target panel: reconstructed control flow from the installed AMD64 PE images
+
+Images come from data/runtime/native-pe-images.json:
+  reference: Steam 53.16 Dwarf Fortress.exe
+  classic: official 53.16 Dwarf Fortress.exe
+  Both use image base 0x140000000. Addresses below are RVAs.
+  The complete renderer machine code is retained in reference-render.asm and classic-render.asm.
+  These are source extraction files. No desktop or game control is used.
+
+Renderer
+  reference [0x878600,0x880118), classic [0x875e80,0x87d998).
+  screen = RCX; screen.stage = *(int*)(screen+4).
+  Bounds helper 0x872d70 fills L,R,T,B. It contains no user-visible text.
+  Classic instruction RVAs in this renderer are reference RVAs - 0x2780.
+  Reference heading dispatch table 0x880044 and content dispatch table 0x88006c:
+    stage  heading entry  content entry  meaning
+    0      0x87889d     0x878c3b      choose target
+    1      0x87890b     0x879261      confirm attack/conflict
+    2      0x878acf     0x87949c      choose Strike/Wrestle/Parry/Block/Dodge
+    3      0x878af5     0x879f78      choose target body part
+    4      0x878b22     0x87a8c2      choose attack, inspect speed/hit quality and attack styles
+    5      0x878acf     0x87949c      choose parrying weapon
+    6      0x878acf     0x87949c      choose blocking item
+    7      0x878acf     0x87949c      choose dodge direction
+    8      0x878bb6     0x87cb4d      wrestling relationship/action records
+    9      0x878bb6     0x87cb4d      wrestling relationship/action records
+  Values >9 go directly to the epilogue; no caption is generated.
+
+Reconstructed main renderer
+  draw_outer_rectangle(L,T,R,B);
+  if (stage != 1) {
+      draw_done_button(R-8,T+1,width=8,height=3);
+      draw_text(R-6,T+2,"Done");                // 0x87881e, draw 0x87883c
+  }
+  heading_position = (L+2,T+2);
+  switch(stage) {
+    case 0:
+      if (screen[0x31d] && !screen[0x31c]) text("Who will you wrestle?");
+      else text("Who will you attack?");
+      break;
+    case 1:
+      target = screen.target_at_0x30;
+      if (target.flags_0x118 & 0x400000)
+        text(unit_identity(target) + " has yielded.  Attack anyway?");
+      else if (conflict_lookup(controlled_unit,target) == -1)
+        text("Really start a conflict with " + unit_identity(target) + "?");
+      else text("Really attack " + unit_identity(target) + "?");
+      break;
+    case 2: case 5: case 6: case 7:
+      // 0x878acf calls 0x872f10 using bounds L+2,R-10,T+2.
+      target_summary(screen.target_at_0x38,L+2,R-10,T+2);
+      // No "Who will you attack?" title exists in these stages.
+      break;
+    case 3: text("What do you want to aim for?"); break;
+    case 4:
+      text("Attack " + bodypart_name(screen.target_at_0x38,screen.bodyparts_0x100[selected]) + ":");
+      // bodypart getter 0x13345d0 at 0x878b71.
+      break;
+    case 8: case 9:
+      text("Wrestle " + capitalize(unit_reference(screen.target_at_0x38)));
+      // unit reference 0x1331500 at 0x878bd9, capitalize 0x52d3c0.
+      break;
+  }
+  switch(stage) {
+    case 0:
+      list_at(L+1,T+4) with record_height=8;
+      for every visible candidate in screen.vector_0x10:
+        draw_rectangle(record width = available panel width, height=8);
+        draw_portrait_or_classic_unit_symbol(L+1,y, width=12);
+        draw_hotkey(L+14,y+1);
+        draw_text(L+16,y+1,unit_identity(candidate));
+        for action in candidate.action_vector_0x7d0:
+          if (action.kind!=-1 && y<record_y+8) draw_status(L+19,y++,action,candidate);
+      break;
+    case 1:
+      draw_rectangle(gps.button_horizontal_option_active,L+2,B-3,L+12,B-1);
+      draw_text(L+4,B-2,"Confirm"); draw_hotkey(L+4,B-1,0x15b);
+      draw_rectangle(gps.button_horizontal_option_remove,R-11,B-3,R-2,B-1);
+      draw_text(R-9,B-2,"Cancel"); draw_hotkey(R-9,B-1,5);
+      break;
+    case 2: case 5: case 6: case 7:
+      list_first_y = T+13; row_height=3;
+      draw_hotkey(L+1,row_top+1); draw_text(L+3,row_top+1,caption);
+      stage 2 uses screen.vector_0xd8 values:
+        0 -> "Strike";
+        1 -> "Wrestle";
+        2 -> "Parry (" + rating(max_parry_level(controlled_unit)) + ")";
+        3 -> "Block (" + rating(skill_level(controlled_unit,44)) + ")";
+        4 -> "Dodge (" + rating(skill_level(controlled_unit,103)) + ")";
+        others -> empty native caption;
+      max_parry_level:
+        foreach weapon in screen.vector_0x40:
+          max(max_parry_level, max(weapon_skill(controlled_unit,weapon), skill_level(controlled_unit,97)/4));
+      stage 5:
+        attack = item designation of incoming attacking item + optional RAW sub-attack + RAW attack name;
+        if incoming item absent, attack = attacker body part name;
+        caption = "Parry " + attack + " with " + item_designation(selected_parrying_weapon)
+                   + " (" + rating(max(weapon_skill, fighter_level/4)) + ")";
+      stage 6:
+        attack assembled as for stage 5;
+        caption = "Block " + attack + " with " + item_designation(selected_blocking_item)
+                   + " (" + rating(skill_level(controlled_unit,44)) + ")";
+      // If attacking item resolves to null, attack may be empty and the source has two spaces before "with".
+      stage 7:
+        caption = "Dodge " + direction_to(controlled_unit,screen.dodge_xz[index],screen.dodge_y[index]);
+        // direction helper 0x74f220, literal and branch extraction in helper files.
+      break;
+    case 3:
+      list rows height=3; body-part field at L+7, hit-quality field at L+45;
+      bodypart_name(target,entry.part_id) draws with a 36-column native cap;
+      chance = entry.chance - ((entry.flags & 0x8000) ? 1 : 0);
+      text(chance<=-3 ? "Impossible strike" : chance==-2 ? "Difficult strike"
+          : chance==-1 ? "Tricky strike" : chance==0 ? "Normal strike"
+          : chance==1 ? "Easy strike" : chance==2 ? "Easier strike" : "Simple strike");
+      text(", "); text(contact_quality(entry.contact));
+      draw_independent_advantage_marks(entry.flags); // +,+,-,-,!; they are not skill/rating text.
+      break;
+    case 4:
+      attack label = weapon-RAW attack / optional sub-attack / full item designation;
+      if unarmed:
+        label = bodypart-RAW attack + optional '/' + bodypart_name(controlled_unit,first associated part);
+        if no associated bodypart: label = "push";
+      // RAW attack names remain data, not a finite hardcoded English noun list.
+      // Specific comparisons stab/slash/slap/hack/bash/lash/pommel/punch/kick/bite/sting/snatch
+      // select artwork; the visible label still comes from RAW strings.
+      label draws from L+7 with native cap 36; summary starts at L+45 on the next text baseline.
+      text(chance<=-3 ? "Impossible" : chance==-2 ? "Difficult" : chance==-1 ? "Tricky"
+          : chance==0 ? "Normal" : chance==1 ? "Easy" : chance==2 ? "Easier" : "Simple");
+      if speed_class != 3: text(" "); text(speed_class>=6 ? "VVSlow" : speed_class==5 ? "V Slow"
+          : speed_class==4 ? "Slow" : speed_class==2 ? "Fast" : speed_class<=1 ? "V Fast" : "");
+      text(" strike, "); text(contact_quality(entry.contact));
+      draw_independent_advantage_marks(entry.flags);
+      // Stage 4 then draws quick/heavy/wild/precise, charge and multi-attack choices, not stage 5.
+      if controlled_unit_is_enraged:
+        text("No quick attack: enraged"); text("No heavy attack: enraged");
+        text("Forced wild attack: enraged"); text("No precise attack: enraged");
+      else:
+        text("Quick attack: faster to strike and recover, but not powerful");
+        text("Heavy attack: slower to strike and recover, but hits harder");
+        text("Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate");
+        text("Precise attack: very slow to strike, improved accuracy");
+      charge_disabled_reason = first applicable native prerequisite:
+        no target; you on ground; you mounted; you chained; you in uncontrolled flight;
+        you on vehicle; you on projectile; you climbing; target on ground; target mounted;
+        target chained; target in uncontrolled flight; target on vehicle; target on projectile;
+        target climbing; target same position; target position inaccessible; target too far;
+      if disabled: text("No charge attack: " + reason);
+      else text("Charge attack: move toward your opponent");
+      text("Multi-attack: choose another simultaneous action afterward");
+      break;
+    case 8: case 9:
+      // Relationships carry two selected objects. Each object is either an item ID or a unit/body-part ID.
+      if relationship refers to an item:
+        title = (flags choose "Both holding ","Grabbed their ","Grabbed your ","Sharing ")
+                + item_designation(relationship.item);
+      else:
+        draw controlled_unit identity on the left, opponent identity on right,
+        with native body-part/grip artwork; the identities are independent captions.
+      if native branch offers possession: text("Gain possession of " + item_designation(item));
+      if native branch offers grab: text("Grab " + target_field + " with " + own_field);
+      text("Wrestle using " + own_field);
+      switch(move_enum) { // jump table 0x8800e0
+        0: text("Lock " + target_field + " with " + own_field); break; // 0x87e598
+        1: text("Choke " + target_field); break;                       // 0x87e853
+        2: text("Take-down by " + target_field); break;                 // 0x87eabf
+        3: text("Throw by " + target_field); break;                     // 0x87ed3c
+        4: text("Pinch " + target_field); break;                        // 0x87efbc
+        5: text("Gouge " + target_field); break;                        // 0x87f22f
+        10: text("Break " + target_field); break;                       // 0x87f49f
+        11:
+          if relationship.owner_flag>0:
+            prefix = grip_kind<=1 ? "Release grip of " : grip_kind==2 ? "Release joint lock of " : "Release choke of ";
+            text(prefix + own_field + " on " + target_field);
+          else:
+            prefix = grip_kind<=1 ? "Break grip of " : grip_kind==2 ? "Loosen joint lock of " : "Loosen choke of ";
+            text(prefix + target_field + " on " + own_field);
+          break;                                                      // 0x87f721
+        12: text("Shake " + target_field); break;                      // 0x87fa4b
+        13: text("Strangle " + target_field); break;                   // 0x87fccc
+        default: no caption; // native entries 6,7,8,9 and outside 0..13.
+      }
+      // own_field/target_field use c65450 for item IDs, otherwise 13345d0 for anatomy.
+      break;
+  }
+
+contact_quality(q)
+  q<=-3 -> "can only graze"; -2 -> "can't land squarely"; -1 -> "can't quite connect";
+  0 -> "fairly solid"; 1 -> "square"; 2 -> "very square"; q>=3 -> "direct hit".
+
+Dynamic fields and translation boundaries
+  Unit name/role/species/curse/custom job follows 0x132e430 and 0x1331500 native getters;
+  see helper-decompiled.txt and pre-existing ../adventure-unit-reference-sources.tsv.
+  Body part follows 0x13345d0: selected RAW body-part name or exact fallback "body part".
+  Item follows 0xc65450: complete native designation with optional " (copy)";
+  vtable item naming/material and RAW attack names are dynamic authored game data.
+  Rating follows 0x7737c0: exact 0..14 plus Legendary default, no skill names nor Legendary+N.
+  Action/status follows 0x852640 over candidate.action_vector_0x7d0, including inline string copies.
+  Full status enum/assembly, directions and summary coordinates are in helper-decompiled.txt.
+
+The scoped runtime catalog adventure-target-translations.tsv retains:
+  fixed literals, typed composite templates, source capture ordering, indexed Chinese targets,
+  all rating and action-status enum texts, attack difficulty/contact/speed texts,
+  direction/altitude/distance qualifiers, and all selectable wrestling captions.
+  Punctuation and artwork comparison literals NO_SUB/stab/etc are retained in literal extraction.
+  Dynamic human names, RAW species, materials, weapons, attack labels and anatomy are processed
+  by their native getter translators rather than replacing arbitrary English substrings globally.
+
+Additional geometry from renderer arithmetic
+  Stage 2/5/6/7 list record top is T+13, records extend [top,top+3).
+  Stage 3 record top is T+4, records extend [top,top+3).
+  Stage 4 record top is T+4; content list ends at B-19 to reserve style controls below.
+  Stage 8/9 relation count C=len(screen+0x128)+len(screen+0x140).
+    relation divider D = C==0 ? T+2 : C<5 ? (T+2)+1+3*C : (T+2)+16.
+    relation records begin T+4, have pitch 3, and show at most 5 relationships.
+    move records begin D+2 and also have pitch 3; text baseline is recordTop+1.
+  NO_SUB is compared as a missing RAW subtype sentinel; that subtype is not appended.
+  It is not a visible "unknown" caption and is absent from the runtime translation table.
+
+Native owner, layer writes and exact control geometry (additional reverse-engineered source)
+  reference vtable viewscreen_dungeonmodest = 0x16b9f48;
+  vtable slot +24 is render() at 0x7f3cb0 (pointer stored at RVA 0x16b9f60).
+  render() calls adventure global UI renderer 0xaf1190 at 0x7f3dba,0x7f3e0c,0x7f3e73.
+  That renderer owns the sole direct call to AttackCreature::render():
+    0xb03469: if (*(byte*)(base+0x18a8728)) {
+    0xb03472:   R9d = local right/map coordinate;
+    0xb03476:   R8d = local bottom/map coordinate;
+    0xb0347a:   EDX = *(int*)(base+0x23ca688);
+    0xb03480:   RCX = base+0x18a8728; // global AttackCreature UI state
+    0xb03487:   call 0x878600;
+               }
+  The combat panel therefore belongs to viewscreen_dungeonmodest and does not
+  introduce a child viewscreen. A screen-type gate accepting current dungeonmodest
+  accepts this native renderer. Full caller assembly is retained in
+  helper-reference-dungeon-render.asm and helper-reference-adventure-global-render.asm.
+
+  graphicst reference base is RVA 0x264a3f0. Texture matrices are column-major [column][row]:
+    +0x1924..0x1944 hover_rectangle; main outer frame at 0x8786b3..0x878774.
+    +0x19a8..0x19c8 button_rectangle; root action record at 0x879590..0x879696.
+    +0xa768..0xa788 button_horizontal_option_active; stage-1 Confirm.
+    +0xa7e0..0xa800 button_horizontal_option_remove; stage-1 Cancel.
+    +0xa804..0xa824 button_horizontal_option_confirm; non-stage-1 Done.
+  Stage-1 Confirm: inclusive outer [L+2,L+12] x [B-3,B-1], width11,height3.
+    Caption L+4,B-2; hotkey L+4,B-1.
+  Stage-1 Cancel: inclusive outer [R-11,R-2] x [B-3,B-1], width10,height3.
+    Caption R-9,B-2; hotkey R-9,B-1.
+  Stage-1 deliberately omits Done (0x878781..0x878786).
+  Root stage2/5/6/7 action records have native outer x=[L+1,R-1], shortened to
+  [L+1,R-3] only when a scrollbar is required; rowTop=T+13+3*visible_index.
+    0x879502 rowTop = (T+2)+11.
+    0x879562 textY = rowTop+1.
+    0x87969a key at L+1,textY.
+    0x8796d1 caption at L+3,textY.
+    0x879ef6 textY += 3.
+  The matrix draw always uses button_rectangle, not type_filter.
+  Ratings are generated as one caption such as "Dodge (" + rating + ")" and
+  emitted once at 0x879ef1 through text draw 0xad9960. The native parentheses
+  remain characters of this caption; this renderer draws no separate slider,
+  type-filter left/right arrows or rating text-strip skin.
+
+  draw_lower_tile(gps,packed) at [0xadaad0,0xadac1c):
+    if cursor outside gps clip rectangle: return;
+    index = cursor_x*gps.dimy + cursor_y;
+    if init.display.flags[0]&USE_GRAPHICS:
+      gps.screentexpos_lower[index] = packed;
+    else:
+      screen[index].char = packed & 255;
+      screen[index].fgRGB = palette[((packed>>8)&7) + 8*((packed>>14)&1)];
+      screen[index].bgRGB = palette[(packed>>11)&7];
+      gps.screentexpos[index] = 0;
+    // Neither branch clears screentexpos_lower; no anchored buffer is written.
+
+  draw_text(gps,string,mode,cap) at [0xad9960,0xad9a33):
+    convert native string to character bytes via 0x6f5d0;
+    if cap != 0 and converted.size>cap: truncate via 0x52d910;
+    foreach visible byte until configured display width:
+      draw_character(gps,byte,advance=1); // 0xad9a00 -> 0xbb190
+  draw_character at [0xbb190,0xbb33c):
+    if cursor inside clip and screen range:
+      write screen character and foreground/background RGB from current gps;
+      gps.screentexpos[index]=0; // 0xbb31c..0xbb323
+    cursor_x += advance;
+    // Does not clear/write screentexpos_lower or anchored buffers in either mode.
+
+  draw_anchored_tile_rectangle(gps,tile,anchorX,anchorY,width,height,modulate)
+    at [0xadad70,0xadb092):
+    foreach clipped cell in [cursor_x,cursor_x+width) x [cursor_y,cursor_y+height):
+      gps.screentexpos_anchored[index] = tile;     // gps+0x200
+      gps.screentexpos_anchored_x[index] = anchorX; // gps+0x208
+      gps.screentexpos_anchored_y[index] = anchorY; // gps+0x210
+      if first cell: gps.screentexpos_flag[index] &= ~4;
+      else: gps.screentexpos_flag[index] = 4 | ((dx<=63?dx:0)<<6) | ((dy<=63?dy:0)<<12);
+      if modulate:
+        write current foreground/background RGB to screen[index];
+        gps.screentexpos_flag[index] |= 0x20;
+      else: gps.screentexpos_flag[index] &= ~0x20;
+    // No screen glyph write. No screentexpos_lower/primary write or clear.
+  Native summary portrait call 0x873145 passes width12,height8,modulate=false.
+  The fallback miniature at 0x87325a passes width5,height3,modulate=false.
+  Thus both text and portraits preserve graphical lower-layer summary/frame skins.
+  In classic mode text replaces screen foreground/character and background with
+  current gps text colors; it does not preserve those particular screen bytes.
+
+  Equivalent classic layer routines extracted from the configured official PE:
+    text draw [0xad69a0,0xad6a73); character draw [0xbb190,0xbb33c);
+    anchored portrait [0xad7db0,0xad80d2); lower tile [0xad7b10,0xad7c5c).
+  Their full machine code is retained in helper-classic-*-draw.asm and
+  helper-classic-*-tile.asm, and paired ranges in helper-edition-function-ranges.tsv.

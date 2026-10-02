@@ -1,0 +1,404 @@
+# Native adventure target/action panel; literal sources and typed templates are scoped to this panel.
+# Branches: data/extracted/adventure-target-panel/*-render.asm and helper sources.
+# Templates preserve the native field order; numbered target captures refer to successive source {s} fields.
+Done	完成
+Confirm	确认
+Cancel	取消
+Talk	交谈
+Strike	攻击
+Wrestle	摔跤
+Dodge	闪避
+Block	格挡
+Parry	招架
+Who will you attack?	你要攻击谁？
+Who will you wrestle?	你要与谁摔跤？
+What do you want to aim for?	你想瞄准哪个部位？
+ has yielded.  Attack anyway?	已经投降。仍要攻击吗？
+Really start a conflict with 	确定要与之发生冲突：
+Really attack 	确定要攻击：
+Attack 	攻击：
+Wrestle 	摔跤：
+Dodge 	闪避
+Block 	格挡
+Parry 	招架
+Dodge (	闪避（
+Block (	格挡（
+Parry (	招架（
+ with 	，使用
+ on 	，作用于
+ (	（
+)	）
+?	？
+:	：
+, 	，
++	+
+-	-
+!	！
+/	／
+Impossible strike	无法命中的攻击
+Difficult strike	难以命中的攻击
+Tricky strike	不易命中的攻击
+Normal strike	普通攻击
+Easy strike	容易命中的攻击
+Easier strike	更易命中的攻击
+Simple strike	轻易命中的攻击
+can only graze	只能擦伤
+can't land squarely	无法正面击中
+can't quite connect	难以有效击中
+fairly solid	较为扎实
+square	正面击中
+very square	准确击中
+direct hit	直接命中
+stab	刺击
+slash	挥砍
+slap	拍击
+hack	劈砍
+bash	猛击
+lash	鞭击
+pommel	柄头
+punch	拳击
+kick	踢击
+bite	咬击
+sting	螫刺
+snatch	抓取
+strike	攻击
+push	推击
+Impossible	无法命中
+Difficult	难以命中
+Tricky	不易命中
+Normal	普通
+Easy	容易命中
+Easier	更易命中
+Simple	轻易命中
+VVSlow	极慢
+V Slow	很慢
+Slow	慢速
+Fast	快速
+V Fast	很快
+ strike	攻击
+Quick attack: faster to strike and recover, but not powerful	快速攻击：出手和恢复更快，但威力较弱。
+Heavy attack: slower to strike and recover, but hits harder	重击：出手和恢复较慢，但打击更有力。
+Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate	狂野攻击：出手快、恢复慢，打击有力，但容易失衡且命中不准。
+Precise attack: very slow to strike, improved accuracy	精准攻击：出手很慢，但命中更准。
+No quick attack: enraged	无法快速攻击：怒不可遏。
+No heavy attack: enraged	无法重击：怒不可遏。
+Forced wild attack: enraged	被迫使用狂野攻击：怒不可遏。
+No precise attack: enraged	无法精准攻击：怒不可遏。
+No charge attack: no target	无法冲锋攻击：没有目标。
+No charge attack: you are on the ground	无法冲锋攻击：你正倒在地上。
+No charge attack: you are mounted	无法冲锋攻击：你正在骑乘。
+No charge attack: you are chained	无法冲锋攻击：你被锁链束缚。
+No charge attack: you are in uncontrolled flight	无法冲锋攻击：你正在空中失控飞行。
+No charge attack: you are on a vehicle	无法冲锋攻击：你在车辆上。
+No charge attack: you are on a projectile	无法冲锋攻击：你在飞行物上。
+No charge attack: you are climbing	无法冲锋攻击：你正在攀爬。
+No charge attack: target is on the ground	无法冲锋攻击：目标正倒在地上。
+No charge attack: target is mounted	无法冲锋攻击：目标正在骑乘。
+No charge attack: target is chained	无法冲锋攻击：目标被锁链束缚。
+No charge attack: target is in uncontrolled flight	无法冲锋攻击：目标正在空中失控飞行。
+No charge attack: target is on a vehicle	无法冲锋攻击：目标在车辆上。
+No charge attack: target is on a projectile	无法冲锋攻击：目标在飞行物上。
+No charge attack: target is climbing	无法冲锋攻击：目标正在攀爬。
+No charge attack: target shares your location	无法冲锋攻击：目标与你位于同一位置。
+No charge attack: target's location inaccessible	无法冲锋攻击：无法抵达目标位置。
+No charge attack: target too far away	无法冲锋攻击：目标距离过远。
+Charge attack: move toward your opponent	冲锋攻击：朝对手移动。
+Multi-attack: choose another simultaneous action afterward	多重攻击：随后选择另一个同时进行的动作。
+Both holding 	双方都握着
+Grabbed their 	抓住对方的
+Grabbed your 	被抓住的己方部位：
+Sharing 	共同持有
+Gain possession of 	夺取
+Grab	抓住
+Wrestle using 	用于摔跤的部位：
+Lock 	锁住
+Choke 	扼住
+Take-down by 	放倒，抓持部位：
+Throw by 	抛摔，抓持部位：
+Pinch 	掐住
+Gouge 	挖刺
+Break 	折断
+Release choke of 	解除扼喉，己方部位：
+Release joint lock of 	解除关节锁，己方部位：
+Release grip of 	松开抓握，己方部位：
+Loosen choke of 	挣松扼喉，对方部位：
+Loosen joint lock of 	挣松关节锁，对方部位：
+Break grip of 	挣脱抓握，对方部位：
+Shake 	摇晃
+Strangle 	勒住
+# Complete native composite fields. Captures are translated by their native type.
+{n} has yielded.  Attack anyway?	{n1}已经投降。仍要攻击吗？
+Really start a conflict with {n}?	确定要与{n1}发生冲突吗？
+Really attack {n}?	确定要攻击{n1}吗？
+Attack {t}:	攻击{t1}：
+Wrestle {n}	与{n1}摔跤
+Dodge ({s})	闪避（{s1}）
+Block ({s})	格挡（{s1}）
+Parry ({s})	招架（{s1}）
+Dodge {s}	向{s1}闪避
+Block {s} with {i} ({s})	使用{i1}格挡{s1}（{s2}）
+Block with {i} ({s})	使用{i1}格挡（{s1}）
+Parry {s} with {i} ({s})	使用{i1}招架{s1}（{s2}）
+Parry with {i} ({s})	使用{i1}招架（{s1}）
+Both holding {i}	双方都握着{i1}
+Grabbed their {i}	抓住对方的{i1}
+Grabbed your {i}	对方抓住你的{i1}
+Sharing {i}	共同持有{i1}
+Gain possession of {i}	夺取{i1}
+Grab {s} with {s}	使用{s2}抓住{s1}
+Wrestle using {s}	使用{s1}摔跤
+Lock {s} with {s}	使用{s2}锁住{s1}
+Choke {s}	扼住{s1}
+Take-down by {s}	抓住{s1}将其放倒
+Throw by {s}	抓住{s1}将其抛摔
+Pinch {s}	掐住{s1}
+Gouge {s}	挖刺{s1}
+Break {s}	折断{s1}
+Release choke of {s} on {s}	松开{s1}对{s2}的扼喉
+Release joint lock of {s} on {s}	解除{s1}对{s2}的关节锁
+Release grip of {s} on {s}	松开{s1}对{s2}的抓握
+Loosen choke of {s} on {s}	挣松{s1}对{s2}的扼喉
+Loosen joint lock of {s} on {s}	挣松{s1}对{s2}的关节锁
+Break grip of {s} on {s}	挣脱{s1}对{s2}的抓握
+Shake {s}	摇晃{s1}
+Strangle {s}	勒住{s1}
+# A missing attacking item emits two native spaces before "with".
+Block  with {i} ({s})	使用{i1}格挡（{s1}）
+Parry  with {i} ({s})	使用{i1}招架（{s1}）
+# Slashes join RAW attack/sub-attack/body-part fields and a complete item designation.
+{s}/{s}/{i}	{s1}／{s2}／{i1}
+{s}/{i}	{s1}／{i1}
+{s}/{t}	{s1}／{t1}
+{s} strike, {s}	{s1}攻击，{s2}
+{s} strike	{s1}攻击
+{s} {s} strike, {s}	{s1}、{s2}攻击，{s3}
+{s} {s} strike	{s1}、{s2}攻击
+{s}, {s}	{s1}，{s2}
+{s} VVSlow	{s1}，极慢
+{s} V Slow	{s1}，很慢
+{s} Slow	{s1}，慢速
+{s} Fast	{s1}，快速
+{s} V Fast	{s1}，很快
+# Native rating helper 0x7737c0: exact enum 0..14 and Legendary default.
+Dabbling	略懂
+Novice	初学
+Adequate	基础
+Competent	合格
+Skilled	熟练
+Proficient	精通
+Talented	出色
+Adept	精熟
+Expert	专家
+Professional	专业
+Accomplished	高超
+Great	卓越
+Master	大师
+High Master	宗师
+Grand Master	大宗师
+Legendary	传奇
+# Native unit action/status helper 0x852640, including inlined NativeString construction.
+Moving	移动中
+Charging	冲锋中
+Attacking	攻击中
+Recovering from attacking	攻击后恢复中
+Jumping	跳跃中
+Pushing Object	推动物体中
+Holding terrain	攀抓地形中
+Releasing hold on terrain	松开地形抓握中
+Climbing	攀爬中
+Mounting	上坐骑中
+Dismounting	下坐骑中
+Leading animal	牵引动物中
+Stop leading animal	停止牵引动物
+Holding item	握住物品中
+Releasing hold on item	松开物品中
+Recovering after shooting	射击后恢复中
+Regaining balance	恢复平衡中
+Sucking Blood	吸血中
+Working	工作中
+Talking	交谈中
+Dodging	闪避中
+Parrying	招架中
+Blocking	格挡中
+Recovering from deflection	防御后恢复中
+Standing Up	起身中
+Lying Down	卧倒中
+Nocking	搭箭中
+Loading	装填中
+ ammo	弹药
+Shooting weapon	射击中
+Throwing item	投掷物品中
+Remote: 	尚很远：
+Distant: 	距离较远：
+Starting: 	开始：
+Incoming: 	即将到来：
+IMMINENT: 	迫在眉睫：
+ with wrestling	，使用摔跤
+ with grab	，使用抓握
+quick	快速
+heavy	重击
+wild	狂野
+precise	精准
+, aiming for 	，瞄准
+southeast	东南
+southwest	西南
+northeast	东北
+northwest	西北
+south	南
+north	北
+east	东
+west	西
+upward	向上
+downward	向下
+ (above)	（上方）
+ (below)	（下方）
+(above)	（上方）
+(below)	（下方）
+you	你
+You	你
+body part	身体部位
+ (copy)	（副本）
+# Direction and status qualifiers append independently in the native helper.
+{s} (above)	{s1}（上方）
+{s} (below)	{s1}（下方）
+Remote: {s}	尚很远：{s1}
+Distant: {s}	距离较远：{s1}
+Starting: {s}	开始：{s1}
+Incoming: {s}	即将到来：{s1}
+IMMINENT: {s}	迫在眉睫：{s1}
+Moving {s}	向{s1}移动
+Dodging {s}	向{s1}闪避
+Attacking {n}	攻击{n1}中
+Recovering from attacking {n}	攻击{n1}后恢复中
+Attacking {n} with wrestling	正在用摔跤攻击{n1}
+Recovering from attacking {n} with wrestling	用摔跤攻击{n1}后恢复中
+Attacking {n} with grab	正在抓住{n1}
+Recovering from attacking {n} with grab	抓住{n1}后恢复中
+Attacking {n} with {s}, aiming for {t}	正在使用{s1}攻击{n1}，瞄准{t1}
+Recovering from attacking {n} with {s}, aiming for {t}	使用{s1}攻击{n1}后恢复中，瞄准{t1}
+Attacking {n} with {s}	正在使用{s1}攻击{n1}
+Recovering from attacking {n} with {s}	使用{s1}攻击{n1}后恢复中
+quick {s}	快速{s1}
+heavy {s}	重击{s1}
+wild {s}	狂野{s1}
+precise {s}	精准{s1}
+Loading {s} ammo	装填{s1}弹药中
+Recovering from deflection with {i}	使用{i1}防御后恢复中
+Parrying with {i}	使用{i1}招架中
+Blocking with {i}	使用{i1}格挡中
+Nocking ammo	搭箭中
+Loading ammo	装填弹药中
+# Status style bits are appended independently without separators, then one space.
+quickheavy	快速重击
+quickwild	快速狂野
+quickprecise	快速精准
+heavywild	重击狂野
+heavyprecise	重击精准
+wildprecise	狂野精准
+quickheavywild	快速重击狂野
+quickheavyprecise	快速重击精准
+quickwildprecise	快速狂野精准
+heavywildprecise	重击狂野精准
+quickheavywildprecise	快速重击狂野精准
+# The style bitmask precedes the complete weapon/body-part attack phrase.
+quickheavy {s}	快速重击{s1}
+quickwild {s}	快速狂野{s1}
+quickprecise {s}	快速精准{s1}
+heavywild {s}	重击狂野{s1}
+heavyprecise {s}	重击精准{s1}
+wildprecise {s}	狂野精准{s1}
+quickheavywild {s}	快速重击狂野{s1}
+quickheavyprecise {s}	快速重击精准{s1}
+quickwildprecise {s}	快速狂野精准{s1}
+heavywildprecise {s}	重击狂野精准{s1}
+quickheavywildprecise {s}	快速重击狂野精准{s1}
+Charging {s}	向{s1}冲锋
+{s} with wrestling	{s1}，使用摔跤
+{s} with grab	{s1}，使用抓握
+{s}, aiming for {t}	{s1}，瞄准{t1}
+{s} with {s}	{s1}，使用{s2}
+# Status native attacking phrase can put an item before a RAW sub-attack/attack name.
+{i} {s}	{i1}{s1}
+{t} {s}	{t1}{s1}
+# Compact destination helper 0x74f220 uses a separate direction grammar.
+NW	西北
+SW	西南
+NE	东北
+SE	东南
+West	西
+East	东
+North	北
+South	南
+Below	下方
+Above	上方
+Here	原地
+/Below	／下方
+/Above	／上方
+{s}/Below	{s1}／下方
+{s}/Above	{s1}／上方
+body parts	身体部位
+{t} (copy)	{t1}（副本）
+# The body-part helper can prepend a positive ordinal when its named variant is unavailable.
+First {t}	第一{t1}
+Second {t}	第二{t1}
+Third {t}	第三{t1}
+Fourth {t}	第四{t1}
+Fifth {t}	第五{t1}
+Sixth {t}	第六{t1}
+Seventh {t}	第七{t1}
+Eighth {t}	第八{t1}
+Ninth {t}	第九{t1}
+Tenth {t}	第十{t1}
+Eleventh {t}	第十一{t1}
+Twelfth {t}	第十二{t1}
+Thirteenth {t}	第十三{t1}
+Fourteenth {t}	第十四{t1}
+Fifteenth {t}	第十五{t1}
+Sixteenth {t}	第十六{t1}
+Seventeenth {t}	第十七{t1}
+Eighteenth {t}	第十八{t1}
+Nineteenth {t}	第十九{t1}
+{d}st {t}	第{d1}{t1}
+{d}nd {t}	第{d1}{t1}
+{d}rd {t}	第{d1}{t1}
+{d}th {t}	第{d1}{t1}
+# Installed RAW weapon/tool/creature attack verbs captured by native +0x10/+0x40 fields.
+bashes	猛击
+bites	咬击
+claw	爪击
+claws	爪击
+drill	钻刺
+drills	钻刺
+gore	角刺
+gores	角刺
+hacks	劈砍
+kicks	踢击
+lashes	鞭击
+punches	拳击
+saw	锯割
+saws	锯割
+scratch	抓挠
+scratches	抓挠
+slaps	拍击
+slashes	挥砍
+slice	切割
+slices	切割
+snatches	抓取
+snatch at	抓取
+snatches at	抓取
+stabs	刺击
+stab at	刺向
+stabs at	刺向
+stick	刺扎
+sticks	刺扎
+strikes	攻击
+# RAW attack +0x50 sub-name belongs to the attacking weapon component.
+flat	刀身平面
+handle	握柄
+helve	斧柄
+shaft	杆身
+flat {s}	用刀身平面{s1}
+handle {s}	用握柄{s1}
+helve {s}	用斧柄{s1}
+pommel {s}	用柄头{s1}
+shaft {s}	用杆身{s1}

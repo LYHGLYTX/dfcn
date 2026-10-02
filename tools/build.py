@@ -84,6 +84,7 @@ def deploy_runtime_data(directory: Path) -> None:
             candidate.unlink(missing_ok=True)
 
     for name in ("translations.tsv", "name-editor.tsv", "instrument-translations.tsv",
+                 "adventure-target-translations.tsv",
                  "procedural-terms.tsv", "procedural-word-senses.tsv"):
         install(runtime / name, (RUNTIME / name).read_bytes())
     for source in sorted((RUNTIME / "rulesets").rglob("*.toml")):

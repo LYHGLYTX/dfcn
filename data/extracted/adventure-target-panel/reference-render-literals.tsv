@@ -1,0 +1,165 @@
+image	instruction_rva	literal_rva	source
+reference	0x87881e	0x16044c0	Done
+reference	0x8788b1	0x16b3908	Who will you wrestle?
+reference	0x8788de	0x16b38f0	Who will you attack?
+reference	0x878950	0x16b39c0	 has yielded.  Attack anyway?
+reference	0x8789a7	0x16b39a0	Really start a conflict with 
+reference	0x878a04	0x1614d50	?
+reference	0x878a3b	0x16b3a00	Really attack 
+reference	0x878a98	0x1614d50	?
+reference	0x878af5	0x16b39e0	What do you want to aim for?
+reference	0x878b2c	0x167e668	Attack 
+reference	0x878b83	0x1618434	:
+reference	0x878bb6	0x16b3980	Wrestle 
+reference	0x879344	0x162bdb8	Confirm
+reference	0x879446	0x15fe724	Cancel
+reference	0x87971f	0x16b3834	Dodge 
+reference	0x8797a4	0x16b37f8	Block 
+reference	0x879871	0x15e873c	 
+reference	0x8798ae	0x1662700	NO_SUB
+reference	0x8798d9	0x15e873c	 
+reference	0x879913	0x15ee5e0	 with 
+reference	0x87995b	0x1615540	 (
+reference	0x8799aa	0x1615580	)
+reference	0x879a2e	0x16b3800	Parry 
+reference	0x879af8	0x15e873c	 
+reference	0x879b35	0x1662700	NO_SUB
+reference	0x879b60	0x15e873c	 
+reference	0x879bef	0x15ee5e0	 with 
+reference	0x879c3f	0x1615540	 (
+reference	0x879cb6	0x1615580	)
+reference	0x879d0e	0x16b3990	Dodge (
+reference	0x879d53	0x1615580	)
+reference	0x879d72	0x16b3998	Block (
+reference	0x879db7	0x1615580	)
+reference	0x879dd6	0x16b3978	Parry (
+reference	0x879eab	0x1615580	)
+reference	0x879ec7	0x1613fa0	Wrestle
+reference	0x879ed0	0x161499c	Strike
+reference	0x87a2ff	0x16b37c0	Impossible strike
+reference	0x87a340	0x16b37a8	Difficult strike
+reference	0x87a381	0x16b37e8	Tricky strike
+reference	0x87a3c1	0x16b37d8	Normal strike
+reference	0x87a3ff	0x16b3898	Easy strike
+reference	0x87a439	0x16b3888	Easier strike
+reference	0x87a477	0x16b38b8	Simple strike
+reference	0x87a4b7	0x15e90d8	, 
+reference	0x87a4fe	0x16b38a8	can only graze
+reference	0x87a545	0x16b3858	can't land squarely
+reference	0x87a58c	0x16b3840	can't quite connect
+reference	0x87a5d3	0x16b3878	fairly solid
+reference	0x87a617	0x16b386c	square
+reference	0x87a65b	0x16b42d8	very square
+reference	0x87a6a2	0x16b42c8	direct hit
+reference	0x87a6f6	0x15edfac	+
+reference	0x87a733	0x15edfac	+
+reference	0x87a770	0x164b74c	-
+reference	0x87a7af	0x164b74c	-
+reference	0x87a808	0x15ee438	!
+reference	0x87aae2	0x16b42ec	stab
+reference	0x87ab0f	0x16b42e4	slash
+reference	0x87ab3c	0x16b42ac	slap
+reference	0x87ab66	0x16b42a4	hack
+reference	0x87ab90	0x16b42bc	bash
+reference	0x87abba	0x16b42b4	lash
+reference	0x87abf5	0x16b4324	pommel
+reference	0x87ac3e	0x16b431c	punch
+reference	0x87ac58	0x1675118	kick
+reference	0x87ac72	0x16b4334	bite
+reference	0x87ac8c	0x16b432c	sting
+reference	0x87aca6	0x16b4304	snatch
+reference	0x87ae57	0x15eb514	/
+reference	0x87ae69	0x1662708	strike
+reference	0x87ae79	0x15eb514	/
+reference	0x87aeae	0x1662700	NO_SUB
+reference	0x87aeda	0x15eb514	/
+reference	0x87af62	0x15eb514	/
+reference	0x87afad	0x16627f4	push
+reference	0x87b043	0x16b2ca0	Impossible
+reference	0x87b084	0x16b42f8	Difficult
+reference	0x87b0c5	0x16b4314	Tricky
+reference	0x87b10e	0x16164b8	Normal
+reference	0x87b16c	0x16b430c	Easy
+reference	0x87b1aa	0x16b4100	Easier
+reference	0x87b1e8	0x16b40f8	Simple
+reference	0x87b231	0x15e873c	 
+reference	0x87b276	0x16b4110	VVSlow
+reference	0x87b2b7	0x16b4108	V Slow
+reference	0x87b2f8	0x16b40dc	Slow
+reference	0x87b336	0x16b40d4	Fast
+reference	0x87b374	0x16b40f0	V Fast
+reference	0x87b3bd	0x16b40e8	 strike
+reference	0x87b3ea	0x15e90d8	, 
+reference	0x87b430	0x16b38a8	can only graze
+reference	0x87b476	0x16b3858	can't land squarely
+reference	0x87b4bc	0x16b3840	can't quite connect
+reference	0x87b502	0x16b3878	fairly solid
+reference	0x87b54a	0x16b386c	square
+reference	0x87b58d	0x16b42d8	very square
+reference	0x87b5d3	0x16b42c8	direct hit
+reference	0x87b634	0x15edfac	+
+reference	0x87b671	0x15edfac	+
+reference	0x87b6ae	0x164b74c	-
+reference	0x87b6ed	0x164b74c	-
+reference	0x87b747	0x15ee438	!
+reference	0x87bd53	0x15e873c	 
+reference	0x87bd87	0x16b41e8	Quick attack: faster to strike and recover, but not powerful
+reference	0x87bee6	0x15e873c	 
+reference	0x87bf1a	0x16b4248	Heavy attack: slower to strike and recover, but hits harder
+reference	0x87c077	0x15e873c	 
+reference	0x87c0ab	0x16b4120	Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate
+reference	0x87c208	0x15e873c	 
+reference	0x87c235	0x16b4190	Precise attack: very slow to strike, improved accuracy
+reference	0x87c293	0x16b4228	No quick attack: enraged
+reference	0x87c2e8	0x16b4288	No heavy attack: enraged
+reference	0x87c336	0x16b4170	Forced wild attack: enraged
+reference	0x87c384	0x16b41c8	No precise attack: enraged
+reference	0x87c40a	0x16b3ef8	No charge attack: no target
+reference	0x87c446	0x16b3ed0	No charge attack: you are on the ground
+reference	0x87c482	0x16b3f40	No charge attack: you are mounted
+reference	0x87c4be	0x16b3f18	No charge attack: you are chained
+reference	0x87c4fa	0x16b3e40	No charge attack: you are in uncontrolled flight
+reference	0x87c536	0x16b3e18	No charge attack: you are on a vehicle
+reference	0x87c572	0x16b3ea0	No charge attack: you are on a projectile
+reference	0x87c5ae	0x16b3e78	No charge attack: you are climbing
+reference	0x87c5ea	0x16b4048	No charge attack: target is on the ground
+reference	0x87c626	0x16b4020	No charge attack: target is mounted
+reference	0x87c66b	0x16b40b0	No charge attack: target is chained
+reference	0x87c6b0	0x16b4078	No charge attack: target is in uncontrolled flight
+reference	0x87c6f5	0x16b3f98	No charge attack: target is on a vehicle
+reference	0x87c73a	0x16b3f68	No charge attack: target is on a projectile
+reference	0x87c77f	0x16b3ff8	No charge attack: target is climbing
+reference	0x87c7bb	0x16b3fc8	No charge attack: target shares your location
+reference	0x87c7f7	0x16b3d08	No charge attack: target's location inaccessible
+reference	0x87c833	0x16b3ce0	No charge attack: target too far away
+reference	0x87c97d	0x15e873c	 
+reference	0x87c9aa	0x16b3d80	Charge attack: move toward your opponent
+reference	0x87caee	0x15e873c	 
+reference	0x87cb1b	0x16b3d40	Multi-attack: choose another simultaneous action afterward
+reference	0x87cf20	0x16b3cb0	Both holding 
+reference	0x87cf29	0x16b3ca0	Grabbed their 
+reference	0x87cf35	0x16b3cd0	Grabbed your 
+reference	0x87cf3e	0x16b3cc0	Sharing 
+reference	0x87dc81	0x16b3df0	Gain possession of 
+reference	0x87e01b	0x16b4898	Grab
+reference	0x87e040	0x15e873c	 
+reference	0x87e16a	0x15ee5e0	 with 
+reference	0x87e538	0x16b3de0	Wrestle using 
+reference	0x87e7f3	0x16b3e0c	Lock 
+reference	0x87e831	0x15ee5e0	 with 
+reference	0x87eab3	0x16b3e04	Choke 
+reference	0x87ed23	0x16b3dc0	Take-down by 
+reference	0x87efa3	0x16b3db0	Throw by 
+reference	0x87f223	0x16b3dd8	Pinch 
+reference	0x87f493	0x16b3dd0	Gouge 
+reference	0x87f703	0x16b4818	Break 
+reference	0x87f9a8	0x16b4838	Release choke of 
+reference	0x87f9c5	0x15ed92c	 on 
+reference	0x87f9e7	0x16b4800	Release joint lock of 
+reference	0x87f9f0	0x16b4820	Release grip of 
+reference	0x87fa10	0x16b47b8	Loosen choke of 
+reference	0x87fa19	0x16b47d0	Loosen joint lock of 
+reference	0x87fa22	0x16b47f0	Break grip of 
+reference	0x87fa3f	0x15ed92c	 on 
+reference	0x87fcb3	0x16b47e8	Shake 
+reference	0x87ff33	0x16b48a0	Strangle 
