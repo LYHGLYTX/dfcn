@@ -1,6 +1,7 @@
 #include "core_api.h"
 #include "core_module.h"
 #include "runtime_paths.h"
+#include "dfhack_toggle.h"
 #include <SDL2/SDL.h>
 #include <cstdio>
 #include <ctime>
@@ -44,6 +45,7 @@ struct CoreImage {
 CoreImage *core = nullptr;
 bool initialized = false;
 bool f10_consumed = false;
+dfcn::dfhack::Toggle dfhack_toggle;
 std::uint64_t generation = 0;
 // Keep source data across failed initialization / partial hook-removal retries.
 // Cleared as soon as a new core takes ownership; never stores executable code.
@@ -144,6 +146,7 @@ DFCN_EXPORT void dfhooks_init() {
     initialized = true;
     try {
         log("INFO", "Resident hot-reload loader initialized");
+        dfhack_toggle.initialize(log);
         load_core(false);
     } catch (...) {
         log("ERROR", "Core load failed; Shift+F10 remains available to retry");
@@ -155,6 +158,7 @@ DFCN_EXPORT void dfhooks_shutdown() {
     initialized = false;
     f10_consumed = false;
     try {
+        dfhack_toggle.shutdown();
         stop_core();
     } catch (...) {
         log("ERROR", "Core shutdown failed; retaining its active mapping");
@@ -172,6 +176,7 @@ DFCN_EXPORT void dfhooks_sdl_loop() {}
 
 DFCN_EXPORT bool dfhooks_sdl_event(void *raw_event) {
     if (!initialized || !raw_event) return false;
+    if (dfhack_toggle.event(raw_event)) return true;
     const auto &event = *static_cast<const SDL_Event *>(raw_event);
     if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_FOCUS_LOST)
         f10_consumed = false;
