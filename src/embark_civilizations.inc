@@ -109,15 +109,17 @@ void Overlay::append_embark_civilization_rows(std::vector<std::string> &rows,
     };
 
     const auto complete_source = [&](int x, int y, const std::string &visible,
-                                     int source_right, int covered_right, bool top_layer) {
+                                     int source_right, int covered_right, bool top_layer)
+            -> std::optional<std::string> {
         const auto same_visible = [&](std::string_view drawn) {
             if (drawn == visible) return true;
-            // Reclaim draws both names BEFORE its checkbox. In PE 53.16,
-            // addst at 0x105136c/0x1051438 ends at r14; the four-column
-            // checkbox at 0x105151d starts at r14-3 and covers the dots.
+            // Both selectors draw their fields BEFORE the checkbox. In PE
+            // 53.16, civilization addst at 0x1051d44/0x1051e68 follows the
+            // captured resize at 0x1051ce5/0x1051e0a. Its four-column box
+            // starts at r14-3 and covers the dots, just as reclaim's does.
             // Bind the surviving prefix to that actual control boundary,
             // including undotted names whose last letters lie under it.
-            // Other fields still require their whole drawn string to match.
+            // Fields without a covering box require the whole drawn string.
             return covered_right > source_right &&
                 drawn.size() > static_cast<size_t>(source_right - x) &&
                 drawn.size() <= static_cast<size_t>(covered_right - x) &&
@@ -132,11 +134,16 @@ void Overlay::append_embark_civilization_rows(std::vector<std::string> &rows,
         for (const auto &capture : captures)
             if (capture.x == x && capture.y == y && same_visible(capture.visible))
                 return capture.complete;
-        return visible;
+        // An unshortened field still uses its original memory draw. Prefer
+        // the pre-resize/widget capture above whenever one exists.
+        for (const auto &draw : draws[top_layer ? 1 : 0])
+            if (draw.x == x && draw.y == y && draw.source == visible &&
+                    !draw.source.ends_with("...")) return draw.source;
+        return std::nullopt;
     };
     const auto append = [&](int y, int left, int source_right, int right, int rule,
                             bool reclaim_action = false, bool site_gloss = false,
-                            int covered_right = -1) {
+                            int covered_right = -1, bool memory_source_only = false) {
         // The native source can extend into our extra text padding. Keep its
         // entire suppression span even when the translated column is inset.
         const auto [first, end] = text_span(y, left, source_right);
@@ -155,9 +162,13 @@ void Overlay::append_embark_civilization_rows(std::vector<std::string> &rows,
                 native_foreground_picture_at(*gps_, x, y)) return;
         }
         const std::string visible = context[y].substr(first, end - first);
-        const std::string source = complete_source(first, y, visible,
+        const auto original = complete_source(first, y, visible,
             source_right, covered_right, source_top);
+        const std::string &source = original ? *original : visible;
         std::optional<std::string> target;
+        // List names must come from the captured live NativeString, including
+        // its pre-resize value. A missing capture leaves this field in English
+        // instead of sending a cut-off suffix to the phonetic name fallback.
         if (reclaim_action) {
             for (std::string_view action : {"Reclaim", "Unretire"}) {
                 if (!source.starts_with(std::string(action) + " ")) continue;
@@ -168,7 +179,7 @@ void Overlay::append_embark_civilization_rows(std::vector<std::string> &rows,
                 if (label && name) target = *label + *name;
                 break;
             }
-        } else {
+        } else if (!memory_source_only || original) {
             target = exact_literal_translation(source);
             if (!target && site_gloss) target = translate_legends_name(source, false);
             if (!target) target = translate_procedural_fragment(source);
@@ -219,8 +230,10 @@ void Overlay::append_embark_civilization_rows(std::vector<std::string> &rows,
                 append(record.reclaim_y + 2, left, record.box.x, right,
                     kEmbarkCivilizationTypeRule);
             } else {
-                append(record.box.y + 1, left, record.box.x, right, kEmbarkCivilizationNameRule);
-                append(record.box.y + 2, left, record.box.x, right, kEmbarkCivilizationTypeRule);
+                append(record.box.y + 1, left, record.box.x, right,
+                    kEmbarkCivilizationNameRule, false, false, record.box.x + record.box.w, true);
+                append(record.box.y + 2, left, record.box.x, right,
+                    kEmbarkCivilizationTypeRule, false, false, record.box.x + record.box.w, true);
             }
             // The selected checkmark is artwork, never an English fragment.
             // Exclude its metadata from generic matching without clearing or
