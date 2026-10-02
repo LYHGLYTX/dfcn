@@ -531,6 +531,9 @@ struct Match {
     // Reflowed prose keeps its paragraph viewport independently of the
     // original writer's per-row clipping and caption background textures.
     bool layout_reflowed_paragraph = false;
+    // A complete multiline control owns the relocated caption's vertical
+    // viewport. Its original writer still bounds the horizontal column.
+    bool layout_reflowed_control = false;
     // A complete current native list row recovered behind the hover frame.
     // Its exposed bytes have been checked before it enters page layout.
     bool native_hover_background = false;
@@ -44458,10 +44461,25 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
     // A paragraph's source rows can each have their own one-row writer clip.
     // Their translated baselines no longer coincide with those source rows.
     // The paragraph fitter combines the current clips before assigning its
-    // shared viewport; captions still use their individual writer clip.
+    // shared viewport. Complete multiline controls also move their captions
+    // off the source rows, while retaining the writer's horizontal limits.
     if (!match.layout_reflowed_paragraph) {
-        if (const auto draw_clip = native_captured_text_clip(*gps_, match))
-            intersect(pixels(*draw_clip));
+        if (const auto draw_clip = native_captured_text_clip(*gps_, match)) {
+            SDL_Rect writer_clip = pixels(*draw_clip);
+            if (match.layout_reflowed_control && match.layout_native_clip &&
+                    match.native_picture_caption_box) {
+                const auto &box = *match.native_picture_caption_box;
+                // Only a clip local to this complete control follows its
+                // caption. A wider page/scroll viewport keeps its own Y's.
+                if (draw_clip->y >= box.y &&
+                        draw_clip->y + draw_clip->h <= box.y + box.h) {
+                    const SDL_Rect control = pixels(box);
+                    writer_clip.y = control.y;
+                    writer_clip.h = control.h;
+                }
+            }
+            intersect(writer_clip);
+        }
     }
     if (match.layout_clip_right >= 0) {
         // Page-specific layout supplies column/control edges independently

@@ -214,6 +214,14 @@ void Overlay::layout_adventure_background_cards(SDL_Renderer *renderer) {
                     part->layout_y = member.box.y + static_cast<int>(row);
                     part->layout_pixel_y = offset;
                     part->layout_fixed_baseline = true;
+                    // The row fitter ran before this block was centered.
+                    // Replace its old one-row clip with the proven control;
+                    // source writer rows own suppression, not these new Y's.
+                    part->layout_native_clip = SDL_Rect{
+                        origin_x + member.box.x * tile_w,
+                        origin_y + member.box.y * tile_h,
+                        member.box.w * tile_w, member.box.h * tile_h};
+                    part->layout_reflowed_control = true;
                 }
             }
             if (member.bottom_skin && member.rows.size() == 2) {
