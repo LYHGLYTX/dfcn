@@ -150,17 +150,20 @@ void Overlay::append_fortress_place_names(std::vector<std::string> &rows,
                 }
             }
             if (farm_name) {
-                // The planted count is an independent coloured column. A
-                // similarly worded substring inside a custom name is not.
+                // Planted counts and Leave fallow share an independent
+                // coloured status column. Neither belongs to the name draw;
+                // similarly worded text inside a custom name still does.
                 constexpr std::string_view planted_suffix = " planted";
                 for (const auto &status : fields) {
                     if (status.start <= field.end || status.end > right ||
-                        !status.text.ends_with(planted_suffix) ||
                         color_at(status.start, y) == color_at(field.start, y)) continue;
-                    const auto count = std::string_view(status.text).substr(0,
-                        status.text.size() - planted_suffix.size());
-                    if (count.empty() || !std::all_of(count.begin(), count.end(),
-                            [](unsigned char ch) { return ch >= '0' && ch <= '9'; })) continue;
+                    if (status.text != "Leave fallow") {
+                        if (!status.text.ends_with(planted_suffix)) continue;
+                        const auto count = std::string_view(status.text).substr(0,
+                            status.text.size() - planted_suffix.size());
+                        if (count.empty() || !std::all_of(count.begin(), count.end(),
+                                [](unsigned char ch) { return ch >= '0' && ch <= '9'; })) continue;
+                    }
                     right = status.start;
                     break;
                 }
