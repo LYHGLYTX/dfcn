@@ -53,6 +53,7 @@
 #include "native_performance_choice.h"
 #include "native_unit_identity.h"
 #include "core_api.h"
+#include "runtime_paths.h"
 
 namespace fs = std::filesystem;
 
@@ -243,8 +244,8 @@ static double parse_double(const std::string &value, double fallback) {
 static void log_line(const char *level, const std::string &message) {
     std::lock_guard<std::mutex> lock(g_log_mutex);
     std::error_code ec;
-    fs::create_directories("dfcn", ec);
-    std::ofstream out("dfcn/dfcn.log", std::ios::app);
+    fs::create_directories(runtime::directory(), ec);
+    std::ofstream out(runtime::path("dfcn.log"), std::ios::app);
     if (!out) return;
     const auto now = std::chrono::system_clock::now();
     const std::time_t time = std::chrono::system_clock::to_time_t(now);
@@ -4307,7 +4308,7 @@ bool Overlay::load_config() {
     embark_knowledge_list_matches_.clear();
     embark_knowledge_list_identity_.clear();
     Config next;
-    std::ifstream in("dfcn/data/runtime/config.ini");
+    std::ifstream in(runtime::config_path());
     if (in) {
         std::string line;
         size_t line_no = 0;
@@ -4366,6 +4367,18 @@ bool Overlay::load_config() {
     if (const char *env = std::getenv("DFCN_CAPTURE_PATH")) next.capture_path = env;
     if (const char *env = std::getenv("DFCN_CAPTURE_TRIGGER")) next.capture_trigger_path = env;
 
+    // Packaged dfcn/... paths follow the loaded core, including a subscribed
+    // Workshop directory. Other custom relative paths still use the game root.
+    next.mapping_path = runtime::utf8(runtime::resolve_path(next.mapping_path));
+    if (!next.font_path.empty())
+        next.font_path = runtime::utf8(runtime::resolve_path(next.font_path));
+    if (!next.untranslated_path.empty())
+        next.untranslated_path = runtime::utf8(runtime::resolve_path(next.untranslated_path));
+    if (!next.capture_path.empty())
+        next.capture_path = runtime::utf8(runtime::resolve_path(next.capture_path));
+    if (!next.capture_trigger_path.empty())
+        next.capture_trigger_path = runtime::utf8(runtime::resolve_path(next.capture_trigger_path));
+
     next.font_scale = std::clamp(next.font_scale, 0.20, 2.0);
     next.font_pixels = next.font_pixels <= 0 ? 0 : std::clamp(next.font_pixels, 4, 64);
     next.knowledge_font_scale = std::clamp(next.knowledge_font_scale, 0.5, 2.0);
@@ -4388,7 +4401,7 @@ bool Overlay::load_config() {
     if (font_changed && ft_) load_font();
 
     std::error_code ec;
-    config_mtime_ = fs::last_write_time("dfcn/data/runtime/config.ini", ec);
+    config_mtime_ = fs::last_write_time(runtime::config_path(), ec);
     return true;
 }
 
@@ -4490,7 +4503,7 @@ bool Overlay::load_rules() {
     native_knowledge_frame_matches_.reset();
     embark_knowledge_list_matches_.clear();
     embark_knowledge_list_identity_.clear();
-    std::ifstream in(config_.mapping_path, std::ios::binary);
+    std::ifstream in(fs::u8path(config_.mapping_path), std::ios::binary);
     if (!in) {
         log_line("ERROR", "Cannot open mapping file: " + config_.mapping_path);
         rules_.clear();
@@ -4812,7 +4825,7 @@ bool Overlay::load_rules() {
     load_raw_material_names();
     load_symbol_shape_forms();
     std::error_code ec;
-    mapping_mtime_ = fs::last_write_time(config_.mapping_path, ec);
+    mapping_mtime_ = fs::last_write_time(fs::u8path(config_.mapping_path), ec);
     const size_t numeric_templates = static_cast<size_t>(std::count_if(
         rules_.begin(), rules_.end(), [](const Rule &rule) { return rule.numeric_template; }));
     const size_t string_templates = static_cast<size_t>(std::count_if(
@@ -5468,14 +5481,15 @@ bool Overlay::load_font() {
     std::string path = config_.font_path;
     int index = std::max(config_.font_index, 0);
     if (path.empty()) {
-        const std::array<const char *, 5> local_candidates = {
-            "dfcn/data/runtime/font.ttf", "dfcn/data/runtime/font.otf", "dfcn/data/runtime/font.ttc",
+        const std::array<fs::path, 5> local_candidates = {
+            runtime::data_path() / "font.ttf", runtime::data_path() / "font.otf",
+            runtime::data_path() / "font.ttc",
             "data/art/font.ttf", "data/art/font.otf"
         };
-        for (const char *candidate : local_candidates) {
+        for (const auto &candidate : local_candidates) {
             std::error_code ec;
             if (fs::is_regular_file(candidate, ec)) {
-                path = candidate;
+                path = runtime::utf8(candidate);
                 index = std::max(config_.font_index, 0);
                 break;
             }
@@ -5483,7 +5497,7 @@ bool Overlay::load_font() {
     }
     if (path.empty()) native_find_font(path, index);
     if (path.empty()) {
-        log_line("ERROR", "No CJK font found. Set font= in dfcn/data/runtime/config.ini");
+        log_line("ERROR", "No CJK font found. Set font= in " + runtime::utf8(runtime::config_path()));
         return false;
     }
     if (config_.font_index >= 0) index = config_.font_index;
@@ -5817,12 +5831,12 @@ bool Overlay::load_generated_instrument_names() {
 
 bool Overlay::load_procedural_word_senses() {
     procedural_word_senses_.clear();
-    std::string path = "dfcn/data/runtime/procedural-word-senses.tsv";
-    std::ifstream input(path, std::ios::binary);
+    std::string path = runtime::utf8(runtime::data_path() / "procedural-word-senses.tsv");
+    std::ifstream input(fs::u8path(path), std::ios::binary);
     if (!input) {
         input.clear();
         path = "data/runtime/procedural-word-senses.tsv";
-        input.open(path, std::ios::binary);
+        input.open(fs::u8path(path), std::ios::binary);
     }
     if (!input) {
         log_line("ERROR", "Cannot open reviewed procedural WORD senses: " + path);
@@ -6094,14 +6108,14 @@ bool Overlay::load_procedural_terms() {
     procedural_terms_.clear();
     if (!load_procedural_word_senses() || !load_procedural_name_grammar())
         log_line("ERROR", "Procedural surname semantics are incomplete");
-    std::string path = "dfcn/data/runtime/procedural-terms.tsv";
-    std::ifstream input(path, std::ios::binary);
+    std::string path = runtime::utf8(runtime::data_path() / "procedural-terms.tsv");
+    std::ifstream input(fs::u8path(path), std::ios::binary);
     if (!input) {
         // Data-only callers can use the project directory; the game itself
         // starts from the game root.
         input.clear();
         path = "data/runtime/procedural-terms.tsv";
-        input.open(path, std::ios::binary);
+        input.open(fs::u8path(path), std::ios::binary);
     }
     if (!input) {
         log_line("ERROR", "Cannot open procedural name vocabulary: " + path);
@@ -6389,7 +6403,7 @@ void Overlay::load_untranslated_index() {
     newly_collected_untranslated_ = 0;
     untranslated_limit_reported_ = false;
     if (config_.untranslated_path.empty()) return;
-    std::ifstream input(config_.untranslated_path, std::ios::binary);
+    std::ifstream input(fs::u8path(config_.untranslated_path), std::ios::binary);
     std::string line;
     while (std::getline(input, line)) {
         if (!line.empty() && line.back() == '\r') line.pop_back();
@@ -6637,12 +6651,12 @@ void Overlay::maybe_reload() {
     if (!reload && config_.hot_reload && now - last_reload_check_ >= std::chrono::seconds(1)) {
         last_reload_check_ = now;
         std::error_code ec1, ec2, ec3, ec4;
-        const auto cm = fs::last_write_time("dfcn/data/runtime/config.ini", ec1);
-        const auto mm = fs::last_write_time(config_.mapping_path, ec2);
+        const auto cm = fs::last_write_time(runtime::config_path(), ec1);
+        const auto mm = fs::last_write_time(fs::u8path(config_.mapping_path), ec2);
         const auto nm = fs::last_write_time(
-            fs::path(config_.mapping_path).parent_path() / "name-editor.tsv", ec3);
+            fs::u8path(config_.mapping_path).parent_path() / "name-editor.tsv", ec3);
         const auto im = fs::last_write_time(
-            fs::path(config_.mapping_path).parent_path() / "instrument-translations.tsv", ec4);
+            fs::u8path(config_.mapping_path).parent_path() / "instrument-translations.tsv", ec4);
         reload = (!ec4 && im != instrument_translations_mtime_) ||
             (!ec1 && cm != config_mtime_) || (!ec2 && mm != mapping_mtime_) ||
             (!ec3 && nm != name_editor_mtime_);
@@ -43677,16 +43691,17 @@ static bool is_shortcut_label(std::string_view text) {
 void Overlay::dump_screen() {
     if (!gps_ || !gps_->screen) return;
     std::error_code ec;
-    fs::create_directories("dfcn/data/extracted/dumps", ec);
+    const auto dump_directory = runtime::path("data/extracted/dumps");
+    fs::create_directories(dump_directory, ec);
     const auto now = std::chrono::system_clock::now();
     const std::time_t time = std::chrono::system_clock::to_time_t(now);
     std::tm tm{};
     native_localtime(tm, time);
     std::ostringstream stem;
-    stem << "dfcn/data/extracted/dumps/screen-" << std::put_time(&tm, "%Y%m%d-%H%M%S");
+    stem << runtime::utf8(dump_directory / "screen-") << std::put_time(&tm, "%Y%m%d-%H%M%S");
     const std::string grid_name = stem.str() + ".txt";
     const std::string suggestions_name = stem.str() + ".untranslated.tsv";
-    std::ofstream out(grid_name, std::ios::binary);
+    std::ofstream out(fs::u8path(grid_name), std::ios::binary);
     if (!out) {
         log_line("ERROR", "Cannot write screen dump " + grid_name);
         return;
@@ -43714,7 +43729,7 @@ void Overlay::dump_screen() {
             covered[static_cast<size_t>(x) * gps_->dimy + match.y] = 1;
         }
     }
-    std::ofstream suggestions(suggestions_name, std::ios::binary);
+    std::ofstream suggestions(fs::u8path(suggestions_name), std::ios::binary);
     std::unordered_set<std::string> seen;
     size_t suggestion_count = 0;
     if (suggestions) {
@@ -43976,7 +43991,7 @@ void Overlay::collect_untranslated_fragments() {
     if (additions.empty()) return;
 
     std::error_code ec;
-    const fs::path output_path(config_.untranslated_path);
+    const fs::path output_path = fs::u8path(config_.untranslated_path);
     if (!output_path.parent_path().empty()) fs::create_directories(output_path.parent_path(), ec);
     const bool new_file = !fs::exists(output_path, ec) || fs::file_size(output_path, ec) == 0;
     std::ofstream output(output_path, std::ios::app | std::ios::binary);
@@ -44027,7 +44042,7 @@ void Overlay::capture(SDL_Renderer *renderer) {
         return;
     }
     std::error_code ec;
-    fs::create_directories(fs::path(config_.capture_path).parent_path(), ec);
+    fs::create_directories(fs::u8path(config_.capture_path).parent_path(), ec);
     if (SDL_SaveBMP(surface, config_.capture_path.c_str()) != 0) {
         log_line("ERROR", std::string("SDL_SaveBMP failed: ") + SDL_GetError());
     } else {
@@ -44621,7 +44636,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     bool triggered_capture = false;
     if (!prepared_matches_.empty() && !config_.capture_trigger_path.empty()) {
         std::error_code trigger_ec;
-        const fs::path trigger(config_.capture_trigger_path);
+        const fs::path trigger = fs::u8path(config_.capture_trigger_path);
         if (fs::exists(trigger, trigger_ec) && !trigger_ec) {
             triggered_capture = true;
             fs::remove(trigger, trigger_ec);
@@ -44651,7 +44666,7 @@ static std::thread::id g_native_hook_thread;
 // this fallback only supplies the same literal vocabulary to early callers.
 static std::string exact_literal_mapping_path() {
     std::string path = "dfcn/data/runtime/translations.tsv";
-    std::ifstream config("dfcn/data/runtime/config.ini");
+    std::ifstream config(runtime::config_path());
     if (config) {
         std::string line;
         while (std::getline(config, line)) {
@@ -44673,14 +44688,14 @@ static std::string exact_literal_mapping_path() {
         environment && *environment) {
         path = environment;
     }
-    return path;
+    return runtime::utf8(runtime::resolve_path(path));
 }
 
 static const std::unordered_map<std::string, std::string> &
 early_exact_literal_translations() {
     static const std::unordered_map<std::string, std::string> translations = [] {
         std::unordered_map<std::string, std::string> loaded;
-        std::ifstream input(exact_literal_mapping_path(), std::ios::binary);
+        std::ifstream input(fs::u8path(exact_literal_mapping_path()), std::ios::binary);
         std::string line;
         size_t line_number = 0;
         while (std::getline(input, line)) {

@@ -8,7 +8,7 @@ void Overlay::load_instrument_translations() {
     native_instrument_names_.clear();
     instrument_names_epoch_ = 0;
     workshop_recipe_translation_cache_.clear();
-    const auto path = fs::path(config_.mapping_path).parent_path() / "instrument-translations.tsv";
+    const auto path = fs::u8path(config_.mapping_path).parent_path() / "instrument-translations.tsv";
     std::ifstream input(path, std::ios::binary);
     if (!input) {
         log_line("WARN", "Cannot open instrument translations: " + path.string());

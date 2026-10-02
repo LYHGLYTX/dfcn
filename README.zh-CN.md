@@ -1,5 +1,14 @@
 # DFCN：渲染阶段文本映射
 
+Windows 运行配置、词表、TOML 规则、内置字体与汉化日志按实际加载的 DLL
+目录定位。工坊安装可以让完整运行文件留在订阅目录，只将 `dfhooks.dll` 和
+`dfhooks_dfcn.ini` 复制到游戏根目录；引导 INI 的第一行填写订阅目录内
+`dfhooks_dfcn.dll` 的路径。该加载器读取同目录的 `dfcn_core.dll`，核心使用
+自身目录下的 `data/runtime/config.ini` 和配套数据。配置中的旧 `dfcn/...`
+运行路径随模块目录解析，绝对自定义路径保持不变，游戏 RAW 和素材仍从
+游戏目录读取。详细路径示例与卸载说明见 [README.md](README.md) 和
+[创意工坊项目](https://steamcommunity.com/sharedfiles/filedetails/?id=3811193379)。
+
 Windows 53.16 同时提供 Steam 与官网免费版的原生绑定。两版共用汉化核心、
 词表、翻译和排版流程；核心按游戏映像选择函数、全局数据和指令签名的地址映射。
 官网版不是 Steam 版的固定地址平移，不能仅放宽版本标识。

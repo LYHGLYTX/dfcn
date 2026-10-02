@@ -21,6 +21,8 @@ __pycache__/
 
 # Packaged runtime
 /DFCN-Windows-x64-minimal.zip
+/workshop/content/*.zip
+/workshop/content/DFCN/
 
 # Local credentials and editor files
 .env

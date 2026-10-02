@@ -1,0 +1,13 @@
+{
+  "appid": 975370,
+  "title": "DFCN · 矮人要塞简体中文汉化",
+  "description_file": "workshop/description.bbcode.txt",
+  "content_folder": "workshop/content",
+  "preview_file": "workshop/preview.png",
+  "tags": ["mod", "translation", "Chinese"],
+  "visibility": 0,
+  "changelog": "移除压缩包，改为 DFCN 文件夹直接提供运行文件。仅需复制 dfhooks.dll 和 dfhooks_dfcn.ini 到游戏目录，配置引导文件即可加载工坊目录中的汉化；核心、词表和规则按实际模块目录读取。补充相对路径、绝对路径、配置文件区别和旧安装迁移说明。",
+  "release_tag": "v53.16-20261002",
+  "release_url": "https://github.com/pokemonchw/dfcn/releases/tag/v53.16-20261002",
+  "github_url": "https://github.com/pokemonchw/dfcn"
+}

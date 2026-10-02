@@ -8,6 +8,7 @@ neither screenshots nor English suffix guesses define which names are valid.
 from collections import Counter
 from pathlib import Path
 import re
+from extract_workshop_tooltip_catalog import native_game_directory
 
 
 def material_names(root: Path) -> list[tuple[str, str, str]]:
@@ -25,7 +26,7 @@ def material_names(root: Path) -> list[tuple[str, str, str]]:
             raise ValueError(f"{path}:{number}: duplicate material term {key}")
         vocabulary[key] = (noun, qualifier)
 
-    directory = root.parent / "data/vanilla/vanilla_procedural/scripts/generators"
+    directory = native_game_directory(root) / "data/vanilla/vanilla_procedural/scripts/generators"
     materials = (directory / "materials.lua").read_text(encoding="utf-8")
     divine = (directory / "divine.lua").read_text(encoding="utf-8")
     evil = (directory / "evil.lua").read_text(encoding="utf-8")

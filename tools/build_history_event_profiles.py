@@ -15,6 +15,7 @@ import re
 from pathlib import Path
 import struct
 import sys
+from extract_workshop_tooltip_catalog import native_game_directory
 
 
 WORKSPACE = Path(__file__).resolve().parent.parent
@@ -232,7 +233,7 @@ def render_elf(image: ELFImage, profiles: list[tuple]) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--exe", type=Path, default=WORKSPACE.parent /
+    parser.add_argument("--exe", type=Path, default=native_game_directory(WORKSPACE) /
                         ("Dwarf Fortress.exe" if sys.platform == "win32" else "dwarfort"))
     parser.add_argument("--layouts", type=Path,
                         default=WORKSPACE / "data/extracted/native-history-event-layouts.tsv")

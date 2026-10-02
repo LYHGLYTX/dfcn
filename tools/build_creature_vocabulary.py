@@ -10,17 +10,19 @@ import json
 import re
 from build_translations import CREATURE_RAW_ROOTS, atomic_dictionary_output
 from legends_grammar import creature_status_prefix
+from extract_workshop_tooltip_catalog import native_game_directory
 
 
 ROOT = Path(__file__).resolve().parents[1]
+GAME = native_game_directory(ROOT)
 SOURCE = ROOT / "data/runtime/creature-name-vocabulary.tsv"
 STATUS_SOURCE = ROOT / "data/runtime/legends-creature-descriptions.tsv"
-MYTHICAL = ROOT.parent / "data/vanilla/vanilla_procedural/scripts/generators/interactions/mythical.lua"
-PROFILES = ROOT.parent / "data/vanilla/vanilla_procedural/scripts/generators/creatures/rcp.lua"
+MYTHICAL = GAME / "data/vanilla/vanilla_procedural/scripts/generators/interactions/mythical.lua"
+PROFILES = GAME / "data/vanilla/vanilla_procedural/scripts/generators/creatures/rcp.lua"
 CREATURES = PROFILES.parent.parent / "creatures.lua"
 INTERACTIONS = PROFILES.parent.parent / "interactions"
 EVIL = PROFILES.parent.parent / "evil.lua"
-GLOBALS = ROOT.parent / "data/init/globals.lua"
+GLOBALS = GAME / "data/init/globals.lua"
 WORD_SENSES = ROOT / "data/runtime/procedural-word-senses.tsv"
 TARGET = ROOT / "src/creature_vocabulary.inc"
 

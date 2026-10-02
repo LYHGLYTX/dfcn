@@ -8,6 +8,22 @@ DFCN 是 **Byayoi 同人社区**的《Dwarf Fortress（矮人要塞）》汉化�
 
 项目在游戏渲染阶段捕获英文文本，通过词表与语法规则生成中文，再进行字形测量、换行和覆盖绘制，不修改游戏 RAW 或存档。提供 Windows 与 Linux 原生适配，当前适配版本为 **53.16**；Windows 支持 Steam 版与官网免费版。
 
+## Windows 安装与使用
+
+当前运行包适用于 **Dwarf Fortress 53.16 / Windows x64**，无需编译，也无需安装 DFHack 或其他外部 Mod。
+
+**Steam 创意工坊：**订阅 [DFCN 汉化](https://steamcommunity.com/sharedfiles/filedetails/?id=3811193379) 后，运行文件位于 `你的 Steam 库目录/steamapps/workshop/content/975370/3811193379/DFCN/`。仅将其中的 `dfhooks.dll` 和 `dfhooks_dfcn.ini` 复制到包含 `Dwarf Fortress.exe` 的游戏根目录，其余文件留在订阅目录。游戏与订阅内容位于同一 Steam 库时，游戏目录中 `dfhooks_dfcn.ini` 的第一行使用：
+
+```text
+../../workshop/content/975370/3811193379/DFCN/dfcn/dfhooks_dfcn.dll
+```
+
+如果位于不同 Steam 库，将第一行改为该 DLL 的实际绝对路径；只写路径，不加引号或 `key=value`，保存为 UTF-8 无 BOM。汉化设置 `config.ini` 留在订阅目录的 `DFCN/dfcn/data/runtime/` 中。完整路径示例、旧版迁移与卸载方法见 [工坊详细说明](https://steamcommunity.com/sharedfiles/filedetails/?id=3811193379)。
+
+**GitHub Release：**从 [v53.16-20261002](https://github.com/pokemonchw/dfcn/releases/tag/v53.16-20261002) 下载 `DFCN-Windows-x64-minimal.zip`，解压后将全部内容按原有目录结构复制到游戏根目录，包括 `dfhooks.dll`、`dfhooks_dfcn.ini` 和整个 `dfcn` 文件夹。此方式的汉化设置位于游戏目录的 `dfcn/data/runtime/config.ini`。
+
+汉化核心、配置与翻译数据按汉化模块所在目录定位，因此支持将运行文件保留在工坊目录。游戏中按 **Shift+F10** 开启或关闭汉化。安装仅添加汉化自身文件，不改写磁盘上的游戏本体、RAW 或存档；取消订阅不会删除已复制的入口文件，卸载时需手动移除自己安装的汉化文件。
+
 ## 技术栈
 
 - **C++20**：原生加载器、汉化核心、文本捕获与界面排版。

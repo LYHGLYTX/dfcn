@@ -7,6 +7,15 @@ param()
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $gameRoot = [IO.Directory]::GetParent($projectRoot).FullName
+$imageConfigPath = Join-Path $projectRoot 'data\runtime\native-pe-images.json'
+if ([IO.File]::Exists($imageConfigPath)) {
+    $imageConfig = [IO.File]::ReadAllText($imageConfigPath) | ConvertFrom-Json
+    $referenceImagePath = [string]$imageConfig.reference
+    if (-not [IO.Path]::IsPathRooted($referenceImagePath)) {
+        $referenceImagePath = [IO.Path]::Combine($projectRoot, $referenceImagePath)
+    }
+    $gameRoot = [IO.Path]::GetDirectoryName([IO.Path]::GetFullPath($referenceImagePath))
+}
 $outputPath = Join-Path $projectRoot 'DFCN-Windows-x64-minimal.zip'
 $stagingPath = Join-Path $projectRoot ('DFCN-Windows-x64-minimal.' + [Guid]::NewGuid().ToString('N') + '.tmp')
 $archive = $null
@@ -42,6 +51,7 @@ try {
     Add-RuntimeFile (Join-Path $gameRoot 'dfhooks.dll') 'dfhooks.dll'
     # Exactly one loader path; no second root-level copy of dfhooks_dfcn.dll.
     Add-RuntimeText 'dfhooks_dfcn.ini' "dfcn/dfhooks_dfcn.dll`n"
+    Add-RuntimeFile (Join-Path $projectRoot 'LICENSE') 'dfcn/LICENSE'
     foreach ($name in @(
         'dfcn_core.dll', 'dfhooks_dfcn.dll', 'data/runtime/config.ini',
         'data/runtime/translations.tsv', 'data/runtime/name-editor.tsv',

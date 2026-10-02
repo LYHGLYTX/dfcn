@@ -16,6 +16,7 @@ referenced by DESCRIPTION:USE_TOOL / DESCRIPTION:USE_INSTRUMENT.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 import re
 import struct
@@ -107,9 +108,24 @@ class NativeELF:
             yield disk, self.raw[disk:disk + size]
 
 
-def native_game_executable(game: Path) -> Path:
+def native_game_directory(project_root: Path | None = None) -> Path:
+    """Use the configured Windows reference image's game directory.
+
+    Linux retains the project-parent installation layout. This resolves the
+    configured source only; it never searches for another game installation.
+    """
+    root = Path(project_root).resolve() if project_root is not None else Path(__file__).resolve().parents[1]
+    if sys.platform == "win32":
+        config_path = root / "data/runtime/native-pe-images.json"
+        if config_path.is_file():
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            return (root / config["reference"]).resolve().parent
+    return root.parent
+
+
+def native_game_executable(game: Path | None = None) -> Path:
     """Resolve only the current host's game executable, never another target."""
-    game = Path(game).resolve()
+    game = native_game_directory() if game is None else Path(game).resolve()
     if sys.platform == "win32":
         names = ("Dwarf Fortress.exe",)
     elif sys.platform.startswith("linux"):

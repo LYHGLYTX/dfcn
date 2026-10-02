@@ -4,7 +4,7 @@
 void Overlay::load_name_editor_translations() {
     ++name_editor_search_revision_;
     name_editor_translations_.clear();
-    const fs::path path = fs::path(config_.mapping_path).parent_path() /
+    const fs::path path = fs::u8path(config_.mapping_path).parent_path() /
         "name-editor.tsv";
     std::ifstream input(path, std::ios::binary);
     std::string line;

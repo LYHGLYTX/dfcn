@@ -49,6 +49,7 @@ All emitted entries stay in the h namespace and retain numbered link captures.
 from collections import Counter
 from pathlib import Path
 import re
+from extract_workshop_tooltip_catalog import native_game_directory
 
 
 FIELD = re.compile(r"\{([anpsricdebtqkmvuf])([1-9][0-9]*)?\}")
@@ -85,7 +86,7 @@ def religious_name_nouns(root: Path) -> dict[str, str]:
                 raise ValueError(f"{senses_path}:{number}: invalid/duplicate noun sense")
             senses[word] = (lemma, target)
 
-    raw_path = Path(__file__).resolve().parents[2] / "data/vanilla/vanilla_languages/objects/language_words.txt"
+    raw_path = native_game_directory() / "data/vanilla/vanilla_languages/objects/language_words.txt"
     forms: dict[str, set[str]] = {}
     word = ""
     for match in re.finditer(r"^\s*\[(WORD|NOUN):([^\]]+)\]",

@@ -39,11 +39,22 @@ def pe_edition_sources():
                         for name in ("reference", "classic")}}
 
 
+if sys.platform == "win32":
+    configured_sources = pe_edition_sources()
+    if configured_sources:
+        GAME = configured_sources["reference"].parent
+
+
 def edition_destinations():
     sources = pe_edition_sources()
-    if not sources or not sources.get("deploy_classic", False):
-        return ()
-    return (sources["classic"].parent / "dfcn",)
+    destinations = []
+    if sys.platform == "win32":
+        game_directory = (GAME / "dfcn").resolve()
+        if game_directory != ROOT:
+            destinations.append(game_directory)
+    if sources and sources.get("deploy_classic", False):
+        destinations.append((sources["classic"].parent / "dfcn").resolve())
+    return tuple(dict.fromkeys(destinations))
 
 
 def deploy_runtime_data(directory: Path) -> None:
@@ -530,7 +541,8 @@ def main() -> int:
                 generate_pe_bindings(pe_sources["reference"], pe_sources["classic"], objdump, output)
         compile_flags = ["-std=c++20", *split_arguments(env.get("CXXFLAGS", "-O2")),
                          "-Wall", "-Wextra", "-Wpedantic", *abi["compile"],
-                         "-Icompat", "-Isrc", "-Ithird_party/tomlplusplus/include", "-iquote", "../g_src",
+                         "-Icompat", "-Isrc", "-Ithird_party/tomlplusplus/include", "-iquote",
+                         str(GAME / "g_src") if sys.platform == "win32" else "../g_src",
                          *dependency_includes, *split_arguments(env.get("CPPFLAGS", ""))]
         link_flags = ["-shared", *split_arguments(env.get("LDFLAGS", "")),
                       *dependency_libraries, *abi["link"], *split_arguments(env.get("LDLIBS", ""))]

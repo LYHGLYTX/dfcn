@@ -1,17 +1,22 @@
 #pragma once
 
 #include <filesystem>
+#include "runtime_paths.h"
 
 namespace DFHack::DFZH::Hooks {
 
-// The standalone DFCN rule engine reads data/runtime/rulesets/zh-Hans,
-// whether the current directory is the game or the project.
+// Runtime modules use the rules shipped beside their own DLL. Linux's
+// established project-directory fallback remains available to data callers.
 struct Config {
     static std::filesystem::path getDataPath() {
-        const std::filesystem::path from_game_root = "dfcn/data/runtime";
-        if (std::filesystem::is_directory(from_game_root / "rulesets/zh-Hans"))
-            return from_game_root;
+        const auto installed = dfcn::runtime::data_path();
+#if defined(_WIN32)
+        return installed;
+#else
+        if (std::filesystem::is_directory(installed / "rulesets/zh-Hans"))
+            return installed;
         return "data/runtime";
+#endif
     }
 };
 

@@ -24,14 +24,15 @@ from pathlib import Path
 from legends_grammar import compile_events, indexed as index_template_target
 from magical_materials import material_names
 from extract_tooltip_catalog import building_tooltip_sources
-from extract_workshop_tooltip_catalog import workshop_tooltip_sources
+from extract_workshop_tooltip_catalog import native_game_directory, workshop_tooltip_sources
 from announcement_grammar import combat_entries
 
 
 ROOT = Path(__file__).resolve().parents[1]
+GAME = native_game_directory(ROOT)
 CREATURE_RAW_ROOTS = (
-    ROOT.parent / "data/vanilla/vanilla_creatures/objects",
-    ROOT.parent / "data/vanilla/vanilla_creatures_extinct/objects",
+    GAME / "data/vanilla/vanilla_creatures/objects",
+    GAME / "data/vanilla/vanilla_creatures_extinct/objects",
 )
 CREATURE_GENDER_MARKERS = "雌雄公母"
 
@@ -696,7 +697,7 @@ def write_preference_vocabulary(args: argparse.Namespace) -> None:
     # RAWs introduce a new reason. This is an input requirement of the asset
     # compiler, not a runtime translation/self-test.
     required: set[str] = set()
-    roots = (*CREATURE_RAW_ROOTS, ROOT.parent / "data/vanilla/vanilla_plants/objects")
+    roots = (*CREATURE_RAW_ROOTS, GAME / "data/vanilla/vanilla_plants/objects")
     for root in roots:
         for raw in sorted(root.glob("*.txt")):
             required.update(re.findall(
@@ -1080,7 +1081,7 @@ def plant_wood_log_entries(root: Path, candidates: list[Entry]) -> list[Entry]:
     log_noun = next(ruleset["rules"]["logs"] for ruleset in wood_document["rulesets"]
                     if "logs" in ruleset.get("rules", {}))
     entries: dict[str, Entry] = {}
-    for path in sorted((ROOT.parent / "data/vanilla").glob("*/objects/*.txt")):
+    for path in sorted((GAME / "data/vanilla").glob("*/objects/*.txt")):
         raw = path.read_text(encoding="utf-8", errors="replace")
         if "[OBJECT:PLANT]" not in raw:
             continue
@@ -1757,13 +1758,13 @@ def build(args: argparse.Namespace) -> tuple[list[Entry], collections.Counter[st
         for line in (ROOT / "data/extracted/workshop-tooltip-sources.tsv").read_text(encoding="utf-8").splitlines()
         if line and not line.startswith("#")
     }
-    native_workshop_sources = {source for _, _, _, source in workshop_tooltip_sources(ROOT.parent)}
+    native_workshop_sources = {source for _, _, _, source in workshop_tooltip_sources(GAME)}
     if missing := native_workshop_sources - workshop_sources:
         raise ValueError("Missing workshop tooltip source inventory: " + repr(sorted(missing)))
     tooltip_sources |= workshop_sources
     # Custom workshops load their TOOLTIP from RAW, not the executable's
     # fixed initializer. Require them in the same source/translation catalog.
-    raw_tooltips = {source for _, _, _, source in building_tooltip_sources(ROOT.parent)}
+    raw_tooltips = {source for _, _, _, source in building_tooltip_sources(GAME)}
     if missing := raw_tooltips - tooltip_sources:
         raise ValueError("Missing RAW building tooltip sources: " + repr(sorted(missing)))
     if missing := tooltip_sources - supplied_sources:

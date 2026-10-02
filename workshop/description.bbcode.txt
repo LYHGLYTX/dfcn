@@ -1,0 +1,62 @@
+[h1]DFCN · 矮人要塞简体中文汉化[/h1]
+
+DFCN 是 Byayoi 同人社区的《Dwarf Fortress（矮人要塞）》汉化作品，结合社区译文与本地修订，让中文玩家更方便地阅读游戏界面、人物信息、物品描述和传说故事。
+
+[b]当前适配游戏版本：53.16。本工坊项目提供 Windows x64 运行文件，支持 Steam 版与官网免费版。[/b]项目同时提供 Linux 原生适配，相关说明见 GitHub。
+
+[url=https://github.com/pokemonchw/dfcn]GitHub 项目主页[/url]
+[url=https://github.com/pokemonchw/dfcn/releases]GitHub Releases[/url]
+[url=https://byayoi.org/]Byayoi 同人社区[/url]
+
+[h1]订阅与安装[/h1]
+
+[b]运行文件已解压，统一放在订阅目录的 DFCN 文件夹中。仅订阅不会自动启用汉化；安装时只需复制两个加载入口文件。[/b]
+
+[olist]
+[*]订阅本项目，等待 Steam 下载完成，打开：[code]你的 Steam 库目录\steamapps\workshop\content\975370\__WORKSHOP_ID__\DFCN\[/code]
+[*]将其中的 [b]dfhooks.dll[/b] 和 [b]dfhooks_dfcn.ini[/b] 复制到游戏根目录，也就是包含 [b]Dwarf Fortress.exe[/b] 的目录：[code]你的 Steam 库目录\steamapps\common\Dwarf Fortress\[/code]
+[*]打开刚复制到游戏目录中的 [b]dfhooks_dfcn.ini[/b]，第一行填写订阅目录中 [b]dfhooks_dfcn.dll[/b] 的实际路径，格式见下方。其余运行文件留在订阅目录中。
+[/olist]
+
+[b]加载路径如何填写[/b]
+
+游戏与订阅内容位于同一 Steam 库时，配置已预填以下相对路径，可以直接使用：[code]../../workshop/content/975370/__WORKSHOP_ID__/DFCN/dfcn/dfhooks_dfcn.dll[/code]
+
+例如 Steam 库为 [b]D:\SteamLibrary[/b]，则游戏程序与汉化加载器的完整路径分别为：[code]D:/SteamLibrary/steamapps/common/Dwarf Fortress/Dwarf Fortress.exe
+D:/SteamLibrary/steamapps/workshop/content/975370/3811193379/DFCN/dfcn/dfhooks_dfcn.dll[/code]
+此时也可以将 [b]dfhooks_dfcn.ini[/b] 的第一行直接写为：[code]D:/SteamLibrary/steamapps/workshop/content/975370/3811193379/DFCN/dfcn/dfhooks_dfcn.dll[/code]
+
+如果 Steam 使用默认安装目录，路径示例为：[code]C:/Program Files (x86)/Steam/steamapps/workshop/content/975370/3811193379/DFCN/dfcn/dfhooks_dfcn.dll[/code]
+
+请按自己的实际 Steam 库位置修改盘符和目录；游戏与订阅内容在不同 Steam 库时，使用订阅内容的绝对路径。[b]第一行只写 DLL 路径，不加引号、不写“key=value”，保存为 UTF-8 无 BOM。[/b]
+
+路径末尾包含 [b]dfhooks_dfcn.dll[/b] 文件名。它会自动加载同目录的 [b]dfcn_core.dll[/b]，并读取该目录中的 [b]data/runtime[/b] 词表、规则与汉化设置。请保留订阅目录内的完整文件结构。
+
+[b]两个配置文件的用途不同：[/b]游戏根目录中的 [b]dfhooks_dfcn.ini[/b] 用于指定加载器路径；汉化设置 [b]config.ini[/b] 留在：[code]你的 Steam 库目录\steamapps\workshop\content\975370\__WORKSHOP_ID__\DFCN\dfcn\data\runtime\config.ini[/code]
+汉化核心与翻译数据会从订阅目录读取，无需复制整个 [b]DFCN[/b] 或 [b]dfcn[/b] 文件夹到游戏目录，也无需编译或在创建世界时启用本项目。
+
+后续工坊更新会由 Steam 下载到订阅目录；只要实际目录不变，游戏中的入口配置就继续指向该目录。
+
+[b]从旧版整包复制方式升级：[/b]移除游戏根目录中旧版汉化的 [b]dfhooks_dfcn.dll[/b]（若存在），避免加载两份汉化。旧的 [b]dfcn[/b] 文件夹已不再使用，可在保留需要的个人配置或资料后移除。
+
+[h1]开启、关闭与卸载[/h1]
+
+在游戏中按 [b]Shift+F10[/b] 可以开启或关闭汉化；再次按下即可切换。
+
+[b]取消订阅不会自动删除手动复制到游戏目录中的文件。[/b]卸载时，手动删除本次添加到游戏根目录的 [b]dfhooks.dll[/b] 与 [b]dfhooks_dfcn.ini[/b]，再取消订阅。旧版整包安装遗留的汉化文件也需自行移除。无需删除游戏本体或存档。
+
+[h1]对游戏本体的影响与依赖[/h1]
+
+本项目在游戏渲染阶段捕获英文文本，通过词表与语法规则生成中文，再进行字形测量、换行和覆盖绘制。[b]不会破坏或改写磁盘上的游戏本体文件，不修改游戏 RAW 或存档，也没有 DFHack 等外部 Mod 依赖。[/b]安装时添加的是汉化自身的加载入口；运行所需组件已包含在订阅内容中。
+
+[h1]技术与致谢[/h1]
+
+项目使用 C++20、SDL2 与字体渲染实现文本捕获和中文排版，以 TSV／TOML 与 toml++ 维护词表、配置和递归翻译规则，使用 Python 整理数据及构建工具。
+
+感谢矮人要塞中文维基翻译组及上游贡献者：DFHack / dfhooks 与 df-structures 提供加载入口和结构定义参考；DFI18n、dfint 提供基础译文；dfzh 提供词表、规则和翻译引擎；ECDICT 提供英汉释义参考。它们是代码与数据来源，并非玩家需要额外安装的 Mod。
+
+本项目使用 OpenAI Codex 协助代码编写、跨平台适配、翻译规则整理、中文渲染与排版修复，以及工具和文档编写。
+
+[h1]许可[/h1]
+
+原创内容采用 [url=https://creativecommons.org/licenses/by-nc-sa/4.0/]CC BY-NC-SA 4.0（署名—非商业性使用—相同方式共享）[/url]。使用时须保留署名、遵守非商业限制，分享改编成果时采用相同许可。第三方资源保留各自许可与署名，详见 [url=https://github.com/pokemonchw/dfcn/blob/main/THIRD_PARTY_NOTICES.md]THIRD_PARTY_NOTICES.md[/url] 及运行文件内许可说明。

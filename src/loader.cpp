@@ -1,5 +1,6 @@
 #include "core_api.h"
 #include "core_module.h"
+#include "runtime_paths.h"
 #include <SDL2/SDL.h>
 #include <cstdio>
 #include <ctime>
@@ -10,7 +11,12 @@
 namespace {
 
 static void log(const char *level, const std::string &message) {
-    FILE *out = std::fopen("dfcn/dfcn.log", "a");
+    const auto filename = dfcn::runtime::path("dfcn.log");
+#if defined(_WIN32)
+    FILE *out = _wfopen(filename.c_str(), L"a");
+#else
+    FILE *out = std::fopen(dfcn::runtime::utf8(filename).c_str(), "a");
+#endif
     if (!out) return;
     const std::time_t now = std::time(nullptr);
     std::tm tm{};

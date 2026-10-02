@@ -32,8 +32,8 @@ int Overlay::caption_diagnostic(std::string_view route, std::string_view source,
     // real global instance so static material bridges see the same dictionaries.
     static const std::string initialization_error = [this] {
         try {
-            if (!std::ifstream("dfcn/data/runtime/config.ini"))
-                return std::string("Run from the game root: dfcn/data/runtime/config.ini is missing");
+            if (!std::ifstream(runtime::config_path()))
+                return std::string("Runtime configuration is missing: ") + runtime::utf8(runtime::config_path());
             if (!load_config()) return std::string("Cannot load caption configuration");
             if (!load_rules()) return std::string("Cannot load translation rules");
             if (!load_generated_instrument_names())
