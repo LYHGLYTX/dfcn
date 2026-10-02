@@ -114,6 +114,10 @@
             break;
         }
         std::vector<SDL_Rect> help_panels;
+        const auto collapsed_panels = native_collapsed_help_panels(*gps_);
+        for (const auto &panel : collapsed_panels)
+            help_panels.push_back({panel.frame.x + 1, panel.frame.y + 1,
+                panel.frame.w - 2, panel.frame.h - 2});
         for (int bottom = 2; bottom < gps_->dimy; ++bottom) {
             for (int left = 0; left + 8 < gps_->dimx; ++left) {
                 if (!skin_at(left, bottom, 0, 2)) continue;
@@ -422,6 +426,11 @@
         for (const SDL_Rect &panel : help_panels) {
             const int left = panel.x - 1, right = panel.x + panel.w;
             const int top = panel.y - 1, bottom = panel.y + panel.h;
+            const auto collapsed = std::find_if(collapsed_panels.begin(), collapsed_panels.end(),
+                [&](const NativeCollapsedHelpPanel &known) {
+                    return known.frame.x == left && known.frame.y == top &&
+                        known.frame.w == panel.w + 2 && known.frame.h == panel.h + 2;
+                });
             // HELP_CORNER is artwork, including the '?' glyphs and its
             // internal border in classic mode. It shares rows with the
             // heading but is not part of that text. Verify the whole live
@@ -430,10 +439,17 @@
             const bool has_corner = left + corner_width < right &&
                 top + corner_height <= bottom && help_corner_at(left, top);
             const auto heading_row = [&](int y) {
-                return has_corner && y < top + corner_height;
+                // A collapsed guide is entirely a caption, including long
+                // titles or titles ending in punctuation. Plain one-row help
+                // frames have already been scoped by their catalogued text.
+                return panel.h == 1 || (has_corner && y < top + corner_height);
             };
             const auto text_left = [&](int y) {
-                return heading_row(y) ? left + corner_width : left + 1;
+                return has_corner && heading_row(y) ? left + corner_width : left + 1;
+            };
+            const auto text_right = [&](int y) {
+                return collapsed != collapsed_panels.end() && y == collapsed->title.y
+                    ? collapsed->title.x + collapsed->title.w : right;
             };
             const auto decoration = [](unsigned char ch) {
                 return ch < 0x20 || (ch >= 0x7f && !is_cp437_latin_letter_byte(ch));
@@ -445,6 +461,7 @@
             // or combining two horizontally adjacent objectives.
             std::vector<bool> objective_rows(static_cast<size_t>(gps_->dimy), false);
             for (int row_y = top + 1; row_y < bottom; ++row_y) {
+                if (panel.h == 1) continue;
                 const int row_left = text_left(row_y);
                 for (int x = row_left; x < right; ++x) {
                     const auto &row = help_rows[row_y];
@@ -512,7 +529,7 @@
             const auto text_row = [&](int y) -> std::optional<Match> {
                 if (objective_rows[static_cast<size_t>(y)]) return std::nullopt;
                 const auto &row = help_rows[y];
-                int begin = text_left(y), end = right;
+                int begin = text_left(y), end = text_right(y);
                 while (begin < end && (row[begin] == ' ' || decoration(row[begin]))) ++begin;
                 while (end > begin && (row[end - 1] == ' ' || decoration(row[end - 1]))) --end;
                 if (begin == end) return std::nullopt;
@@ -561,6 +578,8 @@
                         Match match{rows.front().x + field.start, rows.front().y,
                             field.end - field.start, kHelpDocumentRule, *label, field.text};
                         match.layout_glyph_foreground_rgb = std::move(colors);
+                        if (collapsed != collapsed_panels.end())
+                            match.layout_clip_right = text_right(match.y);
                         claim_source(match.x, match.y, match.length);
                         if (only_y < 0 || only_y == match.y) result.push_back(std::move(match));
                     }

@@ -1,3 +1,8 @@
+struct NativeCollapsedHelpPanel {
+    SDL_Rect frame;
+    SDL_Rect title;
+};
+
 // A matching or layout traversal reads one current native grid. Independent
 // field owners share its widget and border proofs only inside this traversal,
 // never across raw/composited passes, frames, renderer changes or hot reload.
@@ -12,6 +17,7 @@ public:
     std::vector<uint8_t> item_actions;
     std::vector<uint8_t> item_anchor_candidates;
     std::vector<std::pair<int, int>> item_anchor_positions;
+    std::optional<std::vector<NativeCollapsedHelpPanel>> collapsed_help_panels;
     std::optional<std::vector<SDL_Rect>> help_frames;
     std::optional<std::vector<SDL_Rect>> announcement_frames;
     std::optional<std::vector<SDL_Rect>> overlay_frames;
@@ -2027,6 +2033,49 @@ static bool native_inventory_action_at(const graphicst &gps, int x, int y,
     return native_item_action_at(gps, x, y, clip);
 }
 
+// Collapsed help keeps a three-row HELP_BORDER frame, without HELP_CORNER.
+// Its reveal and close controls replace the upper-right six columns across
+// the top two rows. Prove those complete live controls and every remaining
+// edge before sharing the bounded title with matching and composition.
+static std::vector<NativeCollapsedHelpPanel> native_collapsed_help_panels(
+        const graphicst &gps) {
+    auto *cache = NativePanelReadScope::active;
+    if (cache && cache->gps == &gps && cache->collapsed_help_panels)
+        return *cache->collapsed_help_panels;
+    std::vector<NativeCollapsedHelpPanel> panels;
+    const auto settings = native_ui_settings();
+    const auto &border = native_texture_help_border(gps);
+    const auto &reveal = native_texture_help_reveal(gps);
+    const auto &close = native_texture_help_close(gps);
+    const auto tile = [&](int x, int y, int32_t skin) {
+        return native_ui_skin_at(gps, x, y, skin, settings && settings->classic);
+    };
+    for (int bottom = 2; bottom < gps.dimy; ++bottom) {
+        const int top = bottom - 2;
+        for (int left = 0; left + 7 < gps.dimx; ++left) {
+            if (!tile(left, bottom, border[0][2])) continue;
+            int right = left + 1;
+            while (right < gps.dimx && tile(right, bottom, border[1][2])) ++right;
+            if (right < left + 7 || right >= gps.dimx ||
+                !tile(right, bottom, border[2][2])) continue;
+            bool complete = tile(left, top, border[0][0]) &&
+                tile(left, top + 1, border[0][1]);
+            for (int x = left + 1; complete && x < right - 5; ++x)
+                complete = tile(x, top, border[1][0]);
+            for (int dx = 0; complete && dx < 3; ++dx)
+                for (int dy = 0; complete && dy < 2; ++dy)
+                    complete = tile(right - 5 + dx, top + dy, reveal[dx][dy]) &&
+                        tile(right - 2 + dx, top + dy, close[dx][dy]);
+            if (!complete) continue;
+            panels.push_back({{left, top, right - left + 1, 3},
+                {left + 1, top + 1, right - left - 6, 1}});
+            left = right;
+        }
+    }
+    if (cache && cache->gps == &gps) cache->collapsed_help_panels = panels;
+    return panels;
+}
+
 // Shared recognition of the CURRENT native panel skin. Parts use row-major
 // nine-slice order: NW/N/NE, W/interior/E, SW/S/SE. Texture arrays on graphicst
 // use [x][y], as the existing native help-frame reader does.
@@ -2037,6 +2086,8 @@ static std::vector<SDL_Rect> native_help_overlay_frames(const graphicst &gps) {
     auto *cache = NativePanelReadScope::active;
     if (cache && cache->gps == &gps && cache->help_frames) return *cache->help_frames;
     std::vector<SDL_Rect> frames;
+    for (const NativeCollapsedHelpPanel &panel : native_collapsed_help_panels(gps))
+        frames.push_back(panel.frame);
     const auto settings = native_ui_settings();
     const auto &border = native_texture_help_border(gps);
     const auto &corner = native_texture_help_corner(gps);
