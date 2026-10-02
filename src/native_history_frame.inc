@@ -3,7 +3,30 @@
 // grid; consumers must not reinterpret it using that newer selection.
 static std::mutex g_native_history_frame_mutex;
 static std::shared_ptr<const NativeHistoryRenderedFrame> g_native_history_rendered_frame;
-static NativeImportHook g_native_history_render_hook;
+struct NativeHistoryRenderHook {
+    NativeEntryHook entry;
+    NativeImportHook table;
+
+    bool active() const { return entry.active() || table.active(); }
+    void *original() const { return entry.original ? entry.original : table.original; }
+
+    bool install(const NativeHistoryProfile &profile, void *callback, const char *label) {
+        if (profile.legends_render_entry) {
+            if (!entry.prepare(profile.legends_render_entry, profile.legends_render_prefix,
+                    callback, {}, label)) return false;
+            return entry.install(label);
+        }
+        table = {profile.legends_render_slot, nullptr, callback};
+        return table.install(label);
+    }
+
+    bool uninstall(const char *label) {
+        if (!entry.uninstall(label) || !table.uninstall(label)) return false;
+        table = {};
+        return true;
+    }
+};
+static NativeHistoryRenderHook g_native_history_render_hook;
 using NativeHistoryRenderFn = void (*)(void *, uint32_t);
 
 NativeHistoryFrameScope::NativeHistoryFrameScope(const graphicst *graphics) {
@@ -36,7 +59,7 @@ static void capture_native_history_render(void *screen, uint32_t tick) {
         }
         ~DrawPass() { g_native_history_legends_rendering = previous; }
     } pass;
-    const auto original = reinterpret_cast<NativeHistoryRenderFn>(g_native_history_render_hook.original);
+    const auto original = reinterpret_cast<NativeHistoryRenderFn>(g_native_history_render_hook.original());
     original(screen, tick);
     try {
         const auto *graphics = native_graphics();

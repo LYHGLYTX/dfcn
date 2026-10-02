@@ -121,6 +121,13 @@ static bool resolve_native_history_profile(NativeHistoryProfile &profile) {
     profile.layout = reinterpret_cast<NativeHistoryLayoutFn>(native_pe_address(anchor, 0xd51c80));
     profile.draw = reinterpret_cast<NativeHistoryDrawFn>(native_pe_address(anchor, 0xad9960));
     profile.legends_render = native_pe_address(anchor, 0xd3e8d0);
+    // Vtable interposition can replace this slot after initialization and
+    // retain the previous callback. Hook the native function instead, so
+    // other render wrappers retain a game address across core reloads.
+    // MOV [RSP+0x10], RBX is one complete position-independent instruction.
+    profile.legends_render_entry = reinterpret_cast<unsigned char *>(profile.legends_render);
+    profile.legends_render_prefix = {0x48,0x89,0x5c,0x24,0x10};
+    if (!native_pe_bytes(0xd3e8d0, profile.legends_render_prefix)) return false;
     profile.calls = {
         {0xf55731, 0, reinterpret_cast<const void *>(&capture_native_history_sentence), {},
             {0xff,0x90,0xd0,0x00,0x00,0x00}},
@@ -224,20 +231,22 @@ static bool resolve_native_history_profile(NativeHistoryProfile &profile) {
 #else
 #include "native_history_profile_elf.inc"
 #endif
-    // The generated schema supplies each ABI's vtable address and render
-    // displacement. Frame capture, publication and consumption are shared.
-    const auto *legends = native_history_object_layout("viewscreen_legendsst");
-    uintptr_t render = 0;
-    if (!legends || !legends->table || legends->slot_count <= 3 || !profile.legends_render)
-        return false;
-    const uintptr_t render_table = native_reference_address(anchor, legends->table);
-    if (!render_table) return false;
-    const uintptr_t render_slot = render_table + legends->slots[3];
-    if (!native_history_copy(render_slot, render) || render != profile.legends_render) {
-        log_line("ERROR", "Native Legends render slot identity mismatch");
-        return false;
+    // The ELF binding retains its schema-defined vtable slot. An entry
+    // binding validates native code without claiming a mutable vtable slot.
+    if (!profile.legends_render_entry) {
+        const auto *legends = native_history_object_layout("viewscreen_legendsst");
+        uintptr_t render = 0;
+        if (!legends || !legends->table || legends->slot_count <= 3 || !profile.legends_render)
+            return false;
+        const uintptr_t render_table = native_reference_address(anchor, legends->table);
+        if (!render_table) return false;
+        const uintptr_t render_slot = render_table + legends->slots[3];
+        if (!native_history_copy(render_slot, render) || render != profile.legends_render) {
+            log_line("ERROR", "Native Legends render slot identity mismatch");
+            return false;
+        }
+        profile.legends_render_slot = reinterpret_cast<void **>(render_slot);
     }
-    profile.legends_render_slot = reinterpret_cast<void **>(render_slot);
     // Confidence is a shared native producer for all describe introductions.
     // Resolve direct call bindings within the validated function range; PE
     // can merge branch tails while ELF emits distinct calls. There is no

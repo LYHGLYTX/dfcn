@@ -399,6 +399,8 @@ struct NativeHistoryProfile {
     NativeHistoryLayoutFn layout = nullptr;
     NativeHistoryDrawFn draw = nullptr;
     uintptr_t legends_render = 0;
+    unsigned char *legends_render_entry = nullptr;
+    std::vector<unsigned char> legends_render_prefix;
     void **legends_render_slot = nullptr;
     std::vector<NativeCall> calls;
 };
@@ -442,7 +444,7 @@ static bool install_native_history_hooks() {
         return false;
     }
     if (!profile.box || !profile.sentence_slot || !profile.append || !profile.layout || !profile.draw ||
-            !profile.legends_render_slot)
+            (!profile.legends_render_entry && !profile.legends_render_slot))
         return false;
     g_native_history_box = profile.box;
     g_native_history_sentence_slot = profile.sentence_slot;
@@ -453,9 +455,8 @@ static bool install_native_history_hooks() {
         uninstall_native_history_hooks();
         return false;
     }
-    g_native_history_render_hook = {profile.legends_render_slot, nullptr,
-        reinterpret_cast<void *>(&capture_native_history_render)};
-    if (!g_native_history_render_hook.install("Native Legends render")) {
+    if (!g_native_history_render_hook.install(profile,
+            reinterpret_cast<void *>(&capture_native_history_render), "Native Legends render")) {
         uninstall_native_history_hooks();
         return false;
     }
