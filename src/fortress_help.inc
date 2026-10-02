@@ -264,7 +264,32 @@ std::optional<std::string> Overlay::translate_help_paragraph(
                 for (size_t i = 0; i < captures.size(); ++i) {
                     std::optional<std::string> translated;
                     switch (rule.template_kinds[i]) {
-                    case 'p': translated = translate_legends_name(captures[i], true); break;
+                    case 'p':
+                        if (ui_message) {
+                            translated = translate_legends_name(captures[i], true);
+                        } else {
+                            // The adventure initializer calls the historical
+                            // figure formatter, not the bare name formatter:
+                            // its person field can include an article, caste,
+                            // profession, curse, nickname or unnamed identity.
+                            // Prefer captured native fields, then the shared
+                            // actor grammar for already constructed help pages.
+                            const size_t first = source_origins[ranges[i].first];
+                            const size_t last = source_origins[ranges[i].second - 1] + 1;
+                            const auto native = raw_source.substr(first, last - first);
+                            translated = native_unit_identity_source_target(native);
+                            if (!translated)
+                                translated = native_unit_identity_source_target(captures[i]);
+                            if (!translated)
+                                translated = translate_legends_actor(native, 0, true);
+                            // A player's Chinese first name is authored text
+                            // inside this proved person slot, rather than a
+                            // generated Latin name. Reuse the unit parser's
+                            // caste/name separation without broadening names.
+                            if (!translated && contains_cjk_utf8(native))
+                                translated = translate_ui_message_capture(native, true);
+                        }
+                        break;
                     case 'e': translated = translate_legends_name(captures[i], false); break;
                     case 'r': translated = translate_deity_spheres(captures[i]); break;
                     case 'q':

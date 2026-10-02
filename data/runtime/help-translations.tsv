@@ -2,7 +2,7 @@
 # Source inventory: data/extracted/help-sources.tsv; native semantic boundaries never depend on screen wrapping.
 # Dedicated help scope: no empty targets or row-dependent deletion rules.
 # Target [C:foreground:background:bright] tags retain native semantic highlights through Chinese reflow.
-# Optional t flag: native dynamic prose, {p}=person/deity, {e}=place/group/artifact, {r}=sphere, {d}=number, {k}=current native key binding.
+# Optional t flag: native dynamic prose, {p}=complete person/deity identity (including caste and role), {e}=place/group/artifact, {r}=sphere, {d}=number, {k}=current native key binding.
 Prepare to guide your stout charges to fortune in a world fraught with many perils.	准备好带领这些矮人，在危机四伏的世界中追寻财富吧。
 You'll begin by creating your world and watching the region's history unfold.	你首先要创建世界，见证这片土地的历史徐徐展开。
 Once this process is complete, you can prepare a group and send them out to seek wealth deep in the mountains.	这一过程结束后，就可以筹备一支队伍，派他们前往深山探寻财富。
@@ -689,8 +689,9 @@ A foolhardy soul might try to rescue the child that has been kidnapped.	胆大�
 A foolhardy soul might try to rescue the children that have been kidnapped.	胆大莽撞的人或许会尝试营救那些被绑架的孩子。
 {p} is from here and might have some local information.	{p}来自这里，或许知道一些当地的情况。	t
 
-# Siege, bandit, and vault starting situations; names retain native name handling.
-The peaceful town of {e} is threatened! The forces of {e} are on the march.	宁静的城镇{e1}正受到威胁！{e2}的大军正在进逼。	t
+# Siege, bandit, and vault starting situations; native formatter types are retained.
+# Both the invading force and its commander use the historical-figure formatter.
+The peaceful town of {e} is threatened! The forces of {p} are on the march.	宁静的城镇{e}正受到威胁！{p}的大军正在进逼。	t
 The peaceful town of {e} is threatened! The forces of darkness are on the march.	宁静的城镇{e}正受到威胁！黑暗势力的大军正在进逼。	t
 The enemy will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.	敌人绝不会手下留情。时间所剩无几，你必须逃离。也许还能说服家人和朋友一起离开。
 Commanded by {p}, they will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.	他们由{p}统领，绝不会手下留情。时间所剩无几，你必须逃离。也许还能说服家人和朋友一起离开。	t

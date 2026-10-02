@@ -82,11 +82,45 @@ def extract(path: Path) -> list[tuple[str, str, str]]:
             or struct.unpack_from("<H", raw, header + 24)[0] != 0x20B):
         raise ValueError("Expected a PE32+ AMD64 executable")
 
+    image = NativeHelpImage(path)
+    section_count = struct.unpack_from("<H", raw, header + 6)[0]
+    optional_size = struct.unpack_from("<H", raw, header + 20)[0]
+    rdata_ranges = []
+    for index in range(section_count):
+        at = header + 24 + optional_size + index * 40
+        if raw[at:at + 8].rstrip(b"\0") == b".rdata":
+            size, offset = struct.unpack_from("<II", raw, at + 16)
+            rdata_ranges.append((offset, offset + size))
+
+    # Prefer the actual RIP-relative LEA targets in the reviewed introduction
+    # constructor. A raw search for a short pool literal such as "a" otherwise
+    # matches PE headers, numeric tables or individual UTF-16 characters.
+    intro_literal_offsets: dict[str, int] = {}
+    intro_start, intro_end = 0x1407EA2B6, 0x1407EB302
+    for _, operation, _, target in image.disassemble(intro_start, intro_end):
+        if operation != "lea" or target is None:
+            continue
+        try:
+            offset = image.offset(target)
+            if not any(start <= offset < end for start, end in rdata_ranges):
+                continue
+            literal = image.literal(target)
+        except ValueError:
+            continue
+        if offset > 0 and raw[offset - 1] == 0:
+            intro_literal_offsets.setdefault(literal, offset)
+
     def locate(text: str) -> int:
-        position = raw.find(text.encode("ascii") + b"\0")
-        if position < 0:
-            raise ValueError(f"Reviewed native help source changed or is missing: {text!r}")
-        return position
+        if text in intro_literal_offsets:
+            return intro_literal_offsets[text]
+        needle = text.encode("ascii") + b"\0"
+        for start, end in rdata_ranges:
+            position = raw.find(needle, start, end)
+            while position >= 0:
+                if position == start or raw[position - 1] == 0:
+                    return position
+                position = raw.find(needle, position + 1, end)
+        raise ValueError(f"Reviewed native help source changed or is missing: {text!r}")
 
     rows: list[tuple[str, str, str]] = []
     seen: set[str] = set()
@@ -104,7 +138,6 @@ def extract(path: Path) -> list[tuple[str, str, str]]:
             seen.add(source)
             rows.append((family, provenance, source))
 
-    image = NativeHelpImage(path)
     ignored = {"{adventure-introduction}", "Room completed (", "of 20)", "{d}"}
     controls = {*SHARED_LABELS, "Start tutorial", "Skip tutorial", "Next", "Next page",
                 "Previous page", "Don't show again"}
@@ -143,9 +176,10 @@ def extract(path: Path) -> list[tuple[str, str, str]]:
 
     add("tutorial-objective", "Room completed ({d} of {d})", "Room completed (", " of 20)")
     for source in SHARED_LABELS:
-        position = raw.find(source.encode("ascii") + b"\0")
-        provenance = (f"PE:file:0x{position:X}" if position >= 0
-                      else "DF53.16:help-initializer:shared-control")
+        try:
+            provenance = f"PE:file:0x{locate(source):X}"
+        except ValueError:
+            provenance = "DF53.16:help-initializer:shared-control"
         if source not in seen:
             seen.add(source)
             rows.append(("help-control", provenance, source))
@@ -160,7 +194,9 @@ def extract(path: Path) -> list[tuple[str, str, str]]:
 
     town, threatened, march = (
         "The peaceful town of ", " is threatened!  The forces of ", " are on the march.  ")
-    add("adventure-siege", "The peaceful town of {e} is threatened! The forces of {e} are on the march.",
+    # 0x1407EA5B9 calls the same historical-figure formatter as the commander
+    # and bandit leader: its output can include a caste and curse, not a faction.
+    add("adventure-siege", "The peaceful town of {e} is threatened! The forces of {p} are on the march.",
         town, threatened, march)
     add("adventure-siege", "The peaceful town of {e} is threatened! The forces of darkness are on the march.",
         town, threatened, "darkness", march)

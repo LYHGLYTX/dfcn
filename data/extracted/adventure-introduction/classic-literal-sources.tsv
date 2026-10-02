@@ -1,0 +1,44 @@
+# Native complete adventure introduction function; direct literal references. Error strings are UTF-16LE; prose is ASCII.
+classic	0x1407e7a5e	0x1416a60b8	PE:file:0x16a4eb8	FATAL ERROR
+classic	0x1407e7a65	0x1416a8600	PE:file:0x16a7400	Could not locate adventure start square
+classic	0x1407e7d93	0x1416a8678	PE:file:0x16a7478	The peaceful town of 
+classic	0x1407e7dd5	0x1416a8658	PE:file:0x16a7458	 is threatened!  The forces of 
+classic	0x1407e7e40	0x14169c148	PE:file:0x169af48	darkness
+classic	0x1407e7e53	0x1416a82e0	PE:file:0x16a70e0	 are on the march.  
+classic	0x1407e7e85	0x1416a82d0	PE:file:0x16a70d0	Commanded by 
+classic	0x1407e7ecf	0x1416a8304	PE:file:0x16a7104	, they
+classic	0x1407e7ed8	0x1416a82f8	PE:file:0x16a70f8	The enemy
+classic	0x1407e7eeb	0x1416a8230	PE:file:0x16a7030	 will have no mercy.  There is little time -- you must flee.  Perhaps your family and friends can be convinced to leave.
+classic	0x1407e8144	0x1416a8218	PE:file:0x16a7018	Legends speak of 
+classic	0x1407e8162	0x1416a82c0	PE:file:0x16a70c0	an ancient
+classic	0x1407e816b	0x1415fdc64	PE:file:0x15fca64	a
+classic	0x1407e8177	0x1416a82b0	PE:file:0x16a70b0	 vault, 
+classic	0x1407e81b3	0x1416a8408	PE:file:0x16a7208	, where 
+classic	0x1407e820b	0x1416a83f8	PE:file:0x16a71f8	 wrested 
+classic	0x1407e8251	0x1416a84e0	PE:file:0x16a72e0	 power from the Underworld by invoking 
+classic	0x1407e8277	0x1416a8420	PE:file:0x16a7220	 true name.  The location of this place is well-known, but none have penetrated its secrets.  If the true name of the monster can be uncovered, you might be able to end this terror forever.
+classic	0x1407e8584	0x1416a8338	PE:file:0x16a7138	The citizens of 
+classic	0x1407e85c6	0x1416a8310	PE:file:0x16a7110	 are plagued by bandits.  The gang
+classic	0x1407e85ec	0x1415ff6d0	PE:file:0x15fe4d0	 led by 
+classic	0x1407e8642	0x1416a83b0	PE:file:0x16a71b0	 has even sent some troublemakers to harass people right here in town.
+classic	0x1407e8672	0x1415f7ff8	PE:file:0x15f6df8	  
+classic	0x1407e86c9	0x1416a8350	PE:file:0x16a7150	Just reunited after a long journey, you are together with your companions again.  
+classic	0x1407e86d2	0x1416a93a0	PE:file:0x16a81a0	After a long journey, you are here to meet your most trusted companion.  
+classic	0x1407e876b	0x1416a9360	PE:file:0x16a8160	 is from here and might have some local information.
+classic	0x1407e87c7	0x1416a9360	PE:file:0x16a8160	 is from here and might have some local information.
+classic	0x1407e8838	0x1416a93f0	PE:file:0x16a81f0	Your most trusted local companions are meeting you here today.
+classic	0x1407e8844	0x1416a9250	PE:file:0x16a8050	Your most trusted companions have made the journey to meet you here today.
+classic	0x1407e8889	0x1416a9200	PE:file:0x16a8000	After a long journey, you are here to meet your most trusted companion.
+classic	0x1407e8892	0x1416a9310	PE:file:0x16a8110	Your most trusted companion has made the journey to meet you here today.
+classic	0x1407e889b	0x1416a92a0	PE:file:0x16a80a0	You've finally got your equipment together, such as it is.  Now it's time for action and adventure!  
+classic	0x1407e88ae	0x1416a95a0	PE:file:0x16a83a0	In the rush of excitement, you've forgotten where you were going to go.
+classic	0x1407e88e2	0x1416a8350	PE:file:0x16a7150	Just reunited after a long journey, you are together with your companions again.  
+classic	0x1407e88eb	0x1416a93a0	PE:file:0x16a81a0	After a long journey, you are here to meet your most trusted companion.  
+classic	0x1407e88f4	0x1416a9430	PE:file:0x16a8230	Your wanderings have brought you to this place after a long journey.
+classic	0x1407e89c2	0x1416a9568	PE:file:0x16a8368	  A foolhardy soul might try to rescue the 
+classic	0x1407e89df	0x1416a9608	PE:file:0x16a8408	children that have been kidnapped.
+classic	0x1407e89e8	0x1416a95e8	PE:file:0x16a83e8	child that has been kidnapped.
+classic	0x1407e8a09	0x1416a94e0	PE:file:0x16a82e0	  Let the party venture forth!
+classic	0x1407e8a42	0x1416a9538	PE:file:0x16a8338	  Perhaps some of your friends here have ideas.
+classic	0x1407e8a4b	0x1416a9500	PE:file:0x16a8300	  Perhaps some of your friends here can remind you.
+classic	0x1407e8a54	0x1416a9480	PE:file:0x16a8280	  Perhaps some of the people here will be worth talking to before you continue on your way.

@@ -1,0 +1,5 @@
+# Native formatter direct literal references.
+vault-site-reference	0x140b9397a	0x1416df920	PE:file:0x16deb20	[LPAGE:SITE:
+vault-site-reference	0x140b9399d	0x1415fd690	PE:file:0x15fc890	]
+vault-site-reference	0x140b93a06	0x1415fda88	PE:file:0x15fcc88	[/LPAGE]
+vault-site-reference	0x140b93a5e	0x1416df910	PE:file:0x16deb10	an unknown site

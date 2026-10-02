@@ -99,7 +99,8 @@ static bool flush_native_code_patches(const std::vector<NativeCodePatch> &patche
 }
 
 static bool write_native_code_patches(const std::vector<NativeCodePatch> &patches,
-        bool install, const char *label, bool *installed_state = nullptr) {
+        bool install, const char *label, bool *installed_state = nullptr,
+        bool executable = true) {
     const size_t page_size = native_patch_page_size();
     NativePatchPages pages;
     std::map<uintptr_t, uintptr_t> ranges;
@@ -107,7 +108,7 @@ static bool write_native_code_patches(const std::vector<NativeCodePatch> &patche
         const auto &expected = install ? patch.original : patch.replacement;
         const uintptr_t address = reinterpret_cast<uintptr_t>(patch.address);
         if (patch.original.size() != patch.replacement.size() ||
-            !collect_native_patch_pages(pages, address, expected.size(), page_size, true, label)) return false;
+            !collect_native_patch_pages(pages, address, expected.size(), page_size, executable, label)) return false;
         const uintptr_t end = address + expected.size();
         const auto next = ranges.lower_bound(address);
         if ((next != ranges.end() && next->first < end) ||

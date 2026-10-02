@@ -42,6 +42,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_unit_search_hooks.inc"
 #include "native_unit_identity_hooks.inc"
 #include "native_adventure_charge_hooks.inc"
+#include "native_adventure_introduction.inc"
 #include "native_overview_event_hooks.inc"
 #include "native_legends_search_hooks.inc"
 #include "native_workshop_search_hooks.inc"
@@ -82,6 +83,7 @@ static bool install_sdl_hooks() {
         {"Translated unit search", install_native_unit_search_hook},
         {"Native unit identity fields", install_native_unit_identity_hooks},
         {"Native adventure charge fields", install_native_adventure_charge_hooks},
+        {"Native adventure introduction error text", install_native_adventure_introduction_hooks},
         {"Native overview event source", install_native_overview_event_hooks},
         {"Translated Legends search", install_native_legends_search_hook},
         {"Translated workshop search", install_native_workshop_search_hook},
@@ -144,6 +146,7 @@ static void uninstall_sdl_hooks() {
     uninstall_native_legends_search_hook();
     uninstall_native_unit_search_hook();
     uninstall_native_overview_event_hooks();
+    uninstall_native_adventure_introduction_hooks();
     uninstall_native_adventure_charge_hooks();
     uninstall_native_unit_identity_hooks();
     clear_native_unit_identities();
@@ -176,6 +179,7 @@ static bool native_hooks_detached() {
         !native_unit_search_hook_active() &&
         !native_unit_identity_hooks_active() &&
         !native_adventure_charge_hooks_active() &&
+        !native_adventure_introduction_hooks_active() &&
         !native_overview_event_hooks_active() &&
         !native_legends_search_hook_active() &&
         !native_workshop_search_hook_active() &&

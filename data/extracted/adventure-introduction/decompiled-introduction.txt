@@ -1,0 +1,303 @@
+Native DF 53.16 adventure introduction construction
+==================================================
+
+This is a static source reconstruction from the two PE files configured in
+data/runtime/native-pe-images.json. No game code was run. The adjacent .asm
+files preserve the complete native instructions, including conditional edges;
+this text names the branches that construct displayed introduction text.
+
+Disassembler: fixed native w64devkit-2.9.1/w64devkit/bin/objdump.exe, Intel x64.
+
+Reference entry / unwind range: 0x1407E6840 .. 0x1407EB3C4.
+Reference executable return: 0x1407EB332.
+Reference embedded jump tables begin at 0x1407EB334; objdump's subsequent
+"(bad)" lines describe embedded data, not extra text construction branches.
+Classic entry / unwind range: 0x1407E40C0 .. 0x1407E8C44.
+Classic equivalent instruction addresses in this function are reference
+addresses minus 0x2780. Strings have independent image coordinates.
+
+The function first creates/restores the requested adventurers and their party.
+The complete initialization branches remain in reference-introduction.asm and
+classic-introduction.asm. Narrative construction starts at 0x1407EA2B6 only
+when the start-site pointer at [rbp+0x108] is present. It constructs:
+
+  main_text   = std::string at [rbp+0x370]
+  vault_text  = std::string at [rbp+0x390]
+  temporary  = std::string at [rbp+0x3D0]
+  party       = vector at [rbp+0xA8], including the protagonist
+  local_party = vector at [rbp+0xC0]
+  protagonist = unit pointer at [rbp-0x40]
+  origin      = corresponding input descriptor pointer at [rbp+0x8]
+  start_site  = pointer from input vector's [+0x18] site id
+
+local_party selects input descriptors whose [+0x340] matches start_site[+0x88]
+and whose [+0x2D0] is not -1, and retains the corresponding created unit.
+
+Displayed text branch reconstruction
+------------------------------------
+
+1. Siege prefix (0x1407EA3B9 .. 0x1407EA67E)
+
+   Iterate protagonist[+0x10]->[+0x130]->[+0x40]->[+0x68] event vector.
+   Select the first event satisfying all of:
+     event discriminator (0x1400BBB20) == 0
+     event[+0x00] != protagonist[+0x10][+0xB0]
+     event validity helper 0x140072D10(current year/current tick) == true
+     event[+0x04] == start_site[+0x88]
+     event[+0x04] == origin[+0x340]
+   If event's site id lookup (0x14007DB20) fails, continue to bandit path.
+
+   Append "The peaceful town of " + site-name(site) +
+          " is threatened!  The forces of ".
+   If event[+0x08] != -1:
+     append histfig-description(event[+0x08], default context, grammar=0,
+                                 noun mode=0).
+   Else append "darkness".
+   Append " are on the march.  ".
+   If event[+0x0C] != -1:
+     append "Commanded by " + histfig-description(event[+0x0C], ...) + ", they".
+   Else append "The enemy".
+   Append " will have no mercy.  There is little time -- you must flee.  Perhaps your family and friends can be convinced to leave."
+
+   Thus the two independent id-present/id-absent decisions produce four siege
+   text combinations. The first dynamic figure is the force description and
+   the second is its commander. These are both historical-figure formatter
+   calls, rather than an entity-name formatter followed by a person formatter.
+   The reviewed siege template therefore uses {e} for the town and {p} for
+   the invading historical figure; an entity-typed {e} in the second slot
+   would reject the same caste/curse/name forms as the bandit leader.
+   A selected siege does not also append the bandit prefix.
+
+2. Optional vault paragraph (0x1407EA67E .. 0x1407EABA2)
+
+   This follows only the selected siege with event[+0x08] != -1. Resolve that
+   historical figure. Require its [+0x130]->[+0x58] and that object's [+0x50]
+   bit 0. Iterate world[+0x178] sites and select candidates with:
+     site[+0x80] == 10
+     site[+0x310] != null
+     site[+0x310][+0x02] == 1
+     site[+0x310][+0x2C] == the figure's [+0xE0] id
+   Search the world structure collection at 0x1424E7E98, each [+0x28] vector,
+   and retain an element for which type helper 0x140072930 returns 1.
+   If none exists, do not build this paragraph.
+
+   vault_text = "Legends speak of "
+   if structure[+0x04] == -1: append "an ancient"
+   else: append "a"
+   append " vault, " + site-reference(site[+0x88], flags=0) + ", where "
+   append histfig-description(figure[+0xE0], default context, grammar=0,
+                              noun mode=0)
+   append " wrested "
+   pronoun = 0x140AA4850(figure[+0x06], capitalize=false)
+   append pronoun + " power from the Underworld by invoking " + pronoun
+   append " true name.  The location of this place is well-known, but none have penetrated its secrets.  If the true name of the monster can be uncovered, you might be able to end this terror forever."
+
+   Pronoun branches: sex==1 -> "his"; sex==0 -> "her"; other -> "its".
+   Both pronoun occurrences reuse the same constructed string. Article x sex
+   gives six possible forms. No second person or second independent pronoun.
+   This code also registers the site information for party members, without
+   appending additional introduction prose.
+
+3. Bandit prefix (0x1407EABAF .. 0x1407EADDD)
+
+   Reached when no siege was selected. Require origin, origin[+0x340] != -1,
+   protagonist and its event vector described above. Select first event with:
+     event discriminator == 6
+     event[+0x00] != the active unit's [+0x10][+0xB0]
+     event[+0x04] == origin[+0x340]
+     event validity helper == true
+   Resolve the event[+0x04] site; if absent, skip this prefix.
+
+   append "The citizens of " + site-name(site)
+   append " are plagued by bandits.  The gang"
+   if event[+0x08] != -1:
+     append " led by " + histfig-description(event[+0x08], default context,
+                                             grammar=0, noun mode=0)
+   append " has even sent some troublemakers to harass people right here in town."
+
+   This yields the leader-present and leader-absent forms. The leader-present
+   dynamic field can be "the human necromancer <name>", as in the screenshot.
+
+4. Shared main body (0x1407EADE2 .. 0x1407EB082)
+
+   If main_text is nonempty, append the literal "  ".
+   P = party.size(); L = local_party.size().
+   local_index = 0x1400BA600(protagonist, local_party).
+
+   if local_index == -1 and L != 0:
+     if P >= 3:
+       append "Just reunited after a long journey, you are together with your companions again.  "
+     else:
+       append "After a long journey, you are here to meet your most trusted companion.  "
+     Choose one random local_party unit using 0x140071F30(L).
+     If chosen_unit[+0x10][+0x38] is nonempty:
+       copy that string, capitalize via 0x14052D650, append it.
+     Else:
+       append histfig-description(chosen_unit[+0x10][+0xE0], default context,
+                                  grammar=0, noun mode=1).
+     append " is from here and might have some local information."
+   else if origin exists and
+           (origin[+0x2D0] != -1 or local_index != -1):
+     if P >= 3:
+       if P == L:
+         append "Your most trusted local companions are meeting you here today."
+       else:
+         append "Your most trusted companions have made the journey to meet you here today."
+     else if P >= 2:
+       if P == L:
+         append "After a long journey, you are here to meet your most trusted companion."
+       else:
+         append "Your most trusted companion has made the journey to meet you here today."
+     else:
+       append "You've finally got your equipment together, such as it is.  Now it's time for action and adventure!  "
+       append "In the rush of excitement, you've forgotten where you were going to go."
+   else:
+     if P >= 3:
+       append "Just reunited after a long journey, you are together with your companions again.  "
+     else if P >= 2:
+       append "After a long journey, you are here to meet your most trusted companion.  "
+     else:
+       append "Your wanderings have brought you to this place after a long journey."
+
+5. Rescue suffix (0x1407EB087 .. 0x1407EB174)
+
+   Iterate protagonist's same event vector and count entries with discriminator
+   == 1. The native code accumulates this count in r14d/ebx.
+   count==0: no rescue text.
+   count==1: append "  A foolhardy soul might try to rescue the child that has been kidnapped."
+   count>1: append "  A foolhardy soul might try to rescue the children that have been kidnapped."
+   rescued_hint_present is true only when one of the last two forms was added.
+
+6. Final suffix (0x1407EB177 .. 0x1407EB1E2)
+
+   if P >= 2:
+     append "  Let the party venture forth!"
+   else if origin exists and
+           (origin[+0x2D0] != -1 or local_index != -1):
+     if rescued_hint_present:
+       append "  Perhaps some of your friends here have ideas."
+     else:
+       append "  Perhaps some of your friends here can remind you."
+   else:
+     append "  Perhaps some of the people here will be worth talking to before you continue on your way."
+
+7. Submission and visible paragraph consumer
+
+   0x1407EB1E7 constructs announcement options: kind 0x008F, color 7,
+   attribute byte 1, duration 2000. 0x1407EB225 submits main_text through
+   0x1400E3C20 with global 0x1424E3850. If vault_text is nonempty,
+   0x1407EB273 submits it separately with the same options.
+
+   Dispatch 0x1400E3C20 .. 0x1400E569D copies submitted text into native
+   announcement objects at 0x1400E4330 .. 0x1400E4352, whose queued pointer
+   vector is 0x1424E3880 / 0x1424E3888. It also submits to the native text
+   object at 0x1424E3898 via 0x140D51EB0.
+   Help initializer 0x1401F5A6D .. 0x1401F5AB7 iterates that queue, appends
+   every full submitted string to its paragraph buffer, then appends "[B]".
+   Thus prefixes, main body, rescue and final suffix already share one string;
+   the optional vault paragraph is separately queued before help combines it.
+
+8. Exceptional start-site path (0x1407EA1B2 .. 0x1407EA2B1)
+
+   If start_site is absent, ask world helper 0x140F77F10 for a starting square.
+   If the returned square id is -1, the native code calls MessageBoxW and then
+   exits. Its two UTF-16LE sources are:
+     title: "FATAL ERROR"
+       reference RVA 0x16ABA48, file 0x16AAC48
+       classic RVA 0x16A60B8, file 0x16A4EB8
+     message: "Could not locate adventure start square"
+       reference RVA 0x16AD410, file 0x16AC610
+       classic RVA 0x16A8600, file 0x16A7400
+   Neither has final punctuation. Their ASCII first-byte readings "F" and
+   "C" are not full strings. If a square exists, the no-site path initializes
+   travel/map state and skips the prose construction above.
+
+Dynamic historical-figure formatter
+----------------------------------
+
+Full source: reference-histfig-description.asm, 0x140B92F10 .. 0x140B93927.
+Default context constructor: reference-histfig-format-context.asm,
+0x140072080 .. 0x14007216D (leaf function without its own unwind entry).
+
+The introduction invokes the default context, with [+0x00]=0, [+0x08]=null,
+[+0x10]=null, [+0x20]=[+0x24]=-1, grammar=0. Most calls use noun mode 0.
+Local companion fallback uses noun mode 1, suppressing extra species text.
+
+Default-call reachable text branches:
+  - Failed historical-figure lookup: "an unknown creature".
+  - Figure has a name: either its formatted language name alone, or
+    "the " + optional "zombie " + optional "ghostly " + caste/race noun +
+    optional special descriptor + " " + formatted language name.
+  - Figure has no name: "a " + optional "zombie " + optional "ghostly " +
+    caste/race noun + optional special descriptor.
+  - Descriptive noun is suppressed for invalid race, explicit noun mode 1,
+    contextual same-race figures or certain figure flags; the named form
+    becomes just the formatted name.
+  - [+0x130]->[+0x48][+0x160] supplies the zombie condition.
+  - [+0xC8] first flag byte sign-bit supplies ghostly when special descriptor
+    [+0x130]->[+0x48][+0x88] is not active.
+  - [+0x130]->[+0x48][+0x88] enables the appended special description stored
+    as a native string at [+0x90], including dynamically assigned professions
+    or supernatural titles such as necromancer.
+  - Named descriptive noun selects caste raw [+0x20] first, falls back to
+    race raw [+0x20]; both come from raw vector 0x1424ECA68/0x1424ECA70.
+  - Unnamed noun uses 0x140AA3BD0 (reference-creature-noun.asm), same caste
+    singular / race singular fallback. Invalid raw indices can yield empty
+    nouns; there is no hidden extra unknown label in that helper.
+
+Additional formatter branches retained in the full disassembly but not selected
+by the default introduction context/arguments:
+  - Context [+0x08] metadata restricts identity: "interrogator", "subject",
+    known name, "Nameless", or "an unidentified creature".
+  - Context [+0x24] equal to the figure id uses grammar-dependent "I", "me",
+    "my", "myself". The short strings I/me/my use immediate little-endian
+    stores 0x49, 0x656D, 0x796D, and myself copies six bytes at 0x141662EF8.
+  - Noun mode 2 can produce <name> + " the " + descriptive creature text.
+  - Grammar 2 appends "'s" unless "my" already supplied the possessive.
+  - Context flags bit 1 wraps an id with "[LPAGE:HF:" + "]" / "[/LPAGE]".
+  - Context [+0x20] can change the name to its familiar form or the unnamed
+    indefinite article from "a " to "the ".
+
+Dynamic site and language-name sources
+--------------------------------------
+
+site-name: reference-site-name.asm, 0x140A94030 .. 0x140A946D1.
+vault site-reference: reference-vault-site-reference.asm,
+0x140B93930 .. 0x140B93A8A. Missing site lookup appends "an unknown site";
+flags bit 1 optionally adds [LPAGE:SITE:id] markup, but intro passes flags 0.
+Language name: reference-language-name.asm, 0x140A946E0 .. 0x140A94EA2.
+Names use native first-name/nickname strings and language word ids [+0x40]
+through [+0x58], with parts returned by 0x140D2CB50. Besides explicit spaces,
+native construction can append "The ", "the ", "Of ", "of ", nickname quotes
+using immediate bytes 0x60 (`) and 0x27 ('), and a hyphen using immediate byte
+0x2D at 0x140A94C79. These are name grammar, not missing introduction prose.
+
+The adjacent *-literal-sources.tsv files retain exact native constituent
+locations. help-sources.tsv retains semantic sentence templates, including all
+siege, bandit, companion, rescue, ending and six vault forms above. Its "a vault"
+article provenance is corrected to PE:file:0x1601FB4, the actual introduction
+RIP target 0x141602DB4, rather than accidental PE-header occurrence 0x265.
+
+Translation consumers
+---------------------
+
+The 29 semantic source entries in help-sources.tsv comprise 15 shared-body,
+companion, rescue and ending entries, four siege entries, three bandit entries
+and seven vault entries (six article/pronoun forms plus the shared tail).
+help-translations.tsv retains the Chinese prose for each; fortress_help.inc
+combines covered fragments into the complete native paragraph.
+
+All help {p} fields now resolve complete native person/deity identities through
+the native identity source table, then the shared historical-actor grammar.
+The original captured span is retained for authored nicknames, and the existing
+unit identity parser accepts authored Chinese names in this proved person slot.
+This includes invading figures, commanders, bandit leaders, vault figures and
+local companions; race/caste, zombie, ghostly and stored supernatural descriptors
+remain separate from the generated name rather than being phoneticized as names.
+
+The two exceptional UTF-16LE MessageBoxW sources are handled separately by
+native_adventure_introduction.inc because they bypass SDL paragraph drawing:
+"FATAL ERROR" -> "致命错误";
+"Could not locate adventure start square" -> "无法找到冒险起始方格".
+The installed-memory literal replacements retain each original byte extent and
+are restored on core detach. The on-disk executable is not changed.

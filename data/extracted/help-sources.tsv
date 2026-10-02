@@ -745,7 +745,7 @@ adventure-introduction	PE:file:0x16AD338	Perhaps some of your friends here have 
 adventure-introduction	PE:file:0x16ACF88+PE:file:0x16AD008	A foolhardy soul might try to rescue the child that has been kidnapped.
 adventure-introduction	PE:file:0x16ACF88+PE:file:0x16AD028	A foolhardy soul might try to rescue the children that have been kidnapped.
 adventure-introduction	PE:file:0x16AD530	{p} is from here and might have some local information.
-adventure-siege	PE:file:0x16AC688+PE:file:0x16AC668+PE:file:0x16AC5E0	The peaceful town of {e} is threatened! The forces of {e} are on the march.
+adventure-siege	PE:file:0x16AC688+PE:file:0x16AC668+PE:file:0x16AC5E0	The peaceful town of {e} is threatened! The forces of {p} are on the march.
 adventure-siege	PE:file:0x16AC688+PE:file:0x16AC668+PE:file:0x16A0730+PE:file:0x16AC5E0	The peaceful town of {e} is threatened! The forces of darkness are on the march.
 adventure-siege	PE:file:0x16AC5F8+PE:file:0x16AD490	The enemy will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.
 adventure-siege	PE:file:0x16AC5D0+PE:file:0x16AC604+PE:file:0x16AD490	Commanded by {p}, they will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.
@@ -755,9 +755,9 @@ adventure-bandits	PE:file:0x16AD648+PE:file:0x1603900+PE:file:0x16AD6F0	The gang
 adventure-vault	PE:file:0x16AD478+PE:file:0x16AD520+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of an ancient vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.
 adventure-vault	PE:file:0x16AD478+PE:file:0x16AD520+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of an ancient vault, {e}, where {p} wrested her power from the Underworld by invoking her true name.
 adventure-vault	PE:file:0x16AD478+PE:file:0x16AD520+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of an ancient vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.
-adventure-vault	PE:file:0x16AD478+PE:file:0x265+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.
-adventure-vault	PE:file:0x16AD478+PE:file:0x265+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested her power from the Underworld by invoking her true name.
-adventure-vault	PE:file:0x16AD478+PE:file:0x265+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.
+adventure-vault	PE:file:0x16AD478+PE:file:0x1601FB4+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested his power from the Underworld by invoking his true name.
+adventure-vault	PE:file:0x16AD478+PE:file:0x1601FB4+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested her power from the Underworld by invoking her true name.
+adventure-vault	PE:file:0x16AD478+PE:file:0x1601FB4+PE:file:0x16AD510+PE:file:0x16AD378+PE:file:0x16AD368+PE:file:0x16AD450+PE:file:0x16AD390	Legends speak of a vault, {e}, where {p} wrested its power from the Underworld by invoking its true name.
 adventure-vault	PE:file:0x16AD390	The location of this place is well-known, but none have penetrated its secrets. If the true name of the monster can be uncovered, you might be able to end this terror forever.
 divine-guidance	PE:file:0x16ACE10	You will have to leave this structure first before you can travel. Try to make your way out to the settlement.
 divine-guidance	PE:file:0x16ACE90	Do you feel the pull? You sense the direction of my representative. It is possible to travel quickly to reach them, or you may journey more deliberately. It is your decision.

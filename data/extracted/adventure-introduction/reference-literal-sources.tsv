@@ -1,0 +1,44 @@
+# Native complete adventure introduction function; direct literal references. Error strings are UTF-16LE; prose is ASCII.
+reference	0x1407ea1de	0x1416aba48	PE:file:0x16aac48	FATAL ERROR
+reference	0x1407ea1e5	0x1416ad410	PE:file:0x16ac610	Could not locate adventure start square
+reference	0x1407ea513	0x1416ad488	PE:file:0x16ac688	The peaceful town of 
+reference	0x1407ea555	0x1416ad468	PE:file:0x16ac668	 is threatened!  The forces of 
+reference	0x1407ea5c0	0x1416a1530	PE:file:0x16a0730	darkness
+reference	0x1407ea5d3	0x1416ad3e0	PE:file:0x16ac5e0	 are on the march.  
+reference	0x1407ea605	0x1416ad3d0	PE:file:0x16ac5d0	Commanded by 
+reference	0x1407ea64f	0x1416ad404	PE:file:0x16ac604	, they
+reference	0x1407ea658	0x1416ad3f8	PE:file:0x16ac5f8	The enemy
+reference	0x1407ea66b	0x1416ae290	PE:file:0x16ad490	 will have no mercy.  There is little time -- you must flee.  Perhaps your family and friends can be convinced to leave.
+reference	0x1407ea8c4	0x1416ae278	PE:file:0x16ad478	Legends speak of 
+reference	0x1407ea8e2	0x1416ae320	PE:file:0x16ad520	an ancient
+reference	0x1407ea8eb	0x141602db4	PE:file:0x1601fb4	a
+reference	0x1407ea8f7	0x1416ae310	PE:file:0x16ad510	 vault, 
+reference	0x1407ea933	0x1416ae178	PE:file:0x16ad378	, where 
+reference	0x1407ea98b	0x1416ae168	PE:file:0x16ad368	 wrested 
+reference	0x1407ea9d1	0x1416ae250	PE:file:0x16ad450	 power from the Underworld by invoking 
+reference	0x1407ea9f7	0x1416ae190	PE:file:0x16ad390	 true name.  The location of this place is well-known, but none have penetrated its secrets.  If the true name of the monster can be uncovered, you might be able to end this terror forever.
+reference	0x1407ead04	0x1416ae470	PE:file:0x16ad670	The citizens of 
+reference	0x1407ead46	0x1416ae448	PE:file:0x16ad648	 are plagued by bandits.  The gang
+reference	0x1407ead6c	0x141604700	PE:file:0x1603900	 led by 
+reference	0x1407eadc2	0x1416ae4f0	PE:file:0x16ad6f0	 has even sent some troublemakers to harass people right here in town.
+reference	0x1407eadf2	0x1415fcfe8	PE:file:0x15fc1e8	  
+reference	0x1407eae49	0x1416ae490	PE:file:0x16ad690	Just reunited after a long journey, you are together with your companions again.  
+reference	0x1407eae52	0x1416ae370	PE:file:0x16ad570	After a long journey, you are here to meet your most trusted companion.  
+reference	0x1407eaeeb	0x1416ae330	PE:file:0x16ad530	 is from here and might have some local information.
+reference	0x1407eaf47	0x1416ae330	PE:file:0x16ad530	 is from here and might have some local information.
+reference	0x1407eafb8	0x1416ae3c0	PE:file:0x16ad5c0	Your most trusted local companions are meeting you here today.
+reference	0x1407eafc4	0x1416adea0	PE:file:0x16ad0a0	Your most trusted companions have made the journey to meet you here today.
+reference	0x1407eb009	0x1416ade50	PE:file:0x16ad050	After a long journey, you are here to meet your most trusted companion.
+reference	0x1407eb012	0x1416adf60	PE:file:0x16ad160	Your most trusted companion has made the journey to meet you here today.
+reference	0x1407eb01b	0x1416adef0	PE:file:0x16ad0f0	You've finally got your equipment together, such as it is.  Now it's time for action and adventure!  
+reference	0x1407eb02e	0x1416addc0	PE:file:0x16acfc0	In the rush of excitement, you've forgotten where you were going to go.
+reference	0x1407eb062	0x1416ae490	PE:file:0x16ad690	Just reunited after a long journey, you are together with your companions again.  
+reference	0x1407eb06b	0x1416ae370	PE:file:0x16ad570	After a long journey, you are here to meet your most trusted companion.  
+reference	0x1407eb074	0x1416ae400	PE:file:0x16ad600	Your wanderings have brought you to this place after a long journey.
+reference	0x1407eb142	0x1416add88	PE:file:0x16acf88	  A foolhardy soul might try to rescue the 
+reference	0x1407eb15f	0x1416ade28	PE:file:0x16ad028	children that have been kidnapped.
+reference	0x1407eb168	0x1416ade08	PE:file:0x16ad008	child that has been kidnapped.
+reference	0x1407eb189	0x1416ae0e0	PE:file:0x16ad2e0	  Let the party venture forth!
+reference	0x1407eb1c2	0x1416ae138	PE:file:0x16ad338	  Perhaps some of your friends here have ideas.
+reference	0x1407eb1cb	0x1416ae100	PE:file:0x16ad300	  Perhaps some of your friends here can remind you.
+reference	0x1407eb1d4	0x1416ae080	PE:file:0x16ad280	  Perhaps some of the people here will be worth talking to before you continue on your way.
