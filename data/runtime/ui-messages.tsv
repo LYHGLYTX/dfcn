@@ -450,6 +450,21 @@ Choose a musical form for the composition.	为这次创作选择一种音乐形�
 You must compose a piece first (or learn an improvisational form).	你必须先创作一部作品，或学会一种即兴表演形式。
 You don't know anything specific about this, unfortunately.	遗憾的是，你对此没有具体了解。
 Would like to sleep or wait a while?	你想睡觉，还是等待一段时间？
+# Adventure sleep/wait modal: whole labels and native duration sentences.
+# {u} uses the shared spelled-number parser, including twenty-one to twenty-four.
+Sleep	睡觉
+Wait	等待
+Duration	时长
+in hours	（小时）
+Until dawn	直到黎明
+Cannot see dawn.	无法判断黎明时间。
+Go ahead	确认
+You will wait, staying awake until dawn.	你将保持清醒，等待直到黎明。
+You will sleep as necessary until dawn.	你将在黎明到来前按需睡觉。
+You will wait, staying awake for {u} hour.	你将保持清醒，等待{u}小时。
+You will wait, staying awake for {u} hours.	你将保持清醒，等待{u}小时。
+You will sleep as necessary for {u} hour.	你将在接下来的{u}小时内按需睡觉。
+You will sleep as necessary for {u} hours.	你将在接下来的{u}小时内按需睡觉。
 How will you respond to the request for directions?	你将如何回应问路的请求？
 How will you respond to the request for information?	你将如何回应打听消息的请求？
 What will you say about the missing treasure?	关于失踪的宝物，你想说些什么？

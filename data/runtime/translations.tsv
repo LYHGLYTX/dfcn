@@ -27732,6 +27732,7 @@ You haven't named any position symbols yet.	你尚未命名任何职位象征物
 You may find very unpleasant environs here.	此地的环境可能会非常险恶。	l
 You need a broker with the appraisal skill.	需要有估价技能的交易员。	wl
 You pick up the {s} and put it in your {s}.	你拾起了{s1}，并将其放入你的{s2}中。	hPt
+You will wait, staying awake for {u} hours.	你将保持清醒，等待{u1}小时。	hPt
 You've already searched this area recently.	你最近已经搜寻过此区域。	hP
 a long-dead corpse was convicted of a crime	一具久远的尸体被判定有罪	wi
 a scuffle between {a} and {a} in the wilds.	在荒野中，{a1}与{a2}的扭打。	htEi
@@ -28934,6 +28935,8 @@ You have selected an area with salt water.	你选择的区域含有咸水。	l
 You must drive {e} from their home at {e}.	你必须把{e1}赶出他们在{e2}的巢穴。	hPt
 You need a free grasp to hold the terrain.	需要一个空闲的抓握部位才能抓住地形。	hP
 You no longer assume a submissive posture.	你不再摆出投降姿态。	hP
+You will sleep as necessary for {u} hours.	你将在接下来的{u1}小时内按需睡觉。	hPt
+You will wait, staying awake for {u} hour.	你将保持清醒，等待{u1}小时。	hPt
 You've located a {s} above and to the {s}!	你发现上方的{s2}有一处{s1}！	hPt
 You've located a {s} below and to the {s}!	你发现下方的{s2}有一处{s1}！	hPt
 Your wanderings have led you to {n}, a {s}	漫游使你来到{n}（{s}）	atl
@@ -30312,6 +30315,7 @@ You haven't been able to act for a while.	你已经有一段时间无法行动�
 You must appoint a {s} to create a squad.	必须先任命一名{s1}，才能创建小队。	hPt
 You must think you're really frightening.	你肯定觉得自己很吓人。	hP
 You prepare to shoot {n} with {s} in {s}.	你准备朝{n1}发射装在{s2}里的{s1}。	hPt
+You will sleep as necessary for {u} hour.	你将在接下来的{u1}小时内按需睡觉。	hPt
 a competition involving {b} in the wilds.	在荒野中，以《{b1}》为内容的比赛。	htEi
 a scuffle between {a} and {a} during {e}.	在{e1}期间，{a1}与{a2}的扭打。	htEi
 a scuffle between {a} and {a} within {p}.	在{p1}，{a1}与{a2}的扭打。	htEi
@@ -31627,6 +31631,7 @@ You have bestowed the name {b} upon {s}.	你将{s1}命名为{b1}。	hPt
 You have nothing with which to interact.	你没有可互动的物品。	hP
 You may also send a squad to obtain one.	你也可以派遣小队去获取一件造物。	hP
 You sound vaguely like the intended {s}.	你发出的声音隐约像是想模仿的{s1}。	hPt
+You will wait, staying awake until dawn.	你将保持清醒，等待直到黎明。	hP
 Your settlement has crumbled to its end.	你的聚居地已衰败覆灭。	hq
 Your settlement has crumbled to its end.	你的聚居地已衰败至终。	w
 a competition involving {b} in the wilds	在荒野中，以《{b1}》为内容的比赛	htEi
@@ -32897,6 +32902,7 @@ You prepare to shoot {s} nocked in {s}.	你准备射出搭在{s2}上的{s1}。	h
 You shoot out thick strands of webbing!	你喷出粗壮的蛛丝！	hP
 You should report the task as complete.	你应当报告此任务已经完成。	hP
 You tangle together and tumble forward!	你们纠缠在一起，向前翻滚！	hP
+You will sleep as necessary until dawn.	你将在黎明到来前按需睡觉。	hP
 a competition involving {b} during {e}.	在{e1}期间，以《{b1}》为内容的比赛。	htEi
 a competition involving {b} within {p}.	在{p1}，以《{b1}》为内容的比赛。	htEi
 a hundred or more people were expelled.	至少一百人遭到驱逐。	h
@@ -78335,6 +78341,7 @@ Building present	此处已有建筑	wli
 Cages/restraints	笼子/约束装置	w
 Can use any shop	可使用任意工坊	wl
 Cannot chop tree	无法砍树	w
+Cannot see dawn.	无法判断黎明时间。	hP
 Carpenter's Shop	木匠工坊	wi
 Ceremony at {p}.	在{p1}，仪式。	htEi
 Ceremony in {d}.	{d1}年的仪式。	htEi
@@ -105389,6 +105396,7 @@ Track stop	轨道站点	wi
 UX Advisor	UX 顾问	w
 Uneasiness	不安	w
 Ungrateful	不知感恩	w
+Until dawn	直到黎明	hP
 Upper body	上半身	w
 Useful {b}	实用{b}	hbti
 Values law	看重法律	w
@@ -110439,6 +110447,7 @@ Downward	下行	wi
 Drainage	排水性	wi
 Drop {s}	丢下{s1}	hPt
 Drowning	溺水	w
+Duration	时长	hP
 Duthtish	杜提石	wi
 Dwarf, \x0C	矮人，♀
 D\x89ngstam	登斯塔姆	wi
@@ -110469,6 +110478,7 @@ Gameplay	游戏性	w
 Gishdist	吉斯迪斯特	wi
 Give {n}	赠送{n1}	hPt
 Glumness	忧郁	w
+Go ahead	确认	hP
 Gonggash	贡盖石	wi
 Goodbye.	再见。	hP
 Gracious	知恩图报	w
@@ -111128,6 +111138,7 @@ ibex man	羱羊人	wi
 ibex men	羱羊人	wi
 ice wolf	冰原狼	wi
 ilmenite	钛铁矿	wi
+in hours	（小时）	hP
 insulted	受辱	w
 iron man	铁人	wi
 iron men	铁人	wi
@@ -114075,6 +114086,7 @@ Sital	锡塔尔	wi
 Sites	地点
 Sizir	锡兹尔	wi
 Slave	奴隶	w
+Sleep	睡觉	hP
 Sleep	睡觉	wi
 Small	小	w
 Smelt	熔炼	wi
@@ -115084,6 +115096,7 @@ Vain	爱慕虚荣	w
 Vath	瓦斯	wi
 Vesh	维石	wi
 View	查看	w
+Wait	等待	hP
 Walk	行走	w
 Wall	墙	w
 Warm	温暖

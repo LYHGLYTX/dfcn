@@ -20331,6 +20331,63 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    // A button draws its key and action as separate colored fields. Protect
+    // the complete native key before catalog, word and procedural-name rules
+    // see it; Enter has an ordinary verb sense in the procedural vocabulary.
+    // Leave its original glyphs in place instead of creating a text overlay.
+    for (int y = 0; y < gps_->dimy; ++y) {
+        if (only_y >= 0 && y != only_y) continue;
+        for (int x = 0; x < gps_->dimx;) {
+            bool key_layer = false;
+            const auto *first = cell_at(x, y, &key_layer);
+            const bool key_color = first &&
+                (std::equal(first + 1, first + 4, gps_->uccolor[10]) ||
+                 std::equal(first + 1, first + 4, gps_->uccolor[2]));
+            if (!key_color || first[0] <= ' ') { ++x; continue; }
+            const int begin = x;
+            std::string source;
+            while (x < gps_->dimx) {
+                bool layer = false;
+                const auto *cell = cell_at(x, y, &layer);
+                if (!cell || layer != key_layer || !cell[0] ||
+                    !std::equal(cell + 1, cell + 4, first + 1)) break;
+                source.push_back(static_cast<char>(cell[0]));
+                ++x;
+            }
+            const auto key = trim_view(source);
+            if (!is_keybinding_code(key)) continue;
+            if (screen_override && screen_override !=
+                    (key_layer ? gps_->screen_top : gps_->screen)) continue;
+            const int end = begin + static_cast<int>(key.size());
+            const auto button = native_button_text_span(*gps_, begin, end, y);
+            if (!button) continue;
+            bool leading_key = true;
+            for (int column = button->first; column < begin; ++column) {
+                const auto ch = visible_char_at(column, y);
+                if (ch && ch != ' ') { leading_key = false; break; }
+            }
+            if (!leading_key) continue;
+            // A bare action named Enter/Space remains translatable. A key
+            // prefix must be followed inside this same button by an action
+            // with a different native text color.
+            bool action = false;
+            for (int column = end; column < button->second; ++column) {
+                bool layer = false;
+                const auto *cell = cell_at(column, y, &layer);
+                if (!cell || cell[0] <= ' ') continue;
+                action = layer == key_layer &&
+                    !std::equal(cell + 1, cell + 4, first + 1);
+                break;
+            }
+            if (!action) continue;
+            for (int column = begin; column < end; ++column) {
+                // Raw-layer glyph scans and the final composed pass share
+                // ownership, but only matching source bytes are reserved.
+                auto &ch = screen_rows[y][column];
+                if (ch == key[static_cast<size_t>(column - begin)]) ch = ' ';
+            }
+        }
+    }
 #include "pause_menu_fields.inc"
 #include "dfhack_stocks_hint.inc"
 #include "dfhack_hotkeys_menu.inc"

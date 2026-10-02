@@ -337,6 +337,19 @@ adventure.conversation	0x16b23b8	Choose a musical form for the composition.
 adventure.conversation	0x16b2400	You must compose a piece first (or learn an improvisational form).
 adventure.conversation	0x16b2448	You don't know anything specific about this, unfortunately.
 adventure.conversation	0x16b2488	Would like to sleep or wait a while?
+adventure.sleep-wait.control	0x16b23ec	Sleep
+adventure.sleep-wait.control	0x16b23e4	Wait
+adventure.sleep-wait.control	0x872fdc	Duration
+adventure.sleep-wait.control	0x873061	in hours
+adventure.sleep-wait.control	0x16b21a0	Until dawn
+adventure.sleep-wait.control	0x16b21b0	Cannot see dawn.
+adventure.sleep-wait.control	0x16b2168	Go ahead
+adventure.sleep-wait.summary	0x16b2130	You will wait, staying awake until dawn.
+adventure.sleep-wait.summary	0x16b21f0	You will sleep as necessary until dawn.
+adventure.sleep-wait.summary	0x16b2178+0x16b215c+0x15e77b4	You will wait, staying awake for {u} hour.
+adventure.sleep-wait.summary	0x16b2178+0x16b215c+0x15e8498+0x15e77b4	You will wait, staying awake for {u} hours.
+adventure.sleep-wait.summary	0x16b21c8+0x16b215c+0x15e77b4	You will sleep as necessary for {u} hour.
+adventure.sleep-wait.summary	0x16b21c8+0x16b215c+0x15e8498+0x15e77b4	You will sleep as necessary for {u} hours.
 adventure.conversation	0x16b24b8	How will you respond to the request for directions?
 adventure.conversation	0x16b24f0	How will you respond to the request for information?
 adventure.conversation	0x16b2528	What will you say about the missing treasure?
