@@ -2038,6 +2038,12 @@ HUD 原生复合地名、世界名称及“仅音译”完整姓名同样保留�
 性格页的 `He/She/It is currently ...` 当前变化描述与长期性格共用
 `src/personality_facets.inc`，覆盖原生 50 项性格的增减措辞；代词拼接产生的
 双空格与换行空白由共享谓语入口归一化，同时保留原文字节位置供强调色映射。
+性格页的原生文本与分支来源保存在 `data/extracted/personality-traits-sources.tsv`、
+`data/extracted/personality-mannerism-sources.tsv` 和 `data/extracted/personality-adaptation-sources.tsv`。
+末段按原生条件完整处理五种酒精依赖状态、两种户外适应和三种抗创伤描述，
+缺酒程度从开始放慢工作直到记不清上次饮酒时间，均保留完整句意。
+习惯动作依据原生 65 类动作及 15 种情境处理完整句子，保留触发条件、频率和生物部位。
+性格变化后的反转、增强或减弱说明保留对应事件和年份，再处理其后真正的价值观冲突。
 祷告需求中的神名通过 `data/runtime/rulesets/zh-Hans/psychology/needs.toml` 的 `::text::deity` 引用，
 复用既有神名、姓名与称号解析；不再依赖代码替换中文谓语。句号由外层需求句
 统一处理，避免神名漏译或句号夹在神名与“祷告”之间。

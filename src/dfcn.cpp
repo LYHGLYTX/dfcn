@@ -12310,253 +12310,275 @@ static std::optional<std::string> translate_personality_attribute_summary(
 
 static std::optional<std::string> translate_personality_mannerism(
         std::string_view canonical, std::string_view translated_subject) {
-    auto contains_any = [&](std::initializer_list<std::string_view> needles) {
-        return std::any_of(needles.begin(), needles.end(),
-            [&](std::string_view needle) {
-                return canonical.find(needle) != std::string_view::npos;
-            });
+    static constexpr PersonalityFacetPhrase phrases[] = {
+#include "personality_mannerisms.inc"
     };
-    auto sentence = [&](std::string_view predicate) {
-        std::string translated(translated_subject);
-        translated += predicate;
-        translated += "。";
-        return std::optional<std::string>(std::move(translated));
+    // The caller removes an initial subject/possessive, but keeps leading
+    // "When ..." clauses. A native clause can also repeat a capital pronoun.
+    // Put both forms through the same full-sentence template grammar.
+    std::string normalized;
+    for (size_t cursor = 0; cursor < canonical.size();) {
+        if (!ascii_letter(canonical[cursor])) {
+            normalized.push_back(canonical[cursor++]);
+            continue;
+        }
+        const size_t begin = cursor;
+        while (cursor < canonical.size() && ascii_letter(canonical[cursor]))
+            ++cursor;
+        const auto word = canonical.substr(begin, cursor - begin);
+        if (word == "He" || word == "She" || word == "It" ||
+            word == "His" || word == "Her" || word == "Its")
+            normalized += "{p}";
+        else normalized.append(word);
+    }
+    const std::string prefixed = "{p} " + normalized;
+    std::string_view subject = translated_subject;
+    if (subject.ends_with("的")) subject.remove_suffix(std::string_view("的").size());
+
+    // These defaults come from the 17 caste MANNERISM strings, rather than
+    // assuming all body slots mean fingers or lips. Modded caste wording is
+    // resolved as a complete body-part phrase through the existing grammar.
+    static constexpr PersonalityFacetPhrase default_parts[] = {
+        {"finger", "一根手指"}, {"fingers", "手指"}, {"nose", "鼻子"},
+        {"ear", "耳朵"}, {"head", "头"}, {"eyes", "眼睛"}, {"mouth", "嘴"},
+        {"hair", "头发"}, {"knuckles", "指关节"}, {"lips", "嘴唇"},
+        {"cheek", "面颊内侧"}, {"nails", "指甲"}, {"feet", "双脚"},
+        {"arms", "双臂"}, {"hands", "双手"}, {"tongue", "舌头"}, {"leg", "腿"},
     };
-
-    if (contains_any({"voice trails off", "voice has a tendency to trail off"})) {
-        return sentence(translated_subject.ends_with("的")
-                            ? "声音会在努力回忆事情时越来越小"
-                            : "说话时声音常会越来越小");
-    }
-    if (contains_any({"monotone", "starts to drone"}))
-        return sentence("说话时常用单调的语气");
-    if (contains_any({"talk more slowly", "talk much more slowly",
-                      "speaks very slowly", "talk slowly",
-                      "speak very deliberately", "speaks very deliberately"}))
-        return sentence("说话时语速很慢，吐字也很谨慎");
-    if (contains_any({"talks very quiet", "speaks very quiet"}))
-        return sentence("说话声音很轻");
-    if (canonical.find("talk to inanimate objects") != std::string_view::npos)
-        return sentence("常对着没有生命的东西说话");
-    if (contains_any({"talks to {p}", "talking to {p}"}))
-        return sentence("常会自言自语");
-    if (contains_any({"distracted from conversations",
-                      "distracted during conversations",
-                      "distracted during conversation"}))
-        return sentence("交谈时很容易走神");
-    if (contains_any({"pointless stories", "stories without any real point",
-                      "stories that don't have any point", "ramble on"}))
-        return sentence("交谈时经常讲没有重点、也没有结论的故事");
-    if (contains_any({"focused during conversations",
-                      "focused during conversation"}))
-        return sentence("交谈时会变得格外专注");
-    if (contains_any({"pause in conversation to look for",
-                      "look for the right word"}))
-        return sentence("交谈时常会停下来寻找合适的词语");
-    if (canonical.find("arguing with those that are in agreement") !=
-        std::string_view::npos)
-        return sentence("即使意见相同，也常会和对方争辩");
-    if (contains_any({"never allows pauses", "can't stand quiet pauses",
-                      "fills quiet pauses"}))
-        return sentence("无法忍受交谈中的冷场，总会找话把空白填满");
-    if (canonical.find("pauses before speaking") != std::string_view::npos)
-        return sentence("开口前总会先停顿一下");
-    if (contains_any({"talks about others behind their",
-                      "talks about others behind {p}"}))
-        return sentence("常在背后议论别人");
-    if (canonical.find("vague answers") != std::string_view::npos)
-        return sentence("回答问题时总是含糊其辞");
-    if (contains_any({"turn any conversation", "turns every conversation"}))
-        return sentence("总会把谈话的话题转到自己身上");
-    if (contains_any({"rarely starts conversation",
-                      "rarely starts conversations"}))
-        return sentence("很少主动发起交谈");
-    if (contains_any({"questions with questions", "question with a question"}))
-        return sentence("习惯用另一个问题来回答问题");
-    if (contains_any({"touches others", "touch others", "touch those"}))
-        return sentence("交谈或问候时常会碰触对方");
-    if (canonical.find("interrupt") != std::string_view::npos)
-        return sentence("交谈时经常打断别人");
-    if (contains_any({"distinct laugh", "unique laugh", "distinct fashion"}))
-        return sentence("笑声很有特点");
-    if (contains_any({"cackling laugh", "cackles"}))
-        return sentence("笑起来常会发出咯咯声");
-    if (canonical.find("nervous laugh") != std::string_view::npos)
-        return sentence("紧张时常会发笑");
-    if (canonical.find("laughs silently") != std::string_view::npos)
-        return sentence("笑的时候几乎不出声");
-    if (canonical.find("laughs at {p} own jokes") != std::string_view::npos)
-        return sentence("常被自己讲的笑话逗笑");
-    if (contains_any({"laughs very loudly", "laughs loudly"}))
-        return sentence("笑起来声音很大");
-    if (contains_any({"points at others", "point at others"}))
-        return sentence("问候别人时常会用手指着对方");
-    if (canonical.find("points and shakes") != std::string_view::npos)
-        return sentence("经常一边指点一边晃动手指");
-    if (canonical.find("jump all over the place") != std::string_view::npos)
-        return sentence("目光经常四处游移");
-    if (contains_any({"stare unwaveringly", "staring at others",
-                      "menacing stare", "stares intently", "certain stare"}))
-        return sentence("看人时目光总是格外专注，甚至有些逼人");
-    if (canonical.find("wink") != std::string_view::npos)
-        return sentence("经常向别人眨眼");
-    if (contains_any({"whisper", "voice very quiet"}))
-        return sentence("说话声音很轻，常常近似耳语");
-    if (contains_any({"starts yelling", "talk louder", "talks very loudly",
-                      "shouts when", "greets others very loudly",
-                      "speaks very loudly"}))
-        return sentence("说话声音很大");
-    if (contains_any({"talk rapidly", "talks very quickly", "speaks rapidly",
-                      "talks very rapidly", "talk very quickly"}))
-        return sentence("说话速度很快");
-    if (contains_any({"mutter under", "mutters under"}))
-        return sentence("经常压低声音喃喃自语");
-    if (contains_any({"stutter", "stammer"}))
-        return sentence("说话时常会结巴");
-    if (contains_any({"rarely speaks", "rarely talks", "trouble speaking"}))
-        return sentence("很少说话，有时难以开口");
-    if (canonical.find("snap") != std::string_view::npos)
-        return sentence("经常反复打响指");
-    if (canonical.find("drum") != std::string_view::npos)
-        return sentence("经常无意识地用手指敲打");
-    if (canonical.find("scratch") != std::string_view::npos)
-        return sentence("经常无意识地抓挠自己");
-    if (canonical.find("runs ") != std::string_view::npos &&
-        canonical.find(" through ") != std::string_view::npos)
-        return sentence("经常用手梳理身上的毛发");
-    if (canonical.find("crack") != std::string_view::npos)
-        return sentence("经常活动关节并发出响声");
-    if (canonical.find("skips wherever") != std::string_view::npos)
-        return sentence("走到哪里都喜欢蹦跳着前进");
-    if (contains_any({"skips around", "skips over to"}))
-        return sentence("走路时常会蹦蹦跳跳");
-    if (contains_any({"walks as if in a terrible hurry", "always hurries"}))
-        return sentence("走路时总是一副匆匆忙忙的样子");
-    if (contains_any({"walks with a confident", "confident walk"}))
-        return sentence("走路时显得十分自信");
-    if (canonical.find("slouch") != std::string_view::npos)
-        return sentence("站立和行走时常常含胸驼背");
-    if (contains_any({"becomes very rigid", "tenses up", "stiffens up",
-                      "body becomes very still", "rigid posture"}))
-        return sentence("思考或紧张时身体会绷紧不动");
-    // Keep a word boundary so "clicks" cannot be mistaken for "licks".
-    const bool licks_lips = canonical.starts_with("licks {p} lips") ||
-        canonical.starts_with("licking {p} lips") ||
-        contains_any({" licks {p} lips", " lick {p} lips",
-                      " licking {p} lips"});
-    // Match sentence-initial "chews" without treating "eschews" as biting.
-    if (licks_lips || canonical.starts_with("chews ") ||
-        contains_any({"chewing on", "idly chews", "gnaws ", "chew ",
-                      "gnaws on", "bites "})) {
-        // These habits use the caste's MANNERISM body-part names. In
-        // particular, "bites/licks ... when ..." has no "often" prefix.
-        // Preserve the action, affected body part and trigger instead of
-        // reducing them to an unspecified habit or assuming "thinking".
-        std::string_view object;
-        for (const auto &[source, target] :
-             std::initializer_list<std::pair<std::string_view, std::string_view>>{
-                 {"{p} nails", "指甲"}, {"{p} lips", "嘴唇"},
-                 {"{p} cheek", "面颊内侧"}, {"{p} hair", "头发"}}) {
-            if (canonical.find(source) != std::string_view::npos) {
-                object = target;
-                break;
-            }
+    auto body_part = [&](size_t slot, std::string_view source)
+            -> std::optional<std::string> {
+        if (source == default_parts[slot].source)
+            return std::string(default_parts[slot].target);
+        if (source.empty() || source.find("{p}") != std::string_view::npos)
+            return std::nullopt;
+        std::vector<size_t> origins;
+        for (std::string_view context : {
+                 std::string_view("::health::bodypart::bodypart_main"),
+                 std::string_view("::health::bodypart::tissue")}) {
+            auto translated = DFHack::DFZH::Hooks::RulesetsManager::getInstance()
+                .translate_with_origins(std::string(source),
+                    std::string(context), origins);
+            if (!translated || translated->empty() ||
+                std::any_of(translated->begin(), translated->end(),
+                    [](unsigned char ch) { return ascii_letter(ch); })) continue;
+            return translated;
         }
-        if (object.empty()) return sentence("经常无意识地啃咬东西");
-
-        std::string predicate;
-        for (const auto &[source, target] :
-             std::initializer_list<std::pair<std::string_view, std::string_view>>{
-                 {"thinking hard", "苦思时"}, {"thinking", "思考时"},
-                 {"annoyed", "烦恼时"}, {"exasperated", "气恼时"},
-                 {"angered", "生气时"}, {"angry", "生气时"},
-                 {"nervous", "紧张时"}, {"bored", "无聊时"},
-                 {"excited", "兴奋时"}, {"surprised", "惊讶时"}}) {
-            if (canonical.find(source) != std::string_view::npos) {
-                predicate = target;
-                break;
+        return std::nullopt;
+    };
+    for (const PersonalityFacetPhrase &phrase : phrases) {
+        for (std::string_view input : {std::string_view(normalized),
+                                      std::string_view(prefixed)}) {
+            std::array<std::optional<std::string>, 17> body_sources;
+            std::array<std::optional<std::string>, 17> body_targets;
+            std::function<bool(size_t, size_t)> match =
+                [&](size_t pattern_at, size_t input_at) {
+                    const size_t marker = phrase.source.find("{b", pattern_at);
+                    const size_t literal_end = marker == std::string_view::npos
+                        ? phrase.source.size() : marker;
+                    const auto literal = phrase.source.substr(
+                        pattern_at, literal_end - pattern_at);
+                    if (!input.substr(input_at).starts_with(literal)) return false;
+                    input_at += literal.size();
+                    if (marker == std::string_view::npos)
+                        return input_at == input.size();
+                    const size_t close = phrase.source.find('}', marker);
+                    if (close == std::string_view::npos) return false;
+                    size_t slot = 0;
+                    for (size_t digit = marker + 2; digit < close; ++digit) {
+                        const char ch = phrase.source[digit];
+                        if (ch < '0' || ch > '9') return false;
+                        slot = slot * 10 + static_cast<size_t>(ch - '0');
+                    }
+                    if (slot >= body_sources.size()) return false;
+                    const size_t after = close + 1;
+                    const size_t next_marker = phrase.source.find("{b", after);
+                    const auto delimiter = phrase.source.substr(after,
+                        next_marker == std::string_view::npos
+                            ? phrase.source.size() - after : next_marker - after);
+                    if (delimiter.empty() && next_marker != std::string_view::npos)
+                        return false;
+                    size_t end = delimiter.empty()
+                        ? input.size() : input.find(delimiter, input_at);
+                    while (end != std::string_view::npos) {
+                        const auto part = input.substr(input_at, end - input_at);
+                        if (!body_sources[slot] || *body_sources[slot] == part) {
+                            const auto translated = body_part(slot, part);
+                            if (translated) {
+                                const auto previous_source = body_sources[slot];
+                                const auto previous_target = body_targets[slot];
+                                body_sources[slot] = std::string(part);
+                                body_targets[slot] = *translated;
+                                if (match(after, end)) return true;
+                                body_sources[slot] = previous_source;
+                                body_targets[slot] = previous_target;
+                            }
+                        }
+                        if (delimiter.empty()) break;
+                        end = input.find(delimiter, end + 1);
+                    }
+                    return false;
+                };
+            if (!match(0, 0)) continue;
+            std::string translated(phrase.target);
+            auto replace_token = [&](std::string_view token,
+                                     std::string_view replacement) {
+                size_t cursor = 0;
+                while ((cursor = translated.find(token, cursor)) !=
+                       std::string::npos) {
+                    translated.replace(cursor, token.size(), replacement);
+                    cursor += replacement.size();
+                }
+            };
+            replace_token("{s}", subject);
+            for (size_t slot = 0; slot < body_targets.size(); ++slot) {
+                if (!body_targets[slot]) continue;
+                replace_token("{b" + std::to_string(slot) + "}",
+                              *body_targets[slot]);
             }
+            return translated;
         }
-        if (contains_any({"always", "constantly"})) predicate += "总会";
-        else if (contains_any({"often", "habit", "tends", "tendency"}))
-            predicate += "常会";
-        else predicate += "会";
-        if (canonical.find("idly") != std::string_view::npos)
-            predicate += "无意识地";
-        predicate += licks_lips ? "舔" : "咬";
-        predicate += object;
-        return sentence(predicate);
     }
-    if (contains_any({"become animated", "move frantically", "are animated",
-                      "begin moving"}))
-        return sentence("情绪变化时肢体动作会变得格外频繁");
-    if (contains_any({"stomps ", "starts tapping", "taps ",
-                      "habit of tapping"}))
-        return sentence("经常无意识地跺脚或轻敲身体");
-    if (contains_any({"lowers ", "lowered to the ground"}))
-        return sentence("说话时常低着头");
-    if (canonical.find("roll") != std::string_view::npos)
-        return sentence("经常无意识地转动双眼");
-    if (contains_any({"exhales", "deep breath", "blows ", "inhales"}))
-        return sentence("情绪变化时常会刻意深呼吸");
-    if (canonical.find("click") != std::string_view::npos)
-        return sentence("经常用舌头或嘴发出轻响");
-    if (contains_any({"sticks out", "licking"}))
-        return sentence("思考时常会伸舌或舔嘴唇");
-    if (canonical.find("stretch") != std::string_view::npos)
-        return sentence("经常伸展身体");
-    if (canonical.find("hugs") != std::string_view::npos)
-        return sentence("问候别人时常会主动拥抱对方");
-    if (canonical.find("smile") != std::string_view::npos)
-        return sentence("问候别人或紧张时常会微笑");
     return std::nullopt;
 }
 
-static std::string personality_conflict_note(std::string_view suffix) {
-    // A facet/value contradiction is assembled from another finite set of
-    // clauses.  Preserve the useful part of that explanation without tying
-    // coverage to every possible conjunction chosen by the English writer.
-    std::vector<std::string_view> concepts;
-    auto add_concept = [&](std::string_view value_name) {
-        if (std::find(concepts.begin(), concepts.end(), value_name) == concepts.end())
-            concepts.push_back(value_name);
+static std::optional<std::string> personality_conflict_note(
+        std::string_view canonical, size_t cursor, std::string_view native_source,
+        const std::vector<size_t> &canonical_sources,
+        std::vector<size_t> *target_sources = nullptr) {
+    // The native facet writer 0x140e26ca0 has two independent suffixes:
+    // an event/year change at 0x140e29a48, then a finite value contradiction
+    // selected at 0x140e29bfc. Preserve both, consuming every source byte.
+    // These complete clauses come from its actual string concatenations;
+    // the ordinary words "its" and "itself" canonicalize to {p} too.
+    static constexpr PersonalityFacetPhrase conflicts[] = {
+        {", and {p} is troubled by this because {p} values romance", "，但又看重浪漫，因此为这点感到困扰"},
+        {", and {p} is troubled by this because {p} holds romance in low regard", "，但又看不上浪漫，因此为这点感到困扰"},
+        {", and {p} is conflicted by this as {p} values parties and merrymaking in the abstract", "，但观念上又认同聚会和欢庆，因此感到矛盾"},
+        {", though {p} remains put off by deliberate merrymaking", "，不过仍然不喜欢刻意欢庆"},
+        {", and {p} is troubled by this because {p} values self-control", "，但又看重自制力，因此为这点感到困扰"},
+        {", and {p} is troubled by this because {p} values such powerful forces in life", "，但又看重生活中这些强烈的欲望和冲动，因此为这点感到困扰"},
+        {", though {p} is conflicted by this for more than one reason", "，不过这让自己因不止一个原因而感到矛盾"},
+        {", though {p} is disturbed by this since {p} values quiet so, at least in the abstract", "，不过至少在观念上又非常看重安静，因此为这点感到困扰"},
+        {", even though {p} likes the way that they would break up the monotony on some level", "，虽然某种程度上也喜欢这些事能打破生活的单调"},
+        {", though {p} dislikes the adoration of fighting as an art to be refined", "，不过不认同把格斗当作值得钻研精进的艺术来推崇"},
+        {", and {p} works to square this natural tendency with {p} respect of martial prowess", "，而且正努力调和这种天性与自己对武艺的尊重"},
+        {", and {p} finds this troubling, since {p} values perseverance", "，但又看重坚韧，因此为这点感到困扰"},
+        {", though {p} is conflicted by this part of {p}", "，不过也为自己这部分性情感到矛盾"},
+        {", and {p} is conflicted by this since {p} values harmony as an intellectual concept", "，但观念上又看重和谐，因此感到矛盾"},
+        {", though {p} is troubled by {p} own nature as {p} prefers discord and debate at a more abstract level", "，不过观念上又更喜欢争执和辩论，因此为自己的天性感到困扰"},
+        {", and {p} is troubled by {p} nature since {p} values harmony", "，但又看重和谐，因此为自己的天性感到困扰"},
+        {", and {p} is conflicted by {p} nature since {p} would ideally prefer more strife in {p} life", "，但理想中又希望生活中有更多争执，因此为自己的天性感到矛盾"},
+        {", and {p} is bothered by this since {p} values friendship", "，但又看重友谊，因此为这点感到困扰"},
+        {", and {p} is burdened by this tendency because {p} dislikes the idea of friendship", "，但又不认同友谊，因此觉得这种倾向是个负担"},
+        {", though {p} finds rules of etiquette to be valuable in the abstract", "，不过在观念上又觉得礼仪规矩很有价值"},
+        {", though {p} is troubled by this natural tendency in {p} since {p} finds dignified society to be stifling and silly when properly considered", "，不过仔细想来又觉得讲究体面的社会令人压抑而且愚蠢，因此为自己的这种天性感到困扰"},
+        {", and {p} is conflicted by this since {p} sees these tendencies as an impediment to the quest for power", "，但又认为这些倾向妨碍自己追求权力，因此感到矛盾"},
+        {", and {p} is disturbed by this as someone who dislikes those that seek to acquire power over others", "，但又不喜欢企图凌驾于他人之上的人，因此为这点感到困扰"},
+        {", and {p} struggles against this tendency, as {p} finds such open expression offensive", "，而且觉得这种坦率表达会冒犯别人，因而努力克制这种倾向"},
+        {", though {p} is conflicted by this as {p} dislikes this sort of concealment in the abstract", "，不过观念上又不喜欢这种遮掩，因此感到矛盾"},
+        {", and {p} is troubled by this because {p} truly respects sacrifice", "，但又十分尊重牺牲精神，因此为这点感到困扰"},
+        {", though {p} wishes this were not the case as {p} considers altruism foolish", "，不过又认为利他是愚蠢的，所以希望自己没有这种倾向"},
+        {", and {p} is conflicted by this since {p} believes in the importance of the rule of the law", "，但又相信法治的重要性，因此感到矛盾"},
+        {", though {p} still holds the law in disdain", "，不过仍然藐视法律"},
+        {", though {p} values the concept of loyalty and is troubled by {p} natural tendencies", "，不过观念上又看重忠诚，因此为自己的天性感到困扰"},
+        {", though {p} still views loyalty in a dim light, at least in the abstract", "，不过至少在观念上仍然看不上忠诚"},
+        {", although {p} finds this can conflict with {p} sense of independence", "，不过也觉得这可能与自己的独立意识冲突"},
+        {", though {p} still holds the idea of freedom {p} in low regard", "，不过仍然看不上自由这个观念本身"},
+        {", and {p} is conflicted by this because {p} considers tranquility preferable to tumult, conceptually", "，但观念上又觉得宁静比喧闹好，因此感到矛盾"},
+        {", and {p} is conflicted by this since {p} feels intellectually that life should be more tumultuous", "，但观念上又觉得生活应该更热闹，因此感到矛盾"},
+        {", and {p} is conflicted by this as {p} values artwork and {p} creation", "，但又看重艺术品及其创作，因此感到矛盾"},
+        {", and {p} is torn by this since {p} sees the whole pursuit of art as a waste", "，但又认为追求艺术完全是浪费，因此内心纠结"},
+        {", and {p} is conflicted by this because {p} holds nature in high regard", "，但又十分尊重自然，因此感到矛盾"},
+        {", and {p} is troubled by this since {p} dislikes the natural world", "，但又不喜欢自然世界，因此为这点感到困扰"},
     };
-    auto contains_any = [&](std::initializer_list<std::string_view> needles) {
-        return std::any_of(needles.begin(), needles.end(), [&](std::string_view needle) {
-            return suffix.find(needle) != std::string_view::npos;
-        });
+    if (target_sources) target_sources->clear();
+    std::string translated;
+    auto append = [&](std::string_view text, size_t canonical_at) {
+        translated += text;
+        if (target_sources)
+            target_sources->insert(target_sources->end(), text.size(),
+                canonical_sources[canonical_at]);
     };
-    if (contains_any({"martial prowess", "fighting as an art", "weapons"}))
-        add_concept("武艺");
-    if (contains_any({"merrymaking", "parties", "party"})) add_concept("欢庆");
-    if (suffix.find("self-control") != std::string_view::npos) add_concept("自制");
-    if (suffix.find("perseverance") != std::string_view::npos) add_concept("坚韧");
-    if (suffix.find("friendship") != std::string_view::npos) add_concept("友谊");
-    if (suffix.find("loyalty") != std::string_view::npos) add_concept("忠诚");
-    if (suffix.find("law") != std::string_view::npos) add_concept("法律");
-    if (contains_any({"independence", "freedom"})) add_concept("独立");
-    if (contains_any({"tranquility", "quiet"})) add_concept("宁静");
-    if (contains_any({"artwork", "pursuit of art"})) add_concept("艺术");
-    if (suffix.find("romance") != std::string_view::npos) add_concept("浪漫");
-    if (suffix.find("harmony") != std::string_view::npos) add_concept("和谐");
-    if (contains_any({"decorum", "etiquette", "dignified"})) add_concept("礼仪");
-    if (contains_any({"sacrifice", "altruism"})) add_concept("牺牲");
-    if (suffix.find("power") != std::string_view::npos) add_concept("权力");
-    if (contains_any({"natural world", "holds nature", "dislikes nature"}))
-        add_concept("自然");
 
-    if (concepts.empty()) return "，但这和自己看重的东西有些矛盾";
-    std::string joined;
-    for (std::string_view value_name : concepts) {
-        if (!joined.empty()) joined += "、";
-        joined += value_name;
+    struct ChangePrefix { std::string_view source, target; };
+    static constexpr ChangePrefix changes[] = {
+        {", a turn-around after ", "后这种性情发生了逆转"},
+        {", a strengthening after ", "后这种性情更加明显"},
+        {", less extreme after ", "后这种性情不再那么极端"},
+        {", after ", "之后"},
+    };
+    for (const ChangePrefix &change : changes) {
+        if (!canonical.substr(cursor).starts_with(change.source)) continue;
+        const size_t event_begin = cursor + change.source.size();
+        size_t year_at = std::string_view::npos, year_begin = 0, year_end = 0;
+        // An event or its dynamic name can contain "in" too. The actual year
+        // is an integer followed by the end or a complete native conflict.
+        for (size_t at = canonical.find(" in ", event_begin);
+             at != std::string_view::npos;
+             at = canonical.find(" in ", at + 4)) {
+            size_t end = at + 4;
+            if (end < canonical.size() && canonical[end] == '-') ++end;
+            const size_t digits = end;
+            while (end < canonical.size() && canonical[end] >= '0' &&
+                   canonical[end] <= '9') ++end;
+            if (end == digits) continue;
+            const bool boundary = end == canonical.size() || std::any_of(
+                std::begin(conflicts), std::end(conflicts), [&](const auto &phrase) {
+                    return canonical.substr(end).starts_with(phrase.source);
+                });
+            if (boundary) { year_at = at; year_begin = at + 4; year_end = end; }
+        }
+        if (year_at == std::string_view::npos || year_at <= event_begin)
+            return std::nullopt;
+        const size_t native_event_begin = canonical_sources[event_begin];
+        const std::string_view event_source = native_source.substr(
+            native_event_begin, canonical_sources[year_at] - native_event_begin);
+        // Keep grammatical pronouns and every dynamic event field in the
+        // original source. The shared formatter 0x140e2c460 emits its bare
+        // event core here; its preposition flag is false for trait changes.
+        std::string event_utf8;
+        std::vector<size_t> event_native_offsets;
+        for (size_t at = 0; at < event_source.size(); ++at) {
+            const std::string glyph = cp437_to_utf8(event_source.substr(at, 1));
+            event_utf8 += glyph;
+            event_native_offsets.insert(event_native_offsets.end(), glyph.size(),
+                native_event_begin + at);
+        }
+        std::vector<size_t> event_origins;
+        const auto event = RULESETS.translate_with_origins(
+            event_utf8, "::psychology::event", event_origins);
+        if (!event || event->empty()) return std::nullopt;
+        append("（", cursor + 2);
+        for (size_t at = year_begin; at < year_end; ++at)
+            append(canonical.substr(at, 1), at);
+        append("年", year_begin);
+        translated += *event;
+        if (target_sources) {
+            for (size_t at = 0; at < event->size(); ++at) {
+                const size_t origin = at < event_origins.size()
+                    ? event_origins[at] : std::string_view::npos;
+                target_sources->push_back(origin < event_native_offsets.size()
+                    ? event_native_offsets[origin] : native_event_begin);
+            }
+        }
+        append(change.target, cursor + 2);
+        append("）", year_end - 1);
+        cursor = year_end;
+        break;
     }
-    const bool negative = contains_any({
-        "low regard", "dim light", "disdain", "dislikes", "doesn't value",
-        "does not value", "no value", "waste", "foolish", "offensive",
-        "abhorrent", "put off", "distasteful", "disturbed by"});
-    return "，但这和自己" + std::string(negative ? "看不上" : "看重") +
-        joined + "的想法有些矛盾";
+    while (cursor < canonical.size()) {
+        const PersonalityFacetPhrase *matched = nullptr;
+        for (const auto &phrase : conflicts) {
+            if (canonical.substr(cursor).starts_with(phrase.source) &&
+                (!matched || phrase.source.size() > matched->source.size()))
+                matched = &phrase;
+        }
+        if (!matched) return std::nullopt;
+        append(matched->target, cursor + 2);
+        cursor += matched->source.size();
+    }
+    return translated.empty() ? std::nullopt
+        : std::optional<std::string>(std::move(translated));
 }
 
 static std::optional<std::string> translate_personality_facet_sentence(
@@ -12606,7 +12628,7 @@ static std::optional<std::string> translate_personality_facet_sentence(
 
     std::vector<size_t> canonical_sources;
     const std::string canonical = canonical_personality_predicate(
-        sentence.substr(subject.size()), target_sources ? &canonical_sources : nullptr);
+        sentence.substr(subject.size()), &canonical_sources);
     if (direct_attribute_subject) {
         if (const auto attributes = translate_personality_attribute_summary(
                 canonical, translated_subject, target_sources)) {
@@ -12648,11 +12670,16 @@ static std::optional<std::string> translate_personality_facet_sentence(
         target_sources->insert(target_sources->end(), matched->target.size(),
             subject.size() + canonical_sources.front());
     if (!suffix.empty()) {
-        const std::string note = personality_conflict_note(suffix);
-        translated += note;
-        if (target_sources)
-            target_sources->insert(target_sources->end(), note.size(),
-                subject.size() + canonical_sources[matched->source.size()]);
+        std::vector<size_t> note_sources;
+        const auto note = personality_conflict_note(canonical,
+            matched->source.size(), sentence.substr(subject.size()),
+            canonical_sources, target_sources ? &note_sources : nullptr);
+        if (!note) return std::nullopt;
+        translated += *note;
+        if (target_sources) {
+            for (size_t offset : note_sources)
+                target_sources->push_back(subject.size() + offset);
+        }
     }
     translated += "。";
     if (target_sources)

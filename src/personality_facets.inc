@@ -508,7 +508,14 @@
 {"is completely unmoved by art or the beauty of nature", "对艺术和自然风景完全没感觉"},
 
 // Other stable sentences appended to the same personality description.
+// Native writer 0x14047f680..0x140481efe selects the base alcohol predicate
+// and one of four shortage tails. Match every complete branch; canonical {p}
+// covers both scarcity's "its" and the last-drink branch's he/she/it subject.
 {"needs alcohol to get through the working day", "需要靠酒精撑过一天的工作"},
+{"needs alcohol to get through the working day and is starting to work slowly due to {p} scarcity", "需要靠酒精撑过一天的工作，而且已经开始因缺酒而放慢工作速度"},
+{"needs alcohol to get through the working day and really wants a drink", "需要靠酒精撑过一天的工作，而且很想喝上一杯"},
+{"needs alcohol to get through the working day and has gone without a drink for far, far too long", "需要靠酒精撑过一天的工作，而且已经太久太久没喝酒了"},
+{"needs alcohol to get through the working day and can't even remember the last time {p} had some", "需要靠酒精撑过一天的工作，已经记不清上次喝酒是什么时候了"},
 {"likes working outdoors and grumbles only mildly at inclement weather", "喜欢在户外工作，天气不好时也只会抱怨几句"},
 {"does not mind being outdoors, at least for a time", "不介意在户外待一阵子"},
 {"is getting used to tragedy", "已经开始习惯一次次悲剧"},

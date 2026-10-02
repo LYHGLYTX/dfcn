@@ -1,0 +1,58 @@
+# Native unit personality adaptation sources, extracted from PE:6a70a6d9:02711000.
+# Image: D:/program/steam/steamapps/common/Dwarf Fortress/Dwarf Fortress.exe
+# SHA256: 205770918FD54C96CBBCF89223EBD449E2E113C7C873ED81177C4511A3450DB7
+# Parent formatter 0x14047f680; adaptation paragraph 0x1404818ee..0x140481d98.
+# Read-only disassembly: fixed w64devkit-2.9.1/bin/objdump.exe, Intel x86-64 syntax.
+# unit.current_soul = pointer at unit+0xa98; soul.personality begins at soul+0x248.
+# unit.misc_traits vector begin/end = unit+0x9a8/unit+0x9b0; each pointer targets int16 id at +0 and int32 value at +4.
+# misc_trait id 13 = WantsDrink, original ALCOHOLIC; first matching entry is used. No matching entry omits the alcohol sentence.
+# likes_outdoors = signed int32 soul+0x374 (personality+0x12c); combat_hardened = signed int32 soul+0x378 (personality+0x130).
+# This paragraph uses unit.sex byte at unit+0x12e; preceding personality helpers instead use soul.sex byte at soul+0x84.
+# subject formatter 0x140aa4730: sex 1 -> he, sex 0 -> she, all other values -> it; r8b != 0 uppercases the initial byte.
+# <He/She/It> and <he/she/it> are dynamic subject families, not literal native strings. Each represents three grammatical outputs.
+# Alcohol comparisons and hardening ranges are signed. Outdoor equality and hardening==100 are exact; hardening>100 selects hardened individual.
+# Paragraph order: alcohol, outdoors, combat hardening. Native color prefix is [C:7:0:1], with period and two spaces after each sentence.
+# With a soul but no visible adaptation sentence, native control flow can retain only the color prefix; this is not a missing prose branch.
+# This is a decompiled source inventory; it does not claim an observed game display result.
+# family	formatter	site	target	source	condition	handler
+control	0x14047f680	0x140481946	0x141602430	[C:7:0:1]	WantsDrink entry exists	personality-adaptation-color
+alcohol-literal	0x14047f680	0x14048198f	0x141640270	 needs alcohol to get through the working day	WantsDrink entry exists; after uppercase dynamic subject	personality-adaptation
+alcohol-literal	0x14047f680	0x1404819ab	0x141640248	 and can't even remember the last time 	value >= 403200; before lowercase dynamic subject	personality-adaptation
+alcohol-literal	0x14047f680	0x1404819f4	0x1416400f0	 had some	value >= 403200; after lowercase dynamic subject	personality-adaptation
+alcohol-literal	0x14047f680	0x140481a1d	0x1416400b8	 and has gone without a drink for far, far too long	302400 <= value < 403200	personality-adaptation
+alcohol-literal	0x14047f680	0x140481a2d	0x141640098	 and really wants a drink	201600 <= value < 302400	personality-adaptation
+alcohol-literal	0x14047f680	0x140481a3d	0x141640060	 and is starting to work slowly due to its scarcity	100800 <= value < 201600	personality-adaptation
+control	0x14047f680	0x140481a56	0x1415fd968	.  	WantsDrink entry exists; append length 3	personality-adaptation-punctuation
+control	0x14047f680	0x140481a90	0x141602430	[C:7:0:1]	soul exists and adaptation buffer empty before outdoor branch	personality-adaptation-color
+outdoor-literal	0x14047f680	0x140481b03	0x141640150	 likes working outdoors and grumbles only mildly at inclement weather.  	soul exists and likes_outdoors == 2	personality-adaptation
+outdoor-literal	0x14047f680	0x140481b35	0x1416401a0	 does not mind being outdoors, at least for a time.  	soul exists and likes_outdoors == 1	personality-adaptation
+control	0x14047f680	0x140481b6f	0x141602430	[C:7:0:1]	soul exists and adaptation buffer empty before combat_hardened branch	personality-adaptation-color
+combat-literal	0x14047f680	0x140481bdc	0x141640120	 doesn't really care about anything anymore.  	soul exists and combat_hardened == 100	personality-adaptation
+combat-literal	0x14047f680	0x140481c13	0x141640100	 is a hardened individual.  	soul exists and combat_hardened != 100 and combat_hardened >= 67	personality-adaptation
+combat-literal	0x14047f680	0x140481c4a	0x141640000	 is getting used to tragedy.  	soul exists and 33 <= combat_hardened < 67	personality-adaptation
+subject-literal	0x140aa4730	0x140aa4746	0x1416ceccc	he	sex == 1; r8b == 0	personality-adaptation-subject
+subject-literal	0x140aa4730	0x140aa4753	0x1416cecc8	she	sex == 0; r8b == 0	personality-adaptation-subject
+subject-literal	0x140aa4730	0x140aa4762	0x1415ee4d4	it	sex != 0 and sex != 1; r8b == 0	personality-adaptation-subject
+subject-dynamic	0x140aa4730	0x140aa4777..0x140aa4796	0x1416ceccc	He	sex == 1; r8b != 0	personality-adaptation-subject
+subject-dynamic	0x140aa4730	0x140aa4777..0x140aa4796	0x1416cecc8	She	sex == 0; r8b != 0	personality-adaptation-subject
+subject-dynamic	0x140aa4730	0x140aa4777..0x140aa4796	0x1415ee4d4	It	sex != 0 and sex != 1; r8b != 0	personality-adaptation-subject
+alcohol-subject	0x14047f680	0x140481977	0x140aa4730	<He/She/It>	WantsDrink exists; subject(unit.sex, true)	personality-adaptation-subject
+alcohol-subject	0x14047f680	0x1404819dc	0x140aa4730	<he/she/it>	WantsDrink.value >= 403200; subject(unit.sex, false)	personality-adaptation-subject
+outdoor-subject	0x14047f680	0x140481aeb;0x140481b1d	0x140aa4730	<He/She/It>	likes_outdoors == 2; likes_outdoors == 1 respectively; subject(unit.sex, true)	personality-adaptation-subject
+combat-subject	0x14047f680	0x140481bc4;0x140481bfb;0x140481c32	0x140aa4730	<He/She/It>	combat_hardened == 100; non100 >= 67; 33..66 respectively; subject(unit.sex, true)	personality-adaptation-subject
+alcohol-branch	0x14047f680	0x1404819a4..0x140481a64	0x141640270;0x1415fd968	<He/She/It> needs alcohol to get through the working day.  	WantsDrink entry exists and value < 100800	personality-adaptation
+alcohol-branch	0x14047f680	0x140481a36..0x140481a64	0x141640270;0x141640060;0x1415fd968	<He/She/It> needs alcohol to get through the working day and is starting to work slowly due to its scarcity.  	WantsDrink entry exists and 100800 <= value < 201600	personality-adaptation
+alcohol-branch	0x14047f680	0x140481a26..0x140481a64	0x141640270;0x141640098;0x1415fd968	<He/She/It> needs alcohol to get through the working day and really wants a drink.  	WantsDrink entry exists and 201600 <= value < 302400	personality-adaptation
+alcohol-branch	0x14047f680	0x140481a16..0x140481a64	0x141640270;0x1416400b8;0x1415fd968	<He/She/It> needs alcohol to get through the working day and has gone without a drink for far, far too long.  	WantsDrink entry exists and 302400 <= value < 403200	personality-adaptation
+alcohol-branch	0x14047f680	0x1404819a4..0x140481a64	0x141640270;0x141640248;0x140aa4730;0x1416400f0;0x1415fd968	<He/She/It> needs alcohol to get through the working day and can't even remember the last time <he/she/it> had some.  	WantsDrink entry exists and value >= 403200; both dynamic subjects derive from the same unit.sex	personality-adaptation
+outdoor-branch	0x14047f680	0x140481acf..0x140481b43	0x1416401a0	<He/She/It> does not mind being outdoors, at least for a time.  	soul exists and likes_outdoors == 1	personality-adaptation
+outdoor-branch	0x14047f680	0x140481ad4..0x140481b43	0x141640150	<He/She/It> likes working outdoors and grumbles only mildly at inclement weather.  	soul exists and likes_outdoors == 2	personality-adaptation
+combat-branch	0x14047f680	0x140481bae..0x140481c58	0x141640120	<He/She/It> doesn't really care about anything anymore.  	soul exists and combat_hardened == 100	personality-adaptation
+combat-branch	0x14047f680	0x140481be5..0x140481c58	0x141640100	<He/She/It> is a hardened individual.  	soul exists and combat_hardened != 100 and combat_hardened >= 67	personality-adaptation
+combat-branch	0x14047f680	0x140481c1c..0x140481c58	0x141640000	<He/She/It> is getting used to tragedy.  	soul exists and 33 <= combat_hardened < 67	personality-adaptation
+alcohol-omission	0x14047f680	0x140481920..0x140481940	0x140481a7d	<omitted>	No misc_traits entry has id 13; alcohol prose omitted independently of soul presence	native-omission
+outdoor-omission	0x14047f680	0x140481a7d..0x140481a85	0x140481c71	<omitted>	soul is null; both outdoor and combat prose omitted	native-omission
+outdoor-omission	0x14047f680	0x140481acf..0x140481ad7	0x140481b49	<omitted>	soul exists and likes_outdoors is neither 1 nor 2	native-omission
+combat-omission	0x14047f680	0x140481b5c..0x140481b64	0x140481c71	<omitted>	soul is null; combat prose omitted	native-omission
+combat-omission	0x14047f680	0x140481c1c..0x140481c1f	0x140481c5e	<omitted>	soul exists and combat_hardened < 33	native-omission
+paragraph-omission	0x14047f680	0x140481c71..0x140481c74	0x140481d98	<omitted>	Adaptation buffer is empty; no paragraph appended	native-omission
