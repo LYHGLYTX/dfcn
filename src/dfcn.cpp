@@ -544,6 +544,8 @@ struct Match {
     // A summary row reconstructed from ordered native draws already owns
     // its complete column; physical tail spans only suppress surviving ink.
     bool native_overview_complete_row = false;
+    // Tall adventure target cards own their name and status column together.
+    bool native_adventure_target_row = false;
     // Embark resources are drawn over the site's final records by native DF.
     // Keep their display section separate from their original source rows.
     bool native_embark_resource = false;
@@ -3970,6 +3972,7 @@ private:
         std::vector<Match> &matches, int only_y, bool raw_layer) const;
     void layout_fortress_monthly_schedule(SDL_Renderer *renderer);
     void layout_adventure_journal_tabs(SDL_Renderer *renderer);
+    void layout_adventure_target_rows(SDL_Renderer *renderer);
     void layout_fortress_header(SDL_Renderer *renderer);
     int layout_embark_named_item_rows(std::vector<Match> &matches,
                                       int screen_columns,
@@ -19838,6 +19841,7 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "native_panel_layout.inc"
 #include "embark_introduction.inc"
 #include "fortress_hud.inc"
+#include "adventure_target_rows.inc"
 #include "fortress_squads.inc"
 #include "fortress_zones.inc"
 #include "fortress_stockpiles.inc"
@@ -28650,7 +28654,8 @@ void Overlay::normalize_native_split_text() {
             static_cast<size_t>(match.rule) < rules_.size() &&
             (rules_[static_cast<size_t>(match.rule)].source == "Total Power: {d}" ||
              rules_[static_cast<size_t>(match.rule)].source == "Total Power Needed: {d}");
-        const bool structured_span = machine_power || is_credits_row(match) || match.rule == kSaveListCaptionRule ||
+        const bool structured_span = match.native_adventure_target_row ||
+            machine_power || is_credits_row(match) || match.rule == kSaveListCaptionRule ||
             match.rule == kColorPickerChoiceRule ||
             match.rule == kCharacterHeaderRule ||
             match.rule == kCharacterOverviewRowRule ||
@@ -44775,10 +44780,14 @@ void Overlay::render(SDL_Renderer *renderer) {
         }
         std::erase_if(prepared_matches_, is_embark_pause_foreground);
     }
+    // Tall attack-target records retain their complete text column before
+    // generic page layout can center names and statuses independently.
+    layout_adventure_target_rows(renderer);
     // Resolve native half-font rows before detaching a whole information card.
     // Empty duplicate spans still own suppression, but cannot become new rows.
     if (std::any_of(prepared_matches_.begin(), prepared_matches_.end(),
-            [](const Match &match) { return match.rule == kWorkshopRecipeRowRule ||
+            [](const Match &match) { return match.native_adventure_target_row ||
+                match.rule == kWorkshopRecipeRowRule ||
                 match.rule == kFortressUnitChooserRule ||
                 match.rule == kFortressLocationListRule ||
                 match.rule == kFortressScheduleRule ||
@@ -44806,7 +44815,8 @@ void Overlay::render(SDL_Renderer *renderer) {
     // picture geometry is fitted after the page owners have run.
     std::vector<Match> tooltip_foreground;
     const auto is_toolbar_tooltip = [](const Match &match) {
-        return is_credits_row(match) || match.rule == kToolbarTooltipBodyRule ||
+        return match.native_adventure_target_row ||
+            is_credits_row(match) || match.rule == kToolbarTooltipBodyRule ||
             match.rule == kFortressUnitChooserRule ||
             match.rule == kFortressLocationListRule ||
             match.rule == kFortressScheduleRule ||
