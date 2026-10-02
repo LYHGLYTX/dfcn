@@ -80,7 +80,10 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
             }
             if (!complete || fields.size() != 2) continue;
             const Field &label = fields[0], &count = fields[1];
-            if (label.right + 1 >= count.left) continue;
+            // Stocks' native renderer places these fields at left + 2 and
+            // right - 7; both belong to this row's category button.
+            if (label.left != left + 2 || count.left != right - 7 ||
+                label.right + 1 >= count.left) continue;
             std::string_view number = count.source;
             if (number.starts_with('~')) number.remove_prefix(1);
             const bool numeric = !number.empty() &&
@@ -120,24 +123,50 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
 
     // Stocks and building/container details use the same native action skins.
     auto action_at = [&](int x, int y) { return native_item_action_at(*gps_, x, y); };
-    const NativePanelBorders borders(*gps_);
+    const auto scrollbar_cap = [&](int x, int y, bool bottom) {
+        const auto pair = [&](int32_t left, int32_t right) {
+            return left > 0 && right > 0 &&
+                native_ui_skin_at(*gps_, x, y, left, classic) &&
+                native_ui_skin_at(*gps_, x + 1, y, right, classic);
+        };
+        const auto &track = native_texture_scrollbar(*gps_);
+        if (pair(track[0][bottom ? 2 : 0], track[1][bottom ? 2 : 0])) return true;
+        const auto *hover = bottom ? native_texture_scrollbar_down_hover(*gps_)
+            : native_texture_scrollbar_up_hover(*gps_);
+        const auto *pressed = bottom ? native_texture_scrollbar_down_pressed(*gps_)
+            : native_texture_scrollbar_up_pressed(*gps_);
+        return pair(hover[0], hover[1]) || pair(pressed[0], pressed[1]);
+    };
+    const auto scrollbar = [&](const SDL_Rect &area, int top) -> std::optional<SDL_Rect> {
+        for (const auto &bar : native_vertical_scrollbar_spans(*gps_, area))
+            if (bar.y == top && bar.h >= 3 &&
+                scrollbar_cap(bar.x, bar.y, false) &&
+                scrollbar_cap(bar.x, bar.y + bar.h - 1, true)) return bar;
+        return std::nullopt;
+    };
     for (auto &[key, column] : columns) {
         std::sort(column.begin(), column.end(),
             [](const Row *a, const Row *b) { return a->y < b->y; });
-        // Identify the same two-pane widget for unfiltered and filtered
-        // Stocks: a framed category/count column with a complete text box
-        // above the adjoining item pane. Do not use the query spelling,
-        // translated names, row count, or a remembered unfiltered geometry.
-        const auto panel = native_panel_interior(borders, *gps_,
-            key[0], key[1] + 1, column.front()->y);
-        if (!panel || column.back()->y >= panel->y + panel->h) continue;
+        // The two native scrolling controls own these lists. DFHack's shortcut
+        // card can cover the outer window rail with custom artwork whose pen
+        // character is absent from the graphical grid. Requiring that unrelated
+        // frame (or recognizing the card as a native border) drops both panes
+        // back to English-run centering. The native FILTER is four columns
+        // after the category cap, or six when its two-column scrollbar is
+        // present. Complete scrollbars supply the shared visible bottom;
+        // small lists legitimately omit either or both scrolling controls.
         std::optional<SDL_Rect> search;
-        for (int top = panel->y; top < column.front()->y && !search; ++top) {
-            for (int x = key[1] + 1; x < panel->x + panel->w; ++x) {
+        std::optional<SDL_Rect> category_bar;
+        for (int top = 0; top < column.front()->y && !search; ++top) {
+            for (int gap : {4, 6}) {
+                const int x = key[1] + gap;
                 const auto box = native_textbox_rect_at(*gps_, x, top);
-                if (!box || box->x + box->w > panel->x + panel->w ||
-                    box->y + box->h > panel->y + panel->h) continue;
+                if (!box) continue;
+                const auto bar = gap == 6 ? scrollbar(SDL_Rect{key[1] + 1, box->y,
+                    2, gps_->dimy - box->y}, box->y) : std::nullopt;
+                if (bar && column.back()->y >= bar->y + bar->h) continue;
                 search = box;
+                category_bar = bar;
                 break;
             }
         }
@@ -167,6 +196,16 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
         }
         layout_slots(categories);
 
+        const int list_top = search->y + search->h;
+        const int search_right = search->x + search->w;
+        const auto item_bar = scrollbar(SDL_Rect{search_right - 2, list_top,
+            2, gps_->dimy - list_top}, list_top);
+        if (item_bar && category_bar &&
+            item_bar->y + item_bar->h != category_bar->y + category_bar->h) continue;
+        const int pane_right = item_bar ? item_bar->x : search_right;
+        const int list_bottom = item_bar ? item_bar->y + item_bar->h
+            : category_bar ? category_bar->y + category_bar->h : gps_->dimy;
+
         // The item pane is below its own search box. Identify
         // each row by its actual Stocks action strip, including headers and
         // individual items. This also works for a single filtered result or
@@ -175,16 +214,24 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
         // list may end earlier, or expose an unrecognized caption at an edge.
         // Using that column's first/last translated y skipped otherwise visible
         // items and sent them back to per-English-run centering after a wheel
-        // event in the OTHER pane. Scan this pane's full visible height, not
-        // the whole screen or controls belonging to a neighbouring window.
+        // event in the OTHER pane. When neither list needs scrolling, its
+        // actual Stocks inspect controls still establish each visible row;
+        // unrelated state actions in the bottom toolbar do not own names.
         std::vector<Slot> items;
-        int list_right = search->x + search->w;
-        for (int y = search->y + search->h; y < panel->y + panel->h; ++y) {
+        int list_right = pane_right;
+        for (int y = list_top; y < list_bottom; ++y) {
             int controls_left = -1;
-            for (int x = search->x + 1; x + 1 < search->x + search->w; ++x) {
+            for (int x = search->x + 1; x + 1 < pane_right; ++x) {
                 if (action_at(x, y)) { controls_left = x - 1; break; }
             }
             if (controls_left < 0) continue;
+            if (!category_bar && !item_bar) {
+                bool inspect = false;
+                for (int x = controls_left; x + 3 <= pane_right && !inspect; ++x)
+                    inspect = native_square_button_at(*gps_, x, y,
+                        native_texture_button_stocks_view_item(*gps_));
+                if (!inspect) continue;
+            }
             std::vector<Match *> parts;
             bool complete = true;
             for (Match &part : prepared_matches_) {
