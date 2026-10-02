@@ -23104,7 +23104,7 @@ Announcement combat memory-sentence []: I died.	我死了。	l
 Announcement combat memory-sentence []: It was.	就是那样。	l
 Announcement combat memory-value []: friendship	友情	l
 Announcement combat reference-kind []: fortress	要塞	l
-Announcement combat reference-kind []: hillocks	丘陵	l
+Announcement combat reference-kind []: hillocks	丘区	l
 Announcement combat reference-kind []: monument	纪念碑	l
 Announcement combat reference-value []: artwork	艺术	l
 Announcement combat reference-value []: cunning	谋略	l
@@ -25235,7 +25235,7 @@ Announcement combat memory-value []: commerce	商业	l
 Announcement combat memory-value []: fairness	公平	l
 Announcement combat memory-value []: stoicism	克制	l
 Announcement combat reference-kind []: castle	城堡	l
-Announcement combat reference-kind []: hamlet	村落	l
+Announcement combat reference-kind []: hamlet	村庄	l
 Announcement combat reference-kind []: palace	宫殿	l
 Announcement combat reference-kind []: shrine	圣地	l
 Announcement combat reference-value []: peace	和平	l
@@ -38681,6 +38681,8 @@ Workshop recipe: state sand-bearing	含沙	l
 Workshop recipe: state sheet roller	用于卷纸	l
 World mission: Improve trade at {p}	在{p}改善贸易关系	ht
 World mission: Seek alliance at {p}	在{p}寻求结盟	ht
+World site type: important location	Important location	hi
+World site type: mysterious dungeon	Mysterious dungeon	hi
 Wrestling Competition in the wilds.	在荒野中，摔跤比赛。	hEi
 You are completely free of the web.	你完全挣脱了蛛网。	hP
 You are giving a creditable sermon.	你布道讲得可圈可点。	hP
@@ -40369,6 +40371,7 @@ Workshop recipe: state undisturbed	未受扰动	l
 Workshop recipe: writing container	文字载体	l
 World mission: Make contact at {p}	在{p}建立联系	ht
 World site action: Already trading	已在进行贸易	hi
+World site type: mysterious palace	Mysterious palace	hi
 Wrestling Competition in the wilds	在荒野中，摔跤比赛	hEi
 Yes, master. Ask and I shall obey.	是，主人。请下令，我会服从。	hP
 You are partially free of the web.	你已经挣开了部分蛛网。	hP
@@ -43634,6 +43637,7 @@ Workshop recipe: state totemable	可制作图腾	l
 World artifact: Last held by {n}	最后持有者：{n}	ht
 World artifact: Location unknown	下落不明	h
 World mission: Make peace at {p}	在{p}议和	ht
+World site type: mysterious lair	Mysterious lair	hi
 Wrestling Competition during {e}	在{e1}期间，摔跤比赛	htEi
 Wrestling Competition within {p}	在{p1}，摔跤比赛	htEi
 X is making a submissive gesture	X正做出顺从的手势	wl
@@ -45315,6 +45319,8 @@ Workshop recipe: suits of armor	套护甲	l
 World mission: Diplomacy at {p}	在{p}开展外交	ht
 World site action: Inaccessible	无法抵达	hi
 World site racial type: hillock	丘区	hi
+World site type: forest retreat	Forest retreat	hi
+World site type: mountain halls	Mountain halls	hi
 Written objects (incl. copies):	书面作品（含副本）：	wl
 X is making a plaintive gesture	X正做出哀求的手势	wl
 X is striking a triumphant pose	X正摆出胜利的姿态	wl
@@ -54183,6 +54189,8 @@ World mission: Pillage {p}	劫掠：{p}	ht
 World mission: Recover {b}	取回：{b}	ht
 World mission: Recover {i}	取回：{i}	ht
 World mission: Recover {p}	取回：{p}	ht
+World site type: labyrinth	Labyrinth	hi
+World site type: monastery	Monastery	hi
 World site: The {s} of {p}	{p}（{s}）	hti
 Writing material: pig tail	猪尾草纸	l
 X is unnaturally contorted	X的身体扭曲得不自然	wl
@@ -55785,6 +55793,10 @@ What do you want to wear?	你想穿戴什么？	hP
 Workshop recipe: kind dye	染料	l
 World mission: Rescue {n}	营救：{n}	ht
 World site action: At war	处于战争状态	hi
+World site modifier: dark	黑暗	hi
+World site type: fortress	Fortress	hi
+World site type: hillocks	Hillocks	hi
+World site type: monument	Monument	hi
 Writing material: papyrus	纸莎草纸	l
 X is being mutilated by Y	X正在被Y肢解	wl
 You are bound to obey me.	你受我约束，必须服从我。	hP
@@ -58952,6 +58964,9 @@ Workshop recipe: crafts	工艺品	l
 Workshop recipe: gypsum	石膏	l
 World mission: Raid {p}	突袭：{p}	ht
 World mission: Raze {p}	夷平：{p}	ht
+World site type: castle	Castle	hi
+World site type: hamlet	Hamlet	hi
+World site type: shrine	Shrine	hi
 Writing material: kenaf	洋麻纸	l
 Writing material: linen	亚麻纸	l
 Writing material: paper	纸	l
@@ -60696,6 +60711,8 @@ Workers ignore animals	工人不搬运动物	wi
 Workshop recipe: cloth	布匹	l
 Workshop recipe: glaze	釉料	l
 Workshop recipe: items	物品	l
+World site type: tower	Tower	hi
+World site type: vault	Vault	hi
 World site: {s} of {p}	{p}（{s}）	hti
 Wrestling Competition.	摔跤比赛。	hEi
 Writing material: hemp	大麻纸	l
@@ -62513,6 +62530,14 @@ Workers ignore refuse	工人不收集垃圾	wi
 Workshop recipe: flux	熔剂	l
 Workshop recipe: item	物品	l
 Workshop recipe: silk	丝质布	l
+World site type: camp	Camp	hi
+World site type: cave	Cave	hi
+World site type: fort	Fort	hi
+World site type: lair	Lair	hi
+World site type: pits	Pits	hi
+World site type: site	Site	hi
+World site type: tomb	Tomb	hi
+World site type: town	Town	hi
 Wrestling Competition	摔跤比赛	hEi
 You are a projectile.	你正在空中飞行。	hj
 You are dancing well.	你跳得很好。	hP
@@ -70010,7 +70035,7 @@ A caravan from {p}	来自{p1}的商队	htu
 A murderous ghost.	一个嗜杀的鬼魂。	lP
 A wide variety of 	此类别包含多种与食品和酒水相	w
 A {s} cannot jump.	{s1}无法跳跃。	hPt
-Abandoned hillocks	废弃丘陵	wi
+Abandoned hillocks	废弃丘区	wi
 Accept personality	接受人格
 Act quickly today.	今天要迅速行动。	hP
 Adamantine strands	精金缕	wi
@@ -73788,7 +73813,7 @@ A Dwarven Outpost	一座矮人前哨:	w
 A Treatise on {b}	{b}论述	hbti
 A gigantic shark.	一条体型极其庞大的鲨鱼。	lP
 A sadistic ghost.	一个虐待成性的鬼魂。	lP
-Abandoned hillock	废弃丘陵	wi
+Abandoned hillock	废弃丘区	wi
 Abduction of {a}.	对{a1}的绑架。	htEi
 Accept appearance	接受外貌
 Accept background	接受背景
@@ -82807,7 +82832,7 @@ Right upper leg	右大腿	w
 Rocky Wasteland	岩石荒漠
 Rotten raw hide	腐烂生皮	wi
 Royal Mausoleum	皇家陵寝	w
-Ruined hillocks	丘陵废墟	wi
+Ruined hillocks	丘区废墟	wi
 Ruled the World	已经统治世界	w
 Saving items...	保存物品......	w
 Saving units...	保存单位......	w
@@ -87570,7 +87595,7 @@ Regular mining	常规挖掘	wo
 Remove hidden 	移除隐藏的指定。	w
 Return to game	返回游戏	w
 Right shoulder	右肩	w
-Ruined hillock	丘陵废墟	wi
+Ruined hillock	丘区废墟	wi
 Rule the World	统治世界	w
 SMALLER ISLAND	非常小的岛屿	w
 SMALLER REGION	较小的地区	w
@@ -110200,7 +110225,7 @@ Harrowed	耙	w
 He finds	他能够
 Hellooo!	你——好！	hP
 Hey {p}.	嘿，{p1}。	hPt
-Hillocks	丘陵	wi
+Hillocks	丘区	wi
 Hold {s}	抓住{s1}	hPt
 Hopeless	毫无希望	w
 Hospital	医院	wi
@@ -110721,7 +110746,7 @@ high wax	高阶蜡	hi
 high way	高阶路	hi
 high web	高阶网	hi
 highwood	极树	wi
-hillocks	丘陵	hv
+hillocks	丘区	hv
 holy ace	神圣王牌	hi
 holy act	神圣行动	hi
 holy age	神圣年龄	hi
@@ -111288,7 +111313,7 @@ Haulers	搬运工	w
 Hauling	搬运	w
 He does	他确实
 Healthy	健康的	w
-Hillock	丘陵	wi
+Hillock	丘区	wi
 History	历史	w
 Hopeful	乐观向上	w
 Hubris!	狂妄！	hP
@@ -112156,7 +112181,7 @@ Grudge	怨恨	w
 Guilty	内疚	w
 Gulgun	古尔贡	wi
 Gulnas	古纳斯	wi
-Hamlet	村落
+Hamlet	村庄
 Hammer	战锤术	wi
 Hatred	仇恨	w
 Hauled	拖动	w
@@ -112802,7 +112827,7 @@ grunts	咕哝	wi
 guavas	番石榴	wi
 guilty	内疚	w
 gypsum	软石膏	wi
-hamlet	村落	hv
+hamlet	村庄	hv
 height	身高	wi
 helves	斧柄	wi
 hidden	隐藏的	wi

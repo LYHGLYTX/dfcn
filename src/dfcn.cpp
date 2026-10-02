@@ -2896,6 +2896,7 @@ private:
     mutable std::unordered_map<std::string, std::optional<std::string>> legends_nested_cache_;
     std::unordered_map<std::string, std::vector<int>> legends_anchor_rules_;
     std::unordered_map<std::string, std::string> legends_terms_, legends_terms_ci_;
+    std::unordered_map<std::string, std::string> world_site_type_aliases_;
     mutable std::unordered_map<std::string, std::shared_ptr<LegendsTextFlow>> legends_flow_cache_;
     std::string legends_native_capture_status_;
     std::unordered_map<std::string, int> history_semantic_templates_;
@@ -2965,6 +2966,7 @@ private:
     std::optional<std::string> translate_unit_identity(std::string_view source,
         bool typed = false) const;
     std::optional<std::string> translate_racial_hill_type(std::string_view source) const;
+    std::optional<std::string> translate_world_site_type(std::string_view source) const;
     std::optional<std::string> translate_skill_name(
         std::string_view source, bool require_title = false) const;
     std::optional<std::string> translate_skill_rating(std::string_view source) const;
@@ -4152,7 +4154,7 @@ std::optional<std::string> Overlay::exact_literal_translation(
         found != capture_translations_.end() && !found->second.empty()) {
         return found->second;
     }
-    return translate_racial_hill_type(exact);
+    return translate_world_site_type(exact);
 }
 
 static std::string compact_translated_search_text(std::string_view text) {
@@ -4875,6 +4877,7 @@ void Overlay::build_trie() {
     legends_anchor_rules_.clear();
     legends_terms_.clear();
     legends_terms_ci_.clear();
+    world_site_type_aliases_.clear();
     legends_flow_cache_.clear();
     legends_native_capture_status_.clear();
     history_semantic_templates_.clear();
@@ -4946,6 +4949,17 @@ void Overlay::build_trie() {
     };
     for (size_t rule_index = 0; rule_index < rules_.size(); ++rule_index) {
         const Rule &material_rule = rules_[rule_index];
+        constexpr std::string_view world_site_type_scope = "World site type: ";
+        if (material_rule.source.starts_with(world_site_type_scope)) {
+            // Native site-kind leaves are lookup-only data. Keep their finite
+            // suffix table separate from all Legends prose and UI literals.
+            if (material_rule.legends_prose && material_rule.template_kinds.empty() &&
+                    !material_rule.target.empty())
+                world_site_type_aliases_.insert_or_assign(lower(normalize_utterance(
+                    std::string_view(material_rule.source).substr(world_site_type_scope.size()))),
+                    material_rule.target);
+            continue;
+        }
         // Native semantic producers already supply typed template fields.
         // Their exact-key renderer also needs shared UI templates such as
         // b. {d}/d. {d}; keep each rule's original matcher scope unchanged.
@@ -7138,8 +7152,10 @@ static bool world_site_type_shape(std::string_view source) {
         "shrine", "tower", "monastery", "fort", "castle", "camp", "tomb",
         "vault", "monument", "site", "palace", "dungeon",
     };
-    return !folded.empty() && folded.size() <= 64 &&
-        std::count(folded.begin(), folded.end(), ' ') <= 3 &&
+    // Native NAME adjectives can contain several words. The containing
+    // record owns the field; the shared type parser validates its complete
+    // RAW prefix rather than imposing a word-count limit on that prefix.
+    return !folded.empty() &&
         std::all_of(folded.begin(), folded.end(), [](unsigned char ch) {
             return (ch >= 'a' && ch <= 'z') || ch == ' ' || ch == '-';
         }) &&
@@ -7462,10 +7478,91 @@ std::optional<std::string> Overlay::translate_racial_hill_type(
     if (!creature_name_race_adjective.contains(race) &&
         !RULESETS.translate_static_creature_name(cp437_to_utf8(race)))
         return std::nullopt;
-    const auto race_target = translate_creature_descriptor(race, true);
+    const auto adjective = creature_name_race_adjective.find(race);
+    const auto race_target = adjective != creature_name_race_adjective.end()
+        ? std::optional<std::string>(std::string(adjective->second))
+        : RULESETS.translate_static_creature_name(cp437_to_utf8(race));
     const auto noun_target = legends_terms_ci_.find("world site racial type: hillock");
-    if (!race_target || noun_target == legends_terms_ci_.end()) return std::nullopt;
+    if (!race_target || race_target->empty() || noun_target == legends_terms_ci_.end() ||
+            std::any_of(race_target->begin(), race_target->end(), [](unsigned char ch) {
+                return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
+            })) return std::nullopt;
     return *race_target + noun_target->second;
+}
+
+std::optional<std::string> Overlay::translate_world_site_type(
+        std::string_view source) const {
+    const std::string normalized = normalize_utterance(source);
+    const std::string folded = lower(normalized);
+    if (folded.empty()) return std::nullopt;
+    const auto reviewed = [&](std::string_view value) -> std::optional<std::string> {
+        // Preserve complete reviewed labels such as Human hamlet and
+        // Dwarven hillocks without recursively entering exact lookup.
+        const std::string text = normalize_utterance(value);
+        const std::string key_folded = lower(text);
+        if (key_folded.empty()) return std::nullopt;
+        for (const auto &key : {text, key_folded})
+            if (const auto found = capture_translations_.find(key);
+                    found != capture_translations_.end() && !found->second.empty())
+                return found->second;
+        std::string caption = key_folded;
+        if (caption.front() >= 'a' && caption.front() <= 'z')
+            caption.front() -= 'a' - 'A';
+        if (const auto found = capture_translations_.find(caption);
+                found != capture_translations_.end() && !found->second.empty())
+            return found->second;
+        return std::nullopt;
+    };
+    if (const auto hill = translate_racial_hill_type(normalized)) {
+        if (auto target = reviewed(normalized)) return target;
+        return hill;
+    }
+    // PE 0x10cbe50 emits 24 fixed leaves. Prefer the longest complete suffix
+    // so mysterious lair and forest retreat never split into generic nouns.
+    const std::string *noun = nullptr, *noun_alias = nullptr;
+    for (const auto &[kind, alias] : world_site_type_aliases_) {
+        if (kind.empty() || (noun && kind.size() <= noun->size())) continue;
+        if (folded == kind || (folded.size() > kind.size() &&
+                folded.ends_with(kind) && folded[folded.size() - kind.size() - 1] == ' ')) {
+            noun = &kind;
+            noun_alias = &alias;
+        }
+    }
+    if (!noun) return std::nullopt;
+    if (auto target = reviewed(normalized)) return target;
+    // Resolve the alias through the existing complete caption dictionary.
+    // The extracted table establishes grammar, never a second Chinese glossary.
+    const auto noun_target = reviewed(*noun_alias);
+    if (!noun_target) return std::nullopt;
+    std::string race = folded.size() == noun->size() ? std::string{}
+        : folded.substr(0, folded.size() - noun->size() - 1);
+    if (race.empty()) return *noun_target;
+    const auto race_translation = [](std::string_view value) -> std::optional<std::string> {
+        // The native civilization's NAME adjective is one complete RAW
+        // field, including multiword species. Never translate its words as
+        // independent modifiers or fall back to a phonetic generated name.
+        const auto adjective = creature_name_race_adjective.find(value);
+        auto target = adjective != creature_name_race_adjective.end()
+            ? std::optional<std::string>(std::string(adjective->second))
+            : RULESETS.translate_static_creature_name(cp437_to_utf8(value));
+        if (!target || target->empty() || std::any_of(target->begin(), target->end(),
+                [](unsigned char ch) { return (ch >= 'A' && ch <= 'Z') ||
+                    (ch >= 'a' && ch <= 'z'); })) return std::nullopt;
+        return target;
+    };
+    if (const auto race_target = race_translation(race))
+        return *race_target + *noun_target;
+    // PE 0x10cbe10 contributes dark only for the DarkFortress site kind,
+    // whose leaves are fortress/pits. A RAW adjective itself may start with
+    // dark, so the complete species lookup above always gets first choice.
+    if ((*noun != "fortress" && *noun != "pits") ||
+            (race != "dark" && !race.starts_with("dark "))) return std::nullopt;
+    const auto modifier = legends_terms_ci_.find("world site modifier: dark");
+    if (modifier == legends_terms_ci_.end()) return std::nullopt;
+    if (race == "dark") return modifier->second + *noun_target;
+    const auto race_target = race_translation(std::string_view(race).substr(5));
+    return race_target ? std::optional<std::string>(modifier->second + *race_target + *noun_target)
+                       : std::nullopt;
 }
 
 static std::string take_unit_sex_suffix(std::string_view &source) {
@@ -8324,7 +8421,7 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
     // in map cards, Legends and adventure backgrounds. Do not let the generic
     // name compositor translate the bare noun independently of its race.
     if (!name_only)
-        if (auto site = translate_racial_hill_type(screen_text)) return site;
+        if (auto site = translate_world_site_type(screen_text)) return site;
 
     // World-generation summaries and Legends use the same dated events.
     // Resolve the reviewed date/action/participant grammar, including seasons,
@@ -9878,10 +9975,8 @@ std::optional<std::string> Overlay::translate_procedural_fragment(
     }
 
     static constexpr std::string_view feature_suffixes[] = {
-        // World-site types.
-        "lair", "cave", "vault", "shrine", "tomb", "fortress", "camp", "tower",
-        "halls", "hillock", "hillocks", "pits", "retreat", "town", "hamlet",
-        "location", "labyrinth", "monastery", "fort", "castle", "monument", "site",
+        // Native world-site kinds use the complete RAW/type parser above.
+        // These independent building labels retain their existing grammar.
         "house", "houses", "shop", "shops", "palace", "palaces", "dungeon", "dungeons",
         // Every surface biome family, including abbreviated sidebar forms.
         "forest", "forst", "swamp", "marsh", "grassland", "savanna", "shrubland",

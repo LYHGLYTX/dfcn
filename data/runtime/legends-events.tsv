@@ -556,9 +556,9 @@ It concerns the {s} {p}.	内容涉及{s}{p}。	clause
 # Lower-case subject types reuse the reviewed world-site labels. The global
 # title-cased UI literals are case-sensitive, so do not rely on a generic
 # compositional fallback to find them inside these description captures.
-hamlet	村落	description
+hamlet	村庄	description
 town	城镇	description
-hillocks	丘陵	description
+hillocks	丘区	description
 pits	深坑	description
 labyrinth	迷宫	description
 lair	巢穴	description

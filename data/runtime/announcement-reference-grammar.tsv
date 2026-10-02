@@ -82,9 +82,9 @@ reference-building-type	catacombs	地下墓穴		0x140eed490..0x140eed57b native 
 reference-building-type	sewers	下水道		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv the sewers
 reference-building-type	dungeon	地牢		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a dungeon
 reference-building-type	tower	高塔		0x140eed490..0x140eed57b native switch; existing data/runtime/legends-events.tsv a tower
-reference-kind	hamlet	村落		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	hamlet	村庄		0x140ef181d->0x1410cbe50; existing Legends site type
 reference-kind	town	城镇		0x140ef181d->0x1410cbe50; existing Legends site type
-reference-kind	hillocks	丘陵		0x140ef181d->0x1410cbe50; existing Legends site type
+reference-kind	hillocks	丘区		0x140ef181d->0x1410cbe50; existing Legends site type
 reference-kind	pits	深坑		0x140ef181d->0x1410cbe50; existing Legends site type
 reference-kind	labyrinth	迷宫		0x140ef181d->0x1410cbe50; existing Legends site type
 reference-kind	lair	巢穴		0x140ef181d->0x1410cbe50; existing Legends site type

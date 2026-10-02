@@ -1,0 +1,36 @@
+# Native 53.16 PE world-site type productions, read from each edition's machine code.
+# All addresses are RVAs. Steam formatter 0x10cbe50, jump table 0x10cc160;
+# classic formatter 0x10c6dc0, jump table 0x10c70d0. Both have selectors 0..10.
+# title: The [dark ][RAW race adjective ]type of name; compact: name, [dark ][RAW race adjective ]type.
+# Dark prefix: Steam 0x10cbe10 / classic 0x10c6d80, only selector 1.
+# Race: Steam 0xaa3770 / classic 0xaa07f0, caste=-1 -> creature_raw.name[2] (+0x60).
+# Omit race for selector 10, missing governing entity, or entity.flags NON_RACIAL (0x400).
+# World title call sites: Steam 0x1c20e2, 0x1c770e, 0x1ce946;
+# classic 0x1c2072, 0x1c767f..0x1c77ad, 0x1ce8d6. A final pass capitalizes every title word.
+# Abandoned/Ruined local-building captions come from separate adventure-map producers,
+# not from this type formatter or its race/dark composition.
+selector	condition	steam_literal_instruction	classic_literal_instruction	source
+0,1,3,8	0/3: min_depth=0 and max_depth>0; 1: IS_CITY flag true; 8: missing subtype data	0x10cbea5	0x10c6e15	fortress
+0,3	min_depth>0	0x10cbebc	0x10c6e2c	mountain halls
+0,3	remaining min_depth/max_depth branches	0x10cbed1	0x10c6e41	hillocks
+1	IS_CITY flag false; otherwise fortress	0x10cbf03	0x10c6e73	pits
+2	unconditional	0x10cbf28	0x10c6e98	cave
+4	unconditional	0x10cbf3d	0x10c6ead	forest retreat
+5	IS_CITY flag false	0x10cbf6f	0x10c6edf	hamlet
+5	IS_CITY flag true	0x10cbf79	0x10c6ee9	town
+7	lair subtype=3	0x10cbfbb	0x10c6f2b	shrine
+7	lair subtype=2	0x10cbfd0	0x10c6f40	labyrinth
+7	other lair subtype or missing subtype data	0x10cbfe5	0x10c6f55	lair
+8	fortress subtype not 1,2,3	0x10cc01c	0x10c6f8c	castle
+8	fortress subtype=3	0x10cc031	0x10c6fa1	fort
+8	fortress subtype=2	0x10cc046	0x10c6fb6	monastery
+8	fortress subtype=1	0x10cc05b	0x10c6fcb	tower
+10	monument subtype=2 and size>=100	0x10cc09d	0x10c700d	mysterious palace
+10	monument subtype=2 and 15<=size<100	0x10cc0b7	0x10c7027	mysterious dungeon
+10	monument subtype=2 and size<15	0x10cc0cc	0x10c703c	mysterious lair
+10	monument subtype=1	0x10cc0e1	0x10c7051	vault
+10	monument subtype=0	0x10cc0f6	0x10c7066	tomb
+10	other monument subtype or missing subtype data	0x10cc111	0x10c7081	monument
+9	unconditional	0x10cc120	0x10c7090	camp
+6	unconditional	0x10cc135	0x10c70a5	important location
+default	selector outside 0..10	0x10cc14a	0x10c70ba	site

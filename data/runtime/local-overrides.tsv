@@ -4005,14 +4005,44 @@ Tropical Freshwater River	热带淡水河
 Tropical Brackish River	热带半咸水河
 Tropical Saltwater River	热带咸水河
 
-# Complete world-site type vocabulary. The three mythical structures are a
-# finite family; civilization-prefixed combinations are handled productively
-# by the procedural site parser.
+# Native world-site type vocabulary, extracted from both PE editions.
+# Steam RVA 0x10cbe50 / classic RVA 0x10c6dc0: all eleven selectors and
+# their subtype/depth/size branches, plus the unknown-selector fallback.
+# These lookup-only leaves reference existing complete caption entries;
+# Chinese terminology remains in the original dictionary. The title producer
+# prepends optional dark and the civilization's complete RAW NAME adjective;
+# do not enumerate race/type combinations or translate the race word by word.
+World site type: fortress	Fortress	hi
+World site type: mountain halls	Mountain halls	hi
+World site type: hillocks	Hillocks	hi
+World site type: pits	Pits	hi
+World site type: cave	Cave	hi
+World site type: forest retreat	Forest retreat	hi
+World site type: hamlet	Hamlet	hi
+World site type: town	Town	hi
+World site type: shrine	Shrine	hi
+World site type: labyrinth	Labyrinth	hi
+World site type: lair	Lair	hi
+World site type: castle	Castle	hi
+World site type: fort	Fort	hi
+World site type: monastery	Monastery	hi
+World site type: tower	Tower	hi
+World site type: mysterious palace	Mysterious palace	hi
+World site type: mysterious dungeon	Mysterious dungeon	hi
+World site type: mysterious lair	Mysterious lair	hi
+World site type: vault	Vault	hi
+World site type: tomb	Tomb	hi
+World site type: monument	Monument	hi
+World site type: camp	Camp	hi
+World site type: important location	Important location	hi
+World site type: site	Site	hi
+# Steam RVA 0x10cbe10 / classic RVA 0x10c6d80: only selector 1.
+World site modifier: dark	黑暗	hi
 # Complete compound labels are case-insensitive: map captions capitalize the
 # first word, while Legends name/gloss/type headings use lowercase kinds.
 Mountain halls	山地大厅	wi
-Hillock	丘陵	wi
-Hillocks	丘陵	wi
+Hillock	丘区	wi
+Hillocks	丘区	wi
 Dark fortress	黑暗要塞	wi
 Dark pits	黑暗深坑	wi
 Pits	深坑
@@ -4021,7 +4051,7 @@ Pits	深坑
 Forest retreat	森林聚落	wi
 Elven forest retreat	精灵森林聚落	wi
 Town	城镇
-Hamlet	村落
+Hamlet	村庄
 Important location	重要地点	wi
 Labyrinth	迷宫
 Lair	巢穴
@@ -4047,10 +4077,10 @@ Dwarven fortress	矮人要塞
 World site racial type: hillock	丘区	hi
 Dwarven hillock	矮人丘区	wi
 Dwarven hillocks	矮人丘区	wi
-Abandoned hillock	废弃丘陵	wi
-Abandoned hillocks	废弃丘陵	wi
-Ruined hillock	丘陵废墟	wi
-Ruined hillocks	丘陵废墟	wi
+Abandoned hillock	废弃丘区	wi
+Abandoned hillocks	废弃丘区	wi
+Ruined hillock	丘区废墟	wi
+Ruined hillocks	丘区废墟	wi
 Abandoned house	废弃房屋
 Abandoned houses	废弃房屋
 Abandoned shop	废弃商店

@@ -149,15 +149,15 @@ freshwater	淡水
 grassland	草原
 hall	大厅
 halls	大厅
-hamlet	村落
-hamlets	村落
-# Default nouns have no racial prefix. Race-qualified site types use the
-# scoped World site racial type: hillock entry in data/runtime/local-overrides.tsv.
+hamlet	村庄
+hamlets	村庄
+# Settlement hillock(s) retain the established 丘区 definition with or without
+# a race prefix. Natural terrain hill(s) remain 丘陵.
 # Individual buildings (a hillock) use the scoped building vocabulary instead.
 hill	丘陵
 hills	丘陵
-hillock	丘陵
-hillocks	丘陵
+hillock	丘区
+hillocks	丘区
 important	重要
 location	地点
 locations	地点
