@@ -155,3 +155,91 @@ rumor-event	The army of {s} is marching here!	{s1}的军队正向这里进军！
 rumor-event	The army of {s} is marching here!	{s1}的军队正向这里进军！	$name	0x1406897af..0x140689887
 rumor-event	The army of {s} is marching on {s}!	{s1}的军队正向{s2}进军！	rumor-person,$name	0x1406897af..0x140689887
 rumor-event	The army of {s} is marching on {s}!	{s1}的军队正向{s2}进军！	$name,$name	0x1406897af..0x140689887
+
+# World-map site history is produced by a separate rumor formatter. Its two
+# native jump tables select 13 of the 26 rumor types; speech wording above is
+# not a substitute for these complete dated records. Native formatter:
+# Steam PE 53.16 0x1401da280..0x1401dbcec, rumor type +0x24,
+# viewscreen_worldst rumor vector +0x440, wrapped output vector +0x8310.
+site-rumor	In {s}, {s}	在{s1}，{s2}	site-rumor-date,site-rumor-event	0x1401da280..0x1401dbcec; every selected record has the same date prefix
+# Date builder 0x140b92640 owns year precision, before-time, and twelve
+# seasonal thirds. Midseason spellings are native concatenated words.
+site-rumor-date	a time before time	时间开始之前		0x140b92640; every signed year < 1, including zero and negative years
+site-rumor-date	{s}	第{s1}年	$digits	0x140b92640; year >= 1 with tick -1; all earlier years use before-time
+site-rumor-date	the early spring of {s}	第{s1}年初春	$digits	0x140b92640
+site-rumor-date	the midspring of {s}	第{s1}年仲春	$digits	0x140b92640
+site-rumor-date	the late spring of {s}	第{s1}年晚春	$digits	0x140b92640
+site-rumor-date	the early summer of {s}	第{s1}年初夏	$digits	0x140b92640
+site-rumor-date	the midsummer of {s}	第{s1}年仲夏	$digits	0x140b92640
+site-rumor-date	the late summer of {s}	第{s1}年晚夏	$digits	0x140b92640
+site-rumor-date	the early autumn of {s}	第{s1}年初秋	$digits	0x140b92640
+site-rumor-date	the midautumn of {s}	第{s1}年仲秋	$digits	0x140b92640
+site-rumor-date	the late autumn of {s}	第{s1}年晚秋	$digits	0x140b92640
+site-rumor-date	the early winter of {s}	第{s1}年初冬	$digits	0x140b92640
+site-rumor-date	the midwinter of {s}	第{s1}年仲冬	$digits	0x140b92640
+site-rumor-date	the late winter of {s}	第{s1}年晚冬	$digits	0x140b92640
+# Type 0: either the historical figure or the entity owning the army.
+site-rumor-event	the army of {s} marched on {s}.	{s1}的军队向{s2}进军了。	site-rumor-person,$name	0x1401da280..0x1401dbcec; rumor type 0, figure owner
+site-rumor-event	the army of {s} marched on {s}.	{s1}的军队向{s2}进军了。	$name,$name	0x1401da280..0x1401dbcec; rumor type 0, entity owner
+# Type 1: victim, source site and abductor are independently optional.
+site-rumor-event	{s} was kidnapped from {s} by {s}.	{s3}从{s2}绑架了{s1}。	site-rumor-person,$name,site-rumor-person	0x1401da280..0x1401dbcec; rumor type 1
+site-rumor-event	{s} was kidnapped from {s}.	{s1}在{s2}被绑架了。	site-rumor-person,$name	0x1401da280..0x1401dbcec; rumor type 1
+site-rumor-event	{s} was kidnapped by {s}.	{s1}被{s2}绑架了。	site-rumor-person,site-rumor-person	0x1401da280..0x1401dbcec; rumor type 1
+site-rumor-event	{s} was kidnapped.	{s1}被绑架了。	site-rumor-person	0x1401da280..0x1401dbcec; rumor type 1
+site-rumor-event	was kidnapped from {s} by {s}.	{s2}从{s1}绑架了一个人。	$name,site-rumor-person	0x1401da280..0x1401dbcec; rumor type 1, missing victim
+site-rumor-event	was kidnapped from {s}.	有人在{s1}被绑架了。	$name	0x1401da280..0x1401dbcec; rumor type 1, missing victim
+site-rumor-event	was kidnapped by {s}.	有人被{s1}绑架了。	site-rumor-person	0x1401da280..0x1401dbcec; rumor type 1, missing victim
+site-rumor-event	was kidnapped.	有人被绑架了。		0x1401da280..0x1401dbcec; rumor type 1, missing victim
+# Type 3: the occupying entity can be absent.
+site-rumor-event	{s} was conquered by {s}.	{s1}被{s2}征服了。	$name,$name	0x1401da280..0x1401dbcec; rumor type 3
+site-rumor-event	{s} was conquered.	{s1}被征服了。	$name	0x1401da280..0x1401dbcec; rumor type 3
+# Type 7: army allegiance and commander are independently optional.
+site-rumor-event	refugees calling themselves {s} fled from the area just before an army of {s} led by {s} descended upon {s}.	自称{s1}的难民刚逃离这一带，{s3}率领的{s2}军队就袭击了{s4}。	$name,$name,site-rumor-person,$name	0x1401da280..0x1401dbcec; rumor type 7
+site-rumor-event	refugees calling themselves {s} fled from the area just before an army of {s} descended upon {s}.	自称{s1}的难民刚逃离这一带，{s2}的军队就袭击了{s3}。	$name,$name,$name	0x1401da280..0x1401dbcec; rumor type 7
+site-rumor-event	refugees calling themselves {s} fled from the area just before an army led by {s} descended upon {s}.	自称{s1}的难民刚逃离这一带，{s2}率领的军队就袭击了{s3}。	$name,site-rumor-person,$name	0x1401da280..0x1401dbcec; rumor type 7
+site-rumor-event	refugees calling themselves {s} fled from the area just before an army descended upon {s}.	自称{s1}的难民刚逃离这一带，一支军队就袭击了{s2}。	$name,$name	0x1401da280..0x1401dbcec; rumor type 7
+# Types 8, 9, 10, 13 and 14 retain their distinct native predicates.
+site-rumor-event	a group calling itself {s} moved on in search of a better future after the horrible mismanagement of {s} by {s}.	{s3}把{s2}治理得一团糟，自称{s1}的势力于是离开了，另谋出路。	$name,$name,$name	0x1401da280..0x1401dbcec; rumor type 8
+site-rumor-event	a group calling itself {s} reclaimed {s} on behalf of {s}.	自称{s1}的势力代表{s3}收复了{s2}。	$name,$name,$name	0x1401da280..0x1401dbcec; rumor type 9
+site-rumor-event	a group calling itself {s} founded {s} after a long journey from the lands of {s}.	自称{s1}的势力从{s3}的领地长途跋涉而来，建立了{s2}。	$name,$name,$name	0x1401dafc0; rumor type 10
+site-rumor-event	{s} gave up on their occupation of {s}.	{s1}放弃了对{s2}的占领。	$name,$name	0x1401da280..0x1401dbcec; rumor type 13
+site-rumor-event	an insurrection against {s} began in {s}.	{s2}发生了反抗{s1}的叛乱。	$name,$name	0x1401da280..0x1401dbcec; rumor type 14
+# Type 15: every native outcome, with the site attached to the outcome.
+site-rumor-event	{s} was overthrown after an insurrection in {s}.	{s1}在{s2}的一场叛乱后被推翻了。	$name,$name	0x1401da280..0x1401dbcec; rumor type 15, outcome 0
+site-rumor-event	{s} waited out an insurrection in {s}.	{s1}在{s2}按兵不动，一直等到叛乱平息。	$name,$name	0x1401da280..0x1401dbcec; rumor type 15, outcome 1
+site-rumor-event	{s} crushed an insurrection in {s}.	{s1}镇压了{s2}的一场叛乱。	$name,$name	0x1401da280..0x1401dbcec; rumor type 15, outcome 2
+site-rumor-event	{s} in {s}.	{s1}在{s2}。	$name,$name	0x1401dadf6; rumor type 15, other outcome emits no predicate
+# Type 16: complete office titles and optional predecessor identities.
+site-rumor-event	{s} became {s}, replacing {s}.	{s1}取代{s3}，成为了{s2}。	site-rumor-person,site-rumor-position,site-rumor-predecessor	0x1401da280..0x1401dbcec; rumor type 16
+site-rumor-event	{s} became {s}.	{s1}成为了{s2}。	site-rumor-person,site-rumor-position	0x1401da280..0x1401dbcec; rumor type 16
+# An existing position can have an empty gendered and generic RAW title.
+# This branch still appends its site/entity suffix; normalization retains
+# "became of", while a missing position uses the separate ruler fallback.
+site-rumor-event	{s} became of {s}, replacing {s}.	{s1}取代{s3}，在{s2}任职了。	site-rumor-person,$name,site-rumor-predecessor	0x1401daa34;0x14099a3c0; empty RAW office title, predecessor present
+site-rumor-event	{s} became of {s}.	{s1}在{s2}任职了。	site-rumor-person,$name	0x1401daa34;0x14099a3c0; empty RAW office title, no predecessor
+site-rumor-predecessor	his {s} {s}	他的{s1}{s2}	dialogue-family,site-rumor-person	0x140bb2f30;0x14075a580; current figure sex 1
+site-rumor-predecessor	her {s} {s}	她的{s1}{s2}	dialogue-family,site-rumor-person	0x140bb2f30;0x14075a580; current figure sex 0
+site-rumor-predecessor	its {s} {s}	它的{s1}{s2}	dialogue-family,site-rumor-person	0x140bb2f30;0x14075a580; current figure other sex
+site-rumor-predecessor	{s}	{s1}	site-rumor-person	0x1401da280..0x1401dbcec; no family relationship
+site-rumor-position	ruler	统治者		0x1401da280..0x1401dbcec; absent native position
+site-rumor-position	{s} of {s}	{s2}的{s1}	$office,$name	0x14099a3c0;0x1409bdfb0; gendered office name plus its held site, otherwise entity
+site-rumor-position	{s}	{s1}	$office	0x14099a3c0; gendered office name
+# Type 17: ownership claims are separate from settlement construction.
+site-rumor-event	{s} claimed {s} in the name of {s}.	{s1}以{s3}的名义取得了{s2}。	site-rumor-person,$name,$name	0x1401da280..0x1401dbcec; rumor type 17
+# Type 25: artifact location with or without a building field.
+site-rumor-event	{s} was known to be in {s} in {s}.	当时已知{s1}位于{s3}的{s2}。	site-rumor-artifact,site-rumor-building,$name	0x1401da280..0x1401dbcec; rumor type 25
+site-rumor-event	{s} was known to be in {s}.	当时已知{s1}位于{s2}。	site-rumor-artifact,$name	0x1401da280..0x1401dbcec; rumor type 25, no building
+site-rumor-building	{s}	{s1}	$name	0x1401da280..0x1401dbcec; complete building name or native unnamed building label
+# The historical figure formatter supplies a complete native actor. Most
+# branches suppress species; the fleeing army commander retains species and
+# corpse/ghost status. Reuse the shared complete actor and nickname parser.
+site-rumor-person	{s}	{s1}	$memorial-actor	0x140b92f10; species suppressed by 0x1401da7d8/0x1401da856/0x1401da92f/0x1401dac42, retained by 0x1401db431
+# b94400 names an artifact, emits Untitled for an unnamed written artifact,
+# or delegates an unnamed ordinary artifact to c65450's complete item noun.
+site-rumor-artifact	{s}	{s1}	$book	0x140b94400; English name, written title, Untitled, an unknown artifact
+site-rumor-artifact	{s}	{s1}	$item	0x140b94400 -> 0x140c65450; unnamed non-written artifact noun
+site-rumor-artifact	{s}	{s1}	$memorial-item	0x140b94400 -> 0x140c65450; shared full item-term grammar
+# The native dungeon label is empty for a subtype other than 0, 1, or 2,
+# after this caller has already appended its first " in ". Keep the intact
+# record and known artifact/site instead of requiring a nonexistent field.
+site-rumor-event	{s} was known to be in in {s}.	当时已知{s1}位于{s2}的一座建筑里。	site-rumor-artifact,$name	0x1401dac72;0x140b94090; empty native dungeon label, whitespace normalized

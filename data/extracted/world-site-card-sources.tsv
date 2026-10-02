@@ -1,0 +1,106 @@
+# Native 53.16 PE world-map site-card productions. Addresses are RVAs.
+# Steam renderer 0x1c17e0..0x1d3abc; classic renderer 0x1c1770..0x1d3a4c.
+# Three native branches reuse these fields: hover 0x1c2000..0x1c3a00,
+# compact action header 0x1c7700..0x1c8c00, and news/site detail 0x1ce800..0x1cfc00.
+# Corresponding classic literal instructions in these branches are Steam RVA - 0x70.
+# Title dark/race/type branches are recorded in world-site-type-sources.tsv.
+# The title is The [dark ][RAW race adjective ]type of name; compact uses name, type.
+# Title words are capitalized after assembly. Name/government/civilization values are
+# native generated names; no world/save-specific spelling is a source production.
+# Travel cost comes from 0x1bc2d0. For cost >= 18, cost/9 is converted to a native
+# number phrase by 0x52e360, capitalized by 0x52d650, then suffixed with days' travel.
+# Population rows select the first matching lower bound in descending order.
+# Scheduled tribute uses relation.type (+4)=3/4 and season (+0x44)=0..3.
+# They offer/accept, the season, and tribute are separate draws on the same row.
+# Missing/out-of-range season draws no season; the existing unscheduled caption remains.
+# Relationship fallback switch is 0x1cf7e0, table 0x1d39b0: types 0..5.
+# Seasonal relation first takes precedence; fallback type 0 also tests flags +0x40 bit 2.
+# News history is a separate rumor producer at 0x1da280..0x1dbcec, called at 0x1cfa75;
+# its screen+0x8310 rows start at y=12 and are recorded in world-site-rumor-sources.tsv.
+# Prisoner and artifact list entries use native figure/artifact names; their headings
+# belong to the hover branch. Native mission availability captions occupy its bottom.
+field	condition	steam_instruction	classic_instruction	source
+travel	cost >= 18; native phrase for cost/9	0x1ce89a	0x1ce82a	{count} days' travel
+travel	11 <= cost < 18	0x1ce8a8	0x1ce838	More than a day's travel
+travel	8 <= cost < 11	0x1ce8b6	0x1ce846	A day's travel
+travel	6 <= cost < 8	0x1ce8c4	0x1ce854	Nearly a day's travel
+travel	3 <= cost < 6	0x1ce8d2	0x1ce862	A half day's travel
+travel	0 <= cost < 3	0x1ce8dd	0x1ce86d	A short trip
+travel	cost < 0	0x1ce8e6	0x1ce876	Inaccessible from your location
+heading	type/name formatter; see world-site-type-sources.tsv	0x1ce946,0x1cea7d	0x1ce8d6,0x1cea0d	The {type} of {name}
+location	selected site is current site	0x1ceb8c	0x1ceb1c	Your location
+population	population >= 12500	0x1cecb9	0x1cec49	Population: >10000
+population	population >= 8500	0x1cecfe	0x1cec8e	Population: ~10000
+population	population >= 6500	0x1ced43	0x1cecd3	Population: ~7500
+population	population >= 5500	0x1ced88	0x1ced18	Population: ~6000
+population	population >= 4500	0x1cedcd	0x1ced5d	Population: ~5000
+population	population >= 3500	0x1cee12	0x1ceda2	Population: ~4000
+population	population >= 2500	0x1cee57	0x1cede7	Population: ~3000
+population	population >= 1500	0x1cee9c	0x1cee2c	Population: ~2000
+population	population >= 850	0x1ceee1	0x1cee71	Population: ~1000
+population	population >= 650	0x1cef26	0x1ceeb6	Population: ~750
+population	population >= 550	0x1cef6b	0x1ceefb	Population: ~600
+population	population >= 450	0x1cefb0	0x1cef40	Population: ~500
+population	population >= 350	0x1ceff5	0x1cef85	Population: ~400
+population	population >= 250	0x1cf03a	0x1cefca	Population: ~300
+population	population >= 150	0x1cf07f	0x1cf00f	Population: ~200
+population	population >= 85	0x1cf0c1	0x1cf051	Population: ~100
+population	population >= 65	0x1cf103	0x1cf093	Population: ~75
+population	population >= 55	0x1cf145	0x1cf0d5	Population: ~60
+population	population >= 45	0x1cf187	0x1cf117	Population: ~50
+population	population >= 35	0x1cf1c9	0x1cf159	Population: ~40
+population	population >= 25	0x1cf20b	0x1cf19b	Population: ~30
+population	population >= 15	0x1cf24d	0x1cf1dd	Population: ~20
+population	population >= 7	0x1cf28c	0x1cf21c	Population: ~10
+population	population < 7	0x1cf2c6	0x1cf256	Population: <10
+population	no governing population entity	0x1cf419	0x1cf3a9	No civilized population
+government	native government entity name	0x1cf33b	0x1cf2cb	Site government: {name}
+civilization	native civilization entity name	0x1cf4a0	0x1cf430	Civilization: {name}
+tribute	relation.type=3; season=0	0x1cf65e,0x1cf75e,0x1cf798	0x1cf5ee,0x1cf6ee,0x1cf728	They offer Spring tribute
+tribute	relation.type=3; season=1	0x1cf65e,0x1cf727,0x1cf798	0x1cf5ee,0x1cf6b7,0x1cf728	They offer Summer tribute
+tribute	relation.type=3; season=2	0x1cf65e,0x1cf6f0,0x1cf798	0x1cf5ee,0x1cf680,0x1cf728	They offer Autumn tribute
+tribute	relation.type=3; season=3	0x1cf65e,0x1cf6b6,0x1cf798	0x1cf5ee,0x1cf646,0x1cf728	They offer Winter tribute
+tribute	relation.type=4; season=0	0x1cf627,0x1cf75e,0x1cf798	0x1cf5b7,0x1cf6ee,0x1cf728	They accept Spring tribute
+tribute	relation.type=4; season=1	0x1cf627,0x1cf727,0x1cf798	0x1cf5b7,0x1cf6b7,0x1cf728	They accept Summer tribute
+tribute	relation.type=4; season=2	0x1cf627,0x1cf6f0,0x1cf798	0x1cf5b7,0x1cf680,0x1cf728	They accept Autumn tribute
+tribute	relation.type=4; season=3	0x1cf627,0x1cf6b6,0x1cf798	0x1cf5b7,0x1cf646,0x1cf728	They accept Winter tribute
+relationship	fallback type=0; alliance flag set	0x1cf807	0x1cf797	Alliance
+relationship	fallback type=0; alliance flag unset	0x1cf846	0x1cf7d6	Peace
+relationship	fallback type=1	0x1cf885	0x1cf815	War
+relationship	fallback type=2 or missing relation	0x1cf97b	0x1cf90b	No contact
+relationship	fallback type=3	0x1cf8c4	0x1cf854	They offer tribute
+relationship	fallback type=4	0x1cf903	0x1cf893	They accept tribute
+relationship	fallback type=5	0x1cf93f	0x1cf8cf	Skirmishing
+economy	governing entity economic link matches player	0x1cf9e9	0x1cf979	Economically linked to you
+history_control	separate news-detail control below history	0x1cfba2	0x1cfb32	Click to view all news and rumors
+hover_list	known prisoner figure names follow	0x1c3293	0x1c3223	Prisoners
+hover_list	rumored artifact names follow	0x1c346e	0x1c33fe	Artifacts (Rumored)
+hover_status	player civilization target	0x1c3654	0x1c35e4	Cannot raid your civilization
+hover_status	request requires leader	0x1c36be	0x1c364e	Cannot make request without leader
+hover_status	no requestable workers	0x1c372f	0x1c36bf	No workers available
+hover_status	workers request available	0x1c3785	0x1c3715	Click to request workers
+hover_status	mission unreachable	0x1c37e5,0x1c3979	0x1c3775,0x1c3909	Inaccessible mission location
+hover_status	mission requires leader	0x1c3860	0x1c37f0	Cannot order mission without leader
+hover_status	exploration available	0x1c38ef	0x1c387f	Click to explore this site (creates new mission)
+hover_status	contact/raid available	0x1c3929	0x1c38b9	Click to contact/raid this site (creates new mission)
+compact_control	modal cancel	0x1c850e	0x1c849e	Cancel
+compact_action	diplomacy caption	0x1c870f	0x1c869f	Diplomacy
+compact_action	request caption	0x1c8746	0x1c86d6	Request workers
+compact_action	attack caption	0x1c877d	0x1c870d	Attack
+compact_reason	player civilization	0x1c880f	0x1c879f	Belongs to your civilization
+compact_reason	no control	0x1c8849	0x1c87d9	Not under your control
+compact_reason	uncivilized site	0x1c8883	0x1c8813	No civilized inhabitants
+compact_reason	no requestable workers	0x1c88bd	0x1c884d	No requestable workers
+compact_reason	inaccessible	0x1c88f7	0x1c8887	Inaccessible
+compact_reason	civilization military leader required	0x1c8931	0x1c88c1	Need civilization military leader
+compact_reason	military leader required	0x1c896b	0x1c88fb	Need military leader
+compact_reason	leader required	0x1c89a5	0x1c8935	Need leader
+compact_reason	not trading	0x1c89df	0x1c896f	Not trading
+compact_reason	already trading	0x1c8a19	0x1c89a9	Already trading
+compact_reason	already at war	0x1c8a53	0x1c89e3	Already at war
+compact_reason	already peace	0x1c8a8d	0x1c8a1d	Already have peace
+compact_reason	already alliance	0x1c8ac7	0x1c8a57	Already have alliance
+compact_reason	at war	0x1c8b01	0x1c8a91	At war
+compact_reason	cannot communicate	0x1c8b3b	0x1c8acb	Cannot communicate
+compact_reason	no contact	0x1c8b72	0x1c8b02	Not in contact
+compact_reason	too hostile	0x1c8ba9	0x1c8b39	Too hostile

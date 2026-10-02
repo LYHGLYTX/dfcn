@@ -665,9 +665,20 @@ void Overlay::append_world_site_phrases(const NativeTextCard &card,
                     translated = translate_history_event(*document);
                 }
             } else {
-                const auto flow = translate_legends_flow(
-                    paragraph_rows, card.interior.x, right, nullptr);
-                if (flow && flow->fully_translated) translated = flow->pieces;
+                // This producer formats world-map rumors, not history_event
+                // objects. Its native type branches and date prefixes have
+                // their own complete-message grammar. Resolve the whole
+                // paragraph before the general Legends prose path can
+                // reinterpret a place, office or fleeing party as a name.
+                if (auto rumor = translate_announcement_combat(
+                        source, "site-rumor")) {
+                    translated = std::vector<LegendsTextPiece>{{std::move(*rumor),
+                        row.foregrounds.front(), row.x, row.y}};
+                } else {
+                    const auto flow = translate_legends_flow(
+                        paragraph_rows, card.interior.x, right, nullptr);
+                    if (flow && flow->fully_translated) translated = flow->pieces;
+                }
             }
             std::string target;
             std::vector<int> colors;

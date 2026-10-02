@@ -1420,6 +1420,16 @@ No contact	尚未建立联系	w
 Artifacts (Rumored)	造物（传闻）	w
 They offer tribute	对方进贡	w
 They accept tribute	对方接受贡品	w
+# World-site card: native seasonal tribute branches (Steam 0x1cf627..0x1cf7ce).
+They offer Spring tribute	对方在春季进贡	w
+They offer Summer tribute	对方在夏季进贡	w
+They offer Autumn tribute	对方在秋季进贡	w
+They offer Winter tribute	对方在冬季进贡	w
+They accept Spring tribute	对方在春季接受贡品	w
+They accept Summer tribute	对方在夏季接受贡品	w
+They accept Autumn tribute	对方在秋季接受贡品	w
+They accept Winter tribute	对方在冬季接受贡品	w
+Prisoners	囚犯	w
 Skirmishing	小规模交战	w
 Economically linked to you	与你有经济联系	w
 # Civilization-list relationship rows share the site-record vocabulary.
