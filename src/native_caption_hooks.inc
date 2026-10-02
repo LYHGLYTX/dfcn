@@ -397,7 +397,7 @@ static NativeMapHoverContext native_map_hover_context(uintptr_t caller,
             g_native_map_hover_returns.end(), caller) == g_native_map_hover_returns.end())
         return context;
     context.kind = NativeMapHoverKind::Unknown;
-    // Only the two native map loops pass lookinfost::display_str directly.
+    // These native map loops pass lookinfost::display_str directly.
     // Copy its enum and union payload while that exact record owns this draw;
     // later card routing retains values, never a borrowed native pointer.
     const uintptr_t address = reinterpret_cast<uintptr_t>(source);

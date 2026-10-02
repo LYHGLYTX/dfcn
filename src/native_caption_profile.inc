@@ -134,7 +134,7 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
     profile.info_titles.farm_building_slot = -0x170;
     // The spoor constructor alone shortens record+0x28 to 50 bytes here;
     // 0x407efd..0x40849d append its direction and optional party ownership.
-    // Both map draw loops (0x3f9553/0x3f9775) pass that same string directly.
+    // Fortress and adventure map loops pass that same string directly.
     // Rebuilding the record invalidates captures before any new text is set.
     profile.map_track_shorten_call = 0x407ef8;
     profile.map_track_shorten_target = 0x52d910;
@@ -151,10 +151,13 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
     profile.roster_shorten_calls = {0x14239b9, 0x1423b20, 0x1423c24, 0x1423e8c};
     profile.map_caption_build = reinterpret_cast<NativeCaptionBuildFn>(native_pe_address(profile.base, 0x406860));
     profile.map_caption_text_offset = 0x28;
-    // Both native hover loops draw this record's own display_str at +0x28.
+    // Fortress/arena (0x3f9553/0x3f9775) and adventure
+    // (0xb02ff4/0xb0322c) each have classic and graphical hover loops.
+    // All four pass lookinfost::display_str at +0x28 directly to addst.
     // The return address establishes that owner before reading its enum.
     profile.map_hover_returns = {
-        native_pe_address(profile.base, 0x3f9558), native_pe_address(profile.base, 0x3f977a)};
+        native_pe_address(profile.base, 0x3f9558), native_pe_address(profile.base, 0x3f977a),
+        native_pe_address(profile.base, 0xb02ff9), native_pe_address(profile.base, 0xb03231)};
     // Three complete stores to the incoming shadow space; no relative
     // address or branch is displaced by the shared entry-hook trampoline.
     profile.map_caption_build_prefix = {

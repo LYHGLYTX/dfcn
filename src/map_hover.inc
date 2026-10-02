@@ -656,11 +656,23 @@ std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view 
             if (auto target = RULESETS.translate_tile_description(native_text_to_utf8(source)))
                 return target;
         return exact_literal_translation(source);
-    case NativeMapHoverKind::Unit:
+    case NativeMapHoverKind::Unit: {
         if (unit_target) return unit_target;
         if (auto target = translate_arena_numbered_creature(source)) return target;
         if (auto target = scoped(source, "::map_hover::unit")) return target;
+        // Adventure's formatter puts species and profession before the name.
+        // The native Unit kind licenses the complete identity grammar; a
+        // name-only parser would preserve this whole caption as authored text.
+        // Normalize only the formatter's capitalized article, keeping the
+        // selected name, accents and nickname spelling intact.
+        std::string identity(source);
+        if (identity.starts_with("The ") || identity.starts_with("A ") ||
+                identity.starts_with("An "))
+            identity.front() = static_cast<char>(std::tolower(
+                static_cast<unsigned char>(identity.front())));
+        if (auto target = translate_legends_actor(identity, 0, true)) return target;
         return translate_unit_identity(source, true);
+    }
     case NativeMapHoverKind::Building:
         return translate_info_panel_title(NativeInfoTitleKind::Building, source);
     case NativeMapHoverKind::Vermin: {
