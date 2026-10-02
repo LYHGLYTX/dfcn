@@ -90306,6 +90306,7 @@ known murderer	众所周知的谋杀犯	h
 known preacher	众所周知的传教士	h
 kumquat flower	金橘花	wi
 kumquat leaves	金橘叶	wi
+ladies consort	领主夫人	wi
 large rat pups	硕鼠幼崽	wi
 lavender blush	薰衣草粉	wi
 lavender jades	紫翡翠	wi
@@ -95537,6 +95538,7 @@ long yam leaf	长山药叶	wi
 long, curving	修长弯曲的	hv
 long, hanging	修长下垂的	hv
 longnose gars	长鼻雀鳝	wi
+lords consort	女领主之夫	wi
 loving nature	爱的天性	wi
 low priority.	所选区域将被设为最低优先级。	w
 lychee flower	荔枝花	wi
@@ -99889,6 +99891,7 @@ kumquat leaf	金橘叶	wi
 kumquat tree	金橘树	wi
 kumquat wood	金橘木	wi
 laboring {s}	正在劳动的{s1}	hIit
+lady consort	领主夫人	wi
 lapis lazuli	青金石	wi
 larch needle	落叶松针	wi
 large-headed	大头	wi
@@ -99922,6 +99925,7 @@ llama cheese	无峰驼奶酪	wi
 llama's milk	无峰驼奶	wi
 long, spiral	修长螺旋状的	hv
 longnose gar	长鼻雀鳝	wi
+lord consort	女领主之夫	wi
 lorikeet man	吸蜜鹦鹉人	wi
 lorikeet men	吸蜜鹦鹉人	wi
 losing a pet	失去宠物	wi
@@ -112938,6 +112942,7 @@ knives	短刀	wi
 knobby	多瘤节的	hv
 koalas	树袋熊	wi
 kobold	狗头人	wi
+ladies	女领主	wi
 ladles	汤勺	wi
 lashes	皮鞭	wi
 letter	信	hv
@@ -114245,6 +114250,7 @@ liver	肝脏	wi
 llama	无峰驼	wi
 long 	长	wi
 loons	潜鸟	wi
+lords	领主	wi
 louse	虱子	wi
 lover	爱人	wi
 maces	钉头锤	wi
@@ -115011,6 +115017,7 @@ king	国王	h
 king	国王	wi
 kiwi	鹬鸵	wi
 lady	女领主	h
+lady	女领主	wi
 lair	巢穴	hv
 lamb	羊幼崽	wi
 lash	鞭打	wi
@@ -115030,6 +115037,7 @@ long	修长的	hv
 long	修长	wi
 loon	潜鸟	wi
 lord	领主	h
+lord	领主	wi
 love	爱情	r
 love	爱意	w
 luck	运气	r

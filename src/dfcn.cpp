@@ -764,6 +764,7 @@ static constexpr int kFortressSquadRowRule = -137;
 static constexpr int kFortressScheduleRule = -135;
 static constexpr int kFortressScheduleCaptionRule = -136;
 static constexpr int kFortressLocationListRule = -138;
+static constexpr int kFortressUnitChooserRule = -139;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -1304,6 +1305,49 @@ static std::vector<NativeClippedCaption> captured_clipped_captions() {
     std::lock_guard<std::mutex> lock(g_clipped_caption_mutex);
     if (g_clipped_caption_epoch != g_embark_item_capture_epoch.load(std::memory_order_acquire)) return {};
     return g_clipped_captions;
+}
+
+// Captured while the real SKILLS text widget and its parent chain are live.
+// Retain geometry only; later grid readers never dereference these widgets.
+struct NativeUnitChooserRecord {
+    SDL_Rect box{}, viewport{}, panel{};
+    int skill_x = -1;
+    int search_y = -1;
+};
+static std::mutex g_native_unit_chooser_record_mutex;
+static uint64_t g_native_unit_chooser_record_epoch = 0;
+static std::vector<NativeUnitChooserRecord> g_native_unit_chooser_records;
+
+static void clear_native_unit_chooser_records() {
+    std::lock_guard<std::mutex> lock(g_native_unit_chooser_record_mutex);
+    g_native_unit_chooser_records.clear();
+    g_native_unit_chooser_record_epoch = 0;
+}
+
+static void remember_native_unit_chooser_record(const NativeUnitChooserRecord &record,
+        uint64_t epoch) {
+    std::lock_guard<std::mutex> lock(g_native_unit_chooser_record_mutex);
+    if (epoch != g_embark_item_capture_epoch.load(std::memory_order_acquire)) return;
+    if (g_native_unit_chooser_record_epoch != epoch) {
+        g_native_unit_chooser_records.clear();
+        g_native_unit_chooser_record_epoch = epoch;
+    }
+    const auto same_rect = [](const SDL_Rect &a, const SDL_Rect &b) {
+        return a.x == b.x && a.y == b.y && a.w == b.w && a.h == b.h;
+    };
+    std::erase_if(g_native_unit_chooser_records, [&](const NativeUnitChooserRecord &other) {
+        return same_rect(other.box, record.box) && same_rect(other.viewport, record.viewport) &&
+            same_rect(other.panel, record.panel);
+    });
+    if (g_native_unit_chooser_records.size() < 512)
+        g_native_unit_chooser_records.push_back(record);
+}
+
+static std::vector<NativeUnitChooserRecord> captured_native_unit_chooser_records() {
+    std::lock_guard<std::mutex> lock(g_native_unit_chooser_record_mutex);
+    if (g_native_unit_chooser_record_epoch !=
+            g_embark_item_capture_epoch.load(std::memory_order_acquire)) return {};
+    return g_native_unit_chooser_records;
 }
 static std::atomic<int> g_embark_capture_screen_dimx{0};
 static std::atomic<int> g_embark_capture_screen_dimy{0};
@@ -3711,6 +3755,9 @@ private:
     void append_fortress_labor_rows(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const;
     void layout_fortress_labor(SDL_Renderer *renderer);
+    void append_fortress_unit_chooser_rows(std::vector<std::string> &rows,
+        std::vector<Match> &matches, int only_y, bool raw_layer) const;
+    void layout_fortress_unit_chooser(SDL_Renderer *renderer);
     void append_fortress_kitchen_rows(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const;
     void layout_fortress_kitchen(SDL_Renderer *renderer);
@@ -19691,6 +19738,7 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "work_order_buttons.inc"
 #include "workshop_tooltip_rows.inc"
 #include "fortress_labor.inc"
+#include "fortress_unit_chooser.inc"
 #include "fortress_kitchen.inc"
 #include "fortress_stone.inc"
 #include "fortress_monthly_schedule.inc"
@@ -20239,6 +20287,15 @@ std::vector<Match> Overlay::find_matches(int only_y,
         }
 #include "fortress_written_content.inc"
     }
+    // Assignment records own name/profession and relevant skills together.
+    // Location details own their complete header, tier and fact fields before
+    // native title/identity readers or UI actions can consume a fragment.
+    if (!announcement_panel_only) {
+        append_fortress_unit_chooser_rows(screen_rows, result, only_y,
+            screen_override != nullptr);
+        append_fortress_location_matches(screen_rows, result, only_y,
+            screen_override != nullptr);
+    }
     // Fixed catalog records own their bound person fields before the generic
     // item reader sees "This is". That reader reserves unresolved descriptions
     // as source-only rows, which would otherwise block this complete message
@@ -20308,8 +20365,6 @@ std::vector<Match> Overlay::find_matches(int only_y,
     append_fortress_zone_drawing_matches(screen_rows, result, only_y,
         screen_override != nullptr);
     append_fortress_zone_holder_matches(screen_rows, result, only_y);
-    append_fortress_location_matches(screen_rows, result, only_y,
-        screen_override != nullptr);
     }
 
     context_detail.checkpoint(RenderTimingStage::Workshops);
@@ -28385,6 +28440,7 @@ void Overlay::normalize_native_split_text() {
             match.rule == kFortressLocationValueRule ||
             match.rule == kFortressLocationTextRule ||
             match.rule == kFortressLocationListRule ||
+            match.rule == kFortressUnitChooserRule ||
             match.rule == kFortressStockpileTypeRule ||
             match.rule == kFortressZoneTypeRule ||
             match.rule == kFortressStockpileSettingRule ||
@@ -35460,6 +35516,7 @@ void Overlay::prepare_frame() {
                          match.rule == kFortressLocationValueRule ||
                          match.rule == kFortressLocationTextRule ||
                          match.rule == kFortressLocationListRule ||
+                         match.rule == kFortressUnitChooserRule ||
                          match.rule == kFortressStockpileTypeRule ||
                          match.rule == kFortressZoneTypeRule ||
                          match.rule == kFortressStockpileSettingRule ||
@@ -44423,6 +44480,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     // Empty duplicate spans still own suppression, but cannot become new rows.
     if (std::any_of(prepared_matches_.begin(), prepared_matches_.end(),
             [](const Match &match) { return match.rule == kWorkshopRecipeRowRule ||
+                match.rule == kFortressUnitChooserRule ||
                 match.rule == kFortressLocationListRule ||
                 match.rule == kFortressScheduleRule ||
                 match.rule == kColorPickerChoiceRule ||
@@ -44450,6 +44508,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     std::vector<Match> tooltip_foreground;
     const auto is_toolbar_tooltip = [](const Match &match) {
         return is_credits_row(match) || match.rule == kToolbarTooltipBodyRule ||
+            match.rule == kFortressUnitChooserRule ||
             match.rule == kFortressLocationListRule ||
             match.rule == kFortressScheduleRule ||
             match.rule == kColorPickerChoiceRule ||
@@ -44562,6 +44621,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     layout_inventory(renderer);
     layout_workshop_task_rows(renderer);
     layout_fortress_task_rows(renderer);
+    layout_fortress_unit_chooser(renderer);
     layout_fortress_location_list(renderer);
     layout_fortress_stockpile_settings(renderer);
     layout_workshop_recipe_card(renderer);

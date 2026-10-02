@@ -88,7 +88,8 @@ for (bool top_layer : {false, true}) {
             // Labor rows and complete UI records already own the formatter's
             // person field. Their remaining spans can exist only to suppress
             // native ink; never replace a reflowed message with a name label.
-            if (match.rule == kFortressLaborWorkerRule || match.rule == kUiMessageRule) {
+            if (match.rule == kFortressLaborWorkerRule ||
+                match.rule == kFortressUnitChooserRule || match.rule == kUiMessageRule) {
                 claimed = true;
                 break;
             }

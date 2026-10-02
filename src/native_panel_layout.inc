@@ -298,8 +298,8 @@ static std::vector<SDL_Rect> native_vertical_scrollbar_spans(
 // Native FILTER/NAME fields share a left cap and repeated
 // text strip, followed by a four-column icon cap. Recognize the entire live
 // control, including empty/unfocused fields, without inspecting its text.
-// 53.16 uses graphicst's current skins, NOT init's legacy filter atlas.
-// Read them afresh just like rectangle/picture controls when UI modes change.
+// Older ViewBase pages use graphicst's current skins. Widget-based textboxes
+// have a separate init-owned atlas and are read by the helper below.
 static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
         int left, int top) {
     const auto &skin = native_texture_button_filter(gps);
@@ -351,6 +351,60 @@ static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
             for (int row = 0; row < 3; ++row) {
                 const int32_t part = name ? name_skin[column][row] : skin[column + 2][row];
                 if (!native_ui_skin_at(gps, cap + column, top + row, part, classic)) {
+                    complete = false;
+                    break;
+                }
+            }
+        if (complete) return SDL_Rect{left, top, cap + 4 - left, 3};
+    }
+    return std::nullopt;
+}
+
+// widgets::textbox FILTER/NAME (53.16 PE 0x1414191e0) reads init's atlas.
+// Its four-cell right cap can start with the same upper-edge glyph as the
+// text strip in classic mode. Locate the complete cap before proving the
+// fill instead of walking that edge until the first different cell.
+static std::optional<SDL_Rect> native_widget_textbox_rect_at(
+        const graphicst &gps, int left, int top, const NativeUiSettings &settings) {
+    const auto &skin = settings.texpos_button_filter;
+    const bool classic = settings.classic;
+    if (left < 0 || left + 6 > gps.dimx || top < 0 || top + 3 > gps.dimy ||
+            skin[0][1] <= 0 || skin[0][1] == skin[1][1]) return std::nullopt;
+    for (int row = 0; row < 3; ++row)
+        if (!native_ui_skin_at(gps, left, top + row, skin[0][row], classic)) return std::nullopt;
+    for (int cap = left + 2; cap + 4 <= gps.dimx; ++cap) {
+        bool matched = false;
+        for (bool name : {false, true}) {
+            bool complete = true;
+            for (int column = 0; column < 4 && complete; ++column)
+                for (int row = 0; row < 3; ++row) {
+                    const int32_t part = name ? settings.texpos_button_filter_name[column][row]
+                        : skin[column + 2][row];
+                    if (part < 0 || (!classic && part == 0) ||
+                            !native_ui_skin_at(gps, cap + column, top + row, part, classic)) {
+                        complete = false;
+                        break;
+                    }
+                }
+            matched |= complete;
+        }
+        if (!matched) continue;
+        std::string input;
+        if (classic) {
+            for (int x = left + 1; x < cap; ++x) {
+                const size_t at = static_cast<size_t>(x) * gps.dimy + top + 1;
+                const auto *screen = native_ui_top_layer_at(gps, at) ? gps.screen_top : gps.screen;
+                if (!screen) return std::nullopt;
+                input.push_back(screen[at * 8]);
+            }
+        }
+        bool complete = true;
+        for (int x = left + 1; x < cap && complete; ++x)
+            for (int row = 0; row < 3; ++row) {
+                const bool utf8_caption = classic && row == 1 &&
+                    !is_cp437_box_separator(input, static_cast<size_t>(x - left - 1));
+                if (!native_ui_skin_at(gps, x, top + row, skin[1][row], classic,
+                        row == 1, false, false, utf8_caption)) {
                     complete = false;
                     break;
                 }

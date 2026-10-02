@@ -14,23 +14,35 @@ void Overlay::append_fortress_location_matches(std::vector<std::string> &rows,
     }
     const NativePanelBorders borders(*gps_);
     std::optional<SDL_Rect> panel;
-    constexpr std::string_view rooms = "Rented rooms (Total):";
-    constexpr std::string_view goblets = "Goblets (Desired):";
+    static constexpr std::string_view fact_labels[] = {
+        "Chests in common area:", "Goblets (Desired):",
+        "Stored Instruments (Desired):", "Dance floor in common area:",
+        "Rented rooms (Total):",
+    };
     for (int y = 1; y + 1 < gps_->dimy && !panel; ++y) {
-        const auto x = context[y].find(rooms);
-        if (x == std::string::npos) continue;
-        const auto frame = native_panel_interior(borders, *gps_,
-            static_cast<int>(x), static_cast<int>(x + rooms.size()), y);
-        if (!frame) continue;
-        // Both labels must belong to this same closed panel. A tooltip or a
-        // map label elsewhere on screen cannot establish a location page.
-        for (int row = frame->y; row < frame->y + frame->h; ++row) {
-            const auto at = context[row].find(goblets, frame->x);
-            if (at != std::string::npos && at + goblets.size() <=
-                    static_cast<size_t>(frame->x + frame->w)) {
-                panel = frame;
-                break;
+        for (const std::string_view anchor : fact_labels) {
+            const auto x = context[y].find(anchor);
+            if (x == std::string::npos ||
+                !has_word_boundaries(context[y], x, x + anchor.size())) continue;
+            const auto frame = native_panel_interior(borders, *gps_,
+                static_cast<int>(x), static_cast<int>(x + anchor.size()), y);
+            if (!frame) continue;
+            // Temples share chests, instruments and dance floors with taverns,
+            // but have no goblet or rented-room fields. Two distinct facts in
+            // the same closed panel establish either location detail page.
+            for (const std::string_view label : fact_labels) {
+                if (label == anchor) continue;
+                for (int row = frame->y; row < frame->y + frame->h; ++row) {
+                    const auto at = context[row].find(label, frame->x);
+                    if (at == std::string::npos || at + label.size() >
+                            static_cast<size_t>(frame->x + frame->w) ||
+                        !has_word_boundaries(context[row], at, at + label.size())) continue;
+                    panel = frame;
+                    break;
+                }
+                if (panel) break;
             }
+            if (panel) break;
         }
     }
     if (!panel) return;
@@ -60,9 +72,7 @@ void Overlay::append_fortress_location_matches(std::vector<std::string> &rows,
     };
     int first_fact_y = bottom;
     for (int y = panel->y; y < bottom; ++y) {
-        for (const std::string_view label : {"Chests in common area:",
-                "Goblets (Desired):", "Stored Instruments (Desired):",
-                "Dance floor in common area:", "Rented rooms (Total):"}) {
+        for (const std::string_view label : fact_labels) {
             const auto at = context[y].find(label, panel->x);
             if (at == std::string::npos || at + label.size() > static_cast<size_t>(right) ||
                 !has_word_boundaries(context[y], at, at + label.size())) continue;
@@ -91,15 +101,126 @@ void Overlay::append_fortress_location_matches(std::vector<std::string> &rows,
             append(start, y, end - start, kFortressLocationValueRule, value);
         }
     }
+    static constexpr std::string_view location_kinds[] = {
+        "Temple Complex", "Temple complex", "Temple", "Shrine", "Tavern",
+    };
+    const auto is_location_kind = [](std::string_view text) {
+        return std::find(std::begin(location_kinds), std::end(location_kinds), text) !=
+            std::end(location_kinds);
+    };
+    const auto translate_kind = [&](std::string_view source) {
+        return exact_literal_translation(source == "Temple Complex"
+            ? "Temple complex" : std::string(source));
+    };
+    const auto translate_identity = [&](const std::string &source)
+            -> std::optional<std::string> {
+        if (contains_cjk_utf8(source)) return native_text_to_utf8(source);
+        // Deities can be English generated titles or native figure names.
+        // Keep the complete identity, including its article and epithet.
+        auto name = translate_legends_name(source, true);
+        if (!name) name = translate_legends_name(source, false);
+        if (!name) name = translate_procedural_fragment(source, false, false, {},
+            ProceduralFragmentContext::generated_name);
+        return name;
+    };
+    const auto clipped = captured_clipped_captions();
+    const auto complete_source = [&](const LogicalTextField &field, int y) {
+        for (const auto &capture : clipped)
+            if (capture.x == field.start && capture.y == y &&
+                capture.visible == field.text && !capture.complete.empty())
+                return capture.complete;
+        return field.text;
+    };
+    int heading_y = bottom;
+    for (int y = panel->y; y < first_fact_y; ++y)
+        for (const auto &field : split_text_fields(context[y]))
+            if (field.start >= panel->x && field.end <= right &&
+                is_location_kind(field.text)) heading_y = std::min(heading_y, y);
+
     for (int y = panel->y; y < bottom; ++y) {
         for (const auto &field : split_text_fields(context[y])) {
             if (field.start < panel->x || field.end > right) continue;
-            const bool heading = field.text == "Tavern" && y < first_fact_y;
-            const bool caption = heading || field.text == "Tavern Keeper" ||
+
+            // The native rank/value string includes its type, comma, amount,
+            // currency glyph and optional next-rank threshold. Own the whole
+            // phrase so its Chinese rank and unchanged values stay together.
+            bool rank_value = false;
+            for (const std::string_view kind : location_kinds) {
+                if (context[y].compare(field.start, kind.size(), kind) != 0 ||
+                    !has_word_boundaries(context[y], field.start, field.start + kind.size()))
+                    continue;
+                int value_start = field.start + static_cast<int>(kind.size());
+                while (value_start < right && context[y][value_start] == ' ') ++value_start;
+                if (value_start >= right || context[y][value_start] != ',') continue;
+                ++value_start;
+                while (value_start < right && context[y][value_start] == ' ') ++value_start;
+                int end = value_start;
+                while (end < right && context[y][end] >= '0' && context[y][end] <= '9') ++end;
+                if (end == value_start) continue;
+                if (end < right && context[y][end] != ' ' &&
+                    !ascii_word_byte(static_cast<unsigned char>(context[y][end])) &&
+                    !is_cp437_box_separator(context[y], end)) ++end;
+                const auto target = translate_kind(kind);
+                if (!target) continue;
+                std::string translated = *target + "，" + native_text_to_utf8(
+                    context[y].substr(value_start, end - value_start));
+                constexpr std::string_view next_at = " (next at ";
+                if (end + static_cast<int>(next_at.size()) < right &&
+                    context[y].compare(end, next_at.size(), next_at) == 0) {
+                    const int next_start = end + static_cast<int>(next_at.size());
+                    int next_end = next_start;
+                    while (next_end < right && context[y][next_end] >= '0' &&
+                        context[y][next_end] <= '9') ++next_end;
+                    if (next_end > next_start) {
+                        if (next_end < right && context[y][next_end] != ')' &&
+                            context[y][next_end] != ' ' &&
+                            !ascii_word_byte(static_cast<unsigned char>(context[y][next_end])) &&
+                            !is_cp437_box_separator(context[y], next_end)) ++next_end;
+                        if (next_end < right && context[y][next_end] == ')') {
+                            translated += "（下一级需" + native_text_to_utf8(
+                                context[y].substr(next_start, next_end - next_start)) + "）";
+                            end = next_end + 1;
+                        }
+                    }
+                }
+                append(field.start, y, end - field.start, kFortressLocationTextRule,
+                    translated);
+                rank_value = true;
+                break;
+            }
+            if (rank_value) continue;
+
+            constexpr std::string_view dedication = "Dedicated to ";
+            if (field.text.starts_with(dedication)) {
+                const auto complete = complete_source(field, y);
+                const std::string identity(trim_view(
+                    std::string_view(complete).substr(dedication.size())));
+                if (const auto name = translate_identity(identity))
+                    append(field.start, y, field.end - field.start,
+                        kFortressLocationTextRule, "供奉" + *name);
+                continue;
+            }
+            for (const std::string_view suffix : {" worshippers", " worshipper"}) {
+                if (!field.text.ends_with(suffix)) continue;
+                const std::string_view digits(field.text.data(), field.text.size() - suffix.size());
+                if (!digits.empty() && std::all_of(digits.begin(), digits.end(),
+                        [](unsigned char ch) { return ch >= '0' && ch <= '9'; }))
+                    append(field.start, y, field.end - field.start,
+                        kFortressLocationTextRule, std::string(digits) + " 名信徒");
+                break;
+            }
+
+            const bool kind = is_location_kind(field.text);
+            const bool heading = kind && y == heading_y;
+            const bool caption = kind || field.text == "Tavern Keeper" ||
                 field.text == "Tavern keeper" || field.text == "Performer" ||
-                field.text == "All visitors welcome" || field.text == "Citizens only";
+                field.text == "All visitors welcome" || field.text == "Citizens only" ||
+                field.text == "No worshippers" || field.text == "No worshipper" ||
+                field.text == "Only organized religions can have recognized priesthoods.";
             if (!caption) continue;
-            const auto target = exact_literal_translation(field.text);
+            const auto target = kind ? translate_kind(field.text)
+                : field.text == "No worshipper" ? exact_literal_translation("No worshippers")
+                : exact_literal_translation(field.text);
             if (target) append(field.start, y, field.end - field.start,
                 kFortressLocationTextRule, *target);
             if (!heading) continue;
@@ -108,9 +229,9 @@ void Overlay::append_fortress_location_matches(std::vector<std::string> &rows,
             // procedural-name translation and the two original header rows.
             for (int name_y = std::max(panel->y, y - 2); name_y < y; ++name_y) {
                 for (const auto &name : split_text_fields(context[name_y])) {
-                    if (name.start != field.start || name.end > right || name.text == "Tavern")
+                    if (name.start != field.start || name.end > right || is_location_kind(name.text))
                         continue;
-                    const auto translated = translate_procedural_fragment(name.text);
+                    const auto translated = translate_identity(complete_source(name, name_y));
                     if (translated) append(name.start, name_y, name.end - name.start,
                         kFortressLocationTextRule, *translated);
                 }
@@ -124,6 +245,19 @@ void Overlay::layout_fortress_location(SDL_Renderer *renderer) {
         gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
     const NativePanelBorders borders(*gps_);
     const auto layout_caption = [&](Match &match) {
+        // Generic panel layout runs first. These complete location fields
+        // retain their native rows and left origins, not a previously packed
+        // fragment box or the centre of their English source span.
+        match.layout_x = match.x;
+        match.layout_y = match.y;
+        match.layout_pixel_y = 0;
+        match.layout_box_pixel_x = -1;
+        match.layout_box_pixel_width = 0;
+        match.layout_native_clip.reset();
+        match.layout_clip_right = -1;
+        match.layout_fixed_baseline = false;
+        match.layout_right = false;
+        match.layout_left = true;
         auto region = native_button_text_rect(*gps_, match.x,
             match.x + match.length, match.y);
         if (!region) region = native_panel_interior(borders, *gps_,
@@ -145,6 +279,14 @@ void Overlay::layout_fortress_location(SDL_Renderer *renderer) {
     std::vector<Match *> labels, moving;
     for (Match &match : prepared_matches_) {
         if (match.target.empty() || match.native_split_duplicate) continue;
+        if (match.rule == kFortressLocationLabelRule ||
+                match.rule == kFortressLocationValueRule) {
+            match.layout_y = match.y;
+            match.layout_pixel_y = 0;
+            match.layout_clip_right = -1;
+            match.layout_fixed_baseline = false;
+            match.layout_right = false;
+        }
         if (match.rule == kFortressLocationLabelRule) labels.push_back(&match);
         if (match.rule == kFortressLocationLabelRule || match.rule == kFortressLocationValueRule)
             moving.push_back(&match);
@@ -165,8 +307,7 @@ void Overlay::layout_fortress_location(SDL_Renderer *renderer) {
         while (end < labels.size() && labels[end]->x <= left + 1) ++end;
         std::vector<std::vector<Match *>> label_rows, value_rows;
         int right = left, label_width = 0;
-        const int pixels = std::clamp(static_cast<int>(gps_->tile_pixel_y * config_.font_scale),
-            1, gps_->tile_pixel_y);
+        const int pixels = unified_font_pixels();
         for (size_t i = begin; i < end; ++i) {
             Match *label = labels[i];
             label_rows.push_back({label});
@@ -176,7 +317,9 @@ void Overlay::layout_fortress_location(SDL_Renderer *renderer) {
             if (!glyph || !glyph->texture) return;
             label_width = std::max(label_width,
                 (label->x - left) * gps_->tile_pixel_x + glyph->width);
-            int field_right = gps_->dimx;
+            const auto panel = native_panel_interior(borders, *gps_,
+                label->x, label->x + label->length, label->y);
+            int field_right = panel ? panel->x + panel->w : gps_->dimx;
             for (const Match *other : labels)
                 if (display_y(*other) == display_y(*label) && other->x > label->x)
                     field_right = std::min(field_right, other->x);
@@ -196,7 +339,7 @@ void Overlay::layout_fortress_location(SDL_Renderer *renderer) {
             // budget even when a current/desired count gains more digits.
             if (label->source == "Goblets (Desired):" ||
                 label->source == "Stored Instruments (Desired):") {
-                for (int x = label->x + label->length; x + 12 <= gps_->dimx; ++x) {
+                for (int x = label->x + label->length; x + 12 <= field_right; ++x) {
                     bool found = false;
                     for (int y = display_y(*label); y <= display_y(*label) + 1; ++y) {
                         if (native_main_button_at(*gps_, x, y, 299) &&

@@ -8,12 +8,22 @@ base = "positions"
 [[rulesets]]
 name = "singular"
 [rulesets.rules]
+# Generated noble titles also use lord/lady and their sex-specific spouse
+# forms. Keep the complete office meaning in the same typed role namespace.
+"lord" = "领主"
+"lady" = "女领主"
+"lord consort" = "女领主之夫"
+"lady consort" = "领主夫人"
 "{mountain::singular}" = "{mountain::singular}"
 "{forest::singular}" = "{forest::singular}"
 
 [[rulesets]]
 name = "plural"
 [rulesets.rules]
+"lords" = "领主"
+"ladies" = "女领主"
+"lords consort" = "女领主之夫"
+"ladies consort" = "领主夫人"
 "{mountain::plural}" = "{mountain::plural}"
 "{forest::plural}" = "{forest::plural}"
 

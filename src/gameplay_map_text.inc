@@ -64,6 +64,27 @@ std::vector<uint8_t> Overlay::capture_map_text_cells() const {
                 if (is_cp437_box_drawing_byte(ch))
                     cells[static_cast<size_t>(x) * gps_->dimy + y] = 1;
             }
+        // Assignment names can be clipped without an ellipsis draw, or be
+        // partly overwritten by their adjacent skill column. The complete
+        // live chooser/portrait frame and exact surviving draw bytes prove
+        // those source spans before the general map mask erases their text.
+        // Reuse the same owner as final layout; never retain an entire pane.
+        if (const auto chooser = fortress_unit_chooser(*gps_, context);
+                chooser && chooser->header_y >= 0) {
+            for (const auto caption : {std::string_view{"Name"},
+                    std::string_view{"Cat"}, std::string_view{"Prof"}}) {
+                const auto x = context[chooser->header_y].find(caption, chooser->name_x);
+                if (x == std::string::npos) continue;
+                for (size_t offset = 0; offset < caption.size(); ++offset)
+                    cells[(x + offset) * gps_->dimy + chooser->header_y] = 1;
+            }
+        }
+        auto chooser_rows = context;
+        std::vector<Match> chooser_fields;
+        append_fortress_unit_chooser_rows(chooser_rows, chooser_fields, -1, false);
+        for (const auto &field : chooser_fields)
+            for (int x = field.x; x < field.x + field.length; ++x)
+                cells[static_cast<size_t>(x) * gps_->dimy + field.y] = 1;
         std::vector<NativeClippedCaption> covered_video_captions;
         {
             std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);

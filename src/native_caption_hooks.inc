@@ -638,12 +638,154 @@ static std::optional<std::string> native_complete_map_track_caption(
 // before a hot reload. A resize-only capture cannot recover these cached rows.
 // The vtable and field coordinates are native bindings; ownership, lifetime
 // and the complete-caption registry are identical on every host.
+static void capture_native_unit_chooser_record(void *widget) {
+#ifdef _WIN32
+    const uint64_t epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
+    struct Widget {
+        uintptr_t address = 0, parent = 0;
+        std::array<int32_t, 4> rect{};
+    };
+    const auto base = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+    if (!base || !native_pe_supported()) return;
+    const auto read_widget = [&](uintptr_t address, uintptr_t reference,
+            Widget &result) {
+        const auto *bytes = reinterpret_cast<const unsigned char *>(address);
+        const uintptr_t expected = native_pe_address(base, reference);
+        if (!expected || !native_info_title_memory_readable(bytes, 0xa1)) return false;
+        uintptr_t vtable = 0;
+        std::memcpy(&vtable, bytes, sizeof(vtable));
+        if (vtable != expected || (bytes[0xa0] & 3) != 3) return false;
+        result.address = address;
+        std::memcpy(&result.parent, bytes + 0x08, sizeof(result.parent));
+        std::memcpy(result.rect.data(), bytes + 0x10, sizeof(result.rect));
+        return result.rect[0] >= 0 && result.rect[1] >= 0 &&
+            result.rect[2] >= result.rect[0] && result.rect[3] >= result.rect[1];
+    };
+    const auto children = [&](const Widget &parent,
+            std::array<uintptr_t, 3> &vector) {
+        const auto *bytes = reinterpret_cast<const unsigned char *>(parent.address);
+        if (!native_info_title_memory_readable(bytes, 0x178)) return false;
+        std::memcpy(vector.data(), bytes + 0x160, sizeof(vector));
+        if (!vector[0] || vector[0] > vector[1] || vector[1] > vector[2] ||
+                (vector[1] - vector[0]) % 16 || (vector[2] - vector[0]) % 16 ||
+                vector[1] - vector[0] > 8192 * 16) return false;
+        return vector[1] > vector[0] && native_info_title_memory_readable(
+            reinterpret_cast<const void *>(vector[0]), vector[1] - vector[0]);
+    };
+    const auto contains = [&](const Widget &parent, const Widget &child) {
+        if (child.parent != parent.address) return false;
+        std::array<uintptr_t, 3> vector{};
+        if (!children(parent, vector)) return false;
+        for (uintptr_t at = vector[0]; at < vector[1]; at += 16) {
+            uintptr_t member = 0;
+            std::memcpy(&member, reinterpret_cast<const void *>(at), sizeof(member));
+            if (member == child.address) return true;
+        }
+        return false;
+    };
+    Widget text, skills, row, scroll, table, list;
+    if (!read_widget(reinterpret_cast<uintptr_t>(widget), 0x162dc10, text) ||
+            !read_widget(text.parent, 0x15f6df0, skills) || !contains(skills, text) ||
+            !read_widget(skills.parent, 0x15eb4a8, row) || !contains(row, skills) ||
+            !read_widget(row.parent, 0x15eef08, scroll) || !contains(scroll, row) ||
+            !read_widget(scroll.parent, 0x1785bd0, table) || !contains(table, scroll) ||
+            !read_widget(table.parent, 0x17868d0, list) || !contains(list, table)) return;
+
+    // unit_list::build_single_unit reads the four-byte options at +0x2c0.
+    // Other unit-list columns may also contain rows of truncated captions.
+    const auto *list_bytes = reinterpret_cast<const unsigned char *>(list.address);
+    if (!native_info_title_memory_readable(list_bytes, 0x2d8)) return;
+    std::array<uintptr_t, 3> options{};
+    std::memcpy(options.data(), list_bytes + 0x2c0, sizeof(options));
+    if (!options[0] || options[0] > options[1] || options[1] > options[2] ||
+            (options[1] - options[0]) % 4 || (options[2] - options[0]) % 4 ||
+            options[1] - options[0] > 64 * 4 || options[1] == options[0] ||
+            !native_info_title_memory_readable(reinterpret_cast<const void *>(options[0]),
+                options[1] - options[0])) return;
+    bool has_skills = false;
+    for (uintptr_t at = options[0]; at < options[1]; at += 4) {
+        int32_t option = 0;
+        std::memcpy(&option, reinterpret_cast<const void *>(at), sizeof(option));
+        has_skills |= option == 10;
+    }
+    if (!has_skills) return;
+
+    std::array<uintptr_t, 3> members{};
+    if (!children(row, members)) return;
+    bool has_portrait = false;
+    for (uintptr_t at = members[0]; at < members[1]; at += 16) {
+        uintptr_t member = 0;
+        std::memcpy(&member, reinterpret_cast<const void *>(at), sizeof(member));
+        Widget portrait;
+        if (read_widget(member, 0x162e8e0, portrait) && portrait.parent == row.address) {
+            has_portrait = true;
+            break;
+        }
+    }
+    if (!has_portrait) return;
+    const auto *graphics = native_graphics();
+    if (!graphics || !native_info_title_memory_readable(graphics, sizeof(*graphics)) ||
+            graphics->dimx <= 0 || graphics->dimx > 1000 ||
+            graphics->dimy <= 0 || graphics->dimy > 1000) return;
+    const auto in_grid = [&](const Widget &part) {
+        return part.rect[2] < graphics->dimx && part.rect[3] < graphics->dimy;
+    };
+    if (!in_grid(list) || !in_grid(scroll) || !in_grid(row) ||
+            row.rect[0] < scroll.rect[0] || row.rect[1] < scroll.rect[1] ||
+            row.rect[1] + 2 > scroll.rect[3]) return;
+    // Native row render 0x142af10 repeats rectangle[1] at L+5..R-1,
+    // caps at R=max(unit_list.x2,row.x2)-1, and always paints three rows.
+    // The row's arranged width can be narrower than its rendered caption.
+    const int left = row.rect[0] + 5;
+    const int right = std::max(list.rect[2], row.rect[2]) - 1;
+    if (right <= left || text.rect[0] < left || text.rect[0] >= right) return;
+    NativeUnitChooserRecord record;
+    record.box = {left, row.rect[1], right - left, 3};
+    record.viewport = {scroll.rect[0], scroll.rect[1],
+        scroll.rect[2] - scroll.rect[0] + 1, scroll.rect[3] - scroll.rect[1] + 1};
+    record.panel = {list.rect[0], list.rect[1],
+        list.rect[2] - list.rect[0] + 1, list.rect[3] - list.rect[1] + 1};
+    record.skill_x = text.rect[0];
+    // unit_list's constructor creates a direct textbox child named
+    // "Filter box" (0x1424994), then anchors its three rows at the bottom.
+    std::array<uintptr_t, 3> list_members{};
+    if (children(list, list_members)) {
+        for (uintptr_t at = list_members[0]; at < list_members[1]; at += 16) {
+            uintptr_t member = 0;
+            std::memcpy(&member, reinterpret_cast<const void *>(at), sizeof(member));
+            Widget filter;
+            if (!read_widget(member, 0x1710d18, filter) || filter.parent != list.address ||
+                    !in_grid(filter) || filter.rect[1] < scroll.rect[3] + 1) continue;
+            const auto *bytes = reinterpret_cast<const unsigned char *>(member);
+            if (!native_info_title_memory_readable(bytes, 0x1c8)) continue;
+            int32_t type = -1;
+            std::memcpy(&type, bytes + 0x1c4, sizeof(type));
+            NativeString name{};
+            std::memcpy(&name, bytes + 0x80, sizeof(name));
+            std::string_view value;
+            if (type == 0 && native_string_view(&name, &value, 64) &&
+                    !value.empty() && native_info_title_memory_readable(value.data(), value.size()) &&
+                    value == "Filter box") {
+                record.search_y = filter.rect[1];
+                break;
+            }
+        }
+    }
+    remember_native_unit_chooser_record(record, epoch);
+#else
+    (void)widget;
+#endif
+}
+
 static void capture_native_truncated_widget_render(void *widget, uint32_t tick) {
     NativeInputCallbackScope callback;
     const auto original = reinterpret_cast<NativeCaptionWidgetRenderFn>(
         g_native_caption_widget_hook.original);
     if (original) callback.call_native([&] { original(widget, tick); });
     try {
+        // Short skills still prove their live record. Capture before the
+        // complete-caption path excludes visible == original_str.
+        capture_native_unit_chooser_record(widget);
         if (!widget) return;
         const auto *bytes = static_cast<const unsigned char *>(widget);
         const auto &binding = g_native_caption_widget_binding;
@@ -1160,6 +1302,7 @@ static void reset_native_caption_capture() {
     }
     native_clipped_pending() = {};
     clear_clipped_captions();
+    clear_native_unit_chooser_records();
     clear_native_drawn_text_rows();
     pending_native_embark() = {};
     clear_embark_item_sources();

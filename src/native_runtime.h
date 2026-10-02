@@ -74,6 +74,8 @@ struct NativeUiSettings {
     int32_t texpos_sort_descending_inactive[4]{};
     int32_t texpos_sort_text_active[3]{};
     int32_t texpos_sort_text_inactive[3]{};
+    int32_t texpos_button_filter[6][3]{};
+    int32_t texpos_button_filter_name[4][3]{};
     int32_t texpos_border_nw{}, texpos_border_n{}, texpos_border_ne{};
     int32_t texpos_border_w{}, texpos_border_interior{}, texpos_border_e{};
     int32_t texpos_border_sw{}, texpos_border_s{}, texpos_border_se{};
@@ -110,7 +112,12 @@ struct NativeUiSettingsAbi {
     int32_t texpos_scrollbar_center_scroller[2], texpos_scrollbar_center_scroller_hover[2];
     int32_t texpos_scrollbar_offcenter_scroller[2][2];
     int32_t texpos_scrollbar_offcenter_scroller_hover[2][2];
-    std::uint8_t widget_storage[0x390c - 0x36fc];
+    std::uint8_t filter_storage[0x3774 - 0x36fc];
+    // widgets::textbox::render uses init's atlas (Steam 53.16
+    // 0x141419396..0x1414194d1), independently of graphicst's filter skin.
+    int32_t texpos_button_filter[6][3];
+    int32_t texpos_button_filter_name[4][3];
+    std::uint8_t widget_storage[0x390c - 0x37ec];
     int32_t texpos_sort_ascending_active[4];
     int32_t texpos_sort_ascending_inactive[4];
     int32_t texpos_sort_descending_active[4];
@@ -205,6 +212,10 @@ inline std::optional<NativeUiSettings> native_ui_settings() {
     std::copy_n(settings->texpos_sort_descending_inactive, 4, result.texpos_sort_descending_inactive);
     std::copy_n(settings->texpos_sort_text_active, 3, result.texpos_sort_text_active);
     std::copy_n(settings->texpos_sort_text_inactive, 3, result.texpos_sort_text_inactive);
+    for (int column = 0; column < 6; ++column)
+        std::copy_n(settings->texpos_button_filter[column], 3, result.texpos_button_filter[column]);
+    for (int column = 0; column < 4; ++column)
+        std::copy_n(settings->texpos_button_filter_name[column], 3, result.texpos_button_filter_name[column]);
     result.texpos_border_nw = settings->texpos_border_nw;
     result.texpos_border_n = settings->texpos_border_n;
     result.texpos_border_ne = settings->texpos_border_ne;
