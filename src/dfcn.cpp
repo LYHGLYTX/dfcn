@@ -527,6 +527,9 @@ struct Match {
     // Actual native control/paragraph area in absolute screen pixels. Keep
     // this independent of glyph measurement and per-color placement boxes.
     std::optional<SDL_Rect> layout_native_clip{};
+    // Reflowed prose keeps its paragraph viewport independently of the
+    // original writer's per-row clipping and caption background textures.
+    bool layout_reflowed_paragraph = false;
     // A complete current native list row recovered behind the hover frame.
     // Its exposed bytes have been checked before it enters page layout.
     bool native_hover_background = false;
@@ -3937,6 +3940,7 @@ private:
     void prepare_adventure_hover_suppression();
     void draw_hover_clipped_match(SDL_Renderer *renderer, const Match &match);
     SDL_Rect native_text_draw_region(const Match &match) const;
+    SDL_Rect native_paragraph_draw_region(const std::vector<Match> &rows) const;
     void draw_help_clipped_match(SDL_Renderer *renderer, const Match &match,
         const std::vector<SDL_Rect> &frames,
         const std::shared_ptr<NativeTooltipPage> &background_page,
@@ -42000,7 +42004,10 @@ void Overlay::layout_multiline_matches() {
     const auto reflow_paragraph = [&](const std::vector<size_t> &slots,
             const std::string &paragraph, int left, int right, bool align_left) {
         if (slots.empty() || paragraph.empty() || right <= left) return false;
-        SDL_Rect native_region = native_text_draw_region(prepared_matches_[slots.front()]);
+        std::vector<Match> source_rows;
+        source_rows.reserve(slots.size());
+        for (size_t index : slots) source_rows.push_back(prepared_matches_[index]);
+        SDL_Rect native_region = native_paragraph_draw_region(source_rows);
         const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
         const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
         const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
@@ -42021,17 +42028,13 @@ void Overlay::layout_multiline_matches() {
         left = std::max(left, (native_region.x - origin_x + tile_w - 1) / tile_w);
         right = std::min(right, (native_region.x + native_region.w - origin_x) / tile_w);
         if (right <= left || native_region.h <= 0) return false;
-        std::vector<Match> source_rows;
-        source_rows.reserve(slots.size());
-        for (size_t index : slots) {
-            Match row = prepared_matches_[index];
+        for (Match &row : source_rows) {
             if (row.layout_foreground_rgb < 0)
                 row.layout_foreground_rgb = static_cast<int>(foreground(row));
             row.layout_box_pixel_x = -1;
             row.layout_box_pixel_width = 0;
             row.layout_native_clip = native_region;
             row.layout_glyph_foreground_rgb.clear();
-            source_rows.push_back(std::move(row));
         }
         std::vector<Match> output;
         if (!append_bounded_paragraph(std::move(source_rows), paragraph,
@@ -44412,7 +44415,8 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
             intersect({origin_x + tab->first * tile_w,
                 origin_y + match.y * tile_h, (tab->second - tab->first) * tile_w,
                 (match.native_split_text ? 2 : 1) * tile_h});
-        } else if (const auto button = native_caption_button_rect(match)) {
+        } else if (const auto button = match.layout_reflowed_paragraph
+                ? std::nullopt : native_caption_button_rect(match)) {
             intersect(*button);
         } else {
             const NativePanelBorders borders(*gps_);
@@ -44421,8 +44425,14 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
                 intersect(pixels(*panel));
         }
     }
-    if (const auto draw_clip = native_captured_text_clip(*gps_, match))
-        intersect(pixels(*draw_clip));
+    // A paragraph's source rows can each have their own one-row writer clip.
+    // Their translated baselines no longer coincide with those source rows.
+    // The paragraph fitter combines the current clips before assigning its
+    // shared viewport; captions still use their individual writer clip.
+    if (!match.layout_reflowed_paragraph) {
+        if (const auto draw_clip = native_captured_text_clip(*gps_, match))
+            intersect(pixels(*draw_clip));
+    }
     if (match.layout_clip_right >= 0) {
         // Page-specific layout supplies column/control edges independently
         // of the English source. Popup occlusion only adds a right boundary.
@@ -44430,6 +44440,43 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
             origin_x + std::max(0, match.layout_x >= 0 ? match.layout_x : match.x) * tile_w;
         const int right = origin_x + match.layout_clip_right * tile_w;
         intersect({left, 0, std::max(0, right - left), gps_->screen_pixel_y});
+    }
+    return region;
+}
+
+SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) const {
+    if (rows.empty()) return {};
+    Match owner = rows.front();
+    owner.layout_reflowed_paragraph = true;
+    SDL_Rect region = native_text_draw_region(owner);
+    // An explicit paragraph/control viewport already bounds the complete
+    // layout. Otherwise combine all current source writes, not just the
+    // first row: vertical row clips form one paragraph, while every row's
+    // horizontal limit still protects the common column and scroll gutter.
+    if (owner.layout_native_clip) return region;
+    std::optional<SDL_Rect> writer_region;
+    for (const Match &row : rows) {
+        const auto clip = native_captured_text_clip(*gps_, row);
+        if (!clip) continue;
+        if (!writer_region) {
+            writer_region = clip;
+            continue;
+        }
+        const int left = std::max(writer_region->x, clip->x);
+        const int right = std::min(writer_region->x + writer_region->w, clip->x + clip->w);
+        const int top = std::min(writer_region->y, clip->y);
+        const int bottom = std::max(writer_region->y + writer_region->h, clip->y + clip->h);
+        writer_region = SDL_Rect{left, top, std::max(0, right - left), bottom - top};
+    }
+    if (writer_region) {
+        const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
+        const int origin_x = (gps_->screen_pixel_x - tile_w * gps_->dimx) / 2;
+        const int origin_y = (gps_->screen_pixel_y - tile_h * gps_->dimy) / 2;
+        const SDL_Rect pixels{origin_x + writer_region->x * tile_w,
+            origin_y + writer_region->y * tile_h, writer_region->w * tile_w,
+            writer_region->h * tile_h};
+        SDL_Rect visible{};
+        region = SDL_IntersectRect(&region, &pixels, &visible) ? visible : SDL_Rect{};
     }
     return region;
 }

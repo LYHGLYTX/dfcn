@@ -97,7 +97,7 @@ bool Overlay::append_bounded_paragraph(std::vector<Match> rows,
     const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
     const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
     const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
-    SDL_Rect native_region = native_text_draw_region(rows.front());
+    SDL_Rect native_region = native_paragraph_draw_region(rows);
     int left = gps_->dimx;
     for (const Match &row : rows) {
         left = std::min(left, row.x);
@@ -368,6 +368,7 @@ bool Overlay::append_bounded_paragraph(std::vector<Match> rows,
         row.layout_fixed_baseline = true;
         row.layout_clip_right = clip_right;
         row.layout_native_clip = native_region;
+        row.layout_reflowed_paragraph = true;
         row.layout_length = width;
         row.layout_left = true;
         row.layout_font_pixels = font_pixels;
