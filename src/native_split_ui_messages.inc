@@ -24,10 +24,9 @@ static std::optional<SDL_Rect> native_resting_place_panel(
     return SDL_Rect{left + 1, top + 1, right - left - 1, bottom - top - 1};
 }
 
-// Fixed native records draw their introduction and person on separate rows
-// without add_paragraph. Claim the complete record before generic item prose
-// can reserve "This is ..." as untranslated, and before formatter-owned
-// identity rows consume its person field for an independent name overlay.
+// Fixed native records draw their introduction and person separately without
+// add_paragraph, either on consecutive rows or side by side. Claim the complete
+// record before generic item prose or formatter-owned identity rows consume it.
 void Overlay::append_native_split_ui_messages(std::vector<std::string> &screen_rows,
         std::vector<Match> &result, int only_y,
         const unsigned char *screen_override) const {
@@ -80,19 +79,23 @@ void Overlay::append_native_split_ui_messages(std::vector<std::string> &screen_r
             const auto rules = prefixes.find(std::string(trim_view(first.source)));
             if (rules == prefixes.end()) continue;
             const auto heading = current_draw(first);
-            if (!heading || first.y + 1 >= gps_->dimy) continue;
-            const auto next = positions.find({first.x, first.y + 1});
+            if (!heading) continue;
+            // Combat confirmations draw the fixed prefix, the formatter-bound
+            // target and the question mark consecutively on one row. Preserve
+            // that person before the independent identity pass blanks its bytes.
+            auto next = positions.find({first.x + static_cast<int>(first.source.size()), first.y});
+            const bool inline_person = next != positions.end();
+            if (!inline_person) next = positions.find({first.x, first.y + 1});
             if (next == positions.end()) continue;
             const auto &person = *next->second;
             const auto identity = current_draw(person);
-            if (!identity || identity->x != heading->x) continue;
+            if (!identity || (!inline_person && identity->x != heading->x)) continue;
             for (int index : rules->second) {
                 const Rule &rule = rules_[static_cast<size_t>(index)];
                 const auto &suffix = rule.template_literals.back();
                 Match body = *identity;
-                // PE 53.16 0x194f0f/0x194f89/0x194fb9: the coffin record's
-                // introduction, full unit identity and period are three addst
-                // draws. A separate terminal must be immediately adjacent.
+                // Coffin records and combat confirmations append punctuation
+                // in another addst draw. Its terminal must be adjacent.
                 if (!body.source.ends_with(suffix)) {
                     const auto tail = positions.find({person.x +
                         static_cast<int>(person.source.size()), person.y});
@@ -153,6 +156,9 @@ void Overlay::append_native_split_ui_messages(std::vector<std::string> &screen_r
                     right = std::max(source_right, panel->x + panel->w -
                         (heading->x - panel->x));
                     for (const Match *row : std::array<const Match *, 2>{&*heading, &body}) {
+                        // The inline person's bytes belong to this sentence,
+                        // so only its terminal can bound an independent field.
+                        if (inline_person && row == &*heading) continue;
                         for (int x = row->x + row->length; x < right; ++x) {
                             const auto ch = visible_char_at(x, row->y);
                             if ((ch && ch != ' ') ||
@@ -163,7 +169,18 @@ void Overlay::append_native_split_ui_messages(std::vector<std::string> &screen_r
                         }
                     }
                 }
-                append_bounded_paragraph({*heading, std::move(body)}, *target,
+                std::vector<Match> rows;
+                if (inline_person) {
+                    // One physical line owns all three draws. Passing separate
+                    // same-y fields as paragraph rows would invent extra lines.
+                    Match row = *heading;
+                    row.length = end - row.x;
+                    row.source = screen_rows[row.y].substr(row.x, row.length);
+                    rows.push_back(std::move(row));
+                } else {
+                    rows = {*heading, std::move(body)};
+                }
+                append_bounded_paragraph(std::move(rows), *target,
                     screen_rows, result, only_y, right, right, target_colors, false, heading->x);
                 break;
             }
