@@ -1,0 +1,191 @@
+# Extracted from local Steam PE 53.16 AMD64 by native objdump and PE data reads; RVAs relative to image base.
+kind	enum	source	rva	fields	branch
+function			0x1331500..0x1333507	unit RCX; NativeString RDX	description reference; does not call ordinary unit formatters
+dispatch			0x1331df2..0x1331e10	profession uint16; table RVA 0x1333508	135 entries 0..134; outside range goes to Peasant/default
+profession	0	Miner	0x1331e12	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	1	Woodworker	0x1331e36	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	2	Carpenter	0x1331e5f	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	3	Bowyer	0x1331e87	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	4	Woodcutter	0x1331eac	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	5	Stoneworker	0x1331ed5	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	6	Stonecutter	0x1331f27	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	7	Stone Carver	0x1331f3c	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	8	Engraver	0x1331f08	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	9	Mason	0x1331f51	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	10	Ranger	0x1331f66	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	11	Animal Caretaker	0x1331f7b	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	12	Animal Trainer	0x1331f90	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	13	Hunter	0x1331fa5	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	14	Trapper	0x1331fba	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	15	Animal Dissector	0x1331fcf	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	16	Metalsmith	0x1331fe4	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	17	Furnace Operator	0x1331ff9	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	18	Weaponsmith	0x133200e	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	19	Armorer	0x1332023	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	20	Blacksmith	0x1332038	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	21	Metalcrafter	0x1332061	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	22	Jeweler	0x1332088	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	23	Gem Cutter	0x133209d	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	24	Gem Setter	0x13320b2	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	25	Craftsman	0x13320c7	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	26	Woodcrafter	0x13320dc	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	27	Stonecrafter	0x133215a	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	28	Leatherworker	0x133216f	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	29	Bone Carver	0x1332184	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	30	Weaver	0x1332199	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	31	Clothier	0x13321ae	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	32	Glassmaker	0x13321c3	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	33	Potter	0x133211b	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	34	Glazer	0x1332130	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	35	Wax Worker	0x1332145	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	36	Strand Extractor	0x13321d8	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	37	Fishery Worker	0x13321ed	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	38	Fisherman	0x1332202	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	39	Fish Dissector	0x1332217	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	40	Fish Cleaner	0x133222c	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	41	Farmer	0x1332241	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	42	Cheesemaker	0x1332256	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	43	Milker	0x133226b	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	44	Cook	0x13322bf	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	45	Thresher	0x13322d4	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	46	Miller	0x13322e9	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	47	Butcher	0x13322fe	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	48	Tanner	0x1332313	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	49	Dyer	0x1332328	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	50	Planter	0x1332367	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	51	Herbalist	0x133237c	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	52	Brewer	0x1332391	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	53	Soap Maker	0x13323a6	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	54	Potash Maker	0x13323bb	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	55	Lye Maker	0x13323d0	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	56	Wood Burner	0x13323e5	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	57	Shearer	0x1332295	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	58	Spinner	0x13322aa	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	59	Presser	0x133233d	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	60	Beekeeper	0x1332352	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	61	Engineer	0x13323fa	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	62	Mechanic	0x133240f	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	63	Siege Engineer	0x1332424	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	64	Siege Operator	0x1332439	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	65	Pump Operator	0x133244e	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	66	Clerk	0x1332463	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	67	Administrator	0x1332478	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	68	Trader	0x133248d	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	69	Doctor	0x13325dd	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	70	Diagnostician	0x13325f2	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	71	Bone Doctor	0x1332607	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	72	Suturer	0x133261c	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	73	Surgeon	0x1332631	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	74	Merchant	0x1332646	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	75	Hammerman	0x13326d9	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	76	Hammer Lord	0x13326ee	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	77	Spearman	0x1332703	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	78	Spearmaster	0x1332718	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	79	Crossbowman	0x133272d	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	80	Elite Crossbowman	0x1332742	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	81	Wrestler	0x1332757	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	82	Elite Wrestler	0x133276c	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	83	Axeman	0x1332781	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	84	Axe Lord	0x1332796	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	85	Swordsman	0x13327ab	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	86	Swordmaster	0x13327c0	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	87	Maceman	0x13327d5	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	88	Mace Lord	0x13327ea	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	89	Pikeman	0x13327ff	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	90	Pikemaster	0x1332814	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	91	Bowman	0x1332829	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	92	Elite Bowman	0x133283e	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	93	Blowgunner	0x1332853	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	94	Master Blowgunner	0x1332868	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	95	Lasher	0x133287d	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	96	Master Lasher	0x1332892	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	97	Recruit	0x13328a7	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	98	Hunting	0x13328bc	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	99	War	0x13328d1	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	100	Master Thief	0x13328e6	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	101	Thief	0x13328fb	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	102	Peasant	0x1332a92	unit+0xa0; linked identity+0xac overrides when !=-1	Peasant only for viewpoint race; otherwise empty role
+profession	103	Child	0x133298e	unit+0xa0; linked identity+0xac overrides when !=-1	RAW CHILD/BABY caste/race names where available; otherwise literal; marks species already included
+profession	104	Baby	0x1332a2c	unit+0xa0; linked identity+0xac overrides when !=-1	RAW CHILD/BABY caste/race names where available; otherwise literal; marks species already included
+profession	105	Drunk	0x133265b	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	106	Monster Slayer	0x1332670	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	107	Scout	0x1332685	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	108	Beast Hunter	0x133269a	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	109	Snatcher	0x13326af	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	110	Mercenary	0x13326c4	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	111	Gelder	0x1332280	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	112	Performer	0x13324e1	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	113	Poet	0x13324a2	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	114	Bard	0x13324b7	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	115	Dancer	0x13324cc	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	116	Sage	0x1332520	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	117	Scholar	0x1332535	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	118	Philosopher	0x133254a	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	119	Mathematician	0x133255f	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	120	Historian	0x1332574	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	121	Astronomer	0x1332589	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	122	Naturalist	0x133259e	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	123	Chemist	0x13325b3	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	124	Geographer	0x13325c8	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	125	Scribe	0x13324f6	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	126	Papermaker	0x13320f1	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	127	Bookbinder	0x1332106	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	128	Tavern Keeper	0x133250b	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	129	Criminal	0x1332910	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	130	Peddler	0x1332925	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	131	Prophet	0x133293a	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	132	Pilgrim	0x133294f	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	133	Monk	0x1332964	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+profession	134	Messenger	0x1332979	unit+0xa0; linked identity+0xac overrides when !=-1	ordinary enum occupation; captured after native choice at 0x13331cc
+mode		literal first name	0x1331530/0x13334a8..0x13334db	global RVA 0x189c2c4 = 4 or 5; unit+0x8; unit+0xd80 animation+0x20	direct string copy; explicit animation label takes precedence
+identity		selected language_name	0x1331557..0x13315d0	unit+0xc30,+0x1274 -> b530b0 -> +0x130 -> +0x58 -> id+0x30 -> 072570 -> c3a4f0	linked/disguised identity chooses language_name; otherwise unit+0x8
+supernatural		the force	0x1331655..0x1331868	linked identity+0x88 -> definition id+0xe0; definition flags vector+0xc8 bit3	force branch; adventure disclosure determines whether selected name is appended
+supernatural		the deity	0x1331655/0x133186d..0x1331aaa	definition flags vector+0xc8 bit2; selected language_name+0x72	deity branch precedes force; append only visible selected names
+animation		the <animated name>	0x1331aea..0x1331b33	unit+0xd80; animation NativeString+0x20 length+0x30	explicit authored animation label replaces role, species and curse
+viewpoint		race selection	0x1331b3d..0x1331b90	global RVA0x189c298; adventure controlled unit+0xa4; fortress race global0x239367c	same viewpoint race omits species except One placeholder for named curses
+custom		authored profession	0x1331bc0..0x1331bf4	unit NativeString+0x80 length+0x90	nonempty exact custom profession; skips RAW/enum/office/slave/prisoner selection
+raw		RAW occupation	0x1331bf9..0x1331dee	race unit+0xa4; caste unit+0x12c; 30cea0; race table0x24eca68; caste vector+0x178; caste profession+0x1820+32*enum; race profession+0x220+32*enum	caste RAW occupation before race RAW; capitalized and species-included flag
+office		position title	0x1332acb..0x1332c12	b530b0 -> beb620; historical figure sex+0x6; plural flag rsp+0x34; position+0x98/+0xd8/+0x118 singular; +0x158/+0x198/+0x1d8 plural	selected female/male title if nonempty, otherwise generic title; replaces occupation
+office		of <entity>	0x1332bff..0x1332c0d/0x1333497	position+0x2c8 >0 -> 9bdfb0; entity vector+0xd0 link flags+0x1c bit9 and link assignment id+0xc; 07db20 entity name -> a946e0 at0x9be076	suffix appended after personal name; captured entity English language_name independently
+status		Slave	0x1332c3f..0x1332d5d	historical figure b973c0 link type4 >0; professions103/104	adult role replaced; child/baby role appends Slave when nonempty
+status		Prisoner	0x1332d5d..0x1332ec1	b973c0 link type6 >0 or b98d90 link type7 >0	adult role replaced; child/baby role appends Prisoner when nonempty; overrides Slave
+article		the 	0x1332ec6..0x1332f03	profession104 with no custom profession	bare baby omits definite article; every other ordinary reference assigns the
+ghost		Ghost/Ghostly 	0x1332f34..0x1332fa6	unit+0x118 bit12; curse_named unit+0x838; computed role length; viewpoint race	Ghost alone for empty same-race role; Ghostly otherwise; named curse suppresses ghost prefix
+curse-prefix		curse prefix	0x1332fab..0x1332ff3	unit+0x838 true; curse name length unit+0x850 empty; curse prefix NativeString unit+0x880 length+0x890	append exact curse prefix plus space
+placeholder		One	0x1332ff8..0x1333016	same viewpoint race after curse prefix	append One only when curse-prefix branch remains same race
+species		caste/race name	0x133301b..0x133315f	race !=viewpoint and species-included flag false; caste vector race+0x178; caste NativeString+0x20 fallback race NativeString+0x20	capitalized caste singular falls back race singular; appended before curse name and role
+curse		curse name	0x1333164..0x13331b7	unit+0x838 true; NativeString unit+0x840 nonempty	curse name appended after species and before role
+role		selected role	0x13331b7..0x13331cc	computed NativeString rbp-0x61	one boundary captures authored, RAW, enum, position and status role decisions
+visibility		personal name disclosure	0x133325e..0x133347d	selected language_name+0x72; global0x189c2c4; controlled historical figure info+0x130,+0x60; known figure table+0x8 or entity table+0x48; unit hist id+0xc30/entity id+0x14c	name appended only when native knowledge rules permit; unit+0x8 may replace selected linked name when identity known
+name-call		a94030	0x13317b2	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+name-call		a94030	0x133183f	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+name-call		a94030	0x13319bb	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+name-call		a94030	0x1331a48	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+name-call		a94030	0x13333c8	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+name-call		a94030	0x1333454	selected language_name RCX; output NativeString RDX	actual reference name capture callsite
+entity-name-call		a946e0	0x9be076	entity language_name RCX; native flags true,false	belongs to of-entity suffix, not person name
+movement-function			0x132e430..0x132f970	unit RCX; NativeString RDX; article R8D; capitalization R9B; use_custom original RSP+0x28	independent movement, ranged and Charge reference; preserves all five native arguments
+movement-controlled		you/You	0x132e4cc	controlled adventurer comparison	assign pronoun and return without unit name or role
+movement-mode		raw first-name or explicit animated name	0x132f939	global0x189c2c4 modes4/5; unit+0x8; unit+0xd80 then animation NativeString+0x20	literal assign bypasses generated language-name translation
+movement-selected-name		c3a4f0	0x132e5a0	default language_name unit+0x8; linked/disguised identity return pointer	captures actual selected language_name before visibility branch
+movement-name-call		a94030	0x132ec56	selected language_name RCX; temporary name NativeString RDX	captures full visible selected name; final assign0x132ed67 or append0x132ede6
+movement-known-first-name		first_name	0x132eeaa	selected language_name first_name; native knowledge and companion/group disclosure branch	assign only selected first_name; no surname or nickname may be added
+movement-direct-name		a94030	0x132eeba	selected language_name RCX; final output NativeString RDX	full-name fallback writes output directly and is captured as name assign
+movement-visibility		known name and role	0x132e5a5..0x132eefb	language_name+0x72; historical figure/entity knowledge; unit+0x3d0 compared with player+0x130; companion globals0x2649620/0x2649608	known person may expose full name or first_name; unknown branch renders description
+movement-role-builder		132e0c0	0x132e7f4,0x132f09d	profession; race; caste; suppression parameter -2 ordinarily or -1 with animation/curse	actual RAW/enum role buffer is captured after all native choices
+movement-office		position title	0x132e7f9..0x132ebce,0x132f0a2..0x132f489	beb620 selection; sex hf+0x6; title singular offsets0x98/0xd8/0x118, plural0x158/0x198/0x1d8	position and sex/plural choices finish before role append
+movement-office-entity		of entity name	0x132e93b,0x132f1e9	9bdfb0; position+0x2c8; typed entity language_name captured at0x9be076	entity suffix is inside role buffer; retain exact typed boundary and translate entity independently
+movement-status		Slave/Prisoner or appended slave/prisoner	0x132e93f..0x132ebce,0x132f1ee..0x132f489	historical figure links type4 slave, type6/7 prisoner; profession103/104 child/baby	adult role replaced; child/baby role keeps appended status; prisoner takes precedence
+movement-custom		unit custom profession	0x132ebfb..0x132ec45,0x132f4ac..0x132f4e6	unit NativeString+0x80 length+0x90; fifth native use_custom flag	custom final replacement happens only with nonempty actual field and true fifth argument; authored Latin remains literal unless exact whole-field override exists
+movement-known-role		selected role	0x132edb0	final role NativeString temporary	definite article0x132ed96 then role and visible name0x132ede6
+movement-unnamed-role		selected role/species	0x132f7fb	final role NativeString temporary	captures RAW/enum/custom/office/status result after native selection
+movement-divinity		force/deity	0x132efb3..0x132f016	linked divine definition flags bit3 force or bit2 deity	separate article and literal label append; no procedural personal name
+movement-tame-prefix		stray/fierce	0x132f573,0x132f63d	1376500 pet-owner selection; unit+0x3bc owner; unit+0x110 bit26 tame; civilization entity+0x60	unowned tame creature gets stray or civilization fierce prefix
+movement-agitated		agitated	0x132f628,0x132f63d	unit+0x11c bit12 when no tame-prefix branch	article followed by agitated prefix
+movement-ghost		ghost/ghostly	0x132f685..0x132f6de,0x132f8ca	unit+0x118 bit12; computed species-only flag	ghost-only branch or ghostly description prefix; actual append boundaries captured
+movement-appearance		distinguishing appearance	0x132f776	unit NativeString+0x13e8; lazily generated by0x717d30; average sentinel suppressed at0x132f754	uses complete existing data/extracted/map-hover-native-sources.tsv and runtime map_hover unit appearance grammar
+movement-curse-prefix		curse prefix	0x132f7cf	unit+0x838; curse name NativeString+0x840 empty; prefix NativeString+0x880	append before selected role
+movement-curse-name		curse name	0x132f86a	unit+0x838; curse NativeString+0x840 nonempty	append after selected role with native article/space choice0x132f84d
+movement-corpse		corpse	0x132f8a6,0x132f8ca	unit+0xd80 animation pointer present but explicit animation name empty	append native corpse suffix after full description
+movement-capitalization		52d650	0x132ed6f,0x132f8d9,0x132f945	fourth native capitalization flag	capitalization occurs after string assembly; sole authored part preserves final native bytes
+movement-output-boundaries		assign/append	0x132e4cc,0x132ed67,0x132ed96,0x132eeaa,0x132f939;0x132edb0,0x132ede6,0x132efb3,0x132efc8,0x132f001,0x132f016,0x132f573,0x132f628,0x132f63d,0x132f685,0x132f6c9,0x132f6de,0x132f710,0x132f776,0x132f7cf,0x132f7fb,0x132f84d,0x132f86a,0x132f8a6,0x132f8ca	final output object must equal TLS reference_output	all field assignments and appends captured; whitespace-only appends0x132edcc/0x132f78d/0x132f7e1 do not add semantic fields; role-buffer construction appends are captured by its final role boundary

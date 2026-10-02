@@ -44,13 +44,21 @@ static void remember_native_unit_identity(uintptr_t owner, std::string_view sour
         !g_native_unit_identity_owners.contains(owner)) return;
     g_native_unit_identity_owners[owner] = {
         std::string(source), resolved_target, unit_owner, english_name, character_header};
-    if (g_native_unit_identity_sources.size() >= 16384 &&
-            !g_native_unit_identity_sources.contains(std::string(source))) return;
-    const auto [entry, inserted] = g_native_unit_identity_sources.try_emplace(
-        std::string(source), resolved_target);
-    // Ambiguous spelling must not assign one unit's custom name to another
-    // unit's species. Their per-draw owner bindings remain authoritative.
-    if (!inserted && entry->second && *entry->second != resolved_target) entry->second.reset();
+    const auto remember_source = [&](const std::string &key) {
+        if (g_native_unit_identity_sources.size() >= 16384 &&
+                !g_native_unit_identity_sources.contains(key)) return;
+        const auto [entry, inserted] = g_native_unit_identity_sources.try_emplace(
+            key, resolved_target);
+        // Ambiguous spelling must not assign one unit's custom name to another
+        // unit's species. Their per-draw owner bindings remain authoritative.
+        if (!inserted && entry->second && *entry->second != resolved_target) entry->second.reset();
+    };
+    remember_source(std::string(source));
+    // Whole action templates normalize native spacing before visiting their
+    // unit slots. Preserve the formatter's authored fields in the target;
+    // the normalized alias is subject to the same ambiguity handling.
+    const std::string normalized = normalize_utterance(source);
+    if (normalized != source) remember_source(normalized);
 }
 
 static std::optional<NativeUnitIdentitySource> native_unit_identity_source_binding(

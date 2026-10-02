@@ -1,0 +1,59 @@
+# Menu-specific caption sources from the local Steam PE 53.16.
+# These fields use Adventure item action rules and typed material, creature,
+# inventory and contaminant parsers; they are not global UI label aliases.
+# Ordinary chooser categories use virtual +8; categories 3/6/7 use +16.
+family	native_rva_sequence	source
+conversation.shout	0x6b7990+0x6b7999	Shout out to everybody
+conversation.assumed-identity	0x6b79b0+0x6b79b9	Assume an identity
+item-possession	0x7e12e0+0x7e12e9	Gain possession
+item-pull-out	0x7e1320+0x7e1329	Pull it out
+item-nocking	0x7e1340+0x7e1349	Cease nocking
+item-read	0x7e13d0+0x7e13d9	Read
+item-dice	0x7e13f0+0x7e13f9	Roll
+item-dice	0x7e1410+0x7e1419	Roll all
+fill-container	0x835260+0x835394	Fill {s} from {s}
+fill-container	0x835260+0x835394	Fill {s} from {s} ({p})
+fill-material	0x835460+0x8359d6+0x8359ef+0x835cad	Fill {s} with {s}
+fill-material	0x835460+0x8359d6+0x8359ef+0x835cad	Fill {s} with {s} ({p})
+ingest-container	0x8387d0+0x838861+0x838924	Eat {s} from {s}
+ingest-container	0x8387d0+0x838861+0x838924	Eat {s} from {s} ({p})
+ingest-container	0x8387d0+0x838861+0x838924	Drink {s} from {s}
+ingest-container	0x8387d0+0x838861+0x838924	Drink {s} from {s} ({p})
+ingest-material	0x8389f0+0x838f3e+0x838f57+0x83921a	Eat {s}
+ingest-material	0x8389f0+0x838f3e+0x838f57+0x83921a	Eat {s} ({p})
+ingest-material	0x8389f0+0x838f3e+0x838f57+0x83921a	Drink {s}
+ingest-material	0x8389f0+0x838f3e+0x838f57+0x83921a	Drink {s} ({p})
+# Fill/ingest: type-3 contaminant, amount>=100, phase!=2, material!=target
+# prepends each STATE_ADJ. Target type6 independently adds stagnant/salt
+# (designation bits30/31), then STATE_NAME. Each field can include an HF
+# possessive and RAW NAME_PREFIX. Invalid material yields unknown material.
+suck	0x8382f0+0x8383cc+0x838705	Suck {n}'s {s}
+unit-deposit	0x8392a0+0x8392fe+0x8395f8	{s} ({s})
+eat-unit-deposit	0x839850+0x839908+0x839c1c	Eat {s} ({s})
+eat-unit-deposit	0x839850+0x839908+0x839c1c	Drink {s} ({s})
+eat-item-deposit	0x839ca0+0x839d5c+0x839d94	Eat {s} ({s})
+eat-item-deposit	0x839ca0+0x839d5c+0x839d94	Drink {s} ({s})
+# phase1 or phase0/type73 selects Drink; other phases select Eat. Unit
+# location uses BP singular/plural, falling back to body part/body parts;
+# item location is the whole c65450 designation. Null fields emit no text.
+vermin	0x839e87+0x839fe0+0x83a04f	A {s} ({p})
+vermin-invalid-raw	0x839e87+0x839fe0+0x83a04f	A  ({p})
+vermin-no-location	0x839e87+0x839f2c+0x83a06a	A 
+# RAW singular is only appended with a non-sentinel origin; invalid RAW
+# with a location leaves the article plus two spaces before the bracket.
+place-pack-animal	0x837ea0+0x837f6b	Put on {n}
+place-pack-animal	0x837ea0+0x837f6b	Put on {n} ({p})
+place-building	0x837ff0+0x838125	Put in {s}
+place-building	0x837ff0+0x838125	Put in {s} ({p})
+place-building	0x837ff0+0x838125	Put on {s}
+place-building	0x837ff0+0x838125	Put on {s} ({p})
+place-building	0x837ff0+0x838125	Set on {s}
+place-building	0x837ff0+0x838125	Set on {s} ({p})
+place-item	0x8381a0+0x838271	Put in {s}
+place-item	0x8381a0+0x838271	Put in {s} ({p})
+view-event	0x894240	engraving
+view-event-detail	0x894260	View engraving
+# Heat skips its entire near-source suffix when no magma/fire branch
+# matches. The direction is independently optional through origin -30000.
+heat.unspecified-source	0x835e40+0x835f36+0x835fae+0x835fb7	Heat {s}
+heat.unspecified-source	0x835e40+0x835f36+0x835fae+0x835ff7	Heat {s} ({p})

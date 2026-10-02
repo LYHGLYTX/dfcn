@@ -59,6 +59,12 @@ static bool native_unit_identity_flag(uintptr_t object, size_t offset,
 
 static bool capture_native_unit_identity(uintptr_t unit, NativeUnitIdentity &out) {
 #ifdef _WIN32
+    // Reference parts already contain the game's final RAW/office, species,
+    // curse and visibility decisions. Only the explicit authored role field
+    // needs classification; do not reapply the ordinary formatter modifiers.
+    if (out.form == NativeUnitIdentityForm::Reference)
+        return !out.use_custom || (unit && unit <= UINTPTR_MAX - 0xa0 &&
+            native_history_copy_string(unit + 0x80, out.custom_profession));
     // Name-only formatters already captured DF's selected language_name.
     // Their renderer returns before reading any unit role/status fields.
     if (out.form == NativeUnitIdentityForm::NameOnly ||

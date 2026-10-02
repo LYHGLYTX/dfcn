@@ -9810,3 +9810,29 @@ Overview sentence: There will be no sympathy from me.	别指望我会同情。	l
 Overview sentence: Wrath has not risen within me.	我心中并未燃起怒火。	l
 Overview sentence: I could be questioning my life right now.	我现在本来可能会怀疑自己的人生。	l
 Overview sentence: There's no reason to be pessimistic.	没什么理由悲观。	l
+
+# Native environment actions: whole material/deposit and location fields.
+Adventure item action: Fill {s} from {s} ({p})	用{s2}中的内容物装满{s1}（{p}）	h
+Adventure item action: Fill {s} with {s} ({p})	用{s2}装满{s1}（{p}）	h
+Adventure item action: Eat {s} from {s}	食用{s2}中的{s1}	h
+Adventure item action: Eat {s} from {s} ({p})	食用{s2}中的{s1}（{p}）	h
+Adventure item action: Drink {s} from {s}	饮用{s2}中的{s1}	h
+Adventure item action: Drink {s} from {s} ({p})	饮用{s2}中的{s1}（{p}）	h
+Adventure item action: Eat {s} ({p})	食用{s}（{p}）	h
+Adventure item action: Drink {s} ({p})	饮用{s}（{p}）	h
+Adventure item action: Suck {n}'s {s}	吸取{n}的{s}	h
+# Vermin pickup and detail captions can consist only of a complete noun and direction.
+Adventure item action: {s} ({p})	{s}（{p}）	h
+Adventure environment modifier: stagnant	停滞的	h
+Adventure environment modifier: salt	含盐的	h
+
+# Native Heat caption 0x140835e40: an unrecognized or unavailable source
+# tile skips the entire near-fire suffix at 0x140835f36 -> 0x140835fae.
+# The direction remains independently optional through origin -30000.
+Adventure item action: Heat {s}	加热{s}	h
+Adventure item action: Heat {s} ({p})	加热{s}（{p}）	h
+
+# Vermin caption only appends its RAW singular when origin is available.
+Adventure item action: A {s} ({p})	一只{s}（{p}）	h
+Adventure item action: A ({p})	小生物（{p}）	h
+Adventure vermin: A	小生物	l

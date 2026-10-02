@@ -18,6 +18,12 @@ struct NativeUnitIdentityCall {
     bool native_name_words_valid = false;
     bool name_seen = false, name_failed = false, role_seen = false, name_quoted = false;
     bool publish = true;
+    NativeString *reference_output = nullptr;
+    std::vector<NativeUnitReferencePart> reference_parts;
+    NativeUnitReferencePart reference_entity;
+    bool reference_entity_seen = false;
+    bool reference_failed = false;
+    bool reference_use_custom = true;
 };
 
 // Only a trivial pointer is thread-local: no DLL-retaining TLS destructor.
@@ -34,8 +40,9 @@ struct NativeUnitIdentityActiveScope {
 };
 
 struct NativeUnitIdentityHooks {
-    // Role, fallback name, name only, role/status, complete identity.
-    std::array<NativeEntryHook, 5> entries;
+    // Role, fallback name, name only, role/status, complete identity, reference,
+    // movement reference (article, capitalization, explicit custom-role flag).
+    std::array<NativeEntryHook, 7> entries;
     NativeCallHook names;
     NativeUnitIdentityNameFn name = nullptr;
     NativeUnitIdentityEnglishNameFn english_name = nullptr;
@@ -117,6 +124,194 @@ static void capture_native_unit_header_english_name(const void *name,
             reinterpret_cast<uintptr_t>(unit), true, true);
     } catch (...) {
         // Never unwind across the sheet's native formatter call.
+    }
+}
+
+// The reference formatter does not call any of the five ordinary unit
+// formatters. Capture its append boundaries, where DF has already chosen the
+// complete profession, caste, curse, visible name and office territory.
+using NativeUnitReferenceStringFn = NativeString *(*)(NativeString *, const char *, size_t);
+
+template<NativeUnitReferencePartKind Kind, bool Assign = false>
+static void record_native_unit_reference_part(NativeString *output,
+        const char *source, size_t length) {
+    auto *call = g_native_unit_identity_call;
+    if (call && call->reference_output == output) {
+        try {
+            if (Assign) call->reference_parts.clear();
+            if (length > 262144) call->reference_failed = true;
+            else if (length != 0) {
+                NativeUnitReferencePart part;
+                part.kind = Kind;
+                part.source.resize(length);
+                if (!native_history_copy_bytes(reinterpret_cast<uintptr_t>(source),
+                        part.source.data(), length)) call->reference_failed = true;
+                else {
+                    if constexpr (Kind == NativeUnitReferencePartKind::Name ||
+                            Kind == NativeUnitReferencePartKind::GivenName) {
+                        if (!call->name_seen || call->name_failed) call->reference_failed = true;
+                        part.name = call->name;
+                        part.native_name_words = call->native_name_words;
+                        part.native_name_words_valid = call->native_name_words_valid;
+                    } else if constexpr (Kind == NativeUnitReferencePartKind::Title) {
+                        if (!call->reference_entity_seen) call->reference_failed = true;
+                        part.name = call->reference_entity.name;
+                        part.source = call->reference_entity.source;
+                        part.english_name = true;
+                    } else if constexpr (Kind == NativeUnitReferencePartKind::Role) {
+                        // Movement references include the typed office's
+                        // entity suffix inside the role buffer itself.
+                        const std::string entity_suffix = " of " + call->reference_entity.source;
+                        if (call->reference_entity_seen &&
+                                (part.source.ends_with(entity_suffix) ||
+                                 part.source.ends_with(entity_suffix + " slave") ||
+                                 part.source.ends_with(entity_suffix + " prisoner"))) {
+                            part.entity_source = call->reference_entity.source;
+                            part.entity_name = call->reference_entity.name;
+                            part.entity_present = true;
+                        }
+                    }
+                    call->reference_parts.push_back(std::move(part));
+                }
+            }
+        } catch (...) { call->reference_failed = true; }
+    }
+}
+
+template<NativeUnitReferencePartKind Kind, bool Assign = false>
+static NativeString *capture_native_unit_reference_part(NativeString *output,
+        const char *source, size_t length) {
+    NativeInputCallbackScope callback;
+    record_native_unit_reference_part<Kind, Assign>(output, source, length);
+    NativeString *result = nullptr;
+    const auto original = reinterpret_cast<NativeUnitReferenceStringFn>(
+        native_pe_address(g_native_unit_identity_hooks.base, Assign ? 0x6f8d0 : 0x6fa10));
+    callback.call_native([&] { result = original(output, source, length); });
+    return result;
+}
+
+static void capture_native_unit_reference_entity_name(const void *name,
+        NativeString *output, bool first, bool second) {
+    NativeInputCallbackScope callback;
+    callback.call_native([&] {
+        g_native_unit_identity_hooks.english_name(name, output, first, second);
+    });
+    auto *call = g_native_unit_identity_call;
+    if (!call || !call->reference_output) return;
+    try {
+        std::string_view source;
+        if (!native_string_view(output, &source, 262144) ||
+                !capture_native_history_name(g_native_unit_identity_hooks.base,
+                    reinterpret_cast<uintptr_t>(name), call->reference_entity.name)) {
+            call->reference_failed = true;
+            return;
+        }
+        call->reference_entity.source.assign(source);
+        call->reference_entity_seen = true;
+    } catch (...) { call->reference_failed = true; }
+}
+
+static std::optional<std::string> finish_native_unit_reference_call(
+        NativeUnitIdentityCall &call, NativeString *output) noexcept {
+    try {
+        std::string_view source;
+        if (!native_string_view(output, &source, 262144) || source.empty() ||
+                !g_overlay.translation_enabled()) return std::nullopt;
+        const std::string original(source);
+        std::optional<std::string> translated;
+        NativeUnitIdentity snapshot;
+        snapshot.form = NativeUnitIdentityForm::Reference;
+        snapshot.use_custom = call.reference_use_custom;
+        snapshot.reference_parts = std::move(call.reference_parts);
+        if (snapshot.reference_parts.size() == 1 &&
+                snapshot.reference_parts.front().kind == NativeUnitReferencePartKind::Authored)
+            snapshot.reference_parts.front().source = original;
+        if (!call.reference_failed && !snapshot.reference_parts.empty() &&
+                capture_native_unit_identity(call.unit, snapshot))
+            translated = g_overlay.translate_native_unit_identity(snapshot);
+        if (translated && translated->empty()) translated.reset();
+        if (call.publish)
+            remember_native_unit_identity(reinterpret_cast<uintptr_t>(output), original,
+                translated ? *translated : native_text_to_utf8(original), call.unit, false);
+        return translated;
+    } catch (...) {
+        // The overlay never changes DF's reference strings or visibility.
+    }
+    return std::nullopt;
+}
+
+static void capture_native_unit_reference(void *unit, NativeString *output) {
+    NativeInputCallbackScope callback;
+    NativeUnitIdentityCall call;
+    call.unit = reinterpret_cast<uintptr_t>(unit);
+    call.reference_output = output;
+    {
+        NativeUnitIdentityActiveScope scope(call);
+        const auto original = reinterpret_cast<NativeUnitIdentityNameOnlyFn>(
+            g_native_unit_identity_hooks.entries[5].original);
+        callback.call_native([&] { original(unit, output); });
+    }
+    finish_native_unit_reference_call(call, output);
+}
+
+// 132e430 has five native arguments. Its fifth stack argument decides whether
+// a custom profession replaces the selected RAW/office/status role.
+using NativeUnitMovementReferenceFn = void (*)(void *, NativeString *, int32_t, bool, bool);
+
+static void capture_native_unit_reference_selected_name(uintptr_t address) noexcept {
+    auto *call = g_native_unit_identity_call;
+    if (!call || !call->reference_output) return;
+    call->name_seen = true;
+    try {
+        std::array<int32_t, 7> indices;
+        if (!capture_native_history_name(g_native_unit_identity_hooks.base,
+                address, call->name, &indices)) {
+            call->name_failed = true;
+            return;
+        }
+        call->name_failed = false;
+        call->native_name_words_valid = capture_native_unit_identity_name_words(
+            address, call->name, call->native_name_words, &indices);
+    } catch (...) { call->name_failed = true; }
+}
+
+static const void *capture_native_unit_movement_selected_name(const void *identity) {
+    NativeInputCallbackScope callback;
+    const void *result = nullptr;
+    const auto original = reinterpret_cast<const void *(*)(const void *)>(
+        native_pe_address(g_native_unit_identity_hooks.base, 0xc3a4f0));
+    callback.call_native([&] { result = original(identity); });
+    capture_native_unit_reference_selected_name(reinterpret_cast<uintptr_t>(result));
+    return result;
+}
+
+static void capture_native_unit_movement_reference(void *unit, NativeString *output,
+        int32_t article, bool capitalize, bool use_custom) {
+    NativeInputCallbackScope callback;
+    NativeUnitIdentityCall call;
+    call.unit = reinterpret_cast<uintptr_t>(unit);
+    call.reference_output = output;
+    call.reference_use_custom = use_custom;
+    {
+        NativeUnitIdentityActiveScope scope(call);
+        capture_native_unit_reference_selected_name(call.unit + 8);
+        const auto original = reinterpret_cast<NativeUnitMovementReferenceFn>(
+            g_native_unit_identity_hooks.entries[6].original);
+        callback.call_native([&] { original(unit, output, article, capitalize, use_custom); });
+    }
+    finish_native_unit_reference_call(call, output);
+}
+
+static void capture_native_unit_movement_direct_name(const void *name, NativeString *output) {
+    capture_native_unit_identity_name(name, output);
+    try {
+        std::string_view source;
+        if (native_string_view(output, &source, 262144))
+            record_native_unit_reference_part<NativeUnitReferencePartKind::Name, true>(
+                output, source.data(), source.size());
+        else if (g_native_unit_identity_call) g_native_unit_identity_call->reference_failed = true;
+    } catch (...) {
+        if (g_native_unit_identity_call) g_native_unit_identity_call->reference_failed = true;
     }
 }
 
@@ -205,8 +400,30 @@ static std::optional<std::string> translate_native_unit_identity_reference(
             callback.call_native([&] { original(reinterpret_cast<void *>(unit), &output.value, false); });
         }
         std::string_view source;
-        if (!native_string_view(&output.value, &source, 65536) || source != expected)
-            return std::nullopt;
+        if (!native_string_view(&output.value, &source, 65536)) return std::nullopt;
+        if (source != expected) {
+            // Cached relation references use 1331500 rather than the ordinary
+            // name-comma-role formatter. Replay that exact native selection
+            // into a disposable string, retaining its hidden identity rules.
+            if (!hooks.entries[5].installed || !hooks.entries[5].original) return std::nullopt;
+            NativeSearchString reference_output(reinterpret_cast<NativeSearchDestroyFn>(
+                native_pe_address(hooks.base, 0x6f850)));
+            NativeUnitIdentityCall reference_call;
+            reference_call.unit = unit;
+            reference_call.publish = false;
+            reference_call.reference_output = &reference_output.value;
+            {
+                NativeUnitIdentityActiveScope scope(reference_call);
+                const auto original = reinterpret_cast<NativeUnitIdentityNameOnlyFn>(
+                    hooks.entries[5].original);
+                callback.call_native([&] {
+                    original(reinterpret_cast<void *>(unit), &reference_output.value);
+                });
+            }
+            if (!native_string_view(&reference_output.value, &source, 65536) || source != expected)
+                return std::nullopt;
+            return finish_native_unit_reference_call(reference_call, &reference_output.value);
+        }
         // Do not register the disposable string as a future draw owner.
         return finish_native_unit_identity_call<4>(call, &output.value, false);
     }
@@ -305,6 +522,10 @@ static bool install_native_unit_identity_hooks() {
             reinterpret_cast<const void *>(&capture_native_unit_identity_format<3>)},
         {0x1330c30, {0x48,0x89,0x5c,0x24,0x18},
             reinterpret_cast<const void *>(&capture_native_unit_identity_format<4>)},
+        {0x1331500, {0x48,0x89,0x5c,0x24,0x18},
+            reinterpret_cast<const void *>(&capture_native_unit_reference)},
+        {0x132e430, {0x48,0x89,0x5c,0x24,0x18},
+            reinterpret_cast<const void *>(&capture_native_unit_movement_reference)},
     };
     for (size_t i = 0; i < std::size(entries); ++i) {
         const auto &entry = entries[i];
@@ -344,6 +565,166 @@ static bool install_native_unit_identity_hooks() {
         {0x1330f86, 0xa94030,
             reinterpret_cast<const void *>(&capture_native_unit_identity_quoted_name),
             {0x45,0x88,0xe0}},
+        // Force/deity and ordinary references select their visible name here.
+        {0x13317b2, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x133183f, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x13319bb, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x1331a48, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x13333c8, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x1333454, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        // 9bdfb0 appends ` of ` plus an entity's English language_name. Its
+        // selected entity must never overwrite the reference's person name.
+        {0x9be076, 0xa946e0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_entity_name)},
+        {0x132ec56, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_identity_name)},
+        {0x132eeba, 0xa94030,
+            reinterpret_cast<const void *>(&capture_native_unit_movement_direct_name)},
+        {0x132e5a0, 0xc3a4f0,
+            reinterpret_cast<const void *>(&capture_native_unit_movement_selected_name)},
+        // Exact field append sites in 1331500 and 132e430. Keep every site and
+        // target literal so native PE mapping also registers the classic build.
+        {0x133167e, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x133187d, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x1331b12, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x1332efe, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x13334db, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Authored, true>)},
+        {0x13317cc, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x1331859, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x13319d5, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x1331a62, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x13333e2, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x133346e, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x1331b33, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Authored>)},
+        {0x1332f1d, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Curse>)},
+        {0x1332fe1, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Curse>)},
+        {0x13331a1, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Curse>)},
+        {0x1332fa6, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x1333016, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x1333144, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Species>)},
+        {0x13331cc, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Role>)},
+        {0x1333497, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Title>)},
+        {0x132e4cc, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x132ed96, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal, true>)},
+        {0x132eeaa, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::GivenName, true>)},
+        {0x132f939, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Authored, true>)},
+        {0x132ed67, 0x6f8d0,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name, true>)},
+        {0x132ede6, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Name>)},
+        {0x132edb0, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Role>)},
+        {0x132f7fb, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Role>)},
+        {0x132efb3, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132efc8, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f001, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f016, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f573, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f628, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f63d, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f685, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f6c9, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f6de, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f710, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f84d, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f8a6, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f8ca, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Literal>)},
+        {0x132f776, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Appearance>)},
+        {0x132f7cf, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Curse>)},
+        {0x132f86a, 0x6fa10,
+            reinterpret_cast<const void *>(&capture_native_unit_reference_part<
+                NativeUnitReferencePartKind::Curse>)},
     };
     if (!native_reference_calls(names, 0) ||
             !hooks.names.install(hooks.base, names, "Native unit identity name source")) return false;

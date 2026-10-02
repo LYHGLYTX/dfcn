@@ -754,6 +754,79 @@ native-ui.template.travel-terrain	0x14081a5ca+0x14081a627+0x14081a638+0x14081a66
 # Jump's separate constructor 0x1408a46d0 uses the same direction helper,
 # including /Below and /Above; it does not append a level count.
 native-ui.adventure-context.jump	0x1408a46ec+0x1408a4724	Jump to the {s}
+# Complete native RTTI/action types and both caption slots are retained in
+# adventure-action-types.tsv. The renderer selects slot +0x10 for categories
+# 3, 6 and 7, and slot +0x8 otherwise (0x140885553..0x140885586).
+# Jump obj+0x20 == 0 omits only its prefix and emits a complete direction;
+# Shoot/Throw tile use that same flag to omit their action prefix and retain
+# the complete terrain description from helper 0x140e7d330.
+# Jump's direction-only branch is listed by its 27 whole helper outputs below.
+# Shoot creature obj+0x38 == 0 is quick; nonzero is careful. Throw creature
+# uses obj+0x30. Both resolve the unit id at +0x24 and call unit-name helper
+# 0x14132e430. Failed lookups emit no caption, not a fabricated fallback.
+native-ui.adventure-context.shoot.unit.quick	0x1408a491a+0x1408a492f+0x1408a497b+0x1408a4999	Quickly shoot {n}
+native-ui.adventure-context.shoot.unit.careful	0x1408a491a+0x1408a4936+0x1408a497b+0x1408a4999	Aim carefully and shoot {n}
+native-ui.adventure-context.throw.unit.quick	0x1408a5efa+0x1408a5f0f+0x1408a5f5b+0x1408a5f79	Quickly throw at {n}
+native-ui.adventure-context.throw.unit.careful	0x1408a5efa+0x1408a5f16+0x1408a5f5b+0x1408a5f79	Aim carefully and throw at {n}
+native-ui.adventure-context.shoot.tile	0x1408a556b+0x1408a55bd+0x1408a55db	Shoot {s}
+# Shoot target-only: 0x1408a555f+0x1408a5563+0x1408a55bd+0x1408a55db;
+# complete native terrain compositor sources belong to tiles.toml.
+native-ui.adventure-context.throw.tile	0x1408a64fb+0x1408a654d+0x1408a656b	Throw at {s}
+# Throw target-only: 0x1408a64ef+0x1408a64f3+0x1408a654d+0x1408a656b;
+# complete native terrain compositor sources belong to tiles.toml.
+# Empty Attack target vector exits with Attack error. A single missing unit
+# emits creature; multiple targets emit creatures. Combat id -1 exits with
+# Combat error; a nonnegative missing unit emits creature. All noun fallbacks
+# retain the same optional location group as successful unit-name captions.
+native-ui.adventure-context.combat.error	0x14083fe24+0x14083fe35+0x14083fe3d	Attack error
+native-ui.adventure-context.combat.error	0x140840054+0x14084005b+0x140840063	Combat error
+native-ui.adventure-context.combat.fallback.single	0x14083fe6f+0x14083fee0+0x14083ff87+0x14083ffae+0x140840008	Attack creature
+native-ui.adventure-context.combat.fallback.single	0x14083fe6f+0x14083fee0+0x14083ff87+0x14083ffee+0x14083fff9	Attack creature ({s})
+native-ui.adventure-context.combat.fallback.plural	0x14083fe6f+0x14083fe73+0x14083ff96+0x14083ffae+0x140840008	Attack creatures
+native-ui.adventure-context.combat.fallback.plural	0x14083fe6f+0x14083fe73+0x14083ff96+0x14083ffee+0x14083fff9	Attack creatures ({s})
+native-ui.adventure-context.combat.fallback	0x1408400e2+0x140840189+0x1408401a1+0x1408401fb	Combat creature
+native-ui.adventure-context.combat.fallback	0x1408400e2+0x140840189+0x1408401e1+0x1408401ec	Combat creature ({s})
+# Item detail captions append the entire item name with helper 0x140c65450,
+# arguments r8d=0/r9d=1, object at option+0x10. Eat/Drink chooses its verb
+# from the item's virtual +0x2b0 result (nonzero = Drink). None appends a
+# direction, partial body-part name or location in these seven constructors.
+native-ui.adventure-context.item-detail.view	0x1408942a5+0x1408942e5+0x140894303	View {s}
+native-ui.adventure-context.item-detail.drop	0x140894395+0x1408943d5+0x1408943f3	Drop {s}
+native-ui.adventure-context.item-detail.throw	0x140894485+0x1408944c5+0x1408944e3	Throw {s}
+native-ui.adventure-context.item-detail.wear	0x140894575+0x1408945b5+0x1408945d3	Wear {s}
+native-ui.adventure-context.item-detail.remove	0x140894665+0x1408946a5+0x1408946c3	Remove {s}
+native-ui.adventure-context.item-detail.put	0x140894755+0x140894795+0x1408947b3	Put or place {s}
+native-ui.adventure-context.item-detail.eat	0x140894846+0x14089485d+0x1408948a8+0x1408948c6	Eat {s}
+native-ui.adventure-context.item-detail.drink	0x140894846+0x140894864+0x1408948a8+0x1408948c6	Drink {s}
+# Direction helper has 27 whole outputs: eight horizontal directions times
+# three z branches, plus pure Below/Above/Here when x and y both coincide.
+native-ui.adventure-context.direction	0x14074f269	NW
+native-ui.adventure-context.direction	0x14074f269+0x14074f36f	NW/Below
+native-ui.adventure-context.direction	0x14074f269+0x14074f37a	NW/Above
+native-ui.adventure-context.direction	0x14074f282	SW
+native-ui.adventure-context.direction	0x14074f282+0x14074f36f	SW/Below
+native-ui.adventure-context.direction	0x14074f282+0x14074f37a	SW/Above
+native-ui.adventure-context.direction	0x14074f299	West
+native-ui.adventure-context.direction	0x14074f299+0x14074f36f	West/Below
+native-ui.adventure-context.direction	0x14074f299+0x14074f37a	West/Above
+native-ui.adventure-context.direction	0x14074f2bc	NE
+native-ui.adventure-context.direction	0x14074f2bc+0x14074f36f	NE/Below
+native-ui.adventure-context.direction	0x14074f2bc+0x14074f37a	NE/Above
+native-ui.adventure-context.direction	0x14074f2d5	SE
+native-ui.adventure-context.direction	0x14074f2d5+0x14074f36f	SE/Below
+native-ui.adventure-context.direction	0x14074f2d5+0x14074f37a	SE/Above
+native-ui.adventure-context.direction	0x14074f2ec	East
+native-ui.adventure-context.direction	0x14074f2ec+0x14074f36f	East/Below
+native-ui.adventure-context.direction	0x14074f2ec+0x14074f37a	East/Above
+native-ui.adventure-context.direction	0x14074f301	North
+native-ui.adventure-context.direction	0x14074f301+0x14074f36f	North/Below
+native-ui.adventure-context.direction	0x14074f301+0x14074f37a	North/Above
+native-ui.adventure-context.direction	0x14074f312	South
+native-ui.adventure-context.direction	0x14074f312+0x14074f36f	South/Below
+native-ui.adventure-context.direction	0x14074f312+0x14074f37a	South/Above
+native-ui.adventure-context.direction	0x14074f327	Below
+native-ui.adventure-context.direction	0x14074f338	Above
+native-ui.adventure-context.direction	0x14074f347	Here
 native-ui.adventure-context.combat	0x14083fe54+0x14083ffb6+0x14083fff9	Attack {n} ({s})
 native-ui.adventure-context.combat	0x14084007a+0x1408401a9+0x1408401ec	Combat {n} ({s})
 native-ui.adventure-context.interaction	0x14084024a+0x14084037f	Push {s} to {s}
@@ -848,6 +921,46 @@ native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841e31+0x140841
 native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841d25+0x140841d5d+0x140841e31+0x140841e75+0x140841e87	Hang from {s} ({s} from {s}/Magma)
 native-ui.adventure-context.climbing	0x1408422da+0x140842410+0x140842448+0x14084251d+0x140842564+0x140842576	Climb ({s}/Magma)
 native-ui.adventure-context.climbing	0x1408422da+0x140842358+0x140842397+0x140842410+0x140842448+0x14084251d+0x140842564+0x140842576	Climb {s} ({s}/Magma)
+# Medium appends are sequential: Air is followed by water/magma depth checks,
+# not an else-if chain. The depth helpers 0x140247d80 and 0x1402c3a90 read
+# designation bits 0..2 and opposite bit21 branches, so Water and Lava/Magma
+# cannot coexist. Air accepts depth <=6; positive shallow liquid depth can
+# therefore produce Air/Water, Air/Lava or Air/Magma. Lava/Magma is selected
+# by designation bit15 from 0x14007dc40. Whole location omission removes both.
+# Movement Air tile types are 1,32,35,42 at 0x1408417ba..0x1408417cf.
+native-ui.adventure-context.movement.terrain	0x140841481+0x140841716+0x140841805+0x140841839+0x1408418c7	Move to {s} ({s}/Air/Water)
+native-ui.adventure-context.movement.terrain	0x140841488+0x140841716+0x140841805+0x140841839+0x1408418c7	Charge {s} ({s}/Air/Water)
+native-ui.adventure-context.movement.unit	0x140841488+0x140841716+0x140841805+0x140841839+0x1408418c7	Charge {n} ({s}/Air/Water)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a00+0x140841a35+0x140841ab8+0x140841aeb+0x140841b77	Climb to {s} ({s} holding {s}/Air/Water)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a42+0x140841ab8+0x140841aeb+0x140841b77	Climb to {s} ({s} releasing hold/Air/Water)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841dcb+0x140841dfe+0x140841e87	Hold {s} ({s}/Air/Water)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841dfe+0x140841e87	Hold {s} ({s} from {s}/Air/Water)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841dcb+0x140841dfe+0x140841e87	Hang from {s} ({s}/Air/Water)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841dfe+0x140841e87	Hang from {s} ({s} from {s}/Air/Water)
+native-ui.adventure-context.climbing	0x1408422da+0x140842410+0x140842448+0x1408424b7+0x1408424ea+0x140842576	Climb ({s}/Air/Water)
+native-ui.adventure-context.climbing	0x1408422da+0x140842358+0x140842397+0x140842410+0x140842448+0x1408424b7+0x1408424ea+0x140842576	Climb {s} ({s}/Air/Water)
+native-ui.adventure-context.movement.terrain	0x140841481+0x140841716+0x140841805+0x14084186d+0x1408418a6+0x1408418c7	Move to {s} ({s}/Air/Lava)
+native-ui.adventure-context.movement.terrain	0x140841488+0x140841716+0x140841805+0x14084186d+0x1408418a6+0x1408418c7	Charge {s} ({s}/Air/Lava)
+native-ui.adventure-context.movement.unit	0x140841488+0x140841716+0x140841805+0x14084186d+0x1408418a6+0x1408418c7	Charge {n} ({s}/Air/Lava)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a00+0x140841a35+0x140841ab8+0x140841b1e+0x140841b56+0x140841b77	Climb to {s} ({s} holding {s}/Air/Lava)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a42+0x140841ab8+0x140841b1e+0x140841b56+0x140841b77	Climb to {s} ({s} releasing hold/Air/Lava)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841dcb+0x140841e31+0x140841e69+0x140841e87	Hold {s} ({s}/Air/Lava)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841e31+0x140841e69+0x140841e87	Hold {s} ({s} from {s}/Air/Lava)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841dcb+0x140841e31+0x140841e69+0x140841e87	Hang from {s} ({s}/Air/Lava)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841e31+0x140841e69+0x140841e87	Hang from {s} ({s} from {s}/Air/Lava)
+native-ui.adventure-context.climbing	0x1408422da+0x140842410+0x140842448+0x1408424b7+0x14084251d+0x140842555+0x140842576	Climb ({s}/Air/Lava)
+native-ui.adventure-context.climbing	0x1408422da+0x140842358+0x140842397+0x140842410+0x140842448+0x1408424b7+0x14084251d+0x140842555+0x140842576	Climb {s} ({s}/Air/Lava)
+native-ui.adventure-context.movement.terrain	0x140841481+0x140841716+0x140841805+0x14084186d+0x1408418b5+0x1408418c7	Move to {s} ({s}/Air/Magma)
+native-ui.adventure-context.movement.terrain	0x140841488+0x140841716+0x140841805+0x14084186d+0x1408418b5+0x1408418c7	Charge {s} ({s}/Air/Magma)
+native-ui.adventure-context.movement.unit	0x140841488+0x140841716+0x140841805+0x14084186d+0x1408418b5+0x1408418c7	Charge {n} ({s}/Air/Magma)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a00+0x140841a35+0x140841ab8+0x140841b1e+0x140841b65+0x140841b77	Climb to {s} ({s} holding {s}/Air/Magma)
+native-ui.adventure-context.climbing	0x14084192a+0x1408419ec+0x140841a42+0x140841ab8+0x140841b1e+0x140841b65+0x140841b77	Climb to {s} ({s} releasing hold/Air/Magma)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841dcb+0x140841e31+0x140841e75+0x140841e87	Hold {s} ({s}/Air/Magma)
+native-ui.adventure-context.holding	0x140841c2f+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841e31+0x140841e75+0x140841e87	Hold {s} ({s} from {s}/Air/Magma)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841dcb+0x140841e31+0x140841e75+0x140841e87	Hang from {s} ({s}/Air/Magma)
+native-ui.adventure-context.holding	0x140841c36+0x140841cfc+0x140841d25+0x140841d5d+0x140841dcb+0x140841e31+0x140841e75+0x140841e87	Hang from {s} ({s} from {s}/Air/Magma)
+native-ui.adventure-context.climbing	0x1408422da+0x140842410+0x140842448+0x1408424b7+0x14084251d+0x140842564+0x140842576	Climb ({s}/Air/Magma)
+native-ui.adventure-context.climbing	0x1408422da+0x140842358+0x140842397+0x140842410+0x140842448+0x1408424b7+0x14084251d+0x140842564+0x140842576	Climb {s} ({s}/Air/Magma)
 native-ui.adventure-context.path	0x140842adc	Path to here
 native-ui.adventure-context.path	0x140842adc+0x140842b1e+0x140842b41+0x140842b4c+0x140842b99	Path to here ({d} level up)
 native-ui.adventure-context.path	0x140842adc+0x140842b1e+0x140842b41+0x140842b4c+0x140842bb5	Path to here ({d} level down)
@@ -2579,3 +2692,4 @@ fortress.diplomacy.controls	0x165efb0+0x1663827	No positions available
 fortress.introduction.revisit	0x137ab26	A Dwarven Outpost Revisited: You have returned.
 fortress.introduction.revisit	0x137b19e+0x137b17e+0x137b15e	How have your sturdy charges fared in your absence? Have they gone on adventures or moved on to richer delving at new frontier settlements? Perhaps they are all still here, unwilling to leave the magnificent fortress you prepared for them.
 fortress.introduction.revisit	0x137b11e	Deep underground, the promise of treasure and the thrill of overcoming danger have lured you back to this place. Will you strike the earth again?
+

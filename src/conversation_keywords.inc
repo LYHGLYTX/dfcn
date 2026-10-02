@@ -129,8 +129,27 @@ std::optional<std::string> Overlay::translate_adventure_action_choice(
     }
     // Use this exact priority for both complete native search candidates and
     // visible action buttons, including the prompt's name-only submenus.
-    auto target = exact_literal_translation("Adventure action: " + normalized);
+    auto target = native_unit_identity_source_target(source);
+    if (!target && !native_choice && normalized == "A")
+        target = exact_literal_translation("Adventure vermin: A");
+    if (!target) target = exact_literal_translation("Adventure action: " + normalized);
     if (!target) target = translate_adventure_item_action(normalized);
+    if (!target) {
+        // View-contaminant's native caption has no verb. Its complete
+        // material/amount and body-part suffix still form one typed choice.
+        std::vector<size_t> origins;
+        target = RULESETS.translate_with_origins(native_text_to_utf8(normalized),
+            "::health::contaminant::inventory", origins);
+    }
+    if (!target && !native_choice) {
+        // Virtual slot +8 also returns bare inventory designations and RAW
+        // creature labels. Resolve their complete typed grammar before names.
+        target = translate_inventory_item_name(normalized, -1, -1);
+        if (!target) target = translate_inventory_location(normalized, -1, -1);
+        if (!target) target = translate_creature_descriptor(normalized, true);
+        if (!target) target = translate_creature_label(normalized);
+        if (!target) target = RULESETS.translate_tile_description(native_text_to_utf8(normalized));
+    }
     // Name fields preserve the player's nickname spelling, including spaces.
     // Only action lookup above uses the normalized caption.
     if (!target) target = translate_procedural_fragment(
@@ -139,6 +158,8 @@ std::optional<std::string> Overlay::translate_adventure_action_choice(
     if (target) return uniform_colors(std::move(target));
     target = translate_help_paragraph(source, source_colors, target_colors, true);
     if (target) return target;
+    target = translate_ui_message_capture(normalized, false);
+    if (target) return uniform_colors(std::move(target));
     return uniform_colors(translate_conversation_choice(source));
 }
 

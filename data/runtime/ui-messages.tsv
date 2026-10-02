@@ -936,7 +936,95 @@ Hang from {s}[[ ({s}/Magma)]]	悬挂于{s1}[[（{s2}／岩浆）]]
 Hang from {s}[[ ({s} from {s}/Magma)]]	悬挂于{s1}[[（{s2}，从{s3}／岩浆）]]
 Climb[[ ({s}/Magma)]]	攀爬[[（{s}／岩浆）]]
 Climb {s}[[ ({s}/Magma)]]	攀爬{s1}[[（{s2}／岩浆）]]
+# Air is appended before the independent liquid branch. Shallow liquids can
+# therefore retain both media; native water and magma depth helpers are
+# mutually exclusive through designation bit21.
+Move to {s}[[ ({s}/Air/Water)]]	移动到{s1}[[（{s2}／空气／水）]]
+Charge {s}[[ ({s}/Air/Water)]]	冲锋攻击{s1}[[（{s2}／空气／水）]]
+Charge {n}[[ ({s}/Air/Water)]]	冲锋攻击{n}[[（{s}／空气／水）]]
+Climb to {s}[[ ({s} holding {s}/Air/Water)]]	攀向{s1}[[（{s2}，抓着{s3}／空气／水）]]
+Climb to {s}[[ ({s} releasing hold/Air/Water)]]	攀向{s1}[[（{s2}，松开抓住的手／空气／水）]]
+Hold {s}[[ ({s}/Air/Water)]]	抓住{s1}[[（{s2}／空气／水）]]
+Hold {s}[[ ({s} from {s}/Air/Water)]]	抓住{s1}[[（{s2}，从{s3}／空气／水）]]
+Hang from {s}[[ ({s}/Air/Water)]]	悬挂于{s1}[[（{s2}／空气／水）]]
+Hang from {s}[[ ({s} from {s}/Air/Water)]]	悬挂于{s1}[[（{s2}，从{s3}／空气／水）]]
+Climb[[ ({s}/Air/Water)]]	攀爬[[（{s}／空气／水）]]
+Climb {s}[[ ({s}/Air/Water)]]	攀爬{s1}[[（{s2}／空气／水）]]
+Move to {s}[[ ({s}/Air/Lava)]]	移动到{s1}[[（{s2}／空气／熔岩）]]
+Charge {s}[[ ({s}/Air/Lava)]]	冲锋攻击{s1}[[（{s2}／空气／熔岩）]]
+Charge {n}[[ ({s}/Air/Lava)]]	冲锋攻击{n}[[（{s}／空气／熔岩）]]
+Climb to {s}[[ ({s} holding {s}/Air/Lava)]]	攀向{s1}[[（{s2}，抓着{s3}／空气／熔岩）]]
+Climb to {s}[[ ({s} releasing hold/Air/Lava)]]	攀向{s1}[[（{s2}，松开抓住的手／空气／熔岩）]]
+Hold {s}[[ ({s}/Air/Lava)]]	抓住{s1}[[（{s2}／空气／熔岩）]]
+Hold {s}[[ ({s} from {s}/Air/Lava)]]	抓住{s1}[[（{s2}，从{s3}／空气／熔岩）]]
+Hang from {s}[[ ({s}/Air/Lava)]]	悬挂于{s1}[[（{s2}／空气／熔岩）]]
+Hang from {s}[[ ({s} from {s}/Air/Lava)]]	悬挂于{s1}[[（{s2}，从{s3}／空气／熔岩）]]
+Climb[[ ({s}/Air/Lava)]]	攀爬[[（{s}／空气／熔岩）]]
+Climb {s}[[ ({s}/Air/Lava)]]	攀爬{s1}[[（{s2}／空气／熔岩）]]
+Move to {s}[[ ({s}/Air/Magma)]]	移动到{s1}[[（{s2}／空气／岩浆）]]
+Charge {s}[[ ({s}/Air/Magma)]]	冲锋攻击{s1}[[（{s2}／空气／岩浆）]]
+Charge {n}[[ ({s}/Air/Magma)]]	冲锋攻击{n}[[（{s}／空气／岩浆）]]
+Climb to {s}[[ ({s} holding {s}/Air/Magma)]]	攀向{s1}[[（{s2}，抓着{s3}／空气／岩浆）]]
+Climb to {s}[[ ({s} releasing hold/Air/Magma)]]	攀向{s1}[[（{s2}，松开抓住的手／空气／岩浆）]]
+Hold {s}[[ ({s}/Air/Magma)]]	抓住{s1}[[（{s2}／空气／岩浆）]]
+Hold {s}[[ ({s} from {s}/Air/Magma)]]	抓住{s1}[[（{s2}，从{s3}／空气／岩浆）]]
+Hang from {s}[[ ({s}/Air/Magma)]]	悬挂于{s1}[[（{s2}／空气／岩浆）]]
+Hang from {s}[[ ({s} from {s}/Air/Magma)]]	悬挂于{s1}[[（{s2}，从{s3}／空气／岩浆）]]
+Climb[[ ({s}/Air/Magma)]]	攀爬[[（{s}／空气／岩浆）]]
+Climb {s}[[ ({s}/Air/Magma)]]	攀爬{s1}[[（{s2}／空气／岩浆）]]
 Jump to the {s}	向{s}跳跃
+# Native movement ranged attacks: quick/careful flags change the complete verb.
+Quickly shoot {n}	快速射击{n}
+Aim carefully and shoot {n}	仔细瞄准并射击{n}
+Quickly throw at {n}	快速向{n}投掷
+Aim carefully and throw at {n}	仔细瞄准并向{n}投掷
+Shoot {s}	射击{s}
+Throw at {s}	向{s}投掷
+# Fixed lookup fallbacks are nouns, not personal-name captures.
+Attack error	攻击错误
+Combat error	战斗错误
+Attack creature[[ ({s})]]	攻击生物[[（{s}）]]
+Attack creatures[[ ({s})]]	攻击多个生物[[（{s}）]]
+Combat creature[[ ({s})]]	与生物战斗[[（{s}）]]
+# Native category 3/6/7 dispatch uses virtual slot +0x10. The object capture
+# preserves the whole item description supplied by 0x140c65450.
+View {s}	查看{s}
+Drop {s}	丢下{s}
+Throw {s}	投掷{s}
+Wear {s}	穿戴{s}
+Remove {s}	脱下{s}
+Put or place {s}	放下或放置{s}
+Eat {s}	吃{s}
+Drink {s}	喝{s}
+# Jump's prefix-free branch uses the finite direction compositor directly.
+# A horizontal direction may independently append /Below or /Above.
+NW	西北
+NW/Below	西北／下方
+NW/Above	西北／上方
+SW	西南
+SW/Below	西南／下方
+SW/Above	西南／上方
+West	西
+West/Below	西／下方
+West/Above	西／上方
+NE	东北
+NE/Below	东北／下方
+NE/Above	东北／上方
+SE	东南
+SE/Below	东南／下方
+SE/Above	东南／上方
+East	东
+East/Below	东／下方
+East/Above	东／上方
+North	北
+North/Below	北／下方
+North/Above	北／上方
+South	南
+South/Below	南／下方
+South/Above	南／上方
+Below	下方
+Above	上方
+Here	此处
 Path to here	寻路至此
 Path to here ({d} level up)	寻路至此（上方{d}层）
 Path to here ({d} level down)	寻路至此（下方{d}层）

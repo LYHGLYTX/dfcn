@@ -647,7 +647,17 @@ std::optional<std::string> Overlay::translate_legends_nested(
                          rule.source.starts_with("a {s}") ||
                          rule.source.starts_with("an {s}")))
                     target = translate_creature_descriptor(part, true);
-                else if (field == 0 && rule.source.starts_with("This person is ")) {
+                else if (rule.legends_identity && field == 1 &&
+                        (rule.source.starts_with("the {s} the {s}") ||
+                         rule.source.starts_with("the {s} {s}") ||
+                         rule.source.starts_with("a {s} {s}") ||
+                         rule.source.starts_with("an {s} {s}"))) {
+                    // This native identity slot is a complete occupation or
+                    // office, including its territory and role modifiers.
+                    // Reuse the strict unit-role grammar so scoped offices
+                    // such as warlord cannot fall through to personal names.
+                    target = translate_unit_profession(part, false);
+                } else if (field == 0 && rule.source.starts_with("This person is ")) {
                     // Journal office statements share the history office
                     // vocabulary, including titles whose ordinary sense
                     // differs (master, chief). Keep this lookup scoped to

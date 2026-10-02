@@ -23131,6 +23131,7 @@ A small dinosaur person with a bony head crest.	一种小型恐龙类人形生�
 A small feathered bipedal dinosaur with a beak.	一种带羽毛的小型双足恐龙，嘴呈喙状。	lP
 A tiny amphibian, found in underground streams.	一种在地底溪流中发现的小型两栖动物。	lP
 A tiny brown bug known for its powerful poison.	一种因其强大的毒素闻名的小型棕色虫子。	lP
+Adventure item action: Drink {s} from {s} ({p})	饮用{s2}中的{s1}（{p}）	h
 Adventure item action: Heat {s} near fire ({p})	在火旁加热{s}（{p}）	h
 Adventure item action: Heat {s} near lava ({p})	在熔岩旁加热{s}（{p}）	h
 Adventurer log reputation: famous loyal soldier	名声显赫的忠诚军人	h
@@ -24156,6 +24157,8 @@ A small feline predator with a shortened tail.	一种尾巴缩短的小型猫科
 A small whiskered fish found in inland waters.	在内陆水域发现的一种带须的小型鱼类。	lP
 A tiny flying reptile with a small round head.	一种微小的飞行爬行动物，头部小而圆。	lP
 A very large dinosaur person with a long neck.	一种体型很大、颈部修长的恐龙类人形生物。	lP
+Adventure item action: Fill {s} from {s} ({p})	用{s2}中的内容物装满{s1}（{p}）	h
+Adventure item action: Fill {s} with {s} ({p})	用{s2}装满{s1}（{p}）	h
 Adventurer log group status: Aligned mercenary	立场一致的佣兵	h
 Adventurer log group status: Devoted mercenary	忠心耿耿的佣兵	h
 Adventurer log reputation: known enemy fighter	众所周知的敌方战士	h
@@ -25255,6 +25258,7 @@ A small fruit-eating ape, found in the trees.	一种吃水果的小型猿猴，�
 A small mammal resembling a large, white rat.	一个类似大白鼠的小型哺乳动物。	lP
 A very small reptile with a divided carapace.	一种很小的爬行动物，甲壳分成两部分。	lP
 A worm-like creature with the torso of a man.	一种长得像蠕虫的人形生物。	lP
+Adventure item action: Eat {s} from {s} ({p})	食用{s2}中的{s1}（{p}）	h
 Adventure item action: Heat {s} near campfire	在篝火旁加热{s}	h
 Adventurer log group status: Affiliated slave	附属奴隶	h
 Adventurer log group status: Associated slave	有关联的奴隶	h
@@ -27527,6 +27531,8 @@ Bring up {p}'s export prohibition violation	谈起{p1}违反出口禁令这件�
 CONTINUE until you give me another warning.	继续生成，直到再次出现警告。	l
 Choose which squads will use this barracks.	选择使用此兵营的小队。	hj
 Click in the play area to paint the burrow.	在游戏区域中点击，涂画活动区。	hP
+Climb to {s} ({s} releasing hold/Air/Magma)	攀向{s1}（{s2}，松开抓住的手／空气／岩浆）	hPt
+Climb to {s} ({s} releasing hold/Air/Water)	攀向{s1}（{s2}，松开抓住的手／空气／水）	hPt
 Conversation keyword: accuse night creature	指控 夜行生物	l
 Conversation keyword: bone doctor join work	骨科医师 加入 工作	l
 Conversation keyword: confirm service order	确认 服务 订单	l
@@ -28713,6 +28719,7 @@ Change the type of the item being checked.	修改要检查的物品类型。	hj
 Change the weather, temperature, and time.	修改天气、温度和时间。	hj
 Choose a musical form for the composition.	为这次创作选择一种音乐形式。	hP
 Citizen/resident dig speed (more = faster)	公民/居民挖掘速度（越高越快）
+Climb to {s} ({s} releasing hold/Air/Lava)	攀向{s1}（{s2}，松开抓住的手／空气／熔岩）	hPt
 Come with me and I'll bring you to safety.	跟我来，我会带你到安全的地方。	hP
 Conversation keyword: building destruction	毁坏建筑	l
 Conversation keyword: join service soldier	加入 效力 士兵	l
@@ -29967,6 +29974,7 @@ A tiny amphibian that lives in the trees.	一种生活在树上的微型两栖�
 A tiny marine fish found in vast schools.	一种在大量鱼群中发现的微小海鱼。	lP
 Accuse listener of being a night creature	指控对方是夜行生物	hP
 Acknowledge lack of righteous indignation	表示没有义愤	hP
+Adventure item action: Drink {s} from {s}	饮用{s2}中的{s1}	h
 Adventure item action: Heat {s} near fire	在火旁加热{s}	h
 Adventure item action: Heat {s} near lava	在熔岩旁加热{s}	h
 Adventurer log group status: Former slave	前奴隶	h
@@ -31293,6 +31301,7 @@ A large monster in the shape of a stoat.	一只体型巨大的白鼬怪。	lP
 A large person with the head of a hippo.	一种长着河马头的体型庞大的人形生物。	lP
 A large sloth person with a long tongue.	一种大型树懒类人形生物，长着长舌头。	lP
 A thousand or more people were expelled.	至少一千人遭到驱逐。	h
+Adventure environment modifier: stagnant	停滞的	h
 Adventure item action: Fill {s} from {s}	用{s2}中的内容物装满{s1}	h
 Adventure item action: Fill {s} with {s}	用{s2}装满{s1}	h
 Adventure: move view/cursor up (z), fast	冒险模式：向上移动视野/光标（z），快速	w
@@ -31355,6 +31364,8 @@ Bring up {p}'s lack of possession of {i}	谈起{p1}未持有{i1}这件事	hPt
 Can you tell me where I can find myself?	能告诉我到哪里能找到我自己吗？	hP
 Cancel this position's scheduled orders.	取消此职位的日程命令。	hj
 Charge attack: move toward your opponent	冲锋攻击：朝对手移动。	hP
+Climb to {s} ({s} holding {s}/Air/Magma)	攀向{s1}（{s2}，抓着{s3}／空气／岩浆）	hPt
+Climb to {s} ({s} holding {s}/Air/Water)	攀向{s1}（{s2}，抓着{s3}／空气／水）	hPt
 Come see me at the trade depot sometime.	有空到贸易站来找我。	hP
 Conversation keyword: crime of espionage	间谍罪	l
 Conversation keyword: demand item object	要求 物品 物件	l
@@ -32592,6 +32603,7 @@ A small orange monkey with a long tail.	一只有长尾的橙色小猴子。	lP
 A small, slender gazelle-like creature.	一种像瞪羚一样的小而细长的生物。	lP
 A thousand or more people were expelled	至少一千人遭到驱逐	h
 A tiny land mollusk with a large shell.	一个有着大壳的小型陆地软体动物。	lP
+Adventure item action: Eat {s} from {s}	食用{s2}中的{s1}	h
 Adventure item action: Guide {s} to {p}	将{s}引向{p}	h
 Adventure item action: Put in {s} ({p})	放入{s}（{p}）	h
 Adventure item action: Put on {n} ({p})	放到{n}上（{p}）	h
@@ -32643,6 +32655,7 @@ Bring up {p}'s crime of attempted theft	谈起{p1}犯下盗窃未遂罪这件事
 Calcite/limestone/chalk/marble boulders	方解石/石灰岩/白垩岩/大理石岩块	wi
 Change the inequality of the condition.	修改此条件的数量比较方式。	hj
 Click a tile to be a corner of the {s}.	点击一个地格，作为{s1}的一个角。	hPt
+Climb to {s} ({s} holding {s}/Air/Lava)	攀向{s1}（{s2}，抓着{s3}／空气／熔岩）	hPt
 Climb to {s} ({s} releasing hold/Magma)	攀向{s1}（{s2}，松开抓住的手／岩浆）	hPt
 Climb to {s} ({s} releasing hold/Water)	攀向{s1}（{s2}，松开抓住的手／水）	hPt
 Conversation keyword: feelings emotions	感受 情绪	l
@@ -33983,6 +33996,7 @@ A section of the cavern has collapsed!	洞穴的一部分坍塌了！	hP
 A small, grey, tree-dwelling creature.	一种居住在树上的灰色小生物。	lP
 Acknowledge lack of existential crisis	表示没有存在危机	hP
 Add stockpile links for this workshop.	为此工坊添加储物堆连接。	hj
+Adventure item action: Drink {s} ({p})	饮用{s}（{p}）	h
 Adventure item action: Drink {s} ({s})	饮用{s1}（{s2}）	h
 Adventure item action: Gain possession	取得所有权	h
 Adventure item action: Push {s} to {p}	将{s}推向{p}	h
@@ -34060,6 +34074,8 @@ Fortress activity: suffix (no library)	（没有图书馆）	li
 Fortress item claim: Symbol of the {s}	{s}的象征物	ht
 Gift a (large) pet or mount (new menu)	赠送（大型）宠物或坐骑（新菜单）	hP
 Greatly respected for hunting treasure	因狩猎宝物而受人尊敬	w
+Hang from {s} ({s} from {s}/Air/Magma)	悬挂于{s1}（{s2}，从{s3}／空气／岩浆）	hPt
+Hang from {s} ({s} from {s}/Air/Water)	悬挂于{s1}（{s2}，从{s3}／空气／水）	hPt
 Histories of Avarice and Determination	贪婪与决心的编年史	w
 Histories of Cupidity and Perseverance	贪欲与毅力的编年史	w
 Histories of Gluttony and Perseverance	暴食与毅力的编年史	w
@@ -35437,6 +35453,8 @@ A huge monster in the shape of a fox.	一只巨大的狐狸怪。	lP
 A tiny, colorful, long-bodied insect.	一种小型、色彩斑斓的长体昆虫。	lP
 A vile force of darkness has arrived!	一支邪恶的黑暗势力已经到来！	hP
 Acknowledge lack of grim satisfaction	表示没有冷酷的满足	hP
+Adventure item action: Heat {s} ({p})	加热{s}（{p}）	h
+Adventure item action: Suck {n}'s {s}	吸取{n}的{s}	h
 Adventurer log group status: Criminal	罪犯	h
 Adventurer log group status: Prisoner	囚犯	h
 Adventurer log reputation: known ally	众所周知的同盟者	h
@@ -35492,6 +35510,7 @@ Fortress activity: Skillfully trained	训练娴熟	li
 Fortress activity: suffix (no burrow)	（没有活动区）	li
 Fortress activity: suffix (no temple)	（没有神殿）	li
 Greatly feared for violent oppositoin	非常害怕暴力的反抗	w
+Hang from {s} ({s} from {s}/Air/Lava)	悬挂于{s1}（{s2}，从{s3}／空气／熔岩）	hPt
 Her raw umber eyes have slightly thin	她深棕色眼睛的虹膜略显	l
 Hidden, cannot build at this location	不可见，无法在此处建造	wli
 His raw umber eyes have slightly thin	他深棕色眼睛的虹膜略显	l
@@ -36883,7 +36902,9 @@ A huge monster the shape of a moose.	一只巨大的驼鹿怪。	lP
 A huge woolly mammal with two horns.	一种巨大的长毛哺乳动物，长有两根角。	lP
 A person with the head of a warthog.	一种长着疣猪头的人形生物。	lP
 A {s} diplomat from {e} has arrived.	来自{e1}的{s1}外交官已抵达。	hPt
+Adventure environment modifier: salt	含盐的	h
 Adventure item action: Cease nocking	停止搭箭	h
+Adventure item action: Eat {s} ({p})	食用{s}（{p}）	h
 Adventure item action: Eat {s} ({s})	食用{s1}（{s2}）	h
 Adventure item action: Load into {s}	装入{s}	h
 Adventure: move view/cursor down (z)	冒险模式：向下移动视野/光标（z）	w
@@ -40082,6 +40103,7 @@ A very large legless shark person.	一种体型很大、没有腿的鲨鱼类人
 Ability to grasp somewhat impaired	抓取能力有所受损	w
 Ability to stand somewhat impaired	直立能力有所受损	w
 Acknowledge lack of disappointment	表示没有失望	hP
+Adventure item action: A {s} ({p})	一只{s}（{p}）	h
 Adventure item action: Nock in {s}	在{s}上搭箭	h
 Adventure item action: Pull it out	将其拔出	h
 Adventure movement: Worst Possible	最差	l
@@ -41846,6 +41868,8 @@ Histories of Avarice and Exertion	贪婪与努力的编年史	w
 Histories of Avarice and Industry	贪婪与勤勉的编年史	w
 Histories of Avarice and Tenacity	贪婪与韧性的编年史	w
 Histories of Greed and Enterprise	贪婪与进取的编年史	w
+Hold {s} ({s} from {s}/Air/Magma)	抓住{s1}（{s2}，从{s3}／空气／岩浆）	hPt
+Hold {s} ({s} from {s}/Air/Water)	抓住{s1}（{s2}，从{s3}／空气／水）	hPt
 Hotkey: Building, Siege, Ballista	热键：建筑，攻城器械，弩炮	w
 Hotkey: Building, Siege, Catapult	热键：建筑，攻城器械，投石机	w
 Hotkey: Building, Wksp, Carpenter	热键：建筑，工坊，木匠工坊	w
@@ -43349,6 +43373,7 @@ Acknowledge lack of vengefulness	表示没有复仇心	hP
 Adventure item action: Drink {s}	饮用{s}	h
 Adventure item action: Load into	装填	h
 Adventure item action: Throw {s}	投掷{s}	h
+Adventure item action: {s} ({p})	{s}（{p}）	h
 Adventure movement: Faster Crawl	更快爬行	l
 Adventurer, choose your destiny!	冒险者，选择你的命运！	l
 Age of {a} and {a} in the wilds.	在荒野中，{a1}与{a2}时代。	htEi
@@ -43464,6 +43489,7 @@ Histories of Cupidity and Mettle	贪欲与勇气的编年史	w
 Histories of Gluttony and Mettle	暴食与勇气的编年史	w
 Histories of Greed and Diligence	贪婪与勤奋的编年史	w
 Histories of Jealousy and Mettle	嫉妒与勇气的编年史	w
+Hold {s} ({s} from {s}/Air/Lava)	抓住{s1}（{s2}，从{s3}／空气／熔岩）	hPt
 Horizontal keyboard scroll tiles	水平键盘滚动图块	w
 Hotkey: Building, Archery Target	热键：建筑，箭靶	l
 Hotkey: Building, Traction Bench	热键：建筑，牵引台	l
@@ -44936,6 +44962,7 @@ Acknowledge lack of nervousness	表示没有紧张	hP
 Acknowledge lack of unhappiness	表示没有不快	hP
 Acquiesce (changes your values)	默认接受（改变你的价值观）	hP
 Adventure item action: Drop {s}	丢下{s}	h
+Adventure item action: Heat {s}	加热{s}	h
 Adventure item action: Roll all	投掷所有骰子	h
 Adventure item action: View {s}	查看{s}	h
 Adventure item action: Wear {s}	穿戴{s}	h
@@ -46780,6 +46807,7 @@ Acknowledge lack of repentance	表示没有忏悔	hP
 Acknowledge lack of resentment	表示没有怨恨	hP
 Acknowledge lack of tenderness	表示没有温柔	hP
 Acknowledge lack of uneasiness	表示没有不安	hP
+Adventure item action: A ({p})	小生物（{p}）	h
 Adventure item action: Eat {s}	食用{s}	h
 Adventure item action: Nock in	搭箭	h
 Adventure movement: Fast Crawl	快速爬行	l
@@ -46791,6 +46819,7 @@ Age of {a} and {a} within {p}.	在{p1}，{a1}与{a2}时代。	htEi
 Age of {s} and {s} during {e}.	在{e1}期间，{s1}与{s2}时代。	htEi
 Age of {s} and {s} within {p}.	在{p1}，{s1}与{s2}时代。	htEi
 Agreed to build temple complex	已同意建造神殿建筑群	wi
+Aim carefully and throw at {n}	仔细瞄准并向{n1}投掷	hPt
 All drinks cost {d} for a mug.	所有饮品都是每杯{d1}。	hPt
 Announce all job cancellations	通报所有任务取消	wi
 Announcement date: before time	时间开始之前	w
@@ -48746,6 +48775,8 @@ Go below hatch ({d} level up)	前往活动盖板下方（上方{d1}层）	hPt
 Greatly respected for fighter	作为一名战士受到极大的尊重	w
 Greatly respected for loyalty	因忠诚受人敬仰	w
 Grovel before your new master	向你的新主人卑躬屈膝	hP
+Hang from {s} ({s}/Air/Magma)	悬挂于{s1}（{s2}／空气／岩浆）	hPt
+Hang from {s} ({s}/Air/Water)	悬挂于{s1}（{s2}／空气／水）	hPt
 He is the head of the family.	他是家族的首领。	hP
 He is the {s} of {n} and {n}.	他是{n1}与{n2}的{s}。	ht
 He was the first of his kind.	他是同类中最早的个体。	h
@@ -50446,6 +50477,7 @@ Gladiatory Games within {p}.	在{p1}，角斗比赛。	htEi
 Greatly feared as a murderer	令人闻风丧胆的谋杀犯	w
 Gremlin unshackled something	小精怪解开了束缚	w
 Hang from {s} ({s} from {s})	悬挂于{s1}（{s2}，从{s3}）	hPt
+Hang from {s} ({s}/Air/Lava)	悬挂于{s1}（{s2}／空气／熔岩）	hPt
 Have you written a new poem?	你写新诗了吗？	hP
 He is a friendly individual.	他是个友善的人。	l
 He is our family's ancestor.	他是我们家族的祖先。	hP
@@ -51991,6 +52023,7 @@ Age of the {a} in the wilds	在荒野中，{a1}时代	htEi
 Age of the {s} and the {s}.	{s1}与{s2}时代。	htEi
 Age of the {s} in the wilds	在荒野中，{s1}时代	htEi
 Agree to comply with demand	同意服从要求	hP
+Aim carefully and shoot {n}	仔细瞄准并射击{n1}	hPt
 Ambush (uninjured creature)	伏击：未受伤生物	w
 An animal has become a {s}.	一只动物成为了{s1}。	hPt
 An end and a new beginning.	一个终点，一个新的开始。	hP
@@ -52201,6 +52234,8 @@ Move down to the northwest.	向西北下方移动。	hj
 Move down to the southeast.	向东南下方移动。	hj
 Move down to the southwest.	向西南下方移动。	hj
 Move keyboard cursor up (z)	向上移动键盘光标 (z)	w
+Move to {s} ({s}/Air/Magma)	移动到{s1}（{s2}／空气／岩浆）	hPt
+Move to {s} ({s}/Air/Water)	移动到{s1}（{s2}／空气／水）	hPt
 Move view/cursor down, fast	向下移动视野/光标，快速	w
 Move view/cursor left, fast	向左移动视野/光标，快速	w
 Musical Competition at {p}.	在{p1}，音乐比赛。	htEi
@@ -53835,6 +53870,10 @@ Cannot travel through site	无法穿过地点旅行	w
 Change the squad's symbol.	修改小队标志。	hj
 Character overview: Spouse	伴侣	l
 Characterizing raw data...	分析原始数据...	w
+Charge {n} ({s}/Air/Magma)	冲锋攻击{n1}（{s1}／空气／岩浆）	hPt
+Charge {n} ({s}/Air/Water)	冲锋攻击{n1}（{s1}／空气／水）	hPt
+Charge {s} ({s}/Air/Magma)	冲锋攻击{s1}（{s2}／空气／岩浆）	hPt
+Charge {s} ({s}/Air/Water)	冲锋攻击{s1}（{s2}／空气／水）	hPt
 Choose origin civilization	选择起源文明	w
 Competing were {a} at {p}.	在{p1}，参赛者有{a1}。	ht
 Competing were {a} in {p}.	在{p1}，参赛者有{a1}。	ht
@@ -54015,6 +54054,7 @@ Monster Rampage within {p}	在{p1}，怪物肆虐事件	htEi
 Mouse-context scrollbar up	鼠标-上下文滚动条向上	w
 Move keyboard cursor right	键盘光标右移	w
 Move secondary selector up	向上移动次要选区	w
+Move to {s} ({s}/Air/Lava)	移动到{s1}（{s2}／空气／熔岩）	hPt
 Musical Competition at {p}	在{p1}，音乐比赛	htEi
 Musical Competition in {d}	{d1}年的音乐比赛	htEi
 Musical Competition in {p}	在{p1}，音乐比赛	htEi
@@ -55507,7 +55547,11 @@ Cavern Layer Openness Min	洞穴层开阔度下限
 Character overview: Child	子女	l
 Character overview: Lover	爱人	l
 Character overview: Squad	分队	l
+Charge {n} ({s}/Air/Lava)	冲锋攻击{n1}（{s1}／空气／熔岩）	hPt
+Charge {s} ({s}/Air/Lava)	冲锋攻击{s1}（{s2}／空气／熔岩）	hPt
 Choose a vehicle for {c}.	为{c1}选择车辆。	hPt
+Climb {s} ({s}/Air/Magma)	攀爬{s1}（{s2}／空气／岩浆）	hPt
+Climb {s} ({s}/Air/Water)	攀爬{s1}（{s2}／空气／水）	hPt
 Command repeat prefix-key	命令重复前缀按键	w
 Competing were {a} at {p}	在{p1}，参赛者有{a1}	ht
 Competing were {a} in {p}	在{p1}，参赛者有{a1}	ht
@@ -57017,6 +57061,7 @@ Citizens that cannot be 	无法被妥善安葬的居民仍可从石	w
 Civilizations can attack	文明可以发动袭击
 Cleaning game objects...	正在清理游戏对象……
 Click to request workers	点击请求派遣工人。	hP
+Climb {s} ({s}/Air/Lava)	攀爬{s1}（{s2}／空气／熔岩）	hPt
 Closing Ceremony at {p}.	在{p1}，闭幕仪式。	htEi
 Closing Ceremony in {d}.	{d1}年的闭幕仪式。	htEi
 Closing Ceremony in {p}.	在{p1}，闭幕仪式。	htEi
@@ -57079,6 +57124,8 @@ He has a tendency toward	他倾向于	l
 Her ears are free-lobed.	她的耳垂分离。	l
 Here you can make parts 	在此你可以制造弩炮和投石机的	w
 His ears are free-lobed.	他的耳垂分离。	l
+Hold {s} ({s}/Air/Magma)	抓住{s1}（{s2}／空气／岩浆）	hPt
+Hold {s} ({s}/Air/Water)	抓住{s1}（{s2}／空气／水）	hPt
 Hotkey: Building, Bridge	热键：建筑，桥
 Hotkey: Building, Coffin	热键:建筑,棺材	w
 Hotkey: Building, Kennel	热键:建筑,狗舍	w
@@ -58771,6 +58818,7 @@ High linguistic ability	语言能力高	wil
 His feathers are black.	他的羽毛是黑色的。	l
 Historical figures: {d}	历史人物：{d}	wt
 Hold {s} ({s} from {s})	抓住{s1}（{s2}，从{s3}）	hPt
+Hold {s} ({s}/Air/Lava)	抓住{s1}（{s2}／空气／熔岩）	hPt
 Hostile, three thousand	敌对, 三千	w
 Hotkey: Building, Altar	热键：建筑，祭坛	w
 Hotkey: Building, Chain	热键：建筑，链条
@@ -60431,6 +60479,7 @@ Argue nuances of power	争辩权力的复杂之处	hP
 Argue nuances of skill	争辩技艺的复杂之处	hP
 Argue nuances of truth	争辩诚实的复杂之处	hP
 Argue the value of law	争辩法律的价值	hP
+Attack creatures ({s})	攻击多个生物（{s1}）	hPt
 Author: FirePhoenix{d}	作者：FirePhoenix{d}	wt
 Below average patience	耐心低于平均	wil
 Below average strength	力量低于平均	wil
@@ -62232,6 +62281,7 @@ An Exploration of {b}	{b}探索	hbti
 An item has returned!	一件物品回来了！	hP
 Arena: Fluids, remove	竞技场：移除流体	w
 Artistically inclined	有艺术感受力	w
+Attack creature ({s})	攻击生物（{s1}）	hPt
 Attempted {e} at {p}.	在{p1}，未遂的{e1}。	htEi
 Attempted {e} in {d}.	{d1}年的未遂的{e1}。	htEi
 Attempted {e} in {p}.	在{p1}，未遂的{e1}。	htEi
@@ -62259,9 +62309,12 @@ Choose your tone/tact	选择交谈的语气与策略。	hP
 Claim used ammunition	解除已用弹药禁用	wi
 Click the help button	点击帮助按钮	hqO
 Click the help button	点击帮助	w
+Climb ({s}/Air/Magma)	攀爬（{s1}／空气／岩浆）	hPt
+Climb ({s}/Air/Water)	攀爬（{s1}／空气／水）	hPt
 Climb {s} ({s}/Magma)	攀爬{s1}（{s2}／岩浆）	hPt
 Climb {s} ({s}/Water)	攀爬{s1}（{s2}／水）	hPt
 Collect hive products	收集蜂箱产物	wi
+Combat creature ({s})	与生物战斗（{s1}）	hPt
 Confirm service order	确认服务订单	hP
 Considers storyteller	说书人	w
 Create Your Character	创建你的角色
@@ -64324,6 +64377,7 @@ Charge {n} ({s}/Air)	冲锋攻击{n1}（{s1}／空气）	hPt
 Charge {s} ({s}/Air)	冲锋攻击{s1}（{s2}／空气）	hPt
 Chf.Medical's Office	首席医师办公室	wli
 Child is not present	子女不在此地	hP
+Climb ({s}/Air/Lava)	攀爬（{s1}／空气／熔岩）	hPt
 Climb {s} ({s}/Lava)	攀爬{s1}（{s2}／熔岩）	hPt
 Clothing and leather	衣物和皮革	w
 Completely dismayed!	彻底灰心丧气了！	hP
@@ -64487,6 +64541,7 @@ Purge in {p} at {p}.	在{p2}，{p1}清洗事件。	htEi
 Purge in {p} in {d}.	{d1}年的{p1}清洗事件。	htEi
 Purge in {p} in {p}.	在{p2}，{p1}清洗事件。	htEi
 Put into a container	放入容器	w
+Quickly throw at {n}	快速向{n1}投掷	hPt
 Raised coffin zombie	复生棺中僵尸	w
 Raised fetid stalker	复生腐臭潜行者	w
 Raised hollow zombie	复生空洞僵尸	w
@@ -66926,6 +66981,7 @@ Ability to fly lost	飞行能力丧失	w
 Above average focus	专注力高于平均	wil
 Accept the position	接受职位	hP
 Add new work detail	添加劳动分组	wi
+Adventure vermin: A	小生物	l
 Age of Civilization	文明时代	h
 Age of Three Powers	三强权时代	h
 Age of {a} and {a}.	{a1}与{a2}时代。	htEi
@@ -74112,6 +74168,7 @@ Procession at {p}	在{p1}，游行	htEi
 Procession in {d}	{d1}年的游行	htEi
 Procession in {p}	在{p1}，游行	htEi
 Profession change	职业变更	w
+Quickly shoot {n}	快速射击{n1}	hPt
 Race in the wilds	在荒野中，赛跑	hEi
 Raised coffin one	复生棺中者	w
 Range: {d} to {d}	范围：{d}～{d}	wt
@@ -78174,6 +78231,7 @@ Animal Dissector	动物解剖员	wi
 Animal Societies	动物群体	hi
 Associated Plot:	关联阴谋：	wl
 Assumed position	已经就位	w
+Attack creatures	攻击多个生物	hP
 Attack {n} ({s})	攻击{n1}（{s1}）	hPt
 Automate kitchen	厨房自动加工	wi
 Automate smelter	熔炉自动加工	wi
@@ -78404,6 +78462,7 @@ Popup: The world	弹窗:世界	w
 Preparing map...	正在准备地图...	w
 Pressed material	压制材料	wi
 Prone to discord	喜欢挑事	w
+Put or place {s}	放下或放置{s1}	hPt
 Quick to despair	悲观失望	w
 Quick to give up	容易放弃	w
 Quickstart guide	快速入门指南	w
@@ -82679,6 +82738,7 @@ Ask a question.	提出一个问题。	hP
 Ask to join {e}	请求加入{e1}	hPt
 Assume identity	采用身份	w
 At One With {b}	与{b}融为一体	hbti
+Attack creature	攻击生物	hP
 Attic-Artefacts	阁楼-造物	w
 Available Items	可用物品
 Average Profile	身形一般	hP
@@ -82706,6 +82766,7 @@ Climb {s} ({s})	攀爬{s1}（{s2}）	hPt
 Closing file...	关闭文件中...	w
 Clothier's Shop	裁缝工坊	wi
 Codices, scr...	典籍、卷轴……
+Combat creature	与生物战斗	hP
 Commmunications	社区沟通	w
 Completely numb	完全麻木	w
 Conquest of {p}	征服「{p1}」	htEi
@@ -96888,6 +96949,7 @@ Animal traps	动物陷阱	w
 Arctic Ocean	寒带海洋
 Astonishment	惊讶	w
 At least {d}	至少 {d}	wtl
+Attack error	攻击错误	hP
 Avoid fights	避免争斗	w
 Beast hunter	猛兽猎手	wi
 Bolt Thrower	弩箭投射器	wi
@@ -96916,6 +96978,7 @@ Cloth (Yarn)	布料（毛线）	wi
 Collect clay	收集黏土	wi
 Collect sand	收集沙	wi
 Collect webs	收集网	wi
+Combat error	战斗错误	hP
 Competition.	比赛。	hEi
 Construction	构筑物	wi
 Contemptuous	轻蔑	w
@@ -97122,6 +97185,7 @@ Third finger	无名指	w
 This is {s}.	这是{s1}。	hHt
 This stinks!	这糟透了！	hP
 This? Awful.	这？糟透了。	hP
+Throw at {s}	向{s1}投掷	hPt
 Tiny Profile	身形微小	hP
 Titan Number	泰坦数量
 To the east:	东方：	hP
@@ -101276,6 +101340,8 @@ No activity	无活动	wi
 No material	不限材料	wli
 No migrants	没有移民到来	w
 No operator	没有操作员	wi
+North/Above	北／上方	hP
+North/Below	北／下方	hP
 Not anxious	沉着冷静	w
 Not dutiful	逃避责任	w
 Not envious	很少嫉妒	w
@@ -101348,6 +101414,8 @@ Smooth wall	打磨墙壁	wi
 Soap Makers	制肥皂者	wi
 Soap Making	制皂	wi
 Some dozens	数十	wi
+South/Above	南／上方	hP
+South/Below	南／下方	hP
 Spearmaster	持矛主宰	wi
 Spin thread	纺线	wi
 Spring(now)	春季（当前）	wi
@@ -105043,6 +105111,8 @@ Down Stair	下行楼梯	wi
 Dragonfire	龙焰
 Dry season	旱季	w
 Dye thread	染线	wi
+East/Above	东／上方	hP
+East/Below	东／下方	hP
 Eldest son	长子	w
 Enraptured	陶醉	w
 Enthusiasm	热情	w
@@ -105174,6 +105244,7 @@ Poor focus	缺乏专注	w
 Procession	游行	hEi
 Proficient	精通的	wi
 Prophesize	作出预言	hP
+Remove {s}	脱下{s1}	hPt
 Render fat	将脂肪熬制成脂油	wi
 Repentance	忏悔	w
 Resentment	怨恨	w
@@ -105230,6 +105301,8 @@ Visible: W	可见：西	wl
 Wall grate	墙壁格栅	w
 Wax Worker	蜡工	wi
 We See {b}	我们看见{b}	hbti
+West/Above	西／上方	hP
+West/Below	西／下方	hP
 Wet season	雨季	w
 Wilderness	荒野	wi
 Wonderful!	太好了！	hP
@@ -108210,6 +108283,7 @@ Doctrine.	教义.	w
 Dormitory	公共宿舍	wi
 Draw item	拔出物品	w
 Driftwood	浮木	wi
+Drink {s}	喝{s1}	hPt
 Drop item	丢弃物品	w
 Duchesses	女公爵	wi
 Dump item	倾倒物品	wi
@@ -108370,6 +108444,7 @@ Shameful.	可耻。	hP
 Shameless	不顾他人眼光	w
 She tends	她往往
 Shoot web	喷射蛛网	w
+Shoot {s}	射击{s1}	hPt
 Side #{d}	阵营 #{d}	wt
 Slate {d}	第{d}年 板岩月	wt
 Snatchers	绑架者	wi
@@ -108398,6 +108473,7 @@ Thin mist	薄雾
 Third toe	第三脚趾	w
 Threshers	脱粒工	wi
 Threshing	脱粒	wi
+Throw {s}	投掷{s1}	hPt
 Toughness	韧性	wi
 Treatment	治疗	w
 Unretire!	结束退役！	w
@@ -110261,6 +110337,7 @@ Dithbish	迪斯比石	wi
 Dolomite	白云石	w
 Downward	下行	wi
 Drainage	排水性	wi
+Drop {s}	丢下{s1}	hPt
 Drowning	溺水	w
 Duthtish	杜提石	wi
 Dwarf, \x0C	矮人，♀
@@ -110348,6 +110425,10 @@ Mountain	山地
 Movement	移动	hq
 Music By	音乐	w
 Musician	音乐家	wi
+NE/Above	东北／上方	hP
+NE/Below	东北／下方	hP
+NW/Above	西北／上方	hP
+NW/Below	西北／下方	hP
 Nameless	无名者	h
 Nauseous	恶心	w
 Nest box	巢箱	w
@@ -110404,6 +110485,10 @@ Religion	宗教	w
 Restless	坐立不安	w
 Ride {s}	乘坐{s1}	hPt
 Routine:	日程：	wl
+SE/Above	东南／上方	hP
+SE/Below	东南／下方	hP
+SW/Above	西南／上方	hP
+SW/Below	西南／下方	hP
 Sabameli	萨巴梅利
 Savagery	野性	wi
 Schedule	日程	w
@@ -110479,10 +110564,12 @@ Vathsith	瓦锡斯	wi
 Vengeful	有仇必报	w
 Very low	非常低	w
 View {n}	查看{n1}	hPt
+View {s}	查看{s1}	hPt
 Warning!	警告！	wl
 Wasteful	做事浪费	w
 Wax glob	蜂蜡软团	wi
 Weapons:	武器：	w
+Wear {s}	穿戴{s1}	hPt
 Wildlife	野生动物	w
 Windmill	风车	w
 Windowed	窗口化	w
@@ -111329,6 +111416,7 @@ Dungeon	地牢
 Dutiful	责任心强	w
 Dwarves	矮人	w
 D\x8Cshmab	底斯玛	wi
+Eat {s}	吃{s1}	hPt
 Elation	狂喜	w
 Embark!	出发！
 Embrace	拥抱	w
@@ -113177,6 +113265,7 @@ zoysia	结缕草	wi
 A Web	蛛网	wl
 ALERT	警报	w
 Abort	中止
+Above	上方	hP
 Above	上方	wi
 Abras	埃博拉	wi
 Addor	埃多尔	wi
@@ -113244,6 +113333,7 @@ Becor	贝科尔	wi
 Bekar	贝卡尔	wi
 Bekom	贝科姆	wi
 Belar	贝拉尔	wi
+Below	下方	hP
 Below	下方	wi
 Berim	贝利姆	wi
 Betan	贝坦	wi
@@ -113718,6 +113808,7 @@ Nokim	诺基姆	wi
 Nomal	诺玛尔	wi
 Nomes	诺梅斯	wi
 Noram	诺拉姆	wi
+North	北	hP
 North	北方	wi
 Nos\x8Cm	诺锡姆	wi
 Noval	诺瓦尔	wi
@@ -113889,6 +113980,7 @@ Solon	索隆	wi
 Soloz	索洛兹	wi
 Sosad	索萨德	wi
 Sosas	索萨斯	wi
+South	南	hP
 South	南方	wi
 Squad	分队	w
 Steam	水蒸气	wl
@@ -114557,6 +114649,7 @@ Dry 	干枯	wi
 Dusk	黄昏
 Dyed	已染色	wi
 Dyer	染色工	wi
+East	东	hP
 East	东方	wi
 Ecem	埃塞姆	wi
 Ecut	埃库特	wi
@@ -114631,6 +114724,7 @@ Good	善良	wi
 Hard	困难	w
 Head	头部	w
 Help	帮助	w
+Here	此处	hP
 Here	此处	w
 Hero	英雄	w
 Hey.	嘿。	hP
@@ -114889,6 +114983,7 @@ Wall	墙	w
 Warm	温暖
 Weak	弱	w
 Well	井	w
+West	西	hP
 West	西方	wi
 Wife	妻子	wi
 Zany	爱开玩笑	w
@@ -115452,10 +115547,14 @@ you	你	wi
 He	他	h
 He	他	w
 It	它	h
+NE	东北	hP
 NE	东北	w
+NW	西北	hP
 NW	西北	w
 No	否	wi
+SE	东南	hP
 SE	东南	w
+SW	西南	hP
 SW	西南	w
 at	于	h
 by	由	h

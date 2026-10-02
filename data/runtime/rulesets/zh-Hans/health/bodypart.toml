@@ -39,6 +39,10 @@ name = "tissue"
 [[rulesets]]
 name = "bodypart_main"
 [rulesets.rules]
+# Native unit-contaminant actions fall back to these complete labels when
+# the stored body-part index or its RAW name is unavailable (PE 0x8392a0).
+"body part" = "身体部位"
+"body parts" = "身体部位"
 # Generated from the same established BODY/INDIVIDUAL_NAME vocabulary used
 # by Legends. Covers unusual/numbered anatomy without a separate prose joiner.
 "{raw_names}" = "{raw_names}"

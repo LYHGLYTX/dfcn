@@ -52,6 +52,7 @@
 #include "native_history_data.h"
 #include "native_performance_choice.h"
 #include "native_unit_identity.h"
+#include "native_adventure_charge.h"
 #include "core_api.h"
 #include "runtime_paths.h"
 
@@ -2876,6 +2877,8 @@ public:
                                         std::string_view query, bool activity) const;
     std::optional<std::string> translate_native_unit_identity(
         const NativeUnitIdentity &identity) const;
+    std::optional<std::string> translate_native_adventure_charge(
+        std::string_view source, const std::vector<NativeAdventureChargePart> &parts) const;
     bool translated_legends_search_matches(std::string_view source,
         std::string_view description, std::string_view query, LegendsSearchKind kind) const;
     bool translated_conversation_keywords_match(std::string_view keywords,
@@ -4119,6 +4122,8 @@ private:
     std::optional<std::string> translate_inventory_location(
         std::string_view source, int y, int x) const;
     std::vector<Rule> adventure_item_action_rules_;
+    std::optional<std::string> translate_adventure_environment_material(
+        std::string_view source) const;
     std::optional<std::string> translate_adventure_item_action(
         const std::string &source, int y = -1, int x = -1) const;
     std::vector<Match> capture_adventure_item_modal(
@@ -8545,6 +8550,7 @@ std::optional<std::string> Overlay::translate_rated_skill_phrase(std::string_vie
 
 #include "unit_identity.inc"
 #include "native_unit_identity_translation.inc"
+#include "native_adventure_charge_translation.inc"
 
 std::optional<std::string> Overlay::translate_procedural_fragment(
     const std::string &screen_text, bool phonetic_only,
@@ -10858,6 +10864,11 @@ std::optional<std::string> Overlay::translate_ui_message_capture(
         const auto single_unit = [&](std::string_view value) -> std::optional<std::string> {
             value = trim_view(value);
             if (value.empty()) return std::nullopt;
+            // Formatter-owned references include explicit authored first
+            // names, animated names and custom professions. Their literal
+            // Latin spelling is valid unit data, just like a nickname.
+            if (const auto identity = native_unit_identity_source_target(value))
+                return identity;
             if (const auto identity = exact_literal_translation("Announcement unit: " + lower(std::string(value))))
                 return identity;
             // Native action captions use both `the <caste> <name>` and

@@ -94,6 +94,8 @@ std::optional<std::string> Overlay::translate_inventory_location(
     return translate_inventory_item_name(source, y, x);
 }
 
+#include "adventure_environment_material.inc"
+
 // Both the item modal and the map context chooser use these complete action
 // constructors. Keep item designations and directions typed in both places,
 // including native search candidates that have no screen coordinates.
@@ -132,7 +134,35 @@ std::optional<std::string> Overlay::translate_adventure_item_action(
                         value.substr(slash + 1) == "Above" || value.substr(slash + 1) == "Below"))
                         target = translate_ui_message_capture(value, false);
                 } else if (kind == 's') {
-                    target = translate_inventory_item_name(value, y, x);
+                    // The vermin constructor's article precedes one RAW
+                    // singular species field, never an equipment designation.
+                    if (rule.source == "A {s} ({p})") {
+                        target = translate_creature_descriptor(value, true);
+                        if (!target || target->empty()) continue;
+                        captures.push_back(value);
+                        resolved.push_back(std::move(target));
+                        if (self(self, slot + 1, end + literal.size())) return true;
+                        captures.pop_back();
+                        resolved.pop_back();
+                        continue;
+                    }
+                    // Environment ingestion/filling uses STATE_ADJ for every
+                    // deposit before its final STATE_NAME, unlike item names.
+                    // Unit/item contaminant choices instead own a complete
+                    // deposit and an anatomical/container location.
+                    const bool environment_material =
+                        (slot == 1 && rule.source.starts_with("Fill {s} with ")) ||
+                        (slot == 1 && rule.source.starts_with("Suck {n}'s ")) ||
+                        (slot == 0 && (rule.source.starts_with("Eat {s}") ||
+                                      rule.source.starts_with("Drink {s}")) &&
+                            rule.source.find(" from ") == std::string::npos);
+                    if (environment_material)
+                        target = translate_adventure_environment_material(value);
+                    std::vector<size_t> origins;
+                    if (!target) target = RULESETS.translate_with_origins(
+                        native_text_to_utf8(value), "::health::contaminant::inventory", origins);
+                    if (!target) target = translate_inventory_item_name(value, y, x);
+                    if (!target) target = translate_inventory_location(value, y, x);
                     if (!target) target = translate_ui_message_capture(value, false);
                 }
                 if (!target || target->empty()) continue;
