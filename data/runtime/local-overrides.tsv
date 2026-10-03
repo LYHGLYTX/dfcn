@@ -8756,8 +8756,13 @@ Can use any shop	可使用任意工坊	wl
 {d} shops max	最多{d}座工坊	wtl
 # The editable count keeps its native digits and blinking cursor before this suffix.
 shop(s) max	座工坊（上限）	wl
-# Task material chooser heading, not a global replacement of Setting/material.
+# Complete task material chooser headings, not global Setting replacements.
 Setting material	设置材料	wli
+Setting plant	设置植物	wli
+Setting glass	设置玻璃	wli
+# Task detail material controls retain the complete native button caption.
+Specify glass	指定玻璃	wli
+Specify plant	指定植物	wli
 # The empty work-order material constraint leaves the material unrestricted.
 No material	不限材料	wli
 # Military uniform material chooser uses the same unrestricted selection.

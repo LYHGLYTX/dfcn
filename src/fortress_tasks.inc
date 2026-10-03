@@ -996,7 +996,7 @@ void Overlay::append_workshop_task_translations(const WorkshopTaskCard &card,
 // search control's text inset. Availability is a separate right-hand field;
 // neither that field nor the editable query belongs to a translated name.
 std::vector<NativeTextCard> Overlay::capture_workshop_material_fields(
-        const std::vector<std::string> &rows) const {
+        const std::vector<std::string> &rows, bool task_detail_only) const {
     std::vector<NativeTextCard> fields;
     const NativePanelBorders borders(*gps_);
     const auto settings = native_ui_settings();
@@ -1012,6 +1012,72 @@ std::vector<NativeTextCard> Overlay::capture_workshop_material_fields(
             return true;
         });
     };
+    // This task-detail sheet has no search control or workshop tabs. Its
+    // complete glass/plant buttons and their shared closed native frame
+    // establish the fields; the job title is not an English allowlist.
+    if (task_detail_only) {
+        for (int y = 0; y < gps_->dimy; ++y) {
+            for (const auto &anchor : split_text_fields(rows[y])) {
+                if (anchor.text != "Specify glass") continue;
+                const auto panel = native_panel_interior(
+                    borders, *gps_, anchor.start, anchor.end, y);
+                if (!panel) continue;
+                const int right = panel->x + panel->w, bottom = panel->y + panel->h;
+                std::array<std::optional<NativeTextCard>, 2> controls;
+                for (int row_y = panel->y; row_y < bottom; ++row_y) {
+                    for (const auto &caption : split_text_fields(rows[row_y])) {
+                        const int kind = caption.text == "Specify glass" ? 0
+                            : caption.text == "Specify plant" ? 1 : -1;
+                        if (kind < 0 || controls[kind] || caption.start != anchor.start ||
+                            caption.end > right) continue;
+                        const auto button = native_button_text_rect(*gps_, caption.start,
+                            caption.end, row_y, false, nullptr, false, true);
+                        if (!button || button->x - 1 < panel->x ||
+                            button->x + button->w > right || button->y < panel->y ||
+                            button->y + button->h > bottom) continue;
+                        const SDL_Rect source{caption.start,
+                            button->y + (classic ? 1 : 0), caption.end - caption.start,
+                            classic ? 1 : button->h};
+                        auto control = capture_panel_text_card(source, true);
+                        if (!control || !current(*control) ||
+                            std::any_of(control->rows.begin(), control->rows.end(),
+                                [&](const NativeTextCardRow &row) {
+                                    return row.x != caption.start || row.source != caption.text;
+                                })) continue;
+                        control->interior = {caption.start, button->y,
+                            button->x + button->w - caption.start, button->h};
+                        control->button_box = SDL_Rect{button->x - 1, button->y,
+                            button->w + 2, button->h};
+                        control->workshop_task_detail = true;
+                        controls[kind] = std::move(control);
+                    }
+                }
+                if (!controls[0] || !controls[1] ||
+                    controls[0]->interior.y + controls[0]->interior.h >
+                        controls[1]->interior.y) continue;
+                const int title_bottom = controls[0]->interior.y;
+                if (title_bottom <= panel->y) continue;
+                auto title = capture_panel_text_card(
+                    {panel->x, panel->y, panel->w, title_bottom - panel->y}, true);
+                if (!title || !current(*title) || title->rows.size() > 2 ||
+                    title->rows.front().x != anchor.start ||
+                    (title->rows.size() == 2 &&
+                        title->rows.back().y != title->rows.front().y + 1) ||
+                    std::any_of(title->rows.begin(), title->rows.end(),
+                        [&](const NativeTextCardRow &row) {
+                            return row.x != anchor.start ||
+                                row.source != title->rows.front().source;
+                        })) continue;
+                title->interior = {anchor.start, title->rows.front().y,
+                    right - anchor.start, static_cast<int>(title->rows.size())};
+                title->workshop_task_detail = true;
+                fields.push_back(std::move(*title));
+                for (auto &control : controls) fields.push_back(std::move(*control));
+                return fields;
+            }
+        }
+        return fields;
+    }
     const auto availability = [](std::string_view text) {
         if (!text.empty() && text.front() == '~') text.remove_prefix(1);
         if (!text.empty() && text.back() == '?') text.remove_suffix(1);
@@ -1021,7 +1087,13 @@ std::vector<NativeTextCard> Overlay::capture_workshop_material_fields(
     };
     for (int heading_y = 0; heading_y < gps_->dimy; ++heading_y) {
         for (const auto &heading : split_text_fields(rows[heading_y])) {
-            if (lower(heading.text) != "setting material") continue;
+            // Plant and glass selectors use this same search-and-button
+            // layout. Match the complete caption, with grid edge padding
+            // already removed by split_text_fields, before assigning the
+            // title, heading and stock names the search field's text inset.
+            const std::string caption = lower(heading.text);
+            if (caption != "setting material" && caption != "setting plant" &&
+                caption != "setting glass") continue;
             const auto panel = native_panel_interior(
                 borders, *gps_, heading.start, heading.end, heading_y);
             if (!panel) continue;

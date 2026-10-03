@@ -840,6 +840,7 @@ struct NativeTextCard {
     bool travel_buildings = false;
     bool character_group_role = false;
     std::optional<std::pair<int, int>> civilization_official_columns{};
+    bool workshop_task_detail = false;
 };
 struct WorkshopTaskCard : NativeTextCard {
     bool category = false;
@@ -3827,7 +3828,7 @@ private:
         std::vector<std::string> &rows, std::vector<Match> &matches, int only_y) const;
     void layout_workshop_task_rows(SDL_Renderer *renderer);
     std::vector<NativeTextCard> capture_workshop_material_fields(
-        const std::vector<std::string> &rows) const;
+        const std::vector<std::string> &rows, bool task_detail_only = false) const;
     void append_workshop_material_translations(
         const std::vector<NativeTextCard> &fields, std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const;
@@ -20238,7 +20239,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 };
                 const bool tooltip_text = (match.rule == kToolbarTooltipBodyRule ||
                     match.rule == kToolbarTooltipKeyRule ||
-                    match.rule == kWorkshopRecipeRowRule) && inside(box);
+                    match.rule == kWorkshopRecipeRowRule ||
+                    match.rule == kWorkshopMaterialFieldRule) && inside(box);
                 const bool help_text = std::any_of(help_frames.begin(), help_frames.end(), inside);
                 return !tooltip_text && !help_text;
             });
@@ -20446,6 +20448,11 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    // Task-detail material controls are independent native fields. Capture
+    // their complete current frame before tooltip prose or the classic map
+    // mask can consume the title and the individual Specify captions.
+    const auto workshop_task_detail = capture_workshop_material_fields(screen_rows, true);
+    append_workshop_material_translations(workshop_task_detail, screen_rows, result, only_y);
     // A floating recipe owns its complete native fields before toolbar,
     // map and item readers can consume the headings or individual nouns.
     const auto workshop_recipe = capture_workshop_recipe_card(screen_rows);
@@ -20707,7 +20714,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // The world map can leave the local HUD visible. Its detail popup shares
     // ordinary hover borders, but belongs to the world-page field readers.
     const bool world_map = native_world_map_screen();
-    auto map_hover = !world_map && workshop_materials.empty() && !workshop_recipe
+    auto map_hover = !world_map && workshop_materials.empty() &&
+        workshop_task_detail.empty() && !workshop_recipe
         ? capture_map_hover_card(screen_rows, screen_override) : std::optional<NativeTextCard>{};
     if (map_hover) {
         // Card capture restores live native bytes in screen_rows. Earlier
@@ -20903,6 +20911,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
         for (const auto &choice : workshop_choices)
             compose_native_text_rows(choice, result, only_y, kWorkshopTaskRowRule, false, true);
         for (const auto &field : workshop_materials)
+            compose_native_text_rows(field, result, only_y, kWorkshopMaterialFieldRule, false, true);
+        for (const auto &field : workshop_task_detail)
             compose_native_text_rows(field, result, only_y, kWorkshopMaterialFieldRule, false, true);
         for (const auto &row : trade_request_rows)
             compose_native_text_rows(row, result, only_y, kFortressTradeRequestRowRule, false, true);
