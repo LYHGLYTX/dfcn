@@ -82,6 +82,13 @@ attack	{s} from behind	从背后{s1}	attack	0x1400e5b33 repeated on each damage 
 attack	{s} from the side	从侧面{s1}	attack	0x1400e5b40 repeated on each damage outcome
 attack	{s} with {s}	用{s2}{s1}	attack,equipment	0x1400e5b5d+0x1400e5b75; independently optional full weapon phrase
 head	{s} {s}	{s1}{s2}	actor,attack	0x1400e5a58..0x1400e5b75
+# Collision damage constructs this complete prefix before entering the shared
+# outcome tree. Keep its anatomical subject scoped, including native unnamed
+# singular/plural fallbacks; every existing head outcome composes with it.
+impact-part	body part	身体部位		Steam 0x1413b1580..0x1413b209d; classic 0x1413ac4f0..0x1413ad00d; unnamed/invalid-index fallback
+impact-part	body parts	多个身体部位		Steam 0x1413b1580..0x1413b209d; classic 0x1413ac4f0..0x1413ad00d; unnamed plural fallback appends s
+impact-part	{s}	{s1}	$body	Steam 0x1413b1580..0x1413b209d; classic 0x1413ac4f0..0x1413ad00d; complete RAW singular/plural anatomy field
+head	{s} {s} takes the full force of the impact	{s1}{s2}承受了全部冲击力	owner,impact-part	Steam 0x1413b1580..0x1413b209d, prefix 0x1413b1b72; classic 0x1413ac4f0..0x1413ad00d, prefix 0x1413acae2; damage flags 0x20 preserve prefix for every outcome
 layer-phrase	the {s}	{s1}	layer	0x1400e7718+0x1400e777d+0x1400e79b5
 layer-phrase	it	它		0x1400e779b
 layer-list	{s}	{s1}	layer-phrase	0x1400e78d4..0x1400e79b5

@@ -131034,3 +131034,9 @@ Citizenship of	公民资格申请：	wi
 Status of	状态：	wi
 Approve	批准	wi
 Deny	拒绝	wi
+
+# Native collision-damage prefix: full outcome tree uses existing scoped combat grammar.
+Announcement combat impact-part []: body part	身体部位	l
+Announcement combat impact-part []: body parts	多个身体部位	l
+Announcement combat impact-part [$body]: {s}	{s1}	l
+Announcement combat head [owner,impact-part]: {s} {s} takes the full force of the impact	{s1}{s2}承受了全部冲击力	l
