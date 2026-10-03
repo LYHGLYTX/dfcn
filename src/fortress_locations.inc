@@ -155,8 +155,12 @@ void Overlay::append_fortress_location_matches(std::vector<std::string> &rows,
                 ++value_start;
                 while (value_start < right && context[y][value_start] == ' ') ++value_start;
                 int end = value_start;
+                // Estimated location values keep their native '~' prefix.
+                // It precedes the digits, but belongs to the complete rank row.
+                if (end < right && context[y][end] == '~') ++end;
+                const int digits_start = end;
                 while (end < right && context[y][end] >= '0' && context[y][end] <= '9') ++end;
-                if (end == value_start) continue;
+                if (end == digits_start) continue;
                 if (end < right && context[y][end] != ' ' &&
                     !ascii_word_byte(static_cast<unsigned char>(context[y][end])) &&
                     !is_cp437_box_separator(context[y], end)) ++end;
