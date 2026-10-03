@@ -3,6 +3,7 @@
 #include "native_runtime.h"
 #include "native_font_metrics.h"
 #include "native_graphics.h"
+#include "byayoi_sprite.inc"
 #include "native_font_fallback.h"
 #include "dfhack_command_context.h"
 
@@ -789,6 +790,7 @@ static constexpr int kAdventureCombatFieldRule = -142;
 static constexpr int kAnnouncementListRule = -143;
 static constexpr int kFortressLaborCaptionRule = -144;
 static constexpr int kFortressTradeFieldRule = -145;
+static constexpr int kMainMenuCreditsRule = -146;
 static constexpr int kSettingsAnnouncementNameRule = -147;
 
 static bool is_fortress_justice_field(const Match &match) {
@@ -799,7 +801,8 @@ static bool is_fortress_justice_field(const Match &match) {
 
 static bool is_credits_row(const Match &match) {
     return match.rule == kCreditsTextRule || match.rule == kCreditsLegalRule ||
-        match.rule == kCreditsTitleRule || match.rule == kCreditsDoneRule;
+        match.rule == kCreditsTitleRule || match.rule == kCreditsDoneRule ||
+        match.rule == kMainMenuCreditsRule;
 }
 
 static bool is_help_text(const Match &match) {
@@ -3499,6 +3502,10 @@ private:
     // cannot be recovered from gps_->screen.
     std::vector<SDL_Rect> graphical_rects_;
     uint64_t graphical_rect_epoch_ = 0;
+    SDL_Rect main_menu_developer_rect_{};
+    SDL_Renderer *main_menu_developer_renderer_ = nullptr;
+    SDL_Texture *main_menu_developer_target_ = nullptr;
+    uint64_t main_menu_developer_epoch_ = 0;
     bool arena_geometry_logged_ = false;
     std::array<int, 3> fortress_build_menu_geometry_{};
     // Settings widgets redraw their selected tab one cell differently and the
@@ -4032,6 +4039,12 @@ private:
     void append_credits_rows(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const;
     void layout_credits_rows(SDL_Renderer *renderer);
+    void append_main_menu_credits_rows(const std::vector<std::string> &context,
+        std::vector<std::string> &rows, std::vector<Match> &matches, int only_y) const;
+    void layout_main_menu_credits_rows();
+    void note_main_menu_developer_copy(SDL_Renderer *renderer, SDL_Texture *texture,
+        const SDL_Rect &dest);
+    void draw_main_menu_branding(SDL_Renderer *renderer);
     void append_save_list_captions(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const;
     bool layout_save_list(SDL_Renderer *renderer);
@@ -6880,6 +6893,10 @@ void Overlay::reset_render_state() {
     native_border_repairs_.clear();
     graphical_rects_.clear();
     graphical_rect_epoch_ = 0;
+    main_menu_developer_rect_ = {};
+    main_menu_developer_renderer_ = nullptr;
+    main_menu_developer_target_ = nullptr;
+    main_menu_developer_epoch_ = 0;
     arena_geometry_logged_ = false;
     fortress_build_menu_geometry_ = {};
     captured_embark_item_suppress_.clear();
@@ -36085,6 +36102,7 @@ void Overlay::note_graphic_copy(SDL_Renderer *renderer, SDL_Texture *texture,
         dest->w <= 0 || dest->h <= 0) {
         return;
     }
+    note_main_menu_developer_copy(renderer, texture, *dest);
     const int tile_w = gps_->tile_pixel_x;
     const int tile_h = gps_->tile_pixel_y;
     const int origin_x = (gps_->screen_pixel_x - tile_w * gps_->dimx) / 2;
@@ -45262,6 +45280,7 @@ void Overlay::render(SDL_Renderer *renderer) {
         std::make_move_iterator(save_confirmation.begin()),
         std::make_move_iterator(save_confirmation.end()));
     layout_credits_rows(renderer);
+    layout_main_menu_credits_rows();
     // Header fields retain their own semantic ownership across the generic
     // page/tooltip passes. Fit the entire block after those passes, including
     // the activity, rather than rediscovering names from surviving fragments.
@@ -45391,6 +45410,7 @@ void Overlay::render(SDL_Renderer *renderer) {
             RenderTimingStage::DrawDecorations);
         restore_embark_pre_pause_snapshot(renderer);
         draw_embark_pre_pause_matches(renderer);
+        draw_main_menu_branding(renderer);
     }
     if (embark_pause_menu_active_) {
         draw_embark_background_matches(renderer, prepared_matches_, false);
