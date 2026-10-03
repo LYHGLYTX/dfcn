@@ -70,11 +70,39 @@ void Overlay::compose_native_text_rows(const NativeTextCard &card,
         std::vector<Match> &matches, int only_y, int row_rule,
         bool preserve_word_spaces, bool center_vertical) const {
     if (card.rows.empty()) return;
+    const bool workshop_button = row_rule == kWorkshopTaskRowRule && card.button_box;
+    bool paired_halves = false;
+    if (workshop_button) {
+        // A native half-font line occupies two physical rows. Only an exact
+        // source pair with complementary live flags is one displayed line;
+        // a title and a differently colored requirement are separate lines.
+        constexpr uint32_t upper = 1u << 3, lower = 1u << 4;
+        for (size_t i = 1; i < card.rows.size() && !paired_halves; ++i) {
+            const auto &a = card.rows[i - 1], &b = card.rows[i];
+            if (a.x != b.x || a.y + 1 != b.y || a.source != b.source) continue;
+            bool pair = true, ink = false;
+            for (size_t byte = 0; byte < a.source.size() && pair; ++byte) {
+                if (a.source[byte] == ' ') continue;
+                bool a_top = false, b_top = false;
+                const int x = a.x + static_cast<int>(byte);
+                const auto *a_cell = cell_at(x, a.y, &a_top);
+                const auto *b_cell = cell_at(x, b.y, &b_top);
+                const auto *flags = a_top ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+                const size_t at = static_cast<size_t>(x) * gps_->dimy + a.y;
+                pair = a_cell && b_cell && a_top == b_top && flags &&
+                    (flags[at] & (upper | lower)) == upper &&
+                    (flags[at + 1] & (upper | lower)) == lower;
+                ink = true;
+            }
+            paired_halves = pair && ink;
+        }
+    }
+    const bool center_block = center_vertical && !paired_halves;
     // A control can contain a caption plus a disabled-action reason. Centre
     // the complete text block inside its actual skin, not each glyph run or
     // only the first row. Preserve native gaps and source suppression spans.
     const int source_height = card.rows.back().y - card.rows.front().y + 1;
-    const int vertical_padding = center_vertical
+    const int vertical_padding = center_block
         ? std::max(0, card.interior.h - source_height) * gps_->tile_pixel_y / 2 : 0;
     const auto normalized_source = [](std::string_view source) {
         std::string normalized;
@@ -238,9 +266,11 @@ void Overlay::compose_native_text_rows(const NativeTextCard &card,
         for (uint32_t cp : output) append_utf8_codepoint(line.target, cp);
         line.layout_x = card.interior.x;
         line.layout_length = card.interior.w;
-        line.layout_y = center_vertical
+        line.layout_y = center_block
             ? card.interior.y + row.y - card.rows.front().y : row.y;
         line.layout_pixel_y = vertical_padding;
+        line.layout_fixed_baseline = workshop_button && center_block;
+        line.layout_reflowed_control = line.layout_fixed_baseline;
         line.layout_left = !row.centered;
         line.layout_clip_right = card.interior.x + card.interior.w;
         line.native_picture_caption_box = card.button_box;

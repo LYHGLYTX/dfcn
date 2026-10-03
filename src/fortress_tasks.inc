@@ -627,7 +627,10 @@ std::vector<WorkshopTaskCard> Overlay::capture_workshop_task_rows(
             }
         }
         auto card = capture_panel_text_card(source, true);
-        if (card) card->interior = box;
+        if (card) {
+            card->interior = box;
+            card->button_box = box;
+        }
         return card;
     };
     const auto append_candidates = [&](const SDL_Rect &search, int right, int bottom,
@@ -1331,6 +1334,9 @@ void Overlay::layout_workshop_task_rows(SDL_Renderer *renderer) {
     if (!gps_ || !face_ || !renderer ||
         gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
     const auto settings = native_ui_settings();
+    const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
+    const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
+    const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
     // Restore these owned fields only after generic panel/paragraph layout.
     // Both workshop lists use the shared font and native row baselines.
     for (auto &match : prepared_matches_) {
@@ -1341,6 +1347,14 @@ void Overlay::layout_workshop_task_rows(SDL_Renderer *renderer) {
             // width without changing its baseline, font or hitbox.
             layout_fortress_text_rows(renderer, {{&match}}, match.layout_x,
                 match.layout_clip_right);
+            if (match.native_picture_caption_box) {
+                const auto &box = *match.native_picture_caption_box;
+                // The complete button owns both caption lines. Preserve its
+                // viewport after the row fitter supplies the shared font;
+                // an original one-row writer clip must not cut a moved line.
+                match.layout_native_clip = SDL_Rect{origin_x + box.x * tile_w,
+                    origin_y + box.y * tile_h, box.w * tile_w, box.h * tile_h};
+            }
             if (!settings || !settings->classic) continue;
             std::array<int32_t, 9> skin{};
             const auto button = native_button_text_rect(*gps_, match.x, match.x + 1,
