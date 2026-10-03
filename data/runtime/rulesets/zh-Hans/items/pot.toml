@@ -16,7 +16,7 @@ optional = true
 name = "^0"
 optional = true
 [rulesets.rules]
-"{::materials::adjective} " = "{::materials::adjective}"
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
 
 [[rulesets]]
 name = "main"

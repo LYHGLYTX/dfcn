@@ -20,7 +20,7 @@ name = "default"
 name = "default::^0"
 optional = true
 [rulesets.rules]
-"{::materials::adjective} " = "{::materials::adjective}"
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
 
 [[rulesets]]
 name = "default::main"
@@ -41,7 +41,7 @@ name = "plural"
 name = "^material"
 optional = true
 [rulesets.rules]
-"{::materials::adjective} " = "{::materials::adjective}"
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
 
 [[rulesets]]
 name = "^handedness"

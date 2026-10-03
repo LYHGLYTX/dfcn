@@ -5,7 +5,7 @@ base = "items::cage"
 "{^0}{main}" = "{^0}{main}"
 # Native item getDescription (0x140ca4420) and building getName
 # (0x140551cb0) share the same cage/occupant/material arrangement.
-"{material} {main}" = "{material}{main}"
+"{::materials::item_qualifier} {main}" = "{::materials::item_qualifier}{main}"
 "{occupants} {main} ({material})" = "{occupants}{main}（{material}）"
 "{::text::activity_place} ({occupants})" = "{::text::activity_place}（{occupants}）"
 
@@ -13,7 +13,7 @@ base = "items::cage"
 name = "^0"
 optional = true
 [rulesets.rules]
-"{::materials::adjective} " = "{::materials::adjective}"
+"{::materials::item_qualifier} " = "{::materials::item_qualifier}"
 
 [[rulesets]]
 name = "main"

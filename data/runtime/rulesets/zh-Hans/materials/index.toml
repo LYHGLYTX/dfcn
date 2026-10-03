@@ -13,8 +13,8 @@ base = "materials"
 
 # The finished-item material callback is a real namespace dependency, just
 # like items::storage_container. Declare it so references are loadable; its
-# only implementation is the shared native qualifier resolver, not a second
-# adjective grammar or a wildcard fallback.
+# implementation is the shared native qualifier resolver and its scoped
+# finished-material rules, never a wildcard fallback.
 [[rulesets]]
 name = "item_qualifier"
 
@@ -36,3 +36,12 @@ name = "adjective"
 [rulesets.rules]
 "{^prefix}{state::adjective}" = "{^prefix}{state::adjective}"
 "{job::adjective}" = "{job::adjective}"
+
+# Finished objects use a material qualifier, while bulk materials retain
+# their noun/adjective rules above. Keep a creature or plant prefix attached
+# to its material state before the item type is appended.
+[[rulesets]]
+name = "finished_adjective"
+[rulesets.rules]
+"{^prefix}{job::finished_adjective}" = "{^prefix}{job::finished_adjective}"
+"unknown material" = "未知物质"

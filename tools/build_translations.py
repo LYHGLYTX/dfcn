@@ -1136,6 +1136,11 @@ def parse_literal_rulesets(root: Path) -> list[Entry]:
             continue
         document = tomllib.loads(path.read_text(encoding="utf-8"))
         for ruleset in document.get("rulesets", []):
+            # Finished-material qualifiers belong to typed item slots only.
+            # Keep their 毛质/丝质/etc. out of raw-material and general words.
+            if (document.get("base") in {"materials", "materials::job"}
+                    and ruleset.get("name") == "finished_adjective"):
+                continue
             # Unit-label states require a complete creature after the prefix.
             # Agitated here is wildlife status, not the homonymous emotion.
             if document.get("base") == "creatures::caste" and ruleset.get("name") in {

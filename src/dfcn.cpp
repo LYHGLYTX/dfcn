@@ -46,6 +46,7 @@
 
 #include "rulesets_manager.h"
 #include "item_designation.h"
+#include "item_material_qualifier.h"
 #include "reloadable_thread_state.h"
 #include "translation_work.h"
 #include "translation_state.h"
@@ -30118,15 +30119,26 @@ static std::string normalize_arena_equipment_specification(
     return target;
 }
 
+static std::optional<std::string> lookup_item_material_rule(
+        std::string_view source, std::string_view context) {
+    std::vector<size_t> origins;
+    return RULESETS.translate_with_origins(
+        std::string(source), std::string(context), origins);
+}
+
 static std::string arena_wood_material_qualifier(
-        std::string_view source, std::string target) {
+        std::string_view source, std::string target,
+        const ItemMaterialRuleLookup &lookup) {
     const std::string folded = lower(trim(std::string(source)));
+    if (auto finished = lookup(folded, "::materials::finished_adjective"))
+        return *finished;
     // The caller has identified a wood material, so resolve its adjective
     // through the shared material table. A generic noun translation of an
     // alias (ash -> furnace residue) must not become the wood qualifier.
-    if (auto material = RULESETS.translate_material_state(folded, true))
+    if (auto material = lookup(folded, "::materials::state::adjective"))
         target = std::move(*material);
     std::string qualifier = trim(std::move(target));
+    if (qualifier.empty()) return {};
     if (folded == "mangrove") {
         return "红树木质";
     }
@@ -30146,6 +30158,12 @@ static std::string arena_wood_material_qualifier(
         qualifier += "木质";
     }
     return qualifier;
+}
+
+static std::string arena_wood_material_qualifier(
+        std::string_view source, std::string target) {
+    return arena_wood_material_qualifier(source, std::move(target),
+        lookup_item_material_rule);
 }
 
 static bool is_arena_equipment_modifier_token(std::string_view source) {
@@ -30399,17 +30417,23 @@ static void clear_embark_craft_translation_cache() {
         1, std::memory_order_release);
 }
 
-// Finished-material spelling is shared by inventory and native typed items.
-static std::string finish_item_material_qualifier(
-        std::string_view material_source, std::string qualifier) {
-    // Generic job categories already have authoritative item adjectives.
-    // Resolve that complete scoped term before adding a concrete material's
-    // suffix: wooden -> 木制, cloth -> 布, bone -> 骨质. Containers, traps,
-    // crafts and native typed items all use this same finishing entry.
-    std::vector<size_t> origins;
-    if (const auto category = RULESETS.translate_with_origins(
-            native_text_to_utf8(material_source), "::materials::job::adjective", origins))
-        return *category;
+// Every finished-item material slot uses this formatter, including detached
+// caption grammars. Raw materials retain their independent noun/adjective rules.
+std::string finish_item_material_qualifier(
+        std::string_view material_source, std::string qualifier,
+        const ItemMaterialRuleLookup &lookup) {
+    const std::string folded = lower(trim(std::string(material_source)));
+    const auto wood = find_arena_wood_material(folded);
+    if (!wood.source.empty() && wood.at == 0 && wood.length == folded.size())
+        return arena_wood_material_qualifier(wood.source, std::move(qualifier), lookup);
+    if (auto woven = lookup(material_source, "::materials::woven_plant"))
+        return *woven;
+    if (auto finished = lookup(material_source, "::materials::finished_adjective"))
+        return *finished;
+    if (const auto ore = find_arena_metal_ore_material(folded);
+        ore.material && ore.at == 0 && ore.material->source.size() == folded.size())
+        return std::string(ore.material->qualifier);
+    if (qualifier.empty()) return {};
     auto replace_material_suffix = [&qualifier](
             std::string_view suffix, std::string_view replacement) {
         if (!qualifier.ends_with(suffix)) return false;
@@ -30422,12 +30446,7 @@ static std::string finish_item_material_qualifier(
     if (!replace_material_suffix("牙齿质", "牙质"))
         replace_material_suffix("牙齿", "牙");
 
-    if (const ArenaWoodMaterialMatch wood =
-            find_arena_wood_material(material_source);
-        !wood.source.empty() && wood.at == 0 && wood.length == material_source.size()) {
-        qualifier = arena_wood_material_qualifier(
-            wood.source, std::move(qualifier));
-    } else if (qualifier.ends_with("矿质") &&
+    if (qualifier.ends_with("矿质") &&
                !qualifier.ends_with("矿石质")) {
         qualifier.insert(qualifier.size() - std::string("质").size(),
                          "石");
@@ -30436,6 +30455,12 @@ static std::string finish_item_material_qualifier(
         qualifier += "质";
     }
     return qualifier;
+}
+
+static std::string finish_item_material_qualifier(
+        std::string_view material_source, std::string qualifier) {
+    return finish_item_material_qualifier(native_text_to_utf8(material_source),
+        std::move(qualifier), lookup_item_material_rule);
 }
 
 static std::optional<std::string> translate_typed_item_material_qualifier(
@@ -30517,6 +30542,15 @@ static std::optional<std::string> translate_embark_item_material_qualifier(
             return cache_qualifier(std::move(owned));
     if (const auto *material = magical_material(lower(material_source)))
         return cache_qualifier(material->qualifier);
+    if (const auto wood = find_arena_wood_material(material_source);
+            !wood.source.empty() && wood.at == 0 && wood.length == material_source.size()) {
+        const auto qualifier = finish_item_material_qualifier(material_source, {});
+        return cache_qualifier(qualifier.empty() ? std::nullopt :
+            std::optional<std::string>(qualifier));
+    }
+    if (auto finished = lookup_item_material_rule(native_text_to_utf8(material_source),
+            "::materials::finished_adjective"))
+        return cache_qualifier(std::move(finished));
 
     // Generated creatures live in world data, not installed creature RAWs.
     // Resolve their complete typed identity before generic token composition
@@ -31561,7 +31595,9 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
                         std::string_view(folded).substr(0, candidate_start),
                         std::string_view(folded).substr(leather_end));
                     if (equipment && !equipment->empty()) {
-                        return trim(*material) + "质" + *equipment;
+                        if (const auto qualifier = translate_embark_item_material_qualifier(
+                                material_source, true))
+                            return *qualifier + *equipment;
                     }
                 }
 
@@ -31602,7 +31638,9 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
                         std::string_view(folded).substr(0, candidate_start),
                         std::string_view(folded).substr(silk_end));
                     if (equipment && !equipment->empty()) {
-                        return trim(*creature) + "丝质" + *equipment;
+                        if (const auto qualifier = translate_embark_item_material_qualifier(
+                                "silk", true))
+                            return trim(*creature) + *qualifier + *equipment;
                     }
                 }
 
@@ -31630,6 +31668,9 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
         "wool", "fur",
     }};
     for (const std::string_view marker : hair_markers) {
+        const auto qualifier = translate_embark_item_material_qualifier(
+            std::string(marker), true);
+        if (!qualifier) continue;
         size_t marker_at = folded.find(marker);
         while (marker_at != std::string::npos) {
             const size_t marker_end = marker_at + marker.size();
@@ -31651,7 +31692,7 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
                                     0, candidate_start),
                                 std::string_view(folded).substr(marker_end));
                             if (equipment && !equipment->empty()) {
-                                return trim(*creature) + "毛质" + *equipment;
+                                return trim(*creature) + *qualifier + *equipment;
                             }
                         }
 
@@ -31684,7 +31725,7 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
                             std::string_view(folded).substr(0, marker_at),
                             std::string_view(folded).substr(split_at + 1));
                         if (equipment && !equipment->empty()) {
-                            return trim(*creature) + "毛质" + *equipment;
+                            return trim(*creature) + *qualifier + *equipment;
                         }
                     }
                     if (split_at == 0) break;

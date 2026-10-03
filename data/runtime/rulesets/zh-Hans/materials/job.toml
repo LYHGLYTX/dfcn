@@ -28,3 +28,25 @@ name = "shared"
 "pearl" = "珍珠"
 "yarn" = "纱线"
 "rock" = "岩石"
+
+# These forms belong only to finished items. Resource and job selectors keep
+# the established nouns in shared and the ordinary adjective rules above.
+[[rulesets]]
+name = "finished_adjective"
+[rulesets.rules]
+"plant" = "植物质"
+"cloth" = "布"
+"silk" = "丝质"
+"wool" = "毛质"
+"fur" = "毛质"
+"yarn" = "毛质"
+"leather" = "皮革质"
+"bone" = "骨质"
+"shell" = "壳质"
+"soap" = "肥皂质"
+"ivory/tooth" = "长牙/牙质"
+"horn" = "角质"
+"pearl" = "珍珠质"
+"rock" = "岩石质"
+"wood" = "木质"
+"wooden" = "木制"
