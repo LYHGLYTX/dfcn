@@ -192,6 +192,61 @@ static std::optional<SDL_Rect> adventure_combat_action_box_at(
     return SDL_Rect{caption_left, top, right - caption_left, 3};
 }
 
+static std::optional<SDL_Rect> adventure_combat_wrestling_box_at(
+        const graphicst &gps, const SDL_Rect &panel, int top, bool classic) {
+    const int left = panel.x;
+    const int maximum_right = panel.x + panel.w - 1;
+    if (top < panel.y || top + 3 > panel.y + panel.h || left < 0 ||
+            top < 0 || top + 3 > gps.dimy || maximum_right >= gps.dimx)
+        return std::nullopt;
+    const auto *rectangle = native_texture_button_rectangle(gps);
+    // Stages eight/nine have a relationship list before their move list;
+    // the first move's top therefore varies with the live relationship
+    // allocation. Each move still occupies exactly three native rows.
+    // Grab's own object and grip occupy two four-by-three icons. Its
+    // target-object branch adds a third, shifting L+11 to L+15.
+    for (const int artwork_width : {8, 12}) {
+        if (left + artwork_width + 2 >= maximum_right) continue;
+        int right = left + artwork_width;
+        while (right <= maximum_right && native_ui_skin_at(gps,
+                right, top, rectangle[1][0], classic)) ++right;
+        if (right != maximum_right && right != maximum_right - 2) continue;
+
+        // A plain relationship rectangle has no leading icon strip.
+        // Require actual artwork replacing the native horizontal rails
+        // in every four-column icon before excluding those cells.
+        bool artwork = true;
+        for (int start = left; start < left + artwork_width; start += 4) {
+            bool replaces_rail = false;
+            for (int x = start; x < start + 4; ++x) {
+                const int column = x == left ? 0 : 1;
+                for (const int dy : {0, 2})
+                    replaces_rail = replaces_rail || !native_ui_skin_at(
+                        gps, x, top + dy, rectangle[column][dy], classic);
+            }
+            if (!replaces_rail) { artwork = false; break; }
+        }
+        if (!artwork) continue;
+
+        bool intact = true;
+        for (int dy = 0; dy < 3 && intact; ++dy) {
+            for (int x = left + artwork_width; x <= right; ++x) {
+                const int column = x == right ? 2 : 1;
+                const bool caption = dy == 1 && x < right;
+                if (!native_ui_skin_at(gps, x, top + dy,
+                        rectangle[column][dy], classic, caption)) {
+                    intact = false;
+                    break;
+                }
+            }
+        }
+        if (!intact) continue;
+        const int caption_left = left + artwork_width + 2;
+        return SDL_Rect{caption_left, top, right - caption_left, 3};
+    }
+    return std::nullopt;
+}
+
 static std::optional<NativeAdventureCombatPanel> capture_adventure_combat_panel(
         const graphicst &gps, int first, int last, int y) {
     if (gps.dimx <= 0 || gps.dimy <= 0 || first < 0 || first >= last ||

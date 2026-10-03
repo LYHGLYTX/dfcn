@@ -107,15 +107,42 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
                     return finish(*item + suffix->second);
                 return finish(std::nullopt);
             }
+            if (const auto item = translate_item_caption_grammar(trim_view(original)))
+                return finish(item);
             return finish(translate_legends_item(trim_view(original)));
         }
         if (kind == 't') {
             if (const auto anatomy = translate_legends_anatomy(source)) return finish(anatomy);
+        } else {
+            if (const auto found = adventure_target_literals_.find(source);
+                    found != adventure_target_literals_.end()) return finish(found->second);
+            if (const auto rating = translate_skill_rating(source)) return finish(rating);
+            // Complete anatomy and item nouns outrank status templates that
+            // join an item and an ordinary word. Otherwise a weapon noun
+            // such as short sword can be split into an appearance adjective
+            // and a standalone sword before the item grammar sees it.
+            if (const auto anatomy = translate_legends_anatomy(source)) return finish(anatomy);
+            if (const auto item = translate_item_caption_grammar(trim_view(original)))
+                return finish(item);
         }
-        if (const auto found = adventure_target_literals_.find(source);
-                found != adventure_target_literals_.end()) return finish(found->second);
-        if (const auto rating = translate_skill_rating(source)) return finish(rating);
         for (const Rule &entry : adventure_target_templates_) {
+            // A typed body-part capture may add an ordinal to another body
+            // part, but cannot become an item/status union after anatomy
+            // fails. Keep Grab's body-part and item alternatives distinct.
+            if (kind == 't') {
+                const auto &prefix = entry.template_literals.front();
+                const bool word_ordinal = entry.template_kinds.size() == 1 &&
+                    entry.template_kinds.front() == 't' && !prefix.empty() &&
+                    prefix.find(' ') == prefix.size() - 1;
+                const bool numeric_ordinal = entry.template_kinds.size() == 2 &&
+                    entry.template_kinds[0] == 'd' && entry.template_kinds[1] == 't' &&
+                    prefix.empty() && (entry.template_literals[1] == "st " ||
+                        entry.template_literals[1] == "nd " ||
+                        entry.template_literals[1] == "rd " ||
+                        entry.template_literals[1] == "th ");
+                if (!entry.template_literals.back().empty() ||
+                        (!word_ordinal && !numeric_ordinal)) continue;
+            }
             if (!source.starts_with(entry.template_literals.front()) ||
                     !source.ends_with(entry.template_literals.back())) continue;
             std::vector<std::string> captures;
@@ -146,6 +173,7 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
             }
             return finish(std::move(target));
         }
+        if (kind == 't') return finish(std::nullopt);
         // Separators and damage/accuracy marks are original renderer fields.
         // Each adjoining term must resolve completely before composing them.
         for (const std::string_view separator : {", ", " / ", "/"}) {
@@ -163,14 +191,9 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
             if (const auto target = resolve(std::string_view(source).substr(0, marks + 1), 's'))
                 return finish(*target + source.substr(marks + 1));
         }
-        if (const auto anatomy = translate_legends_anatomy(source)) return finish(anatomy);
-        // Wrestling's native held-object union can name a body part or an
-        // item. Ordinal body-part prefixes above recurse in this same scope
-        // before either typed leaf is asked to resolve its complete noun.
-        if (kind != 't') {
-            if (const auto item = resolve(source, 'i')) return finish(item);
-        }
-        if (kind == 't') return finish(std::nullopt);
+        // Item captions outside the TOML grammar retain the shared complete
+        // item fallback after typed nouns and native action templates.
+        if (const auto item = resolve(source, 'i')) return finish(item);
         if (const auto term = translate_ui_message_capture(source, false)) return finish(term);
         return finish(std::nullopt);
     };
@@ -510,6 +533,17 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
             picture_end = list_end;
         }
         for (int y = picture_end; y < panel.y + panel.h; ++y) {
+            if (stage == 8) {
+                // Wrestling actions place two or three four-column icons
+                // over the row's left edge. Own the caption after those
+                // icons as one field, before generic word translation.
+                if (const auto box = adventure_combat_wrestling_box_at(
+                        *gps_, panel, y, classic)) {
+                    append(*box, box->x, 's');
+                    y += box->h - 1;
+                    continue;
+                }
+            }
             if (stage == 4 && (y - picture_end) % 3 == 1) {
                 // Six three-row style controls remain below the attack
                 // list. Their full explanations are one addst, after the
