@@ -167,15 +167,14 @@ bool Overlay::translated_adventure_action_matches(std::string_view source,
         std::string_view query, const NativePerformanceChoice *native_choice) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled || source.empty() || source.size() > 65536) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     if (native_choice) {
         // Several different objects can have the identical native Unknown
         // key. Their species must never enter a cache keyed by that text alone.
         std::vector<int> source_colors(source.size(), 0xffffff), target_colors;
         const auto target = translate_adventure_action_choice(
             source, source_colors, target_colors, native_choice);
-        return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+        return target && translated_search_text_matches(*target, query);
     }
     const std::string key(source);
     auto cached = adventure_action_search_cache_.find(key);
@@ -185,8 +184,7 @@ bool Overlay::translated_adventure_action_matches(std::string_view source,
         std::vector<int> source_colors(source.size(), 0xffffff), target_colors;
         const auto target = translate_adventure_action_choice(
             source, source_colors, target_colors);
-        std::string text = target ? lower(compact_translated_search_text(*target))
-                                  : std::string{};
+        std::string text = target.value_or(std::string{});
         static constexpr size_t maximum_records = 4096;
         if (adventure_action_search_cache_.size() >= maximum_records &&
             !adventure_action_search_order_.empty()) {
@@ -196,7 +194,7 @@ bool Overlay::translated_adventure_action_matches(std::string_view source,
         cached = adventure_action_search_cache_.emplace(key, std::move(text)).first;
         adventure_action_search_order_.push_back(key);
     }
-    return !cached->second.empty() && cached->second.find(needle) != std::string::npos;
+    return !cached->second.empty() && translated_search_text_matches(cached->second, query);
 }
 
 // Immutable vocabulary is shared by every keyword row until rules reload.
@@ -713,9 +711,8 @@ bool Overlay::translated_conversation_keywords_match(std::string_view keywords,
                                                      std::string_view query) const {
     TranslationStateScope translation_scope;
     if (!translation_enabled()) return false;
-    const std::string compact_query = compact_translated_search_text(query);
-    if (compact_query.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     const auto translated = translate_conversation_keywords(keywords);
     if (!translated) return false;
-    return compact_translated_search_text(*translated).find(compact_query) != std::string::npos;
+    return translated_search_text_matches(*translated, query);
 }

@@ -44,7 +44,6 @@ static size_t capture_native_item_search_find(const char *native_text,
         if (!g_overlay.translation_enabled() || !query_text ||
             query_length == 0 || query_length > 4096) return native_result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return native_result;
         std::string_view source;
         if (native_string_view(original_name, &source, 65536) && !source.empty() &&
             g_overlay.translated_item_search_matches(source, query))

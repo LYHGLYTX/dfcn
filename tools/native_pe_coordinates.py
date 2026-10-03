@@ -46,7 +46,6 @@ _SEARCH_ELEMENT = {
 }
 _EXCLUDED = {
     'native_ime_adapter.inc',  # The fixed image coordinates belong to SDL2.dll.
-    'native_journal_search_hooks.inc',  # This binding is ELF-only.
 }
 
 

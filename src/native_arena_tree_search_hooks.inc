@@ -29,7 +29,6 @@ static size_t capture_native_arena_tree_search_find(const char *text, size_t len
         if (!g_overlay.translation_enabled() || !query_text ||
             !query_length || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::string_view source;
         if (native_string_view(original_name, &source, 65536) &&
             g_overlay.translated_plant_search_matches(source, query)) return 0;

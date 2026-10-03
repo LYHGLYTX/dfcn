@@ -1,8 +1,13 @@
-// Linux adventure-log filter: every branch restores the native candidate
+// Adventure-log filters restore the native candidate
 // vector, folds disposable search keys, then runs an inlined substring search.
 // No native records, list identities or selection logic are replaced.
 static NativeCallHook g_native_journal_search_hook;
 static NativeSearchFoldFn g_native_journal_search_fold = nullptr;
+struct NativeJournalSearchProfile {
+    uintptr_t base = 0;
+    NativeSearchFoldFn fold = nullptr;
+    std::vector<NativeCall> calls;
+};
 
 static void capture_native_journal_search_query(NativeString *query) {
     fold_native_search_query(query, g_native_journal_search_fold);
@@ -17,7 +22,7 @@ static void capture_native_journal_search_term(NativeString *term,
         std::string_view query, caption;
         if (g_overlay.translation_enabled() &&
             native_string_view(query_string, &query, 4096) &&
-            contains_non_ascii_codepoint(query) &&
+            !query.empty() &&
             native_string_view(display_source, &caption, 65536)) source.assign(caption);
     } catch (...) {}
     prepare_native_inlined_search_term(term, query_string, g_native_journal_search_fold,
@@ -26,6 +31,10 @@ static void capture_native_journal_search_term(NativeString *term,
                 g_overlay.translated_journal_search_matches(source, query, Kind);
         });
 }
+
+#ifdef _WIN32
+#include "native_journal_search_profile_pe.inc"
+#endif
 
 static bool native_journal_search_hook_active() {
     return g_native_journal_search_hook.active();
@@ -43,11 +52,10 @@ static bool install_native_journal_search_hook() {
         uninstall_native_journal_search_hook();
         if (native_journal_search_hook_active()) return false;
     }
-    struct Profile {
-        uintptr_t base = 0;
-        NativeSearchFoldFn fold = nullptr;
-        std::vector<NativeCall> calls;
-    };
+    NativeJournalSearchProfile profile;
+#ifdef _WIN32
+    if (!resolve_native_journal_search_profile_pe(profile)) return false;
+#else
     const uintptr_t base = native_history_profile_base();
     // Reference ELF bcc6789: owner+2a8 is the input, stack+70 its working
     // query. The relay has pushed its return address, hence RSI = RSP+78.
@@ -57,7 +65,7 @@ static bool install_native_journal_search_hook() {
     // list_name: people/sites/groups/regions/artifacts +08, bestiary +10,
     // agreements +20, intrigue actors/organizations +18, plots +00.
     // Plots also search organization_name+70 with its own name grammar.
-    const NativeSearchBinding<Profile> bindings[]{
+    const NativeSearchBinding<NativeJournalSearchProfile> bindings[]{
         {{
             {0x13d92b0, {0xf3,0x0f,0x1e,0xfa,0x41,0x57,0x41,0x56,0x41,0x55,
                 0x41,0x54,0x49,0x89,0xfc,0x55,0x53,0x48,0x81,0xec,0xe8,0,0,0}},
@@ -92,14 +100,14 @@ static bool install_native_journal_search_hook() {
             {0x13d943f, 0x25940, reinterpret_cast<const void *>(&capture_native_journal_search_term<JournalSearchKind::PlotOrganization>), {0x48,0x8d,0x74,0x24,0x78,0x48,0x89,0xfa}}
         }}}
     };
-    Profile profile;
     if (!resolve_native_search_binding(bindings, profile, "Adventure journal search")) return false;
+#endif
     g_native_journal_search_fold = profile.fold;
     if (!g_native_journal_search_hook.install(profile.base, profile.calls,
                                               "Native adventure journal search")) {
         uninstall_native_journal_search_hook();
         return false;
     }
-    log_line("INFO", "Enabled Chinese adventure journal search across all native tabs");
+    log_line("INFO", "Enabled translated and pinyin adventure journal search across all native tabs");
     return true;
 }

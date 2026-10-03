@@ -2928,6 +2928,8 @@ public:
                                    std::string_view query) const;
     bool translated_plant_search_matches(std::string_view source,
                                         std::string_view query) const;
+    bool translated_color_search_matches(std::string_view source,
+                                        std::string_view query) const;
     bool translated_material_search_matches(std::string_view source,
                                            std::string_view query) const;
     bool translated_work_order_condition_search_matches(std::string_view source,
@@ -2964,6 +2966,8 @@ public:
         bool personality = false, bool health = false, bool thoughts = false) const;
 
 private:
+    std::optional<std::string> translate_color_picker_caption(
+        std::string_view source) const;
     std::optional<std::string> translate_journal_title(std::string_view source,
         JournalSearchKind kind) const;
     std::optional<std::string> translate_symbol_candidate(std::string_view source,
@@ -4477,18 +4481,18 @@ static std::string compact_translated_search_text(std::string_view text) {
     return compact;
 }
 
+#include "pinyin_search.inc"
+
 bool Overlay::translated_search_matches(std::string_view source,
                                         std::string_view query) const {
     TranslationStateScope translation_scope;
     const std::string compact_query = compact_translated_search_text(query);
     if (source.empty() || compact_query.empty()) return false;
 
-    const auto contains_query = [&compact_query](const std::string &target) {
-        const std::string compact_target =
-            compact_translated_search_text(target);
-        return !compact_target.empty() &&
-               compact_target.find(compact_query) != std::string::npos;
+    const auto contains_query = [query](const std::string &target) {
+        return translated_search_text_matches(target, query);
     };
+    if (contains_query(native_text_to_utf8(source))) return true;
     if (const auto exact = exact_literal_translation(source);
         exact && contains_query(*exact)) {
         return true;
@@ -4518,35 +4522,73 @@ bool Overlay::translated_plant_search_matches(std::string_view source,
                                              std::string_view query) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (source.empty() || needle.empty()) return false;
+    if (source.empty() || compact_translated_search_text(query).empty()) return false;
     const auto target = translate_plant_name(source);
-    return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+    return target && translated_search_text_matches(*target, query);
+}
+
+std::optional<std::string> Overlay::translate_color_picker_caption(
+        std::string_view caption) const {
+    TranslationStateScope translation_scope;
+    std::istringstream words(native_text_to_utf8(caption));
+    std::string source;
+    for (std::string word; words >> word;) {
+        if (!source.empty()) source += ' ';
+        source += lower(word);
+    }
+    if (source == "any color") return exact_literal_translation(source);
+    const bool dye = source.ends_with(" (dye)");
+    if (dye) source.resize(source.size() - std::string_view(" (dye)").size());
+    auto target = RULESETS.translate_color(source);
+    if (!target) {
+        // Reagent choices concatenate two complete descriptor color names.
+        // Resolve each whole color so multiword colors and material/species
+        // homonyms retain the same meaning as the displayed picker caption.
+        for (size_t at = source.find(' '); at != std::string::npos;
+                at = source.find(' ', at + 1)) {
+            auto first = RULESETS.translate_color(source.substr(0, at));
+            if (!first) continue;
+            auto second = RULESETS.translate_color(source.substr(at + 1));
+            if (second) {
+                target = *first + " " + *second;
+                break;
+            }
+        }
+    }
+    if (target && dye) *target += "（染料）";
+    return target;
+}
+
+bool Overlay::translated_color_search_matches(std::string_view source,
+                                             std::string_view query) const {
+    TranslationStateScope translation_scope;
+    if (!config_.enabled || source.empty() ||
+            compact_translated_search_text(query).empty()) return false;
+    const auto target = translate_color_picker_caption(source);
+    return target && translated_search_text_matches(*target, query);
 }
 
 bool Overlay::translated_material_search_matches(std::string_view source,
                                                 std::string_view query) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (source.empty() || needle.empty()) return false;
+    if (source.empty() || compact_translated_search_text(query).empty()) return false;
     // Use the material noun grammar used by the displayed captions, never
     // equipment adjectives or unrelated creature-name token matches.
     auto target = exact_literal_translation(source);
     if (!target && config_.compositional_rules) target = translate_material_name(source);
-    return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+    return target && translated_search_text_matches(*target, query);
 }
 
 bool Overlay::translated_work_order_condition_search_matches(std::string_view source,
                                                             std::string_view query) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (source.empty() || needle.empty()) return false;
+    if (source.empty() || compact_translated_search_text(query).empty()) return false;
     // Exactly the same complete grammar/cache as the displayed trait row,
     // including material-bearing, tool-use and multiword color constraints.
     const auto target = translate_workshop_recipe_source(source);
-    return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+    return target && translated_search_text_matches(*target, query);
 }
 
 bool Overlay::translated_item_search_matches(std::string_view source,
@@ -4561,8 +4603,7 @@ bool Overlay::translated_item_search_matches(std::string_view source,
         ? translate_fortress_item_caption(source)
         : translate_embark_equipment_item(source, -1, -1, source);
     if (!translated || translated->empty()) return false;
-    const std::string compact_target = lower(compact_translated_search_text(*translated));
-    return compact_target.find(compact_query) != std::string::npos;
+    return translated_search_text_matches(*translated, query);
 }
 
 void Overlay::capture_conversation_choices(
@@ -7633,10 +7674,9 @@ bool Overlay::translated_unit_search_matches(std::string_view source,
                                              std::string_view query, bool activity) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled || source.empty() || source.size() > 65536) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     const auto matches = [&](std::string_view text) {
-        return lower(compact_translated_search_text(text)).find(needle) != std::string::npos;
+        return translated_search_text_matches(text, query);
     };
     // User-authored Chinese names/nicknames remain literal. Convert only the
     // surrounding legacy game bytes, exactly as the visible name renderer does.

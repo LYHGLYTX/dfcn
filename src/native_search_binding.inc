@@ -153,24 +153,66 @@ struct NativeSearchString {
 };
 
 using NativeSearchFoldFn = void (*)(NativeString *);
+struct NativeSearchTermSpelling {
+    const NativeString *term = nullptr;
+    std::string source, folded;
+};
+static std::vector<NativeSearchTermSpelling> &native_search_term_spellings() {
+    return reloadable_thread_state<std::vector<NativeSearchTermSpelling>,
+        struct SearchTermSpellingTag>();
+}
+
+static bool native_search_display_term(const NativeString *term,
+        std::string_view *source, size_t maximum) {
+    std::string_view folded;
+    if (!source || !native_string_view(term, &folded, maximum)) return false;
+    for (const auto &spelling : native_search_term_spellings()) {
+        if (spelling.term == term && folded == spelling.folded &&
+            spelling.source.size() <= maximum) {
+            *source = spelling.source;
+            return true;
+        }
+    }
+    *source = folded;
+    return true;
+}
+
 static void fold_native_search_query(NativeString *text, NativeSearchFoldFn original) {
     NativeInputCallbackScope callback;
-    try { if (fold_native_unicode_search_query(text)) return; } catch (...) {}
+    try {
+        native_search_term_spellings().clear();
+        if (fold_native_unicode_search_query(text)) return;
+    } catch (...) {}
     if (original) callback.call_native([&] { original(text); });
 }
 
 static void fold_native_search_term(NativeString *text,
         const NativeString *query_string, NativeSearchFoldFn original) {
     NativeInputCallbackScope callback;
+    std::string source;
+    bool preserve_unicode = false;
     try {
-        std::string_view query;
+        std::string_view query, spelling;
         // Translated matching needs the complete display spelling, including
         // generated names. Only temporary filter strings reach this boundary.
         if (g_overlay.translation_enabled() &&
-            native_string_view(query_string, &query, 4096) &&
-            contains_non_ascii_codepoint(query)) return;
+            native_string_view(query_string, &query, 4096) && !query.empty() &&
+            native_string_view(text, &spelling, 65536)) {
+            source.assign(spelling);
+            preserve_unicode = contains_non_ascii_codepoint(query);
+        }
     } catch (...) {}
-    if (original) callback.call_native([&] { original(text); });
+    if (original && !preserve_unicode) callback.call_native([&] { original(text); });
+    try {
+        std::string_view folded;
+        if (source.empty() || !native_string_view(text, &folded, 65536)) return;
+        auto &spellings = native_search_term_spellings();
+        std::erase_if(spellings, [&](const auto &spelling) { return spelling.term == text; });
+        // Scratch strings are reused within a single native filter. Bound the
+        // retained originals, and require the current folded bytes on lookup.
+        if (spellings.size() == 16) spellings.erase(spellings.begin());
+        spellings.push_back({text, std::move(source), std::string(folded)});
+    } catch (...) {}
 }
 
 // Some native compilers inline substring comparisons. Their temporary search
@@ -181,14 +223,19 @@ template<typename Match>
 static void prepare_native_inlined_search_term(NativeString *term,
         const NativeString *query_string, NativeSearchFoldFn original, Match match) {
     NativeInputCallbackScope callback;
+    std::string source;
+    try {
+        std::string_view spelling;
+        if (native_string_view(term, &spelling, 65536)) source.assign(spelling);
+    } catch (...) {}
     if (original) callback.call_native([&] { original(term); });
     try {
         std::string_view query, text;
         if (!g_overlay.translation_enabled() ||
             !native_string_view(query_string, &query, 4096) ||
-            !contains_non_ascii_codepoint(query) ||
+            query.empty() || source.empty() ||
             !native_string_view(term, &text, 65536) ||
-            text.find(query) != std::string_view::npos || !match(text, query)) return;
+            text.find(query) != std::string_view::npos || !match(source, query)) return;
         // Native assignment preserves the game's allocator/SSO ownership.
         // Only this filter's disposable key is changed, never its source.
         const auto assign = reinterpret_cast<void (*)(NativeString *, const char *)>(

@@ -58,10 +58,9 @@ bool Overlay::translated_journal_search_matches(std::string_view source,
     TranslationStateScope translation_scope;
     if (!config_.enabled || source.empty() || source.size() > 65536 || query.size() > 4096)
         return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     const auto matches = [&](std::string_view text) {
-        return lower(compact_translated_search_text(text)).find(needle) != std::string::npos;
+        return translated_search_text_matches(text, query);
     };
     if (matches(native_text_to_utf8(source))) return true;
     const auto target = translate_journal_title(source, kind);
@@ -75,14 +74,10 @@ bool Overlay::translated_legends_search_matches(std::string_view source,
     TranslationStateScope translation_scope;
     if (!config_.enabled || source.size() + description.size() > 65536 ||
         (source.empty() && description.empty()) || query.size() > 4096) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
-    const auto normalize = [](std::string_view value) {
-        return lower(compact_translated_search_text(value));
-    };
+    if (compact_translated_search_text(query).empty()) return false;
     // Keep authored Chinese names and mixed native/UTF-8 text literal.
-    if (normalize(native_text_to_utf8(source)).find(needle) != std::string::npos ||
-        normalize(native_text_to_utf8(description)).find(needle) != std::string::npos)
+    if (translated_search_text_matches(native_text_to_utf8(source), query) ||
+        translated_search_text_matches(native_text_to_utf8(description), query))
         return true;
 
     std::string key(1, static_cast<char>(kind));
@@ -153,11 +148,6 @@ bool Overlay::translated_legends_search_matches(std::string_view source,
             target.push_back('\n');
             target.append(type.value_or(native_text_to_utf8(description)));
         }
-        // Normalize fields separately; retain their boundary in cached text.
-        const size_t boundary = target.find('\n');
-        target = boundary == std::string::npos ? normalize(target) :
-            normalize(std::string_view(target).substr(0, boundary)) + '\n' +
-            normalize(std::string_view(target).substr(boundary + 1));
         constexpr size_t maximum_records = 65536;
         constexpr size_t maximum_bytes = 32u * 1024u * 1024u;
         const size_t cost = 2 * key.size() + target.size();
@@ -176,5 +166,12 @@ bool Overlay::translated_legends_search_matches(std::string_view source,
         cached = legends_search_translation_cache_.emplace(key, std::move(target)).first;
         legends_search_translation_order_.push_back(std::move(key));
     }
-    return cached->second.find(needle) != std::string::npos;
+    // Search each field independently so literal, pinyin and initial keys
+    // cannot join a title with its separate description.
+    const std::string_view target(cached->second);
+    const size_t boundary = target.find('\n');
+    if (boundary == std::string::npos)
+        return translated_search_text_matches(target, query);
+    return translated_search_text_matches(target.substr(0, boundary), query) ||
+        translated_search_text_matches(target.substr(boundary + 1), query);
 }

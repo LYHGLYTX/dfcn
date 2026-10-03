@@ -71,6 +71,14 @@ DFCN 的原创内容采用知识共享署名—非商业性使用—相同方式
    - 许可：MIT；许可文本见 `third_party/lua-output.LICENSE`
    - 著作权：Copyright (C) 1994-2020 Lua.org, PUC-Rio.
 
+9. **pinyin-data 0.15.0 汉字读音数据**
+   - 项目：https://github.com/mozillazg/pinyin-data
+   - 导入版本：`9193766130af24d2ac54230be979b2e98ac66223`
+   - 本地文件：`third_party/pinyin-data/pinyin_data.inc`
+   - 用途：所有原生搜索入口共用的汉字全拼和首字母匹配；去除声调、将 ü 归为 v，保留每字所有读音。
+   - 许可：MIT；许可文本见 `third_party/pinyin-data/LICENSE`，随运行文件部署及打包。
+   - 著作权：Copyright (c) 2016 mozillazg
+
 完整许可文本分别保存在 `data/upstream/licenses/dfi18n-data.LICENSE.md` 和
 `data/upstream/licenses/dfzh-data.LICENSE.md`。DFCN 对数据做了格式转换、冲突过滤、数字模板转换、
 RAW 空白归一化和 CP437 屏幕编码转换；本地 dfzh 词表另按项目约定将居民管理

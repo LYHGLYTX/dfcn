@@ -51,9 +51,9 @@ static bool native_legends_search_source(LegendsSearchKind kind, const void *fra
     const auto &layout = g_native_legends_search_sources;
     if (!base || index >= layout.names.size()) return false;
     std::string_view name, gloss;
-    if (!native_string_view(reinterpret_cast<const NativeString *>(
+    if (!native_search_display_term(reinterpret_cast<const NativeString *>(
             native_legends_search_frame_field(address, layout.names[index])), &name, 16384) ||
-        !native_string_view(reinterpret_cast<const NativeString *>(
+        !native_search_display_term(reinterpret_cast<const NativeString *>(
             native_legends_search_frame_field(address, layout.glosses[index])), &gloss, 16384))
         return false;
     // Artifact lists leave the gloss scratch untouched on their Untitled

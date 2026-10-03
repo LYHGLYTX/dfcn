@@ -63,7 +63,6 @@ static size_t match_native_workshop_search(const char *native_text,
         if (!g_overlay.translation_enabled() || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         // Native search keys are already lowercased; the display caption
         // retains the spelling required by generated instrument names and
         // scoped task grammar. It is available even for offscreen choices.

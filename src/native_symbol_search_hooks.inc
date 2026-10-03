@@ -33,7 +33,7 @@ static void capture_native_symbol_creature_term(NativeString *term, const Native
     try {
         std::string_view source, needle;
         if (g_overlay.translation_enabled() &&
-            native_string_view(query, &needle, 4096) && contains_non_ascii_codepoint(needle) &&
+            native_string_view(query, &needle, 4096) && !needle.empty() &&
             native_string_view(term, &source, 65536)) original.assign(source);
     } catch (...) {}
     // Preserve generated species spelling before CP437 folding. Only the
@@ -98,7 +98,7 @@ static bool capture_native_symbol_search_match(const void *candidate,
                     &second, 65536) && native_search_byte_find(second.data(), second.size(), 0,
                         query.data(), query.size()) != SIZE_MAX) return true;
         }
-        if (!g_overlay.translation_enabled() || !contains_non_ascii_codepoint(query)) return false;
+        if (!g_overlay.translation_enabled() || query.empty()) return false;
         std::string source;
         if constexpr (identity) {
             // Rebuild the exact display name from the native identity. The

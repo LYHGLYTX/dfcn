@@ -36,6 +36,18 @@ static bool native_arena_candidates(std::vector<NativeArenaCandidate> &result) {
     for (size_t i = 0; i < races.size(); ++i) result.emplace_back(races.begin[i], castes.begin[i]);
     return true;
 }
+static bool native_arena_filtered_candidates(std::vector<NativeArenaCandidate> &result) {
+    if (!native_arena_open()) return false;
+    // Recompute from the query before taking the English result snapshot.
+    // The current vectors may contain our own previous translated results.
+    g_native_arena.filter(g_native_arena.picker);
+    const auto races = NativeBorrowedVector<int16_t>::read(g_native_arena.picker + 0x38);
+    const auto castes = NativeBorrowedVector<int16_t>::read(g_native_arena.picker + 0x50);
+    if (!races.valid(1u << 18) || !castes.valid(1u << 18) || races.size() != castes.size()) return false;
+    result.reserve(races.size());
+    for (size_t i = 0; i < races.size(); ++i) result.emplace_back(races.begin[i], castes.begin[i]);
+    return true;
+}
 static const NativeString *native_arena_candidate_name(int16_t race, int16_t caste) {
     if (!g_native_arena.raws || race < 0) return nullptr;
     const auto raws = NativeBorrowedVector<unsigned char *>::read(g_native_arena.raws);

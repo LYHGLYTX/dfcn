@@ -52,7 +52,6 @@ static size_t match_native_choice_caption(const char *text, size_t length,
         if (!g_overlay.translation_enabled() || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::string_view source;
         if (native_string_view(caption, &source, 65536) && !source.empty()) {
             if constexpr (AdventureAction) {
@@ -193,8 +192,7 @@ static void rank_translated_conversation_choices(void *raw_entries, size_t count
     const auto *query_string = reinterpret_cast<const NativeString *>(
         static_cast<const unsigned char *>(context) + layout.query);
     std::string_view query;
-    if (!native_string_view(query_string, &query, 4096) || query.empty() ||
-        !contains_non_ascii_codepoint(query)) return;
+    if (!native_string_view(query_string, &query, 4096) || query.empty()) return;
 
     const auto *entries = static_cast<unsigned char *const *>(raw_entries);
     std::vector<unsigned char *> matches;

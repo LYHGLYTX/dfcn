@@ -23,7 +23,7 @@ static NativeCallHook g_native_unit_search_hook;
 static NativeUnitSearchFindFn g_real_native_unit_search_find = nullptr;
 static NativeUnitSearchFoldFn g_real_native_unit_search_fold = nullptr;
 struct NativeUnitSearchIdentity {
-    std::string source;
+    std::string source, folded;
     std::optional<std::string> target;
 };
 static NativeUnitSearchIdentity &native_unit_search_identity() {
@@ -47,6 +47,10 @@ static void capture_native_unit_search_name_fold(NativeString *text,
         }
     } catch (...) { identity = {}; }
     fold_native_search_term(text, query_string, g_real_native_unit_search_fold);
+    try {
+        std::string_view folded;
+        if (native_string_view(text, &folded, 65536)) identity.folded.assign(folded);
+    } catch (...) { identity = {}; }
 }
 
 static size_t match_native_unit_search(const char *text, size_t length, size_t start,
@@ -63,16 +67,16 @@ static size_t match_native_unit_search(const char *text, size_t length, size_t s
             !query_text || query_length == 0 || query_length > 4096 ||
             !g_overlay.translation_enabled()) return result;
         const std::string_view query(query_text, query_length);
-        if (!activity && contains_non_ascii_codepoint(query)) {
+        if (!activity) {
             const auto &identity = native_unit_search_identity();
-            if (identity.target && std::string_view(text, length) == identity.source) {
-                const auto needle = lower(compact_translated_search_text(query));
-                return !needle.empty() && lower(compact_translated_search_text(*identity.target))
-                    .find(needle) != std::string::npos ? 0 : result;
+            if (std::string_view(text, length) == identity.folded) {
+                if (identity.target && translated_search_text_matches(*identity.target, query))
+                    return 0;
+                return g_overlay.translated_unit_search_matches(identity.source, query, false)
+                    ? 0 : result;
             }
         }
-        if (contains_non_ascii_codepoint(query) &&
-            g_overlay.translated_unit_search_matches(std::string_view(text, length), query, activity))
+        if (g_overlay.translated_unit_search_matches(std::string_view(text, length), query, activity))
             return 0;
     } catch (...) {
         // Never unwind through the game's predicate or change its records.

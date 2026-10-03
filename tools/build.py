@@ -73,7 +73,7 @@ def deploy_runtime_data(directory: Path) -> None:
                  "dfhack-output-stonesense.tsv",
                  "procedural-terms.tsv", "procedural-word-senses.tsv"):
         install(runtime / name, (RUNTIME / name).read_bytes())
-    for name in ("dfhack-help.LICENSE", "lua-output.LICENSE"):
+    for name in ("dfhack-help.LICENSE", "lua-output.LICENSE", "pinyin-data/LICENSE"):
         install(runtime / name, (ROOT / "third_party" / name).read_bytes())
     for source in sorted((RUNTIME / "rulesets").rglob("*.toml")):
         install(runtime / source.relative_to(RUNTIME), source.read_bytes())
@@ -571,7 +571,8 @@ def main() -> int:
             raise RuntimeError("Global static linking is unsupported; SDL2 must remain dynamically linked.")
         core_inputs = [SCRIPT, *file_inputs(ROOT / "src", {".cpp", ".h", ".inc", ".exports"}),
                        *file_inputs(ROOT / "compat", {".h"}),
-                       *file_inputs(ROOT / "third_party/tomlplusplus/include", {".h", ".hpp"})]
+                       *file_inputs(ROOT / "third_party/tomlplusplus/include", {".h", ".hpp"}),
+                       ROOT / "third_party/pinyin-data/pinyin_data.inc"]
         if (GAME / "g_src/init.h").is_file():
             core_inputs.append(GAME / "g_src/init.h")
         configured_build = bool(args.toolchain_root or args.sdl_root or any(

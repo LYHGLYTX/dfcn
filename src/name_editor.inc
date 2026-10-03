@@ -124,10 +124,9 @@ bool Overlay::translated_name_editor_search_matches(std::string_view word_id,
         std::string_view query) const {
     TranslationStateScope translation_scope;
     if (native_part < 0 || native_part > 8) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     const auto contains = [&](std::string_view text) {
-        return lower(compact_translated_search_text(text)).find(needle) != std::string::npos;
+        return translated_search_text_matches(text, query);
     };
     if (contains(source) || (!native_word.empty() && contains(native_word))) return true;
     const auto part = native_part <= 1 ? ProceduralNamePartOfSpeech::noun :

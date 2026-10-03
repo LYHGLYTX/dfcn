@@ -99,7 +99,6 @@ static size_t match_native_legends_search(const char *native_text, size_t native
         if (!g_overlay.translation_enabled() || !frame || !screen || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::string source, description;
         if (native_legends_search_source(kind, frame, screen, source, description) &&
             g_overlay.translated_legends_search_matches(source, description, query, kind))
@@ -145,7 +144,6 @@ static size_t capture_native_legends_search_descriptor_find(const char *native_t
         if (!g_overlay.translation_enabled() || !descriptor || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::vector<std::string_view> sources;
         if (native_legends_search_descriptors(descriptor, sources)) {
             for (const auto source : sources)

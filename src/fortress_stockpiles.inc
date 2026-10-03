@@ -69,10 +69,9 @@ bool Overlay::translated_stockpile_search_matches(std::string_view source,
         std::string_view query, StockpileCaptionKind kind) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (source.empty() || needle.empty()) return false;
+    if (source.empty() || compact_translated_search_text(query).empty()) return false;
     const auto target = translate_stockpile_setting(source, kind);
-    return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+    return target && translated_search_text_matches(*target, query);
 }
 
 // Custom settings are three independent category-button columns. Categories

@@ -7,6 +7,7 @@ struct NameEditorSearchState {
     uintptr_t creator = 0;
     NativeNameSearchSnapshot source;
     std::vector<int32_t> words, parts;
+    std::unordered_set<uint64_t> native_matches;
     uint64_t revision = 0;
     bool cached = false, error_reported = false;
 };
@@ -54,20 +55,34 @@ static void apply_pending_name_editor_search() {
             report_name_editor_search_error("active query or candidate storage is unavailable");
             return;
         }
-        // ASCII/empty queries still use the native filter. Clearing the
-        // query restores all entries and never changes any chosen name part.
-        if (!contains_non_ascii_codepoint(source.query)) {
+        // Clearing the query restores all entries through the native filter.
+        // Every nonempty query also searches the translated word spellings.
+        if (source.query.empty()) {
             state.cached = false;
+            state.native_matches.clear();
             return;
         }
         const uint64_t revision = g_overlay.name_editor_search_revision();
-        const bool changed = !state.cached || state.revision != revision ||
+        const bool native_changed = !state.cached ||
             source.query != state.source.query || source.slot != state.source.slot ||
             source.name != state.source.name || source.language != state.source.language ||
             source.raws.begin != state.source.raws.begin ||
             source.native_words.begin != state.source.native_words.begin ||
             source.words != state.source.words || source.parts != state.source.parts;
+        const bool changed = native_changed || state.revision != revision;
         if (changed) {
+            const auto candidate_key = [](int32_t word, int32_t part) {
+                return (uint64_t(uint32_t(word)) << 32) | uint32_t(part);
+            };
+            if (native_changed) {
+                // Native edits/slot changes rebuild this output from the full
+                // legal word table. Keep that exact English/POS result set;
+                // later translation revisions must not snapshot our own list.
+                state.native_matches.clear();
+                for (size_t i = 0; i < source.output_words.size(); ++i)
+                    state.native_matches.insert(candidate_key(
+                        source.output_words.begin[i], source.output_parts.begin[i]));
+            }
             std::vector<int32_t> words, parts;
             words.reserve(source.words.size());
             parts.reserve(source.parts.size());
@@ -77,7 +92,8 @@ static void apply_pending_name_editor_search() {
                     report_name_editor_search_error("cannot read a complete WORD/POS candidate");
                     return;
                 }
-                if (!g_overlay.translated_name_editor_search_matches(id, english,
+                if (!state.native_matches.contains(candidate_key(source.words[i], source.parts[i])) &&
+                    !g_overlay.translated_name_editor_search_matches(id, english,
                         native_word, source.parts[i], source.query)) continue;
                 words.push_back(source.words[i]);
                 parts.push_back(source.parts[i]);

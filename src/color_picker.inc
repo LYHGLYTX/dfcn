@@ -53,22 +53,8 @@ void Overlay::append_color_picker_rows(std::vector<std::string> &rows,
         while (end > x && context[y][end - 1] == ' ') --end;
         // Only lookup discards native justification padding. Suppression
         // retains every physical byte between the color and annotation.
-        std::istringstream words(context[y].substr(x, end - x));
-        std::string source;
-        for (std::string word; words >> word;) {
-            if (!source.empty()) source += ' ';
-            source += lower(word);
-        }
-        std::optional<std::string> target;
-        if (source == "any color") {
-            target = exact_literal_translation(source);
-        } else {
-            const bool dye = source.ends_with(" (dye)");
-            if (dye) source.resize(source.size() - std::string_view(" (dye)").size());
-            std::vector<size_t> origins;
-            target = RULESETS.translate_with_origins(source, "::color::name", origins);
-            if (target && dye) *target += "（染料）";
-        }
+        auto target = translate_color_picker_caption(
+            std::string_view(context[y]).substr(x, end - x));
         if (!target || target->empty()) continue;
         choices.push_back({x, y, end, std::move(*target)});
         left = std::min(left, x);

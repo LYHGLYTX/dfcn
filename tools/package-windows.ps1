@@ -63,7 +63,7 @@ try {
     )) {
         Add-RuntimeFile (Join-Path $projectRoot $name) ('dfcn/' + $name)
     }
-    foreach ($name in @('dfhack-help.LICENSE', 'lua-output.LICENSE')) {
+    foreach ($name in @('dfhack-help.LICENSE', 'lua-output.LICENSE', 'pinyin-data/LICENSE')) {
         Add-RuntimeFile (Join-Path $projectRoot ('third_party/' + $name)) ('dfcn/data/runtime/' + $name)
     }
 
@@ -95,7 +95,8 @@ try {
         'data/upstream/licenses/dfi18n-data.LICENSE.md', 'data/upstream/licenses/dfzh-data.LICENSE.md',
         'third_party/dfzh-rules-engine.LICENSE', 'third_party/tomlplusplus/LICENSE',
         'third_party/dfhooks.LICENSE', 'data/upstream/licenses/ECDICT.LICENSE',
-        'third_party/dfhack-help.LICENSE', 'third_party/lua-output.LICENSE'
+        'third_party/dfhack-help.LICENSE', 'third_party/lua-output.LICENSE',
+        'third_party/pinyin-data/LICENSE'
     )) {
         [void]$notices.AppendLine()
         [void]$notices.AppendLine('## ' + $relative)

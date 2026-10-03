@@ -67,7 +67,7 @@ static void capture_native_material_search_term_fold(NativeString *term,
         std::string_view query, source;
         if (g_overlay.translation_enabled() &&
             native_string_view(query_string, &query, 4096) &&
-            contains_non_ascii_codepoint(query) &&
+            !query.empty() &&
             native_string_view(term, &source, 65536) &&
             source.find('\0') == std::string_view::npos) {
             std::memcpy(caption.source.data(), source.data(), source.size());
@@ -93,7 +93,6 @@ static size_t match_native_material_search(const char *text, size_t length,
         if (!g_overlay.translation_enabled() || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::string source;
         if (read_caption(source) && (condition
                 ? g_overlay.translated_work_order_condition_search_matches(source, query)

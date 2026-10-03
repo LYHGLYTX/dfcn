@@ -4,6 +4,7 @@ using NativeArenaCandidate = std::pair<std::int16_t, std::int16_t>;
 static bool native_arena_open();
 static NativeString *native_arena_query();
 static bool native_arena_candidates(std::vector<NativeArenaCandidate> &candidates);
+static bool native_arena_filtered_candidates(std::vector<NativeArenaCandidate> &candidates);
 static const NativeString *native_arena_candidate_name(std::int16_t race, std::int16_t caste);
 static bool native_arena_filter_reset(std::string_view saved_query);
 static bool native_arena_filter_assign(const std::vector<NativeArenaCandidate> &candidates);
@@ -135,15 +136,18 @@ static void apply_pending_arena_translated_search() {
     if (!native_arena_open()) return;
     std::string_view current;
     if (!native_string_view(native_arena_query(), &current, 4096) ||
-        current.empty() || !contains_non_ascii_codepoint(current)) return;
+        current.empty()) return;
     const std::string query(current);
-    std::vector<NativeArenaCandidate> candidates;
-    if (!native_arena_candidates(candidates) || !native_arena_filter_reset(query)) {
+    std::vector<NativeArenaCandidate> candidates, native_matches;
+    if (!native_arena_candidates(candidates) ||
+        !native_arena_filtered_candidates(native_matches) || !native_arena_filter_reset(query)) {
         log_line("WARN", "Cannot restore the complete native Arena creature list");
         return;
     }
     const size_t total = candidates.size();
+    std::sort(native_matches.begin(), native_matches.end());
     std::erase_if(candidates, [&](const NativeArenaCandidate &candidate) {
+        if (std::binary_search(native_matches.begin(), native_matches.end(), candidate)) return false;
         std::string_view source;
         return !native_string_view(native_arena_candidate_name(candidate.first, candidate.second),
                                    &source, 4096) || source.empty() ||
@@ -162,7 +166,7 @@ static void apply_pending_arena_translated_search() {
 
 static void capture_arena_translated_sdl_text(std::string_view committed) {
     try {
-    if (native_arena_open() && contains_non_ascii_codepoint(committed))
+    if (native_arena_open() && !committed.empty())
         g_arena_translated_search_dirty = true;
     } catch (...) {
     }

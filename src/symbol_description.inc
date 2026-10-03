@@ -47,10 +47,9 @@ bool Overlay::translated_symbol_search_matches(std::string_view source,
         std::string_view query, SymbolCaptionKind kind) const {
     TranslationStateScope translation_scope;
     if (!config_.enabled || source.empty()) return false;
-    const std::string needle = lower(compact_translated_search_text(query));
-    if (needle.empty()) return false;
+    if (compact_translated_search_text(query).empty()) return false;
     const auto target = translate_symbol_candidate(source, kind);
-    return target && lower(compact_translated_search_text(*target)).find(needle) != std::string::npos;
+    return target && translated_search_text_matches(*target, query);
 }
 
 // Image prose and the Choose X/Y picker refer to the SAME art elements.

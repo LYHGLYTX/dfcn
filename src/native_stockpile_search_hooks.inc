@@ -29,7 +29,6 @@ static size_t capture_native_stockpile_search_find(const char *text, size_t leng
         if (!g_overlay.translation_enabled() || !query_text ||
             query_length == 0 || query_length > 4096) return result;
         const std::string_view query(query_text, query_length);
-        if (!contains_non_ascii_codepoint(query)) return result;
         std::string_view source;
         if (!native_string_view(caption, &source, 65536) || source.empty() ||
             source.find('\0') != std::string_view::npos) return result;
