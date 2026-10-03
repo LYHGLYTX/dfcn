@@ -391,6 +391,8 @@ static bool native_info_title_memory_readable(const void *pointer, size_t size) 
 #endif
 }
 
+#include "native_fortress_labor_capture.inc"
+
 static NativeMapHoverContext native_map_hover_context(uintptr_t caller,
         const NativeString *source) {
     NativeMapHoverContext context;
@@ -1041,7 +1043,8 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
         bool mission_title = false, int mission_title_right = -1,
         NativeMapHoverContext map_hover = {},
         NativeLocationPickerField location_picker_field = NativeLocationPickerField::None,
-        std::optional<SDL_Rect> location_picker_box = std::nullopt) {
+        std::optional<SDL_Rect> location_picker_box = std::nullopt,
+        std::optional<NativeFortressLaborCaption> fortress_labor_caption = std::nullopt) {
     PendingNativeField captured;
     auto &state = native_clipped_pending();
     // Both supported addst implementations draw at the current cursor and
@@ -1087,7 +1090,7 @@ static PendingNativeField remember_native_clipped_draw(graphicst *graphics, cons
                         reinterpret_cast<uintptr_t>(source), graphics,
                         top_layer, complete, info_title_kind, info_title_authored, info_title_right,
                         civilization_field, mission_title, mission_title_right, std::nullopt, epoch,
-                        map_hover, location_picker_field, location_picker_box);
+                        map_hover, location_picker_field, location_picker_box, fortress_labor_caption);
                     if (!complete.empty())
                         remember_clipped_caption(graphics->screenx, graphics->screeny,
                             visible, complete);
@@ -1148,14 +1151,18 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         if (mission_title) mission_title_right = right;
     }
     std::optional<SDL_Rect> location_picker_box;
+    std::optional<NativeFortressLaborCaption> fortress_labor_caption;
     try {
-        if (!top_layer) location_picker_box = native_location_picker_draw_box(
-            graphics, source, location_picker_field);
+        if (!top_layer) {
+            location_picker_box = native_location_picker_draw_box(graphics, source, location_picker_field);
+            fortress_labor_caption = capture_native_fortress_labor_caption(
+                reinterpret_cast<uintptr_t>(source));
+        }
     } catch (...) {}
     const auto captured_source = remember_native_clipped_draw(graphics, source, just, width, top_layer,
         info_title_kind, info_title_authored, info_title_right, civilization_field,
         mission_title, mission_title_right, map_hover,
-        location_picker_field, location_picker_box);
+        location_picker_field, location_picker_box, fortress_labor_caption);
     std::string complete;
     int x = -1, y = -1, dimx = 0, dimy = 0;
     const unsigned char *screen = nullptr;
@@ -1204,7 +1211,7 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
             graphics->dimx != dimx || graphics->dimy != dimy ||
             graphics->screeny != y || graphics->screenx <= x ||
             (graphics->screenx > dimx && info_title_kind == NativeInfoTitleKind::None &&
-                !mission_title) ||
+                !mission_title && !fortress_labor_caption) ||
             (width > 0 && graphics->screenx - x > width) ||
             epoch != g_embark_item_capture_epoch.load(std::memory_order_acquire)) return;
         // addchar advances the cursor even outside clipx/clipy. Its verified
@@ -1240,14 +1247,14 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
         // proves the visible prefix to the map text filter.
         if (width > 0 || first != x || info_title_kind != NativeInfoTitleKind::None ||
                 civilization_field != NativeCivilizationField::None || mission_title ||
-                location_picker_field != NativeLocationPickerField::None)
+                location_picker_field != NativeLocationPickerField::None || fortress_labor_caption)
             remember_native_drawn_text_row(first, y, visible,
                 reinterpret_cast<uintptr_t>(source), graphics, top_layer,
                 first == x ? std::string_view(complete) : std::string_view{},
                 first == x ? info_title_kind : NativeInfoTitleKind::None,
                 info_title_authored, info_title_right, civilization_field,
                 first == x && mission_title, mission_title_right, draw_clip, epoch,
-                map_hover, location_picker_field, location_picker_box);
+                map_hover, location_picker_field, location_picker_box, fortress_labor_caption);
         if (first == x && visible != complete)
             remember_clipped_caption(x, y, visible, complete);
     } catch (...) {}

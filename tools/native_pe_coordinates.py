@@ -13,6 +13,14 @@ from pathlib import Path
 import re
 
 
+# Native types used by our ownership bindings but absent from the upstream
+# symbol catalog. Coordinates come from each configured image's MSVC RTTI;
+# the normal generator resolves the type name before admitting the pair.
+PE_VTABLE_TYPE_ANCHORS = {
+    0x163c1c0: (0x16370a0, '.?AVlabor_list_widget@@'),
+}
+
+
 _TOKEN = re.compile(
     r'"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'|'
     r'0[xX][0-9a-fA-F]+[uUlL]*|\d+[uUlL]*|[A-Za-z_]\w*|'

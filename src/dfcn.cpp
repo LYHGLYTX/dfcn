@@ -559,6 +559,7 @@ struct Match {
     // geometry; proven multi-line buttons use it to move text off their
     // overwritten borders. Source spans still own only the original glyphs.
     std::optional<SDL_Rect> native_picture_caption_box{};
+    bool native_labor_control = false;
     std::string native_picture_caption_source{};
     // Layout ownership is not translation coverage: retain unknown field
     // text in the collection queue even if its display is later ellipsized.
@@ -786,6 +787,7 @@ static constexpr int kDfhackHotkeysHintRule = -141;
 // independently drawn unit summary and action ratings.
 static constexpr int kAdventureCombatFieldRule = -142;
 static constexpr int kAnnouncementListRule = -143;
+static constexpr int kFortressLaborCaptionRule = -144;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -1799,6 +1801,17 @@ enum class NativeLocationPickerField {
     None, Prompt, Action, Name, Faith, Guild, Kind
 };
 
+enum class NativeFortressLaborKind { DetailName, Label, Control };
+struct NativeFortressLaborCaption {
+    NativeFortressLaborKind kind = NativeFortressLaborKind::Label;
+    uintptr_t owner = 0;
+    bool authored = false;
+    SDL_Rect box{};
+    std::string source;
+};
+static std::optional<NativeFortressLaborCaption> capture_native_fortress_labor_caption(
+    uintptr_t source_address);
+
 struct NativeDrawnTextRow {
     int x = 0, y = 0;
     std::string source;
@@ -1823,6 +1836,9 @@ struct NativeDrawnTextRow {
     // caption span during that draw, before a later native grid replaces it.
     NativeLocationPickerField location_picker_field = NativeLocationPickerField::None;
     std::optional<SDL_Rect> location_picker_box{};
+    // The live Labor widget and work_detail object identify this field.
+    // Player-authored names remain distinct from identically spelled labors.
+    std::optional<NativeFortressLaborCaption> fortress_labor_caption{};
     // The mission formatter's actual addst caller owns this whole title,
     // including action and destination, before any generic name matching.
     bool mission_title = false;
@@ -2266,7 +2282,8 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         std::optional<std::array<long, 4>> original_clip = std::nullopt,
         uint64_t original_epoch = 0, NativeMapHoverContext map_hover = {},
         NativeLocationPickerField location_picker_field = NativeLocationPickerField::None,
-        std::optional<SDL_Rect> location_picker_box = std::nullopt) {
+        std::optional<SDL_Rect> location_picker_box = std::nullopt,
+        std::optional<NativeFortressLaborCaption> fortress_labor_caption = std::nullopt) {
     std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
     const auto epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
     if (original_epoch && original_epoch != epoch) return;
@@ -2370,6 +2387,8 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         row.civilization_field = civilization_field;
         row.location_picker_field = location_picker_field;
         row.location_picker_box = location_picker_box;
+        row.fortress_labor_caption = std::move(fortress_labor_caption);
+        if (row.fortress_labor_caption) row.caption_source = true;
         row.mission_title = mission_title;
         row.mission_title_right = mission_title_right;
         row.map_hover = map_hover;
@@ -28471,6 +28490,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 if (help_background_covered(match, x, match_y)) continue;
                 const unsigned char ch = raw[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
+                     match.rule == kFortressLaborCaptionRule ||
                      match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
                      match.rule == kCharacterOverviewRowRule ||
@@ -28539,6 +28559,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 const unsigned char top_ch = raw[tile * 8];
                 const unsigned char base_ch = gps_->screen[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
+                     match.rule == kFortressLaborCaptionRule ||
                      match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
                      match.rule == kCharacterOverviewRowRule ||
@@ -28883,6 +28904,7 @@ void Overlay::normalize_native_split_text() {
             match.rule == kFortressHaulingNameRule ||
             match.rule == kFortressKitchenCaptionRule ||
             match.rule == kFortressKitchenFoodRule ||
+            match.rule == kFortressLaborCaptionRule ||
             match.rule == kFortressDepotFieldRule || is_fortress_task_field(match);
         for (int offset = 0; offset < match.length; ++offset) {
             bool cell_top = false;
@@ -35969,6 +35991,7 @@ void Overlay::prepare_frame() {
                 // transition from suppressing unrelated text at the same cell.
                 if (cell && cell[0] != 0 && cell[0] != ' ') {
                     if ((match.native_hover_background || is_help_text(match) ||
+                         match.rule == kFortressLaborCaptionRule ||
                          match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                          match.rule == kCharacterHeaderRule ||
                          match.rule == kCharacterOverviewRowRule ||
@@ -42271,6 +42294,7 @@ void Overlay::layout_multiline_matches() {
             match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
             match.rule == kCharacterHeaderRule || match.rule == kCharacterRoomStatusRule ||
             match.rule == kFortressStandingOrderRule ||
+            match.rule == kFortressLaborCaptionRule ||
             match.rule == kFortressScheduleCaptionRule ||
             match.rule == kCharacterInventoryItemRule ||
             match.rule == kCharacterInventoryLocationRule ||

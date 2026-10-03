@@ -250,7 +250,10 @@ void Overlay::append_hover_picture_captions(std::vector<std::string> &rows,
     std::set<std::tuple<int, int, std::string>> owners;
     std::set<std::tuple<int, int, std::string>> physical_rows;
     for (const auto &draw : draws) {
-        if (!draw.picture_frame || (only_y >= 0 && draw.y != only_y)) continue;
+        // Labor's live owner preserves authored names and owns its complete
+        // captions. Generic hover recovery must not reinterpret those names.
+        if (draw.fortress_labor_caption || !draw.picture_frame ||
+                (only_y >= 0 && draw.y != only_y)) continue;
         const auto &frame = *draw.picture_frame;
         const SDL_Rect &button = frame.text;
         if (frame.dimx != gps_->dimx || frame.dimy != gps_->dimy ||
@@ -443,7 +446,10 @@ void Overlay::append_hover_text_captions(std::vector<std::string> &rows,
     const auto occluders = std::make_shared<const std::vector<SDL_Rect>>(frames);
     std::set<std::tuple<int, int, std::string>> owners;
     for (const auto &draw : draws) {
-        if (!draw.caption_source || draw.picture_frame || draw.y < 0 || draw.y >= gps_->dimy ||
+        // Keep Labor captions with their typed owner even when a popup hides
+        // source cells that the page reader can no longer claim.
+        if (draw.fortress_labor_caption || !draw.caption_source || draw.picture_frame ||
+                draw.y < 0 || draw.y >= gps_->dimy ||
             (only_y >= 0 && only_y != draw.y)) continue;
         const auto source = trim_view(draw.source);
         if (source.empty()) continue;

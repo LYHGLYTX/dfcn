@@ -11438,6 +11438,7 @@ After a polite discussion with local rivals, {n} has claimed the position of {s}
 Although my own insignificant beliefs lie elsewhere, I am overmastered by your presence!	虽说我有点不值一提的不同看法，但你的气势真让我服气！	hP
 Announcement combat boast-slain-clause []: whose insignificant name I struggle to recall	对方微不足道的名字，我都快想不起来了	l
 Announcement combat diplomacy-cause []: general ill feelings over past historical events	以往历史事件造成的普遍怨恨	l
+Announcement combat head [owner,impact-part]: {s} {s} takes the full force of the impact	{s1}{s2}承受了全部冲击力	l
 Announcement combat justice-interrogation-relationship-factor []: hatred of interrogator	憎恨审讯者	l
 Announcement combat justice-interrogation-response []: respected interrogator and agreed	出于对审讯者的尊重而答应了	l
 Announcement combat justice-intrigue-actor [justice-intrigue-actor]: comrade-in-arms {s}	战友{s1}	l
@@ -33411,6 +33412,7 @@ Announcement combat dialogue-family []: spouse	配偶	l
 Announcement combat diplomacy-cause []: a coup	一次政变	l
 Announcement combat diplomacy-cause []: a raid	一次突袭	l
 Announcement combat guard-building []: a house	房子	l
+Announcement combat impact-part []: body parts	多个身体部位	l
 Announcement combat memorial-death []: Drowned	溺亡	l
 Announcement combat memorial-family []: father	父亲	l
 Announcement combat memorial-family []: mother	母亲	l
@@ -34670,6 +34672,7 @@ Announcement combat dialogue-family []: niece	侄甥女	l
 Announcement combat dialogue-family []: uncle	叔舅	l
 Announcement combat dialogue-family []: wives	妻子	l
 Announcement combat guard-building []: a tree	树	l
+Announcement combat impact-part []: body part	身体部位	l
 Announcement combat injury-condition []: torn	撕裂	l
 Announcement combat injury-list [injury]: {s}	{s1}	l
 Announcement combat memorial-death []: Boiled	沸腾而亡	l
@@ -35918,6 +35921,7 @@ Announcement combat damage-verb []: chipping	崩裂	l
 Announcement combat dialogue-family []: aunt	姑姨	l
 Announcement combat dialogue-family []: wife	妻子	l
 Announcement combat fraction []: the rest of	剩余部分	l
+Announcement combat impact-part [$body]: {s}	{s1}	l
 Announcement combat memorial-family []: wife	妻子	l
 Announcement combat memory-crime []: a theft	盗窃罪	l
 Announcement combat memory-crime []: bribery	贿赂罪	l
@@ -40540,6 +40544,7 @@ The full moon is high in the eastern sky.	满月位于东方高空。	hj
 The full moon is high in the western sky.	满月位于西方高空。	hP
 The full moon is high in the western sky.	满月位于西方高空。	hj
 The image was commissioned by {p}, a {s}.	这幅图像由{s1}「{p1}」委托创作。	hHt
+The location must be built and furnished,	必须建好并布置该场所，	hP
 The poetry enters the seventeenth stanza.	诗歌朗诵到了第17节。	hP
 The rest of the interface is now enabled.	现在，其余界面功能也已开放。	hq
 The rest of the interface is now enabled.	其他的交互按钮现已可用.	w
@@ -44332,6 +44337,7 @@ was wrongfully convicted of {s} by {a}.	被{a1}错判犯有{s1}。	ht
 was wrongfully convicted of {s} in {p}.	在{p1}被错判犯有{s1}。	ht
 were a population within {p} during {e}	在{e1}期间是生活在{p1}的族群	ht
 were a population within {p} within {p}	在{p2}是生活在{p1}的族群	ht
+with the new position appointed by you.	并由你任命新职位的人员。	hP
 wove a masterful sewn image during {e}.	在{e1}期间织出了一幅杰作级的刺绣图像。	ht
 wove a masterful sewn image within {p}.	在{p1}织出了一幅杰作级的刺绣图像。	ht
 wrongfully convicted {n} of {s} at {p}.	在{p1}错误地判定{n1}犯有{s1}。	ht
@@ -45064,6 +45070,10 @@ It seems to glow brightly from within.	它似乎从体内放射出耀眼的光�
 It spins wildly, lurching and howling.	它疯狂地旋转、踉跄并嚎叫。	h
 Join me and we'll bring {p} back home!	加入我，我们一起把{p1}带回家！	hPt
 Justice case: Conspiracy to alow labor	合谋怠工	l
+Labor -> Standing orders -> Petitions.	劳动 → 劳动规则 → 申请。	hP
+Labor caption: Feed Patients/Prisoners	喂食病患和囚犯	wi
+Labor caption: Small Animal Dissection	小动物解剖	wi
+Labor caption: Wall/Floor Construction	墙壁与地板建造	wi
 Make the sacrifice regardless of fear.	即使恐惧，也要做出牺牲。	hP
 Mineral Scarcity (Low = More minerals)	矿物稀缺度（数值越低，矿物越多）
 Minimum Initial Grassland Region Count	初始草原区域最少数量
@@ -50921,6 +50931,7 @@ display on {p} of the skins of {a}.	将{a1}的皮陈列在{p1}上。	htEi
 display on {s} of the skins of {a}.	将{a1}的皮陈列在{s1}上。	htEi
 eating without a proper dining room	没有合适的餐厅可供就餐	wi
 enacted a series of oppressive laws	颁布了一系列苛法	h
+entertaining citizens and visitors.	为公民和访客表演。	hP
 entirely outwitted {a} in the wilds	在荒野中以计谋彻底挫败了{a1}	ht
 expelled {a} from {p} in the wilds.	在荒野中将{a1}逐出了{p1}。	ht
 favorable trading of {a} during {e}	在{e1}期间，{a1}有利的交易	htEi
@@ -54108,6 +54119,9 @@ Its {q} scales are large and {s}.	它的{q1}鳞片很大，{s1}。	ht
 Its {q} scales are round and {s}.	它的{q1}鳞片呈圆形，{s1}。	ht
 Its {q} scales are small and {s}.	它的{q1}鳞片很小，{s1}。	ht
 Justice sentence: days in prison.	监禁{d}日。	l
+Labor caption: Push/Haul Vehicles	推拉车辆	wi
+Labor caption: Recovering Wounded	救助伤员	wi
+Labor caption: Trade Good Hauling	搬运贸易货物	wi
 Megabeast attack period (seasons)	巨兽来袭间隔（季度）
 Minimum Final Desert Region Count	最终沙漠区域最少数量
 Minimum Final Forest Region Count	最终森林区域最少数量
@@ -56007,6 +56021,10 @@ Justice detail: Unknown convict.	罪犯不明。	l
 Justice intelligence tab: Actors	人物	l
 Justice sentence: day in prison.	监禁{d}日。	l
 Justice sentence: hammerstrikes.	锤刑{d}次。	l
+Labor caption: Furnace Operating	操作熔炉	wi
+Labor caption: Furniture Hauling	搬运家具	wi
+Labor caption: Siege Engineering	制造攻城器械	wi
+Labor caption: Strand Extraction	缕丝提取	wi
 Last interlude: Toady Two - Dabu	上一首间奏：托迪二号 — 达布
 Loading civilized populations...	加载文明人口......	w
 Log world generation map rejects	记录世界生成地图拒绝	w
@@ -56256,6 +56274,7 @@ a procession held by {a} in {d}.	{d1}年的{a1}举办的游行。	htEi
 a procession held by {a} in {p}.	在{p1}，{a1}举办的游行。	htEi
 a tactical situation during {e}.	在{e1}期间，一次战术态势。	htEi
 a tactical situation within {p}.	在{p1}，一次战术态势。	htEi
+a temple complex and high priest	建造神殿建筑群并任命高阶祭司	hP
 abandoned the settlement of {p}.	放弃了{p1}聚落。	ht
 abducted {a} from {p} during {e}	在{e1}期间从{p1}绑架了{a1}	ht
 abducted {a} from {p} within {p}	在{p2}从{p1}绑架了{a1}	ht
@@ -57884,6 +57903,8 @@ Justice case: Espionage against	刺探情报，目标：	l
 Justice detail: Found the body.	发现了尸体。	l
 Justice intelligence tab: Plots	阴谋	l
 Justice sentence: hammerstrike.	锤刑{d}次。	l
+Labor caption: Farming (Fields)	耕种	wi
+Labor caption: Plant Processing	植物加工	wi
 Legendary protector of the weak	传奇庇护者	w
 Let's continue onward together.	我们一起接着走吧。	hP
 Loading fortress information...	加载堡垒信息......	w
@@ -60049,6 +60070,17 @@ It was the {s} of {n} and {n}.	它是{n1}与{n2}的{s}。	ht
 Justice alias title head: ward	守护者	l
 Justice case: Attempted murder	谋杀未遂	l
 Justice person value: somebody	某人	l
+Labor caption: Animal Training	驯兽	wi
+Labor caption: Crossbow-making	制弩	wi
+Labor caption: Dressing Wounds	包扎伤口	wi
+Labor caption: Farming/Related	农业及相关劳动	wi
+Labor caption: Fish Dissection	鱼类解剖	wi
+Labor caption: Fishing/Related	捕鱼及相关劳动	wi
+Labor caption: Hunting/Related	狩猎及相关劳动	wi
+Labor caption: Lever Operation	操作控制杆	wi
+Labor caption: Plant Gathering	植物采集	wi
+Labor caption: Siege Operating	操作攻城器械	wi
+Labor caption: Stone Engraving	石刻	wi
 Loading cultural identities...	加载文化身份......	w
 Loading general information...	加载一般信息......	w
 Loud grinding (heard recently)	响亮机械摩擦声（刚刚听到）	wl
@@ -61217,6 +61249,7 @@ was unafraid of {a} within {p}	在{p1}不惧怕{a1}	ht
 were reunited with {a} at {p}.	在{p1}与{a1}重聚了。	ht
 were reunited with {a} in {p}.	在{p1}与{a1}重聚了。	ht
 with a thousand or more others	与另外至少一千人一同	h
+with the hall designated for a	并将大厅指定给以下行会：	hP
 {a} abducted {a} in the wilds.	{a1}在荒野中绑架了{a2}。	ht
 {a} added a masterful covering	{a1}添加了杰作级的覆盖层	ht
 {a} added masterful coloration	{a1}添加了杰作级的着色	ht
@@ -62027,6 +62060,9 @@ Forming lakes and minerals...	正在生成湖泊与矿物……
 Fortress activity: Make peace	议和	li
 Fortress activity: Tell Story	讲故事	li
 Fortress activity: Underworld	地下世界生物	li
+Future such petitions: accept	今后同类申请：接受	hP
+Future such petitions: prompt	今后同类申请：询问	hP
+Future such petitions: reject	今后同类申请：拒绝	hP
 Gladiatory Games in the wilds	在荒野中，角斗比赛	hEi
 Go below hatch ({d} level up)	前往活动盖板下方（上方{d1}层）	hPt
 Greatly respected for fighter	作为一名战士受到极大的尊重	w
@@ -62090,6 +62126,11 @@ Justice case: Attempted theft	盗窃未遂	l
 Justice detail: No witnesses.	无证人。	l
 Justice person: Injured party	受害方	l
 Keep building after placement	放置后继续建造	wli
+Labor caption: Animal Hauling	搬运动物	wi
+Labor caption: Leatherworking	皮革加工	wi
+Labor caption: Pump Operating	操作水泵	wi
+Labor caption: Refuse Hauling	搬运垃圾	wi
+Labor caption: Weaponsmithing	锻造武器	wi
 Land holder trade trigger {d}	封地贵族出口财富阈值 {d}	wt
 Leave editor and discard data	退出编辑器并放弃修改	w
 Light combat (heard recently)	轻微战斗声（刚刚听到）	wl
@@ -64059,6 +64100,21 @@ Journey of {a} in the wilds.	在荒野中，{a1}的旅程。	htEi
 Justice case: Blood-drinking	吸血	l
 Justice detail: No witnesses	无证人	l
 Keep your own counsel today.	今天不要轻易透露自己的想法。	hP
+Labor caption: Blacksmithing	锻造杂物	wi
+Labor caption: Cheese Making	制酪	wi
+Labor caption: Clothesmaking	制衣	wi
+Labor caption: Fish Cleaning	清理鱼	wi
+Labor caption: Metalcrafting	金属工艺	wi
+Labor caption: Metalsmithing	金属加工	wi
+Labor caption: Potash Making	制草碱	wi
+Labor caption: Road Building	修筑道路	wi
+Labor caption: Setting Bones	接骨	wi
+Labor caption: Stone Carving	石雕	wi
+Labor caption: Stone Cutting	切石	wi
+Labor caption: Stone Hauling	搬运石头	wi
+Labor caption: Stonecrafting	石艺	wi
+Labor caption: Water Hauling	运水	wi
+Labor caption: Working Stone	石材加工	wi
 Let the party venture forth!	让队伍踏上冒险之旅吧！	hq
 Loading world information...	加载世界信息......	w
 Looks to be snowing outside.	外面好像在下雪。	hP
@@ -65962,6 +66018,15 @@ Justice action: Interrogate	审讯	l
 Justice actor: Unidentified	身份不明	l
 Justice report: Prepared by	撰写者	l
 Justice tab: Fortress guard	监牢配置	w
+Labor caption: Bone Carving	骨雕	wi
+Labor caption: Food Hauling	搬运食物	wi
+Labor caption: Item Hauling	搬运物品	wi
+Labor caption: Stoneworking	石材加工	wi
+Labor caption: Wood Burning	烧炭	wi
+Labor caption: Wood Cutting	伐木	wi
+Labor caption: Wood Hauling	搬运木材	wi
+Labor caption: Woodcrafting	木艺	wi
+Labor caption: Working Wood	木材加工	wi
 Lava/Magma at this location	此处有岩浆	wli
 Loading army controllers...	加载军队管制员......	w
 Loading coin information...	加载硬币信息......	w
@@ -66186,6 +66251,7 @@ There has been one already!	已经出现过一条了！	hq
 There is thick fog outside.	外面有浓雾。	hP
 There is thick fog outside.	外面有浓雾。	hj
 There were {c} competitors.	共有{c1}名参赛者。	ht
+This can also be changed in	也可在以下位置修改：	hP
 This creature is a scholar.	此生物担任学者。	hj
 This creature lives in {p}.	这种生物生活在{p}。	ht
 This dancer could be worse.	这位舞者倒也不算差。	hP
@@ -68009,6 +68075,16 @@ Journey of {a} during {e}.	在{e1}期间，{a1}的旅程。	htEi
 Journey of {a} within {p}.	在{p1}，{a1}的旅程。	htEi
 Justice case: Embezzlement	挪用资金	l
 Justice person: Implicates	牵涉对象	l
+Labor caption: Animal Care	动物护理	wi
+Labor caption: Bee Keeping	养蜂	wi
+Labor caption: Bookbinding	书籍装订	wi
+Labor caption: Engineering	工程	wi
+Labor caption: Gem Cutting	宝石切割	wi
+Labor caption: Gem Setting	宝石镶嵌	wi
+Labor caption: Glassmaking	玻璃制作	wi
+Labor caption: Papermaking	造纸	wi
+Labor caption: Wax Working	蜡工	wi
+Labor caption: Woodworking	木材加工	wi
 Labor tab: Standing orders	规则	wi
 Linguistic Ability (minor)	语言能力（次要）	wi
 Link a building to trigger	将建筑连接到触发装置	wi
@@ -69443,6 +69519,7 @@ were expelled in the wilds	在荒野中遭到了驱逐	h
 (Charge) (D) Knocked over	(冲锋) (D)击倒	w
 - mine rock or chop trees	- 开采岩石或砍伐树木。	hP
 A Bay 12 Games Production	Bay 12 Games 出品	wl
+A Grand Guildhall for {e}	大行会大厅申请：{e1}	hPt
 A few thousand live there	那里住着几千人	al
 Ability to throw objects.	投掷物品的能力。	w
 Acknowledge lack of agony	表示没有极度痛苦	hP
@@ -69816,6 +69893,10 @@ Justice detail: Unsolved.	未破案。	l
 Justice person: Convicted	已定罪	l
 Justice tab: Intelligence	情报	w
 Kinesthetic Sense (minor)	运动感知（次要）	wi
+Labor caption: Healthcare	医疗	wi
+Labor caption: Lye Making	制碱液	wi
+Labor caption: Other Jobs	其他劳动	wi
+Labor caption: Soap Maker	制皂	wi
 Lay quest to retrieve {i}	下达寻回{i1}的任务	hPt
 Legendary treasure hunter	传奇寻宝者	w
 Loading belief systems...	加载信仰系统......	w
@@ -70453,6 +70534,7 @@ happening upon {a} at {p}	在{p1}，偶遇{a1}	htEi
 happening upon {a} in {d}	{d1}年的偶遇{a1}	htEi
 happening upon {a} in {p}	在{p1}，偶遇{a1}	htEi
 has a touch of melancholy	略带忧郁	hv
+has many worshippers here	在这里拥有众多信徒	hP
 has poorly-executed humor	幽默表现拙劣	hv
 having a request approved	请求获得批准	wi
 held a competition at {p}	在{p1}举行了比赛	ht
@@ -71521,6 +71603,9 @@ Its joints are backward.	它的关节反向弯曲。	h
 Justice case: Kidnapping	绑架	l
 Justice detail: Beating.	殴打惩罚。	l
 Kick listener out of {e}	将对方逐出{e1}	hPt
+Labor caption: Carpentry	木工	wi
+Labor caption: Diagnosis	诊断	wi
+Labor caption: Mechanics	机械作业	wi
 Let's drop the argument.	我们别争了。	hP
 Life is, in a word, {r}.	一言以蔽之，生命就是{r1}。	hPt
 Loading announcements...	加载公告......	w
@@ -73400,6 +73485,14 @@ Justice person: Officer	执法人员	l
 Justice person: Witness	证人	l
 Keyboard cursor enabled	启用键盘光标	w
 LACK OF LOW-LYING CAVES	缺少低地洞穴
+Labor caption: Armoring	锻甲	wi
+Labor caption: Butchery	屠宰	wi
+Labor caption: Cleaning	清扫	wi
+Labor caption: Pressing	压榨	wi
+Labor caption: Shearing	剪毛	wi
+Labor caption: Spinning	纺纱	wi
+Labor caption: Suturing	缝合	wi
+Labor caption: Trapping	诱捕	wi
 Labor tab: Work details	分组	wi
 Large Non-Prone Profile	身形较大（未卧倒）	hP
 Large instruments must 	大型乐器必须放置在酒馆或神庙	w
@@ -73504,6 +73597,7 @@ Skill name: Intimidator	恐吓	li
 Skill name: Shield User	盾牌使用	li
 Skill rating: Competent	合格	li
 Skill rating: Legendary	传奇	li
+Small Animal Dissection	小动物解剖	wi
 Smooth a rough wall to 	将粗糙的墙面打磨平整，让居民	w
 So, {p}... {p}, was it?	那么，{p1}……是叫{p2}，对吗？	hPt
 Spread rumor of the {v}	传播{v1}的传闻	hPt
@@ -73622,6 +73716,7 @@ Very high spatial sense	空间感知很高	wil
 View all announcements.	查看全部公告。	hj
 View this item's sheet.	查看此物品的详情页。	hj
 Visitor shared rumor(s)	访客分享传闻	w
+Wall/Floor Construction	墙壁与地板建造	wi
 We are rid of an enemy.	我们除去了一个敌人。	hP
 Weave thread into cloth	将线纺织为布匹	wi
 Welcome home, my child.	欢迎回家，我的孩子。	hP
@@ -74132,6 +74227,7 @@ grand scheme of things.	大局中相当重要。	l
 great horned owl chicks	大角鸮幼崽	wi
 had no respect for {a}.	不尊重{a1}。	ht
 has a very serious tone	基调十分严肃	hv
+has many worshippers in	在以下地点拥有众多信徒：	hP
 hated {a} in the wilds.	在荒野中憎恨{a1}。	ht
 head keeper of the seal	首席掌玺官	hi
 held a ceremony at {p}.	在{p1}举行了仪式。	ht
@@ -75334,6 +75430,21 @@ Journey of {a} in {p}.	在{p1}，{a1}的旅程。	htEi
 Joy is on the horizon.	喜悦即将到来。	hP
 Justice case: Theft of	盗窃：	l
 Justice date: Reported	报案日期	l
+Labor caption: Brewing	酿造	wi
+Labor caption: Cooking	烹饪	wi
+Labor caption: Fishing	捕鱼	wi
+Labor caption: Gelding	阉割	wi
+Labor caption: Glazing	上釉	wi
+Labor caption: Hauling	搬运	wi
+Labor caption: Hunting	狩猎	wi
+Labor caption: Jewelry	珠宝加工	wi
+Labor caption: Masonry	石工	wi
+Labor caption: Milking	挤奶	wi
+Labor caption: Milling	碾磨	wi
+Labor caption: Pottery	制陶	wi
+Labor caption: Surgery	外科手术	wi
+Labor caption: Tanning	制革	wi
+Labor caption: Weaving	织布	wi
 Land's status elevated	领地地位提升	w
 Loading flow guides...	加载流量指南......	w
 Loading occupations...	装载职业......	w
@@ -76975,6 +77086,8 @@ wounded {a} within {p}	在{p1}击伤了{a1}	ht
 .Overlapping fracture	·错位骨折
 .Rotten -- inoperable	·已坏死，无法手术
 .Serious condensation	·严重凝结
+A Grand Guildhall for	大行会大厅申请：	wi
+A High Priest for {e}	高阶祭司申请：{e1}	hPt
 A baby! How adorable!	是个小宝宝！真可爱！	hP
 A huge marine turtle.	一只巨大的海龟。	lP
 A small bird of prey.	一种小型的猛禽。	lP
@@ -77315,6 +77428,10 @@ Justice case: Treason	叛国	l
 Justice person: Alias	别名	l
 Keywords: bypass skip	关键词：[C:2:0:1]略过 跳过	hP
 Keywords: greet hello	关键词：[C:2:0:1]问候 你好	hP
+Labor caption: Burial	埋葬	wi
+Labor caption: Crafts	工艺制作	wi
+Labor caption: Dyeing	染色	wi
+Labor caption: Mining	挖掘	wi
 Lead Audio Programmer	首席音频程序员	w
 Left click to choose 	左键点击以选择矩形的一角。	w
 Loading activities...	加载活动......	w
@@ -77939,6 +78056,7 @@ elemental glitchstuff	元素异常质	wim
 emperor penguin chick	帝企鹅幼崽	wi
 energetic poltergeist	活跃的骚灵	wi
 entering the nobility	进入贵族身份	wi
+eradicating monsters.	消灭怪物。	hP
 especially important 	杆上，以控制要塞内的通行。	w
 exalted circumstances	高尚境遇	hi
 exalted confederacies	高尚联盟	hi
@@ -78093,6 +78211,7 @@ hacked {a} to pieces.	将{a1}砍成了碎块。	ht
 hammerhead shark pups	锤头鲨幼崽	wi
 harvest administrator	收获管理员	hi
 harvest commissioners	收获专员	hi
+has many members here	在这里拥有众多成员	hP
 hated {a} and agreed.	憎恨{a1}，答应了。	ht
 hated {a} and refused	憎恨{a1}，拒绝了对方	ht
 hated {a} during {e}.	在{e1}期间憎恨{a1}。	ht
@@ -79071,6 +79190,7 @@ whether it is thread 	的蛛丝。	w
 white stork hatchling	白鹳幼崽	wi
 white-spotted puffers	白斑河豚	wi
 willow pollen catkins	柳树花粉葇荑花序	wi
+wishes to reside here	希望在这里居住	hP
 with dozens of others	与另外数十人一同	h
 withdrew from society	退出了社会交往	h
 withered in the wilds	在荒野中衰亡了	h
@@ -80158,6 +80278,7 @@ cut green glass gems	切割绿玻璃宝石	wi
 defeated {a} at {p}.	在{p1}击败了{a1}。	ht
 defeated {a} in {p}.	在{p1}击败了{a1}。	ht
 desert lime wood log	漠橘树原木	wi
+desires citizenship.	希望取得公民资格。	hP
 destroyed {p} at {p}	在{p2}摧毁了{p1}	ht
 destroyed {p} in {p}	在{p2}摧毁了{p1}	ht
 devoured {a} at {p}.	在{p1}吞噬了{a1}。	ht
@@ -82012,6 +82133,7 @@ yours or companion's	你或同伴留下的	h
 .Minor condensation	·轻微凝结
 .Serious blistering	·严重起泡
 .Serious frost-bite	·严重冻伤
+A Guildhall for {e}	行会大厅申请：{e1}	hPt
 A Meditation on {b}	{b}沉思录	hbti
 A ballista fires a 	弩炮向固定方向发射弩炮大箭。	w
 A catapult fires a 	投石机向固定方向发射岩块。	w
@@ -82592,6 +82714,7 @@ a pile of driftwood	一堆浮木	wi
 a procession at {p}	在{p1}，游行	htEi
 a procession in {d}	{d1}年的游行	htEi
 a procession in {p}	在{p1}，游行	htEi
+a temple and priest	建造神殿并任命祭司	hP
 a tribute agreement	进贡协议	h
 a war starting plot	挑起战争的阴谋	h
 abducted {a} at {p}	在{p1}绑架了{a1}	ht
@@ -83233,6 +83356,7 @@ green tree frog men	绿树蛙人	wi
 haikouichthys woman	始脊椎鱼人	wi
 haikouichthys women	始脊椎鱼人	wi
 happening upon {a}.	偶遇{a1}。	htEi
+has many members in	在以下地点拥有众多成员：	hP
 hazel pollen catkin	榛花粉葇荑花序	wi
 held a competition.	举行了比赛。	h
 held a dance at {p}	在{p1}举行了舞会	ht
@@ -85155,6 +85279,7 @@ will look hard for 	不存在或过长，他们仍会使用该	w
 willow seed catkins	柳树种子葇荑花序	wi
 winter melon flower	冬瓜花	wi
 winter melon leaves	冬瓜叶	wi
+wishes to reside in	希望居住于	hP
 withered during {e}	在{e1}期间衰亡了	ht
 withered within {p}	在{p1}衰亡了	ht
 woodcutting, plant 	打磨命令。	w
@@ -85399,6 +85524,7 @@ Cannot link to {s}	无法连接到{s}	wtli
 Children do chores	儿童参与杂务	wi
 Children's Quarter	儿童居所	wl
 Choose a proposal.	选择一项提议。	hP
+Citizenship of {p}	公民资格申请：{p1}	hPt
 Commander's Office	指挥官办公室	wli
 Comment on weather	评论天气	hP
 Competing were {a}	参赛者有{a1}	ht
@@ -85669,6 +85795,7 @@ Procession in {d}.	{d1}年的游行。	htEi
 Procession in {p}.	在{p1}，游行。	htEi
 Profession changes	职业变更	w
 Push track vehicle	推动轨道载具	wi
+Push/Haul Vehicles	推拉车辆	wi
 Race in the wilds.	在荒野中，赛跑。	hEi
 Raid of {p} at {p}	在{p2}，{p1}袭击事件	htEi
 Raid of {p} in {d}	{d1}年的{p1}袭击事件	htEi
@@ -85678,6 +85805,7 @@ Ramps and channels	坡道和沟渠	hq
 Ramps and channels	坡道和沟渠	w
 Range: -{d} to {d}	范围：-{d}～{d}	wt
 Really attack {n}?	确定要攻击{n1}吗？	hPt
+Recovering Wounded	救助伤员	wi
 Reflections on {b}	{b}反思录	hbti
 Refuse and dumping	垃圾和倾倒	hq
 Refuse and dumping	垃圾和倾倒	w
@@ -86489,6 +86617,7 @@ food imports signs	食物进口招牌	wi
 fooled {a} at {p}.	在{p1}欺骗了{a1}。	ht
 fooled {a} in {p}.	在{p1}欺骗了{a1}。	ht
 for ballistae and 	部件。此工坊也是组装弩炮弹药	w
+for the purpose of	居留目的：	hP
 formed during {e}.	在{e1}期间成立了。	ht
 formed within {p}.	在{p1}成立了。	ht
 formed {p} at {p}.	在{p2}成立了{p1}。	ht
@@ -89195,6 +89324,7 @@ yellow spessartine	橙榴石	wi
 .Partial numbness	·局部麻木
 .Serious freezing	·严重冻结
 A Dwarven Outpost	一座矮人前哨:	w
+A High Priest for	高阶祭司申请：	wi
 A Treatise on {b}	{b}论述	hbti
 A gigantic shark.	一条体型极其庞大的鲨鱼。	lP
 A sadistic ghost.	一个虐待成性的鬼魂。	lP
@@ -89561,6 +89691,7 @@ Skill rating: Not	未掌握	li
 Skipped on liquid	在液面弹跳	w
 So true, so true.	说得太对了，太对了。	hP
 Soap Maker's Shop	皂匠工坊	wi
+Some corrupt data	部分数据损坏	hP
 Somebody grows up	有人成年	w
 Sorting plants...	正在整理植物……
 Spouse is elected	配偶担任民选职位	hP
@@ -89682,6 +89813,7 @@ a ceremony in {p}	在{p1}，仪式	htEi
 a concert at {p}.	在{p1}，音乐会。	htEi
 a concert in {d}.	{d1}年的音乐会。	htEi
 a concert in {p}.	在{p1}，音乐会。	htEi
+a grand guildhall	大行会大厅	hP
 a guide agreement	向导协议	h
 a murderous ghost	嗜杀的鬼魂	h
 a mythical palace	神话宫殿	h
@@ -90766,6 +90898,7 @@ ichthyosaurus men	鱼龙人	wi
 ichthyosaurus pup	鱼龙幼崽	wi
 iguana hatchlings	鬣蜥幼崽	wi
 in defense of {p}	以保卫{p1}	ht
+in order to avert	以避免	hP
 in order to drink	为了喝酒	h
 in order to relax	为了放松	h
 in order to study	为了学习	h
@@ -93545,6 +93678,7 @@ youngest daughter	最小的女儿	h
 .Serious melting	·严重熔化
 .Slight numbness	·轻微麻木
 .Strained tendon	·肌腱拉伤
+A Priest for {e}	祭司申请：{e1}	hPt
 A small reptile.	一种小型的爬行动物。	lP
 A violent ghost.	一个暴戾的鬼魂。	lP
 Abandoned houses	废弃房屋
@@ -93678,6 +93812,7 @@ Execute criminal	处决罪犯	wi
 Expect a change.	变化即将到来。	hP
 Exported Wealth:	出口财富：	w
 Extract (animal)	提取物（动物）	wi
+Farming (Fields)	耕种	wi
 Fifth eldest son	第五个儿子	w
 Fine Dining Room	精致餐厅	w
 Flights of fancy	爱幻想	w
@@ -93811,6 +93946,7 @@ Pet adopts owner	宠物认领主人	w
 Petition ignored	请愿被忽略	w
 Pickup equipment	拾取装备	w
 Pillaging of {p}	{p1}劫掠事件	htEi
+Plant Processing	植物加工	wi
 Plant growth (?)	植物生长物（？）	wi
 Points Left: {d}	剩余点数：{d}	wt
 Population: <{d}	人口：少于{d}	ht
@@ -93845,6 +93981,7 @@ Region name: goo	黏泥沼泽	hi
 Region name: ice	冰原	hi
 Region name: sea	海	hi
 Related Entities	相关势力	h
+Reset to default	恢复默认	wi
 Resists sickness	抵御疾病	w
 Restore defaults	恢复默认设置	w
 Retracted Spears	缩回的长矛	w
@@ -94533,6 +94670,7 @@ and moved at {p}	并在{p1}迁移了	ht
 and moved in {p}	并在{p1}迁移了	ht
 and moved to {p}	并迁往了{p1}	ht
 and murdered {a}	并谋杀了{a1}	ht
+and now requires	现提出以下要求：	hP
 and pillaged {p}	并劫掠了{p1}	ht
 and profaned {p}	并亵渎了{p1}	ht
 and pulled rank.	并摆出上级的架子施压。	h
@@ -97941,6 +98079,7 @@ wide dorsal fins	宽背鳍	wi
 wild boar piglet	野猪幼崽	wi
 wild goose woman	大雁人	wi
 wild goose women	大雁人	wi
+wishes to parley	希望进行和谈	hP
 with many others	与其他许多人一同	h
 with some others	与其他一些人一同	h
 withered at {p}.	在{p1}衰亡了。	ht
@@ -98079,6 +98218,7 @@ yellow grossular	缃榴石	wi
 .Needs dressing	·需要包扎
 .Needs traction	·需要牵引
 A Course on {b}	{b}教程	hbti
+A Guildhall for	行会大厅申请：	wi
 A Record of {b}	{b}实录	hbti
 Abandoned house	废弃房屋
 Accept as a {s}	接纳为{s1}	hPt
@@ -98142,6 +98282,7 @@ Considers bully	看作为恶霸	w
 Continue action	继续行动	wl
 Crafting skill.	制作技能。	w
 Created Wealth:	创造的价值：	w
+Crossbow-making	制弩	wi
 Crutch required	需要拐杖
 Cursed by deity	遭神明诅咒	w
 Custom Workshop	自定义工坊	wi
@@ -98178,6 +98319,7 @@ Disdains nature	轻视自然	w
 Disembowelment.	解剖.	w
 Disillusionment	幻灭	w
 Dismount to {s}	下坐骑至{s1}	hPt
+Dressing Wounds	包扎伤口	wi
 Drop this item.	丢下此物品。	hj
 Dwarf, Ordinary	矮人，普通
 Dwarven hillock	矮人丘堡	wi
@@ -98195,6 +98337,7 @@ Endgame event 2	终局事件 2	w
 Enjoy the hunt!	祝你狩猎愉快！	hP
 Exports to {e}:	向{e1}出口：	hPt
 Extract (plant)	提取物（植物）	wi
+Farming/Related	农业及相关劳动	wi
 Fell tree ({s})	砍倒树木（{s1}）	hPt
 Fertilize field	给田地施肥	wi
 Finish setting 	结束设置物品/建筑指定。	w
@@ -98205,6 +98348,7 @@ First Adjective	第一形容词	w
 Fish Dissection	剖鱼	wi
 Fish Dissectors	剖鱼工	wi
 Fishery Workers	渔业工人	wi
+Fishing/Related	捕鱼及相关劳动	wi
 Former prisoner	前囚徒	w
 Found a feature	发现地质特征	w
 Glowing Barrier	发光的屏障	wi
@@ -98217,6 +98361,7 @@ High creativity	创造力高	wil
 High musicality	乐感高	wil
 Historical f...	历史人物……
 Horizontal axle	传动横轴	w
+Hunting/Related	狩猎及相关劳动	wi
 Hyphen Compound	连字符复合词	w
 I am a soldier.	我是一名士兵。	hP
 I cannot agree.	我无法赞同。	hP
@@ -98301,10 +98446,12 @@ Opening file...	正在打开文件……	w
 Optics Engineer	光学工程师	wi
 Other materials	其他材料	wi
 Page {d} of {d}	页面 {d} of {d}	wt
+Parley with {e}	和谈对象：{e1}	hPt
 Party organized	聚会已组织	w
 Past Participle	过去分词	w
 Pathways to {b}	通往{b}之路	hbti
 Place zones to 	放置功能区用以设立集会区域，	w
+Plant Gathering	植物采集	wi
 Plant gatherers	植物采集者	w
 Please help me!	请救救我！	hP
 Poetry Recital.	诗歌朗诵。	hEi
@@ -98364,6 +98511,7 @@ Soap (Desired):	肥皂（期望数量）：	wl
 Specific person	特定人物	wi
 Standing orders	劳动规则	wi
 Steal livestock	偷走牲畜	wli
+Stone Engraving	石刻	wi
 Stone-Fall Trap	落石陷阱	wi
 Superior memory	上等记忆力	wil
 Talented hunter	天才猎人	w
@@ -99157,6 +99305,7 @@ armadillo women	犰狳人	wi
 arose from {p}.	从{p1}出现了。	ht
 artichoke heart	洋蓟菜心	wi
 artichoke seeds	洋蓟种子	wi
+as a citizen of	成为以下地点的公民：	hP
 as overlapping 	牵引台等高级医疗装置进行治疗。	w
 as part of {e}.	作为{e1}的一部分。	ht
 asked about {p}	询问了关于{p1}的事情	ht
@@ -102915,6 +103064,7 @@ Charge Defense	冲锋防御	wli
 Cheese (plant)	奶酪（植物）	wi
 Chop down tree	砍倒树木	hqO
 Chopping trees	砍伐树木	wo
+Citizenship of	公民资格申请：	wi
 Click workshop	点击工坊	hqO
 Close the map.	关闭地图。	hj
 Clothes Making	制衣	wi
@@ -103204,7 +103354,7 @@ View stockpile	查看储物堆	wi
 View your log.	查看日志。	hj
 Vile creature!	卑劣的生物！	hP
 Walledcrests\\"	围墙顶\\"	w
-Weaponsmithing	武器锻造	wi
+Weaponsmithing	锻造武器	wi
 What happened?	发生了什么事？	hP
 When necessary	必要时	hP
 Wind Direction	风向	hi
@@ -107626,6 +107776,7 @@ white yam leaf	白薯叶	wi
 wild boar sows	野猪	wi
 wild goose man	大雁人	wi
 wild goose men	大雁人	wi
+wishes to join	希望加入	hP
 with accuracy.	提高精确度。	wl
 with {d} items	携带 {d} 件物品	wt
 wolverine kits	狼獾幼崽	wi
@@ -107756,7 +107907,7 @@ Be practical.	务实一些。	hP
 Beast hunters	猛兽猎手	wi
 Beat criminal	殴打罪犯	wi
 Beware doubt.	提防疑虑。	hP
-Blacksmithing	锻造	wi
+Blacksmithing	锻造杂物	wi
 Blocks: metal	块：金属	wi
 Bowyer's Shop	制弓工坊	wi
 Break of dawn	破晓	w
@@ -107779,6 +107930,7 @@ Clean patient	清洗病人	wi
 Clear weather	天气放晴	w
 Cloth (Plant)	植物布	wi
 Cloth (metal)	布匹（金属）	wi
+Clothesmaking	制衣	wi
 Clothing Shop	服装店	wi
 Collect taxes	征税	wi
 Concentration	专注	wi
@@ -107918,6 +108070,7 @@ Menu overview	菜单概览	hq
 Menu overview	菜单概览	w
 Metal Crafter	金属工匠	wi
 Metalcrafters	金属工匠	wi
+Metalcrafting	金属工艺	wi
 Metalsmithing	金属加工	wi
 Migrant (one)	一名移民到来	w
 Militia-dwarf	民兵	wi
@@ -107982,6 +108135,7 @@ Record Keeper	记录员	wi
 Regular beast	野兽来袭	w
 Related Sites	相关地点	h
 Replace first	替换第一个	w
+Road Building	修筑道路	wi
 Ropes (Plant)	绳索（植物纤维）
 Routine:Ready	日程：待命	wl
 Royal Bedroom	皇家卧室	w
@@ -107992,6 +108146,7 @@ Seek alliance	寻求结盟	wli
 Seek artifact	寻找造物	wi
 Seeks harmony	追求和睦	w
 Select color.	选择颜色。	hP
+Setting Bones	接骨	wi
 Setting glass	设置玻璃	wli
 Setting plant	设置植物	wli
 She generally	她通常	l
@@ -108010,10 +108165,12 @@ Spatial Sense	空间感知	wi
 Spears/Spikes	长矛/尖刺	wi
 Specify glass	指定玻璃	wli
 Specify plant	指定植物	wli
+Status of {p}	状态：{p1}	hPt
 Stay occupied	保持忙碌	w
 Stone Carvers	石雕师	wi
 Stone Carving	石雕	wi
 Stone Crafter	石艺师	wi
+Stone Cutting	切石	wi
 Stone Hauling	搬运石头	wi
 Stonecrafters	石艺师	wi
 Stonecrafting	石艺	wi
@@ -108075,6 +108232,7 @@ Weapon skill.	武器技能。	w
 Wear an item.	穿戴一件物品。	hj
 Weird weather	怪异天气	w
 When possible	尽可能	hP
+Working Stone	石材加工	wi
 Wound Dresser	裹伤师	wi
 X is cringing	X正在畏缩	wl
 X is hiding Y	X正在藏匿Y	wl
@@ -110996,6 +111154,7 @@ long, curving	修长弯曲的	hv
 long, hanging	修长下垂的	hv
 longnose gars	长鼻雀鳝	wi
 lords consort	女领主之夫	wi
+loss of life.	人员伤亡。	hP
 loving nature	爱的天性	wi
 low priority.	所选区域将被设为最低优先级。	w
 lychee flower	荔枝花	wi
@@ -112332,6 +112491,7 @@ yellow zircon	黄锆石	wi
 .Artery torn	·动脉撕裂
 .Broken open	·折裂
 .Torn tendon	·肌腱撕裂
+A Priest for	祭司申请：	wi
 A short trip	很近	w
 Accomplished	娴熟的	wi
 Activity end	活动结束	w
@@ -112563,6 +112723,7 @@ Stonecrafter	石艺师	wi
 Stonecutters	切石师	wi
 Stonecutting	切石	wi
 Stoneworkers	石工	wi
+Stoneworking	石材加工	wi
 Store weapon	存放武器	wi
 Strange mood	怪异心情	w
 Subterranean	地下温度
@@ -112626,6 +112787,7 @@ Work Details	劳动分组	w
 Work animals	家畜	w
 Work details	劳动分组	hq
 Work details	劳动分组	wi
+Working Wood	木材加工	wi
 X is burning	X正在燃烧	wl
 X is cooking	X正在烹饪	wl
 X is falling	X正在坠落	wl
@@ -116581,6 +116743,7 @@ Aggravation	恼火	w
 Altostratus	高层云
 Ambivalence	矛盾	w
 Anger-prone	容易发怒	w
+Animal Care	动物护理	wi
 Animal trap	动物陷阱	w
 Armor stand	盔甲架	w
 Armorsmiths	盔甲匠	wi
@@ -116755,6 +116918,7 @@ Other stone	其他石材	wi
 Overbearing	为人强势	w
 Papermakers	造纸工	wi
 Papermaking	造纸	wi
+Parley with	和谈对象：	wi
 Pen/Pasture	畜栏／牧场	wi
 Performance	表演	hEi
 Personality	人格	w
@@ -116874,6 +117038,7 @@ Woodcutters	樵夫	wi
 Woodcutting	伐木	hq
 Woodcutting	伐木	w
 Woodworkers	木工	wi
+Woodworking	木材加工	wi
 Work detail	劳动分组	wi
 Work orders	工单	hq
 Work orders	工单	w
@@ -116890,6 +117055,7 @@ a ceremony.	仪式。	hEi
 a dormitory	宿舍	h
 a foot race	赛跑	hEi
 a guildhall	行会大厅	h
+a guildhall	行会大厅	hP
 a mead hall	蜂蜜酒厅	h
 a proboscis	一根长鼻	hv
 a warehouse	仓库	h
@@ -120202,6 +120368,7 @@ sloth woman	树懒人	wi
 sloth women	树懒人	wi
 small-lobed	小耳垂	wi
 soldier ant	蚂蚁兵蚁	wi
+soldiering.	提供军事服务。	hP
 solidified.	凝固而死。	h
 soybean pod	黄豆荚	wi
 sparrow man	麻雀人	wi
@@ -120552,6 +120719,7 @@ Group Name	势力名称	i
 Grumpiness	暴躁	w
 Guildhalls	行会大厅	hq
 He is {s}.	他{s}。	wtlx
+Healthcare	医疗	wi
 Held/Worn:	正在被持有/穿戴：	w
 Hello {p}.	你好，{p1}。	hPt
 Herbalists	草药师	wi
@@ -120627,6 +120795,7 @@ Open cases	未结案件	w
 Optimistic	乐观	w
 Option {d}	选项 {d}	wt
 Ore of {s}	{s}矿石	witx
+Other Jobs	其他劳动	wi
 Overshares	爱说私事	w
 Owner: {u}	拥有者：{u1}	hHt
 Papermaker	造纸工	wi
@@ -123381,6 +123550,7 @@ sacred war	神圣战争	hi
 sacred wax	神圣蜡	hi
 sacred way	神圣路	hi
 sacred web	神圣网	hi
+sanctuary.	寻求庇护。	hP
 sand pears	沙梨	wi
 sandy clay	砂质黏土	wi
 sandy loam	砂质壤土	wi
@@ -123600,6 +123770,7 @@ zombie {s}	僵尸{s1}	htv
 {s} (copy)	{s1}（抄本）	hIit
 {s} at {p}	{s1}（于{p1}）	htC
 {s} by {n}	由{n1}制作的{s1}	hIit
+{s} guild.	{s1}行会。	hPt
 {s} in {p}	{s1}（于{p1}）	htC
 {s} of {p}	{p1}的{s1}	htu
 {s} to {a}	向{a1}提出的{s1}	htEi
@@ -123852,6 +124023,7 @@ Slate {d}	第{d}年 板岩月	wt
 Snatchers	绑架者	wi
 Socialize	社交	w
 Some soil	一些土壤	w
+Status of	状态：	wi
 Stone use	分配石材	wi
 Straight 	平滑	wi
 Stran sbu	斯特兰·斯布	w
@@ -125680,6 +125852,7 @@ Alliance	联盟	w
 Ambusher	伏击者	wi
 Anything	没有任何感觉	w
 Armorers	盔甲匠	wi
+Armoring	锻甲	wi
 Arrivals	到访	w
 Artifact	造物	wi
 Assemble	组装	wi
@@ -126746,6 +126919,8 @@ Animals	动物	w
 Annoyed	烦恼	w
 Anxiety	焦虑	w
 Anxious	容易焦虑	w
+Approve	批准	hP
+Approve	批准	wi
 Archery	射术	wi
 Armorer	盔甲匠	wi
 Arngish	昂基石	wi
@@ -126892,6 +127067,7 @@ In {d},	第{d}年，	ht
 Injured	受伤的	w
 It {e}.	它{e1}。	hHt
 Jeweler	宝石匠	wi
+Jewelry	珠宝	wi
 Justice	司法	hq
 Justice	司法	w
 Kesting	凯斯廷	wi
@@ -128597,6 +128773,7 @@ stray 	无主的	wip
 strays	无主	wi
 strike	打击	wi
 stubby	粗短的	hv
+study.	从事学术研究。	hP
 summer	夏	wi
 sunken	深陷	wi
 swords	剑	wi
@@ -130052,6 +130229,8 @@ Dast	达斯特	wi
 Dawn	黎明
 Dead	死亡	hq
 Dead	已死亡	w
+Deny	拒绝	hP
+Deny	拒绝	wi
 Done	完成	hq
 Done	完成	w
 Door	门	w
@@ -130980,63 +131159,3 @@ of	所属	h
 .	。	hq
 :	：	h
 ;	；	h
-
-# Petitions: complete native Windows 53.16 branch family; authored in ui-messages.tsv.
-A Priest for {e}	祭司申请：{e1}	hPt
-A High Priest for {e}	高阶祭司申请：{e1}	hPt
-A Guildhall for {e}	行会大厅申请：{e1}	hPt
-A Grand Guildhall for {e}	大行会大厅申请：{e1}	hPt
-Parley with {e}	和谈对象：{e1}	hPt
-Citizenship of {p}	公民资格申请：{p1}	hPt
-Status of {p}	状态：{p1}	hPt
-Some corrupt data	部分数据损坏	hP
-has many worshippers in	在以下地点拥有众多信徒：	hP
-has many worshippers here	在这里拥有众多信徒	hP
-and now requires	现提出以下要求：	hP
-a temple complex and high priest	建造神殿建筑群并任命高阶祭司	hP
-a temple and priest	建造神殿并任命祭司	hP
-The location must be built and furnished,	必须建好并布置该场所，	hP
-with the new position appointed by you.	并由你任命新职位的人员。	hP
-Approve	批准	hP
-Deny	拒绝	hP
-has many members in	在以下地点拥有众多成员：	hP
-has many members here	在这里拥有众多成员	hP
-a grand guildhall	大行会大厅	hP
-a guildhall	行会大厅	hP
-with the hall designated for a	并将大厅指定给以下行会：	hP
-{s} guild.	{s1}行会。	hPt
-wishes to parley	希望进行和谈	hP
-in order to avert	以避免	hP
-loss of life.	人员伤亡。	hP
-wishes to join	希望加入	hP
-as a citizen of	成为以下地点的公民：	hP
-desires citizenship.	希望取得公民资格。	hP
-Future such petitions: prompt	今后同类申请：询问	hP
-Future such petitions: accept	今后同类申请：接受	hP
-Future such petitions: reject	今后同类申请：拒绝	hP
-This can also be changed in	也可在以下位置修改：	hP
-Labor -> Standing orders -> Petitions.	劳动 → 劳动规则 → 申请。	hP
-wishes to reside in	希望居住于	hP
-wishes to reside here	希望在这里居住	hP
-for the purpose of	居留目的：	hP
-sanctuary.	寻求庇护。	hP
-study.	从事学术研究。	hP
-soldiering.	提供军事服务。	hP
-entertaining citizens and visitors.	为公民和访客表演。	hP
-eradicating monsters.	消灭怪物。	hP
-# Fixed prefixes cover native shortened titles; controls retain semantic priority.
-A Priest for	祭司申请：	wi
-A High Priest for	高阶祭司申请：	wi
-A Guildhall for	行会大厅申请：	wi
-A Grand Guildhall for	大行会大厅申请：	wi
-Parley with	和谈对象：	wi
-Citizenship of	公民资格申请：	wi
-Status of	状态：	wi
-Approve	批准	wi
-Deny	拒绝	wi
-
-# Native collision-damage prefix: full outcome tree uses existing scoped combat grammar.
-Announcement combat impact-part []: body part	身体部位	l
-Announcement combat impact-part []: body parts	多个身体部位	l
-Announcement combat impact-part [$body]: {s}	{s1}	l
-Announcement combat head [owner,impact-part]: {s} {s} takes the full force of the impact	{s1}{s2}承受了全部冲击力	l

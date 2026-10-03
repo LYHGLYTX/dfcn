@@ -1,5 +1,5 @@
-// The fortress-wide Labor table is distinct from a character's Labor page.
-// Its complete four-tab band establishes context before any row is claimed.
+// The fortress-wide resident table uses its complete four-tab band.
+// Work-detail captions retain their own typed widget/object ownership.
 struct FortressLaborBand {
     int tabs_y = -1;
     int standing_tabs_y = -1;
@@ -195,14 +195,207 @@ static std::optional<int32_t> fortress_labor_classic_caption_skin(
 
 void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y) const {
-    const auto band = fortress_labor_band(rows);
-    if (!band) return;
-    if (band->header_y < 0 && band->standing_tabs_y < 0) return;
     const auto settings = native_ui_settings();
     const bool classic = settings && settings->classic;
     const auto captures = captured_clipped_captions();
     const auto draws = captured_native_drawn_text_rows();
     const auto top_draws = captured_native_drawn_text_rows(true);
+    struct CaptionRow {
+        NativeFortressLaborCaption caption;
+        bool top = false;
+        int y = 0, first = 0, end = 0;
+        std::vector<std::pair<int, int>> ink;
+    };
+    std::vector<CaptionRow> caption_rows;
+    const auto preserve_authored_spans = [&](const NativeDrawnTextRow &draw, int first, int end) {
+        if (!draw.fortress_labor_caption || !draw.fortress_labor_caption->authored ||
+                draw.y < 0 || draw.y >= gps_->dimy) return;
+        const auto exposed = [&](int x) {
+            bool top = false;
+            const auto *cell = cell_at(x, draw.y, &top);
+            return cell && top == draw.top_layer &&
+                (cell[0] ? cell[0] : ' ') == static_cast<unsigned char>(draw.source[x - draw.x]);
+        };
+        for (int x = first; x < end;) {
+            while (x < end && !exposed(x)) ++x;
+            const int start = x;
+            while (x < end && exposed(x)) ++x;
+            if (start == x) continue;
+            std::erase_if(matches, [&](const Match &match) {
+                return match.y == draw.y && match.x < x && start < match.x + match.length;
+            });
+            // These are surviving native glyphs beside an occluder, not a
+            // complete field to redraw. Reserve their matching scope without
+            // creating a source-mask Match that would erase the English ink.
+            for (int cell = start; cell < x; ++cell)
+                if (rows[draw.y][cell] == draw.source[cell - draw.x]) rows[draw.y][cell] = ' ';
+        }
+    };
+    for (const auto *batch : {&draws, &top_draws}) {
+        for (const auto &draw : *batch) {
+            if (!draw.fortress_labor_caption || draw.source.empty() ||
+                    draw.x < 0 || draw.x >= gps_->dimx || draw.y < 0 ||
+                    draw.y >= gps_->dimy || draw.source.size() > 4096) continue;
+            const auto &caption = *draw.fortress_labor_caption;
+            const auto &box = caption.box;
+            if (!caption.owner || caption.source.empty() || box.w <= 0 || box.h <= 0 ||
+                    draw.y < box.y || draw.y >= box.y + box.h) continue;
+            // addst keeps the complete input string even when the widget's
+            // native clip stops its suffix. Only the exposed intersection
+            // owns grid bytes; requiring the whole input to fit rejected the
+            // entire typed label and handed it back to word-level matching.
+            int first = std::max(draw.x, std::max(0, box.x));
+            int end = std::min({gps_->dimx, box.x + box.w,
+                draw.x + static_cast<int>(draw.source.size())});
+            if (first >= end) continue;
+            bool current = true;
+            for (int x = first; x < end; ++x) {
+                bool top = false;
+                const auto *cell = cell_at(x, draw.y, &top);
+                if (!cell || top != draw.top_layer ||
+                        (cell[0] ? cell[0] : ' ') != static_cast<unsigned char>(draw.source[x - draw.x])) {
+                    current = false;
+                    break;
+                }
+            }
+            if (!current) {
+                preserve_authored_spans(draw, first, end);
+                continue;
+            }
+            while (first < end && draw.source[first - draw.x] == ' ') ++first;
+            while (end > first && draw.source[end - draw.x - 1] == ' ') --end;
+            if (first >= end) continue;
+            const auto retain_row = [&](int y) {
+                for (int x = first; x < end; ++x) {
+                    bool top = false;
+                    const auto *cell = cell_at(x, y, &top);
+                    if (!cell || top != draw.top_layer ||
+                        (cell[0] ? cell[0] : ' ') != static_cast<unsigned char>(draw.source[x - draw.x]))
+                        return;
+                }
+                auto found = std::find_if(caption_rows.begin(), caption_rows.end(),
+                    [&](const CaptionRow &row) {
+                        return row.caption.owner == caption.owner && row.y == y &&
+                            row.top == draw.top_layer && row.caption.kind == caption.kind &&
+                            row.caption.source == caption.source;
+                    });
+                if (found == caption_rows.end()) {
+                    caption_rows.push_back({caption, draw.top_layer, y, first, end, {{first, end}}});
+                } else {
+                    found->first = std::min(found->first, first);
+                    found->end = std::max(found->end, end);
+                    found->ink.push_back({first, end});
+                }
+            };
+            retain_row(draw.y);
+            // One addst call can paint the two logical font halves while
+            // capture records only its initial row. Claim the proven mate as
+            // the same field before generic words can own its other half.
+            // The formatter's semantic source never supplies extra mask ink.
+            const auto *flags = draw.top_layer ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+            constexpr uint32_t upper = 1u << 3, lower_half = 1u << 4;
+            const uint32_t half = flags ? flags[static_cast<size_t>(first) * gps_->dimy + draw.y] &
+                (upper | lower_half) : 0;
+            const int mate = half == upper ? draw.y + 1 : half == lower_half ? draw.y - 1 : -1;
+            if (mate >= 0 && mate < gps_->dimy && flags &&
+                (flags[static_cast<size_t>(first) * gps_->dimy + mate] & (upper | lower_half)) ==
+                    (half == upper ? lower_half : upper)) retain_row(mate);
+        }
+    }
+    for (const auto &row : caption_rows) {
+        const auto &caption = row.caption;
+        std::string physical(row.end - row.first, ' ');
+        bool current = true;
+        for (int x = row.first; x < row.end; ++x) {
+            bool top = false;
+            const auto *cell = cell_at(x, row.y, &top);
+            const unsigned char ch = cell && cell[0] ? cell[0] : ' ';
+            const bool owned = std::any_of(row.ink.begin(), row.ink.end(),
+                [&](const auto &span) { return x >= span.first && x < span.second; });
+            if (!cell || top != row.top || (!owned && ch != ' ')) {
+                current = false;
+                break;
+            }
+            physical[x - row.first] = static_cast<char>(ch);
+        }
+        if (!current) continue;
+        // Ownership comes from the live Text/widget tree and work_detail
+        // flags. An editable name remains authored even when it spells a
+        // known labor or the game's initial "Custom Detail N" value.
+        std::optional<std::string> target;
+        const auto literal_target = [&](const std::string &source) {
+            if (caption.kind == NativeFortressLaborKind::Label)
+                if (const auto labor = exact_literal_translation("Labor caption: " + source))
+                    return labor;
+            return exact_literal_translation(source);
+        };
+        if (!caption.authored) target = literal_target(caption.source);
+        if (!target && !caption.authored) {
+            std::istringstream words(caption.source);
+            std::string normalized;
+            for (std::string word; words >> word;) {
+                if (!normalized.empty()) normalized += ' ';
+                normalized += word;
+            }
+            target = literal_target(normalized);
+        }
+        const bool untranslated = !target;
+        if (!target) target = native_text_to_utf8(caption.source);
+        if (target->empty()) continue;
+        SDL_Rect box = caption.box;
+        box.x = std::max(0, box.x);
+        box.w = std::min(gps_->dimx, caption.box.x + caption.box.w) - box.x;
+        if (box.w <= 0) continue;
+        // Earlier generic words never own part of an authored field. Raw
+        // layer scans project this typed source only onto their own bytes;
+        // the final composite carries the complete translated/display name.
+        std::erase_if(matches, [&](const Match &match) {
+            return match.y == row.y && match.x < row.end &&
+                row.first < match.x + match.length;
+        });
+        if (only_y < 0 || only_y == row.y) {
+            if (only_y < 0 || rows[row.y].compare(row.first, physical.size(), physical) == 0) {
+                // The composed grid above proves every current source byte.
+                // An earlier reader may already have reserved/blanked the
+                // local matching buffer; its overlap was removed, so retain
+                // the typed field's complete display target in this pass.
+                Match match{row.first, row.y, row.end - row.first,
+                    kFortressLaborCaptionRule, *target, physical};
+                match.native_picture_caption_box = box;
+                match.layout_x = box.x;
+                match.layout_length = box.w;
+                match.layout_clip_right = box.x + box.w;
+                match.native_labor_control = caption.kind == NativeFortressLaborKind::Control;
+                match.layout_left = !match.native_labor_control;
+                match.layout_ellipsize = caption.kind == NativeFortressLaborKind::DetailName;
+                match.native_hover_untranslated = untranslated && !caption.authored;
+                match.layout_font_pixels = std::clamp(
+                    static_cast<int>(gps_->tile_pixel_y * config_.font_scale), 1, gps_->tile_pixel_y);
+                match.layout_lock_font_pixels = true;
+                match.layout_line_height_pixels = gps_->tile_pixel_y;
+                matches.push_back(std::move(match));
+            } else {
+                for (int offset = 0; offset < static_cast<int>(physical.size());) {
+                    while (offset < static_cast<int>(physical.size()) &&
+                        rows[row.y][row.first + offset] != physical[offset]) ++offset;
+                    const int start = offset;
+                    while (offset < static_cast<int>(physical.size()) &&
+                        rows[row.y][row.first + offset] == physical[offset]) ++offset;
+                    if (start < offset) matches.push_back({row.first + start, row.y,
+                        offset - start, kFortressLaborCaptionRule, {}, physical.substr(start, offset - start)});
+                }
+            }
+        }
+        if (only_y < 0) {
+            std::fill(rows[row.y].begin() + row.first, rows[row.y].begin() + row.end, ' ');
+        } else {
+            for (int offset = 0; offset < static_cast<int>(physical.size()); ++offset)
+                if (rows[row.y][row.first + offset] == physical[offset])
+                    rows[row.y][row.first + offset] = ' ';
+        }
+    }
+    const auto band = fortress_labor_band(rows);
+    if (!band || (band->header_y < 0 && band->standing_tabs_y < 0)) return;
     if (band->standing_tabs_y >= 0) {
         for (int y = band->standing_tabs_y + 1; y < gps_->dimy; ++y) {
             if (only_y >= 0 && y != only_y) continue;
@@ -600,6 +793,24 @@ void Overlay::append_fortress_labor_rows(std::vector<std::string> &rows,
 
 void Overlay::layout_fortress_labor(SDL_Renderer *renderer) {
     if (!gps_ || !face_ || !renderer || gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
+    for (Match &match : prepared_matches_) {
+        if (match.rule != kFortressLaborCaptionRule || match.target.empty() ||
+                match.native_split_duplicate) continue;
+        // Typed captions also appear on a character's Work details page.
+        // Their live widget owner supplies context even when the fortress
+        // four-tab strip is outside this viewport or behind another frame.
+        if (match.native_picture_caption_box) {
+            const auto &box = *match.native_picture_caption_box;
+            match.layout_x = box.x;
+            match.layout_length = box.w;
+            match.layout_clip_right = box.x + box.w;
+        }
+        match.layout_left = !match.native_labor_control;
+        match.layout_box_pixel_x = -1;
+        match.layout_box_pixel_width = 0;
+        layout_fortress_text_rows(renderer, {{&match}},
+            match.layout_x, match.layout_clip_right, false, true);
+    }
     std::vector<std::string> rows(gps_->dimy, std::string(gps_->dimx, ' '));
     for (int y = 0; y < gps_->dimy; ++y)
         for (int x = 0; x < gps_->dimx; ++x) {
@@ -626,6 +837,7 @@ void Overlay::layout_fortress_labor(SDL_Renderer *renderer) {
                 if (const auto target = exact_literal_translation(key)) match.target = *target;
             continue;
         }
+        if (match.rule == kFortressLaborCaptionRule) continue;
         if (band->standing_tabs_y >= 0) {
             if (match.rule != kFortressStandingOrderRule) continue;
             // Restore the native button bounds after generic panel layout.

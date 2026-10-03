@@ -8403,6 +8403,140 @@ Work details	劳动分组	wi
 # The Kitchen tab reuses Cooking; the workshop remains Kitchen.
 Labor tab: Work details	分组	wi
 Labor tab: Standing orders	规则	wi
+# Complete system labor captions. The Work details editor renders these as
+# single fields; substrings must not leave suffixes or become generated names.
+Working Wood	木材加工	wi
+Working Stone	石材加工	wi
+Woodworking	木材加工	wi
+Stoneworking	石材加工	wi
+Crossbow-making	制弩	wi
+Stone Cutting	切石	wi
+Stone Carving	石雕	wi
+Stone Engraving	石刻	wi
+Stonecrafting	石艺	wi
+Animal Care	动物护理	wi
+Small Animal Dissection	小动物解剖	wi
+Hunting/Related	狩猎及相关劳动	wi
+Fishing/Related	捕鱼及相关劳动	wi
+Farming/Related	农业及相关劳动	wi
+Farming (Fields)	耕种	wi
+Plant Gathering	植物采集	wi
+Plant Processing	植物加工	wi
+Healthcare	医疗	wi
+Armoring	锻甲	wi
+Weaponsmithing	锻造武器	wi
+Blacksmithing	锻造杂物	wi
+Metalcrafting	金属工艺	wi
+Clothesmaking	制衣	wi
+Setting Bones	接骨	wi
+Dressing Wounds	包扎伤口	wi
+Recovering Wounded	救助伤员	wi
+Wall/Floor Construction	墙壁与地板建造	wi
+Jewelry	珠宝	wi
+Push/Haul Vehicles	推拉车辆	wi
+Other Jobs	其他劳动	wi
+Road Building	修筑道路	wi
+Reset to default	恢复默认	wi
+# unit_labor captions use a labor-specific lookup so profession nouns such
+# as Soap Maker and Mechanics retain their meanings outside this selector.
+# All named 53.16 unit_labor entries are listed in native enum order.
+Labor caption: Mining	挖掘	wi
+Labor caption: Stone Hauling	搬运石头	wi
+Labor caption: Wood Hauling	搬运木材	wi
+Labor caption: Burial	埋葬	wi
+Labor caption: Food Hauling	搬运食物	wi
+Labor caption: Refuse Hauling	搬运垃圾	wi
+Labor caption: Item Hauling	搬运物品	wi
+Labor caption: Furniture Hauling	搬运家具	wi
+Labor caption: Animal Hauling	搬运动物	wi
+Labor caption: Cleaning	清扫	wi
+Labor caption: Wood Cutting	伐木	wi
+Labor caption: Carpentry	木工	wi
+Labor caption: Stone Cutting	切石	wi
+Labor caption: Stone Carving	石雕	wi
+Labor caption: Stone Engraving	石刻	wi
+Labor caption: Masonry	石工	wi
+Labor caption: Animal Training	驯兽	wi
+Labor caption: Animal Care	动物护理	wi
+Labor caption: Diagnosis	诊断	wi
+Labor caption: Surgery	外科手术	wi
+Labor caption: Setting Bones	接骨	wi
+Labor caption: Suturing	缝合	wi
+Labor caption: Dressing Wounds	包扎伤口	wi
+Labor caption: Feed Patients/Prisoners	喂食病患和囚犯	wi
+Labor caption: Recovering Wounded	救助伤员	wi
+Labor caption: Butchery	屠宰	wi
+Labor caption: Trapping	诱捕	wi
+Labor caption: Small Animal Dissection	小动物解剖	wi
+Labor caption: Leatherworking	皮革加工	wi
+Labor caption: Tanning	制革	wi
+Labor caption: Brewing	酿造	wi
+Labor caption: Soap Maker	制皂	wi
+Labor caption: Weaving	织布	wi
+Labor caption: Clothesmaking	制衣	wi
+Labor caption: Milling	碾磨	wi
+Labor caption: Plant Processing	植物加工	wi
+Labor caption: Cheese Making	制酪	wi
+Labor caption: Milking	挤奶	wi
+Labor caption: Cooking	烹饪	wi
+Labor caption: Farming (Fields)	耕种	wi
+Labor caption: Plant Gathering	植物采集	wi
+Labor caption: Fishing	捕鱼	wi
+Labor caption: Fish Cleaning	清理鱼	wi
+Labor caption: Fish Dissection	鱼类解剖	wi
+Labor caption: Hunting	狩猎	wi
+Labor caption: Furnace Operating	操作熔炉	wi
+Labor caption: Weaponsmithing	锻造武器	wi
+Labor caption: Armoring	锻甲	wi
+Labor caption: Blacksmithing	锻造杂物	wi
+Labor caption: Metalcrafting	金属工艺	wi
+Labor caption: Gem Cutting	宝石切割	wi
+Labor caption: Gem Setting	宝石镶嵌	wi
+Labor caption: Woodcrafting	木艺	wi
+Labor caption: Stonecrafting	石艺	wi
+Labor caption: Bone Carving	骨雕	wi
+Labor caption: Glassmaking	玻璃制作	wi
+Labor caption: Strand Extraction	缕丝提取	wi
+Labor caption: Siege Engineering	制造攻城器械	wi
+Labor caption: Siege Operating	操作攻城器械	wi
+Labor caption: Crossbow-making	制弩	wi
+Labor caption: Mechanics	机械作业	wi
+Labor caption: Potash Making	制草碱	wi
+Labor caption: Lye Making	制碱液	wi
+Labor caption: Dyeing	染色	wi
+Labor caption: Wood Burning	烧炭	wi
+Labor caption: Pump Operating	操作水泵	wi
+Labor caption: Shearing	剪毛	wi
+Labor caption: Spinning	纺纱	wi
+Labor caption: Pottery	制陶	wi
+Labor caption: Glazing	上釉	wi
+Labor caption: Pressing	压榨	wi
+Labor caption: Bee Keeping	养蜂	wi
+Labor caption: Wax Working	蜡工	wi
+Labor caption: Push/Haul Vehicles	推拉车辆	wi
+Labor caption: Trade Good Hauling	搬运贸易货物	wi
+Labor caption: Lever Operation	操作控制杆	wi
+Labor caption: Water Hauling	运水	wi
+Labor caption: Gelding	阉割	wi
+Labor caption: Road Building	修筑道路	wi
+Labor caption: Wall/Floor Construction	墙壁与地板建造	wi
+Labor caption: Papermaking	造纸	wi
+Labor caption: Bookbinding	书籍装订	wi
+# The negative labor-category IDs have their own native display captions.
+Labor caption: Working Wood	木材加工	wi
+Labor caption: Working Stone	石材加工	wi
+Labor caption: Woodworking	木材加工	wi
+Labor caption: Stoneworking	石材加工	wi
+Labor caption: Hunting/Related	狩猎及相关劳动	wi
+Labor caption: Healthcare	医疗	wi
+Labor caption: Farming/Related	农业及相关劳动	wi
+Labor caption: Fishing/Related	捕鱼及相关劳动	wi
+Labor caption: Metalsmithing	金属加工	wi
+Labor caption: Jewelry	珠宝加工	wi
+Labor caption: Crafts	工艺制作	wi
+Labor caption: Engineering	工程	wi
+Labor caption: Hauling	搬运	wi
+Labor caption: Other Jobs	其他劳动	wi
 # Kitchen sort labels and complete food-type selector captions.
 # Keep plant, drink and ingredient names in the shared item dictionaries.
 Type	类型	wi

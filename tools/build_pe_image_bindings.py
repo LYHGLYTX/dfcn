@@ -82,6 +82,14 @@ class PeImage:
         at = s[2]+rva-s[0]
         return self.data[at:self.data.index(b'\0',at)].decode('ascii')
 
+    def vtable_type(self, rva):
+        locator = struct.unpack('<Q', self.read(rva-8, 8))[0]-self.base
+        signature, offset, _, descriptor, _, self_rva = struct.unpack(
+            '<IIIIII', self.read(locator, 24))
+        if signature != 1 or offset != 0 or self_rva != locator:
+            raise ValueError(f'Invalid primary MSVC vtable at {rva:#x} in {self.path}')
+        return self.cstring(descriptor+16)
+
     def disassemble(self, objdump, coordinates):
         cache=ROOT/'data/extracted/cache/native-build'/('pe-3-'+hashlib.sha256(self.data).hexdigest()+'.pickle')
         if cache.is_file():
@@ -149,7 +157,7 @@ def generate(reference_path, classic_path, objdump, output):
         raise RuntimeError('PE edition sources must be Steam 53.16 and Classic 53.16.')
     sources = [p for p in (ROOT/'src').iterdir() if p.suffix in ('.h','.inc','.cpp') and 'build_bindings' not in p.name]
     text = '\n'.join(p.read_text(encoding='utf-8') for p in sources)
-    from native_pe_coordinates import collect_required_coordinates
+    from native_pe_coordinates import collect_required_coordinates, PE_VTABLE_TYPE_ANCHORS
     required=collect_required_coordinates(ROOT)
     # A signature can cross several unwind records belonging to one routine.
     # Retaining only its first address loses operand translations in later
@@ -211,6 +219,13 @@ def generate(reference_path, classic_path, objdump, output):
     for image in (a,b):
         table=next(t for t in symbols.iter('symbol-table') if any(int(n.get('value'),16)==image.timestamp for n in t.findall('binary-timestamp')))
         tables.append({(n.tag,n.get('name')):int(n.get('value'),16)-image.base for n in table if n.tag in ('global-address','vtable-address') and n.get('value')})
+    for reference, (native, type_name) in PE_VTABLE_TYPE_ANCHORS.items():
+        if reference not in required:
+            continue
+        if a.vtable_type(reference) != type_name or b.vtable_type(native) != type_name:
+            raise RuntimeError(f'PE vtable type does not match its ownership anchor at {reference:#x}')
+        key = ('vtable-address', type_name)
+        tables[0][key], tables[1][key] = reference, native
     named=sorted(set((va,tables[1][name]) for name,va in tables[0].items() if name in tables[1]))
     vtable_ranges=[]
     authoritative={}
