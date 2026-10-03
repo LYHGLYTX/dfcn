@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 #include <atomic>
 #include <string>
+#include "dfhack_command_context.h"
 
 #ifdef _WIN32
 #include "dfhack_interpose.h"
@@ -88,6 +89,23 @@ class Toggle {
 
     inline static Toggle *instance_ = nullptr;
     inline static thread_local unsigned maintenance_ = 0;
+    struct CommandFrame {
+        CommandFrame *parent;
+        void *out;
+        const void *name;
+        const void *arguments;
+        uint64_t invocation;
+        bool local_console;
+    };
+    // These TLS objects are POD and belong to the resident loader. In
+    // particular no destructor in a hot-reloaded core is registered here.
+    inline static thread_local CommandFrame *command_frame_ = nullptr;
+    // A reused OS/thread id must not revive a former thread's print ticket.
+    inline static std::atomic<uint64_t> command_sequence_{0};
+    inline static std::atomic<uint64_t> command_thread_sequence_{0};
+    inline static thread_local uint64_t command_thread_identity_ = 0;
+    inline static thread_local uint64_t command_entry_epoch_ = 0;
+    inline static std::atomic_bool command_context_ready_{false};
     Report report_ = nullptr;
     HMODULE module_ = nullptr;
     void **core_slot_ = nullptr;
@@ -378,8 +396,22 @@ class Toggle {
     }
 
     static int command_callback(void *core, void *console, const void *name, void *arguments, bool autocomplete) {
+        // Advance before every early return too: a new attempt must invalidate
+        // a previous producer record even when the switch suppresses execution.
+        const auto invocation = command_sequence_.fetch_add(1, std::memory_order_relaxed) + 1;
+        command_entry_epoch_ = invocation;
         auto &self = *instance_;
         if (self.off_.load(std::memory_order_acquire) && !maintenance_) return 1; // CR_FAILURE
+        // Record every command, including non-local and nested ones. A
+        // remote/silent child is a barrier; querying never walks to an outer
+        // Console frame. Aliases naturally expose their innermost invocation.
+        CommandFrame frame{command_frame_, console, name, arguments, invocation,
+            self.console_ && self.console_(core) == console};
+        struct RestoreFrame {
+            CommandFrame *parent;
+            ~RestoreFrame() { command_frame_ = parent; }
+        } restore{frame.parent};
+        command_frame_ = &frame;
         return reinterpret_cast<CommandFn>(self.command_.trampoline)(core, console, name, arguments, autocomplete);
     }
 
@@ -464,6 +496,43 @@ class Toggle {
     }
 
 public:
+    static int query_command_context(void *requested_console,
+            DfcnDfhackCommandContextV1 *result) noexcept {
+        const auto *frame = command_frame_;
+        if (!command_context_ready_.load(std::memory_order_acquire) ||
+                !result || result->size != sizeof(*result) ||
+                result->version != DFCN_DFHACK_COMMAND_CONTEXT_VERSION) return 0;
+        if (requested_console && (!frame || !frame->invocation ||
+                !frame->local_console || frame->out != requested_console)) return 0;
+        if (!command_thread_identity_)
+            command_thread_identity_ = command_thread_sequence_.fetch_add(1, std::memory_order_relaxed) + 1;
+        // The wire field is 32 bits. Decline rather than reuse an identity
+        // if a process ever exhausts that space.
+        if (!command_thread_identity_ || command_thread_identity_ > UINT32_MAX) return 0;
+        *result = {sizeof(*result), DFCN_DFHACK_COMMAND_CONTEXT_VERSION,
+            frame && frame->local_console ? DFCN_DFHACK_COMMAND_LOCAL_CONSOLE : 0,
+            static_cast<uint32_t>(command_thread_identity_), frame ? frame->invocation : 0,
+            frame ? frame->out : nullptr, frame ? frame->name : nullptr,
+            frame ? frame->arguments : nullptr};
+        return 1;
+    }
+
+    static int query_command_context_v2(void *requested_console,
+            DfcnDfhackCommandContextV2 *result) noexcept {
+        if (!result || result->size != sizeof(*result) ||
+                result->version != DFCN_DFHACK_COMMAND_CONTEXT_VERSION_V2) return 0;
+        DfcnDfhackCommandContextV1 leaf{};
+        leaf.size = sizeof(leaf);
+        leaf.version = DFCN_DFHACK_COMMAND_CONTEXT_VERSION;
+        // Reuse precisely V1's readiness, leaf selection and resident thread
+        // identity rules. No frame/native object is retained after this call.
+        if (!query_command_context(requested_console, &leaf)) return 0;
+        *result = {sizeof(*result), DFCN_DFHACK_COMMAND_CONTEXT_VERSION_V2,
+            leaf.flags, leaf.thread_identity, leaf.invocation, leaf.out,
+            leaf.name, leaf.arguments, command_entry_epoch_};
+        return 1;
+    }
+
     void initialize(Report report_function) {
         report_ = report_function;
         if (ready_ || attempted_) return;
@@ -485,6 +554,7 @@ public:
         }
         chain_write(true);
         ready_ = true;
+        command_context_ready_.store(true, std::memory_order_release);
         report("INFO", "Shift+F11 DFHack switch installed");
     }
 
@@ -516,6 +586,7 @@ public:
 
     void shutdown() {
         if (!ready_ || !native_stopped_) return;
+        command_context_ready_.store(false, std::memory_order_release);
         // DFHack's normal shutdown follows immediately. Do not re-enable
         // tools or replay deferred startup scripts while exiting the game.
         off_.store(false, std::memory_order_release);
@@ -537,6 +608,8 @@ public:
 namespace dfcn::dfhack {
 class Toggle {
 public:
+    static int query_command_context(void *, DfcnDfhackCommandContextV1 *) noexcept { return 0; }
+    static int query_command_context_v2(void *, DfcnDfhackCommandContextV2 *) noexcept { return 0; }
     void initialize(void (*)(const char *, const std::string &)) {}
     bool event(void *) { return false; }
     void shutdown() {}

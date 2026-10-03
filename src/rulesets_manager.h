@@ -41,6 +41,13 @@ namespace Hooks {
         void load_from_dir(const std::filesystem::path& dir);
 
         std::optional<std::string> translate(const std::string& text) const;
+        // Local command callbacks can own DFHack's Console lock. Give their
+        // explicitly typed human captions a detached grammar and cache; they
+        // must never wait for Overlay or enter its game-backed callbacks.
+        using CaptionSnapshot = std::function<std::optional<std::string>(
+            std::string_view kind, std::string_view text)>;
+        CaptionSnapshot make_caption_snapshot(
+            std::unordered_map<std::string, std::string> material_qualifiers = {}) const;
         // Native semantic fields bind an exact existing TOML production.
         // No input sentence matching, word segmentation or type inference.
         // With no fields, source_pattern is literal text, not token syntax.

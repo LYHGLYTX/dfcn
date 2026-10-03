@@ -1,5 +1,6 @@
 // A submitted record is the translation unit. Dictionary reload invalidates
 // this cache; layout and colors remain shared with all bounded paragraphs.
+static std::optional<std::string> translate_dfhack_siren_announcement(std::string_view source);
 std::optional<std::string> Overlay::translate_complete_announcement(
         std::string_view source, const std::vector<int> &source_colors,
         std::vector<int> &target_colors) const {
@@ -17,6 +18,17 @@ std::optional<std::string> Overlay::translate_complete_announcement(
     const auto translate_block = [&](std::string_view block, const std::vector<int> &colors,
             std::vector<int> &translated_colors) -> std::optional<std::string> {
         translated_colors.clear();
+        if (!colors.empty() && std::all_of(colors.begin(), colors.end(),
+                [&](int color) { return color == colors.front(); })) {
+            if (const auto siren = translate_dfhack_siren_announcement(block)) {
+                // showAnnouncement writes the original report and game log.
+                // Only this displayed complete record receives the fixed
+                // siren prose; its captured burrow names remain opaque.
+                for (unsigned char ch : *siren)
+                    if ((ch & 0xc0) != 0x80) translated_colors.push_back(colors.front());
+                return siren;
+            }
+        }
         if (const auto original = native_original_speech_source(block)) {
             const std::vector<int> original_colors(original->size(), colors.front());
             auto translated = translate_complete_announcement(*original, original_colors, translated_colors);

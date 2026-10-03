@@ -37,6 +37,7 @@ static std::vector<NativeAnnouncementParagraph> native_adventure_announcement_pa
 static bool native_announcement_history_index(std::vector<uintptr_t> &records,
     int32_t &next_id, uintptr_t &world);
 static bool native_announcement_history_row(uintptr_t record, NativeAnnouncementHistoryRow &row);
+static bool native_announcement_display_tail(std::vector<uintptr_t> &records);
 static std::vector<uintptr_t> g_native_announcement_history_index;
 static int32_t g_native_announcement_history_next_id = -1;
 static uintptr_t g_native_announcement_history_world = 0;

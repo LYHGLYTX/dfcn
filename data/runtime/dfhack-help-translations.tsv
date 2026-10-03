@@ -8653,23 +8653,23 @@ DFHack help: region-pops	region-pops	l
 DFHack help: Tags: fort | inspection | animals	标签：要塞 |检验|动物	l
 DFHack help: Command: "region-pops"	命令："region-pops"	l
 DFHack help: Change regional animal populations.	改变区域动物种群。	l
-DFHack help: This tool can show or modify the populations of animals in the region.	该工具可以显示或修改该地区动物的数量。	l
-DFHack help: "region-pops list [<pattern>]" Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	"region-pops list [<pattern>]" 显示您的文明所了解的地区的种族人口。您可以通过指定模式来过滤列表。	l
+DFHack help: This tool can show or modify the populations of animals in the region.	该工具可以显示或修改该地区动物的种群数量。	l
+DFHack help: "region-pops list [<pattern>]" Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	"region-pops list [<pattern>]" 显示文明已知的本地区各物种种群，可指定 pattern 过滤列表。	l
 DFHack help: "region-pops list [<pattern>]"	"region-pops list [<pattern>]"	l
-DFHack help: Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	显示您的文明所了解的地区的种族人口。您可以通过指定模式来过滤列表。	l
-DFHack help: "region-pops list-all [<pattern>]" Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	"region-pops list-all [<pattern>]" 列出该地区的总种族人口，包括那些你的文明不知道的单位。您可以通过指定模式来过滤列表。	l
+DFHack help: Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	显示文明已知的本地区各物种种群，可指定 pattern 过滤列表。	l
+DFHack help: "region-pops list-all [<pattern>]" Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	"region-pops list-all [<pattern>]" 列出本地区各物种的全部种群，包括文明尚未知晓的个体，可指定 pattern 过滤列表。	l
 DFHack help: "region-pops list-all [<pattern>]"	"region-pops list-all [<pattern>]"	l
-DFHack help: Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	列出该地区的总种族人口，包括您的文明不知道的那些单位。您可以通过指定模式来过滤列表。	l
-DFHack help: "region-pops boost <race> <factor>" Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	"region-pops boost <race> <factor>" 将给定种族的所有人口乘以给定因子。如果该系数大于 1，命令将增加人口。如果它在 0 和 1 之间，该命令将减少人口。	l
+DFHack help: Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	列出本地区各物种的全部种群，包括文明尚未知晓的个体，可指定 pattern 过滤列表。	l
+DFHack help: "region-pops boost <race> <factor>" Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	"region-pops boost <race> <factor>" 将指定物种的所有种群数量乘以 factor。factor 大于 1 时增加种群数量，在 0 和 1 之间时减少种群数量。	l
 DFHack help: "region-pops boost <race> <factor>"	"region-pops boost <race> <factor>"	l
-DFHack help: Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	将给定种族的所有人口乘以给定因子。如果该系数大于 1，命令将增加人口。如果它在 0 和 1 之间，该命令将减少人口。	l
-DFHack help: "region-pops boost-all <pattern> <factor>" Same as above, but apply to all races that match the given pattern.	"region-pops boost-all <pattern> <factor>" 与上面相同，但适用于与给定模式匹配的所有比赛。	l
+DFHack help: Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	将指定物种的所有种群数量乘以 factor。factor 大于 1 时增加种群数量，在 0 和 1 之间时减少种群数量。	l
+DFHack help: "region-pops boost-all <pattern> <factor>" Same as above, but apply to all races that match the given pattern.	"region-pops boost-all <pattern> <factor>" 与上面相同，但适用于匹配指定 pattern 的所有物种。	l
 DFHack help: "region-pops boost-all <pattern> <factor>"	"region-pops boost-all <pattern> <factor>"	l
-DFHack help: Same as above, but apply to all races that match the given pattern.	与上面相同，但适用于与给定模式匹配的所有比赛。	l
-DFHack help: "region-pops incr <race> <amount>" Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	"region-pops incr <race> <amount>" 将给定数量添加到给定种族的人口计数中。如果数量为负，则会减少人口。	l
+DFHack help: Same as above, but apply to all races that match the given pattern.	与上面相同，但适用于匹配指定 pattern 的所有物种。	l
+DFHack help: "region-pops incr <race> <amount>" Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	"region-pops incr <race> <amount>" 将指定物种的种群数量增加 amount。amount 为负时减少种群数量。	l
 DFHack help: "region-pops incr <race> <amount>"	"region-pops incr <race> <amount>"	l
-DFHack help: Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	将给定数量添加到给定种族的人口计数中。如果数量为负，则会减少人口。	l
-DFHack help: "region-pops incr-all <pattern> <amount>" Same as above, but apply to all races that match the given pattern.	"region-pops incr-all <pattern> <amount>" 与上面相同，但适用于与给定模式匹配的所有比赛。	l
+DFHack help: Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	将指定物种的种群数量增加 amount。amount 为负时减少种群数量。	l
+DFHack help: "region-pops incr-all <pattern> <amount>" Same as above, but apply to all races that match the given pattern.	"region-pops incr-all <pattern> <amount>" 与上面相同，但适用于匹配指定 pattern 的所有物种。	l
 DFHack help: "region-pops incr-all <pattern> <amount>"	"region-pops incr-all <pattern> <amount>"	l
 DFHack help: "region-pops list-all BIRD" List the populations of all the bird races in the region.	"region-pops list-all BIRD" 列出该地区所有鸟类的种群数量。	l
 DFHack help: "region-pops list-all BIRD"	"region-pops list-all BIRD"	l
@@ -8680,9 +8680,9 @@ DFHack help: Add 1000 trolls to the region.	向该地区添加 1000 个巨魔。
 DFHack help: "region-pops boost-all .* .5" Halve the population of all creatures in the region.	"region-pops boost-all .* .5" 将该地区所有生物的数量减半。	l
 DFHack help: "region-pops boost-all .* .5"	"region-pops boost-all .* .5"	l
 DFHack help: Halve the population of all creatures in the region.	将该地区所有生物的数量减半。	l
-DFHack help: "region-pops boost-all .* 10" Increase populations of all creatures by a factor of 10. Hashtag zoolife.	"region-pops boost-all .* 10" 将所有生物的数量增加 10 倍。标签动物园。	l
+DFHack help: "region-pops boost-all .* 10" Increase populations of all creatures by a factor of 10. Hashtag zoolife.	"region-pops boost-all .* 10" 将该地区所有生物的种群数量扩大为原来的 10 倍。标签 zoolife。	l
 DFHack help: "region-pops boost-all .* 10"	"region-pops boost-all .* 10"	l
-DFHack help: Increase populations of all creatures by a factor of 10. Hashtag zoolife.	将所有生物的数量增加 10 倍。标签动物园。	l
+DFHack help: Increase populations of all creatures by a factor of 10. Hashtag zoolife.	将该地区所有生物的种群数量扩大为原来的 10 倍。标签 zoolife。	l
 DFHack help: regrass =======	regrass =======	l
 DFHack help: regrass	regrass	l
 DFHack help: Tags: adventure | fort | armok | animals | map | plants	标签：冒险 | 要塞 |阿莫克 |动物 |地图 |植物	l
@@ -9087,7 +9087,7 @@ DFHack help: set-timeskip-duration	set-timeskip-duration	l
 DFHack help: Tags: adventure | embark | fort | armok	标签：冒险 | 启程 | 要塞 |阿莫克	l
 DFHack help: Command: "set-timeskip-duration"	命令："set-timeskip-duration"	l
 DFHack help: Modify the duration of the pre-game world update.	修改游戏前世界更新的持续时间。	l
-DFHack help: Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	开始新的 fortress/adventurer 会话之前有一个"更新世界"过程，该过程通常持续 2 周。此脚本允许您修改此时间跳跃的持续时间，使您能够比平常更早或更晚地进入游戏。	l
+DFHack help: Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	开始新的要塞／冒险模式游戏前，会经历通常持续 2 周的“更新世界”过程。此脚本可以修改这次时间跳跃的时长，让你比平常更早或更晚地进入游戏。	l
 DFHack help: You can use this tool at any point before the timeskip begins (for example, while still at the "Start Playing" menu).	您可以在时间跳跃开始之前的任何时候使用此工具（例如，仍在"开始播放"菜单时）。	l
 DFHack help: It is also possible to run the script while the world is updating, which can be useful if you decide to end the process earlier or later than initially planned.	也可以在世界更新时运行脚本，如果您决定早于或晚于最初计划结束进程，这会很有用。	l
 DFHack help: Note that the change in timeskip duration will persist until either:	请注意，时间跳跃持续时间的更改将持续存在，直到：	l
@@ -13674,21 +13674,22 @@ DFHack help: DFHack-native implementation of the classic Quickfort utility.	DFHa
 DFHack help: Makes the game immediately save the state.	使游戏立即保存状态。	l
 DFHack help: quickstart visual help manual.	快速入门可视化帮助手册。	l
 DFHack help: Show or edit regional plant and animal populations.	显示或编辑区域植物和动物种群。	l
-DFHack help: region-pops =========== Show or modify the populations of animals in the region.	region-pops =========== 显示或修改该区域的动物数量。	l
-DFHack help: Show or modify the populations of animals in the region.	显示或修改该地区动物的数量。	l
-DFHack help: :region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	:region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	l
+DFHack help: region-pops =========== Show or modify the populations of animals in the region.	region-pops =========== 显示或修改该地区动物的种群数量。	l
+DFHack help: Show or modify the populations of animals in the region.	显示或修改该地区动物的种群数量。	l
+DFHack help: :region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	:region-pops list [pattern]: 列出该地区已发现的种群，可用 pattern 限制范围。 :region-pops list-all [pattern]: 列出该地区的全部种群。 :region-pops boost <TOKEN> <factor>: 将 TOKEN 的所有种群数量乘以 factor。若 factor 大于 1，则增加种群数量；否则减少。 :region-pops boost-all <pattern> <factor>: 与上面相同，但使用 list 支持的 pattern 进行匹配。 :region-pops incr <TOKEN> <factor>: 将 TOKEN 的所有种群数量增加（或减少）factor（以加法调整）。 :region-pops incr-all <pattern> <factor>: 与上面相同，但使用 list 支持的 pattern 进行匹配。	l
 DFHack help: :region-pops list [pattern]:	:region-pops list [pattern]:	l
-DFHack help: Lists encountered populations of the region, possibly restricted by pattern.	列出该地区遇到的人口，可能受模式限制。	l
+DFHack help: Lists encountered populations of the region, possibly restricted by pattern.	列出该地区已发现的种群，可用 pattern 限制范围。	l
 DFHack help: :region-pops list-all [pattern]:	:region-pops list-all [pattern]:	l
-DFHack help: Lists all populations of the region.	列出该地区的所有人口。	l
+DFHack help: Lists all populations of the region.	列出该地区的全部种群。	l
 DFHack help: :region-pops boost <TOKEN> <factor>:	:region-pops boost <TOKEN> <factor>:	l
-DFHack help: Multiply all populations of TOKEN by factor.	将 TOKEN 的所有群体乘以因子。	l
-DFHack help: If the factor is greater than one, increases the	如果因子大于 1，则增加	l
-DFHack help: population, otherwise decreases it.	人口，否则减少。	l
+DFHack help: Multiply all populations of TOKEN by factor.	将 TOKEN 的所有种群数量乘以 factor。	l
+DFHack help: If the factor is greater than one, increases the	若 factor 大于 1，则增加	l
+DFHack help: population, otherwise decreases it.	种群数量；否则减少。	l
+DFHack help: If the factor is greater than one, increases the population, otherwise decreases it.	若 factor 大于 1，则增加种群数量；否则减少。	l
 DFHack help: :region-pops boost-all <pattern> <factor>:	:region-pops boost-all <pattern> <factor>:	l
-DFHack help: Same as above, but match using a pattern acceptable to list.	与上面相同，但使用列表可接受的模式进行匹配。	l
+DFHack help: Same as above, but match using a pattern acceptable to list.	与上面相同，但使用 list 支持的 pattern 进行匹配。	l
 DFHack help: :region-pops incr <TOKEN> <factor>:	:region-pops incr <TOKEN> <factor>:	l
-DFHack help: Augment (or diminish) all populations of TOKEN by factor (additive).	按因子（加法）增加（或减少）TOKEN 的所有种群。	l
+DFHack help: Augment (or diminish) all populations of TOKEN by factor (additive).	将 TOKEN 的所有种群数量增加（或减少）factor（以加法调整）。	l
 DFHack help: :region-pops incr-all <pattern> <factor>:	:region-pops incr-all <pattern> <factor>:	l
 DFHack help: Sets stress to negative one million.	将压力设置为负一百万。	l
 DFHack help: Reset items in your fort to 0 wear.	将要塞中的物品重置为 0 磨损。	l
@@ -13703,9 +13704,9 @@ DFHack help: Swap color palettes with the changes of the seasons.	随着季节�
 DFHack help: For this script to work you need to add *at least* one color palette file to your save raw directory.	​​要使此脚本正常工作，您需要将*至少*一个调色板文件添加到您的保存原始目录中。	l
 DFHack help: For this script to work you need to add *at least* one color palette file to	要使此脚本正常工作，您需要添加*至少*一个调色板文件到	l
 DFHack help: your save raw directory.	您的保存原始目录。	l
-DFHack help: Palette file names: "colors.txt": The world "default" (worldgen and replacement) palette. "colors_spring.txt": The palette displayed during spring. "colors_summer.txt": The palette displayed during summer. "colors_autumn.txt": The palette displayed during autumn. "colors_winter.txt": The palette displayed during winter.	调色板文件名："colors.txt"：世界 "default"（世界生成和替换）调色板。 "colors_spring.txt"：春季显示的调色板。 "colors_summer.txt"：夏季显示的调色板。 "colors_autumn.txt"：秋季展示的调色板。 "colors_winter.txt"：冬季显示的调色板。	l
+DFHack help: Palette file names: "colors.txt": The world "default" (worldgen and replacement) palette. "colors_spring.txt": The palette displayed during spring. "colors_summer.txt": The palette displayed during summer. "colors_autumn.txt": The palette displayed during autumn. "colors_winter.txt": The palette displayed during winter.	调色板文件名："colors.txt"：世界默认调色板（用于世界生成及替换缺失的季节调色板）。 "colors_spring.txt"：春季使用的调色板。 "colors_summer.txt"：夏季使用的调色板。 "colors_autumn.txt"：秋季使用的调色板。 "colors_winter.txt"：冬季使用的调色板。	l
 DFHack help: Palette file names:	调色板文件名：	l
-DFHack help: "colors.txt": The world "default" (worldgen and replacement) palette.	"colors.txt"：世界 "default"（世界生成和替换）调色板。	l
+DFHack help: "colors.txt": The world "default" (worldgen and replacement) palette.	"colors.txt"：世界默认调色板（用于世界生成及替换缺失的季节调色板）。	l
 DFHack help: If you do not provide a world default palette, palette switching will be disabled for the current world. The seasonal palettes are optional, the default palette is not! The default palette will be used to replace any missing seasonal palettes and during worldgen.	如果您不提供世界默认调色板，当前世界的调色板切换将被禁用。季节性调色板是可选的，默认调色板不是！默认调色板将用于替换任何缺失的季节性调色板以及世界生成期间的调色板。	l
 DFHack help: If you do not provide a world default palette, palette switching will be	如果不提供世界默认调色板，调色板切换将是	l
 DFHack help: disabled for the current world. The seasonal palettes are optional, the default	在当前世界中禁用。季节性调色板是可选的，默认的	l
@@ -13728,8 +13729,8 @@ DFHack help: the same format as "/data/init/colors.txt". If there is an error an
 DFHack help: changes will be reverted and this function will return false (returns	更改将被恢复，并且该函数将返回 false（返回	l
 DFHack help: true normally).	通常为真）。	l
 DFHack help: Change the duration of the "Updating World" timeskip preceding the start of a new game.	更改新游戏开始前"更新世界"时间跳跃的持续时间。	l
-DFHack help: set-timeskip-duration ===================== Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	set-timeskip-duration ===================== 开始新的 fortress/adventurer 会话之前有一个"更新世界"过程，该过程通常持续 2 周。此脚本允许您修改此时间跳跃的持续时间，使您能够比平常更早或更晚地进入游戏。	l
-DFHack help: Starting a new fortress/adventurer session is preceded by	开始新的 fortress/adventurer 会话之前	l
+DFHack help: set-timeskip-duration ===================== Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	set-timeskip-duration ===================== 开始新的要塞／冒险模式游戏前，会经历通常持续 2 周的“更新世界”过程。此脚本可以修改这次时间跳跃的时长，让你比平常更早或更晚地进入游戏。	l
+DFHack help: Starting a new fortress/adventurer session is preceded by	开始新的要塞／冒险模式游戏前，会经历	l
 DFHack help: an "Updating World" process which is normally 2 weeks long.	一个"更新世界"过程，通常需要 2 周时间。	l
 DFHack help: This script allows you to modify the duration of this timeskip,	此脚本允许您修改此 timeskip 的持续时间，	l
 DFHack help: enabling you to jump into the game earlier or later than usual.	使您能够比平时更早或更晚进入游戏。	l
@@ -13785,19 +13786,19 @@ DFHack help: Weaken and eventually destroy undead over time.	随着时间的推�
 DFHack help: makes units very speedy.	使单位速度非常快。	l
 DFHack help: Suspend all construction jobs.	暂停所有建筑工作。	l
 DFHack help: tame and train animals {set animals as Wild through to Masterfully Trained}.	驯服和训练动物{将动物设置为"野生"到"熟练训练"}。	l
-DFHack help: tame ==== Tame and train animals.	tame ==== Tame and train animals.	l
+DFHack help: tame ==== Tame and train animals.	tame ==== 驯服并训练动物。	l
 DFHack help: Usage: ``tame -read`` OR ``tame -set <level>``	用法：``tame -read`` 或 ``tame -set <level>``	l
-DFHack help: :0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	:0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	l
-DFHack help: :0: semi-wild	:0: semi-wild	l
-DFHack help: :1: trained	:1: trained	l
-DFHack help: :2: well-trained	:2: well-trained	l
-DFHack help: :3: skillfully trained	:3: skillfully trained	l
-DFHack help: :4: expertly trained	:4: expertly trained	l
-DFHack help: :5: exceptionally trained	:5: exceptionally trained	l
-DFHack help: :6: masterfully trained	:6: masterfully trained	l
-DFHack help: :7: tame	:7: tame	l
-DFHack help: :8: wild	:8: wild	l
-DFHack help: :9: wild	:9: wild	l
+DFHack help: :0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	:0: 半野生 :1: 已训练 :2: 训练良好 :3: 训练娴熟 :4: 训练精熟 :5: 训练出众 :6: 训练大师级 :7: 已驯服 :8: 野生 :9: 野生	l
+DFHack help: :0: semi-wild	:0: 半野生	l
+DFHack help: :1: trained	:1: 已训练	l
+DFHack help: :2: well-trained	:2: 训练良好	l
+DFHack help: :3: skillfully trained	:3: 训练娴熟	l
+DFHack help: :4: expertly trained	:4: 训练精熟	l
+DFHack help: :5: exceptionally trained	:5: 训练出众	l
+DFHack help: :6: masterfully trained	:6: 训练大师级	l
+DFHack help: :7: tame	:7: 已驯服	l
+DFHack help: :8: wild	:8: 野生	l
+DFHack help: :9: wild	:9: 野生	l
 DFHack help: teleports a unit to a location.	将单位传送到某个位置。	l
 DFHack help: tidlers ======= Toggle between all possible positions where the idlers count can be placed (see ``data/init/d_init.txt`` for details).	tidlers ======= Toggle between all possible positions where the idlers count can be placed (see ``data/init/d_init.txt`` for details).	l
 DFHack help: Toggle between all possible positions where the idlers count can be placed	在可以放置惰轮计数的所有可能位置之间切换	l

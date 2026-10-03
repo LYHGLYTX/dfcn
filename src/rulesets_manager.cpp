@@ -1,6 +1,7 @@
 
 #include "rulesets_manager.h"
 #include "item_designation.h"
+#include "item_material_qualifier.h"
 #include "config.h"
 #include "logger.h"
 #include "translation_state.h"
@@ -20,6 +21,77 @@ namespace DFHack {
 namespace DFZH {
 namespace Hooks {
     RulesetsManager::RulesetsManager() {
+    }
+
+    RulesetsManager::CaptionSnapshot RulesetsManager::make_caption_snapshot(
+            std::unordered_map<std::string, std::string> material_qualifiers) const {
+        dfcn::TranslationStateScope translation_scope;
+        auto parser = std::shared_ptr<RulesetsManager>(new RulesetsManager,
+            [](RulesetsManager* value) { delete value; });
+        parser->rulesets_ = rulesets_;
+        parser->cyclic_rule_signatures_ = cyclic_rule_signatures_;
+        parser->static_creature_names_ = static_creature_names_;
+        // Leaf indexes contain views into token storage, so rebuild them in
+        // the copied graph. Memoized trees and Overlay resolvers stay empty.
+        parser->rebuild_rule_prefix_indexes();
+        const auto complete = [owner = parser.get()](std::string_view source,
+                std::string_view name) -> std::optional<std::string> {
+            const auto results = owner->resolve_namespace(
+                std::string(source), std::string(name), 0);
+            const ResultTree* best = nullptr;
+            for (const auto& result : results) {
+                if (!result->remaining.empty() || result->translated.empty()) continue;
+                if (!best || result->preferred_to(*best)) best = result.get();
+            }
+            if (!best) return std::nullopt;
+            std::string target = best->translated;
+            normalize_translation(target);
+            return target;
+        };
+        // Finished item grammars bind this material namespace through the
+        // usual typed callback. Resolve it inside this detached graph only.
+        parser->phrase_resolver_ = [complete, material_qualifiers = std::move(material_qualifiers)](
+                std::string_view source,
+                std::string_view kind) -> std::optional<std::string> {
+            if (kind != "item_material") return std::nullopt;
+            std::string key(source);
+            for (char &ch : key)
+                if (ch >= 'A' && ch <= 'Z') ch += 'a' - 'A';
+            if (const auto known = material_qualifiers.find(key);
+                    known != material_qualifiers.end()) return known->second;
+            auto target = complete(source, "::materials::adjective");
+            if (!target) target = complete(source, "::materials");
+            auto qualifier = dfcn::finish_item_material_qualifier(
+                source, target ? std::move(*target) : std::string{}, complete);
+            return qualifier.empty() ? std::nullopt :
+                std::optional<std::string>(std::move(qualifier));
+        };
+        auto mutex = std::make_shared<std::mutex>();
+        return [parser = std::move(parser), mutex = std::move(mutex), complete](
+                std::string_view kind, std::string_view source) -> std::optional<std::string> {
+            if (source.empty() || source.size() > 65536) return std::nullopt;
+            std::lock_guard<std::mutex> lock(*mutex);
+            dfcn::TranslationWorkScope work;
+            if (kind == "item") return complete(source, "::items");
+            if (kind == "material") return complete(source, "::materials");
+            if (kind == "material_adjective") return complete(source, "::materials::adjective");
+            if (kind == "tile") return complete(source, "::tiles");
+            if (kind == "building") return complete(source, "::map_hover::building");
+            if (kind == "job") {
+                for (const auto* ns : {"::activities", "::tasks", "::menu"})
+                    if (auto target = complete(source, ns)) return target;
+                return std::nullopt;
+            }
+            if (kind == "profession") {
+                if (auto target = complete(source, "::skills::name")) return target;
+                return complete(source, "::professions");
+            }
+            if (kind == "creature") {
+                if (auto target = complete(source, "::creatures::name::singular")) return target;
+                return complete(source, "::creatures::name::plural");
+            }
+            return std::nullopt;
+        };
     }
 
     // Public operations share the overlay's recursive state lock. Native

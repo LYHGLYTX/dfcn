@@ -49,7 +49,7 @@ DFHack help: You can save up to 10 filters to the favorites panel, which can be 
 DFHack help: If you want to choose specific items instead of using the filters, click on the "Choose items" selector or hit "z" before placing the building. You can choose to be prompted for every item ("Manually") or you can have it automatically select the type of item that you last chose for this building type. The list you are prompted with is sorted by most recently used materials for that building type by default, but you can change to sort by name or by available quantity by clicking on the "Sort by" selector or hitting "R". The configuration for whether you would like to choose specific items is saved per building type and will be restored when you plan more of that building type.	如果您想选择特定项目而不是使用过滤器，请在放置建筑物之前单击"选择项目"选择器或点击 "z"。您可以选择对每个项目进行提示（"手动"），也可以让它自动选择您上次为此建筑类型选择的项目类型。默认情况下，提示您的列表按该建筑类型最近使用的材料排序，但您可以通过单击"排序依据"选择器或按"R"更改为按名称或按可用数量排序。您是否要选择特定项目的配置是按建筑类型保存的，并且当您计划更多该建筑类型时将恢复。	l
 DFHack help: Once you run a command, the lower panel will switch to command output mode, where you can see any text the command printed to the screen. If you want to see more help text as you browse further commands, you can switch the lower panel back to help mode with "Ctrl""T". The output text is kept for all the commands you run while the launcher window is open (up to 256KB of text), but only the most recent 32KB of text is saved if you dismiss the launcher window and bring it back up. Command output is also printed to the external DFHack console (the one you can show with show on Windows) or the parent terminal on Unix-based systems if you need a longer history of the output.	运行命令后，下方面板会切换到输出模式，显示命令打印的文字。继续浏览其他命令时，可按 Ctrl+T 切回帮助模式。启动器打开期间会保留各命令的输出，最多 256KB；关闭并重新打开后，仅保留最近 32KB。若需查阅更早的输出，可查看外部 DFHack 控制台，Windows 下可用 show 命令显示该窗口；Unix 系统则输出到启动 DFHack 的终端。	l
 DFHack help: For the caverns, we don't want to adjust the irritation counters directly since that would negatively affect the chances of being attacked by (the much more interesting) forgotten beasts. Instead, when a cavern invasion begins, we record the current irritation counter value and effectively use that as the new "minimum". A "sensitivity" value is synthesized from the average of the values of "Wilderness irritation minimum" and "Wilderness sensitivity". This makes cavern invasions behave similarly to surface agitation and lets it be controlled by the same difficulty settings. The parameters for forgotten beast attacks can still be controlled independently of this mod.	对于地下洞穴，我们不想直接调整刺激计数器，因为这会对被（更有趣的）被遗忘的野兽攻击的机会产生负面影响。相反，当地下洞穴入侵开始时，我们记录当前的刺激计数器值，并将其有效地用作新的 "minimum"。 "sensitivity"值是根据"荒野刺激最小值"和"荒野敏感性"的平均值合成的。这使得地下洞穴入侵的行为与表面搅动类似，并可以通过相同的难度设置来控制。被遗忘的野兽攻击的参数仍然可以独立于这个模组进行控制。	l
-DFHack help: :region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	:region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	l
+DFHack help: :region-pops list [pattern]: Lists encountered populations of the region, possibly restricted by pattern. :region-pops list-all [pattern]: Lists all populations of the region. :region-pops boost <TOKEN> <factor>: Multiply all populations of TOKEN by factor. If the factor is greater than one, increases the population, otherwise decreases it. :region-pops boost-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list. :region-pops incr <TOKEN> <factor>: Augment (or diminish) all populations of TOKEN by factor (additive). :region-pops incr-all <pattern> <factor>: Same as above, but match using a pattern acceptable to list.	:region-pops list [pattern]: 列出该地区已发现的种群，可用 pattern 限制范围。 :region-pops list-all [pattern]: 列出该地区的全部种群。 :region-pops boost <TOKEN> <factor>: 将 TOKEN 的所有种群数量乘以 factor。若 factor 大于 1，则增加种群数量；否则减少。 :region-pops boost-all <pattern> <factor>: 与上面相同，但使用 list 支持的 pattern 进行匹配。 :region-pops incr <TOKEN> <factor>: 将 TOKEN 的所有种群数量增加（或减少）factor（以加法调整）。 :region-pops incr-all <pattern> <factor>: 与上面相同，但使用 list 支持的 pattern 进行匹配。	l
 DFHack help: -syndrome name|id the name or id of the syndrome to operate on examples: "gila monster bite" 14 -resetPolicy policy specify a policy of what to do if the unit already has an instance of the syndrome. examples: NewInstance default behavior: create a new instance of the syndrome DoNothing ResetDuration AddDuration -erase instead of adding an instance of the syndrome, erase one -eraseAll erase every instance of the syndrome -eraseClass SYN_CLASS erase every instance of every syndrome with the given SYN_CLASS -target id the unit id of the target unit examples: 0 28 -skipImmunities add the syndrome to the target even if it is immune to the syndrome	-syndrome name|id 要操作的综合症的名称或 ID 示例："吉拉毒蜥咬伤" 14 -resetPolicy 策略指定如果单位已具有该综合症实例时应执行的操作的策略。示例： NewInstance 默认行为：创建综合征的新实例 DoNothing ResetDuration AddDuration -erase 不是添加综合征实例，而是擦除一个 -eraseAll 擦除综合征的每个实例 -eraseClass SYN_CLASS 擦除具有给定 SYN_CLASS 的每个综合征的每个实例 -target id 目标单元的单元 ID 示例： 0 28 -skipImmunities 添加即使目标对该综合症免疫，也会对目标产生综合症	l
 DFHack help: A command for easy designation of filled and hollow circles. Options: hollow = Set the circle to hollow (default) filled = Set the circle to filled set = set designation unset = unset current designation invert = invert current designation dig = normal digging ramp = ramp digging ustair = staircase up dstair = staircase down xstair = staircase up/down chan = dig channel # = diameter in tiles (default = 0) -p # = designation priority (default = 4) After you have set the options, the command called with no options repeats with the last selected parameters: 'digcircle filled 3' = Dig a filled circle with diameter = 3. 'digcircle' = Do it again.	用于方便地指定实心圆或空心圆形挖掘区域的命令。\\n选项：\\nhollow = 空心圆（默认）\\nfilled = 实心圆\\nset = 添加指定\\nunset = 取消当前指定\\ninvert = 反转当前指定\\ndig = 普通挖掘\\nramp = 挖掘斜坡\\nustair = 向上楼梯\\ndstair = 向下楼梯\\nxstair = 上下楼梯\\nchan = 挖掘沟渠\\n# = 直径，单位为地图格（默认值为 0）\\n-p # = 指定优先级（默认值为 4）\\n设置选项后，不带选项执行此命令，会重复使用上次选定的参数：\\n'digcircle filled 3' = 指定挖掘直径为 3 格的实心圆。\\n'digcircle' = 用相同参数再执行一次。	l
 DFHack help: -command [ commandStrs ] specify the command to be executed after infection remember to include a space after/before the square brackets! the following may be added to appropriate commands where relevant: \\\\UNIT_ID inserts the ID of the infected unit \\\\LOCATION inserts the x, y, z coordinates of the infected unit \\\\SYNDROME_ID inserts the ID of the syndrome note that: \\\\anything -> \\anything anything -> anything examples: -command [ full-heal -unit \\\\UNIT_ID ] heals units when they acquire the specified syndrome -command [ modtools/spawn-flow -flowType Dragonfire -location [ \\\\LOCATION ] ] spawns dragonfire at the location of infected units	-command [ commandStrs ] 指定感染后要执行的命令记得带空格after/before方括号！可以将以下内容添加到相关的适当命令中： \\\\\\\\UNIT_ID 插入受感染单位的 ID \\\\\\\\LOCATION 插入受感染单位的 x、y、z 坐标 \\\\\\\\SYNDROME_ID 插入综合症的 ID 请注意： \\\\\\\\anything -> \\\\anything everything -> everything 示例：-command [ full-heal -unit \\\\\\\\UNIT_ID ] 治愈当单位获得指定的综合症 -command [ modtools/spawn-flow -flowType Dragonfire -location [ \\\\\\\\LOCATION ] ] 时，会在受感染单位的位置生成龙火	l
@@ -453,7 +453,7 @@ DFHack help: "--likematerial [ <token> [<token> ...] ]" This is usually set to t
 DFHack help: Hide everything, then reveal tiles with a path to the keyboard cursor (if enabled) or the selected unit (if a unit is selected) or else a random citizen. This allows repairing maps that you accidentally saved while they were revealed. Note that tiles behind constructed walls are also revealed as a workaround for Bug 1871.	先隐藏整张地图，再揭示可通过路径到达键盘光标的地块；未启用键盘光标时，使用选中的单位；也未选中单位时，使用一名随机居民。这可恢复误在地图已揭示状态下保存的地图。为绕过 Bug 1871，建造墙后方的地块也会被揭示。	l
 DFHack help: If sorting is done by "melee potential", then citizens are arranged based on genetic predispositions in physical and mental attributes, as well as body size. Dwarves (and other humanoid creatures) with higher ratings are expected to be more effective in melee combat if they train their attributes to their genetic maximum.	如果按照"近战潜力"排序，那么居民是根据身体和精神属性的遗传倾向以及体型来排列的。具有较高评级的矮人（和其他人形生物）如果将其属性训练到其遗传最大值，预计在近战战斗中会更有效。	l
 DFHack help: This tool identifies wildlife that is trying to leave the map but has gotten stuck. The stuck creatures will be moved off the map so that new waves of wildlife can enter. When removing stuck wildlife, their regional population counters are correctly incremented, just as if they had successfully left the map on their own.	该工具可识别试图离开地图但被卡住的野生动物。被困的生物将被移出地图，以便新一波的野生动物可以进入。当清除被困的野生动物时，它们的区域人口计数器会正确增加，就像它们自己成功离开地图一样。	l
-DFHack help: Palette file names: "colors.txt": The world "default" (worldgen and replacement) palette. "colors_spring.txt": The palette displayed during spring. "colors_summer.txt": The palette displayed during summer. "colors_autumn.txt": The palette displayed during autumn. "colors_winter.txt": The palette displayed during winter.	调色板文件名："colors.txt"：世界 "default"（世界生成和替换）调色板。 "colors_spring.txt"：春季显示的调色板。 "colors_summer.txt"：夏季显示的调色板。 "colors_autumn.txt"：秋季展示的调色板。 "colors_winter.txt"：冬季显示的调色板。	l
+DFHack help: Palette file names: "colors.txt": The world "default" (worldgen and replacement) palette. "colors_spring.txt": The palette displayed during spring. "colors_summer.txt": The palette displayed during summer. "colors_autumn.txt": The palette displayed during autumn. "colors_winter.txt": The palette displayed during winter.	调色板文件名："colors.txt"：世界默认调色板（用于世界生成及替换缺失的季节调色板）。 "colors_spring.txt"：春季使用的调色板。 "colors_summer.txt"：夏季使用的调色板。 "colors_autumn.txt"：秋季使用的调色板。 "colors_winter.txt"：冬季使用的调色板。	l
 DFHack help: When the civ alert is active, the civilian alert button will stay on the screen, even if the squads menu is closed. After the danger has passed, remember to turn the civ alert off again by clicking the button. Otherwise, your units will continue to be confined to their burrow and may eventually become unhappy or starve.	当民用警报激活时，即使小队菜单关闭，民用警报按钮也会保留在屏幕上。危险过去后，请记得单击按钮再次关闭文明警报。否则，你的单位将继续被限制在活动区内，最终可能会变得不高兴或挨饿。	l
 DFHack help: :need <ID>: ID of the need to target. For example 0 or DrinkAlcohol. If the need is PrayOrMeditate, a -deity argument is also required. :deity <HISTFIG ID>: Required when using PrayOrMeditate needs. This value should be the historical figure ID of the deity in question. :all: All of the target's needs will be affected.	:need <ID>: ID of the need to target. For example 0 or DrinkAlcohol. If the need is PrayOrMeditate, a -deity argument is also required. :deity <HISTFIG ID>: Required when using PrayOrMeditate needs. This value should be the historical figure ID of the deity in question. :all: All of the target's needs will be affected.	l
 DFHack help: A custom field "__reduce_amount" can be set if existing open orders should be taken into account. The first matching existing order will be modified to have the desired quantity remaining. If the desired quantity is negative, the existing order will be removed. An empty "amount_total" implies ""__reduce_amount": true".	如果应考虑现有未结订单，则可以设置自定义字段"__reduce_amount"。第一个匹配的现有订单将被修改以保留所需的数量。如果所需数量为负数，现有订单将被删除。空的 "amount_total" 意味着"__reduce_amount"：true"。	l
@@ -624,7 +624,7 @@ DFHack help: Listing multiple actions on the same line is not supported. Likewis
 DFHack help: Load the "lenient" preset, which allows for a fair amount of tree cutting and other activity between attacks. This preset is loaded automatically if the "auto-preset" feature enabled (it's enabled by default) and you have the "Enemies" difficulty settings at their default "Normal" values.	加载 "lenient" 预设，它允许在攻击之间进行大量的树木砍伐和其他活动。如果启用了 "auto-preset" 功能（默认情况下启用）并且您将"敌人"难度设置为其默认"正常"值，则会自动加载此预设。	l
 DFHack help: Note - when using the "materials" option, you need to pair the [number ID] with the correct "KEYS" material table. Generally you use "tiletype" option as a helper to sort tiles into different material types. I would recommend consulting "tile-material.lua" to see how materials are sorted.	注意 - 使用 "materials" 选项时，您需要将[编号 ID] 与正确的 "KEYS" 材料表配对。通常，您使用 "tiletype" 选项作为帮助程序将瓷砖分类为不同的材质类型。我建议咨询 "tile-material.lua" 以了解材料是如何分类的。	l
 DFHack help: Query is a useful script for finding and reading values of data structure fields. Players can use it to explore data structures or list elements of enums that they might need for another command. Developers can even integrate this script into another script to print data out for a player.	Query 是一个有用的脚本，用于查找和读取数据结构字段的值。玩家可以使用它来探索数据结构或列出其他命令可能需要的枚举元素。开发人员甚至可以将此脚本集成到另一个脚本中，为玩家打印数据。	l
-DFHack help: set-timeskip-duration ===================== Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	set-timeskip-duration ===================== 开始新的 fortress/adventurer 会话之前有一个"更新世界"过程，该过程通常持续 2 周。此脚本允许您修改此时间跳跃的持续时间，使您能够比平常更早或更晚地进入游戏。	l
+DFHack help: set-timeskip-duration ===================== Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	set-timeskip-duration ===================== 开始新的要塞／冒险模式游戏前，会经历通常持续 2 周的“更新世界”过程。此脚本可以修改这次时间跳跃的时长，让你比平常更早或更晚地进入游戏。	l
 DFHack help: Again, "NONE" will keep the material of the existing tiles, and you can cycle through the common options by clicking on the "Material" selector. Extended material selections, like grass, are available via the gear button. If you want to paint an empty, open tile, use a material of "AIR".	同样，"NONE" 将保留现有图块的材质，您可以通过单击"材质"选择器循环浏览常用选项。通过齿轮按钮可以选择更多的材质，例如草。如果要绘制空的、开放的瓷砖，请使用 "AIR" 材质。	l
 DFHack help: Buildingplan allows you to place furniture, constructions, and other buildings, regardless of whether the required materials are available. This allows you to focus purely on design elements when you are laying out your fort, and defers item production concerns to a more convenient time.	Buildingplan 允许您放置家具、建筑和其他建筑物，无论所需材料是否可用。这使您可以在布置要塞时完全专注于设计元素，并将物品生产问题推迟到更方便的时间。	l
 DFHack help: Click on an item and shift-click on a second item to toggle all items between the two that you clicked on. If the one that you shift-clicked on was selected, the range of items will be deselected. If the one you shift-clicked on was not selected, then the range of items will be selected.	单击一个项目，然后按住 Shift 键并单击第二个项目，可在您单击的两个项目之间切换所有项目。如果您按住 Shift 键单击的项目已被选中，则该项目范围将被取消选择。如果您按住 Shift 键单击的项目未被选中，则将选择项目范围。	l
@@ -901,11 +901,11 @@ DFHack help: "--likeshape [ <token> [<token> ...] ]" I couldn't find a list of s
 DFHack help: "stockpiles export myroutesettings -r "Train porter,2"" Exports the "desired items" for the stop with id 2 (the second stop, unless you've previously deleted the original first stop and now this is the first) of the "Train porter" hauling route.	"stockpiles export myroutesettings -r "Train porter,2"" 导出"Train porter"运输路线中 id 2 的站点（第二个站点，除非您之前删除了原来的第一个站点，现在这是第一个站点）的"所需物品"。	l
 DFHack help: Configure useful limits for dogs, cats, geese (for eggs, leather, and bones), alpacas, sheep, and llamas (for wool), and pigs (for milk and meat). All other unnamed tame units will be marked for slaughter as soon as they arrive in your fortress:	配置狗、猫、鹅（蛋、皮革和骨头）、羊驼、绵羊和美洲驼（羊毛）和猪（牛奶和肉）的有用限制。所有其他未命名的驯服单位一到达你的要塞就会被标记为待宰：	l
 DFHack help: Repeats the specified blueprint(s) up or down the requested number of z-levels. Direction can be "up" or "down", and can be abbreviated with "<" or ">". For example, the following options are equivalent: "--repeat down,5", "-rdown5", and "-r>5".	按请求的 Z 层数量向上或向下重复指定的蓝图。方向可以是"up"或"down"，可以缩写为"<"或"">"。例如，以下选项是等效的："--repeat down,5"、"-rdown5" 和 "-r>5"。	l
-DFHack help: Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	开始新的 fortress/adventurer 会话之前有一个"更新世界"过程，该过程通常持续 2 周。此脚本允许您修改此时间跳跃的持续时间，使您能够比平常更早或更晚地进入游戏。	l
+DFHack help: Starting a new fortress/adventurer session is preceded by an "Updating World" process which is normally 2 weeks long. This script allows you to modify the duration of this timeskip, enabling you to jump into the game earlier or later than usual.	开始新的要塞／冒险模式游戏前，会经历通常持续 2 周的“更新世界”过程。此脚本可以修改这次时间跳跃的时长，让你比平常更早或更晚地进入游戏。	l
 DFHack help: This tool also fixes Bug 10921, where you request workers from your holdings, but they come with the "Merchant" profession and are unable to complete jobs in your fort. Select those units and run makeown to convert them into functional citizens.	该工具还修复了错误 10921，您可以从您的资产中请求工人，但他们具有"商人"职业，无法完成您的要塞中的工作。选择这些单位并运行 makeown 将它们转换为功能居民。	l
 DFHack help: This tool can report on or modify the diplomatic relationships (i.e. war vs. peace) you have with other contacted civilizations. Note that a civilization is only at peace if **both** you are at peace with them **and** they are at peace with you.	此工具可以报告或修改您与其他接触过的文明的外交关系（即战争与和平）。请注意，只有当**双方**你与他们和平相处**并且**他们与你和平相处时，文明才处于和平状态。	l
 DFHack help: This tool can trigger an immediate migrant wave. Note that it only works after at least one wave of migrants have arrived naturally, and that no migrants are actually guaranteed to arrive (especially if you've just run this command a few times).	这个工具可以立即引发移民潮。请注意，它仅在至少一波移民自然到达后才起作用，并且实际上并不能保证移民一定会到达（特别是如果您刚刚运行此命令几次）。	l
-DFHack help: "region-pops boost <race> <factor>" Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	"region-pops boost <race> <factor>" 将给定种族的所有人口乘以给定因子。如果该系数大于 1，命令将增加人口。如果它在 0 和 1 之间，该命令将减少人口。	l
+DFHack help: "region-pops boost <race> <factor>" Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	"region-pops boost <race> <factor>" 将指定物种的所有种群数量乘以 factor。factor 大于 1 时增加种群数量，在 0 和 1 之间时减少种群数量。	l
 DFHack help: * ``KEY_NAME`` is the name of an ``interface_key`` - a full list of valid names can be obtained by running ``lua @df.interface_key``, looking in ``data/init/interface.txt``, or by checking ``df.keybindings.xml`` in the df-structures repository.	* ``KEY_NAME`` 是 ``interface_key`` 的名称 - 可以通过运行 ``lua @df.interface_key``、查找 ``data/init/interface.txt`` 或通过检查 df-structs 存储库中的 ``df.keybindings.xml`` 来获取有效名称的完整列表。	l
 DFHack help: -- Note: this is an arguably bad example because this is the same as running deathcause -- from the launcher, but this would theoretically still work. local deathReason = dc.getDeathCauseFromUnit(dfhack.gui.getSelectedUnit()) print(deathReason)	-- 注意：这可以说是一个糟糕的例子，因为这与从启动器运行 Deathcause 相同，但理论上这仍然有效。本地 DeathReason = dc.getDeathCauseFromUnit(dfhack.gui.getSelectedUnit()) print(deathReason)	l
 DFHack help: Print the current map z-level state: "z_count"/"z_count_block", the highest construction z-level, whether the top-level map blocks are allocated, and the state of the cave-column bookkeeping flags that are suspected to be involved in the issue.	打印当前地图Z 层状态："z_count"/"z_count_block"、最高构造Z 层、顶层地图块是否分配、以及疑似涉及问题的洞列记账标志的状态。	l
@@ -1181,6 +1181,7 @@ DFHack help: "tooltip-stress-levels" Controls how happiness levels (stress) are 
 DFHack help: * bool isPlannableBuilding(df::building_type type, int16_t subtype, int32_t custom) * bool isPlannedBuilding(df::building *bld) * void addPlannedBuilding(df::building *bld) * void doCycle() * void scheduleCycle()	* bool isPlannedBuilding(df::building_type type, int16_t subtype, int32_t custom) * bool isPlannedBuilding(df::building *bld) * void addPlannedBuilding(df::building *bld) * void doCycle() * void ScheduleCycle()	l
 DFHack help: If running from adventure mode, the map will show fort-mode "dig" markers on tiles that were within the code of vision of your adventurers. This is visually distracting, but it is not an error and can be ignored.	如果从冒险模式运行，地图将在冒险家视野范围内的图块上显示要塞模式 "dig" 标记。这会在视觉上分散注意力，但这不是错误，可以忽略。	l
 DFHack help: Intended to be used by keybindings for manually triggering a widget. For example, you could use an "overlay trigger" keybinding to show a menu that normally appears when you hover the mouse over a screen hotspot.	旨在由按键绑定用于手动触发小部件。例如，您可以使用 "overlay trigger" 键绑定来显示通常在将鼠标悬停在屏幕热点上时出现的菜单。	l
+DFHack help: Manage siege engines at a glance This interface provides a list of siege engines, their ammo count, and current active jobs whilst providing shortcuts to configure their firing/standy mode and view them in-world.	一览并管理攻城武器。此界面列出攻城武器、弹药数量和当前任务，并提供快捷方式来设置射击或待命模式，以及在世界中定位它们。	l
 DFHack help: Run the full reproduction sequence: "status", optionally "add n" sky levels, optionally "enable infinite-sky" (reproduces the "construction monitoring" variant of the report), "tower --platform", "poke", "watch".	运行完整的再现序列："status"，可选"添加 n"个天空层，可选 "enable infinite-sky"（再现报告的"施工监控"变体），"塔 - 平台"，"poke"，"watch"。	l
 DFHack help: Set a particular vein type for the "stone" option to take advantage of the different boulder drop rates. To see valid vein types, run ":lua @df.inclusion_type", or use vein type "CLUSTER" to reset to the default.	为 "stone" 选项设置特定的矿脉类型，以利用不同的巨石掉落率。要查看有效的矿脉类型，请运行":lua @df.inclusion_type"，或使用矿脉类型 "CLUSTER" 重置为默认值。	l
 DFHack help: You can assign this profession to new migrants temporarily while you sort them into professions. Like "Marksdwarf" and "Meleedwarf", the purpose of this profession is so you can find your new dwarves more easily.	您可以在对新移民进行职业分类时，暂时将这个职业分配给新移民。就像"Marksdwarf"和"Meleedwarf"一样，这个职业的目的是让你可以更容易地找到你的新矮人。	l
@@ -1228,7 +1229,7 @@ DFHack help: "tiletypes-here-point [<options>]" Apply the current options set in
 DFHack help: Basically, the drainage is used as an "RNG" to cause an aquifer to be heavy about 5% of the time. The script shifts the matching numbers to a neighboring one, which does not result in any change of the biome.	基本上，排水用作 "RNG" 会导致含水层在大约 5% 的时间里很重。该脚本将匹配的数字转移到相邻的数字，这不会导致生物群系发生任何变化。	l
 DFHack help: If you are creating a mod and you want to enable deep embarks by default, create a file called "onLoad.init" in the DF raw folder (if one does not exist already) and enter the "deep-embark" command within it.	如果您正在创建 mod 并且希望默认启用深度启动，请在 DF raw 文件夹中创建一个名为"onLoad.init"的文件（如果尚不存在），然后在其中输入 "deep-embark" 命令。	l
 DFHack help: Modded cloth-like materials are not supported because custom reactions do not support being sized for non-dwarf races. The game only supports sizing the built-in default make-clothing or make-armor reactions.	不支持改装的类似布料的材料，因为自定义反应不支持针对非矮人种族调整尺寸。游戏仅支持调整内置默认制作服装或制作盔甲反应的尺寸。	l
-DFHack help: Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	将给定种族的所有人口乘以给定因子。如果该系数大于 1，命令将增加人口。如果它在 0 和 1 之间，该命令将减少人口。	l
+DFHack help: Multiply all populations of the given race by the given factor. If the factor is greater than one, the command will increase the population. If it is between 0 and 1, the command will decrease the population.	将指定物种的所有种群数量乘以 factor。factor 大于 1 时增加种群数量，在 0 和 1 之间时减少种群数量。	l
 DFHack help: Number of z-levels to translate. Positive numbers go *up* from the cursor and negative numbers go *down*. Defaults to 1 if not specified, indicating that the blueprint should only include the current z-level.	要翻译的 Z 层的数量。正数从光标处"向上"移动，负数从光标处"向下"移动。如果未指定，则默认为 1，表示蓝图应仅包含当前的 Z 层。	l
 DFHack help: Press the Z-Up ("<") and Z-Down (">") keys to move quickly between labor/skill categories. The numpad Z-Up and Z-Down keys seek to the first or last unit in the list. "Backspace" seeks to the top left corner.	按 Z 向上 ("<") 和 Z 向下 (">") 键可在 labor/skill 类别之间快速移动。数字键盘 Z-Up 和 Z-Down 键查找列表中的第一个或最后一个单位。 "Backspace" 寻找左上角。	l
 DFHack help: Select an artifact that was designated as a noble's symbol and run the command to remove its designation as a symbol. The operation will only be performed if the symbol is claimed by a vacated noble position.	选择一个被指定为贵族符号的神器并运行命令以删除其规划标记作为符号。仅当符号由空出的贵族位置声明时才会执行该操作。	l
@@ -1279,6 +1280,7 @@ DFHack help: "-n", "--haul-now" Task all of the unit's burial items for simultan
 DFHack help: "buildingplan ignore [<burrow>]" Do not use items from the selected burrow as building materials. If no burrow is specified, or if the specified burrow does not exist, revert to using all available items.	"buildingplan ignore [<burrow>]" 请勿使用所选活动区中的物品作为建筑材料。如果未指定活动区，或者指定的活动区不存在，则恢复为使用所有可用项目。	l
 DFHack help: * Loads and applies the profile called "DOCTOR" in the default json file, resetting/clearing all the characteristics changed by the profile, leaving the others unchanged, and then applies the new values::	* 加载并应用默认json文件中名为"DOCTOR"的配置文件，resetting/clearing配置文件更改的所有特性，保持其他不变，然后应用新值::	l
 DFHack help: * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	​​ 以二进制形式重新分发必须在分发时提供的文档 and/or 其他材料中复制上述版权声明、此条件列表和以下免责声明。	l
+DFHack help: Assigns citizens to a military squad until they have fulfilled their need for Martial Training This script automatically assigns citizens with the need for military training to designated training squads.	将居民分配到军事小队，直到满足军事训练需求。此脚本会把需要军事训练的居民自动分配到指定训练小队。	l
 DFHack help: Live tame (pets) and untamed vermin are considered items by the game. They are normally excluded from dumping since that risks them escaping or dying from your cats. Use these options to dump them anyway.	活的驯服（宠物）和未驯服的害虫被游戏视为物品。它们通常被排除在倾倒之外，因为这有可能让它们从你的猫手中逃脱或死亡。无论如何，请使用这些选项来转储它们。	l
 DFHack help: Specify "hollow" to fill in naturally hollow veins too, but be aware that this will trigger a demon invasion on top of your miner when you dig into the region that used to be hollow. You have been warned!	指定"hollow"来填充自然空心的矿脉，但要注意，当你挖掘到曾经空心的区域时，这会触发你的矿工顶部的恶魔入侵。您已被警告！	l
 DFHack help: The orders plugin provides several overlays managed by the overlay framework. You can toggle them via the "Overlays" tab in gui/control-panel or reposition the ones with onscreen widgets with gui/overlay.	订单插件提供了多个由覆盖框架管理的覆盖。您可以通过 gui/control-panel 中的"叠加"选项卡切换它们，或者使用 gui/overlay. 重新定位屏幕小部件	l
@@ -1428,7 +1430,7 @@ DFHack help: cat_ammo cat_animals cat_armor cat_bars_blocks cat_cloth cat_coins 
 A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are fantastic.	来自{e1}的{s1}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿极其高涨。	hPt
 A {s} caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are very good.	来自{e1}的{s1}商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿非常良好。	hPt
 DFHack help: "enable infinite-sky" Enables monitoring of constructions. If you build anything in the second highest z-level, it will allocate one more sky level. You can build stairs up as high as you like!	"enable infinite-sky" 启用施工监控。如果您在第二高的 Z 层中建造任何东西，它将再分配一个天空层。你可以把楼梯建到你喜欢的高度！	l
-DFHack help: "region-pops list-all [<pattern>]" Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	"region-pops list-all [<pattern>]" 列出该地区的总种族人口，包括那些你的文明不知道的单位。您可以通过指定模式来过滤列表。	l
+DFHack help: "region-pops list-all [<pattern>]" Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	"region-pops list-all [<pattern>]" 列出本地区各物种的全部种群，包括文明尚未知晓的个体，可指定 pattern 过滤列表。	l
 DFHack help: -groupId id Make the created unit a member of the specified group (or none if id = -1). If id is \\\\LOCAL, make it a member of the group associated with the fort; otherwise id must be an integer	-groupId id 使创建的单位成为指定组的成员（如果 id = -1，则无）。如果id为\\\\\\\\LOCAL，则使其成为与要塞关联的组的成员；否则 id 必须是整数	l
 DFHack help: Aids script development and reverse engineering by observing live game state. Lua expressions are evaluated with the normal script environment, so "df", "dfhack", and friends are all available.	通过观察实时游戏状态来帮助脚本开发和逆向工程。 Lua 表达式是使用普通脚本环境进行计算的，因此 "df"、"dfhack" 和朋友都可以使用。	l
 DFHack help: Attributes are divided into tiers from -4 to 4. Tier 0 is the standard level and represents the average values for that attribute, tier 4 is the maximum level, and tier -4 is the minimum level.	属性分为-4到4的等级。0级是标准等级，代表该属性的平均值，4级是最高等级，-4级是最低等级。	l
@@ -1850,6 +1852,7 @@ DFHack help: reveal-hidden-units =================== This script exposes all uni
 Link a stockpile to this stop. Citizens will haul items to and from the minecart as you specify. Items for the minecart must be specified using the desired items button to the left.	将储物堆连接到此站点。居民会按你的设置为矿车装卸物品。矿车需要的物品须通过左侧的“所需物品”按钮指定。	hj
 Now we'll unpause the game and let the miner finish the task. Press {k} to unpause or use the highlighted controls at the top of the screen. You should pause regularly starting out.	现在解除暂停，让矿工完成任务。按{k1}解除暂停，也可使用屏幕顶部已高亮的按钮。刚上手时应经常暂停。	hqt
 These creatures are shaped like men covered with rough scales. They have the head and tail of a lizard and possess a dark and evil intelligence. They are found deep under the earth.	这些人形生物全身覆盖着粗糙鳞片，长有蜥蜴的头和尾巴，并拥有黑暗邪恶的智慧。它们出没于地下深处。	lP
+DFHack GUI Design: Use the DFHack building planner to configure filters for the desired construction types. This tool will use the current buildingplan filters for a building type.	使用 DFHack 建造规划器设置各类建筑的筛选条件。本工具会采用 buildingplan 当前设置的对应建造条件。	l
 DFHack help: "-s", "--spheres <sphereList>" A comma-separated list of spheres of influence for the god. This is a required argument. To see the available spheres, run this command:	"-s", "--spheres <sphereList>" 以逗号分隔的神的势力范围列表。这是一个必需的参数。要查看可用的球体，请运行以下命令：	l
 DFHack help: "devel/lsmem 0x1234 5678 90ab" List any ranges containing the addresses "0x1234", "0x5678", or "0x90ab". Addresses are interpreted as hex; the "0x" prefix is optional.	"devel/lsmem 0x1234 5678 90ab" 列出包含地址"0x1234"、"0x5678"或"0x90ab"的任何范围。地址被解释为十六进制； "0x"前缀是可选的。	l
 DFHack help: Heal the unit, raising from the dead if needed. If "--keep_corpse" is specified, don't remove their corpse. The unit can be targeted by selecting its corpse in the UI.	治愈单位，如果需要的话可以从死里复活。如果指定了"--keep_corpse"，则不要移除他们的尸体。可以通过在用户界面中选择其尸体来定位该单位。	l
@@ -1930,7 +1933,7 @@ DFHack help: "orders import <name>" Imports the specified manager orders. Note t
 DFHack help: "regrass -zf -p 128" Regrass the current z-level, refilling existing and depleted grass, else filling with "underlichen" (subject to world's raws) if non-existent.	"regrass -zf -p 128" 重草当前的 Z 层，重新填充现有的和耗尽的草，否则如果不存在则用 "underlichen" 填充（以世界原始草为准）。	l
 DFHack help: * match the walkability group of the starting tile OR (if the starting tile is walkable) is adjacent to a tile with the same walkability group as the starting tile	* 匹配起始图块的步行性组或（如果起始图块是可步行的）与起始图块具有相同步行性组的图块相邻	l
 DFHack help: -c, --clear Remove accumulated metrics after generating the report, ensuring the next report starts from a clean slate. -h, --help Show this help message and exit.	-c、--clear 生成报告后删除累积的指标，确保下一个报告从头开始。 -h、--help 显示此帮助消息并退出。	l
-DFHack help: :0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	:0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	l
+DFHack help: :0: semi-wild :1: trained :2: well-trained :3: skillfully trained :4: expertly trained :5: exceptionally trained :6: masterfully trained :7: tame :8: wild :9: wild	:0: 半野生 :1: 已训练 :2: 训练良好 :3: 训练娴熟 :4: 训练精熟 :5: 训练出众 :6: 训练大师级 :7: 已驯服 :8: 野生 :9: 野生	l
 DFHack help: Assign a tomb zone with the specified ID to the unit with the specified ID and task all its burial items for simultaneous hauling into the coffin in the tomb zone.	为指定ID的单位分配指定ID的墓区，并任务其所有陪葬品同时拖入墓区的棺材中。	l
 DFHack help: Change the corresponding geology layer for all biomes on your map. Be aware that the same geology layer can AND WILL be on different z-levels for different biomes.	更改地图上所有生物群落的相应地质图层。请注意，同一地质层 AND WILL 可以位于不同生物群落的不同 Z 层上。	l
 DFHack help: Clear all skills. If the script is called with both this option and "--skills", first all the unit skills will be cleared and then the listed skills will be added.	清除所有技能。如果同时使用此选项和 ​​"--skills" 调用脚本，首先将清除所有单位技能，然后添加列出的技能。	l
@@ -1980,7 +1983,7 @@ Announcement combat agreement-core [agreement-party-list,$office,$name,agreement
 DFHack help: "--unit" Make the strange mood strike the selected unit instead of picking one randomly. Unit eligibility is still enforced (unless "--force" is also specified).	"--unit" 让奇怪的情绪袭击选定的单位，而不是随机挑选一个。单位资格仍然有效（除非还指定了 "--force"）。	l
 DFHack help: "logistics add melt" Register the currently selected stockpile for automelting. Meltable items that are brought to this stockpile will be designated for melting.	"logistics add melt" 注册当前选择的储物堆进行自动熔化。被带到这个储物堆的可熔化物品将被指定用于熔化。	l
 DFHack help: "modtools/add-syndrome --target 2391 --syndrome "gila monster bite" --eraseAll" Remove all instances of the "gila monster bite" syndrome from the specified unit.	"modtools/add-syndrome --target 2391 --syndrome "吉拉怪物咬伤" --eraseAll" 从指定单位中删除所有"吉拉怪物咬伤"综合症实例。	l
-DFHack help: "region-pops incr <race> <amount>" Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	"region-pops incr <race> <amount>" 将给定数量添加到给定种族的人口计数中。如果数量为负，则会减少人口。	l
+DFHack help: "region-pops incr <race> <amount>" Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	"region-pops incr <race> <amount>" 将指定物种的种群数量增加 amount。amount 为负时减少种群数量。	l
 DFHack help: -synclass SYN_CLASS any syndrome with the specified SYN_CLASS will act as a trigger enclose in quotation marks if it includes spaces example: -synclass VAMPCURSE	-synclass SYN_CLASS 具有指定 SYN_CLASS 的任何综合症都将充当触发器，如果包含空格，则用引号引起来示例：-synclass VAMPCURSE	l
 DFHack help: Add a new need to the unit. Requires a -need argument, and target. -focus and -level can be used to set starting values, otherwise they'll fall back to defaults.	向单元添加新需求。需要 -need 参数和目标。 -focus 和 -level 可用于设置起始值，否则它们将恢复为默认值。	l
 DFHack help: Find and assign a free minecart to all hauling routes (or the specified hauling route). Hauling routes that already have a minecart assigned to them are skipped.	查找并分配一个空闲矿车到所有运输路线（或指定的运输路线）。已经分配了矿车的运输路线将被跳过。	l
@@ -2059,7 +2062,7 @@ DFHack help: * "coords_short" (boolean, default: "false"): if "true", hides expl
 DFHack help: A tool often has at least one tag per group, encompassing when you use the tool, why you might want to use it, and what kind of thing you're trying to affect.	一个工具通常每组至少有一个标签，包括您何时使用该工具、为什么要使用它以及您想要影响哪类事物。	l
 DFHack help: Due to the limitations of the ASCII mode screen buffer, the designation highlights may show through other interface elements that overlap the designated area.	由于ASCII模式屏幕缓冲区的限制，规划标记的亮点可能会通过与指定区域重叠的其他界面元素显示。	l
 DFHack help: Fixes crafted items not wearing out over time (Bug 6003). With this tweak, items made from cloth and leather will gain a level of wear every 20 in-game years.	修复了制作的物品不会随着时间的推移而磨损的问题（错误 6003）。通过此调整，由布料和皮革制成的物品将在游戏中每 20 年获得一定程度的磨损。	l
-DFHack help: Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	列出该地区的总种族人口，包括您的文明不知道的那些单位。您可以通过指定模式来过滤列表。	l
+DFHack help: Lists total race populations of the region, including those units that your civilization does not know about. You can filter the list by specifying a pattern.	列出本地区各物种的全部种群，包括文明尚未知晓的个体，可指定 pattern 过滤列表。	l
 DFHack help: Modify the traits of the selected dwarf to match an idealized personality: as stable and reliable as possible to prevent tantrums even after months of misery.	修改所选矮人的特征以匹配理想化的性格：尽可能稳定和可靠，以防止即使在经历了几个月的痛苦之后也不会发脾气。	l
 DFHack help: The script shows a list of the input reagents of the selected job, and allows changing them like the `job` ``item-type`` and `job` ``item-material`` commands.	该脚本显示所选作业的输入试剂列表，并允许更改它们，如 `job` ``item-type`` 和 `job` ``item-material`` 命令。	l
 DFHack help: This command saves information about the current DFHack installation and recent errors to "install-info.txt" in the current DF folder. Useful for bug reports.	该命令将有关当前 DFHack 安装和最近错误的信息保存到当前 DF 文件夹中的 "install-info.txt" 中。对于错误报告很有用。	l
@@ -2281,7 +2284,7 @@ DFHack help: "-o", "--aquifers-only" Don't reveal any map tiles, but continue to
 DFHack help: "color-schemes register <directory> [-f] [-q]" Register the directory (relative to the main DF game directory) where your color scheme files are stored.	"color-schemes register <directory> [-f] [-q]" 注册存储配色方案文件的目录（相对于主 DF 游戏目录）。	l
 DFHack help: "i", "ignore" Bypasses the usual item eligibility checks (such as "Never equip gear belonging to another dwarf" and "Nobody is allowed to equip a Hive".	"i"、"ignore" 绕过通常的物品资格检查（例如"切勿装备属于另一个矮人的装备"和"不允许任何人装备蜂巢"。	l
 DFHack help: "overlay list [<filter>]" Show a list of all the widgets that are registered with the overlay framework, optionally filtered by the given filter string.	"overlay list [<filter>]" 显示向覆盖框架注册的所有小部件的列表，可以选择通过给定的过滤字符串进行过滤。	l
-DFHack help: "region-pops list [<pattern>]" Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	"region-pops list [<pattern>]" 显示您的文明所了解的地区的种族人口。您可以通过指定模式来过滤列表。	l
+DFHack help: "region-pops list [<pattern>]" Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	"region-pops list [<pattern>]" 显示文明已知的本地区各物种种群，可指定 pattern 过滤列表。	l
 DFHack help: * "-item", "-creature", "-color", "-shape", "-plant", "-poetic", "-musical", "-dance": Include one of these to describe what the id argument represents.	* "-item"、"-creature"、"-color"、"-shape"、"-plant"、"-poetic"、"-musical"、"-dance"：包括其中之一来描述 id 参数表示的内容。	l
 DFHack help: After the surface irritation counter rises above the minimum, this value represents the range over which the chance of attack increases from 0% to 100%.	当表面刺激计数器上升到最小值以上后，该值代表攻击几率从 0% 增加到 100% 的范围。	l
 DFHack help: Applies the specified blueprint data and returns processing statistics. The statistics structure is a map of stat ids to "{label=string, value=number}".	应用指定的蓝图数据并返回处理统计信息。统计结构是 stat id 到"{label=string, value=number}"的映射。	l
@@ -3920,6 +3923,7 @@ Announcement combat agreement-core [agreement-party-list,agreement-party-list,ag
 Announcement combat justice-interrogation-sentence [justice-interrogation-response,justice-interrogation-factors]: Subject {s}, despite {s}.	尽管{s2}，受审者仍{s1}。	l
 Announcement combat site-rumor-event [$name,$name,$name]: a group calling itself {s} founded {s} after a long journey from the lands of {s}.	自称{s1}的势力从{s3}的领地长途跋涉而来，建立了{s2}。	l
 Commanded by {p}, they will have no mercy. There is little time -- you must flee. Perhaps your family and friends can be convinced to leave.	他们由{p1}统领，绝不会手下留情。时间所剩无几，你必须逃离。也许还能说服家人和朋友一起离开。	hqt
+DFHack GUI Notification settings: Warns when job postings stay unclaimed for more than a day while labormanager (or monitor mode) is active.	启用 labormanager 或其监控模式后，任务超过一个游戏日仍无人接手时发出警告。	l
 DFHack help: "--likeplant [ <token> [<token> ...] ]" As in "--likecreature" above, you can just list the tree or plant species in the token.	"--likeplant [ <token> [<token> ...] ]" 与上面的 "--likecreature" 一样，您可以只在代币中列出树木或植物种类。	l
 DFHack help: "-a", "--no-auto" No automatic mining mode designation - useful if you want to avoid dwarves digging where you don't want them.	"-a"、"--no-auto" 无自动挖掘模式规划标记 - 如果您想避免矮人在您不想要的地方挖掘，则非常有用。	l
 DFHack help: "-q", "--liquid" The type of liquid inside the tile. [number ID] (WATER/MAGMA) (will return nil if the tile flow level is zero)	"-q", "--liquid" 瓷砖内部液体的类型。 [编号ID] (WATER/MAGMA)（如果瓦片流量级别为零，则返回nil）	l
@@ -4036,7 +4040,7 @@ DFHack help: "zone nick <nickname> [<filter>]" Assign the given nickname to the 
 DFHack help: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	* 源代码的重新分发必须保留上述版权声明、此条件列表和以下免责声明。	l
 DFHack help: * Text Wrapping: Text automatically wraps within the editor, ensuring lines fit within the display without manual adjustments.	* 文本换行：文本在编辑器内自动换行，确保线条适合显示，无需手动调整。	l
 DFHack help: :lua ids={} for _,en in ipairs(world.entities.all) do ids[en.entity_raw.code] = true end for id in pairs(ids) do print(id) end	:lua ids={} for _,en in ipairs(world.entities.all) do ids[en.entity_raw.code] = true end for id in pairs(ids) do print(id) end	l
-DFHack help: Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	将给定数量添加到给定种族的人口计数中。如果数量为负，则会减少人口。	l
+DFHack help: Add the given amount to the population counts of the given race. If the amount is negative, this will decrease the population.	将指定物种的种群数量增加 amount。amount 为负时减少种群数量。	l
 DFHack help: After using any of these presets, you can always to go the vanilla difficulty settings and adjust them further to your liking.	使用任何这些预设后，您可以随时进入普通难度设置并根据您的喜好进一步调整它们。	l
 DFHack help: Can also be invoked as "clear". Note that this command does not delete command history. It just clears the text on the screen.	也可以作为 "clear" 调用。请注意，此命令不会删除命令历史记录。它只是清除屏幕上的文本。	l
 DFHack help: Developers use this command to reload a plugin that they are actively modifying. Also see load and unload for related actions.	开发人员使用此命令重新加载他们正在主动修改的插件。另请参阅加载和卸载以了解相关操作。	l
@@ -4214,6 +4218,7 @@ A caravan from {e} has arrived. Your status as a major land has attracted much m
 A caravan from {e} has arrived. Your status as a minor land has attracted a bit more trade than usual. Overall trade sentiments are good.	来自{e1}的商队已抵达。你作为小领地的地位吸引来了比平时略多的贸易。总体贸易意愿良好。	hPt
 Announcement combat agreement-core [agreement-party-list,agreement-party-list]: {s} made an agreement with {s} to entertain the citizenry	{s1}与{s2}达成协议，以便为居民表演	l
 Announcement combat sentence [$person]: Not that it matters, as the seat of {s} is here, and the blood-drinker allows no chattel to rise.	不过这也没什么要紧，{s1}的统治中心就在这里，那吸血者可不会让奴隶有出头之日。	l
+DFHack GUI Sitemap: Click on a name or hit Enter to zoom to the selected target. Shift-click or Shift-Enter to zoom and follow unit/item.	点击名称或按下 Enter，定位至选中的目标。按住 Shift 点击，或按下 Shift-Enter，定位并跟随生物或物品。	l
 DFHack help: "--mode <mode>" Mode can be "add" or "set", depending on whether you want to add to the existing experience/level or set it.	"--mode <mode>" 模式可以是 "add" 或 "set"，具体取决于您是否要添加到现有的 experience/level 或设置它。	l
 DFHack help: "--search <pattern> [<pattern>]" Searches the source for field names with substrings matching any of the specified patterns.	"--search <pattern> [<pattern>]" 在源中搜索子字符串与任何指定模式匹配的字段名称。	l
 DFHack help: "deep-embark --clear" Stop monitoring the game for the welcome message, effectively restoring normal embarks on the surface.	"deep-embark --clear" 停止监听游戏欢迎信息，有效恢复地表正常登陆。	l
@@ -4530,6 +4535,7 @@ Announcement combat agreement-core [agreement-party-list,$unit,agreement-crime,$
 Announcement combat agreement-core [agreement-party-list,agreement-target,$name]: {s} plotted to sabotage the activities of {s} at {s}	{s1}密谋破坏{s2}在{s3}的活动	l
 Announcement combat rumor-event []: As you know, we are at war. You might be able to strike our enemies where our armies cannot reach.	你也知道，我们正在打仗。有些地方军队去不了，也许你能到那里打击敌人。	l
 Bridges can be used to span open spaces or placed above water or magma. Bridges can be connected to levers and raised to block access.	桥梁可跨越空隙，也可建在水或岩浆上方。桥梁可连接到控制杆，升起后阻断通路。	hj
+DFHack GUI Sitemap: Click on a name or hit {key} to zoom to the selected target. Shift-click or {follow} to zoom and follow unit/item.	点击名称或按下 {key}，定位至选中的目标。按住 Shift 点击，或按下 {follow}，定位并跟随生物或物品。	l
 DFHack help: ",": Rotate counterclockwise (ccw) ".": Rotate clockwise (cw) "[": Flip vertically (vflip) "]": Flip horizontally (hflip)	",": 逆时针旋转 (ccw) ".": 顺时针旋转 (cw) "[": 垂直翻转 (vflip) "]": 水平翻转 (hflip)	l
 DFHack help: "aquifer add heavy here --leaky" Create a heavy aquifer tile in the exposed natural rough wall under the keyboard cursor.	"aquifer add heavy here --leaky" 在键盘光标下方裸露的自然粗糙墙壁上创建厚重的含水层瓷砖。	l
 DFHack help: "devel/query --tile --search "occup.*carv"" Prints out information about the carving configuration for the selected tile.	"devel/query --tile --search "ocup.*carv"" 打印有关所选图块的雕刻配置的信息。	l
@@ -4547,7 +4553,7 @@ DFHack help: It uses a library of profiles to define job classes, and generates 
 DFHack help: Non-entombed body parts that can be used for manufacturing, crafting, or suturing (e.g. hair, wool, skulls, horns, etc.).	可用于制造、制作或缝合的非埋藏身体部位（例如头发、羊毛、头骨、角等）。	l
 DFHack help: Only applies to the "count" action. Outputs, in addition to the total count, a table of item counts grouped by item type.	仅适用于 "count" 动作。除了总计数之外，还输出按项目类型分组的项目计数表。	l
 DFHack help: Set how often the plugin will cause pregnancies. The default frequency is every 10,000 ticks (a little over 8 game days).	设置插件导致怀孕的频率。默认频率是每 10,000 个刻度（略多于 8 个游戏日）。	l
-DFHack help: Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	显示您的文明所了解的地区的种族人口。您可以通过指定模式来过滤列表。	l
+DFHack help: Shows race populations of the region that your civilization knows about. You can filter the list by specifying a pattern.	显示文明已知的本地区各物种种群，可指定 pattern 过滤列表。	l
 DFHack help: The "dfhack-config/dwarfmonitor.json" file can be edited to change widget configuration with any of the following fields:	可以编辑"dfhack-config/dwarfmonitor.json"文件以更改具有以下任意字段的小部件配置：	l
 DFHack help: The gui/journal interface makes it easy to take notes and document important details for your fortresses and adventurers.	gui/journal 界面让您的要塞和冒险家可以轻松记笔记和记录重要细节。	l
 DFHack help: The selection dialog will appear if no options are provided. You can interactively choose one of the following to rename:	如果未提供选项，将出现选择对话框。您可以以交互方式选择以下选项之一进行重命名：	l
@@ -5842,7 +5848,7 @@ DFHack help: "deep-embark --depth UNDERWORLD --blockDemons" Embark in the underw
 DFHack help: "diglx [-p<number>]" Dig layer stone across z-levels, digging stairs as needed. This is an alias for "digl x".	"diglx [-p<number>]" 在 Z 层上挖掘层石，根据需要挖掘楼梯。这是"digl x"的别名。	l
 DFHack help: "digtype [<designation>] [-p<number>] [--zup|-u] [--zdown|-zu] [--cur-zlevel|-z] [--hidden|-h] [--no-auto|-a]"	"挖掘类型[<规划标记>][-p<数字>][--zup|-u][--zdown|-zu][--cur-zlevel|-z][--hidden|-h][--no-auto|-a]"	l
 DFHack help: "diplomacy 224 peace" Changes both your stance towards civilization 224 and their stance towards you to peace.	"diplomacy 224 peace" 将你对文明224的立场和他们对你的立场都改为和平。	l
-DFHack help: "region-pops boost-all <pattern> <factor>" Same as above, but apply to all races that match the given pattern.	"region-pops boost-all <pattern> <factor>" 与上面相同，但适用于与给定模式匹配的所有比赛。	l
+DFHack help: "region-pops boost-all <pattern> <factor>" Same as above, but apply to all races that match the given pattern.	"region-pops boost-all <pattern> <factor>" 与上面相同，但适用于匹配指定 pattern 的所有物种。	l
 DFHack help: "stockpiles_max_barrels", "stockpiles_max_bins", and "stockpiles_max_wheelbarrows" (defaults: "-1", "-1", "0")	"stockpiles_max_barrels"、"stockpiles_max_bins" 和 "stockpiles_max_wheelbarrows"（默认值："-1"、"-1"、"0"）	l
 DFHack help: (default: "true") Set whether or not raw fish should be counted in the running total of fish in your fortress.	（默认："true"）设置是否将生鱼计入要塞中的鱼的运行总数中。	l
 DFHack help: * "Warning" Enabled by default. Shows warnings about unexpected events which code managed to handle correctly.	* "警告"默认启用。显示有关代码设法正确处理的意外事件的警告。	l
@@ -5965,7 +5971,7 @@ DFHack help: "--group-by-date" Create a folder with name "year-month" inside the
 DFHack help: "burrow units clear Farmhouse Workshops" Remove all units from the burrows named "Farmhouse" and "Workshops".	"burrow units clear Farmhouse Workshops" 移除活动区中名为"农舍"和"车间"的所有单位。	l
 DFHack help: "caravan extend" Force a caravan that is leaving to return to the depot and extend their stay another 7 days.	"caravan extend" 强制即将出发的商队返回仓库并延长停留时间7天。	l
 DFHack help: "getplants <id> [<id> ...] [<options>]" Designate trees/shrubs of the specified types for chopping/gathering.	"getplants <id> [<id> ...] [<options>]" 将指定类型的trees/shrubs指定为chopping/gathering.	l
-DFHack help: "region-pops incr-all <pattern> <amount>" Same as above, but apply to all races that match the given pattern.	"region-pops incr-all <pattern> <amount>" 与上面相同，但适用于与给定模式匹配的所有比赛。	l
+DFHack help: "region-pops incr-all <pattern> <amount>" Same as above, but apply to all races that match the given pattern.	"region-pops incr-all <pattern> <amount>" 与上面相同，但适用于匹配指定 pattern 的所有物种。	l
 DFHack help: * auto: Tools that run in the background and automatically manage routine, toilsome aspects of your fortress.	* auto：在后台运行并自动管理要塞的常规、繁琐方面的工具。	l
 DFHack help: , pen=COLOR_MAGENTA}) end else --Physical location if target_data.loc_type == LType.Local then insert_text(t,	, pen=COLOR_MAGENTA}) end else --Physical 位置 if target_data.loc_type == LType.Local then insert_text(t,	l
 DFHack help: -days X Replace "X" with a positive integer (or 0) Adds (1200 multiplied by X) ticks to the timeskip duration	-days X 将"X"替换为正整数（或 0） 将（1200 乘以 X）刻度添加到跳时持续时间	l
@@ -6083,6 +6089,7 @@ Announcement combat justice-interrogation-sentence [$person]: Subject revealed t
 Announcement combat merchant-hawk-origin [merchant-genuine-item,merchant-advert-origin]: your very own {s} clear from {s}	专属于你的远从{s2}运来的{s1}	l
 Announcement combat negotiation-response []: attempted to put their opposite at ease as well but did not ultimately agree	也试着让对方放松下来，但最终仍未同意	l
 Announcement combat rumor-event [rumor-person,rumor-owner,$name,$name]: {s} refused {s} offer of tribute from {s} to {s}.	{s1}拒绝了{s2}进贡提议：由{s3}向{s4}纳贡。	l
+DFHack GUI Notification settings: Describes the status of the current moody dwarf: gathering materials, working, or stuck	显示处于怪异心境的矮人正在收集材料、制作，还是因缺少材料或工坊而受阻。	l
 DFHack help: "--clean <value>" Checks for skills with a rating of "<value>" and removes them from the dwarf's skill list.	"--clean <value>" 检查评级为"<值>"的技能并将其从矮人的技能列表中删除。	l
 DFHack help: "--tile" Selects the highlighted tile's block, and then uses the tile's local position to index the 2D data.	"--tile" 选择突出显示的图块的块，然后使用图块的本地位置来索引 2D 数据。	l
 DFHack help: "-q", "--quality <num>" (default: "0", equal to "df.item_quality.Ordinary") The quality of the created item.	"-q"，"--quality <num>"（默认："0"，等于"df.item_quality.Ordinary"）创建的项目的质量。	l
@@ -6205,6 +6212,7 @@ Announcement combat site-rumor-event [site-rumor-artifact,site-rumor-building,$n
 Announcement combat site-rumor-event [site-rumor-person,$name,site-rumor-predecessor]: {s} became of {s}, replacing {s}.	{s1}取代{s3}，在{s2}任职了。	l
 Assign a station order. The soldiers will stand near the point selected and engage any hostile creatures that come near.	下达驻守命令。士兵会站在选定位置附近，与靠近的敌对生物交战。	hj
 Be warned that shooting a projectile currently has a long recovery time, so you may be subject to attack after you fire.	请注意，目前发射弹药后的恢复时间较长，因此射击后可能遭到攻击。	hq
+DFHack GUI Notification settings: Notifies when you have agreed to build (but have not yet built) a guildhall or temple.	已承诺建造公会大厅或寺庙，却尚未建成时发出通知。	l
 DFHack help: "--listunit" Prints a list of all a unit's personality traits, with their modified trait value in brackets.	"--listunit" 打印一个单位所有性格特征的列表，其修改后的特征值放在括号中。	l
 DFHack help: "--select <criteria>" Select a specific subset of dwarves that the specified Command options should act on.	"--select <criteria>" 选择指定命令选项应起作用的矮人的特定子集。	l
 DFHack help: "-m", "--material <matdef>" (required) That def string of the material you want the item to be made out of.	"-m"、"--material <matdef>"（必需）您想要制作该物品的材料的默认字符串。	l
@@ -6437,6 +6445,7 @@ Announcement combat inscription [$person,$person]: I am {s}, {s}, once of the Un
 Announcement combat rumor-event [$name,$name]: A bandit gang calling itself {s} has been harassing people over in {s}.	有伙土匪自称{s1}，一直在{s2}那边骚扰百姓。	l
 Announcement combat sentence [$name,dialogue-family,$unit]: I'm going to {s} to move into my new home with my {s} {s}.	我正前往{s1}，与我的{s2}{s3}搬入我们的新家。	l
 Announcement combat sentence [diplomacy-group]: {s} is paying us tribute, and there is friendship between our peoples.	{s1}正在向我们进贡，双方百姓也相处和睦。	l
+DFHack GUI Confirmation prompt: Would you like to save now? (Note: You can also close this reminder and save manually)	现在要保存吗？（也可以关闭此提醒并手动保存。）	l
 DFHack help: "--citizens" All citizens and residents of your fort will be affected. Will do nothing in adventure mode.	"--citizens" 所有居民以及您的要塞的居民都将受到影响。在冒险模式下什么也不做。	l
 DFHack help: "armoks-blessing" Adjust stats and personalities to an ideal for all dwarves. No skills will be modified.	"armoks-blessing" 将统计数据和个性调整为所有矮人的理想状态。不会修改任何技能。	l
 DFHack help: "autodump destroy forbidden" Destroys all forbidden items marked for dumping, skipping unforbidden items.	"autodump destroy forbidden" 销毁所有标记为倾倒的违禁物品，跳过违禁物品。	l
@@ -6450,6 +6459,7 @@ DFHack help: - when building trap add to known traps (or known adventurers?) so 
 DFHack help: 2. has the same type, material, and quality. If it is a masterwork, it is also grouped by who created it.	2. 型号、材质、质量相同。如果它是杰作，也会按创作者分组。	l
 DFHack help: Applies the listed types to the selected dwarves. Run "dwarf-op --list dwf_types" to see available types.	将列出的类型应用于选定的矮人。运行 "dwarf-op --list dwf_types" 查看可用类型。	l
 DFHack help: Features and settings once set will persist until you change them, even if you save and reload your game.	一旦设置的功能和设置将一直存在，直到您更改它们为止，即使您保存并重新加载游戏也是如此。	l
+DFHack help: Find and track historical figures and artifacts A real-time tracker for historical figures and artifacts.	查找并实时追踪历史人物和神器。	l
 DFHack help: If the "spectate.tooltip" overlay is enabled, toggle whether to show the job of the dwarf in the tooltip.	如果启用了 "spectate.tooltip" 叠加，切换是否在工具提示中显示矮人的作业。	l
 DFHack help: If the thought is the name of a syndrome, then the severity will be used as the severity of the syndrome.	如果思想是一种综合症的名称，那么严重程度将被用作该综合症的严重程度。	l
 DFHack help: Makes the pathfinding algorithm work on at most n edges per tick. Set to 0 or lower to make it unlimited.	使寻路算法在每个刻度最多 n 条边上工作。设置为 0 或更低以使其不受限制。	l
@@ -6560,6 +6570,7 @@ Announcement combat sentence [diplomacy-group]: {s} accepts our tribute, and the
 Announcement combat sentence [diplomacy-group]: {s} is not at war with us, but there is ill-will between our peoples.	{s1}没有与我们交战，可双方百姓却互有敌意。	l
 Chosen mode is only available in worlds with developed religions. There are no temples available. Try an older world.	天选模式需要宗教发展完善的世界。当前没有可用的神殿，请尝试历史更悠久的世界。	l
 Cut rough gems here to increase their value, and improve the value of other objects by encrusting them with cut gems.	在这里切割宝石原石以提高价值，也可将切割宝石镶嵌到其他物品上以提升其价值。	hj
+DFHack GUI Mass remove: Please deselect any selected buildings, stockpiles or zones before attempting to remove them.	移除前请取消已选中的建筑、储物堆或区域。	l
 DFHack help: "-n", "--dry-run" Don't actually grow plants. Just print the total number of plants that would be grown.	"-n", "--dry-run" 实际上不种植植物。只需打印将种植的植物总数。	l
 DFHack help: "add-recipe native" Add all crafting recipes that your civ could have chosen from its pool, but did not.	"add-recipe native" 添加您的文明可以从其池中选择但没有选择的所有制作配方。	l
 DFHack help: "autodump-destroy-here" is an alias for "autodump destroy-here" and is intended for use as a keybinding.	autodump-destroy-here 是 autodump destroy-here 的别名，便于绑定快捷键。	l
@@ -6668,11 +6679,12 @@ Announcement combat sentence [unit,$book]: {s} was spotted sneaking around! "You
 Announcement combat sentence [unit,owned-object,owned-object]: {s} struggles in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	l
 Announcement combat site-rumor-event [$name,$name,$name]: a group calling itself {s} reclaimed {s} on behalf of {s}.	自称{s1}的势力代表{s3}收复了{s2}。	l
 Announcement combat site-rumor-event [site-rumor-person,$name,site-rumor-person]: {s} was kidnapped from {s} by {s}.	{s3}从{s2}绑架了{s1}。	l
+DFHack GUI Notification settings: Shows number of injured citizens and a warning if there is no functional hospital.	显示受伤居民数量，并在没有可正常运作的医院时发出警告。	l
 DFHack help: "control-panel autostart fix/blood-del" Configures fix/blood-del to run once when you start a new fort.	"control-panel autostart fix/blood-del" 配置 fix/blood-del 在启动新的要塞时运行一次。	l
 DFHack help: "enable dwarfmonitor" Enable tracking of job efficiency for display on the "dwarfmonitor stats" screen.	"enable dwarfmonitor" 启用工作效率跟踪并显示在 "dwarfmonitor stats" 屏幕上。	l
 DFHack help: "fix/wildlife" Remove any wildlife that is currently trying to leave the map but has not yet succeeded.	"fix/wildlife" 移除所有当前试图离开地图但尚未成功的野生动物。	l
 DFHack help: "full-heal --all [-r] [--keep_corpse]" Heal all units on the map, optionally resurrecting them if dead.	"full-heal --all [-r] [--keep_corpse]" 治疗地图上的所有单位，如果死亡则可选择复活它们。	l
-DFHack help: "region-pops boost-all .* 10" Increase populations of all creatures by a factor of 10. Hashtag zoolife.	"region-pops boost-all .* 10" 将所有生物的数量增加 10 倍。标签动物园。	l
+DFHack help: "region-pops boost-all .* 10" Increase populations of all creatures by a factor of 10. Hashtag zoolife.	"region-pops boost-all .* 10" 将该地区所有生物的种群数量扩大为原来的 10 倍。标签 zoolife。	l
 DFHack help: Adds all seeds to the watch list, sets the targets to 30, and starts monitoring your seed stock levels.	将所有种子添加到观察列表，将目标设置为 30，并开始监控种子库存水平。	l
 DFHack help: Alternately, you can register commandlines with the gui/quickcmd tool and run them from the popup menu.	或者，您可以使用 gui/quickcmd 工具注册命令行并从弹出菜单中运行它们。	l
 DFHack help: By default, all unsuspended buildings on the map are completed, but the area of effect is configurable.	默认情况下，地图上所有悬空建筑均已完成，但效果区域是可配置的。	l
@@ -6787,6 +6799,7 @@ Announcement combat rumor-event []: A great monster from the underground is said
 Announcement combat rumor-event [rumor-time,rumor-person,rumor-person]: I heard that {s}, {s} was kidnapped by {s}.	听说{s1}，{s2}被{s3}绑走了。	l
 Announcement combat sentence [diplomacy-group]: {s} accepts our tribute, but there is ill-will between our peoples.	{s1}接受我们的贡品，可双方百姓却互有敌意。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} struggle in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	l
+DFHack GUI Teleport: Draw boxes around units to select, or double click on a tile to teleport {d} selected unit(s).	用鼠标框选单位，或双击格子将已选中的 {d} 个单位传送至该处。	l
 DFHack help: "--script <script>" Selects the specified script (which must support being included with reqscript()).	"--script <script>" 选择指定的脚本（必须支持包含在 reqscript() 中）。	l
 DFHack help: "deteriorate frequency 0.5 all" Deteriorate items of the enabled categories at twice the default rate.	"deteriorate frequency 0.5 all" 以默认速率的两倍恶化启用类别的项目。	l
 DFHack help: "embark-skills legendary [all]" Sets all skills of the selected dwarf (or all dwarves) to "Legendary".	"embark-skills legendary [all]" 将所选矮人（或所有矮人）的所有技能设置为"传奇"。	l
@@ -7186,6 +7199,7 @@ Announcement combat negotiation-sentence []: The sheer number of lost invaders m
 Announcement combat rumor-event []: Body corrupted beyond reckoning, she assumes a beastly form to terrorize us.	她的身体已经彻底腐化，还会变成野兽来吓唬我们。	l
 Announcement combat sentence []: This place is insulated from the rest of the world, at least in terms of trade.	这里与外界没有往来，至少做买卖是如此。	l
 Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense.	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。	hP
+DFHack GUI Confirmation prompt: Close this popup to open the options menu and select "Save and continue playing"	关闭此窗口后，在选项菜单中选择“保存并继续游戏”。	l
 DFHack help: "-d", "--dry-run" Dry run: report how many designations would be (un)set without changing anything.	"-d"、"--dry-run" 试运行：报告在不更改任何内容的情况下将设置（取消）设置多少个规划标记。	l
 DFHack help: "-f", "--force" Register and read color schemes that are incomplete or are syntactically incorrect.	"-f"、"--force" 注册并读取不完整或语法不正确的配色方案。	l
 DFHack help: "animal-control --all" View all your animals and whether they are marked for gelding or butchering.	"animal-control --all" 查看您的所有动物以及它们是否被标记为骟马或屠宰。	l
@@ -7591,6 +7605,8 @@ Announcement combat rumor-event []: Mastering the forces of nature would glorify
 Announcement combat sentence [diplomacy-group]: {s} is our ally, and there is friendship between our peoples.	{s1}是我们的盟友，双方百姓也相处和睦。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} is unable to break the grip of {s} on {s}!	{s1}无法挣脱{s2}对{s3}的抓握！	l
 Attacks target specific body parts and have various modifiers. You will select these in the subsequent menus.	攻击针对具体身体部位，并带有各种修正项。接下来的菜单会让你选择这些内容。	hq
+DFHack GUI Design: Click to place the first point with the mouse. Use right-click to dismiss points in order.	点击鼠标放置起点。右键可依次撤销已放置的点。	l
+DFHack GUI Notification settings: Shows a reminder if it has been more than {d} minutes since your last save.	距离上次保存超过 {d} 分钟时发出提醒。	l
 DFHack help: "--contaminant <mat>" Trigger the command for items with a given material contaminant. Examples:	"--contaminant <mat>" 针对具有给定材料污染物的物品触发命令。示例：	l
 DFHack help: "enable autogems" Enables the plugin and starts autocutting gems according to its configuration.	"enable autogems" 启用插件并根据其配置开始自动切割宝石。	l
 DFHack help: "fix/empty-wheelbarrows" Empties all items, listing all wheelbarrows emptied and their contents.	"fix/empty-wheelbarrows" 清空所有物品，列出所有清空的手推车及其内容。	l
@@ -7736,6 +7752,8 @@ Announcement combat negotiation-response []: joined the conversation and over ti
 Announcement combat negotiation-response []: made light conversation and over time came around on the matter	轻松地闲谈，并渐渐改变了对此事的看法	l
 Announcement combat rumor-event []: A small but organized military order have been causing us much hardship.	一个军事修会人数不多，却组织严密，害得我们吃尽苦头。	l
 Call visitors from all over the world with the greatest tavern, library, or temple the world has ever known.	建造举世无双的酒馆、图书馆或神殿，吸引世界各地的访客。	hq
+DFHack GUI Notification settings: Notifies when there are non-invader hostiles (e.g. megabeasts) on the map.	地图上出现不属于入侵军队的敌对生物（如巨兽）时发出通知。	l
+DFHack GUI Notification settings: Shows a reminder if it has been more than {d} minute since your last save.	距离上次保存超过 {d} 分钟时发出提醒。	l
 DFHack help: "--id" Select the lever by ID to show/pull. Uses the currently selected lever if not specified.	"--id" 通过 ID 选择控制杆至 show/pull. 如果未指定，则使用当前选择的控制杆。	l
 DFHack help: "construct" Generate quickfort "#build" blueprints for constructions (e.g. flooring and walls).	"construct" 生成快速堡垒"#build"建筑蓝图（例如地板和墙壁）。	l
 DFHack help: "devel/luacov quickfort hack/lua" Report only on quickfort and DFHack library lua source files.	"devel/luacov quickfort hack/lua" 仅报告 Quickfort 和 DFHack 库 lua 源文件。	l
@@ -7753,6 +7771,7 @@ DFHack help: Change an existing need in some way. Requires a need target, at lea
 DFHack help: Dwarves on active military duty or dwarves assigned to burrows are left untouched by autolabor.	Autolabor 不会更改正在服役或已分配到活动区域的矮人的劳动设置。	l
 DFHack help: Fix all issues with uniforms that have only one item per body part (like all default uniforms).	修复每个身体部位只有一件物品的制服的所有问题（如所有默认制服）。	l
 DFHack help: For more information about arguments and return values, see ``hack/scripts/color-schemes.lua``.	有关参数和返回值的更多信息，请参阅"`hack/scripts/color-schemes.lua`"。	l
+DFHack help: GUI interface for ``autotraining`` This is an in-game configuration interface for autotraining.	autotraining 的图形界面，可在游戏中配置 autotraining。	l
 DFHack help: Make dwarves with Einstein in their name into geniuses capable of surpassing the real Einstein.	让名字里有爱因斯坦的矮人成为超越真正的爱因斯坦的天才。	l
 DFHack help: Mud will not be cleaned out from under farm plots, since that would render the plot inoperable.	农场地块下的泥土不会被清除，因为这会使该地块无法使用。	l
 DFHack help: Note that the beliefs aligned with the cultural values of the unit have not triggered a report.	请注意，与单位文化价值观一致的信仰尚未触发报告。	l
@@ -8292,6 +8311,7 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} loosens the c
 Announcement combat sentence [unit,owned-object,owned-object]: {s} loosens the joint lock of {s} on {s}.	{s1}松开了{s2}对{s3}的关节锁技。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the choke hold of {s} on {s}.	{s1}解除了{s2}对{s3}的勒颈控制。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the joint lock of {s} on {s}.	{s1}解除了{s2}对{s3}的关节锁技。	l
+DFHack GUI Design: Move any draggable points with the mouse. Use right-click to dismiss points in order.	用鼠标移动可拖动的点。右键可依次撤销已放置的点。	l
 DFHack help: "-a", "--aquifer" Whether the tile is considered an aquifer. [number ID] (NONE/LIGHT/HEAVY)	"-a", "--aquifer" 该图块是否被视为含水层。 [号码ID](NONE/LIGHT/HEAVY)	l
 DFHack help: "-x" eXcept: Apply selected action to all plants except those specified (invert selection).	"-x" eXcept：将选定的操作应用于除指定植物之外的所有植物（反向选择）。	l
 DFHack help: "autolabor reset-all|<labor> reset" Return a labor (or all labors) to the default handling.	"autolabor reset-all|<labor> reset" 将一个劳动（或所有劳动）返回到默认处理。	l
@@ -8426,6 +8446,7 @@ Announcement combat sentence [unit]: {s} was spotted sneaking around! "I'll live
 Certain livestock need to graze on grass. Assign these animals to a pasture zone. No fencing is needed.	某些牲畜需要吃草。可划定畜栏／牧场，将这些动物分配到有草的区域，无需建造围栏。	hj
 DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for gameplay tools?	确定要将玩法扩展工具的自动启动状态恢复为默认设置吗？	l
 DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for automation tools?	确定要将自动化工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Design: Click to place the point with the mouse. Use right-click to dismiss points in order.	点击鼠标放置点。右键可依次撤销已放置的点。	l
 DFHack help: "add-thought [--unit <id>] [<options>]" Add a thought to the selected (or specified) unit.	"add-thought [--unit <id>] [<options>]" 向所选（或指定）单元添加想法。	l
 DFHack help: "digcircle filled 3 -p2" Dig a filled circle with a diameter of 3 tiles at dig priority 2.	"digcirclefilled 3 -p2" 以挖掘优先级 2 挖一个直径为 3 个方块的实心圆。	l
 DFHack help: "diplomacy" See current diplomatic relationships between you and all other contacted civs.	"diplomacy" 查看您与所有其他联系公民之间当前的外交关系。	l
@@ -8568,6 +8589,7 @@ A medium-sized mammalian predator. It is known by the tell-tale tufts of hair on
 Announcement combat justice-intrigue-response [justice-intrigue-actor]: accepted out of loyalty to {s}	出于对{s1}的忠诚而接受了	l
 Announcement combat negotiation-response []: negotiated with discernment in turn but was outmaneuvered	也审时度势地谈判，却被对方胜过一筹	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} places a chokehold on {s} with {s}!	{s1}用{s3}勒住了{s2}！	l
+DFHack GUI Quickfort: Build mode blueprints will use DFHack building planner material filter settings.	建造类蓝图会采用 DFHack 建造规划器的材料筛选设置。	l
 DFHack help: "-m", "--method <method>" Specifies the "method" of killing units. See below for details.	"-m"、"--method <method>" 指定杀伤单位的"method"。详情请参阅下文。	l
 DFHack help: "adaptation set --all 0" Clear the cave adaptation levels for all citizens and residents.	"adaptation set --all 0" 清除所有居民和居民的洞穴适应级别。	l
 DFHack help: "armoks-blessing classes" Prints list of all skill classes (i.e. named groups of skills).	"armoks-blessing classes" 打印所有技能类别的列表（即命名的技能组）。	l
@@ -8749,6 +8771,7 @@ But my chosen, you are in need of drink and sustenance! See to yourself before y
 But my chosen, you are in need of sustenance and sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要食物和睡眠！面对前方的挑战之前，先照顾好自己。	hq
 DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for bugfix tools?	确定要将漏洞修复工具的自动启动状态恢复为默认设置吗？	l
 DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for gameplay tools?	确定要将玩法扩展工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Design: Place any extra points with the mouse. Use right-click to dismiss points in order.	用鼠标放置附加点。右键可依次撤销已放置的点。	l
 DFHack help: "--exclude <string>[,<string>...]" Exclude commands that match any of the given strings.	"--exclude <string>[,<string>...]" 排除与任何给定字符串匹配的命令。	l
 DFHack help: "--findvalue <value>" Searches the source for field values matching the specified value.	"--findvalue <value>" 在源中搜索与指定值匹配的字段值。	l
 DFHack help: "--notmarkedfor <action>" Selects units which have not been marked for the given action.	"--notmarkedfor <action>" 选择尚未标记给定操作的单位。	l
@@ -8901,6 +8924,7 @@ Announcement combat sentence [unit,unit,object,owned-object]: {s} take {s} down 
 Announcement combat site-rumor-event [$name,$name]: {s} was overthrown after an insurrection in {s}.	{s1}在{s2}的一场叛乱后被推翻了。	l
 Assign a burrow defense order. The soldiers will patrol the burrow and attack any hostile creatures.	下达活动区防卫命令。士兵会在活动区内巡逻并攻击敌对生物。	hj
 Assign a training order. The squad must be assigned to a barracks zone with the training option set.	下达训练命令。小队必须已被分配到开启训练用途的兵营区域。	hj
+DFHack GUI Design: Move the center point with the mouse. Use right-click to dismiss points in order.	用鼠标移动中心点。右键可依次撤销已放置的点。	l
 DFHack help: "--group-by-world" Create a folder named after the world in the "map-export" directory.	"--group-by-world" 在"map-export"目录下创建一个以世界命名的文件夹。	l
 DFHack help: "--skipImmunities" Add the syndrome to the target even if it is immune to the syndrome.	"--skipImmunities" 即使目标对该综合症免疫，也将该综合症添加到目标上。	l
 DFHack help: "-z", "--cur-zlevel" Restricts a flood fill operation to the currently visible z-level.	"-z"、"--cur-zlevel" 将洪水填充操作限制为当前可见的 Z 层。	l
@@ -9061,6 +9085,7 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} breaks the gr
 Announcement combat sentence [unit,owned-object,owned-object]: {s} releases the grip of {s} on {s}.	{s1}解除了{s2}对{s3}的抓握。	l
 Coffers inside the Tavern. Optionally you can place Tables and Chairs where your residents can eat.	[C:6:0:0]保险箱[C:7:0:0]中。你还可以摆放[C:6:0:0]桌椅[C:7:0:0]，供居民吃饭。	hq
 DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for bugfix tools?	确定要将漏洞修复工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Notification settings: Notifies when a production mandate is within 1 month of expiring.	生产命令距离期限不足一个月时发出通知。	l
 DFHack help: "--multi" Attempt to fix issues with uniforms that allow multiple items per body part.	"--multi" 尝试解决允许每个身体部位携带多个物品的制服问题。	l
 DFHack help: "-c", "--count <num>" Set the quantity of items to create instead of prompting for it.	"-c"、"--count <num>" 设置要创建的项目数量，而不是提示。	l
 DFHack help: "-m", "--material <string>" Filter by material the item is made out of (e.g., "iron").	"-m"、"--material <string>" 按物品制造材料过滤（例如，"iron"）。	l
@@ -9264,6 +9289,7 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} adjusts the g
 Announcement combat sentence [unit,owned-object,owned-object]: {s} break the grip of {s} from {s}!	{s1}挣脱了{s2}对{s3}的抓握！	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the grip of {s} on {s}.	{s1}解除了{s2}对{s3}的抓握。	l
 As the guild grows in power they may demand a Guildhall of greater value. This can be increased by	[C:7:0:0]随着行会势力增长，他们可能要求提高[C:1:0:1]行会大厅[C:7:0:0]的价值。你可以通过	hq
+DFHack GUI Notification settings: Reports missing nemesis records, indicating savegame corruption.	报告缺失的人物关联记录，提示存档可能损坏。	l
 DFHack help: "--all" Selects all units. This is the default if no selection options are specified.	"--all" 选择所有单位。如果未指定选择选项，则这是默认值。	l
 DFHack help: "-d", "--delete" Stop automatically prioritizing new jobs of the specified job types.	"-d"、"--delete" 停止自动优先指定指定作业类型的新作业。	l
 DFHack help: "-d", "--dry-run" Display what would be combined instead of actually combining items.	"-d", "--dry-run" 显示要组合的内容而不是实际组合项目。	l
@@ -9447,6 +9473,8 @@ Announcement combat sentence [unit,unit,object,owned-object]: {s} throws {s} by 
 By now you should have a room underground where your residents can hide from the creatures above.	现在，你应该已有一间地下房间，可供居民躲避地表的生物。	hq
 Can volcanism be placed at the value 100 enough times to provide space for each of your volcanos?	火山活动度为 100 的方格是否足以容纳所有火山？	l
 Carve a track in a stone floor. Tracks are used by minecarts with routes set in the hauling menu.	在石地板上雕凿轨道。矿车沿轨道行驶，路线在搬运菜单中设置。	hj
+DFHack GUI Mass remove: Designate buildings, constructions, stockpiles, and/or zones for removal.	指定建筑、构筑物、储物堆或区域进行移除。	l
+DFHack GUI Notification settings: Notifies when thieving or mischievous creatures are on the map.	地图上出现偷窃或捣乱的生物时发出通知。	l
 DFHack help: "--opposite <INTEREST>" Set the interest level towards the opposite sex to the unit.	"--opposite <INTEREST>" 设置本机对异性的兴趣程度。	l
 DFHack help: "animal-control --gelded --markfor slaughter" Mark all gelded animals for slaughter.	"animal-control --gelded --markfor slaughter" 标记所有阉割的动物以供屠宰。	l
 DFHack help: "autofish 150 -r true" Sets your maximum fish to 150, and enables counting raw fish.	"autofish 150 -r true" 将最大鱼数设置为 150，并能够对生鱼进行计数。	l
@@ -9468,6 +9496,7 @@ DFHack help: Depending on the cursor location, it rewrites all 'individual choic
 DFHack help: Dig a vein across z-levels, digging stairs as needed. This is an alias for "digv x".	在Z 层上挖一个矿脉，根据需要挖楼梯。这是"digv x"的别名。	l
 DFHack help: Exports the "desired items" for the first stop of the "Stone quantum" hauling route.	为"石量子"运输路线的第一站输出"想要的物品"。	l
 DFHack help: If no topic is given, or if "all" is supplied, every supported export target is run.	如果未给出主题，或者提供了 "all"，则运行每个支持的导出目标。	l
+DFHack help: If the factor is greater than one, increases the population, otherwise decreases it.	若 factor 大于 1，则增加种群数量；否则减少。	l
 DFHack help: Kill by blood loss, and if this is ineffective, then kill by vaporization (default).	失血击杀，无效则气化击杀（默认）。	l
 DFHack help: Messages that happen often but they should happen only a couple of times per second.	经常发生的消息，但每秒应该只发生几次。	l
 DFHack help: Negates the next filter keyword. All of the keywords documented below are negatable.	否定下一个过滤关键字。下面记录的所有关键字都是可否定的。	l
@@ -9642,6 +9671,8 @@ Announcement combat sentence [unit,unit,object,owned-object]: {s} throw {s} by t
 Announcement combat site-rumor-event [site-rumor-artifact,$name]: {s} was known to be in in {s}.	当时已知{s1}位于{s2}的一座建筑里。	l
 Archery targets, siege weapons, and some ornamental display items can be found in this category.	此类别包含射箭靶、攻城武器和一些装饰展示物品。	hj
 But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水和睡眠！面对前方的挑战之前，先照顾好自己。	hq
+DFHack GUI Notification settings: Reports units that are dangerously hungry, thirsty, or drowsy.	报告饥饿、口渴或困倦已达到危险程度的生物。	l
+DFHack GUI Sitemap: No temples, guildhalls, hospitals, taverns, or libraries found at this site.	此据点没有寺庙、公会大厅、医院、酒馆或图书馆。	l
 DFHack help: "--checkInventoryEvery <n>" Check for inventory events at least once every n ticks.	​​"--checkInventoryEvery <n>" 至少每 n 个周期检查一次库存事件。	l
 DFHack help: "-q", "--quiet" Don't print the number of affected units if no units were affected.	"-q", "--quiet" 如果没有单位受到影响，则不打印受影响单位的数量。	l
 DFHack help: "-t", "--timing-only" Randomize windmill polarity, but synchronize windmill timers.	"-t"、"--timing-only" 随机化风车极性，但同步风车计时器。	l
@@ -10081,6 +10112,7 @@ Announcement combat sentence [memory-person,memory-person]: {s} escalated a conf
 Announcement combat site-rumor-event [$name,site-rumor-person]: was kidnapped from {s} by {s}.	{s2}从{s1}绑架了一个人。	l
 Announcement combat work-sentence [work-reference]: For lyrics, the composer has selected {s}.	作曲者选用{s1}作为歌词。	l
 Build an elaborate water-powered contraption or domesticate previously untameable wild beasts.	建造精巧的水力机械，或驯服此前无法驯服的野兽。	hq
+DFHack GUI Notification settings: Shows a suffocation bar when you are drowning or breathless.	溺水或呼吸困难时显示剩余呼吸量。	l
 DFHack help: "--cmd [ <command> ]" Specify the command to be run when the given id is matched.	"--cmd [ <command> ]" 指定当给定的 id 匹配时要运行的命令。	l
 DFHack help: "--markedfor <action>" Selects units which have been marked for the given action.	"--markedfor <action>" 选择已标记为给定操作的单位。	l
 DFHack help: "-h", "--histfig <id>" Set the target to the historical figure with the given ID.	"-h", "--histfig <id>" 将目标设置为给定 ID 的历史人物。	l
@@ -10306,7 +10338,7 @@ DFHack help: lazuli (5 blue gems in vanilla DF), rather than further restricting
 DFHack help: modtools/spawn-flow =================== Creates flows at the specified location.	modtools/spawn-flow =================== 在指定位置创建流。	l
 DFHack help: more Lua patterns matching files or directories to be included. Alternately, you	更多 Lua 模式匹配要包含的文件或目录。或者，你	l
 DFHack help: raw and prepared fish. this category also includes all types of eggs. Qty max 5.	生鱼和熟鱼。此类别还包括所有类型的鸡蛋。数量最多 5 个。	l
-DFHack help: region-pops =========== Show or modify the populations of animals in the region.	region-pops =========== 显示或修改该区域的动物数量。	l
+DFHack help: region-pops =========== Show or modify the populations of animals in the region.	region-pops =========== 显示或修改该地区动物的种群数量。	l
 DFHack help: then self:scroll(spec - sheet.scroll_position_linked_buildings-1) elseif spec ==	然后 self:scroll(spec -sheet.scroll_position_linked_buildings-1) elseif spec ==	l
 DFHack help: |-------------------- auto ---------------------|------------ 32 --------------|	|-------------------- 自动 ---------------------|------------ 32 --------------|	l
 Despite the interrogation by {a}, {a} refused to reveal anything and was released during {e}.	在{e1}期间，尽管受到{a1}审讯，{a2}仍拒绝交代任何事情，随后被释放了。	ht
@@ -11225,7 +11257,7 @@ DFHack help: Dumps unforbidden armor equipped by the caged creature in the selec
 DFHack help: Fix quivers and training ammo items to allow archery practice to take place.	修复箭袋和训练弹药物品，以便进行射箭练习。	l
 DFHack help: Fixes some corruption that can occur in equipment lists, as in :bug:`11014`.	修复了设备列表中可能发生的一些损坏，如:bug:`11014`。	l
 DFHack help: For this script to work you need to add *at least* one color palette file to	要使此脚本正常工作，您需要添加*至少*一个调色板文件到	l
-DFHack help: Lists encountered populations of the region, possibly restricted by pattern.	列出该地区遇到的人口，可能受模式限制。	l
+DFHack help: Lists encountered populations of the region, possibly restricted by pattern.	列出该地区已发现的种群，可用 pattern 限制范围。	l
 DFHack help: Lua expressions are evaluated with the normal script environment, so ``df``,	Lua 表达式是在普通脚本环境下计算的，所以``df``，	l
 DFHack help: Make the selected dwarf legendary in the specified skill or class of skills.	使选定的矮人在指定技能或技能类别中成为传奇。	l
 DFHack help: Overlay to allow changing track stop and roller settings after construction.	覆盖层允许在施工后更改轨道停止器和滚轮设置。	l
@@ -11421,6 +11453,7 @@ Announcement combat sentence [$item,merchant-address]: Might I interest you in {
 Announcement combat sentence [$sphere]: There is also the issue of their worship of {s}.	还有，他们崇拜{s1}，这也是个问题。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} catches {s} with {s}!	{s1}用{s3}抓住了{s2}！	l
 But if one of these brave workers falls, you'll need to assign somebody to these duties.	但如果这些勇敢的工人有人倒下，你就需要另外指派人手接替。	hq
+DFHack GUI Notification settings: Notifies when traders are ready to trade at the depot.	商人在贸易站准备好交易时发出通知。	l
 DFHack help: "-q", "--quality <num>" (default: "0", equal to "df.item_quality.Ordinary")	"-q"、"--quality <num>"（默认值："0"，等于"df.item_quality.Ordinary"）	l
 DFHack help: "-z", "--cur-zlevel" Restricts the bounds to the currently visible z-level.	"-z", "--cur-zlevel" 将边界限制为当前可见的 Z 层。	l
 DFHack help: "add-thought --gui" Add a thought to the unit currently selected in the UI.	"add-thought --gui" 为 UI 中当前选择的单位添加一个想法。	l
@@ -11651,6 +11684,9 @@ Announcement combat site-rumor-event [$name,$name]: {s} crushed an insurrection 
 Before you start chopping down trees you may want to create a dedicated Wood Stockpile.	[C:7:0:0]开始砍树之前，不妨先设置一个[C:6:0:0]专门存放木头的储物堆[C:7:0:0]。	hq
 But this is only the beginning. Ultimately, your true goals are up to your imagination.	但这也只是开始。归根结底，你真正的目标由想象力决定。	hq
 Change whether the work order must be activated or completed to satisfy this condition.	切换满足此条件所需的工单状态：已启动或已完成。	hj
+DFHack GUI Autodump: Double click on a tile to teleport {d} item(s) marked for dumping.	双击格子，将已标记倾倒的 {d} 件物品传送至该处。	l
+DFHack GUI Notification settings: Notifies when there are no squads set up for training	没有设置训练小队时发出通知。	l
+DFHack GUI Notification settings: Notifies when units are stranded from the main group.	居民与主要群体隔绝而受困时发出通知。	l
 DFHack help: "--all" Apply to all dwarves instead of just the currently selected dwarf.	"--all" 适用于所有矮人，而不仅仅是当前选定的矮人。	l
 DFHack help: "--trait <ID>" ID of the trait to edit. For example, 0 or HATE_PROPENSITY.	"--trait <ID>" 要编辑的特征的 ID。例如，0 或 HATE_PROPENSITY。	l
 DFHack help: "KEYS" The tables containing the [number ID] values for different options.	"KEYS" 包含不同选项的 [number ID] 值的表。	l
@@ -11880,6 +11916,7 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} locks {s} wit
 Announcement combat work-reference-list [work-reference,work-reference-list]: {s}, {s}	{s1}、{s2}	l
 But my chosen, you are in need of drink! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。	hq
 But my chosen, you are in need of sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要睡眠！面对前方的挑战之前，先照顾好自己。	hq
+DFHack GUI Notification settings: Notifies when there are agitated animals on the map.	地图上出现躁动动物时发出通知。	l
 DFHack help: "--all" Rejuvenate all citizens and residents instead of a selected unit.	"--all" 复兴所有居民和居民而不是选定的单位。	l
 DFHack help: "--unitsOnly" Free all units from webs without actually removing any webs	"--unitsOnly" 从网上释放所有单位，而不实际删除任何网站	l
 DFHack help: "-n", "--dry-run" Print out which creatures are stuck but take no action.	"-n", "--dry-run" 打印出哪些生物被卡住但不采取任何行动。	l
@@ -11921,7 +11958,7 @@ DFHack help: Facilitates in-game reproduction of DFHack issue #254: z-levels add
 DFHack help: Finished goods stockpile adjustments ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	成品储物堆调整~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	l
 DFHack help: His very long moustache is neatly combed. His hair is clean-shaven. He is	很长的胡子梳得整整齐齐。他的头发刮得很干净。他是	l
 DFHack help: If a first name is desired, press ``f``. To clear the current first name,	如果需要名字，请按"`f`"。要清除当前的名字，	l
-DFHack help: Increase populations of all creatures by a factor of 10. Hashtag zoolife.	将所有生物的数量增加 10 倍。标签动物园。	l
+DFHack help: Increase populations of all creatures by a factor of 10. Hashtag zoolife.	将该地区所有生物的种群数量扩大为原来的 10 倍。标签 zoolife。	l
 DFHack help: Load the default color scheme that you previously set with "default set".	加载您之前使用"默认设置"设置的默认配色方案。	l
 DFHack help: Make the selected dwarf legendary in all skills. Only perfection will do.	让选中的矮人在所有技能上都成为传奇。只有完美才能做到。	l
 DFHack help: Modify the personality traits of the selected dwarf to match an idealised	修改所选矮人的性格特征以匹配理想化的	l
@@ -12108,6 +12145,7 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} lock {s} with
 Announcement combat sentence [unit]: {s} are propelled away by the force of the blow!	{s1}被这一击打飞了！	l
 Certainly. It would be terrible to leave someone to fend for themselves after sunset.	当然。日落之后，让人独自在外面自生自灭就太糟了。	hP
 DFHack GUI Confirmation prompt: Are you sure you want to restore default preferences?	确定要将所有偏好恢复为默认设置吗？	l
+DFHack GUI Notification settings: Notifies when there are active invaders on the map.	地图上有正在活动的入侵者时发出通知。	l
 DFHack help: "-a", "--all" Apply the action to every possible tile in the entire map.	"-a"、"--all" 将操作应用于整个地图中的每个可能的图块。	l
 DFHack help: "-d", "--zdown" Only designates tiles on the cursor's z-level and below.	"-d", "--zdown" 只指定光标Z 层及以下的图块。	l
 DFHack help: "animal-control --race DOG --showstats" View extended info on your dogs.	"animal-control --race DOG --showstats" 查看有关您的狗的更多信息。	l
@@ -12652,7 +12690,7 @@ DFHack help: The general forms for modifying the filter or paint specification a
 DFHack help: The screens which have been tested and known to function properly with	经测试且已知可正常工作的屏幕	l
 DFHack help: These two functions apply changes to the build sidebar menus. If "add"	这两个函数将更改应用于构建侧边栏菜单。如果"add"	l
 DFHack help: This script will attempt to read the current df-screen, and if it is a	该脚本将尝试读取当前的 df-screen，如果它是	l
-DFHack help: This tool can show or modify the populations of animals in the region.	该工具可以显示或修改该地区动物的数量。	l
+DFHack help: This tool can show or modify the populations of animals in the region.	该工具可以显示或修改该地区动物的种群数量。	l
 DFHack help: Use the default probabilities to set the belief to a new random value.	使用默认概率将置信度设置为新的随机值。	l
 DFHack help: Views with `frame.w` field take their own width. Leftover parent width	具有 `frame.w` 字段的视图采用自己的宽度。剩余父级宽度	l
 DFHack help: ``--top`` (default: one z-level below the current map ceiling, leaving	``--top`` （默认：当前地图上限以下一个 Z 层，留下	l
@@ -12829,6 +12867,7 @@ Announcement combat sentence [dialogue-family-indef,$person]: I had {s} named {s
 Announcement combat sentence [head]: {s} and the severed part sails off in an arc!	{s1}，断肢划着弧线飞了出去！	l
 Announcement combat site-rumor-event [site-rumor-person,$name]: {s} became of {s}.	{s1}在{s2}任职了。	l
 DFHack GUI Confirmation prompt: Are you sure you want to restore overlay defaults?	确定要将所有界面覆盖层恢复为默认设置吗？	l
+DFHack GUI Notification settings: Notifies when a squad is stuck on the world map.	小队受困于世界地图时发出通知。	l
 DFHack help: "--keepInventory" Move items back into inventory after transformation	"--keepInventory" 改造后将物品移回库存	l
 DFHack help: "--showpaths" Displays the full path of a field instead of indenting.	"--showpaths" 显示字段的完整路径而不是缩进。	l
 DFHack help: "--unmarkfor <action>" Unmarks selected animals for the given action.	"--unmarkfor <action>" 取消标记指定动作的选定动物。	l
@@ -12842,7 +12881,7 @@ DFHack help: "armoks-blessing RANGED_COMBAT" All dwarves become legendary archer
 DFHack help: "autodump destroy" Destroys all unforbidden items marked for dumping.	"autodump destroy" 销毁所有标记为倾倒的违禁物品。	l
 DFHack help: "autodump undestroy" Reverts pending destruction of all marked items.	"autodump undestroy" 恢复所有标记项目的待销毁。	l
 DFHack help: "brainwash ideal" Sets the dwarf to have an ideal, stable personality	"brainwash ideal" 设定矮人具有理想、稳定的性格	l
-DFHack help: "colors.txt": The world "default" (worldgen and replacement) palette.	"colors.txt"：世界 "default"（世界生成和替换）调色板。	l
+DFHack help: "colors.txt": The world "default" (worldgen and replacement) palette.	"colors.txt"：世界默认调色板（用于世界生成及替换缺失的季节调色板）。	l
 DFHack help: "dig" Generate quickfort "#dig" blueprints for digging natural stone.	"dig" 生成用于挖掘天然石材的快速堡垒"#dig"蓝图。	l
 DFHack help: "diggingInvaders clear" Clears the registry of digging invader races.	"diggingInvaders clear" 清除挖掘入侵者种族的注册表。	l
 DFHack help: "enable deteriorate" Start deteriorating items with current settings.	"enable deteriorate" 使用当前设置开始恶化项目。	l
@@ -13132,6 +13171,8 @@ Announcement combat sentence []: Cavern dwellers! Send them back to the darkness
 Announcement combat sentence []: It's such a noble pursuit. Let's go immediately!	这是多么崇高的追求。我们马上走吧！	l
 Announcement combat sentence [unit,actor,equipment]: {s} bats {s} aside with {s}!	{s1}用{s3}将{s2}拨到了一旁！	l
 Click on a Resident to see their needs, inventory, thoughts, relations, and more.	[C:7:0:0]点击[C:2:0:0]居民[C:7:0:0]，可查看其需求、物品栏、想法、人际关系等信息。	hq
+DFHack GUI Notification settings: Gives a summary of visible wildlife on the map.	汇总地图上可见的野生动物。	l
+DFHack GUI Notification settings: Shows a bleeding bar when you are losing blood.	正在失血时显示剩余血量。	l
 DFHack help: "--biOnly" Only creatures who can get into romances with both sexes.	"--biOnly" 唯一可以与两性发生浪漫关系的生物。	l
 DFHack help: "-d", "--description <string>" (required if you are creating a slab)	"-d"、"--description <string>"（如果您要创建板，则需要）	l
 DFHack help: "-q", "--quiet" Do not report how many dwarves were given nicknames.	"-q"、"--quiet" 不要报告有多少个矮人被赋予了昵称。	l
@@ -13165,7 +13206,7 @@ DFHack help: Add the syndrome to the target even if it is immune to the syndrome
 DFHack help: Adds a widget to the world generation screen for renaming the world.	在世界生成屏幕上添加一个小部件，用于重命名世界。	l
 DFHack help: Adds sort and annotation capabilities to the squad assignment panel.	为小队成员分配面板添加排序和信息标注。	l
 DFHack help: All food and plants. Milk is included, but seeds are left untouched.	所有食物和植物。包括牛奶，但种子不受影响。	l
-DFHack help: Augment (or diminish) all populations of TOKEN by factor (additive).	按因子（加法）增加（或减少）TOKEN 的所有种群。	l
+DFHack help: Augment (or diminish) all populations of TOKEN by factor (additive).	将 TOKEN 的所有种群数量增加（或减少）factor（以加法调整）。	l
 DFHack help: Beliefs are defined with the belief token and a number from -3 to 3,	信念由信念标记和 -3 到 3 之间的数字定义，	l
 DFHack help: Columns show butcherable stock (+ protected stock, if any) / target:	列显示可屠宰库存（+ 受保护库存，如果有）/目标：	l
 DFHack help: Create a folder named after the world in the "map-export" directory.	在"map-export"目录下创建一个以世界命名的文件夹。	l
@@ -13443,6 +13484,9 @@ Announcement combat sentence [work,work-description]: You have composed {s}. {s}
 But my chosen, you are in a state! See to yourself before you face what's ahead.	但是，我的天选者，你现在的状态很糟！面对前方的挑战之前，先照顾好自己。	hq
 Chop down more trees if necessary. Unpause and wait for the Bed to be completed.	[C:7:0:0]必要时再砍一些树。解除暂停，等待[C:6:0:1]床[C:7:0:0]制作完成。	hq
 Civilizations use available plants in their surroundings as their initial crops.	文明会使用周边可用植物作为初始作物。	l
+DFHack GUI Autodump: Double click on a tile to teleport {d} highlighted item(s).	双击格子，将高亮选中的 {d} 件物品传送至该处。	l
+DFHack GUI Sitemap: Click on a name or hit Enter to zoom to the selected target.	点击名称或按下 Enter，定位至选中的目标。	l
+DFHack GUI Sitemap: Click on a name or hit {key} to zoom to the selected target.	点击名称或按下 {key}，定位至选中的目标。	l
 DFHack help: "--erase" Instead of adding an instance of the syndrome, erase one.	"--erase" 不要添加该综合症的一个实例，而是删除一个。	l
 DFHack help: "--maxdepth <value>" Limits the field recursion depth (default: 7).	"--maxdepth <value>" 限制字段递归深度（默认值：7）。	l
 DFHack help: "--position <x>,<y>,<z>" The position at which to spawn the liquid.	"--position <x>,<y>,<z>" 产生液体的位置。	l
@@ -13489,7 +13533,7 @@ DFHack help: Note that the skill level provided must be a number greater than 0.
 DFHack help: PLANT WOOD CLOTH SILK LEATHER BONE SHELL SOAP TOOTH HORN PEARL YARN	PLANT WOOD CLOTH SILK LEATHER BONE SHELL SOAP TOOTH HORN PEARL YARN	l
 DFHack help: Print the current map z-level state: ``z_count``/``z_count_block``,	打印当前地图Z 层状态：``z_count``/``z_count_block``,	l
 DFHack help: Prints all the arguments you supply to the script on their own line	在自己的行上打印您提供给脚本的所有参数	l
-DFHack help: Same as above, but apply to all races that match the given pattern.	与上面相同，但适用于与给定模式匹配的所有比赛。	l
+DFHack help: Same as above, but apply to all races that match the given pattern.	与上面相同，但适用于匹配指定 pattern 的所有物种。	l
 DFHack help: See the preferences of a dwarf or set them to a designated profile.	查看矮人的首选项或将其设置为指定的配置文件。	l
 DFHack help: Set the age of the selected dwarf to 149, even if they are younger.	将所选矮人的年龄设置为 149，即使他们更年轻。	l
 DFHack help: Sets the groupId and civId to those of the player in Fortress mode.	将groupId和civId设置为要塞模式下玩家的groupId和civId。	l
@@ -13678,6 +13722,7 @@ Announcement combat sentence [unit]: {s} slam into an obstacle and blows apart!	
 Announcement combat sentence [unit]: {s} slams into an obstacle and blow apart!	{s1}猛撞在障碍物上，四分五裂了！	l
 Announcement combat site-rumor-event [site-rumor-person]: was kidnapped by {s}.	有人被{s1}绑架了。	l
 Barrels, and Bags. Barrels are used to store Food. Bags are used to store Seeds	[C:6:0:1]桶[C:7:0:0]和[C:6:0:1]袋子[C:7:0:0]来腾出空间。[C:6:0:1]桶[C:7:0:0]用来储存[C:6:0:1]食物[C:7:0:0]，[C:6:0:1]袋子[C:7:0:0]用来储存[C:6:0:1]种子[C:7:0:0]	hq
+DFHack GUI Mass remove: Designate buildings or constructions to cancel removal.	指定建筑或构筑物，取消其移除安排。	l
 DFHack help: "--years <num>", "--months <num>", "--days <num>", "--hours <num>"	"--years <num>"、"--months <num>"、"--days <num>"、"--hours <num>"	l
 DFHack help: "-d", "--zdown" Apply the action to the current z-level and below.	"-d"、"--zdown" 将动作应用于当前的 Z 层及以下。	l
 DFHack help: "-h", "--hidden" Whether tile is revealed or unrevealed. [boolean]	"-h", "--hidden" 瓷砖是否显露或不显露。 [布尔值]	l
@@ -14241,6 +14286,7 @@ Click to suspend the task. Assigned workers are removed from suspended tasks.	�
 Congratulations! Now you must return this precious object to its proper home.	祝贺你！现在必须将这件珍贵的物品送回它应在的地方。	hq
 Conversation prompt: What will you say about the conclusion of the agreement?	关于约定的结束，你想说些什么？	l
 DFHack GUI Confirmation prompt: Are you sure you want to delete this command:	确定删除此命令吗：	l
+DFHack GUI Confirmation prompt: It has been {d} minutes since your last save.	距离上次保存已过去 {d} 分钟。	l
 DFHack help: "--profile <profile>" The profile inside the json file to apply.	"--profile <profile>" 要应用的 json 文件内的配置文件。	l
 DFHack help: "-q", "--quiet" Don't print the final item distribution summary.	"-q"、"--quiet" 不打印最终的物品分配汇总。	l
 DFHack help: "-u", "--zup" Apply the action to the current z-level and above.	"-u"、"--zup" 将动作应用于当前 Z 层及以上。	l
@@ -15578,7 +15624,7 @@ DFHack help: Make the created unit a member of the specified civilisation	使创
 DFHack help: Prints status information, including any defined thresholds.	打印状态信息，包括任何定义的阈值。	l
 DFHack help: Resize any armor or clothing item to suit any creature size.	调整任何盔甲或服装的尺寸以适合任何生物尺寸。	l
 DFHack help: Run a command if the current fort entity matches a given ID.	如果当前要塞实体与给定 ID 匹配，则运行命令。	l
-DFHack help: Same as above, but match using a pattern acceptable to list.	与上面相同，但使用列表可接受的模式进行匹配。	l
+DFHack help: Same as above, but match using a pattern acceptable to list.	与上面相同，但使用 list 支持的 pattern 进行匹配。	l
 DFHack help: Set the interest level towards the opposite sex to the unit.	设置本机对异性的兴趣程度。	l
 DFHack help: Summarize the cumulative needs of a unit or the entire fort.	总结一个单位或整个要塞的累计需求。	l
 DFHack help: There are six types of location types displayed for targets:	目标显示的位置类型有六种：	l
@@ -16687,7 +16733,7 @@ DFHack help: Replace DF's continue game screen with a searchable list.	将 DF �
 DFHack help: So you want to bridge a gap? ----------------------------	所以你想弥合差距吗？ ----------------------------	l
 DFHack help: Specify the ID of the unit to be assigned to a tomb zone.	指定要分配到墓区的单位的 ID。	l
 DFHack help: Start generating milking and shearing orders for animals.	开始为动物生成挤奶和剪毛订单。	l
-DFHack help: Starting a new fortress/adventurer session is preceded by	开始新的 fortress/adventurer 会话之前	l
+DFHack help: Starting a new fortress/adventurer session is preceded by	开始新的要塞／冒险模式游戏前，会经历	l
 DFHack help: Teleport items marked for dumping to the keyboard cursor.	将标记为倾倒的物品传送到键盘光标所在位置。	l
 DFHack help: The only undo option is to restore your save from backup.	唯一的撤消选项是从备份中恢复您的保存。	l
 DFHack help: This can be used to set the specified unit flags to true.	这可用于将指定的单位标志设置为 true。	l
@@ -17076,7 +17122,7 @@ DFHack help: Report cursor and mouse position, along with other info.	报告光�
 DFHack help: See the wiki for more information on quantum stockpiles.	有关量子储物堆的更多信息，请参阅 wiki。	l
 DFHack help: Set the interest level towards the same sex as the unit.	设置对单位同性别的兴趣程度。	l
 DFHack help: Set the threshold for Plump Helmets and Pig Tails to 150	将丰满头盔和猪尾巴的阈值设置为150	l
-DFHack help: Show or modify the populations of animals in the region.	显示或修改该地区动物的数量。	l
+DFHack help: Show or modify the populations of animals in the region.	显示或修改该地区动物的种群数量。	l
 DFHack help: Specify how often, in days, undead should lose strength.	指定不死生物失去力量的频率（以天为单位）。	l
 DFHack help: Start following dwarves and observing life in your fort.	开始关注矮人并观察要塞中的生活。	l
 DFHack help: The rate at which active jobs are monitored. (default:1)	监控活动作业的速率。 （默认值：1）	l
@@ -19045,6 +19091,7 @@ Conversation prompt: How will you respond to the position offer?	你将如何回
 Conversation prompt: How will you respond to this passive reply?	你将如何回应这个消极的答复？	l
 Conversation prompt: What will you say about the new leadership?	关于新的领导者，你想说些什么？	l
 Creating Elathu Inala, \\"The Domain of Portents\\" ({d} rejected)	创建埃拉苏·伊纳拉,"预兆之域\\"({d}个被拒绝)	wt
+DFHack GUI Mass remove: Select the second corner with the mouse.	用鼠标选择第二个角点。	l
 DFHack help: "--alignto <value>" Specifies the alignment column.	"--alignto <value>" 指定对齐列。	l
 DFHack help: "--applyprofessions <profession>[,<profession>...]"	"--applyprofessions <profession>[,<profession>...]"	l
 DFHack help: "--unit <UNIT ID>" The given unit will be affected.	​​"--unit <UNIT ID>" 给定单位将受到影响。	l
@@ -19529,6 +19576,8 @@ Conversation prompt: Choose a musical form for the composition.	为这次创作�
 Conversation prompt: What will you say about tribute agreement?	关于进贡协议，你想说些什么？	l
 DFHack GUI Control tool: gui/settings-manager load-work-details	载入工作分工（gui/settings-manager load-work-details）	l
 DFHack GUI Control tool: gui/settings-manager.embark_difficulty	保存定居难度设置（gui/settings-manager.embark_difficulty）	l
+DFHack GUI Mass remove: Select the first corner with the mouse.	用鼠标选择第一个角点。	l
+DFHack GUI Sitemap: No temples, guildhalls, hospitals, taverns,	此据点没有寺庙、公会大厅、医院、酒馆，	l
 DFHack help: "--all" Apply the edit to all the target's traits.	"--all" 将编辑应用于目标的所有特征。	l
 DFHack help: "--eraseAll" Erase every instance of the syndrome.	"--eraseAll" 删除该综合症的每个实例。	l
 DFHack help: "--id <entity id>" Specify the entity ID to match.	"--id <entity id>" 指定要匹配的实体ID。	l
@@ -20678,7 +20727,7 @@ DFHack help: Find and track historical figures and artifacts.	查找并追踪历
 DFHack help: He needs alcohol to get through the working day.	他需要酒精来度过工作日。	l
 DFHack help: Here are some basic commands to get you started:	以下基本命令可以帮助你开始使用：	l
 DFHack help: ID of the belief to edit. For example, 0 or LAW.	要编辑的信念的 ID。例如，0 或 LAW。	l
-DFHack help: If the factor is greater than one, increases the	如果因子大于 1，则增加	l
+DFHack help: If the factor is greater than one, increases the	若 factor 大于 1，则增加	l
 DFHack help: Invaders dig and destroy to get to your dwarves.	入侵者挖掘并摧毁你的矮人。	l
 DFHack help: Keybinding: [Ctrl][J] in "dwarfmode|dungeonmode"	按键绑定："矮人模式|地下城模式"中的 [Ctrl][J]	l
 DFHack help: List input items for the selected building type.	列出所选建筑类型的输入项目。	l
@@ -21129,6 +21178,7 @@ Conversation prompt: How will you respond to this dismissal?	你将如何回应�
 Conversation prompt: What will you say about the occupation?	关于占领行动，你想说些什么？	l
 Crafts are an easy way to make a lot of trade goods quickly.	[C:7:0:0]制作[C:6:0:1]工艺品[C:7:0:0]，是快速获得大量贸易商品的简单办法。	hq
 DFHack GUI Control tool: orders.conditionsquantityrightclick	条件数量右键取消（orders.conditionsquantityrightclick）	l
+DFHack GUI Teleport: Click name or hit Enter to zoom to unit	点击名称或按 Enter，定位至该单位。	l
 DFHack help: "--block" Selects the highlighted tile's block.	"--block" 选择突出显示的图块块。	l
 DFHack help: "--ignore-webs" Ignore undisturbed spider webs.	"--ignore-webs" 忽略未受干扰的蜘蛛网。	l
 DFHack help: "--random" Set the trait to a new random value.	"--random" 将特征设置为新的随机值。	l
@@ -23092,6 +23142,7 @@ Conversation prompt: What will you say about the trouble?	关于这个麻烦，�
 Conversation prompt: What will you say about your family?	关于你的家人，你想说些什么？	l
 Conversation prompt: What will you say about your master?	关于你的师父，你想说些什么？	l
 DFHack GUI Control tool: aquifer drain --all --skip-top 2	含水层最多两层（aquifer drain --all --skip-top 2）	l
+DFHack GUI Sitemap: Please enter a site to see locations.	请进入据点以查看地点。	l
 DFHack help: "--set <0-100>" Set trait to given strength.	"--set <0-100>" 将特质设置为给定强度。	l
 DFHack help: "-e", "--exclude <plant_id>[,<plant_id>...]"	"-e", "--exclude <plant_id>[,<plant_id>...]"	l
 DFHack help: "-t", "--caste <name or num>" (default: "0")	"-t"、"--caste <name or num>"（默认："0"）	l
@@ -23150,7 +23201,7 @@ DFHack help: Keybinding: [Ctrl][M] in "dwarfmode/Default"	键绑定：[Ctrl][M] 
 DFHack help: Left click: Move debug cursor (if available)	左键单击：移动调试光标（如果有）	l
 DFHack help: Marks selected animals for the given action.	为给定的动作标记选定的动物。	l
 DFHack help: Max bins, max barrels, and num wheelbarrows.	最大垃圾箱、最大桶和手推车数量。	l
-DFHack help: Multiply all populations of TOKEN by factor.	将 TOKEN 的所有群体乘以因子。	l
+DFHack help: Multiply all populations of TOKEN by factor.	将 TOKEN 的所有种群数量乘以 factor。	l
 DFHack help: Number formatting style for DFHack tool UIs.	DFHack 工具界面的数字显示格式。	l
 DFHack help: Only include items outside the given burrow.	仅包含给定活动区之外的项目。	l
 DFHack help: Provides a Lua API for random distributions.	为随机分布提供Lua API。	l
@@ -24613,6 +24664,7 @@ Conversation prompt: What will you say about the group?	关于这个势力，你
 Conversation prompt: What will you say about the trade?	关于这笔交易，你想说些什么？	l
 Credits: elsewhere to keep the project afloat these two	让这个项目在过去二十年间得以延续的	wl
 DFHack GUI Control tool: deteriorate frequency 0.15 all	腐朽速度：不到一个月（deteriorate frequency 0.15 all）	l
+DFHack GUI Sitemap: the selected target. Shift-click or	选中的目标。按住 Shift 点击，或按下	l
 DFHack GUI Viewer status: Command finished successfully	命令执行成功	l
 DFHack GUI Viewer status: Default preferences restored.	偏好已恢复为默认设置。	l
 DFHack help: "--all" All active units will be affected.	"--all" 所有活跃单位都会受到影响。	l
@@ -25381,6 +25433,8 @@ Conversation prompt: What will you say about the gang?	关于这个帮派，你�
 Conversation prompt: What will you say about the site?	关于这个地点，你想说些什么？	l
 Curious wilderness creatures can come to cause trouble	好奇的荒野生物可以前来捣乱
 DFHack GUI Control tool: buildingplan.mechanism_unlink	解除机关连接（buildingplan.mechanism_unlink）	l
+DFHack GUI Mass remove: Remove or schedule for removal	移除或安排拆除	l
+DFHack GUI Teleport: Draw boxes around units to select	用鼠标框选单位。	l
 DFHack help: "! Must be list, create, grow, or remove!	"！必须列出、创建、增长或删除！	l
 DFHack help: "--visible" Same as "--not-marked=hidden"	"--visible" 与 "--not-marked=hidden" 相同	l
 DFHack help: "-l", "--haul-labor <labor>[,<labor>...]"	"-l", "--haul-labor <labor>[,<labor>...]"	l
@@ -26176,6 +26230,8 @@ Change the frequency that the conditions are checked.	修改条件检查频率�
 Check for culled historical figures {d}/{d} completed	检查已清理的历史人物：已完成 {d1}/{d2}	wt
 Click to contact/raid this site (creates new mission)	点击联系或突袭此地点（创建新任务）。	hP
 Cook meals here. You can also render fat into tallow.	在这里烹饪饭菜，也可将脂肪熬制成脂油。	hj
+DFHack GUI Autodump: Include items dropped by traders	包含商人丢弃的物品	l
+DFHack GUI Autodump: Select all items on this z-level	选择本层全部物品	l
 DFHack GUI Control tool: gui/civ-alert.big_red_button	平民警报按钮（gui/civ-alert.big_red_button）	l
 DFHack GUI Control tool: gui/mod-manager.notification	模组预设应用提示（gui/mod-manager.notification）	l
 DFHack GUI Control tool: logistics enable autoretrain	自动重新驯养（logistics enable autoretrain）	l
@@ -27061,6 +27117,7 @@ Argue the worthlessness of harmony (not your values)	争辩和谐毫无价值（
 Argue the worthlessness of loyalty (not your values)	争辩忠诚毫无价值（并非你的价值观）	hP
 Argue the worthlessness of romance (not your values)	争辩爱情毫无价值（并非你的价值观）	hP
 Copyright(C){d}-{d} Firelight Technologies Pty, Ltd.	版权所有（C）{d}-{d} Firelight Technologies Pty, Ltd.	wtl
+DFHack GUI Autodump: Dump to tile under mouse cursor	倾倒至鼠标所在格	l
 DFHack GUI Control tool: agitation-rebalance.monitor	自然躁动监控（agitation-rebalance.monitor）	l
 DFHack GUI Control tool: buildingplan set logs false	建造不用原木（buildingplan set logs false）	l
 DFHack GUI Control tool: buildingplan.mechanism_free	取出未连接机关（buildingplan.mechanism_free）	l
@@ -27070,6 +27127,7 @@ DFHack GUI Control tool: exportlegends.histfigfilter	历史人物种族筛选（
 DFHack GUI Control tool: fix/stuck-written-materials	修复卡住的书籍（fix/stuck-written-materials）	l
 DFHack GUI Control tool: machine-toggle.gearassembly	齿轮组开关（machine-toggle.gearassembly）	l
 DFHack GUI Control tool: orders.conditionsrightclick	条件详情右键取消（orders.conditionsrightclick）	l
+DFHack GUI Sitemap: or libraries found at this site.	或图书馆。	l
 DFHack GUI Viewer status: Overlay defaults restored.	界面覆盖层已恢复为默认设置。	l
 DFHack help: "--caste <caste>" Set the target caste.	"--caste <caste>" 设置目标种姓。	l
 DFHack help: "--likecolor [ <token> [<token> ...] ]"	"--likecolor [ <token> [<token> ...] ]"	l
@@ -27998,6 +28056,8 @@ Behold, mortal. I am {p}. I know why you have come.	看吧，凡人。我是{p1}
 Bring up {e}'s acceptance of {e}'s offer of tribute	谈起{e1}接受{e2}的进贡提议这件事	hPt
 Conversation keyword: crime of attempted kidnapping	绑架未遂罪	l
 DFHack GUI Control tool: idle-crafting.idlecrafting	休闲制作开关（idle-crafting.idlecrafting）	l
+DFHack GUI Notification settings: mandates_expiring	生产命令即将到期	l
+DFHack GUI Teleport: Teleport units to mouse cursor	将单位传送至鼠标位置	l
 DFHack help: "--item" Selects the highlighted item.	"--item" 选择突出显示的项目。	l
 DFHack help: "--likefood [ <token> [<token> ...] ]"	"--likefood [ <token> [<token> ...] ]"	l
 DFHack help: "--likeitem [ <token> [<token> ...] ]"	"--likeitem [ <token> [<token> ...] ]"	l
@@ -28936,8 +28996,12 @@ Bring up {e}'s refusal of {e}'s demand for tribute	谈起{e1}拒绝{e2}的进贡
 Cancel an order. Does not affect scheduled orders.	取消命令，不影响日程命令。	hj
 Click it now, and this tutorial will be concluded.	现在点击它，本教程便告结束。	hq
 Conversation keyword: export prohibition violation	违反出口禁令	l
+DFHack GUI Autodump: Include items claimed by jobs	包含任务占用的物品	l
 DFHack GUI Control tool: gui/unit-info-viewer.mood	单位当前与长期心情（gui/unit-info-viewer.mood）	l
 DFHack GUI Control tool: orders.quantityrightclick	订单数量右键取消（orders.quantityrightclick）	l
+DFHack GUI Design: First Mark ({d}): {d}, {d}, {d}	起点（{d}）：{d}, {d}, {d}	l
+DFHack GUI Notification settings: labor_starvation	无人接手的任务	l
+DFHack GUI Notification settings: petitions_agreed	未兑现的建造承诺	l
 DFHack help: "(no)clearcut <burrow>[,<burrow>...]"	"（无）明确 <活动区>[,<活动区>...]"	l
 DFHack help: "-g", "--gender (male|female|neuter)"	"-g", "--gender (male|female|neuter)"	l
 DFHack help: "catsplosion" Make all cats pregnant.	"catsplosion" 让所有的猫怀孕。	l
@@ -29943,6 +30007,10 @@ Creating Elathu Inala, \\"The Domain of Portents\\"	创建埃拉苏·伊纳拉,"
 DFHack GUI Control tool: hotkeys.newadventuremenu	新建冒险快捷菜单（hotkeys.newadventuremenu）	l
 DFHack GUI Control tool: orders.laborrestrictions	工坊劳动限制（orders.laborrestrictions）	l
 DFHack GUI Control tool: orders.skillrestrictions	工坊技能限制（orders.skillrestrictions）	l
+DFHack GUI Design: Last Mark ({d}): {d}, {d}, {d}	终点（{d}）：{d}, {d}, {d}	l
+DFHack GUI Notification settings: missing_nemesis	人物记录缺失	l
+DFHack GUI Notification settings: suffocation_adv	呼吸余量（冒险）	l
+DFHack GUI Sitemap: to zoom and follow unit/item.	以定位并跟随生物或物品。	l
 DFHack help: "--include-pets", "--include-vermin"	"--include-pets", "--include-vermin"	l
 DFHack help: "--job" Selects the highlighted job.	"--job" 选择突出显示的作业。	l
 DFHack help: "--race <race>" Set the target race.	"--race <race>" 设置目标比赛。	l
@@ -30015,7 +30083,7 @@ DFHack help: Keybinding: [Ctrl][V] in "dwarfmode"	按键绑定："dwarfmode" 中
 DFHack help: Launch widget position adjustment UI	打开控件位置调整界面	l
 DFHack help: List all vermin colonies on the map.	列出地图上所有害虫栖息地。	l
 DFHack help: List the keybindings to the console.	列出控制台的键绑定。	l
-DFHack help: Lists all populations of the region.	列出该地区的所有人口。	l
+DFHack help: Lists all populations of the region.	列出该地区的全部种群。	l
 DFHack help: Lua script coverage report generator	Lua脚本覆盖率报告生成器	l
 DFHack help: Mark the map as ordinary (not lair).	将地图标记为普通（不是巢穴）。	l
 DFHack help: Mark the specified unit for gelding.	标记指定的骟马单位。	l
@@ -31032,6 +31100,11 @@ DFHack GUI Control tool: preserve-rooms.reserved	区域预留信息（preserve-r
 DFHack GUI Control tool: sort.workanimals_filter	工作动物分配筛选（sort.workanimals_filter）	l
 DFHack GUI Control tool: tailor confiscate false	保留旧衣不倾倒（tailor confiscate false）	l
 DFHack GUI Control tool: uniform-unstick.overlay	装备冲突修复入口（uniform-unstick.overlay）	l
+DFHack GUI Design: Area: {d}x{d}x{d} ({d} tiles)	范围：{d}x{d}x{d}（{d}格）	l
+DFHack GUI Mass remove: Affect built and planned	处理已建成及规划中	l
+DFHack GUI Notification settings: agitated_count	躁动动物	l
+DFHack GUI Quickfort: Blueprint shows help text.	此蓝图显示帮助说明。	l
+DFHack GUI Quickfort: Reposition with the mouse.	用鼠标调整蓝图位置。	l
 DFHack help: "-i", "--item <itemdef>" (required)	"-i"、"--item <itemdef>"（必填）	l
 DFHack help: "-m", "--marker <type>[,<type>...]"	"-m", "--marker <type>[,<type>...]"	l
 DFHack help: "-m", "--mode (set|enable|disable)"	"-m", "--mode (set|enable|disable)"	l
@@ -31181,7 +31254,7 @@ DFHack help: modtools/raw-lint =================	modtools/raw-lint =============
 DFHack help: modtools/set-need =================	modtools/set-need =================	l
 DFHack help: pf-: make the spawned liquid static	pf-：使生成的液体静态	l
 DFHack help: plant and plant growths. Qty max 5.	植物和植物生长。数量最多 5 个。	l
-DFHack help: population, otherwise decreases it.	人口，否则减少。	l
+DFHack help: population, otherwise decreases it.	种群数量；否则减少。	l
 DFHack help: quantum stockpile. You're all done!	量子储物堆。你都完成了！	l
 DFHack help: red is bad, bright red is very bad.	红色不好，大红色很不好。	l
 DFHack help: regrass [<pos> [<pos>]] [<options>]	regrass [<pos> [<pos>]] [<options>]	l
@@ -32221,6 +32294,16 @@ DFHack GUI Control tool: gui/rename.unit_embark	定居准备单位昵称（gui/r
 DFHack GUI Control tool: sort.deathcause_button	查看死因（sort.deathcause_button）	l
 DFHack GUI Control tool: sort.location_selector	神殿与行会筛选（sort.location_selector）	l
 DFHack GUI Control tool: suspendmanager.overlay	暂停施工标记（suspendmanager.overlay）	l
+DFHack GUI Design: Area: {d}x{d}x{d} ({d} tile)	范围：{d}x{d}x{d}（{d}格）	l
+DFHack GUI Notification settings: hostile_count	敌对生物	l
+DFHack GUI Notification settings: invader_count	入侵者	l
+DFHack GUI Notification settings: save-reminder	保存提醒	l
+DFHack GUI Notification settings: traders_ready	商人准备就绪	l
+DFHack GUI Notification settings: warn_nuisance	盗窃捣乱生物	l
+DFHack GUI Notification settings: warn_starving	饥渴困倦警报	l
+DFHack GUI Notification settings: warn_stranded	居民受困	l
+DFHack GUI Quickfort: Delete selected blueprint	删除选中蓝图	l
+DFHack GUI Quickfort: Unlock blueprint position	解锁蓝图位置	l
 DFHack help: "--exclude <string>[,<string>...]"	"--exclude <string>[,<string>...]"	l
 DFHack help: "--unit <id>" Set the target unit.	"--unit <id>" 设置目标单位。	l
 DFHack help: "Cavern dweller maximum attackers"	"地下洞穴居民最大攻击者"	l
@@ -33384,6 +33467,10 @@ DFHack GUI Control tool: overlay.title_version	DFHack 版本与快捷入口（ov
 DFHack GUI Control tool: sort.squad_annotation	小队成员排序与标注（sort.squad_annotation）	l
 DFHack GUI Control tool: suspendmanager.status	施工暂停原因（suspendmanager.status）	l
 DFHack GUI Control tool: suspendmanager.toggle	智能施工暂停开关（suspendmanager.toggle）	l
+DFHack GUI Design: Mirror Point: {d}, {d}, {d}	镜像点：{d}, {d}, {d}	l
+DFHack GUI Notification settings: bleeding_adv	血量余量（冒险）	l
+DFHack GUI Notification settings: moody_status	怪异心境进度	l
+DFHack GUI Notification settings: wildlife_adv	野生动物（冒险）	l
 DFHack help: "(no)chop <burrow>[,<burrow>...]"	"（不）砍<活动区>[，<活动区>...]"	l
 DFHack help: "--preserve-engravings <quality>"	"--preserve-engravings <quality>"	l
 DFHack help: "add-thought --gui [--unit <id>]"	"add-thought --gui [--unit <id>]"	l
@@ -33522,7 +33609,7 @@ DFHack help: s a valid db entry -- (e.g. if it	是一个有效的数据库条目
 DFHack help: s built-in EditField with our own	内置 EditField 和我们自己的	l
 DFHack help: stacks of ammunition. Qty max 25.	成堆的弹药。数量最多 25 个。	l
 DFHack help: stockpiles import -m enable bolts	储物堆进口-m使能螺栓	l
-DFHack help: tame ==== Tame and train animals.	tame ==== Tame and train animals.	l
+DFHack help: tame ==== Tame and train animals.	tame ==== 驯服并训练动物。	l
 DFHack help: this is intended for flying units	这是用于飞行单位的	l
 DFHack help: tweak <command> [disable] [quiet]	tweak <command> [disable] [quiet]	l
 DFHack help: undump-buildings ================	undump-buildings ================	l
@@ -34619,10 +34706,17 @@ Conversation keyword: offer transfer position	提议 转让 职位	l
 Conversation keyword: tavern keeper join work	酒保 加入 工作	l
 Conversation prompt: Where do you want to go?	你想去哪里？	l
 Conversation prompt: Which pet will you gift?	你要赠送哪只宠物？	l
+DFHack GUI Autodump: Forbid after teleporting	传送后禁用物品	l
 DFHack GUI Control tool: buildingplan.planner	建筑规划面板（buildingplan.planner）	l
 DFHack GUI Control tool: dwarfmonitor.weather	当前天气（dwarfmonitor.weather）	l
 DFHack GUI Control tool: exportlegends.export	传奇导出进度（exportlegends.export）	l
 DFHack GUI Control tool: spectate.followpanel	观战跟随面板（spectate.followpanel）	l
+DFHack GUI Notification settings: stuck_squad	小队受困	l
+DFHack GUI Quickfort: Generate manager orders	生成管理者订单	l
+DFHack GUI Quickfort: Load selected blueprint	加载选中蓝图	l
+DFHack GUI Quickfort: Lock blueprint position	锁定蓝图位置	l
+DFHack GUI Quickfort: Zoom to locked position	定位到锁定位置	l
+DFHack GUI Sitemap: No artifacts around here.	附近没有造物。	l
 DFHack help: "--female" Selects female units.	"--female" 选择女性单位。	l
 DFHack help: "--not-marked=<flag>,<flag>,..."	"--not-marked=<flag>,<flag>,..."	l
 DFHack help: "--search <pattern> [<pattern>]"	"--search <pattern> [<pattern>]"	l
@@ -35874,6 +35968,7 @@ Conversation keyword: neighbors town village	邻居 城镇 村庄	l
 Conversation keyword: service order room buy	服务 订单 客房 买入	l
 Creating Namaanenu, "The Everseeing Planets"	正在创建 Namaanenu, "永恒守望的行星"	w
 Credits: Additional changes for the SDL Port	SDL 移植的后续改进	wl
+DFHack GUI Autodump: Include forbidden items	包含禁用物品	l
 DFHack GUI Caption: Click characters or type	点击字符或直接输入	l
 DFHack GUI Confirmation action: Yes, proceed	确认继续	l
 DFHack GUI Control tool: advtools.fastcombat	快速战斗（advtools.fastcombat）	l
@@ -35895,6 +35990,11 @@ DFHack GUI Control tool: stockflow.stockflow	储物区生产设置（stockflow.s
 DFHack GUI Control tool: trackstop.trackstop	轨道停靠点设置（trackstop.trackstop）	l
 DFHack GUI Control tool: zone.animal_actions	驯服动物操作（zone.animal_actions）	l
 DFHack GUI Control tool: zone.retirelocation	撤销闲置场所（zone.retirelocation）	l
+DFHack GUI Design: Start placing more points	继续放置点	l
+DFHack GUI Notification settings: Toggle all	全部切换	l
+DFHack GUI Notification settings: auto_train	训练小队设置	l
+DFHack GUI Quickfort: Baseline dig priority:	基础挖掘优先级：	l
+DFHack GUI Quickfort: Preview manager orders	预览管理者订单	l
 DFHack help: "-Q", "--max-quality <integer>"	"-Q", "--max-quality <integer>"	l
 DFHack help: "-c", "--mat-category <string>"	"-c", "--mat-category <string>"	l
 DFHack help: "-f", "--freeze", "--safe-mode"	"-f"、"--freeze"、"--safe-mode"	l
@@ -37194,6 +37294,7 @@ DFHack GUI Control tool: startdwarf.overlay	初始矮人列表滚动（startdwar
 DFHack GUI Control tool: stockpiles.hauling	矿车站点条件（stockpiles.hauling）	l
 DFHack GUI Control tool: stockpiles.overlay	储物区自动化（stockpiles.overlay）	l
 DFHack GUI Input prompt: Enter new command:	输入新命令：	l
+DFHack GUI Teleport: Include friendly units	包含友好单位	l
 DFHack help: "--applyjobs <job>[,<job>...]"	"--applyjobs <job>[,<job>...]"	l
 DFHack help: "-e [NAME]", "--entity [NAME]"	"-e [NAME]", "--entity [NAME]"	l
 DFHack help: "-s", "--spheres <sphereList>"	"-s", "--spheres <sphereList>"	l
@@ -38559,6 +38660,16 @@ DFHack GUI Control tool: realistic-melting	真实熔炼回收率（realistic-mel
 DFHack GUI Control tool: sort.squad_filter	小队成员筛选（sort.squad_filter）	l
 DFHack GUI Control tool: sort.stress_icons	居民压力分类列表（sort.stress_icons）	l
 DFHack GUI Control tool: trackstop.rollers	滚轮设置（trackstop.rollers）	l
+DFHack GUI Design: Commit shape to the map	将形状应用到地图	l
+DFHack GUI Notification settings: Disabled	禁用	l
+DFHack GUI Notification settings: wildlife	野生动物（要塞）	l
+DFHack GUI Quickfort: Blueprint tiles: {d}	蓝图格数：{d}	l
+DFHack GUI Quickfort: Invalid tiles:   {d}	无效格数：{d}	l
+DFHack GUI Sitemap: Click on a name or hit	点击名称或按下	l
+DFHack GUI Sitemap: Nobody around. Spooky!	附近没有生物，令人毛骨悚然！	l
+DFHack GUI Teleport: Include citizen units	包含公民单位	l
+DFHack GUI Teleport: Include hostile units	包含敌对单位	l
+DFHack GUI Title: Load quickfort blueprint	加载 Quickfort 蓝图	l
 DFHack help: "--command [ <commandStrs> ]"	"--command [ <commandStrs> ]"	l
 DFHack help: "--granularity <granularity>"	"--granularity <granularity>"	l
 DFHack help: "-g", "--granularity <value>"	"-g", "--granularity <value>"	l
@@ -40101,11 +40212,18 @@ Conversation keyword: profession work job	职业 工作 职务	l
 Conversation keyword: prophecy prophesize	预言 作出预言	l
 Converting gathering blueprint to regular	将采集蓝图转为普通指定区域	wo
 Converting smoothing blueprint to regular	将打磨蓝图转为普通指定区域	wo
+DFHack GUI Autodump: Clear selected items	清除已选物品	l
 DFHack GUI Control tool: gui/notify.panel	要塞通知列表（gui/notify.panel）	l
 DFHack GUI Control tool: gui/rename.world	新世界改名（gui/rename.world）	l
 DFHack GUI Control tool: sort.workanimals	工作动物数量标注（sort.workanimals）	l
 DFHack GUI Control tool: spectate.tooltip	观战信息提示（spectate.tooltip）	l
 DFHack GUI Control tool: zone.pasturepond	牧场与池塘动物分配（zone.pasturepond）	l
+DFHack GUI Design: Next point offset: {d}	连接间隔：{d}	l
+DFHack GUI Design: Show alignment guides:	显示对齐辅助线：	l
+DFHack GUI Notification settings: Enabled	启用	l
+DFHack GUI Notification settings: injured	受伤居民	l
+DFHack GUI Quickfort: No blueprint loaded	尚未加载蓝图	l
+DFHack GUI Sitemap: caged merchant animal	被囚禁的商队动物	l
 DFHack help: "--death-threshold <months>"	"--death-threshold <months>"	l
 DFHack help: "--excludetypes [a|bfnstu0]"	"--excludetypes [a|bfnstu0]"	l
 DFHack help: "--location [ <x> <y> <z> ]"	"--location [ <x> <y> <z> ]"	l
@@ -41585,6 +41703,12 @@ DFHack GUI Control tool: notes.map_notes	地图注记（notes.map_notes）	l
 DFHack GUI Control tool: reaction-gloves	修复左右手套配对（reaction-gloves）	l
 DFHack GUI Control tool: sort.candidates	贵族任命搜索（sort.candidates）	l
 DFHack GUI Control tool: sort.conviction	定罪对象筛选（sort.conviction）	l
+DFHack GUI Design: Auto-commit on click:	点击自动应用：	l
+DFHack GUI Design: Commit mirror changes	应用镜像	l
+DFHack GUI Notification settings: Toggle	切换	l
+DFHack GUI Quickfort: Current blueprint:	当前蓝图：	l
+DFHack GUI Quickfort: Load new blueprint	加载新蓝图	l
+DFHack GUI Sitemap: the selected target.	选中的目标。	l
 DFHack help: "--checkInventoryEvery <n>"	"--checkInventoryEvery <n>"	l
 DFHack help: "-a", "--include-artifacts"	"-a", "--include-artifacts"	l
 DFHack help: "-m", "--material <string>"	"-m", "--material <string>"	l
@@ -43081,6 +43205,7 @@ Conversation keyword: scholar join work	学者 加入 工作	l
 Conversation keyword: surgeon join work	外科医师 加入 工作	l
 Conversation keyword: surroundings area	周边 地区	l
 Conversation prompt: What will you say?	你想说些什么？	l
+DFHack GUI Autodump: Undo destroy items	撤销物品销毁	l
 DFHack GUI Caption: Hit "A" to add one!	按 A 添加命令！	l
 DFHack GUI Caption: Send text to parent	将文字输入原界面	l
 DFHack GUI Control tool: craft-age-wear	有机制品自然磨损（craft-age-wear）	l
@@ -43093,7 +43218,11 @@ DFHack GUI Control tool: preserve-tombs	保留陵墓分配（preserve-tombs）	l
 DFHack GUI Control tool: stocks.overlay	库存便捷操作（stocks.overlay）	l
 DFHack GUI Control tool: suspendmanager	智能管理暂停工作（suspendmanager）	l
 DFHack GUI Control tool: zone.cagechain	笼子与锁链动物分配（zone.cagechain）	l
+DFHack GUI Design: Clear entire z-level	清除本层全部指定	l
+DFHack GUI Design: Mouse: {d}, {d}, {d}	鼠标：{d}, {d}, {d}	l
 DFHack GUI Input prompt: Enter command:	输入命令：	l
+DFHack GUI Sitemap: Unknown affiliation	所属势力不明	l
+DFHack GUI Title: Notification settings	通知设置	l
 DFHack help: "-f", "--include-friendly"	"-f", "--include-friendly"	l
 DFHack help: "-m", "--melt-masterworks"	"-m", "--melt-masterworks"	l
 DFHack help: "-o", "--outside <burrow>"	"-o", "--outside <burrow>"	l
@@ -44659,6 +44788,14 @@ DFHack GUI Control tool: fix/ownership	修复物品所有权（fix/ownership）	
 DFHack GUI Control tool: named-codices	显示书名（named-codices）	l
 DFHack GUI Control tool: orders.search	生产订单搜索（orders.search）	l
 DFHack GUI Control tool: partial-items	显示物品剩余百分比（partial-items）	l
+DFHack GUI Design: Line thickness: {d}	线宽：{d}	l
+DFHack GUI Design: Single level stair:	单层楼梯：	l
+DFHack GUI Design: Stop placing points	停止放置点	l
+DFHack GUI Mass remove: Affect planned	处理规划中	l
+DFHack GUI Mass remove: Cancel removal	取消移除	l
+DFHack GUI Mass remove: Constructions:	构筑物：	l
+DFHack GUI Teleport: Click name or hit	点击名称或按	l
+DFHack GUI Teleport: No selected units	未选择单位	l
 DFHack GUI Title: DFHack Control Panel	DFHack 控制面板	l
 DFHack help: "--command [ <command> ]"	"--command [ <command> ]"	l
 DFHack help: "--eraseClass <class id>"	"--eraseClass <class id>"	l
@@ -44715,7 +44852,7 @@ DFHack help: , -- updated in on_select	, -- 在 on_select 中更新	l
 DFHack help: -allEntities [true/false]	-allEntities [true/false]	l
 DFHack help: .. summary else summary =	.. 摘要其他摘要 =	l
 DFHack help: 2. it is sand or plaster.	2. 是沙子或石膏。	l
-DFHack help: :5: exceptionally trained	:5: exceptionally trained	l
+DFHack help: :5: exceptionally trained	:5: 训练出众	l
 DFHack help: An energetic poltergeist.	一个精力充沛的恶作剧者。	l
 DFHack help: Apply to entire level now	立即应用于整个级别	l
 DFHack help: Autocomplete ------------	自动补全	l
@@ -46323,6 +46460,16 @@ DFHack GUI Control tool: fix/wildlife	移出卡住的野生动物（fix/wildlife
 DFHack GUI Control tool: hotkeys.menu	DFHack 快捷菜单（hotkeys.menu）	l
 DFHack GUI Control tool: infinite-sky	无限天空层（infinite-sky）	l
 DFHack GUI Control tool: starvingdead	不死生物衰朽（starvingdead）	l
+DFHack GUI Design: Bottom Stair Type:	底层楼梯：	l
+DFHack GUI Design: Mirror across axis	沿轴镜像	l
+DFHack GUI Design: Mirror horizontal:	水平镜像：	l
+DFHack GUI Design: Next point offset:	连接间隔：	l
+DFHack GUI Design: Remove Designation	取消指定	l
+DFHack GUI Design: Second Curve Point	第二曲线控制点	l
+DFHack GUI Frame status: PAUSE FORCED	强制暂停	l
+DFHack GUI Quickfort: Double click or	双击或	l
+DFHack GUI Sitemap: caged fort animal	被囚禁的要塞动物	l
+DFHack GUI Sitemap: caged fort member	被囚禁的要塞居民	l
 DFHack help: " and loaded on startup.	"并在启动时加载。	l
 DFHack help: "--checkAttackEvery <n>"	"--checkAttackEvery <n>"	l
 DFHack help: "--position <x>,<y>,<z>"	"--position <x>,<y>,<z>"	l
@@ -47992,7 +48139,14 @@ DFHack GUI Control tool: deteriorate	物品自然腐朽（deteriorate）	l
 DFHack GUI Control tool: orders-sort	排序生产订单（orders-sort）	l
 DFHack GUI Control tool: pop-control	控制移民人数（pop-control）	l
 DFHack GUI Control tool: sort.places	场所总览搜索（sort.places）	l
+DFHack GUI Design: Total points: {d}	顶点数：{d}	l
 DFHack GUI Input prompt: Enter name:	输入名称：	l
+DFHack GUI Mass remove: Affect built	处理已建成	l
+DFHack GUI Quickfort: No description	没有描述	l
+DFHack GUI Quickfort: Shift click or	Shift 点击或	l
+DFHack GUI Quickfort: Undo blueprint	撤销蓝图	l
+DFHack GUI Teleport: Selected units:	已选单位：	l
+DFHack GUI Teleport: to zoom to unit	定位至该单位	l
 DFHack help: "--opposite <INTEREST>"	"--opposite <INTEREST>"	l
 DFHack help: "--severity <severity>"	"--severity <severity>"	l
 DFHack help: "--strength <strength>"	"--strength <strength>"	l
@@ -48071,7 +48225,7 @@ DFHack help: **caravan.tradeethics**	**商队.贸易道德**	l
 DFHack help: , pen=COLOR_LIGHTBLUE})	，笔=COLOR_LIGHTBLUE})	l
 DFHack help: -- Goto Position Button	-- 转到位置按钮	l
 DFHack help: -- at this point, so we	-- 此时，我们	l
-DFHack help: :6: masterfully trained	:6: masterfully trained	l
+DFHack help: :6: masterfully trained	:6: 训练大师级	l
 DFHack help: Adjust a unit's skills.	调整单位技能。	l
 DFHack help: An available minecart (	可用的矿车 (	l
 DFHack help: An in-game CP437 table.	游戏内的 CP437 字符表。	l
@@ -49759,6 +49913,14 @@ DFHack GUI Control tool: emigration	允许居民迁离（emigration）	l
 DFHack GUI Control tool: prioritize	提高重要工作优先级（prioritize）	l
 DFHack GUI Control tool: sort.world	世界神器搜索（sort.world）	l
 DFHack GUI Control tool: timestream	缓解后期帧率崩溃（timestream）	l
+DFHack GUI Design: Building filters	建造筛选条件	l
+DFHack GUI Design: Mirror diagonal:	对角镜像：	l
+DFHack GUI Design: Mirror vertical:	垂直镜像：	l
+DFHack GUI Design: Reinforced Walls	加固墙壁	l
+DFHack GUI Mass remove: Leave alone	不处理	l
+DFHack GUI Mass remove: Stockpiles:	储物堆：	l
+DFHack GUI Quickfort: Down z-levels	向下重复楼层	l
+DFHack GUI Sitemap: merchant animal	商队动物	l
 DFHack GUI Viewer status: No output	无输出	l
 DFHack help: "--markedfor <action>"	"--markedfor <action>"	l
 DFHack help: "--no-stringification"	"--no-stringification"	l
@@ -49829,7 +49991,7 @@ DFHack help: 0-7: set liquid amount	0-7：设置液体量	l
 DFHack help: 6: masterfully trained	6：训练有素	l
 DFHack help: : Hide processing info	: Hide processing info	l
 DFHack help: : Show processing info	: Show processing info	l
-DFHack help: :3: skillfully trained	:3: skillfully trained	l
+DFHack help: :3: skillfully trained	:3: 训练娴熟	l
 DFHack help: <flag_key> : <boolean>	<flag_key> : <boolean>	l
 DFHack help: >> / << toggle button.	>> / << 切换按钮。	l
 DFHack help: Allow immediate leaks:	允许立即泄漏：	l
@@ -51656,6 +51818,7 @@ Conversation keyword: state values	阐述 价值观	l
 Conversation keyword: surroundings	周边	l
 Conversation keyword: troublemaker	惹事精	l
 Conversation keyword: vengefulness	复仇心	l
+DFHack GUI Autodump: Destroy items	销毁物品	l
 DFHack GUI Caption: Capture output	显示输出	l
 DFHack GUI Caption: Delete command	删除命令	l
 DFHack GUI Control tool: autolabor	自动分配劳动（autolabor）	l
@@ -51667,6 +51830,17 @@ DFHack GUI Control tool: seedwatch	保护种子库存（seedwatch）	l
 DFHack GUI Control tool: sort.info	信息界面搜索与筛选（sort.info）	l
 DFHack GUI Control tool: sort.slab	纪念石板搜索与筛选（sort.slab）	l
 DFHack GUI Control tool: stockflow	按储物容量安排生产（stockflow）	l
+DFHack GUI Design: Line thickness:	线宽：	l
+DFHack GUI Design: Top stair type:	顶层楼梯：	l
+DFHack GUI Design: gui/design Help	形状绘制帮助	l
+DFHack GUI Mass remove: Buildings:	建筑：	l
+DFHack GUI Quickfort: Click or hit	点击或按	l
+DFHack GUI Quickfort: No transform	无变换	l
+DFHack GUI Sitemap: Shift-click or	按住 Shift 点击，或按下	l
+DFHack GUI Sitemap: caged friendly	被囚禁的友好生物	l
+DFHack GUI Sitemap: caged merchant	被囚禁的商人	l
+DFHack GUI Sitemap: caged wildlife	被囚禁的野生动物	l
+DFHack GUI Teleport: Deselect unit	取消选择该单位	l
 DFHack help: "--cmd [ <command> ]"	"--cmd [ <command> ]"	l
 DFHack help: "--contaminant <mat>"	"--contaminant <mat>"	l
 DFHack help: "--decay-rate <days>"	"--decay-rate <days>"	l
@@ -53651,6 +53825,11 @@ DFHack GUI Control tool: automilk	自动挤奶（automilk）	l
 DFHack GUI Control tool: autoslab	自动雕刻纪念石板（autoslab）	l
 DFHack GUI Control tool: dwarfvet	兽医治疗（dwarfvet）	l
 DFHack GUI Control tool: work-now	缩短工作间歇（work-now）	l
+DFHack GUI Quickfort: Add marker:	添加标记：	l
+DFHack GUI Quickfort: Up z-levels	向上重复楼层	l
+DFHack GUI Sitemap: caged hostile	被囚禁的敌对生物	l
+DFHack GUI Sitemap: caged invader	被囚禁的入侵者	l
+DFHack GUI Sitemap: caged visitor	被囚禁的访客	l
 DFHack help: "--duration <ticks>"	"--duration <ticks>"	l
 DFHack help: "--getfield <field>"	"--getfield <field>"	l
 DFHack help: "--markfor <action>"	"--markfor <action>"	l
@@ -53721,7 +53900,7 @@ DFHack help: -4 unfathomably weak	-4 弱得不可思议	l
 DFHack help: ..self.section_name)	..self.section_name)	l
 DFHack help: 0: No teleportation.	0：无瞬移。	l
 DFHack help: :-item <item token>:	:-item <item token>:	l
-DFHack help: :4: expertly trained	:4: expertly trained	l
+DFHack help: :4: expertly trained	:4: 训练精熟	l
 DFHack help: :deity <HISTFIG ID>:	:deity <HISTFIG ID>:	l
 DFHack help: A note on autohauler	关于汽车运输机的说明	l
 DFHack help: ANY_EDIBLE_CARNIVORE	ANY_EDIBLE_CARNIVORE	l
@@ -55480,6 +55659,13 @@ Converting to chopping blueprint	将砍伐指定区域转为蓝图	wo
 DFHack GUI Caption: Edit command	编辑命令	l
 DFHack GUI Caption: Name/Command	名称／命令	l
 DFHack GUI Control tool: combine	合并物品堆（combine）	l
+DFHack GUI Design: Cancel mirror	取消镜像	l
+DFHack GUI Design: Fortification	防御工事	l
+DFHack GUI Design: Priority: {d}	优先级：{d}	l
+DFHack GUI Design: Total points:	顶点数：	l
+DFHack GUI Quickfort: Blueprint:	蓝图标记：	l
+DFHack GUI Quickfort: No matches	没有匹配的蓝图	l
+DFHack GUI Quickfort: Transform:	变换：	l
 DFHack GUI Title: Delete command	删除命令	l
 DFHack help: "--alignto <value>"	"--alignto <value>"	l
 DFHack help: "--command [ ... ]"	"--command [ ... ]"	l
@@ -57377,8 +57563,22 @@ DFHack GUI Caption: Add command	添加命令	l
 DFHack GUI Control tool: hermit	隐士挑战（hermit）	l
 DFHack GUI Control tool: misery	增加居民痛苦（misery）	l
 DFHack GUI Control tool: tailor	自动补充新衣（tailor）	l
+DFHack GUI Design: Designation:	指定类型：	l
+DFHack GUI Design: Inner Tiles:	内部建造：	l
+DFHack GUI Design: Outer Tiles:	外缘建造：	l
+DFHack GUI Design: Spacing: {d}	间距：{d}	l
+DFHack GUI Quickfort: Damp dig:	潮湿挖掘：	l
+DFHack GUI Quickfort: Warm dig:	温热挖掘：	l
+DFHack GUI Quickfort: to apply.	应用蓝图。	l
+DFHack GUI Sitemap: fort animal	要塞动物	l
+DFHack GUI Sitemap: fort member	要塞居民	l
+DFHack GUI Teleport: (friendly)	（友好）	l
+DFHack GUI Teleport: (merchant)	（商人）	l
+DFHack GUI Teleport: (resident)	（居民）	l
+DFHack GUI Teleport: Clear list	清空列表	l
 DFHack GUI Title: Are you sure?	确认操作	l
 DFHack GUI Title: Quick Command	快捷命令	l
+DFHack GUI Title: Save reminder	保存提醒	l
 DFHack GUI Viewer action: Close	关闭	l
 DFHack help: "--group-by-world"	"--group-by-world"	l
 DFHack help: "--id <entity id>"	"--id <entity id>"	l
@@ -59459,6 +59659,16 @@ Conversation keyword: withdraw	撤离	l
 Converting mining to blueprint	将挖掘指定区域转为蓝图	wo
 Credits: Lead Audio Programmer	首席音频程序员	wl
 Credits: Lots of HTML/IT stuff	大量 HTML 与信息技术工作	wl
+DFHack GUI Design: Curve Point	曲线控制点	l
+DFHack GUI Design: Horizontal:	横向：	l
+DFHack GUI Mass remove: Remove	移除	l
+DFHack GUI Mass remove: Zones:	区域：	l
+DFHack GUI Quickfort: Filters:	筛选：	l
+DFHack GUI Quickfort: Library:	内置：	l
+DFHack GUI Sitemap: No matches	没有匹配项	l
+DFHack GUI Sitemap: to zoom to	以定位至	l
+DFHack GUI Teleport: (citizen)	（公民）	l
+DFHack GUI Teleport: (hostile)	（敌对）	l
 DFHack GUI Title: Edit command	编辑命令	l
 DFHack GUI Title: Edit setting	编辑设置	l
 DFHack help: "--caste <caste>"	"--caste <caste>"	l
@@ -61560,8 +61770,12 @@ Conversation keyword: welcome	欢迎	l
 Conversation keyword: writing	著作	l
 Credits: Bug Tracker Managers	问题追踪系统管理员	wl
 DFHack GUI Caption: Edit name	编辑名称	l
+DFHack GUI Mass remove: Mode:	模式：	l
+DFHack GUI Quickfort: Hidden:	隐藏项：	l
+DFHack GUI Quickfort: Repeat:	重复：	l
 DFHack GUI Title: Add command	添加命令	l
 DFHack GUI Title: CP437 table	CP437 字符表	l
+DFHack GUI Title: Mass Remove	批量移除	l
 DFHack help: "--emotion <id>"	"--emotion <id>"	l
 DFHack help: "--race <value>"	"--race <value>"	l
 DFHack help: "--straightOnly"	"--straightOnly"	l
@@ -61629,7 +61843,7 @@ DFHack help: -onDefendStr str	-onDefendStr 字符串	l
 DFHack help: -range [ x y z ]	-range [ x y z ]	l
 DFHack help: : Clear filters,	: Clear filters,	l
 DFHack help: : Severity Order	: Severity Order	l
-DFHack help: :2: well-trained	:2: well-trained	l
+DFHack help: :2: well-trained	:2: 训练良好	l
 DFHack help: ::continue:: end	::continue:: end	l
 DFHack help: :focus <NUMBER>:	:focus <NUMBER>:	l
 DFHack help: :level <NUMBER>:	:level <NUMBER>:	l
@@ -63485,6 +63699,15 @@ Credits: Initial Playtesting	早期试玩测试	wl
 Credits: Lead Sound Designer	首席声音设计师	wl
 Credits: Tarn and Zach Adams	Tarn and Zach Adams	wl
 Current top temple location:	当前等级最高的神殿地点：	wl
+DFHack GUI Design: Area: N/A	范围：无	l
+DFHack GUI Design: Main Axis	主轴	l
+DFHack GUI Design: On (even)	开启（偶数）	l
+DFHack GUI Design: Priority:	优先级：	l
+DFHack GUI Design: Rectangle	矩形	l
+DFHack GUI Design: Vertical:	纵向：	l
+DFHack GUI Sitemap: friendly	友好生物	l
+DFHack GUI Sitemap: merchant	商人	l
+DFHack GUI Sitemap: wildlife	野生动物	l
 DFHack GUI Viewer action: Ok	确定	l
 DFHack and its capabilities.	DFHack及其功能.	w
 DFHack help: "--asexualOnly"	"--asexualOnly"	l
@@ -65448,6 +65671,21 @@ Create a creature to begin.	请先创建一个生物。	l
 Creating {s} ({d} rejected)	正在生成{s}（已拒绝 {d} 次）	wtl
 Current guildhall location:	当前行会大厅地点：	wl
 Customize the squad's name.	自定义小队名称。	hj
+DFHack GUI Design: Building	建造	l
+DFHack GUI Design: Diagonal	对角线	l
+DFHack GUI Design: FreeForm	自由形状	l
+DFHack GUI Design: On (odd)	开启（奇数）	l
+DFHack GUI Design: Reverse:	反向：	l
+DFHack GUI Design: Spacing:	间距：	l
+DFHack GUI Quickfort: fliph	横向翻转	l
+DFHack GUI Quickfort: flipv	纵向翻转	l
+DFHack GUI Sitemap: Unknown	未知	l
+DFHack GUI Sitemap: hostile	敌对生物	l
+DFHack GUI Sitemap: invader	入侵者	l
+DFHack GUI Sitemap: visitor	访客	l
+DFHack GUI Teleport: (wild)	（野生）	l
+DFHack GUI Title: Quickfort	Quickfort 蓝图	l
+DFHack GUI Title: Save now?	现在保存？	l
 DFHack help: "--id <value>"	"--id <value>"	l
 DFHack help: "--nopointers"	"--nopointers"	l
 DFHack help: "--stockpiled"	"--stockpiled"	l
@@ -67457,7 +67695,18 @@ Credits: Alexandra Orlando	Alexandra Orlando	wl
 Credits: Patrick Schroeder	Patrick Schroeder	wl
 DFHack GUI Caption: Cancel	取消	l
 DFHack GUI Caption: Hotkey	快捷键	l
+DFHack GUI Design: Channel	挖沟	l
+DFHack GUI Design: Closed:	闭合：	l
+DFHack GUI Design: Ellipse	椭圆	l
+DFHack GUI Design: Engrave	雕刻	l
+DFHack GUI Design: Filled:	填充：	l
+DFHack GUI Design: Hollow:	空心：	l
+DFHack GUI Design: Invert:	反选：	l
+DFHack GUI Quickfort: Hide	隐藏	l
+DFHack GUI Quickfort: Show	显示	l
+DFHack GUI Title: Autodump	自动倾倒	l
 DFHack GUI Title: Set name	设置名称	l
+DFHack GUI Title: Teleport	单位传送	l
 DFHack help: "--age <num>"	"--age <num>"	l
 DFHack help: "--atReclaim"	"--atReclaim"	l
 DFHack help: "--debugdata"	"--debugdata"	l
@@ -67513,7 +67762,7 @@ DFHack help: .. search_key	.. 搜索键	l
 DFHack help: 15+ Legendary	15+ 传奇	l
 DFHack help: 2 very strong	2 非常强	l
 DFHack help: : Count items	: Count items	l
-DFHack help: :0: semi-wild	:0: semi-wild	l
+DFHack help: :0: semi-wild	:0: 半野生	l
 DFHack help: :lua !item.id	:lua !item.id	l
 DFHack help: <empty line>:	<empty line>：	l
 DFHack help: ANY_GOOD_FOOD	ANY_GOOD_FOOD	l
@@ -69296,6 +69545,15 @@ Conversation keyword: who	谁	l
 Conversation keyword: yes	是	l
 Corrupt Strange Mood: {d}	异常的怪异心情：{d1}	hPt
 Crawling around babbling!	胡言乱语地四处爬行！	hP
+DFHack GUI Design: Rotate	旋转	l
+DFHack GUI Design: Shape:	形状：	l
+DFHack GUI Design: Smooth	磨平	l
+DFHack GUI Design: Stairs	楼梯	l
+DFHack GUI Design: UpDown	上下楼梯	l
+DFHack GUI Quickfort: Off	关闭	l
+DFHack GUI Quickfort: ccw	逆时针旋转	l
+DFHack GUI Sitemap: caged	被囚禁的	l
+DFHack GUI Title: Sitemap	据点地图	l
 DFHack GUI Title: Success	完成	l
 DFHack help: "--brewable"	"--brewable"	l
 DFHack help: "--building"	"--building"	l
@@ -70962,6 +71220,17 @@ Copy output to clipboard	复制输出到剪贴板	w
 Credits: Commmunications	社区沟通	wl
 Credits: Theodorick Grau	Theodorick Grau	wl
 Crossbows, leather armor	十字弩（皮甲）	wli
+DFHack GUI Autodump: Off	关闭	l
+DFHack GUI Design: Area:	范围：	l
+DFHack GUI Design: Floor	地板	l
+DFHack GUI Design: Ramps	斜坡	l
+DFHack GUI Design: Reset	重置	l
+DFHack GUI Design: Walls	墙壁	l
+DFHack GUI Quickfort: No	关闭	l
+DFHack GUI Quickfort: On	开启	l
+DFHack GUI Quickfort: cw	顺时针旋转	l
+DFHack GUI Teleport: Off	关闭	l
+DFHack GUI Title: Design	形状绘制	l
 DFHack help: "--average"	"--average"	l
 DFHack help: "--by-type"	"--by-type"	l
 DFHack help: "--discard"	"--discard"	l
@@ -71030,7 +71299,7 @@ DFHack help: 1 iron pick	1个铁镐	l
 DFHack help: 100 ticks::	100 个刻度::	l
 DFHack help: 2 Very High	2 非常高	l
 DFHack help: 3 Competent	3 合格	l
-DFHack help: :1: trained	:1: trained	l
+DFHack help: :1: trained	:1: 已训练	l
 DFHack help: :need <ID>:	:need <ID>:	l
 DFHack help: ANY_CAN_ROT	ANY_CAN_ROT	l
 DFHack help: AddDuration	添加持续时间	l
@@ -72865,7 +73134,18 @@ Crossbow, leather armor	十字弩（皮甲）	wli
 Current amount: {d}/{d}	当前施肥量：{d}/{d}	wtli
 Cut raw glass into gems	将粗糙玻璃切割成宝石	wi
 Cut rough gems here to 	在此切割粗糙宝石以提高其价值，	w
+DFHack GUI Autodump: On	开启	l
 DFHack GUI Caption: Out	输出	l
+DFHack GUI Design: Add:	添加：	l
+DFHack GUI Design: Auto	自动	l
+DFHack GUI Design: Down	向下楼梯	l
+DFHack GUI Design: Flip	翻转	l
+DFHack GUI Design: Line	线条	l
+DFHack GUI Design: None	无	l
+DFHack GUI Design: Ramp	斜坡	l
+DFHack GUI Design: Rows	行列	l
+DFHack GUI Design: Star	星形	l
+DFHack GUI Teleport: On	开启	l
 DFHack Quickstart Guide	DFHack 快速入门指南	w
 DFHack help: "--active"	"--active"	l
 DFHack help: "--biOnly"	"--biOnly"	l
@@ -74782,6 +75062,9 @@ Credits: Simon Swerwer	Simon Swerwer	wl
 Credits: Svein Ove Aas	Svein Ove Aas	wl
 Credits: Victoria Tran	Victoria Tran	wl
 Crossbows, metal armor	十字弩（金属甲）	wli
+DFHack GUI Design: Dig	挖掘	l
+DFHack GUI Design: N/A	无	l
+DFHack GUI Design: Off	关闭	l
 DFHack help: "--block"	"--block"	l
 DFHack help: "--clear"	"--clear"	l
 DFHack help: "--cloth"	"--cloth"	l
@@ -76771,6 +77054,8 @@ Credits: Matthew Moss	Matthew Moss	wl
 Credits: Michal Madej	Michal Madej	wl
 Credits: Omar Dabbous	Omar Dabbous	wl
 Crossbow, metal armor	十字弩（金属甲）	wli
+DFHack GUI Design: On	开启	l
+DFHack GUI Design: Up	向上楼梯	l
 DFHack help: "--dorm"	"--dorm"	l
 DFHack help: "--drop"	"--drop"	l
 DFHack help: "--dumb"	"--dumb"	l
@@ -76830,9 +77115,9 @@ DFHack help: 11 Great	11 太棒了	l
 DFHack help: 3 mighty	3 强大	l
 DFHack help: 8 Expert	8 专家	l
 DFHack help: :-throw:	:-throw:	l
-DFHack help: :7: tame	:7: tame	l
-DFHack help: :8: wild	:8: wild	l
-DFHack help: :9: wild	:9: wild	l
+DFHack help: :7: tame	:7: 已驯服	l
+DFHack help: :8: wild	:8: 野生	l
+DFHack help: :9: wild	:9: 野生	l
 DFHack help: :remove:	:remove:	l
 DFHack help: :revert:	:revert:	l
 DFHack help: Actions:	行动：	l
@@ -107698,13 +107983,13 @@ Seek alliance	寻求结盟	wli
 Seek artifact	寻找造物	wi
 Seeks harmony	追求和睦	w
 Select color.	选择颜色。	hP
+Setting glass	设置玻璃	wli
+Setting plant	设置植物	wli
 She generally	她通常	l
 Shrine to {p}	供奉{p}的圣地	hPt
 Siege engines	攻城器械	wi
 Single-minded	专注投入	w
 Singular Noun	单数名词	w
-Setting glass	设置玻璃	wli
-Setting plant	设置植物	wli
 Skeweredglens	穿刺幽谷
 Skip tutorial	跳过教程	hq
 Skip tutorial	跳过教程	w
@@ -107714,13 +107999,13 @@ Small Profile	身形较小	hP
 Snow-covered 	雪覆	wi
 Spatial Sense	空间感知	wi
 Spears/Spikes	长矛/尖刺	wi
+Specify glass	指定玻璃	wli
+Specify plant	指定植物	wli
 Stay occupied	保持忙碌	w
 Stone Carvers	石雕师	wi
 Stone Carving	石雕	wi
 Stone Crafter	石艺师	wi
 Stone Hauling	搬运石头	wi
-Specify glass	指定玻璃	wli
-Specify plant	指定植物	wli
 Stonecrafters	石艺师	wi
 Stonecrafting	石艺	wi
 Stop deleting	停止删除	w

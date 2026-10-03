@@ -87,8 +87,12 @@ def deploy_runtime_data(directory: Path) -> None:
                  "adventure-target-translations.tsv",
                  "dfhack-help-translations.tsv", "dfhack-help-overrides.tsv",
                  "dfhack-help-command-overrides.tsv",
+                 "dfhack-output-core.tsv", "dfhack-output-translations.tsv",
+                 "dfhack-output-stonesense.tsv",
                  "procedural-terms.tsv", "procedural-word-senses.tsv"):
         install(runtime / name, (RUNTIME / name).read_bytes())
+    for name in ("dfhack-help.LICENSE", "lua-output.LICENSE"):
+        install(runtime / name, (ROOT / "third_party" / name).read_bytes())
     for source in sorted((RUNTIME / "rulesets").rglob("*.toml")):
         install(runtime / source.relative_to(RUNTIME), source.read_bytes())
 

@@ -4,6 +4,31 @@
 std::vector<SDL_Rect> dfhack_auxiliary_regions;
 std::vector<Match> dfhack_auxiliary_matches;
 {
+    // gui.paint_frame writes the brand seven columns before the bottom-right
+    // corner, including on titleless three-row notification panels. Reserve
+    // that native signature without requiring a full document-sized frame.
+    const auto signature_horizontal = [](unsigned char ch) {
+        return ch == 0xc4 || ch == 0xcd || ch == 0xc2 ||
+            ch == 0xcb || ch == 0xc1 || ch == 0xca;
+    };
+    const auto signature_vertical = [](unsigned char ch) {
+        return ch == 0xb3 || ch == 0xba || ch == 0xc3 ||
+            ch == 0xcc || ch == 0xb4 || ch == 0xb9;
+    };
+    for (int y = 1; y < gps_->dimy; ++y) {
+        const auto &row = dfhack_context_rows[y];
+        for (size_t at = row.find("DFHack"); at != std::string::npos;
+                at = row.find("DFHack", at + 6)) {
+            if (at == 0 || at + 7 >= row.size()) continue;
+            const auto corner = static_cast<unsigned char>(row[at + 7]);
+            if (!signature_horizontal(static_cast<unsigned char>(row[at - 1])) ||
+                    !signature_horizontal(static_cast<unsigned char>(row[at + 6])) ||
+                    (corner != 0xd9 && corner != 0xbc) ||
+                    !signature_vertical(static_cast<unsigned char>(
+                        dfhack_context_rows[y - 1][at + 7]))) continue;
+            dfhack_auxiliary_regions.push_back({static_cast<int>(at), y, 6, 1});
+        }
+    }
     const auto auxiliary_pixels = [&](const SDL_Rect &box) {
         const int tw = gps_->tile_pixel_x, th = gps_->tile_pixel_y;
         return SDL_Rect{(gps_->screen_pixel_x - gps_->dimx * tw) / 2 + box.x * tw,
@@ -33,15 +58,29 @@ std::vector<Match> dfhack_auxiliary_matches;
         auxiliary_literal(x, y, source, right, centered,
             "DFHack GUI " + std::string(role) + ": ");
     };
-    const auto auxiliary_body = [&](const SDL_Rect &box, int native_width, bool advfort) {
+    const auto auxiliary_body = [&](const SDL_Rect &box, int native_width, bool advfort,
+            bool command_output = false) {
         if (box.x < 0 || box.y < 0 || box.w <= 0 || box.h <= 0 ||
             box.x + box.w > gps_->dimx || box.y + box.h > gps_->dimy) return;
         dfhack_auxiliary_regions.push_back(box);
         std::vector<Match> paragraph;
+        const auto body_translation = [&](const std::vector<Match> &rows,
+                NativeParagraphViewport *viewport) -> std::optional<std::string> {
+            if (command_output) {
+                if (const auto catalog = g_dfhack_output_snapshot.load(std::memory_order_acquire))
+                    if (auto target = translate_dfhack_lever_output_rows(*catalog, rows,
+                            box.x, native_width)) {
+                        if (viewport) *viewport = {};
+                        return target;
+                    }
+                return translate_dfhack_output_rows(rows, native_width, viewport);
+            }
+            return translate_dfhack_help_rows(rows, native_width, viewport);
+        };
         const auto flush = [&]() {
             if (paragraph.empty()) return;
             NativeParagraphViewport viewport;
-            auto target = translate_dfhack_help_rows(paragraph, native_width, &viewport);
+            auto target = body_translation(paragraph, &viewport);
             // advfort's introduction contains a live SELECT key token. Match
             // its complete prose around that token and retain the actual key.
             if (!target && advfort) {
@@ -96,8 +135,7 @@ std::vector<Match> dfhack_auxiliary_matches;
                         std::vector<Match> rows(paragraph.begin() + start,
                             paragraph.begin() + start + count);
                         NativeParagraphViewport slice;
-                        const auto translation = translate_dfhack_help_rows(rows,
-                            native_width, &slice);
+                        const auto translation = body_translation(rows, &slice);
                         if (!translation) continue;
                         append(std::move(rows), *translation, slice);
                         start += count;
@@ -240,6 +278,13 @@ std::vector<Match> dfhack_auxiliary_matches;
                 "DFHack GUI Confirmation action: " + std::string(action)).has_value();
             const bool viewer = action_x >= 0 && exact_literal_translation(
                 "DFHack GUI Viewer action: " + std::string(action)).has_value();
+#include "dfhack_confirm_dialogs.inc"
+#include "dfhack_save_reminder.inc"
+#include "dfhack_input_monitor.inc"
+#include "dfhack_warn_stranded.inc"
+#include "dfhack_unretire_anyone.inc"
+#include "dfhack_tile_browser.inc"
+#include "dfhack_suspendmanager.inc"
             if (input && input_gap) {
                 dfhack_auxiliary_regions.push_back(*frame);
                 gui_literal(at, title_y, title, title_end, "Title", true);
@@ -259,8 +304,17 @@ std::vector<Match> dfhack_auxiliary_matches;
                 if (status) {
                     gui_literal(at, title_y, title, title_end, "Title", true);
                     append_gui_prompt(*status, left, right - 1);
+                } else {
+                    // Minimal launcher mode and command viewers use the same
+                    // output catalog as the launcher's scrollback, rather than
+                    // reserving every result as opaque user data.
+                    if (title == "DFHack Launcher")
+                        auxiliary_literal(at, title_y, title, title_end, true);
+                    else gui_literal(at, title_y, title, title_end, "Title", true);
+                    auxiliary_body({left, top, right - 1 - left, footer_y - 1 - top},
+                        right - 1 - left, false, true);
                 }
-                // Viewer titles and all other output are user/command data.
+                // Unmapped identifiers and values retain their native glyphs.
             }
         }
     }
@@ -458,6 +512,19 @@ std::vector<Match> dfhack_auxiliary_matches;
                 static_cast<int>(x + source.size()), "Caption");
     }
 #include "dfhack_control_panel.inc"
+#include "dfhack_finder_output.inc"
+#include "dfhack_embark_output.inc"
+#include "dfhack_autotraining_output.inc"
+#include "dfhack_autobutcher_output.inc"
+#include "dfhack_unit_info_output.inc"
+#include "dfhack_unit_overlays_output.inc"
+#include "dfhack_design.inc"
+#include "dfhack_sitemap.inc"
+#include "dfhack_autodump.inc"
+#include "dfhack_notification_settings.inc"
+#include "dfhack_mass_remove.inc"
+#include "dfhack_quickfort.inc"
+#include "dfhack_teleport.inc"
     // Ownership prevents generic rules from translating isolated help words
     // or key names. Unmapped source remains native until its complete entry
     // is supplied; no incomplete sentence is drawn or silently discarded.

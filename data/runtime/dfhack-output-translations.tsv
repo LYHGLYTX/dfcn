@@ -1,0 +1,2576 @@
+# DFHack runtime output catalog. Sources: installed hack/docs/docs/Tags.txt,
+# hack/lua/helpdb.lua and hack/scripts/*.lua (DFHack 53.16-r2).
+# Dedicated output scope; executable command names, flags, IDs and paths remain native.
+# source<TAB>Chinese<TAB>l. Templates use {s}/{d}, numbered captures in targets.
+# Common native DFHack errors and headers.
+DFHack output: Available tags:	可用标签：	l
+DFHack output: Available commands:	可用命令：	l
+DFHack output: Available plugins:	可用插件：	l
+DFHack output: Available scripts:	可用脚本：	l
+DFHack output: Usage:	用法：	l
+DFHack output: Usage	用法	l
+DFHack output: Examples:	示例：	l
+DFHack output: Options:	选项：	l
+DFHack output: Commands:	命令：	l
+DFHack output: Status:	状态：	l
+DFHack output: Error: {s}	错误：{s1}	l
+DFHack output: ERROR: {s}	错误：{s1}	l
+DFHack output: Warning: {s}	警告：{s1}	l
+DFHack output: WARNING: {s}	警告：{s1}	l
+DFHack output: World not loaded.	尚未载入世界。	l
+DFHack output: World not loaded!	尚未载入世界！	l
+DFHack output: World is not loaded.	尚未载入世界。	l
+DFHack output: Map is not loaded.	尚未载入地图。	l
+DFHack output: Map not loaded.	尚未载入地图。	l
+DFHack output: Map not loaded!	尚未载入地图！	l
+DFHack output: A world must be loaded.	需要先载入世界。	l
+DFHack output: A map must be loaded.	需要先载入地图。	l
+DFHack output: No unit selected	未选择单位	l
+DFHack output: No unit selected.	未选择单位。	l
+DFHack output: No unit selected!	未选择单位！	l
+DFHack output: No unit found.	未找到单位。	l
+DFHack output: No item selected.	未选择物品。	l
+DFHack output: No building selected.	未选择建筑。	l
+DFHack output: No job selected.	未选择任务。	l
+DFHack output: No stockpile selected.	未选择储物区。	l
+DFHack output: Invalid arguments.	参数无效。	l
+DFHack output: Invalid argument: {s}	参数无效：{s1}	l
+DFHack output: Invalid arguments: {s}	参数无效：{s1}	l
+DFHack output: Invalid unit ID.	单位 ID 无效。	l
+DFHack output: Invalid zone ID.	区域 ID 无效。	l
+DFHack output: Unknown command: {s}	未知命令：{s1}	l
+DFHack output: unknown command: {s}	未知命令：{s1}	l
+DFHack output: No such command: {s}	没有此命令：{s1}	l
+DFHack output: Unknown type: {s}	未知类型：{s1}	l
+DFHack output: Unknown state: {s}	未知状态：{s1}	l
+DFHack output: unrecognized command: "{s}"	无法识别的命令："{s1}"	l
+DFHack output: unrecognized category: "{s}"	无法识别的类别："{s1}"	l
+DFHack output: '{s}' is not a valid unit ID.	'{s1}' 不是有效的单位 ID。	l
+DFHack output: '{s}' is not a valid number.	'{s1}' 不是有效的数字。	l
+DFHack output: '{s}' is not a true or false value.	'{s1}' 不是 true 或 false。	l
+DFHack output: File '{s}' not found.	未找到文件 '{s1}'。	l
+DFHack output: Profile '{s}' not found	未找到配置档 '{s1}'	l
+DFHack output: Missing profile name.	缺少配置档名称。	l
+DFHack output: Missing rank value after '{s}'.	'{s1}' 后缺少等级值。	l
+DFHack output: Missing realized flag after '{s}'.	'{s1}' 后缺少是否已实现的标志。	l
+DFHack output: Missing level value after '{s}'.	'{s1}' 后缺少等级值。	l
+DFHack output: Missing tier value after '{s}'.	'{s1}' 后缺少层级值。	l
+DFHack output: A unit must be specified or selected.	必须指定或选择一个单位。	l
+DFHack output: Please select a unit or specify the --all option	请选择单位，或指定 --all 选项	l
+DFHack output: Please select a stockpile.	请选择储物区。	l
+DFHack output: Please select a container, building, stockpile, or tile with a list of items.	请选择容器、建筑、储物区，或包含物品列表的格子。	l
+DFHack output: Unsupported context	当前界面不支持此操作	l
+DFHack output: This script requires the game to be in fortress mode.	此脚本需要处于要塞模式。	l
+DFHack output: frequency must be greater than 0	执行频率必须大于 0	l
+DFHack output: clamping value to 800,000	将数值限制为 800,000	l
+# tags: all installed category descriptions and their combined two-column rows.
+DFHack output: Tools that are useful while in adventure mode.	冒险模式下使用的工具。	l
+DFHack output: Tools that you use to run DFHack commands or interact with the DFHack or DF system.	执行 DFHack 命令，或与 DFHack、游戏系统交互的工具。	l
+DFHack output: Tools that are useful while on the fort embark screen or while creating an adventurer.	要塞出发准备或创建冒险者时使用的工具。	l
+DFHack output: Tools that are useful while in fort mode.	要塞模式下使用的工具。	l
+DFHack output: Tools that are useful while in legends mode.	传奇模式下使用的工具。	l
+DFHack output: Tools which give the player god-like powers or the ability to access information the game intentionally keeps hidden. Players that do not wish to see these tools can hide them in the "Preferences" tab of gui/control-panel.	赋予玩家神一般的能力，或查看游戏刻意隐藏的信息。不想看到这些工具的玩家，可以在 gui/control-panel 的“偏好设置”页中隐藏它们。	l
+DFHack output: Tools that run in the background and automatically manage routine, toilsome aspects of your fortress.	在后台自动处理要塞日常事务，减少繁琐操作的工具。	l
+DFHack output: Tools that fix specific bugs, either permanently or on-demand.	持续修复特定错误，或在需要时执行修复的工具。	l
+DFHack output: Tools that help you with fort layout.	帮助规划要塞布局的工具。	l
+DFHack output: Tools that are useful when debugging or developing mods.	调试或开发模组时使用的工具。	l
+DFHack output: Tools that help you prevent impact to your FPS.	帮助减少帧率下降的工具。	l
+DFHack output: Tools that introduce new gameplay elements.	添加新玩法的工具。	l
+DFHack output: Tools that let you view information that is otherwise difficult to find.	查看难以直接找到的信息的工具。	l
+DFHack output: Tools that help you perform common tasks quickly and easily.	快速、方便地完成常用操作的工具。	l
+DFHack output: Tools that interact with animals.	管理动物的工具。	l
+DFHack output: Tools that interact with buildings and furniture.	管理建筑和家具的工具。	l
+DFHack output: Tools that interact with game graphics.	调整游戏图形的工具。	l
+DFHack output: Tools that interact with or extend the DF user interface.	操作或扩展游戏界面的工具。	l
+DFHack output: Tools that interact with in-game items.	管理游戏物品的工具。	l
+DFHack output: Tools that interact with jobs.	管理任务的工具。	l
+DFHack output: Tools that deal with labor assignment.	管理劳动分配的工具。	l
+DFHack output: Tools that interact with the game map.	操作游戏地图的工具。	l
+DFHack output: Tools that interact with the military.	管理军队的工具。	l
+DFHack output: Tools that interact with grass, trees, shrubs, and crops.	管理草、树木、灌木和农作物的工具。	l
+DFHack output: Tools that interact with stockpiles.	管理储物区的工具。	l
+DFHack output: Tools that interact with units.	管理单位的工具。	l
+DFHack output: Tools that interact with workorders.	管理工作订单的工具。	l
+DFHack output: Tools that are not yet available for the current release.	当前版本尚不可用的工具。	l
+# adaptation, animal-control, armoks-blessing, assign-*, autofish, autocheese.
+DFHack output: {s} has changed from an adaptation level of {d} to {d}	{s1} 的适应等级从 {d1} 改为 {d2}	l
+DFHack output: Invalid race: {s}	种族无效：{s1}	l
+DFHack output: total: {d}	总计：{d1}	l
+DFHack output: Adjusting {s}	正在调整 {s1}	l
+DFHack output: Adjusting current value for {s} of {d} to the value of {d}	将 {s1} 的当前数值从 {d1} 调整为 {d2}	l
+DFHack output: Adjusting current value for {s} of {d} to max value of {d}	将 {s1} 的当前数值从 {d1} 调整为最大值 {d2}	l
+DFHack output: Preference #{d}:	偏好 #{d1}：	l
+DFHack output: autocheese: Skipping farmer's workshop with unavailable master	autocheese：跳过主管无法工作的农民工坊	l
+DFHack output: autocheese: no Farmer's Workshop available	autocheese：没有可用的农民工坊	l
+DFHack output: autocheese: no cheesemaker available	autocheese：没有可用的奶酪工	l
+DFHack output: autocheese: dispatching cheesemaking job for {s} ({d} milk) to {s}	autocheese：将 {s1}（{d1} 份奶）的制酪任务分配给 {s2}	l
+DFHack output: autofish: Re-enabling fishing, fallen below minimum.	autofish：鱼的数量低于下限，重新允许捕鱼。	l
+DFHack output: autofish: Disabling fishing, reached desired quota.	autofish：鱼的数量已达到目标，停止捕鱼。	l
+DFHack output: autofish is currently enabled.	autofish 当前已启用。	l
+DFHack output: autofish is currently disabled.	autofish 当前已停用。	l
+DFHack output: Stopping at {s} raw fish.	生鱼达到 {s1} 时停止。	l
+DFHack output: Restarting at {s} raw fish.	生鱼降至 {s1} 时恢复。	l
+DFHack output: Stopping at {s} prepared fish.	已处理的鱼达到 {s1} 时停止。	l
+DFHack output: Restarting at {s} prepared fish.	已处理的鱼降至 {s1} 时恢复。	l
+DFHack output: Currently allowing fishing.	当前允许捕鱼。	l
+DFHack output: Currently not allowing fishing.	当前禁止捕鱼。	l
+DFHack output: autofish needs a loaded fortress to work	autofish 需要先载入要塞	l
+DFHack output: not enough unique names in dfhack-config/autonick.txt	dfhack-config/autonick.txt 中不同的名字不够用	l
+DFHack output: gave nicknames to {s} dwarves.	已为 {s1} 名矮人起昵称。	l
+# minecarts, construction, caravans, pregnancies, smoke, webs and dance.
+DFHack output: No minecarts available! Please build some.	没有可用的矿车！请先制作矿车。	l
+DFHack output: No hauling routes defined.	尚未设置搬运路线。	l
+DFHack output: Assigned a minecart to route {s}.	已为路线 {s1} 分配矿车。	l
+DFHack output: Route {s} already has a minecart assigned.	路线 {s1} 已分配矿车。	l
+DFHack output: route id not found: {s}	未找到路线 ID：{s1}	l
+DFHack output: Found {d} route:	找到 {d1} 条路线：	l
+DFHack output: Found {d} routes:	找到 {d1} 条路线：	l
+DFHack output: route id minecart? has stops? route name	路线 ID 有矿车？有停靠点？路线名称	l
+DFHack output: You have {d} unassigned minecart.	当前有 {d1} 辆尚未分配的矿车。	l
+DFHack output: You have {d} unassigned minecarts.	当前有 {d1} 辆尚未分配的矿车。	l
+DFHack output: Skipped {d} suspended building	已跳过 {d1} 座暂停施工的建筑	l
+DFHack output: Skipped {d} suspended buildings	已跳过 {d1} 座暂停施工的建筑	l
+DFHack output: Skipped {d} building with pending items	已跳过 {d1} 座尚在等待物品的建筑	l
+DFHack output: Skipped {d} buildings with pending items	已跳过 {d1} 座尚在等待物品的建筑	l
+DFHack output: Skipped {d} building out of processing range	已跳过处理范围外的 {d1} 座建筑	l
+DFHack output: Skipped {d} buildings out of processing range	已跳过处理范围外的 {d1} 座建筑	l
+DFHack output: Completed {d} construction job	已完成 {d1} 项建造任务	l
+DFHack output: Completed {d} construction jobs	已完成 {d1} 项建造任务	l
+DFHack output: Created {s} tomb(s).	已创建 {s1} 处墓区。	l
+DFHack output: Broke up {d} dance(s)	已结束 {d1} 场舞蹈	l
+DFHack output: invalid number of days: {s}	天数无效：{s1}	l
+DFHack output: {d} day(s) remaining	剩余 {d1} 天	l
+DFHack output: {d}: {s} caravan from {s}	{d1}：来自 {s2} 的 {s1} 商队	l
+DFHack output: Reconnecting disconnected pack animals...	正在重新连接脱离商队的驮畜……	l
+DFHack output: All pack animals reconnected.	所有驮畜已重新连接。	l
+DFHack output: No disconnected pack animals found.	未找到脱离商队的驮畜。	l
+DFHack output: Type Male # Female #	种类 雄性数量 雌性数量	l
+DFHack output: {d} pregnancies accelerated.	已加速 {d1} 次妊娠。	l
+DFHack output: {d} pregnancies created.	已使 {d1} 只动物怀孕。	l
+DFHack output: No creatures matched.	没有匹配的生物。	l
+DFHack output: Total creatures checked: {d}	已处理生物总数：{d1}	l
+DFHack output: {d} smoke flows removed.	已清除 {d1} 处烟雾。	l
+DFHack output: You have specified both --unitsOnly and --websOnly. These cannot be used together.	同时指定了 --unitsOnly 和 --websOnly。这两个选项不能同时使用。	l
+DFHack output: No webs detected!	未发现蛛网！	l
+DFHack output: No captured units detected!	未发现被蛛网困住的单位！	l
+DFHack output: Removed {d} web!	已清除 {d1} 张蛛网！	l
+DFHack output: Removed {d} webs!	已清除 {d1} 张蛛网！	l
+DFHack output: Freed {d} unit!	已解救 {d1} 个单位！	l
+DFHack output: Freed {d} units!	已解救 {d1} 个单位！	l
+# control-panel, confirm, combine and deteriorate.
+DFHack output: autostart enabled: {s} (default: {s})	自动启动已启用：{s1}（默认：{s2}）	l
+DFHack output: currently enabled: {s}	当前已启用：{s1}	l
+DFHack output: current: {s} (default: {s})	当前：{s1}（默认：{s2}）	l
+DFHack output: minimum: {s}	最小值：{s1}	l
+DFHack output: must have a loaded fortress to enable {s}	需要载入要塞才能启用 {s1}	l
+DFHack output: Enabled {s}	已启用 {s1}	l
+DFHack output: Disabled {s}	已停用 {s1}	l
+DFHack output: Enabled autostart for: {s}	已为以下命令启用自动启动：{s1}	l
+DFHack output: Disabled autostart for: {s}	已为以下命令停用自动启动：{s1}	l
+DFHack output: autostart command or index not found: "{s}"	未找到自动启动命令或序号："{s1}"	l
+DFHack output: preference name not found: "{s}"	未找到偏好设置名称："{s1}"	l
+DFHack output: Available confirmation prompts:	可用的确认提示：	l
+DFHack output: confirmation prompt id not found: {s}	未找到确认提示 ID：{s1}	l
+DFHack output: Emptying {s}	正在清空 {s1}	l
+DFHack output: {s} was skipped (use --force to override)	已跳过 {s1}（使用 --force 可强制处理）	l
+DFHack output: All stacks already optimally combined.	所有堆叠都已合并到最佳状态。	l
+DFHack output: Stockpile(all): {d} found	储物区（全部）：找到 {d1} 处	l
+DFHack output: Stockpile(here): {s} <{d}> #items:{d}	储物区（此处）：{s1} <{d1}> 物品数量：{d2}	l
+DFHack output: Expected: comma separated list of types	需要以逗号分隔的类型列表	l
+DFHack output: Expected: only one value for {s}	{s1} 只能指定一个值	l
+DFHack output: combine needs a loaded fortress map to work	combine 需要先载入要塞地图	l
+DFHack output: deteriorate: {s} crumbles away to dust	deteriorate：{s1} 已崩解成尘土	l
+DFHack output: no categories specified	未指定类别	l
+DFHack output: deteriorate is enabled	deteriorate 已启用	l
+DFHack output: deteriorate is disabled	deteriorate 已停用	l
+DFHack output: Deteriorated {d} item	已使 {d1} 件物品腐坏	l
+DFHack output: Deteriorated {d} items	已使 {d1} 件物品腐坏	l
+DFHack output: emigration needs a loaded fortress map to work	emigration 需要先载入要塞地图	l
+DFHack output: emigration is enabled	emigration 已启用	l
+DFHack output: emigration is not enabled	emigration 未启用	l
+DFHack output: set hardness value for {s} to {d}	已将 {s1} 的战斗磨炼值设为 {d1}	l
+DFHack output: Couldn't find unit. If you don't want to target a specific unit, use --all or --citizens.	未找到单位。如果无需指定具体单位，可使用 --all 或 --citizens。	l
+DFHack output: --citizens requires fortress mode	--citizens 需要处于要塞模式	l
+# embark, deep-embark, entomb.
+DFHack output: Must be called on the "Prepare carefully" screen, "Dwarves" tab	必须在“仔细准备”界面的“矮人”页中执行	l
+DFHack output: Cavern type not specified!	未指定洞穴类型！	l
+DFHack output: Insufficient space at {s}	{s1} 处的空间不足	l
+DFHack output: Cleared settings; now embarking normally.	已清除设置；现在将正常出发。	l
+DFHack output: Depth not specified! Enter "help deep-embark" for more information.	未指定深度！输入 "help deep-embark" 可查看详细说明。	l
+DFHack output: Invalid depth: {s}	深度无效：{s1}	l
+DFHack output: Embarking at: {s}	出发深度：{s1}	l
+DFHack output: No vermin found with name: {s}	未找到名称为 {s1} 的小动物	l
+DFHack output: Selected item is not a corpse or body part.	选中的物品不是尸体或身体部位。	l
+DFHack output: Unit already has an assigned tomb zone.	此单位已分配墓区。	l
+DFHack output: Specified tomb zone is already assigned to a different unit.	指定的墓区已经分配给其他单位。	l
+DFHack output: No unassigned tomb zones are available.	没有尚未分配的墓区。	l
+DFHack output: No item selected or unit specified.	未选择物品，也未指定单位。	l
+DFHack output: Burial items cannot be teleported and tasked for hauling simultaneously.	不能同时传送遗体物品和为其安排搬运任务。	l
+DFHack output: Unit is already completely interred in a tomb zone.	此单位已经完整安葬在墓区中。	l
+DFHack output: Unable to move burial item(s);	无法移动遗体物品；	l
+DFHack output: ...no coffin in assigned tomb zone.	……分配的墓区中没有棺材。	l
+# dwarf-op, exportlegends, exterminate and feature.
+DFHack output: Debug info [ON]	调试信息［开启］	l
+DFHack output: Previous session save data found. [{s}]	找到上次保存的会话数据。[{s1}]	l
+DFHack output: No session data found. All dwarves will be treated as non-optimized.	未找到会话数据。所有矮人都将视为尚未优化。	l
+DFHack output: Existing session data found. [{s}]	找到现有会话数据。[{s1}]	l
+DFHack output: Deleting {s}	正在删除 {s1}	l
+DFHack output: Could not find skill: {s}	未找到技能：{s1}	l
+DFHack output: Found a job!	找到任务！	l
+DFHack output: :WARNING: No job found, that is bad?!	警告：未找到任务，出现问题了！	l
+DFHack output: Clearing loaded dwf data for dwf id: {s}	清除已载入的矮人数据，矮人 ID：{s1}	l
+DFHack output: :WARNING: ZeroDwarf(dwf) - dwf was zeroed, but had never been optimized before	警告：ZeroDwarf(dwf) 已重置此前从未优化过的矮人	l
+DFHack output: Loading persistent data..	正在载入持久数据……	l
+DFHack output: OpData, job counts	OpData，任务数量	l
+DFHack output: Data load complete.	数据载入完成。	l
+DFHack output: Calculating wave enumerations..	正在计算移民批次……	l
+DFHack output: Done calculating.	计算完成。	l
+DFHack output: No dorfs were harmed in the building of this help screen.	编写这个帮助界面时，没有矮人受到伤害。	l
+DFHack output: dwarf-op script	dwarf-op 脚本	l
+DFHack output: To use this script, you need to select a subset of your dwarves. Then run commands on those dwarves.	使用此脚本时，先选出部分矮人，再对他们执行命令。	l
+DFHack output: Active Units Population: {s}	活跃单位数量：{s1}	l
+DFHack output: Dwarf Population: {s}	矮人人口：{s1}	l
+DFHack output: Work Force: {s}	劳动力：{s1}	l
+DFHack output: Existing Optimized Dwarves: {s}	已优化的矮人：{s1}	l
+DFHack output: Selected Dwarves: {s}	已选矮人：{s1}	l
+DFHack output: Resetting selected dwarves..	正在重置已选矮人……	l
+DFHack output: Optimizing selected dwarves..	正在优化已选矮人……	l
+DFHack output: Rerolling selected dwarves..	正在重新随机生成已选矮人的属性……	l
+DFHack output: Cleaning skills list of selected dwarves..	正在清理已选矮人的技能列表……	l
+DFHack output: Applying jobs:{s}, to selected dwarves	将任务 {s1} 应用于已选矮人	l
+DFHack output: Applying professions:{s}, to selected dwarves	将职业 {s1} 应用于已选矮人	l
+DFHack output: Applying types:{s}, to selected dwarves	将类型 {s1} 应用于已选矮人	l
+DFHack output: {s} dwarves affected.	已影响 {s1} 名矮人。	l
+DFHack output: It looks like you may have entered an invalid combination of arguments. Check -help or report a bug.	输入的参数组合可能无效。请查看 -help，或报告此问题。	l
+DFHack output: Invalid number!	数字无效！	l
+DFHack output: This script can only be used on the embark screen!	此脚本只能在出发准备界面使用！	l
+DFHack output: could not open file: {s}	无法打开文件：{s1}	l
+DFHack output: Done exporting population data to: {s}	人口数据已导出至：{s1}	l
+DFHack output: Done exporting world history to: {s}	世界历史已导出至：{s1}	l
+DFHack output: Done exporting world map metadata to: {s}	世界地图元数据已导出至：{s1}	l
+DFHack output: Some elements could not be interpreted correctly because they were not simple elements.	部分元素并非简单元素，因此未能正确解析。	l
+DFHack output: These elements are reported above. Please notify the DFHack community of these value pairs.	上方列出了这些元素。请向 DFHack 社区报告这些值对。	l
+DFHack output: Note that these issues have not invalidated the XML file: it ought to still be usable.	这些问题不会使 XML 文件失效：该文件应仍可使用。	l
+DFHack output: Done exporting extended legends data to: {s}	扩展传奇数据已导出至：{s1}	l
+DFHack output: exportlegends already in progress	exportlegends 已在执行	l
+DFHack output: exportlegends must be run from the main legends view	exportlegends 必须在传奇模式主界面运行	l
+DFHack output: This script requires a fortress map to be loaded	此脚本需要先载入要塞地图	l
+DFHack output: Select a unit and run the script again.	需要选中单位后才能执行此脚本。	l
+DFHack output: Unit exterminated.	单位已消灭。	l
+DFHack output: No undead found on the map.	地图上没有亡灵。	l
+DFHack output: No creatures of this race on the map ({s}).	地图上没有此种族的生物（{s1}）。	l
+DFHack output: Invalid caste: {s}	种姓无效：{s1}	l
+DFHack output: Exterminated {s} {s}.	已消灭 {s1} 个 {s2}。	l
+DFHack output: Select a target, place the keyboard cursor, or specify --all to extinguish everything on the map.	需要选中目标、启用键盘光标，或指定 --all 才能熄灭地图上的所有火焰。	l
+DFHack output: Invalid feature ID	地形特征 ID 无效	l
+DFHack output: Enabled magma furnaces.	已启用岩浆熔炉。	l
+DFHack output: Could not find a magma-bearing feature.	未找到含有岩浆的地形特征。	l
+DFHack output: Changed {s} creatures.	已修改 {s1} 个生物。	l
+DFHack output: Unrecognised first argument: {s}. Aborting.	无法识别第一个参数：{s1}。已中止。	l
+DFHack output: Changed selected creature.	已修改选中的生物。	l
+DFHack output: Creature not found. Check spelling.	未找到生物。请核对拼写。	l
+DFHack output: Unrecognised optional argument. Aborting	无法识别可选参数。已中止	l
+DFHack output: Total Fixed: {s}	修复总数：{s1}	l
+DFHack output: No forbidden items found on the map.	地图上没有被禁用的物品。	l
+DFHack output: Forbidden items on the map by type:	地图上被禁用的物品，按类型分类：	l
+DFHack output: TYPE COUNT	类型 数量	l
+DFHack output: TOTAL {s}	总计 {s1}	l
+DFHack output: Forbidding all items on the map...	正在禁用地图上的所有物品……	l
+DFHack output: Forbidding all unreachable items on the map...	正在禁用地图上无法到达的所有物品……	l
+DFHack output: Forbade {s} items, you can unforbid them by running `unforbid all`	已禁用 {s1} 件物品，可运行 `unforbid all` 解除禁用	l
+DFHack output: missing event type	缺少事件类型	l
+DFHack output: unknown event type: {s}	未知事件类型：{s1}	l
+DFHack output: Event type: FeatureAttack is not currently supported	当前不支持 FeatureAttack 事件类型	l
+DFHack output: unable to find civilization: {s}	未找到文明：{s1}	l
+DFHack output: Invalid usage: No unit selected and --all argument not given.	用法无效：未选中单位，也未指定 --all 参数。	l
+# full-heal, geld, growcrops, husbandry, idle-crafting and instruments.
+DFHack output: Resurrecting {s}	正在复活 {s1}	l
+DFHack output: Invalid unit ID: {s}	单位 ID 无效：{s1}	l
+DFHack output: This corpse can no longer be resurrected.	此尸体已无法复活。	l
+DFHack output: Please select a unit or corpse, or specify its ID via the -unit argument.	需要选中单位或尸体，或通过 -unit 参数指定其 ID。	l
+DFHack output: Please select a unit in the UI	需要在界面中选中单位	l
+DFHack output: Please select a unit in the UI.	需要在界面中选中单位。	l
+DFHack output: Total not shown: {s}	未显示的总数：{s1}	l
+DFHack output: Invalid unit ID provided.	提供的单位 ID 无效。	l
+DFHack output: Invalid unit selection.	选中的单位无效。	l
+DFHack output: Cannot geld female animals.	不能阉割雌性动物。	l
+DFHack output: Could not find a geldable body part.	未找到可以阉割的身体部位。	l
+DFHack output: Unit {s} gelded.	已阉割单位 {s1}。	l
+DFHack output: Failed to geld unit {s}.	无法阉割单位 {s1}。	l
+DFHack output: Unit {s} ungelded.	已恢复单位 {s1} 的生殖能力。	l
+DFHack output: Failed to ungeld unit {s}.	无法恢复单位 {s1} 的生殖能力。	l
+DFHack output: Unit {s} is already gelded.	单位 {s1} 已经被阉割。	l
+DFHack output: Unit {s} is already ungelded.	单位 {s1} 尚未被阉割。	l
+DFHack output: This script must be used in adventure mode	此脚本必须在冒险模式使用	l
+DFHack output: invalid plant material {s}	植物材料无效：{s1}	l
+DFHack output: Grew {s} {s}	已使 {s1} 株 {s2} 成熟	l
+DFHack output: hermit is currently enabled.	hermit 当前已启用。	l
+DFHack output: hermit is currently disabled.	hermit 当前已停用。	l
+DFHack output: hermit needs a loaded fortress to work	hermit 需要先载入要塞	l
+DFHack output: Select a location by placing the cursor	需要用光标指定位置	l
+DFHack output: hide-tutorials needs a loaded fortress or adventure map to work	hide-tutorials 需要先载入要塞或冒险地图	l
+DFHack output: husbandry is enabled	husbandry 已启用	l
+DFHack output: husbandry is not enabled	husbandry 未启用	l
+DFHack output: including roaming animals	包含游荡动物	l
+DFHack output: ignoring roaming animals	忽略游荡动物	l
+DFHack output: not milking/shearing animals inside pastures without workshops	不为没有工坊的牧场中的动物挤奶或剪毛	l
+DFHack output: unrecognized option	无法识别的选项	l
+DFHack output: idle-crafting: profile allows neither bone carving, stonecrafting, nor clothesmaking	idle-crafting：工坊设置既不允许骨雕，也不允许石雕或制衣	l
+DFHack output: idle-crafting: workshop has no usable materials in linked stockpiles	idle-crafting：关联的储物区中没有工坊可用的材料	l
+DFHack output: idle-crafting: assigned crafting job to {s}	idle-crafting：已将制作任务分配给 {s1}	l
+DFHack output: this tool requires a loaded fort	此工具需要先载入要塞	l
+DFHack output: This tool is enabled by permitting idle crafting at a Craftsdarf's workshop	在工匠工坊中允许闲暇制作，即可启用此工具	l
+DFHack output: Fulfillment levels for "craft item" needs	“制作物品”需求的满足程度	l
+DFHack output: Script is enabled with {s} workshops configured for idle crafting	脚本已启用；{s1} 座工坊已设置闲暇制作	l
+DFHack output: Script is disabled with {s} workshops configured for idle crafting	脚本已停用；{s1} 座工坊已设置闲暇制作	l
+DFHack output: The thresholds for "craft item" needs are {s}	“制作物品”需求的阈值为 {s1}	l
+DFHack output: Will only assign crafting jobs to happy dwarves with strong needs	仅向需求强烈的快乐矮人分配制作任务	l
+DFHack output: Will treat happy units like all other units	对快乐单位与其他单位采用相同处理方式	l
+DFHack output: Thresholds for "craft item" needs set to {s}	“制作物品”需求的阈值已设为 {s1}	l
+DFHack output: immortal-cravings: {s} is getting a drink	immortal-cravings：{s1} 正在找饮料	l
+DFHack output: immortal-cravings: {s} is getting something to eat	immortal-cravings：{s1} 正在找食物	l
+DFHack output: Could not write to install-info.txt.	无法写入 install-info.txt。	l
+DFHack output: Copy the above text instead.	请改为复制上方的文本。	l
+DFHack output: Saved to:	已保存至：	l
+DFHack output: Could not find instrument {s}	未找到乐器 {s1}	l
+DFHack output: Warning: Could not find reactions for all instrument pieces	警告：未能找到所有乐器部件对应的生产配方	l
+DFHack output: Created {s} work orders	已创建 {s1} 个工作订单	l
+DFHack output: invalid material category	材料类别无效	l
+DFHack output: {s} items matched the filter options	{s1} 件物品符合筛选条件	l
+DFHack output: {s} items would be modified	将修改 {s1} 件物品	l
+DFHack output: {s} items were modified	已修改 {s1} 件物品	l
+DFHack output: unkown flag "{s}"	未知标志 "{s1}"	l
+DFHack output: burrow {s} not found	未找到洞穴区 {s1}	l
+DFHack output: main action not recognized	无法识别主要操作	l
+# justice, adventure tools, names and basic selection errors.
+DFHack output: {s} (id: {s}): serving a sentence of {s} day(s)	{s1}（ID：{s2}）：正在服刑，刑期 {s3} 天	l
+DFHack output: No criminals currently serving sentences.	当前没有罪犯在服刑。	l
+DFHack output: Unit is not currently serving a sentence!	此单位当前并未服刑！	l
+DFHack output: No unit with id {s}	没有 ID 为 {s1} 的单位	l
+DFHack output: Unrecognised command: {s}	无法识别的命令：{s1}	l
+DFHack output: Must be used in adventurer mode or the arena!	必须在冒险模式或竞技场使用！	l
+DFHack output: No cursor located! You would have slammed into the ground and exploded.	未找到光标！这会使你猛撞地面并爆炸。	l
+DFHack output: Can't find lever with ID, or no lever selected	未找到指定 ID 的拉杆，或尚未选中拉杆	l
+DFHack output: This script requires a world to be loaded.	此脚本需要先载入世界。	l
+DFHack output: This script can only be used in adventure mode!	此脚本只能在冒险模式使用！	l
+DFHack output: Your adventurer hasn't died yet!	你的冒险者还没有死亡！	l
+DFHack output: Killer not found!	未找到凶手！	l
+DFHack output: Your slayer, {s} is dead!	杀死你的 {s1} 已经死亡！	l
+DFHack output: Agreement with unknown org	与未知组织的协议	l
+DFHack output: argument ``{s}`` not supported	不支持参数 ``{s1}``	l
+DFHack output: Wave {s} consisted of {s} unit(s) and arrived in {s}	第 {s1} 批移民共有 {s2} 个单位，于 {s3} 抵达	l
+DFHack output: please load a fortress	需要先载入要塞	l
+DFHack output: Invalid granularity value: "{s}". Omit the option if you want "seasons".	时间粒度无效："{s1}"。若要使用 "seasons"，可省略此选项。	l
+DFHack output: No folder name given	未提供文件夹名称	l
+DFHack output: Can't find title or load game screen	未找到标题界面或载入游戏界面	l
+DFHack output: Can't find 'Continue Playing' option	未找到“继续游戏”选项	l
+DFHack output: Can't find load game screen	未找到载入游戏界面	l
+DFHack output: Can't find save: {s}	未找到存档：{s1}	l
+DFHack output: Cannot find any undesignated {s}	未找到尚未标记的 {s1}	l
+DFHack output: Here is some {s}	这里有一些 {s1}	l
+DFHack output: Savefile not loaded	尚未载入存档	l
+DFHack output: machine-toggle cannot be called directly	machine-toggle 不能直接调用	l
+DFHack output: The skill name provided is not in the list	提供的技能名称不在列表中	l
+DFHack output: skill name noun not found	未找到技能名称对应的职业名	l
+DFHack output: {s} is now a legendary {s}	{s1} 现在是一名传奇 {s2}	l
+DFHack output: Provide the UPPER_CASE argument, for example: ENGRAVE_STONE rather than Engraving.	请使用全大写的参数，例如 ENGRAVE_STONE，而非 Engraving。	l
+DFHack output: The breath of Armok has engulfed {s}	阿莫克的气息笼罩了 {s1}	l
+DFHack output: {s} skill {s} is now legendary for {s}	{s3} 的 {s1} 技能 {s2} 现已达到传奇等级	l
+DFHack output: Skill class names:	技能类别名称：	l
+DFHack output: Provide one of these arguments, and all skills of that type will be made Legendary	指定这些参数之一，可将该类别的所有技能提升至传奇等级	l
+DFHack output: For example: Medical will make all medical skills legendary	例如：Medical 将把所有医疗技能提升至传奇等级	l
+DFHack output: No monarch found!	未找到君主！	l
+DFHack output: Error opening file: {s}. {s}	打开文件出错：{s1}。{s2}	l
+DFHack output: Data appended to "{s}"	数据已追加至 "{s1}"	l
+DFHack output: Data overwritten in "{s}"	数据已写入并覆盖 "{s1}"	l
+DFHack output: Exporting description of the {s}	正在导出 {s1} 的描述	l
+DFHack output: Exporting Health/Description & Personality/Traits data for:	正在导出以下单位的健康／描述及性格／特征数据：	l
+DFHack output: Could not find valid target	未找到有效目标	l
+DFHack output: Target's name does not have a language	目标的名称未指定语言	l
+DFHack output: names screen already shown	名称界面已经打开	l
+DFHack output: Slabs:	石板：	l
+DFHack output: Books and Scrolls:	书籍和卷轴：	l
+DFHack output: necronomicon: Invalid argument: "{s}"	necronomicon：参数无效："{s1}"	l
+DFHack output: Enable keyboard cursor to add a note.	添加注释需要启用键盘光标。	l
+DFHack output: no world loaded	尚未载入世界	l
+DFHack output: no world loaded - cannot modify embark points	尚未载入世界，无法修改出发点数	l
+# population, position, preferences and prioritization.
+DFHack output: pop-control: Population cap set to {s}	pop-control：人口上限已设为 {s1}	l
+DFHack output: pop-control: Population cap reset to {s}	pop-control：人口上限已重置为 {s1}	l
+DFHack output: unknown setting: "{s}"	未知设置："{s1}"	l
+DFHack output: pop-control is enabled.	pop-control 已启用。	l
+DFHack output: pop-control is disabled.	pop-control 已停用。	l
+DFHack output: Settings:	设置：	l
+DFHack output: Current game caps:	当前游戏上限：	l
+DFHack output: population cap: {s}	人口上限：{s1}	l
+DFHack output: strict pop cap: {s}	严格人口上限：{s1}	l
+DFHack output: visitor cap: {s}	访客上限：{s1}	l
+DFHack output: needs a loaded fortress map to work	需要先载入要塞地图	l
+DFHack output: Too many positionals!	位置参数过多！	l
+DFHack output: Time:	时间：	l
+DFHack output: The time is {s}:{s}:{s}	当前时间为 {s1}:{s2}:{s3}	l
+DFHack output: The date is {s}-{s}-{s}	当前日期为 {s1}-{s2}-{s3}	l
+DFHack output: It is the month of {s}	当前月份为 {s1}	l
+DFHack output: The current site is at x={s}, y={s} on the {s}x{s} world map.	当前地点位于 {s3}×{s4} 的世界地图上，坐标 x={s1}，y={s2}。	l
+DFHack output: The adventurer is at x={s}, y={s} on the {s}x{s} world map.	冒险者位于 {s3}×{s4} 的世界地图上，坐标 x={s1}，y={s2}。	l
+DFHack output: Place:	位置：	l
+DFHack output: The z-level is z={s}	当前楼层为 z={s1}	l
+DFHack output: The keyboard cursor is at x={s}, y={s} ({s}+{s}, {s}+{s})	键盘光标坐标为 x={s1}，y={s2}（{s3}+{s4}，{s5}+{s6}）	l
+DFHack output: The keyboard cursor is inactive.	键盘光标未启用。	l
+DFHack output: The window is {s} tiles wide and {s} tiles high.	窗口宽 {s1} 格，高 {s2} 格。	l
+DFHack output: The mouse is at x={s}, y={s} within the window.	鼠标在窗口内的坐标为 x={s1}，y={s2}。	l
+DFHack output: The mouse is over map tile x={s}, y={s}	鼠标所指地图格子的坐标为 x={s1}，y={s2}	l
+DFHack output: The mouse is not in the DF window.	鼠标未位于游戏窗口内。	l
+DFHack output: No keyboard cursor!	键盘光标未启用！	l
+DFHack output: Clearing Preferences for {s}	正在清除 {s1} 的偏好	l
+DFHack output: Unit {s} has no preferences.	单位 {s1} 没有偏好。	l
+DFHack output: Preferences for {s}:	{s1} 的偏好：	l
+DFHack output: Unrecognized option: {s}	无法识别的选项：{s1}	l
+DFHack output: Showing Preferences for {s}	显示 {s1} 的偏好	l
+DFHack output: Not automatically prioritizing any jobs.	当前未自动提高任何任务的优先级。	l
+DFHack output: Automatically prioritized jobs:	自动提高优先级的任务：	l
+DFHack output: Prioritized {s} job.	已提高 {s1} 项任务的优先级。	l
+DFHack output: Prioritized {s} jobs.	已提高 {s1} 项任务的优先级。	l
+DFHack output: {s} job already prioritized.	{s1} 项任务已具有最高优先级。	l
+DFHack output: {s} jobs already prioritized.	{s1} 项任务已具有最高优先级。	l
+DFHack output: Automatically prioritizing future jobs of type: {s}	将自动提高此类型后续任务的优先级：{s1}	l
+DFHack output: Skipping already-watched type: {s}	跳过已监控的类型：{s1}	l
+DFHack output: No longer automatically prioritizing jobs of type: {s}	不再自动提高此类型任务的优先级：{s1}	l
+DFHack output: Skipping unwatched type: {s}	跳过未监控的类型：{s1}	l
+DFHack output: Current prioritizable jobs:	当前可提高优先级的任务：	l
+DFHack output: unclaimed total job type	未认领 总计 任务类型	l
+DFHack output: No current prioritizable jobs.	当前没有可提高优先级的任务。	l
+DFHack output: Invalid work order selected	选中的工作订单无效	l
+DFHack output: Made the job {s} top priority	已将任务 {s1} 设为最高优先级	l
+DFHack output: The job {s} is already top priority	任务 {s1} 已是最高优先级	l
+DFHack output: Couldn't find any job for {s}	未找到与 {s1} 对应的任务	l
+DFHack output: Couldn't find either construct or destroy building job for {s}	未找到与 {s1} 对应的建造或拆除建筑任务	l
+DFHack output: Couldn't find any job involving {s}	未找到涉及 {s1} 的任务	l
+DFHack output: Couldn't find any job involving this plant.	未找到涉及此植物的任务。	l
+DFHack output: Found {s} jobs for this work order.	找到此工作订单对应的 {s1} 项任务。	l
+DFHack output: Couldn't find any job for this work order.	未找到此工作订单对应的任务。	l
+DFHack output: Select something job-related in game.	需要在游戏中选中与任务有关的对象。	l
+DFHack output: "this" cannot be combined with other arguments	"this" 不能与其他参数同时使用	l
+DFHack output: prioritize needs a loaded fortress map to work	prioritize 需要先载入要塞地图	l
+# adventure travel, quickfort, regional population, age, wear and sizing.
+DFHack output: Could not find main adventure mode screen!	未找到冒险模式主界面！	l
+DFHack output: You must first select your destination on the quest log map!	需要先在任务日志地图中选择目的地！	l
+DFHack output: Please zoom the quest log map out to the world map!	需要将任务日志地图缩小到世界地图范围！	l
+DFHack output: You already seem to be at the target location!	你似乎已经位于目标位置！	l
+DFHack output: Please close the open menu before questporting!	使用 questport 传送前需要关闭已打开的菜单！	l
+DFHack output: quickfort needs a fortress map to be loaded.	quickfort 需要先载入要塞地图。	l
+DFHack output: World and map aren't loaded.	世界和地图尚未载入。	l
+DFHack output: This script can only be used in fortress mode	此脚本只能在要塞模式使用	l
+DFHack output: Plants:	植物：	l
+DFHack output: Creatures and vermin:	生物和小动物：	l
+DFHack output: Invalid boost factor.	倍增系数无效。	l
+DFHack output: Unknown population token.	未知种群标识。	l
+DFHack output: Updated {s} populations.	已更新 {s1} 个种群。	l
+DFHack output: Invalid increment factor.	增量系数无效。	l
+DFHack output: cannot set age to child or baby range	不能将年龄设为儿童或婴儿范围	l
+DFHack output: {s} is under {s} years old. Use --force to force.	{s1} 尚不满 {s2} 岁。使用 --force 可强制处理。	l
+DFHack output: would change: {s}	将修改：{s1}	l
+DFHack output: {s} is now {s} years old and will live a normal lifespan henceforth	{s1} 现在是 {s2} 岁，此后将拥有正常的寿命	l
+DFHack output: remove-wear: could not find item: {s}	remove-wear：未找到物品：{s1}	l
+DFHack output: Invalid item ID: {s}	物品 ID 无效：{s1}	l
+DFHack output: remove-wear: removed wear from {s}	remove-wear：已去除磨损，数量 {s1}	l
+DFHack output: {s} resized for {s}.	已将 {s1} 的尺寸调整为适合 {s2}。	l
+DFHack output: {s} is already sized for {s}.	{s1} 的尺寸已经适合 {s2}。	l
+DFHack output: {d} items resized for {s}.	已调整 {d1} 件物品的尺寸，使其适合 {s1}。	l
+DFHack output: All items are already sized for {s}	所有物品的尺寸都已适合 {s1}	l
+DFHack output: Selected item cannot be resized.	选中的物品无法调整尺寸。	l
+DFHack output: Selected stockpile contains no items that can be resized.	选中的储物区中没有可以调整尺寸的物品。	l
+DFHack output: Unable to obtain race ID. Please specify race ID manually.	无法获取种族 ID。需要明确指定种族 ID。	l
+DFHack output: No item or stockpile selected.	未选中物品或储物区。	l
+DFHack output: This script requires the game to be in adventure or fortress mode.	此脚本需要处于冒险或要塞模式。	l
+DFHack output: No hidden sites detected!	未发现隐藏地点！	l
+DFHack output: No hidden units detected!	未发现隐藏单位！	l
+DFHack output: Exposed {s} site!	已揭示 {s1} 处地点！	l
+DFHack output: Exposed {s} sites!	已揭示 {s1} 处地点！	l
+DFHack output: Exposed {s} unit!	已揭示 {s1} 个单位！	l
+DFHack output: Exposed {s} units!	已揭示 {s1} 个单位！	l
+# palette, orientation and timeskip.
+DFHack output: Attempting to load color palette file: "{s}"	正在尝试载入调色板文件："{s1}"	l
+DFHack output: Could not open file.	无法打开文件。	l
+DFHack output: Color file parse error (all changes reverted).	颜色文件解析出错（所有修改已撤销）。	l
+DFHack output: Warning: The {s} component for color {s} is out of range! Adjusting value.	警告：颜色 {s2} 的 {s1} 分量超出范围！正在调整数值。	l
+DFHack output: The current world do not provide a valid default palette, disabling palette swapping for this world.	当前世界未提供有效的默认调色板，已停用此世界的调色板切换。	l
+DFHack output: unexpected sex: {s}	未预期的性别：{s1}	l
+DFHack output: Couldn't find unit.	未找到单位。	l
+DFHack output: Orientation of {s}:	{s1} 的性取向：	l
+DFHack output: Please provide a sex and value to edit. Valid sexes are -male, -female, -opposite, and -same.	需要提供要修改的性别和值。有效的性别选项为 -male、-female、-opposite 和 -same。	l
+DFHack output: asexual creatures do not have a same sex	无性生物没有同性	l
+DFHack output: there is no opposite sex	没有异性	l
+DFHack output: Timeskip duration set to {s} tick.	时间跳跃时长已设为 {s1} 个游戏刻。	l
+DFHack output: Timeskip duration set to {s} ticks.	时间跳跃时长已设为 {s1} 个游戏刻。	l
+DFHack output: This is equivalent to:	相当于：	l
+DFHack output: Timeskip duration reset to default.	时间跳跃时长已恢复默认。	l
+DFHack output: Invalid -ticks duration: {s}	-ticks 时长无效：{s1}	l
+DFHack output: Invalid -years duration: {s}	-years 时长无效：{s1}	l
+DFHack output: Invalid -months duration: {s}	-months 时长无效：{s1}	l
+DFHack output: Invalid -days duration: {s}	-days 时长无效：{s1}	l
+DFHack output: Invalid -hours duration: {s}	-hours 时长无效：{s1}	l
+DFHack output: Duration not specified! Enter "set-timeskip-duration -help" for more information.	未指定时长！输入 "set-timeskip-duration -help" 可查看详细说明。	l
+DFHack output: Invalid FPS cap value: {s}	帧率上限无效：{s1}	l
+DFHack output: Unknown burrow: {s}	未知洞穴区：{s1}	l
+# liquid source, initial dwarves, stored possessions and cage stripping.
+DFHack output: Adding {s} water to {s}	向 {s2} 添加 {s1} 单位水	l
+DFHack output: Adding {s} magma to {s}	向 {s2} 添加 {s1} 单位岩浆	l
+DFHack output: Deleting Source at {s}	正在删除 {s1} 处的液体源	l
+DFHack output: Source Found	找到液体源	l
+DFHack output: Current Liquid Sources:	当前液体源：	l
+DFHack output: Searching for Source at {s}	正在寻找 {s1} 处的液体源	l
+DFHack output: Cleared sources	已清除液体源	l
+DFHack output: Please place the cursor where there is a source to delete	需要将光标指向要删除的液体源	l
+DFHack output: Deleted source at {s}	已删除 {s1} 处的液体源	l
+DFHack output: {s} Does not contain a liquid source	{s1} 处没有液体源	l
+DFHack output: Please place the cursor where you would like a source	需要用光标指定液体源的位置	l
+DFHack output: You must specify a liquid to add a source for	添加液体源需要指定液体类型	l
+DFHack output: Liquid must be either "water" or "magma"	液体类型必须为 "water" 或 "magma"	l
+DFHack output: Tile not flow passable: I'm afraid I can't let you do that, Dave.	此格子不允许液体流通：恐怕我不能让你这么做，戴夫。	l
+DFHack output: Added water {s} at {s}	已在 {s2} 添加 {s1} 单位水	l
+DFHack output: Added magma {s} at {s}	已在 {s2} 添加 {s1} 单位岩浆	l
+DFHack output: source needs a loaded fortress map to work	source 需要先载入要塞地图	l
+DFHack output: This script requires an active cursor.	此脚本需要启用光标。	l
+DFHack output: value must be no more than 32,767: {s}	数值不得超过 32,767：{s1}	l
+DFHack output: starting dwarf count set to {s}. good luck!	初始矮人数量已设为 {s1}。祝你好运！	l
+DFHack output: Selected item is not owned by any unit.	选中的物品不属于任何单位。	l
+DFHack output: Owner of selected item is currently busy.	选中物品的主人当前忙于其他事务。	l
+DFHack output: Selected item cannot be stored.	选中的物品无法收存。	l
+DFHack output: Selected item is already stored in the owner's room furniture.	选中的物品已存放在主人房间的家具中。	l
+DFHack output: Selected item is part of a building.	选中的物品是建筑的一部分。	l
+DFHack output: Owner of selected item cannot reach the item.	选中物品的主人无法到达该物品。	l
+DFHack output: Sufficient storage space available;	有足够的储存空间；	l
+DFHack output: ...selected item will be stored inside {s} in {s}.	……选中的物品将存入 {s2} 中的 {s1}。	l
+DFHack output: Unobstructed tile available;	有未被阻挡的格子；	l
+DFHack output: ...selected item will be dropped off on the floor of {s}.	……选中的物品将放在 {s1} 的地面上。	l
+DFHack output: Depot accessible;	贸易站可以到达；	l
+DFHack output: ...selected item will be dropped off at the {s}.	……选中的物品将送到 {s1}。	l
+DFHack output: Unable to drop selected item off at the trade depot.	无法将选中的物品送到贸易站。	l
+DFHack output: Owner of selected item does not have any assigned rooms.	选中物品的主人尚未分配任何房间。	l
+DFHack output: No dormitory available.	没有可用的宿舍。	l
+DFHack output: No trade depot available.	没有可用的贸易站。	l
+DFHack output: {s} has been tasked to store away {s}.	已安排 {s1} 收存 {s2}。	l
+DFHack output: Ownership of {s} was removed from {s}.	已解除 {s2} 对 {s1} 的所有权。	l
+DFHack output: Unable to store selected item in any owned room, dormitory, or trade depot.	无法将选中的物品存入任何自有房间、宿舍或贸易站。	l
+DFHack output: Cannot remove ownership of an ownerless item.	无主物品没有可解除的所有权。	l
+DFHack output: Dumped {s} in {s}	已将 {s2} 中的 {s1} 标记为倾倒	l
+DFHack output: Total:	总计：	l
+DFHack output: Invalid item id {s}	物品 ID 无效：{s1}	l
+DFHack output: Item {s} is not a cage	物品 {s1} 不是笼子	l
+# superdwarf, keyboard cursor and military uniform.
+DFHack output: No unit found to add; select a unit or provide a unit id	未找到要添加的单位；需要选中单位或提供单位 ID	l
+DFHack output: No unit found to remove; select a unit or provide a unit id	未找到要移除的单位；需要选中单位或提供单位 ID	l
+DFHack output: Removing superdwarf from all units	正在从所有单位移除超级矮人效果	l
+DFHack output: Current Superdwarfs:	当前超级矮人：	l
+DFHack output: range must be 0 to 9	范围必须为 0 至 9	l
+DFHack output: training level: {s}	训练程度：{s1}	l
+DFHack output: select a valid unit	需要选中有效单位	l
+DFHack output: A unit needs to be selected or specified. Use teleport -showunitid to get a unit's ID.	需要选中或指定单位。使用 teleport -showunitid 可获取单位 ID。	l
+DFHack output: A position needs to be highlighted or specified. Use teleport -showpos to get a position's exact xyz values.	需要用光标选中或明确指定位置。使用 teleport -showpos 可获取准确的 xyz 坐标。	l
+DFHack output: Toggled the display of idlers.	已切换闲置单位的显示。	l
+DFHack output: Look mode disabled.	查看模式已停用。	l
+DFHack output: Look mode enabled.	查看模式已启用。	l
+DFHack output: Keyboard cursor disabled.	键盘光标已停用。	l
+DFHack output: Keyboard cursor enabled.	键盘光标已启用。	l
+DFHack output: trackstop cannot be called directly	trackstop 不能直接调用	l
+DFHack output: No item found	未找到物品	l
+DFHack output: Water level display toggled.	已切换水位显示。	l
+DFHack output: Undumped {s} in-use building item	已解除 {s1} 件正在使用的建筑物品的倾倒标记	l
+DFHack output: Undumped {s} in-use building items	已解除 {s1} 件正在使用的建筑物品的倾倒标记	l
+DFHack output: Processing unit {s}	正在处理单位 {s1}	l
+DFHack output: {s} does not have a military uniform.	{s1} 没有军装。	l
+DFHack output: {s} is missing an assigned item, {s}	{s1} 缺少已分配的物品 {s2}	l
+DFHack output: {s} cannot equip item: another unit has a claim on {s}	{s1} 无法装备物品：{s2} 已被其他单位认领	l
+DFHack output: Removing from uniform	正在从军装配置中移除	l
+DFHack output: {s} has an improperly assigned item, {s}; removing it	{s1} 的物品 {s2} 分配不当；正在移除	l
+DFHack output: {s} has a nonexistent item assigned, item # {s}; removing it	{s1} 被分配了不存在的物品，物品编号 {s2}；正在移除	l
+DFHack output: {s} potentially has {s} blocking a missing uniform item.	{s1} 身上的 {s2} 可能阻挡了缺少的军装物品。	l
+DFHack output: Could not find drop location for {s}	未找到可放下 {s1} 的位置	l
+DFHack output: Dropped {s}	已放下 {s1}	l
+DFHack output: Could not drop {s}	无法放下 {s1}	l
+DFHack output: Please select a unit if not running with --all	未使用 --all 时，需要选中单位	l
+DFHack output: This script can only be used during adventure mode setup!	此脚本只能在冒险模式设置阶段使用！	l
+# warn-stranded and weather.
+DFHack output: Group {s} does not exist	第 {s1} 组不存在	l
+DFHack output: Group {s} is the main group of dwarves. Cannot toggle.	第 {s1} 组是矮人的主群体，无法切换忽略状态。	l
+DFHack output: Group {s} is the main group of dwarves. Not ignoring.	第 {s1} 组是矮人的主群体，不会忽略。	l
+DFHack output: Unit {s} already ignored, doing nothing to them.	单位 {s1} 已被忽略，不进行操作。	l
+DFHack output: Ignoring unit {s}	正在忽略单位 {s1}	l
+DFHack output: Unignoring unit {s}	正在解除单位 {s1} 的忽略状态	l
+DFHack output: Unit {s} not already ignored, doing nothing to them.	单位 {s1} 尚未被忽略，不进行操作。	l
+DFHack output: warn-stranded requires a map to be loaded	warn-stranded 需要先载入地图	l
+DFHack output: Clearing unit ignore list.	正在清空单位忽略列表。	l
+DFHack output: No citizens are currently stranded.	当前没有被困的公民。	l
+DFHack output: Ignored citizens:	已忽略的公民：	l
+DFHack output: None	无	l
+DFHack output: Must provide unit id to the ignore command.	ignore 命令需要提供单位 ID。	l
+DFHack output: No citizen with unit id {s} found in the fortress	要塞中没有找到 ID 为 {s1} 的公民	l
+DFHack output: Unit {s} is already ignored. You may want to use the unignore command.	单位 {s1} 已被忽略。可使用 unignore 命令解除。	l
+DFHack output: Must provide group id to the ignoregroup command.	ignoregroup 命令需要提供分组 ID。	l
+DFHack output: Ignoring group {s}	正在忽略第 {s1} 组	l
+DFHack output: Must provide unit id to unignore command.	unignore 命令需要提供单位 ID。	l
+DFHack output: Unit {s} is not ignored. You may want to use the ignore command.	单位 {s1} 尚未被忽略。可使用 ignore 命令忽略。	l
+DFHack output: Must provide group id to unignoregroup command.	unignoregroup 命令需要提供分组 ID。	l
+DFHack output: Unignoring group {s}	正在解除第 {s1} 组的忽略状态	l
+DFHack output: The current weather is Clear	当前天气为晴天	l
+DFHack output: The current weather is Rain	当前天气为下雨	l
+DFHack output: The current weather is Snow	当前天气为下雪	l
+DFHack output: The weather has cleared.	天气已转晴。	l
+DFHack output: It is now raining.	现在正在下雨。	l
+DFHack output: It is now snowing.	现在正在下雪。	l
+DFHack output: Set weather to {s}	天气已设为 {s1}	l
+DFHack output: Unrecognized argument: {s}	无法识别的参数：{s1}	l
+DFHack output: Weather map (C = clear, R = rain, S = snow):	天气地图（C＝晴天，R＝下雨，S＝下雪）：	l
+# workorder.
+DFHack output: workorder: verbose mode on	workorder：详细输出已开启	l
+DFHack output: workorder: verbose mode off	workorder：详细输出已关闭	l
+DFHack output: workorder: very verbose mode on	workorder：更详细输出已开启	l
+DFHack output: workorder: very verbose mode off	workorder：更详细输出已关闭	l
+DFHack output: Error in order:	工作订单出错：	l
+DFHack output: Invalid job type for manager order: {s}	经理工作订单的任务类型无效：{s1}	l
+DFHack output: Invalid item type for manager order: {s}	经理工作订单的物品类型无效：{s1}	l
+DFHack output: Invalid item subtype for manager order: {s}	经理工作订单的物品子类型无效：{s1}	l
+DFHack output: Invalid material for manager order: {s}	经理工作订单的材料无效：{s1}	l
+DFHack output: Missing historical figure for manager order: {s}	经理工作订单缺少历史人物：{s1}	l
+DFHack output: Invalid material_category value for manager order: {s}	经理工作订单的 material_category 值无效：{s1}	l
+DFHack output: Invalid frequency value for manager order: {s}	经理工作订单的执行频率无效：{s1}	l
+DFHack output: Missing workshop for manager order: {s}	经理工作订单缺少工坊：{s1}	l
+DFHack output: Invalid item condition flags for manager order: {s}	经理工作订单的物品条件标志无效：{s1}	l
+DFHack output: Invalid item condition item type for manager order: {s}	经理工作订单的物品条件类型无效：{s1}	l
+DFHack output: Invalid item condition material for manager order: {s}	经理工作订单的物品条件材料无效：{s1}	l
+DFHack output: Invalid item condition inorganic bearing type for manager order: {s}	经理工作订单的物品条件所含无机材料类型无效：{s1}	l
+DFHack output: Invalid item condition tool use for manager order: {s}	经理工作订单的物品条件工具用途无效：{s1}	l
+DFHack output: Missing order condition target for manager order: {s}	经理工作订单缺少订单条件目标：{s1}	l
+DFHack output: adjusting existing order by {s}	正在调整现有订单数量，变化量 {s1}	l
+DFHack output: negative amount; removing existing order	数量为负；正在删除现有订单	l
+DFHack output: Order {s} ({s}) not queued.	订单 {s1}（{s2}）未加入队列。	l
+DFHack output: Queuing {s} infinitely	将 {s1} 加入队列，无限重复	l
+DFHack output: Queuing {s} x{s}	将 {s1} 加入队列，数量 {s2}	l
+DFHack output: Parameters:	参数：	l
+DFHack output: Missing amount_total, set to infinity	缺少 amount_total，已设为无限	l
+DFHack output: Missing amount_total, set to {s}	缺少 amount_total，已设为 {s1}	l
+DFHack output: Invalid amount_total: {s} changed to infinity	amount_total 无效：{s1}，已改为无限	l
+DFHack output: Invalid amount_total: {s} changed to {s}	amount_total 无效：{s1}，已改为 {s2}	l
+# bodyswap, brainwash, colonies, deathcause and diplomacy.
+DFHack output: Invalid command: {s}	命令无效：{s1}	l
+DFHack output: Target unit not specified!	未指定目标单位！	l
+DFHack output: Failed to obtain target nemesis!	无法获取目标的历史记录关联！	l
+DFHack output: Enter the following if you require assistance: help bodyswap	需要帮助时可输入：help bodyswap	l
+DFHack output: Invalid unit id: {s}	单位 ID 无效：{s1}	l
+DFHack output: Previous personality values for {s}	{s1} 修改前的性格数值	l
+DFHack output: New personality values for {s}	{s1} 修改后的性格数值	l
+DFHack output: {s} has been brainwashed, praise Armok!	{s1} 已被洗脑，赞美阿莫克！	l
+DFHack output: Converted {s} colonies to {s}	已将 {s1} 处群落转换为 {s2}	l
+DFHack output: Cursor must be pointing somewhere	光标必须指向一个位置	l
+DFHack output: There are no colonies on the map.	地图上没有群落。	l
+DFHack output: Unable to parse config file `{s}`	无法解析配置文件 `{s1}`	l
+DFHack output: Automatically chose first corpse at the selected location.	已自动选择指定位置的第一具尸体。	l
+DFHack output: Cause of death not available	无法获取死因	l
+DFHack output: The {s} died.	这只 {s1} 已死亡。	l
+DFHack output: Please select a unit, a corpse, or a body part	需要选中单位、尸体或身体部位	l
+DFHack output: Your civilisation has no diplomatic relations! This means something is going wrong, as it should have at least a relation to itself.	你的文明没有外交关系！这表明出现了异常，因为它至少应当与自身存在关系。	l
+DFHack output: ID Relation Mutual Name	ID 关系 双方关系 名称	l
+DFHack output: Changing relation with {s} to Peace	将与 {s1} 的关系改为和平	l
+DFHack output: Changing relation with {s} to War	将与 {s1} 的关系改为战争	l
+DFHack output: Cannot parse relation: {s}	无法解析关系：{s1}	l
+DFHack output: Please specify 'peace' or 'war'	需要指定 'peace' 或 'war'	l
+# installed plugin Lua command front ends.
+DFHack output: Please specify a target range	需要指定目标范围	l
+DFHack output: must specify a target range (--all, --zdown, --zup, --cur-zlevel, or coordinates)	需要指定目标范围（--all、--zdown、--zup、--cur-zlevel 或坐标）	l
+DFHack output: must specify an aquifer type (heavy or light)	需要指定含水层类型（heavy 或 light）	l
+DFHack output: invalid action: {s}	操作无效：{s1}	l
+DFHack output: {s} tile(s) modified	已修改 {s1} 个格子	l
+DFHack output: expecting a non-negative integer, but got: {s}	需要非负整数，但得到：{s1}	l
+DFHack output: missing list of races (or "all" or "new" keywords)	缺少种族列表（或 "all"、"new" 关键字）	l
+DFHack output: target maximum must be a non-negative integer	目标上限必须为非负整数	l
+DFHack output: target minimum must be between 0 and the maximum, inclusive	目标下限必须在 0 至上限之间，包含两个端点	l
+DFHack output: no target burrows specified	未指定目标洞穴区	l
+DFHack output: burrow not found: {s}	未找到洞穴区：{s1}	l
+DFHack output: unknown {s}: "{s}"; expected one of: {s}	未知 {s1}："{s2}"；有效选项为：{s3}	l
+DFHack output: playback start offsets must be positive integers: "{s}", "{s}"	应用蓝图的起始偏移必须为正整数："{s1}"、"{s2}"	l
+DFHack output: invalid basename: "{s}"; must be a valid, non-empty pathname	基础文件名无效："{s1}"；必须是有效且非空的路径名	l
+DFHack output: unknown phase: "{s}"; expected one of: {s}	未知阶段："{s1}"；有效选项为：{s2}	l
+DFHack output: invalid depth: "{s}"; must be a non-zero integer	深度无效："{s1}"；必须为非零整数	l
+DFHack output: playback start x offset outside width of blueprint: {s}	应用蓝图的起始 x 偏移超出蓝图宽度：{s1}	l
+DFHack output: playback start y offset outside height of blueprint: {s}	应用蓝图的起始 y 偏移超出蓝图高度：{s1}	l
+DFHack output: done	完成	l
+DFHack output: Failed to load {s}: {s}	无法载入 {s1}：{s2}	l
+DFHack output: dwarfvet is running	dwarfvet 正在运行	l
+DFHack output: dwarfvet is not running	dwarfvet 未运行	l
+DFHack output: The following animals are receiving treatment:	以下动物正在接受治疗：	l
+DFHack output: The following animals are injured and need treatment:	以下动物受伤，需要治疗：	l
+DFHack output: dwarfvet scheduled treatment for {s} of {s} injured animals	dwarfvet 已为 {s2} 只受伤动物中的 {s1} 只安排治疗	l
+DFHack output: [M] in the "melt" column indicates that masterworks in the stockpile will be melted.	“熔化”列中的 [M] 表示此储物区中的杰作也将被熔化。	l
+DFHack output: [C] in the "forbid" column indicates that items in the stockpile will be claimed (unforbidden).	“禁用”列中的 [C] 表示此储物区中的物品将被认领（解除禁用）。	l
+DFHack output: logistics status	logistics 状态	l
+DFHack output: - actively monitoring stockpiles and designating items	- 正在监控储物区并标记物品	l
+DFHack output: - not actively monitoring stockpiles and designating items	- 未在监控储物区或标记物品	l
+DFHack output: - auto-retraining partially trained animals	- 正在自动重新训练尚未完全驯化的动物	l
+DFHack output: - not auto-retraining partially trained animals	- 未自动重新训练尚未完全驯化的动物	l
+DFHack output: Total fortress items:	要塞物品总计：	l
+DFHack output: - Items designated for melting: {s}	- 标记为熔化的物品：{s1}	l
+DFHack output: - Items designated for trading: {s}	- 标记为交易的物品：{s1}	l
+DFHack output: - Items designated for dumping: {s}	- 标记为倾倒的物品：{s1}	l
+DFHack output: - Animals designated for train: {s}	- 标记为训练的动物：{s1}	l
+DFHack output: - Forbidden items : {s}	- 被禁用的物品：{s1}	l
+DFHack output: - All (unforbidden) items : {s}	- 所有未禁用的物品：{s1}	l
+DFHack output: please specify or select a stockpile	需要指定或选中储物区	l
+DFHack output: invalid stockpile: {s}	储物区无效：{s1}	l
+DFHack output: unknown feature: "{s}"	未知功能："{s1}"	l
+DFHack output: misery is enabled	misery 已启用	l
+DFHack output: misery is disabled	misery 已停用	l
+DFHack output: misery factor is: {s}	misery 苦难系数：{s1}	l
+DFHack output: deleting {s}	正在删除 {s1}	l
+DFHack output: Order conditions is not open	订单条件界面未打开	l
+DFHack output: failed to save overlay config file: "{s}"	无法保存叠加界面配置文件："{s1}"	l
+DFHack output: please specify a widget name or list number	需要指定控件名称或列表序号	l
+DFHack output: widget not found: "{s}"	未找到控件："{s1}"	l
+DFHack output: enabled widget {s}	已启用控件 {s1}	l
+DFHack output: disabled widget {s}	已停用控件 {s1}	l
+DFHack output: ({s} widgets filtered out)	（已筛除 {s1} 个控件）	l
+DFHack output: error loading overlay widget "{s}"	载入叠加界面控件 "{s1}" 出错	l
+DFHack output: widget {s} is positioned at x={s}, y={s}	控件 {s1} 位于 x={s2}，y={s3}	l
+DFHack output: it will be attached to the following viewscreens:	它将附加到以下界面：	l
+DFHack output: it will act as a hotspot on all screens	它将在所有界面上作为可交互区域	l
+DFHack output: repositioned widget {s} to x={s}, y={s}	已将控件 {s1} 移至 x={s2}，y={s3}	l
+DFHack output: cannot trigger widget; widget "{s}" is already active	无法触发控件；控件 "{s1}" 已处于活动状态	l
+DFHack output: triggered widget {s}	已触发控件 {s1}	l
+DFHack output: Plant raw not found: "{s}"	未找到植物原始定义："{s1}"	l
+DFHack output: Filter already defined!	筛选条件已定义！	l
+DFHack output: Invalid age: "{s}"	年龄无效："{s1}"	l
+DFHack output: Specify mode: list, create, grow, or remove!	需要指定模式：list、create、grow 或 remove！	l
+DFHack output: Must specify plant_id for create!	create 模式必须指定 plant_id！	l
+DFHack output: Invalid mode: "{s}"! Must be list, create, grow, or remove!	模式无效："{s1}"！必须为 list、create、grow 或 remove！	l
+DFHack output: Noble or administrator role not found: {s}	未找到贵族或管理职位：{s1}	l
+DFHack output: Features:	功能：	l
+DFHack output: Rooms reserved for traveling units: {s}	为旅行中单位预留的房间：{s1}	l
+DFHack output: Managing assignments for noble rooms: {s}	管理的贵族房间分配：{s1}	l
+DFHack output: unknown keyword: "{s}"	未知关键字："{s1}"	l
+DFHack output: unknown report section: "{s}"	未知报告部分："{s1}"	l
+DFHack output: Use of --plant without --force!	使用 --plant 时必须同时指定 --force！	l
+DFHack output: seedwatch is enabled	seedwatch 已启用	l
+DFHack output: seedwatch is disabled	seedwatch 已停用	l
+DFHack output: usable seed counts and current targets:	可用种子数量与当前目标：	l
+DFHack output: total usable seeds: {s}	可用种子总数：{s1}	l
+DFHack output: must specify "all" or plant name	需要指定 "all" 或植物名称	l
+DFHack output: target must be a non-negative integer	目标数量必须为非负整数	l
+DFHack output: spectate is: enabled	spectate：已启用	l
+DFHack output: spectate is: disabled	spectate：已停用	l
+DFHack output: settings:	设置：	l
+DFHack output: missing key	缺少键名	l
+DFHack output: missing value for {s}	{s1} 缺少值	l
+DFHack output: too many arguments for {s}	{s1} 的参数过多	l
+DFHack output: unknown option: {s}	未知选项：{s1}	l
+DFHack output: missing option	缺少选项	l
+DFHack output: No manager jobs have been set for your stockpiles.	尚未为储物区设置经理任务。	l
+DFHack output: Select a stockpile and use the stockflow overlay to create one...	选中储物区后，可使用 stockflow 叠加界面创建任务……	l
+DFHack output: Adjusting stockflow entry for stockpile #{s}: {s} ({s} => {s})	调整储物区 #{s1} 的 stockflow 条目：{s2}（{s3} => {s4}）	l
+DFHack output: Unmatched stockflow entry for stockpile #{s}: {s} ({s})	储物区 #{s1} 的 stockflow 条目未匹配：{s2}（{s3}）	l
+DFHack output: Current stockpiles: {s}	当前储物区：{s1}	l
+DFHack output: ID Name	ID 名称	l
+DFHack output: Cannot find stockpile settings directory: "{s}"	未找到储物区设置目录："{s1}"	l
+DFHack output: name missing or empty	名称缺失或为空	l
+DFHack output: name can only contain numbers, letters, periods, and underscores	名称只能包含数字、字母、句点和下划线	l
+DFHack output: Please select a stockpile or specify the stockpile ID	需要选中储物区或指定储物区 ID	l
+DFHack output: invalid included element: "{s}"	包含的元素无效："{s1}"	l
+DFHack output: invalid mode: "{s}"	模式无效："{s1}"	l
+DFHack output: could not find stockpile with name: {s}	未找到此名称的储物区：{s1}	l
+DFHack output: could not find route with name: {s}	未找到此名称的路线：{s1}	l
+DFHack output: could not find stop with name: {s}	未找到此名称的停靠点：{s1}	l
+DFHack output: tailor is enabled	tailor 已启用	l
+DFHack output: tailor is disabled	tailor 已停用	l
+DFHack output: and confiscating tattered clothing	并收回破烂的衣物	l
+DFHack output: but not confiscating tattered clothing	但不收回破烂的衣物	l
+DFHack output: tailor is automating dye	tailor 正在自动安排染色	l
+DFHack output: tailor is not automating dye	tailor 未自动安排染色	l
+DFHack output: materials preference order:	材料偏好顺序：	l
+DFHack output: must specify setting and value	需要指定设置和值	l
+DFHack output: set {s} to {s}	已将 {s1} 设为 {s2}	l
+DFHack output: timestream is enabled	timestream 已启用	l
+DFHack output: timestream is not enabled	timestream 未启用	l
+DFHack output: target FPS is set to: {s}	目标帧率已设为：{s1}	l
+DFHack output: failed to open "{s}"	无法打开 "{s1}"	l
+# builtin helpdb errors.
+DFHack output: No help entry found for "{s}"	未找到 "{s1}" 的帮助条目	l
+DFHack output: No matches.	没有匹配项。	l
+DFHack output: unrecognized tag: "{s}"	无法识别的标签："{s1}"	l
+# installed fix/* script outputs.
+DFHack output: Splitting training ammo for {s}...	正在拆分 {s1} 的训练弹药……	l
+DFHack output: Moving quiver to the end for {s}...	正在将 {s1} 的箭袋移至物品栏末尾……	l
+DFHack output: {s} stack(s) of ammo item(s) split into stacks of 5.	已将 {s1} 堆弹药拆分为每堆 5 件。	l
+DFHack output: No ammo items require splitting.	没有需要拆分的弹药。	l
+DFHack output: {s} quiver(s) moved to the end of each unit's inventory list.	已将 {s1} 个箭袋移至各单位物品栏末尾。	l
+DFHack output: No inventories require sorting.	没有需要排序的物品栏。	l
+DFHack output: No ranged squads are currently training.	当前没有远程小队正在训练。	l
+DFHack output: removed {s} types of unusable trade goods	已移除 {s1} 种无法使用的贸易货物	l
+DFHack output: Civil war removed!	内战已解除！	l
+DFHack output: No civil war found.	未发现内战。	l
+DFHack output: No book with written content selected.	未选中包含书面内容的书籍。	l
+DFHack output: No books available in site.	地点中没有可用的书籍。	l
+DFHack output: {s} pages added to {s}.	已为 {s2} 添加 {s1} 页。	l
+DFHack output: A total of {s} pages were added to {s} book.	共向 {s2} 本书添加了 {s1} 页。	l
+DFHack output: A total of {s} pages were added to {s} books.	共向 {s2} 本书添加了 {s1} 页。	l
+DFHack output: Selected book already has pages in it.	选中的书籍已有页面。	l
+DFHack output: No written content with unspecified page counts were found; no pages were added to any books.	未找到页数未指定的书面内容；没有为任何书籍添加页面。	l
+DFHack output: Removing corrupted {s} (index {s})	正在移除损坏的 {s1}（索引 {s2}）	l
+DFHack output: Removing {s} of invalid type {s} (index {s})	正在移除类型 {s2} 无效的 {s1}（索引 {s3}）	l
+DFHack output: removed {s} corrupted job(s) from affected units	已从受影响单位移除 {s1} 项损坏的任务	l
+DFHack output: Dead units scrubbed: {s}	已清理的死亡单位：{s1}	l
+DFHack output: Error: Map not loaded!	错误：尚未载入地图！	l
+DFHack output: {s} webs projectilized!	已将 {s1} 张蛛网转换为投射物！	l
+DFHack output: Emptied {s} buckets.	已清空 {s1} 只桶。	l
+DFHack output: Unclogged {s} wells.	已疏通 {s1} 口井。	l
+DFHack output: {s} bad engraving(s) fixed.	已修复 {s1} 处异常雕刻。	l
+DFHack output: fix/general-strike fixed {s} mislabeled seed(s)	fix/general-strike 已修复 {s1} 颗标记错误的种子	l
+DFHack output: Fixed {s} units with loyalty issues.	已修复 {s1} 个单位的忠诚问题。	l
+DFHack output: No loyalty cascade found.	未发现忠诚关系连锁异常。	l
+DFHack output: fix/ownership: Erasing invalid claim on item #{s} for {s}	fix/ownership：清除 {s2} 对物品 #{s1} 的无效认领	l
+DFHack output: fix/ownership: Restoring {s} ownership link for {s}	fix/ownership：为 {s2} 恢复 {s1} 所有权关联	l
+DFHack output: No active fortress.	当前没有已载入的要塞。	l
+DFHack output: Home civ notified about current population.	已向所属文明报告当前人口。	l
+DFHack output: fix/protect-nicks only works in fortress mode	fix/protect-nicks 只能在要塞模式使用	l
+DFHack output: Restoring and saving nicknames	正在恢复并保存昵称	l
+DFHack output: fix/protect-nicks is currently enabled	fix/protect-nicks 当前已启用	l
+DFHack output: fix/protect-nicks is currently disabled	fix/protect-nicks 当前已停用	l
+DFHack output: Retrieving from the abyss: {s} ({s})	正在从虚空找回：{s1}（{s2}）	l
+DFHack output: Items updated: {s}	已更新物品：{s1}	l
+DFHack output: Use 'fix/stable-temp apply' to normalize temperature.	使用 'fix/stable-temp apply' 可使温度恢复正常。	l
+DFHack output: Items not in equilibrium: {s}	未达到温度平衡的物品：{s1}	l
+DFHack output: Found stuck instrument: {s}	找到卡住的乐器：{s1}	l
+DFHack output: Found stuck written material: {s}	找到卡住的书面材料：{s1}	l
+DFHack output: fix/stuck-squad: Squad rescue operation underway! {s} is rescuing {s}	fix/stuck-squad：小队救援已开始！{s1} 正在救援 {s2}	l
+DFHack output: Shuffled prayer target for {s}	已重新分配 {s1} 的祈祷目标	l
+DFHack output: Rebalanced prayer needs for {s} units.	已重新平衡 {s1} 个单位的祈祷需求。	l
+DFHack output: Unstuck {s} doors	已使 {s1} 扇门恢复正常	l
+DFHack output: Symbol designation removed from selected item.	已解除选中物品的贵族象征指定。	l
+DFHack output: {s} can now be re-designated as a symbol of nobility.	现在可以重新将 {s1} 指定为贵族象征。	l
+DFHack output: Selected item is not a defunct symbol of the current site's civilization.	选中的物品并非当前地点文明已失效的贵族象征。	l
+DFHack output: Selected item is not an artifact claimed by the current site's civilization.	选中的物品不是当前地点文明认领的神器。	l
+DFHack output: No stuck wildlife found	未发现卡住的野生动物	l
+DFHack output: please select a unit or pass a unit ID on the commandline	需要选中单位，或在命令行中提供单位 ID	l
+DFHack output: selected unit is not blocking new waves of wildlife; nothing to do	选中的单位未阻挡新一批野生动物；无需处理	l
+DFHack output: {s} will now be ignored by fix/wildlife	fix/wildlife 现在将忽略 {s1}	l
+# installed modtools/* errors and status lines. Native enum/RAW identifiers remain executable.
+DFHack output: RevertBuildingChanges: Invalid workshop ID: {s}	RevertBuildingChanges：工坊 ID 无效：{s1}	l
+DFHack output: ChangeBuilding: Invalid category ID: {s}	ChangeBuilding：类别 ID 无效：{s1}	l
+DFHack output: ChangeBuilding: Invalid workshop ID: {s}	ChangeBuilding：工坊 ID 无效：{s1}	l
+DFHack output: change-build-menu: No World Loaded!	change-build-menu：尚未载入世界！	l
+DFHack output: Could not choose a creator unit. Please select one in the UI	无法选择创造者单位。需要在界面中选中一个单位	l
+DFHack output: modtools/create-item needs a loaded map to work	modtools/create-item 需要先载入地图	l
+DFHack output: Invalid location coordinates!	位置坐标无效！	l
+DFHack output: Tree name not specified!	未指定树木名称！	l
+DFHack output: Invalid tree name: {s}	树木名称无效：{s1}	l
+DFHack output: Invalid age: {s}	年龄无效：{s1}	l
+DFHack output: Location not specified!	未指定位置！	l
+DFHack output: Invalid location!	位置无效！	l
+DFHack output: Invalid location type: {s}	位置类型无效：{s1}	l
+DFHack output: Invalid age (must be 0 or greater): {s}	年龄无效（必须大于等于 0）：{s1}	l
+DFHack output: Invalid duration (must be a number greater than 0): {s}	时长无效（必须是大于 0 的数字）：{s1}	l
+DFHack output: Invalid entity raw name: {s}	实体原始定义名称无效：{s1}	l
+DFHack output: Invalid civId (must be a number): {s}	civId 无效（必须是数字）：{s1}	l
+DFHack output: Civilisation not found: {s}	未找到文明：{s1}	l
+DFHack output: Invalid civId (entity is not civilisation): {s}	civId 无效（该实体不是文明）：{s1}	l
+DFHack output: Invalid groupId (must be a number): {s}	groupId 无效（必须是数字）：{s1}	l
+DFHack output: Group not found: {s}	未找到群体：{s1}	l
+DFHack output: Invalid groupId (entity is a civilisation): {s}	groupId 无效（该实体是文明）：{s1}	l
+DFHack output: Invalid nickname: {s}	昵称无效：{s1}	l
+DFHack output: Invalid custom profession: {s}	自定义职业无效：{s1}	l
+DFHack output: Invalid profession: {s}	职业无效：{s1}	l
+DFHack output: Invalid spawn quantity (must be a number greater than 0): {s}	生成数量无效（必须是大于 0 的数字）：{s1}	l
+DFHack output: Race not specified!	未指定种族！	l
+DFHack output: Invalid item type: {s}	物品类型无效：{s1}	l
+DFHack output: Insufficient equipment details provided: {s}	提供的装备信息不足：{s1}	l
+DFHack output: Invalid equipment material (missing detail): {s}	装备材料无效（缺少详细信息）：{s1}	l
+DFHack output: Invalid equipment material: {s}	装备材料无效：{s1}	l
+DFHack output: Invalid equipment count: {s}	装备数量无效：{s1}	l
+DFHack output: Insufficient skill details provided: {s}	提供的技能信息不足：{s1}	l
+DFHack output: Invalid skill token: {s}	技能标识无效：{s1}	l
+DFHack output: Invalid skill level (must be a number greater than 0): {s}	技能等级无效（必须是大于 0 的数字）：{s1}	l
+DFHack output: Invalid vanish delay: {s}	消失延迟无效：{s1}	l
+DFHack output: Specify a race for the new unit.	需要为新单位指定种族。	l
+DFHack output: -locationType cannot be used without -locationRange!	-locationType 必须与 -locationRange 同时使用！	l
+DFHack output: The LOCAL civ cannot be specified outside of Fortress mode!	LOCAL 文明只能在要塞模式中指定！	l
+DFHack output: The LOCAL group cannot be specified outside of Fortress mode!	LOCAL 群体只能在要塞模式中指定！	l
+DFHack output: The LOCAL entityRawName cannot be specified outside of Fortress mode!	LOCAL entityRawName 只能在要塞模式中指定！	l
+DFHack output: The world needs to be loaded to use this.	使用此功能需要先载入世界。	l
+DFHack output: Please provide a valid mode: basic or vanilla.	需要提供有效模式：basic 或 vanilla。	l
+DFHack output: Please provide a valid target.	需要提供有效目标。	l
+DFHack output: Couldn't find material: {s}	未找到材料：{s1}	l
+DFHack output: invalid sphere: {s}	神域无效：{s1}	l
+DFHack output: invalid gender: {s}	性别无效：{s1}	l
+DFHack output: race id {s} does not exist	种族 ID {s1} 不存在	l
+DFHack output: race {s} does not exist	种族 {s1} 不存在	l
+DFHack output: This script requires a loaded world.	此脚本需要先载入世界。	l
+DFHack output: name and spheres must be specified.	必须指定名称和神域。	l
+DFHack output: god "{s}" already exists.	神祇 "{s1}" 已存在。	l
+DFHack output: {s} created as historical figure {s}	已将 {s1} 创建为历史人物 {s2}	l
+DFHack output: Please provide a valid modifier.	需要提供有效的修改方式。	l
+DFHack output: Couldn't find provided creature	未找到指定的生物	l
+DFHack output: Couldn't find provided color	未找到指定的颜色	l
+DFHack output: Couldn't find provided shape	未找到指定的形状	l
+DFHack output: Couldn't find provided plant	未找到指定的植物	l
+DFHack output: Unit has matching preference.	此单位具有匹配的偏好。	l
+DFHack output: Unit doesn't have matching preference.	此单位没有匹配的偏好。	l
+DFHack output: Failed to list directory: {s}	无法列出目录：{s1}	l
+DFHack output: transition information written to reaction-trigger-transition.txt	转换信息已写入 reaction-trigger-transition.txt	l
+DFHack output: Beliefs for {s}:	{s1} 的信念：	l
+DFHack output: Couldn't find unit. If you don't want to target a specific unit, use -citizens.	未找到单位。如果无需指定具体单位，可使用 -citizens。	l
+DFHack output: -citizens argument only available in Fortress Mode.	-citizens 参数只能在要塞模式使用。	l
+DFHack output: --citizens argument only available in Fortress Mode.	--citizens 参数只能在要塞模式使用。	l
+DFHack output: Please specify a belief to edit using -belief <ID> or -all.	需要通过 -belief <ID> 指定要修改的信念，或使用 -all。	l
+DFHack output: Needs for {s}:	{s1} 的需求：	l
+DFHack output: {s}: Focus = {s} Level = {s}	{s1}：专注度＝{s2}，需求程度＝{s3}	l
+DFHack output: Please specify a command to use. Valid commands are -add, -remove, -edit, and -revert.	需要指定命令。有效命令为 -add、-remove、-edit 和 -revert。	l
+DFHack output: -add requires a -need argument.	-add 需要 -need 参数。	l
+DFHack output: -remove requires a need target.	-remove 需要指定需求目标。	l
+DFHack output: -edit requires a need target.	-edit 需要指定需求目标。	l
+DFHack output: Traits of {s}:	{s1} 的性格特征：	l
+DFHack output: Please specify a trait to edit using -trait <ID> or -all.	需要通过 -trait <ID> 指定要修改的特征，或使用 -all。	l
+DFHack output: {s} is an unrecognized liquid type. Types available: Water Magma	无法识别液体类型 {s1}。有效类型为 Water、Magma。	l
+DFHack output: No liquid type specified. Use `--type <type>`	未指定液体类型。用法：`--type <type>`	l
+DFHack output: Invalid liquid level specified. Minimum of 1 and maximum of 7.	指定的液体深度无效。最小为 1，最大为 7。	l
+DFHack output: No liquid level specified. Use `--level <level>`	未指定液体深度。用法：`--level <level>`	l
+DFHack output: No position specified. Use `--position [ <x> <y> <z> ]	未指定位置。用法：`--position [ <x> <y> <z> ]	l
+DFHack output: Syndrome not specified! Enter "modtools/syndrome-trigger -help" for more information.	未指定综合症！输入 "modtools/syndrome-trigger -help" 可查看详细说明。	l
+DFHack output: Command not specified! Enter "modtools/syndrome-trigger -help" for more information.	未指定命令！输入 "modtools/syndrome-trigger -help" 可查看详细说明。	l
+# installed devel/* command status and errors; dumped XML/code is intentionally retained as data.
+DFHack output: script name(s) required	需要提供脚本名称	l
+DFHack output: Script not loaded: {s}	脚本尚未载入：{s1}	l
+DFHack output: Can't find script: {s}	未找到脚本：{s1}	l
+DFHack output: ... and {s} more	……另有 {s1} 项	l
+DFHack output: missing lua expression	缺少 Lua 表达式	l
+DFHack output: cannot evaluate: {s}	无法求值：{s1}	l
+DFHack output: watching {s} = {s}	正在监视 {s1}＝{s2}	l
+DFHack output: all watches removed	已移除所有监视项	l
+DFHack output: no watch named "{s}"	没有名为 "{s1}" 的监视项	l
+DFHack output: stopped watching {s}	已停止监视 {s1}	l
+DFHack output: no active watches	没有活动的监视项	l
+DFHack output: snapshot "{s}": {s} fields recorded	快照 "{s1}"：已记录 {s2} 个字段	l
+DFHack output: no snapshot named "{s}"	没有名为 "{s1}" 的快照	l
+DFHack output: no changes	没有变化	l
+DFHack output: no matching fields	没有匹配的字段	l
+DFHack output: Could not find data segment	未找到数据段	l
+DFHack output: Could not find global table header	未找到全局表头	l
+DFHack output: global table length: {s}	全局表长度：{s1}	l
+DFHack output: Event types (and the eventful event functions they map to):	事件类型（以及对应的 eventful 事件函数）：	l
+DFHack output: eventful-client: {s} received {s} event (freq={s})	eventful-client：{s1} 收到 {s2} 事件（频率＝{s3}）	l
+DFHack output: no eventful event function for {s} events; skipping	没有 {s1} 事件对应的 eventful 函数；已跳过	l
+DFHack output: eventful-client registering new {s} handler at freq {s}: {s}	eventful-client 正在注册新的 {s1} 处理函数，频率 {s2}：{s3}	l
+DFHack output: Active handlers:	活动的处理函数：	l
+DFHack output: Clearing handlers:	正在清除处理函数：	l
+DFHack output: Destination file {s} already exists!	目标文件 {s1} 已存在！	l
+DFHack output: File created in Dwarf Fortress folder under {s}	已在游戏文件夹中创建文件 {s1}	l
+DFHack output: This script requires a map to be loaded	此脚本需要先载入地图	l
+DFHack output: Valid data types:	有效的数据类型：	l
+DFHack output: Invalid data type	数据类型无效	l
+DFHack output: Unable to find variable	未找到变量	l
+DFHack output: requires a loaded fortress map	需要先载入要塞地图	l
+DFHack output: no position given, no cursor, no units	未指定位置，没有光标，也没有单位	l
+DFHack output: no surface tile found at ({s}, {s})	坐标（{s1}，{s2}）处未找到地表格子	l
+DFHack output: start z={s} is above top z={s}	起始楼层 z={s1} 高于顶层 z={s2}	l
+DFHack output: fabricating pillar tower at ({s}, {s}) from z={s} to z={s}	正在坐标（{s1}，{s2}）处建造柱塔，从 z={s3} 到 z={s4}	l
+DFHack output: stopped at z={s}: {s}	在 z={s1} 处停止：{s2}	l
+DFHack output: reused {s} existing construction(s)	已复用 {s1} 处现有建造物	l
+DFHack output: could not build any part of the tower	无法建造柱塔的任何部分	l
+DFHack output: could not add top floor: {s}	无法添加顶层地板：{s1}	l
+DFHack output: not currently watching	当前未在监视	l
+DFHack output: Not backed up.	尚未备份。	l
+DFHack output: Reaction {s} already exists.	反应 {s1} 已存在。	l
+DFHack output: Injecting reaction {s}	正在注入反应 {s1}	l
+DFHack output: Building {s} already exists.	建筑 {s1} 已存在。	l
+DFHack output: Injecting building {s}	正在注入建筑 {s1}	l
+DFHack output: Not adding to civs.	不会添加到文明中。	l
+DFHack output: Itemdef {s} already exists.	物品定义 {s1} 已存在。	l
+DFHack output: Injecting item {s}	正在注入物品 {s1}	l
+DFHack output: Invalid option: {s}	选项无效：{s1}	l
+DFHack output: No changes made.	未进行任何修改。	l
+DFHack output: histfig not found: {s}	未找到历史人物：{s1}	l
+DFHack output: Would target histfig {s}	将以历史人物 {s1} 为目标	l
+DFHack output: Terminated pregnancy of histfig {s}	已终止历史人物 {s1} 的妊娠	l
+DFHack output: Killed histfig {s}	已杀死历史人物 {s1}	l
+DFHack output: Lua rendermode not enabled!	Lua 渲染模式未启用！	l
+DFHack output: Arguments:	参数：	l
+DFHack output: Command called {s} times.	命令已调用 {s1} 次。	l
+DFHack output: Required internal functions are missing	缺少必需的内部函数	l
+DFHack output: Deletion requested: {s}	已请求删除：{s1}	l
+DFHack output: requires at least one event ID or index	至少需要一个事件 ID 或索引	l
+DFHack output: event ID not found: {s}	未找到事件 ID：{s1}	l
+DFHack output: <query on {s} truncated after {s}>	<对 {s1} 的查询在第 {s2} 项后截断>	l
+DFHack output: Set {s} value to {s}, from {s}	将 {s1} 的值从 {s3} 设为 {s2}	l
+DFHack output: Selected {s} is null. Invalid selection.	选中的 {s1} 为空。选择无效。	l
+DFHack output: searching for a job at the cursor	正在光标处寻找任务	l
+DFHack output: Must provide a number with -depth	-depth 必须提供数字	l
+DFHack output: Key not found: {s}	未找到键：{s1}	l
+DFHack output: unsupported OS: {s}	不支持的操作系统：{s1}	l
+DFHack output: This script requires an item selected!	此脚本需要先选中物品！	l
+DFHack output: Found in the following indices:	在以下索引中找到：	l
+DFHack output: Unrecognized key	无法识别的按键	l
+# Native plugin format strings read from installed hack/plugins/*.plug.dll.
+DFHack output: Cannot enable {s} without a loaded fort.	需要载入要塞才能启用 {s1}。	l
+DFHack output: Cannot run {s} without a loaded fort.	需要载入要塞才能运行 {s1}。	l
+DFHack output: Cannot configure {s} without a loaded fort.	需要载入要塞才能配置 {s1}。	l
+DFHack output: no config found in this save; initializing	此存档中未找到配置；正在初始化	l
+DFHack output: loading persisted enabled state: {s}	正在载入保存的启用状态：{s1}	l
+DFHack output: world unloaded; disabling {s}	世界已卸载；正在停用 {s1}	l
+DFHack output: {s} is disabled	{s1} 已停用	l
+DFHack output: {s} is enabled	{s1} 已启用	l
+DFHack output: {s} from the API, but already {s}; no action	从 API 收到 {s1}，但已经 {s2}；无需操作	l
+DFHack output: {s} from the API, but already {s} ; no action	从 API 收到 {s1}，但已经 {s2}；无需操作	l
+DFHack output: {s} from the API; persisting	从 API 收到 {s1}；正在保存	l
+DFHack output: Cannot find plant with id {s}	未找到 ID 为 {s1} 的植物	l
+DFHack output: Current state: {s}, mode: {s}.	当前状态：{s1}，模式：{s2}。	l
+DFHack output: Error: The plugin is not enabled in legacy mode.	错误：此插件未以旧版模式启用。	l
+DFHack output: no map loaded	尚未载入地图	l
+DFHack output: {s} jobs total	共 {s1} 项任务	l
+DFHack output: race not found: '{s}'	未找到种族：'{s1}'	l
+DFHack output: total visible logs: {s}	可见木材总数：{s1}	l
+DFHack output: total visible trees: {s}	可见树木总数：{s1}	l
+DFHack output: total trees harvested: {s}	砍伐树木总数：{s1}	l
+DFHack output: no burrows defined	尚未定义洞穴区	l
+DFHack output: ERROR: failed to open file for writing: '{s}'	错误：无法打开文件进行写入：'{s1}'	l
+DFHack output: failed to open file for reading: '{s}'	无法打开文件进行读取：'{s1}'	l
+DFHack output: invalid quality token: {s}	品质标识无效：{s1}	l
+DFHack output: serialization failed: protobuf exception: {s}	序列化失败，protobuf 异常：{s1}	l
+DFHack output: ERROR: file doesn't exist: '{s}'	错误：文件不存在：'{s1}'	l
+DFHack output: deserialization failed: '{s}'	反序列化失败：'{s1}'	l
+DFHack output: deserialization failed: protobuf exception: {s}	反序列化失败，protobuf 异常：{s1}	l
+DFHack output: Specified hauling route not found: {s}	未找到指定的搬运路线：{s1}	l
+DFHack output: Specified hauling stop not found in route {s}: {s}.	路线 {s1} 中未找到指定的停靠点：{s2}。	l
+DFHack output: finished refresh: found {s} reasons for suspension	刷新完成：找到 {s1} 个暂停施工的原因	l
+DFHack output: suspendmanager disabled	suspendmanager 已停用	l
+DFHack output: {s} is enabled and suspending blocking jobs	{s1} 已启用，并会暂停阻挡道路的任务	l
+DFHack output: {s} is enabled without suspending blocking jobs	{s1} 已启用，但不会暂停阻挡道路的任务	l
+DFHack output: Invalid embark coordinates: x={s}, y={s}	出发坐标无效：x={s1}，y={s2}	l
+DFHack output: Region geo-biome not found: ({s}, {s})	未找到区域地质生态群系：（{s1}，{s2}）	l
+DFHack output: Warning: the above data is only a very rough estimate.	警告：上述数据只是非常粗略的估计。	l
+DFHack output: Current state: fast = {s}, teleport = {s}.	当前状态：快速行动＝{s1}，传送＝{s2}。	l
+DFHack output: Invalid value for fast: '{s}'	fast 的值无效：'{s1}'	l
+DFHack output: Invalid value for tele: '{s}'	tele 的值无效：'{s1}'	l
+DFHack output: Disabled tweak {s} ({s})	已停用微调 {s1}（{s2}）	l
+DFHack output: Enabled tweak {s} ({s})	已启用微调 {s1}（{s2}）	l
+DFHack output: discarded invalid seed id: {s}	已丢弃无效的种子 ID：{s1}	l
+DFHack output: invalid configuration for {s} discarded	已丢弃 {s1} 的无效配置	l
+DFHack output: {s}: enabled {s} seed types for cooking	{s1}：已允许烹饪 {s2} 种种子	l
+DFHack output: cannot set target for unknown plant id: {s}	无法为未知的植物 ID 设置目标：{s1}	l
+DFHack output: {s} has not been found as a material.	未找到材料 {s1}。	l
+DFHack output: tailor: cannot determine race for clothing of size {s}, skipped	tailor：无法确定尺寸为 {s1} 的衣物适用的种族，已跳过	l
+DFHack output: tailor: civilization cannot make {s}, skipped	tailor：此文明无法制作 {s1}，已跳过	l
+DFHack output: no extended config found in this save; initializing	此存档中未找到扩展配置；正在初始化	l
+DFHack output: found existing configuration with CONFIG_CONFISCATE unset, initializing to true	现有配置未设置 CONFIG_CONFISCATE，初始化为 true	l
+DFHack output: found existing configuration with CONFIG_AUTOMATE_DYE unset, initializing to false	现有配置未设置 CONFIG_AUTOMATE_DYE，初始化为 false	l
+DFHack output: tailor: ordered {s} items of clothing	tailor：已下达 {s1} 件衣物的工作订单	l
+DFHack output: ordered {s} items of clothing	已下达 {s1} 件衣物的工作订单	l
+DFHack output: An item can't be both hidden and visible.	物品不能同时是隐藏和可见的。	l
+DFHack output: Map is not available!	地图不可用！	l
+DFHack output: Map is not available.	地图不可用。	l
+DFHack output: Done. {s} items unmarked for destruction.	完成。已解除 {s1} 件物品的销毁标记。	l
+DFHack output: Keyboard cursor must be over a suitable map tile.	键盘光标必须位于合适的地图格子上。	l
+DFHack output: Cursor is in an invalid/uninitialized area.	光标位于无效或尚未初始化的区域。	l
+DFHack output: Can't dump inside walls.	无法向墙内倾倒物品。	l
+DFHack output: Could not move item: {s}	无法移动物品：{s1}	l
+DFHack output: Item is already marked for destroy.	物品已标记为销毁。	l
+DFHack output: Choosing not to destroy buildings, constructions and artifacts.	不会销毁建筑、建造物和神器。	l
+DFHack output: Choosing not to destroy items in unit inventory.	不会销毁单位物品栏中的物品。	l
+DFHack output: all contruction materials disabled; resetting config	所有建材都被禁用；正在重置配置	l
+DFHack output: building {s} no longer exists; skipping	建筑 {s1} 已不存在；已跳过	l
+DFHack output: loaded state for building {s} doesn't match world	建筑 {s1} 的已载入状态与世界不符	l
+DFHack output: unexpected number of jobs: want 1, got {s}	任务数量异常：应为 1，实际为 {s1}	l
+DFHack output: buildingplan is enabled	buildingplan 已启用	l
+DFHack output: buildingplan is disabled	buildingplan 已停用	l
+DFHack output: Current settings:	当前设置：	l
+DFHack output: use blocks: {s}	使用砖块：{s1}	l
+DFHack output: use boulders: {s}	使用石块：{s1}	l
+DFHack output: use logs: {s}	使用木材：{s1}	l
+DFHack output: use bars: {s}	使用金属锭：{s1}	l
+DFHack output: plan constructions on tiles with existing constructed floors/ramps when using box select: {s}	框选时在已有建造地板／坡道的格子上规划建造：{s1}	l
+DFHack output: map not yet loaded; not scanning jobs	地图尚未载入；不扫描任务	l
+DFHack output: invalid burrow specifier or burrow not found	洞穴区标识无效，或未找到洞穴区	l
+DFHack output: invalid box bounds	框选边界无效	l
+DFHack output: invalid starting coordinates	起始坐标无效	l
+DFHack output: no warm dig config found in this save; initializing	此存档中未找到高温挖掘配置；正在初始化	l
+DFHack output: no damp dig config found in this save; initializing	此存档中未找到潮湿挖掘配置；正在初始化	l
+DFHack output: scrubbed {s} tagged tiles	已清理 {s1} 个标记格子	l
+DFHack output: no more active tagged tiles; disabling	已无活动的标记格子；正在停用	l
+DFHack output: invalid priority specified; reverting to {s}	指定的优先级无效；恢复为 {s1}	l
+DFHack output: Invalid dump tile coordinates! Ensure the --dump option specifies an open, non-wall tile.	倾倒格子坐标无效！--dump 必须指定开放且没有墙的格子。	l
+DFHack output: unable to place boulder generated at ({s}, {s}, {s})	无法放置在（{s1}，{s2}，{s3}）处生成的石块	l
+DFHack output: No valid tile beneath ({s},{s},{s}) can't move units and items to floor	（{s1}，{s2}，{s3}）下方没有有效格子，无法将单位和物品移至地板	l
+DFHack output: Failed to load dig-now Lua code	无法载入 dig-now Lua 代码	l
+DFHack output: At least one unit must be alive!	至少必须有一个存活的单位！	l
+DFHack output: invalid stockpile number: {s}	储物区编号无效：{s1}	l
+DFHack output: logistics: designated {s} item for melting	logistics：已将 {s1} 件物品标记为熔化	l
+DFHack output: logistics: designated {s} items for melting	logistics：已将 {s1} 件物品标记为熔化	l
+DFHack output: logistics: designated {s} item for trading	logistics：已将 {s1} 件物品标记为交易	l
+DFHack output: logistics: designated {s} items for trading	logistics：已将 {s1} 件物品标记为交易	l
+DFHack output: logistics: designated {s} item for dumping	logistics：已将 {s1} 件物品标记为倾倒	l
+DFHack output: logistics: designated {s} items for dumping	logistics：已将 {s1} 件物品标记为倾倒	l
+DFHack output: logistics: designated {s} animal for training	logistics：已将 {s1} 只动物标记为训练	l
+DFHack output: logistics: designated {s} animals for training	logistics：已将 {s1} 只动物标记为训练	l
+DFHack output: logistics: claimed {s} forbidden item	logistics：已认领 {s1} 件禁用物品	l
+DFHack output: logistics: claimed {s} forbidden items	logistics：已认领 {s1} 件禁用物品	l
+DFHack output: Missing filename!	缺少文件名！	l
+DFHack output: Invalid symbol in name: {s}	名称中有无效符号：{s1}	l
+DFHack output: Cannot find orders file: {s}	未找到工作订单文件：{s1}	l
+DFHack output: Error reading orders file: {s}	读取工作订单文件出错：{s1}	l
+DFHack output: Invalid orders file: {s}	工作订单文件无效：{s1}	l
+DFHack output: Fixed priority of manager orders.	已修正经理工作订单的优先级。	l
+DFHack output: No map block at pos!	此位置没有地图区块！	l
+DFHack output: Can't create plant: Not floor!	无法创建植物：此处不是地板！	l
+DFHack output: Can't create plant: Building present!	无法创建植物：此处已有建筑！	l
+DFHack output: Can't create plant: Tile flagged no_grow and not --force!	无法创建植物：此格子标记为 no_grow，且未指定 --force！	l
+DFHack output: Can't create plant: Too much liquid!	无法创建植物：液体过深！	l
+DFHack output: Can't create plant: Smooth stone!	无法创建植物：此处是光滑的石材！	l
+DFHack output: Can't create plant: Non-muddy stone!	无法创建植物：石材上没有泥土！	l
+DFHack output: Can't create plant: Wrong tile material!	无法创建植物：格子材料不合适！	l
+DFHack output: Can't create plant: Plant raw not found!	无法创建植物：未找到植物原始定义！	l
+DFHack output: Can't create plant: Plant type can't grow this {s} water feature!	无法创建植物：此植物类型不能在这个 {s1} 水域特征中生长！	l
+DFHack output: Override with --force	使用 --force 可强制执行	l
+DFHack output: No map block!	没有地图区块！	l
+DFHack output: Can't use --force without create!	--force 只能用于 create！	l
+DFHack output: Can't use remove's options without remove!	remove 的选项只能用于 remove！	l
+DFHack output: Can't use --dead without targeting shrubs/saplings!	--dead 必须指定灌木或幼树！	l
+DFHack output: Can't use --age with remove!	--age 不能用于 remove！	l
+DFHack output: --trees not implemented!	--trees 尚未实现！	l
+DFHack output: Map not loaded!	尚未载入地图！	l
+DFHack output: Cannot use --zlevel or --dry-run with create!	create 不能与 --zlevel 或 --dry-run 同时使用！	l
+DFHack output: Cannot use filter/exclude with create!	create 不能与 filter／exclude 同时使用！	l
+DFHack output: Invalid pos for create! Make sure keyboard cursor is active if not entering pos manually!	创建位置无效！未明确输入位置时，需要启用键盘光标！	l
+DFHack output: Could not find magma sea; depth may be incorrect.	未找到岩浆海；深度可能不正确。	l
+DFHack output: World data is not available.	世界数据不可用。	l
+DFHack output: Other vein stone:	其他矿脉石材：	l
+DFHack output: Layer materials:	岩层材料：	l
+DFHack output: Embark depth:	出发深度：	l
+DFHack output: Base materials:	基础材料：	l
+DFHack output: Has HFS tubes	存在隐秘乐趣区域通道	l
+DFHack output: Has demon temple	存在恶魔神庙	l
+DFHack output: Wood in trees:	树木中的木材：	l
+DFHack output: Collecting grasses...	正在收集草类……	l
+DFHack output: Done collecting grasses.	草类收集完成。	l
+DFHack output: Skipping invalid tile.	跳过无效格子。	l
+DFHack output: Handling new grasses...	正在处理新草类……	l
+DFHack output: Grass (ID {s}) already present.	草类（ID {s1}）已存在。	l
+DFHack output: Failed to allocate new grass event! Aborting loop.	无法分配新的草类事件！已中止循环。	l
+DFHack output: No valid grasses. Remove all.	没有有效的草类。全部移除。	l
+DFHack output: Handling forced grass...	正在处理强制指定的草类……	l
+DFHack output: Failed to allocate forced grass event!	无法分配强制草类事件！	l
+DFHack output: `reveal demon` is currently disabled to prevent a hang due to a bug in the base game	`reveal demon` 当前已停用，以避免游戏本身的错误导致卡死	l
+DFHack output: Map is already revealed.	地图已揭示。	l
+DFHack output: Map revealed.	地图已揭示。	l
+DFHack output: Note that in graphics mode, tiles that are not adjacent to open space will not render but can still be examined by hovering over them with the mouse. Switching to text mode (in the game settings) will allow the display of the revealed tiles.	在图形模式下，不与开放空间相邻的格子不会绘制，但仍可通过鼠标悬停查看。切换到游戏设置中的文本模式，即可显示这些已揭示的格子。	l
+DFHack output: Unpausing can unleash the forces of hell, so it has been temporarily disabled.	解除暂停可能释放地狱的力量，因此已暂时禁止。	l
+DFHack output: Run 'unreveal' to revert to previous state.	运行 'unreveal' 可恢复此前的状态。	l
+DFHack output: Can only reveal in adventure or fortress mode.	只能在冒险或要塞模式揭示地图。	l
+DFHack output: There's nothing to revert!	没有可以恢复的内容！	l
+DFHack output: This is only safe to use with non-revealed map.	仅在尚未揭示的地图上使用才安全。	l
+DFHack output: Only in proper dwarf mode.	只能在正常的矮人模式中使用。	l
+DFHack output: Please select a unit or place the keyboard cursor at some empty space you want to be unhidden.	需要选中单位，或将键盘光标指向要取消隐藏的空白位置。	l
+DFHack output: There's nothing to forget!	没有可以清除的揭示记录！	l
+DFHack output: Reveal data forgotten!	已清除地图揭示记录！	l
+DFHack output: Cleaned {s} of {s} map blocks.	已清理 {s2} 个地图区块中的 {s1} 个。	l
+DFHack output: Removed {s} contaminants from {s} items.	已从 {s2} 件物品移除 {s1} 处污染物。	l
+DFHack output: Removed {s} contaminants from {s} creatures.	已从 {s2} 个生物移除 {s1} 处污染物。	l
+DFHack output: Removed {s} contaminants from {s} plants.	已从 {s2} 株植物移除 {s1} 处污染物。	l
+DFHack output: The cursor is not active.	光标未启用。	l
+DFHack output: only protecting eggs inside burrow: {s}	仅保护此洞穴区中的蛋：{s1}	l
+DFHack output: protecting all fertile eggs	保护所有受精蛋	l
+DFHack output: Could not create activity zone reference!	无法创建活动区域引用！	l
+DFHack output: Unit {s} ({s}) assigned to nestbox zone {s} ({s})	已将单位 {s1}（{s2}）分配到巢箱区域 {s3}（{s4}）	l
+DFHack output: Failed to assign unit to building.	无法将单位分配到建筑。	l
+DFHack output: -n requires a positive integer parameter!	-n 需要正整数参数！	l
+DFHack output: Cannot specify both -t and -s at the same time!	不能同时指定 -t 和 -s！	l
+DFHack output: Cannot specify both -t and -f at the same time!	不能同时指定 -t 和 -f！	l
+DFHack output: Cannot specify both -a and -x at the same time!	不能同时指定 -a 和 -x！	l
+DFHack output: Cannot specify -a along with plant IDs!	-a 不能与植物 ID 同时指定！	l
+DFHack output: {s} does not match the specified trait filters	{s1} 不符合指定的特征筛选条件	l
+DFHack output: {s} is a grass and cannot be gathered	{s1} 是草，无法采集	l
+DFHack output: {s} does not have any parts that can be gathered for seeds for farming	{s1} 没有可采集以获得种植用种子的部分	l
+DFHack output: {s} does not have any parts that can be gathered	{s1} 没有可以采集的部分	l
+DFHack output: {s} is out of season, with nothing that can be gathered now	{s1} 已过季，当前没有可以采集的部分	l
+DFHack output: Invalid plant ID(s):	无效的植物 ID：	l
+DFHack output: Valid plant IDs:	有效的植物 ID：	l
+DFHack output: Welcome to the liquid spawner.	欢迎使用液体生成器。	l
+DFHack output: Type 'help' or '?' for a list of available commands, 'q' to quit.	输入 'help' 或 '?' 可列出可用命令，输入 'q' 退出。	l
+DFHack output: Press return after a command to confirm.	输入命令后按回车确认。	l
+DFHack output: Usage: point the DF cursor at a tile you want to modify	用法：将游戏光标指向要修改的格子	l
+DFHack output: empty line - put liquid	空行 - 放置液体	l
+DFHack output: help or ? - print this list of commands	help 或 ? - 显示此命令列表	l
+DFHack output: flood - Flood-fill water tiles from cursor	flood - 从光标开始填充有水的格子	l
+DFHack output: column - Column from cursor, up through free space	column - 从光标沿上方空白空间建立柱状范围	l
+DFHack output: block - DF map block with cursor in it	block - 光标所在的游戏地图区块	l
+DFHack output: range - block with cursor at bottom north-west [r]	range - 以光标为西北底角的区块 [r]	l
+DFHack output: point - single tile [p]	point - 单个格子 [p]	l
+DFHack output: 0-7 - set liquid amount	0-7 - 设置液体深度	l
+DFHack output: Permaflow (only for water):	永久流动（仅用于水）：	l
+DFHack output: Properties (only for magma/water):	属性（仅用于岩浆／水）：	l
+DFHack output: Set-Modes (only for magma/water):	放置模式（仅用于岩浆／水）：	l
+DFHack output: s- - only remove	s- - 仅移除	l
+DFHack output: s+ - only add	s+ - 仅添加	l
+DFHack output: wclean - remove salt and stagnant flags from tiles	wclean - 清除格子的盐分和死水标志	l
+# Full variable-built messages that print()/qerror() sites assemble from local constants.
+DFHack output: currently milking and shearing animals	当前正在为动物挤奶和剪毛	l
+DFHack output: currently not milking and not shearing animals	当前未为动物挤奶或剪毛	l
+DFHack output: currently milking but not shearing animals	当前正在挤奶，但未为动物剪毛	l
+DFHack output: currently not milking but shearing animals	当前未挤奶，但正在为动物剪毛	l
+DFHack output: Male: Uninterested	男性：不感兴趣	l
+DFHack output: Male: Romance	男性：恋爱	l
+DFHack output: Male: Marry	男性：结婚	l
+DFHack output: Female: Uninterested	女性：不感兴趣	l
+DFHack output: Female: Romance	女性：恋爱	l
+DFHack output: Female: Marry	女性：结婚	l
+DFHack output: Casualty	有人员伤亡	l
+DFHack output: Encountered hardship	遭遇困难	l
+DFHack output: Goods seized	货物被扣押	l
+DFHack output: Offended	已被冒犯	l
+DFHack output: {s}: Running every {s} day	{s1}：正在运行，每 {s2} 天执行一次	l
+DFHack output: {s}: Running every {s} days	{s1}：正在运行，每 {s2} 天执行一次	l
+DFHack output: {s}: Would run every {s} day	{s1}：启用后每 {s2} 天执行一次	l
+DFHack output: {s}: Would run every {s} days	{s1}：启用后每 {s2} 天执行一次	l
+DFHack output: {s}: Stopped	{s1}：已停止	l
+DFHack output: {s} assigned to {s} for burial.	已将 {s1} 分配到 {s2} 安葬。	l
+DFHack output: Tomb {d}	墓区 {d1}	l
+DFHack output: ({d} corpse, body part, or burial item)	（{d1} 件尸体、身体部位或随葬物品）	l
+DFHack output: ({d} corpse, body parts, or burial items)	（{d1} 件尸体、身体部位或随葬物品）	l
+DFHack output: {s} has no corpse or body parts available for burial.	{s1} 没有可以安葬的尸体或身体部位。	l
+DFHack output: Adding {s} for burial with unit.	将 {s1} 添加为此单位的随葬物品。	l
+DFHack output: Unable to inter additional item(s);	无法安葬额外物品；	l
+DFHack output: ...no coffin in assigned tomb zone.	……分配的墓区中没有棺材。	l
+DFHack output: ...selected item is not valid for burial.	……选中的物品不能用于安葬。	l
+DFHack output: ...no items at cursor are valid for burial.	……光标处没有可以用于安葬的物品。	l
+DFHack output: ...no item selected and keyboard cursor not enabled.	……未选中物品，也未启用键盘光标。	l
+DFHack output: Teleporting {d} {s} into a coffin.	正在将物品 #{d1} {s1} 传送到棺材中。	l
+DFHack output: Tasking {d} {s} for immediate burial.	正在为物品 #{d1} {s1} 安排立即安葬任务。	l
+DFHack output: ...specified tomb zone is not assigned to a unit.	……指定的墓区尚未分配给单位。	l
+DFHack output: ...specified unit has no assigned tomb zone.	……指定的单位尚未分配墓区。	l
+DFHack output: ...specified tomb zone is not assigned to specified unit.	……指定的墓区未分配给指定的单位。	l
+DFHack output: ...no assigned tomb zone or unit with assigned tomb zone specified.	……未指定已分配的墓区，也未指定已分配墓区的单位。	l
+DFHack output: Unable to store selected item inside a storage furniture in owner's assigned room(s).	无法将选中的物品存入主人分配房间的储物家具中。	l
+DFHack output: Unable to drop selected item off on the floor of owner's assigned room(s).	无法将选中的物品放在主人分配房间的地面上。	l
+DFHack output: Unable to store selected item inside a storage furniture in the dormitory.	无法将选中的物品存入宿舍的储物家具中。	l
+DFHack output: Unable to drop selected item off on the floor of the dormitory.	无法将选中的物品放在宿舍的地面上。	l
+DFHack output: Unable to task selected item for storage.	无法为选中的物品安排收存任务。	l
+DFHack output: {s} year	{s1} 年	l
+DFHack output: {s} years	{s1} 年	l
+DFHack output: {s} month	{s1} 个月	l
+DFHack output: {s} months	{s1} 个月	l
+DFHack output: {s} day	{s1} 天	l
+DFHack output: {s} days	{s1} 天	l
+DFHack output: {s} hour	{s1} 小时	l
+DFHack output: {s} hours	{s1} 小时	l
+DFHack output: {s} minute	{s1} 分钟	l
+DFHack output: {s} minutes	{s1} 分钟	l
+DFHack output: {s} second	{s1} 秒	l
+DFHack output: {s} seconds	{s1} 秒	l
+# Explicit status values only; lower-case executable tag/command/RAW identifiers remain native.
+DFHack output value: enabled	已启用	l
+DFHack output value: disabled	已停用	l
+DFHack output value: Enabled	已启用	l
+DFHack output value: Disabled	已停用	l
+DFHack output value: not enabled	未启用	l
+DFHack output value: running	正在运行	l
+DFHack output value: not running	未运行	l
+DFHack output value: Running	正在运行	l
+DFHack output value: Stopped	已停止	l
+DFHack output value: Would run	启用后运行	l
+DFHack output value: true	是（true）	l
+DFHack output value: false	否（false）	l
+DFHack output value: True	是（True）	l
+DFHack output value: False	否（False）	l
+DFHack output value: yes	是	l
+DFHack output value: no	否	l
+DFHack output value: Yes	是	l
+DFHack output value: No	否	l
+DFHack output value: ON	开启	l
+DFHack output value: OFF	关闭	l
+DFHack output value: on	开启	l
+DFHack output value: off	关闭	l
+DFHack output value: None	无	l
+DFHack output value: Default	默认	l
+DFHack output value: Available	可用	l
+DFHack output value: Unavailable	不可用	l
+DFHack output value: Uninterested	不感兴趣	l
+DFHack output value: Romance	恋爱	l
+DFHack output value: Marry	结婚	l
+DFHack output value: Clear	晴天	l
+DFHack output value: Rain	下雨	l
+DFHack output value: Snow	下雪	l
+DFHack output value: Approaching	正在接近	l
+DFHack output value: AtDepot	已到贸易站	l
+DFHack output value: Leaving	正在离开	l
+DFHack output value: Casualty	有人员伤亡	l
+DFHack output value: Encountered hardship	遭遇困难	l
+DFHack output value: Goods seized	货物被扣押	l
+DFHack output value: Offended	已被冒犯	l
+DFHack output value: Peace	和平	l
+DFHack output value: War	战争	l
+DFHack output value: Locked	已锁定	l
+DFHack output value: Unlocked	未锁定	l
+DFHack output value: Suspended	已暂停	l
+DFHack output value: Active	活动	l
+DFHack output value: Inactive	不活动	l
+DFHack output value: Complete	完成	l
+DFHack output value: Incomplete	未完成	l
+DFHack output value: Success	成功	l
+DFHack output value: Failed	失败	l
+# Fixed output fragments are authored from concrete print/color_ostream assembly sites.
+# Edge spaces in source fragments are intentional and are not TSV padding.
+DFHack output fragment: animal type	动物类型	l
+DFHack output fragment: unit id	单位 ID	l
+DFHack output fragment: race id	种族 ID	l
+DFHack output fragment: marked for slaughter	标记为屠宰	l
+DFHack output fragment: marked for gelding	标记为阉割	l
+DFHack output fragment: route id	路线 ID	l
+DFHack output fragment: minecart?	有矿车？	l
+DFHack output fragment: has stops?	有停靠点？	l
+DFHack output fragment: route name	路线名称	l
+DFHack output fragment: [Enabled] Auto-Designations	［已启用］自动标记	l
+DFHack output fragment: Designated / Designatable Item Counts	已标记／可标记物品数量	l
+DFHack output fragment: Total Stockpiled Items	储物区物品总数	l
+DFHack output fragment: Likes material: 	喜欢的材料：	l
+DFHack output fragment: Likes food: 	喜欢的食物：	l
+DFHack output fragment: Likes item type: 	喜欢的物品类型：	l
+DFHack output fragment: Likes plant: 	喜欢的植物：	l
+DFHack output fragment: Hates creature: 	厌恶的生物：	l
+DFHack output fragment: Likes color: 	喜欢的颜色：	l
+DFHack output fragment: Likes shape: 	喜欢的形状：	l
+DFHack output fragment: Likes poetic form: 	喜欢的诗歌形式：	l
+DFHack output fragment: Likes musical form: 	喜欢的音乐形式：	l
+DFHack output fragment: Likes dance form: 	喜欢的舞蹈形式：	l
+DFHack output fragment: Unknown preference type: 	未知偏好类型：	l
+DFHack output fragment:  has an adaptation level of 	的洞穴适应等级为 	l
+DFHack output fragment:  is not a valid skill. Skipping...	不是有效的技能。已跳过……	l
+DFHack output fragment:  is not a valid attribute. Skipping...	不是有效的属性。已跳过……	l
+DFHack output fragment:  is not a valid goal token. Skipping...	不是有效的目标标识。已跳过……	l
+DFHack output fragment:  is not a valid facet token. Skipping...	不是有效的性格特征标识。已跳过……	l
+DFHack output fragment:  is not a valid belief token. Skipping...	不是有效的信念标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid material token. Skipping...	似乎不是有效的材料标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid creature token. Skipping...	似乎不是有效的生物标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid food token. Skipping...	似乎不是有效的食物标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid item token. Skipping...	似乎不是有效的物品标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid plant token. Skipping...	似乎不是有效的植物标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid color token. Skipping...	似乎不是有效的颜色标识。已跳过……	l
+DFHack output fragment:  does not seem to be a valid shape token. Skipping...	似乎不是有效的形状标识。已跳过……	l
+DFHack output fragment: WARNING: tier out of range for attribute '	警告：属性层级超出范围：'	l
+DFHack output fragment: WARNING: level out of range for facet '	警告：性格特征等级超出范围：'	l
+DFHack output fragment: WARNING: level out of range for belief '	警告：信念等级超出范围：'	l
+DFHack output fragment: WARNING: unable to calculate a value for field '	警告：无法计算字段的值：'	l
+DFHack output fragment: '. Skipping...	'。已跳过……	l
+DFHack output fragment:  (deceased)	（已故）	l
+DFHack output fragment:  (selected unit)	（选中的单位）	l
+DFHack output fragment:  (includes selected unit)	（包含选中的单位）	l
+DFHack output fragment: Units who joined via petition	通过请愿加入的单位	l
+DFHack output fragment: Migrants:	移民：	l
+DFHack output fragment: Feature #	地形特征 #	l
+DFHack output fragment:  is shown: 	已显示：	l
+DFHack output fragment:  is hidden: 	已隐藏：	l
+DFHack output fragment: Establish a Temple Complex for "	建立神庙建筑群，供"	l
+DFHack output fragment: Establish a Temple for "	建立神庙，供"	l
+DFHack output fragment: Establish a Grand Guildhall for "	建立大型行会大厅，供"	l
+DFHack output fragment: Establish a Guildhall for "	建立行会大厅，供"	l
+DFHack output fragment: Establish a Unknown Location for "	建立未知场所，供"	l
+DFHack output fragment: " worshiping "	"，信奉"	l
+DFHack output fragment: ", a 	"，所属 	l
+DFHack output fragment:  guild,	行会，	l
+DFHack output fragment: as agreed on 	协议签订于 	l
+DFHack output fragment: An Unknown Entity or Group	未知实体或群体	l
+DFHack output fragment: An Unknown Deity	未知神祇	l
+DFHack output fragment:  (outstanding)	（尚未兑现）	l
+DFHack output fragment:  (satisfied)	（已兑现）	l
+DFHack output fragment:  (denied)	（已拒绝）	l
+DFHack output fragment:  (expired)	（已过期）	l
+DFHack output fragment: Autofarm is 	autofarm 当前状态：	l
+DFHack output fragment: Default: 	默认：	l
+DFHack output fragment: autobutcher is 	autobutcher 当前状态：	l
+DFHack output fragment: monitoring races: 	正在监控的种族：	l
+DFHack output fragment: burrow name	洞穴区名称	l
+DFHack output fragment: Mode: 	模式：	l
+DFHack output fragment: Balance: 	劳动平衡：	l
+DFHack output fragment: Idle reserve: 	闲置人力储备：	l
+DFHack output fragment: job board: 	任务公告板：	l
+DFHack output fragment: top skills in use:	正在使用的最高技能：	l
+DFHack output fragment: labor monitor: 	劳动监控：	l
+DFHack output fragment: labor defaults table has 	默认劳动分配表包含 	l
+DFHack output fragment: minimum 	最少 	l
+DFHack output fragment: Ores:	矿石：	l
+DFHack output fragment: Gems:	宝石：	l
+DFHack output fragment: Other vein stone:	其他矿脉石材：	l
+DFHack output fragment: Layer materials:	岩层材料：	l
+DFHack output fragment: Embark depth: 	出发深度：	l
+DFHack output fragment: Base materials:	基础材料：	l
+DFHack output fragment: Liquids:	液体：	l
+DFHack output fragment: Features:	地形特征：	l
+DFHack output fragment: Has aquifer	存在含水层	l
+DFHack output fragment: Has lair	存在巢穴	l
+DFHack output fragment: Has HFS tubes	存在隐秘乐趣区域通道	l
+DFHack output fragment: Has demon temple	存在恶魔神庙	l
+DFHack output fragment: Shrubs:	灌木：	l
+DFHack output fragment: Wood in trees:	树木中的木材：	l
+DFHack output fragment: Bad index: 	索引无效：	l
+DFHack output fragment:    Elev:	   高度：	l
+DFHack output fragment:  (wear level 	（磨损程度 	l
+DFHack output fragment: , owner 	，主人 	l
+DFHack output fragment: Jobsite is submerged	施工地点被水淹没	l
+DFHack output fragment: Managed by buildingplan	由 buildingplan 管理	l
+DFHack output fragment: May block another build job	可能阻挡其他建造任务	l
+DFHack output fragment: Blocks another build job	阻挡其他建造任务	l
+DFHack output fragment: Would collapse immediately	会立即坍塌	l
+DFHack output fragment: Blocked by an unmovable item	被无法移动的物品阻挡	l
+DFHack output fragment: Would collapse machinery	会导致机械坍塌	l
+DFHack output fragment: External reason	外部原因	l
+DFHack output fragment: not suspended by suspendmanager	不是由 suspendmanager 暂停	l
+DFHack output fragment: Invalid symbol in name: 	名称中有无效符号：	l
+DFHack output fragment: Invalid job type for imported manager order: 	导入的经理工作订单中任务类型无效：	l
+DFHack output fragment: Invalid item type for imported manager order: 	导入的经理工作订单中物品类型无效：	l
+DFHack output fragment: Invalid item subtype for imported manager order: 	导入的经理工作订单中物品子类型无效：	l
+DFHack output fragment: Invalid material for imported manager order: 	导入的经理工作订单中材料无效：	l
+DFHack output fragment: Invalid item_category value for imported manager order: 	导入的经理工作订单中 item_category 值无效：	l
+DFHack output fragment: Missing historical figure for imported manager order: 	导入的经理工作订单缺少历史人物：	l
+DFHack output fragment: Invalid material_category value for imported manager order: 	导入的经理工作订单中 material_category 值无效：	l
+DFHack output fragment: Invalid art type value for imported manager order: 	导入的经理工作订单中艺术类型无效：	l
+DFHack output fragment: Invalid frequency value for imported manager order: 	导入的经理工作订单中执行频率无效：	l
+DFHack output fragment: Missing workshop for imported manager order: 	导入的经理工作订单缺少工坊：	l
+DFHack output fragment: Invalid item condition condition for imported manager order: 	导入的经理工作订单中物品条件无效：	l
+DFHack output fragment: Invalid item condition flags for imported manager order: 	导入的经理工作订单中物品条件标志无效：	l
+DFHack output fragment: Invalid item condition item type for imported manager order: 	导入的经理工作订单中物品条件类型无效：	l
+DFHack output fragment: Invalid item condition item subtype for imported manager order: 	导入的经理工作订单中物品条件子类型无效：	l
+DFHack output fragment: Invalid item condition material for imported manager order: 	导入的经理工作订单中物品条件材料无效：	l
+DFHack output fragment: Invalid item condition inorganic bearing type for imported manager order: 	导入的经理工作订单中物品条件所含无机材料类型无效：	l
+DFHack output fragment: Invalid item condition tool use for imported manager order: 	导入的经理工作订单中物品条件工具用途无效：	l
+DFHack output fragment: Reaction code not found for imported manager order: 	导入的经理工作订单中未找到反应代码：	l
+DFHack output fragment: Invalid reagent code for imported manager order: 	导入的经理工作订单中原料代码无效：	l
+DFHack output fragment: Missing order condition target for imported manager order: 	导入的经理工作订单缺少订单条件目标：	l
+DFHack output fragment: Invalid order condition type for imported manager order: 	导入的经理工作订单中订单条件类型无效：	l
+DFHack output fragment: Cannot find orders file: 	未找到工作订单文件：	l
+DFHack output fragment: Error reading orders file: 	读取工作订单文件出错：	l
+DFHack output fragment: : expected array	：需要数组	l
+DFHack output fragment: Invalid orders file: 	工作订单文件无效：	l
+DFHack output fragment: Unhandled raw item type in manager order: 	经理工作订单中存在未处理的原始物品类型：	l
+DFHack output fragment:  manager orders.	个经理工作订单。	l
+DFHack output fragment: Re-checking conditions for 	正在重新计算条件，涉及 	l
+DFHack output fragment: Other:	其他：	l
+DFHack output fragment: Brush:	笔刷：	l
+DFHack output fragment: Modes:	模式：	l
+DFHack output fragment:  : invalid permaflow mode	：永久流动模式无效	l
+DFHack output fragment:  : unknown command.	：未知命令。	l
+DFHack output fragment: Run liquids-here with these parameters: 	使用这些参数运行 liquids-here：	l
+DFHack output fragment: invalid cursor position	光标位置无效	l
+DFHack output fragment: invalid liquid amount	液体深度无效	l
+# Exact or templated assembled report rows with dynamic IDs left intact.
+DFHack output: animal type unit id race id sex marked for slaughter gelded marked for gelding	动物类型 单位 ID 种族 ID 性别 标记为屠宰 已阉割 标记为阉割	l
+DFHack output: animal type unit id race id sex marked for slaughter gelded marked for gelding str agi tgh endur recup disres	动物类型 单位 ID 种族 ID 性别 标记为屠宰 已阉割 标记为阉割 力量 敏捷 韧性 耐力 恢复力 抗病力	l
+DFHack output: number name melt items trade items dump items train items forbid items	编号 名称 熔化 物品 交易 物品 倾倒 物品 训练 物品 禁用 物品	l
+DFHack output: No stockpiles configured	尚未配置储物区	l
+DFHack output: Route {s} has no stops defined. Cannot assign minecart.	路线 {s1} 尚未定义停靠点，无法分配矿车。	l
+DFHack output: WARNING: '{s}' is not a valid skill. Skipping...	警告：'{s1}' 不是有效的技能。已跳过……	l
+DFHack output: WARNING: '{s}' is not a valid attribute. Skipping...	警告：'{s1}' 不是有效的属性。已跳过……	l
+DFHack output: WARNING: '{s}' is not a valid goal token. Skipping...	警告：'{s1}' 不是有效的目标标识。已跳过……	l
+DFHack output: WARNING: '{s}' is not a valid facet token. Skipping...	警告：'{s1}' 不是有效的性格特征标识。已跳过……	l
+DFHack output: WARNING: '{s}' is not a valid belief token. Skipping...	警告：'{s1}' 不是有效的信念标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid material token. Skipping...	警告：'{s1}' 似乎不是有效的材料标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid creature token. Skipping...	警告：'{s1}' 似乎不是有效的生物标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid food token. Skipping...	警告：'{s1}' 似乎不是有效的食物标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid item token. Skipping...	警告：'{s1}' 似乎不是有效的物品标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid plant token. Skipping...	警告：'{s1}' 似乎不是有效的植物标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid color token. Skipping...	警告：'{s1}' 似乎不是有效的颜色标识。已跳过……	l
+DFHack output: WARNING: '{s}' does not seem to be a valid shape token. Skipping...	警告：'{s1}' 似乎不是有效的形状标识。已跳过……	l
+DFHack output: WARNING: tier out of range for attribute '{s}'. Skipping...	警告：属性 '{s1}' 的层级超出范围。已跳过……	l
+DFHack output: WARNING: level out of range for facet '{s}'. Skipping...	警告：性格特征 '{s1}' 的等级超出范围。已跳过……	l
+DFHack output: WARNING: level out of range for belief '{s}'. Skipping...	警告：信念 '{s1}' 的等级超出范围。已跳过……	l
+DFHack output: WARNING: unable to calculate a value for field '{s}'. Skipping...	警告：无法计算字段 '{s1}' 的值。已跳过……	l
+DFHack output: Likes material: {s}	喜欢的材料：{s1}	l
+DFHack output: Likes food: {s}	喜欢的食物：{s1}	l
+DFHack output: Likes item type: {s}	喜欢的物品类型：{s1}	l
+DFHack output: Likes plant: {s}	喜欢的植物：{s1}	l
+DFHack output: Hates creature: {s}	厌恶的生物：{s1}	l
+DFHack output: Likes color: {s}	喜欢的颜色：{s1}	l
+DFHack output: Likes shape: {s}	喜欢的形状：{s1}	l
+DFHack output: Likes poetic form: {s}	喜欢的诗歌形式：{s1}	l
+DFHack output: Likes musical form: {s}	喜欢的音乐形式：{s1}	l
+DFHack output: Likes dance form: {s}	喜欢的舞蹈形式：{s1}	l
+DFHack output: Unknown preference type: {s}	未知偏好类型：{s1}	l
+DFHack output: Feature #{d} is shown: "{s}", type {s}	地形特征 #{d1} 已显示："{s1}"，类型 {s2}	l
+DFHack output: Feature #{d} is hidden: "{s}", type {s}	地形特征 #{d1} 已隐藏："{s1}"，类型 {s2}	l
+DFHack output: Autofarm is enabled	autofarm 已启用	l
+DFHack output: Autofarm is disabled	autofarm 已停用	l
+DFHack output: autobutcher is enabled	autobutcher 已启用	l
+DFHack output: autobutcher is disabled	autobutcher 已停用	l
+DFHack output: could not create persistent key for race: {s}	无法为此种族创建持久数据键：{s1}	l
+# Additional concrete status-field fragments from installed script/plugin reporters.
+DFHack output fragment: autostart enabled: 	自动启动已启用：	l
+DFHack output fragment: currently enabled: 	当前已启用：	l
+DFHack output fragment: current: 	当前：	l
+DFHack output fragment:  (default: 	（默认：	l
+DFHack output fragment: minimum: 	最小值：	l
+DFHack output fragment: Type: 	类型：	l
+DFHack output fragment: Time:	时间：	l
+DFHack output fragment: Place:	位置：	l
+DFHack output fragment: Settings:	设置：	l
+DFHack output fragment: Current settings:	当前设置：	l
+DFHack output fragment: Current game caps:	当前游戏上限：	l
+DFHack output fragment: population cap: 	人口上限：	l
+DFHack output fragment: strict pop cap: 	严格人口上限：	l
+DFHack output fragment: visitor cap: 	访客上限：	l
+DFHack output fragment: stockpile number: 	储物区编号：	l
+DFHack output fragment: Items designated for melting: 	标记为熔化的物品：	l
+DFHack output fragment: Items designated for trading: 	标记为交易的物品：	l
+DFHack output fragment: Items designated for dumping: 	标记为倾倒的物品：	l
+DFHack output fragment: Animals designated for train: 	标记为训练的动物：	l
+DFHack output fragment: Total fortress items:	要塞物品总计：	l
+DFHack output fragment: total visible logs: 	可见木材总数：	l
+DFHack output fragment: total visible trees: 	可见树木总数：	l
+DFHack output fragment: total trees harvested: 	砍伐树木总数：	l
+DFHack output fragment: training level:	训练程度：	l
+DFHack output fragment: Orientation of 	性取向：	l
+DFHack output fragment: Male: 	男性：	l
+DFHack output fragment: Female: 	女性：	l
+DFHack output fragment: Skill class names:	技能类别名称：	l
+DFHack output fragment: Fulfillment levels for "craft item" needs	“制作物品”需求的满足程度	l
+DFHack output fragment: Automatically prioritized jobs:	自动提高优先级的任务：	l
+DFHack output fragment: Current prioritizable jobs:	当前可提高优先级的任务：	l
+DFHack output fragment: unclaimed total job type	未认领 总计 任务类型	l
+DFHack output fragment: Forbidden items on the map by type:	地图上被禁用的物品，按类型分类：	l
+DFHack output fragment: Books and Scrolls:	书籍和卷轴：	l
+DFHack output fragment: Slabs:	石板：	l
+DFHack output fragment: Available confirmation prompts:	可用的确认提示：	l
+DFHack output fragment: Current Superdwarfs: 	当前超级矮人：	l
+DFHack output fragment: Current Liquid Sources:	当前液体源：	l
+DFHack output fragment: Ignored citizens:	已忽略的公民：	l
+DFHack output fragment: The following animals are receiving treatment:	以下动物正在接受治疗：	l
+DFHack output fragment: The following animals are injured and need treatment:	以下动物受伤，需要治疗：	l
+DFHack output fragment: usable seed counts and current targets:	可用种子数量与当前目标：	l
+DFHack output fragment: total usable seeds: 	可用种子总数：	l
+DFHack output fragment: Rooms reserved for traveling units:	为旅行中单位预留的房间：	l
+DFHack output fragment: Managing assignments for noble rooms:	管理的贵族房间分配：	l
+DFHack output fragment: materials preference order:	材料偏好顺序：	l
+DFHack output fragment: Parameters:	参数：	l
+DFHack output fragment: Error in order:	工作订单出错：	l
+DFHack output fragment: negative amount; removing existing order	数量为负；正在删除现有订单	l
+DFHack output fragment: Queuing 	加入订单队列：	l
+DFHack output fragment:  infinitely	，无限重复	l
+DFHack output fragment: Missing amount_total, set to 	缺少 amount_total，已设为 	l
+DFHack output fragment: Invalid amount_total: 	amount_total 无效：	l
+DFHack output fragment: not queued.	未加入队列。	l
+DFHack output fragment: Data appended to "	数据已追加至"	l
+DFHack output fragment: Data overwritten in "	数据已写入并覆盖"	l
+DFHack output fragment: Exporting description of the 	正在导出以下对象的描述：	l
+DFHack output fragment:  (id: 	（ID：	l
+DFHack output fragment: ): serving a sentence of 	）：正在服刑，刑期 	l
+DFHack output fragment:  day(s)	天	l
+DFHack output fragment:  has been tasked to store away 	已被安排收存 	l
+DFHack output fragment: Ownership of 	所有权：	l
+DFHack output fragment:  was removed from 	已从以下单位解除：	l
+DFHack output fragment: [enabled]	［已启用］	l
+DFHack output fragment: [disabled]	［已停用］	l
+DFHack output fragment: [ON]	［开启］	l
+DFHack output fragment: [OFF]	［关闭］	l
+# Mode/status enum values retain their native token when it is also a command option.
+DFHack output value: NO	否	l
+DFHack output value: started	已开始	l
+DFHack output value: stopped	已停止	l
+DFHack output value: watched	正在监控	l
+DFHack output value: gelded	已阉割	l
+DFHack output value: ungelded	未阉割	l
+DFHack output value: shown	已显示	l
+DFHack output value: hidden	已隐藏	l
+DFHack output value: forbidden	已禁用	l
+DFHack output value: unforbidden	未禁用	l
+DFHack output value: legacy	旧版（legacy）	l
+DFHack output value: modern	新版（modern）	l
+DFHack output value: mapper	映射（mapper）	l
+DFHack output value: managed	已管理	l
+DFHack output value: unmanaged	未管理	l
+DFHack output value: IDLE	闲置	l
+DFHack output value: BUSY	忙碌	l
+DFHack output value: EXCLUSIVE	专职	l
+DFHack output value: MILITARY	军事	l
+DFHack output value: CHILD	儿童	l
+DFHack output value: OTHER	其他	l
+DFHack output value: outstanding	尚未兑现	l
+DFHack output value: satisfied	已兑现	l
+DFHack output value: denied	已拒绝	l
+DFHack output value: expired	已过期	l
+DFHack output value: profession-less	未指定职业	l
+DFHack output: A valid JSON document must be either an array or an object value.	有效的 JSON 文档必须是数组或对象值。	l
+DFHack output: Exceeded stackLimit in readValue().	readValue() 超出了 stackLimit 限制。	l
+DFHack output: Syntax error: value, object or array expected.	语法错误：此处应为值、对象或数组。	l
+DFHack output: Missing ':' after object member name	对象成员名称后缺少 ':'	l
+DFHack output: Missing ',' or '}' in object declaration	对象声明中缺少 ',' 或 '}'	l
+DFHack output: Missing '}' or object member name	缺少 '}' 或对象成员名称	l
+DFHack output: Missing ',' or ']' in array declaration	数组声明中缺少 ',' 或 ']'	l
+DFHack output: '{s}' is not a number.	'{s1}' 不是数字。	l
+DFHack output: Empty escape sequence in string	字符串中存在空转义序列	l
+DFHack output: Bad escape sequence in string	字符串中的转义序列无效	l
+DFHack output: additional six characters expected to parse unicode surrogate pair.	解析 Unicode 代理对还需要六个字符。	l
+DFHack output: expecting another \u token to begin the second half of a unicode surrogate pair	Unicode 代理对的后一部分应以另一个 \u 标记开头	l
+DFHack output: Bad unicode escape sequence in string: four digits expected.	字符串中的 Unicode 转义序列无效：应有四位数字。	l
+DFHack output: Bad unicode escape sequence in string: hexadecimal digit expected.	字符串中的 Unicode 转义序列无效：应为十六进制数字。	l
+DFHack output: Line {d}, Column {d}	第 {d1} 行，第 {d2} 列	l
+DFHack output: * Line {d}, Column {d}	* 第 {d1} 行，第 {d2} 列	l
+DFHack output: See Line {d}, Column {d} for detail.	详情见第 {d1} 行，第 {d2} 列。	l
+DFHack output: Extra non-whitespace after JSON value.	JSON 值后存在多余的非空白字符。	l
+DFHack output: keylength >= 2^30	键长度 >= 2^30	l
+DFHack output: Duplicate key: '{s}'	重复的键：'{s1}'	l
+DFHack output: in Json::Value::duplicateStringValue(): Failed to allocate string value buffer	Json::Value::duplicateStringValue()：无法为字符串值分配缓冲区	l
+DFHack output: in Json::Value::duplicateAndPrefixStringValue(): length too big for prefixing	Json::Value::duplicateAndPrefixStringValue()：长度过大，无法添加前缀	l
+DFHack output: in Json::Value::duplicateAndPrefixStringValue(): Failed to allocate string value buffer	Json::Value::duplicateAndPrefixStringValue()：无法为字符串值分配缓冲区	l
+DFHack output: Null Value Passed to Value Constructor	传给 Value 构造函数的值为空	l
+DFHack output: in Json::Value::asCString(): requires stringValue	Json::Value::asCString()：需要 stringValue 类型	l
+DFHack output: Type is not convertible to string	此类型无法转换为字符串	l
+DFHack output: LargestInt out of Int range	LargestInt 超出 Int 的取值范围	l
+DFHack output: LargestUInt out of Int range	LargestUInt 超出 Int 的取值范围	l
+DFHack output: Value is not convertible to Int.	该值无法转换为 Int。	l
+DFHack output: LargestInt out of UInt range	LargestInt 超出 UInt 的取值范围	l
+DFHack output: LargestUInt out of UInt range	LargestUInt 超出 UInt 的取值范围	l
+DFHack output: Value is not convertible to UInt.	该值无法转换为 UInt。	l
+DFHack output: LargestUInt out of Int64 range	LargestUInt 超出 Int64 的取值范围	l
+DFHack output: Double value is minInt64, precise value cannot be determined	Double 值为 minInt64，无法确定精确值	l
+DFHack output: Value is not convertible to Int64.	该值无法转换为 Int64。	l
+DFHack output: LargestInt out of UInt64 range	LargestInt 超出 UInt64 的取值范围	l
+DFHack output: Value is not convertible to UInt64.	该值无法转换为 UInt64。	l
+DFHack output: Value is not convertible to double.	该值无法转换为 double。	l
+DFHack output: Value is not convertible to float.	该值无法转换为 float。	l
+DFHack output: Value is not convertible to bool.	该值无法转换为 bool。	l
+DFHack output: in Json::Value::clear(): requires complex value	Json::Value::clear()：需要复合值	l
+DFHack output: in Json::Value::resize(): requires arrayValue	Json::Value::resize()：需要 arrayValue 类型	l
+DFHack output: in Json::Value::operator[](ArrayIndex): requires arrayValue	Json::Value::operator[](ArrayIndex)：需要 arrayValue 类型	l
+DFHack output: in Json::Value::operator[](int index): index cannot be negative	Json::Value::operator[](int index)：索引不能为负数	l
+DFHack output: in Json::Value::operator[](ArrayIndex)const: requires arrayValue	Json::Value::operator[](ArrayIndex)const：需要 arrayValue 类型	l
+DFHack output: in Json::Value::operator[](int index) const: index cannot be negative	Json::Value::operator[](int index) const：索引不能为负数	l
+DFHack output: in Json::Value::resolveReference(): requires objectValue	Json::Value::resolveReference()：需要 objectValue 类型	l
+DFHack output: in Json::Value::resolveReference(key, end): requires objectValue	Json::Value::resolveReference(key, end)：需要 objectValue 类型	l
+DFHack output: in Json::Value::find(begin, end): requires objectValue or nullValue	Json::Value::find(begin, end)：需要 objectValue 或 nullValue 类型	l
+DFHack output: in Json::Value::demand(begin, end): requires objectValue or nullValue	Json::Value::demand(begin, end)：需要 objectValue 或 nullValue 类型	l
+DFHack output: in Json::Value::append: requires arrayValue	Json::Value::append：需要 arrayValue 类型	l
+DFHack output: in Json::Value::insert: requires arrayValue	Json::Value::insert：需要 arrayValue 类型	l
+DFHack output: in Json::Value::removeMember(): requires objectValue	Json::Value::removeMember()：需要 objectValue 类型	l
+DFHack output: in Json::Value::getMemberNames(), value must be objectValue	Json::Value::getMemberNames()：值必须为 objectValue 类型	l
+DFHack output: in Json::Value::setComment(): Comments must start with /	Json::Value::setComment()：注释必须以 / 开头	l
+DFHack output: commentStyle must be 'All' or 'None'	commentStyle 必须为 'All' 或 'None'	l
+DFHack output: precisionType must be 'significant' or 'decimal'	precisionType 必须为 'significant' 或 'decimal'	l
+DFHack output: DFHack will now deactivate.	DFHack 现在将停用。	l
+DFHack output: Check file stderr.log for details.	详情见 stderr.log 文件。	l
+DFHack output: DFHack error!	DFHack 错误！	l
+DFHack output: DFHack fatal error: {s}	DFHack 致命错误：{s1}	l
+DFHack output fragment: DFHack fatal error: 	DFHack 致命错误：	l
+DFHack output: Enter new mode: 	输入新的模式：	l
+DFHack output: Enter new game mode number (c for exit): 	输入新的游戏模式编号 (c 退出)：	l
+DFHack output: Enter new game type number (c for exit): 	输入新的游戏类型编号 (c 退出)：	l
+DFHack output: Did you make a backup? (y/n): 	是否已备份？ (y/n)：	l
+DFHack output: Continue with the script? (y/n): 	是否继续运行脚本？ (y/n)：	l
+DFHack output: Retry search from the start? (y/n): 	是否从头重新搜索？ (y/n)：	l
+DFHack output:   Continue? (y/n)[y]: 	是否继续？ (y/n)[y]：	l
+# Installed scripts/troubleshoot-item.lua: main() prints top-level out() rows with '- '.
+# warn() contributes 'WARNING: '; level-1 Description/Job rows have indentation but no '- '.
+# Original descriptions, readable unit names, item/building/job enums, IDs, and coordinates remain values.
+DFHack output: - Item details:	- 物品详情：	l
+DFHack output: - WARNING: Invalid ID: {d}	- 警告：ID 无效：{d1}	l
+DFHack output: - WARNING: Could not locate item in item lists	- 警告：在物品列表中找不到该物品	l
+DFHack output: - Forbidden	- 已禁用	l
+DFHack output: - Melt-designated	- 已指定熔化	l
+DFHack output: - Dump-designated	- 已指定倾倒	l
+DFHack output: - Hidden	- 已隐藏	l
+DFHack output: - WARNING: Could not find unit with unit_id: {d}	- 警告：找不到 unit_id 为 {d1} 的单位	l
+DFHack output: - WARNING: Could not find unit_id in unit_holder	- 警告：在 unit_holder 中找不到 unit_id	l
+DFHack output: - Stored in item of type: {s}	- 存放在以下类型的物品中：{s1}	l
+DFHack output: - WARNING: Could not find item with item_id: {d}	- 警告：找不到 item_id 为 {d1} 的物品	l
+DFHack output: - WARNING: Could not find item_id in contained_in_item	- 警告：在 contained_in_item 中找不到 item_id	l
+DFHack output: - Inside building of type: {s}	- 位于以下类型的建筑内：{s1}	l
+DFHack output: - WARNING: Could not find building with building_id: {d}	- 警告：找不到 building_id 为 {d1} 的建筑	l
+DFHack output: - WARNING: Could not find building_id in building_holder	- 警告：在 building_holder 中找不到 building_id	l
+DFHack output: - Is a container, holding 0 items	- 此物品是容器，内含 0 件物品	l
+DFHack output: - Is a container, holding 1 item:	- 此物品是容器，内含 1 件物品：	l
+DFHack output: - Is a container, holding {d} items:	- 此物品是容器，内含 {d1} 件物品：	l
+DFHack output: - On fire	- 正在燃烧	l
+DFHack output: - Rotten	- 已腐烂	l
+DFHack output: - Trade good	- 贸易物品	l
+DFHack output: - Owned	- 有主人	l
+DFHack output: - Foreign	- 外来物品	l
+DFHack output: - Encased in ice	- 被冰包裹	l
+DFHack output: - WARNING: Marked for garbage collection	- 警告：已标记为待清理	l
+DFHack output: - Used for construction	- 用于建造结构	l
+DFHack output: - Used for building	- 用于建筑	l
+DFHack output: - Artifact (from strange mood)	- 神器（由怪异心情制作）	l
+DFHack output: - Artifact	- 神器	l
+DFHack output: - In job	- 已用于任务	l
+DFHack output: Job type: {s}	任务类型：{s1}	l
+DFHack output: Job position: {s}	任务位置：{s1}	l
+DFHack output: - WARNING: Item not attached to job	- 警告：物品未关联到任务	l
+DFHack output: - WARNING: No job specific_ref found	- 警告：找不到任务的 specific_ref	l
+DFHack output: - Unhandled specific_ref: {s}	- 未处理的 specific_ref：{s1}	l
+# Translate these labels as fragments so readable unit names and full item descriptions are kept intact.
+DFHack output fragment: Description: 	描述：	l
+DFHack output: Description: {s}	描述：{s}	l
+DFHack output: - Description: {s}	- 描述：{s}	l
+DFHack output fragment: - Held by unit: 	- 由以下单位持有：	l
+# Installed scripts/internal/quickfort/*.lua: concrete local print/printerr/error messages.
+# command.finish_commands prints each authored statistic as label + ': ' + its integer count.
+# Blueprint text, cell references, file names, raw setting keys, and command tokens remain captures.
+DFHack output: Blueprint statistics:	蓝图统计：	l
+DFHack output: Tiles outside map boundary: {d}	超出地图边界的格块：{d1}	l
+DFHack output: Invalid key sequences: {d}	无效键序列：{d1}	l
+DFHack output: Buildings designated: {d}	已指定的建筑：{d1}	l
+DFHack output: Unsuitable tiles for building: {d}	不适合建造的格块：{d1}	l
+DFHack output: Buildings undesignated: {d}	已取消指定的建筑：{d1}	l
+DFHack output: Buildings marked for removal: {d}	已标记拆除的建筑：{d1}	l
+DFHack output: Tiles designated for digging: {d}	已指定挖掘的格块：{d1}	l
+DFHack output: Tiles undesignated for digging: {d}	已取消挖掘指定的格块：{d1}	l
+DFHack output: Tiles that could not be designated for digging: {d}	无法指定挖掘的格块：{d1}	l
+DFHack output: Engravings protected from destruction: {d}	已保护免遭破坏的雕刻：{d1}	l
+DFHack output: Tiles whose priority had to be clamped to 1: {d}	优先级已限制为 1 的格块：{d1}	l
+DFHack output: Tiles whose priority had to be clamped to 7: {d}	优先级已限制为 7 的格块：{d1}	l
+DFHack output: Stockpiles designated: {d}	已指定的储物区：{d1}	l
+DFHack output: Stockpile tiles designated: {d}	已指定储物区的格块：{d1}	l
+DFHack output: Stockpile tiles skipped (tile occupied): {d}	已跳过的储物区格块（格块被占用）：{d1}	l
+DFHack output: Stockpiles removed: {d}	已移除的储物区：{d1}	l
+DFHack output: Zones designated: {d}	已指定的区域：{d1}	l
+DFHack output: Zone tiles designated: {d}	已指定区域的格块：{d1}	l
+DFHack output: Zone tiles skipped (tile occupied): {d}	已跳过的区域格块（格块被占用）：{d1}	l
+DFHack output: Zones removed: {d}	已移除的区域：{d1}	l
+DFHack output: Tiles configured: {d}	已配置的格块：{d1}	l
+DFHack output: Tiles not configured due to missing buildings: {d}	因缺少建筑而未配置的格块：{d1}	l
+DFHack output: Keystrokes sent: {d}	已发送的按键：{d1}	l
+DFHack output: Blueprints applied: {d}	已应用的蓝图：{d1}	l
+DFHack output: {d} blueprints did not match filter	{d1} 个蓝图不符合筛选条件	l
+DFHack output: {d} library blueprints not shown	未显示 {d1} 个蓝图库中的蓝图	l
+DFHack output: active settings:	当前设置：	l
+DFHack output: {s} now set to "{s}"	{s1} 现在设为 "{s2}"	l
+DFHack output: {s} successfully completed	{s1} 已成功完成	l
+DFHack output: please position the keyboard cursor at the blueprint start location or use the --cursor option	需要将键盘光标放在蓝图起始位置，或使用 --cursor 选项	l
+DFHack output: the buildingplan plugin is not enabled. buildings placed with #build blueprints will disappear if you do not have required building materials in stock.	buildingplan 插件未启用。若库存中没有所需建材，通过 #build 蓝图放置的建筑会消失。	l
+DFHack output: cannot create a guildhall without a specified profession	未指定职业，无法创建行会会堂	l
+DFHack output: cannot remove actively selected zone.	无法移除当前选中的区域。	l
+DFHack output: please deselect the zone and try again.	需要取消选择该区域后重试。	l
+DFHack output: cannot remove actively selected stockpile.	无法移除当前选中的储物区。	l
+DFHack output: please deselect the stockpile and try again.	需要取消选择该储物区后重试。	l
+DFHack output: cannot remove actively selected building.	无法移除当前选中的建筑。	l
+DFHack output: please deselect the building and try again.	需要取消选择该建筑后重试。	l
+DFHack output: ignoring invalid location type: "{s}"	忽略无效的地点类型："{s1}"	l
+DFHack output: ignoring invalid allow value: "{s}"	忽略无效的 allow 值："{s1}"	l
+DFHack output: ignoring invalid guildhall profession: "{s}"	忽略无效的行会会堂职业："{s1}"	l
+DFHack output: ignoring invalid {s} value: "{s}"	忽略无效的 {s1} 值："{s2}"	l
+DFHack output: unhandled property: "{s}"="{s}"	未处理的属性："{s1}"="{s2}"	l
+DFHack output: cannot find stockpile or workshop with name or id "{s}" to take from	找不到名称或 ID 为 "{s1}" 的来源储物区或工坊	l
+DFHack output: cannot find stockpile or workshop with name or id "{s}" to give to	找不到名称或 ID 为 "{s1}" 的目标储物区或工坊	l
+DFHack output: cannot find stockpile with name or id "{s}" to give to	找不到名称或 ID 为 "{s1}" 的目标储物区	l
+DFHack output: cannot find stockpile with name or id "{s}" to take from	找不到名称或 ID 为 "{s1}" 的来源储物区	l
+DFHack output: unable to designate zone: {s}	无法指定区域：{s1}	l
+DFHack output: unable to place stockpile: {s}	无法放置储物区：{s1}	l
+DFHack output: unable to place {s}: {s}	无法放置 {s1}：{s2}	l
+DFHack output: space needed for "{s}" is taken by adjacent structures (defined in spreadsheet cells: {s})	"{s1}" 所需空间已被相邻结构占用（定义于表格单元格：{s2}）	l
+DFHack output: skipping "{s}": empty file	跳过 "{s1}"：文件为空	l
+DFHack output: skipping "{s}": no sheet with data detected	跳过 "{s1}"：未发现包含数据的工作表	l
+DFHack output: infinite loop detected in blueprint: "{s}"	蓝图中发现无限循环："{s1}"	l
+DFHack output: alias maximum recursion depth exceeded ({d})	别名递归深度超出上限（{d1}）	l
+DFHack output: unknown alias or keycode: "{s}"	未知别名或键码："{s1}"	l
+DFHack output: invalid setting: "{s}"	设置无效："{s1}"	l
+DFHack output: error: invalid setting: "{s}"	错误：设置无效："{s1}"	l
+DFHack output: error: invalid boolean: "{s}"	错误：布尔值无效："{s1}"	l
+DFHack output: error: invalid integer: "{s}"	错误：整数无效："{s1}"	l
+DFHack output: unhandled filter:	未处理的筛选条件：	l
+DFHack output: quickfort out of sync with DFHack filters; please file a bug	quickfort 与 DFHack 的筛选条件不一致；请提交缺陷反馈	l
+DFHack output: unhandled building type: "{s}:{s}:{s}"; buildings.lua needs updating	未处理的建筑类型："{s1}:{s2}:{s3}"；buildings.lua 需要更新	l
+DFHack output: removing existing job at {d}, {d}, {d}	正在移除 {d1}, {d2}, {d3} 处的现有任务	l
+DFHack output: no building at coordinates ({d}, {d}, {d}); skipping text in spreadsheet cell {s}: "{s}"	坐标 ({d1}, {d2}, {d3}) 处没有建筑；跳过表格单元格 {s1} 中的文本："{s2}"	l
+DFHack output: expected to be at cursor position ({d}, {d}, {d}) on screen "{s}" but there is no active cursor; there is likely a problem with the blueprint text in cell {s}: "{s}" (do you need a "q" at the end to get back into query mode?)	预期光标位于画面 "{s1}" 的 ({d1}, {d2}, {d3})，但当前没有活动光标；单元格 {s2} 中的蓝图文本可能有问题："{s3}"（是否需要在末尾添加 "q" 以返回查询模式？）	l
+DFHack output: expected to be at cursor position ({d}, {d}, {d}) on screen "{s}" but cursor is at ({d}, {d}, {d}); there is likely a problem with the blueprint text in cell {s}: "{s}"	预期光标位于画面 "{s1}" 的 ({d1}, {d2}, {d3})，但实际位于 ({d4}, {d5}, {d6})；单元格 {s2} 中的蓝图文本可能有问题："{s3}"	l
+DFHack output: expected to be at cursor position ({d}, {d}, {d}) on screen "{s}" but screen is "{s}"; there is likely a problem with the blueprint text in cell {s}: "{s}" (do you need a "^" at the end to escape back to the map screen?)	预期光标位于画面 "{s1}" 的 ({d1}, {d2}, {d3})，但当前画面为 "{s2}"；单元格 {s3} 中的蓝图文本可能有问题："{s4}"（是否需要在末尾添加 "^" 以返回地图画面？）	l
+DFHack output: expected to be at map screen, but we seem to be in mode "{s}"; there is likely a problem with the blueprint text in cell {s}: "{s}" (do you need a "^" at the end to get back to the main map?)	预期位于地图画面，但当前似乎处于 "{s1}" 模式；单元格 {s2} 中的蓝图文本可能有问题："{s3}"（是否需要在末尾添加 "^" 以返回主地图？）	l
+
+# Installed gui/adv-finder.lua: runtime notices, finder labels, and location frames.
+DFHack output: Adventure mode only!	只能在冒险模式中使用！	l
+DFHack output: gui/adv-finder: lost adv mode, dismissing view	gui/adv-finder：已离开冒险模式，正在关闭视图。	l
+DFHack output: gui/adv-finder: cleared target	gui/adv-finder：已清除目标。	l
+DFHack output: Find Target	查找目标	l
+DFHack output: Finder	寻踪器	l
+DFHack output: Finder (#{d})	寻踪器（#{d1}）	l
+DFHack output: Historical Figures	历史人物	l
+DFHack output: Artifacts	神器	l
+DFHack output: No results	没有结果	l
+DFHack output: Show dead:	显示死者：	l
+DFHack output: Show books:	显示书籍：	l
+DFHack output: Target (local):	目标（本地）：	l
+DFHack output: Target (global):	目标（世界）：	l
+DFHack output: Global: X{d} Y{d}	世界坐标：X{d1} Y{d2}	l
+DFHack output: Global: X{d} Y{d} Z{d}	世界坐标：X{d1} Y{d2} Z{d3}	l
+DFHack output: Local: X{d} Y{d} Z{d}	本地坐标：X{d1} Y{d2} Z{d3}	l
+DFHack output: You	你	l
+DFHack output: Unnamed	未命名	l
+DFHack output: Force	力量	l
+DFHack output: DEAD	已死亡	l
+DFHack output: ETERNAL	永恒	l
+DFHack output: ALIVE	活着	l
+DFHack output: Transcendent	超然存在	l
+DFHack output: Missing	下落不明	l
+DFHack output: Nearby	就在附近	l
+DFHack output: At {s}	位于{s1}	l
+DFHack output: Traveling	旅行中	l
+DFHack output: Wilderness ({s})	荒野（{s1}）	l
+DFHack output: Underground	地下	l
+DFHack output: Error	错误	l
+DFHack output: Held by {s}	持有者：{s1}	l
+
+# Installed advtools.lua and internal/advtools: authored prompts and descriptions.
+DFHack output: This script can only be used during adventure mode!	此脚本只能在冒险模式中使用！	l
+DFHack output: party	队伍	l
+DFHack output: Select someone to add to your "Core Party" (able to assume control, able to unretire):	选择要加入“核心队伍”的成员（可接管控制，可重新开始冒险）：	l
+DFHack output: Ask for the whereabouts of the {s}	询问{s1}的下落	l
+DFHack output: Ask for the whereabouts of the {s} (Heard of)	询问{s1}的下落（听说过）	l
+DFHack output: (Heard of)	（听说过）	l
+DFHack output: Adds keywords to conversation entries.	为对话选项添加关键词。	l
+DFHack output: Skip combat animations and announcements with a click or key press.	点击或按键可跳过战斗动画和公告。	l
+
+# Installed allneeds.lua: displayed table headings; need_type IDs remain unchanged.
+DFHack output: unknown sort: "{s}"	未知排序方式："{s1}"	l
+DFHack output: Summarizing needs for {s}:	正在汇总{s1}的需求：	l
+DFHack output: Summarizing needs for all (sane) citizens and residents:	正在汇总所有心智正常的公民和居民的需求：	l
+DFHack output: Need Strength Focus Impact Frequency Num. Unfettered -> Badly distracted	需求 强度 专注影响 频次 各满足程度人数：无牵挂 -> 严重分心	l
+DFHack output: Need	需求	l
+DFHack output: Strength	强度	l
+DFHack output: Focus Impact	专注影响	l
+DFHack output: Frequency	频次	l
+DFHack output: Num. Unfettered -> Badly distracted	各满足程度人数：无牵挂 -> 严重分心	l
+
+# Installed agitation-rebalance.lua: CLI states, difficulty descriptions, and monitor labels.
+DFHack output: preset not found: "{s}"	未找到预设："{s1}"	l
+DFHack output: agitation-rebalance: preset applied: {s}	agitation-rebalance：已应用预设：{s1}	l
+DFHack output: agitation-rebalance is enabled	agitation-rebalance 已启用	l
+DFHack output: agitation-rebalance is not enabled	agitation-rebalance 未启用	l
+DFHack output: features:	功能：	l
+DFHack output: auto_preset: true	auto_preset：已启用	l
+DFHack output: auto_preset: false	auto_preset：已禁用	l
+DFHack output: surface: true	surface：已启用	l
+DFHack output: surface: false	surface：已禁用	l
+DFHack output: cavern: true	cavern：已启用	l
+DFHack output: cavern: false	cavern：已禁用	l
+DFHack output: cap_invaders: true	cap_invaders：已启用	l
+DFHack output: cap_invaders: false	cap_invaders：已禁用	l
+DFHack output: monitor: true	monitor：已启用	l
+DFHack output: monitor: false	monitor：已禁用	l
+DFHack output: difficulty settings:	难度设置：	l
+DFHack output: Wilderness irritation minimum: {d} (about {d} tree(s) until initial attacks are possible)	荒野愤怒最低值：{d1}（约砍伐 {d2} 棵树后可能开始遭到攻击）	l
+DFHack output: Wilderness sensitivity: {d} (each tree past the miniumum makes an attack {s}% more likely)	荒野敏感度：{d1}（超过最低值后，每砍一棵树，攻击概率增加 {s1}%）	l
+DFHack output: Wilderness irritation decay: {d} (about {d} additional tree(s) allowed per year)	荒野愤怒衰减：{d1}（每年约可额外砍伐 {d2} 棵树）	l
+DFHack output: Cavern dweller maximum attackers: {d} (maximum allowed across all caverns)	洞穴居民进攻人数上限：{d1}（所有洞穴合计的最大人数）	l
+DFHack output: current agitated wildlife: {d}	当前愤怒的野生动物：{d1}	l
+DFHack output: current known cavern invaders: {d}	当前已知洞穴入侵者：{d1}	l
+DFHack output: current chances for an upcoming attack:	接下来遭到攻击的概率：	l
+DFHack output: Surface: None	地表：无	l
+DFHack output: Surface: Low	地表：低	l
+DFHack output: Surface: Med	地表：中	l
+DFHack output: Surface: High	地表：高	l
+DFHack output: Caverns: None	洞穴：无	l
+DFHack output: Caverns: Low	洞穴：低	l
+DFHack output: Caverns: Med	洞穴：中	l
+DFHack output: Caverns: High	洞穴：高	l
+DFHack output: feature not found: "{s}"	未找到功能："{s1}"	l
+DFHack output: feature enabled: {s}	已启用功能：{s1}	l
+DFHack output: feature disabled: {s}	已禁用功能：{s1}	l
+DFHack output: Irrit. Threat	愤怒威胁	l
+DFHack output: Surface:	地表：	l
+DFHack output: Caverns:	洞穴：	l
+DFHack output: Low	低	l
+DFHack output: Med	中	l
+DFHack output: High	高	l
+DFHack output: Attack chance	攻击概率	l
+DFHack output: FBs:	遗忘巨兽：	l
+DFHack output: Irrit	愤怒值	l
+DFHack output: Invaders:	入侵者：	l
+DFHack output: Invaders: {d}/{d}	入侵者：{d1}/{d2}	l
+DFHack output: Surface attacks:	地表攻击：	l
+DFHack output: Surface attacks: {d}	地表攻击：{d1}	l
+DFHack output: Cavern attacks:	洞穴攻击：	l
+DFHack output: Cavern attacks: {d}	洞穴攻击：{d1}	l
+DFHack output: Invasions erased:	已取消的入侵：	l
+DFHack output: Invasions erased: {d}	已取消的入侵：{d1}	l
+DFHack output: Invaders culled:	已清除的入侵者：	l
+DFHack output: Invaders culled: {d}	已清除的入侵者：{d1}	l
+
+# Native Commands::alias: names and executable alias expansions remain unchanged.
+DFHack output: Could not add alias {s} - already exists	无法添加别名 {s1}：别名已存在。	l
+DFHack output: Could not remove alias {s}	无法移除别名 {s1}。	l
+
+# Native ls command descriptions from installed buildingplan.plug.dll, cursecheck.plug.dll, and dig.plug.dll.
+# helpdb.scan_plugins uses getCommandDescription(), overriding the rendered tool description.
+# getCommandDescription() exposes a sentence terminator in the ls display; rendered docs use different descriptions.
+DFHack help: Plan building placement before you have materials.	在建材齐备之前规划建筑放置。	l
+DFHack help: Check for cursed creatures (undead, necromancers...).	检查受诅咒的生物（亡灵、死灵法师等）。	l
+DFHack help: Dig designate a circle (filled or hollow).	指定挖掘圆形区域（实心或空心）。	l
+DFHack help: Dig layerstone.	指定挖掘岩层。	l
+# The same native terminator rule affects debugfilter and the tiletypes command family.
+# Sources: installed debug.plug.dll / tiletypes.plug.dll and official 53.16-r2 plugins/debug.cpp / tiletypes.cpp.
+# library/LuaApi.cpp internal_getCommandDescription appends '.' when the nonempty description does not already end in '.'.
+DFHack help: Manage runtime debug print filters.	管理运行时调试输出的筛选条件。	l
+DFHack help: Run tiletypes commands (seperated by ' ; ').	执行 tiletypes 命令，各条命令以 ' ; ' 分隔。	l
+DFHack help: Repeat tiletypes command at cursor (with brush).	使用当前笔刷，在光标位置重复执行 tiletypes 命令。	l
+DFHack help: Repeat tiletypes command at cursor (with single tile brush).	使用单格笔刷，在光标位置重复执行 tiletypes 命令。	l
+
+# Local authored output from installed scripts/autofish.lua and scripts/armoks-blessing.lua.
+# Preserve command arguments, skill identifiers, unit names, and dynamic values.
+DFHack output: Stopping at {s} raw & prepared fish.	生鱼与已处理的鱼总量达到 {s1} 时停止。	l
+DFHack output: Restarting at {s} raw & prepared fish.	生鱼与已处理的鱼总量降至 {s1} 时恢复。	l
+DFHack output: No unit available!  Aborting with extreme prejudice.	没有可用单位！立即终止操作。	l
+DFHack output: The skill name provided is not in the list.	提供的技能名称不在列表中。	l
+DFHack output: {s} is now a Legendary {s}	{s1} 现在是一名传奇 {s2}	l
+DFHack output: Empty skill name noun, bailing out!	技能职业名称为空，终止操作！	l
+DFHack output: Skill {s} is type: {s} and is now Legendary for {s}	技能 {s1} 的类别为 {s2}，现已为 {s3} 提升至传奇等级	l
+DFHack output: Provide the UPPER CASE argument, for example: PROCESSPLANTS rather than Threshing	请使用全大写参数，例如 PROCESSPLANTS，而非 Threshing	l
+DFHack output: No skillname supplied, no skills will be adjusted.  Pass argument 'list' to see a skill list, 'classes' to show skill classes, or use 'all' if you want all skills legendary.	未提供技能名称，不会调整任何技能。传入参数 'list' 可查看技能列表，'classes' 可查看技能类别，'all' 可将全部技能提升至传奇等级。	l
+
+# Local color_ostream messages from official DFHack 53.16-r2 plugins/autofarm.cpp.
+# The matching format strings are present in the installed autofarm.plug.dll.
+DFHack output: autofarm: changing farm #{d} from {s} to {s}	autofarm：将农田 #{d1} 的作物从 {s1} 改为 {s2}	l
+DFHack output: threshold of {d} for plant {s} in saved configuration loaded	已载入保存配置中植物 {s1} 的阈值 {d1}	l
+DFHack output: threshold for unknown plant {s} in saved configuration ignored	已忽略保存配置中未知植物 {s1} 的阈值	l
+
+# Local authored output from installed scripts/autotraining.lua and gui/autotraining.lua.
+# Keep the executable command identifiers unchanged and translate only human status text.
+DFHack output: autotraining: {d} training, {d} waiting, and {d} excluded units with training needs	autotraining：有训练需求的单位中，{d1} 名正在训练，{d2} 名等待训练，{d3} 名已排除	l
+DFHack output: autotraining is enabled	autotraining 已启用	l
+DFHack output: autotraining is disabled	autotraining 已禁用	l
+DFHack output: gui/autotraining requires a fortress map to be loaded	gui/autotraining 需要先载入要塞地图	l
+
+# Local authored print/qerror output from installed scripts/{colonies,deathcause,color-schemes}.lua.
+# color-schemes.log() prints to the local console; its JSON configuration contents are not translation rules.
+# Preserve colony raw tokens, scheme names, paths, arguments, and unit names in captures.
+DFHack output: {s} at {d}, {d}, {d}	{s1} 位于 {d1}, {d2}, {d3}	l
+DFHack output: {s} is not dead yet!	{s1} 还活着！	l
+DFHack output: {s} does not exist	{s1} 不存在	l
+DFHack output: Could not open {s}	无法打开 {s1}	l
+DFHack output: color-schemes : Registered `{s}` [{s}]	color-schemes：已注册 `{s1}` [{s2}]	l
+DFHack output: color-schemes : Registered `{s}` [{s}] invalid	color-schemes：已注册 `{s1}` [{s2}]，方案无效	l
+DFHack output: color-schemes : Updated `{s}` [{s}]	color-schemes：已更新 `{s1}` [{s2}]	l
+DFHack output: color-schemes : Updated `{s}` [{s}] invalid	color-schemes：已更新 `{s1}` [{s2}]，方案无效	l
+DFHack output: color-schemes : Up to date `{s}` [{s}]	color-schemes：`{s1}` [{s2}] 已是最新状态	l
+DFHack output: color-schemes : Couldn't register `{s}` [{s}] duplicate name	color-schemes：无法注册 `{s1}` [{s2}]，名称重复	l
+DFHack output: color-schemes : Couldn't register `{s}` [{s}] invalid	color-schemes：无法注册 `{s1}` [{s2}]，方案无效	l
+DFHack output: color-schemes : Couldn't register file or directory `{s}` (does not exist)	color-schemes：无法注册文件或目录 `{s1}`（不存在）	l
+DFHack output: color-schemes : Unregistered color scheme `{s}`	color-schemes：配色方案 `{s1}` 尚未注册	l
+DFHack output: color-schemes : Loaded `{s}`	color-schemes：已载入 `{s1}`	l
+DFHack output: color-schemes : Color scheme `{s}` already loaded !	color-schemes：配色方案 `{s1}` 已经载入！	l
+DFHack output: color-schemes : Default set to `{s}`	color-schemes：默认配色方案已设为 `{s1}`	l
+DFHack output: color-schemes : No default color scheme	color-schemes：尚未设置默认配色方案	l
+DFHack output: argument `{s}` requires {d} argument(s)	参数 `{s1}` 需要 {d1} 个值	l
+DFHack output: argument `{s}` must be one of {s}	参数 `{s1}` 必须为以下值之一：{s2}	l
+DFHack output: argument `{s}` could not be converted	无法转换参数 `{s1}`	l
+DFHack output: a command is required	必须提供命令	l
+DFHack output: missing argument `{s}`	缺少参数 `{s1}`	l
+DFHack output: unknown option `{s}`	未知选项 `{s1}`	l
+DFHack output: unknown command `{s}`	未知命令 `{s1}`	l
+DFHack output: name |file	名称 |文件	l
+
+# Exact descriptions from color-schemes.lua's local Parser:help() print path.
+# Option aliases, argument placeholders, and command names remain executable original text.
+DFHack help: Manage color schemes	管理配色方案	l
+DFHack help: Type `--help` after a command to get further information	在命令后添加 `--help` 可获取更多信息	l
+DFHack help: Show this help message and exit	显示此帮助信息并退出	l
+DFHack help: Show version number and exit	显示版本号并退出	l
+DFHack help: Do not write anything to output	不输出任何信息	l
+DFHack help: Load a registered color scheme	载入已注册的配色方案	l
+DFHack help: Color scheme name	配色方案名称	l
+DFHack help: List registered color schemes	列出已注册的配色方案	l
+DFHack help: Register color schemes	注册配色方案	l
+DFHack help: Also register syntaxically incorrect or partial color schemes	同时注册语法不正确或内容不完整的配色方案	l
+DFHack help: Path to color scheme file or directory	配色方案文件或目录的路径	l
+DFHack help: Load or set the default color scheme	载入或设置默认配色方案	l
+DFHack help: Load the default color scheme	载入默认配色方案	l
+DFHack help: Set the default color scheme	设置默认配色方案	l
+
+# Human death clauses from installed gui/unit-info-viewer.lua DEATH_TYPES (indices 0..51).
+# deathcause.lua trims these clauses and adds names, creature/item captions, years, and slayers.
+# This dedicated scope is consumed only by the complete death-narrative adapter; enum spellings remain original.
+DFHack death cause: died of old age	寿终正寝	l
+DFHack death cause: starved to death	饿死	l
+DFHack death cause: died of dehydration	因脱水死亡	l
+DFHack death cause: was shot and killed	被射杀	l
+DFHack death cause: bled to death	失血过多而死	l
+DFHack death cause: drowned	溺水死亡	l
+DFHack death cause: suffocated	窒息死亡	l
+DFHack death cause: was struck down	被击杀	l
+DFHack death cause: was scuttled	被摧毁	l
+DFHack death cause: didn't survive a collision	未能在碰撞中幸存	l
+DFHack death cause: took a magma bath	死于岩浆	l
+DFHack death cause: took a magma shower	死于岩浆喷雾	l
+DFHack death cause: was incinerated by dragon fire	被龙焰焚毁	l
+DFHack death cause: was killed by fire	被火烧死	l
+DFHack death cause: experienced death by SCALD	死于 SCALD	l
+DFHack death cause: was crushed by cavein	被塌方压死	l
+DFHack death cause: was smashed by a drawbridge	被吊桥砸死	l
+DFHack death cause: was killed by falling rocks	被落石砸死	l
+DFHack death cause: experienced death by CHASM	死于 CHASM	l
+DFHack death cause: experienced death by CAGE	死于 CAGE	l
+DFHack death cause: was murdered	被谋杀	l
+DFHack death cause: was killed by a trap	被陷阱杀死	l
+DFHack death cause: vanished	消失了	l
+DFHack death cause: experienced death by QUIT	死于 QUIT	l
+DFHack death cause: experienced death by ABANDON	死于 ABANDON	l
+DFHack death cause: suffered heat stroke	因中暑死亡	l
+DFHack death cause: died of hypothermia	因失温死亡	l
+DFHack death cause: experienced death by SPIKE	死于 SPIKE	l
+DFHack death cause: experienced death by ENCASE_LAVA	死于 ENCASE_LAVA	l
+DFHack death cause: experienced death by ENCASE_MAGMA	死于 ENCASE_MAGMA	l
+DFHack death cause: was preserved in ice	被冻封在冰中	l
+DFHack death cause: became headless	被斩首	l
+DFHack death cause: was crucified	被钉死在十字架上	l
+DFHack death cause: experienced death by BURY_ALIVE	死于 BURY_ALIVE	l
+DFHack death cause: experienced death by DROWN_ALT	死于 DROWN_ALT	l
+DFHack death cause: experienced death by BURN_ALIVE	死于 BURN_ALIVE	l
+DFHack death cause: experienced death by FEED_TO_BEASTS	死于 FEED_TO_BEASTS	l
+DFHack death cause: experienced death by HACK_TO_PIECES	死于 HACK_TO_PIECES	l
+DFHack death cause: choked on air	因暴露于空气而窒息	l
+DFHack death cause: experienced death by BOIL	死于 BOIL	l
+DFHack death cause: melted	熔化了	l
+DFHack death cause: experienced death by CONDENSE	死于 CONDENSE	l
+DFHack death cause: experienced death by SOLIDIFY	死于 SOLIDIFY	l
+DFHack death cause: succumbed to infection	因感染死亡	l
+DFHack death cause: 's ghost was put to rest with a memorial	的幽灵已通过纪念碑安息	l
+DFHack death cause: scared to death	被吓死	l
+DFHack death cause: experienced death by DARKNESS	死于 DARKNESS	l
+DFHack death cause: experienced death by COLLAPSE	死于 COLLAPSE	l
+DFHack death cause: was drained of blood	被吸干血液	l
+DFHack death cause: was slaughtered	被宰杀	l
+DFHack death cause: became roadkill	被车辆碾死	l
+DFHack death cause: killed by a falling object	被坠落物砸死	l
+# deathcause.lua's unspecified-cause fallback and unit-info-viewer.lua's unknown-cause fallback.
+DFHack death cause: died	死亡	l
+DFHack death cause: died of unknown causes	死于未知原因	l
+
+# Contextual formatters for deathcause.lua's year, slayer, and weapon clauses.
+# These templates are private to the complete death-narrative adapter.
+DFHack deathcause phrase: in year {d}	于{d1}年	l
+DFHack deathcause phrase: killed by the {s}	凶手为{s1}	l
+DFHack deathcause phrase: using a {s}	使用{s1}	l
+DFHack deathcause phrase: shot by a {s}	使用{s1}射击	l
+
+# Fixed local print() notifications from installed scripts/forum-dwarves.lua.
+# The forumdwarves.txt BBCode payload, raw structure dumps, and original screen text remain outside this scope.
+DFHack output: data prepared for forum in "forumdwarves.txt"	论坛用的数据已保存至 "forumdwarves.txt"	l
+DFHack output: this is not a textview screen	当前不是文本查看界面	l
+
+# adaptation.lua prints this authored prefix immediately, then switches color and prints only the number.
+# The stream translator preserves the native trailing separator outside the normalized rule key.
+DFHack output: {s} has an adaptation level of	{s1} 的洞穴适应等级为	l
+
+# Exact local dfhack.print() chunks from gui/prerelease-warning.lua's colored message loop.
+# These chunks are emitted separately around NEWLINE/color changes; no command, URL, or version is rewritten.
+DFHack output: This is an alpha build of DFHack. Some structures are likely	这是 DFHack 的 alpha 版本。部分数据结构可能	l
+DFHack output: to be incorrect, resulting in crashes or save corruption	不正确，从而导致崩溃或存档损坏。	l
+DFHack output: Make backups of your saves often!	请经常备份存档！	l
+DFHack output: This is a beta release of DFHack. It is more stable than an	这是 DFHack 的 beta 版本。它比 alpha 版本更稳定，	l
+DFHack output: alpha release, but bugs are still possible, possibly including	但仍可能存在缺陷，可能导致	l
+DFHack output: crashes and save corruption.	崩溃和存档损坏。	l
+DFHack output: Make backups of your saves beforehand to be safe.	为确保安全，请事先备份存档。	l
+DFHack output: This is a DFHack release candidate. It is fairly stable but	这是 DFHack 的候选发布版本。它已较为稳定，但	l
+DFHack output: likely contains newer features that are not fully-tested.	可能包含尚未充分验证的新功能。	l
+DFHack output: Crashes are unlikely, but always make backups of your saves	崩溃的可能性较低，但仍请始终备份存档，	l
+DFHack output: to be safe.	以确保安全。	l
+DFHack output: This release is flagged as a prerelease but named as a	此版本标记为预发布版本，名称却表明它是	l
+DFHack output: stable release.	稳定版本。	l
+DFHack output: Please report this to the DFHack team.	请将此情况反馈给 DFHack 团队。	l
+DFHack output: Unknown prerelease DFHack build. This should never happen!	未知的 DFHack 预发布版本。这种情况不应发生！	l
+DFHack output: This should not be enabled by default in a pack.	整合包不应默认启用此功能。	l
+DFHack output: If you are seeing this message and did not enable/install DFHack	如果你看到此消息，却未自行启用或安装 DFHack，	l
+DFHack output: yourself, please report this to your pack's maintainer.	请将此情况反馈给整合包维护者。	l
+DFHack output: warning: unknown release state: {s}	警告：未知的发布状态：{s1}	l
+DFHack output: REMINDER: Please report any issues you encounter while	提醒：使用此 DFHack 版本时遇到问题，请反馈至	l
+DFHack output: using this DFHack build on GitHub (github.com/DFHack/dfhack/issues)	GitHub (github.com/DFHack/dfhack/issues)	l
+DFHack output: or the Bay12 forums (dfhack.org/bay12).	或 Bay12 论坛 (dfhack.org/bay12)。	l
+
+# devel/check-release.lua warn() colors and immediately prints this complete authored warning.
+DFHack output: This build is marked as a prerelease.	此版本标记为预发布版本。	l
+
+# Complete local orientation messages from installed scripts/gaydar.lua determineorientation().
+# The leading value is nameOrSpeciesAndNumber(): preserve names, unit IDs, and native sex symbols.
+# Its anonymous-unit caste caption requires a typed creature resolver rather than generic word substitution.
+DFHack output: {s} indeterminate (probably adventurer)	{s1} 性取向未确定（可能是冒险者）	l
+DFHack output: {s} likes males	{s1} 喜欢男性	l
+DFHack output: {s} will marry males	{s1} 愿与男性结婚	l
+DFHack output: {s} likes females	{s1} 喜欢女性	l
+DFHack output: {s} will marry females	{s1} 愿与女性结婚	l
+DFHack output: {s} likes males and likes females	{s1} 既喜欢男性，也喜欢女性	l
+DFHack output: {s} likes males and will marry females	{s1} 喜欢男性，也愿与女性结婚	l
+DFHack output: {s} will marry males and likes females	{s1} 愿与男性结婚，也喜欢女性	l
+DFHack output: {s} will marry males and will marry females	{s1} 愿与男性或女性结婚	l
+DFHack output: {s} is asexual	{s1} 是无性恋者	l
+DFHack output: {s} is not biologically capable of sex	{s1} 在生理上不具备性行为能力	l
+
+# Complete local messages from installed scripts/idle-crafting.lua (for_inputs and status).
+# The fulfillment labels are authored prose, not enum values; preserve the numeric counts.
+DFHack output: {d} unfettered	{d1} 无牵挂	l
+DFHack output: {d} level-headed	{d1} 心态平稳	l
+DFHack output: {d} untroubled	{d1} 无忧	l
+DFHack output: {d} not distracted	{d1} 未分心	l
+DFHack output: {d} unfocused	{d1} 难以专注	l
+DFHack output: {d} distracted	{d1} 分心	l
+DFHack output: {d} badly distracted	{d1} 严重分心	l
+DFHack output: workshop has no links	工坊没有关联的储物区	l
+
+# Complete local error/debug messages from installed scripts/immortal-cravings.lua.
+# The skipping-busy source intentionally has no space before the preserved unit name.
+DFHack output: could not attach drink	无法关联饮料	l
+DFHack output: could not attach meal	无法关联餐食	l
+DFHack output: immortal-cravings: running unit loop ({d} watched units)	immortal-cravings：正在处理单位循环（跟踪 {d1} 个单位）	l
+DFHack output: immortal-cravings: skipping busy{s}	immortal-cravings：正在跳过忙碌的 {s1}	l
+DFHack output: immortal-cravings: no more watched units, cancelling unit loop	immortal-cravings：没有需要跟踪的单位，正在取消单位循环	l
+DFHack output: immortal-cravings watching:	immortal-cravings 正在跟踪：	l
+
+# Exact local errors from installed scripts/item.lua and scripts/instruments.lua.
+# Command and argument syntax remains executable English.
+DFHack output: match argument must be string or number	match 参数必须是字符串或数字	l
+DFHack output: Usage: instruments order <instrument_name> [<amount>]	用法：instruments order <instrument_name> [<amount>]	l
+
+# lua/argparse.lua arg_error() prepends these actual caller parameter names.
+# Call sites: justice.lua unit; item.lua wear/quality; idle-crafting.lua thresholds/happy.
+# Preserve each parameter name, user value, and accepted boolean token verbatim.
+DFHack output: unit: expected non-negative integer; got "{s}"	unit: 需要非负整数；实际值为 "{s1}"	l
+DFHack output: min-wear: expected non-negative integer; got "{s}"	min-wear: 需要非负整数；实际值为 "{s1}"	l
+DFHack output: max-wear: expected non-negative integer; got "{s}"	max-wear: 需要非负整数；实际值为 "{s1}"	l
+DFHack output: min-quality: expected non-negative integer; got "{s}"	min-quality: 需要非负整数；实际值为 "{s1}"	l
+DFHack output: max-quality: expected non-negative integer; got "{s}"	max-quality: 需要非负整数；实际值为 "{s1}"	l
+DFHack output: thresholds: invalid number: "{s}"	thresholds: 无效数字："{s1}"	l
+DFHack output: happy: missing value; expected "true", "yes", "false", or "no"	happy: 缺少值；应为 "true"、"yes"、"false" 或 "no"	l
+DFHack output: happy: unknown value: "{s}"; expected "true", "yes", "false", or "no"	happy: 未知值："{s1}"；应为 "true"、"yes"、"false" 或 "no"	l
+
+# scripts/list-waves.lua granularities.to_string_fn() and print_waves(): complete arrival frames.
+# Numeric date/count fields retain their original digits. Only the season capture is human prose.
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d}, month {d} ({s}), day {d}	第 {d1} 批共有 {d2} 个单位，于第 {d3} 年第 {d4} 月（{s1}）第 {d5} 天抵达	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d}, month {d} ({s}), day {d} (includes selected unit)	第 {d1} 批共有 {d2} 个单位，于第 {d3} 年第 {d4} 月（{s1}）第 {d5} 天抵达（包含选中的单位）	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d}, month {d} ({s})	第 {d1} 批共有 {d2} 个单位，于第 {d3} 年第 {d4} 月（{s1}）抵达	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d}, month {d} ({s}) (includes selected unit)	第 {d1} 批共有 {d2} 个单位，于第 {d3} 年第 {d4} 月（{s1}）抵达（包含选中的单位）	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in the {s} of year {d}	第 {d1} 批共有 {d2} 个单位，于 {d3} 年的{s1}抵达	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in the {s} of year {d} (includes selected unit)	第 {d1} 批共有 {d2} 个单位，于 {d3} 年的{s1}抵达（包含选中的单位）	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d}	第 {d1} 批共有 {d2} 个单位，于 {d3} 年抵达	l
+DFHack output: Wave {d} consisted of {d} unit(s) and arrived in year {d} (includes selected unit)	第 {d1} 批共有 {d2} 个单位，于 {d3} 年抵达（包含选中的单位）	l
+DFHack output: Migrants:	移民：	l
+DFHack output: Units who joined via petition:	通过请愿加入的单位：	l
+# The season map is used only by typed date fields, never command arguments or named entities.
+DFHack human season: spring	春季	l
+DFHack human season: summer	夏季	l
+DFHack human season: autumn	秋季	l
+DFHack human season: winter	冬季	l
+
+# scripts/make-legendary.lua PrintSkillList(): enum, human caption, class enum.
+# Preserve captures 0 and 2; capture 1 is a typed job_skill caption.
+DFHack output: {s} ({s}), Type: {s}	{s1}（{s2}），类型：{s3}	l
+
+# scripts/locate-ore.lua getOreDescription() and selectOreTile().
+# Ore ID and the comma-separated metal IDs are raw tokens, not translated material captions.
+DFHack output: {d} tile(s) of {s} ({s})	{d1} 格 {s1} 矿石（{s2}）	l
+DFHack output: {d} visible tile(s) of {s} ({s})	{d1} 格可见的 {s1} 矿石（{s2}）	l
+DFHack output: Cannot find any undesignated visible {s}	未找到可见且尚未标记开采的 {s1}	l
+
+# scripts/list-agreements.lua generate_output(): each source joins its two actual physical lines.
+# The source normalizes the newline/tab before "as agreed on" and the tab before elapsed age.
+# Temple deity punctuation is really '<deity>,"'; unresolved agreements have no status suffix.
+# Capture 0 is the party name; capture 1 is a deity name or a typed guild profession.
+# All six date/age numeric captures retain their original digits, including leading zeroes.
+DFHack output: Establish a Temple for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago	为 "{s1}" 建立神庙，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天	l
+DFHack output: Establish a Temple for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (satisfied)	为 "{s1}" 建立神庙，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已兑现）	l
+DFHack output: Establish a Temple for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (denied)	为 "{s1}" 建立神庙，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已拒绝）	l
+DFHack output: Establish a Temple for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (expired)	为 "{s1}" 建立神庙，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已过期）	l
+DFHack output: Establish a Temple Complex for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago	为 "{s1}" 建立神庙建筑群，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天	l
+DFHack output: Establish a Temple Complex for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (satisfied)	为 "{s1}" 建立神庙建筑群，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已兑现）	l
+DFHack output: Establish a Temple Complex for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (denied)	为 "{s1}" 建立神庙建筑群，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已拒绝）	l
+DFHack output: Establish a Temple Complex for "{s}" worshiping "{s}," as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (expired)	为 "{s1}" 建立神庙建筑群，敬奉 "{s2}"；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已过期）	l
+DFHack output: Establish a Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago	为 "{s1}" 的 {s2} 行会建立行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天	l
+DFHack output: Establish a Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (satisfied)	为 "{s1}" 的 {s2} 行会建立行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已兑现）	l
+DFHack output: Establish a Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (denied)	为 "{s1}" 的 {s2} 行会建立行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已拒绝）	l
+DFHack output: Establish a Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (expired)	为 "{s1}" 的 {s2} 行会建立行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已过期）	l
+DFHack output: Establish a Grand Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago	为 "{s1}" 的 {s2} 行会建立大型行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天	l
+DFHack output: Establish a Grand Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (satisfied)	为 "{s1}" 的 {s2} 行会建立大型行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已兑现）	l
+DFHack output: Establish a Grand Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (denied)	为 "{s1}" 的 {s2} 行会建立大型行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已拒绝）	l
+DFHack output: Establish a Grand Guildhall for "{s}", a {s} guild, as agreed on {d}-{d}-{d}. {d}y, {d}m, {d}d ago (expired)	为 "{s1}" 的 {s2} 行会建立大型行会大厅；协议签订于 {d1}-{d2}-{d3}，距今 {d4} 年 {d5} 个月 {d6} 天（已过期）	l
+
+# scripts/names.lua: exact authored lines from the legacy -help print block.
+# The script name, -help argument, and key f are left unchanged.
+DFHack output: arguments:	参数：	l
+DFHack output: print this help message	显示这段帮助信息	l
+DFHack output: if a first name is desired press f, leave blank to clear current first name	如需名字，请按 f；留空可清除当前名字	l
+DFHack output: if viewing an artifact you can rename it	查看神器时，可以为其重命名	l
+DFHack output: if viewing a unit you can rename them	查看单位时，可以为其重命名	l
+
+# scripts/internal/notes/note_manager.lua createNote()/saveNote(): local printerr message.
+DFHack output: Note need at least a name	注释至少需要一个名称	l
+
+# scripts/position.lua print_time_info(): prefix plus each complete authored month sentence.
+# These are calendar descriptions, not material IDs or generic substitutions of month words.
+DFHack output: It is the month of Granite, in early Spring.	现在是花岗岩月，属于早春。	l
+DFHack output: It is the month of Slate, in mid Spring.	现在是板岩月，属于仲春。	l
+DFHack output: It is the month of Felsite, in late Spring.	现在是霏细岩月，属于晚春。	l
+DFHack output: It is the month of Hematite, in early Summer.	现在是赤铁矿月，属于初夏。	l
+DFHack output: It is the month of Malachite, in mid Summer.	现在是孔雀石月，属于仲夏。	l
+DFHack output: It is the month of Galena, in late Summer.	现在是方铅矿月，属于晚夏。	l
+DFHack output: It is the month of Limestone, in early Autumn.	现在是石灰岩月，属于初秋。	l
+DFHack output: It is the month of Sandstone, in mid Autumn.	现在是砂岩月，属于仲秋。	l
+DFHack output: It is the month of Timber, in late Autumn.	现在是林木月，属于晚秋。	l
+DFHack output: It is the month of Moonstone, in early Winter.	现在是月光石月，属于初冬。	l
+DFHack output: It is the month of Opal, in mid Winter.	现在是蛋白石月，属于仲冬。	l
+DFHack output: It is the month of Obsidian, in late Winter.	现在是黑曜石月，属于晚冬。	l
+
+# Installed scripts/quicksave.lua, remove-stress.lua, remove-wear.lua, and resize-armor.lua.
+# The race argument error comes from lua/argparse.lua nonnegativeInt(); retain the user value.
+DFHack output: The game should autosave now.	游戏现在应会自动保存。	l
+DFHack output: Invalid usage: Missing stress value for -value.	用法无效：-value 缺少压力值。	l
+DFHack output: Invalid usage: No unit selected and -all argument not given.	用法无效：未选中单位，也未提供 -all 参数。	l
+DFHack output: remove-wear: removed wear from {d} items	remove-wear：已去除 {d1} 件物品的磨损	l
+DFHack output: race: expected non-negative integer; got "{s}"	race：应为非负整数；收到 "{s1}"	l
+
+# Installed scripts/internal/quickfort/{command,list,set}.lua: local errors and status.
+# Commands, argument syntax, blueprint names, and file paths remain original captures.
+DFHack output: invalid command: "{s}"	无效的命令："{s1}"	l
+DFHack output: must specify blueprint_name	必须指定 blueprint_name	l
+DFHack output: must specify cursor	必须指定 cursor	l
+DFHack output: invalid marker type: "{s}"	无效的标记类型："{s1}"	l
+DFHack output: expected <list_num>[,<list_num>...] or <blueprint_name>	应指定 <list_num>[,<list_num>...] 或 <blueprint_name>	l
+DFHack output: unexpected argument: "{s}"; did you mean "-n {s}"?	意外的参数："{s1}"；是否想使用 "-n {s2}"？	l
+DFHack output: Cannot find blueprints directory: "{s}"	找不到蓝图目录："{s1}"	l
+DFHack output: invalid list index: "{s}"	无效的列表索引："{s1}"	l
+DFHack output: only player-owned blueprints can be deleted. not deleting library/mod blueprint: "{s}"	只能删除玩家自己的蓝图；不会删除库或模组蓝图："{s1}"	l
+DFHack output: removed blueprint: "{s}"	已删除蓝图："{s1}"	l
+DFHack output: failed to remove blueprint: "{s}"	无法删除蓝图："{s1}"	l
+DFHack output: error: expected "quickfort set [<key> <value>]"	错误：应使用 "quickfort set [<key> <value>]"	l
+
+# Installed scripts/unforbid.lua unforbid_all(): %s is item userdata tostring, not a caption.
+# Actual indentation is retained by the output renderer, outside these normalized keys.
+DFHack output: Unforbidding all items...	正在解除所有物品的禁止标记……	l
+DFHack output: unreachable: {s} (skipping)	无法抵达：{s1}（跳过）	l
+DFHack output: worn: {s} (skipping)	已磨损：{s1}（跳过）	l
+DFHack output: unforbid: {s}	解除禁止标记：{s1}	l
+DFHack output: {d} items unforbidden	已解除 {d1} 件物品的禁止标记	l
+
+# Installed scripts/uniform-unstick.lua: concatenated warnings, with only three literal labor callers.
+# Unit names remain original; MINE/CUTWOOD/HUNT enum identifiers are not translated.
+DFHack output: WARNING: Unit {s} is a member of a squad from another site! This may be preventing them from doing any useful work. You can fix this by assigning them to a local squad and then unassigning them.	警告：单位 {s1} 属于另一个地点的军队！这可能妨碍其正常工作。可先将其分配到本地军队，再取消分配，以解决此问题。	l
+DFHack output: WARNING: Unit {s} has the mining labor enabled, which conflicts with military uniforms.	警告：单位 {s1} 启用了采矿劳动，这与军装存在冲突。	l
+DFHack output: WARNING: Unit {s} has the woodcutting labor enabled, which conflicts with military uniforms.	警告：单位 {s1} 启用了伐木劳动，这与军装存在冲突。	l
+DFHack output: WARNING: Unit {s} has the hunting labor enabled, which conflicts with military uniforms.	警告：单位 {s1} 启用了狩猎劳动，这与军装存在冲突。	l
+# item_description() supplies item #ID 'description'. Only the description is a typed human caption.
+# The first four frames capture unit name, numeric item ID, then item description.
+# The last three frames capture numeric item ID, then item description.
+DFHack output: {s} is missing an assigned item, item #{d} '{s}'	{s1} 缺少已分配的物品，物品 #{d1} '{s2}'	l
+DFHack output: {s} cannot equip item: another unit has a claim on item #{d} '{s}'	{s1} 无法装备物品：其他单位已认领物品 #{d1} '{s2}'	l
+DFHack output: {s} has an improperly assigned item, item #{d} '{s}'; removing it	{s1} 被分配了不合适的物品，物品 #{d1} '{s2}'；正在移除	l
+DFHack output: {s} potentially has item #{d} '{s}' blocking a missing uniform item.	{s1} 身上的物品 #{d1} '{s2}' 可能妨碍穿戴尚缺的军装物品。	l
+DFHack output: Could not find drop location for item #{d} '{s}'	未找到可放下物品 #{d1} '{s1}' 的位置	l
+DFHack output: Dropped item #{d} '{s}'	已放下物品 #{d1} '{s1}'	l
+DFHack output: Could not drop item #{d} '{s}'	无法放下物品 #{d1} '{s1}'	l
+# ReportWindow and EquipOverlay show these authored local GUI labels and instructions.
+DFHack output: Equipment conflict report	装备冲突报告	l
+DFHack output: Equipment conflict report:	装备冲突报告：	l
+DFHack output: After resolving conflicts, be sure to click the "Update equipment" button to reassign new equipment!	解决冲突后，请务必点击“更新装备”按钮，以重新分配新装备！	l
+DFHack output: Try to resolve conflicts	尝试解决冲突	l
+DFHack output: Detect conflicts	检测冲突	l
+DFHack output: No conflicts	没有冲突	l
+DFHack output: Adds a link to the equip screen to fix equipment conflicts.	在装备界面添加解决装备冲突的入口。	l
+
+# Installed scripts/unretire-anyone.lua showNemesisPrompt(): human native-menu label.
+DFHack output: Select someone to add to the "Specific Person" list:	选择要加入“指定人物”列表的人：	l
+# Installed scripts/weather.lua: weather_type.None is the human clear-weather status here.
+# This complete sentence does not introduce a generic translation of the enum value None.
+DFHack output: The current weather is None	当前天气为晴天	l
+
+# Installed scripts/workorder.lua: local parser diagnostics and verbose prose.
+# item_type, df type names, flags, jobtype, and supplied values are machine identifiers.
+# get_itemdef() has already converted an unknown item_type to nil before printing this error.
+DFHack output: Unknown item_type: nil	未知的 item_type：nil	l
+DFHack output: Type df.{s} doesn't exist!	类型 df.{s1} 不存在！	l
+DFHack output: Invalid meal ingredients for managed order: {s} (is not a number).	经理工作订单的餐点原料数量无效：{s1}（不是数字）。	l
+DFHack output: Invalid item_category value for manager order: {s}	经理工作订单的 item_category 值无效：{s1}	l
+DFHack output: Invalid art type value for manager order: {s}	经理工作订单的艺术类型值无效：{s1}	l
+DFHack output: Invalid item condition for manager order: {s}	经理工作订单的物品条件无效：{s1}	l
+DFHack output: Invalid item condition item subtype for manager order: {s}:{s}	经理工作订单的物品条件子类型无效：{s1}:{s2}	l
+DFHack output: Invalid order condition type for manager order: {s}	经理工作订单的订单条件类型无效：{s1}	l
+DFHack output: Unknown jobtype: {s}	未知的 jobtype：{s1}	l
+DFHack output: Got {d} orders, processing...	收到 {d1} 个工作订单，正在处理……	l
+DFHack output: Milkable units:	可挤奶的单位：	l
+DFHack output: Milking jobs needed: {d}	需要的挤奶任务数：{d1}	l
+DFHack output: Shearable units:	可剪毛的单位：	l
+DFHack output: Shearing jobs needed: {d}	需要的剪毛任务数：{d1}	l
+
+# Installed scripts/modtools/create-unit.lua allocateNewChunk(): separate Lua print args use a tab.
+# Normalized complete frames preserve entity ID and allocated chunk ID.
+DFHack output: allocating chunk for entity {d}: {d}	正在为实体 {d1} 分配区块：{d2}	l
+DFHack output: allocating chunk in worldgen: {d}	正在世界生成中分配区块：{d1}	l
+
+# Installed scripts/fix/sleepers.lua:18,20, and fix/loyaltycascade.lua:54.
+# Loyalty diagnostics retain the script command and readable unit identity.
+DFHack output: No sleepers with the fixable bug were found, sorry.	未找到存在此可修复错误的沉睡单位。	l
+DFHack output: Fixed {d} group(s) of sleeping units.	已修复 {d1} 组沉睡单位。	l
+DFHack output: {s}: skipping citizen without historical figure: {s}	{s1}：跳过没有历史人物记录的公民：{s2}	l
+
+# Installed scripts/fix/empty-wheelbarrows.lua:20,53: outputCallback is local print unless quiet.
+# The header capture is getReadableDescription(wheelbarrow), without df2console.
+DFHack output: Emptying wheelbarrow: {s}	正在清空手推车：{s1}	l
+DFHack output: fix/empty-wheelbarrows - would remove {d} item(s) from {d} wheelbarrow(s).	fix/empty-wheelbarrows - 预计从 {d2} 辆手推车中移除 {d1} 件物品。	l
+DFHack output: fix/empty-wheelbarrows - removed {d} item(s) from {d} wheelbarrow(s).	fix/empty-wheelbarrows - 已从 {d2} 辆手推车中移除 {d1} 件物品。	l
+
+# Installed scripts/fix/stuck-written-materials.lua:104: concrete dry-run/repair summary states.
+DFHack output: Found {d} stuck written material(s).	找到 {d1} 件卡住的书面材料。	l
+DFHack output: Fixed {d} stuck written material(s).	已修复 {d1} 件卡住的书面材料。	l
+
+# Installed scripts/fix/corrupt-equipment.lua:103: l/k are vector indices, not item or unit IDs.
+# Squad name and item_type enum remain original.
+DFHack output: Item {d} assigned to squad member {d} of squad {s} is of unexpected type {s}. Detection only. No action performed.	分配给小队 {s1} 成员索引 {d2} 的物品条目 {d1} 类型异常（{s2}）。仅检测，未执行操作。	l
+# Installed scripts/fix/stuck-merchants.lua:30: explicit dry-run and removal states.
+# Keep readable unit identity, unit species, civilization name, and civilization species captures original.
+DFHack output: Would remove unit {d}: {s} ({s}), civ {d} ({s}, {s})	预计移除单位 {d1}：{s1}（{s2}），文明 {d2}（{s3}，{s4}）	l
+DFHack output: Removing unit {d}: {s} ({s}), civ {d} ({s}, {s})	正在移除单位 {d1}：{s1}（{s2}），文明 {d2}（{s3}，{s4}）	l
+
+# Installed scripts/fix/stuck-squad.lua:99: concrete singular/plural first line of one qerror message.
+# Preserve the actual hard newline; the following instructions are translated as their own complete line.
+DFHack output: {d} stuck squad found, but no returning squads or messengers are available to rescue them!	发现 {d1} 支卡住的小队，但没有可返回的小队或信使来解救他们！	l
+DFHack output: {d} stuck squads found, but no returning squads or messengers are available to rescue them!	发现 {d1} 支卡住的小队，但没有可返回的小队或信使来解救他们！	l
+# Installed scripts/fix/stuck-squad.lua:95,97-98: complete authored second line in one qerror message.
+# The variable wait target is a squad name; "the messenger" is the concrete fallback branch.
+DFHack output: Please wait for {s} to complete their objective and run this command again when they are on their way home.	请等待 {s1} 完成目标，并在其返程途中再次运行此命令。	l
+DFHack output: Please wait for the messenger to complete their objective and run this command again when they are on their way home.	请等待信使完成目标，并在其返程途中再次运行此命令。	l
+DFHack output: Please send a squad or a messenger out on a mission that will return to the fort, and run this command again when they are on the way home.	请派出一支小队或一名信使执行会返回要塞的任务，并在其返程途中再次运行此命令。	l
+# Installed scripts/fix/codex-pages.lua:223-228: translate only its authored untitled-work fallback.
+# Actual quoted book titles continue to use the existing opaque-title frame.
+DFHack output: {d} pages added to an untitled work.	已为一部无题作品添加 {d1} 页。	l
+
+# Installed scripts/modtools/skill-change.lua:79,129: -loud rating/experience report.
+# Separate Lua print arguments normalize their tabs to spaces; the numeric values stay unchanged.
+DFHack output: old: {d}: {d}	修改前：{d1}：{d2}	l
+DFHack output: new: {d}: {d}	修改后：{d1}：{d2}	l
+# Installed scripts/modtools/random-trigger.lua:171,174,176: -listOutcomes local report.
+# The outcome capture is table.concat(outcome.command, ' '), an executable command kept original.
+DFHack output: No outcomes registered.	尚未注册任何结果。	l
+DFHack output: Total weight: {d}	总权重：{d1}	l
+DFHack output: outcome weight {d}: {s}	结果权重 {d1}：{s1}	l
+
+# Installed scripts/modtools/raw-lint.lua:51,53,58,85,88; perr():21 prefixes entry.path set at :102.
+# Captures are paths, filename/declaration names, or a comma-separated [OBJECT:RAW_ENUM] list.
+# These diagnose local RAW reads; no source file or export content is translated.
+DFHack output: {s}: Unrecognized filename	{s1}：无法识别文件名。	l
+DFHack output: {s}: Unable to open file	{s1}：无法打开文件。	l
+DFHack output: {s}: Name mismatch: expected {s}, found {s}	{s1}：名称不一致：应为 {s2}，实际为 {s3}	l
+DFHack output: {s}: None of {s} found	{s1}：未找到以下任何对象标记：{s2}	l
+DFHack output: {s}: No valid object names	{s1}：没有有效的对象名称。	l
+# Installed scripts/modtools/raw-lint.lua:16,133: retain the version and full CLI syntax.
+DFHack output: This script requires DFHack 0.40.24-r2 or newer	此脚本需要 DFHack 0.40.24-r2 或更高版本。	l
+DFHack output: Usage: raw-lint.lua enable|disable|help	用法：raw-lint.lua enable|disable|help	l
+
+# Installed scripts/modtools/syndrome-trigger.lua:141,160,162: supplied syndrome names/classes stay original.
+DFHack output: Multiple syndromes with the same name: {s}	存在多个同名综合症：{s1}	l
+DFHack output: Invalid syndrome name: {s}	综合症名称无效：{s1}	l
+DFHack output: Invalid syndrome class: {s}	综合症类别无效：{s1}	l
+
+# Installed scripts/fix/wildlife.lua print_summary():32,38.
+# Explicit is/are, dry-run/repair, and optional -week command-prefix forms avoid empty captures.
+# In these eight frames overall capture 0 is count and 1 is a human creature caption.
+# Singular uses getRaceReadableNameById(raw.name[0]); plural uses getRaceNamePluralById(raw.name[1]).
+# Neither producer nor print applies df2console; the typed creature field needs native decoding.
+DFHack output: {d} {s} is blocking new waves of wildlife	{d1} 只 {s1} 正在阻挡新一批野生动物	l
+DFHack output: {d} {s} are blocking new waves of wildlife	{d1} 只 {s1} 正在阻挡新一批野生动物	l
+DFHack output: {d} {s} is no longer blocking new waves of wildlife	{d1} 只 {s1} 已不再阻挡新一批野生动物	l
+DFHack output: {d} {s} are no longer blocking new waves of wildlife	{d1} 只 {s1} 已不再阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} {s} is blocking new waves of wildlife	fix/wildlife：{d1} 只 {s1} 正在阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} {s} are blocking new waves of wildlife	fix/wildlife：{d1} 只 {s1} 正在阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} {s} is no longer blocking new waves of wildlife	fix/wildlife：{d1} 只 {s1} 已不再阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} {s} are no longer blocking new waves of wildlife	fix/wildlife：{d1} 只 {s1} 已不再阻挡新一批野生动物	l
+# The same two calls supply these literal fallbacks when the creature is still hidden.
+# Keep them as complete messages, without a generic hidden-creature word substitution.
+DFHack output: {d} hidden creature is blocking new waves of wildlife	{d1} 只隐藏的生物正在阻挡新一批野生动物	l
+DFHack output: {d} hidden creatures are blocking new waves of wildlife	{d1} 只隐藏的生物正在阻挡新一批野生动物	l
+DFHack output: {d} hidden creature is no longer blocking new waves of wildlife	{d1} 只隐藏的生物已不再阻挡新一批野生动物	l
+DFHack output: {d} hidden creatures are no longer blocking new waves of wildlife	{d1} 只隐藏的生物已不再阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} hidden creature is blocking new waves of wildlife	fix/wildlife：{d1} 只隐藏的生物正在阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} hidden creatures are blocking new waves of wildlife	fix/wildlife：{d1} 只隐藏的生物正在阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} hidden creature is no longer blocking new waves of wildlife	fix/wildlife：{d1} 只隐藏的生物已不再阻挡新一批野生动物	l
+DFHack output: fix/wildlife: {d} hidden creatures are no longer blocking new waves of wildlife	fix/wildlife：{d1} 只隐藏的生物已不再阻挡新一批野生动物	l
+# fix/wildlife.lua:185 calls lua/argparse.lua nonnegativeInt(..., 'unit_id').
+# Overall capture 0 is the supplied command-line value and remains original.
+DFHack output: unit_id: expected non-negative integer; got "{s}"	unit_id：应为非负整数；收到 "{s1}"	l
+
+# Installed scripts/modtools/transform-unit.lua:76,95,108,119: local Lua error messages.
+# "Specficy" is the actual authored misspelling; keep the source key exact.
+DFHack output: Select or specify a valid unit	请选择或指定一个有效单位。	l
+DFHack output: Specficy a target form.	请指定目标形态。	l
+DFHack output: Invalid race.	种族无效。	l
+DFHack output: Invalid caste.	品系无效。	l
+# Installed scripts/modtools/spawn-flow.lua:67,73,78.
+# Overall capture 0 in the two templates is args.flowSize or args.flowType, never a human caption.
+# "none specified" is the complete authored missing-argument branch, not a global enum translation.
+DFHack output: Invalid flow size: {s}	流体规模无效：{s1}	l
+DFHack output: Invalid flow type: {s}	流体类型无效：{s1}	l
+DFHack output: Invalid flow type: none specified	流体类型无效：未指定。	l
+DFHack output: Specify a location.	请指定位置。	l
+# Installed scripts/modtools/item-trigger.lua:264,271,278,292,299: retain the actual option names.
+DFHack output: checkAttackEvery must be a number	checkAttackEvery 必须是数字。	l
+DFHack output: checkInventoryEvery must be a number	checkInventoryEvery 必须是数字。	l
+DFHack output: specify a command	请指定命令。	l
+DFHack output: Could not find item type.	找不到物品类型。	l
+DFHack output: Specify at least one material, itemType or contaminant.	请至少指定 material、itemType 或 contaminant 中的一项。	l
+# Installed scripts/modtools/reaction-product-trigger.lua:65,118.
+DFHack output: BUILDING_ID is not supported for adventure mode reactions	冒险模式的反应不支持 BUILDING_ID。	l
+DFHack output: No reactionName.	未指定 reactionName。	l
+
+# Installed scripts/modtools/skill-change.lua:49,59,62,114,122,125: local Lua error bodies.
+DFHack output: Invalid unit.	单位无效。	l
+DFHack output: invalid skill	技能无效。	l
+DFHack output: invalid value	数值无效。	l
+DFHack output: bad mode	模式无效。	l
+DFHack output: bad granularity	修改粒度无效。	l
+# Installed scripts/modtools/random-trigger.lua:133,137,140,153.
+# Overall capture 0 is args.weight or the numeric withProbability value/authored nil fallback.
+# Keep command-line values original, including fractions and scientific notation.
+DFHack output: Invalid weight: {s}	权重无效：{s1}	l
+DFHack output: Noninteger weight.	权重不是整数。	l
+DFHack output: invalid weight: must be non-negative	权重无效：必须为非负数。	l
+DFHack output: Invalid withProbability: {s}	withProbability 无效：{s1}	l
+# Installed scripts/modtools/add-syndrome.lua:62,66,79,84,99.
+# Overall capture 0 is args.target or args.syndrome: user IDs, parameters, and custom/RAW identities.
+DFHack output: Specify a target.	请指定目标。	l
+DFHack output: Could not find target: {s}	找不到目标：{s1}	l
+DFHack output: Invalid reset policy.	重置策略无效。	l
+DFHack output: Specify a syndrome name or id.	请指定综合症名称或 ID。	l
+DFHack output: Invalid syndrome: {s}	综合症无效：{s1}	l
+# Installed scripts/modtools/reaction-trigger.lua:33,39,46,52,211.
+# Two-number frames capture workerId/generalRef.unit_id or buildingId/generalRef.building_id.
+# The syndrome capture is args.syndrome and remains original.
+DFHack output: reaction-trigger: two workers on same job: {d}, {d}	reaction-trigger：同一任务有两个工作者：{d1}, {d2}	l
+DFHack output: reaction-trigger: invalid worker	reaction-trigger：工作者无效。	l
+DFHack output: reaction-trigger: two buildings same job: {d}, {d}	reaction-trigger：同一任务关联了两座建筑：{d1}, {d2}	l
+DFHack output: reaction-trigger: invalid building	reaction-trigger：建筑无效。	l
+DFHack output: Could not find syndrome {s}	找不到综合症 {s1}	l
+# Installed scripts/modtools/spawn-flow.lua:86: complete local position error.
+DFHack output: Invalid pos.	位置无效。	l
+
+# Installed scripts/fix/corrupt-equipment.lua:47,50,76-82.
+# Expand the authored list-status prefixes instead of capturing those English words as values.
+# All string captures are item_type enum keys; the number is the vector index, not an item ID.
+# unmanifested is translated as the list label, without assuming creation or registration semantics.
+DFHack output: Removing corrupted unmanifested {s} (index {d})	正在移除未显现列表中损坏的 {s1}（索引 {d1}）	l
+DFHack output: Removing corrupted unassigned {s} (index {d})	正在移除未分配列表中损坏的 {s1}（索引 {d1}）	l
+DFHack output: Removing corrupted assigned {s} (index {d})	正在移除已分配列表中损坏的 {s1}（索引 {d1}）	l
+DFHack output: Removing unmanifested {s} of invalid type {s} (index {d})	正在移除未显现列表中类型 {s2} 无效的 {s1}（索引 {d1}）	l
+DFHack output: Removing unassigned {s} of invalid type {s} (index {d})	正在移除未分配列表中类型 {s2} 无效的 {s1}（索引 {d1}）	l
+DFHack output: Removing assigned {s} of invalid type {s} (index {d})	正在移除已分配列表中类型 {s2} 无效的 {s1}（索引 {d1}）	l
+# Installed scripts/fix/stuck-squad.lua:103-106: the messenger is an authored fallback.
+# Overall capture 0 is getSquadName(stuck.squad.id), a proper name, without df2console.
+DFHack output: fix/stuck-squad: Squad rescue operation underway! the messenger is rescuing {s}	fix/stuck-squad：小队救援已开始！信使正在救援 {s1}	l
+
+# Installed scripts/devel/jobwatch.lua:47-50,74,77: local status and transition messages.
+# Transition overall captures 0/1 are tick/unit ID, 2 is df2console(getReadableName(unit)),
+# and 3/4 are the previous/current job enum or verbose machine description. Keep all values original.
+# Preserve the actual all/true/false command or boolean spellings in the complete status frames.
+DFHack output: {d} unit {d} {s}: {s} -> {s}	{d1} 单位 {d2} {s1}：{s2} -> {s3}	l
+DFHack output: jobwatch: unit filter = {d}	jobwatch：单位筛选 = {d1}	l
+DFHack output: jobwatch: unit filter = all	jobwatch：单位筛选 = all	l
+DFHack output: jobwatch: verbose = true	jobwatch：详细输出 = true	l
+DFHack output: jobwatch: verbose = false	jobwatch：详细输出 = false	l
+# Installed scripts/devel/annc-monitor.lua:26-29: printed usage prose, with command syntax intact.
+# The monitored annc.text is game announcement content, not a generic authored-message template.
+DFHack output: annc-monitor start|enable: Begin monitoring	annc-monitor start|enable：开始监视	l
+DFHack output: annc-monitor stop|disable: End monitoring	annc-monitor stop|disable：停止监视	l
+DFHack output: annc-monitor report enable: Show combat reports	annc-monitor report enable：显示战斗报告	l
+DFHack output: annc-monitor report disable: Only show announcements	annc-monitor report disable：仅显示公告	l
+# Installed scripts/devel/input-monitor.lua:11,32,41,54,67: fixed local GUI captions.
+# Key names, _STRING input values, and streamed key enums are deliberately outside these keys.
+DFHack output: Input Monitor	输入监视器	l
+DFHack output: Modifier keys:	修饰键：	l
+DFHack output: Mouse buttons:	鼠标按键：	l
+DFHack output: Input stream (newest at bottom):	输入流（最新输入在底部）：	l
+DFHack output: Hit ESC twice or click here twice to close	按 ESC 两次，或在此处点击两次以关闭	l
+# Installed scripts/devel/unit-path.lua:123,143,151-152,164,166,169,209.
+# Numeric fields are computeMovementSpeed, computeSlowdownFactor, and idle_area_threshold.
+# Lua API documents computeSlowdownFactor as a float, so retain its full numeric spelling in {s}.
+# Profession/custom names, path/station enums, and tiletype IDs are not part of these fixed keys.
+DFHack output: Unit Path	单位路径	l
+DFHack output: Not following path	未沿路径移动	l
+DFHack output: Speed: {d}	速度：{d1}	l
+DFHack output: Slowdown: {s}	减速系数：{s1}	l
+DFHack output: Threshold: {d}	阈值：{d1}	l
+DFHack output: No station	没有驻留位置	l
+DFHack output: At cursor:	光标位置：	l
+DFHack output: This script requires 'v' mode with a unit selected	此脚本需要在 'v' 模式下选中一个单位	l
+# Installed scripts/devel/watch-minecarts.lua:70: local timer error, not its numeric cart dump.
+DFHack output: Could not start timer in watch-minecarts	无法在 watch-minecarts 中启动计时器	l
+# Installed scripts/devel/tree-info.lua:182: complete cursor-selection error.
+DFHack output: No tree!	没有树木！	l
+
+# Installed scripts/internal/confirm/specs.lua:107-108,116-117,127-128,138-139.
+# Fixed title/body text consumed by scripts/confirm.lua:142 (body wraps at 45 columns).
+# Keep the authored English wording exact, including missing words after "want".
+# These keys have no captures; confirmation IDs, input enums, and registry fields are excluded.
+DFHack output: Cancel trade	取消交易	l
+DFHack output: Are you sure you want leave this screen? Selected items will not be saved.	确定要离开此界面吗？已选物品不会保存。	l
+DFHack output: Mark all fortress goods	勾选全部要塞货物	l
+DFHack output: Are you sure you want mark all fortress goods at the depot? Your current fortress goods selections will be lost.	确定要勾选贸易站中的全部要塞货物吗？当前对要塞货物的选择将丢失。	l
+DFHack output: Unmark all fortress goods	取消勾选全部要塞货物	l
+DFHack output: Are you sure you want unmark all fortress goods at the depot? Your current fortress goods selections will be lost.	确定要取消勾选贸易站中的全部要塞货物吗？当前对要塞货物的选择将丢失。	l
+DFHack output: Mark all merchant goods	勾选商人的全部货物	l
+DFHack output: Are you sure you want mark all merchant goods at the depot? Your current merchant goods selections will be lost.	确定要勾选贸易站中商人的全部货物吗？当前对商人货物的选择将丢失。	l
+# Installed scripts/internal/confirm/specs.lua:169-170,180-181,191-192,202-203.
+# The trade/offer questions are complete base paragraphs of get_ethics_message, not arbitrary suffix templates.
+DFHack output: Confirm trade	确认交易	l
+DFHack output: Are you sure you want to trade the selected goods?	确定要交易已选货物吗？	l
+DFHack output: Seize merchant goods	扣押商人货物	l
+DFHack output: Are you sure you want seize marked merchant goods? This will make the merchant unwilling to trade further and will damage relations with the merchant's civilization.	确定要扣押已勾选的商人货物吗？这会使商人不愿继续交易，并损害与其所属文明的关系。	l
+DFHack output: Offer fortress goods	赠送要塞货物	l
+DFHack output: Are you sure you want to offer these goods? You will receive no payment.	确定要赠送这些货物吗？你将不会得到任何报酬。	l
+DFHack output: Cancel trade agreement	取消贸易协议	l
+DFHack output: Are you sure you want to leave this screen? The trade agreement selection will not be saved until you hit the "Done" button at the bottom of the screen.	确定要离开此界面吗？只有点击界面底部的“完成”按钮后，贸易协议中的选择才会保存。	l
+# Installed scripts/internal/confirm/specs.lua:211-212,221-222,231-232,242-243.
+DFHack output: Delete hauling route	删除运输路线	l
+DFHack output: Are you sure you want to delete this route?	确定要删除这条运输路线吗？	l
+DFHack output: Delete hauling stop	删除运输停靠点	l
+DFHack output: Are you sure you want to delete this stop?	确定要删除这个停靠点吗？	l
+DFHack output: Remove depot	拆除贸易站	l
+DFHack output: Are you sure you want to remove this depot? Merchants are present and will lose profits.	确定要拆除这个贸易站吗？商人仍在场，这会使他们损失利润。	l
+DFHack output: Delete uniform	删除军装方案	l
+DFHack output: Are you sure you want to delete this uniform?	确定要删除这套军装方案吗？	l
+
+# Installed scripts/warn-stranded.lua:217,233,238,245,252,260: fixed local GUI captions.
+# Unit descriptions, names, IDs, group designations, and bracketed dynamic fields are not captured here.
+DFHack output: Stranded citizen warning	受困公民警告	l
+DFHack output: Select to zoom to unit. Double click to toggle unit ignore. Shift double click to toggle a group.	选择条目可定位单位。双击可切换该单位的忽略状态。按住 Shift 双击可切换整组的忽略状态。	l
+DFHack output: Toggle ignore	切换忽略状态	l
+DFHack output: Toggle group	切换整组忽略状态	l
+DFHack output: Ignore all	全部忽略	l
+DFHack output: Clear all ignored	清除所有忽略状态	l
+# Installed scripts/unretire-anyone.lua:41: exact human fallback when a creature RAW cannot be found.
+# Do not translate the command title or invent templates for caste, curse, readable-name, or sex-glyph fields.
+DFHack output: Unknown Creature	未知生物	l
+# Installed scripts/siren.lua:104-114: complete local showAnnouncement text.
+# The zero-argument location is authored prose, so expand it rather than treating it as a name capture.
+# Overall capture 0 in the named-location frame is supplied burrow name(s), retained exactly as constructed.
+DFHack output: A loud siren sounds throughout the halls and tunnels, waking the sleeping and startling the awake.	响亮的警报声响彻大厅和隧道，惊醒熟睡者，并惊扰醒着的人。	l
+DFHack output: A loud siren sounds throughout {s}, waking the sleeping and startling the awake.	响亮的警报声响彻 {s1}，惊醒熟睡者，并惊扰醒着的人。	l
+
+# Installed scripts/devel/sc.lua:106,121: fixed local errors printed by err().
+# Original two-space indentation is retained by the output renderer; catalog keys contain the normalized body.
+DFHack output: INVALID VECTOR, SKIPPING REST OF THE TYPE	向量无效，跳过此类型的其余部分	l
+DFHack output: INVALID ADDRESS, SKIPPING REST OF THE TYPE	地址无效，跳过此类型的其余部分	l
+# Installed scripts/devel/save-version.lua:160-161,175-186: fixed version-query errors and the not-saved branch.
+# Numeric version values, identifiers, and describe() machine values are not captured by these entries.
+DFHack output: could not find original DF version (DFHack version too old)	无法取得最初的 DF 版本（DFHack 版本过旧）	l
+DFHack output: could not find most recent DF version (DFHack version too old)	无法取得最近保存的 DF 版本（DFHack 版本过旧）	l
+DFHack output: could not find running DF version (DFHack version too old)	无法取得正在运行的 DF 版本（DFHack 版本过旧）	l
+DFHack output: original DF version:      not saved	最初的 DF 版本：尚未保存	l
+DFHack output: most recent DF version:   not saved	最近保存的 DF 版本：尚未保存	l
+DFHack output: running DF version:       not saved	正在运行的 DF 版本：尚未保存	l
+# Installed scripts/devel/infinite-sky-probe.lua:137-147: complete local status frames.
+# Counts, coordinates, process_columns, UPDATE_CAVE_COLUMNS, and CAVE_COLLAPSE remain original machine values.
+DFHack output: constructions: {d}; highest at z={d}	建造物：{d1}；最高位置：z={d2}	l
+DFHack output: constructions: {d}; highest at z=none	建造物：{d1}；暂无最高楼层	l
+DFHack output: top level allocated blocks: {d}/{d}	顶层已分配的区块：{d1}/{d2}	l
+DFHack output: world process_columns flag: true	世界 process_columns 标志：true	l
+DFHack output: world process_columns flag: false	世界 process_columns 标志：false	l
+DFHack output: columns flagged UPDATE_CAVE_COLUMNS: {d}	标有 UPDATE_CAVE_COLUMNS 的列：{d1}	l
+DFHack output: CAVE_COLLAPSE reports on record: {d}	记录中的 CAVE_COLLAPSE 报告：{d1}	l
+# Installed scripts/devel/infinite-sky-probe.lua:328-330: singular/plural frames with a nonempty coordinate capture.
+# Overall capture 1 is tostring(highest_construction_z()), an integer coordinate or literal nil; preserve it exactly.
+DFHack output: built {d} construction; highest construction now at z={s}	已建造 {d1} 处建造物；当前最高建造物位于 z={s1}	l
+DFHack output: built {d} constructions; highest construction now at z={s}	已建造 {d1} 处建造物；当前最高建造物位于 z={s1}	l
+# Installed scripts/devel/infinite-sky-probe.lua:457,473,475-477: fixed watch-start messages.
+# Overall captures in the final frame are frame count, map block height, and map tile height; keep numeric values unchanged.
+DFHack output: already watching; run "devel/infinite-sky-probe stop" first	已在监视；请先运行 "devel/infinite-sky-probe stop"	l
+DFHack output: unpaused game while watching (pause state will be restored)	监视期间已解除游戏暂停（暂停状态将恢复）	l
+DFHack output: watching z-levels for {d} frames; current z_count_block={d} z_count={d}; run "devel/infinite-sky-probe stop" to abort	正在监视楼层，持续 {d1} 帧；当前 z_count_block={d2} z_count={d3}；运行 "devel/infinite-sky-probe stop" 可中止	l
+# Installed scripts/devel/tile-browser.lua:15,26,48,59: fixed local GUI captions.
+# The label's trailing space belongs to the input layout and is preserved outside the normalized caption key.
+DFHack output: Tile Browser	纹理浏览器	l
+DFHack output: Start index:	起始索引：	l
+DFHack output: Prev	上一页	l
+DFHack output: Next	下一页	l

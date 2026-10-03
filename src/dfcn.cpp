@@ -4,6 +4,7 @@
 #include "native_font_metrics.h"
 #include "native_graphics.h"
 #include "native_font_fallback.h"
+#include "dfhack_command_context.h"
 
 #include <algorithm>
 #include <array>
@@ -3362,7 +3363,11 @@ private:
     std::atomic<bool> dump_requested_{false};
     fs::file_time_type config_mtime_{};
     fs::file_time_type mapping_mtime_{};
-    std::array<fs::file_time_type, 3> dfhack_help_mtimes_{};
+    static constexpr std::array<const char *, 6> dfhack_catalog_names_{
+        "dfhack-help-translations.tsv", "dfhack-help-overrides.tsv",
+        "dfhack-help-command-overrides.tsv", "dfhack-output-core.tsv",
+        "dfhack-output-translations.tsv", "dfhack-output-stonesense.tsv"};
+    std::array<fs::file_time_type, dfhack_catalog_names_.size()> dfhack_help_mtimes_{};
     std::chrono::steady_clock::time_point last_reload_check_{};
     std::chrono::steady_clock::time_point last_untranslated_collect_{};
     bool dumped_first_ = false;
@@ -3900,6 +3905,7 @@ private:
     mutable std::list<std::string> announcement_translation_order_;
     mutable size_t announcement_translation_bytes_ = 0;
     void clear_announcement_translation_cache() const {
+        clear_dfhack_stonesense_announcements();
         announcement_translation_cache_.clear();
         announcement_translation_order_.clear();
         announcement_translation_bytes_ = 0;
@@ -3917,12 +3923,32 @@ private:
     std::vector<DfhackHelpParagraph> dfhack_help_paragraphs_;
     std::unordered_map<std::string, size_t> dfhack_help_source_index_;
     std::unordered_map<std::string, std::vector<size_t>> dfhack_help_words_;
+    std::vector<DfhackHelpParagraph> dfhack_output_paragraphs_;
+    std::unordered_map<std::string, size_t> dfhack_output_source_index_;
+    std::unordered_map<std::string, std::vector<size_t>> dfhack_output_words_;
+    std::vector<Rule> dfhack_output_templates_;
+    std::unordered_map<std::string, size_t> dfhack_output_template_source_index_;
+    std::unordered_map<std::string, std::vector<size_t>> dfhack_output_template_words_;
+    std::unordered_map<std::string, std::string> dfhack_output_values_;
+    std::unordered_map<std::string, std::string> dfhack_output_fragments_;
+    void index_dfhack_output(const Rule &rule);
     void index_dfhack_help_paragraph(const Rule &rule);
     void load_dfhack_help_catalog();
+    void publish_dfhack_caption_snapshot();
+    void publish_dfhack_stonesense_announcements() const;
+    std::optional<std::string> translate_dfhack_catalog_rows(
+        const std::vector<Match> &rows, int native_width, std::string_view prefix,
+        const std::vector<DfhackHelpParagraph> &paragraphs,
+        const std::unordered_map<std::string, std::vector<size_t>> &words,
+        NativeParagraphViewport *viewport, std::string *complete_source) const;
     std::optional<std::string> translate_dfhack_help_rows(
         const std::vector<Match> &rows, int native_width,
         NativeParagraphViewport *viewport = nullptr,
         std::string *complete_source = nullptr) const;
+    std::optional<std::string> translate_dfhack_output_rows(
+        const std::vector<Match> &rows, int native_width,
+        NativeParagraphViewport *viewport = nullptr,
+        std::string *complete_source = nullptr, int depth = 0) const;
     bool match_catalog_template(const Rule &rule, std::string_view source,
         size_t start, std::vector<std::string> &captures,
         std::vector<std::pair<size_t, size_t>> &ranges,
@@ -5122,6 +5148,14 @@ void Overlay::build_trie() {
     dfhack_help_paragraphs_.clear();
     dfhack_help_source_index_.clear();
     dfhack_help_words_.clear();
+    dfhack_output_paragraphs_.clear();
+    dfhack_output_source_index_.clear();
+    dfhack_output_words_.clear();
+    dfhack_output_templates_.clear();
+    dfhack_output_template_source_index_.clear();
+    dfhack_output_template_words_.clear();
+    dfhack_output_values_.clear();
+    dfhack_output_fragments_.clear();
     map_track_translations_.clear();
     adventure_item_action_rules_.clear();
     overview_quote_translations_.clear();
@@ -5969,6 +6003,7 @@ bool Overlay::load_compositional_rules() {
                     : "Cannot load compositional TOML translation rules: " + RULESETS.last_load_error());
     if (!config_.compositional_rules)
         log_line("INFO", "General composition disabled; typed species vocabulary remains available");
+    publish_dfhack_caption_snapshot();
     return loaded;
 }
 
@@ -6932,13 +6967,10 @@ void Overlay::maybe_reload() {
             (!ec4 && im != instrument_translations_mtime_) ||
             (!ec1 && cm != config_mtime_) || (!ec2 && mm != mapping_mtime_) ||
             (!ec3 && nm != name_editor_mtime_);
-        constexpr std::array<const char *, 3> help_catalogs = {
-            "dfhack-help-translations.tsv", "dfhack-help-overrides.tsv",
-            "dfhack-help-command-overrides.tsv"};
         const auto catalog_directory = fs::u8path(config_.mapping_path).parent_path();
-        for (size_t index = 0; index < help_catalogs.size(); ++index) {
+        for (size_t index = 0; index < dfhack_catalog_names_.size(); ++index) {
             std::error_code catalog_error;
-            auto modified = fs::last_write_time(catalog_directory / help_catalogs[index], catalog_error);
+            auto modified = fs::last_write_time(catalog_directory / dfhack_catalog_names_[index], catalog_error);
             if (catalog_error) modified = {};
             if (modified != dfhack_help_mtimes_[index]) reload = true;
         }
@@ -19986,6 +20018,7 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "fortress_build_placement.inc"
 #include "text_paragraphs.inc"
 #include "dfhack_help_translation.inc"
+#include "dfhack_stonesense_announcements.inc"
 #include "native_text_rows.inc"
 #include "fortress_justice.inc"
 #include "credits.inc"
@@ -20208,6 +20241,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
         return result;
     }
     NativePanelReadScope panel_reads(gps_);
+    refresh_dfhack_raw_creature_labels();
     if (!NativeUiReadScope::active) {
         const auto widget = captured_native_tooltip_widget(*gps_);
         if (widget && widget->page) {
@@ -44836,6 +44870,11 @@ SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) c
 void Overlay::render(SDL_Renderer *renderer) {
     TranslationStateScope translation_scope;
     (void)install_native_dfhack_capture_hook();
+    (void)install_native_dfhack_console_hook();
+    (void)install_native_dfhack_lua_output_hook();
+    (void)install_native_dfhack_messagebox_hook();
+    (void)install_native_dfhack_prompt_hook();
+    (void)install_native_dfhack_stonesense_hook();
     NativeCaptureMaskScope capture_mask(gps_);
     struct EndKnowledgeFrame {
         std::optional<std::vector<Match>> &matches;
@@ -44896,6 +44935,7 @@ void Overlay::render(SDL_Renderer *renderer) {
     frame_prepared_ = false;
     prepare_frame();
     NativePanelReadScope panel_reads(gps_);
+    publish_dfhack_stonesense_announcements();
     const auto rendered_help_frames = gps_ && gps_->dimx > 0 && gps_->dimx <= 1000 &&
         gps_->dimy > 0 && gps_->dimy <= 1000
         ? native_text_overlay_frames(*gps_) : std::vector<SDL_Rect>{};

@@ -11,6 +11,15 @@ struct NativeDfhackLogoCapture {
 static bool install_native_dfhack_capture_hook();
 static void uninstall_native_dfhack_capture_hook();
 static bool native_dfhack_capture_hook_active();
+static bool install_native_dfhack_console_hook();
+static bool install_native_dfhack_lua_output_hook();
+static bool install_native_dfhack_messagebox_hook();
+static bool install_native_dfhack_prompt_hook();
+static bool install_native_dfhack_stonesense_hook();
+static bool native_dfhack_stonesense_hook_active();
+static bool native_dfhack_stonesense_window_active();
+static void clear_dfhack_stonesense_announcements() noexcept;
+static std::optional<std::string> lookup_dfhack_stonesense_announcement(std::string_view source);
 
 struct NativeDfhackTileWrite {
     const graphicst *graphics = nullptr;

@@ -28,6 +28,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_history_page.inc"
 #include "native_history_collection_page.inc"
 #include "native_history_capture.inc"
+#include "native_dfhack_raw_creatures.inc"
 #include "native_history_hooks.inc"
 #include "native_embark_reclaim_history.inc"
 #include "native_ime_adapter.inc"
@@ -61,6 +62,12 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_adventure_hover_hooks.inc"
 #include "native_announcement_hooks.inc"
 #include "native_dfhack_capture_hooks.inc"
+#include "native_dfhack_item_print_ticket.h"
+#include "native_dfhack_console_hooks.inc"
+#include "native_dfhack_lua_output_hooks.inc"
+#include "native_dfhack_messagebox_hooks.inc"
+#include "native_dfhack_prompt_hooks.inc"
+#include "native_dfhack_stonesense_hooks.inc"
 
 static NativeProcessGuard g_process_instance_guard{NativeGuardRole::Core};
 static bool acquire_process_instance_guard() { return g_process_instance_guard.acquire(log_line); }
@@ -112,6 +119,11 @@ static bool install_sdl_hooks() {
     // DFHack may be loaded after this core. Present retries this optional
     // observer until its exported tile hook is available.
     (void)install_native_dfhack_capture_hook();
+    (void)install_native_dfhack_console_hook();
+    (void)install_native_dfhack_lua_output_hook();
+    (void)install_native_dfhack_messagebox_hook();
+    (void)install_native_dfhack_prompt_hook();
+    (void)install_native_dfhack_stonesense_hook();
     for (auto &hook : g_render_hooks) {
         if (!hook.install("SDL render/mouse binding")) return false;
     }
@@ -122,6 +134,11 @@ static bool install_sdl_hooks() {
 }
 
 static void uninstall_sdl_hooks() {
+    uninstall_native_dfhack_lua_output_hook();
+    uninstall_native_dfhack_stonesense_hook();
+    uninstall_native_dfhack_prompt_hook();
+    uninstall_native_dfhack_messagebox_hook();
+    uninstall_native_dfhack_console_hook();
     uninstall_native_dfhack_capture_hook();
     g_legends_mouse_hook_active = false;
     for (auto it = g_render_hooks.rbegin(); it != g_render_hooks.rend(); ++it)
@@ -164,6 +181,11 @@ static bool native_hooks_detached() {
     return std::none_of(g_render_hooks.begin(), g_render_hooks.end(),
                        [](const auto &hook) { return hook.active(); }) &&
         !native_dfhack_capture_hook_active() &&
+        !native_dfhack_console_hook_active() &&
+        !native_dfhack_lua_output_hook_active() &&
+        !native_dfhack_messagebox_hook_active() &&
+        !native_dfhack_prompt_hook_active() &&
+        !native_dfhack_stonesense_hook_active() &&
         !g_native_stone_use_guard.active() &&
         !g_native_mouse_click_hook.active() &&
         !native_history_hooks_active() && !native_announcement_hook_active() && !native_adventure_hover_hook_active() &&

@@ -532,3 +532,10 @@ DFHack GUI Control tool: gui/mod-manager.notification	模组预设应用提示�
 DFHack GUI Control tool: gui/mass-remove.toolbar	批量移除工具入口（gui/mass-remove.toolbar）	l
 DFHack GUI Control tool: gui/rename.unit_embark	定居准备单位昵称（gui/rename.unit_embark）	l
 DFHack GUI Control tool: gui/rename.world	新世界改名（gui/rename.world）	l
+# Installed helpdb.lua update_entry() and docs/docs/tools/{gui/adv-finder,gui/siegemanager,gui/autotraining,autotraining}.txt.
+# ls uses rendered help before the script's first comment. A description without '.' continues across blank lines to the next literal '.'.
+# These complete short_help strings join the unpunctuated description title and the following paragraph's first sentence.
+DFHack help: Find and track historical figures and artifacts A real-time tracker for historical figures and artifacts.	查找并实时追踪历史人物和神器。	l
+DFHack help: Manage siege engines at a glance This interface provides a list of siege engines, their ammo count, and current active jobs whilst providing shortcuts to configure their firing/standy mode and view them in-world.	一览并管理攻城武器。此界面列出攻城武器、弹药数量和当前任务，并提供快捷方式来设置射击或待命模式，以及在世界中定位它们。	l
+DFHack help: GUI interface for ``autotraining`` This is an in-game configuration interface for autotraining.	autotraining 的图形界面，可在游戏中配置 autotraining。	l
+DFHack help: Assigns citizens to a military squad until they have fulfilled their need for Martial Training This script automatically assigns citizens with the need for military training to designated training squads.	将居民分配到军事小队，直到满足军事训练需求。此脚本会把需要军事训练的居民自动分配到指定训练小队。	l

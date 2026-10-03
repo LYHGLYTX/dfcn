@@ -1,5 +1,15 @@
 // Borrowed native fields only. Layouts come from the same generated ABI
 // declarations as historical records; no per-host announcement algorithm.
+static bool native_announcement_display_tail(std::vector<uintptr_t> &records) {
+    NativeBorrowedVector<uintptr_t> native;
+    if (!native_history_read_vector(native_history_global(0x23d14f0 + 0x112378), native))
+        return false;
+    const size_t count = std::min(native.size(), size_t{10});
+    records.resize(count);
+    return !count || native_history_copy_bytes(reinterpret_cast<uintptr_t>(native.begin) +
+        (native.size() - count) * sizeof(uintptr_t), records.data(), count * sizeof(uintptr_t));
+}
+
 static bool native_announcement_history_index(std::vector<uintptr_t> &records,
         int32_t &next_id, uintptr_t &world) {
     NativeBorrowedVector<uintptr_t> native;

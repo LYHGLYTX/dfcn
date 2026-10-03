@@ -140,6 +140,19 @@ static bool load_core(bool enable) {
 
 } // namespace
 
+// Optional read-only command context lives independently of DfcnCoreApi.
+// It touches only the resident loader's calling-thread POD frame, never the
+// current core image, native strings, render state or game synchronization.
+DFCN_EXPORT int dfcn_get_dfhack_command_context_v1(void *requested_console,
+        DfcnDfhackCommandContextV1 *result) noexcept {
+    return dfcn::dfhack::Toggle::query_command_context(requested_console, result);
+}
+
+DFCN_EXPORT int dfcn_get_dfhack_command_context_v2(void *requested_console,
+        DfcnDfhackCommandContextV2 *result) noexcept {
+    return dfcn::dfhack::Toggle::query_command_context_v2(requested_console, result);
+}
+
 DFCN_EXPORT void dfhooks_init() {
     if (initialized) return;
     if (!dfcn::module::acquire_guard(log)) return;

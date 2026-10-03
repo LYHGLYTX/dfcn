@@ -1,0 +1,133 @@
+# Stonesense local display and local Console output translations.
+# Sources: installed D:\program\steam\steamapps\common\DFHack\hack\plugins\stonesense.plug.dll ASCII strings;
+# https://github.com/DFHack/stonesense/blob/master/main.cpp (drawcredits, stonesense_thread, stonesense_command)
+# https://github.com/DFHack/stonesense/blob/master/GUI.cpp (drawDebugInfo, DrawMinimap, DrawSpriteIndexOverlay, paintboard, saveMegashot)
+# https://github.com/DFHack/stonesense/blob/master/ContentLoader.cpp (draw_loading_message, content loading)
+# https://github.com/DFHack/stonesense/blob/master/Config.cpp and Keybinds.cpp (local configuration errors)
+# All message and format literals below occur in the installed DLL; source identifies their human-visible use.
+# Only fixed prose is translated. KEY/action tokens, API names, enums, raw game reports/names, paths, and numeric values remain original.
+# No rules target remote output, exported files, Stonesense.log, benchmark data, or screenshot image content.
+# Floating-point values use {s}; {d} is a signed integer. Adjacent optional strings in native formats are captured as one combined value.
+
+# main.cpp: welcome, credits, and startup. Contributor name-only lines deliberately have no entries.
+DFHack output: Welcome to Stonesense Felsite!	欢迎使用 Stonesense Felsite！	l
+DFHack output: Stonesense is an isometric viewer for Dwarf Fortress.	Stonesense 是《矮人要塞》的等轴视角查看器。	l
+DFHack output: Programming: Jonas Ask, Kris Parker, Japa Illo, Tim Aitken, and peterix	程序编写：Jonas Ask、Kris Parker、Japa Illo、Tim Aitken、peterix	l
+DFHack output: Lead graphics designer, Dale Holdampf	首席图形设计师：Dale Holdampf	l
+DFHack output: Contributors:	贡献者：	l
+DFHack output: With special thanks to peterix for making DFHack	特别感谢 peterix 开发了 DFHack	l
+DFHack output: Starting up...	正在启动……	l
+
+# ContentLoader.cpp: real draw_loading_message calls. The file/document capture retains its spelling.
+DFHack output: Reading Custom Workshop Types	正在读取自定义工坊类型	l
+DFHack output: Reading Professions	正在读取职业	l
+DFHack output: Reading Hairstyles	正在读取发型	l
+DFHack output: Loading {s}	正在加载 {s1}	l
+
+# GUI.cpp: map, sprite sheet, repeat hint, viewport tracking, and local screenshot progress.
+DFHack output: No map loaded	尚未加载地图	l
+DFHack output: Could not find DF process	找不到 DF 进程	l
+DFHack output: {s} ({d}) (Press SPACE to return)	{s1} ({d1}) (按 SPACE 返回)	l
+DFHack output: Locked on DF screen + ({d},{d},{d})	锁定 DF 画面 + ({d1},{d2},{d3})	l
+DFHack output: Following DF Cursor at: {d},{d},{d}	跟随 DF 光标，位置：{d1},{d2},{d3}	l
+DFHack output: Single layer view	单层视图	l
+DFHack output: Reloading every {s}s	每 {s1} 秒重新加载	l
+DFHack output: saving large screenshot...	正在保存大幅截图……	l
+DFHack output fragment:  (repeats)	 (重复)	l
+
+# GUI.cpp paintboard: fixed performance labels, with the formatted numeric value preserved.
+DFHack output: Map Read Time: {s}ms	地图读取耗时：{s1}ms	l
+DFHack output: Map Beautification Time: {s}ms	地图美化耗时：{s1}ms	l
+DFHack output: Tile Sprite Assembly Time: {s}ms	格块图像组装耗时：{s1}ms	l
+DFHack output: DF Renderer Overlay Time: {s}ms	DF 渲染器叠加耗时：{s1}ms	l
+DFHack output: FPS: {s}	帧率：{s1}	l
+DFHack output: Draw: {s}ms	绘制耗时：{s1}ms	l
+
+# GUI.cpp drawDebugInfo: enum/token/material/tree names are opaque capture values.
+# Native hexadecimal tile address is also opaque, rather than being treated as a decimal integer.
+DFHack output: Coord: invalid	坐标：无效	l
+DFHack output: Tile 0x{s} ({d},{d},{d})	格块 0x{s1} ({d1},{d2},{d3})	l
+DFHack output: Coord:({d},{d},{d})	坐标：({d1},{d2},{d3})	l
+DFHack output: Tile: {s}	格块：{s1}	l
+DFHack output: Game Mode:{d}, Control Mode:{d}	游戏模式：{d1}，控制模式：{d2}	l
+DFHack output: {s} {s}:{d} Material:{s} ({d},{d})	{s1} {s2}:{d1} 材料：{s3} ({d2},{d3})	l
+DFHack output: Layer Material:{s}	岩层材料：{s1}	l
+DFHack output: Vein Material:{s}	矿脉材料：{s1}	l
+DFHack output: Grass length:{d}, Material: {s}	草长度：{d1}，材料：{s1}	l
+DFHack output: Grass length:{d}, Material:	草长度：{d1}，材料：	l
+DFHack output: tree:{d} water:{d},{d}	树木：{d1}，液体：{d2},{d3}	l
+DFHack output: tree name:{s} type:{d}	树名：{s1}，类型：{d1}	l
+DFHack output: tree tile:{s}	树木格块：{s1}	l
+DFHack output: tree tile:	树木格块：	l
+DFHack output: {d} extra sprites.	{d1} 个附加图像。	l
+DFHack output: Building: game_type = {s}({d}) game_subtype = {s}({d}) Material: {s} ({d},{d}) Occupancy:{d}, Special: {d}	建筑：game_type = {s1}({d1}) game_subtype = {s2}({d2}) 材料：{s3} ({d3},{d4}) 占用状态：{d5}，特殊状态：{d6}	l
+DFHack output: Material[{d}]: {s} ({d},{d})	材料[{d1}]：{s1} ({d2},{d3})	l
+DFHack output: Traffic: {d}	通行优先级：{d1}	l
+DFHack output: Stockpile?	储物区？	l
+DFHack output: Water table	含水层	l
+DFHack output: Rained	下过雨	l
+DFHack output: Snow: {d}, Mud: {d}, Blood: {d}	积雪：{d1}，泥：{d2}，血：{d3}	l
+DFHack output: Item: {s} - {s}	物品：{s1} - {s2}	l
+DFHack output: Item: {s} -	物品：{s1} -	l
+DFHack output: {s}: {d}, Material:{s}	{s1}：{d1}，材料：{s2}	l
+
+# Fixed rendering fragments cover optional/partially assembled debug rows without rewriting value enums.
+# Spaces next to source fragments are intentional phrase boundaries.
+DFHack output fragment: Map Read Time: 	地图读取耗时：	l
+DFHack output fragment: Map Beautification Time: 	地图美化耗时：	l
+DFHack output fragment: Tile Sprite Assembly Time: 	格块图像组装耗时：	l
+DFHack output fragment: DF Renderer Overlay Time: 	DF 渲染器叠加耗时：	l
+DFHack output fragment: FPS: 	帧率：	l
+DFHack output fragment: Draw: 	绘制耗时：	l
+DFHack output fragment: Coord:	坐标：	l
+DFHack output fragment: Tile: 	格块：	l
+DFHack output fragment: Game Mode:	游戏模式：	l
+DFHack output fragment: Control Mode:	控制模式：	l
+DFHack output fragment: Layer Material:	岩层材料：	l
+DFHack output fragment: Vein Material:	矿脉材料：	l
+DFHack output fragment: Grass length:	草长度：	l
+DFHack output fragment: tree:	树木：	l
+DFHack output fragment:  water:	 液体：	l
+DFHack output fragment: tree name:	树名：	l
+DFHack output fragment:  type:	 类型：	l
+DFHack output fragment: tree tile:	树木格块：	l
+DFHack output fragment: Building: 	建筑：	l
+DFHack output fragment:  Material:	 材料：	l
+DFHack output fragment:  Occupancy:	 占用状态：	l
+DFHack output fragment:  Special: 	 特殊状态：	l
+DFHack output fragment: Traffic: 	通行优先级：	l
+DFHack output fragment: Snow: 	积雪：	l
+DFHack output fragment: Mud: 	泥：	l
+DFHack output fragment: Blood: 	血：	l
+DFHack output fragment: Item: 	物品：	l
+DFHack output fragment:  (Press SPACE to return)	 (按 SPACE 返回)	l
+
+# Local Console messages from main.cpp. These do not alter separate file/log writes.
+DFHack output: Stonesense launched	Stonesense 已启动	l
+DFHack output: Using allegro version {d}.{d}.{d} r{d}	使用 Allegro 版本 {d1}.{d2}.{d3} r{d4}	l
+DFHack output: Stonesense shutdown.	Stonesense 已关闭。	l
+DFHack output: Stonesense already running.	Stonesense 已在运行。	l
+DFHack output: Cannot load font: {s}	无法加载字体：{s1}	l
+DFHack output: Cannot load image: {s}	无法加载图像：{s1}	l
+DFHack output: Failed to resize diplay	无法调整显示区域大小	l
+DFHack output: Could not init Allegro.	无法初始化 Allegro。	l
+DFHack output: al_create_display failed	al_create_display 失败	l
+DFHack output: Stonesense: al_install_keyboard failed	Stonesense：al_install_keyboard 失败	l
+DFHack output: Stonesense: al_install_mouse failed	Stonesense：al_install_mouse 失败	l
+DFHack output: al_create_event_queue failed	al_create_event_queue 失败	l
+DFHack output: al_init_image_addon failed.	al_init_image_addon 失败。	l
+DFHack output: al_init_primitives_addon failed.	al_init_primitives_addon 失败。	l
+DFHack output: al_init_ttf_addon failed.	al_init_ttf_addon 失败。	l
+
+# Config.cpp / Keybinds.cpp / ContentLoader.cpp / GUI.cpp: local human-visible messages.
+DFHack output: cannot find init file	找不到初始化配置文件	l
+DFHack output: cannot find keybinds file	找不到键绑定文件	l
+DFHack output: invalid action	动作无效	l
+DFHack output: Reading index at {s}...	正在读取索引 {s1}……	l
+DFHack output: Reading index {s}...	正在读取索引 {s1}……	l
+DFHack output: Reading xml {s}...	正在读取 XML {s1}……	l
+DFHack output: Failure in reading {s}	读取 {s1} 失败	l
+DFHack output: flushing images...	正在清理图像……	l
+DFHack output: saving screenshot to {s}	正在将截图保存到 {s1}	l
+DFHack output: saving large screenshot to {s}	正在将大幅截图保存到 {s1}	l
+DFHack output: failed to take large screenshot; try zooming out	无法生成大幅截图；可尝试缩小视图	l
