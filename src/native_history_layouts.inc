@@ -5501,6 +5501,18 @@ struct f_report {
     int32_t f_speaker_id;
     size_t f_pool_id;
 };
+struct f_stocks_interfacest {
+    bool f_open;
+    Vector f_type_list;
+    Vector f_filtered_type_list;
+    int16_t f_current_type;
+    int32_t f_scroll_position_type;
+    int32_t f_scroll_position_item;
+    bool f_scrolling_type;
+    bool f_scrolling_item;
+    std::string f_item_filter;
+    bool f_entering_item_filter;
+};
 struct f_abstract_interfacest {
     virtual void native_vtable();
 };
@@ -5844,6 +5856,16 @@ struct f_viewscreen_worldst : f_viewscreen {
     uintptr_t f_artifact_eac;
     uintptr_t f_artifact_rpa_holder;
     uintptr_t f_artifact_fac_holder;
+};
+struct f_widget_textbox : f_widget {
+    std::string f_str;
+    uint32_t f_flags;
+    std::function<void()> f_callback;
+    int16_t f_fg;
+    int16_t f_bg;
+    int8_t f_bright;
+    int32_t f_maxlen;
+    int32_t f_textbox_type;
 };
 struct f_world_construction {
     virtual void native_vtable();
@@ -16878,6 +16900,18 @@ static constexpr std::array<Field, 22> f_report_fields = {{
     {0x64, DFCN_NATIVE_FIELD(f_report, f_speaker_id, 0x64), 4},
     {0x68, DFCN_NATIVE_FIELD(f_report, f_pool_id, 0x68), 8},
 }};
+static constexpr std::array<Field, 10> f_stocks_interfacest_fields = {{
+    {0x0, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_open, 0x0), 1},
+    {0x8, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_type_list, 0x8), 24},
+    {0x20, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_filtered_type_list, 0x20), 24},
+    {0x38, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_current_type, 0x38), 2},
+    {0x3c, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_scroll_position_type, 0x3c), 4},
+    {0x40, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_scroll_position_item, 0x40), 4},
+    {0x44, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_scrolling_type, 0x44), 1},
+    {0x45, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_scrolling_item, 0x45), 1},
+    {0x48, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_item_filter, 0x48), 32},
+    {0x68, DFCN_NATIVE_FIELD(f_stocks_interfacest, f_entering_item_filter, 0x68), 1},
+}};
 static constexpr std::array<Field, 35> f_viewscreen_dungeonmodest_fields = {{
     {0x8, DFCN_NATIVE_FIELD(f_viewscreen_dungeonmodest, f_child, 0x8), 8},
     {0x10, DFCN_NATIVE_FIELD(f_viewscreen_dungeonmodest, f_parent, 0x10), 8},
@@ -17316,6 +17350,42 @@ static constexpr std::array<Field, 162> f_viewscreen_worldst_fields = {{
     {0x8470, DFCN_NATIVE_FIELD(f_viewscreen_worldst, f_artifact_rpa_holder, 0x8470), 8},
     {0x8478, DFCN_NATIVE_FIELD(f_viewscreen_worldst, f_artifact_fac_holder, 0x8478), 8},
 }};
+static constexpr std::array<Field, 34> f_widget_textbox_fields = {{
+    {0x8, DFCN_NATIVE_FIELD(f_widget_textbox, f_parent, 0x8), 8},
+    {0x10, DFCN_NATIVE_FIELD(f_widget_textbox, f_rect.f_x1, 0x10), 4},
+    {0x14, DFCN_NATIVE_FIELD(f_widget_textbox, f_rect.f_y1, 0x14), 4},
+    {0x18, DFCN_NATIVE_FIELD(f_widget_textbox, f_rect.f_x2, 0x18), 4},
+    {0x1c, DFCN_NATIVE_FIELD(f_widget_textbox, f_rect.f_y2, 0x1c), 4},
+    {0x20, DFCN_NATIVE_FIELD(f_widget_textbox, f_custom_feed, 0x20), 24},
+    {0x38, DFCN_NATIVE_FIELD(f_widget_textbox, f_custom_logic, 0x38), 24},
+    {0x50, DFCN_NATIVE_FIELD(f_widget_textbox, f_custom_render, 0x50), 24},
+    {0x68, DFCN_NATIVE_FIELD(f_widget_textbox, f_custom_activated, 0x68), 24},
+    {0x80, DFCN_NATIVE_FIELD(f_widget_textbox, f_name, 0x80), 32},
+    {0xa0, DFCN_NATIVE_FIELD(f_widget_textbox, f_flag, 0xa0), 1},
+    {0xa4, DFCN_NATIVE_FIELD(f_widget_textbox, f_offset_bottom, 0xa4), 4},
+    {0xa8, DFCN_NATIVE_FIELD(f_widget_textbox, f_offset_left, 0xa8), 4},
+    {0xac, DFCN_NATIVE_FIELD(f_widget_textbox, f_offset_right, 0xac), 4},
+    {0xb0, DFCN_NATIVE_FIELD(f_widget_textbox, f_offset_top, 0xb0), 4},
+    {0xb4, DFCN_NATIVE_FIELD(f_widget_textbox, f_anchor_top, 0xb4), 4},
+    {0xb8, DFCN_NATIVE_FIELD(f_widget_textbox, f_anchor_bottom, 0xb8), 4},
+    {0xbc, DFCN_NATIVE_FIELD(f_widget_textbox, f_anchor_left, 0xbc), 4},
+    {0xc0, DFCN_NATIVE_FIELD(f_widget_textbox, f_anchor_right, 0xc0), 4},
+    {0xc4, DFCN_NATIVE_FIELD(f_widget_textbox, f_min_w, 0xc4), 4},
+    {0xc8, DFCN_NATIVE_FIELD(f_widget_textbox, f_min_h, 0xc8), 4},
+    {0xd0, DFCN_NATIVE_FIELD(f_widget_textbox, f_tooltip, 0xd0), 72},
+    {0x118, DFCN_NATIVE_FIELD(f_widget_textbox, f_tooltip_type, 0x118), 1},
+    {0x119, DFCN_NATIVE_FIELD(f_widget_textbox, f_displaying_tooltip, 0x119), 1},
+    {0x120, DFCN_NATIVE_FIELD(f_widget_textbox, f_search_string, 0x120), 32},
+    {0x140, DFCN_NATIVE_FIELD(f_widget_textbox, f_activation_hotkeys, 0x140), 16},
+    {0x150, DFCN_NATIVE_FIELD(f_widget_textbox, f_str, 0x150), 32},
+    {0x170, DFCN_NATIVE_FIELD(f_widget_textbox, f_flags, 0x170), 4},
+    {0x178, DFCN_NATIVE_FIELD(f_widget_textbox, f_callback, 0x178), 64},
+    {0x1b8, DFCN_NATIVE_FIELD(f_widget_textbox, f_fg, 0x1b8), 2},
+    {0x1ba, DFCN_NATIVE_FIELD(f_widget_textbox, f_bg, 0x1ba), 2},
+    {0x1bc, DFCN_NATIVE_FIELD(f_widget_textbox, f_bright, 0x1bc), 1},
+    {0x1c0, DFCN_NATIVE_FIELD(f_widget_textbox, f_maxlen, 0x1c0), 4},
+    {0x1c4, DFCN_NATIVE_FIELD(f_widget_textbox, f_textbox_type, 0x1c4), 4},
+}};
 static constexpr std::array<Field, 4> f_world_construction_fields = {{
     {0x8, DFCN_NATIVE_FIELD(f_world_construction, f_id, 0x8), 4},
     {0x10, DFCN_NATIVE_FIELD(f_world_construction, f_square_obj, 0x10), 24},
@@ -17678,6 +17748,16 @@ static constexpr std::array<Field, 93> f_world_site_fields = {{
     {0x530, DFCN_NATIVE_FIELD(f_world_site, f_wg_queued_merchant_num, 0x530), 4},
     {0x538, DFCN_NATIVE_FIELD(f_world_site, f_wg_site_culture, 0x538), 8},
 }};
+static constexpr size_t textbox_parent_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_parent, 0x8);
+static constexpr size_t textbox_rect_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_rect, 0x10);
+static constexpr size_t textbox_visibility_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_flag, 0xa0);
+static constexpr size_t textbox_string_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_str, 0x150);
+static constexpr size_t textbox_flags_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_flags, 0x170);
+static constexpr size_t textbox_maxlen_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_maxlen, 0x1c0);
+static constexpr size_t textbox_type_offset = DFCN_NATIVE_FIELD(f_widget_textbox, f_textbox_type, 0x1c4);
+static constexpr size_t stocks_open_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_open, 0x0);
+static constexpr size_t stocks_filter_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_item_filter, 0x48);
+static constexpr size_t stocks_entering_filter_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_entering_item_filter, 0x68);
 static constexpr size_t f_abstract_building_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
 static constexpr size_t f_abstract_building_counting_housest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
 static constexpr size_t f_abstract_building_dark_towerst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
@@ -17945,6 +18025,7 @@ static constexpr size_t f_viewscreen_dwarfmodest_slots[] = {DFCN_NATIVE_BINDING(
 static constexpr size_t f_viewscreen_legendsst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_new_regionst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_worldst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
+static constexpr size_t f_widget_textbox_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56)};
 static constexpr size_t f_world_construction_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32)};
 static constexpr size_t f_world_construction_bridgest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32)};
 static constexpr size_t f_world_construction_roadst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32)};
@@ -18312,11 +18393,13 @@ static constexpr Object objects[] = {
     {"plant_raw", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_plant_raw_fields.data(), std::size(f_plant_raw_fields), nullptr, 0},
     {"plotinfost", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_plotinfost_fields.data(), std::size(f_plotinfost_fields), nullptr, 0},
     {"report", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_report_fields.data(), std::size(f_report_fields), nullptr, 0},
+    {"stocks_interfacest", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_stocks_interfacest_fields.data(), std::size(f_stocks_interfacest_fields), nullptr, 0},
     {"viewscreen_dungeonmodest", "viewscreen", DFCN_NATIVE_BINDING(0x16b9f48, 0x207fb70), f_viewscreen_dungeonmodest_fields.data(), std::size(f_viewscreen_dungeonmodest_fields), f_viewscreen_dungeonmodest_slots, std::size(f_viewscreen_dungeonmodest_slots)},
     {"viewscreen_dwarfmodest", "viewscreen", DFCN_NATIVE_BINDING(0x16be500, 0x20802e8), f_viewscreen_dwarfmodest_fields.data(), std::size(f_viewscreen_dwarfmodest_fields), f_viewscreen_dwarfmodest_slots, std::size(f_viewscreen_dwarfmodest_slots)},
     {"viewscreen_legendsst", "viewscreen", DFCN_NATIVE_BINDING(0x1711820, 0x2084800), f_viewscreen_legendsst_fields.data(), std::size(f_viewscreen_legendsst_fields), f_viewscreen_legendsst_slots, std::size(f_viewscreen_legendsst_slots)},
     {"viewscreen_new_regionst", "viewscreen", DFCN_NATIVE_BINDING(0x1721480, 0x2085088), f_viewscreen_new_regionst_fields.data(), std::size(f_viewscreen_new_regionst_fields), f_viewscreen_new_regionst_slots, std::size(f_viewscreen_new_regionst_slots)},
     {"viewscreen_worldst", "viewscreen", DFCN_NATIVE_BINDING(0x1603050, 0x2080698), f_viewscreen_worldst_fields.data(), std::size(f_viewscreen_worldst_fields), f_viewscreen_worldst_slots, std::size(f_viewscreen_worldst_slots)},
+    {"widget_textbox", "widget", DFCN_NATIVE_BINDING(0x1710d18, 0x204c190), f_widget_textbox_fields.data(), std::size(f_widget_textbox_fields), f_widget_textbox_slots, std::size(f_widget_textbox_slots)},
     {"world_construction", "", DFCN_NATIVE_BINDING(0x178a508, 0x204bdf8), f_world_construction_fields.data(), std::size(f_world_construction_fields), f_world_construction_slots, std::size(f_world_construction_slots)},
     {"world_construction_bridgest", "world_construction", DFCN_NATIVE_BINDING(0x178a460, 0x204bf98), f_world_construction_bridgest_fields.data(), std::size(f_world_construction_bridgest_fields), f_world_construction_bridgest_slots, std::size(f_world_construction_bridgest_slots)},
     {"world_construction_data_blockst", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_world_construction_data_blockst_fields.data(), std::size(f_world_construction_data_blockst_fields), nullptr, 0},

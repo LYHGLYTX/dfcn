@@ -307,7 +307,7 @@ static std::vector<SDL_Rect> native_vertical_scrollbar_spans(
 // Older ViewBase pages use graphicst's current skins. Widget-based textboxes
 // have a separate init-owned atlas and are read by the helper below.
 static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
-        int left, int top, SDL_Rect *input_region = nullptr) {
+        int left, int top) {
     const auto &skin = native_texture_button_filter(gps);
     const auto &name_skin = native_texture_button_filter_name(gps);
     if (left < 0 || left >= gps.dimx || top < 0 || top + 3 > gps.dimy ||
@@ -329,8 +329,7 @@ static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
     int cap = left + 1;
     while (cap < gps.dimx && native_ui_skin_at(gps, cap, top + strip_row,
             skin[1][strip_row], classic)) ++cap;
-    if (cap <= left + 1 || cap + (input_region ? 1 : 4) > gps.dimx)
-        return std::nullopt;
+    if (cap <= left + 1 || cap + 4 > gps.dimx) return std::nullopt;
     std::string input;
     if (classic) {
         input.reserve(cap - left - 1);
@@ -353,7 +352,7 @@ static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
         }
     }
     for (bool name : {false, true}) {
-        bool complete = cap + 4 <= gps.dimx;
+        bool complete = true;
         for (int column = 0; column < 4 && complete; ++column)
             for (int row = 0; row < 3; ++row) {
                 const int32_t part = name ? name_skin[column][row] : skin[column + 2][row];
@@ -362,24 +361,7 @@ static std::optional<SDL_Rect> native_textbox_rect_at(const graphicst &gps,
                     break;
                 }
             }
-        if (complete) {
-            if (input_region) *input_region = {left + 1, top + 1, cap - left - 1, 1};
-            return SDL_Rect{left, top, cap + 4 - left, 3};
-        }
-    }
-    // Plain entry fields use the same strip with a single-column right
-    // rail. Include them only for input ownership: list layout callers still
-    // require their FILTER/NAME icon and its four-column geometry.
-    if (input_region) {
-        const auto &rail = native_texture_button_filter_no_mag_right(gps);
-        bool complete = true;
-        for (int row = 0; row < 3; ++row)
-            complete = complete && rail[row] > 0 &&
-                native_ui_skin_at(gps, cap, top + row, rail[row], classic);
-        if (complete) {
-            *input_region = {left + 1, top + 1, cap - left - 1, 1};
-            return SDL_Rect{left, top, cap + 1 - left, 3};
-        }
+        if (complete) return SDL_Rect{left, top, cap + 4 - left, 3};
     }
     return std::nullopt;
 }
@@ -436,39 +418,6 @@ static std::optional<SDL_Rect> native_widget_textbox_rect_at(
         if (complete) return SDL_Rect{left, top, cap + 4 - left, 3};
     }
     return std::nullopt;
-}
-
-// Editable text belongs to the control, regardless of focus or vocabulary.
-// Both native textbox families use the middle row before their right cap.
-static std::vector<SDL_Rect> native_text_input_regions(const graphicst &gps) {
-    std::vector<SDL_Rect> regions;
-    if (!gps.screen || gps.dimx <= 0 || gps.dimx > 1000 ||
-            gps.dimy <= 0 || gps.dimy > 1000) return regions;
-    const auto settings = native_ui_settings();
-    const bool classic = settings && settings->classic;
-    const auto &skin = native_texture_button_filter(gps);
-    for (int top = 0; top + 3 <= gps.dimy; ++top) {
-        for (int left = 0; left + 3 <= gps.dimx; ++left) {
-            std::optional<SDL_Rect> box;
-            SDL_Rect input{};
-            if (skin[0][1] != skin[1][1] &&
-                    native_ui_skin_at(gps, left, top + 1, skin[0][1], classic))
-                box = native_textbox_rect_at(gps, left, top, &input);
-            if (!box && settings &&
-                    settings->texpos_button_filter[0][1] !=
-                        settings->texpos_button_filter[1][1] &&
-                    native_ui_skin_at(gps, left, top + 1,
-                        settings->texpos_button_filter[0][1], classic)) {
-                box = native_widget_textbox_rect_at(gps, left, top, *settings);
-                if (box)
-                    input = {box->x + 1, box->y + 1, box->w - 5, 1};
-            }
-            if (!box) continue;
-            regions.push_back(input);
-            left = box->x + box->w - 1;
-        }
-    }
-    return regions;
 }
 
 // Main-toolbar/list actions are four columns by three rows, stored [x][y].

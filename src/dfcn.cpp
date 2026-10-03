@@ -71,6 +71,8 @@ static bool native_history_worldgen_page();
 static bool native_gameplay_map_screen(bool include_world = false);
 static bool native_world_map_screen();
 static bool native_arena_map_screen();
+static std::vector<SDL_Rect> native_text_input_regions(const graphicst &gps,
+    const std::vector<std::string> &rows, const unsigned char *screen_override);
 static std::optional<std::vector<std::string>> native_world_artifact_description_lines();
 static bool native_history_legends_page();
 struct NativeHistoryLegendsCaption {
@@ -1838,6 +1840,31 @@ struct NativeFortressLaborCaption {
 static std::optional<NativeFortressLaborCaption> capture_native_fortress_labor_caption(
     uintptr_t source_address);
 
+// Input ownership exists only inside a native editable control's draw.
+// Its temporary strings inherit the real textbox identity, never a skin.
+class NativeEditableTextScope {
+public:
+    inline static thread_local bool active = false;
+    inline static thread_local uintptr_t required_caller = 0;
+    explicit NativeEditableTextScope(bool editable, uintptr_t caller = 0)
+        : previous_(active), previous_caller_(required_caller) {
+        active = editable && !caller;
+        required_caller = editable ? caller : 0;
+    }
+    ~NativeEditableTextScope() {
+        active = previous_;
+        required_caller = previous_caller_;
+    }
+    static bool owns(uintptr_t caller) {
+        return active || (required_caller && required_caller == caller);
+    }
+    NativeEditableTextScope(const NativeEditableTextScope &) = delete;
+    NativeEditableTextScope &operator=(const NativeEditableTextScope &) = delete;
+private:
+    bool previous_;
+    uintptr_t previous_caller_;
+};
+
 struct NativeDrawnTextRow {
     int x = 0, y = 0;
     std::string source;
@@ -1882,6 +1909,7 @@ struct NativeDrawnTextRow {
     int draw_dimx = 0, draw_dimy = 0;
     uint64_t draw_epoch = 0;
     NativeMapHoverContext map_hover{};
+    bool editable_text = false;
 };
 static std::mutex g_native_drawn_text_mutex;
 static std::vector<NativeDrawnTextRow> g_native_drawn_text_rows;
@@ -2367,6 +2395,7 @@ static void remember_native_drawn_text_row(int x, int y, std::string_view source
         NativeDrawnTextRow row{x, y, std::string(source), address,
             is_native_prose_source(source) || short_caption};
         row.sequence = ++g_native_drawn_text_sequence;
+        row.editable_text = NativeEditableTextScope::active;
         row.top_layer = top_layer;
         if (graphics) {
             row.draw_grid = top_layer ? graphics->screen_top : graphics->screen;
@@ -20758,7 +20787,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
-    const auto text_input_regions = native_text_input_regions(*gps_);
+    const auto text_input_regions = native_text_input_regions(*gps_, screen_rows, screen_override);
     std::vector<Match> text_input_utf8;
     for (const auto &region : text_input_regions) {
         auto &row = screen_rows[region.y];

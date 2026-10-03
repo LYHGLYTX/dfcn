@@ -23,6 +23,12 @@ struct NativeMultilineWidgetBinding {
     NativeCaptionWidgetArrangeFn base_arrange = nullptr;
     size_t minimum_height = 0;
 };
+struct NativeTextboxWidgetBinding {
+    uintptr_t table = 0;
+    void **render_slot = nullptr;
+    void *expected_render = nullptr;
+    uintptr_t text_return_address = 0;
+};
 
 struct NativeCaptionSite {
     uintptr_t resize, draw;
@@ -89,6 +95,7 @@ struct NativeCaptionProfile {
     std::vector<unsigned char> default_resize_entry_prefix;
     NativeCaptionWidgetBinding truncated_widget;
     NativeMultilineWidgetBinding multiline_widget;
+    NativeTextboxWidgetBinding textbox_widget;
     void **tooltip_container_slot = nullptr;
     void *tooltip_container_render = nullptr;
     bool legacy_toolbar_tooltip = false;
@@ -122,6 +129,8 @@ static NativeCaptionWidgetBinding g_native_caption_widget_binding;
 static NativeImportHook g_native_multiline_widget_hook;
 static NativeImportHook g_native_multiline_arrange_hook;
 static NativeMultilineWidgetBinding g_native_multiline_widget_binding;
+static NativeImportHook g_native_textbox_widget_hook;
+static NativeTextboxWidgetBinding g_native_textbox_widget_binding;
 static NativeImportHook g_native_tooltip_container_hook;
 static NativeImportHook g_native_help_tile_hook;
 static NativeImportHook g_native_help_top_tile_hook;
@@ -409,6 +418,52 @@ static bool native_info_title_memory_readable(const void *pointer, size_t size) 
     // No ELF caller-frame layout is bound by the current title profile.
     return false;
 #endif
+}
+
+static bool native_textbox_widget_editable(const void *widget) {
+    const auto address = reinterpret_cast<uintptr_t>(widget);
+    const auto &binding = g_native_textbox_widget_binding;
+    uintptr_t table = 0, parent = 0;
+    uint8_t visibility = 0;
+    uint32_t flags = 0;
+    int32_t maxlen = 0, type = -1;
+    std::array<int32_t, 4> rect{};
+    const auto read_field = [&](size_t offset, auto &value) {
+        return offset <= UINTPTR_MAX - address &&
+            native_history_copy(address + offset, value);
+    };
+    if (!address || !binding.table || !native_history_copy(address, table) ||
+        table != binding.table ||
+        !read_field(native_history_layout::textbox_parent_offset, parent) ||
+        !read_field(native_history_layout::textbox_rect_offset, rect) ||
+        !read_field(native_history_layout::textbox_visibility_offset, visibility) ||
+        !read_field(native_history_layout::textbox_flags_offset, flags) ||
+        !read_field(native_history_layout::textbox_maxlen_offset, maxlen) ||
+        !read_field(native_history_layout::textbox_type_offset, type) ||
+        (visibility & 3u) != 3u || maxlen < 0 || type < 0 || type > 2 ||
+        (flags & ~0x7fu) != 0 || rect[2] < rect[0] || rect[3] < rect[1]) return false;
+    // FILTER, NAME and NONE are all editable textbox classes. A textbox
+    // need not own keyboard focus or a parent to retain its authored text.
+    // Read its owned string safely; render may draw a temporary substring,
+    // so protection belongs to this native render scope, never its address.
+    std::string text;
+    return native_history_layout::textbox_string_offset <= UINTPTR_MAX - address &&
+        native_history_copy_string(address + native_history_layout::textbox_string_offset, text);
+}
+
+static void capture_native_textbox_widget_render(void *widget, uint32_t tick) {
+    NativeInputCallbackScope callback;
+    const auto original = reinterpret_cast<NativeCaptionWidgetRenderFn>(
+        g_native_textbox_widget_hook.original);
+    if (!original) return;
+    bool editable = false;
+    try { editable = native_textbox_widget_editable(widget); } catch (...) {}
+    // widget::render runs custom callbacks before textbox draws str. The
+    // verified caller alone activates protection for that actual addst;
+    // callbacks and separately drawn labels retain ordinary translation.
+    NativeEditableTextScope scope(editable,
+        g_native_textbox_widget_binding.text_return_address);
+    callback.call_native([&] { original(widget, tick); });
 }
 
 #include "native_fortress_labor_capture.inc"
@@ -1280,9 +1335,60 @@ static void capture_native_limited_caption_draw(graphicst *graphics, const Nativ
     } catch (...) {}
 }
 
+static bool native_legacy_editable_draw(uintptr_t caller) {
+#ifdef _WIN32
+    const uintptr_t base = native_history_profile_base();
+    if (!base) return false;
+    uintptr_t owner = 0;
+    size_t string_offset = 0, entering_offset = 0;
+    bool has_open = true;
+    // Each legacy renderer copies this one owned edit string before addst.
+    // Its ordinary list/button captions have different callers. Reference
+    // coordinates are resolved for both supported PE editions.
+    if (caller == native_pe_address(base, 0x3a20c7)) {
+        owner = native_reference_address(base, 0x18a2710);
+        string_offset = native_history_layout::stocks_filter_offset;
+        entering_offset = native_history_layout::stocks_entering_filter_offset;
+    } else if (caller == native_pe_address(base, 0x382106)) {
+        // construction_interfacest.item_filter / entering_item_filter.
+        owner = native_reference_address(base, 0x18a1788);
+        string_offset = 0x68;
+        entering_offset = 0x88;
+        has_open = false; // Construction has category state, not an open bit.
+    } else if (caller == native_pe_address(base, 0x380e14)) {
+        // custom_stockpile_interfacest.spec_filter / entering_spec_filter.
+        owner = native_reference_address(base, 0x18a4238);
+        string_offset = 0x18;
+        entering_offset = 0x38;
+    } else if (caller == native_pe_address(base, 0x38d4af)) {
+        // create_work_order_interfacest.job_filter / entering_job_filter.
+        owner = native_reference_address(base, 0x18a7200);
+        string_offset = 0x50;
+        entering_offset = 0x70;
+    } else return false;
+    if (!owner) return false;
+    uint8_t open = 0, entering = 0;
+    std::string text;
+    const auto field = [&](size_t offset) -> uintptr_t {
+        return offset <= UINTPTR_MAX - owner ? owner + offset : 0;
+    };
+    // entering records keyboard focus, not whether this field is editable.
+    // Retain the owned input while unfocused too, without comparing words.
+    return (!has_open || (native_history_copy(owner, open) && open == 1)) &&
+        native_history_copy(field(entering_offset), entering) &&
+        entering <= 1 && native_history_copy_string(
+            field(string_offset), text);
+#else
+    (void)caller;
+    return false;
+#endif
+}
+
 static void capture_native_clipped_draw(graphicst *graphics, const NativeString *source,
         NativeJustification just, int width) {
     const auto caller = reinterpret_cast<uintptr_t>(__builtin_return_address(0));
+    NativeEditableTextScope input_scope(
+        NativeEditableTextScope::owns(caller) || native_legacy_editable_draw(caller));
     const auto kind = native_info_title_kind(caller);
     const bool authored = native_info_title_authored(kind, source, caller);
     const auto civilization_field = native_civilization_caption_field(caller);
@@ -1412,6 +1518,7 @@ static bool native_caption_hooks_active() {
     return g_native_help_top_tile_hook.active() || g_native_help_tile_hook.active() ||
         g_native_legacy_tooltip_hook.active() || g_native_tooltip_container_hook.active() ||
         g_native_multiline_arrange_hook.active() || g_native_multiline_widget_hook.active() ||
+        g_native_textbox_widget_hook.active() ||
         g_native_caption_widget_hook.active() || g_native_caption_hooks.code.active() ||
         g_native_map_track_caption_hooks.build_entry.active() ||
         g_native_clipped_caption_hooks.resize_entry.active() ||
@@ -1440,7 +1547,7 @@ static bool install_native_caption_hooks() {
     } guard;
     NativeCaptionProfile profile;
     if (!resolve_native_caption_profile(profile) || !profile.resize || !profile.draw ||
-        !profile.truncated_widget.render_slot) {
+        !profile.truncated_widget.render_slot || !profile.textbox_widget.render_slot) {
         log_line("ERROR", "Cannot resolve the native complete-caption profile");
         return false;
     }
@@ -1581,6 +1688,19 @@ static bool install_native_caption_hooks() {
     g_native_caption_widget_hook = {profile.truncated_widget.render_slot, nullptr,
         reinterpret_cast<void *>(&capture_native_truncated_widget_render)};
     if (!g_native_caption_widget_hook.install("Native original widget caption capture")) return false;
+    {
+        const auto &binding = profile.textbox_widget;
+        if (!binding.table || !binding.expected_render ||
+            std::atomic_ref<void *>(*binding.render_slot).load(
+                std::memory_order_acquire) != binding.expected_render) {
+            log_line("ERROR", "Native editable textbox original render mismatch");
+            return false;
+        }
+        g_native_textbox_widget_binding = binding;
+        g_native_textbox_widget_hook = {binding.render_slot, binding.expected_render,
+            reinterpret_cast<void *>(&capture_native_textbox_widget_render)};
+        if (!g_native_textbox_widget_hook.install("Native editable textbox properties")) return false;
+    }
     if (profile.multiline_widget.render_slot) {
         // The announcement binding resolves this same profile after caption
         // hooks are installed. Validate mutable slot ownership only here,
@@ -1656,6 +1776,9 @@ static bool uninstall_native_caption_hooks() {
     if (!g_native_multiline_widget_hook.uninstall("Native complete multiline widget restore")) return false;
     g_native_multiline_widget_hook = {};
     g_native_multiline_widget_binding = {};
+    if (!g_native_textbox_widget_hook.uninstall("Native editable textbox properties restore")) return false;
+    g_native_textbox_widget_hook = {};
+    g_native_textbox_widget_binding = {};
     if (!g_native_caption_widget_hook.uninstall("Native original widget caption restore")) return false;
     g_native_caption_widget_hook = {};
     g_native_caption_widget_binding = {};

@@ -12,6 +12,13 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
     profile.truncated_widget = {
         reinterpret_cast<void **>(native_pe_address(profile.base, 0x162dc10) + 3 * sizeof(void *)),
         0x10, 0x150, 0x180, 0x175};
+    // Only widgets::textbox owns editable str/flags/maxlen/textbox_type.
+    // The abstract interface render precedes the widget destructor at slot 3.
+    const auto textbox_table = native_pe_address(profile.base, 0x1710d18);
+    profile.textbox_widget = {textbox_table,
+        reinterpret_cast<void **>(textbox_table + 3 * sizeof(void *)),
+        reinterpret_cast<void *>(native_pe_address(profile.base, 0x14191e0)),
+        native_pe_address(profile.base, 0x1419581)};
     // container::render invokes widget::render before drawing its children.
     // Save the complete page before Tooltip overwrites it, as on ELF; rect
     // and name retain the shared widget offsets used by the capture.
@@ -822,6 +829,14 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
     profile.truncated_widget = {
         reinterpret_cast<void **>(widget_table + (2 + 3) * sizeof(void *)),
         0x10, 0x150, 0x180, 0x175};
+    const auto textbox_table = reinterpret_cast<uintptr_t>(
+        dlsym(RTLD_DEFAULT, "_ZTVN7widgets7textboxE"));
+    auto *textbox_render = dlsym(RTLD_DEFAULT, "_ZN7widgets7textbox6renderEj");
+    if (!textbox_table || !textbox_render) return false;
+    // The object's vptr names the Itanium address point after its two header
+    // words. render is abstract_interfacest slot 3, as on the native PE ABI.
+    profile.textbox_widget = {textbox_table + 2 * sizeof(void *),
+        reinterpret_cast<void **>(textbox_table + (2 + 3) * sizeof(void *)), textbox_render};
     // 53.16 ViewBase and the ELF constructor agree on rect+0x10 and name+0x80.
     // container::render invokes child render slot 3 after widget::render.
     const auto tooltip_table = reinterpret_cast<uintptr_t>(

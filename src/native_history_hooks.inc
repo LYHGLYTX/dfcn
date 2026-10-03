@@ -40,6 +40,62 @@ static bool native_world_map_screen() {
     return screen && native_history_object_is(screen, "viewscreen_worldst");
 }
 
+static std::vector<SDL_Rect> native_text_input_regions(const graphicst &gps,
+        const std::vector<std::string> &rows, const unsigned char *screen_override) {
+    std::vector<SDL_Rect> regions;
+    if (!gps.screen || gps.dimx <= 0 || gps.dimx > 1000 ||
+            gps.dimy <= 0 || gps.dimy > 1000 ||
+            rows.size() != static_cast<size_t>(gps.dimy)) return regions;
+    std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
+    const uint64_t epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
+    if (g_native_drawn_text_epoch != epoch) return regions;
+    const auto has_input = [](const auto &draws) {
+        return std::any_of(draws.begin(), draws.end(),
+            [](const auto &draw) { return draw.editable_text; });
+    };
+    if (!has_input(g_native_drawn_text_rows) && !has_input(g_native_drawn_top_text_rows))
+        return regions;
+    std::vector<uint8_t> input(static_cast<size_t>(gps.dimx) * gps.dimy, 0);
+    // The real editable owner marks addst while it renders. Only its current
+    // visible glyphs are protected; later labels and popup writes take over
+    // even when they happen to contain the same bytes as an input string.
+    const auto apply = [&](const auto &draws) {
+        for (const auto &draw : draws) {
+            if (draw.draw_epoch != epoch || draw.draw_dimx != gps.dimx ||
+                    draw.draw_dimy != gps.dimy || draw.y < 0 || draw.y >= gps.dimy ||
+                    (screen_override && draw.draw_grid != screen_override)) continue;
+            const int left = std::max(0, draw.x);
+            const int right = static_cast<int>(std::min<int64_t>(gps.dimx,
+                static_cast<int64_t>(draw.x) + draw.source.size()));
+            for (int x = left; x < right; ++x) {
+                if (draw.draw_clip && (x < draw.draw_clip->x ||
+                        x >= draw.draw_clip->x + draw.draw_clip->w ||
+                        draw.y < draw.draw_clip->y ||
+                        draw.y >= draw.draw_clip->y + draw.draw_clip->h)) continue;
+                const size_t tile = static_cast<size_t>(x) * gps.dimy + draw.y;
+                if (!screen_override && draw.draw_grid !=
+                        (native_ui_top_layer_at(gps, tile) ? gps.screen_top : gps.screen)) continue;
+                if (rows[draw.y][x] == draw.source[static_cast<size_t>(x - draw.x)])
+                    input[tile] = draw.editable_text;
+            }
+        }
+    };
+    apply(g_native_drawn_text_rows);
+    apply(g_native_drawn_top_text_rows);
+    for (int y = 0; y < gps.dimy; ++y) {
+        int first = -1;
+        for (int x = 0; x <= gps.dimx; ++x) {
+            const bool owned = x < gps.dimx && input[static_cast<size_t>(x) * gps.dimy + y];
+            if (owned && first < 0) first = x;
+            else if (!owned && first >= 0) {
+                regions.push_back({first, y, x - first, 1});
+                first = -1;
+            }
+        }
+    }
+    return regions;
+}
+
 static bool native_arena_map_screen() {
     const uintptr_t base = native_history_profile_base();
     if (!base) return false;
