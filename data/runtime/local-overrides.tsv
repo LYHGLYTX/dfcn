@@ -8422,7 +8422,9 @@ Standing orders	劳动规则	wi
 Hauling	搬运	w
 Refuse	垃圾	w
 Forbidding	禁用	w
-Petitions	申请	w
+# Main HUD notification draws PETITIONS; the standing-orders tab draws Petitions.
+# Both captions share the same case-insensitive UI term.
+Petitions	申请	wi
 Chores	杂务	w
 # Complete policy captions from the native executable, including alternate
 # states. The widget owns left alignment; l is for prose, not button captions.
