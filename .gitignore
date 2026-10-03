@@ -2,6 +2,7 @@
 /run/
 /data/runtime/untranslated.tsv
 /data/runtime/native-pe-images.json
+/data/runtime/native-elf-images.json
 /data/extracted/dumps/
 /data/extracted/capture-first-match.bmp
 *.log
@@ -21,6 +22,7 @@ __pycache__/
 
 # Packaged runtime
 /DFCN-Windows-x64-minimal.zip
+/DFCN-Linux-x64-minimal.zip
 /workshop/content/*.zip
 /workshop/content/DFCN/
 

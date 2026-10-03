@@ -125,6 +125,10 @@ static NativeMultilineWidgetBinding g_native_multiline_widget_binding;
 static NativeImportHook g_native_tooltip_container_hook;
 static NativeImportHook g_native_help_tile_hook;
 static NativeImportHook g_native_help_top_tile_hook;
+using NativeHelpTileFn = void (*)(graphicst *, long);
+using NativeHelpTopTileFn = void (*)(graphicst *, long, char);
+static NativeHelpTileFn g_real_native_help_tile = nullptr;
+static NativeHelpTopTileFn g_real_native_help_top_tile = nullptr;
 static NativeAnnouncementPageBinding g_native_announcement_page_binding;
 static NativeAnnouncementRowsFn g_native_announcement_page_rows = nullptr;
 
@@ -216,13 +220,13 @@ static void capture_native_help_cell(graphicst *gps) {
 static void capture_native_help_tile(graphicst *gps, long tile) {
     NativeInputCallbackScope callback;
     capture_native_help_cell(gps);
-    const auto original = reinterpret_cast<void (*)(graphicst *, long)>(g_native_help_tile_hook.original);
+    const auto original = g_real_native_help_tile;
     if (original) callback.call_native([&] { original(gps, tile); });
 }
 static void capture_native_help_top_tile(graphicst *gps, long tile, char color) {
     NativeInputCallbackScope callback;
     capture_native_help_cell(gps);
-    const auto original = reinterpret_cast<void (*)(graphicst *, long, char)>(g_native_help_top_tile_hook.original);
+    const auto original = g_real_native_help_top_tile;
     if (original) callback.call_native([&] { original(gps, tile, color); });
 }
 static thread_local NativeTooltipWidgetFrame *g_native_tooltip_write = nullptr;
@@ -1610,15 +1614,21 @@ static bool install_native_caption_hooks() {
         constexpr const char *symbol = "_ZN9graphicst18add_top_lower_tileEl";
         PatchSearch search{symbol};
         dl_iterate_phdr(find_main_import_slot, &search);
-        if (!search.slot) return false;
-        g_native_help_tile_hook = {search.slot, dlsym(RTLD_DEFAULT, symbol),
+        g_real_native_help_tile = reinterpret_cast<NativeHelpTileFn>(dlsym(RTLD_DEFAULT, symbol));
+        if (!search.slot || !g_real_native_help_tile) return false;
+        // Classic may never have called these graphical tile imports. Keep
+        // the live slot (possibly a lazy PLT resolver) for ownership/restore,
+        // but forward directly to the resolved function so the resolver cannot
+        // overwrite our installed hook on the first captured tile.
+        g_native_help_tile_hook = {search.slot, nullptr,
             reinterpret_cast<void *>(&capture_native_help_tile)};
         if (!g_native_help_tile_hook.install("Native classic help background capture")) return false;
         constexpr const char *top_symbol = "_ZN9graphicst12add_top_tileElc";
         PatchSearch top_search{top_symbol};
         dl_iterate_phdr(find_main_import_slot, &top_search);
-        if (!top_search.slot) return false;
-        g_native_help_top_tile_hook = {top_search.slot, dlsym(RTLD_DEFAULT, top_symbol),
+        g_real_native_help_top_tile = reinterpret_cast<NativeHelpTopTileFn>(dlsym(RTLD_DEFAULT, top_symbol));
+        if (!top_search.slot || !g_real_native_help_top_tile) return false;
+        g_native_help_top_tile_hook = {top_search.slot, nullptr,
             reinterpret_cast<void *>(&capture_native_help_top_tile)};
         if (!g_native_help_top_tile_hook.install("Native classic help artwork capture")) return false;
     }
@@ -1630,8 +1640,10 @@ static bool install_native_caption_hooks() {
 static bool uninstall_native_caption_hooks() {
     if (!g_native_help_top_tile_hook.uninstall("Native classic help artwork restore")) return false;
     g_native_help_top_tile_hook = {};
+    g_real_native_help_top_tile = nullptr;
     if (!g_native_help_tile_hook.uninstall("Native classic help background restore")) return false;
     g_native_help_tile_hook = {};
+    g_real_native_help_tile = nullptr;
     g_native_help_page.reset();
     // Live relays retain the native targets until restoration and release both
     // succeed, including failures during a partially completed installation.
