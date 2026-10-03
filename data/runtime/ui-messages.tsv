@@ -72,6 +72,7 @@ Locations such as taverns, temples and libraries can be created from meeting are
 
 # Work orders and workshop assignment.
 A manager is required to coordinate work orders.	需要经理人来协调工单。
+All work orders must be validated by the manager before they become active.	所有工单必须经经理人批准后才能开始执行。
 There are no active work orders.	目前没有正在执行的工单。
 One-time order, conditions checked daily	一次性工单，每日检查条件。
 Restarts if completed, conditions checked daily	完成后重新开始，每日检查条件。

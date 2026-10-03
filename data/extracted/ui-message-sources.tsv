@@ -12,6 +12,10 @@
 # Add a reviewed menu's complete branch family here, not just a screenshot's
 # visible rows. The shared data build requires a full hP translation per row.
 # family<TAB>documented native address/offset sequence<TAB>complete English source
+# Work-order footer, Windows 53.16: three fixed native rows form one sentence.
+# PE literal file offsets, in draw order, for Steam and classic respectively.
+fortress.work-orders.validation	0x162a740+0x162a780+0x162a778	All work orders must be validated by the manager before they become active.
+fortress.work-orders.validation	0x1625c68+0x1625c40+0x1625ca0	All work orders must be validated by the manager before they become active.
 # Coffin detail, Windows 53.16: fixed label row, next-row unit formatter,
 # then a separate period. These addst draws are not an add_paragraph wrap.
 building.coffin.resting-place	0x140194f0f+0x140194f6f+0x140194f89+0x140194fb9	This is the resting place of {n}.
