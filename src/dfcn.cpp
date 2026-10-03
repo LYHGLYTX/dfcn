@@ -19935,6 +19935,22 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
     const int target_start = native_range > 0
         ? static_cast<int>((static_cast<int64_t>(first_native_line) * target_range +
                             native_range / 2) / native_range) : 0;
+    int clip_left = left, clip_right = left + width;
+    for (const auto &draw : draws) {
+        clip_left = std::max(clip_left,
+            static_cast<int>(std::clamp<int64_t>(draw.clip[0], 0, gps_->dimx)));
+        clip_right = std::min(clip_right,
+            static_cast<int>(std::clamp<int64_t>(draw.clip[1], -1, gps_->dimx - 1) + 1));
+    }
+    if (clip_left >= clip_right) return result;
+    const int origin_x = (gps_->screen_pixel_x - gps_->dimx * gps_->tile_pixel_x) / 2;
+    const int origin_y = (gps_->screen_pixel_y - gps_->dimy * gps_->tile_pixel_y) / 2;
+    // Taller Chinese lines cross native source-row boundaries. Keep the
+    // proven document viewport, including its retained extent during a new
+    // draw prefix; a source row's writer clip must not cut its target line.
+    const SDL_Rect document_clip{origin_x + clip_left * gps_->tile_pixel_x,
+        origin_y + top * gps_->tile_pixel_y,
+        (clip_right - clip_left) * gps_->tile_pixel_x, height * gps_->tile_pixel_y};
     for (int row = 0; row < height; ++row) {
         const int y = top + row;
         // Every native row remains suppressed, even when it lies between two
@@ -19956,6 +19972,9 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
         match.layout_left = true;
         match.layout_font_pixels = layout.font_pixels;
         match.layout_line_height_pixels = layout.line_height_pixels;
+        match.layout_fixed_baseline = true;
+        match.layout_native_clip = document_clip;
+        match.layout_reflowed_paragraph = true;
         if (owns_line) match.layout_pixel_y = pixel_top - row * gps_->tile_pixel_y;
         auto foreground_rgb = [&](int foreground) {
             if (foreground < 0) foreground = document.foreground;
