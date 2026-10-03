@@ -541,11 +541,9 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 ? announcements->originals.contains(*capture->display_source)
                 : announcements->originals.contains(native_announcement_display_source(capture->source));
             if (announcement != announcements_only) continue;
-            // Only announcements can recover an addressed viewport slice.
-            // Other captures must fit their entire native wrap on screen;
-            // reject oversized history before scanning its message rules.
-            if (!announcement && capture->wrapped_lines.size() >
-                    static_cast<size_t>(gps_->dimy)) continue;
+            // A native row address can prove a catalog paragraph's visible
+            // continuation as well as an announcement's. The full captured
+            // source still selects its rule; screen suffixes never do so.
             // The capture history also contains character descriptions,
             // item records and other documents. Reject sources outside
             // the message catalog before searching the screen for them.
@@ -577,8 +575,8 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
             }
             if (rule_indices.empty()) continue;
             std::vector<NativeMessageSpan> spans;
-            if (announcement && capture->row_addresses.size() == capture->wrapped_lines.size()) {
-                if (capture->wrapped_lines.size() >= 2) {
+            if (capture->row_addresses.size() == capture->wrapped_lines.size()) {
+                if (announcement && capture->wrapped_lines.size() >= 2) {
                     const auto [first, last] = draws_by_address.equal_range(capture->row_addresses.front());
                     for (auto at = first; at != last; ++at) {
                         const auto &draw = *at->second;
@@ -598,7 +596,7 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                         const auto &draw = *at->second;
                         const int origin_y = draw.y - static_cast<int>(line);
                         if (!native_message_rows(*capture, draw.x, origin_y,
-                                line, line + 1, true, true)) continue;
+                                line, line + 1, true, announcement)) continue;
                         const auto [slice, inserted] = slices.try_emplace(
                             std::pair{draw.x, origin_y}, std::pair{line, line + 1});
                         if (!inserted) {
@@ -609,7 +607,7 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 }
                 for (const auto &[origin, slice] : slices)
                     if (native_message_rows(*capture, origin.first, origin.second,
-                            slice.first, slice.second, true, true))
+                            slice.first, slice.second, true, announcement))
                         spans.push_back({origin.first, origin.second, slice.first, slice.second, true});
             }
             if (spans.empty() && capture->wrapped_lines.size() <= static_cast<size_t>(gps_->dimy)) {
@@ -705,6 +703,41 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 message_source = capture.display_source ? *capture.display_source
                     : native_announcement_display_source(capture.source);
                 source_colors.assign(message_source.size(), message_foreground(first->x, first->y));
+            } else if (span.addressed) {
+                // Native trade replies wrap into separately allocated strings
+                // and may expose only the middle of the row vector. Keep the
+                // pristine constructor source, including long words which the
+                // game's wrapper breaks by inserting a temporary space.
+                const auto first = std::find_if(paragraph->begin(), paragraph->end(),
+                    [](const Match &row) { return !row.source.empty(); });
+                if (first == paragraph->end()) continue;
+                message_source = capture.source;
+                int inherited = message_foreground(first->x, first->y);
+                source_colors.assign(message_source.size(), inherited);
+                size_t source_at = 0;
+                bool same_source = true;
+                for (size_t line = 0; line < capture.wrapped_lines.size() && same_source; ++line) {
+                    const auto &native = capture.wrapped_lines[line];
+                    for (size_t column = 0; column < native.size(); ++column) {
+                        if (native_prose_space(static_cast<unsigned char>(native[column]))) continue;
+                        while (source_at < message_source.size() && native_prose_space(
+                                static_cast<unsigned char>(message_source[source_at])))
+                            source_colors[source_at++] = inherited;
+                        if (source_at == message_source.size() ||
+                                message_source[source_at] != native[column]) {
+                            same_source = false;
+                            break;
+                        }
+                        if (line >= span.begin && line < span.end)
+                            inherited = message_foreground(span.x + static_cast<int>(column),
+                                span.y + static_cast<int>(line));
+                        source_colors[source_at++] = inherited;
+                    }
+                }
+                while (source_at < message_source.size() && native_prose_space(
+                        static_cast<unsigned char>(message_source[source_at])))
+                    source_colors[source_at++] = inherited;
+                if (!same_source || source_at != message_source.size()) continue;
             } else {
                 for (const Match &row : *paragraph) {
                     if (row.source.empty()) continue;
@@ -719,13 +752,14 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
             }
             if (message_source.empty()) continue;
             std::optional<NativeParagraphViewport> viewport;
-            if (announcement && (span.begin != 0 || span.end != capture.wrapped_lines.size())) {
-                // Only an address-proven announcement can reach this path.
+            if (span.addressed && (span.begin != 0 || span.end != capture.wrapped_lines.size())) {
                 // Select the visible window only after translating the whole
-                // record in its single native foreground color.
+                // address-proven paragraph. Adjacent records keep their own
+                // source, row addresses and scrolling range.
                 viewport = NativeParagraphViewport{static_cast<int>(span.begin),
                     static_cast<int>(capture.wrapped_lines.size())};
             }
+            bool submitted = false;
             for (int rule_index : message.rules) {
                 std::vector<int> target_colors;
                 const auto target = announcement
@@ -734,10 +768,18 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 if (!target && !announcement) continue;
                 append_message(std::move(*paragraph), span.x + capture.paragraph_width,
                     target ? std::string_view(*target) : std::string_view{}, target_colors,
-                    viewport, message_source, announcement ? span.x : -1, false,
-                    announcement ? static_cast<int>(capture.wrapped_lines.size()) : 0);
+                    viewport, message_source, announcement || span.addressed ? span.x : -1, false,
+                    announcement || span.addressed ? static_cast<int>(capture.wrapped_lines.size()) : 0);
+                submitted = true;
                 break;
             }
+            if (!submitted && span.addressed)
+                // A known constructor with an unresolved typed name remains
+                // one intact native message, rather than word translations
+                // around an untranslated continuation.
+                append_message(std::move(*paragraph), span.x + capture.paragraph_width,
+                    {}, {}, viewport, message_source, span.x, false,
+                    static_cast<int>(capture.wrapped_lines.size()));
         }
     }
     if (!announcements_only) return;

@@ -49,8 +49,11 @@ std::optional<std::string> Overlay::translate_legends_artifact_identity(
     // Keep their existing historical vocabulary in the shared identity path,
     // including diplomatic claims and quests, rather than phoneticizing them.
     source = trim_view(source);
-    if (source == "an unknown artifact" || source == "Untitled")
-        return translate_legends_term(source);
+    const auto folded = lower(normalize_utterance(source));
+    // Trade can capitalize the first byte when this field starts a reply.
+    if (folded == "an unknown artifact")
+        return translate_legends_term("an unknown artifact");
+    if (folded == "untitled") return translate_legends_term("Untitled");
     const auto repeated = split_repeated_title_identity(source);
     const auto title = repeated.value_or(source);
     // Native single-name figures also repeat their names. Only an actual

@@ -7179,6 +7179,7 @@ to interact with nearby objects and environmental features. In particular, this 
 {a} was unswayed by the emotional appeal and refused, despite the efforts of surrounding allies to stop the plot.	{a1}虽然身边的盟友竭力阻止这场阴谋，但不为动情的劝说所动，拒绝了对方。	ht
 {a} was willing to accept eventual death and refused, despite the efforts of co-conspirators to further the plot.	{a1}虽然同谋竭力促成这场阴谋，但愿意接受终有一死的命运，拒绝了对方。	ht
 {a} was willing to accept eventual death and refused, despite the efforts of surrounding allies to stop the plot.	{a1}虽然身边的盟友竭力阻止这场阴谋，但愿意接受终有一死的命运，拒绝了对方。	ht
+"Even with your combined trade goods, such as they are, I can't fathom you ending up with the items you desire."	“就算把你这些货物全加在一起，我也看不出你怎么换得到想要的东西。”	hP
 "You will have to leave this structure first before you can travel. Try to make your way out to the settlement."	“你必须先离开这座建筑，才能开始旅行。试着走出去，来到聚居地中。”	hP
 A huge feathered bipedal dinosaur with three gigantic claws on each hand. It is a herbivore with a beaked mouth.	一种巨大的带羽毛双足恐龙，每只前爪都有三根硕大无比的利爪。它以植物为食，嘴呈喙状。	lP
 A humanoid creature with the head of a blind cave fish. They live in colonies in watery regions far underground.	一种有失明的洞穴鱼头的人形生物，它们生活在远离地底的水域。	lP
@@ -7321,6 +7322,7 @@ the bestowal of the title of {s} in {p} after serving in combat, slaying an enem
 {a} received the title of {s} in {p} after serving in combat, slaying {d} enemies, and being a member for a year	{a1}在战斗中效力、杀死{d1}名敌人及入会满一年后，获得了{p1}的{s1}头衔	ht
 {n} engaged me to infiltrate in order to steal treasures, initiate sabotage, instill terror, and prepare a coup.	{n1}雇我渗透，以窃取宝藏、开展破坏活动、制造恐慌和策划政变。	hPt
 "Sometimes the blunt truth just does more damage.  Think about how the situation will unfold before you speak."	“有时直言实情只会造成更大伤害。开口之前，先想想后果。”	l
+"You truly despise life, don't you? I am beside myself with grief. Perhaps we will show you how they suffered."	“你真是蔑视生命，不是吗？我悲痛得难以自持。也许我们该让你体会它们遭受的痛苦。”	hP
 A bird of prey so large and ferocious it dwarfs many dragons. All beneath its mighty wings should fear the sky.	一种庞大凶猛的猛禽，令许多龙相形见绌，在它强大的翅膀下的一切都应该敬畏天空。	lP
 A medium-sized herbivore that lives in the high mountains, able to navigate the slopes despite its hooved feet.	一种生活在高山上的中型食草动物，尽管它的脚是蹄子，但仍能驾驭斜坡。	lP
 A medium-sized sea mammal with a long thin horn on its nose. It uses this horn to communicate and break up ice.	中型海洋哺乳动物，它的吻部探出细长且尖锐的长角，常被用于破开冰面以及与同伴交流。	lP
@@ -7585,6 +7587,7 @@ thrust a spire of slade up from the underworld, naming it {p}, and established a
 {a} received the title of {s} in {p} after serving in combat, slaying an enemy, and being a member for a year.	{a1}在战斗中效力、杀死一名敌人及入会满一年后，获得了{p1}的{s1}头衔。	ht
 {a} received the title of {s} in {p} after serving in combat, slaying {d} enemies, and {d} years of membership	{a1}在战斗中效力、杀死{d1}名敌人及拥有{d2}年会龄后，获得了{p1}的{s1}头衔	ht
 "Building friendships is a waste.  There is no bond that can withstand distance or a change of circumstance."	“结交朋友是白费心力。没有哪份情谊经得起相隔遥远或境遇变迁。”	l
+"[Laughs uproariously] You had me going there. Obviously, your copious wit is matched only by your industry!"	“[放声大笑] 我差点当真了。显然，只有你的勤劳才配得上你这么出众的机智！”	hP
 A ballista fires a ballista arrow in a fixed direction. The operator can adjust the aim freely within a cone.	弩炮沿固定方向发射弩炮箭矢，操作员可在锥形范围内自由调整瞄准方向。	hj
 A gigantic feline predator, similar to its cousins in all but size. It can be found in the savage wilderness.	一种巨大的猫科掠食者，与它的近亲体型相似。它可以在野蛮荒野中被找到。	lP
 A huge leaf-eating mammal. It has an extremely long neck. Its skin has a distinctive brown and white pattern.	巨型食叶哺乳动物。它有一根非常长的脖子。它的皮肤有独特的棕与白色的图案。	lP
@@ -8005,6 +8008,7 @@ the bestowal of the title of {s} in {p} after slaying {d} enemies and {d} years 
 {a} was unaffected by the comments and refused, despite the efforts of co-conspirators to further the plot.	{a1}虽然同谋竭力促成这场阴谋，但没把这番话放在心上，拒绝了对方。	ht
 {a} was unaffected by the comments and refused, despite the efforts of surrounding allies to stop the plot.	{a1}虽然身边的盟友竭力阻止这场阴谋，但没把这番话放在心上，拒绝了对方。	ht
 {b} is sought by {s}, and I aim to return it home. My epic journey began {s}. I've already searched in {e}.	{s1}正在寻找{b1}，而我打算将它送回故乡。我的史诗之旅始于{s2}。我已经搜寻过{e1}。	hPt
+"Yes, and trade we will! Simply tell me what interests you and what you're prepared to offer in exchange."	“没错，我们就来交易吧！告诉我你看中了什么，以及准备拿什么来交换。”	hP
 A huge emaciated-looking bear with great drooping ears and many sharp teeth. It is found deep underground.	一种长着大垂耳和许多尖牙的，体形消瘦的巨熊。被发现于深层地底。	lP
 A small carnivorous animal found in temperate climates. It has orange fur and is known for its cleverness.	一种生活在温带的小型食肉动物。它有橙色的皮毛，以聪明著称。	lP
 Although my own insignificant beliefs lie elsewhere, we can both agree you are by far the most persuasive!	虽说我有点不值一提的不同看法，但我们都承认，你的说服力远胜众人！	hP
@@ -8738,6 +8742,7 @@ the theory and methods involved in the extraction of a constituent liquid from o
 {a} received the title of {s} in {p} after slaying an enemy and being a member for a year in the wilds	{a1}在荒野中杀死一名敌人及入会满一年后，获得了{p1}的{s1}头衔	ht
 {a} received the title of {s} in {p} after slaying {d} enemies and {d} years of membership during {e}.	{a1}在{e1}期间杀死{d1}名敌人及拥有{d2}年会龄后，获得了{p1}的{s1}头衔。	ht
 {a} received the title of {s} in {p} after slaying {d} enemies and {d} years of membership within {p}.	{a1}在{p2}杀死{d1}名敌人及拥有{d2}年会龄后，获得了{p1}的{s1}头衔。	ht
+"Please understand the journey must be profitable. Perhaps you'd consider tossing in a little extra?"	“请理解，这趟旅程必须有利可图。也许你愿意再添一点？”	hP
 "There are times when it is best to keep your feelings to yourself, but I wouldn't want to force it."	“有时把感受留在心里更好，但我不愿勉强。”	l
 A huge bipedal dinosaur with a giant biting jaw and short arms. It has two small horns over its eyes.	一种巨大的双足恐龙，咬合用的颌部十分巨大，前肢短小，双眼上方各有一根小角。	lP
 A huge intelligent ape found in the tropical forests. It is bright red and found living in the trees.	一种体型庞大且有着智慧的猩猩被发现生活在热带丛林里.它们有着鲜红的颜色并且生活在树上.	lP
@@ -9258,6 +9263,7 @@ was too envious of others to face death and agreed, despite being unswayed by th
 {a} was unswayed by the emotional appeal and refused, despite being swayed by the emotional appeal.	{a1}虽然被动情的劝说打动，但不为动情的劝说所动，拒绝了对方。	ht
 {a} was willing to accept eventual death and refused, despite being swayed by the emotional appeal.	{a1}虽然被动情的劝说打动，但愿意接受终有一死的命运，拒绝了对方。	ht
 {n} engaged me to infiltrate {e} in order to initiate sabotage, instill terror, and prepare a coup.	{n1}雇我渗透{e1}，以开展破坏活动、制造恐慌和策划政变。	hPt
+"Leave it to the besotted dullard to miss the finer points of discourse. I'm leaving. Do reflect."	“也只有你这醉醺醺的蠢货，才会听不懂话里的意思。我走了。好好反省吧。”	hP
 "There's more to life than becoming great at just one thing, but being good at several isn't bad!"	“人生不只有精通一件事，多擅长几样也不错！”	l
 A huge oceanic fish capable of great speed. It has a long, sharp snout used for slashing its prey.	一种巨大的海洋鱼类，速度很快。它有一个长长的，锋利的鼻突用来攻击猎物.	lP
 A medium-sized creature with the arms and torso on a man, but with the head and tail of a narwhal.	一种中等大小的生物，它拥有人类的手臂和躯干，但是长着独角鲸的头和尾巴.	lP
@@ -9642,6 +9648,7 @@ was willing to accept eventual death and refused, despite being unswayed by the 
 {n} told me to tell {n} to ask {n} to grant an important position to {n} when one came available.	{n1}让我转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予{n4}。	hPt
 {p}: Farewell, {p}. I look forward to our meeting next year. Our fortunes rise and fall together.	{p1}：再见，{p2}。期待明年与你再次会面。我们的命运休戚与共。	hPt
 "It's good to keep pushing forward, but sometimes you just have to know when it's time to stop."	“不断向前固然好，但有时也要懂得适可而止。”	l
+"My stones, are you giving me those? Do you wish to trade or to make an offering to our leader?"	“我的石头啊，你要把那些送给我？你是想交易，还是想向我们的领袖献礼？”	hP
 A large hooved animal with curved horns and a thick brown coat. It is known for its strong odor.	一种大的有蹄的动物，有弯曲的角和厚厚的棕色皮毛。它以其强烈的气味而闻名。	lP
 A large, flat, camouflaged fish found on the sea floor in temperate waters. It is quite passive.	一种大型、扁平、善于伪装的鱼类，生活在温带水域海底。 不具有主动进攻性。	lP
 A small spiny mammal with a long snout. It eats ants and termites and reproduces by laying eggs.	长鼻子的多刺哺乳动物。它以蚂蚁和白蚁为食，并通过产卵繁殖。	lP
@@ -9859,6 +9866,7 @@ the bestowal of the title of {s} in {p} after slaying {d} enemies and being a me
 {p}: Again on behalf of the Merchants' Guild, let me bid farewell to you and your stout dwarves.	{p1}：请允许我再次代表商人行会，向你和你健壮的矮人族人道别。	hPt
 {p}: Remember, trade agreements strengthen bonds. Please consider an import agreement next year.	{p1}：请记住，贸易协议能增进双方的情谊。请考虑在明年达成进口协议。	hPt
 "Everyone should broaden their horizons.  Any work beyond learning the basics is just a waste."	“人人都应拓宽眼界。掌握基础之后再花功夫，只是浪费。”	l
+"Your childish games have made me tired. Perhaps next time I visit you'll take this seriously."	“你这幼稚的把戏让我厌烦了。也许我下次来时，你会认真对待。”	hP
 A floating pod with eye-stalks. It can spray poison and it gives off poison gas when punctured.	一个漂浮着的长有眼柄的豆荚。它能喷射毒液，被刺穿时会释放毒气。.	lP
 A large mammalian herbivore living in cold climates. It has large antlers and sought-after fur.	一种生活在寒冷气候中的大型哺乳类食草动物，具有巨大的鹿角和抢手的皮毛。	lP
 A small oceanic eel-like creature that latches onto the side of its victim and tears into them.	一种小型海洋鳗鱼类生物，会紧紧抓住并撕咬受害者。	lP
@@ -10096,6 +10104,7 @@ was willing to accept eventual death and refused, despite being swayed by the em
 {n} has created {b}, a {s}! He claims it as an heirloom in the name of the family ancestor {p}.	{n1}创造了{b1}，一件{s1}！他以家族先祖{p1}之名，宣布将其作为传家宝。	hPt
 {n} has created {b}, a {s}! It claims it as an heirloom in the name of the family ancestor {p}.	{n1}创造了{b1}，一件{s1}！它以家族先祖{p1}之名，宣布将其作为传家宝。	hPt
 "It is best not to complicate your life with lies, sure, but the truth also has its problems."	“最好别让谎言把生活弄复杂，但实话也有实话的麻烦。”	l
+"You wish to make an offering to our leader? This would please us greatly. What do you offer?"	“你想向我们的领袖献礼？我们会非常高兴。你要献上什么？”	hP
 Announcement combat agreement-core [agreement-party-list,$name]: {s} plotted to infiltrate {s}	{s1}密谋潜入{s2}	l
 Announcement combat agreement-goals []: instill terror, initiate sabotage, and steal treasures	制造恐慌、展开破坏行动、盗取财宝	l
 Announcement combat agreement-goals []: prepare a coup, initiate sabotage, and steal treasures	筹备政变、展开破坏行动、盗取财宝	l
@@ -11660,6 +11669,7 @@ was wrongfully convicted as a go-between in a conspiracy to commit {s} by {a} wi
 {a} was wrongfully convicted as a go-between in a conspiracy to commit {s} by {a} at {p}	{a1}在{p1}被{a2}错判为实施{s1}的阴谋中的中间人	ht
 {a} was wrongfully convicted as a go-between in a conspiracy to commit {s} by {a} in {p}	{a1}在{p1}被{a2}错判为实施{s1}的阴谋中的中间人	ht
 {a} was wrongfully convicted as a go-between in a conspiracy to commit {s} in the wilds.	{a1}在荒野中被错判为实施{s1}的阴谋中的中间人。	ht
+"A hairy drunkard has come hither to once more disrespect the sanctity of life, I see."	“看来又有个毛茸茸的酒鬼跑来，践踏生命的神圣了。”	hP
 "There's some value in leisure, but one also has to engage with other aspects of life."	“闲暇有其益处，但生活的其他方面也不能荒废。”	l
 "Wouldn't it be grand to just take my life off and do nothing for the rest of my days?"	“若能从此歇下，余生什么也不做，岂不美好？”	l
 "You should only maintain loyalty so long as something more important is not at stake."	“忠诚应当坚守，但不能为此危及更重要的事。”	l
@@ -12596,6 +12606,7 @@ was wrongfully convicted as a go-between in a conspiracy to commit {s} in the wi
 {n} told me to ask {n} to grant an important position to me when one came available.	{n1}让我要求{n2}在职位出现空缺时，将一个重要职位授予我。	hPt
 {p} defeated {p} and placed {a} in charge of {p}. The new government was called {p}.	{p1}击败了{p2}，并任命{a1}掌管{p3}。新政府名为{p4}。	ht
 "Friends are future enemies.  I don't see the difference.  People do as they must."	“朋友终会成为敌人，两者并无区别。人各有不得已。”	l
+"Greetings from our mountain halls to yours. Let us strengthen our bonds in trade."	“我们的山中殿堂向你们致以问候。让我们通过贸易增进情谊。”	hP
 "I don't understand how somebody can become so obsessed by what somebody else has."	“我不明白，一个人怎么会如此执着于别人拥有的东西。”	l
 "Some discord is a healthy part of society, but we must also try to live together."	“社会中有些分歧未必是坏事，但我们也得努力相处。”	l
 A forlorn haunt, seeking out known locations or drifting around the place of death.	一个孤苦的幽魂，寻访熟悉的地方，或在死亡之地附近游荡。	lP
@@ -12832,6 +12843,7 @@ was wrongfully convicted as a go-between in a conspiracy to commit {s} in the wi
 {n} engaged me to infiltrate {e} in order to steal treasures and initiate sabotage.	{n1}雇我渗透{e1}，以窃取宝藏和开展破坏活动。	hPt
 {n} was asked to grant an important position in {e} to {n} when one came available.	有人要求{n1}在职位出现空缺时，将{e1}的一个重要职位授予{n2}。	hPt
 {p}: I don't know very much about the outside world. I wish I had more to tell you.	{p1}：我对外面的世界所知不多。真希望能告诉你更多消息。	hPt
+"I am a merchant, yes. You see, I wish to trade. Which of my goods do you desire?"	“是的，我是个商人。你看，我想做笔交易。你想要我的哪些货物？”	hP
 "I can see a place for maintaining decorum, but it's exhausting to live that way."	“我明白守礼有它的道理，但那样生活实在太累。”	l
 "You are approaching your destination. End your travels now and prepare yourself."	“你正接近目的地。现在结束旅行，做好准备。”	hP
 A bolt thrower can be freely turned by the operator. Choose a resting orientation.	弩箭投射器可由操作员自由转向。请选择待命时的朝向。	hP
@@ -13446,8 +13458,10 @@ was wrongfully convicted as a go-between in a conspiracy to commit {s} within {p
 {n} and {n} cemented a bond of friendship amidst the horror of combat during {e}.	在{e1}期间，{n1}与{n2}在惨烈战斗中结下了深厚友谊。	ht
 {n} and {n} cemented a bond of friendship amidst the horror of combat within {p}.	在{p1}，{n1}与{n2}在惨烈战斗中结下了深厚友谊。	ht
 {n} asked me to grant an important position in {e} to me when one came available.	{n1}要求我在职位出现空缺时，将{e1}的一个重要职位授予我。	hPt
+"Greetings from the Mountainhomes. Your efforts are legend there. Let us trade!"	“向你们致以山国都城的问候。你们的成就在那儿已成传奇。让我们做笔交易吧！”	hP
 "Some traditions are worth keeping, but we should consider their overall value."	“有些传统值得保留，但也应衡量它们整体的价值。”	l
 "You can't always rely on your family, but it's good to know somebody is there."	“家人未必总能靠得住，但知道有人在，总是好的。”	l
+"You'll need more goods to make this arrangement. All I see here is not enough."	“想达成这笔交易，你还得拿出更多货物。这里的所有东西加起来也不够。”	hP
 A giant oceanic creature resembling a huge fish's head connected to a wide tail.	一种巨大的海洋生物，像一个巨大的鱼头连接着一条宽的尾巴.	lP
 A large canine found in temperate regions. It is territorial and hunts in packs.	一种常在温带地区的大型犬科生物。它具有较强的领地意识并且集体狩猎。	lP
 A large feathered bipedal dinosaur with a sharp scything claw on its second toe.	一种带羽毛的大型双足恐龙，第二趾上长有锋利的镰刀状爪。	lP
@@ -13968,6 +13982,9 @@ was unafraid of {a} and agreed, despite being unswayed by the emotional appeal.	
 {a} were taken by a mood to act against their better judgment at {p} within {p}	{a1}在{p2}在{p1}一时冲动，违背了理智行事	ht
 {n} engaged me to infiltrate in order to steal treasures and initiate sabotage.	{n1}雇我渗透，以窃取宝藏和开展破坏活动。	hPt
 {n} engaged me to infiltrate {e} in order to instill terror and prepare a coup.	{n1}雇我渗透{e1}，以制造恐慌和策划政变。	hPt
+"Greetings from the outer lands. Your efforts are legend there. Let us trade!"	“向你们致以外界的问候。你们的成就在那儿已成传奇。让我们做笔交易吧！”	hP
+"Greetings. We are enchanted by your more ethical works. We've come to trade."	“你们好。你们那些更合乎道德的作品令我们着迷。我们前来交易。”	hP
+"Once a beautiful tree, and now? It is a rude bauble, fit only for your kind."	“它曾是一棵美丽的树，现在呢？却成了粗俗的小玩意，只配给你们这种族用。”	hP
 "Why this obsession with weapons and battle?  I don't understand some people."	“为什么如此痴迷武器与战斗？有些人真让我不理解。”	l
 A large mammalian herbivore. It is powerfully built and has long curved horns.	一种大型哺乳类食草动物，具有强壮的体格和弯曲的长角。	lP
 A medium-sized red fish that lives in the ocean and swims up a river to breed.	一种中等大小的红鱼，生活在海洋中，向上游游动繁殖。	lP
@@ -14249,6 +14266,7 @@ were taken by a mood to act against their better judgment at {p} in the wilds.	�
 {n} engaged me to infiltrate in order to initiate sabotage and instill terror.	{n1}雇我渗透，以开展破坏活动和制造恐慌。	hPt
 {n} engaged me to infiltrate in order to initiate sabotage and prepare a coup.	{n1}雇我渗透，以开展破坏活动和策划政变。	hPt
 {p}: There is much to share... (Information added to Civilizations/World Info)	{p1}：有许多消息要分享……（信息已添加至文明／世界信息）	hPt
+"For me? At no price? I can accept your offer, or perhaps you wish to trade."	“给我的？不用付钱？我可以收下你的礼物，或者你其实想做笔交易？”	hP
 "You've found {p}! My chosen, you must speak to them and offer your service."	“你找到了{p1}！我的天选者，你必须与其交谈，表示愿意效劳。”	hPt
 A caravan from {e} has arrived. Overall trade sentiments are tenuous at best.	来自{e1}的商队已抵达。总体贸易意愿至多只能算勉强。	hPt
 A fluffy, pudge-filled being, known for its warm heart and stumble bumblings.	一种毛茸茸的圆滚滚生物，因其热心肠和蠢萌而出名。	lP
@@ -15201,6 +15219,7 @@ were taken by a mood to act against their better judgment at {p} within {p}	在{
 {n} asked me to grant an important position to {n} when one came available.	{n1}要求我在职位出现空缺时，将一个重要职位授予{n2}。	hPt
 {n} engaged me to infiltrate in order to instill terror and prepare a coup.	{n1}雇我渗透，以制造恐慌和策划政变。	hPt
 {n} was asked to grant an important position to me when one came available.	有人要求{n1}在职位出现空缺时，将一个重要职位授予我。	hPt
+"I see your low race still revels in death. That poor, gentle creature..."	“看来你们这低劣的种族仍以杀戮为乐。那可怜而温顺的生灵……”	hP
 "Knowledge can be useful, but it can also be pointless or even dangerous."	“知识可以有用，也可能毫无意义，甚至带来危险。”	l
 "Rules are there to be bent, but they shouldn't be flouted thoughtlessly."	“规矩可以变通，却不该不加思索地违背。”	l
 A large hairless mammal person with a large shovel-like mouth and a trunk.	一种大型无毛哺乳类人形生物，长着宽大的铲状嘴和一条象鼻。	lP
@@ -15872,6 +15891,7 @@ was willing to accept eventual death and refused, despite respect of {a}.	虽然
 {a} was unafraid of {a} and agreed, despite being unafraid in the moment.	{a1}虽然当时毫无畏惧，但不惧怕{a2}，答应了。	ht
 {i} was stolen from {p} by {a} during {e} and brought to {p} in the wilds	在荒野中，在{e1}期间，{a1}从{p1}偷走了{i1}，并将其带到{p2}	ht
 {p} was stolen from {p} by {a} during {e} and brought to {p} in the wilds	在荒野中，在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}	ht
+"Do not tempt me! My beasts of burden cannot possibly haul such a load."	“别诱惑我了！我的驮兽可拉不动这么多货物。”	hP
 "I only work so hard, but sometimes you have to do what you have to do."	“我干活只肯出这么多力，但有些事该做还是得做。”	l
 A feathered man with the wings and head of a bird. It lives underground.	长着翅膀和鸟头的长着羽毛的人形生物。它生活在地底。	lP
 A huge quadrupedal dinosaur with an armored carapace. It is a herbivore.	一种巨大的四足恐龙，身披坚甲，以植物为食。	lP
@@ -16193,6 +16213,7 @@ were taken by a mood to act against their better judgment at {p} in {p}.	在{p2}
 {n} and {n} become friends over a shared love of athletics in the wilds.	在荒野中，{n1}与{n2}因共同热爱竞技而成为了朋友。	ht
 {p} was stolen from {p} by {a} during {e} and brought to {p} during {e}.	在{e2}期间，在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}。	ht
 {p} was stolen from {p} by {a} during {e} and brought to {p} within {p}.	在{p4}，在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}。	ht
+"Greetings. The {s}ship of the {s} is unparalleled. Let's make a deal!"	“你们好。{s2}的{s1}手艺无与伦比。让我们做笔交易吧！”	hPt
 A caravan from {e} has arrived. Overall trade sentiments are fantastic.	来自{e1}的商队已抵达。总体贸易意愿极其高涨。	hPt
 A caravan from {e} has arrived. Overall trade sentiments are very good.	来自{e1}的商队已抵达。总体贸易意愿非常良好。	hPt
 A foolhardy soul might try to rescue the child that has been kidnapped.	胆大莽撞的人或许会尝试营救那个被绑架的孩子。	hq
@@ -17798,6 +17819,7 @@ was unafraid of {a} and refused, despite lack of loyalty toward {a}.	虽然不�
 {p} was stolen from {p} by {a} during {e} and brought to {p} at {p}.	在{p4}，在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}。	ht
 {p} was stolen from {p} by {a} during {e} and brought to {p} in {p}.	在{p4}，在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}。	ht
 "It's a competitive world, and you'd be a fool to think otherwise."	“这世界处处都是竞争，不承认这一点才是愚蠢。”	l
+"These _are_ fine items, aren't they? Now, what do offer for them?"	“这些可都是好东西，对吧？那么，你拿什么来换？”	hP
 A caravan from {e} has arrived. Overall trade sentiments are great.	来自{e1}的商队已抵达。总体贸易意愿很高。	hPt
 A horse-like creature with a spiral horn growing from its forehead.	一种类似马的生物，前额长出螺旋状的角。	lP
 A large ape-like creature with white fur, found in the snowy wilds.	一种长着白色皮毛的类人猿大型生物，生活在白雪皑皑的荒野。	lP
@@ -20051,6 +20073,7 @@ was unafraid of {a} and refused, despite loathing the powerful.	虽然厌恶权�
 {a} was unswayed by the emotional appeal and refused within {p}	{a1}在{p1}不为动情的劝说所动，拒绝了对方	ht
 {a} was willing to accept eventual death and refused during {e}	{a1}在{e1}期间愿意接受终有一死的命运，拒绝了对方	ht
 {a} was willing to accept eventual death and refused within {p}	{a1}在{p1}愿意接受终有一死的命运，拒绝了对方	ht
+{b} is a great treasure. We respect that this is no mere trade.	{b1}是一件伟大的珍宝。我们深知，这绝非普通的交易。	hPt
 {e} by fooling {a} with fabricated evidence in {p} in the wilds	在荒野中，在{p1}利用伪造的证据欺骗{a1}而进行的{e1}	htEi
 {n} engaged me to frame {n} for attempted theft by fooling {n}.	{n1}雇我通过欺骗{n3}，诬陷{n2}犯下盗窃未遂罪。	hPt
 {n} engaged me to infiltrate {e} in order to initiate sabotage.	{n1}雇我渗透{e1}，以开展破坏活动。	hPt
@@ -20058,6 +20081,7 @@ was unafraid of {a} and refused, despite loathing the powerful.	虽然厌恶权�
 {n} is most often depicted as a {s} and is associated with {r}.	{n}最常以{s}的形象出现，并与{r}有关。	ht
 {n} sent me to demand a portion of the official funds from {n}.	{n1}派我向{n2}索要一部分公款。	hPt
 {p} concluded with the local government overthrown in the wilds	在荒野中，{p1}以当地政府被推翻告终	ht
+"I must make a profit. There is simply not enough value here."	“我得有利可图。这些货物的价值实在不够。”	hP
 "We grow through debate and struggle, even chaos and discord."	“我们在辩论与抗争中成长，甚至混乱与不和也能促人成长。”	l
 A gigantic hairless mammal with a long neck and a small trunk.	一种体型极其庞大、没有毛发的哺乳动物，颈部修长，鼻子短小。	lP
 A humanoid with the head, tail and poison spurs of a platypus.	一个长着鸭嘴兽脑袋、尾巴和蹼的人。	lP
@@ -20820,6 +20844,7 @@ Overview sentence: Why does it keep happening to me? Why me?!	为什么这种事
 Request duty or advice pertaining to service as a {s} for {e}	请求分派为{e1}担任{s1}的职责或给予建议	hPt
 Set a low traffic area. Citizens will look for better routes.	设置低通行区域。居民会寻找更好的路线。	hj
 Start a performance. This can take several turns to complete.	开始表演。可能需要多个回合才能完成。	hj
+The following fortress goods were added for the counteroffer:	下列要塞货物已加入还价方案：	hP
 The moon is high in the eastern sky bright behind the clouds.	月亮位于东方高空，在云后仍显明亮。	hP
 The moon is high in the eastern sky bright behind the clouds.	月亮位于东方高空，在云后仍显明亮。	hj
 The moon is high in the western sky bright behind the clouds.	月亮位于西方高空，在云后仍显明亮。	hP
@@ -21118,6 +21143,7 @@ was willing to accept eventual death and refused in the wilds	在荒野中愿意
 {p} concluded with the local government overthrown during {e}	在{e1}期间，{p1}以当地政府被推翻告终	ht
 {p} concluded with the local government overthrown within {p}	在{p2}，{p1}以当地政府被推翻告终	ht
 {p} was stolen from {p} by {a} during {e} and brought to {p}.	在{e1}期间，{a1}从{p2}偷走了{p1}，并将其带到{p3}。	ht
+"Ah, but my goods are not free! What do you offer in trade?"	“啊，可我的货物不是白送的！你拿什么来换？”	hP
 "Don't be afraid to do anything to get ahead in this world."	“要在这世上出人头地，就别怕不择手段。”	l
 "Don't serve anyone blindly.  You'll only get into trouble."	“不要盲目效忠任何人，那只会惹祸上身。”	l
 "Everything is so much easier when you just tell the truth."	“坦诚相待，事情就简单多了。”	l
@@ -23067,6 +23093,7 @@ was unafraid of {a} and refused, despite fearing of death.	虽然惧怕死亡，
 {p} was made a symbol of the {s} of {p} by {a} within {p}.	在{p3}，{a1}将{p1}定为{p2}的{s1}的象征。	ht
 "All of this striving against one another is so foolish."	“这些相互争胜的举动，实在愚蠢。”	l
 "People can be so angry, and I just don't understand it."	“人怎么会有那么大的怒气，我实在不理解。”	l
+"These goods are too heavy and cheap for me to consider."	“这些货物又重又不值钱，我不会考虑。”	hP
 A gigantic filter-feeding fish found in temperate oceans.	一种生活在温带海洋中的巨型滤食性鱼类。	lP
 A large dinosaur person with a fierce jaw and short arms.	一种大型恐龙类人形生物，颌部凶猛有力，手臂短小。	lP
 A large dinosaur person with a long neck that has a sail.	一种大型恐龙类人形生物，颈部修长，并长有帆状结构。	lP
@@ -27416,6 +27443,7 @@ There is nothing to catch in the southwestern ocean.	西南部的海洋中没有
 This great hunt has saved us from a dangerous enemy!	这场出色的狩猎从危险的敌人手中拯救了我们！	hP
 This storyteller. How can I even describe the skill?	这位讲故事的人的技艺，我简直不知该如何形容！	hP
 Verbally struggle against looming existential crisis	说出你与迫近的存在危机的抗争	hP
+Villains! The seizure of {b} will not go unanswered.	恶徒！你们强征{b1}的行为必将遭到报复。	hPt
 What will you say about the end of the insurrection?	关于起义结束，你想说些什么？	hP
 What will you say about the refusal to give tribute?	关于拒绝进贡，你想说些什么？	hP
 Where are their forces? Are there patrols or guards?	他们的军队在哪里？有巡逻队或守卫吗？	hP
@@ -31002,6 +31030,8 @@ you want to dump using the Dump Designation tool.	[C:7:0:0]想要倾倒的物品
 "Do not hide yourself behind an unfeeling mask."	“不要把自己藏在冷漠的面具后面。”	l
 "How I long for the beautiful spectacle of war!"	“我多么向往战争那壮美的景象！”	l
 "I think self-control is key.  Master yourself."	“我认为自制最为关键，要能掌控自己。”	l
+"I will see that our leader gets this offering."	“我会把这份赠礼交到我们的领袖手中。”	hP
+"I wish I could take so much, but my animals..."	“我倒想带走这么多，可我的牲畜……”	hP
 "It's admirable when the traditions are upheld."	“坚守传统，值得敬重。”	l
 "One should not complain or betray any feeling."	“人不应抱怨，也不应流露任何情绪。”	l
 "Trade is the life-blood of a thriving society."	“贸易是繁荣社会的命脉。”	l
@@ -33343,6 +33373,7 @@ wove a masterful sewn image to a {i} within {p}	在{p1}为{i1}织出了一幅杰
 {s} between {a} and {a} concluded in the wilds.	在荒野中，{a1}与{a2}之间的{s1}结束了。	ht
 {s} can start in the indicated locations above.	{s}可以从上方标示的地点开始冒险。	wtlx
 "Some people are so wrapped up in themselves."	“有些人眼里实在只有自己。”	l
+"You wish to make an offering? We love gifts."	“你想献礼？我们很喜欢礼物。”	hP
 A giant limbless dragon that lives in the sea.	一种生活在海里的没有四肢的巨龙。	lP
 A giant monster in the form of a leopard seal.	一只体型巨大的豹纹海豹怪	lP
 A gigantic digging creature found underground.	在地底发现的一种巨大的挖掘生物。	lP
@@ -34612,6 +34643,7 @@ weaving of a masterful sewn image in the wilds	在荒野中，织出杰作级的
 {p}, an insurrection, began in {p} during {e}.	在{e1}期间，{p2}爆发了名为{p1}的起义。	ht
 {p}, an insurrection, began in {p} within {p}.	在{p3}，{p2}爆发了名为{p1}的起义。	ht
 {s} between {a} and {a} concluded in the wilds	在荒野中，{a1}与{a2}之间的{s1}结束了	ht
+"Ah, wonderful. Thank you for your business."	“啊，太好了。多谢惠顾。”	hP
 "Don't bother trying to play on my emotions."	“别费心利用我的感情。”	l
 "Get me going and I won't stop for anything."	“只要我行动起来，就没有什么能让我停下。”	l
 "How great it is to be surrounded by family!"	“家人在身边，真是幸福！”	l
@@ -35864,6 +35896,7 @@ wrongfully convicted {n} of {s} in the wilds.	在荒野中错误地判定{n1}犯
 {s} between {a} and {a} concluded within {p}.	在{p1}，{a1}与{a2}之间的{s1}结束了。	ht
 "A great piece of art is one that moves me."	“能打动我的，才是好艺术。”	l
 "I can appreciate the right turn of phrase."	“恰到好处的措辞，我是懂得欣赏的。”	l
+"I cannot take so much -- and at such cost!"	“这么多货物我带不走，况且还要付这个价！”	hP
 , while completely misreading the situation,	，却完全看错了形势，	h
 A huge monster in the shape of a black bear.	一只巨大的黑熊怪。	lP
 A huge monster in the shape of a moon snail.	一只巨大的月亮蜗牛怪。	lP
@@ -37628,6 +37661,7 @@ You don't seem to know how to play the {s}.	你似乎根本不会演奏{s1}。	h
 You have a weapon drawn. Click to strap it.	你已拔出武器。点击将武器收起并系好。	hj
 You have been drained of blood by somebody!	你被人吸干了血！	hP
 You haven't named any position symbols yet.	你尚未命名任何职位象征物。	hP
+You honor {e} with the presentation of {b}.	你献上{b1}，使{e1}倍感荣耀。	hPt
 You may find very unpleasant environs here.	此地的环境可能会非常险恶。	l
 You need a broker with the appraisal skill.	需要有估价技能的交易员。	wl
 You pick up the {s} and put it in your {s}.	你拾起了{s1}，并将其放入你的{s2}中。	hPt
@@ -38509,6 +38543,7 @@ wrongfully convicted {n} of {s} within {p}.	在{p1}错误地判定{n1}犯有{s1}
 {n} has been cursed with a week's bad luck!	{n1}受到诅咒，将遭遇一周的厄运！	hPt
 {n} has been found dead, contorted in fear!	{n1}的尸体被发现了，因恐惧而扭曲着！	hPt
 {n} has risen and is haunting the fortress!	{n1}已从死后归来，在要塞中作祟！	hPt
+{n} is not going to take much more of this.	{n1}快要忍无可忍了。	hPt
 {n} picks up the {s} and put it in her {s}.	{n1}拾起了{s1}，并将其放入她的{s2}中。	hPt
 {n} picks up the {s} and put it in his {s}.	{n1}拾起了{s1}，并将其放入他的{s2}中。	hPt
 {n} picks up the {s} and put it in its {s}.	{n1}拾起了{s1}，并将其放入它的{s2}中。	hPt
@@ -41596,6 +41631,7 @@ you will need to reclaim the fort to play	但你需要先收复这座要塞，	w
 {s} between {a} and {a} concluded at {p}.	在{p1}，{a1}与{a2}之间的{s1}结束了。	ht
 {s} between {a} and {a} concluded in {p}.	在{p1}，{a1}与{a2}之间的{s1}结束了。	ht
 {s} has been moved from its proper place!	{s1}被移离了原本的位置！	hPt
+"Are these gifts? Do you wish to trade?"	“这些是礼物吗？你想做笔交易？”	hP
 "I cannot stand the world any longer..."	“我再也受不了这个世界了……”	l
 "I don't really get attached to people."	“我不太会对别人产生依恋。”	l
 "It's best to slow down and just relax."	“最好放慢脚步，好好放松。”	l
@@ -43089,6 +43125,7 @@ wove a masterful sewn image in the wilds	在荒野中织出了一幅杰作级的
 {n} is in the middle of a sermon on {n}.	{n1}正在围绕{n2}布道。	hPt
 {n} is in the middle of a sermon on {r}.	{n1}正在围绕{r1}布道。	hPt
 {n} routed {p} of {p} and destroyed {p}.	{n}击溃了{p2}的{p1}，并摧毁了{p3}。	ht
+{n} seems to be rapidly losing patience.	{n1}似乎正迅速失去耐心。	hPt
 {n} sent me to engage {n} to abduct {n}.	{n1}派我雇{n2}绑架{n3}。	hPt
 {n} sent me to engage {n} to obtain {b}.	{n1}派我雇{n2}取得{b1}。	hPt
 {n} sent me to engage {n} to obtain {i}.	{n1}派我雇{n2}取得{i1}。	hPt
@@ -43138,6 +43175,7 @@ wove a masterful sewn image in the wilds	在荒野中织出了一幅杰作级的
 "Is there something to be happy about?"	“有什么值得高兴的事吗？”	l
 "It is important to discover yourself."	“认识自己，是件重要的事。”	l
 "Sometimes I just don't like somebody."	“有时我就是不喜欢某个人。”	l
+"Take what you wish. I can't stop you."	“想拿什么就拿吧。我阻止不了你。”	hP
 "There's nothing like a great romance!"	“没有什么比得上一场美好的爱情！”	l
 A grey person with the head of a koala.	一种长着考拉头的灰色人形生物。	lP
 A huge ground sloth with a long tongue.	一只巨大的地懒，长着长舌头。	lP
@@ -44685,6 +44723,7 @@ wrongfully convicted {n} of {s} in {p}.	在{p1}错误地判定{n1}犯有{s1}。	
 {n} most often takes the form of a {s}.	{n}最常以{s}的形象出现。	ht
 {n} says, "We are going the wrong way."	{n1}说：“我们走错方向了。”	hPt
 {n} says: "We are going the wrong way."	{n1}说：“我们走错方向了。”	hPt
+{n} seems very happy about the trading.	{n1}似乎对这次交易十分满意。	hPt
 {p} was confiscated by {a} in the wilds	在荒野中，{a1}没收了{p1}	ht
 {p} was hidden in {p} by {n} during {e}	在{e1}期间，{n1}将{p1}藏在了{p2}	ht
 {p} was hidden in {p} by {n} within {p}	在{p3}，{n1}将{p1}藏在了{p2}	ht
@@ -49827,6 +49866,7 @@ you will need to unretire or recruit	但你需要让这个角色复出或将其	
 {n} maintains possession of the {s}.	{n1}仍控制着{s1}。	hPt
 {n} says, "We must not abandon {n}!"	{n1}说：“我们不能抛下{n2}！”	hPt
 {n} says: "We must not abandon {n}!"	{n1}说：“我们不能抛下{n2}！”	hPt
+{n} seems ecstatic with the trading.	{n1}似乎为这次交易欣喜若狂。	hPt
 {n} stops and pays attention to you.	{n1}停了下来，把注意力转向你。	hPt
 {n} tells the story in vivid detail.	{n1}绘声绘色地讲述着故事的细节。	hPt
 {n} was a force which permeates {p}.	{n}曾是遍及{p}的自然之灵。	ht
@@ -51716,6 +51756,7 @@ you were caught up in a new romance	你陷入新的恋情	wi
 {n} pulls off the {s} with her {s}.	{n1}用她的{s2}扯下了{s1}。	hPt
 {n} pulls off the {s} with his {s}.	{n1}用他的{s2}扯下了{s1}。	hPt
 {n} pulls off the {s} with its {s}.	{n1}用它的{s2}扯下了{s1}。	hPt
+{n} seems pleased with the trading.	{n1}似乎对这次交易感到满意。	hPt
 {n} was convicted of {s} during {e}	在{e1}期间，{n1}被判定犯有{s1}	ht
 {n} was convicted of {s} within {p}	在{p1}，{n1}被判定犯有{s1}	ht
 {n} was wrongfully convicted of {s}	{n1}被错判犯有{s1}	ht
@@ -67566,6 +67607,7 @@ wove a masterful sewn image	织出了一幅杰作级的刺绣图像	h
 {n} is partially paralyzed!	{n1}部分麻痹了！	hPt
 {n} is taken by a fey mood!	{n1}陷入了神秘的情绪！	hPt
 {n} of {p} constructed {p}.	{p1}的{n}建造了{p2}。	ht
+{n} seems willing to trade.	{n1}似乎愿意交易。	hPt
 {n} struck down {n} at {p}.	在{p}，{n1}击杀了{n2}。	ht
 {n} struck down {n} in {p}.	在{p}，{n1}击杀了{n2}。	ht
 {n} struck down {p} at {p}.	在{p2}，{n}击杀了{p1}。	ht
@@ -67599,6 +67641,7 @@ wove a masterful sewn image	织出了一幅杰作级的刺绣图像	h
 {s} was made to {a} by {a}.	{a2}向{a1}提出了{s1}。	ht
 {s} was made to {a} in {p}.	在{p1}，向{a1}提出了{s1}。	ht
  (holding another's goods)	（持有他人物品）	w
+"I won't trade at a loss."	“我不会做亏本买卖。”	hP
 "I'm feeling randy today!"	“我今天很想与人亲热！”	l
 "Oh, I'm nothing special."	“我没什么过人之处。”	l
 "There's work to be done!"	“还有事要做！”	l
@@ -69461,6 +69504,7 @@ were expelled in the wilds	在荒野中遭到了驱逐	h
 {n} imprisoned {p} in {p}.	在{p2}，{n}囚禁了{p1}。	ht
 {n} is an {s} born in {d}.	{n}是{s}，生于第{d}年。	ht
 {n} is playing with a toy.	{n1}正在玩玩具。	hPt
+{n} is unwilling to trade.	{n1}不愿交易。	hPt
 {n} loses hold of the {s}.	{n1}没能抓住{s1}。	hPt
 {n} regains consciousness.	{n1}恢复了意识。	hPt
 {n} ruled from {p} of {p}.	{n}以{p2}的{p1}为统治中心。	ht
@@ -73137,6 +73181,7 @@ writing of a masterpiece	书写杰作	hEi
  Brought to rest in Bed	 被他人安置于床上	wi
 "I like to dress well."	“我喜欢衣着得体。”	l
 "You're so perceptive!"	“你看得真透彻！”	l
+"[Chuckles] How droll."	“[轻声笑] 真有趣。”	hP
 (Combat) Attack latched	战斗：攻击咬住	w
 (Wrestle) Release choke	(摔跤)松开锁喉	w
 , keeping it within {p}	，并将其保存在{p1}	ht
@@ -82122,6 +82167,8 @@ yours or companion's	你或同伴留下的	h
  completely sublime	完全卓越的	wi
 "Strive for power."	“权力要靠争取。”	l
 "That isn't funny."	“这并不好笑。”	l
+"What do you want?"	“你想要什么？”	hP
+"You are too kind."	“你太客气了。”	hP
 (Charge) (A) Tumble	(冲锋) (A)跌倒	w
 (Charge) (D) Tumble	(冲锋) (D)跌倒	w
 (Wrestle) Chokehold	(摔跤)锁喉	w
@@ -82143,6 +82190,7 @@ A {s} cannot climb.	{s1}无法攀爬。	hPt
 A {s} cannot speak.	{s1}无法说话。	hPt
 Ability to fly lost	飞行能力丧失	w
 Above average focus	专注力高于平均	wil
+Accept Counteroffer	接受还价	hP
 Accept the position	接受职位	hP
 Add new work detail	添加劳动分组	wi
 Adventure vermin: A	小生物	l
@@ -98234,6 +98282,7 @@ Agree to follow	同意跟随	hP
 Air Race at {p}	在{p1}，飞行竞赛	htEi
 Air Race in {d}	{d1}年的飞行竞赛	htEi
 Air Race in {p}	在{p1}，飞行竞赛	htEi
+Allowed Weight:	可用载重：	hP
 Ambush (nature)	伏击：荒野生物	w
 An angry ghost.	一个愤怒的鬼魂。	lP
 Animal Trainers	驯兽师	wi
@@ -103103,6 +103152,7 @@ Elite Bowdwarf	精英矮人弓手	wi
 Elite Wrestler	精英摔跤手	wi
 Enable caveins	启用塌方	w
 Enable weather	启用天气	w
+Excess Weight:	超出载重：	hP
 Explore today.	今天去探索一番。	hP
 FPS: {d} ({d})	FPS: {d} ({d})	wt
 Famous brawler	名声显赫的斗士	w
@@ -103329,6 +103379,7 @@ Total seed cap	总种子上限	w
 Traction bench	牵引台	w
 Trade at depot	在贸易站交易	wi
 Trade diplomat	贸易外交官到来	w
+Trader Profit:	商人利润：	hP
 Transformation	变身	w
 Tropical Ocean	热带海洋
 Uncovering {b}	揭开{b}	hbti
@@ -108094,6 +108145,7 @@ Noted brigand	著名的强盗	w
 Noted fighter	著名的战士	w
 Noted monster	著名的怪物	w
 Noted villain	著名的恶棍	w
+Offer as gift	作为礼物赠送	hP
 Older brother	哥哥	w
 Older sibling	兄姊	w
 Only daughter	唯一的女儿	w
@@ -112747,6 +112799,7 @@ Tiny Profile	身形微小	hP
 Titan Number	泰坦数量
 To the east:	东方：	hP
 To the west:	西方：	hP
+Trader Loss:	商人亏损：	hP
 Tree chopped	树木被砍倒	w
 Twilight Age	暮光时代	h
 Two thousand	两千	w
@@ -120859,6 +120912,7 @@ Track stop	轨道站点	wi
 UX Advisor	UX 顾问	w
 Uneasiness	不安	w
 Ungrateful	不知感恩	w
+Unmark all	取消全选	hP
 Until dawn	直到黎明	hP
 Upper body	上半身	w
 Useful {b}	实用{b}	hbti
@@ -125982,6 +126036,7 @@ Logician	逻辑学家	wi
 Make ash	制作灰烬	wi
 Make dye	制作染料	wi
 Make lye	制作碱液	wi
+Mark all	全选	hP
 Mechanic	机械师	wi
 Meditate	冥想	w
 Memories	记忆	w
@@ -129538,6 +129593,7 @@ Sedur	塞杜尔	wi
 Seeds	种子	w
 Sefol	塞福尔	wi
 Segun	塞古恩	wi
+Seize	强征	hP
 Selen	塞伦	wi
 Selor	塞洛尔	wi
 Semor	塞莫尔	wi

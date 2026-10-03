@@ -2770,3 +2770,63 @@ fortress.introduction.revisit	0x137ab26	A Dwarven Outpost Revisited: You have re
 fortress.introduction.revisit	0x137b19e+0x137b17e+0x137b15e	How have your sturdy charges fared in your absence? Have they gone on adventures or moved on to richer delving at new frontier settlements? Perhaps they are all still here, unwilling to leave the magnificent fortress you prepared for them.
 fortress.introduction.revisit	0x137b11e	Deep underground, the promise of treasure and the thrill of overcoming danger have lured you back to this place. Will you strike the earth again?
 
+
+# Fortress depot trade, Steam PE RVA 0x384850..0x38a5b0 and artifact helper
+# 0x36a9c0..0x36b0a8. Native branch reconstruction, complete assembly and
+# both editions' literal coordinates: data/extracted/fortress-trade/.
+fortress.trade.dialogue	0x385be8+0x385c36+0x385c5b+0x3861b9	"Greetings from the outer lands.  Your efforts are legend there.  Let us trade!"
+fortress.trade.dialogue	0x385be8+0x385c3d+0x385c5b+0x3861b9	"Greetings from the Mountainhomes.  Your efforts are legend there.  Let us trade!"
+fortress.trade.dialogue	0x385be8+0x385cc9+0x3861b9	"Greetings from our mountain halls to yours.  Let us strengthen our bonds in trade."
+fortress.trade.dialogue	0x385be8+0x385cd5+0x385d55+0x385d5c+0x385d82+0x385db9+0x385dd1+0x3861b9	"Greetings.  The {s}ship of the {s} is unparalleled.  Let's make a deal!"
+fortress.trade.dialogue	0x385be8+0x385e03+0x385e16+0x3861b9	"Greetings.  We are enchanted by your more ethical works.  We've come to trade."
+fortress.trade.dialogue	0x385be8+0x385e6f+0x3861b9	"A hairy drunkard has come hither to once more disrespect the sanctity of life, I see."
+fortress.trade.dialogue	0x385be8+0x385e7c+0x3861b9	"What do you want?"
+fortress.trade.dialogue	0x385be8+0x385e88+0x3861b9	"These goods are too heavy and cheap for me to consider."
+fortress.trade.dialogue	0x385be8+0x385e94+0x3861b9	"I cannot take so much -- and at such cost!"
+fortress.trade.dialogue	0x385be8+0x385ea0+0x3861b9	"Do not tempt me!  My beasts of burden cannot possibly haul such a load."
+fortress.trade.dialogue	0x385be8+0x385eac+0x3861b9	"I wish I could take so much, but my animals..."
+fortress.trade.dialogue	0x385be8+0x385eb8+0x3861b9	"I must make a profit.  There is simply not enough value here."
+fortress.trade.dialogue	0x385be8+0x385ec4+0x3861b9	"I won't trade at a loss."
+fortress.trade.dialogue	0x385be8+0x385ed0+0x3861b9	"Please understand the journey must be profitable.  Perhaps you'd consider tossing in a little extra?"
+fortress.trade.dialogue	0x385be8+0x385f19+0x3861b9	"Your childish games have made me tired.  Perhaps next time I visit you'll take this seriously."
+fortress.trade.dialogue	0x385be8+0x385f26+0x3861b9	"Leave it to the besotted dullard to miss the finer points of discourse.  I'm leaving.  Do reflect."
+fortress.trade.dialogue	0x385be8+0x385f32+0x385f45+0x3861b9	"You'll need more goods to make this arrangement.  All I see here is not enough."
+fortress.trade.dialogue	0x385be8+0x385f51+0x385f64+0x3861b9	"Even with your combined trade goods, such as they are, I can't fathom you ending up with the items you desire."
+fortress.trade.dialogue	0x385be8+0x385f70+0x3861b9	"Ah, wonderful.  Thank you for your business."
+fortress.trade.dialogue	0x385be8+0x385fb9+0x3861b9	"I will see that our leader gets this offering."
+fortress.trade.dialogue	0x385be8+0x385fc6+0x3861b9	"You are too kind."
+fortress.trade.dialogue	0x385be8+0x385fd2+0x3861b9	"Take what you wish.  I can't stop you."
+fortress.trade.dialogue	0x385be8+0x38601d+0x386030+0x3861b9	"You wish to make an offering to our leader?  This would please us greatly.  What do you offer?"
+fortress.trade.dialogue	0x385be8+0x38603c+0x3861b9	"You wish to make an offering?  We love gifts."
+fortress.trade.dialogue	0x385be8+0x386087+0x38609a+0x3861b9	"[Laughs uproariously]  You had me going there.  Obviously, your copious wit is matched only by your industry!"
+fortress.trade.dialogue	0x385be8+0x3860a6+0x3861b9	"[Chuckles]  How droll."
+fortress.trade.dialogue	0x385be8+0x3860b2+0x3861b9	"I am a merchant, yes.  You see, I wish to trade.  Which of my goods do you desire?"
+fortress.trade.dialogue	0x385be8+0x3860be+0x3860d1+0x3861b9	"Yes, and trade we will!  Simply tell me what interests you and what you're prepared to offer in exchange."
+fortress.trade.dialogue	0x385be8+0x3860dd+0x3861b9	"Ah, but my goods are not free!  What do you offer in trade?"
+fortress.trade.dialogue	0x385be8+0x3860e9+0x3860fc+0x3861b9	"These _are_ fine items, aren't they?  Now, what do offer for them?"
+fortress.trade.dialogue	0x385be8+0x386108+0x3861b9	"For me?  At no price?  I can accept your offer, or perhaps you wish to trade."
+fortress.trade.dialogue	0x385be8+0x386136+0x3861b9	"Are these gifts?  Do you wish to trade?"
+fortress.trade.dialogue	0x385be8+0x38613f+0x386152+0x3861b9	"My stones, are you giving me those?  Do you wish to trade or to make an offering to our leader?"
+fortress.trade.dialogue	0x385be8+0x38615b+0x38616e+0x3861b9	"You truly despise life, don't you?  I am beside myself with grief.  Perhaps we will show you how they suffered."
+fortress.trade.dialogue	0x385be8+0x386177+0x38618a+0x3861b9	"Once a beautiful tree, and now?  It is a rude bauble, fit only for your kind."
+fortress.trade.dialogue	0x385be8+0x386193+0x3861a6+0x3861b9	"I see your low race still revels in death.  That poor, gentle creature..."
+fortress.trade.artifact	0x36ab7c+0x36ab9f+0x36abaa+0x36abc4+0x36abcf	You honor {e} with the presentation of {b}.
+fortress.trade.artifact	0x36abef+0x36ac09+0x36ac14	Villains!  The seizure of {b} will not go unanswered.
+fortress.trade.artifact	0x36ac4e+0x36ac57+0x36ac7d	{b} is a great treasure.  We respect that this is no mere trade.
+fortress.trade.willingness	0x3863dd+0x38640c+0x386441+0x386511	{n} seems ecstatic with the trading.
+fortress.trade.willingness	0x3863dd+0x38640c+0x386466+0x386511	{n} seems very happy about the trading.
+fortress.trade.willingness	0x3863dd+0x38640c+0x38648c+0x386511	{n} seems pleased with the trading.
+fortress.trade.willingness	0x3863dd+0x38640c+0x3864ae+0x386511	{n} seems willing to trade.
+fortress.trade.willingness	0x3863dd+0x38640c+0x3864cd+0x386511	{n} seems to be rapidly losing patience.
+fortress.trade.willingness	0x3863dd+0x386403+0x3864eb+0x386511	{n} is not going to take much more of this.
+fortress.trade.willingness	0x3863dd+0x386403+0x3864fe+0x386511	{n} is unwilling to trade.
+fortress.trade.counteroffer	0x386691+0x3866de	The following fortress goods were added for the counteroffer:
+fortress.trade.controls	0x389751+0x3899f1	Mark all
+fortress.trade.controls	0x3898a1+0x389b41	Unmark all
+fortress.trade.controls	0x389d41	Seize
+fortress.trade.controls	0x389f4b	Accept Counteroffer
+fortress.trade.controls	0x38a1f3	Offer as gift
+fortress.trade.controls	0x3893c4	Trader Profit:
+fortress.trade.controls	0x389469	Trader Loss:
+fortress.trade.controls	0x389538	Allowed Weight:
+fortress.trade.controls	0x3895b8	Excess Weight:

@@ -1,0 +1,43 @@
+# Full native artifact/civilization label formatter literals. Trade uses flags 0, hence no LPAGE markers.
+image	role	function_start	function_end	load_va	literal_va	literal	branch
+reference	artifact-label	0x140b94400	0x140b94710	0x140b944bf	0x1415fdaa8	[LPAGE:ARTIFACT:	linked flag 2 only; trade passes flags 0
+reference	artifact-label	0x140b94400	0x140b94710	0x140b944ce	0x1416df718	[LPAGE:BOOK:	linked flag 2 only; trade passes flags 0
+reference	artifact-label	0x140b94400	0x140b94710	0x140b944f3	0x1415fd690	]	linked flag 2 only; trade passes flags 0
+reference	artifact-label	0x140b94400	0x140b94710	0x140b94686	0x1415fda88	[/LPAGE]	linked flag 2 only; trade passes flags 0
+reference	artifact-label	0x140b94400	0x140b94710	0x140b946de	0x1416df700	an unknown artifact	missing native record default
+reference	artifact-label	0x140b94400	0x140b94710	0x140b945b0	-	Untitled	inline immediate; empty name and BOOK 89/SLAB 87/tool use 20
+reference	artifact-label	0x140b94400	0x140b94710	0x140b9460b	-	Untitled	inline immediate; empty name and BOOK 89/SLAB 87/tool use 20
+reference	civilization-label	0x140b92900	0x140b92a78	0x140b9296a	0x14165e438	[LPAGE:ENT:	linked flag 2 only; trade passes flags 0
+reference	civilization-label	0x140b92900	0x140b92a78	0x140b9298a	0x1415fd690	]	linked flag 2 only; trade passes flags 0
+reference	civilization-label	0x140b92900	0x140b92a78	0x140b929f4	0x1415fda88	[/LPAGE]	linked flag 2 only; trade passes flags 0
+reference	civilization-label	0x140b92900	0x140b92a78	0x140b92a4c	0x1416df940	an unknown civilization	missing native record default
+classic	artifact-label	0x140b91440	0x140b91750	0x140b914ff	0x1415f8a20	[LPAGE:ARTIFACT:	linked flag 2 only; trade passes flags 0
+classic	artifact-label	0x140b91440	0x140b91750	0x140b9150e	0x1416da4e8	[LPAGE:BOOK:	linked flag 2 only; trade passes flags 0
+classic	artifact-label	0x140b91440	0x140b91750	0x140b91533	0x1415f8664	]	linked flag 2 only; trade passes flags 0
+classic	artifact-label	0x140b91440	0x140b91750	0x140b916c6	0x1415f8b50	[/LPAGE]	linked flag 2 only; trade passes flags 0
+classic	artifact-label	0x140b91440	0x140b91750	0x140b9171e	0x1416da4d0	an unknown artifact	missing native record default
+classic	artifact-label	0x140b91440	0x140b91750	0x140b915f0	-	Untitled	inline immediate; empty name and BOOK 89/SLAB 87/tool use 20
+classic	artifact-label	0x140b91440	0x140b91750	0x140b9164b	-	Untitled	inline immediate; empty name and BOOK 89/SLAB 87/tool use 20
+classic	civilization-label	0x140b8f940	0x140b8fab8	0x140b8f9aa	0x1416592f8	[LPAGE:ENT:	linked flag 2 only; trade passes flags 0
+classic	civilization-label	0x140b8f940	0x140b8fab8	0x140b8f9ca	0x1415f8664	]	linked flag 2 only; trade passes flags 0
+classic	civilization-label	0x140b8f940	0x140b8fab8	0x140b8fa34	0x1415f8b50	[/LPAGE]	linked flag 2 only; trade passes flags 0
+classic	civilization-label	0x140b8f940	0x140b8fab8	0x140b8fa8c	0x1416da720	an unknown civilization	missing native record default
+
+# Native article virtual +0x5f0 invoked by the empty ordinary artifact label fallback, mode 1.
+reference	item-article	0x140c653e0	0x140c65445	0x140c653f5	0x1415e8e48	the 	mode 1; trade unnamed artifact fallback
+reference	item-article	0x140c653e0	0x140c65445	0x140c6542b	0x1415ed620	a 	mode 0 non-artifact singleton; unused by trade artifact fallback
+classic	item-article	0x140c62420	0x140c62485	0x140c62435	0x1415e3e34	the 	mode 1; trade unnamed artifact fallback
+classic	item-article	0x140c62420	0x140c62485	0x140c6246b	0x1415e8618	a 	mode 0 non-artifact singleton; unused by trade artifact fallback
+
+# Complete field branches: reference b94400 / classic b91440 use flags 0 in trade.
+# Nonempty artifact language_name at artifact+8 -> a946e0 / a91760(name,out,true,false): English full name only, without native-name/quoted-English pair or item suffix.
+# Empty name + item BOOK(89), SLAB(87), or virtual +0xe0(use=20) -> Untitled. Other empty names -> c65450 / c62490(item,out,false,1), complete item grammar.
+# Ordinary complete item grammar is article before quality/wear/designation wrappers and actual +0x5e8 title; all 98 native title owners retained in item-info-title-sources.tsv and map-hover-item-sources.tsv.
+# Mode-1 article slots: 95 item owners use c653e0; item_body_componentst, item_corpsepiecest and item_corpsest use ca0d60. Corpse override suppresses article for named owner or current Adventurer, otherwise the same definite article.
+# Trade reply 3 calls 52d650 / 52b070 after the artifact field, capitalizing the first byte only; descriptor the silver axe becomes The silver axe, whereas English artifact title can be The Silver Axe.
+# Civilization field: reference b92900 / classic b8f940 call a946e0 / a91760(entity+0x20,out,true,false), English full name only; trade flags 0 omit all LPAGE markers.
+# Existing defaults: legends-events.tsv Untitled -> 无题 at886; an unknown civilization -> 未知文明 at1041; an unknown artifact -> 未知造物 at3083.
+reference	corpse-item-article	0x140ca0d60	0x140ca0e44	0x140ca0df8	0x1415e8e48	the 	mode 1 and unnamed owner; named owner/current Adventurer suppresses article
+reference	corpse-item-article	0x140ca0d60	0x140ca0e44	0x140ca0e25	0x1415ed620	a 	mode 0 non-artifact singleton; unused by artifact fallback
+classic	corpse-item-article	0x140c9dda0	0x140c9de84	0x140c9de38	0x1415e3e34	the 	mode 1 and unnamed owner; classic located independently via item_corpsepiecest RTTI +0x5f0
+classic	corpse-item-article	0x140c9dda0	0x140c9de84	0x140c9de65	0x1415e8618	a 	mode 0 non-artifact singleton; unused by artifact fallback

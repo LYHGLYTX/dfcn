@@ -288,6 +288,80 @@ We'll be ready soon!	我们马上就准备好了！
 The merchants need a trade depot to unload their goods.	商人需要贸易站才能卸下货物。
 A trade depot is requiered for the delivery of the tribute.	运送贡品需要贸易站。
 
+# Fortress depot trade: complete renderer and all 29 native dialogue switch
+# slots from the 53.16 reference/classic PE images. RVA 0x384850..0x38a5b0
+# (classic 0x382410..0x388170); native literals and joins are recorded in
+# data/extracted/fortress-trade/native-sources.tsv and reference-render.asm.
+# Dialogue slots 21..23 contain only empty quotes. The remaining 26 slots
+# expand to 36 complete quoted forms; retain native double spaces and typos.
+# The greeting uses a RAW singular craftsman profession followed by literal
+# "ship", then a RAW plural player species (0xaa3bd0), not a civilization name.
+"Greetings from the outer lands.  Your efforts are legend there.  Let us trade!"	“向你们致以外界的问候。你们的成就在那儿已成传奇。让我们做笔交易吧！”
+"Greetings from the Mountainhomes.  Your efforts are legend there.  Let us trade!"	“向你们致以山国都城的问候。你们的成就在那儿已成传奇。让我们做笔交易吧！”
+"Greetings from our mountain halls to yours.  Let us strengthen our bonds in trade."	“我们的山中殿堂向你们致以问候。让我们通过贸易增进情谊。”
+"Greetings.  The {s}ship of the {s} is unparalleled.  Let's make a deal!"	“你们好。{s2}的{s1}手艺无与伦比。让我们做笔交易吧！”
+"Greetings.  We are enchanted by your more ethical works.  We've come to trade."	“你们好。你们那些更合乎道德的作品令我们着迷。我们前来交易。”
+"A hairy drunkard has come hither to once more disrespect the sanctity of life, I see."	“看来又有个毛茸茸的酒鬼跑来，践踏生命的神圣了。”
+"What do you want?"	“你想要什么？”
+"These goods are too heavy and cheap for me to consider."	“这些货物又重又不值钱，我不会考虑。”
+"I cannot take so much -- and at such cost!"	“这么多货物我带不走，况且还要付这个价！”
+"Do not tempt me!  My beasts of burden cannot possibly haul such a load."	“别诱惑我了！我的驮兽可拉不动这么多货物。”
+"I wish I could take so much, but my animals..."	“我倒想带走这么多，可我的牲畜……”
+"I must make a profit.  There is simply not enough value here."	“我得有利可图。这些货物的价值实在不够。”
+"I won't trade at a loss."	“我不会做亏本买卖。”
+"Please understand the journey must be profitable.  Perhaps you'd consider tossing in a little extra?"	“请理解，这趟旅程必须有利可图。也许你愿意再添一点？”
+"Your childish games have made me tired.  Perhaps next time I visit you'll take this seriously."	“你这幼稚的把戏让我厌烦了。也许我下次来时，你会认真对待。”
+"Leave it to the besotted dullard to miss the finer points of discourse.  I'm leaving.  Do reflect."	“也只有你这醉醺醺的蠢货，才会听不懂话里的意思。我走了。好好反省吧。”
+"You'll need more goods to make this arrangement.  All I see here is not enough."	“想达成这笔交易，你还得拿出更多货物。这里的所有东西加起来也不够。”
+"Even with your combined trade goods, such as they are, I can't fathom you ending up with the items you desire."	“就算把你这些货物全加在一起，我也看不出你怎么换得到想要的东西。”
+"Ah, wonderful.  Thank you for your business."	“啊，太好了。多谢惠顾。”
+"I will see that our leader gets this offering."	“我会把这份赠礼交到我们的领袖手中。”
+"You are too kind."	“你太客气了。”
+"Take what you wish.  I can't stop you."	“想拿什么就拿吧。我阻止不了你。”
+"You wish to make an offering to our leader?  This would please us greatly.  What do you offer?"	“你想向我们的领袖献礼？我们会非常高兴。你要献上什么？”
+"You wish to make an offering?  We love gifts."	“你想献礼？我们很喜欢礼物。”
+"[Laughs uproariously]  You had me going there.  Obviously, your copious wit is matched only by your industry!"	“[放声大笑] 我差点当真了。显然，只有你的勤劳才配得上你这么出众的机智！”
+"[Chuckles]  How droll."	“[轻声笑] 真有趣。”
+"I am a merchant, yes.  You see, I wish to trade.  Which of my goods do you desire?"	“是的，我是个商人。你看，我想做笔交易。你想要我的哪些货物？”
+"Yes, and trade we will!  Simply tell me what interests you and what you're prepared to offer in exchange."	“没错，我们就来交易吧！告诉我你看中了什么，以及准备拿什么来交换。”
+"Ah, but my goods are not free!  What do you offer in trade?"	“啊，可我的货物不是白送的！你拿什么来换？”
+"These _are_ fine items, aren't they?  Now, what do offer for them?"	“这些可都是好东西，对吧？那么，你拿什么来换？”
+"For me?  At no price?  I can accept your offer, or perhaps you wish to trade."	“给我的？不用付钱？我可以收下你的礼物，或者你其实想做笔交易？”
+"Are these gifts?  Do you wish to trade?"	“这些是礼物吗？你想做笔交易？”
+"My stones, are you giving me those?  Do you wish to trade or to make an offering to our leader?"	“我的石头啊，你要把那些送给我？你是想交易，还是想向我们的领袖献礼？”
+"You truly despise life, don't you?  I am beside myself with grief.  Perhaps we will show you how they suffered."	“你真是蔑视生命，不是吗？我悲痛得难以自持。也许我们该让你体会它们遭受的痛苦。”
+"Once a beautiful tree, and now?  It is a rude bauble, fit only for your kind."	“它曾是一棵美丽的树，现在呢？却成了粗俗的小玩意，只配给你们这种族用。”
+"I see your low race still revels in death.  That poor, gentle creature..."	“看来你们这低劣的种族仍以杀戮为乐。那可怜而温顺的生灵……”
+# Artifact gift/seizure helper fills the trade announcement vector (+0x3c0),
+# with no dialogue quotation wrapper, RVA 0x36a9c0..0x36b0a8. The civilization
+# is an entity name; the artifact uses the shared historical artifact grammar.
+You honor {e} with the presentation of {b}.	你献上{b}，使{e}倍感荣耀。
+Villains!  The seizure of {b} will not go unanswered.	恶徒！你们强征{b}的行为必将遭到报复。
+{b} is a great treasure.  We respect that this is no mere trade.	{b}是一件伟大的珍宝。我们深知，这绝非普通的交易。
+# One native name + predicate + period draw, RVA 0x3863dd..0x386538.
+# Scores >=20 use "seems"; lower scores use "is". All seven real states follow.
+{n} seems ecstatic with the trading.	{n}似乎为这次交易欣喜若狂。
+{n} seems very happy about the trading.	{n}似乎对这次交易十分满意。
+{n} seems pleased with the trading.	{n}似乎对这次交易感到满意。
+{n} seems willing to trade.	{n}似乎愿意交易。
+{n} seems to be rapidly losing patience.	{n}似乎正迅速失去耐心。
+{n} is not going to take much more of this.	{n}快要忍无可忍了。
+{n} is unwilling to trade.	{n}不愿交易。
+# Counteroffer heading joins both adjacent fixed native continuation rows
+# (RVA 0x386691 + 0x3866de) into the complete sentence owned by the paragraph.
+The following fortress goods were added for the counteroffer:	下列要塞货物已加入还价方案：
+# Controls and trade summaries are separate complete native draws. The numbers
+# and currency/weight glyphs are drawn separately and retain the native format.
+Mark all	全选
+Unmark all	取消全选
+Seize	强征
+Accept Counteroffer	接受还价
+Offer as gift	作为礼物赠送
+Trader Profit:	商人利润：
+Trader Loss:	商人亏损：
+Allowed Weight:	可用载重：
+Excess Weight:	超出载重：
+
 # First caravan arrival: complete paragraphs, not resolution-sized wrap rows.
 # Entity names use {e}; the RAW plural profession or native craftsmen fallback uses {s}.
 Although it is a grim reminder of the winter hardships to come, the supply caravan from {e} is a welcome sight. Their eyes are alight with the anticipation of inspecting the splendid products of your industrious {s}.	虽然这也无情地提醒着你们，寒冬的艰难即将到来，但来自{e}的补给商队仍令人欣喜。商人们的眼中闪着期待的光芒，迫不及待地想要检视你们勤劳的{s}制作的精美商品。

@@ -1,0 +1,196 @@
+# Native fortress trade renderer literal sources; VA coordinates, complete renderer unwind ranges.
+image	function_start	function_end	load_va	literal_va	literal
+reference	0x140384850	0x14038a5b0	0x1403849f9	0x14162a938	Select a merchant group to trade with:
+reference	0x140384850	0x14038a5b0	0x140384c4a	0x1415ed97c	 from 
+reference	0x140384850	0x14038a5b0	0x140385be8	0x1415e9718	"
+reference	0x140384850	0x14038a5b0	0x140385c36	0x14162a7a0	Greetings from the outer lands.  
+reference	0x140384850	0x14038a5b0	0x140385c3d	0x14162a778	Greetings from the Mountainhomes.  
+reference	0x140384850	0x14038a5b0	0x140385c5b	0x14162a7f0	Your efforts are legend there.  Let us trade!
+reference	0x140384850	0x14038a5b0	0x140385cc9	0x14162a820	Greetings from our mountain halls to yours.  Let us strengthen our bonds in trade.
+reference	0x140384850	0x14038a5b0	0x140385cd5	0x14162a8b8	Greetings.  The 
+reference	0x140384850	0x14038a5b0	0x140385d5c	0x14162a8a8	craftsman
+reference	0x140384850	0x14038a5b0	0x140385d82	0x14162a5c8	ship of the 
+reference	0x140384850	0x14038a5b0	0x140385dd1	0x14162a5a0	 is unparalleled.  Let's make a deal!
+reference	0x140384850	0x14038a5b0	0x140385e03	0x14162a7c8	Greetings.  We are enchanted by 
+reference	0x140384850	0x14038a5b0	0x140385e16	0x14162a878	your more ethical works.  We've come to trade.
+reference	0x140384850	0x14038a5b0	0x140385e6f	0x14162a5f0	A hairy drunkard has come hither to once more disrespect the sanctity of life, I see.
+reference	0x140384850	0x14038a5b0	0x140385e7c	0x14162a5d8	What do you want?
+reference	0x140384850	0x14038a5b0	0x140385e88	0x14162a698	These goods are too heavy and cheap for me to consider.
+reference	0x140384850	0x14038a5b0	0x140385e94	0x14161b2a8	I cannot take so much -- and at such cost!
+reference	0x140384850	0x14038a5b0	0x140385ea0	0x14162a650	Do not tempt me!  My beasts of burden cannot possibly haul such a load.
+reference	0x140384850	0x14038a5b0	0x140385eac	0x14161b2d8	I wish I could take so much, but my animals...
+reference	0x140384850	0x14038a5b0	0x140385eb8	0x14162a738	I must make a profit.  There is simply not enough value here.
+reference	0x140384850	0x14038a5b0	0x140385ec4	0x14161b308	I won't trade at a loss.
+reference	0x140384850	0x14038a5b0	0x140385ed0	0x14162a6d0	Please understand the journey must be profitable.  Perhaps you'd consider tossing in a little extra?
+reference	0x140384850	0x14038a5b0	0x140385f19	0x14162aec0	Your childish games have made me tired.  Perhaps next time I visit you'll take this seriously.
+reference	0x140384850	0x14038a5b0	0x140385f26	0x14162af20	Leave it to the besotted dullard to miss the finer points of discourse.  I'm leaving.  Do reflect.
+reference	0x140384850	0x14038a5b0	0x140385f32	0x14162afa8	You'll need more goods to make this arrangement.  
+reference	0x140384850	0x14038a5b0	0x140385f45	0x14162af88	All I see here is not enough.
+reference	0x140384850	0x14038a5b0	0x140385f51	0x14162b010	Even with your combined trade goods, such as they are, I can't 
+reference	0x140384850	0x14038a5b0	0x140385f64	0x14162afe0	fathom you ending up with the items you desire.
+reference	0x140384850	0x14038a5b0	0x140385f70	0x14161b540	Ah, wonderful.  Thank you for your business.
+reference	0x140384850	0x14038a5b0	0x140385fb9	0x14162b050	I will see that our leader gets this offering.
+reference	0x140384850	0x14038a5b0	0x140385fc6	0x14162b080	You are too kind.
+reference	0x140384850	0x14038a5b0	0x140385fd2	0x14162ad40	Take what you wish.  I can't stop you.
+reference	0x140384850	0x14038a5b0	0x14038601d	0x14162ada0	You wish to make an offering to our leader?  
+reference	0x140384850	0x14038a5b0	0x140386030	0x14162ad68	This would please us greatly.  What do you offer?
+reference	0x140384850	0x14038a5b0	0x14038603c	0x14162ad10	You wish to make an offering?  We love gifts.
+reference	0x140384850	0x14038a5b0	0x140386087	0x14162add0	[Laughs uproariously]  You had me 
+reference	0x140384850	0x14038a5b0	0x14038609a	0x14162ae70	going there.  Obviously, your copious wit is matched only by your industry!
+reference	0x140384850	0x14038a5b0	0x1403860a6	0x14162adf8	[Chuckles]  How droll.
+reference	0x140384850	0x14038a5b0	0x1403860b2	0x14162ae10	I am a merchant, yes.  You see, I wish to trade.  Which of my goods do you desire?
+reference	0x140384850	0x14038a5b0	0x1403860be	0x14162ab98	Yes, and trade we will!  Simply tell me 
+reference	0x140384850	0x14038a5b0	0x1403860d1	0x14162ab50	what interests you and what you're prepared to offer in exchange.
+reference	0x140384850	0x14038a5b0	0x1403860dd	0x14162abf8	Ah, but my goods are not free!  What do you offer in trade?
+reference	0x140384850	0x14038a5b0	0x1403860e9	0x14162abc8	These _are_ fine items, aren't they?  Now, 
+reference	0x140384850	0x14038a5b0	0x1403860fc	0x14162ac90	what do offer for them?
+reference	0x140384850	0x14038a5b0	0x140386108	0x14162ac40	For me?  At no price?  I can accept your offer, or perhaps you wish to trade.
+reference	0x140384850	0x14038a5b0	0x140386136	0x14161b428	Are these gifts?  Do you wish to trade?
+reference	0x140384850	0x14038a5b0	0x14038613f	0x14162ace0	My stones, are you giving me those?  Do you 
+reference	0x140384850	0x14038a5b0	0x140386152	0x14162aca8	wish to trade or to make an offering to our leader?
+reference	0x140384850	0x14038a5b0	0x14038615b	0x14162aa50	You truly despise life, don't you?  
+reference	0x140384850	0x14038a5b0	0x14038616e	0x14162aa00	I am beside myself with grief.  Perhaps we will show you how they suffered.
+reference	0x140384850	0x14038a5b0	0x140386177	0x14162aaa8	Once a beautiful tree, and now?  
+reference	0x140384850	0x14038a5b0	0x14038618a	0x14162aa78	It is a rude bauble, fit only for your kind.
+reference	0x140384850	0x14038a5b0	0x140386193	0x14162aaf0	I see your low race still revels in death.  
+reference	0x140384850	0x14038a5b0	0x1403861a6	0x14162aad0	That poor, gentle creature...
+reference	0x140384850	0x14038a5b0	0x1403861b9	0x1415e9718	"
+reference	0x140384850	0x14038a5b0	0x140386403	0x1415f71e4	 is 
+reference	0x140384850	0x14038a5b0	0x14038640c	0x14162ab40	 seems 
+reference	0x140384850	0x14038a5b0	0x140386441	0x14162ab20	ecstatic with the trading
+reference	0x140384850	0x14038a5b0	0x140386466	0x14162b310	very happy about the trading
+reference	0x140384850	0x14038a5b0	0x14038648c	0x14162b2f0	pleased with the trading
+reference	0x140384850	0x14038a5b0	0x1403864ae	0x14162b350	willing to trade
+reference	0x140384850	0x14038a5b0	0x1403864cd	0x14162b330	to be rapidly losing patience
+reference	0x140384850	0x14038a5b0	0x1403864eb	0x14162b380	not going to take much more of this
+reference	0x140384850	0x14038a5b0	0x1403864fe	0x14162b368	unwilling to trade
+reference	0x140384850	0x14038a5b0	0x140386511	0x1415e85b4	.
+reference	0x140384850	0x14038a5b0	0x140386691	0x14162b3d0	The following fortress goods
+reference	0x140384850	0x14038a5b0	0x1403866de	0x14162b3a8	were added for the counteroffer:
+reference	0x140384850	0x14038a5b0	0x1403867b5	0x1415eed60	Okay
+reference	0x140384850	0x14038a5b0	0x140386d4a	0x14161bb50	Contains 
+reference	0x140384850	0x14038a5b0	0x140386d6c	0x1415f71ec	 item
+reference	0x140384850	0x14038a5b0	0x140386d84	0x1415e9298	s
+reference	0x140384850	0x14038a5b0	0x140386e99	0x1415fe080	Value: 
+reference	0x140384850	0x14038a5b0	0x140386f39	0x1415fe088	Weight: 
+reference	0x140384850	0x14038a5b0	0x140387209	0x1415ec860	...
+reference	0x140384850	0x14038a5b0	0x14038724d	0x1415ec82c	_
+reference	0x140384850	0x14038a5b0	0x140387cb5	0x14161bb50	Contains 
+reference	0x140384850	0x14038a5b0	0x140387cd7	0x1415f71ec	 item
+reference	0x140384850	0x14038a5b0	0x140387cef	0x1415e9298	s
+reference	0x140384850	0x14038a5b0	0x140387e17	0x1415fe080	Value: 
+reference	0x140384850	0x14038a5b0	0x140387eb6	0x1415fe088	Weight: 
+reference	0x140384850	0x14038a5b0	0x14038922b	0x1415fe080	Value: 
+reference	0x140384850	0x14038a5b0	0x1403892e3	0x1415fe080	Value: 
+reference	0x140384850	0x14038a5b0	0x1403893c4	0x14162b278	Trader Profit: 
+reference	0x140384850	0x14038a5b0	0x140389469	0x14162b268	Trader Loss: 
+reference	0x140384850	0x14038a5b0	0x140389538	0x14162b298	Allowed Weight: 
+reference	0x140384850	0x14038a5b0	0x1403895b8	0x14162b288	Excess Weight: 
+reference	0x140384850	0x14038a5b0	0x140389751	0x14161bd00	Mark all
+reference	0x140384850	0x14038a5b0	0x1403898a1	0x14161bd10	Unmark all
+reference	0x140384850	0x14038a5b0	0x1403899f1	0x14161bd00	Mark all
+reference	0x140384850	0x14038a5b0	0x140389b41	0x14161bd10	Unmark all
+reference	0x140384850	0x14038a5b0	0x140389d41	0x14162b2c4	Seize
+reference	0x140384850	0x14038a5b0	0x140389f4b	0x14162b2b0	Accept Counteroffer
+reference	0x140384850	0x14038a5b0	0x140389f74	0x1415f70a8	Trade
+reference	0x140384850	0x14038a5b0	0x14038a1f3	0x14162b2e0	Offer as gift
+reference	0x140384850	0x14038a5b0	0x14038a441	0x14162a908	My apologies, but we're still unloading.
+reference	0x140384850	0x14038a5b0	0x14038a48e	0x14162a998	We'll be ready soon!
+reference	0x140384850	0x14038a5b0	0x14038a4de	0x14162a960	There are no merchants present with which to trade.
+classic	0x140382410	0x140388170	0x1403825b9	0x141625a50	Select a merchant group to trade with:
+classic	0x140382410	0x140388170	0x14038280a	0x1415e8984	 from 
+classic	0x140382410	0x140388170	0x1403837a8	0x1415e46fc	"
+classic	0x140382410	0x140388170	0x1403837f6	0x141626118	Greetings from the outer lands.  
+classic	0x140382410	0x140388170	0x1403837fd	0x1416261a8	Greetings from the Mountainhomes.  
+classic	0x140382410	0x140388170	0x14038381b	0x141626178	Your efforts are legend there.  Let us trade!
+classic	0x140382410	0x140388170	0x140383889	0x141625f80	Greetings from our mountain halls to yours.  Let us strengthen our bonds in trade.
+classic	0x140382410	0x140388170	0x140383895	0x141625f60	Greetings.  The 
+classic	0x140382410	0x140388170	0x14038391c	0x141625fe8	craftsman
+classic	0x140382410	0x140388170	0x140383942	0x141625fd8	ship of the 
+classic	0x140382410	0x140388170	0x140383991	0x141626058	 is unparalleled.  Let's make a deal!
+classic	0x140382410	0x140388170	0x1403839c3	0x141626200	Greetings.  We are enchanted by 
+classic	0x140382410	0x140388170	0x1403839d6	0x1416261d0	your more ethical works.  We've come to trade.
+classic	0x140382410	0x140388170	0x140383a2f	0x141626000	A hairy drunkard has come hither to once more disrespect the sanctity of life, I see.
+classic	0x140382410	0x140388170	0x140383a3c	0x1416260b8	What do you want?
+classic	0x140382410	0x140388170	0x140383a48	0x141626080	These goods are too heavy and cheap for me to consider.
+classic	0x140382410	0x140388170	0x140383a54	0x141616210	I cannot take so much -- and at such cost!
+classic	0x140382410	0x140388170	0x140383a60	0x141625d40	Do not tempt me!  My beasts of burden cannot possibly haul such a load.
+classic	0x140382410	0x140388170	0x140383a6c	0x141616240	I wish I could take so much, but my animals...
+classic	0x140382410	0x140388170	0x140383a78	0x141625cf8	I must make a profit.  There is simply not enough value here.
+classic	0x140382410	0x140388170	0x140383a84	0x141616270	I won't trade at a loss.
+classic	0x140382410	0x140388170	0x140383a90	0x141625e00	Please understand the journey must be profitable.  Perhaps you'd consider tossing in a little extra?
+classic	0x140382410	0x140388170	0x140383ad9	0x141625ea0	Your childish games have made me tired.  Perhaps next time I visit you'll take this seriously.
+classic	0x140382410	0x140388170	0x140383ae6	0x141625d90	Leave it to the besotted dullard to miss the finer points of discourse.  I'm leaving.  Do reflect.
+classic	0x140382410	0x140388170	0x140383af2	0x141625e68	You'll need more goods to make this arrangement.  
+classic	0x140382410	0x140388170	0x140383b05	0x141625f40	All I see here is not enough.
+classic	0x140382410	0x140388170	0x140383b11	0x141625f00	Even with your combined trade goods, such as they are, I can't 
+classic	0x140382410	0x140388170	0x140383b24	0x141625bc0	fathom you ending up with the items you desire.
+classic	0x140382410	0x140388170	0x140383b30	0x141616820	Ah, wonderful.  Thank you for your business.
+classic	0x140382410	0x140388170	0x140383b79	0x141625c18	I will see that our leader gets this offering.
+classic	0x140382410	0x140388170	0x140383b86	0x141625ba8	You are too kind.
+classic	0x140382410	0x140388170	0x140383b92	0x141625bf0	Take what you wish.  I can't stop you.
+classic	0x140382410	0x140388170	0x140383bdd	0x141625c48	You wish to make an offering to our leader?  
+classic	0x140382410	0x140388170	0x140383bf0	0x141625cc0	This would please us greatly.  What do you offer?
+classic	0x140382410	0x140388170	0x140383bfc	0x141625c78	You wish to make an offering?  We love gifts.
+classic	0x140382410	0x140388170	0x140383c47	0x1416265d0	[Laughs uproariously]  You had me 
+classic	0x140382410	0x140388170	0x140383c5a	0x141626580	going there.  Obviously, your copious wit is matched only by your industry!
+classic	0x140382410	0x140388170	0x140383c66	0x141625ca8	[Chuckles]  How droll.
+classic	0x140382410	0x140388170	0x140383c72	0x141626630	I am a merchant, yes.  You see, I wish to trade.  Which of my goods do you desire?
+classic	0x140382410	0x140388170	0x140383c7e	0x1416265f8	Yes, and trade we will!  Simply tell me 
+classic	0x140382410	0x140388170	0x140383c91	0x1416266d0	what interests you and what you're prepared to offer in exchange.
+classic	0x140382410	0x140388170	0x140383c9d	0x141626688	Ah, but my goods are not free!  What do you offer in trade?
+classic	0x140382410	0x140388170	0x140383ca9	0x141626730	These _are_ fine items, aren't they?  Now, 
+classic	0x140382410	0x140388170	0x140383cbc	0x141626718	what do offer for them?
+classic	0x140382410	0x140388170	0x140383cc8	0x1416263f0	For me?  At no price?  I can accept your offer, or perhaps you wish to trade.
+classic	0x140382410	0x140388170	0x140383cf6	0x141616738	Are these gifts?  Do you wish to trade?
+classic	0x140382410	0x140388170	0x140383cff	0x1416263c0	My stones, are you giving me those?  Do you 
+classic	0x140382410	0x140388170	0x140383d12	0x141626468	wish to trade or to make an offering to our leader?
+classic	0x140382410	0x140388170	0x140383d1b	0x141626440	You truly despise life, don't you?  
+classic	0x140382410	0x140388170	0x140383d2e	0x1416264d0	I am beside myself with grief.  Perhaps we will show you how they suffered.
+classic	0x140382410	0x140388170	0x140383d37	0x1416264a0	Once a beautiful tree, and now?  
+classic	0x140382410	0x140388170	0x140383d4a	0x141626550	It is a rude bauble, fit only for your kind.
+classic	0x140382410	0x140388170	0x140383d53	0x141626520	I see your low race still revels in death.  
+classic	0x140382410	0x140388170	0x140383d66	0x1416262e0	That poor, gentle creature...
+classic	0x140382410	0x140388170	0x140383d79	0x1415e46fc	"
+classic	0x140382410	0x140388170	0x140383fc3	0x1415f2120	 is 
+classic	0x140382410	0x140388170	0x140383fcc	0x1416262d8	 seems 
+classic	0x140382410	0x140388170	0x140384001	0x141626320	ecstatic with the trading
+classic	0x140382410	0x140388170	0x140384026	0x141626300	very happy about the trading
+classic	0x140382410	0x140388170	0x14038404c	0x141626358	pleased with the trading
+classic	0x140382410	0x140388170	0x14038406e	0x141626340	willing to trade
+classic	0x140382410	0x140388170	0x14038408d	0x1416263a0	to be rapidly losing patience
+classic	0x140382410	0x140388170	0x1403840ab	0x141626378	not going to take much more of this
+classic	0x140382410	0x140388170	0x1403840be	0x141626248	unwilling to trade
+classic	0x140382410	0x140388170	0x1403840d1	0x1415e3574	.
+classic	0x140382410	0x140388170	0x140384251	0x141626228	The following fortress goods
+classic	0x140382410	0x140388170	0x14038429e	0x141626270	were added for the counteroffer:
+classic	0x140382410	0x140388170	0x140384375	0x1415e9d10	Okay
+classic	0x140382410	0x140388170	0x14038490a	0x1416168f8	Contains 
+classic	0x140382410	0x140388170	0x14038492c	0x1415f2204	 item
+classic	0x140382410	0x140388170	0x140384944	0x1415e4220	s
+classic	0x140382410	0x140388170	0x140384a59	0x1415f90c8	Value: 
+classic	0x140382410	0x140388170	0x140384af9	0x1415f90d0	Weight: 
+classic	0x140382410	0x140388170	0x140384dc9	0x1415e77d0	...
+classic	0x140382410	0x140388170	0x140384e0d	0x1415e783c	_
+classic	0x140382410	0x140388170	0x140385875	0x1416168f8	Contains 
+classic	0x140382410	0x140388170	0x140385897	0x1415f2204	 item
+classic	0x140382410	0x140388170	0x1403858af	0x1415e4220	s
+classic	0x140382410	0x140388170	0x1403859d7	0x1415f90c8	Value: 
+classic	0x140382410	0x140388170	0x140385a76	0x1415f90d0	Weight: 
+classic	0x140382410	0x140388170	0x140386deb	0x1415f90c8	Value: 
+classic	0x140382410	0x140388170	0x140386ea3	0x1415f90c8	Value: 
+classic	0x140382410	0x140388170	0x140386f84	0x141626260	Trader Profit: 
+classic	0x140382410	0x140388170	0x140387029	0x1416262b0	Trader Loss: 
+classic	0x140382410	0x140388170	0x1403870f8	0x141626298	Allowed Weight: 
+classic	0x140382410	0x140388170	0x140387178	0x1416262c8	Excess Weight: 
+classic	0x140382410	0x140388170	0x140387311	0x141616540	Mark all
+classic	0x140382410	0x140388170	0x140387461	0x141616550	Unmark all
+classic	0x140382410	0x140388170	0x1403875b1	0x141616540	Mark all
+classic	0x140382410	0x140388170	0x140387701	0x141616550	Unmark all
+classic	0x140382410	0x140388170	0x140387901	0x1416262c0	Seize
+classic	0x140382410	0x140388170	0x140387b0b	0x141626a30	Accept Counteroffer
+classic	0x140382410	0x140388170	0x140387b34	0x1415f2020	Trade
+classic	0x140382410	0x140388170	0x140387db3	0x141626a20	Offer as gift
+classic	0x140382410	0x140388170	0x140388001	0x1416260e8	My apologies, but we're still unloading.
+classic	0x140382410	0x140388170	0x14038804e	0x1416260d0	We'll be ready soon!
+classic	0x140382410	0x140388170	0x14038809e	0x141626140	There are no merchants present with which to trade.

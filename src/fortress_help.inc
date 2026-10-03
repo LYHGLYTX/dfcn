@@ -318,8 +318,33 @@ std::optional<std::string> Overlay::translate_help_paragraph(
                         break;
                     case 'b':
                         if (ui_message) {
-                            translated = translate_legends_artifact_identity(captures[i]);
+                            // Trade's artifact formatter returns the complete
+                            // item description for an unnamed non-book item.
+                            // Only these constructor fields admit that branch;
+                            // a fully consumed item production wins before the
+                            // broad generated-name fallback can claim its nouns.
+                            const auto sentence = normalize_utterance(rule.source);
+                            const bool trade_artifact =
+                                sentence == "You honor {e} with the presentation of {b}." ||
+                                sentence == "Villains! The seizure of {b} will not go unanswered." ||
+                                sentence == "{b} is a great treasure. We respect that this is no mere trade.";
+                            if (trade_artifact) {
+                                auto item = trim_view(captures[i]);
+                                // c65450 mode 1 emits lowercase "the "; the
+                                // treasure reply capitalizes only that first
+                                // byte. Generated titles such as The Silver
+                                // Axe retain their proper-name grammar.
+                                if (item.starts_with("the ") ||
+                                        (item.starts_with("The ") && !generated_title_shape(item))) {
+                                    item.remove_prefix(4);
+                                    translated = translate_item_caption_grammar(item);
+                                }
+                            }
+                            if (!translated)
+                                translated = translate_legends_artifact_identity(captures[i]);
                             if (!translated) translated = translate_legends_book(captures[i]);
+                            if (!translated && trade_artifact)
+                                translated = translate_item_description_term(captures[i]);
                         }
                         break;
                     case 'd': translated = captures[i]; break;

@@ -1,0 +1,16 @@
+# Native artifact trade replies, additional big_announce producers.
+image	function_start	function_end	load_va	literal_va	literal
+reference	0x14036a9c0	0x14036b0a8	0x14036ab7c	0x14162a010	You honor 
+reference	0x14036a9c0	0x14036b0a8	0x14036abaa	0x141629ff0	 with the presentation of 
+reference	0x14036a9c0	0x14036b0a8	0x14036abcf	0x1415e85b4	.
+reference	0x14036a9c0	0x14036b0a8	0x14036abef	0x141629e98	Villains!  The seizure of 
+reference	0x14036a9c0	0x14036b0a8	0x14036ac14	0x141629e78	 will not go unanswered.
+reference	0x14036a9c0	0x14036b0a8	0x14036ac7d	0x141629ed0	 is a great treasure.  We respect that this is no mere trade.
+reference	0x14036a9c0	0x14036b0a8	0x14036ae27	0x1415e873c	 
+classic	0x140368580	0x140368c68	0x14036873c	0x1416251a8	You honor 
+classic	0x140368580	0x140368c68	0x14036876a	0x1416251f0	 with the presentation of 
+classic	0x140368580	0x140368c68	0x14036878f	0x1415e3574	.
+classic	0x140368580	0x140368c68	0x1403687af	0x1416251d0	Villains!  The seizure of 
+classic	0x140368580	0x140368c68	0x1403687d4	0x141625250	 will not go unanswered.
+classic	0x140368580	0x140368c68	0x14036883d	0x141625210	 is a great treasure.  We respect that this is no mere trade.
+classic	0x140368580	0x140368c68	0x1403689e7	0x1415e3720	 

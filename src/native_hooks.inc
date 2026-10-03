@@ -57,6 +57,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_caption_hooks.inc"
 #include "native_character_relations.inc"
 #include "native_paragraph_hooks.inc"
+#include "native_trade_paragraph_hooks.inc"
 #include "native_workshop_recipe_hooks.inc"
 #include "native_rich_hooks.inc"
 #include "native_adventure_hover_hooks.inc"
@@ -104,6 +105,7 @@ static bool install_sdl_hooks() {
         {"Complete caption capture", install_native_caption_hooks},
         {"Character kinship captions", install_native_character_relations_hook},
         {"Complete paragraph capture", install_native_paragraph_hook},
+        {"Complete trade reply capture", install_native_trade_paragraph_hooks},
         {"Complete workshop requirement capture", install_native_workshop_recipe_hooks},
         {"Rich-text capture", install_native_rich_hooks},
         {"Adventure hover background capture", install_native_adventure_hover_hook},
@@ -149,6 +151,7 @@ static void uninstall_sdl_hooks() {
     uninstall_native_adventure_hover_hook();
     uninstall_native_rich_hooks();
     uninstall_native_workshop_recipe_hooks();
+    uninstall_native_trade_paragraph_hooks();
     uninstall_native_paragraph_hook();
     uninstall_native_character_relations_hook();
     uninstall_native_caption_hooks();
@@ -190,6 +193,7 @@ static bool native_hooks_detached() {
         !g_native_mouse_click_hook.active() &&
         !native_history_hooks_active() && !native_announcement_hook_active() && !native_adventure_hover_hook_active() &&
         !native_rich_hooks_active() && !native_paragraph_hooks_active() &&
+        !native_trade_paragraph_hooks_active() &&
         !native_workshop_recipe_hooks_active() &&
         !native_caption_hooks_active() && !native_conversation_search_hook_active() &&
         !native_character_relations_hook_active() &&

@@ -1,0 +1,215 @@
+Native DF 53.16 fortress depot trade text construction
+===================================================
+
+Static reconstruction from the two PE images configured in
+data/runtime/native-pe-images.json. No game process or desktop was controlled.
+Addresses below are reference-image RVAs unless an edition is named.
+The retained .asm files contain the complete native instructions and branches.
+Disassembler: configured w64devkit-2.9.1 native objdump.exe, Intel AMD64.
+
+Renderer:
+  Steam reference PE:6a70a6d9:02711000, 0x384850..0x38a5b0.
+  Official classic PE:6a70b91c:0270a000, 0x382410..0x388170.
+  Within this renderer, classic instruction RVAs = reference RVAs - 0x2440.
+  Literal addresses are independent; native-sources.tsv retains both editions.
+  Each edition has 97 printable literal references in the renderer.
+  Executable reference return is 0x38a53a. The range after 0x38a53c is the
+  29-entry switch table, not additional executable text branches.
+
+Trade interface fields used by the native renderer:
+  +0x48   talker string (merchant's short name)
+  +0xb8   caravan_state pointer
+  +0xc0   merchant civilization pointer
+  +0xd0   merchant unit pointer
+  +0xd8   fortress broker unit pointer
+  +0x37a  int16 talkline (talk_line_type)
+  +0x380  counteroffer item vector
+  +0x398  counteroffer scroll position
+  +0x3c0  big_announce vector of std::string* rows
+  +0x3d8  big_announce scroll position
+  +0x3dc  big_announce scrollbar interaction flag
+
+Dialogue construction
+---------------------
+
+At 0x385be8 the renderer initializes a std::string to one ASCII quotation
+mark. talkline is sign-extended at 0x385c00; unsigned values greater than 28
+skip the switch. The selected branch appends one or more strings to this
+same owner; 0x3861b9 appends the closing quotation mark. A native paragraph
+split at 0x3861e5 calls 0x8e7310, then 0x386220..0x38626d draws its rows.
+These strings are full quoted messages, not independently translatable words.
+
+Reconstructed switch (table 0x38a53c):
+  value  native branch  text construction
+   0     0x385c24       Greet: five forms, expanded below
+   1     0x385e88       "These goods are too heavy and cheap for me to consider."
+   2     0x385e94       "I cannot take so much -- and at such cost!"
+   3     0x385ea0       "Do not tempt me!  My beasts of burden cannot possibly haul such a load."
+   4     0x385eac       "I wish I could take so much, but my animals..."
+   5     0x385eb8       "I must make a profit.  There is simply not enough value here."
+   6     0x385ec4       "I won't trade at a loss."
+   7     0x385f70       "Ah, wonderful.  Thank you for your business."
+   8     0x385f7c       ordinary: "I will see that our leader gets this offering."
+                        nature-linked: "You are too kind."
+   9     0x385fd2       "Take what you wish.  I can't stop you."
+  10     0x385fde       ordinary: "You wish to make an offering to our leader?  This would please us greatly.  What do you offer?"
+                        nature-linked: "You wish to make an offering?  We love gifts."
+  11     0x386048       ordinary: "[Laughs uproariously]  You had me going there.  Obviously, your copious wit is matched only by your industry!"
+                        nature-linked: "[Chuckles]  How droll."
+  12     0x3860b2       "I am a merchant, yes.  You see, I wish to trade.  Which of my goods do you desire?"
+  13     0x3860be       "Yes, and trade we will!  Simply tell me what interests you and what you're prepared to offer in exchange."
+  14     0x3860dd       "Ah, but my goods are not free!  What do you offer in trade?"
+  15     0x3860e9       "These _are_ fine items, aren't they?  Now, what do offer for them?"
+  16     0x386108       "For me?  At no price?  I can accept your offer, or perhaps you wish to trade."
+  17     0x386114       ordinary: "Are these gifts?  Do you wish to trade?"
+                        same entity or same species: "My stones, are you giving me those?  Do you wish to trade or to make an offering to our leader?"
+  18     0x38615b       "You truly despise life, don't you?  I am beside myself with grief.  Perhaps we will show you how they suffered."
+  19     0x386193       "I see your low race still revels in death.  That poor, gentle creature..."
+  20     0x386177       "Once a beautiful tree, and now?  It is a rude bauble, fit only for your kind."
+  21     0x3861b9       only empty quotation marks
+  22     0x3861b9       only empty quotation marks
+  23     0x3861b9       only empty quotation marks
+  24     0x385ed0       "Please understand the journey must be profitable.  Perhaps you'd consider tossing in a little extra?"
+  25     0x385f32       "You'll need more goods to make this arrangement.  All I see here is not enough."
+  26     0x385f51       "Even with your combined trade goods, such as they are, I can't fathom you ending up with the items you desire."
+  27     0x385e22       nature-linked and caravan flag +0x20c0 bit0x80: "A hairy drunkard has come hither to once more disrespect the sanctity of life, I see."
+                        otherwise: "What do you want?"
+  28     0x385edc       ordinary: "Your childish games have made me tired.  Perhaps next time I visit you'll take this seriously."
+                        nature-linked: "Leave it to the besotted dullard to miss the finer points of discourse.  I'm leaving.  Do reflect."
+
+The repeated nature-linked predicate calls 0x75cfd0 on entity fields +0xcf2
+and +0xcf4, also accepting +0xcf2 values 5 or 6. These are entity ethics
+branches, rather than a translation decision based on a fixed race name.
+
+Greet (case 0):
+  if merchant entity ID (+4) == player entity ID (global 0x2393670):
+    select "Greetings from the outer lands.  " or
+           "Greetings from the Mountainhomes.  " by global byte 0x23912da;
+    append "Your efforts are legend there.  Let us trade!".
+  else if nature-linked:
+    append "Greetings.  We are enchanted by ";
+    append "your more ethical works.  We've come to trade.".
+  else if merchant species (+0x98) == player species (global 0x239367c):
+    append "Greetings from our mountain halls to yours.  Let us strengthen our bonds in trade.".
+  else:
+    append "Greetings.  The ";
+    craft = broker RAW profession 25, queried through 0x30cea0/0x30cf70
+            using broker species (+0xa4) and caste (+0x12c);
+    fall back to "craftsman" if no broker or no RAW profession override;
+    append craft + "ship of the ";
+    append player creature RAW plural from 0xaa3bd0(player_species,plural=1,caste=-1);
+    append " is unparalleled.  Let's make a deal!".
+
+Thus case 0 has five full forms. Together with the six two-form cases,
+the 26 nonempty switch slots contain 36 complete quoted dialogue forms.
+Occupation and creature plural are term captures {s}; they are not civ names.
+The normal paragraph splitter already retains full text and row addresses.
+
+Merchant willingness
+--------------------
+
+The appraisal-skilled-broker condition is computed at 0x385b95..0x385bb5
+using 0x133e7a0(unit,skill=0x48). If it holds, 0x3863dd copies the stored
+talker name into a NEW std::string. It appends a predicate and final '.'
+and draws the ENTIRE string once at 0x386538. It is not separate name and
+predicate drawings; the formatter address binding belongs to a different owner.
+
+score = caravan[+0x2118]. The seven actual branches are:
+  score >=100: name + " seems ecstatic with the trading."
+  score >=80 : name + " seems very happy about the trading."
+  score >=60 : name + " seems pleased with the trading."
+  score >=40 : name + " seems willing to trade."
+  score >=20 : name + " seems to be rapidly losing patience."
+  score >0   : name + " is not going to take much more of this."
+  score <=0  : name + " is unwilling to trade."
+Prefix selection uses the same threshold 20. Only those seven combinations
+are native output; name is a typed {n} capture, including short first names.
+The original threshold-specific foreground colors belong to the whole draw.
+
+Counteroffer, controls and dynamic content
+-----------------------------------------
+
+When the counteroffer panel is active, 0x386691 and 0x3866de draw the fixed
+two-row sentence "The following fortress goods were added for the counteroffer:".
+Its translation owns both physical rows; they are not resolution-specific keys.
+0x3867b5 draws Okay. Item labels are formatted separately from Value:/Weight:.
+Native item formatters, instrument/item description grammars, material rules
+and RAW vocabulary cover those dynamically generated labels and categories.
+The raw literal table also retains Contains + count + item(s), Value:, Weight:,
+Trader Profit:, Trader Loss:, Allowed Weight:, Excess Weight:, Mark all,
+Unmark all, Seize, Accept Counteroffer, Trade and Offer as gift.
+Numeric runs, currency glyphs and weight glyphs remain native fields.
+Merchant-group names use the existing identity/entity formatters; the group
+chooser, unloading apologies, readiness reply and no-merchants prompt are
+already complete messages in the same authored UI catalog.
+
+Artifact replies in big_announce
+-------------------------------
+
+Additional producer:
+  reference 0x36a9c0..0x36b0a8; classic 0x368580..0x368c68.
+  ABI: void(trade_interface*, item*, entity*, entity*, bool offer, bool seize).
+  First four arguments are RCX/RDX/R8/R9; offer and seize are at entry
+  RSP+0x28 and RSP+0x30. Retained assembly and artifact-sources.tsv
+  describe both editions independently.
+
+The helper requires the item, two entity pointers and merchant unit; the
+entity must match interface.civ unless seize=true. It requires an artifact
+item flag, a general_ref artifact entry and a nonempty artifact significance
+vector (+0xc0, +0xd8 or +0xf0). It constructs these three complete messages:
+  offer:
+    "You honor " + entity_name(interface.civ->id) + " with the presentation of "
+                 + artifact_name + "."
+  else if seize:
+    "Villains!  The seizure of " + artifact_name + " will not go unanswered."
+  else:
+    capitalize_first_byte(artifact_name) +
+    " is a great treasure.  We respect that this is no mere trade."
+
+entity_name is 0xb92900; artifact_name is 0xb94400. These fields use the
+existing entity {e} and artifact {b} capture grammars. These paragraphs do
+not receive the dialogue quotation wrapper.
+
+Trade passes flags=0 to both name formatters. Entity names are English
+language_name output (0xa946e0, translated=true) or "an unknown civilization".
+Artifact names use the same English language_name output, without a native
+name/quoted-gloss pair or item descriptor on the named branch. The remaining
+artifact branches are "Untitled" for unnamed written objects, a complete
+item descriptor (0xc65450) for ordinary unnamed artifacts, and "an unknown
+artifact" for a missing record. The item fallback belongs to the artifact
+capture too; arbitrary item names must not be treated as proper-name words.
+The unnamed item branch uses mode 1, whose article virtual emits "the "
+before quality, wear and decoration marks. The treasure reply changes it to
+"The "; the rest of the item description retains its original case. A
+capitalized generated title retains the existing proper-name grammar.
+
+The complete string is built at stack [rbp-1] through 0x36accc. The helper
+then manually wraps at 68 characters and appends allocated std::string* rows
+directly to interface+0x3c0, inserting an empty separator between replies.
+It does not call add_paragraph. At 0x36b01c it sets talkline=-1.
+Renderer 0x38628d..0x38632a displays the visible slice of that vector,
+with its own scrolling. Keeping only visible rows loses message identity
+when the first row or the artifact name has scrolled out of view.
+
+The original full string remains at [rbp-1]. At 0x36ad21 the native copy
+function 0x6f8d0 receives its pristine byte pointer (RDX), length (R8) and
+allocated destination (RCX), with the interface still held in R12. The
+wrapper only mutates the copied temporary string, including inserting a
+space inside words longer than 68 bytes at 0x36ae1a..0x36ae33. Concatenating
+final rows with spaces therefore cannot always reconstruct the source.
+At 0x36b007 the temporary vector is destroyed after the final row was
+appended; R12 has been restored to the interface. These two specific calls
+provide source capture and completion without hooking a shared string
+operation throughout the game. The completion can associate only the new
+message's actual row addresses with its pristine source.
+
+Callers 0x31bf96 (offering), 0x31af52 (seizing) and transaction 0x36a5d7
+(accepted trade; 0x36a307 is the other shared transaction path) reach this
+producer. Other direct big_announce global references in 0x3153ba..0x316125
+and 0x8b7550..0x8b7653 read row counts or modify scroll position. They do
+not construct an additional text family.
+
+Authored translations are in data/runtime/ui-messages.tsv. Exact full-message
+provenance is appended to data/extracted/ui-message-sources.tsv. Source literal
+tables preserve the individual native fragments without treating them as
+standalone translation keys.
