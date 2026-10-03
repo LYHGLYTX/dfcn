@@ -20237,7 +20237,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         match.y < frame.y + frame.h;
                 };
                 const bool tooltip_text = (match.rule == kToolbarTooltipBodyRule ||
-                    match.rule == kToolbarTooltipKeyRule) && inside(box);
+                    match.rule == kToolbarTooltipKeyRule ||
+                    match.rule == kWorkshopRecipeRowRule) && inside(box);
                 const bool help_text = std::any_of(help_frames.begin(), help_frames.end(), inside);
                 return !tooltip_text && !help_text;
             });
@@ -20445,6 +20446,11 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    // A floating recipe owns its complete native fields before toolbar,
+    // map and item readers can consume the headings or individual nouns.
+    const auto workshop_recipe = capture_workshop_recipe_card(screen_rows);
+    if (workshop_recipe)
+        append_workshop_recipe_card(*workshop_recipe, screen_rows, result, only_y);
     // A button draws its key and action as separate colored fields. Protect
     // the complete native key before catalog, word and procedural-name rules
     // see it; Enter has an ordinary verb sense in the procedural vocabulary.
@@ -20689,9 +20695,6 @@ std::vector<Match> Overlay::find_matches(int only_y,
     const auto workshop_choices = capture_workshop_task_rows(screen_rows);
     const auto workshop_materials = capture_workshop_material_fields(screen_rows);
     append_workshop_material_translations(workshop_materials, screen_rows, result, only_y);
-    const auto workshop_recipe = capture_workshop_recipe_card(screen_rows);
-    if (workshop_recipe)
-        append_workshop_recipe_card(*workshop_recipe, screen_rows, result, only_y);
     for (const auto &choice : workshop_choices)
         append_workshop_task_translations(choice, screen_rows, result, only_y);
 
@@ -20704,7 +20707,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // The world map can leave the local HUD visible. Its detail popup shares
     // ordinary hover borders, but belongs to the world-page field readers.
     const bool world_map = native_world_map_screen();
-    auto map_hover = !world_map && workshop_materials.empty()
+    auto map_hover = !world_map && workshop_materials.empty() && !workshop_recipe
         ? capture_map_hover_card(screen_rows, screen_override) : std::optional<NativeTextCard>{};
     if (map_hover) {
         // Card capture restores live native bytes in screen_rows. Earlier

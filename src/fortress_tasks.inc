@@ -1153,21 +1153,49 @@ std::optional<NativeTextCard> Overlay::capture_workshop_recipe_card(
     for (int y = 0; y < gps_->dimy; ++y) {
         for (const auto &field : split_text_fields(rows[y])) {
             if (field.text != "Produces:" && field.text != "Requires:") continue;
-            const auto panel = native_panel_interior(borders, *gps_, field.start, field.end, y);
+            const auto panel = native_panel_interior_with_occluder(borders, *gps_,
+                SDL_Rect{field.start, y, field.end - field.start, 1});
             if (!panel) continue;
-            auto card = capture_panel_text_card(*panel);
-            if (!card || (card->rows.front().source != "Produces:" &&
-                          card->rows.front().source != "Requires:")) continue;
+            NativeTextCard card;
+            card.interior = *panel;
+            const int bottom = panel->y + panel->h;
+            bool current = true;
+            for (int row_y = panel->y; row_y < bottom; ++row_y) {
+                // Use the same visible source as the matching pass. A
+                // graphical tooltip can leave covered map bytes and control
+                // textures in its logical grid; rereading those raw cells
+                // either invents extra text or rejects this read-only card.
+                const auto source = std::string_view(rows[row_y]).substr(panel->x, panel->w);
+                const size_t first = source.find_first_not_of(' ');
+                if (first == std::string_view::npos) continue;
+                const size_t end = source.find_last_not_of(' ') + 1;
+                NativeTextCardRow row{panel->x + static_cast<int>(first), row_y,
+                    std::string(source.substr(first, end - first)), {}};
+                row.foregrounds.reserve(row.source.size());
+                for (size_t i = 0; i < row.source.size(); ++i) {
+                    bool top = false;
+                    const auto *cell = cell_at(row.x + static_cast<int>(i), row_y, &top);
+                    // Raw-layer matching may also see covered background
+                    // bytes. Only current visible ink belongs to this card;
+                    // filtered gaps must not revive hidden map characters.
+                    if (row.source[i] != ' ' && (!cell ||
+                            cell[0] != static_cast<unsigned char>(row.source[i]))) {
+                        current = false;
+                        break;
+                    }
+                    row.foregrounds.push_back(cell
+                        ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : 0xffffff);
+                }
+                if (!current) break;
+                card.rows.push_back(std::move(row));
+            }
+            if (!current || card.rows.empty() ||
+                    (card.rows.front().source != "Produces:" &&
+                     card.rows.front().source != "Requires:")) continue;
             bool requires_heading = false, has_product = false, has_reagent = false;
             bool valid = true;
-            const int heading_x = card->rows.front().x;
-            for (const auto &row : card->rows) {
-                // Raw-layer recovery must see exactly this visible card, not
-                // substitute text from a covered workshop or an older hover.
-                if (std::string_view(rows[row.y]).substr(row.x, row.source.size()) != row.source) {
-                    valid = false;
-                    break;
-                }
+            const int heading_x = card.rows.front().x;
+            for (const auto &row : card.rows) {
                 if (row.source == "Produces:") {
                     // Native half-font captions can occupy two source rows;
                     // normalize_native_split_text owns their deduplication.
