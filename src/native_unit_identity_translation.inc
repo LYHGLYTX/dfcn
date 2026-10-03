@@ -130,9 +130,57 @@ std::optional<std::string> Overlay::translate_native_unit_identity(
     const auto role = [&]() -> std::string {
         // An animated unit's explicit name replaces the entire role in DF.
         if (!unit.animated_name.empty()) return native_text_to_utf8(unit.animated_name);
+        if (unit.native_role_authored) return native_text_to_utf8(unit.native_role);
         if (!unit.use_custom || unit.custom_profession.empty()) {
             // This is the game's actual RAW/occupation formatter result. Its
             // source type is known even if it happens to equal a custom name.
+            const auto occupation = [&](std::string_view source) -> std::optional<std::string> {
+                if (source.empty()) return std::string{};
+                if (auto target = translate_creature_label(source)) return target;
+                return translate_unit_profession(source, false);
+            };
+            if (unit.curse_named) {
+                const auto curse_text = [&](std::string_view value) {
+                    if (auto target = translate_creature_descriptor(value, false)) return *target;
+                    return field_text(value);
+                };
+                const std::string source = normalize_utterance(unit.native_role);
+                std::string_view base(source);
+                std::string suffix;
+                // Corpse follows the actual curse name/prefix in the native
+                // role formatter; keep it outside the typed field boundary.
+                constexpr std::string_view corpse = " corpse";
+                if (unit.undead && lower(std::string(base)).ends_with(corpse)) {
+                    if (const auto status = exact_literal_translation("corpse")) {
+                        suffix = "的" + *status;
+                        base.remove_suffix(corpse.size());
+                    }
+                }
+                const std::string name = normalize_utterance(unit.curse_name);
+                const std::string prefix = normalize_utterance(unit.curse_name_prefix);
+                if (!name.empty()) {
+                    if (base == name || base.ends_with(" " + name)) {
+                        const auto core = occupation(trim_view(
+                            base.substr(0, base.size() - name.size())));
+                        if (core) return *core + (core->empty() ? "" : "／") +
+                            curse_text(name) + suffix;
+                    }
+                } else if (!prefix.empty()) {
+                    size_t at = 0;
+                    const std::string folded = lower(std::string(base));
+                    for (const std::string_view status : {"stray ", "fierce ", "agitated "})
+                        if (folded.starts_with(status)) { at = status.size(); break; }
+                    if (base.substr(at).starts_with(prefix) &&
+                            (base.size() == at + prefix.size() ||
+                             base[at + prefix.size()] == ' ')) {
+                        const auto outer = at == 0 ? std::optional<std::string>(std::string{}) :
+                            RULESETS.compose_bound_rule("::creatures::caste::name::prefix",
+                                folded.substr(0, at));
+                        const auto core = occupation(trim_view(base.substr(at + prefix.size())));
+                        if (outer && core) return *outer + curse_text(prefix) + *core + suffix;
+                    }
+                }
+            }
             if (auto target = translate_creature_label(unit.native_role)) return *target;
             if (auto target = translate_unit_profession(unit.native_role, false)) return *target;
             return native_text_to_utf8(unit.native_role);

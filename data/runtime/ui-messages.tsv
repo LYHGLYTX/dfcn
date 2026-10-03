@@ -2622,7 +2622,15 @@ Spread rumor of {p}'s crime of kidnapping	传播{p}犯下绑架罪的传闻
 Bring up {p}'s crime of attempted kidnapping	谈起{p}犯下绑架未遂罪这件事
 Spread rumor of {p}'s crime of attempted kidnapping	传播{p}犯下绑架未遂罪的传闻
 
-# Complete native creature stress/strange-mood status family, including all grief pronouns.
+# Complete native creature soldier/strange-mood and stress status families.
+# Character-header renderer branches: data/extracted/character-header-native-sources.tsv.
+# Grief uses all three native reflexive pronouns; corrupt enums retain the number.
+Enraged at all enemies!	对所有敌人怒不可遏！
+In a martial trance!	进入了战斗专注状态！
+Throwing a tantrum!	正在大发脾气！
+Sunk into depression...	陷入了抑郁……
+Stumbling obliviously!	浑浑噩噩地踉跄而行！
+Corrupt Soldier Mood: {d}	异常的军人情绪：{d}
 Has a horrible fell look!	露出可怕而凶险的神情！
 Brooding darkly...	阴郁地沉思着……
 Has the aspect of one fey!	显出神秘的神情！

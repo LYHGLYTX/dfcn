@@ -5800,6 +5800,15 @@ Unmet need: 	未满足的需求：
 I have unmet needs.	我有尚未满足的需求。	l
 You are distracted by unmet needs.  View your status for more information.	需求未得到满足，使你分心。请查看状态页了解详情。	l
 
+# Character header: the native renderer draws each relation prefix and its
+# object separately on one line (data/extracted/character-header-native-sources.tsv).
+# A creation name can be empty in the original native branch: its complete
+# bare caption means 创作：未命名. Named creations retain the complete relation
+# grammar in professions.toml.
+Creator of	创作：未命名	wli
+Pet of	宠物主人：	wli
+Somebody	某人	wl
+
 # The header uses complete job labels shared with Tasks/Creatures. Keep the
 # action and its object together; building remains 建筑 in noun-only tabs.
 Construct building	建造建筑	wi
@@ -5946,6 +5955,126 @@ Fortress activity: Chained	被拴住	li
 # Restraint suffixes can also occupy the activity field without a role/job.
 Fortress activity: (Caged)	（关在笼中）	li
 Fortress activity: (Chained)	（被拴住）	li
+# Complete native header job/status captions also license activity recognition before a separator.
+# Windows sources: data/extracted/character-header-activity-sources.tsv; preserve the existing meanings.
+Fortress activity: Apply cast	打石膏	li
+Fortress activity: Beat criminal	殴打罪犯	li
+Fortress activity: Bring crutch	送来拐杖	li
+Fortress activity: Bring item to depot	将物品搬到贸易站	li
+Fortress activity: Bring item to shop	将物品搬到工坊	li
+Fortress activity: Cage small animal	将小型动物关入笼子	li
+Fortress activity: Carve downward staircase	挖掘下行楼梯	li
+Fortress activity: Carve fortification	雕凿城防垛口	li
+Fortress activity: Carve ramp	挖掘斜坡	li
+Fortress activity: Carve track	雕凿轨道	li
+Fortress activity: Carve up/down staircase	挖掘上下楼梯	li
+Fortress activity: Carve upward staircase	挖掘上行楼梯	li
+Fortress activity: Cause trouble	惹是生非	li
+Fortress activity: Clean	清洁	li
+Fortress activity: Clean patient	清洗病人	li
+Fortress activity: Clean self	清洗自身	li
+Fortress activity: Clean trap	清理陷阱	li
+Fortress activity: Collect hive products	收集蜂箱产物	li
+Fortress activity: Collect taxes	征税	li
+Fortress activity: Construct building	建造建筑	li
+Fortress activity: Destroy building	拆除建筑	li
+Fortress activity: Detail floor	雕刻地板	li
+Fortress activity: Detail wall	雕刻墙壁	li
+Fortress activity: Diagnose patient	诊断病人	li
+Fortress activity: Dig	挖掘	li
+Fortress activity: Dig channel	挖掘沟道	li
+Fortress activity: Drain aquarium	排空水族箱	li
+Fortress activity: Dress wound	包扎伤口	li
+Fortress activity: Dump item	倾倒物品	li
+Fortress activity: Eat	进食	li
+Fortress activity: Engrave memorial slab	雕刻纪念石板	li
+Fortress activity: Execute criminal	处决罪犯	li
+Fortress activity: Fell tree	砍倒树木	li
+Fortress activity: Fertilize field	给田地施肥	li
+Fortress activity: Fill aquarium	给水族箱注水	li
+Fortress activity: Fill pond	给池塘注水	li
+Fortress activity: Fill waterskin	灌满水袋	li
+Fortress activity: Fire ballista	发射弩炮	li
+Fortress activity: Fire bolt thrower	发射弩箭投射器	li
+Fortress activity: Fire catapult	发射投石机	li
+Fortress activity: Gather plants	采集植物	li
+Fortress activity: Get provisions	获取补给	li
+Fortress activity: Give food	送食物	li
+Fortress activity: Give water	送水	li
+Fortress activity: Go shopping	购物	li
+Fortress activity: Guard tax collector	保护税务官	li
+Fortress activity: Handle small creature	照料小型生物	li
+Fortress activity: Harvest plants	收获植物	li
+Fortress activity: Hunt	狩猎	li
+Fortress activity: Hunt for small creature	猎捕小型生物	li
+Fortress activity: Immobilize break	固定骨折部位	li
+Fortress activity: Install colony in hive	将蜂群安置到蜂箱	li
+Fortress activity: Kidnap	绑架	li
+Fortress activity: Link a building to trigger	将建筑连接到触发装置	li
+Fortress activity: Load ballista	装填弩炮	li
+Fortress activity: Load bolt thrower	装填弩箭投射器	li
+Fortress activity: Load cage trap	装填笼陷阱	li
+Fortress activity: Load catapult	装填投石机	li
+Fortress activity: Load stone trap	装填落石陷阱	li
+Fortress activity: Load weapon trap	装填武器陷阱	li
+Fortress activity: Manage work orders	管理工单	li
+Fortress activity: No activity	无活动	li
+Fortress activity: No job	没有工作	li
+Fortress activity: Operate pump	操作泵机	li
+Fortress activity: Pen/pasture small animal	将小型动物带入畜栏或牧场	li
+Fortress activity: Pickup equipment	拾取装备	li
+Fortress activity: Pit/pond small animal	将小型动物放入坑洞或池塘	li
+Fortress activity: Place in traction	进行牵引治疗	li
+Fortress activity: Place item in tomb	将物品放入陵墓	li
+Fortress activity: Place track vehicle	放置轨道载具	li
+Fortress activity: Plant seeds	播种种子	li
+Fortress activity: Pull the lever	拉动控制杆	li
+Fortress activity: Push track vehicle	推动轨道载具	li
+Fortress activity: Put in chains	戴上锁链	li
+Fortress activity: Put item on display	陈列物品	li
+Fortress activity: Reaction	进行反应	li
+Fortress activity: Recover pet	找回宠物	li
+Fortress activity: Recover wounded	救助伤员	li
+Fortress activity: Release pet	释放宠物	li
+Fortress activity: Release small creature	释放小型生物	li
+Fortress activity: Remove construction	拆除构筑	li
+Fortress activity: Remove stairs/ramps	移除楼梯与坡道	li
+Fortress activity: Report crime	报告罪行	li
+Fortress activity: Rest	休息	li
+Fortress activity: Return kill	带回猎物	li
+Fortress activity: Seek artifact	寻找造物	li
+Fortress activity: Seek infant	寻找婴儿	li
+Fortress activity: Set bone	接骨	li
+Fortress activity: Sleep	睡觉	li
+Fortress activity: Smooth floor	打磨地板	li
+Fortress activity: Smooth wall	打磨墙壁	li
+Fortress activity: Starting fist fight	挑起斗殴	li
+Fortress activity: Store armor	存放护甲	li
+Fortress activity: Store item in bag	将物品存入袋子	li
+Fortress activity: Store item in barrel	将物品存入圆桶	li
+Fortress activity: Store item in bin	将物品存入储物箱	li
+Fortress activity: Store item in location	将物品存放到地点	li
+Fortress activity: Store item in stockpile	将物品存入储物堆	li
+Fortress activity: Store item in vehicle	将物品存入载具	li
+Fortress activity: Store owned item	存放私人物品	li
+Fortress activity: Store squad equipment	存放小队装备	li
+Fortress activity: Store weapon	存放武器	li
+Fortress activity: Strange mood	怪异心情	li
+Fortress activity: Surgery	外科手术	li
+Fortress activity: Suture	缝合	li
+Fortress activity: Trade at depot	在贸易站交易	li
+Fortress activity: Unchain	解开锁链	li
+Fortress activity: Unchain pet	解开宠物的锁链	li
+Fortress activity: Update stockpile records	更新库存记录	li
+Fortress activity: Attend Meeting	参加会面	li
+Fortress activity: New Arrival	刚刚抵达	li
+Fortress activity: Mercenary	佣兵	li
+Fortress activity: Monster Slayer	怪物猎手	li
+Fortress activity: Play	游玩	li
+Fortress activity: Socialize	社交	li
+Fortress activity: Squad Order	小队命令	li
+# RAW CustomReaction NAME: reaction_other.txt:538 in both configured editions.
+Fortress activity: Carve wooden helve from branch	用树枝雕刻木制斧柄	li
 # Complete unit activity graph, not only job_type. See data/extracted/unit-activity-sources.tsv.
 # Scoped meanings are shared by Tasks, Creatures, headers, depot and search.
 Fortress activity: Conduct Meeting	主持会面	li

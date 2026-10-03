@@ -1,0 +1,53 @@
+人物资料顶部姓名/职业 formatter 的静态反编译来源
+
+本文件记录用户本轮要求的原生来源与字段分支。它不是测试入口、断言或实机显示记录；没有启动、连接、操作或截取游戏进程。机器地址均为RVA，映像基址为0x140000000。静态读取的两份映像来自data/runtime/native-pe-images.json：Steam D:/program/steam/steamapps/common/Dwarf Fortress/Dwarf Fortress.exe；Classic C:/Users/WIN11/Downloads/df_53_16_win/Dwarf Fortress.exe。使用本机固定w64devkit objdump的Intel反汇编与PE节表文件读取。
+
+原生调用关系
+
+Steam顶部姓名与职业合并getter 0x1330c30..0x13312b8，对应Classic 0x132bba0..0x132c228。宽度不足时分别调用Steam 0x1330500..0x133087d的name-only及0x1330880..0x1330c2c的profession+state，Classic分别为0x132b470..0x132b7ed与0x132b7f0..0x132bb9c。这些getter的职业来源是Steam 0x132f980..0x133025d，Classic 0x132a8f0..0x132b1cd。
+
+职业selector Steam 0x132cc10..0x132de89，Classic 0x1327b80..0x1328df9。0x132cc24和0x132ccc4的0x86比较限定enum 0..134；读取Steam 0x132de98、Classic 0x1328e08处的135项RVA跳转表。每项及其实际字符串引用指令、字符串数据地址记录在character-header-profession-sources.tsv。此selector先询问PROFESSION_NAME，再执行内置enum分支。Steam 0x132e0c0..0x132e427，Classic 0x1329030..0x1329397是species/viewpoint/plural/capitalization包装器。
+
+内置135 enum与RAW范围
+
+135个内置单数并非全部直接印到当前角色顶部：HUNTING/WAR放入prefix再与物种组合；PEASANT在selector本体留空，只在132e0c0确定同观察种族时补Peasant；CHILD/BABY优先读RAW幼体名。selector也有craftsmen、fishermen、hammermen、spearmen、crossbowmen、Elite Crossbowmen、axemen、swordsmen、macemen、pikemen、bowmen、Elite Bowmen、mercenaries、children、babies等原生复数alternates。顶部职业通常请求单数，职务选择可能转入其plural字段。
+
+实际翻译入口为native_unit_identity_translation.inc普通Role分支的translate_creature_label，再translate_unit_profession(false)，未解析时保留原文。后者先查Unit profession:作用域、完整exact literal、Native history office:，再查positions::singular/plural，以及professions::^0；professions::^0包含skills::name，所以职业和技能称谓共用数据。读取这些入口后，135个标准单数具有有效数据来源；不能因此推断它们的所有复合状态已被入口解析。
+
+RAW override不是猜测显示词。Steam 0x30cea0..0x30cf62判断caste+0x1830+32*enum的singular length，随后race+0x230+32*enum；0x30cf70..0x30d0e3选择caste NativeString+0x1820（单）/+0x2900（复），为空再经0x1bb330..0x1bb3fb取race+0x220（单）/+0x1300（复）。读取PROFESSION_NAME时按caste优先、race后备，所选职业被首字母大写。两套安装的现有vanilla及installed_mods各有12个PROFESSION_NAME条目，提供24个单复数字面值：craftsdwarf、fisherdwarf、hammerdwarf、speardwarf、marksdwarf、axedwarf、swordsdwarf、macedwarf、pikedwarf、bowdwarf、Elite Marksdwarf、Elite Bowdwarf及相应复数。具体路径、token和行号保存在TSV，这些字面值当前具有有效翻译。
+
+CHILD/BABY在PROFESSION_NAME后选择caste/race幼体字段；现有Steam RAW的NAME、CASTE_NAME、GENERAL_CHILD_NAME、CHILDNAME、GENERAL_BABY_NAME、BABYNAME分别有1817、2499、797、10、2、2个唯一字面值，各类有重叠。这些RAW字面值在creatures/caste.toml与creatures/name/raw_names.toml所承接的原生creature_name解析源中已有对应词条。RAW来源以vanilla/installed_mods的当前文件为边界，未来mod作者仍可增加名称；TSV末尾按唯一字面值合并两安装的全部上述RAW输入及path/token来源，作为静态来源目录；它们仍由既有creature RAW语法处理，不另造运行时头部专用词表。
+
+职务及任职区域
+
+原生0x132fbdf调用beb620选择实际职务；linked identity的profession字段非-1会略过普通office/status选择。原生0x132fc08..0x132fc98按historical figure sex与plural标志读entity_position neutral/female/male NativeString，单数+0x98/+0xd8/+0x118，复数+0x158/+0x198/+0x1d8，性别字段为空回退neutral。需要任职范围时position+0x2c8>0后0x132fcce调用9bdfb0追加“of <entity>”。这里entity是带language_name的生成势力名，由已有原生姓名字段翻译承接。
+
+顶部另有0x13cbbd0返回office并经0x99a3c0选择其title的路径。0x99a3c0..0x99a4d2是entity_position标题选择，不是caste_raw动物名：DL是sex，R8B是plural，R9B是spouse；普通title字段如上，配偶字段还包括+0xf8/+0x138（单数性别）及+0x1b8/+0x1f8（复数性别）。随后+0x2c8与9bdfb0继续任职区域语义。
+
+现有RAW的标准ENTITY共有30个(entity,position)记录，86个NAME/NAME_MALE/NAME_FEMALE/SPOUSE及其性别变体的单复数token值，82个唯一title；具体全量保存在TSV。它们通过已有Unit profession、完整exact literal、Native history office或positions leaf处理。世界生成还可生成宗教、宫廷、文明行政职务：已有Native history office词汇和typed office语法承接；玩家/mod自定义的新职位文本不能声称来自上述有限RAW目录。
+
+角色外层分支与复合词来源
+
+0x132f9b2..0x132f9c9优先unit+0xd80动画对象的非空NativeString+0x20，直接替换整个职业。0x132f9ce..0x132f9da在模式4/5直接返回unit+0x8的literal first_name。linked identity divine definition分别按flag bit2/bit3返回deity/force（0x132fade/0x132faf5），普通profession可被linked identity+0xac替代。作者动画label、unit+0x80自定义职业、昵称等不是有限内置单词；现有typed renderer只允许Unit custom profession:或Unit nickname:明确整字段覆写，其余保护原文。
+
+0x132fd16询问历史人物slave关系type4；enum103/104而已有role时0x132fd3c追加“ Slave”，成人整字段改Slave。0x132fe52和0x132fe8c询问prisoner关系type6/type7；enum103/104而已有role时0x132feb3追加“ Prisoner”，成人整字段改Prisoner。儿童两关系都存在时可以出现“Child Slave Prisoner”或RAW幼体/职务的对应组合；不能只列Child Slave和Child Prisoner。
+
+0x132ff8a..0x132ffc1在use_custom为真且unit+0x80非空时最后以custom profession替换上述RAW/office/slave/prisoner角色。之后原生继续组合外层Stray /Fierce /Agitated （0x1330066/0x133006d/0x133008e），Ghost或Ghostly （0x13300c4/0x13300de），curse-prefix unit+0x880（0x1330122）或curse-name unit+0x840（0x133019d），以及动画存在但无explicit label时的Corpse/ Corpse（0x13301bc/0x13301cb）。Classic对应这段的代码RVA为Steam减0x5090；两PE实际反汇编提取的这些字面值相同。
+
+常规getter还追加sex glyph、gelding x标记及training等级：Trained、-Trained-、+Trained+、*Trained*、使用游戏品质符号围住的Trained、Tame、Semi-Wild。native_unit_identity_translation.inc已按实际training_level 0..7和sex/gelded字段输出中文，并保留品质符号。无需给每个符号包装另造头部词条。
+
+本轮定位到的入口欠缺及随后代码处理
+
+普通Role的child/baby Slave/Prisoner后缀原先只有Reference renderer具有递归处理，translate_unit_profession此前不处理；普通头像顶部因此可能保留整串。完整职业的Corpse后缀、Stray/Fierce/Agitated前缀同样原先只由species grammar尝试，后文若是“Dwarf Miner”等职业句而非creature descriptor就不能完整解析。本轮主代理已在共享职业入口加入这些前缀/后缀递归。Ghostly与Necromancer、resident、of任职范围已有职业递归，但需与新增这些真实原生外层组合共享入口，不能靠单词已经存在宣称组合覆盖。force在普通native role中还会先命中creature_name_kind的“力量”，其身份语义应是“自然之灵”；本轮主代理已将原生kind force/forces的作者词汇改为“自然之灵”，与身份词条一致。
+
+有限与动态边界
+
+内置enum、上述PE status/训练原子、当前安装RAW职业和标准ENTITY title均可静态枚举。个人名字、生成势力/领地、生成curse称谓、mod新增RAW与玩家的昵称/custom profession/animated label是字段来源，不是可穷尽的静态单词集合。它们必须使用已确定的native typed字段与语法，而不是把整屏拼句误当普通词逐字替换。反编译与数据/入口审阅不等于观察到游戏内最后显示；本轮没有实机显示观察。
+
+RAW去重目录：两安装上述六类RAW token合并后共3376个唯一字面值，每行保留所有来源path/token及该词的field位置。
+
+组合代码静态审阅边界：新增Slave/Prisoner/Corpse与Stray/Fierce/Agitated递归可以层层解析已确认原生原子组合。unit+0x840/0x880的其他生成curse名称与普通职业组合仍是typed动态字段问题；单独的Necromancer后缀规则不能证明所有可能生成curse与职业组合已经解析。普通office of实体也不能仅凭词库存在推断当前世界所有生成任职名被完整捕获。
+
+原生curse/species动态字段的后续来源静态目录：继续读取两安装的interactions/secret.lua、disturbance.lua、curse.lua、mythical.lua、evil.lua和creatures/rcp.lua内的真实CE_DISPLAY_NAME固定三元组、raise/ghoul/ghost形容词名词表、mythical_names及adj_after方向、cloud_zombie_names、were种类筛选与were+name_string(+s)拼接，归并得到5215个候选词面并追加同一TSV。ghost创建目前受“if false and ghost”保护，相关候选行明确注明此状态，不能报告它们会在当前新世界生成。记录的是生成器真实候选与字段来源，不是执行生成器后凭新世界样本穷举。
+
+后续实现采用上述原生边界：ordinary snapshot读取unit+0x840/+0x880的actual curse字段，按完整原样前后边界解析；原生0x133012d追加空格作为prefix边界。Corpse位于curse之外，Stray/Fierce/Agitated位于curse-prefix之外。explicit animation优先；gametype 4/5直接复制first_name的早返回以内部native_role_authored标记保留原文。模式字段使用既有native_reference_address(base, native_history_layout::gametype_rva)，Steam 0x189c2c4，Classic 0x1896294。此标记仅是核心内部字段，不改变加载器的导出ABI。

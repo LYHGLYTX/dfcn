@@ -1,0 +1,113 @@
+# Native character-header current-job/activity source graph, traced from the installed Windows PE header renderer.
+# Offline disassembly provenance; this is source data, not a runtime hook or an in-game display result.
+# Addresses are image-relative RVAs. Activity caption vtable slot is +0xb0; squad-order caption slot is +0x68.
+# Function ends include chained MSVC unwind ranges; stackless skill/topic/sphere/diplomatic leaf bodies use their decoded control-flow ends.
+# Significant literal whitespace is retained. Fixed operands such as values/topics/skills/spheres are input fragments of typed compositions.
+# Generated instruments, objects, creatures, people, sites and editable place names remain typed dynamic sources, not a finite full-sentence list.
+# Steam: D:/program/steam/steamapps/common/Dwarf Fortress/Dwarf Fortress.exe; PE:6a70a6d9:02711000; header renderer RVA 0x14ef90; current-job call 0x15d697 -> 0xd03170; activity call 0x15d6c9 -> 0x1390cf0 -> 0x138ffd0.
+# Classic: C:/Users/WIN11/Downloads/df_53_16_win/Dwarf Fortress.exe; PE:6a70b91c:0270a000; header renderer RVA 0x14ef20; current-job call 0x15d627 -> 0xd001b0; activity call 0x15d659 -> 0x138bc60 -> 0x138af40.
+# image identity	kind	owner	start RVA	end RVA	vtable slot RVA or -
+PE:6a70a6d9:02711000	activity	activity_event_teach_topicst	0xa27d0	0xa297e	0x15eaaf8
+PE:6a70a6d9:02711000	activity	activity_event_ranged_practicest	0xa4fd0	0xa51a8	0x15e9970
+PE:6a70a6d9:02711000	activity	activity_event_copy_written_contentst	0xa2d50	0xa2ec3	0x15ea060
+PE:6a70a6d9:02711000	activity	activity_event_researchst	0x79df0	0x79e05	0x15ea740
+PE:6a70a6d9:02711000	activity	activity_event_writest	0xa2c20	0xa2d4f	0x15ea2b8
+PE:6a70a6d9:02711000	activity	activity_event_prayerst	0xa2ed0	0xa305a	0x15ea668
+PE:6a70a6d9:02711000	activity	activity_event_ponder_topicst	0xa26b0	0xa27cc	0x15ea978
+PE:6a70a6d9:02711000	activity	activity_event_readst	0xa2aa0	0xa2c13	0x15eabb8
+PE:6a70a6d9:02711000	activity	activity_event_skill_demonstrationst	0xa4400	0xa4791	0x15ea1e0
+PE:6a70a6d9:02711000	activity	activity_event_guardst	0x75f70	0x75f85	0x15eaa38
+PE:6a70a6d9:02711000	activity	activity_event_harassmentst	0x75f70	0x75f85	0x15eb3e8
+PE:6a70a6d9:02711000	activity	activity_event_conflictst	0x75f70	0x75f85	0x15eaf78
+PE:6a70a6d9:02711000	activity	activity_event_combat_trainingst	0xa3060	0xa3269	0x15ea800
+PE:6a70a6d9:02711000	activity	activity_event_performancest	0xa3410	0xa43f4	0x15eadf8
+PE:6a70a6d9:02711000	activity	activity_event_socializest	0x7a1a0	0x7a1b5	0x15ea5a8
+PE:6a70a6d9:02711000	activity	activity_event_sparringst	0xa4bc0	0xa4fce	0x15e9e20
+PE:6a70a6d9:02711000	activity	activity_event_conversationst	0x75f70	0x75f85	0x15eac78
+PE:6a70a6d9:02711000	activity	activity_event_playst	0x79f70	0x79f85	0x15eaeb8
+PE:6a70a6d9:02711000	activity	activity_eventst	0x75f70	0x75f85	0x15ead38
+PE:6a70a6d9:02711000	activity	activity_event_training_sessionst	0x76070	0x76085	0x15ea4e8
+PE:6a70a6d9:02711000	activity	activity_event_worshipst	0x7a100	0x7a115	0x15eb268
+PE:6a70a6d9:02711000	activity	activity_event_store_objectst	0x75f70	0x75f85	0x15ea120
+PE:6a70a6d9:02711000	activity	activity_event_individual_skill_drillst	0xa49b0	0xa4bb2	0x15eb0e8
+PE:6a70a6d9:02711000	activity	activity_event_reunionst	0x75f70	0x75f85	0x15e9fa0
+PE:6a70a6d9:02711000	activity	activity_event_encounterst	0x75f70	0x75f85	0x15eb328
+PE:6a70a6d9:02711000	activity	activity_event_make_believest	0xa3270	0xa3285	0x15ea378
+PE:6a70a6d9:02711000	activity	activity_event_discuss_topicst	0xa2980	0xa2a9c	0x15e9ee0
+PE:6a70a6d9:02711000	activity	activity_event_fill_service_orderst	0xa47a0	0xa49ae	0x15e9d60
+PE:6a70a6d9:02711000	activity	activity_event_play_with_toyst	0xa3290	0xa3410	0x15eb1a8
+PE:6a70a6d9:02711000	order	squad_order_rescue_hfst	0x10f3160	0x10f31ca	0x1603388
+PE:6a70a6d9:02711000	order	squad_order_retrieve_artifactst	0x10f2fb0	0x10f2fee	0x1603268
+PE:6a70a6d9:02711000	order	squad_order_raid_sitest	0x10f2ff0	0x10f3160	0x16032f8
+PE:6a70a6d9:02711000	order	squad_orderst	0x1bb750	0x1bb765	0x1603440
+PE:6a70a6d9:02711000	order	squad_order_movest	0x10f2800	0x10f28a8	0x162dff8
+PE:6a70a6d9:02711000	order	squad_order_patrol_routest	0x10f31d0	0x10f3263	0x162e5e0
+PE:6a70a6d9:02711000	order	squad_order_trainst	0x10f3270	0x10f3285	0x163c698
+PE:6a70a6d9:02711000	order	squad_order_defend_burrowsst	0x10f2ea0	0x10f2fa1	0x163bfc0
+PE:6a70a6d9:02711000	order	squad_order_kill_listst	0x10f2e50	0x10f2e96	0x163ca20
+PE:6a70a6d9:02711000	order	squad_order_kill_hfst	0x10f28b0	0x10f294b	0x1641d98
+PE:6a70a6d9:02711000	order	squad_order_cause_trouble_for_entityst	0x10f2a90	0x10f2b02	0x1641d08
+PE:6a70a6d9:02711000	order	squad_order_drive_armies_from_sitest	0x10f2950	0x10f29e6	0x1641e28
+PE:6a70a6d9:02711000	order	squad_order_drive_entity_off_sitest	0x10f29f0	0x10f2a86	0x1641ff8
+PE:6a70a6d9:02711000	job	current job and surgery variants	0xd03170	0xd0329b	-
+PE:6a70a6d9:02711000	job	job title	0xd032b0	0xd082d4	-
+PE:6a70a6d9:02711000	status-wrapper	header unit activity wrapper	0x1390cf0	0x1390dec	-
+PE:6a70a6d9:02711000	status	unit activity with native colors	0x138ffd0	0x1390cf0	-
+PE:6a70a6d9:02711000	status	diplomatic mission action	0x1bb400	0x1bb568	-
+PE:6a70a6d9:02711000	order	kill list caption helper	0x10f2b10	0x10f2e4c	-
+PE:6a70a6d9:02711000	skill	skill action nouns	0x773990	0x77450b	-
+PE:6a70a6d9:02711000	topic	knowledge topic short names	0xef8fb0	0xefb221	-
+PE:6a70a6d9:02711000	sphere	deity sphere nouns	0x756690	0x757174	-
+PE:6a70a6d9:02711000	sphere-wrapper	sphere definite article	0x756500	0x756688	-
+PE:6a70b91c:0270a000	activity	activity_event_teach_topicst	0xa2760	0xa290e	0x15e5ab0
+PE:6a70b91c:0270a000	activity	activity_event_ranged_practicest	0xa4f60	0xa5138	0x15e4a68
+PE:6a70b91c:0270a000	activity	activity_event_copy_written_contentst	0xa2ce0	0xa2e53	0x15e5018
+PE:6a70b91c:0270a000	activity	activity_event_researchst	0x79d80	0x79d95	0x15e56f8
+PE:6a70b91c:0270a000	activity	activity_event_writest	0xa2bb0	0xa2cdf	0x15e5270
+PE:6a70b91c:0270a000	activity	activity_event_prayerst	0xa2e60	0xa2fea	0x15e5620
+PE:6a70b91c:0270a000	activity	activity_event_ponder_topicst	0xa2640	0xa275c	0x15e5930
+PE:6a70b91c:0270a000	activity	activity_event_readst	0xa2a30	0xa2ba3	0x15e5b70
+PE:6a70b91c:0270a000	activity	activity_event_skill_demonstrationst	0xa4390	0xa4721	0x15e5198
+PE:6a70b91c:0270a000	activity	activity_event_guardst	0x75f00	0x75f15	0x15e59f0
+PE:6a70b91c:0270a000	activity	activity_event_harassmentst	0x75f00	0x75f15	0x15e63a0
+PE:6a70b91c:0270a000	activity	activity_event_conflictst	0x75f00	0x75f15	0x15e5f30
+PE:6a70b91c:0270a000	activity	activity_event_combat_trainingst	0xa2ff0	0xa31f9	0x15e57b8
+PE:6a70b91c:0270a000	activity	activity_event_performancest	0xa33a0	0xa4384	0x15e5db0
+PE:6a70b91c:0270a000	activity	activity_event_socializest	0x7a130	0x7a145	0x15e5560
+PE:6a70b91c:0270a000	activity	activity_event_sparringst	0xa4b50	0xa4f5e	0x15e4dd8
+PE:6a70b91c:0270a000	activity	activity_event_conversationst	0x75f00	0x75f15	0x15e5c30
+PE:6a70b91c:0270a000	activity	activity_event_playst	0x79f00	0x79f15	0x15e5e70
+PE:6a70b91c:0270a000	activity	activity_eventst	0x75f00	0x75f15	0x15e5cf0
+PE:6a70b91c:0270a000	activity	activity_event_training_sessionst	0x76000	0x76015	0x15e54a0
+PE:6a70b91c:0270a000	activity	activity_event_worshipst	0x7a090	0x7a0a5	0x15e6220
+PE:6a70b91c:0270a000	activity	activity_event_store_objectst	0x75f00	0x75f15	0x15e50d8
+PE:6a70b91c:0270a000	activity	activity_event_individual_skill_drillst	0xa4940	0xa4b42	0x15e60a0
+PE:6a70b91c:0270a000	activity	activity_event_reunionst	0x75f00	0x75f15	0x15e4f58
+PE:6a70b91c:0270a000	activity	activity_event_encounterst	0x75f00	0x75f15	0x15e62e0
+PE:6a70b91c:0270a000	activity	activity_event_make_believest	0xa3200	0xa3215	0x15e5330
+PE:6a70b91c:0270a000	activity	activity_event_discuss_topicst	0xa2910	0xa2a2c	0x15e4e98
+PE:6a70b91c:0270a000	activity	activity_event_fill_service_orderst	0xa4730	0xa493e	0x15e4d18
+PE:6a70b91c:0270a000	activity	activity_event_play_with_toyst	0xa3220	0xa33a0	0x15e6160
+PE:6a70b91c:0270a000	order	squad_order_rescue_hfst	0x10ee0d0	0x10ee13a	0x15fe358
+PE:6a70b91c:0270a000	order	squad_order_retrieve_artifactst	0x10edf20	0x10edf5e	0x15fe238
+PE:6a70b91c:0270a000	order	squad_order_raid_sitest	0x10edf60	0x10ee0d0	0x15fe2c8
+PE:6a70b91c:0270a000	order	squad_orderst	0x1bb6e0	0x1bb6f5	0x15fe410
+PE:6a70b91c:0270a000	order	squad_order_movest	0x10ed770	0x10ed818	0x1628ed8
+PE:6a70b91c:0270a000	order	squad_order_patrol_routest	0x10ee140	0x10ee1d3	0x16294c0
+PE:6a70b91c:0270a000	order	squad_order_trainst	0x10ee1e0	0x10ee1f5	0x1637550
+PE:6a70b91c:0270a000	order	squad_order_defend_burrowsst	0x10ede10	0x10edf11	0x1636ea0
+PE:6a70b91c:0270a000	order	squad_order_kill_listst	0x10eddc0	0x10ede06	0x1637900
+PE:6a70b91c:0270a000	order	squad_order_kill_hfst	0x10ed820	0x10ed8bb	0x163cc88
+PE:6a70b91c:0270a000	order	squad_order_cause_trouble_for_entityst	0x10eda00	0x10eda72	0x163cbf8
+PE:6a70b91c:0270a000	order	squad_order_drive_armies_from_sitest	0x10ed8c0	0x10ed956	0x163cd18
+PE:6a70b91c:0270a000	order	squad_order_drive_entity_off_sitest	0x10ed960	0x10ed9f6	0x163cee8
+PE:6a70b91c:0270a000	job	current job and surgery variants	0xd001b0	0xd002db	-
+PE:6a70b91c:0270a000	job	job title	0xd002f0	0xd05314	-
+PE:6a70b91c:0270a000	status-wrapper	header unit activity wrapper	0x138bc60	0x138bd5c	-
+PE:6a70b91c:0270a000	status	unit activity with native colors	0x138af40	0x138bc60	-
+PE:6a70b91c:0270a000	status	diplomatic mission action	0x1bb390	0x1bb4f8	-
+PE:6a70b91c:0270a000	order	kill list caption helper	0x10eda80	0x10eddbc	-
+PE:6a70b91c:0270a000	skill	skill action nouns	0x7713b0	0x771f2b	-
+PE:6a70b91c:0270a000	topic	knowledge topic short names	0xef3f20	0xef6191	-
+PE:6a70b91c:0270a000	sphere	deity sphere nouns	0x7540b0	0x754b94	-
+PE:6a70b91c:0270a000	sphere-wrapper	sphere definite article	0x753f20	0x7540a8	-

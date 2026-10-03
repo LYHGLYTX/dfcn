@@ -84,8 +84,28 @@ static bool capture_native_unit_identity(uintptr_t unit, NativeUnitIdentity &out
             (result.use_custom && !native_history_copy_string(unit + 0x80,
                 result.custom_profession))) return false;
     result.undead = animation != 0;
-    const bool custom_role = result.animated_name.empty() && result.use_custom &&
+    int32_t game_type = -1;
+    if (!native_history_copy(native_reference_address(base,
+            native_history_layout::gametype_rva), game_type)) return false;
+    // After an explicit animation label, the arena-mode branch returns the
+    // literal first_name before selecting a profession or curse modifier.
+    result.native_role_authored = result.animated_name.empty() &&
+        (game_type == 4 || game_type == 5);
+    const bool custom_role = !result.native_role_authored &&
+        result.animated_name.empty() && result.use_custom &&
         !result.custom_profession.empty();
+    // Ordinary roles also carry these exact typed fields after RAW/office
+    // selection. Their append boundaries must not be guessed from a title
+    // that happens to contain words such as vampire or mummy.
+    uint8_t curse_named = 0;
+    if (!result.native_role_authored && result.animated_name.empty() &&
+            (!native_history_copy(unit + 0x838, curse_named) || curse_named > 1))
+        return false;
+    result.curse_named = curse_named != 0;
+    if (result.curse_named &&
+            (!native_history_copy_string(unit + 0x840, result.curse_name) ||
+             !native_history_copy_string(unit + 0x880, result.curse_name_prefix)))
+        return false;
     if (custom_role || result.include_status) {
         uint32_t flags1 = 0;
         if (!native_history_copy(unit + 0x110, flags1)) return false;
@@ -117,15 +137,7 @@ static bool capture_native_unit_identity(uintptr_t unit, NativeUnitIdentity &out
         if (!native_history_copy(unit + 0x118, flags3)) return false;
         result.gelded = (flags3 & 0x10000000u) != 0;
         if (custom_role) {
-            uint8_t curse_named = 0;
-            if (!native_history_copy(unit + 0x838, curse_named) || curse_named > 1)
-                return false;
-            result.curse_named = curse_named != 0;
             result.ghostly = (flags3 & 0x00001000u) != 0 && !curse_named;
-            if (result.curse_named &&
-                    (!native_history_copy_string(unit + 0x840, result.curse_name) ||
-                     !native_history_copy_string(unit + 0x880, result.curse_name_prefix)))
-                return false;
         }
     }
     if (!custom_role) return true;

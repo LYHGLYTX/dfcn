@@ -30204,6 +30204,7 @@ DFHack help: }, initial_option=self.start_pos and	}，initial_option=self.start_
 DFHack hotkeys hint: Toggles the keyboard cursor.	开启或关闭键盘光标。	l
 ENABLE ONE! Entities in Dwarvemon use all Pokemon	只能启用一个！Dwarvemon 的实体包含所有宝可梦	l
 Feel free to pause and check out the information.	你随时可以暂停，仔细查看信息。	hq
+Fortress activity: Carve wooden helve from branch	用树枝雕刻木制斧柄	li
 Guide {s} immediately when empty of desired items	未装载所需物品时，立即引导矿车向{s1}行驶	hPt
 Guide {s} in {d} days when empty of desired items	等待{d1}天且未装载所需物品时，引导矿车向{s1}行驶	hPt
 How will you respond to the tribute cancellation?	你将如何回应停止进贡的决定？	hP
@@ -34909,6 +34910,7 @@ Fail the struggle against great mortification	没能克服强烈的羞愧难当	
 For {u} of my years, I rescued lost children.	我曾经专门救助迷路的孩子，干了{u1}年。	hPt
 Forgive me, but that isn't at all convincing.	恕我直言，这完全没有说服力。	hP
 Forgotten beast wealth divisor (more = safer)	遗忘猛兽财富除数（越高越安全）
+Fortress activity: Link a building to trigger	将建筑连接到触发装置	li
 Fortress activity: suffix (cannot leave site)	（无法离开据点）	li
 Fortress activity: suffix (improper barracks)	（兵营不合要求）	li
 Fortress activity: suffix (improper building)	（建筑不合要求）	li
@@ -37512,8 +37514,11 @@ Exchange, give, take or show personal items	交换、赠送、拿取或展示随
 Explore the history of The Past Dimensions.	探索“往昔维度”的历史。	l
 Forbid toppled building items during sieges	围城期间禁用被推倒建筑的物品	wi
 Forgotten beast sensitivity (less = sooner)	遗忘猛兽敏感度（越低越早来袭）
+Fortress activity: Carve downward staircase	挖掘下行楼梯	li
 Fortress activity: Organize Combat Training	组织战斗训练	li
+Fortress activity: Pen/pasture small animal	将小型动物带入畜栏或牧场	li
 Fortress activity: Repair Compound Fracture	修复开放性骨折	li
+Fortress activity: Update stockpile records	更新库存记录	li
 Fortress activity: Wait for Combat Training	等待战斗训练	li
 Fortress activity: suffix (no patrol route)	（没有巡逻路线）	li
 Fortress schedule editor: Minimum number of	执行新命令	l
@@ -38926,6 +38931,9 @@ For lyrics, the composer has selected {b}.	作曲者选用了《{b}》作为歌�
 For {u} of my years, I wandered the wilds.	我在荒野游历了{u1}年。	hPt
 Forbid other non-hunted dead during sieges	围城期间禁用其他尸体（猎物除外）	wi
 Fortress activity: Agitated Caged Creature	躁动的笼中生物	li
+Fortress activity: Carve up/down staircase	挖掘上下楼梯	li
+Fortress activity: Hunt for small creature	猎捕小型生物	li
+Fortress activity: Store item in stockpile	将物品存入储物堆	li
 Fortress activity: Watch Sparring Practice	观看比武训练	li
 Fortress activity: suffix (does not exist)	（不存在）	li
 Fortress item claim: {n}'s family heirloom	{n}的家族传家宝	ht
@@ -40431,6 +40439,10 @@ Diplomacy tree-fell count (untamed wilds)	外交砍树限额（蛮荒之地）
 Do this if you want to keep the old save.	若想保留旧存档，请选择此项。	w
 Five hundred or more people were expelled	至少五百人遭到驱逐	h
 Follow destiny or strike out on your own.	顺从天意，还是自己闯出一条路？	w
+Fortress activity: Carve upward staircase	挖掘上行楼梯	li
+Fortress activity: Install colony in hive	将蜂群安置到蜂箱	li
+Fortress activity: Release small creature	释放小型生物	li
+Fortress activity: Store item in location	将物品存放到地点	li
 Fortress activity: suffix (invalid order)	（命令无效）	li
 Grazing coefficient (higher = less grass)	放牧系数(越高=草越少)	w
 Greatly respected for protecting the weak	极大地受人尊敬的庇护弱者之人	w
@@ -41968,7 +41980,13 @@ Do not avoid a necessary conflict today.	今天不要回避必要的冲突。	hP
 Do they have a firm grip on these lands?	他们牢牢控制着这片土地吗？	hP
 Fail the struggle against great distress	没能克服强烈的苦恼	hP
 Forbid floor/wall cleaning during sieges	围城期间禁止清洁地面和墙壁	wi
+Fortress activity: Collect hive products	收集蜂箱产物	li
+Fortress activity: Engrave memorial slab	雕刻纪念石板	li
 Fortress activity: Exceptionally trained	训练出众	li
+Fortress activity: Handle small creature	照料小型生物	li
+Fortress activity: Pit/pond small animal	将小型动物放入坑洞或池塘	li
+Fortress activity: Store item in vehicle	将物品存入载具	li
+Fortress activity: Store squad equipment	存放小队装备	li
 Fortress activity: suffix (not in squad)	（不在小队中）	li
 Game frames-per-second cap (default 100)	游戏FPS上限（默认100）	w
 Game frames-per-second cap (default {d})	游戏每秒帧数上限(默认{d})	wt
@@ -43447,6 +43465,7 @@ Fail the struggle against great despair	没能克服强烈的绝望	hP
 Fail the struggle against great sadness	没能克服强烈的悲伤	hP
 Fortress activity: Lead Combat Training	主持战斗训练	li
 Fortress activity: Remove Rotten Tissue	清除坏死组织	li
+Fortress activity: Store item in barrel	将物品存入圆桶	li
 Fortress activity: suffix (no activity)	（无活动）	li
 Fortress activity: suffix (no barracks)	（没有兵营）	li
 He is one of the only ones of his kind.	他是同类中仅有的少数个体之一。	h
@@ -45078,8 +45097,16 @@ Fail the struggle against great misery	没能克服强烈的悲惨	hP
 Fail the struggle against great terror	没能克服强烈的恐惧	hP
 Finish setting plant gathering orders.	结束植物采集命令设置。	hj
 Forbid other death items during sieges	围城期间禁用其他死者遗物	wi
+Fortress activity: Bring item to depot	将物品搬到贸易站	li
+Fortress activity: Carve fortification	雕凿城防垛口	li
 Fortress activity: Demand Tribute from	索取贡品	li
+Fortress activity: Guard tax collector	保护税务官	li
 Fortress activity: Masterfully trained	训练高超	li
+Fortress activity: Place track vehicle	放置轨道载具	li
+Fortress activity: Put item on display	陈列物品	li
+Fortress activity: Remove construction	拆除构筑	li
+Fortress activity: Remove stairs/ramps	移除楼梯与坡道	li
+Fortress activity: Starting fist fight	挑起斗殴	li
 Fortress activity: suffix (no library)	（没有图书馆）	li
 Fortress item claim: Symbol of the {s}	{s}的象征物	ht
 Gift a (large) pet or mount (new menu)	赠送（大型）宠物或坐骑（新菜单）	hP
@@ -46732,6 +46759,11 @@ Fail the struggle against great grief	没能克服强烈的悲伤	hP
 Fail the struggle against great shock	没能克服强烈的震惊	hP
 Finish Game (holding another's goods)	结束游戏（持有他人物品）	w
 Forbid your death items during sieges	围城期间禁用己方死者遗物	wi
+Fortress activity: Bring item to shop	将物品搬到工坊	li
+Fortress activity: Construct building	建造建筑	li
+Fortress activity: Manage work orders	管理工单	li
+Fortress activity: Place item in tomb	将物品放入陵墓	li
+Fortress activity: Push track vehicle	推动轨道载具	li
 Fortress activity: Skillfully trained	训练娴熟	li
 Fortress activity: suffix (no burrow)	（没有活动区）	li
 Fortress activity: suffix (no temple)	（没有神殿）	li
@@ -48474,8 +48506,14 @@ Fanfare follows it wherever it goes.	它所到之处都有嘹亮的号角声相�
 Filter the unit list by name or job.	按名称或工作筛选单位列表。	hj
 Finish setting tree chopping orders.	结束树木砍伐命令设置。	hj
 Forbid used ammunition during sieges	围城期间禁用已用弹药	wi
+Fortress activity: Cage small animal	将小型动物关入笼子	li
 Fortress activity: Cause trouble for	制造麻烦	li
+Fortress activity: Fire bolt thrower	发射弩箭投射器	li
+Fortress activity: Load bolt thrower	装填弩箭投射器	li
+Fortress activity: Place in traction	进行牵引治疗	li
 Fortress activity: Play Make Believe	玩扮演游戏	li
+Fortress activity: Store item in bag	将物品存入袋子	li
+Fortress activity: Store item in bin	将物品存入储物箱	li
 Fortress item claim: Heirloom of {a}	{a}的传家宝	ht
 Fortress item claim: Treasure of {a}	{a}的珍宝	ht
 Gathering fruit and leaves blueprint	采集果实与叶片蓝图	wo
@@ -50202,9 +50240,16 @@ Forming lakes and minerals... ({d})	正在生成湖泊与矿物……（{d}）	w
 Fortress activity: Chained Prisoner	被拴住的囚犯	li
 Fortress activity: Current Resident	现居居民	li
 Fortress activity: Demand surrender	要求投降	li
+Fortress activity: Destroy building	拆除建筑	li
+Fortress activity: Diagnose patient	诊断病人	li
+Fortress activity: Execute criminal	处决罪犯	li
 Fortress activity: Expertly trained	训练精湛	li
+Fortress activity: Immobilize break	固定骨折部位	li
 Fortress activity: Listen to Poetry	聆听诗歌	li
 Fortress activity: Listen to Sermon	聆听布道	li
+Fortress activity: Load weapon trap	装填武器陷阱	li
+Fortress activity: Pickup equipment	拾取装备	li
+Fortress activity: Store owned item	存放私人物品	li
 Fortress activity: Training Session	训练课程	li
 Fortress activity: suffix (no item)	（没有物品）	li
 Fortress schedule editor: new order	士兵人数	l
@@ -52199,10 +52244,13 @@ Express astonishment at seeing {p}	对见到{p1}表示惊讶	hPt
 Forbid trap cleaning during sieges	围城期间禁止清洁陷阱	wi
 Forbid trap rearming during sieges	围城期间禁止重装陷阱	wi
 Fortress activity: Conduct Meeting	主持会面	li
+Fortress activity: Fertilize field	给田地施肥	li
 Fortress activity: Listen to Music	聆听音乐	li
 Fortress activity: Listen to Story	聆听故事	li
+Fortress activity: Load stone trap	装填落石陷阱	li
 Fortress activity: Make Request of	提出请求	li
 Fortress activity: Opposed to life	仇视生命	li
+Fortress activity: Recover wounded	救助伤员	li
 Fortress activity: Return Treasure	归还财宝	li
 Fortress activity: Uninvited Guest	不速之客	li
 Fortress activity: suffix /Resting	／休息中	li
@@ -54122,8 +54170,17 @@ Duel of {a} and {a} in the wilds.	在荒野中，{a1}与{a2}的决斗。	htEi
 Eat not the fruits of your labor.	不要享用自己劳动的成果。	hP
 Famous preserver of the knowledge	名声显赫的博学大师	w
 Fertilizer is not needed to farm.	[C:7:0:0]不[C:6:0:1]施肥[C:7:0:0]也可以种植。	hq
+Fortress activity: Attend Meeting	参加会面	li
 Fortress activity: Caged Prisoner	关在笼中的囚犯	li
+Fortress activity: Drain aquarium	排空水族箱	li
+Fortress activity: Fill waterskin	灌满水袋	li
+Fortress activity: Get provisions	获取补给	li
+Fortress activity: Harvest plants	收获植物	li
+Fortress activity: Load cage trap	装填笼陷阱	li
+Fortress activity: Monster Slayer	怪物猎手	li
+Fortress activity: Pull the lever	拉动控制杆	li
 Fortress activity: Serve Customer	接待顾客	li
+Fortress activity: Trade at depot	在贸易站交易	li
 Gather fallen fruit in this zone.	采集此区域内掉落的果实。	hj
 Greatly respected for heroic acts	为人传颂的英雄之举	w
 Greetings. It is good to see you.	你好。很高兴见到你。	hP
@@ -56013,13 +56070,25 @@ Finalizing civ mats... ({d}/{d})	正在完成文明材料……（{d}/{d}）	wt
 Finalizing uniforms... ({d}/{d})	正在完成制服……（{d}/{d}）	wt
 Follow your desire to reconcile.	遵从内心和解的愿望。	hP
 Fortress activity: Attend Parley	参加谈判	li
+Fortress activity: Beat criminal	殴打罪犯	li
+Fortress activity: Cause trouble	惹是生非	li
 Fortress activity: Chained Guest	被拴住的访客	li
+Fortress activity: Clean patient	清洗病人	li
+Fortress activity: Collect taxes	征税	li
+Fortress activity: Fill aquarium	给水族箱注水	li
+Fortress activity: Fire ballista	发射弩炮	li
+Fortress activity: Fire catapult	发射投石机	li
+Fortress activity: Gather plants	采集植物	li
 Fortress activity: Improve trade	改善贸易关系	li
+Fortress activity: Load ballista	装填弩炮	li
+Fortress activity: Load catapult	装填投石机	li
 Fortress activity: Perform Dance	表演舞蹈	li
 Fortress activity: Perform Music	演奏音乐	li
 Fortress activity: Play with Toy	玩玩具	li
+Fortress activity: Put in chains	戴上锁链	li
 Fortress activity: Recite Poetry	朗诵诗歌	li
 Fortress activity: Seek alliance	寻求结盟	li
+Fortress activity: Seek artifact	寻找造物	li
 Fortress activity: Stop Bleeding	止血	li
 General work orders allowed: {d}	常规工单上限：{d}	wtl
 Gladly. I will be your {s}, {s}.	我很乐意，{s2}。我会成为你的{s1}。	hPt
@@ -57890,8 +57959,15 @@ Duel of {a} and {a} within {p}.	在{p1}，{a1}与{a2}的决斗。	htEi
 Erase a portion of this burrow.	擦除此活动区的一部分。	hj
 Finalizing generated objects...	完成生成的对象......	w
 Fortification carving blueprint	城防垛口开凿蓝图	wo
+Fortress activity: Bring crutch	送来拐杖	li
+Fortress activity: Detail floor	雕刻地板	li
 Fortress activity: Kill various	杀死多个目标	li
 Fortress activity: Make contact	建立联系	li
+Fortress activity: Operate pump	操作泵机	li
+Fortress activity: Report crime	报告罪行	li
+Fortress activity: Smooth floor	打磨地板	li
+Fortress activity: Store weapon	存放武器	li
+Fortress activity: Strange mood	怪异心情	li
 Fortress activity: Well-trained	训练良好	li
 Give a sermon promoting a value	发表宣扬某种价值观的布道	hP
 Go below hatch ({d} level down)	前往活动盖板下方（下方{d1}层）	hPt
@@ -60061,7 +60137,23 @@ Forbid cages from sprung traps	禁用已触发陷阱中的笼子	wi
 Forbid your dead during sieges	围城期间禁用己方尸体	wi
 Forbidding items and buildings	禁用物品和建筑	wo
 Fortress activity: Caged Guest	关在笼中的访客	li
+Fortress activity: Carve track	雕凿轨道	li
 Fortress activity: Declare war	宣战	li
+Fortress activity: Detail wall	雕刻墙壁	li
+Fortress activity: Dig channel	挖掘沟道	li
+Fortress activity: Dress wound	包扎伤口	li
+Fortress activity: Go shopping	购物	li
+Fortress activity: New Arrival	刚刚抵达	li
+Fortress activity: No activity	无活动	li
+Fortress activity: Plant seeds	播种种子	li
+Fortress activity: Recover pet	找回宠物	li
+Fortress activity: Release pet	释放宠物	li
+Fortress activity: Return kill	带回猎物	li
+Fortress activity: Seek infant	寻找婴儿	li
+Fortress activity: Smooth wall	打磨墙壁	li
+Fortress activity: Squad Order	小队命令	li
+Fortress activity: Store armor	存放护甲	li
+Fortress activity: Unchain pet	解开宠物的锁链	li
 Fortress activity: Watch Dance	观看舞蹈	li
 Fortress faith picker: Worship	供奉	l
 Gladiatory Games in the wilds.	在荒野中，角斗比赛。	hEi
@@ -62100,6 +62192,11 @@ Finish setting traffic areas.	结束通行区域设置。	hj
 Fish only in designated zones	仅在指定区域捕鱼	wi
 Forbid toppled building items	禁用被推倒建筑的物品	wi
 Forming lakes and minerals...	正在生成湖泊与矿物……
+Fortress activity: Apply cast	打石膏	li
+Fortress activity: Carve ramp	挖掘斜坡	li
+Fortress activity: Clean self	清洗自身	li
+Fortress activity: Clean trap	清理陷阱	li
+Fortress activity: Give water	送水	li
 Fortress activity: Make peace	议和	li
 Fortress activity: Tell Story	讲故事	li
 Fortress activity: Underworld	地下世界生物	li
@@ -62417,6 +62514,8 @@ Workshop recipe: state nearby	附近	l
 Workshop recipe: state rotten	腐烂	l
 Workshop recipe: state sticky	黏稠	l
 Workshop recipe: state unused	未使用	l
+Workshop recipe: unit threads	卷	l
+Workshop recipe: yarn threads	纱线	l
 Wrestling Competition at {p}.	在{p1}，摔跤比赛。	htEi
 Wrestling Competition in {d}.	{d1}年的摔跤比赛。	htEi
 Wrestling Competition in {p}.	在{p1}，摔跤比赛。	htEi
@@ -64092,7 +64191,13 @@ Famous protector of the weak	声名显赫的庇护者	w
 Finish establishing burrows.	结束建立活动区。	hj
 Forbid other non-hunted dead	禁用其他尸体（猎物除外）	wi
 Fortress activity: (Chained)	（被拴住）	li
+Fortress activity: Dump item	倾倒物品	li
+Fortress activity: Fell tree	砍倒树木	li
+Fortress activity: Fill pond	给池塘注水	li
+Fortress activity: Give food	送食物	li
+Fortress activity: Mercenary	佣兵	li
 Fortress activity: Play with	玩	li
+Fortress activity: Socialize	社交	li
 Fortress activity: Take Over	接管	li
 Gladiatory Games during {e}.	在{e1}期间，角斗比赛。	htEi
 Gladiatory Games within {p}.	在{p1}，角斗比赛。	htEi
@@ -64385,6 +64490,8 @@ Workshop recipe: state slimy	黏滑	l
 Workshop recipe: state solid	固态	l
 Workshop recipe: state woven	编织	l
 Workshop recipe: unit sheets	张	l
+Workshop recipe: unit thread	卷	l
+Workshop recipe: yarn thread	纱线	l
 World mission: Take over {p}	占领：{p}	ht
 Wrestling Competition at {p}	在{p1}，摔跤比赛	htEi
 Wrestling Competition in {d}	{d1}年的摔跤比赛	htEi
@@ -66008,8 +66115,10 @@ Forced wild attack: enraged	被迫使用狂野攻击：怒不可遏。	hP
 Fortress activity: Activity	活动	li
 Fortress activity: Diplomat	外交官	li
 Fortress activity: Friendly	友善	li
+Fortress activity: Reaction	进行反应	li
 Fortress activity: Research	研究	li
 Fortress activity: Retrieve	取回造物	li
+Fortress activity: Set bone	接骨	li
 Fortress activity: suffix !	！	li
 Generate Mythical Materials	生成神话材料
 Give up the hopeless cause.	放弃毫无希望的事业。	hP
@@ -68067,8 +68176,10 @@ Fortress activity: Invader	入侵者	li
 Fortress activity: Pillage	劫掠	li
 Fortress activity: Soldier	士兵	li
 Fortress activity: Station	驻守	li
+Fortress activity: Surgery	外科手术	li
 Fortress activity: Trained	受过训练	li
 Fortress activity: Trainer	驯兽师	li
+Fortress activity: Unchain	解开锁链	li
 Fortress activity: Visitor	来访者	li
 Fortress activity: Worship	礼拜	li
 Fulfillment will be yours.	你将获得满足。	hP
@@ -69675,6 +69786,7 @@ Conversation keyword: sad	难过	l
 Conversation keyword: war	战争	l
 Conversation keyword: who	谁	l
 Conversation keyword: yes	是	l
+Corrupt Soldier Mood: {d}	异常的军人情绪：{d1}	hPt
 Corrupt Strange Mood: {d}	异常的怪异心情：{d1}	hPt
 Crawling around babbling!	胡言乱语地四处爬行！	hP
 DFHack GUI Design: Rotate	旋转	l
@@ -69883,8 +69995,11 @@ Experiencing mortal fear!	感到濒死般的恐惧！	hP
 Finalizing descriptors...	完成描述符...	w
 Fortress activity: Burrow	活动区	li
 Fortress activity: Defend	保卫活动区	li
+Fortress activity: Kidnap	绑架	li
+Fortress activity: No job	没有工作	li
 Fortress activity: Patrol	巡逻	li
 Fortress activity: Rescue	营救	li
+Fortress activity: Suture	缝合	li
 Fortress activity: Undead	不死生物	li
 Generate Divine Materials	生成神圣材料
 Ha ha ha... You're funny!	哈哈哈……你真有趣！	hP
@@ -71601,6 +71716,7 @@ Forbid other death items	禁用其他死者遗物	wi
 Forge weapons and armor 	在此锻造武器和盔甲，以及大多	w
 Fortress activity: Caged	关在笼中	li
 Fortress activity: Chant	吟唱	li
+Fortress activity: Clean	清洁	li
 Fortress activity: Drink	饮用	li
 Fortress activity: Drive	驱逐	li
 Fortress activity: Guest	访客	li
@@ -71610,6 +71726,7 @@ Fortress activity: Point	地点	li
 Fortress activity: Route	路线	li
 Fortress activity: Seize	夺取	li
 Fortress activity: Serve	供应	li
+Fortress activity: Sleep	睡觉	li
 Fortress activity: Train	训练	li
 Fortress activity: Write	写作	li
 Generating inorganics...	生成无机物......	w
@@ -73459,6 +73576,7 @@ Do not automate tannery	制革工坊不自动加工	wi
 Eat or drink this item.	食用或饮用此物品。	hj
 Emotionally overloaded!	情绪不堪重负！	hP
 Engrave artwork into a 	将艺术作品雕刻在平滑的墙面上。	w
+Enraged at all enemies!	对所有敌人怒不可遏！	hP
 Entangled in hidden web	被隐藏的蛛网缠住	w
 Extend use of free room	延长免费客房的使用时间	hP
 Feed Patients/Prisoners	喂食病患和囚犯	wi
@@ -73471,10 +73589,13 @@ Fog enshrouds the area.	雾气笼罩着这片区域。	hj
 Forbid your death items	禁用己方死者遗物	wi
 Fortress activity: Copy	抄写	li
 Fortress activity: Fish	捕鱼	li
+Fortress activity: Hunt	狩猎	li
 Fortress activity: Kill	杀死目标	li
+Fortress activity: Play	游玩	li
 Fortress activity: Raid	袭击	li
 Fortress activity: Raze	摧毁	li
 Fortress activity: Read	阅读	li
+Fortress activity: Rest	休息	li
 Fortress activity: Sing	歌唱	li
 Fortress activity: Spar	比武训练	li
 Fortress activity: Tame	驯服	li
@@ -73678,6 +73799,7 @@ Stream: Saffronsnarling	溪流:藏红花咆哮	w
 Stream: Watchworshipped	溪流:观看崇拜	w
 Struck economic mineral	发现经济矿物	w
 Succumb to the invasion	败于入侵	w
+Sunk into depression...	陷入了抑郁……	hP
 Surrender of {p} at {p}	在{p2}，{p1}的投降	htEi
 Surrender of {p} in {d}	{d1}年的{p1}的投降	htEi
 Surrender of {p} in {p}	在{p2}，{p1}的投降	htEi
@@ -75413,6 +75535,8 @@ Finished prehistory...	史前历史生成完毕……
 Follow your intuition.	跟随你的直觉。	hP
 Forbid used ammunition	禁用已用弹药	wi
 Forming lakes... ({d})	正在生成湖泊……（{d}）	wt
+Fortress activity: Dig	挖掘	li
+Fortress activity: Eat	进食	li
 Fourth eldest daughter	第四个女儿	w
 Furnaces are used for 	熔炉用于冶炼、玻璃制造、陶器	w
 Generating entities...	生成实体......	w
@@ -75633,6 +75757,7 @@ Store item in location	将物品存放到地点	wi
 Stream: Morningsnarled	溪流:早晨纠缠	w
 Stream: The Hoary Bone	溪流:灰白骨头	w
 Structure (remembered)	建筑（印象中）	wl
+Stumbling obliviously!	浑浑噩噩地踉跄而行！	hP
 Suggest talking to {p}	建议与{p1}交谈	hPt
 Superior spatial sense	上等空间感知	wil
 Supernatural vengeance	灵异复仇	w
@@ -79655,6 +79780,7 @@ I am afraid of them.	我害怕他们。	hP
 I am your loyal {s}.	我是你忠诚的{s1}。	hPt
 I don't really know.	我实在不知道。	hP
 I love light poetry.	我喜欢轻快的诗歌。	hP
+In a martial trance!	进入了战斗专注状态！	hP
 Inclined to abstract	喜欢抽象思考	w
 Insurrection in {p}.	{p1}起义。	htEi
 Interaction (target)	互动（目标）	w
@@ -82692,6 +82818,7 @@ This is your owner.	这是你的主人。	hP
 This nameless being	这位无名生灵	h
 This singer stinks!	这位歌手糟透了！	hP
 This singer? Awful.	这位歌手？糟透了。	hP
+Throwing a tantrum!	正在大发脾气！	hP
 Time Spent With {b}	与{b}共度的时光	hbti
 Toggle/edit setting	切换/编辑设置	w
 Underground regions	地下区域
@@ -120729,6 +120856,7 @@ Continents	大陆	w
 Countesses	女伯爵	wi
 Created By	创作	w
 Creativity	创造力	wi
+Creator of	创作：未命名	wli
 Dance form	舞蹈形式	w
 Dehydrated	脱水	w
 Diagnosers	诊断医师	wi
@@ -126152,6 +126280,7 @@ Shearing	剪毛	wi
 Shithath	锡萨斯	wi
 Sluggish	呆滞	w
 Snatcher	绑架者	wi
+Somebody	某人	wl
 Sparring	比武训练	w
 Speaking	演讲	wi
 Spearman	矛手	wi
@@ -127808,7 +127937,7 @@ zealous	热忱	wi
 {d} pts	{d} 点	wt
 {s} Age	{s1}时代	htEi
  block	方块	wi
- cloth	布匹	wi
+ cloth	布	wi
  lower	下	wi
  metal	金属	wi
  paper	纸	wi
@@ -128204,6 +128333,7 @@ Output	输出	w
 Owner:	拥有者：	wl
 Palace	宫殿
 People	人物	w
+Pet of	宠物主人：	wli
 Pillar	支柱	w
 Places	地点	w
 Pocket	小型	w
@@ -129767,7 +129897,7 @@ Vunom	沃诺姆	wi
 Vutok	沃托克	wi
 Warm 	温暖	wi
 Water	水	wl
-Weave	纺织	wi
+Weave	织	wi
 Wells	井	hq
 Wells	井	w
 Width	宽度	w
@@ -131228,7 +131358,3 @@ of	所属	h
 .	。	hq
 :	：	h
 ;	；	h
-Workshop recipe: unit thread	卷	l
-Workshop recipe: unit threads	卷	l
-Workshop recipe: yarn thread	纱线	l
-Workshop recipe: yarn threads	纱线	l

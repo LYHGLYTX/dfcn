@@ -1,0 +1,137 @@
+edition	kind	range_start	range_end	code_va	string_va	source
+steam	header-literal	0x14015b8be	0x14015d706	0x14015bc52	0x1415f7258	Independent
+steam	header-literal	0x14015b8be	0x14015d706	0x14015be6f	0x1415fe1e0	#
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c2c3	0x1415fe1c8	Enraged at all enemies!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c31d	0x1415fe1b0	In a martial trance!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c377	0x1415fe198	Throwing a tantrum!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c3d1	0x1415fe180	Sunk into depression...
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c42b	0x1415fe168	Stumbling obliviously!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c484	0x1415fe150	Corrupt Soldier Mood: 
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c583	0x1415fe130	Has a horrible fell look!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c5db	0x1415fe118	Brooding darkly...
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c635	0x1415fe3d8	Has the aspect of one fey!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c68f	0x1415fe3c0	Peculiarly secretive...
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c6e9	0x1415fe3a0	Possessed by unknown forces!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c743	0x1415fe380	Stricken by melancholy...
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c80b	0x1415fe360	Crawling around babbling!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c84b	0x1415fe340	Running around babbling!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c8a7	0x1415fe328	Crawling around crazed!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c8e7	0x1415fe310	Running around crazed!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c941	0x1415fe2f8	In a berserk rage!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c99b	0x1415fe2d8	Staring off into space...
+steam	header-literal	0x14015b8be	0x14015d706	0x14015c9f4	0x1415fe2c0	Corrupt Strange Mood: 
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cc26	0x1415fe2a8	Overcome by terror!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cc71	0x1415fe290	In emotional shock!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015ccbc	0x1415fe278	Overwhelmed by horror!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cd07	0x1415fe258	Experiencing mortal fear!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cd52	0x1415fe250	Beside 
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cda5	0x1415fe528	herself
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cdfe	0x1415fe520	himself
+steam	header-literal	0x14015b8be	0x14015d706	0x14015ce3e	0x1415fe518	itself
+steam	header-literal	0x14015b8be	0x14015d706	0x14015ce7c	0x1415fe508	 with grief!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cec7	0x1415fe4f0	Drowning in sadness!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cf12	0x1415fe4d8	Writhing in agony!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cf5d	0x1415fe4c8	Anguished!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cfa8	0x1415fe4b0	Lost in despair!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015cff3	0x1415fe498	Completely dismayed!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d03e	0x1415fe488	Distressed!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d089	0x1415fe470	Taken by a fright!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d0d4	0x1415fe458	Wallowing in misery!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d11f	0x1415fe440	Truly mortified!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d16a	0x1415fe428	Shaken to the core!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d1b2	0x1415fe410	In existential crisis!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d217	0x1415fe3f8	Emotionally overloaded!
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d2ac	0x1415fe688	Pet of 
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d339	0x1415ed568	Somebody
+steam	header-literal	0x14015b8be	0x14015d706	0x14015d3b0	0x1415fe678	Creator of 
+classic	header-literal	0x14015b84e	0x14015d696	0x14015bbe2	0x1415f21f8	Independent
+classic	header-literal	0x14015b84e	0x14015d696	0x14015bdff	0x1415f92c0	#
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c253	0x1415f92a8	Enraged at all enemies!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c2ad	0x1415f9290	In a martial trance!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c307	0x1415f9278	Throwing a tantrum!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c361	0x1415f9260	Sunk into depression...
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c3bb	0x1415f9248	Stumbling obliviously!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c414	0x1415f9230	Corrupt Soldier Mood: 
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c513	0x1415f9210	Has a horrible fell look!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c56b	0x1415f91f8	Brooding darkly...
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c5c5	0x1415f91d8	Has the aspect of one fey!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c61f	0x1415f91c0	Peculiarly secretive...
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c679	0x1415f91a0	Possessed by unknown forces!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c6d3	0x1415f9180	Stricken by melancholy...
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c79b	0x1415f9160	Crawling around babbling!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c7db	0x1415f9140	Running around babbling!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c837	0x1415f9408	Crawling around crazed!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c877	0x1415f93f0	Running around crazed!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c8d1	0x1415f93d8	In a berserk rage!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c92b	0x1415f93b8	Staring off into space...
+classic	header-literal	0x14015b84e	0x14015d696	0x14015c984	0x1415f93a0	Corrupt Strange Mood: 
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cbb6	0x1415f9388	Overcome by terror!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cc01	0x1415f9370	In emotional shock!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cc4c	0x1415f9358	Overwhelmed by horror!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cc97	0x1415f9338	Experiencing mortal fear!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cce2	0x1415f9330	Beside 
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cd35	0x1415f9328	herself
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cd8e	0x1415f9320	himself
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cdce	0x1415f9318	itself
+classic	header-literal	0x14015b84e	0x14015d696	0x14015ce0c	0x1415f9308	 with grief!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015ce57	0x1415f92f0	Drowning in sadness!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cea2	0x1415f92d8	Writhing in agony!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015ceed	0x1415f9568	Anguished!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cf38	0x1415f9550	Lost in despair!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cf83	0x1415f9538	Completely dismayed!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015cfce	0x1415f9528	Distressed!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d019	0x1415f9510	Taken by a fright!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d064	0x1415f94f8	Wallowing in misery!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d0af	0x1415f94e0	Truly mortified!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d0fa	0x1415f94c8	Shaken to the core!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d142	0x1415f94b0	In existential crisis!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d1a7	0x1415f9498	Emotionally overloaded!
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d23c	0x1415f9490	Pet of 
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d2c9	0x1415e84b8	Somebody
+classic	header-literal	0x14015b84e	0x14015d696	0x14015d340	0x1415f9480	Creator of 
+steam	header-nickname-edit	0x14015aa0e	0x14015b177	0x14015b02a	0x1415ec82c	_
+steam	header-nickname-edit	0x14015aa0e	0x14015b177	0x14015b134	0x1415ec82c	_
+steam	header-native-name	0x140a94030	0x140a946d1	0x140a9413d	0x1415e873c	 
+steam	header-native-name	0x140a94030	0x140a946d1	0x140a942b3	0x1415e873c	 
+steam	header-native-name	0x140a94030	0x140a946d1	0x140a9450f	0x1415e873c	 
+steam	header-native-name	0x140a94030	0x140a946d1	0x140a9463b	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a948a3	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a9495e	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94a3b	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94a5d	0x1415ed9bc	The 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94a78	0x1415e8e48	the 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94af2	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94b11	0x1415ed9bc	The 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94b1a	0x1415e8e48	the 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94b9a	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94bb9	0x1415ed9bc	The 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94bc2	0x1415e8e48	the 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94d1f	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94d4b	0x1415ed9bc	The 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94d62	0x1415e8e48	the 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94e09	0x1415e873c	 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94e18	0x1416ced90	of 
+steam	header-english-name	0x140a946e0	0x140a94ea2	0x140a94e1f	0x1416cee1c	Of 
+classic	header-nickname-edit	0x14015a99e	0x14015b107	0x14015afba	0x1415e783c	_
+classic	header-nickname-edit	0x14015a99e	0x14015b107	0x14015b0c4	0x1415e783c	_
+classic	header-native-name	0x140a910b0	0x140a91751	0x140a911bd	0x1415e3720	 
+classic	header-native-name	0x140a910b0	0x140a91751	0x140a91333	0x1415e3720	 
+classic	header-native-name	0x140a910b0	0x140a91751	0x140a9158f	0x1415e3720	 
+classic	header-native-name	0x140a910b0	0x140a91751	0x140a916bb	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91923	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a919de	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91abb	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91add	0x1415e89c4	The 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91af8	0x1415e3e34	the 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91b72	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91b91	0x1415e89c4	The 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91b9a	0x1415e3e34	the 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91c1a	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91c39	0x1415e89c4	The 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91c42	0x1415e3e34	the 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91d9f	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91dcb	0x1415e89c4	The 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91de2	0x1415e3e34	the 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91e89	0x1415e3720	 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91e98	0x1416cb220	of 
+classic	header-english-name	0x140a91760	0x140a91f22	0x140a91e9f	0x1416cb2ac	Of 

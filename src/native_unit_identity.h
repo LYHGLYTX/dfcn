@@ -43,6 +43,7 @@ struct NativeUnitIdentity {
     bool use_custom = true, show_gender = false, include_status = false;
     bool name_fallback = false, english_name = false;
     bool name_quoted = false;
+    bool native_role_authored = false;
 };
 
 } // namespace dfcn

@@ -29,6 +29,43 @@ std::optional<std::string> Overlay::translate_unit_profession(
     if (auto role = RULESETS.translate_with_origins(
             native_text_to_utf8(title), "::professions::^0", origins)) return role;
 
+    // Tame/unowned and agitated prefixes wrap the complete native role, not
+    // only a species. Keep the caste prefix glossary authoritative.
+    for (const std::string_view prefix : {"stray ", "fierce ", "agitated "}) {
+        if (!folded.starts_with(prefix) || source.size() <= prefix.size()) continue;
+        const auto status = RULESETS.compose_bound_rule(
+            "::creatures::caste::name::prefix", std::string(prefix));
+        const auto remainder = std::string_view(source).substr(prefix.size());
+        auto role = translate_creature_label(remainder);
+        if (!role) role = translate_unit_profession(remainder, typed);
+        if (status && role) return *status + *role;
+    }
+
+    // Native role selection replaces adult roles with Slave/Prisoner, but
+    // appends the status to child/baby caste roles (PE 0x132fd3c/0x132feb3).
+    // Resolve the complete role before its status, including species words.
+    for (const auto &[suffix, label] : {
+            std::pair<std::string_view, std::string_view>{" slave", "Slave"},
+            {" prisoner", "Prisoner"}}) {
+        if (!folded.ends_with(suffix) || source.size() <= suffix.size()) continue;
+        const auto remainder = std::string_view(source).substr(0, source.size() - suffix.size());
+        auto role = translate_creature_label(remainder);
+        if (!role) role = translate_unit_profession(remainder, typed);
+        const auto status = exact_literal_translation(label);
+        if (role && status) return *role + "（" + *status + "）";
+    }
+
+    // The same formatter appends Corpse after the selected RAW/office role
+    // (PE 0x13301cb); preserve that role when resolving the animation suffix.
+    constexpr std::string_view corpse = " corpse";
+    if (folded.ends_with(corpse) && source.size() > corpse.size()) {
+        const auto remainder = std::string_view(source).substr(0, source.size() - corpse.size());
+        auto role = translate_creature_label(remainder);
+        if (!role) role = translate_unit_profession(remainder, typed);
+        const auto status = exact_literal_translation("corpse");
+        if (role && status) return *role + "的" + *status;
+    }
+
     // Native role formatters prepend Ghostly/ghostly to the complete role,
     // including an office's territory: Windows RVA 0x13300de, 0x1332f9c,
     // and 0x132f6d4. Their empty-role branches use Ghost/ghost instead.
