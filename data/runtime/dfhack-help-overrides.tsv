@@ -241,4 +241,15 @@ DFHack GUI Viewer status: Enabled defaults restored for gameplay tools.	玩法�
 DFHack GUI Viewer status: Autostart defaults restored for gameplay tools.	玩法扩展工具的自动启动状态已恢复为默认设置。	l
 DFHack GUI Viewer status: Overlay defaults restored.	界面覆盖层已恢复为默认设置。	l
 DFHack GUI Viewer status: Default preferences restored.	偏好已恢复为默认设置。	l
+
+# CP437 character picker: fixed GUI fields and their help-catalog equivalents.
+DFHack GUI Title: CP437 table	CP437 字符表	l
+DFHack GUI Caption: Click characters or type	点击字符或直接输入	l
+DFHack GUI Caption: Send text to parent	将文字输入原界面	l
+DFHack GUI Caption: Click here to Backspace	点击此处退格	l
+DFHack GUI Caption: Cancel	取消	l
+DFHack help: An in-game CP437 table.	游戏内的 CP437 字符表。	l
+DFHack help: Click characters or type	点击字符或直接输入	l
+DFHack help: Send text to parent	将文字输入原界面	l
+DFHack help: Click here to Backspace	点击此处退格	l
 DFHack help: No matches	没有匹配项	l

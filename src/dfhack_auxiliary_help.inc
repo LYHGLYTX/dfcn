@@ -418,6 +418,45 @@ std::vector<Match> dfhack_auxiliary_matches;
             auxiliary_literal(static_cast<int>(all), footer_y, "Cycle all", right);
         }
     }
+    // gui/cp437-table.lua owns a character palette and an EditField, not
+    // dictionary prose. Its complete labels distinguish the window; retain
+    // the palette, entered bytes, hotkeys and DFHack signature natively.
+    for (int title_y = 0; title_y < gps_->dimy; ++title_y) {
+        constexpr std::string_view title = "CP437 table";
+        constexpr std::string_view prompt = "Click characters or type";
+        constexpr std::string_view send = "Send text to parent";
+        constexpr std::string_view backspace = "Click here to Backspace";
+        constexpr std::string_view cancel = "Cancel";
+        const size_t at = dfhack_context_rows[title_y].find(title);
+        if (at == std::string::npos) continue;
+        const auto frame = native_dfhack_frame(dfhack_context_rows, title_y,
+            static_cast<int>(at), static_cast<int>(title.size()), 26, 26);
+        if (!frame) continue;
+        const int edge = frame->x + frame->w - 1;
+        const int bottom = frame->y + frame->h - 1;
+        const int left = frame->x + 2, right = edge - 1;
+        const int prompt_y = bottom - 4, footer_y = bottom - 2;
+        if (dfhack_context_rows[bottom].compare(edge - 7, 6, "DFHack") != 0 ||
+                dfhack_context_rows[prompt_y].compare(left, prompt.size(), prompt) != 0)
+            continue;
+        const auto &footer = dfhack_context_rows[footer_y];
+        const size_t send_at = footer.find(send, left);
+        if (send_at == std::string::npos) continue;
+        const size_t backspace_at = footer.find(backspace, send_at + send.size());
+        if (backspace_at == std::string::npos) continue;
+        const size_t cancel_at = footer.find(cancel, backspace_at + backspace.size());
+        if (cancel_at == std::string::npos ||
+                cancel_at + cancel.size() > static_cast<size_t>(right)) continue;
+        dfhack_auxiliary_regions.push_back(*frame);
+        gui_literal(static_cast<int>(at), title_y, title,
+            static_cast<int>(at + title.size()), "Title", true);
+        gui_literal(left, prompt_y, prompt, right, "Caption");
+        for (const auto &[x, source] : {
+                std::pair{send_at, send}, std::pair{backspace_at, backspace},
+                std::pair{cancel_at, cancel}})
+            gui_literal(static_cast<int>(x), footer_y, source,
+                static_cast<int>(x + source.size()), "Caption");
+    }
 #include "dfhack_control_panel.inc"
     // Ownership prevents generic rules from translating isolated help words
     // or key names. Unmapped source remains native until its complete entry

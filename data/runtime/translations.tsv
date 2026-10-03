@@ -35874,6 +35874,7 @@ Conversation keyword: neighbors town village	邻居 城镇 村庄	l
 Conversation keyword: service order room buy	服务 订单 客房 买入	l
 Creating Namaanenu, "The Everseeing Planets"	正在创建 Namaanenu, "永恒守望的行星"	w
 Credits: Additional changes for the SDL Port	SDL 移植的后续改进	wl
+DFHack GUI Caption: Click characters or type	点击字符或直接输入	l
 DFHack GUI Confirmation action: Yes, proceed	确认继续	l
 DFHack GUI Control tool: advtools.fastcombat	快速战斗（advtools.fastcombat）	l
 DFHack GUI Control tool: agitation-rebalance	平衡自然躁动（agitation-rebalance）	l
@@ -37182,6 +37183,7 @@ Conversation keyword: goodbye bye done quit	再见 告别 完毕 结束	l
 Conversation keyword: righteous indignation	义愤	l
 Conversation keyword: sleep permission rest	留宿 许可 休息	l
 Conversation prompt: About whom do you ask?	你想打听谁？	l
+DFHack GUI Caption: Click here to Backspace	点击此处退格	l
 DFHack GUI Control tool: burrow.designation	活动区域填充与框选（burrow.designation）	l
 DFHack GUI Control tool: exportlegends.mask	传奇导出退出保护（exportlegends.mask）	l
 DFHack GUI Control tool: fix/general-strike	解除矮人停工（fix/general-strike）	l
@@ -43080,6 +43082,7 @@ Conversation keyword: surgeon join work	外科医师 加入 工作	l
 Conversation keyword: surroundings area	周边 地区	l
 Conversation prompt: What will you say?	你想说些什么？	l
 DFHack GUI Caption: Hit "A" to add one!	按 A 添加命令！	l
+DFHack GUI Caption: Send text to parent	将文字输入原界面	l
 DFHack GUI Control tool: craft-age-wear	有机制品自然磨损（craft-age-wear）	l
 DFHack GUI Control tool: fix/dead-units	清理死者区域分配（fix/dead-units）	l
 DFHack GUI Control tool: fix/engravings	修复无法雕刻的地块（fix/engravings）	l
@@ -46389,7 +46392,7 @@ DFHack help: Already taking from here	已从这里获取	l
 DFHack help: An alias for stonesense.	Stonesense 的别名。	l
 DFHack help: CREATURE_MAT:DWARF:BRAIN	CREATURE_MAT:DWARF:BRAIN	l
 DFHack help: Choose item to put into:	选择要放入的项目：	l
-DFHack help: Click characters or type	单击字符或输入	l
+DFHack help: Click characters or type	点击字符或直接输入	l
 DFHack help: Click to place the point	单击放置点	l
 DFHack help: Command: "assign-facets"	命令："assign-facets"	l
 DFHack help: Command: "assign-skills"	命令："assign-skills"	l
@@ -48071,11 +48074,11 @@ DFHack help: -- at this point, so we	-- 此时，我们	l
 DFHack help: :6: masterfully trained	:6: masterfully trained	l
 DFHack help: Adjust a unit's skills.	调整单位技能。	l
 DFHack help: An available minecart (	可用的矿车 (	l
-DFHack help: An in-game CP437 table.	游戏中的 CP437 桌子。	l
+DFHack help: An in-game CP437 table.	游戏内的 CP437 字符表。	l
 DFHack help: Blank for always active	空白表示始终处于活动状态	l
 DFHack help: Choosing specific items	选择特定项目	l
 DFHack help: Clear any designations.	清除任何规划标记。	l
-DFHack help: Click here to Backspace	单击此处退格	l
+DFHack help: Click here to Backspace	点击此处退格	l
 DFHack help: Command: "assign-goals"	命令："assign-goals"	l
 DFHack help: Command: "autoclothing"	命令："autoclothing"	l
 DFHack help: Command: "autotraining"	命令："autotraining"	l
@@ -55613,7 +55616,7 @@ DFHack help: Rationale ---------	原理---------	l
 DFHack help: Restricted Traffic.	交通限制。	l
 DFHack help: Selectors ---------	选择器---------	l
 DFHack help: Selects male units.	选择男性单位。	l
-DFHack help: Send text to parent	发送短信给家长	l
+DFHack help: Send text to parent	将文字输入原界面	l
 DFHack help: Setting stockpile #	设置储物堆 #	l
 DFHack help: Show only in stock:	仅显示有货：	l
 DFHack help: Single level stair:	单层楼梯：	l
@@ -61558,6 +61561,7 @@ Conversation keyword: writing	著作	l
 Credits: Bug Tracker Managers	问题追踪系统管理员	wl
 DFHack GUI Caption: Edit name	编辑名称	l
 DFHack GUI Title: Add command	添加命令	l
+DFHack GUI Title: CP437 table	CP437 字符表	l
 DFHack help: "--emotion <id>"	"--emotion <id>"	l
 DFHack help: "--race <value>"	"--race <value>"	l
 DFHack help: "--straightOnly"	"--straightOnly"	l
@@ -67451,6 +67455,7 @@ Conversation keyword: work	工作	l
 Conversation keyword: zeal	热忱	l
 Credits: Alexandra Orlando	Alexandra Orlando	wl
 Credits: Patrick Schroeder	Patrick Schroeder	wl
+DFHack GUI Caption: Cancel	取消	l
 DFHack GUI Caption: Hotkey	快捷键	l
 DFHack GUI Title: Set name	设置名称	l
 DFHack help: "--age <num>"	"--age <num>"	l
