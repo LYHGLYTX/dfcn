@@ -10035,3 +10035,17 @@ Popup: Justice	弹窗：司法	w
 Popup: Work orders	弹窗：工作指令	w
 Popup: The world	弹窗：世界	w
 Bins, bags, and barrels	箱子、袋子与桶	w
+
+# Visitor Overview employment paragraphs. Native Windows literals at file
+# offsets 0x16012a8..0x1601594 assemble the purpose, pronoun and named location
+# before wrapping. Keep both sentences together; {s} is the complete role and
+# {e} uses the shared generated-location name grammar.
+This visitor has come seeking work as a {s}. He heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come seeking work as a {s}. She heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。她听说可以在{e1}找到长期工作。	hPt
+This visitor has come seeking work as a {s}. It heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come seeking work as a {s}. He heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come seeking work as a {s}. She heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。她听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come seeking work as a {s}. It heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。它听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
+This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
