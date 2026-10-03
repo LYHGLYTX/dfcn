@@ -238,7 +238,8 @@ static double parse_double(const std::string &value, double fallback) {
     char *end = nullptr;
     errno = 0;
     double parsed = std::strtod(value.c_str(), &end);
-    if (errno || end == value.c_str() || *end != '\0') return fallback;
+    if (errno || end == value.c_str() || *end != '\0' || !std::isfinite(parsed))
+        return fallback;
     return parsed;
 }
 
@@ -273,6 +274,7 @@ static void log_translation_state_timing(const TranslationStateTiming &sample) {
 }
 
 struct Config {
+    static constexpr double default_font_scale = 0.92;
     bool enabled = true;
     bool hot_reload = true;
     bool clear_background = true;
@@ -290,7 +292,7 @@ struct Config {
     int max_cached_textures = 2048;
     int collect_interval_seconds = 2;
     int max_untranslated_entries = 50000;
-    double font_scale = 0.92;
+    double font_scale = default_font_scale;
     double knowledge_font_scale = 1.0;
     std::string mapping_path = "dfcn/data/runtime/translations.tsv";
     std::string font_path;
@@ -4606,7 +4608,9 @@ bool Overlay::load_config() {
 
     const bool font_changed = next.font_path != config_.font_path ||
                               next.font_index != config_.font_index ||
-                              next.font_pixels != config_.font_pixels;
+                              next.font_pixels != config_.font_pixels ||
+                              next.font_scale != config_.font_scale ||
+                              next.min_font_pixels != config_.min_font_pixels;
     if (runtime_enabled_override_) next.enabled = *runtime_enabled_override_;
     config_ = std::move(next);
     translation_enabled_snapshot_.store(config_.enabled, std::memory_order_release);
@@ -5510,13 +5514,20 @@ void Overlay::clear_fallback_fonts() {
 
 int Overlay::unified_font_pixels() const {
     if (config_.font_pixels > 0) return config_.font_pixels;
+    // Preserve the native-ink calibration at the established default scale.
+    // User scaling changes this one shared size, never a page-specific fit.
+    const auto scaled_pixels = [this](int pixels) {
+        return std::clamp(std::max(config_.min_font_pixels,
+            static_cast<int>(std::lround(pixels * config_.font_scale /
+                Config::default_font_scale))), 1, 512);
+    };
     const int row_height = gps_ && gps_->tile_pixel_y > 0 ? gps_->tile_pixel_y : 16;
     const int line_limit = std::max(1, row_height - 2);
     const int ink_height = std::clamp(native_english_ink_height(row_height)
         .value_or(line_limit), 1, line_limit);
     if (calibrated_row_height_ == row_height && calibrated_ink_height_ == ink_height &&
-        calibrated_font_pixels_ > 0) return calibrated_font_pixels_;
-    if (!face_) return ink_height;
+        calibrated_font_pixels_ > 0) return scaled_pixels(calibrated_font_pixels_);
+    if (!face_) return scaled_pixels(ink_height);
 
     // An em size is not a visible pixel height. Measure hinted Han bitmaps
     // against the native alphabet, and keep the stable cursor/descender box
@@ -5544,12 +5555,13 @@ int Overlay::unified_font_pixels() const {
         }
     }
     // Measurement changes the selected face size, including fallback faces.
-    FT_Set_Pixel_Sizes(face_, 0, selected);
-    for (FT_Face face : fallback_fonts_) FT_Set_Pixel_Sizes(face, 0, selected);
+    const int pixels = scaled_pixels(selected);
+    FT_Set_Pixel_Sizes(face_, 0, pixels);
+    for (FT_Face face : fallback_fonts_) FT_Set_Pixel_Sizes(face, 0, pixels);
     calibrated_row_height_ = row_height;
     calibrated_ink_height_ = ink_height;
     calibrated_font_pixels_ = selected;
-    return selected;
+    return pixels;
 }
 
 bool Overlay::set_font_pixel_size(int pixels) const {
@@ -5735,6 +5747,9 @@ bool Overlay::load_font() {
             }
         }
     }
+#ifdef _WIN32
+    const bool use_default_font = path.empty();
+#endif
     if (path.empty()) native_find_font(path, index);
     if (path.empty()) {
         log_line("ERROR", "No CJK font found. Set font= in " + runtime::utf8(runtime::config_path()));
@@ -5747,6 +5762,18 @@ bool Overlay::load_font() {
                               std::to_string(index) + " (error " + std::to_string(error) + ")");
         return false;
     }
+#ifdef _WIN32
+    if (use_default_font) {
+        // Keep the established default family and medium weight when the
+        // user has not supplied a font. The discovered file is still
+        // registered so a private/default font remains available to GDI.
+        face_->family.clear();
+        face_->font_description = {};
+        face_->font_description.lfWeight = FW_MEDIUM;
+        face_->font_description.lfCharSet = DEFAULT_CHARSET;
+        face_->font_description.lfPitchAndFamily = DEFAULT_PITCH | FF_DONTCARE;
+    }
+#endif
     active_font_path_ = path;
     active_font_index_ = index;
     log_line("INFO", "Using font " + path + " (face index " + std::to_string(index) + ")");

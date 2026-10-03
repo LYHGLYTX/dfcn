@@ -4,6 +4,7 @@
 #define NOMINMAX
 #endif
 #include <windows.h>
+#include <dwrite.h>
 
 #include <algorithm>
 #include <cstddef>
@@ -47,6 +48,8 @@ struct FT_FaceRec_ {
     int pixel_size = 0;
     std::wstring family;
     std::wstring private_font_path;
+    LOGFONTW font_description{};
+    bool private_font_registered = false;
     std::vector<unsigned char> bitmap_storage;
     FT_GlyphSlotRec_ glyph_storage{};
     FT_GlyphSlot glyph = &glyph_storage;
@@ -90,10 +93,86 @@ inline FT_Error FT_Done_FreeType(FT_Library library) {
     return 0;
 }
 
-inline FT_Error FT_New_Face(FT_Library, const char *path, long, FT_Face *result) {
+inline bool dfcn_font_file_description(const std::wstring &path, long face_index,
+        LOGFONTW &description) {
+    if (face_index < 0) return false;
+    // DirectWrite supplies the selected collection face's GDI family and
+    // style. Registering a file alone does not make CreateFont select it.
+    HMODULE module = LoadLibraryExW(L"dwrite.dll", nullptr,
+        LOAD_LIBRARY_SEARCH_SYSTEM32);
+    if (!module) return false;
+    using CreateFactory = HRESULT (WINAPI *)(DWRITE_FACTORY_TYPE, REFIID, IUnknown **);
+    const auto create_factory = reinterpret_cast<CreateFactory>(
+        GetProcAddress(module, "DWriteCreateFactory"));
+    IDWriteFactory *factory = nullptr;
+    IDWriteFontFile *file = nullptr;
+    IDWriteFontFace *face = nullptr;
+    IDWriteGdiInterop *interop = nullptr;
+    HRESULT status = E_FAIL;
+    if (create_factory) {
+        // Keep the GUID local: neither DirectWrite nor its import library is
+        // required by the existing native link configuration.
+        const IID factory_iid = {0xb859ee5a, 0xd838, 0x4b5b,
+            {0xa2, 0xe8, 0x1a, 0xdc, 0x7d, 0x93, 0xdb, 0x48}};
+        status = create_factory(DWRITE_FACTORY_TYPE_ISOLATED, factory_iid,
+            reinterpret_cast<IUnknown **>(&factory));
+    }
+    if (SUCCEEDED(status))
+        status = factory->CreateFontFileReference(path.c_str(), nullptr, &file);
+    BOOL supported = FALSE;
+    DWRITE_FONT_FILE_TYPE file_type = DWRITE_FONT_FILE_TYPE_UNKNOWN;
+    DWRITE_FONT_FACE_TYPE face_type = DWRITE_FONT_FACE_TYPE_UNKNOWN;
+    UINT32 face_count = 0;
+    if (SUCCEEDED(status))
+        status = file->Analyze(&supported, &file_type, &face_type, &face_count);
+    if (SUCCEEDED(status) && (!supported ||
+            static_cast<unsigned long>(face_index) >= face_count)) status = E_FAIL;
+    if (SUCCEEDED(status))
+        status = factory->CreateFontFace(face_type, 1, &file,
+            static_cast<UINT32>(face_index), DWRITE_FONT_SIMULATIONS_NONE, &face);
+    if (SUCCEEDED(status)) status = factory->GetGdiInterop(&interop);
+    if (SUCCEEDED(status)) status = interop->ConvertFontFaceToLOGFONT(face, &description);
+    if (interop) interop->Release();
+    if (face) face->Release();
+    if (file) file->Release();
+    if (factory) factory->Release();
+    FreeLibrary(module);
+    return SUCCEEDED(status) && description.lfFaceName[0] != L'\0';
+}
+
+inline FT_Error FT_New_Face(FT_Library, const char *path, long face_index, FT_Face *result) {
     if (!result) return 1;
+    *result = nullptr;
     auto *face = new (std::nothrow) FT_FaceRec_();
     if (!face) return 1;
+    face->font_description.lfWeight = FW_MEDIUM;
+    face->font_description.lfCharSet = DEFAULT_CHARSET;
+    face->font_description.lfPitchAndFamily = DEFAULT_PITCH | FF_DONTCARE;
+    if (path && *path) {
+        const std::wstring requested_path = dfcn_utf8_to_wide(path);
+        const DWORD needed = requested_path.empty() ? 0 :
+            GetFullPathNameW(requested_path.c_str(), 0, nullptr, nullptr);
+        if (!needed) {
+            delete face;
+            return 1;
+        }
+        face->private_font_path.resize(needed);
+        const DWORD length = GetFullPathNameW(requested_path.c_str(), needed,
+            face->private_font_path.data(), nullptr);
+        if (!length || length >= needed) {
+            delete face;
+            return 1;
+        }
+        face->private_font_path.resize(length);
+        const DWORD attributes = GetFileAttributesW(face->private_font_path.c_str());
+        if (attributes == INVALID_FILE_ATTRIBUTES || (attributes & FILE_ATTRIBUTE_DIRECTORY) ||
+                !dfcn_font_file_description(face->private_font_path, face_index,
+                    face->font_description)) {
+            delete face;
+            return 1;
+        }
+        face->family = face->font_description.lfFaceName;
+    }
     face->dc = CreateCompatibleDC(nullptr);
     if (!face->dc) {
         delete face;
@@ -102,10 +181,13 @@ inline FT_Error FT_New_Face(FT_Library, const char *path, long, FT_Face *result)
     SetBkMode(face->dc, TRANSPARENT);
     SetTextColor(face->dc, RGB(255, 255, 255));
     face->glyph_storage.owner = face;
-    face->private_font_path = dfcn_utf8_to_wide(path);
-    if (!face->private_font_path.empty() &&
-        GetFileAttributesW(face->private_font_path.c_str()) != INVALID_FILE_ATTRIBUTES) {
-        AddFontResourceExW(face->private_font_path.c_str(), FR_PRIVATE, nullptr);
+    if (!face->private_font_path.empty()) {
+        if (AddFontResourceExW(face->private_font_path.c_str(), FR_PRIVATE, nullptr) <= 0) {
+            DeleteDC(face->dc);
+            delete face;
+            return 1;
+        }
+        face->private_font_registered = true;
     }
     *result = face;
     return 0;
@@ -116,7 +198,7 @@ inline FT_Error FT_Done_Face(FT_Face face) {
     if (face->previous_font) SelectObject(face->dc, face->previous_font);
     if (face->font) DeleteObject(face->font);
     if (face->dc) DeleteDC(face->dc);
-    if (!face->private_font_path.empty()) {
+    if (face->private_font_registered) {
         RemoveFontResourceExW(face->private_font_path.c_str(), FR_PRIVATE, nullptr);
     }
     delete face;
@@ -134,16 +216,22 @@ inline FT_Error FT_Set_Pixel_Sizes(FT_Face face, FT_UInt, FT_UInt height) {
         DeleteObject(face->font);
         face->font = nullptr;
     }
-    face->font = CreateFontW(-static_cast<int>(height), 0, 0, 0, FW_MEDIUM, FALSE,
-                             FALSE, FALSE, DEFAULT_CHARSET, OUT_TT_PRECIS,
-                             CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY,
-                             DEFAULT_PITCH | FF_DONTCARE,
-                             face->family.empty() ? L"Noto Sans SC" : face->family.c_str());
+    LOGFONTW description = face->font_description;
+    description.lfHeight = -static_cast<int>(height);
+    description.lfWidth = 0;
+    description.lfEscapement = 0;
+    description.lfOrientation = 0;
+    description.lfUnderline = FALSE;
+    description.lfStrikeOut = FALSE;
+    description.lfOutPrecision = OUT_TT_PRECIS;
+    description.lfClipPrecision = CLIP_DEFAULT_PRECIS;
+    description.lfQuality = ANTIALIASED_QUALITY;
+    lstrcpynW(description.lfFaceName,
+        face->family.empty() ? L"Noto Sans SC" : face->family.c_str(), LF_FACESIZE);
+    face->font = CreateFontIndirectW(&description);
     if (!face->font && face->family.empty()) {
-        face->font = CreateFontW(-static_cast<int>(height), 0, 0, 0, FW_MEDIUM, FALSE,
-                                 FALSE, FALSE, DEFAULT_CHARSET, OUT_TT_PRECIS,
-                                 CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY,
-                                 DEFAULT_PITCH | FF_DONTCARE, L"Microsoft YaHei");
+        lstrcpynW(description.lfFaceName, L"Microsoft YaHei", LF_FACESIZE);
+        face->font = CreateFontIndirectW(&description);
     }
     if (!face->font) return 1;
     face->previous_font = SelectObject(face->dc, face->font);

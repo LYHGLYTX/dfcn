@@ -539,19 +539,30 @@ ABI 4 跨核心传递完整段落、知识与人物文档的原文、行内容�
 | `mapping` | 运行时映射文件路径 |
 | `compositional_rules` | 是否启用递归 TOML 组合翻译 |
 | `font`、`font_index` | 字体文件及字体集合中的字面索引 |
-| `font_pixels` | 0 按原版英文字母实际像素高度自动标定中文字号；正数直接指定 em 像素字号 |
-| `font_scale`、`min_font_pixels`、`knowledge_font_scale` | 兼容旧版排版提示，不改变统一绘制字号 |
+| `font_pixels` | 0 按原版英文字母实际像素高度自动标定中文字号；正数直接指定 em 像素字号，优先于比例和下限设置 |
+| `font_scale` | 自动字号的统一比例，以默认值 0.92 为基准；增大时放大全界面中文字号 |
+| `min_font_pixels` | 自动字号的 em 像素下限；不覆盖正数 `font_pixels` |
+| `knowledge_font_scale` | 兼容旧版排版提示，不单独改变知识页绘制字号 |
 | `hot_reload` | 是否按一秒周期检查配置与词表变化 |
 | `collect_untranslated` | 是否采集未完整翻译的片段 |
 | `collect_interval_seconds` | 自动采集间隔，默认两秒 |
 | `max_untranslated_entries` | 漏译队列容量，默认 50000 项；满额会明确写入日志 |
 | `max_cached_textures` | 字形纹理缓存数量上限 |
 
+运行时读取已安装核心所在目录的 `data/runtime/config.ini`。源码工作区与游戏安装
+分开时，游戏使用安装目录中的配置；编译部署保留各安装现有配置，不用源码配置
+覆盖用户设置。
+
 字体可以指定路径，也可以放置为 `dfcn/data/runtime/font.ttf`、`dfcn/data/runtime/font.otf` 或 `dfcn/data/runtime/font.ttc`；
-未指定时由本机字体接口选择可用的简体中文字体。自动字号读取原版字体图集，
+Windows 未指定字体时沿用默认的 `Noto Sans SC` 和中等字重；Linux 由本机字体接口
+选择可用的简体中文字体。指定 `font` 或放置上述本地字体文件时，Windows 绘制使用
+该文件及 `font_index` 选择的字面。自动字号读取原版字体图集，
 计算英文字母随 UI 缩放后的可见像素高度，再测量中文字体实际栅格化后的墨迹，
 选择最接近且不超出目标高度的字号。同时将括号、下伸字母和编辑光标的共同
-参考范围留在原版行高内，避免相同行数因额外行距逐渐越过边框。
+参考范围留在原版行高内，避免相同行数因额外行距逐渐越过边框。标定后按
+`font_scale / 0.92` 调节全界面的统一字号，并应用 `min_font_pixels` 下限。
+`font_pixels` 为正数时直接采用指定的 em 像素字号，不受这两项自动设置覆盖；
+`knowledge_font_scale` 仍只作为旧版排版提示。
 
 主字体缺少某个字形时，共享渲染层通过本机字体接口从已安装字体中寻找真正包含
 该字符的轮廓字形，不改写原字符，也不替换整行中文字体。例如思源黑体缺少的
