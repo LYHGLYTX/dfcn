@@ -78,6 +78,21 @@ std::optional<std::string> Overlay::translate_adventure_target_text(
         // A formatter-owned unit/item/anatomy capture is resolved by that
         // type before a same-spelled status or ordinary dictionary word.
         if (kind == 'n') {
+            // Target records draw the conflict label and its punctuation
+            // before the unit formatter advances the same native cursor.
+            // Own them as one caption so the colon cannot leave the name
+            // centered independently in its original English span.
+            for (const std::string_view level : {"Encounter", "Horseplay", "Training",
+                    "Brawl", "Non-lethal", "Lethal", "No Quarter"}) {
+                if (!source.starts_with(level) ||
+                        !std::string_view(source).substr(level.size()).starts_with(": "))
+                    continue;
+                const auto conflict = exact_literal_translation(level);
+                const auto identity = resolve(std::string_view(source).substr(level.size() + 2), 'n');
+                const auto colon = adventure_target_literals_.find(":");
+                return finish(conflict && identity && colon != adventure_target_literals_.end()
+                    ? Result(*conflict + colon->second + *identity) : std::nullopt);
+            }
             if (source == "you" || source == "You") {
                 const auto found = adventure_target_literals_.find(source);
                 if (found != adventure_target_literals_.end()) return finish(found->second);

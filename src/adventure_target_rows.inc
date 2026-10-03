@@ -49,10 +49,10 @@ static std::optional<SDL_Rect> adventure_target_record(const graphicst &gps,
 void Overlay::layout_adventure_target_rows(SDL_Renderer *renderer) {
     if (!gps_ || !renderer || !face_ || gps_->tile_pixel_x <= 0 ||
             gps_->tile_pixel_y <= 0) return;
-    constexpr std::string_view prompt = "Who will you attack?";
     const NativePanelBorders borders(*gps_);
     for (const auto &heading : prepared_matches_) {
-        if (heading.source != prompt) continue;
+        if (heading.source != "Who will you attack?" &&
+                heading.source != "Who will you wrestle?") continue;
         const auto panel = native_panel_interior(borders, *gps_, heading.x,
             heading.x + heading.length, heading.y);
         if (!panel) continue;
