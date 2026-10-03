@@ -155,7 +155,11 @@ std::vector<Match> dfhack_auxiliary_matches;
             const int bottom = frame->y + frame->h - 1;
             if (dfhack_context_rows[bottom].compare(right - 7, 6, "DFHack") != 0) continue;
             if (quickstart) {
-                const auto &footer = dfhack_context_rows[bottom - 1];
+                // Window's frame_inset and framed Panel gap each consume
+                // one cell. Its b=0 controls therefore sit two rows above
+                // the border, not on the intervening padding row.
+                const int footer_y = bottom - 2;
+                const auto &footer = dfhack_context_rows[footer_y];
                 const auto page = footer.find("Page ", frame->x + 1);
                 if (page == std::string::npos || page >= static_cast<size_t>(right) ||
                     footer.find(" of ", page + 5) == std::string::npos) continue;
@@ -178,13 +182,13 @@ std::vector<Match> dfhack_auxiliary_matches;
                         if (placeholder == std::string::npos) { complete = false; break; }
                         counter->replace(placeholder, 3, value);
                     }
-                    const auto raw = read_row(bottom - 1);
+                    const auto raw = read_row(footer_y);
                     if (complete && raw.compare(page, counter_end - page,
                             footer, page, counter_end - page) == 0) {
-                        dfhack_auxiliary_regions.push_back({static_cast<int>(page), bottom - 1,
+                        dfhack_auxiliary_regions.push_back({static_cast<int>(page), footer_y,
                             static_cast<int>(counter_end - page), 1});
-                        if (only_y < 0 || only_y == bottom - 1) {
-                            Match match{static_cast<int>(page), bottom - 1,
+                        if (only_y < 0 || only_y == footer_y) {
+                            Match match{static_cast<int>(page), footer_y,
                                 static_cast<int>(counter_end - page), kDfhackHotkeysHintRule,
                                 *counter, footer.substr(page, counter_end - page)};
                             match.layout_x = static_cast<int>(page);
@@ -197,17 +201,24 @@ std::vector<Match> dfhack_auxiliary_matches;
                 }
                 const auto back = footer.find("Back", frame->x + 1);
                 if (back != std::string::npos && back < static_cast<size_t>(right))
-                    auxiliary_literal(static_cast<int>(back), bottom - 1, "Back", right);
+                    auxiliary_literal(static_cast<int>(back), footer_y, "Back", right);
                 const auto next = footer.find("Next", page + 5);
                 if (next != std::string::npos && next < static_cast<size_t>(right))
-                    auxiliary_literal(static_cast<int>(next), bottom - 1, "Next", right);
+                    auxiliary_literal(static_cast<int>(next), footer_y, "Next", right);
             }
+            // The frame signature is branding, never a generated person name.
+            // Reserving its native bytes leaves DFHack's own glyphs untouched.
+            dfhack_auxiliary_regions.push_back({right - 7, bottom, 6, 1});
             dfhack_auxiliary_regions.push_back(
                 {at, y, static_cast<int>(title.size()), 1});
             auxiliary_literal(at, y, title, right);
-            const SDL_Rect body{frame->x + 1, frame->y + 1,
-                frame->w - (advfort ? 3 : 5), frame->h - (quickstart ? 4 : (advfort ? 4 : 2))};
-            auxiliary_body(body, advfort ? body.w : frame->w - 5, advfort);
+            // Quickstart's Pages leaves two rows for navigation. WrappedLabel
+            // also keeps three columns beside its text for the scrollbar.
+            const SDL_Rect body = quickstart
+                ? SDL_Rect{frame->x + 2, frame->y + 2, frame->w - 7, frame->h - 6}
+                : SDL_Rect{frame->x + 1, frame->y + 1,
+                    frame->w - (advfort ? 3 : 5), frame->h - (advfort ? 4 : 2)};
+            auxiliary_body(body, quickstart || advfort ? body.w : frame->w - 5, advfort);
         }
     }
     // The tag filter is a 46-column panel inside the launcher. Its controls
