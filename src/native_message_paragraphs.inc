@@ -99,6 +99,205 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
     // word or sentence can claim only part of it. A missing production is
     // collected as a whole original message, never erased or phoneticized.
     const auto announcements = native_announcement_sources();
+    if (announcements_only) {
+        // The compact Announcements/Done log draws separate addst records,
+        // without requiring a captured paragraph or a history-source match.
+        // Its closed frame and header own those records before generic prose,
+        // names and item captions can consume or join their individual fields.
+        // In classic mode a scrollbar block (0xdb) next to the vertical
+        // border (0xb3) forms valid UTF-8 bytes. The known modal header lets
+        // the live border skin and palette prove the frame without treating
+        // those neighbouring native widgets as an authored text sequence.
+        const NativePanelBorders announcement_borders(*gps_, true);
+        constexpr std::string_view heading = "Announcements", done = "Done";
+        const auto owned_text = [&](int x, int y, std::string_view source) {
+            if (screen_rows[y].compare(x, source.size(), source) != 0) return false;
+            for (size_t at = 0; at < source.size(); ++at)
+                if (source[at] != ' ' && !visible_layer(x + static_cast<int>(at), y))
+                    return false;
+            return true;
+        };
+        for (int header_y = 1; header_y < gps_->dimy - 1; ++header_y) {
+            const auto &header = screen_rows[header_y];
+            const auto title_at = header.find(heading);
+            if (title_at == std::string::npos ||
+                    !has_word_boundaries(header, title_at, title_at + heading.size()) ||
+                    !owned_text(static_cast<int>(title_at), header_y, heading)) continue;
+            const auto panel = native_panel_interior(announcement_borders, *gps_,
+                static_cast<int>(title_at), static_cast<int>(title_at + heading.size()), header_y);
+            if (!panel || !trim_view(std::string_view(header).substr(
+                    panel->x, title_at - panel->x)).empty()) continue;
+            const auto done_at = header.find(done, title_at + heading.size());
+            if (done_at == std::string::npos || done_at + done.size() >
+                    static_cast<size_t>(panel->x + panel->w) ||
+                    !has_word_boundaries(header, done_at, done_at + done.size()) ||
+                    !owned_text(static_cast<int>(done_at), header_y, done)) continue;
+            const auto button = native_button_text_rect(*gps_, static_cast<int>(done_at),
+                static_cast<int>(done_at + done.size()), header_y);
+            if (!button) continue;
+            // The caption rectangle excludes both side caps. Classic mode
+            // writes their CP437 glyphs into this same row, while graphical
+            // mode draws textures over blank cells. The header gap must end
+            // before the complete button frame in either representation.
+            const SDL_Rect button_frame{button->x - 1, button->y, button->w + 2, button->h};
+            if (button_frame.x < panel->x || button_frame.x + button_frame.w > panel->x + panel->w ||
+                    button_frame.y < panel->y || button_frame.y + button_frame.h > panel->y + panel->h ||
+                    button_frame.x < static_cast<int>(title_at + heading.size()) ||
+                    !trim_view(std::string_view(header).substr(title_at + heading.size(),
+                        button_frame.x - title_at - heading.size())).empty()) continue;
+            const int body_top = std::max(header_y + 1, button_frame.y + button_frame.h);
+            const int bottom = panel->y + panel->h;
+            int right = panel->x + panel->w;
+            for (const auto &scroll : native_vertical_scrollbar_spans(*gps_, *panel))
+                if (scroll.y + scroll.h > body_top)
+                    right = std::min(right, scroll.x);
+            if (right <= static_cast<int>(title_at) || body_top >= bottom) continue;
+            const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
+            const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
+            const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
+            const auto record_row = [&](int y) -> std::optional<Match> {
+                const auto physical = std::string_view(screen_rows[y]).substr(panel->x, right - panel->x);
+                const auto text = trim_view(physical);
+                if (text.empty()) return std::nullopt;
+                const int x = panel->x + static_cast<int>(text.data() - physical.data());
+                if (!owned_text(x, y, text)) return std::nullopt;
+                return Match{x, y, static_cast<int>(text.size()), kAnnouncementListRule,
+                    {}, std::string(text)};
+            };
+            // Staging layout never changes the live record's source ownership
+            // until its entire translation fits its own native row allocation.
+            auto layout_rows = screen_rows;
+            for (int y = body_top; y < bottom; ++y) {
+                const auto first = record_row(y);
+                if (!first) continue;
+                std::vector<Match> rows{*first};
+                std::string source = first->source;
+                auto colors = message_foregrounds(first->x, first->y, first->length);
+                std::vector<int> target_colors;
+                auto target = translate_complete_announcement(source, colors, target_colors);
+                // An original complete record proves its wrap directly.
+                // Same colors, punctuation and indent alone never merge
+                // two independent log entries.
+                while (!target && y + 1 < bottom) {
+                    const auto normalized = native_announcement_display_source(source);
+                    const auto candidate = announcements->sorted_originals.lower_bound(normalized);
+                    if (candidate == announcements->sorted_originals.end() ||
+                            !candidate->starts_with(normalized) || *candidate == normalized) break;
+                    const auto next = record_row(y + 1);
+                    if (!next || next->x != first->x) break;
+                    const auto joined = source + ' ' + next->source;
+                    const auto joined_key = native_announcement_display_source(joined);
+                    const auto complete = announcements->sorted_originals.lower_bound(joined_key);
+                    if (complete == announcements->sorted_originals.end() ||
+                            !complete->starts_with(joined_key)) break;
+                    source = joined;
+                    colors.push_back(colors.back());
+                    const auto next_colors = message_foregrounds(next->x, next->y, next->length);
+                    colors.insert(colors.end(), next_colors.begin(), next_colors.end());
+                    rows.push_back(*next);
+                    ++y;
+                    target = translate_complete_announcement(source, colors, target_colors);
+                }
+                // A visible cancellation can differ from the retained history
+                // text (for example its current name/profession formatting).
+                // Recover its wrapped reason through ONE complete catalogue
+                // rule, rather than requiring an identical historical prefix.
+                // The actor and job must both end on the original first row;
+                // a later record cannot supply another actor or cancels clause.
+                if (!target && source.find(" cancels ") != std::string::npos &&
+                        std::string_view(".!?").find(source.back()) == std::string_view::npos) {
+                    auto candidate_rows = rows;
+                    auto candidate_source = source;
+                    auto candidate_colors = colors;
+                    int candidate_y = y;
+                    while (candidate_y + 1 < bottom) {
+                        const auto next = record_row(candidate_y + 1);
+                        if (!next || next->x != first->x ||
+                                message_foreground(next->x, next->y) != colors.front()) break;
+                        const auto next_colors = message_foregrounds(next->x, next->y, next->length);
+                        candidate_source += ' ';
+                        candidate_source += next->source;
+                        candidate_colors.push_back(candidate_colors.back());
+                        candidate_colors.insert(candidate_colors.end(), next_colors.begin(), next_colors.end());
+                        candidate_rows.push_back(*next);
+                        ++candidate_y;
+                        const auto compact = compact_ui_message_literal(candidate_source);
+                        for (int index : ui_message_anchors_.candidates(compact)) {
+                            const auto &probe = message_templates[index];
+                            const Rule &rule = rules_[static_cast<size_t>(probe.index)];
+                            if (!rule.source.starts_with("{n} cancels {s}: ") ||
+                                    !compact.starts_with(probe.prefix) || !compact.ends_with(probe.suffix)) continue;
+                            std::vector<std::string> captures;
+                            std::vector<std::pair<size_t, size_t>> ranges;
+                            if (!match_catalog_template(rule, candidate_source, 0, captures, ranges,
+                                    &candidate_colors) || ranges.size() < 2 ||
+                                    ranges[0].second > first->source.size() ||
+                                    ranges[1].second > first->source.size()) continue;
+                            std::vector<int> resolved_colors;
+                            const auto resolved = translate_help_paragraph(candidate_source, candidate_colors,
+                                resolved_colors, true, probe.index);
+                            // required_rule excludes composition of several
+                            // neighbouring announcements and resolves every
+                            // job, person and requirement field in this one.
+                            if (!resolved) continue;
+                            target = resolved;
+                            target_colors = std::move(resolved_colors);
+                            break;
+                        }
+                        if (target) {
+                            rows = std::move(candidate_rows);
+                            source = std::move(candidate_source);
+                            colors = std::move(candidate_colors);
+                            y = candidate_y;
+                            break;
+                        }
+                        // A continuation such as "item." may itself be a
+                        // translatable phrase. Prove the complete cancellation
+                        // first, before treating that phrase as another entry.
+                        std::vector<int> independent_colors;
+                        if (translate_complete_announcement(next->source, next_colors, independent_colors)) break;
+                        if (std::string_view(".!?").find(candidate_source.back()) != std::string_view::npos) break;
+                    }
+                }
+                const SDL_Rect clip{origin_x + first->x * tile_w, origin_y + first->y * tile_h,
+                    (right - first->x) * tile_w, static_cast<int>(rows.size()) * tile_h};
+                for (auto &row : rows) row.layout_native_clip = clip;
+                std::vector<Match> output;
+                const bool fitted = target && append_bounded_paragraph(rows, *target,
+                    layout_rows, output, -1, right, right, target_colors, false, first->x) &&
+                    std::none_of(output.begin(), output.end(), [&](const Match &row) {
+                        return !row.target.empty() && row.layout_y * tile_h + row.layout_pixel_y +
+                            row.layout_line_height_pixels > (y + 1) * tile_h;
+                    });
+                if (fitted) {
+                    for (auto &row : output)
+                        if (only_y < 0 || only_y == row.y) result.push_back(std::move(row));
+                } else {
+                    rows.front().native_help_review_source = source;
+                    for (auto &row : rows) {
+                        row.native_help_source_only = true;
+                        untranslated_help_rows.push_back(std::move(row));
+                    }
+                }
+                for (int row_y = first->y; row_y <= y; ++row_y)
+                    std::fill(screen_rows[row_y].begin() + panel->x,
+                        screen_rows[row_y].begin() + right, ' ');
+            }
+            // The native heading is left-aligned at the list's margin too.
+            if (const auto title = exact_literal_translation(heading)) {
+                Match caption{static_cast<int>(title_at), header_y, static_cast<int>(heading.size()),
+                    kAnnouncementListRule, *title, std::string(heading)};
+                caption.layout_x = caption.x;
+                caption.layout_length = caption.length;
+                caption.layout_left = true;
+                caption.layout_font_pixels = unified_font_pixels();
+                caption.layout_lock_font_pixels = true;
+                caption.layout_foreground_rgb = message_foreground(caption.x, caption.y);
+                if (only_y < 0 || only_y == header_y) result.push_back(std::move(caption));
+                std::fill_n(screen_rows[header_y].begin() + title_at, heading.size(), ' ');
+            }
+        }
+    }
     // Native wrap rows carry both their complete source and their live
     // draw identity. A scrolled report may expose only a continuation;
     // identical suffix text alone must never select a different record.

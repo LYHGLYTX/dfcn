@@ -2,7 +2,7 @@ base = "professions"
 
 [[rulesets]]
 [rulesets.rules]
-"Woodworker" = "樵夫"
+"Woodworker" = "木工"
 "Stoneworker" = "石材工人"
 "Ranger" = "游侠"
 "Hunter" = "猎人"

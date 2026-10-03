@@ -424,7 +424,7 @@ The {s} were unable to complete the {s}.	{s1}未能完成{s2}。
 Jobs removed from unpowered {s}.	已取消无动力的{s}中的工作。
 The {s} suspended the construction of {s}.	{s1}暂停了{s2}的建造。
 The {s} suspended a linkage from {s}.	{s1}暂停了从{s2}接出的联动连接。
-{s} ({s}) has been completed.	{s1}（{s2}）已完成。
+{s} ({d}) has been completed.	{s}（{d}）已完成。
 {n} cancels {s}: Unscheduled.	{n}取消了{s}：未排定。
 {n} cancels {s}: Cannot reach site.	{n}取消了{s}：无法到达地点。
 {n} cancels {s}: Getting married.	{n}取消了{s}：正在结婚。

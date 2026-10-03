@@ -38,8 +38,8 @@ shared-world	0x140a25d80	Something has unchained a creature!
 shared-world	0x140a88610	A kidnapper has made off with {n}!
 shared-world	0x140a88610	{n} has stolen {s}!
 shared-world	0x140a88610	A thief has stolen {s}!
-shared-world	0x140ad0710	You have created a masterpiece {s}!
-shared-world	0x140ad0710	{n} has created a masterpiece {s}!
+shared-world	0x140ad0710	You have created a masterpiece {i}!
+shared-world	0x140ad0710	{n} has created a masterpiece {i}!
 shared-world	0x140ad2240	{n} begins to stalk and brood...
 shared-world	0x140ad2240	{n} looses a roaring laughter, fell and terrible!
 shared-world	0x140ad2240	{n} has been possessed!

@@ -779,6 +779,7 @@ static constexpr int kDfhackHotkeysHintRule = -141;
 // Complete fields in the native adventure combat chooser, including its
 // independently drawn unit summary and action ratings.
 static constexpr int kAdventureCombatFieldRule = -142;
+static constexpr int kAnnouncementListRule = -143;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -10320,6 +10321,34 @@ std::optional<std::string> Overlay::translate_ui_catalog_capture(
         const Rule &rule, size_t index, std::string_view source) const {
     if (catalog_scoped_term_capture(rule, index))
         return translate_legends_term(normalize_utterance(source));
+    // Completion and cancellation constructors insert a complete job caption,
+    // using the same action/item formatter as Tasks and the workshop menus.
+    // Keep its verb, material and quantity together instead of sending it to
+    // the general noun compositor (for example Make three wooden cups).
+    const bool completed_job = index == 0 &&
+        (rule.source == "{s} ({d}) has been completed." ||
+         rule.source == "{s} ({s}) has been completed.");
+    const bool cancelled_job = index == 1 &&
+        rule.source.starts_with("{n} cancels {s}: ");
+    if (rule.ui_message && (completed_job || cancelled_job)) {
+        const auto job = translate_fortress_activity(normalize_utterance(source));
+        if (job && !job->empty() && job->find("[C:") == std::string::npos &&
+                job->find_first_of("\r\n") == std::string::npos &&
+                std::none_of(job->begin(), job->end(), [](unsigned char ch) {
+                    return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
+                })) return job;
+        return std::nullopt;
+    }
+    // Accept existing reloadable catalogues with the earlier string-count
+    // placeholder while the maintained constructor now uses numeric {d}.
+    if (rule.ui_message && index == 1 &&
+            rule.source == "{s} ({s}) has been completed.") {
+        const auto count = trim_view(source);
+        if (!count.empty() && std::all_of(count.begin(), count.end(),
+                [](unsigned char ch) { return ch >= '0' && ch <= '9'; }))
+            return std::string(count);
+        return std::nullopt;
+    }
     // Diplomatic quests use the same native historical person/entity,
     // elapsed-time and building formatters as rumors and historical prose.
     // Their authored slots are semantic fields, never generic word strings.
@@ -28611,7 +28640,8 @@ void Overlay::normalize_native_split_text() {
         Match &match = prepared_matches_[index];
         // The decompiled adventure combat renderer uses ordinary addst,
         // which retains underlying half-font flags without drawing halves.
-        if (match.rule == kAdventureCombatFieldRule) continue;
+        if (match.rule == kAdventureCombatFieldRule ||
+                match.rule == kAnnouncementListRule) continue;
         // Tooltip wrapping owns its physical source rows and output lines.
         // Flags retained from a covered picture caption cannot turn those
         // lines into duplicate halves or move their final Chinese baseline.

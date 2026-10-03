@@ -424,7 +424,7 @@ adventure.announcement.shared-item-job	0x140a80510:0x140a80616-0x140a80869;perio
 adventure.announcement.shared-item-job	0x140a80510:0x140a809cd-0x140a80b7d	Jobs removed from unpowered {s}.
 adventure.announcement.shared-item-job	0x141325080:0x141325e4d-0x141325f76	The {s} suspended the construction of {s}.
 adventure.announcement.shared-item-job	0x141325080:0x1413260e0-0x141326238	The {s} suspended a linkage from {s}.
-adventure.announcement.shared-item-job	0x141325080:0x141327bd3-0x141327ca0	{s} ({s}) has been completed.
+adventure.announcement.shared-item-job	0x141325080:0x141327bd3-0x141327ca0	{s} ({d}) has been completed.
 adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Unscheduled.
 adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Cannot reach site.
 adventure.announcement.shared-item-job	0x141325080:0x141325395-0x141325d4a;reason-switch=0x14132540b-0x141325be7;period=0x141325bf0	{n} cancels {s}: Getting married.

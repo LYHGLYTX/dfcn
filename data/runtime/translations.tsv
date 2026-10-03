@@ -38837,7 +38837,7 @@ You feel too watched to fell trees.	你感觉被人盯着，无法安心砍树�
 You have been executed by drowning.	你被以溺水之刑处死了。	hP
 You have been murdered by somebody!	你被人谋杀了！	hP
 You have burned up in a magma mist.	你在岩浆雾中被烧死了。	hP
-You have created a masterpiece {s}!	你制作出了一件杰作级的{s1}！	hPt
+You have created a masterpiece {i}!	你制作出了一件杰作级的{i1}！	hPt
 You have leapt from a great height.	你从高处跳了下去。	hP
 You have located {b}, "{b}", a {s}.	你找到了{b1}（“{b2}”），一件{s1}。	hPt
 You maintain possession of the {s}.	你仍控制着{s1}。	hPt
@@ -41781,7 +41781,7 @@ wove a masterful sewn image in {p}	在{p1}织出了一幅杰作级的刺绣图�
 {n} has burned up in a magma mist.	{n1}在岩浆雾中被烧死了。	hPt
 {n} has climbed out of depression.	{n1}摆脱了抑郁。	hPt
 {n} has constructed a masterpiece!	{n1}建造出了一件杰作！	hPt
-{n} has created a masterpiece {s}!	{n1}制作出了一件杰作级的{s1}！	hPt
+{n} has created a masterpiece {i}!	{n1}制作出了一件杰作级的{i1}！	hPt
 {n} has leapt from a great height.	{n1}从高处跳了下去。	hPt
 {n} is completely free of the web.	{n1}完全挣脱了蛛网。	hPt
 {n} is giving a creditable sermon.	{n1}布道讲得可圈可点。	hPt
@@ -50356,7 +50356,7 @@ you can succumb to invasions.	入侵就可能让你覆灭。	hq
 {p} was stored in {p} at {p}.	在{p3}，{p1}被存放在{p2}。	ht
 {p} was stored in {p} by {a}.	{a1}将{p1}存放在了{p2}。	ht
 {p} was stored in {p} in {p}.	在{p3}，{p1}被存放在{p2}。	ht
-{s} ({s}) has been completed.	{s1}（{s2}）已完成。	hPt
+{s} ({d}) has been completed.	{s1}（{d1}）已完成。	hPt
 {s} Rampage of {a} during {e}	在{e1}期间，{s1}{a1}的肆虐事件	htEi
 {s} Rampage of {a} within {p}	在{p1}，{s1}{a1}的肆虐事件	htEi
 {s} of {n}'s {t} in the wilds	在荒野中，{n1}的{t1}遭到{s1}的事件	htEi
@@ -101579,7 +101579,7 @@ Woodcrafter	木艺师	wi
 Woodcutters	樵夫	wi
 Woodcutting	伐木	hq
 Woodcutting	伐木	w
-Woodworkers	樵夫	wi
+Woodworkers	木工	wi
 Work detail	劳动分组	wi
 Work orders	工单	hq
 Work orders	工单	w
@@ -105415,7 +105415,7 @@ Wilderness	荒野	wi
 Wonderful!	太好了！	hP
 Woodcutter	樵夫	hq
 Woodcutter	樵夫	wi
-Woodworker	樵夫	wi
+Woodworker	木工	wi
 World name	世界名称	w
 World: {s}	世界：{s}	wt
 Yararececa	雅拉雷塞卡
