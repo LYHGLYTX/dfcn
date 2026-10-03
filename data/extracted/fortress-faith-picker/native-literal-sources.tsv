@@ -1,0 +1,145 @@
+edition	image	function_rva	instruction_rva	literal_rva	source	instruction
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9498	0x15fe724	Cancel	lea    rdx,[rip+0x1245285]        # 0x1415fe724
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b94d3	0x1601194	Back	lea    rdx,[rip+0x1247cba]        # 0x141601194
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b97d4	0x162c8a0	 hall	lea    rdx,[rip+0x12730c5]        # 0x14162c8a0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9a3a	0x162c7c0	Want 	mov    eax,DWORD PTR [rip+0x1272d80]        # 0x14162c7c0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9a43	0x162c7c4	 	movzx  eax,BYTE PTR [rip+0x1272d7a]        # 0x14162c7c4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9a60	0x162c7b0	meeting place	lea    rdx,[rip+0x1272d49]        # 0x14162c7b0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9a72	0x162c7d8	guildhall	lea    rdx,[rip+0x1272d5f]        # 0x14162c7d8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9a7b	0x162c7c8	grand guildhall	lea    rdx,[rip+0x1272d46]        # 0x14162c7c8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9b82	0x162c7f4	Have 	mov    eax,DWORD PTR [rip+0x1272c6c]        # 0x14162c7f4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9b8b	0x162c7f8	 	movzx  eax,BYTE PTR [rip+0x1272c66]        # 0x14162c7f8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9ba8	0x162c7b0	meeting place	lea    rdx,[rip+0x1272c01]        # 0x14162c7b0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9bba	0x162c7d8	guildhall	lea    rdx,[rip+0x1272c17]        # 0x14162c7d8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9bc3	0x162c7c8	grand guildhall	lea    rdx,[rip+0x1272bfe]        # 0x14162c7c8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9f90	0x162c1f8	 worker	lea    rdx,[rip+0x1272261]        # 0x14162c1f8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9fa6	0x15e9298	s	lea    rdx,[rip+0x122f2eb]        # 0x1415e9298
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9fe3	0x162c7e8	No workers	movsd  xmm0,QWORD PTR [rip+0x12727fd]        # 0x14162c7e8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3b9ff0	0x162c7f0	rs	movzx  eax,WORD PTR [rip+0x12727f9]        # 0x14162c7f0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba057	0x162c80c	Guild:	mov    eax,DWORD PTR [rip+0x12727af]        # 0x14162c80c
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba060	0x162c810	d:	movzx  eax,WORD PTR [rip+0x12727a9]        # 0x14162c810
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba1a2	0x15ec9b0	 member	lea    rdx,[rip+0x1232807]        # 0x1415ec9b0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba1b8	0x15e9298	s	lea    rdx,[rip+0x122f0d9]        # 0x1415e9298
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba1fd	0x162c800	No members	lea    rdx,[rip+0x12725fc]        # 0x14162c800
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba25b	0x162c200	No established guild	movups xmm0,XMMWORD PTR [rip+0x1271f9e]        # 0x14162c200
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba265	0x162c210	uild	mov    ecx,DWORD PTR [rip+0x1271fa5]        # 0x14162c210
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba681	0x162c6f8	(No particular deity)	lea    rdx,[rip+0x1272070]        # 0x14162c6f8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba8a2	0x162c7c0	Want 	mov    eax,DWORD PTR [rip+0x1271f18]        # 0x14162c7c0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba8ab	0x162c7c4	 	movzx  eax,BYTE PTR [rip+0x1271f12]        # 0x14162c7c4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba8be	0x162c6ec	shrine	lea    rdx,[rip+0x1271e27]        # 0x14162c6ec
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba8c7	0x162c720	temple	lea    rdx,[rip+0x1271e52]        # 0x14162c720
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba8d2	0x162c710	temple complex	lea    rax,[rip+0x1271e37]        # 0x14162c710
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba9f6	0x162c7f4	Have 	mov    eax,DWORD PTR [rip+0x1271df8]        # 0x14162c7f4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3ba9ff	0x162c7f8	 	movzx  eax,BYTE PTR [rip+0x1271df2]        # 0x14162c7f8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3baa12	0x162c6ec	shrine	lea    rdx,[rip+0x1271cd3]        # 0x14162c6ec
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3baa1b	0x162c720	temple	lea    rdx,[rip+0x1271cfe]        # 0x14162c720
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3baa26	0x162c710	temple complex	lea    rax,[rip+0x1271ce3]        # 0x14162c710
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bae01	0x162c508	 worshipper	lea    rdx,[rip+0x1271700]        # 0x14162c508
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bae17	0x15e9298	s	lea    rdx,[rip+0x122e47a]        # 0x1415e9298
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bae47	0x162c750	No worshippers	lea    rdx,[rip+0x1271902]        # 0x14162c750
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bae9c	0x15e8618	Worship	lea    rdx,[rip+0x122d775]        # 0x1415e8618
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb17d	0x162c728	Locations such as taverns, temples	lea    rdx,[rip+0x12715a4]        # 0x14162c728
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb1b7	0x162c788	and libraries can be created from	lea    rdx,[rip+0x12715ca]        # 0x14162c788
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb1f5	0x162c760	meeting area zones, dining rooms and	lea    rdx,[rip+0x1271564]        # 0x14162c760
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb233	0x162c638	bedrooms.  These larger associations	lea    rdx,[rip+0x12713fe]        # 0x14162c638
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb271	0x162c610	of rooms can attract visitors from	lea    rdx,[rip+0x1271398]        # 0x14162c610
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb2af	0x162c680	outside the fortress.	lea    rdx,[rip+0x12713ca]        # 0x14162c680
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb2dc	0x162c660	Add or choose a location.	lea    rdx,[rip+0x127137d]        # 0x14162c660
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb42f	0x162c6a8	Remove current location assignment	lea    rdx,[rip+0x1271272]        # 0x14162c6a8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb54e	0x162ca00	New guildhall	movsd  xmm0,QWORD PTR [rip+0x12714aa]        # 0x14162ca00
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb55b	0x162ca08	dhall	mov    eax,DWORD PTR [rip+0x12714a7]        # 0x14162ca08
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb564	0x162ca0c	l	movzx  eax,BYTE PTR [rip+0x12714a1]        # 0x14162ca0c
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb59f	0x162c6d0	New library	movsd  xmm0,QWORD PTR [rip+0x1271129]        # 0x14162c6d0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb5ac	0x162c6d8	ary	movzx  eax,WORD PTR [rip+0x1271125]        # 0x14162c6d8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb5b7	0x162c6da	y	movzx  eax,BYTE PTR [rip+0x127111c]        # 0x14162c6da
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb63b	0x162c6e0	New temple	movsd  xmm0,QWORD PTR [rip+0x127109d]        # 0x14162c6e0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb648	0x162c6e8	le	movzx  eax,WORD PTR [rip+0x1271099]        # 0x14162c6e8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb684	0x162c698	New inn/tavern	movsd  xmm0,QWORD PTR [rip+0x127100c]        # 0x14162c698
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb691	0x162c6a0	tavern	mov    eax,DWORD PTR [rip+0x1271009]        # 0x14162c6a0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb69a	0x162c6a4	rn	movzx  eax,WORD PTR [rip+0x1271003]        # 0x14162c6a4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb6e9	0x162c9f0	New hospital	movsd  xmm0,QWORD PTR [rip+0x12712ff]        # 0x14162c9f0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bb6f6	0x162c9f8	ital	mov    eax,DWORD PTR [rip+0x12712fc]        # 0x14162c9f8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbdd6	0x162c1b0	No particular deity	lea    rdx,[rip+0x12703d3]        # 0x14162c1b0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbe02	0x162c1b0	No particular deity	movups xmm0,XMMWORD PTR [rip+0x12703a7]        # 0x14162c1b0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbe0c	0x162c1c0	ity	movzx  ecx,WORD PTR [rip+0x12703ad]        # 0x14162c1c0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbe17	0x162c1c2	y	movzx  ecx,BYTE PTR [rip+0x12703a4]        # 0x14162c1c2
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbf61	0x162bce0	 meeting place	lea    rdx,[rip+0x126fd78]        # 0x14162bce0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbf80	0x162bd18	 guildhall	lea    rdx,[rip+0x126fd91]        # 0x14162bd18
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bbf9f	0x162bd00	 grand guildhall	lea    rdx,[rip+0x126fd5a]        # 0x14162bd00
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bc0a1	0x162b7c8	Tavern	mov    eax,DWORD PTR [rip+0x126f721]        # 0x14162b7c8
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bc0aa	0x162b7cc	rn	movzx  eax,WORD PTR [rip+0x126f71b]        # 0x14162b7cc
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bc11d	0x162b7c0	Library	mov    rax,QWORD PTR [rip+0x126f69c]        # 0x14162b7c0
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bc127	0x162b7c4	ary	movzx  eax,WORD PTR [rip+0x126f696]        # 0x14162b7c4
+reference	PE:6a70a6d9:02711000	0x3b9270..0x3bc3f5	0x3bc132	0x162b7c6	y	movzx  eax,BYTE PTR [rip+0x126f68d]        # 0x14162b7c6
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7058	0x15f959c	Cancel	lea    rdx,[rip+0x124253d]        # 0x1415f959c
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7093	0x15fc2d4	Back	lea    rdx,[rip+0x124523a]        # 0x1415fc2d4
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7394	0x1627960	 hall	lea    rdx,[rip+0x12705c5]        # 0x141627960
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b75fa	0x1627958	Want 	mov    eax,DWORD PTR [rip+0x1270358]        # 0x141627958
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7603	0x162795c	 	movzx  eax,BYTE PTR [rip+0x1270352]        # 0x14162795c
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7620	0x1627978	meeting place	lea    rdx,[rip+0x1270351]        # 0x141627978
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7632	0x1627968	guildhall	lea    rdx,[rip+0x127032f]        # 0x141627968
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b763b	0x1627990	grand guildhall	lea    rdx,[rip+0x127034e]        # 0x141627990
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7742	0x1627988	Have 	mov    eax,DWORD PTR [rip+0x1270240]        # 0x141627988
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b774b	0x162798c	 	movzx  eax,BYTE PTR [rip+0x127023a]        # 0x14162798c
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7768	0x1627978	meeting place	lea    rdx,[rip+0x1270209]        # 0x141627978
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b777a	0x1627968	guildhall	lea    rdx,[rip+0x12701e7]        # 0x141627968
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7783	0x1627990	grand guildhall	lea    rdx,[rip+0x1270206]        # 0x141627990
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7b50	0x16278c0	 worker	lea    rdx,[rip+0x126fd69]        # 0x1416278c0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7b66	0x15e4220	s	lea    rdx,[rip+0x122c6b3]        # 0x1415e4220
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7ba3	0x1627e80	No workers	movsd  xmm0,QWORD PTR [rip+0x12702d5]        # 0x141627e80
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7bb0	0x1627e88	rs	movzx  eax,WORD PTR [rip+0x12702d1]        # 0x141627e88
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7c17	0x1627e74	Guild:	mov    eax,DWORD PTR [rip+0x1270257]        # 0x141627e74
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7c20	0x1627e78	d:	movzx  eax,WORD PTR [rip+0x1270251]        # 0x141627e78
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7d62	0x15e7998	 member	lea    rdx,[rip+0x122fc2f]        # 0x1415e7998
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7d78	0x15e4220	s	lea    rdx,[rip+0x122c4a1]        # 0x1415e4220
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7dbd	0x1627ea8	No members	lea    rdx,[rip+0x12700e4]        # 0x141627ea8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7e1b	0x1627888	No established guild	movups xmm0,XMMWORD PTR [rip+0x126fa66]        # 0x141627888
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b7e25	0x1627898	uild	mov    ecx,DWORD PTR [rip+0x126fa6d]        # 0x141627898
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8241	0x1627e90	(No particular deity)	lea    rdx,[rip+0x126fc48]        # 0x141627e90
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8462	0x1627958	Want 	mov    eax,DWORD PTR [rip+0x126f4f0]        # 0x141627958
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b846b	0x162795c	 	movzx  eax,BYTE PTR [rip+0x126f4ea]        # 0x14162795c
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b847e	0x1627ebc	shrine	lea    rdx,[rip+0x126fa37]        # 0x141627ebc
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8487	0x1627eb4	temple	lea    rdx,[rip+0x126fa26]        # 0x141627eb4
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8492	0x1627ed8	temple complex	lea    rax,[rip+0x126fa3f]        # 0x141627ed8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b85b6	0x1627988	Have 	mov    eax,DWORD PTR [rip+0x126f3cc]        # 0x141627988
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b85bf	0x162798c	 	movzx  eax,BYTE PTR [rip+0x126f3c6]        # 0x14162798c
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b85d2	0x1627ebc	shrine	lea    rdx,[rip+0x126f8e3]        # 0x141627ebc
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b85db	0x1627eb4	temple	lea    rdx,[rip+0x126f8d2]        # 0x141627eb4
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b85e6	0x1627ed8	temple complex	lea    rax,[rip+0x126f8eb]        # 0x141627ed8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b89c1	0x16276c8	 worshipper	lea    rdx,[rip+0x126ed00]        # 0x1416276c8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b89d7	0x15e4220	s	lea    rdx,[rip+0x122b842]        # 0x1415e4220
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8a07	0x1627ec8	No worshippers	lea    rdx,[rip+0x126f4ba]        # 0x141627ec8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8a5c	0x15e35c0	Worship	lea    rdx,[rip+0x122ab5d]        # 0x1415e35c0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8d3d	0x1627d78	Locations such as taverns, temples	lea    rdx,[rip+0x126f034]        # 0x141627d78
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8d77	0x1627d50	and libraries can be created from	lea    rdx,[rip+0x126efd2]        # 0x141627d50
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8db5	0x1627dc8	meeting area zones, dining rooms and	lea    rdx,[rip+0x126f00c]        # 0x141627dc8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8df3	0x1627da0	bedrooms.  These larger associations	lea    rdx,[rip+0x126efa6]        # 0x141627da0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8e31	0x1627e08	of rooms can attract visitors from	lea    rdx,[rip+0x126efd0]        # 0x141627e08
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8e6f	0x1627df0	outside the fortress.	lea    rdx,[rip+0x126ef7a]        # 0x141627df0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8e9c	0x1627e58	Add or choose a location.	lea    rdx,[rip+0x126efb5]        # 0x141627e58
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b8fef	0x1627e30	Remove current location assignment	lea    rdx,[rip+0x126ee3a]        # 0x141627e30
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b910e	0x1627cf0	New guildhall	movsd  xmm0,QWORD PTR [rip+0x126ebda]        # 0x141627cf0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b911b	0x1627cf8	dhall	mov    eax,DWORD PTR [rip+0x126ebd7]        # 0x141627cf8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9124	0x1627cfc	l	movzx  eax,BYTE PTR [rip+0x126ebd1]        # 0x141627cfc
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b915f	0x1627d00	New library	movsd  xmm0,QWORD PTR [rip+0x126eb99]        # 0x141627d00
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b916c	0x1627d08	ary	movzx  eax,WORD PTR [rip+0x126eb95]        # 0x141627d08
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9177	0x1627d0a	y	movzx  eax,BYTE PTR [rip+0x126eb8c]        # 0x141627d0a
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b91fb	0x1627cd0	New temple	movsd  xmm0,QWORD PTR [rip+0x126eacd]        # 0x141627cd0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9208	0x1627cd8	le	movzx  eax,WORD PTR [rip+0x126eac9]        # 0x141627cd8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9244	0x1627ce0	New inn/tavern	movsd  xmm0,QWORD PTR [rip+0x126ea94]        # 0x141627ce0
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9251	0x1627ce8	tavern	mov    eax,DWORD PTR [rip+0x126ea91]        # 0x141627ce8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b925a	0x1627cec	rn	movzx  eax,WORD PTR [rip+0x126ea8b]        # 0x141627cec
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b92a9	0x1627d20	New hospital	movsd  xmm0,QWORD PTR [rip+0x126ea6f]        # 0x141627d20
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b92b6	0x1627d28	ital	mov    eax,DWORD PTR [rip+0x126ea6c]        # 0x141627d28
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9996	0x1627480	No particular deity	lea    rdx,[rip+0x126dae3]        # 0x141627480
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b99c2	0x1627480	No particular deity	movups xmm0,XMMWORD PTR [rip+0x126dab7]        # 0x141627480
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b99cc	0x1627490	ity	movzx  ecx,WORD PTR [rip+0x126dabd]        # 0x141627490
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b99d7	0x1627492	y	movzx  ecx,BYTE PTR [rip+0x126dab4]        # 0x141627492
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9b21	0x1626f50	 meeting place	lea    rdx,[rip+0x126d428]        # 0x141626f50
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9b40	0x1626f40	 guildhall	lea    rdx,[rip+0x126d3f9]        # 0x141626f40
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9b5f	0x1626f70	 grand guildhall	lea    rdx,[rip+0x126d40a]        # 0x141626f70
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9c61	0x1626fe4	Tavern	mov    eax,DWORD PTR [rip+0x126d37d]        # 0x141626fe4
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9c6a	0x1626fe8	rn	movzx  eax,WORD PTR [rip+0x126d377]        # 0x141626fe8
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9cdd	0x1626f20	Library	mov    rax,QWORD PTR [rip+0x126d23c]        # 0x141626f20
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9ce7	0x1626f24	ary	movzx  eax,WORD PTR [rip+0x126d236]        # 0x141626f24
+classic	PE:6a70b91c:0270a000	0x3b6e30..0x3b9fb5	0x3b9cf2	0x1626f26	y	movzx  eax,BYTE PTR [rip+0x126d22d]        # 0x141626f26

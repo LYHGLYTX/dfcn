@@ -1,0 +1,18 @@
+scope	kind	source	reference_draw_return_rva	classic_draw_return_rva	construction
+shared-control	literal	Cancel	0x3b94bc	0x3b707c	Neither guild nor faith subpage is active; native control source at 0x3b9498.
+shared-control	literal	Back	0x3b94f7	0x3b70b7	Guild or faith subpage is active; native control source at 0x3b94d3.
+faith-list	literal	(No particular deity)	0x3ba720	0x3b82e0	Record kind -1; assign literal at 0x3ba681.
+faith-list	world-identity	{deity_name}	0x3ba720	0x3b82e0	Record kind 0; native historical figure name at +0x38, optional alternate-name lookup, then language-name formatter 0xa946e0.
+faith-list	world-identity	{religion_name}	0x3ba720	0x3b82e0	Record kind 1; native religious entity name at +0x20 through language-name formatter 0xa946e0.
+faith-list	status	Want shrine	0x3ba96d	0x3b852d	Requested tier 0 exceeds existing tier; DWORD/BYTE prefix copy at 0x3ba8a2/0x3ba8ab plus shrine at 0x3ba8be.
+faith-list	status	Want temple	0x3ba96d	0x3b852d	Requested tier 1 exceeds existing tier; prefix plus temple at 0x3ba8c7.
+faith-list	status	Want temple complex	0x3ba96d	0x3b852d	Requested tier other than 0/1 exceeds existing tier; prefix plus temple complex at 0x3ba8d2.
+faith-list	status	Have shrine	0x3baac1	0x3b8681	No higher requested tier and existing tier 0; DWORD/BYTE prefix copy at 0x3ba9f6/0x3ba9ff plus shrine at 0x3baa12.
+faith-list	status	Have temple	0x3baac1	0x3b8681	No higher requested tier and existing tier 1; prefix plus temple at 0x3baa1b.
+faith-list	status	Have temple complex	0x3baac1	0x3b8681	No higher requested tier and existing tier other than 0/1; prefix plus temple complex at 0x3baa26.
+faith-hover	quantity	{d} worshipper	0x3bae3a	0x3b89fa	Decimal count 1, followed by complete singular suffix at 0x3bae01.
+faith-hover	quantity	{d} worshippers	0x3bae3a	0x3b89fa	Decimal count >=2, singular suffix followed by s at 0x3bae17.
+faith-hover	literal	No worshippers	0x3bae67	0x3b8a27	Count <=0; fixed-size copies from literal 0x162c750.
+faith-hover	contextual-label	Worship	0x3baec0	0x3b8a80	Religious entity record with a resolved deity; this heading precedes the object of worship.
+faith-hover	world-identity	{deity_name}	0x3baf80	0x3b8b40	Full historical figure language name, following Worship.
+faith-hover	sphere	{sphere}	0x3bb052	0x3b8c12	Sphere IDs in historical figure vector +0x130; 0x756500 article wrapper plus 0x756690 130-case enum/default formatter, then 0x52d3c0 title capitalization. See sphere-sources.tsv.

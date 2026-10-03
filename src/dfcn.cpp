@@ -1806,8 +1806,14 @@ enum class NativeCivilizationField {
 };
 
 enum class NativeLocationPickerField {
-    None, Prompt, Action, Name, Faith, Guild, Kind
+    None, Prompt, Action, Name, Faith, Guild, Kind,
+    FaithChoice, FaithStatus, FaithCount, FaithWorship, FaithDeity, FaithSphere
 };
+
+static bool native_faith_picker_field(NativeLocationPickerField field) {
+    return field >= NativeLocationPickerField::FaithChoice &&
+        field <= NativeLocationPickerField::FaithSphere;
+}
 
 enum class NativeFortressLaborKind { DetailName, Label, Control };
 struct NativeFortressLaborCaption {
@@ -20627,7 +20633,10 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // Native chooser callers own these whole fields even when the map has
     // replaced the live outer frame by the time SDL presents its captions.
     const bool classic_location_fields = native_ui_classic().value_or(false);
-    if (classic_location_fields)
+    const auto location_draws = captured_native_drawn_text_rows();
+    const bool faith_picker_fields = std::any_of(location_draws.begin(), location_draws.end(),
+        [](const auto &draw) { return native_faith_picker_field(draw.location_picker_field); });
+    if (classic_location_fields || faith_picker_fields)
         append_fortress_location_list_matches(screen_rows, result, only_y,
             screen_override != nullptr, true);
     // A foreground document owns its ink before item/roster/map readers see

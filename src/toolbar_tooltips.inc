@@ -201,9 +201,16 @@ bool Overlay::translate_deity_tooltip_fields(NativeToolbarTooltip &card) const {
                 break;
             }
             count_seen = target.has_value();
-        } else if (deity_sphere_translations_.contains(lower(std::string(source)))) {
-            target = translate_deity_spheres(source);
-            sphere_seen = target.has_value();
+        } else {
+            // The native sphere wrapper adds "the " to ten enum values
+            // before title capitalization. Recognize that same semantic key
+            // here as in translate_deity_spheres, retaining card ownership.
+            std::string sphere = lower(std::string(source));
+            if (sphere.starts_with("the ")) sphere.erase(0, 4);
+            if (deity_sphere_translations_.contains(sphere)) {
+                target = translate_deity_spheres(source);
+                sphere_seen = target.has_value();
+            }
         }
         if (!target) return false;
         fields[line].target = std::move(*target);

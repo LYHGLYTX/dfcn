@@ -8310,6 +8310,21 @@ Craft guild	工艺行会	wi
 Guild	行会	wi
 No members	没有成员	wi
 No worshippers	没有信徒	wi
+# Fortress faith picker, complete native renderer branches rather than word
+# replacements. Source constructions and both PE editions are retained in
+# data/extracted/fortress-faith-picker/. Requested/existing tiers are 0, 1, 2.
+Want shrine	需要圣地	wli
+Want temple	需要神殿	wli
+Want temple complex	需要神殿建筑群	wli
+Have shrine	已有圣地	wli
+Have temple	已有神殿	wli
+Have temple complex	已有神殿建筑群	wli
+(No particular deity)	（无特定神祇）	wli
+{d} worshipper	{d}名信徒	wtli
+{d} worshippers	{d}名信徒	wtli
+# Only the typed faith-card label uses this key. Other Worship actions keep
+# their existing activity wording; spheres use the shared semantic r glossary.
+Fortress faith picker: Worship	供奉	l
 All visitors welcome	欢迎所有访客	wi
 Citizens only	仅限公民	wi
 # Location staff positions use the established occupation name.

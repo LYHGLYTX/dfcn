@@ -1,0 +1,135 @@
+Native DF 53.16 location chooser: faith-selection branch
+======================================================
+
+Sources are the two PE images configured in data/runtime/native-pe-images.json.
+These files reconstruct native text construction; they do not run the game.
+Disassembly uses the configured w64devkit-2.9.1 objdump.exe, Intel AMD64.
+Addresses below are reference-image RVAs unless an edition is named.
+
+Complete renderer:
+  Steam reference PE:6a70a6d9:02711000, 0x3b9270..0x3bc3f5.
+  Official classic PE:6a70b91c:0270a000, 0x3b6e30..0x3b9fb5.
+  In this renderer, classic instruction RVAs = reference RVAs - 0x2440.
+  String addresses differ independently between the editions.
+  reference-render.asm and classic-render.asm retain all instructions.
+  native-literal-sources.tsv also includes fixed-size MOV/MOVSD/MOVUPS
+  reads, which a LEA-only string inventory would miss. Interior suffix
+  references in this table are copies of the same complete native field,
+  not separate translation keys.
+
+Page scope and fixed controls
+-----------------------------
+
+The shared top control at 0x3b9478..0x3b94f2 selects Cancel when neither
+subpage is active and Back when the guild or faith subpage is active.
+The faith subpage enters at 0x3ba338 when selector+0x2c is nonzero;
+its row loop and hover card end at 0x3bb126. The sibling guild selector
+and the Add or choose a location page are outside this branch.
+
+Faith list records
+------------------
+
+selector+0x30 is the vector of record kinds and selector+0x50 holds IDs.
+Visible records use three native rows per item: picture/name, optional
+requested-or-existing rank, and the remaining record spacing.
+
+  kind -1: default identity '(No particular deity)'.
+           0x3ba681 reads reference literal 0x162c6f8;
+           classic 0x3b8241 reads literal 0x1627e90.
+  kind  0: historical figure lookup 0x067dc0, name at figure+0x38;
+           0x3ba62d..0x3ba66e can select an alternate figure name through
+           0xc0f630 and 0xc3a4f0 before formatting.
+  kind  1: religious entity lookup 0x07daf0, name at entity+0x20;
+           formatting at 0x3ba5f5..0x3ba61e.
+
+Both dynamic identities call the existing native language-name formatter
+0xa946e0. They depend on world data and cannot be enumerated as a finite
+list of saved-game names. Translation uses the shared complete identity
+grammar. The same string object is shortened to the row allocation and
+drawn at call 0x3ba71b (return 0x3ba720); existing resize capture retains
+its original text before the native ellipsis.
+
+Requested and existing rank
+--------------------------
+
+requestedTier comes from matching religious agreements, field +0x1c,
+at 0x3ba72f..0x3ba7db. existingTier is the maximum temple-location rank:
+0x3ba800..0x3ba843 walks current locations of type 2, requires location
++0xb8/+0xbc to match the row kind/ID, and reads the realized location's
++0x34 after virtual lookup at slot +0x18.
+
+Reconstructed selection:
+
+  if requestedTier >= 0 and requestedTier > existingTier:
+      status = 'Want ' + rank(requestedTier)
+  else if existingTier >= 0:
+      status = 'Have ' + rank(existingTier)
+  else:
+      no status draw
+
+  rank(0) = 'shrine'
+  rank(1) = 'temple'
+  rank(other nonnegative value) = 'temple complex'
+
+All six complete status strings are:
+  Want shrine              Have shrine
+  Want temple              Have temple
+  Want temple complex      Have temple complex
+
+The prefixes are copied from data by DWORD and BYTE reads, not LEA:
+  Want: 0x3ba8a2/0x3ba8ab from 0x162c7c0/0x162c7c4;
+  Have: 0x3ba9f6/0x3ba9ff from 0x162c7f4/0x162c7f8.
+Want rank selection is 0x3ba8b9..0x3ba8dd; Have is
+0x3baa0d..0x3baa31. Native draw returns are 0x3ba96d and 0x3baac1.
+Want at 0x3ba8f6..0x3ba957 and Have at 0x3baa4a..0x3baaab shorten the
+same complete string to the available width and write three periods.
+Translation uses the captured complete source, never a collection of
+width-specific clipped variants or global Want/Have word replacements.
+
+Hovered record
+--------------
+
+The hover card is constructed at 0x3babb1..0x3bb084. Its height derives
+from the selected record and the figure's sphere vector; it has its own
+closed rectangle. These fields share the same card:
+
+  count > 0: decimal count + ' worshipper'; count >= 2 appends 's'.
+             Construction 0x3baddc..0x3bae35, draw return 0x3bae3a.
+  count == 0: 'No worshippers', reference literal 0x162c750;
+              draw return 0x3bae67.
+  religion record with a resolved deity: 'Worship', draw return 0x3baec0,
+              followed on the next line by that deity's complete name,
+              draw return 0x3baf80. The local label means its object of
+              worship; it uses a context key, separate from activity names.
+  resolved deity: one sphere per row, formatter call 0x3bb025 and
+              addst return 0x3bb052. Each row is capitalized by 0x52d3c0.
+
+Sphere construction
+-------------------
+
+0x756500..0x756688 wraps the base sphere-name function
+0x756690..0x757174. Its switch table at 0x757174 has 130 entries
+(enum IDs 0..129) and a default 'no sphere'. The wrapper's byte table
+at 0x75661c adds 'the ' to these enum IDs:
+
+  19 dawn       70 moon       76 night      87 rain       98 seasons
+ 100 sky       103 stars    107 sun       125 weather   126 wind
+
+sphere-sources.tsv records every branch, literal, final capitalized
+caption and the existing semantic r-vocabulary translation. The native
+instruction files retain the base function and article wrapper.
+These concepts use translate_deity_spheres, including the article forms
+and the default, rather than ordinary UI meanings such as work orders
+or rainfall. The complete existing r glossary supplies their translations.
+
+Translation ownership
+---------------------
+
+Verified addst callers identify list identities, status fields, hover
+counts, the contextual Worship label, hover identities and sphere rows.
+Identity and rank fields retain the complete string before native resize;
+layout follows the list picture strip or the hover card rectangle. Both
+native image editions use the same translation grammar and source data.
+Back/Cancel reuse their existing complete control translations. Authored
+fixed captions and quantity templates live in local-overrides.tsv; world
+identities and spheres reuse the existing shared semantic dictionaries.

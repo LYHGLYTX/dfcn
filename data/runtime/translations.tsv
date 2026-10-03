@@ -60063,6 +60063,7 @@ Forbidding items and buildings	禁用物品和建筑	wo
 Fortress activity: Caged Guest	关在笼中的访客	li
 Fortress activity: Declare war	宣战	li
 Fortress activity: Watch Dance	观看舞蹈	li
+Fortress faith picker: Worship	供奉	l
 Gladiatory Games in the wilds.	在荒野中，角斗比赛。	hEi
 Go below hatch ({d} levels up)	前往活动盖板下方（上方{d1}层）	hPt
 Graphical FPS cap (default 50)	图形帧率上限（默认50）	w
@@ -77126,6 +77127,7 @@ wounded {a} within {p}	在{p1}击伤了{a1}	ht
 "Huh? What was that?"	“嗯？刚才说什么？”	l
 (Adventure) Made item	冒险：制作物品	w
 (Cavern soil is best)	（洞穴土层最肥沃）	wli
+(No particular deity)	（无特定神祇）	wli
 (Wrestle) Adjust grip	(摔跤)调整抓握点	w
 ({s}, {d} to present)	（{s1}，{d1}年至今）	ht
 .Needs immobilization	·需要固定
@@ -82441,6 +82443,7 @@ Generating items...	生成项目......	w
 Gremlin opened cage	小精怪打开笼子	w
 Guard tax collector	保护税务官	wi
 Hang from {s} ({s})	悬挂于{s1}（{s2}）	hPt
+Have temple complex	已有神殿建筑群	wli
 He has a low voice.	他嗓音低沉。	l
 He has a {s} voice.	他嗓音{s}。	wtlx
 Her eyes are black.	她的眼睛是黑色的。	l
@@ -82710,6 +82713,7 @@ Very high willpower	意志力很强	wil
 Very low creativity	创造力很低	wil
 Very low musicality	乐感很低	wil
 Volcanism Mesh Size	火山活动度网格尺寸
+Want temple complex	需要神殿建筑群	wli
 We yield! We yield!	我们投降！我们投降！	hP
 Weapon traps use a 	武器陷阱使用武器或陷阱组件攻	w
 Welcome adventurer!	欢迎，冒险者！	hq
@@ -102980,6 +102984,7 @@ younger sibling	弟妹	wi
 {c} Other Kills	其他击杀数：{c}	ht
 {d} dwarven ale	{d} 份矮人艾尔啤酒	wt
 {d} dwarven rum	{d} 份矮人朗姆酒	wt
+{d} worshippers	{d}名信徒	wtli
 {d}nd Limestone	石灰岩月{d}日	wt
 {d}nd Malachite	孔雀石月{d}日	wt
 {d}nd Moonstone	月光石月{d}日	wt
@@ -107876,6 +107881,7 @@ youngest child	最小的孩子	h
 {d} imprisoned	已囚禁 {d}	wtl
 {d} to harvest	待收获{d}	wtl
 {d} to present	{d1}年至今	ht
+{d} worshipper	{d}名信徒	wtli
 {d}nd Hematite	赤铁矿月{d}日	wt
 {d}nd Obsidian	黑曜石月{d}日	wt
 {d}rd Hematite	赤铁矿月{d}日	wt
@@ -116880,6 +116886,8 @@ Good memory	过目不忘	w
 Granite {d}	第{d}年 花岗岩月	wt
 Grouchiness	暴躁	w
 Hammer Lord	战锤之主	wi
+Have shrine	已有圣地	wli
+Have temple	已有神殿	wli
 He has {s}.	他有{s}。	wtlx
 He is tall.	他身材高挑。	l
 High Master	宗师级的	wi
@@ -117079,6 +117087,8 @@ Vision lost	视力丧失	w
 Visitor cap	访客上限	w
 Vomit blood	吐血	w
 Wait, what?	等等，什么？	hP
+Want shrine	需要圣地	wli
+Want temple	需要神殿	wli
 Water Wheel	水车	wi
 Wax Workers	蜡工	wi
 Wax Working	蜡工	wi

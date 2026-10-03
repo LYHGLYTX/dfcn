@@ -326,9 +326,11 @@ static NativeLocationPickerField native_location_picker_field(uintptr_t caller) 
 static std::optional<SDL_Rect> native_location_picker_draw_box(
         const graphicst *graphics, const NativeString *source,
         NativeLocationPickerField field) {
+    const bool faith = native_faith_picker_field(field);
     if (field == NativeLocationPickerField::None ||
             field == NativeLocationPickerField::Prompt ||
-            !graphics || !graphics->screen || !native_ui_classic().value_or(false))
+            !graphics || !graphics->screen ||
+            (!faith && !native_ui_classic().value_or(false)))
         return std::nullopt;
     const int x = graphics->screenx, y = graphics->screeny;
     if (graphics->dimx <= 0 || graphics->dimx > 1000 ||
@@ -336,6 +338,18 @@ static std::optional<SDL_Rect> native_location_picker_draw_box(
             x < 0 || x >= graphics->dimx || y < 0 || y >= graphics->dimy)
         return std::nullopt;
     NativePanelReadScope panel_scope(graphics);
+    if (faith && field != NativeLocationPickerField::FaithChoice &&
+            field != NativeLocationPickerField::FaithStatus) {
+        // 3baddc..3bb04d draws the faith card after its complete hover frame.
+        // Its 21 interior columns, rather than the outer chooser or screen,
+        // own counts, the Worship relation, deity identity and each sphere.
+        const NativePanelBorders borders(*graphics);
+        if (const auto panel = native_panel_interior(borders, *graphics, x, x + 1, y)) {
+            const int right = panel->x + panel->w;
+            if (x >= panel->x && right > x) return SDL_Rect{x, y, right - x, 1};
+        }
+        return std::nullopt;
+    }
     if (field == NativeLocationPickerField::Action) {
         std::string_view text;
         if (!native_string_view(source, &text, 4096) || text.empty() ||
@@ -350,12 +364,14 @@ static std::optional<SDL_Rect> native_location_picker_draw_box(
         }
         return std::nullopt;
     }
-    const int middle = field == NativeLocationPickerField::Name ? y : y - 1;
+    const int middle = field == NativeLocationPickerField::Name ||
+        field == NativeLocationPickerField::FaithChoice ? y : y - 1;
     if (const auto frame = native_picture_caption_rect(
             *graphics, x, middle, true, nullptr, true)) {
-        // This caller paints main[181] after both captions. Reserve its
-        // four columns while the complete underlying strip still exists.
-        const int right = frame->x + frame->w - 4;
+        // The main chooser paints main[181] after both captions. Reserve
+        // those four columns there; the faith subpage allocates the entire
+        // picture strip to its name and status without that later action.
+        const int right = frame->x + frame->w - (faith ? 0 : 4);
         if (right > x) return SDL_Rect{x, y, right - x, 1};
     }
     return std::nullopt;

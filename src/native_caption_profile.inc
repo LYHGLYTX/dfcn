@@ -110,7 +110,17 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
         {native_pe_address(profile.base, 0x3bc051), NativeLocationPickerField::Guild},
         {native_pe_address(profile.base, 0x3bc0cc), NativeLocationPickerField::Kind}, // Tavern
         {native_pe_address(profile.base, 0x3bc153), NativeLocationPickerField::Kind}, // Library
-        {native_pe_address(profile.base, 0x3bc1c9), NativeLocationPickerField::Kind}}; // Hospital
+        {native_pe_address(profile.base, 0x3bc1c9), NativeLocationPickerField::Kind}, // Hospital
+        // The temple dedication subpage owns identities, all Want/Have
+        // grades and the complete faith card through these separate draws.
+        {native_pe_address(profile.base, 0x3ba720), NativeLocationPickerField::FaithChoice},
+        {native_pe_address(profile.base, 0x3ba96d), NativeLocationPickerField::FaithStatus}, // Want
+        {native_pe_address(profile.base, 0x3baac1), NativeLocationPickerField::FaithStatus}, // Have
+        {native_pe_address(profile.base, 0x3bae3a), NativeLocationPickerField::FaithCount},
+        {native_pe_address(profile.base, 0x3bae67), NativeLocationPickerField::FaithCount},
+        {native_pe_address(profile.base, 0x3baec0), NativeLocationPickerField::FaithWorship},
+        {native_pe_address(profile.base, 0x3baf80), NativeLocationPickerField::FaithDeity},
+        {native_pe_address(profile.base, 0x3bb052), NativeLocationPickerField::FaithSphere}};
     // World missions use one complete title draw for every goal in the
     // removable list and another in the selected mission's detail frame.
     // Both pass width zero; the list first calls resize at 0x1c6677, so
@@ -488,6 +498,12 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
         // Codices: native title and capitalized item description.
         {0xd42094,0xd420f3,NativeFieldKind::BookTitle},
         {0xd42141,0xd42183,NativeFieldKind::BookType}};
+    // The faith chooser clips at length >= width-1 and can append one zero
+    // byte before replacing its last three cells with dots. Preserve the
+    // complete owner through that exact native path, as for other captions.
+    profile.inline_resizes.push_back({0x3ba6d1, {0xe8,0x5a,0x6b,0xd2,0xff}, {}, true});
+    profile.inline_resizes.push_back({0x3ba91c, {0xe8,0x0f,0x69,0xd2,0xff}, {}, true});
+    profile.inline_resizes.push_back({0x3baa70, {0xe8,0xbb,0x67,0xd2,0xff}, {}, true});
     // Resolve the reference PE coordinates once. Shared hook installation
     // consumes only the selected executable's addresses and original bytes.
     for (auto &signature : profile.signatures) {

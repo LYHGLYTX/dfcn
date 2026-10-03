@@ -222,15 +222,17 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
         }
     };
 
-    if (native_ui_classic().value_or(false)) {
-        // The typed addst caller identifies the chooser, independently of
-        // when the outer frame survives in the live glyph grid. Its saved
-        // allocation reserves the later Inspect action and both row baselines.
+    {
+        // Typed addst callers identify the chooser and its faith subpage
+        // independently of the outer frame. The main chooser keeps its
+        // classic binding; faith fields own both native display modes.
+        // Each saved allocation retains its original row and clip boundary.
         for (const auto *layer : {&drawn, &top_drawn}) {
             for (const auto &draw : *layer) {
                 const auto kind = draw.location_picker_field;
                 if (kind == NativeLocationPickerField::None ||
                     kind == NativeLocationPickerField::Prompt || !draw.location_picker_box ||
+                    (!native_ui_classic().value_or(false) && !native_faith_picker_field(kind)) ||
                     draw.draw_grid != (draw.top_layer ? gps_->screen_top : gps_->screen) ||
                     draw.draw_dimx != gps_->dimx || draw.draw_dimy != gps_->dimy ||
                     draw.source.empty() || draw.x < 0 || draw.x >= gps_->dimx ||
@@ -271,6 +273,40 @@ void Overlay::append_fortress_location_list_matches(std::vector<std::string> &ro
                 case NativeLocationPickerField::Faith:
                     target = complete == "No particular deity"
                         ? exact_literal_translation(complete) : translate_identity(complete);
+                    break;
+                case NativeLocationPickerField::FaithChoice:
+                    target = complete == "(No particular deity)" || complete == "No particular deity"
+                        ? exact_literal_translation(complete) : translate_identity(complete);
+                    break;
+                case NativeLocationPickerField::FaithDeity:
+                    target = translate_identity(complete);
+                    break;
+                case NativeLocationPickerField::FaithStatus:
+                    // The native prefix and grade are one field. Its proven
+                    // pre-resize source resolves every Want/Have state even
+                    // when the final English cells end in three dots.
+                    target = exact_literal_translation(complete);
+                    break;
+                case NativeLocationPickerField::FaithCount:
+                    if (complete == "No worshippers") target = exact_literal_translation(complete);
+                    else for (const std::string_view suffix : {" worshippers", " worshipper"}) {
+                        if (!complete.ends_with(suffix)) continue;
+                        const std::string digits = complete.substr(0, complete.size() - suffix.size());
+                        if (!digits.empty() && std::all_of(digits.begin(), digits.end(),
+                                [](unsigned char ch) { return ch >= '0' && ch <= '9'; }))
+                            target = render_template("{d}" + std::string(suffix), digits);
+                        break;
+                    }
+                    break;
+                case NativeLocationPickerField::FaithWorship:
+                    if (complete == "Worship")
+                        target = exact_literal_translation("Fortress faith picker: Worship");
+                    break;
+                case NativeLocationPickerField::FaithSphere:
+                    // The native sphere formatter supplies the semantic
+                    // noun and optional article. Ordinary UI words such as
+                    // Rain or The rain must never own this typed field.
+                    target = translate_deity_spheres(complete);
                     break;
                 case NativeLocationPickerField::Guild:
                     if (const auto type = description(complete))
