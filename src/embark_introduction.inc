@@ -249,7 +249,7 @@ bool Overlay::layout_embark_introduction(SDL_Renderer *renderer) {
             for (uint32_t cp : paragraph) {
                 if (glyphs.contains(cp)) continue;
                 Metrics metrics{FT_Get_Char_Index(face_, cp), 0, 0, 0};
-                if (FT_Load_Glyph(face_, metrics.index, FT_LOAD_DEFAULT) != 0) return false;
+                if (native_load_font_glyph(face_, metrics.index, config_.font_bold) != 0) return false;
                 metrics.advance = static_cast<int>(face_->glyph->advance.x >> 6);
                 if (FT_Render_Glyph(face_->glyph, FT_RENDER_MODE_NORMAL) != 0) return false;
                 metrics.left = face_->glyph->bitmap_left;

@@ -1617,7 +1617,7 @@ void Overlay::append_legends_detail_matches(std::vector<std::string> &rows,
             if (inserted) {
                 auto &m = it->second;
                 m.index = FT_Get_Char_Index(face_, cp);
-                if (FT_Load_Glyph(face_, m.index, FT_LOAD_DEFAULT) == 0) {
+                if (native_load_font_glyph(face_, m.index, config_.font_bold) == 0) {
                     m.advance = static_cast<int>(face_->glyph->advance.x >> 6);
                     if (FT_Render_Glyph(face_->glyph, FT_RENDER_MODE_NORMAL) == 0) {
                         m.left = face_->glyph->bitmap_left;

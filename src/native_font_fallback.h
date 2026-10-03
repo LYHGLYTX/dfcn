@@ -11,6 +11,7 @@ struct NativeFallbackFontSearch {
     FT_Library library;
     uint32_t codepoint;
     int pixel_size;
+    bool bold;
     FT_Face face = nullptr;
 };
 
@@ -22,6 +23,7 @@ inline int CALLBACK native_fallback_font_candidate(const LOGFONTW *font,
     FT_Face candidate = nullptr;
     if (FT_New_Face(search.library, "", 0, &candidate) != 0) return 1;
     candidate->family = font->lfFaceName;
+    if (search.bold) candidate->font_description.lfWeight = FW_BOLD;
     if (FT_Set_Pixel_Sizes(candidate, 0, search.pixel_size) == 0) {
         const FT_UInt index = FT_Get_Char_Index(candidate, search.codepoint);
         if (index && FT_Load_Glyph(candidate, index, FT_LOAD_DEFAULT) == 0) {
@@ -35,14 +37,14 @@ inline int CALLBACK native_fallback_font_candidate(const LOGFONTW *font,
 #endif
 
 inline FT_Face native_open_fallback_font(FT_Library library,
-        uint32_t codepoint, int pixel_size) {
+        uint32_t codepoint, int pixel_size, bool bold = false) {
 #ifdef _WIN32
     if (codepoint > 0xffff) return nullptr;
     HDC dc = CreateCompatibleDC(nullptr);
     if (!dc) return nullptr;
     LOGFONTW query{};
     query.lfCharSet = DEFAULT_CHARSET;
-    NativeFallbackFontSearch search{library, codepoint, pixel_size};
+    NativeFallbackFontSearch search{library, codepoint, pixel_size, bold};
     EnumFontFamiliesExW(dc, &query, native_fallback_font_candidate,
         reinterpret_cast<LPARAM>(&search), 0);
     DeleteDC(dc);
@@ -63,7 +65,7 @@ inline FT_Face native_open_fallback_font(FT_Library library,
         reinterpret_cast<const FcChar8 *>("sans-serif"));
     FcPatternAddString(pattern, FC_LANG,
         reinterpret_cast<const FcChar8 *>("zh-cn"));
-    FcPatternAddInteger(pattern, FC_WEIGHT, FC_WEIGHT_MEDIUM);
+    FcPatternAddInteger(pattern, FC_WEIGHT, bold ? FC_WEIGHT_BOLD : FC_WEIGHT_MEDIUM);
     FcPatternAddBool(pattern, FC_SCALABLE, FcTrue);
     FcConfigSubstitute(nullptr, pattern, FcMatchPattern);
     FcDefaultSubstitute(pattern);

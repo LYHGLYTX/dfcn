@@ -286,6 +286,7 @@ struct Config {
     bool capture_first_match = false;
     bool compositional_rules = true;
     bool collect_untranslated = true;
+    bool font_bold = false;
     int font_index = -1;
     int min_font_pixels = 6;
     // Zero matches native English ink height; positive values override the em size.
@@ -4586,6 +4587,7 @@ bool Overlay::load_config() {
             else if (key == "mapping") next.mapping_path = value;
             else if (key == "font") next.font_path = value;
             else if (key == "font_index") next.font_index = parse_int(value, next.font_index);
+            else if (key == "font_bold") next.font_bold = parse_bool(value, next.font_bold);
             else if (key == "font_pixels") next.font_pixels = parse_int(value, next.font_pixels);
             else if (key == "font_scale") next.font_scale = parse_double(value, next.font_scale);
             else if (key == "knowledge_font_scale") next.knowledge_font_scale = parse_double(value, next.knowledge_font_scale);
@@ -4636,6 +4638,7 @@ bool Overlay::load_config() {
 
     const bool font_changed = next.font_path != config_.font_path ||
                               next.font_index != config_.font_index ||
+                              next.font_bold != config_.font_bold ||
                               next.font_pixels != config_.font_pixels ||
                               next.font_scale != config_.font_scale ||
                               next.min_font_pixels != config_.min_font_pixels;
@@ -5670,7 +5673,7 @@ Overlay::FontGlyph Overlay::resolve_font_glyph_at_size(uint32_t codepoint, int p
         }
     }
     if (!selected.index) {
-        if (FT_Face face = native_open_fallback_font(ft_, codepoint, pixels)) {
+        if (FT_Face face = native_open_fallback_font(ft_, codepoint, pixels, config_.font_bold)) {
             fallback_fonts_.push_back(face);
             selected = {face, FT_Get_Char_Index(face, codepoint)};
         }
@@ -5699,7 +5702,7 @@ std::shared_ptr<const Overlay::FontGlyphBitmap> Overlay::font_glyph_bitmap_at_si
         return found->second.bitmap;
     }
     if (!glyph.face || FT_Set_Pixel_Sizes(glyph.face, 0, pixels) != 0 ||
-        FT_Load_Glyph(glyph.face, glyph.index, FT_LOAD_DEFAULT) != 0)
+        native_load_font_glyph(glyph.face, glyph.index, config_.font_bold) != 0)
         return {};
     auto bitmap = std::make_shared<FontGlyphBitmap>();
     bitmap->advance = static_cast<int>(glyph.face->glyph->advance.x >> 6);
@@ -5786,7 +5789,7 @@ bool Overlay::load_font() {
 #ifdef _WIN32
     const bool use_default_font = path.empty();
 #endif
-    if (path.empty()) native_find_font(path, index);
+    if (path.empty()) native_find_font(path, index, config_.font_bold);
     if (path.empty()) {
         log_line("ERROR", "No CJK font found. Set font= in " + runtime::utf8(runtime::config_path()));
         return false;
@@ -5809,10 +5812,14 @@ bool Overlay::load_font() {
         face_->font_description.lfCharSet = DEFAULT_CHARSET;
         face_->font_description.lfPitchAndFamily = DEFAULT_PITCH | FF_DONTCARE;
     }
+    if (config_.font_bold)
+        face_->font_description.lfWeight = std::max<LONG>(
+            face_->font_description.lfWeight, FW_BOLD);
 #endif
     active_font_path_ = path;
     active_font_index_ = index;
-    log_line("INFO", "Using font " + path + " (face index " + std::to_string(index) + ")");
+    log_line("INFO", "Using font " + path + " (face index " + std::to_string(index) +
+        "; bold " + (config_.font_bold ? "enabled" : "disabled") + ")");
     return true;
 }
 

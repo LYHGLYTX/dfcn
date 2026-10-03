@@ -911,7 +911,7 @@ void Overlay::layout_toolbar_tooltip(SDL_Renderer *renderer) {
                 if (found == glyphs.end()) {
                     GlyphMetrics glyph;
                     glyph.index = FT_Get_Char_Index(face_, cp);
-                    if (FT_Load_Glyph(face_, glyph.index, FT_LOAD_DEFAULT) != 0) return false;
+                    if (native_load_font_glyph(face_, glyph.index, config_.font_bold) != 0) return false;
                     glyph.advance = static_cast<int>(face_->glyph->advance.x >> 6);
                     if (FT_Render_Glyph(face_->glyph, FT_RENDER_MODE_NORMAL) != 0) return false;
                     const FT_Bitmap &bitmap = face_->glyph->bitmap;
