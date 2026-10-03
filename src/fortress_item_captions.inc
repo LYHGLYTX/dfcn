@@ -86,6 +86,11 @@ std::optional<std::string> Overlay::translate_fortress_item_caption(
         TranslationWorkFrame work_frame("complete item caption", source);
         if (building_material && config_.compositional_rules)
             target = translate_material_name(source, true);
+        // Bulk resources already are complete material nouns. Resolve their
+        // species/state together before the more general item grammar can
+        // reinterpret a species word as an independent material.
+        if (!target && !relationship && config_.compositional_rules)
+            target = translate_material_name(source);
         // This field already proves an item. Its scoped production must win
         // over homonyms in the general dictionary (a casket is a coffin here,
         // and generated sword/knife types are objects rather than skills).
@@ -683,8 +688,9 @@ void Overlay::append_fortress_item_captions(std::vector<std::string> &rows,
                     // Loose-item selectors show a container and its contents
                     // as picture/caption buttons, without Weight or an item
                     // action strip. A paired designation plus the native
-                    // stack/container annotation proves the item role;
-                    // portraits and build choices share these same skins.
+                    // stack/container annotation proves the item role. Bulk
+                    // material choices instead prove it through the complete
+                    // material grammar; a portrait's bare species cannot.
                     // Own the whole label, including sex, count and enclosing
                     // designation, before generic word/field matching splits it.
                     if (pass != 0 || (only_y >= 0 && y != only_y)) continue;
@@ -711,7 +717,10 @@ void Overlay::append_fortress_item_captions(std::vector<std::string> &rows,
                         item = designation.item;
                         if (item.size() == previous) break;
                     }
-                    if (!numbered || !designated || item.empty()) continue;
+                    if (item.empty()) continue;
+                    const bool raw_material = config_.compositional_rules &&
+                        translate_material_name(normalize_utterance(item)).has_value();
+                    if ((!numbered || !designated) && !raw_material) continue;
                     // The popup's close button makes its outer frame stepped.
                     // The complete adjoining three-row button is the boundary,
                     // independent of that nonrectangular enclosing frame.

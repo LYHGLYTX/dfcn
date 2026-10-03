@@ -2759,6 +2759,8 @@ goat cheese	山羊奶酪	wi
 sheep cheese	羊奶酪	wi
 pig cheese	猪奶酪	wi
 water buffalo cheese	水牛奶酪	wi
+# Keep the compound species/material name ahead of fragment composition.
+water buffalo leather	水牛皮革	wi
 paraceratherium leather	巨犀皮革
 thylacine leather	袋狼皮革
 smilodon leather	剑齿虎皮革

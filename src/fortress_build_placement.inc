@@ -1,6 +1,6 @@
 // Material selection is a label/value header and a name/count/distance table.
 // The item rows reuse the build menu's picture skin, NOT its single-caption
-// contract. Keep the current native origins and existing dictionary targets.
+// contract. Resolve the complete name inside its own native column.
 void Overlay::layout_fortress_build_materials(SDL_Renderer *renderer) {
     if (!gps_ || !face_ || !renderer ||
         gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
@@ -91,6 +91,25 @@ void Overlay::layout_fortress_build_materials(SDL_Renderer *renderer) {
             cursor += part->length;
         }
         if (!complete || parts.empty() || cursor != name_end) continue;
+        // The ordinary matcher may have translated a multiword species as
+        // separate runs (water + buffalo leather). The native name column
+        // supplies the whole item, so translate that source before packing
+        // its Chinese fragments. Amount and distance remain separate fields.
+        const std::string name_source = native.substr(0, name_end - left);
+        if (const auto target = translate_fortress_item_caption(name_source)) {
+            std::string fragment_target;
+            for (const Match *part : parts) fragment_target += part->target;
+            if (*target != fragment_target) {
+                Match &name = *parts.front();
+                name.x = left;
+                name.length = name_end - left;
+                name.source = name_source;
+                name.target = *target;
+                name.layout_glyph_foreground_rgb.clear();
+                for (size_t i = 1; i < parts.size(); ++i) parts[i]->target.clear();
+                parts.resize(1);
+            }
+        }
         // Retain an explicit gutter even when a long translated item needs
         // ellipsizing. The selected amount retains its native glyphs and
         // position; the distance is fitted separately. Neither is appended
