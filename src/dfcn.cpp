@@ -20738,6 +20738,21 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    const auto text_input_regions = native_text_input_regions(*gps_);
+    std::vector<Match> text_input_utf8;
+    for (const auto &region : text_input_regions) {
+        auto &row = screen_rows[region.y];
+        if (only_y < 0 || only_y == region.y) {
+            const size_t first = text_input_utf8.size();
+            append_direct_utf8_matches(row.substr(region.x, region.w),
+                region.y, text_input_utf8);
+            for (size_t index = first; index < text_input_utf8.size(); ++index)
+                text_input_utf8[index].x += region.x;
+        }
+        // Reserve the input before dictionary, item and generated-name
+        // readers see it. Literal Unicode drawing still uses its exact bytes.
+        std::fill_n(row.begin() + region.x, region.w, ' ');
+    }
     append_settings_announcement_names(screen_rows, result, only_y);
     // The trade controls and totals are independent native fields. Claim
     // them before paragraph/item readers or generic word translations.
@@ -21274,6 +21289,18 @@ std::vector<Match> Overlay::find_matches(int only_y,
             std::make_move_iterator(dfhack_launcher_matches.end()));
         result.insert(result.end(), std::make_move_iterator(dfhack_auxiliary_matches.begin()),
             std::make_move_iterator(dfhack_auxiliary_matches.end()));
+        // Independent caption readers can restore raw cells after the work
+        // buffer was masked. Input ownership also wins over those recoveries
+        // and row composition; only its original Unicode glyphs need overlay.
+        std::erase_if(result, [&](const Match &match) {
+            return std::any_of(text_input_regions.begin(), text_input_regions.end(),
+                [&](const SDL_Rect &region) {
+                    return match.y == region.y && match.x < region.x + region.w &&
+                        region.x < match.x + match.length;
+                });
+        });
+        result.insert(result.end(), std::make_move_iterator(text_input_utf8.begin()),
+            std::make_move_iterator(text_input_utf8.end()));
         return std::move(result);
     };
 
