@@ -1,138 +1,35 @@
-DFCN v53.16-20261003 · 2026-10-03
-适配 Dwarf Fortress 53.16，Windows x64；支持 Steam 版与官网免费版。
+DFCN v53.16-20261003.2 · 2026-10-03
 
-本次集中完善冒险模式的交互、战斗、人物身份和开场汉化，修复公告、库存、劳务、农田及工坊界面的翻译和排版；补齐 DFHack 帮助、控制面板、常用弹窗和本地命令输出，并新增独立开关。字体文件和自动字号设置恢复生效。
+Windows x64 精简运行包，适配 Dwarf Fortress 53.16，支持 Steam 版与官网免费版。
 
-更新范围：上次 Release v53.16-20261002.2（bb6c192）之后，截至 201795e 的全部 41 条开发提交，按提交顺序列出。本次发布整理另补齐安装包中的 6 份 DFHack 帮助／输出运行词表及 2 份许可，同步 GitHub 与工坊版本、说明和下载链接。
+本次完善访客求职说明和申请界面汉化，新增全界面中文字体加粗开关，运行包配置默认启用；同时修复知识详情、人格、健康和想法正文在字号放大后被原英文行边界裁切的问题。
 
-1. 73d4e37 — 将聚落类型 Hillock/Hillocks 统一译为“丘堡”，同步地图、历史、公告和人物背景中的相关用语，包括“矮人丘堡”“废弃丘堡”和“丘堡废墟”。自然地形 Hill/Hills 继续使用“丘陵”。
-   https://github.com/pokemonchw/dfcn/commit/73d4e37
+更新范围：上次 Release v53.16-20261003（e053198）之后，截至 fe02c18 的全部 5 条开发提交，按提交顺序逐条列出。发布整理同步 GitHub 与工坊版本、安装说明、下载链接及逐条日志。
 
-2. d37fd4f — 补齐军事小队窗口的完整标题词条，避免把 Squads 当作名称音译，统一显示为“小队”。
-   https://github.com/pokemonchw/dfcn/commit/d37fd4f
+使用变化
 
-3. 67b1926 — 公告中的玩家自定义中文姓名保留原文，同时继续翻译相邻的物种、职业、状态和整句消息。修复报告提示框出现时地块说明失去原生文本关联而漏译的问题。
-   https://github.com/pokemonchw/dfcn/commit/67b1926
+- 新增 font_bold 字体加粗开关，主字体与缺字回退字体共用设置。本次运行包的 config.ini 设置为 font_bold=true；设为 false 可保留原有字重。沿用旧配置且未添加此项时，默认仍为 false。
+- 开启 hot_reload 时，修改 font_bold 会随配置自动重载，重新加载字体，并更新字形、测量及排版缓存。
+- 申请界面的固定按钮统一译为“批准”“拒绝”，未处理申请提示统一使用“申请”。人物、地点、机构名称及行会职业继续沿用既有名称和职业翻译规则。
 
-4. ed8ed3b — 完善工坊人员选择弹窗的识别与排版，姓名和身份使用统一列宽，并避开职业图标及工作策略按钮。弹窗覆盖工坊文字时恢复完整提示翻译，将排序栏 Cat 按“类别”处理。
-   https://github.com/pokemonchw/dfcn/commit/ed8ed3b
+逐条更新日志
 
-5. 6c59cb9 — 将农田列表中的“休耕”和已种植数量作为独立状态列处理，避免与农田名称合并翻译或挤占名称列。
-   https://github.com/pokemonchw/dfcn/commit/6c59cb9
+1. 8294523 (https://github.com/pokemonchw/dfcn/commit/82945231ecc40a4a4dac35d2dae8353b67600539) — 补齐访客概述中求职原因的完整段落翻译，覆盖寻找长期工作、以要塞为佣兵基地、长期从事学术研究三类说明，以及“他／她／它”代词分支。职业和地点按完整字段翻译，两句说明保持为同一段落处理。
 
-6. aa9ed18 — 修复劳务人员列表中姓名、职业和技能列相互覆盖或串译的问题，处理被工作策略按钮遮住的技能尾部及跨行文本。完整身份中的职位不再因可见续行重复添加，图形与 ASCII 模式均采用劳务页面自己的字段处理。
-   https://github.com/pokemonchw/dfcn/commit/aa9ed18
+2. 06a0dbf (https://github.com/pokemonchw/dfcn/commit/06a0dbf20407468be7916b0e463d941ecbf58836) — 新增 font_bold 开关，统一控制全界面汉化文字、主字体和缺字回退字体的加粗。运行包配置默认启用；设为 false 保留原有字重，旧配置省略此项时仍默认关闭。字体测量和实际绘制共用加粗结果，配置自动重载时同步更新字体及相关缓存。
 
-7. 1f1c52d — 中文段落按全部英文源行的可见区域重新换行，修复图形界面中续行被单行裁剪边界截断的问题。重排后的正文使用整个段落区域绘制。
-   https://github.com/pokemonchw/dfcn/commit/1f1c52d
+3. 73856cd (https://github.com/pokemonchw/dfcn/commit/73856cddbf354b943b668b696f7c0d6a61ae6306) — 修正主界面全大写 PETITIONS 提示漏译的问题，与劳动规则中的 Petitions 标签统一译为“申请”。
 
-8. d054477 — 修复世界生成编年史中中文事件重新排列后被原英文位置的裁剪区域隐藏的问题，使正文按编年史的可见范围排列和显示。
-   https://github.com/pokemonchw/dfcn/commit/d054477
+4. 3f884d9 (https://github.com/pokemonchw/dfcn/commit/3f884d91656af957ac96cffc3ad7d27a1c045b14) — 修复知识详情、人格、健康和想法等共用文档排版的正文在字号放大后，被原英文单行裁剪边界截断的问题。重排后的中文使用完整文档可见区域绘制，保留文本框横向边界，并统一行基线。
 
-9. 70c7074 — 补齐折叠状态引导面板的标题识别，处理长标题和带标点的标题。中文标题避开展开、关闭按钮，减少折叠后漏译或被控件遮挡的问题。
-   https://github.com/pokemonchw/dfcn/commit/70c7074
+5. fe02c18 (https://github.com/pokemonchw/dfcn/commit/fe02c18018ee02287e0ed8cea11db96fe54ae086) — 补齐 Windows 53.16 原生申请界面的各类分支，覆盖神殿／神殿建筑群与祭司任命、行会大厅／大行会大厅、和谈、公民资格及居留申请。居留目的包含庇护、学术研究、军事服务、表演和消灭怪物；同步翻译今后同类申请的“询问／接受／拒绝”设置及劳动规则入口说明。修正“批准”“拒绝”按钮被当作姓名音译的问题，补充列表截短标题的固定前缀，并统一“没有待处理申请”的提示用语。
 
-10. ce508b1 — 补齐冒险模式图形和 ASCII 悬浮信息中的原生地块类型识别，并完善人物身份说明的翻译。处理以大写冠词开头的物种、职业和姓名组合，保留姓名中的重音字符。
-   https://github.com/pokemonchw/dfcn/commit/ce508b1
+下载与安装
 
-11. 5e56cc3 — 扩展冒险交互菜单的完整分支翻译，覆盖移动、冲锋、攀爬、抓握、射击、投掷及物品使用，并补齐方向、上下层和空气／水／岩浆等介质组合。人物身份按游戏实际提供的字段翻译，保留玩家自定义文字及原有身份可见范围；环境材料同时处理污染物、含盐和停滞状态及所属者信息。
-   https://github.com/pokemonchw/dfcn/commit/5e56cc3
+下载附件 DFCN-Windows-x64-minimal.zip，将 dfhooks.dll、dfhooks_dfcn.ini 和整个 dfcn 文件夹按压缩包目录结构解压到包含 Dwarf Fortress.exe 的游戏根目录。Release 包内入口路径为 dfcn/dfhooks_dfcn.dll。
 
-12. e519eaa — 修复通过 Shift+F10 关闭再开启汉化时，传说界面渲染钩子与其他渲染封装发生冲突的问题。调整 Windows 传说文本捕获方式，避免其他扩展持有已卸载汉化核心的回调地址。
-   https://github.com/pokemonchw/dfcn/commit/e519eaa
+Steam 创意工坊订阅 (https://steamcommunity.com/sharedfiles/filedetails/?id=3811193379)提供解压后的相同运行内容，完整安装方式见工坊说明；逐条详细日志随订阅内容提供在 CHANGELOG.txt。运行包包含加载器、汉化核心、配置、词表、规则及第三方许可，不包含游戏程序、源码或开发工具。
 
-13. 3f79e41 — 将 DFHack 图标区域从汉化文字识别和相关捕获中排除，减少图标字符或纹理干扰界面识别与排版的问题。DFHack 图标仍由原生方式显示。
-   https://github.com/pokemonchw/dfcn/commit/3f79e41
+本次基于现有 Windows DLL 和运行数据打包，未操作游戏或实际观察游戏内最终显示效果。
 
-14. f3556f1 — 修复冒险背景选择卡片中的中文文字重新居中、换行后，被旧的英文单行裁剪区域截断的问题。重排文字使用完整卡片区域，并保留原有横向边界。
-   https://github.com/pokemonchw/dfcn/commit/f3556f1
-
-15. a5d1a0d — 库存界面改用分类、筛选框、滚动条和物品操作控件确定列宽，修复 DFHack 提示卡遮住外框后中文列表排版失效的问题。兼顾筛选后的少量结果以及无需滚动条的短列表。
-   https://github.com/pokemonchw/dfcn/commit/a5d1a0d
-
-16. a04d430 — 补齐 DFHack 库存提示卡中的“全部折叠”“全部展开”“移除空分类”和“快速滚动”。快捷键和 DFHack 标识保留原文，避免被当作物品名称或普通词语误译。
-   https://github.com/pokemonchw/dfcn/commit/a04d430
-
-17. e7126e4 — Windows 配合 DFHack 53.16-r2 使用时，新增 Shift+F11 独立开关，可暂停并恢复 DFHack 工具，同时保留插件配置和状态。关闭时停止插件更新、界面钩子、热键、命令及 Lua 定时回调，并关闭已经打开的 DFHack 界面；此前对游戏或存档执行的修改不会回滚。
-   https://github.com/pokemonchw/dfcn/commit/e7126e4
-
-18. 9b367c7 — DFHack 快捷菜单中的可执行命令及快捷键保留原文，单独翻译所选命令的完整说明、快速入门入口和未找到命令／无帮助提示。处理帮助位于菜单上方或下方的布局，避免命令字符串被音译或拆译。
-   https://github.com/pokemonchw/dfcn/commit/9b367c7
-
-19. a487416 — 补齐暂停菜单的保存、退役、放弃、结束冒险、时间线选择和确认提示，以及保存过程各阶段的状态文字与帮助目录标题。时间线文件夹名称和自定义音乐标题、作者信息保留原文，菜单动作使用统一排版。
-   https://github.com/pokemonchw/dfcn/commit/a487416
-
-20. 81aef33 — 完善冒险开场的围城、匪患和宝库分支，人物描述使用完整身份字段，保留昵称及玩家中文姓名。补齐 Windows 原生“无法找到冒险起始方格”错误弹窗的汉化。
-   https://github.com/pokemonchw/dfcn/commit/81aef33
-
-21. 30959c6 — 补齐冒险模式睡眠／等待弹窗的选项、小时数、直到黎明及完整时长说明。保护按钮中作为键位显示的 Enter、Space 等原文，避免被当作动作词翻译。
-   https://github.com/pokemonchw/dfcn/commit/30959c6
-
-22. da4c441 — 将攻击目标卡片中的姓名和状态统一放入头像右侧的文字列，保留快捷键位置、原生颜色及行基线，避免各段中文分别居中后错位。
-   https://github.com/pokemonchw/dfcn/commit/da4c441
-
-23. 61e9b4a — 对“是否发起冲突”“是否攻击”等提示，合并同一行或相邻行分别绘制的提示前缀、人物身份和标点，按完整中文句子排版，避免人物姓名被单独处理或多出换行。
-   https://github.com/pokemonchw/dfcn/commit/61e9b4a
-
-24. 1918d91 — 为战斗面板加入独立词表，覆盖目标身份、行动状态、技能等级、装备、身体部位及攻击确认等字段，并依据控件边界统一排版。安装包和部署清单同步纳入该词表，修正规则编号与颜色选择器冲突的问题。
-   https://github.com/pokemonchw/dfcn/commit/1918d91
-
-25. 7779618 — 分别处理部位／攻击名称、命中难度、接触效果及优势符号列，清除名称后的点线占位，保留图标、颜色和文字基线。补充螫刺等攻击词，并修正带“副本”后缀的物品名称解析。
-   https://github.com/pokemonchw/dfcn/commit/7779618
-
-26. 7c411eb — 公告窗口按完整记录翻译，保持原生左边距、颜色及每条公告的行空间，并补充跨行任务取消消息的整句处理。修正任务完成次数和杰作物品的占位字段，将 Woodworker 统一译为“木工”，并调整 ASCII 线框识别。
-   https://github.com/pokemonchw/dfcn/commit/7c411eb
-
-27. 094f54e — 将遭遇、训练、混战、致命冲突等等级标签与后续人物身份作为一个完整提示处理，补齐其中的种族、职业及姓名翻译，避免整段身份被误当作专名保留英文。
-   https://github.com/pokemonchw/dfcn/commit/094f54e
-
-28. 267c967 — 将攻击目标列表的文字对齐处理扩展到摔跤目标列表，同时合并冲突等级、冒号及人物姓名，避免姓名与状态分离居中。
-   https://github.com/pokemonchw/dfcn/commit/267c967
-
-29. efdb2f8 — 补充没有可选目标时的短面板和紧凑确认窗口处理，覆盖已投降目标仍要攻击等完整提示。确认句中的人物姓名保留原生身份翻译及对应颜色，避免被后续姓名处理覆盖。
-   https://github.com/pokemonchw/dfcn/commit/efdb2f8
-
-30. 3691107 — 区分抓握动作中的身体部位和物品字段，补充“使用某部位／物品抓住”的完整翻译，并调整图标后的说明文字布局。完整物品名称优先解析，避免将短剑等名称拆成零散词语，同时统一盾牌材质限定词。
-   https://github.com/pokemonchw/dfcn/commit/3691107
-
-31. 8a7a7cd — 将 DFHack 启动器、帮助弹窗、快速入门指南及标签说明纳入专用的完整段落翻译，处理滚动后可见正文和动态版本信息。指令列表、标签标识及可执行命令示例保留原文，安装和部署加入帮助词表及对应许可声明。
-   https://github.com/pokemonchw/dfcn/commit/8a7a7cd
-
-32. 06c9a89 — 修正 DFHack 快速入门指南的正文区域、页码和上一页／下一页按钮定位，补充正文译文。保留窗口底部的 DFHack 品牌标记原文，避免被误作人物名称音译。
-   https://github.com/pokemonchw/dfcn/commit/06c9a89
-
-33. 5fa200e — 补齐快捷命令窗口的新增、删除、编辑、名称设置及输出控制文案，汉化输入、确认和结果查看弹窗中的固定提示。用户输入的命令、保存名称及其他动态内容保留原文。
-   https://github.com/pokemonchw/dfcn/commit/5fa200e
-
-34. a8d06ac — 补充 DFHack 控制面板各页的标题、工具名称、说明及操作提示，并汉化设置编辑和恢复默认提示。适配子标签换行及未载入要塞时的三行空列表说明，保留已修改设置的颜色提示。
-   https://github.com/pokemonchw/dfcn/commit/a8d06ac
-
-35. 08debbc — 补齐 CP437 字符表标题、输入提示、发送文字、退格和取消操作的翻译，保持字符调色板、已输入内容及快捷键原样，避免字符表内容被通用翻译误处理。
-   https://github.com/pokemonchw/dfcn/commit/08debbc
-
-36. 7cb59a3 — Windows 依据指定字体文件和 font_index 选择字体集合中的实际字面，未指定字体时继续使用默认中等字重的 Noto Sans SC。自动字号模式重新应用 font_scale 和 min_font_pixels；正数 font_pixels 直接指定字号并优先于这两项设置。
-   https://github.com/pokemonchw/dfcn/commit/7cb59a3
-
-37. f483933 — 服装、家具、容器和其他成品共用材质限定词规则，统一木质、毛质、丝质、布及皮革质等表达，减少物品分类与具体条目名称不一致。原材料保留原有名词含义，成品材质限定词只在物品字段中使用。
-   https://github.com/pokemonchw/dfcn/commit/f483933
-
-38. e8ec84d — 选材列表优先翻译完整材料／物品名称，修正 water buffalo leather 被拆分后重复翻译的问题。数量和距离继续作为独立列处理，不与名称拼接。
-   https://github.com/pokemonchw/dfcn/commit/e8ec84d
-
-39. 32a842b — 优先识别工坊任务浮动提示中的完整“产出／需求”字段，修正提示被地图悬浮信息、工具栏或零散物品翻译抢先处理的问题。读取当前可见文字，避免被遮挡的地图内容混入提示。
-   https://github.com/pokemonchw/dfcn/commit/32a842b
-
-40. 62df8f6 — 补齐任务详情中的“指定玻璃”“指定植物”，以及材料、植物、玻璃选择页的完整标题翻译。将任务标题、操作按钮和材料列表按各自控件区域排版，保留搜索输入及库存可用数量的独立位置。
-   https://github.com/pokemonchw/dfcn/commit/62df8f6
-
-41. 201795e — 扩展 DFHack 控制台、启动器输出页和辅助界面的中文消息，覆盖命令简介、物品与单位报告、工具状态、确认和输入提示，以及 Stonesense 相关文字。具体标签、命令标识、参数、路径、远程调用及结构化导出内容保留原文。
-   https://github.com/pokemonchw/dfcn/commit/201795e
-
-使用变化：Windows 配合 DFHack 53.16-r2 时，Shift+F11 可独立暂停／恢复 DFHack，并保留插件状态；已执行的修改不会回滚。字体文件和 font_index 生效，自动字号应用 font_scale、min_font_pixels，正数 font_pixels 优先。命令、快捷键、路径和导出内容保留原文。
-
-本次基于现有 Windows DLL 和运行数据打包，未实际观察游戏内最终显示效果。
-
-完整差异：https://github.com/pokemonchw/dfcn/compare/v53.16-20261002.2...v53.16-20261003
-GitHub Release：https://github.com/pokemonchw/dfcn/releases/tag/v53.16-20261003
-Steam 创意工坊：https://steamcommunity.com/sharedfiles/filedetails/?id=3811193379
-
+查看全部提交差异 (https://github.com/pokemonchw/dfcn/compare/v53.16-20261003...v53.16-20261003.2) · 项目说明与署名 (https://github.com/pokemonchw/dfcn#readme)
