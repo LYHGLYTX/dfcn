@@ -14909,6 +14909,7 @@ A very large feathered dinosaur person with three giant claws on each hand.	一�
 A {s} caravan from {e} has arrived. Overall trade sentiments are fantastic.	来自{e1}的{s1}商队已抵达。总体贸易意愿极其高涨。	hPt
 A {s} caravan from {e} has arrived. Overall trade sentiments are very good.	来自{e1}的{s1}商队已抵达。总体贸易意愿非常良好。	hPt
 Affects stamina recover, ability to remain standing when tired, and breath.	影响体力恢复、疲劳时保持站立的能力以及憋气能力。	w
+All work orders must be validated by the manager before they become active.	所有工单必须经经理人批准后才能开始执行。	hP
 Announcement combat dialogue-battle-death [dialogue-battle-group]: {s} died	{s1}丧生了	l
 Announcement combat dialogue-battle-slain-list [dialogue-battle-slain]: {s}	{s1}	l
 Announcement combat dialogue-trouble []: brewing trouble with our neighbors	与邻邦日益紧张的关系	l
@@ -31050,7 +31051,6 @@ A large legless reptile person with a long neck.	一种颈部修长的大型无�
 A large monster in the form of a rhesus macaque.	一只巨大的猕猴怪。	lP
 A large oceanic fish. It is flat, round and red.	一种大型海鱼。它是平的，圆的和红色的.	lP
 A manager is required to coordinate work orders.	需要经理人来协调工单。	hP
-All work orders must be validated by the manager before they become active.	所有工单必须经经理人批准后才能开始执行。	hP
 A medium-sized creature prone to great ambition.	一种中等体型的生物，容易产生巨大的野心。	lP
 A medium-sized oceanic fish prized for its meat.	一种中等大小的海洋鱼类，因其肉质而备受珍视。	lP
 A person with the carapace and head of a beetle.	一种长着甲虫脑袋和翅膀的人形生物。	lP
@@ -79959,6 +79959,7 @@ You scratch the {s}.	你刨了刨{s1}。	hPt
 You whistle harshly.	你发出刺耳的哨声。	hP
 You've caught a {s}!	你捕获了一只{s1}！	hPt
 Your fate is sealed.	你的命运已定。	hP
+Your fortress of {s}	你的要塞：{s1}	hPt
 Your order delivered	你的订单已交付	w
 Your site government	你所在地区的政府	w
 Zone type: Dormitory	公共宿舍	l
@@ -89634,6 +89635,7 @@ Master Blowgunner	吹管大师	wi
 Maximum Elevation	最高海拔
 Maximum Volcanism	最高火山活动度
 Maximum interface	最大界面百分比	w
+Merchant from {s}	来自{s1}的商人	hPt
 Migrants (danger)	危险中的移民	w
 Minimum Elevation	最低海拔	w
 Minimum Volcanism	最低火山活动度

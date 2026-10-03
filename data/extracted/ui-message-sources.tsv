@@ -2826,6 +2826,8 @@ fortress.trade.willingness	0x3863dd+0x386403+0x3864eb+0x386511	{n} is not going 
 fortress.trade.willingness	0x3863dd+0x386403+0x3864fe+0x386511	{n} is unwilling to trade.
 fortress.trade.counteroffer	0x386691+0x3866de	The following fortress goods were added for the counteroffer:
 fortress.trade.controls	0x389751+0x3899f1	Mark all
+fortress.trade.pane-heading	0x3870fd	Merchant from {s}
+fortress.trade.pane-heading	0x388181	Your fortress of {s}
 fortress.trade.controls	0x3898a1+0x389b41	Unmark all
 fortress.trade.controls	0x389d41	Seize
 fortress.trade.controls	0x389f4b	Accept Counteroffer

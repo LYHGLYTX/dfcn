@@ -788,6 +788,7 @@ static constexpr int kDfhackHotkeysHintRule = -141;
 static constexpr int kAdventureCombatFieldRule = -142;
 static constexpr int kAnnouncementListRule = -143;
 static constexpr int kFortressLaborCaptionRule = -144;
+static constexpr int kFortressTradeFieldRule = -145;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -3661,6 +3662,8 @@ private:
     void append_fortress_depot_fields(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y, bool raw_layer = false) const;
     void layout_fortress_depot(SDL_Renderer *renderer);
+    void append_fortress_trade_fields(std::vector<std::string> &rows,
+        std::vector<Match> &matches, int only_y, bool raw_layer = false) const;
     std::vector<NativeTextCard> capture_fortress_trade_request_rows() const;
     void layout_fortress_trade_requests(SDL_Renderer *renderer);
     std::optional<NativeTextCard> capture_map_hover_card(
@@ -10441,6 +10444,15 @@ static bool catalog_scoped_term_capture(const Rule &rule, size_t index) {
 
 std::optional<std::string> Overlay::translate_ui_catalog_capture(
         const Rule &rule, size_t index, std::string_view source) const {
+    // Trade pane titles store the civilization/fortress native-language
+    // name as one field. Reuse settlement-name transliteration, without
+    // interpreting a native root as an unrelated English UI word.
+    if (index == 0 && (rule.source == "Merchant from {s}" ||
+            rule.source == "Your fortress of {s}")) {
+        return contains_cjk_utf8(source)
+            ? std::optional<std::string>(native_text_to_utf8(source))
+            : translate_procedural_fragment(std::string(source), true);
+    }
     if (catalog_scoped_term_capture(rule, index))
         return translate_legends_term(normalize_utterance(source));
     // Completion and cancellation constructors insert a complete job caption,
@@ -20069,6 +20081,7 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "fortress_justice.inc"
 #include "credits.inc"
 #include "fortress_trade_requests.inc"
+#include "fortress_trade_fields.inc"
 #include "operation_titles.inc"
 #include "map_hover.inc"
 #include "embark_site.inc"
@@ -20528,6 +20541,9 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    // The trade controls and totals are independent native fields. Claim
+    // them before paragraph/item readers or generic word translations.
+    append_fortress_trade_fields(screen_rows, result, only_y, screen_override != nullptr);
     // Task-detail material controls are independent native fields. Capture
     // their complete current frame before tooltip prose or the classic map
     // mask can consume the title and the individual Specify captions.
@@ -28499,7 +28515,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                      match.rule == kFortressStockpileTypeRule ||
                      match.rule == kFortressZoneTypeRule ||
                      match.rule == kFortressStockpileSettingRule ||
-                     match.rule == kFortressDepotFieldRule ||
+                     match.rule == kFortressDepotFieldRule || match.rule == kFortressTradeFieldRule ||
                      match.rule == kMapHoverRowRule ||
                      match.rule == kAdventureBackgroundDescriptionRule ||
                      match.rule == kWorkshopTaskRowRule || match.rule == kWorkshopRecipeRowRule ||
@@ -28811,10 +28827,11 @@ void Overlay::normalize_native_split_text() {
     std::vector<Caption> captions;
     for (size_t index = 0; index < prepared_matches_.size(); ++index) {
         Match &match = prepared_matches_[index];
-        // The decompiled adventure combat renderer uses ordinary addst,
+        // The decompiled adventure combat and trade renderers use ordinary addst,
         // which retains underlying half-font flags without drawing halves.
         if (match.rule == kAdventureCombatFieldRule ||
-                match.rule == kAnnouncementListRule) continue;
+                match.rule == kAnnouncementListRule ||
+                match.rule == kFortressTradeFieldRule) continue;
         // Tooltip wrapping owns its physical source rows and output lines.
         // Flags retained from a covered picture caption cannot turn those
         // lines into duplicate halves or move their final Chinese baseline.
@@ -28905,7 +28922,8 @@ void Overlay::normalize_native_split_text() {
             match.rule == kFortressKitchenCaptionRule ||
             match.rule == kFortressKitchenFoodRule ||
             match.rule == kFortressLaborCaptionRule ||
-            match.rule == kFortressDepotFieldRule || is_fortress_task_field(match);
+            match.rule == kFortressDepotFieldRule || match.rule == kFortressTradeFieldRule ||
+            is_fortress_task_field(match);
         for (int offset = 0; offset < match.length; ++offset) {
             bool cell_top = false;
             const unsigned char *cell = cell_at(match.x + offset, match.y, &cell_top);
@@ -36000,7 +36018,7 @@ void Overlay::prepare_frame() {
                          match.rule == kAdventureBackgroundDescriptionRule ||
                          match.rule == kAdventureCreationDescriptionRule ||
                          match.rule == kFortressEconomyRule ||
-                         match.rule == kFortressDepotFieldRule ||
+                         match.rule == kFortressDepotFieldRule || match.rule == kFortressTradeFieldRule ||
                          match.rule == kFortressLocationLabelRule ||
                          match.rule == kFortressLocationValueRule ||
                          match.rule == kFortressLocationTextRule ||
@@ -42305,7 +42323,8 @@ void Overlay::layout_multiline_matches() {
             match.rule == kFortressHaulingCaptionRule || match.rule == kFortressHaulingNameRule ||
             match.rule == kFortressItemCaptionRule || match.rule == kFortressItemUseRule ||
             match.rule == kFortressNoblePositionRule || match.rule == kFortressNobleHolderRule ||
-            match.rule == kFortressNobleRoomRule || match.rule == kFortressDepotFieldRule) {
+            match.rule == kFortressNobleRoomRule || match.rule == kFortressDepotFieldRule ||
+            match.rule == kFortressTradeFieldRule) {
             independent_fields[i] = 1;
         } else if (match.x >= 0 && match.x < gps_->dimx &&
                    match.y >= 0 && match.y < gps_->dimy &&
