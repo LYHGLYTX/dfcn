@@ -608,6 +608,9 @@ struct Match {
     bool native_split_text = false;
     bool native_split_duplicate = false;
     int native_split_top_y = 0;
+    // A binding belongs to the current settings list, never to another field
+    // which happens to occupy the same screen column (including the HUD).
+    std::optional<SDL_Rect> native_keybinding_table{};
 };
 
 // Reflow moves rendered Legends links, never the game's source text. The
@@ -792,6 +795,8 @@ static constexpr int kFortressLaborCaptionRule = -144;
 static constexpr int kFortressTradeFieldRule = -145;
 static constexpr int kMainMenuCreditsRule = -146;
 static constexpr int kSettingsAnnouncementNameRule = -147;
+static constexpr int kSettingsKeybindingActionRule = -148;
+static constexpr int kSettingsKeybindingCodeRule = -149;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -20071,6 +20076,123 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 
 #include "fortress_economy.inc"
 #include "native_panel_layout.inc"
+
+struct NativeKeybindingScope {
+    SDL_Rect table{};
+    std::vector<SDL_Rect> choosers;
+
+    static bool contains(const SDL_Rect &box, int first, int last, int y) {
+        return box.w > 0 && box.h > 0 && first >= box.x &&
+            last <= box.x + box.w && y >= box.y && y < box.y + box.h;
+    }
+    bool table_contains(int first, int last, int y) const {
+        return contains(table, first, last, y);
+    }
+    bool field_contains(int first, int last, int y) const {
+        return table_contains(first, last, y) ||
+            std::any_of(choosers.begin(), choosers.end(), [&](const SDL_Rect &box) {
+                return contains(box, first, last, y);
+            });
+    }
+    bool row_contains(int y) const {
+        return (table.h > 0 && y >= table.y && y < table.y + table.h) ||
+            std::any_of(choosers.begin(), choosers.end(), [&](const SDL_Rect &box) {
+                return y >= box.y && y < box.y + box.h;
+            });
+    }
+};
+
+// Establish the settings list before recognizing any keyboard identifiers.
+// Its live panel and controls own both axes; translated/key-like candidates
+// cannot establish the scope themselves, since ordinary HUD counts are keys
+// syntactically too. The tab/footer fallback also excludes the background HUD
+// when the graphical panel has no readable logical border.
+static NativeKeybindingScope capture_native_keybinding_scope(const graphicst &gps,
+        const std::vector<std::string> &rows, bool known_page,
+        int known_action_x, int known_add_x) {
+    NativeKeybindingScope result;
+    const NativePanelBorders borders(gps);
+    std::vector<SDL_Rect> anchors;
+    bool text_entry = false, macros = false, repeat = false;
+    int primary_count = 0, first_binding_y = gps.dimy;
+    int action_x = gps.dimx, add_right = 0;
+    int sidebar_top = gps.dimy, sidebar_right = 0;
+    int tab_bottom = -1, tab_left = gps.dimx, footer_y = gps.dimy;
+    static constexpr std::array<std::string_view, 6> tabs = {{
+        "Video", "Audio", "Game", "Keybindings", "Announcements", "Difficulty",
+    }};
+    for (int y = 0; y < gps.dimy; ++y) {
+        const std::string &row = rows[static_cast<size_t>(y)];
+        int tab_count = 0, row_tab_left = gps.dimx;
+        for (const auto tab : tabs) {
+            const size_t at = row.find(tab);
+            if (at == std::string::npos ||
+                    (at > 0 && ascii_word_byte(row[at - 1])) ||
+                    (at + tab.size() < row.size() && ascii_word_byte(row[at + tab.size()]))) continue;
+            ++tab_count;
+            row_tab_left = std::min(row_tab_left, static_cast<int>(at));
+        }
+        if (tab_count >= 3 && row.find("Keybindings") != std::string::npos) {
+            tab_bottom = std::max(tab_bottom, y);
+            tab_left = std::min(tab_left, row_tab_left);
+        }
+        if (const auto fields = parse_keybinding_row(row)) {
+            ++primary_count;
+            first_binding_y = std::min(first_binding_y, y);
+            action_x = std::min(action_x, fields->action_start);
+            add_right = std::max(add_right, fields->add_start + 3);
+            anchors.push_back({fields->action_start, y,
+                fields->add_start + 3 - fields->action_start, 1});
+        }
+        for (const auto &field : split_text_fields(row)) {
+            if (field.text == "Don't repeat" || field.text == "Delayed repeat" ||
+                    field.text == "Fast repeat") repeat = true;
+            if (field.text == "Restore defaults") footer_y = std::min(footer_y, y);
+            if (field.text == "General" || field.text == "Text entry" || field.text == "Macros") {
+                text_entry = text_entry || field.text == "Text entry";
+                macros = macros || field.text == "Macros";
+                sidebar_top = std::min(sidebar_top, y);
+                sidebar_right = std::max(sidebar_right, field.end);
+                anchors.push_back({field.start, y, field.end - field.start, 1});
+            }
+            if (field.text.starts_with("Custom:") && translate_keybinding_action(field.text)) {
+                const auto panel = native_panel_interior(borders, gps,
+                    field.start, field.end, y);
+                result.choosers.push_back(panel.value_or(
+                    SDL_Rect{field.start, y, field.end - field.start, 1}));
+            }
+        }
+    }
+    const bool current_page = (primary_count >= 2 && repeat) ||
+        (text_entry && macros) || (known_page && tab_bottom >= 0);
+    if (!current_page || anchors.empty()) return result;
+    std::optional<SDL_Rect> panel;
+    for (const auto &anchor : anchors) {
+        const auto candidate = native_panel_interior(borders, gps, anchor);
+        if (!candidate || (action_x < gps.dimx &&
+                (candidate->x > action_x || candidate->x + candidate->w < add_right))) continue;
+        if (std::all_of(anchors.begin(), anchors.end(), [&](const SDL_Rect &other) {
+                return NativeKeybindingScope::contains(*candidate,
+                    other.x, other.x + other.w, other.y);
+            })) { panel = candidate; break; }
+    }
+    // Without either a current native frame or the settings tab/footer pair,
+    // no screen-wide fallback may reserve numbers or names as bindings.
+    if (!panel && (tab_bottom < 0 || footer_y == gps.dimy)) return result;
+    int top = std::min(first_binding_y, sidebar_top);
+    top = std::max(top, panel ? panel->y : 0);
+    top = std::max(top, tab_bottom + 1);
+    const int bottom = std::min(footer_y, panel ? panel->y + panel->h : gps.dimy);
+    const int left = action_x < gps.dimx ? action_x : known_action_x >= 0
+        ? known_action_x : std::max(panel ? panel->x : tab_left, sidebar_right);
+    // Add terminates the binding cells. The rest of the settings panel and
+    // any exposed map/sidebar to its right are not keyboard fields either.
+    const int right = std::min(panel ? panel->x + panel->w : gps.dimx,
+        add_right > 0 ? add_right : known_add_x >= 0 ? known_add_x + 3 : left);
+    if (left < right && top < bottom) result.table = {left, top, right - left, bottom - top};
+    return result;
+}
+
 #include "embark_introduction.inc"
 #include "fortress_hud.inc"
 #include "adventure_target_rows.inc"
@@ -24071,26 +24193,33 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // origin and they overprint one another. Detect both the binding table and
     // its Custom pop-up, then reserve every complete key code as one identity
     // candidate before overlap resolution.
-    // Retain the already identified settings page across scroll frames. A
-    // viewport can temporarily hide every semantic anchor except the table
-    // itself, but that must never re-enable dictionary translation of keys.
-    bool keybinding_context = settings_active_page_ == 3;
-    bool keybinding_text_entry = false;
-    bool keybinding_macros = false;
-    for (int row_y = 0; row_y < gps_->dimy; ++row_y) {
-        const std::string &probe = screen_rows[static_cast<size_t>(row_y)];
-        keybinding_context = keybinding_context ||
-            probe.find("Don't repeat") != std::string::npos ||
-            probe.find("Delayed repeat") != std::string::npos ||
-            probe.find("Fast repeat") != std::string::npos ||
-            probe.find("Custom:") != std::string::npos;
-        keybinding_text_entry = keybinding_text_entry ||
-            probe.find("Text entry") != std::string::npos;
-        keybinding_macros = keybinding_macros ||
-            probe.find("Macros") != std::string::npos;
+    const bool known_keybinding_page = settings_active_page_ == 3 &&
+        settings_geometry_dimx_ == gps_->dimx && settings_geometry_dimy_ == gps_->dimy &&
+        settings_geometry_tile_x_ == gps_->tile_pixel_x &&
+        settings_geometry_tile_y_ == gps_->tile_pixel_y;
+    auto keybinding_scope = capture_native_keybinding_scope(
+        *gps_, screen_rows, known_keybinding_page,
+        known_keybinding_page && settings_keybinding_geometry_valid_ ? settings_keybinding_action_x_ : -1,
+        known_keybinding_page && settings_keybinding_geometry_valid_ ? settings_keybinding_add_x_ : -1);
+    if (screen_override && keybinding_scope.table.h == 0) {
+        // Immediate suppression can read one raw layer while the tab/sidebar
+        // controls live on the other. Their current composed frame supplies
+        // the list bounds, without borrowing a previous page's key columns.
+        std::vector<std::string> composed_rows(static_cast<size_t>(gps_->dimy),
+            std::string(static_cast<size_t>(gps_->dimx), ' '));
+        for (int y = 0; y < gps_->dimy; ++y)
+            for (int x = 0; x < gps_->dimx; ++x) {
+                const auto ch = visible_char_at(x, y);
+                composed_rows[static_cast<size_t>(y)][static_cast<size_t>(x)] = ch ? ch : ' ';
+            }
+        auto composed_scope = capture_native_keybinding_scope(
+            *gps_, composed_rows, known_keybinding_page,
+            known_keybinding_page && settings_keybinding_geometry_valid_ ? settings_keybinding_action_x_ : -1,
+            known_keybinding_page && settings_keybinding_geometry_valid_ ? settings_keybinding_add_x_ : -1);
+        keybinding_scope.table = composed_scope.table;
+        keybinding_scope.choosers.insert(keybinding_scope.choosers.end(),
+            composed_scope.choosers.begin(), composed_scope.choosers.end());
     }
-    keybinding_context = keybinding_context ||
-        (keybinding_text_entry && keybinding_macros);
 
     // Embark and adventurer equipment share the two item headings, with
     // different point-balance labels and Adventure's quality actions. Prove
@@ -24526,6 +24655,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
             rule_index == -9 || rule_index == -10 ||
             rule_index == -11 ||
             rule_index == -13 ||
+            rule_index == kSettingsKeybindingActionRule ||
+            rule_index == kSettingsKeybindingCodeRule ||
             rule_index == kCreatureNameRule ||
             rule_index == kRatedSkillRule ||
             rule_index == kCharacterInventoryItemRule ||
@@ -24554,6 +24685,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     for (int y = first_y; y < last_y; ++y) {
         RenderTimingScope row_detail(render_timings_, config_.trace_render_timing, RenderTimingStage::RowCaptures);
         std::string row = screen_rows[static_cast<size_t>(y)];
+        const bool keybinding_context = keybinding_scope.row_contains(y);
         std::vector<Match> candidates =
             reconstructed_need_rows[static_cast<size_t>(y)];
         std::vector<Match> authoritative_captured_items;
@@ -25544,22 +25676,28 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 return std::nullopt;
             };
             keybinding_row_fields = parse_keybinding_row(row);
-            if (keybinding_row_fields) {
+            if (keybinding_row_fields &&
+                    keybinding_scope.table_contains(keybinding_row_fields->action_start,
+                        keybinding_row_fields->key_end, y)) {
                 KeybindingRowFields &fields = *keybinding_row_fields;
                 auto translated = translate_keybinding_action(fields.action);
                 if (!translated)
                     translated = exact_dictionary_translation(fields.action);
-                candidates.push_back({
+                Match action{
                     fields.action_start, y,
-                    fields.action_end - fields.action_start, -7,
+                    fields.action_end - fields.action_start, kSettingsKeybindingActionRule,
                     translated ? std::move(*translated) : fields.action,
                     fields.action,
-                });
-                candidates.push_back({
+                };
+                action.native_keybinding_table = keybinding_scope.table;
+                candidates.push_back(std::move(action));
+                Match key{
                     fields.key_start, y,
-                    fields.key_end - fields.key_start, -5,
+                    fields.key_end - fields.key_start, kSettingsKeybindingCodeRule,
                     display_keybinding_code(fields.key), fields.key,
-                });
+                };
+                key.native_keybinding_table = keybinding_scope.table;
+                candidates.push_back(std::move(key));
             } else {
                 // The Custom chooser is a one-column list rather than an
                 // Add/key table. Keep its complete `Custom: <key>` labels on
@@ -25609,6 +25747,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         joined.append(row, static_cast<size_t>(runs[end].first),
                                       static_cast<size_t>(
                                           runs[end].second - runs[end].first));
+                        if (!keybinding_scope.field_contains(
+                                runs[begin].first, runs[end].second, y)) continue;
                         if (is_keybinding_code(joined)) continue;
                         auto translated = translate_keybinding_action(joined);
                         if (!translated)
@@ -25730,7 +25870,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 }
                 if (existing_field_priority >= match_priority(kRatedSkillRule, fragment)) continue;
                 auto is_clear_control = [&]() {
-                    if (!keybinding_context ||
+                    if (!keybinding_scope.table_contains(start, end, y) ||
                         (fragment != "x" && fragment != "X")) {
                         return false;
                     }
@@ -25776,22 +25916,27 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 // That made the same list alternate between aligned and
                 // unaligned layouts solely as it was scrolled.
                 const bool cached_key_cell = is_keybinding_column_fragment(
-                    keybinding_context, settings_keybinding_geometry_valid_,
+                    keybinding_scope.table_contains(start, end, y),
+                    known_keybinding_page && settings_keybinding_geometry_valid_,
                     start, end, settings_keybinding_key_x_,
                     settings_keybinding_add_x_);
                 if (cached_key_cell) {
                     // Column membership is authoritative. Preserve the whole
                     // cell before any literal or compositional translation,
                     // regardless of whether this identifier is in a list.
-                    candidates.push_back({start, y, end - start, -5,
-                                          display_keybinding_code(fragment),
-                                          std::move(fragment)});
+                    Match key{start, y, end - start, kSettingsKeybindingCodeRule,
+                        display_keybinding_code(fragment), std::move(fragment)};
+                    key.native_keybinding_table = keybinding_scope.table;
+                    candidates.push_back(std::move(key));
                     continue;
                 }
-                if (keybinding_context) {
+                if (keybinding_scope.field_contains(start, end, y)) {
                     if (auto translated = preserve_keyboard_fragment(fragment)) {
-                        candidates.push_back({start, y, end - start, -5,
-                                              std::move(*translated), std::move(fragment)});
+                        Match key{start, y, end - start, kSettingsKeybindingCodeRule,
+                            std::move(*translated), std::move(fragment)};
+                        if (keybinding_scope.table_contains(start, end, y))
+                            key.native_keybinding_table = keybinding_scope.table;
+                        candidates.push_back(std::move(key));
                         continue;
                     }
                 }
@@ -40471,6 +40616,9 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
     int announcement_header_count = 0;
     bool announcement_name_anchor = false;
     bool game_page_anchor = false;
+    bool difficulty_enemies_anchor = false;
+    bool difficulty_economy_anchor = false;
+    bool difficulty_custom_anchor = false;
     int video_page_anchor_count = 0;
     int audio_page_anchor_count = 0;
     int settings_range_count = 0;
@@ -40481,6 +40629,9 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
             match.source == "Display all errorlogs on screen" ||
             match.source == "Scale interface to fit grid height/width";
         if (match.source == "Display all errorlogs on screen") game_page_anchor = true;
+        if (match.source == "Enemies:") difficulty_enemies_anchor = true;
+        if (match.source == "Economy:") difficulty_economy_anchor = true;
+        if (match.source == "Custom settings") difficulty_custom_anchor = true;
         if (is_video_setting_source(match.source)) ++video_page_anchor_count;
         if (match.source.starts_with("Master Volume:") ||
             match.source.starts_with("Music Volume (Fortress):") ||
@@ -40526,6 +40677,8 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
     // page hint from that base layer so opening the Video resolution menu
     // cannot make the remaining Yes/No and Range rows masquerade as Game.
     int base_settings_page_hint = -1;
+    const bool difficulty_page_anchor = difficulty_enemies_anchor &&
+        difficulty_economy_anchor && difficulty_custom_anchor;
     if (settings_tab_groups.size() >= 3 && gps_->screen) {
         int base_video = 0;
         int base_audio = 0;
@@ -40538,6 +40691,9 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
         bool base_text_entry = false;
         bool base_macros = false;
         bool base_announcement_name = false;
+        bool base_difficulty_enemies = false;
+        bool base_difficulty_economy = false;
+        bool base_difficulty_custom = false;
         for (const Match &match : find_matches(-1, gps_->screen)) {
             if (is_video_setting_source(match.source)) ++base_video;
             if (match.source.starts_with("Master Volume:") ||
@@ -40549,6 +40705,9 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
             }
             if (trim(match.source).starts_with("Range: ")) ++base_ranges;
             if (match.source == "Display all errorlogs on screen") base_game = true;
+            if (match.source == "Enemies:") base_difficulty_enemies = true;
+            if (match.source == "Economy:") base_difficulty_economy = true;
+            if (match.source == "Custom settings") base_difficulty_custom = true;
             if (match.source == "Add") ++base_add;
             if (match.source == "Yes" || match.source == "No") ++base_yes_no;
             if (match.source == "Don't repeat" || match.source == "Delayed repeat" ||
@@ -40564,7 +40723,10 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
                 ++base_announcement_headers;
             }
         }
-        if (base_video >= 3) {
+        if (base_difficulty_enemies && base_difficulty_economy &&
+            base_difficulty_custom) {
+            base_settings_page_hint = 5;
+        } else if (base_video >= 3) {
             base_settings_page_hint = 0;
         } else if (base_audio >= 3) {
             base_settings_page_hint = 1;
@@ -40582,6 +40744,7 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
     // geometry is a stronger page identity than those surviving fragments.
     if (resolution_dropdown_left >= 0) base_settings_page_hint = 0;
     settings_content_anchor = settings_content_anchor ||
+        difficulty_page_anchor ||
         (settings_add_count >= 4 && keybinding_repeat_anchor) ||
         (keybinding_text_entry_anchor && keybinding_macros_anchor) ||
         (announcement_name_anchor && announcement_header_count >= 5) ||
@@ -40649,7 +40812,12 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
         // they are visible, then retain it through scroll intervals that show
         // only one or two otherwise ambiguous rows.  Layout must not toggle
         // off merely because an arbitrary anchor crossed the viewport edge.
-        if (base_settings_page_hint >= 0) {
+        // Difficulty presets have no toggle matrix or scrolling fields. Their
+        // own controls must end any cached Announcements page identity before
+        // that page can move the new button captions into its filter column.
+        if (difficulty_page_anchor) {
+            settings_active_page_ = 5;
+        } else if (base_settings_page_hint >= 0) {
             settings_active_page_ = base_settings_page_hint;
         } else if (video_page_anchor_count >= 3) {
             settings_active_page_ = 0;
@@ -40666,8 +40834,8 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
             settings_active_page_ = 2;
         }
         if (settings_active_page_ != settings_logged_page_) {
-            static constexpr std::array<std::string_view, 5> page_names = {{
-                "Video", "Audio", "Game", "Keybindings", "Announcements",
+            static constexpr std::array<std::string_view, 6> page_names = {{
+                "Video", "Audio", "Game", "Keybindings", "Announcements", "Difficulty",
             }};
             const std::string name = settings_active_page_ >= 0 &&
                     settings_active_page_ < static_cast<int>(page_names.size())
@@ -41019,9 +41187,11 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
                 const Match &button = prepared_matches_[add_index];
                 for (const Match &candidate : prepared_matches_) {
                     if (candidate.y != button.y) continue;
-                    if (candidate.rule == -7) {
+                    if (candidate.rule == kSettingsKeybindingActionRule &&
+                            candidate.native_keybinding_table) {
                         action_columns.push_back(candidate.x);
-                    } else if (candidate.rule == -5) {
+                    } else if (candidate.rule == kSettingsKeybindingCodeRule &&
+                            candidate.native_keybinding_table) {
                         key_centres_twice.push_back(
                             candidate.x * 2 + candidate.length);
                     }
@@ -41079,7 +41249,8 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
 
             std::vector<int> visible_action_columns;
             for (const Match &match : prepared_matches_) {
-                if (match.rule == -7) visible_action_columns.push_back(match.x);
+                if (match.rule == kSettingsKeybindingActionRule && match.native_keybinding_table)
+                    visible_action_columns.push_back(match.x);
             }
             const int action_column_x = settings_keybinding_geometry_valid_
                 ? settings_keybinding_action_x_
@@ -41140,13 +41311,15 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
         const bool keybinding_rows_visible = std::any_of(
             prepared_matches_.begin(), prepared_matches_.end(),
             [](const Match &match) {
-                return match.rule == -5 || match.rule == -7;
+                return match.native_keybinding_table &&
+                    (match.rule == kSettingsKeybindingCodeRule ||
+                     match.rule == kSettingsKeybindingActionRule);
             });
 
         if (keybinding_rows_visible) {
             std::vector<int> visible_key_centres_twice;
             for (const Match &match : prepared_matches_) {
-                if (match.rule == -5) {
+                if (match.rule == kSettingsKeybindingCodeRule && match.native_keybinding_table) {
                     visible_key_centres_twice.push_back(
                         match.x * 2 + match.length);
                 }
@@ -41160,7 +41333,8 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
             // removes the last per-source-width path that made short codes
             // large and long combinations small while scrolling.
             for (Match &match : prepared_matches_) {
-                if (match.rule != -5) continue;
+                if (match.rule != kSettingsKeybindingCodeRule || !match.native_keybinding_table)
+                    continue;
                 place_keybinding_code(
                     match, key_centre_twice, settings_font_pixels,
                     gps_->tile_pixel_y, gps_->dimx);
@@ -41171,37 +41345,42 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
             const int action_x = settings_keybinding_action_x_;
             const int key_x = settings_keybinding_key_x_;
             const int add_x = settings_keybinding_add_x_;
-            int first_y = INT32_MAX;
-            int last_y = INT32_MIN;
+            std::vector<SDL_Rect> table_scopes;
             for (const Match &match : prepared_matches_) {
-                if (match.rule != -5 && match.rule != -7) continue;
-                first_y = std::min(first_y, match.y);
-                last_y = std::max(last_y, match.y);
+                if (!match.native_keybinding_table ||
+                        (match.rule != kSettingsKeybindingCodeRule &&
+                         match.rule != kSettingsKeybindingActionRule)) continue;
+                const auto &box = *match.native_keybinding_table;
+                if (std::none_of(table_scopes.begin(), table_scopes.end(), [&](const SDL_Rect &other) {
+                        return box.x == other.x && box.y == other.y &&
+                            box.w == other.w && box.h == other.h;
+                    })) table_scopes.push_back(box);
             }
-            // Whole-cell rows define the visible keybinding band even when
-            // the viewport contains only auxiliary rows without Add buttons.
-            first_y = std::max(0, first_y - 4);
-            last_y = std::min(gps_->dimy - 1, last_y + 4);
             for (Match &match : prepared_matches_) {
-                // -5 is emitted only by the whole-cell keyboard grammar
-                // after the keybindings screen has been confirmed. It is
-                // therefore a key-column value even when centering a very
-                // short raw label (notably `Up`) puts its source x just
+                // Only fields captured inside the current native list belong
+                // to these columns. HUD names/counts and Hotkey hints never
+                // borrow its geometry, even if their x coordinates agree.
+                if (std::none_of(table_scopes.begin(), table_scopes.end(), [&](const SDL_Rect &box) {
+                        return NativeKeybindingScope::contains(box,
+                            match.x, match.x + match.length, match.y);
+                    })) continue;
+                if (match.rule == -5 || match.rule == -7) continue;
+                // A complete keyboard field remains a key-column value even
+                // when centering a short raw label (notably `Up`) puts its source x just
                 // outside the statistically inferred band, or when the
                 // first/last visible primary row changes while scrolling.
-                if (match.rule == -5) {
+                if (match.rule == kSettingsKeybindingCodeRule && match.native_keybinding_table) {
                     place_keybinding_code(
                         match, key_x + add_x, settings_font_pixels,
                         gps_->tile_pixel_y, gps_->dimx);
                     continue;
                 }
-                if (match.rule == -7) {
+                if (match.rule == kSettingsKeybindingActionRule && match.native_keybinding_table) {
                     place_left(match, action_x,
                                std::max(1, key_x - action_x - 3));
                     continue;
                 }
-                if (match.y < first_y || match.y > last_y ||
-                    match.x < action_x - 2 || match.x >= add_x - 1) {
+                if (match.x < action_x - 2 || match.x >= add_x - 1) {
                     continue;
                 }
                 if (match.x < key_x - 2) {
@@ -41220,7 +41399,7 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
                     // current frame reached this value through a generic
                     // literal match instead of the whole-cell grammar. Keep
                     // the identifier canonical and use the exact same centred
-                    // key box as rule -5. The former place_left() fallback is
+                    // key box as complete binding fields. The former place_left() fallback is
                     // what left lower-case `left`/`right` at the key cell's
                     // leading edge while every neighbouring code was centred.
                     preserve_keybinding_code(match);
@@ -41276,11 +41455,10 @@ void Overlay::layout_structured_panels(SDL_Renderer *renderer) {
         }
         auto align_announcement_filters = [&](int name_x) {
             auto is_filter_region_match = [&](const Match &match) {
-                const bool tab = std::find(
-                    settings_tabs.begin(), settings_tabs.end(),
-                    std::string_view(match.source)) != settings_tabs.end();
+                // A previous page's cached column is not evidence that an
+                // unrelated caption belongs to the announcement sidebar.
                 return match.y > 2 && match.x < name_x - 2 &&
-                    match.source != "Done" && !tab;
+                    is_announcement_filter_source(match.source);
             };
             int filter_x = INT32_MAX;
             for (const Match &match : prepared_matches_) {
