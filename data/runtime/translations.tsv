@@ -14158,6 +14158,7 @@ Can the elevation 400 be placed enough times to provide space for your peaks?	�
 Click to suspend the task. Assigned workers are removed from suspended tasks.	点击暂停此任务。暂停任务会移除已分配的工人。	hj
 Congratulations! Now you must return this precious object to its proper home.	祝贺你！现在必须将这件珍贵的物品送回它应在的地方。	hq
 Conversation prompt: What will you say about the conclusion of the agreement?	关于约定的结束，你想说些什么？	l
+DFHack GUI Confirmation prompt: Are you sure you want to delete this command:	确定删除此命令吗：	l
 DFHack help: "--profile <profile>" The profile inside the json file to apply.	"--profile <profile>" 要应用的 json 文件内的配置文件。	l
 DFHack help: "-q", "--quiet" Don't print the final item distribution summary.	"-q"、"--quiet" 不打印最终的物品分配汇总。	l
 DFHack help: "-u", "--zup" Apply the action to the current z-level and above.	"-u"、"--zup" 将动作应用于当前 Z 层及以上。	l
@@ -24466,6 +24467,7 @@ Conversation prompt: What will you say about the claim?	关于这项领地宣称
 Conversation prompt: What will you say about the group?	关于这个势力，你想说些什么？	l
 Conversation prompt: What will you say about the trade?	关于这笔交易，你想说些什么？	l
 Credits: elsewhere to keep the project afloat these two	让这个项目在过去二十年间得以延续的	wl
+DFHack GUI Viewer status: Command finished successfully	命令执行成功	l
 DFHack help: "--all" All active units will be affected.	"--all" 所有活跃单位都会受到影响。	l
 DFHack help: "--all" Selects every creature on the map.	"--all" 选择地图上的每个生物。	l
 DFHack help: "--flowType <type>" The flow type, one of:	"--flowType <type>" 流类型，其中之一：	l
@@ -35664,6 +35666,7 @@ Conversation keyword: neighbors town village	邻居 城镇 村庄	l
 Conversation keyword: service order room buy	服务 订单 客房 买入	l
 Creating Namaanenu, "The Everseeing Planets"	正在创建 Namaanenu, "永恒守望的行星"	w
 Credits: Additional changes for the SDL Port	SDL 移植的后续改进	wl
+DFHack GUI Confirmation action: Yes, proceed	确认继续	l
 DFHack help: "-Q", "--max-quality <integer>"	"-Q", "--max-quality <integer>"	l
 DFHack help: "-c", "--mat-category <string>"	"-c", "--mat-category <string>"	l
 DFHack help: "-f", "--freeze", "--safe-mode"	"-f"、"--freeze"、"--safe-mode"	l
@@ -36951,6 +36954,7 @@ Conversation keyword: goodbye bye done quit	再见 告别 完毕 结束	l
 Conversation keyword: righteous indignation	义愤	l
 Conversation keyword: sleep permission rest	留宿 许可 休息	l
 Conversation prompt: About whom do you ask?	你想打听谁？	l
+DFHack GUI Input prompt: Enter new command:	输入新命令：	l
 DFHack help: "--applyjobs <job>[,<job>...]"	"--applyjobs <job>[,<job>...]"	l
 DFHack help: "-e [NAME]", "--entity [NAME]"	"-e [NAME]", "--entity [NAME]"	l
 DFHack help: "-s", "--spheres <sphereList>"	"-s", "--spheres <sphereList>"	l
@@ -38303,6 +38307,7 @@ Conversation keyword: building destruction	毁坏建筑	l
 Conversation keyword: join service soldier	加入 效力 士兵	l
 Conversation prompt: Choose your tone/tact	选择交谈的语气与策略。	l
 Conversation prompt: How will you respond?	你将如何回应？	l
+DFHack GUI Caption: Command list is empty.	命令列表为空。	l
 DFHack help: "--command [ <commandStrs> ]"	"--command [ <commandStrs> ]"	l
 DFHack help: "--granularity <granularity>"	"--granularity <granularity>"	l
 DFHack help: "-g", "--granularity <value>"	"-g", "--granularity <value>"	l
@@ -42810,6 +42815,8 @@ Conversation keyword: scholar join work	学者 加入 工作	l
 Conversation keyword: surgeon join work	外科医师 加入 工作	l
 Conversation keyword: surroundings area	周边 地区	l
 Conversation prompt: What will you say?	你想说些什么？	l
+DFHack GUI Caption: Hit "A" to add one!	按 A 添加命令！	l
+DFHack GUI Input prompt: Enter command:	输入命令：	l
 DFHack help: "-f", "--include-friendly"	"-f", "--include-friendly"	l
 DFHack help: "-m", "--melt-masterworks"	"-m", "--melt-masterworks"	l
 DFHack help: "-o", "--outside <burrow>"	"-o", "--outside <burrow>"	l
@@ -47684,6 +47691,7 @@ Conversation keyword: revoke service	撤销 任职	l
 Conversation keyword: tavern keepers	酒保	l
 Create a tree to place in the arena.	创建一棵树并将其放入竞技场。	hj
 Create a tree to place in the arena.	创建一棵树并将其放入竞技场。	l
+DFHack GUI Input prompt: Enter name:	输入名称：	l
 DFHack help: "--opposite <INTEREST>"	"--opposite <INTEREST>"	l
 DFHack help: "--severity <severity>"	"--severity <severity>"	l
 DFHack help: "--strength <strength>"	"--strength <strength>"	l
@@ -49442,6 +49450,7 @@ Conversation keyword: tavern keeper	酒保	l
 Conversation keyword: worthlessness	毫无价值	l
 Create a sharp rock with two rocks.	用两块石头制作一块尖石。	w
 Cull Unimportant Historical Figures	清理不重要的历史人物
+DFHack GUI Viewer status: No output	无输出	l
 DFHack help: "--markedfor <action>"	"--markedfor <action>"	l
 DFHack help: "--no-stringification"	"--no-stringification"	l
 DFHack help: "--no-target-selector"	"--no-target-selector"	l
@@ -51338,6 +51347,8 @@ Conversation keyword: state values	阐述 价值观	l
 Conversation keyword: surroundings	周边	l
 Conversation keyword: troublemaker	惹事精	l
 Conversation keyword: vengefulness	复仇心	l
+DFHack GUI Caption: Capture output	显示输出	l
+DFHack GUI Caption: Delete command	删除命令	l
 DFHack help: "--cmd [ <command> ]"	"--cmd [ <command> ]"	l
 DFHack help: "--contaminant <mat>"	"--contaminant <mat>"	l
 DFHack help: "--decay-rate <days>"	"--decay-rate <days>"	l
@@ -55140,6 +55151,9 @@ Conversation keyword: terrifying	骇人	l
 Conversation keyword: uneasiness	不安	l
 Conversation keyword: withdrawal	撤军	l
 Converting to chopping blueprint	将砍伐指定区域转为蓝图	wo
+DFHack GUI Caption: Edit command	编辑命令	l
+DFHack GUI Caption: Name/Command	名称／命令	l
+DFHack GUI Title: Delete command	删除命令	l
 DFHack help: "--alignto <value>"	"--alignto <value>"	l
 DFHack help: "--command [ ... ]"	"--command [ ... ]"	l
 DFHack help: "--file <filename>"	"--file <filename>"	l
@@ -57032,6 +57046,9 @@ Conversation keyword: vandalism	蓄意破坏	l
 Conversation keyword: violation	违反	l
 Credits: Premium DF Playtesting	《矮人要塞》高级版试玩测试	wl
 Current top guildhall location:	当前等级最高的行会大厅地点：	wl
+DFHack GUI Caption: Add command	添加命令	l
+DFHack GUI Title: Quick Command	快捷命令	l
+DFHack GUI Viewer action: Close	关闭	l
 DFHack help: "--group-by-world"	"--group-by-world"	l
 DFHack help: "--id <entity id>"	"--id <entity id>"	l
 DFHack help: "--material <mat>"	"--material <mat>"	l
@@ -59110,6 +59127,7 @@ Conversation keyword: withdraw	撤离	l
 Converting mining to blueprint	将挖掘指定区域转为蓝图	wo
 Credits: Lead Audio Programmer	首席音频程序员	wl
 Credits: Lots of HTML/IT stuff	大量 HTML 与信息技术工作	wl
+DFHack GUI Title: Edit command	编辑命令	l
 DFHack help: "--caste <caste>"	"--caste <caste>"	l
 DFHack help: "--clean <value>"	"--clean <value>"	l
 DFHack help: "--debug <value>"	"--debug <value>"	l
@@ -61207,6 +61225,8 @@ Conversation keyword: weather	天气	l
 Conversation keyword: welcome	欢迎	l
 Conversation keyword: writing	著作	l
 Credits: Bug Tracker Managers	问题追踪系统管理员	wl
+DFHack GUI Caption: Edit name	编辑名称	l
+DFHack GUI Title: Add command	添加命令	l
 DFHack help: "--emotion <id>"	"--emotion <id>"	l
 DFHack help: "--race <value>"	"--race <value>"	l
 DFHack help: "--straightOnly"	"--straightOnly"	l
@@ -67096,6 +67116,8 @@ Conversation keyword: work	工作	l
 Conversation keyword: zeal	热忱	l
 Credits: Alexandra Orlando	Alexandra Orlando	wl
 Credits: Patrick Schroeder	Patrick Schroeder	wl
+DFHack GUI Caption: Hotkey	快捷键	l
+DFHack GUI Title: Set name	设置名称	l
 DFHack help: "--age <num>"	"--age <num>"	l
 DFHack help: "--atReclaim"	"--atReclaim"	l
 DFHack help: "--debugdata"	"--debugdata"	l
@@ -72492,6 +72514,7 @@ Crossbow, leather armor	十字弩（皮甲）	wli
 Current amount: {d}/{d}	当前施肥量：{d}/{d}	wtli
 Cut raw glass into gems	将粗糙玻璃切割成宝石	wi
 Cut rough gems here to 	在此切割粗糙宝石以提高其价值，	w
+DFHack GUI Caption: Out	输出	l
 DFHack Quickstart Guide	DFHack 快速入门指南	w
 DFHack help: "--active"	"--active"	l
 DFHack help: "--biOnly"	"--biOnly"	l

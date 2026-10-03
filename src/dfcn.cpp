@@ -5167,9 +5167,11 @@ void Overlay::build_trie() {
     };
     for (size_t rule_index = 0; rule_index < rules_.size(); ++rule_index) {
         const Rule &material_rule = rules_[rule_index];
-        if (material_rule.source.starts_with("DFHack help: ")) {
+        if (material_rule.source.starts_with("DFHack help: ") ||
+                material_rule.source.starts_with("DFHack GUI ")) {
             index_capture_literal(material_rule);
-            index_dfhack_help_paragraph(material_rule);
+            if (material_rule.source.starts_with("DFHack help: "))
+                index_dfhack_help_paragraph(material_rule);
             continue;
         }
         constexpr std::string_view world_site_type_scope = "World site type: ";

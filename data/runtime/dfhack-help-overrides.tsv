@@ -135,3 +135,28 @@ DFHack help: use job in that direction	在移动方向执行当前工作	l
 DFHack help: The Gathering Against Goblin Oppresion (TGAGO) is not responsible for all the damage that this tool can (and will) cause to you and your loved worlds and/or sanity.Please use with caution. Magma not included.	反地精压迫联合会（TGAGO）不对本工具可能且必然给你、你钟爱的世界或你的理智造成的损害负责。请谨慎使用。本工具不附赠岩浆。	l
 DFHack help: No help available.	暂无帮助信息。	l
 DFHack help: Command not found	未找到命令	l
+# Fixed GUI fields are scoped separately from help documents.
+# Input, Confirmation, and Viewer protocols translate their fixed roles; executable commands, names, and other dynamic user text remain literal.
+DFHack GUI Title: Quick Command	快捷命令	l
+DFHack GUI Caption: Command list is empty.	命令列表为空。	l
+DFHack GUI Caption: Hit "A" to add one!	按 A 添加命令！	l
+DFHack GUI Caption: Add command	添加命令	l
+DFHack GUI Caption: Delete command	删除命令	l
+DFHack GUI Caption: Edit command	编辑命令	l
+DFHack GUI Caption: Edit name	编辑名称	l
+DFHack GUI Caption: Capture output	显示输出	l
+DFHack GUI Caption: Hotkey	快捷键	l
+DFHack GUI Caption: Out	输出	l
+DFHack GUI Caption: Name/Command	名称／命令	l
+DFHack GUI Title: Add command	添加命令	l
+DFHack GUI Title: Edit command	编辑命令	l
+DFHack GUI Title: Delete command	删除命令	l
+DFHack GUI Title: Set name	设置名称	l
+DFHack GUI Input prompt: Enter new command:	输入新命令：	l
+DFHack GUI Input prompt: Enter command:	输入命令：	l
+DFHack GUI Input prompt: Enter name:	输入名称：	l
+DFHack GUI Confirmation prompt: Are you sure you want to delete this command:	确定删除此命令吗：	l
+DFHack GUI Confirmation action: Yes, proceed	确认继续	l
+DFHack GUI Viewer action: Close	关闭	l
+DFHack GUI Viewer status: No output	无输出	l
+DFHack GUI Viewer status: Command finished successfully	命令执行成功	l

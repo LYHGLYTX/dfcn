@@ -84,9 +84,13 @@ void Overlay::load_dfhack_help_catalog() {
             rule.target = unescape_tsv(std::string_view(line).substr(tab + 1,
                 flags == std::string::npos ? std::string::npos : flags - tab - 1), &target_ok);
             std::vector<uint32_t> codepoints;
-            if (!source_ok || !target_ok || !rule.source.starts_with("DFHack help: ") ||
+            const bool gui_field = rule.source.starts_with("DFHack GUI ");
+            if (!source_ok || !target_ok ||
+                    (!gui_field && !rule.source.starts_with("DFHack help: ")) ||
                     trim(rule.target).empty() || !decode_utf8(rule.target, codepoints)) continue;
-            index_dfhack_help_paragraph(rule);
+            if (gui_field)
+                capture_translations_.insert_or_assign(rule.source, rule.target);
+            else index_dfhack_help_paragraph(rule);
         }
     }
 }
@@ -180,9 +184,9 @@ std::optional<std::string> Overlay::translate_dfhack_help_rows(
 // Restored CP437 comes only from set_tile writes whose texture is live.
 static std::optional<SDL_Rect> native_dfhack_frame(
         const std::vector<std::string> &rows, int title_y,
-        int title_x, int title_length) {
+        int title_x, int title_length, int minimum_width = 26, int minimum_height = 7) {
     if (rows.empty() || title_y < 0 || title_y >= static_cast<int>(rows.size()) ||
-            title_x < 0 || title_length <= 0) return std::nullopt;
+            title_x < 0 || title_length < 0) return std::nullopt;
     const int width = static_cast<int>(rows[title_y].size());
     const auto ch = [&](int x, int y) { return static_cast<unsigned char>(rows[y][x]); };
     const auto vertical = [&](int x, int y) {
@@ -221,7 +225,8 @@ static std::optional<SDL_Rect> native_dfhack_frame(
                             (pause != std::string::npos && x >= static_cast<int>(pause) &&
                              x < static_cast<int>(pause) + 14) ||
                             (pause_blink && x >= left + 2 && x < left + 16);
-                    if (lower && right - left >= 25 && bottom - title_y >= 6)
+                    if (lower && right - left + 1 >= minimum_width &&
+                            bottom - title_y + 1 >= minimum_height)
                         return SDL_Rect{left, title_y, right - left + 1, bottom - title_y + 1};
                     break;
                 }

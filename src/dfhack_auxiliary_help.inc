@@ -1,5 +1,5 @@
 // Included after dfhack_launcher_help.inc inside find_matches. These readers
-// share its complete-document catalog and visible-slice recovery. DFHack's
+// share its GUI-field/document catalog and visible-slice recovery. DFHack's
 // graphical frames are read from the captured pens, not native DF skins.
 std::vector<SDL_Rect> dfhack_auxiliary_regions;
 std::vector<Match> dfhack_auxiliary_matches;
@@ -10,12 +10,13 @@ std::vector<Match> dfhack_auxiliary_matches;
             (gps_->screen_pixel_y - gps_->dimy * th) / 2 + box.y * th,
             box.w * tw, box.h * th};
     };
-    const auto auxiliary_literal = [&](int x, int y, std::string_view source, int right) {
+    const auto auxiliary_literal = [&](int x, int y, std::string_view source, int right,
+            bool centered = false, std::string_view scope = "DFHack help: ") {
         if (x < 0 || y < 0 || y >= gps_->dimy || right > gps_->dimx ||
             x + static_cast<int>(source.size()) > right) return;
         const auto raw = read_row(y);
         if (raw.compare(x, source.size(), source) != 0) return;
-        const auto target = exact_literal_translation("DFHack help: " + std::string(source));
+        const auto target = exact_literal_translation(std::string(scope) + std::string(source));
         if (!target) return;
         dfhack_auxiliary_regions.push_back({x, y, static_cast<int>(source.size()), 1});
         if (only_y >= 0 && only_y != y) return;
@@ -23,9 +24,14 @@ std::vector<Match> dfhack_auxiliary_matches;
             *target, std::string(source)};
         match.layout_x = x;
         match.layout_length = right - x;
-        match.layout_left = true;
+        match.layout_left = !centered;
         match.layout_clip_right = right;
         dfhack_auxiliary_matches.push_back(std::move(match));
+    };
+    const auto gui_literal = [&](int x, int y, std::string_view source, int right,
+            std::string_view role, bool centered = false) {
+        auxiliary_literal(x, y, source, right, centered,
+            "DFHack GUI " + std::string(role) + ": ");
     };
     const auto auxiliary_body = [&](const SDL_Rect &box, int native_width, bool advfort) {
         if (box.x < 0 || box.y < 0 || box.w <= 0 || box.h <= 0 ||
@@ -135,16 +141,139 @@ std::vector<Match> dfhack_auxiliary_matches;
         }
         flush();
     };
-    // A help title must belong to the dedicated catalog, its frame must be
+    // Common GUI components have a separate role-scoped catalogue. A help
+    // document may contain executable examples; those entries must never
+    // select a translation for an EditField, saved name or command output.
+    struct GuiPrompt {
+        std::vector<Match> rows;
+        std::string target;
+    };
+    const auto gui_prompt = [&](std::string_view role, int left, int top,
+            int right, int last) -> std::optional<GuiPrompt> {
+        std::optional<GuiPrompt> selected;
+        std::vector<Match> rows;
+        std::string source;
+        for (int row_y = top; row_y <= last; ++row_y) {
+            const auto band = std::string_view(dfhack_context_rows[row_y]).substr(
+                left, right - left);
+            const auto text = trim_view(band);
+            if (text.empty()) break;
+            const int x = left + static_cast<int>(text.data() - band.data());
+            rows.push_back({x, row_y, static_cast<int>(text.size()),
+                kDfhackHotkeysHintRule, {}, std::string(text)});
+            if (!source.empty()) source += ' ';
+            source += text;
+            const auto target = exact_literal_translation(
+                "DFHack GUI " + std::string(role) + ": " + source);
+            if (target && contains_cjk_utf8(*target)) selected = GuiPrompt{rows, *target};
+        }
+        return selected;
+    };
+    const auto append_gui_prompt = [&](const GuiPrompt &prompt, int left, int right) {
+        auto rows = prompt.rows;
+        for (const auto &row : rows)
+            if (read_row(row.y).compare(row.x, row.length, row.source) != 0) return;
+        // The prompt owns its original rows only. The following value is a
+        // separate native field even when there is no blank line between them.
+        rows.front().layout_native_clip = auxiliary_pixels(
+            {left, rows.front().y, right - left, static_cast<int>(rows.size())});
+        append_bounded_paragraph(std::move(rows), prompt.target, screen_rows,
+            dfhack_auxiliary_matches, only_y, right, right, {}, false, left);
+    };
+    for (int title_y = 0; title_y < gps_->dimy; ++title_y) {
+        const auto &title_row = dfhack_context_rows[title_y];
+        if (title_row.find(static_cast<char>(0xda)) == std::string::npos &&
+                title_row.find(static_cast<char>(0xc9)) == std::string::npos) continue;
+        for (int corner = 0; corner < gps_->dimx; ++corner) {
+            const auto left_ch = static_cast<unsigned char>(title_row[corner]);
+            if (left_ch != 0xda && left_ch != 0xc9) continue;
+            int right_corner = corner + 1;
+            while (right_corner < gps_->dimx) {
+                const auto ch = static_cast<unsigned char>(title_row[right_corner]);
+                if (ch == 0xbf || ch == 0xbb) break;
+                ++right_corner;
+            }
+            if (right_corner == gps_->dimx) continue;
+            const auto title_padding = [&](int x) {
+                const auto ch = static_cast<unsigned char>(title_row[x]);
+                return ch == ' ' || ch == 0xc4 || ch == 0xcd || ch == 0xc2 ||
+                    ch == 0xcb || ch == 0xc1 || ch == 0xca;
+            };
+            // The title is opaque data: repeated spaces and an empty command
+            // title must not prevent the surrounding viewer from being read.
+            int at = corner + 1, title_end = right_corner;
+            while (at < title_end && title_padding(at)) ++at;
+            while (title_end > at && title_padding(title_end - 1)) --title_end;
+            if (at == title_end) at = title_end = corner + 1;
+            const auto title = std::string_view(title_row).substr(at, title_end - at);
+            // Legacy InputBox is 23 columns wide. Connected borders and a
+            // role-scoped prompt/control prove the component, not its size.
+            const auto frame = native_dfhack_frame(dfhack_context_rows,
+                title_y, at, static_cast<int>(title.size()), 23, 7);
+            if (!frame || frame->x != corner ||
+                    frame->x + frame->w - 1 != right_corner) continue;
+            const int right = frame->x + frame->w - 1;
+            const int bottom = frame->y + frame->h - 1;
+            if (dfhack_context_rows[bottom].compare(right - 7, 6, "DFHack") != 0) continue;
+            const int left = frame->x + 2, top = frame->y + 2;
+            const int footer_y = bottom - 2;
+            const auto footer_band = std::string_view(dfhack_context_rows[footer_y]).substr(
+                left, right - 1 - left);
+            const auto footer = trim_view(footer_band);
+            const auto separator = footer.find(": ");
+            std::string_view action;
+            int action_x = -1;
+            if (separator != std::string_view::npos) {
+                auto key = std::string(footer.substr(0, separator));
+                std::replace(key.begin(), key.end(), '-', '+');
+                if (is_keybinding_code(key)) {
+                    action = trim_view(footer.substr(separator + 2));
+                    action_x = left + static_cast<int>(action.data() - footer_band.data());
+                }
+            }
+            const auto input = gui_prompt("Input prompt", left, top, right, bottom - 4);
+            const auto confirmation = gui_prompt(
+                "Confirmation prompt", left, top, right - 1, footer_y - 2);
+            const bool input_gap = trim_view(std::string_view(
+                dfhack_context_rows[bottom - 3]).substr(left, right - left)).empty();
+            const bool confirm_action = action_x >= 0 && exact_literal_translation(
+                "DFHack GUI Confirmation action: " + std::string(action)).has_value();
+            const bool viewer = action_x >= 0 && exact_literal_translation(
+                "DFHack GUI Viewer action: " + std::string(action)).has_value();
+            if (input && input_gap) {
+                dfhack_auxiliary_regions.push_back(*frame);
+                gui_literal(at, title_y, title, title_end, "Title", true);
+                append_gui_prompt(*input, left, right);
+                // The final body row is the EditField, including its cursor.
+            } else if (confirmation && confirm_action) {
+                dfhack_auxiliary_regions.push_back(*frame);
+                gui_literal(at, title_y, title, title_end, "Title", true);
+                append_gui_prompt(*confirmation, left, right - 1);
+                gui_literal(action_x, footer_y, action, right - 1, "Confirmation action");
+            } else if (viewer) {
+                dfhack_auxiliary_regions.push_back(*frame);
+                gui_literal(action_x, footer_y, action, right - 1, "Viewer action");
+                if (const auto status = gui_prompt(
+                        "Viewer status", left, top, right - 4, footer_y - 2))
+                    append_gui_prompt(*status, left, right - 4);
+                // Viewer titles and all other output are user/command data.
+            }
+        }
+    }
+    // A GUI title must belong to the dedicated catalog, its frame must be
     // connected, and its bottom must carry DFHack's native signature. This
     // also covers independent help dialogs added by other DFHack scripts.
     for (int y = 0; y < gps_->dimy; ++y) {
         for (const auto &field : split_text_fields(dfhack_context_rows[y])) {
             const std::string_view title = field.text;
             const std::string folded = lower(std::string(title));
-            if (title != "DFHack Quickstart Guide" && folded.find("help") == std::string::npos)
+            const bool quickcmd = title == "Quick Command";
+            if (!quickcmd && title != "DFHack Quickstart Guide" &&
+                    folded.find("help") == std::string::npos)
                 continue;
-            if (!exact_literal_translation("DFHack help: " + std::string(title))) continue;
+            if (!exact_literal_translation(
+                    (quickcmd ? "DFHack GUI Title: " : "DFHack help: ") +
+                    std::string(title))) continue;
             const int at = field.start;
             const auto frame = native_dfhack_frame(dfhack_context_rows, y,
                 at, static_cast<int>(title.size()));
@@ -154,6 +283,40 @@ std::vector<Match> dfhack_auxiliary_matches;
             const int right = frame->x + frame->w - 1;
             const int bottom = frame->y + frame->h - 1;
             if (dfhack_context_rows[bottom].compare(right - 7, 6, "DFHack") != 0) continue;
+            if (quickcmd) {
+                // gui/quickcmd.lua keeps executable commands and user labels
+                // in the list. Own the whole window so only its fixed UI
+                // fields translate, including during raw-layer suppression.
+                dfhack_auxiliary_regions.push_back(*frame);
+                gui_literal(at, y, title,
+                    at + static_cast<int>(title.size()), "Title", true);
+                const int body_left = frame->x + 2;
+                const int body_top = frame->y + 2;
+                const int body_right = right - 1;
+                const int footer_bottom = bottom - 2;
+                const int second_column = body_left + 19;
+                gui_literal(body_left, body_top,
+                    "Command list is empty.", body_right, "Caption");
+                gui_literal(body_left, body_top + 1,
+                    "Hit \"A\" to add one!", body_right, "Caption");
+                // HOTKEYWIDTH=7 and OUTWIDTH=4 are independent header fields.
+                gui_literal(body_left, body_top, "Hotkey", body_left + 7, "Caption");
+                gui_literal(body_left + 7, body_top, "Out", body_left + 11, "Caption");
+                gui_literal(body_left + 11, body_top, "Name/Command", body_right, "Caption");
+                // Each HotkeyLabel paints its key and ': ' before the action.
+                // Limit the left column to the next key, preserving both keys.
+                gui_literal(body_left + 3, footer_bottom - 2,
+                    "Add command", std::min(second_column, body_right), "Caption");
+                gui_literal(second_column + 3, footer_bottom - 2,
+                    "Delete command", body_right, "Caption");
+                gui_literal(body_left + 3, footer_bottom - 1,
+                    "Edit command", std::min(second_column, body_right), "Caption");
+                gui_literal(second_column + 3, footer_bottom - 1,
+                    "Edit name", body_right, "Caption");
+                gui_literal(body_left + 3, footer_bottom,
+                    "Capture output", body_right, "Caption");
+                continue;
+            }
             if (quickstart) {
                 // Window's frame_inset and framed Panel gap each consume
                 // one cell. Its b=0 controls therefore sit two rows above
