@@ -562,6 +562,9 @@ struct Match {
     std::optional<SDL_Rect> native_picture_caption_box{};
     bool native_labor_control = false;
     std::string native_picture_caption_source{};
+    // Complete source and group role recovered by the native item reader.
+    std::string native_item_caption_source{};
+    bool native_item_group_caption = false;
     // Layout ownership is not translation coverage: retain unknown field
     // text in the collection queue even if its display is later ellipsized.
     bool native_hover_untranslated = false;
@@ -2936,6 +2939,11 @@ public:
                                                        std::string_view query) const;
     bool translated_item_search_matches(std::string_view source,
         std::string_view query, bool fortress_item = false) const;
+    std::optional<std::string> translate_wood_item_caption(
+        std::string_view source, bool group = false, bool allow_bare = true,
+        bool allow_bare_ash = false) const;
+    bool translated_stocks_search_matches(std::string_view source,
+        std::string_view query) const;
     bool translated_stockpile_search_matches(std::string_view source,
         std::string_view query, StockpileCaptionKind kind) const;
     bool translated_symbol_search_matches(std::string_view source,
@@ -4604,6 +4612,18 @@ bool Overlay::translated_item_search_matches(std::string_view source,
         : translate_embark_equipment_item(source, -1, -1, source);
     if (!translated || translated->empty()) return false;
     return translated_search_text_matches(*translated, query);
+}
+
+bool Overlay::translated_stocks_search_matches(std::string_view source,
+        std::string_view query) const {
+    TranslationStateScope translation_scope;
+    if (!config_.enabled || source.empty() ||
+            compact_translated_search_text(query).empty()) return false;
+    // Stocks searches group names, so explicit log captions use the same
+    // wood name as their headers. Preserve the existing item-name aliases.
+    if (const auto wood = translate_wood_item_caption(source, true, false);
+            wood && translated_search_text_matches(*wood, query)) return true;
+    return translated_item_search_matches(source, query, true);
 }
 
 void Overlay::capture_conversation_choices(
@@ -30530,6 +30550,77 @@ static std::string arena_wood_material_qualifier(
         std::string_view source, std::string target) {
     return arena_wood_material_qualifier(source, std::move(target),
         lookup_item_material_rule);
+}
+
+std::optional<std::string> Overlay::translate_wood_item_caption(
+        std::string_view source, bool group, bool allow_bare, bool allow_bare_ash) const {
+    TranslationStateScope translation_scope;
+    if (!config_.enabled || !config_.compositional_rules) return std::nullopt;
+    source = trim_view(source);
+    if (source.empty()) return std::nullopt;
+
+    // Counts and quality/ownership marks can nest in either order. Peel only
+    // their proved grammar, retaining each visible marker around the name.
+    std::string prefix, suffix;
+    for (;;) {
+        if (const auto number = item_number_suffix(source); !number.empty()) {
+            suffix.insert(0, number);
+            source = trim_view(source.substr(0, source.size() - number.size()));
+            continue;
+        }
+        const ItemDesignationText designation = split_item_designation(source);
+        if (designation.prefix.empty() && designation.suffix.empty()) break;
+        prefix += designation.prefix;
+        suffix.insert(0, designation.suffix);
+        source = designation.item;
+    }
+    if (source.empty()) return std::nullopt;
+
+    std::string material = lower(std::string(source));
+    bool explicit_log = false;
+    for (const std::string_view noun : {" logs", " log"}) {
+        if (material.size() <= noun.size() || !material.ends_with(noun)) continue;
+        material = trim(material.substr(0, material.size() - noun.size()));
+        explicit_log = true;
+        break;
+    }
+    if (!explicit_log && !allow_bare) return std::nullopt;
+    // Outside a proved Logs category, a bare ash noun is the furnace product.
+    // Explicit log names and the unambiguous ashen material keep the wood sense.
+    if (!explicit_log && !allow_bare_ash && (material == "ash" || material == "ashes"))
+        return std::nullopt;
+    const ArenaWoodMaterialMatch wood = find_arena_wood_material(material);
+    if (wood.source.empty() || wood.at != 0 || wood.length != material.size())
+        return std::nullopt;
+
+    // Keep the existing plant/log vocabulary: the material adjective can
+    // use another species synonym (walnut wood is 胡桃木, logs are 核桃树原木).
+    // Item captions, description nouns and Stocks share this wood spelling.
+    const auto raw_log_name = [&](const std::string &name) -> std::optional<std::string> {
+        std::vector<size_t> origins;
+        auto target = RULESETS.translate_with_origins(name,
+            "::items::wood::raw_names", origins);
+        return target && target->ends_with("原木") ? target : std::nullopt;
+    };
+    auto log_name = raw_log_name(material + " logs");
+    if (!log_name) log_name = raw_log_name(std::string(wood.source) + " logs");
+    std::string target;
+    if (log_name) target = std::move(*log_name);
+    else {
+        target = arena_wood_material_qualifier(wood.source, {});
+        if (target.empty()) return std::nullopt;
+        if (target.ends_with("木")) target.resize(target.size() - std::string_view("木").size());
+        target += "原木";
+    }
+    for (size_t at = target.find("树"); at != std::string::npos;
+            at = target.find("树", at)) target.erase(at, std::string_view("树").size());
+    if (group || !explicit_log) {
+        target.resize(target.size() - std::string_view("原木").size());
+        if (!target.ends_with("木")) target += "木";
+    } else {
+        target.insert(target.size() - std::string_view("原木").size(), "树");
+    }
+    return prefix + target + suffix;
 }
 
 static bool is_arena_equipment_modifier_token(std::string_view source) {

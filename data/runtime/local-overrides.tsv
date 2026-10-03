@@ -233,6 +233,7 @@ Assign new display items	指定新展品	wi
 # Reuse Bodywear's established term only for this category, not actual armor
 # items, the broader stockpile category, workshop menus or skill names.
 Stocks category: armor	躯干装备	li
+Stocks category: logs	木材	li
 
 # Complete native stockpile settings vocabulary; source families and native
 # references are inventoried in data/extracted/stockpile-sources.tsv. Existing labels retain

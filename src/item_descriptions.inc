@@ -299,9 +299,14 @@ std::optional<std::string> Overlay::translate_item_description_term(
             std::to_string(depth) + ":" + std::string(value);
         if (const auto found = memo.find(memo_key); found != memo.end()) return found->second;
         auto resolve = [&]() -> std::optional<std::string> {
-            // Existing whole terms win over decomposition. Thus goblin-cap,
-            // kobold bulb, horn silver and every other established multiword
-            // material retain the same spelling everywhere they appear.
+            // The native item writer can name a wood item by its material
+            // alone. Share the caption spelling before a plant-name literal
+            // claims that complete noun in a This-is sentence.
+            if (!predicate)
+                if (auto target = translate_wood_item_caption(value)) return target;
+            // Other established whole terms win over decomposition. Kobold
+            // bulb, horn silver and complete multiword materials retain
+            // their existing spelling before generic noun parsing.
             if (!predicate)
                 if (auto target = exact_literal_translation(value);
                     item_description_translation_complete(target)) return target;

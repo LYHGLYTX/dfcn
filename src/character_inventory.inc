@@ -34,6 +34,7 @@ std::optional<std::string> Overlay::translate_inventory_item_name(
         if (target) return designation.prefix + *target + designation.suffix;
         return std::nullopt;
     }
+    if (auto target = translate_wood_item_caption(source)) return target;
     if (auto target = translate_item_caption_grammar(source)) return target;
     if (auto target = translate_arena_equipment_source_phrase(source); complete(target))
         return target;

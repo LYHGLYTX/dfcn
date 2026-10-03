@@ -19,6 +19,8 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
     struct Row {
         int y, button_left, button_right, label_left, count_left;
         std::vector<Match *> label, count;
+        std::string source;
+        bool selected;
     };
     std::vector<Row> rows;
     // Use the current skin in either native representation: texture handles
@@ -103,7 +105,8 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
                 count_parts.back()->x + count_parts.back()->length != count.right)
                 count_parts.clear();
             rows.push_back({match.y, left, right, label.left, count.left,
-                std::move(label_parts), std::move(count_parts)});
+                std::move(label_parts), std::move(count_parts), label.source,
+                skin == skins[1] || skin == skins[3] || skin == skins[5]});
             break;
         }
     }
@@ -115,7 +118,10 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
     for (Row &row : rows)
         columns[{row.button_left, row.button_right, row.label_left}]
             .push_back(&row);
-    struct Slot { std::vector<Match *> parts; int left, right; };
+    struct Slot {
+        std::vector<Match *> parts;
+        int left, right;
+    };
     auto layout_slots = [&](std::vector<Slot> &slots) {
         for (Slot &slot : slots)
             layout_fortress_text_rows(renderer, {slot.parts}, slot.left, slot.right);
@@ -175,7 +181,12 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
         for (const Row *row : column)
             label_right = std::min(label_right, row->count_left - 1);
         std::vector<Slot> categories;
+        bool selected_category_visible = false, wood_context = false;
         for (Row *row : column) {
+            if (row->selected) {
+                selected_category_visible = true;
+                wood_context = wood_context || lower(trim(row->source)) == "logs";
+            }
             // Only this proved category field has the Stocks item-type
             // meaning. ITEM_ARMOR includes tunics/dresses as well as armor;
             // concrete items, armor stands and workshop menus keep their
@@ -205,6 +216,17 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
         const int pane_right = item_bar ? item_bar->x : search_right;
         const int list_bottom = item_bar ? item_bar->y + item_bar->h
             : category_bar ? category_bar->y + category_bar->h : gps_->dimy;
+        const auto source_of = [](const Match &part) -> std::string_view {
+            return part.native_item_caption_source.empty()
+                ? std::string_view(part.source)
+                : std::string_view(part.native_item_caption_source);
+        };
+        for (const Match &part : prepared_matches_)
+            if (!part.native_split_duplicate && !part.target.empty() &&
+                    part.y >= list_top && part.y < list_bottom &&
+                    part.x >= search->x && part.x + part.length < pane_right &&
+                    translate_wood_item_caption(source_of(part), false, false))
+                wood_context = true;
 
         // The item pane is below its own search box. Identify
         // each row by its actual Stocks action strip, including headers and
@@ -225,12 +247,120 @@ void Overlay::layout_fortress_stocks(SDL_Renderer *renderer) {
                 if (action_at(x, y)) { controls_left = x - 1; break; }
             }
             if (controls_left < 0) continue;
+            bool item_record = false;
+            for (int x = controls_left + 1; x + 1 < pane_right; ++x) {
+                if (native_item_action_skin_at(*gps_, x, y,
+                        native_texture_button_stocks_recenter(*gps_), classic)) {
+                    item_record = true;
+                    break;
+                }
+            }
             if (!category_bar && !item_bar) {
-                bool inspect = false;
+                // Group headers have state actions but no individual item
+                // to inspect. Filtering can remove both scrollbars, so an
+                // inspect-only requirement would discard every such header.
+                bool inspect = false, state_action = false;
                 for (int x = controls_left; x + 3 <= pane_right && !inspect; ++x)
                     inspect = native_square_button_at(*gps_, x, y,
                         native_texture_button_stocks_view_item(*gps_));
-                if (!inspect) continue;
+                for (int x = controls_left + 1; x + 1 < pane_right && !state_action; ++x)
+                    state_action = native_item_state_action_at(*gps_, x, y);
+                if (!inspect && !state_action) continue;
+            }
+            // Translation ownership is independent of layout completeness.
+            // A header can have a separately drawn/native [count], or its
+            // retained half-font owner can sit on the other text row from
+            // the action strip. Neither makes it a concrete item caption.
+            std::vector<Match *> captions;
+            for (Match &part : prepared_matches_) {
+                const bool same_row = part.y == y || (part.native_split_text &&
+                    (part.native_split_top_y == y || part.native_split_top_y + 1 == y));
+                if (same_row && !part.native_split_duplicate && !part.target.empty() &&
+                        !part.legends_flow && part.x >= search->x &&
+                        part.x + part.length <= controls_left)
+                    captions.push_back(&part);
+            }
+            std::sort(captions.begin(), captions.end(),
+                [](const Match *a, const Match *b) { return a->x < b->x; });
+            if (!captions.empty()) {
+                const int first = captions.front()->x;
+                std::string native;
+                for (int x = first; x < controls_left; ++x) {
+                    const auto ch = visible_char_at(x, captions.front()->y);
+                    native.push_back(ch ? static_cast<char>(ch) : ' ');
+                }
+                while (!native.empty() && native.back() == ' ') native.pop_back();
+                const auto count = item_number_suffix(native);
+                // Stocks' individual records have a recenter action; group
+                // rows have only state actions. Counts can be drawn in a
+                // separate half/field, so they do not establish this role.
+                const bool group = !item_record;
+                const auto allow_bare = [&](std::string_view source) {
+                    if (wood_context) return true;
+                    if (selected_category_visible) return false;
+                    auto name = trim_view(source);
+                    for (;;) {
+                        const size_t previous = name.size();
+                        if (const auto suffix = item_number_suffix(name); !suffix.empty())
+                            name = trim_view(name.substr(0, name.size() - suffix.size()));
+                        name = split_item_designation(name).item;
+                        if (name.size() == previous) break;
+                    }
+                    // Bare ash also names a furnace product, so it needs
+                    // the selected category or another explicit log caption.
+                    const auto folded = lower(std::string(name));
+                    return folded != "ash" && folded != "ashes";
+                };
+                // The generic matcher may own the species and log noun as
+                // separate runs, including a final logs+[count] run. Join a
+                // fully owned field first; when the count is unowned, join
+                // only the name and leave that count at its native position.
+                const auto rewrite_field = [&](std::string_view field) {
+                    const int end = first + static_cast<int>(field.size());
+                    std::vector<Match *> fields;
+                    int cursor = first;
+                    for (Match *caption : captions) {
+                        if (caption->x >= end) break;
+                        if (caption->x < cursor || caption->x + caption->length > end)
+                            return false;
+                        while (cursor < caption->x && native[cursor - first] == ' ') ++cursor;
+                        if (cursor != caption->x) return false;
+                        cursor = caption->x + caption->length;
+                        fields.push_back(caption);
+                    }
+                    if (cursor != end || fields.size() < 2) return false;
+                    if (auto target = translate_wood_item_caption(
+                            field, group, allow_bare(field), wood_context)) {
+                        Match &caption = *fields.front();
+                        caption.source = std::string(field);
+                        caption.length = end - first;
+                        caption.native_item_caption_source = caption.source;
+                        caption.native_item_group_caption = group;
+                        caption.target = std::move(*target);
+                        caption.native_hover_untranslated = false;
+                        caption.layout_length = caption.length;
+                        caption.layout_clip_right = end;
+                        caption.layout_glyph_foreground_rgb.clear();
+                        for (size_t i = 1; i < fields.size(); ++i) fields[i]->target.clear();
+                        return true;
+                    }
+                    return false;
+                };
+                const auto name = trim_view(std::string_view(native).substr(
+                    0, native.size() - count.size()));
+                if (!rewrite_field(native) && !rewrite_field(name))
+                    for (Match *caption : captions) {
+                        const auto source = source_of(*caption);
+                        // A bare material fragment is not a whole item name.
+                        const bool bare = captions.size() == 1 && allow_bare(source);
+                        if (auto target = translate_wood_item_caption(
+                                source, group, bare, wood_context)) {
+                            caption->target = std::move(*target);
+                            caption->native_item_group_caption = group;
+                            caption->native_hover_untranslated = false;
+                            caption->layout_glyph_foreground_rgb.clear();
+                        }
+                    }
             }
             std::vector<Match *> parts;
             bool complete = true;

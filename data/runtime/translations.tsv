@@ -77735,6 +77735,7 @@ Spouse is not present	配偶不在此地	hP
 Start painting a new 	开始绘制新的储物处。选定地块	w
 State feelings of awe	表达敬畏	hP
 State feelings of joy	表达喜悦	hP
+Stocks category: logs	木材	li
 Stop Pumping Manually	停止手动抽水	wl
 Store item in vehicle	将物品存入载具	wi
 Store squad equipment	存放小队装备	wi
@@ -109116,7 +109117,6 @@ clown loaches	丑鳅鱼	wi
 coat patterns	花纹皮毛	wi
 cockatiel man	玄凤鹦鹉人	wi
 cockatiel men	玄凤鹦鹉人	wi
-coconut palms	椰棕榈	wi
 coffee cherry	咖啡果	wi
 coffee leaves	咖啡叶	wi
 colorful hair	彩色毛发	wi
@@ -113292,7 +113292,6 @@ clear garnet	透明榴石	wi
 clear zircon	透明锆石	wi
 clear-voiced	嗓音清亮	wi
 cloudberries	云莓	wi
-coconut palm	椰棕榈	wi
 coffee beans	咖啡豆	wi
 coffee trees	咖啡树	wi
 common reeds	芦苇	wi
@@ -116774,7 +116773,6 @@ tredecaplets	十三胞胎	wi
 trillion cut	三角形切工	wi
 trust of {a}	信任{a1}	ht
 trusted {a}.	信任{a1}。	ht
-tunnel tubes	隧管菌	wi
 turnip plant	芜菁植株	wi
 turnip seeds	芜菁种子	wi
 two thousand	两千	wi
@@ -117342,7 +117340,6 @@ black metal	乌黑金属	hMi
 black metal	乌黑金属	wim
 black opals	黑欧泊	wi
 blood gnats	血飞虫	wi
-blood thorn	血荆棘	wi
 bloodstones	血石	wi
 blue garnet	蓝榴石	wi
 blue peahen	蓝孔雀	wi
@@ -119901,7 +119898,6 @@ narrow-chin	下巴窄小	wi
 narwhal man	独角鲸人	wi
 narwhal men	独角鲸人	wi
 native gold	天然金矿	wi
-nether-caps	下界菇	wi
 nomadic {s}	游牧的{s1}	hIit
 nose bridge	鼻梁	wi
 noted bully	著名的恶霸	h
@@ -120631,7 +120627,6 @@ triceratops	三角龙	wi
 troglodytes	穴居人	wi
 trusted {a}	信任{a1}	ht
 tube agates	管脉玛瑙	wi
-tunnel tube	隧管菌	wi
 turkey hens	火鸡	wi
 turnip leaf	芜菁叶	wi
 turnip wine	芜菁果酒	wi
@@ -121170,7 +121165,6 @@ bitter goo	苦涩的黏稠物	wim
 black bear	黑熊	wi
 black opal	黑欧泊	wi
 black sand	黑沙	wi
-black-caps	黑菇	wi
 blackberry	黑莓	wi
 blade weed	刀刃草	wi
 blood gnat	血飞虫	wi
@@ -121199,7 +121193,6 @@ cacao leaf	可可叶	wi
 cacao pods	可可豆荚	wi
 cacao tree	可可树	wi
 cacao wood	可可树	wi
-candlenuts	石栗	wi
 cap hopper	菌盖跳螈	wi
 caper bush	刺山柑灌木	wi
 caper leaf	刺山柑叶	wi
@@ -121271,7 +121264,6 @@ dark metal	黑暗金属	wim
 dark olive	深橄榄色	wi
 dark peach	深桃色	wi
 dark taupe	深灰褐色	wi
-date palms	枣棕榈	wi
 deer fawns	鹿幼崽	wi
 deer woman	鹿人	wi
 deer women	鹿人	wi
@@ -121845,7 +121837,6 @@ front horn	前角	wi
 front hump	前驼峰	h
 front paws	前爪	wi
 frustrated	挫败	w
-fungiwoods	真菌木	wi
 fuse-lobed	耳垂贴合	wi
 gabbro man	辉长岩人 	wi
 gabbro men	辉长岩人 	wi
@@ -123504,7 +123495,6 @@ mutilated 	残缺不全的	wi
 nanny goat	山羊	wi
 nautiluses	鹦鹉螺	wi
 nest boxes	巢箱	wi
-nether-cap	下界菇	wi
 nightmares	噩梦	r
 nightwings	夜翼	wi
 nodosaurus	结节龙	wi
@@ -123840,7 +123830,6 @@ toad women	蟾蜍人	wi
 tomatillos	灯笼番茄	wi
 toothy maw	有牙齿的胃	wi
 topazolite	黄榴石	wi
-tower-caps	塔菇	wi
 toy hammer	玩具锤	wi
 travellers	旅人	r
 treasurers	司库	hi
@@ -124323,7 +124312,6 @@ beet leaf	甜菜叶	wi
 bentgrass	糠穗草	wi
 biography	传记	hv
 birch log	桦树原木	wi
-black-cap	黑菇	wi
 blood man	血人	wi
 blood men	血人	wi
 blowdarts	吹箭箭矢	wi
@@ -124345,7 +124333,6 @@ bull calf	牛幼崽	wi
 bumblebee	大黄蜂	wi
 cabochons	弧面切工	wi
 cacao pod	可可豆荚	wi
-candlenut	石栗	wi
 capuchins	卷尾猴	wi
 capybaras	水豚	wi
 carambola	杨桃	wi
@@ -124400,7 +124387,6 @@ cut gems.	切割宝石。	w
 damselfly	蓝蜻蛉	wi
 dark blue	深蓝色	wi
 dark pink	深粉色	wi
-date palm	枣棕榈	wi
 date wine	椰枣果酒	wi
 decaplets	十胞胎	wi
 deer fawn	鹿幼崽	wi
@@ -124609,7 +124595,6 @@ fox woman	狐狸人	wi
 fox women	狐狸人	wi
 freed {a}	解救了{a1}	ht
 from afar	从远方	h
-fungiwood	真菌木	wi
 gauntlets	护手	wi
 genealogy	家谱	hv
 giant bat	蝙蝠	wi
@@ -125936,7 +125921,6 @@ tin glaze	锡釉	wi
 titanoboa	泰坦蚺	wi
 tomatillo	灯笼番茄	wi
 tormented	折磨	wi
-tower-cap	塔菇	wi
 toy boats	玩具船	wi
 tradition	传统	wi
 travelers	旅人	r
@@ -126961,7 +126945,6 @@ rutherer	厚毛巨尾兽	wi
 rye beer	黑麦啤酒	wi
 rye leaf	黑麦叶	wi
 ryegrass	绿麦草	wi
-saguaros	巨刺柱	wi
 sardonyx	缠丝玛瑙	wi
 sawgrass	锯齿草	wi
 scepters	节杖	wi
@@ -127506,7 +127489,6 @@ a tower	高塔	h
 a vault	秘库	h
 a waste	荒地	h
 abdomen	腹部	h
-acacias	刺槐	wi
 acolyte	侍僧	wi
 advisor	顾问	hi
 alarmed	惊慌	w
@@ -127734,7 +127716,6 @@ kittens	猫幼崽	wi
 kobolds	狗头人	wi
 kumquat	金橘	wi
 kunzite	紫锂辉石	wi
-larches	落叶松	wi
 leather	皮革	wi
 leeches	水蛭	wi
 legwear	腿部装备	wi
@@ -127839,7 +127820,6 @@ rooster	鸡	wi
 rounded	圆弧形	wi
 rumours	传闻	r
 saffron	藏红花色	wi
-saguaro	巨刺柱	wi
 sandals	凉鞋	wi
 scarlet	猩红色	wi
 scepter	节杖	wi
@@ -128602,7 +128582,6 @@ a work	一部作品	h
 a yard	院落	h
 abbess	修道院长	h
 about 	这件事	wi
-acacia	刺槐	wi
 acorns	橡子	wi
 adders	蝰蛇	wi
 afraid	害怕	w
@@ -128674,7 +128653,6 @@ carrot	胡萝卜	wi
 casque	头盔	h
 castle	城堡	hv
 cavies	豚鼠	wi
-cedars	雪松	wi
 celery	芹菜	wi
 chain 	锁链	wi
 chains	链条	wi
@@ -129989,7 +129967,6 @@ cages	笼子	wi
 caper	刺山柑	wi
 capes	披风	wi
 casts	固定套	wi
-cedar	雪松	wi
 chain	链条	wi
 chair	椅子	wi
 chalk	白垩岩	wi
@@ -130116,7 +130093,6 @@ ladle	汤勺	wi
 lakes	湖泊	r
 lambs	羊幼崽	wi
 lanky	瘦高	wi
-larch	落叶松	wi
 large	大	wi
 leech	水蛭	wi
 leeks	韭葱	wi
@@ -130181,7 +130157,6 @@ perch	鲈鱼	wi
 perry	梨酒	wi
 picks	鹤嘴锄	wi
 pikes	长枪	wi
-pines	针松	wi
 pixie	小精灵	wi
 plant	植物	wi
 plums	李	wi
@@ -130343,7 +130318,6 @@ youth	青春	r
 \x99ntak	奥塔克	wi
 \x99ssek	奥塞克	wi
  ash	灰烬	wi
- log	原木	wi
  own	自己的	wi
  she	她	wi
 (EW)	（东西）	wi
@@ -130970,7 +130944,6 @@ peel	皮	wi
 pick	鹤嘴锄	wi
 pigs	猪	wi
 pike	狗鱼	wi
-pine	针松	wi
 pink	粉色	wi
 pits	深坑	hv
 play	戏剧	hv

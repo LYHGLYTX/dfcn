@@ -39,7 +39,7 @@ name = "named_plant::kind"
 "{prefix::may_dead}Sapling" = "{prefix::may_dead}树苗"
 "{prefix::may_dead}{plants::tile}" = "{prefix::may_dead}{plants::tile}"
 "{prefix::may_dead}Young {plants::tile}" = "{prefix::may_dead}幼体{plants::tile}"
-"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}树苗"
+"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}苗"
 
 [[rulesets]]
 name = "^0"
@@ -112,7 +112,7 @@ name = "plants"
 "{prefix::may_dead}Sapling" = "{prefix::may_dead}树苗"
 "{prefix::may_dead}{plants::tile}" = "{prefix::may_dead}{plants::tile}"
 "{prefix::may_dead}Young {plants::tile}" = "{prefix::may_dead}幼体{plants::tile}"
-"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}树苗"
+"{prefix::may_dead}{plants::tile} Sapling" = "{prefix::may_dead}{plants::tile}苗"
 "{prefix::may_dead_dry}Grass" = "{prefix::may_dead_dry}草"
 "{prefix::may_sparse_dense}{prefix::may_dead_dry}{plants::tile}" = "{prefix::may_sparse_dense}{prefix::may_dead_dry}{plants::tile}"
 "{::plants::growth::plural}" = "{::plants::growth::plural}"
@@ -120,17 +120,52 @@ name = "plants"
 [[rulesets]]
 name = "plants::tile"
 [rulesets.rules]
+"{plants::tile::name}" = "{plants::tile::name}"
+"{plants::tile::name} roots" = "{plants::tile::name}根"
+"{plants::tile::name} trunk" = "{plants::tile::name}干"
+"thick {plants::tile::name} branches" = "{plants::tile::name}粗枝"
+"{plants::tile::name} branches" = "{plants::tile::name}枝"
+"smooth {plants::tile::name} branches" = "光滑{plants::tile::name}枝"
+"{plants::tile::name} twigs" = "{plants::tile::name}细枝"
+"{plants::tile::name} cap" = "{plants::tile::name}冠"
+
+# Native TREE names without a terminal 树 in the shared plant noun. Direct
+# tile rules win over the deeper shared-name fallback; names already ending
+# in 树 and ordinary shrubs/grasses keep their existing plant translations.
+[[rulesets]]
+name = "plants::tile::name"
+[rulesets.rules]
 "{::plants::name::plural}" = "{::plants::name::plural}"
 "{::plants::name::singular}" = "{::plants::name::singular}"
-"{::plants::name::singular} roots" = "{::plants::name::singular}根"
-"{::plants::name::singular} trunk" = "{::plants::name::singular}干"
-"thick {::plants::name::singular} branches" = "{::plants::name::singular}粗枝"
-# Match existing compounds such as oak branches = 橡树枝 and peach tree
-# branches = 桃树枝; the plant name may already end in 树.
-"{::plants::name::singular} branches" = "{::plants::name::singular}枝"
-"smooth {::plants::name::singular} branches" = "光滑{::plants::name::singular}枝"
-"{::plants::name::singular} twigs" = "{::plants::name::singular}细枝"
-"{::plants::name::singular} cap" = "{::plants::name::singular}冠"
+"acacia" = "刺槐树"
+"acacias" = "刺槐树"
+"black-cap" = "黑菇树"
+"black-caps" = "黑菇树"
+"blood thorn" = "血荆棘树"
+"candlenut" = "石栗树"
+"candlenuts" = "石栗树"
+"cedar" = "雪松树"
+"cedars" = "雪松树"
+"coconut palm" = "椰棕榈树"
+"coconut palms" = "椰棕榈树"
+"date palm" = "枣棕榈树"
+"date palms" = "枣棕榈树"
+"fungiwood" = "真菌木树"
+"fungiwoods" = "真菌木树"
+"goblin-cap" = "哥布林菇树"
+"goblin-caps" = "哥布林菇树"
+"larch" = "落叶松树"
+"larches" = "落叶松树"
+"nether-cap" = "下界菇树"
+"nether-caps" = "下界菇树"
+"pine" = "针松树"
+"pines" = "针松树"
+"saguaro" = "巨刺柱树"
+"saguaros" = "巨刺柱树"
+"tower-cap" = "塔菇树"
+"tower-caps" = "塔菇树"
+"tunnel tube" = "隧管菌树"
+"tunnel tubes" = "隧管菌树"
 
 [[rulesets]]
 name = "floors"
@@ -337,6 +372,9 @@ name = "constructed"
 # Shoddy is emitted by the tile switch before the helper's independent
 # rough prefix; rough, reinforcement and material suffixes can coexist.
 "{constructed::^0}{constructed::^rough}{constructed::^1}{constructed::main}{constructed::$0}" = "{constructed::^0}{constructed::^rough}{constructed::^1}{constructed::main}{constructed::$0}"
+# Log constructions use a finished wood qualifier, including the wood
+# suffix for names such as cedar and willow, rather than a loose-log noun.
+"{constructed::^0}{constructed::^rough}{constructed::^1}{::materials::item_qualifier} log" = "{constructed::^0}{constructed::^rough}{constructed::^1}{::materials::item_qualifier}"
 
 [[rulesets]]
 name = "constructed::^0"
@@ -378,7 +416,6 @@ name = "constructed::$0"
 optional = true
 [rulesets.rules]
 " block" = "方块"
-" log" = "原木"
 
 [[rulesets]]
 name = "material"

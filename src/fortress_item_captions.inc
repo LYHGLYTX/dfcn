@@ -84,7 +84,12 @@ std::optional<std::string> Overlay::translate_fortress_item_caption(
     bool typed_description_complete = false;
     try {
         TranslationWorkFrame work_frame("complete item caption", source);
-        if (building_material && config_.compositional_rules)
+        // A complete wood item can omit log/logs in its native caption.
+        // Incorporated components use the same name before the generic
+        // material adjective; a framed classic component is still an item.
+        if ((!relationship || building_material) && config_.compositional_rules)
+            target = translate_wood_item_caption(source);
+        if (!target && building_material && config_.compositional_rules)
             target = translate_material_name(source, true);
         // Bulk resources already are complete material nouns. Resolve their
         // species/state together before the more general item grammar can
@@ -406,7 +411,8 @@ void Overlay::append_fortress_item_captions(std::vector<std::string> &rows,
                                     bool building_material = false,
                                     bool display_status = false,
                                     std::optional<SDL_Rect> caption_box = std::nullopt,
-                                    int layout_left = -1) {
+                                    int layout_left = -1,
+                                    bool item_group = false) {
         if (end <= left || right <= left) return;
         const std::string visible = rows[y].substr(left, end - left);
         bool top_layer = false;
@@ -470,6 +476,8 @@ void Overlay::append_fortress_item_captions(std::vector<std::string> &rows,
             }
         }
         Match caption{left, y, end - left, kFortressItemCaptionRule, *target, visible};
+        caption.native_item_caption_source = complete;
+        caption.native_item_group_caption = item_group;
         caption.native_hover_untranslated = !translated;
         caption.native_picture_caption_box = caption_box;
         caption.layout_foreground_rgb = foreground;
@@ -848,7 +856,8 @@ void Overlay::append_fortress_item_captions(std::vector<std::string> &rows,
                 while (left < right && rows[y][left] == ' ') ++left;
                 int end = right;
                 while (end > left && rows[y][end - 1] == ' ') --end;
-                append_caption(left, end, right, y, true);
+                append_caption(left, end, right, y, true, false, false,
+                    std::nullopt, -1, true);
                 cap = right;
             }
         }
