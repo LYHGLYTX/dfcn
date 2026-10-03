@@ -5842,10 +5842,10 @@ Make traction bench	制作牵引台	wi
 Dye thread	染线	wi
 Dye cloth	染布匹	wi
 Dye leather	染皮革	wi
-Weave metal cloth	纺织金属布匹	wi
-Weave thread into silk	将线纺织为丝绸	wi
-Weave yarn into cloth	将纱线纺织为布匹	wi
-Weave thread into cloth	将线纺织为布匹	wi
+Weave metal cloth	织金属布	wi
+Weave thread into silk	将线织成丝绸	wi
+Weave yarn into cloth	将纱线织成布	wi
+Weave thread into cloth	将线织成布	wi
 Bring item to shop	将物品搬到工坊	wi
 Bring item to depot	将物品搬到贸易站	wi
 Store owned item	存放私人物品	wi

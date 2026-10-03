@@ -39063,7 +39063,7 @@ Whatever happens, it will be for the best.	无论发生什么，都会是最好�
 Wilderness irritation decay (more = safer)	荒野激怒值衰减（越高越安全）
 With them comes a {s} from the {s} of {e}!	随军而来的还有一只{s1}，来自{e1}的{s2}！	hPt
 Workshop recipe: format material body part	由{s}构成的身体部位	l
-Workshop recipe: format quantity with unit	{d} {u}{s}	l
+Workshop recipe: format quantity with unit	{d}{u}{s}	l
 Workshop recipe: kind extract-bearing fish	鱼	l
 Workshop recipe: state heavy object hauler	用于搬运重物	l
 Workshop recipe: state meat-carving holder	用于切肉时承托	l
@@ -50465,7 +50465,7 @@ What will you say about the rescue?	关于这次营救，你想说些什么？	h
 Winter has arrived on the calendar.	按历法，已到冬季。	hP
 Workshop recipe: format -containing	装有{s1}的{s2}	l
 Workshop recipe: format exclude bin	{s}（不含储物箱）	l
-Workshop recipe: format join states	{s1}、{s2}	l
+Workshop recipe: format join states	{s1}且{s2}	l
 Workshop recipe: format requirement	[需要{s}]	l
 Workshop recipe: kind deep material	深层材料	l
 Workshop recipe: kind finished good	成品	l
@@ -73765,7 +73765,7 @@ View this item's sheet.	查看此物品的详情页。	hj
 Visitor shared rumor(s)	访客分享传闻	w
 Wall/Floor Construction	墙壁与地板建造	wi
 We are rid of an enemy.	我们除去了一个敌人。	hP
-Weave thread into cloth	将线纺织为布匹	wi
+Weave thread into cloth	将线织成布	wi
 Welcome home, my child.	欢迎回家，我的孩子。	hP
 What do you want to do?	你想做什么？	hP
 Workers gather minerals	工人搬运矿物	wi
@@ -75706,7 +75706,7 @@ Visual Stealth Factors	视觉隐蔽因素	hP
 Water at this location	此处有水	wli
 We will fight no more.	我们不会再战斗了。	hP
 Weapons and Ammunition	武器与弹药	wi
-Weave thread into silk	将线纺织为丝绸	wi
+Weave thread into silk	将线织成丝绸	wi
 What did you just say?	你刚才说什么？	hP
 What's available here?	这里有什么可以买的？	hP
 When placed, a female 	放置后，如果有可用的雌鸟，它	w
@@ -77717,7 +77717,7 @@ Vanilla Music {d}.{d}	原版音乐 {d}.{d}	wt
 Vermin Catcher's Shop	害虫捕坊	wi
 Very low recuperation	恢复能力很低	wil
 View monthly schedule	查看月度日程	w
-Weave yarn into cloth	将纱线纺织为布匹	wi
+Weave yarn into cloth	将纱线织成布	wi
 Welcome to the arena!	欢迎来到竞技场！	wi
 Werebeasts can attack	狂化生物可以来袭
 What a strange place!	多么奇怪的地方！	hP
@@ -89835,7 +89835,7 @@ Very low patience	耐心很低	wil
 Very low strength	力量很低	wil
 View your status.	查看自身状态。	hj
 Wall (remembered)	墙（印象中）	wl
-Weave metal cloth	纺织金属布匹	wi
+Weave metal cloth	织金属布	wi
 What an odd glow!	多么奇怪的光芒！	hP
 What do you want?	你想要什么？	hP
 Willpower (minor)	意志力（次要）	wi
@@ -131228,3 +131228,7 @@ of	所属	h
 .	。	hq
 :	：	h
 ;	；	h
+Workshop recipe: unit thread	卷	l
+Workshop recipe: unit threads	卷	l
+Workshop recipe: yarn thread	纱线	l
+Workshop recipe: yarn threads	纱线	l

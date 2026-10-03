@@ -10,7 +10,7 @@
 # Grammar wrappers; displayed quantities have already been dimension-scaled.
 Workshop recipe: format requirement	[需要{s}]	l
 Workshop recipe: format quantity	{d} {s}	l
-Workshop recipe: format quantity with unit	{d} {u}{s}	l
+Workshop recipe: format quantity with unit	{d}{u}{s}	l
 Workshop recipe: format exclude bin	{s}（不含储物箱）	l
 Workshop recipe: format -bearing	含{s1}的{s2}	l
 Workshop recipe: format -producing	可产出{s1}的{s2}	l
@@ -28,6 +28,8 @@ Workshop recipe: format join /	{s1}/{s2}	l
 Workshop recipe: unit cloth	块	l
 Workshop recipe: unit sheet	张	l
 Workshop recipe: unit sheets	张	l
+Workshop recipe: unit thread	卷	l
+Workshop recipe: unit threads	卷	l
 
 # Native prefix entries carry state, material or kind roles.
 # Material and category roles select the noun before states are attached.
@@ -199,6 +201,8 @@ Workshop recipe: items	物品	l
 Workshop recipe: milk item	奶	l
 Workshop recipe: milk items	奶	l
 Workshop recipe: cloth	布匹	l
+Workshop recipe: yarn thread	纱线	l
+Workshop recipe: yarn threads	纱线	l
 Workshop recipe: stone boulders	石块	l
 Workshop recipe: stone boulder	石块	l
 Workshop recipe: body part	身体部位	l
@@ -239,7 +243,7 @@ Workshop recipe: state bloody	含血	l
 # Typed noun assembly. These are noun classes, independent of complete
 # sentences, quantities, states, capabilities and the native line wrapping.
 Workshop recipe: format qualified noun	{s1}的{s2}	l
-Workshop recipe: format join states	{s1}、{s2}	l
+Workshop recipe: format join states	{s1}且{s2}	l
 Workshop recipe: format material noun	{s1}{s2}	l
 Workshop recipe: format kind noun	{s1}类{s2}	l
 Workshop recipe: format material body part	由{s}构成的身体部位	l
