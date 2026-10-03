@@ -20,7 +20,7 @@ base = "materials::state"
 [[rulesets]]
 name = "adjective"
 [rulesets.rules]
-"bone" = "骨质"
+"bone" = "骨"
 "fatty" = "脂肪"
 "greasy" = "油脂"
 "cartilaginous" = "软骨"

@@ -1203,7 +1203,7 @@ static constexpr auto embark_available_item_categories = std::to_array<
     std::pair<std::string_view, std::string_view>>({
     {"Leather", "皮革"},
     {"Cloth (Plant)", "植物布"},
-    {"Cloth (Silk)", "丝质布"},
+    {"Cloth (Silk)", "丝布"},
     {"Crafts", "工艺品"},
     {"Wood", "原木"},
     {"Metal Bars", "金属锭"},
@@ -24023,7 +24023,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // the page before rebuilding fields: the
     // ordinary dictionary intentionally keeps material nouns short (`铁`,
     // `隧管菌`), while this page is required to use Arena's finished-equipment
-    // grammar (`铁质...`, `隧管菌木质...`).  Immediate suppression inspects one
+    // grammar (`铁...`, `隧管菌木...`).  Immediate suppression inspects one
     // raw layer at a time, so fall back to the composed grid when the headings
     // and item rows were issued on different layers.
     context_detail.checkpoint(RenderTimingStage::ItemsContext);
@@ -29232,7 +29232,7 @@ static bool is_embark_craft_item_source(std::string_view raw) {
 
 // ITEM_TOOL names are a finite semantic family on the embark Tools page.
 // Keep singular, plural and adjective-bearing forms together so every raw
-// material can use the same attributive `material + 质 + item` grammar.
+// material can use the same attributive `material + item` grammar.
 static constexpr auto embark_tool_item_nouns =
     std::to_array<EmbarkToolItemNoun>({
         {"carving knives", "切肉刀"}, {"carving knife", "切肉刀"},
@@ -29715,7 +29715,7 @@ int Overlay::layout_embark_named_item_rows(std::vector<Match> &matches,
                     }
                     best_source_length = source.size();
                     material_name = trim(*translated);
-                    if (marker == "silk") material_name += "丝质布";
+                    if (marker == "silk") material_name += "丝布";
                 }
             }
             if (material_name.empty()) continue;
@@ -30214,22 +30214,20 @@ static std::string arena_wood_material_qualifier(
     std::string qualifier = trim(std::move(target));
     if (qualifier.empty()) return {};
     if (folded == "mangrove") {
-        return "红树木质";
+        return "红树木";
     }
     if (folded == "goblin-cap") {
-        return "哥布林菇木质";
+        return "哥布林菇木";
     }
-    if (qualifier.ends_with("木质")) return qualifier;
-    if (qualifier.ends_with("木制") || qualifier.ends_with("木头")) {
+    if (qualifier.ends_with("木质") || qualifier.ends_with("木制") ||
+            qualifier.ends_with("木头")) {
         qualifier.erase(qualifier.size() - std::string("木制").size());
-        qualifier += "木质";
+        qualifier += "木";
     } else if (qualifier.ends_with("树")) {
         qualifier.erase(qualifier.size() - std::string("树").size());
-        qualifier += "木质";
-    } else if (qualifier.ends_with("木")) {
-        qualifier += "质";
-    } else {
-        qualifier += "木质";
+        qualifier += "木";
+    } else if (!qualifier.ends_with("木")) {
+        qualifier += "木";
     }
     return qualifier;
 }
@@ -30422,22 +30420,22 @@ struct ArenaMetalOreMaterialMatch {
 // product (galena -> lead and tetrahedrite -> copper).
 static constexpr auto arena_metal_ore_materials =
     std::to_array<ArenaMetalOreMaterial>({
-        {"native platinum", "platinum nuggets", "铂矿石质"},
-        {"native aluminum", "native aluminum", "铝矿石质"},
-        {"native silver", "silver nuggets", "银矿石质"},
-        {"native copper", "copper nuggets", "铜矿石质"},
-        {"native gold", "gold nuggets", "金矿石质"},
-        {"bismuthinite", "bismuthinite", "铋矿石质"},
-        {"tetrahedrite", "tetrahedrite", "铜矿石质"},
-        {"cassiterite", "cassiterite", "锡矿石质"},
-        {"garnierite", "garnierite", "镍矿石质"},
-        {"sphalerite", "sphalerite", "锌矿石质"},
-        {"horn silver", "horn silver", "银矿石质"},
-        {"magnetite", "magnetite", "铁矿石质"},
-        {"hematite", "hematite", "铁矿石质"},
-        {"limonite", "limonite", "铁矿石质"},
-        {"malachite", "malachite", "铜矿石质"},
-        {"galena", "galena", "铅矿石质"},
+        {"native platinum", "platinum nuggets", "铂矿石"},
+        {"native aluminum", "native aluminum", "铝矿石"},
+        {"native silver", "silver nuggets", "银矿石"},
+        {"native copper", "copper nuggets", "铜矿石"},
+        {"native gold", "gold nuggets", "金矿石"},
+        {"bismuthinite", "bismuthinite", "铋矿石"},
+        {"tetrahedrite", "tetrahedrite", "铜矿石"},
+        {"cassiterite", "cassiterite", "锡矿石"},
+        {"garnierite", "garnierite", "镍矿石"},
+        {"sphalerite", "sphalerite", "锌矿石"},
+        {"horn silver", "horn silver", "银矿石"},
+        {"magnetite", "magnetite", "铁矿石"},
+        {"hematite", "hematite", "铁矿石"},
+        {"limonite", "limonite", "铁矿石"},
+        {"malachite", "malachite", "铜矿石"},
+        {"galena", "galena", "铅矿石"},
     });
 
 static const ArenaMetalOreMaterial *find_embark_metal_ore_boulder(
@@ -30492,7 +30490,8 @@ static void clear_embark_craft_translation_cache() {
 }
 
 // Every finished-item material slot uses this formatter, including detached
-// caption grammars. Raw materials retain their independent noun/adjective rules.
+// caption grammars. Material names join directly to item names without an
+// added 质; characters belonging to the material's own name stay intact.
 std::string finish_item_material_qualifier(
         std::string_view material_source, std::string qualifier,
         const ItemMaterialRuleLookup &lookup) {
@@ -30515,19 +30514,9 @@ std::string finish_item_material_qualifier(
         qualifier += replacement;
         return true;
     };
-    if (!replace_material_suffix("骨头质", "骨质"))
-        replace_material_suffix("骨头", "骨");
-    if (!replace_material_suffix("牙齿质", "牙质"))
-        replace_material_suffix("牙齿", "牙");
-
-    if (qualifier.ends_with("矿质") &&
-               !qualifier.ends_with("矿石质")) {
-        qualifier.insert(qualifier.size() - std::string("质").size(),
-                         "石");
-    } else if (!qualifier.ends_with("质")) {
-        if (qualifier.ends_with("矿")) qualifier += "石";
-        qualifier += "质";
-    }
+    replace_material_suffix("骨头", "骨");
+    replace_material_suffix("牙齿", "牙");
+    if (qualifier.ends_with("矿")) qualifier += "石";
     return qualifier;
 }
 
@@ -31692,8 +31681,8 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
 
     // Creature silk is a named textile material, not the generic material
     // adjective followed by a creature name. Compose the entire source as
-    // `生物名 + 丝质 + 装备名`, e.g. brown recluse spider silk coats ->
-    // 棕色遁蛛丝质大衣.
+    // `生物名 + 丝 + 装备名`, e.g. brown recluse spider silk coats ->
+    // 棕色遁蛛丝大衣.
     size_t silk_at = folded.find("silk");
     while (silk_at != std::string::npos) {
         const size_t silk_end = silk_at + std::string_view("silk").size();
@@ -31736,7 +31725,7 @@ static std::optional<std::string> translate_arena_equipment_source_phrase(
     // `creature material item` and `material creature item` order by different
     // native source paths. Treat both markers as the same semantic material
     // and rebuild either form into one stable Chinese grammar:
-    // `生物名 + 毛质 + 形制/装备名`. Doing this from the full source also keeps
+    // `生物名 + 毛 + 形制/装备名`. Doing this from the full source also keeps
     // fragment order and scrolling from changing the displayed name.
     static constexpr std::array<std::string_view, 2> hair_markers = {{
         "wool", "fur",
@@ -31911,7 +31900,7 @@ translate_embark_creature_leather_container_name(
     const auto leather =
         translate_arena_creature_leather(material_source);
     if (!leather || trim(*leather).empty()) return std::nullopt;
-    return trim(*leather) + "质" + std::string(noun.noun->target);
+    return trim(*leather) + std::string(noun.noun->target);
 }
 
 static std::optional<std::string> translate_writing_material_qualifier(
@@ -31996,73 +31985,73 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
         std::string_view source, std::string target) {
     // Material names are also used as standalone filters elsewhere, where
     // short nouns such as `铁` are correct.  Equipment rows need attributive
-    // forms instead (`铁质长鞭`), so keep this conversion local to the Arena
+    // forms instead (`铁长鞭`), so keep this conversion local to the Arena
     // equipment compositor rather than changing the global material rules.
     static constexpr std::array<std::tuple<std::string_view,
                                            std::string_view,
                                            std::string_view>, 62> materials = {{
-        {"clear blue metal", "湛蓝金属", "湛蓝金属质"},
-        {"multicolored metal", "多彩金属", "多彩金属质"},
-        {"pock-marked metal", "凹陷金属", "凹陷金属质"},
-        {"translucent metal", "透明金属", "透明金属质"},
-        {"sterling silver", "标准银", "纯银质"},
-        {"bismuth bronze", "铋青铜", "铋青铜质"},
-        {"nickel silver", "镍银", "镍银质"},
-        {"twisting metal", "扭曲金属", "扭曲金属质"},
-        {"singing metal", "振鸣金属", "鸣响金属质"},
-        {"blazing metal", "燃烧金属", "炽热金属质"},
-        {"blistered metal", "鼓泡金属", "鼓泡金属质"},
-        {"booming metal", "轰鸣金属", "轰鸣金属质"},
-        {"flickering metal", "闪烁金属", "闪烁金属质"},
-        {"twinkling metal", "闪亮金属", "闪亮金属质"},
-        {"flashing metal", "闪耀金属", "闪耀金属质"},
-        {"crashing metal", "破碎金属", "破碎金属质"},
-        {"faceted metal", "多面金属", "多面金属质"},
-        {"flowing metal", "流动金属", "流动金属质"},
-        {"glowing metal", "柔和金属", "柔和金属质"},
-        {"shining metal", "发光金属", "发光金属质"},
-        {"searing metal", "灼热金属", "灼热金属质"},
-        {"rusted metal", "生锈金属", "锈蚀金属质"},
-        {"frosty metal", "结霜金属", "霜覆金属质"},
-        {"slick metal", "光滑金属", "光滑金属质"},
-        {"bright metal", "明亮金属", "明亮金属质"},
-        {"black metal", "乌黑金属", "乌黑金属质"},
-        {"dark metal", "黑暗金属", "黑暗金属质"},
-        {"pale metal", "苍白金属", "苍白金属质"},
-        {"ruddy metal", "红润金属", "红润金属质"},
-        {"black bronze", "乌青铜", "乌青铜质"},
-        {"fine pewter", "精白锡", "精白锡质"},
-        {"trifle pewter", "廉白锡", "廉白锡质"},
-        {"lay pewter", "劣白锡", "劣白锡质"},
-        {"rose gold", "玫瑰金", "玫瑰金质"},
-        {"pig iron", "生铁", "生铁质"},
-        {"adamantine", "精金", "精金质"},
-        {"candlenut", "石栗", "石栗木质"},
-        {"electrum", "琥珀金", "琥珀金质"},
-        {"platinum", "铂", "铂质"},
-        {"birchen", "桦木", "桦木质"},
-        {"leather", "皮革", "皮革质"},
-        {"copper", "铜", "铜质"},
-        {"aluminum", "铝", "铝质"},
-        {"silver", "银", "银质"},
-        {"nickel", "镍", "镍质"},
-        {"billon", "毕朗合金", "毕朗合金质"},
-        {"bronze", "青铜", "青铜质"},
-        {"bismuth", "铋", "铋质"},
-        {"brass", "黄铜", "黄铜质"},
-        {"pewter", "白镴", "白镴质"},
-        {"alder", "桤树", "桤木质"},
-        {"steel", "钢", "钢质"},
-        {"iron", "铁", "铁质"},
-        {"gold", "金", "金质"},
-        {"zinc", "锌", "锌质"},
-        {"lead", "铅", "铅质"},
-        {"tin", "锡", "锡质"},
-        {"wood", "木头", "木质"},
-        {"silk", "丝绸", "丝质"},
-        {"wool", "绒线", "毛质"},
-        {"fur", "毛皮", "毛质"},
-        {"bone", "骨", "骨质"},
+        {"clear blue metal", "湛蓝金属", "湛蓝金属"},
+        {"multicolored metal", "多彩金属", "多彩金属"},
+        {"pock-marked metal", "凹陷金属", "凹陷金属"},
+        {"translucent metal", "透明金属", "透明金属"},
+        {"sterling silver", "标准银", "纯银"},
+        {"bismuth bronze", "铋青铜", "铋青铜"},
+        {"nickel silver", "镍银", "镍银"},
+        {"twisting metal", "扭曲金属", "扭曲金属"},
+        {"singing metal", "振鸣金属", "鸣响金属"},
+        {"blazing metal", "燃烧金属", "炽热金属"},
+        {"blistered metal", "鼓泡金属", "鼓泡金属"},
+        {"booming metal", "轰鸣金属", "轰鸣金属"},
+        {"flickering metal", "闪烁金属", "闪烁金属"},
+        {"twinkling metal", "闪亮金属", "闪亮金属"},
+        {"flashing metal", "闪耀金属", "闪耀金属"},
+        {"crashing metal", "破碎金属", "破碎金属"},
+        {"faceted metal", "多面金属", "多面金属"},
+        {"flowing metal", "流动金属", "流动金属"},
+        {"glowing metal", "柔和金属", "柔和金属"},
+        {"shining metal", "发光金属", "发光金属"},
+        {"searing metal", "灼热金属", "灼热金属"},
+        {"rusted metal", "生锈金属", "锈蚀金属"},
+        {"frosty metal", "结霜金属", "霜覆金属"},
+        {"slick metal", "光滑金属", "光滑金属"},
+        {"bright metal", "明亮金属", "明亮金属"},
+        {"black metal", "乌黑金属", "乌黑金属"},
+        {"dark metal", "黑暗金属", "黑暗金属"},
+        {"pale metal", "苍白金属", "苍白金属"},
+        {"ruddy metal", "红润金属", "红润金属"},
+        {"black bronze", "乌青铜", "乌青铜"},
+        {"fine pewter", "精白锡", "精白锡"},
+        {"trifle pewter", "廉白锡", "廉白锡"},
+        {"lay pewter", "劣白锡", "劣白锡"},
+        {"rose gold", "玫瑰金", "玫瑰金"},
+        {"pig iron", "生铁", "生铁"},
+        {"adamantine", "精金", "精金"},
+        {"candlenut", "石栗", "石栗木"},
+        {"electrum", "琥珀金", "琥珀金"},
+        {"platinum", "铂", "铂"},
+        {"birchen", "桦木", "桦木"},
+        {"leather", "皮革", "皮革"},
+        {"copper", "铜", "铜"},
+        {"aluminum", "铝", "铝"},
+        {"silver", "银", "银"},
+        {"nickel", "镍", "镍"},
+        {"billon", "毕朗合金", "毕朗合金"},
+        {"bronze", "青铜", "青铜"},
+        {"bismuth", "铋", "铋"},
+        {"brass", "黄铜", "黄铜"},
+        {"pewter", "白镴", "白镴"},
+        {"alder", "桤树", "桤木"},
+        {"steel", "钢", "钢"},
+        {"iron", "铁", "铁"},
+        {"gold", "金", "金"},
+        {"zinc", "锌", "锌"},
+        {"lead", "铅", "铅"},
+        {"tin", "锡", "锡"},
+        {"wood", "木头", "木"},
+        {"silk", "丝绸", "丝"},
+        {"wool", "绒线", "毛"},
+        {"fur", "毛皮", "毛"},
+        {"bone", "骨", "骨"},
     }};
     const std::string folded = lower(trim(std::string(source)));
     target = trim(std::move(target));
@@ -32205,7 +32194,7 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
     // installed vanilla raws. Some end in `wood`, while others are names such
     // as `oaken`, `tower-cap`, or `blood thorn`; the wagon creature even uses
     // the template adjective `wooden`. Treat the complete raw set as material
-    // fragments and normalize every Chinese form to `...木质`. Keeping this
+    // fragments and normalize every Chinese form to `...木`. Keeping this
     // classification inside the Arena compositor avoids changing ordinary
     // plant names such as `pine` to material adjectives elsewhere in the UI.
     if (const ArenaWoodMaterialMatch wood_match =
@@ -32223,7 +32212,7 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
         size_t target_at = displayed_material.empty()
             ? std::string::npos : target.find(displayed_material);
         // The wagon template is rendered by a procedural rule as `货车木制`,
-        // while its exact material entry is `货车木质`. Accept the procedural
+        // while its exact material entry is `货车木`. Accept the procedural
         // spelling, then normalize it through the same wood qualifier path.
         if (target_at == std::string::npos &&
             wood_match.source.starts_with("wagon ")) {
@@ -32266,8 +32255,8 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
     // material name, not the independent material `leather` followed by an
     // item adjective.  Claim the longest translatable suffix ending in
     // `leather` before the generic material loop can turn the row into
-    // `皮革质蜻蜓盔甲`.  Equipment-size words before the creature remain in the
-    // remainder, producing `蜻蜓皮革质小型盔甲` in the final compositor.
+    // `皮革蜻蜓盔甲`. Equipment-size words before the creature remain in the
+    // remainder, producing `蜻蜓皮革小型盔甲` in the final compositor.
     size_t leather_at = folded.find("leather");
     while (leather_at != std::string::npos) {
         const size_t leather_end = leather_at + std::string_view("leather").size();
@@ -32286,7 +32275,7 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
                     if (material_name.ends_with("皮革")) {
                         const size_t target_at = target.find(material_name);
                         if (target_at != std::string::npos) {
-                            const std::string qualifier = material_name + "质";
+                            const std::string qualifier = material_name;
                             const bool already_qualified =
                                 target.compare(target_at, qualifier.size(),
                                                qualifier) == 0;
@@ -32307,7 +32296,7 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
     }
 
     // Keep the producing creature attached to silk before the generic
-    // `silk` material entry can move `丝质` in front of the creature name.
+    // `silk` material entry can move `丝` in front of the creature name.
     size_t silk_at = folded.find("silk");
     while (silk_at != std::string::npos) {
         const size_t silk_end = silk_at + std::string_view("silk").size();
@@ -32321,10 +32310,10 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
                     candidate_start, silk_end - candidate_start);
                 if (const auto creature =
                         translate_arena_creature_silk(candidate)) {
-                    const std::string qualifier = trim(*creature) + "丝质";
+                    const std::string qualifier = trim(*creature) + "丝";
                     const std::string raw_material = trim(*creature) + "丝绸";
                     const std::string cloth_material =
-                        trim(*creature) + "丝质布";
+                        trim(*creature) + "丝布";
                     size_t target_at = target.find(cloth_material);
                     size_t erase_length = cloth_material.size();
                     if (target_at == std::string::npos) {
@@ -32350,23 +32339,23 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
         silk_at = folded.find("silk", silk_end);
     }
 
-    // The standalone dictionary now names the material “丝质布”, while the
+    // The standalone dictionary names the material “丝布”, while the
     // recursive upstream rules can still supply the older noun or an already
     // adjectival form inside finished equipment. Accept all three inputs, but
-    // emit only the stable “丝质” equipment qualifier.
+    // emit only the stable “丝” equipment qualifier.
     const size_t generic_silk_at = folded.find("silk");
     if (generic_silk_at != std::string::npos &&
         (generic_silk_at == 0 || folded[generic_silk_at - 1] == ' ') &&
         (generic_silk_at + std::string_view("silk").size() == folded.size() ||
          folded[generic_silk_at + std::string_view("silk").size()] == ' ')) {
         static constexpr std::array<std::string_view, 3> silk_nouns = {{
-            "丝质布", "丝绸", "丝质",
+            "丝布", "丝绸", "丝",
         }};
         for (const std::string_view noun : silk_nouns) {
             const size_t target_at = target.find(noun);
             if (target_at == std::string::npos) continue;
             target.erase(target_at, noun.size());
-            return {"丝质", std::move(target)};
+            return {"丝", std::move(target)};
         }
     }
 
@@ -32380,9 +32369,8 @@ static ArenaEquipmentNamePart arena_equipment_name_part(
                     RULESETS.translate_woven_plant_material(material)) {
                 auto noun = RULESETS.translate_material_state(material);
                 if (!noun) noun = overlay_exact_literal_translation(material);
-                const std::array<std::string, 3> forms = {
-                    *qualifier, noun ? *noun + "质" : std::string{},
-                    noun.value_or(std::string{})};
+                const std::array<std::string, 2> forms = {
+                    *qualifier, noun.value_or(std::string{})};
                 for (const std::string &form : forms) {
                     if (form.empty()) continue;
                     const size_t at = target.find(form);
@@ -32910,7 +32898,7 @@ std::optional<std::string> Overlay::translate_embark_equipment_item_uncached(
                 creature_source + " silk");
         }
         if (creature) {
-            std::string textile = trim(*creature) + "丝质布";
+            std::string textile = trim(*creature) + "丝布";
             if (quantity.empty()) return textile;
             return quantity + " 块" + textile;
         }
@@ -32921,7 +32909,7 @@ std::optional<std::string> Overlay::translate_embark_equipment_item_uncached(
     // an English piece noun in the Tools list. Resolve that full grammar before
     // the general captured-item segmenter can mistake a coincidental spelling
     // such as `tan` for an English adjective. This yields one invariant
-    // `材料 + 质 + 乐器音译 + 部件` label for every material/name combination.
+    // `材料 + 乐器音译 + 部件` label for every material/name combination.
     if (const auto instrument =
             translate_embark_instrument_item(item_source)) {
         if (quantity.empty()) return instrument;
@@ -32946,7 +32934,7 @@ std::optional<std::string> Overlay::translate_embark_equipment_item_uncached(
     }
 
     // Every craft uses the same attributive grammar regardless of material:
-    // `材料名 + 质 + 物品名`. Resolve it directly from the complete English
+    // `材料名 + 物品名`. Resolve it directly from the complete English
     // source, since the general equipment extractor intentionally knows only
     // equipment materials and otherwise leaves coal, gems and stone bare.
     if (const auto craft = translate_embark_craft_item_name(item_source)) {
@@ -32993,8 +32981,8 @@ std::optional<std::string> Overlay::translate_embark_equipment_item_uncached(
     // A metal bar is the named bulk form of the metal, not equipment made
     // from it.  The shared item rule already emits `金属名 + 锭`; sending that
     // result through the equipment-material extractor would incorrectly turn
-    // `铂锭` into `铂质锭`.  Preserve the complete bar translation here while
-    // leaving attributive `金属名 + 质` forms intact for actual equipment.
+    // a complete bar name into equipment fragments. Preserve the complete
+    // resource translation here before resolving equipment materials.
     if (item_ends_with_noun("bar") || item_ends_with_noun("bars")) {
         if (quantity.empty()) return translated;
         return quantity + " 块" + *translated;
@@ -33003,7 +32991,7 @@ std::optional<std::string> Overlay::translate_embark_equipment_item_uncached(
     // manufactured from that wood.  The item rule already emits
     // `植物名 + 原木` for plant wood (sharing the RAW-backed log names);
     // the equipment extractor would otherwise rewrite it as
-    // the attributive and redundant `木材名 + 木质 + 原木`.
+    // the attributive and redundant `木材名 + 木 + 原木`.
     if (item_ends_with_noun("log") || item_ends_with_noun("logs")) {
         if (quantity.empty()) return translated;
         return quantity + " 根" + *translated;
@@ -33597,7 +33585,7 @@ static std::string arena_equipment_row_name(
                 }
             }
             if (!equipment_name.empty()) {
-                return trim(*hair_creature) + "毛质" +
+                return trim(*hair_creature) + "毛" +
                        equipment_modifiers + equipment_name;
             }
         }
@@ -33608,8 +33596,8 @@ static std::string arena_equipment_row_name(
     // expose `mango wood` as either one run or the two independently matched
     // runs `mango` + `wood`.  Resolve the longest consecutive wood phrase at
     // row level before processing ordinary adjective/item fragments.  This is
-    // what keeps every raw wood material in `木材名 + 木质 + 规格 + 装备名`
-    // order instead of producing `大型芒果树刺剑` or `木质芒果大型刺剑`.
+    // what keeps every raw wood material in `木材名 + 木 + 规格 + 装备名`
+    // order instead of producing `大型芒果树刺剑` or `木芒果大型刺剑`.
     std::vector<bool> claimed(indices.size(), false);
     std::string material_prefix;
     std::string material_window_remainder;
@@ -33652,8 +33640,8 @@ static std::string arena_equipment_row_name(
     // Creature silk can also be split into several native text runs, for
     // example `brown recluse spider` + `silk` + `coats`. Resolve the longest
     // row window first so scrolling cannot alternate between
-    // `棕色遁蛛丝质大衣` and the incorrectly reordered
-    // `丝质棕色遁蛛大衣`.
+    // `棕色遁蛛丝大衣` and the incorrectly reordered
+    // `丝棕色遁蛛大衣`.
     for (size_t begin = 0; begin < indices.size(); ++begin) {
         if (claimed[begin]) continue;
         std::string combined_source;
@@ -33671,8 +33659,8 @@ static std::string arena_equipment_row_name(
             if (combined_source.find("silk") == std::string::npos) continue;
             ArenaEquipmentNamePart part = arena_equipment_name_part(
                 combined_source, combined_target);
-            if (part.material == "丝质" ||
-                !part.material.ends_with("丝质")) {
+            if (part.material == "丝" ||
+                !part.material.ends_with("丝")) {
                 continue;
             }
             best_end = end;
@@ -33691,13 +33679,13 @@ static std::string arena_equipment_row_name(
     // As with wood, DF may expose creature leather as one translated run or
     // as adjacent `dragonfly` + `leather` runs.  Resolve the longest compound
     // whose complete target is a material, so the species remains attached to
-    // `皮革质` while size/shape words stay available for the item remainder.
+    // `皮革` while size/shape words stay available for the item remainder.
     // Modded/generated creature names can themselves be several independently
     // translated runs and need not have an exact dictionary entry (for example
     // `large` + `horned` + `owl` + `leather`).  In that case the ordinary
     // material parser can still prove the final `leather` token and leaves the
     // displayed creature name in its remainder.  Fold that remainder back into
-    // the material here instead of later emitting `皮革质大型角鸮...`.
+    // the material here instead of later emitting `皮革大型角鸮...`.
     for (size_t begin = 0; begin < indices.size(); ++begin) {
         if (claimed[begin]) continue;
         std::string combined_source;
@@ -33715,7 +33703,7 @@ static std::string arena_equipment_row_name(
             if (combined_source.find("leather") == std::string::npos) continue;
             ArenaEquipmentNamePart part = arena_equipment_name_part(
                 combined_source, combined_target);
-            if (!part.material.ends_with("皮革质")) {
+            if (!part.material.ends_with("皮革")) {
                 continue;
             }
             if (!part.remainder.empty()) {
@@ -33725,7 +33713,7 @@ static std::string arena_equipment_row_name(
                 // claim only the known material so `小型` remains on the item.
                 // A generic leather match, however, means the whole preceding
                 // translated phrase is the otherwise-unregistered creature.
-                if (part.material != "皮革质") {
+                if (part.material != "皮革") {
                     // The native renderer can keep the equipment noun in the
                     // same run as `leather` while drawing the were-species in
                     // a preceding run: `wereloris` + `leather sleek vest`.
@@ -33742,7 +33730,7 @@ static std::string arena_equipment_row_name(
                     // replace it with a wider window that also consumes the
                     // equipment noun: doing so moves an earlier modifier to
                     // the end (`asymmetrical dodo leather cloak` became
-                    // `渡渡鸟皮革质斗篷不对称`).  Joined were-creature sources are
+                    // `渡渡鸟皮革斗篷不对称`). Joined were-creature sources are
                     // the exceptional path described above and may need the
                     // wider window because their native run includes both
                     // material and noun.
@@ -33764,7 +33752,7 @@ static std::string arena_equipment_row_name(
                     // `asymmetrical dodo leather` must leave `asymmetrical`
                     // unclaimed, allow the shorter `dodo leather` suffix to
                     // own the material, and finally compose as
-                    // `渡渡鸟皮革质不对称...`.
+                    // `渡渡鸟皮革不对称...`.
                     if (starts_with_arena_equipment_modifier(combined_source)) {
                         continue;
                     }

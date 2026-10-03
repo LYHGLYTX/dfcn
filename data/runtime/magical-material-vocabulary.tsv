@@ -9,25 +9,25 @@ remnant-adjective	cosmic	宇宙	宇宙
 remnant-adjective	primal	原始	原始
 remnant-adjective	elemental	元素	元素
 remnant-adjective	primeval	太古	太古
-remnant-material	stone	石头	石质
-remnant-material	crystal	水晶	晶质
-remnant-material	chaos	混沌	混沌质
-remnant-material	darkness	黑暗	暗质
+remnant-material	stone	石头	石
+remnant-material	crystal	水晶	晶
+remnant-material	chaos	混沌	混沌
+remnant-material	darkness	黑暗	暗
 remnant-material	dreamstuff	梦质	梦质
-remnant-material	fire	火焰	火质
-remnant-material	light	光	光质
-remnant-material	lightning	闪电	雷质
-remnant-material	metal	金属	金属质
-remnant-material	moonstone	月石	月石质
-remnant-material	mudstone	泥石	泥石质
-remnant-material	ice	冰	冰质
-remnant-material	leaf	叶	叶质
-remnant-material	salt	盐	盐质
+remnant-material	fire	火焰	火
+remnant-material	light	光	光
+remnant-material	lightning	闪电	雷
+remnant-material	metal	金属	金属
+remnant-material	moonstone	月石	月石
+remnant-material	mudstone	泥石	泥石
+remnant-material	ice	冰	冰
+remnant-material	leaf	叶	叶
+remnant-material	salt	盐	盐
 remnant-material	cloudstuff	云质	云质
-remnant-material	stardust	星尘	星尘质
-remnant-material	sunstone	日石	日石质
-remnant-material	wood	木头	木质
-remnant-material	obsidian	黑曜石	黑曜石质
+remnant-material	stardust	星尘	星尘
+remnant-material	sunstone	日石	日石
+remnant-material	wood	木头	木
+remnant-material	obsidian	黑曜石	黑曜石
 remnant-material	glitchstuff	异常质	异常质
 # Healing substances: adjective senses refer to the material, not personality,
 # arithmetic (odd), blood (goo), or fate (weird). No ordinary glossary changes.
@@ -79,44 +79,44 @@ divine-metal	blazing metal	燃烧金属	燃烧金属
 divine-metal	booming metal	轰鸣金属	轰鸣金属
 divine-metal	searing metal	灼热金属	灼热金属
 divine-metal	flowing metal	流动金属	流动金属
-# Divine silk: preserve the existing equipment qualifiers, but do not use a
-# dangling 丝质 as a substance noun or append silk to a native essence name.
-divine-silk	blazing cloth	炽燃的丝绸	炽燃的丝质
-divine-silk	bright cloth	明亮的丝绸	明亮的丝质
-divine-silk	clear blue cloth	澄蓝的丝绸	澄蓝的丝质
-divine-silk	dancing wisps	舞动灵缕	舞动灵缕的丝质
-divine-silk	dirty fabric	污秽的丝绸	污秽的丝质
-divine-silk	faceted cloth	晶面的丝绸	晶面的丝质
-divine-silk	flashing sparks	闪光火花	闪光火花的丝质
-divine-silk	flickering cloth	明灭的丝绸	明灭的丝质
-divine-silk	flowing cloth	飘流的丝绸	飘流的丝质
-divine-silk	flowing fabric	流淌的丝绸	流淌的丝质
-divine-silk	glowing cloth	荧光的丝绸	荧光的丝质
-divine-silk	heavy cloth	厚重的丝绸	厚重的丝质
-divine-silk	liquid cloth	液态的丝绸	液态的丝质
-divine-silk	liquid darkness	液态黑暗	液态黑暗的丝质
-divine-silk	misty cloth	雾霭的丝绸	雾霭的丝质
-divine-silk	moist fabric	湿润的丝绸	湿润的丝质
-divine-silk	molten liquid	熔融液	熔融液的丝质
-divine-silk	motes of light	光尘	光尘的丝质
-divine-silk	multicolored cloth	多彩的丝绸	多彩的丝质
-divine-silk	never-still cloth	永动的丝绸	永动的丝质
-divine-silk	pale fabric	苍白的丝绸	苍白的丝质
-divine-silk	patchy cloth	斑驳的丝绸	斑驳的丝质
-divine-silk	pitch-black fabric	漆黑的丝绸	漆黑的丝质
-divine-silk	rotted fabric	腐朽的丝绸	腐朽的丝质
-divine-silk	rustling fabric	窸窣的丝绸	窸窣的丝质
-divine-silk	screaming mouths	尖啸之口	尖啸之口的丝质
-divine-silk	shadow stuff	暗影物质	暗影的丝质
-divine-silk	shimmering cloth	微光的丝绸	微光的丝质
-divine-silk	shining cloth	闪耀的丝绸	闪耀的丝质
-divine-silk	sonorous lines	鸣响丝线	鸣响丝线的丝质
-divine-silk	still blue fabric	静蓝的丝绸	静蓝的丝质
-divine-silk	translucent cloth	半透明的丝绸	半透明的丝质
-divine-silk	twisted fabric	扭曲的丝绸	扭曲的丝质
-divine-silk	undulating cloth	波动的丝绸	波动的丝质
-divine-silk	white cloth	洁白的丝绸	洁白的丝质
-divine-silk	wispy cloth	缥缈的丝绸	缥缈的丝质
+# Divine silk keeps its equipment qualifiers without an added material suffix.
+# Substance nouns do not append silk to a native essence name.
+divine-silk	blazing cloth	炽燃的丝绸	炽燃的丝
+divine-silk	bright cloth	明亮的丝绸	明亮的丝
+divine-silk	clear blue cloth	澄蓝的丝绸	澄蓝的丝
+divine-silk	dancing wisps	舞动灵缕	舞动灵缕的丝
+divine-silk	dirty fabric	污秽的丝绸	污秽的丝
+divine-silk	faceted cloth	晶面的丝绸	晶面的丝
+divine-silk	flashing sparks	闪光火花	闪光火花的丝
+divine-silk	flickering cloth	明灭的丝绸	明灭的丝
+divine-silk	flowing cloth	飘流的丝绸	飘流的丝
+divine-silk	flowing fabric	流淌的丝绸	流淌的丝
+divine-silk	glowing cloth	荧光的丝绸	荧光的丝
+divine-silk	heavy cloth	厚重的丝绸	厚重的丝
+divine-silk	liquid cloth	液态的丝绸	液态的丝
+divine-silk	liquid darkness	液态黑暗	液态黑暗的丝
+divine-silk	misty cloth	雾霭的丝绸	雾霭的丝
+divine-silk	moist fabric	湿润的丝绸	湿润的丝
+divine-silk	molten liquid	熔融液	熔融液的丝
+divine-silk	motes of light	光尘	光尘的丝
+divine-silk	multicolored cloth	多彩的丝绸	多彩的丝
+divine-silk	never-still cloth	永动的丝绸	永动的丝
+divine-silk	pale fabric	苍白的丝绸	苍白的丝
+divine-silk	patchy cloth	斑驳的丝绸	斑驳的丝
+divine-silk	pitch-black fabric	漆黑的丝绸	漆黑的丝
+divine-silk	rotted fabric	腐朽的丝绸	腐朽的丝
+divine-silk	rustling fabric	窸窣的丝绸	窸窣的丝
+divine-silk	screaming mouths	尖啸之口	尖啸之口的丝
+divine-silk	shadow stuff	暗影物质	暗影的丝
+divine-silk	shimmering cloth	微光的丝绸	微光的丝
+divine-silk	shining cloth	闪耀的丝绸	闪耀的丝
+divine-silk	sonorous lines	鸣响丝线	鸣响丝线的丝
+divine-silk	still blue fabric	静蓝的丝绸	静蓝的丝
+divine-silk	translucent cloth	半透明的丝绸	半透明的丝
+divine-silk	twisted fabric	扭曲的丝绸	扭曲的丝
+divine-silk	undulating cloth	波动的丝绸	波动的丝
+divine-silk	white cloth	洁白的丝绸	洁白的丝
+divine-silk	wispy cloth	缥缈的丝绸	缥缈的丝
 # Evil-weather materials are also STATE_NAME_ADJ substances in native Lua.
 cloud-adjective	cursed	受诅咒的	受诅咒的
 cloud-adjective	wicked	邪恶的	邪恶的

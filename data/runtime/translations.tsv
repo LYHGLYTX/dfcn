@@ -77564,7 +77564,7 @@ Workers ignore bodies	工人不搬运尸体	wi
 Workers ignore refuse	工人不收集垃圾	wi
 Workshop recipe: flux	熔剂	l
 Workshop recipe: item	物品	l
-Workshop recipe: silk	丝质布	l
+Workshop recipe: silk	丝布	l
 World site type: camp	Camp	hi
 World site type: cave	Cave	hi
 World site type: fort	Fort	hi
@@ -81573,9 +81573,9 @@ positive sentiments.	正面情感。	l
 potash, and milk of 	建造需要一个砖块、一个圆桶和	w
 primeval glitchstuff	太古异常质	hMi
 primeval glitchstuff	太古异常质	wim
-primordial lightning	原初雷质	hMi
+primordial lightning	原初雷	hMi
 primordial lightning	原初闪电	wim
-primordial moonstone	原初月石质	hMi
+primordial moonstone	原初月石	hMi
 primordial moonstone	原初月石	wim
 procompsognathus man	始秀颌龙人	wi
 procompsognathus men	始秀颌龙人	wi
@@ -82981,9 +82981,9 @@ drowned {a} at {p}.	在{p1}溺死了{a1}。	ht
 drowned {a} in {p}.	在{p1}溺死了{a1}。	ht
 dwarven wheat flour	矮人小麦粉	wi
 eighth eldest child	第八个孩子	h
-elemental lightning	元素雷质	hMi
+elemental lightning	元素雷	hMi
 elemental lightning	元素闪电	wim
-elemental moonstone	元素月石质	hMi
+elemental moonstone	元素月石	hMi
 elemental moonstone	元素月石	wim
 elephant seal woman	象海豹人	wi
 elephant seal women	象海豹人	wi
@@ -84900,15 +84900,15 @@ primeval cloudstuff	太古云质	hMi
 primeval cloudstuff	太古云质	wim
 primeval dreamstuff	太古梦质	hMi
 primeval dreamstuff	太古梦质	wim
-primordial darkness	原初暗质	hMi
+primordial darkness	原初暗	hMi
 primordial darkness	原初黑暗	wim
-primordial mudstone	原初泥石质	hMi
+primordial mudstone	原初泥石	hMi
 primordial mudstone	原初泥石	wim
-primordial obsidian	原初黑曜石质	hMi
+primordial obsidian	原初黑曜石	hMi
 primordial obsidian	原初黑曜石	wim
-primordial stardust	原初星尘质	hMi
+primordial stardust	原初星尘	hMi
 primordial stardust	原初星尘	wim
-primordial sunstone	原初日石质	hMi
+primordial sunstone	原初日石	hMi
 primordial sunstone	原初日石	wim
 profaned {p} at {p}	在{p2}亵渎了{p1}	ht
 profaned {p} in {p}	在{p2}亵渎了{p1}	ht
@@ -86268,15 +86268,15 @@ dunkleosteus woman	邓氏鱼人	wi
 dunkleosteus women	邓氏鱼人	wi
 eating rotten food	吃到腐烂的食物	wi
 eight-sided prisms	八面棱镜	wi
-elemental darkness	元素暗质	hMi
+elemental darkness	元素暗	hMi
 elemental darkness	元素黑暗	wim
-elemental mudstone	元素泥石质	hMi
+elemental mudstone	元素泥石	hMi
 elemental mudstone	元素泥石	wim
-elemental obsidian	元素黑曜石质	hMi
+elemental obsidian	元素黑曜石	hMi
 elemental obsidian	元素黑曜石	wim
-elemental stardust	元素星尘质	hMi
+elemental stardust	元素星尘	hMi
 elemental stardust	元素星尘	wim
-elemental sunstone	元素日石质	hMi
+elemental sunstone	元素日石	hMi
 elemental sunstone	元素日石	wim
 elephant seal pups	象海豹幼崽	wi
 elk bird hatchling	麋鹿鸟幼崽	wi
@@ -88746,7 +88746,7 @@ most sacred zephyr	至圣西风	hi
 mountain avens bud	山蔷薇花苞	wi
 mountain goat kids	雪羊幼崽	wi
 moved in the wilds	在荒野中迁移了	h
-multicolored cloth	多彩的丝质	hMi
+multicolored cloth	多彩的丝	hMi
 multicolored cloth	多彩的丝绸	wim
 multicolored metal	多彩金属	hMi
 multicolored metal	多彩金属	wim
@@ -88774,7 +88774,7 @@ pearl millet flour	珍珠粟面粉	wi
 pearl millet plant	珍珠粟植株	wi
 performance troupe	演出团	hIi
 persimmon wood log	柿树原木	wi
-pitch-black fabric	漆黑的丝质	hMi
+pitch-black fabric	漆黑的丝	hMi
 pitch-black fabric	漆黑的丝绸	wim
 platybelodon woman	铲齿象人	wi
 platybelodon women	铲齿象人	wi
@@ -88792,11 +88792,11 @@ pretty decent meal	相当不错的饭菜	wi
 prickle berry wine	刺莓果酒	wi
 primal glitchstuff	原始异常质	hMi
 primal glitchstuff	原始异常质	wim
-primeval lightning	太古雷质	hMi
+primeval lightning	太古雷	hMi
 primeval lightning	太古闪电	wim
-primeval moonstone	太古月石质	hMi
+primeval moonstone	太古月石	hMi
 primeval moonstone	太古月石	wim
-primordial crystal	原初晶质	hMi
+primordial crystal	原初晶	hMi
 primordial crystal	原初水晶	wim
 pulled rank at {p}	在{p1}摆出上级的架子施压	ht
 pulled rank in {p}	在{p1}摆出上级的架子施压	ht
@@ -90236,7 +90236,7 @@ eight-sided prism	八面棱镜	wi
 eighth eldest son	第八个儿子	h
 elder glitchstuff	上古异常质	hMi
 elder glitchstuff	上古异常质	wim
-elemental crystal	元素晶质	hMi
+elemental crystal	元素晶	hMi
 elemental crystal	元素水晶	wim
 elephant seal man	象海豹人	wi
 elephant seal men	象海豹人	wi
@@ -92994,7 +92994,7 @@ nauseating sludge	令人作呕的软泥制	hMi
 nauseating sludge	令人作呕的软泥	wim
 nearly fuse-lobed	耳垂近乎贴合	wi
 needle-like horns	针状的角	wi
-never-still cloth	永动的丝质	hMi
+never-still cloth	永动的丝	hMi
 never-still cloth	永动的丝绸	wim
 no slabs engraved	无石碑被雕刻	wi
 noted storyteller	著名的说书人	h
@@ -93040,15 +93040,15 @@ primal cloudstuff	原始云质	hMi
 primal cloudstuff	原始云质	wim
 primal dreamstuff	原始梦质	hMi
 primal dreamstuff	原始梦质	wim
-primeval darkness	太古暗质	hMi
+primeval darkness	太古暗	hMi
 primeval darkness	太古黑暗	wim
-primeval mudstone	太古泥石质	hMi
+primeval mudstone	太古泥石	hMi
 primeval mudstone	太古泥石	wim
-primeval obsidian	太古黑曜石质	hMi
+primeval obsidian	太古黑曜石	hMi
 primeval obsidian	太古黑曜石	wim
-primeval stardust	太古星尘质	hMi
+primeval stardust	太古星尘	hMi
 primeval stardust	太古星尘	wim
-primeval sunstone	太古日石质	hMi
+primeval sunstone	太古日石	hMi
 primeval sunstone	太古日石	wim
 prolific breeding	繁殖能力强	wi
 propensity to dig	倾向于挖掘	wi
@@ -93269,7 +93269,7 @@ spotted wobbegong	斑纹须鲨	wi
 starved to death.	饿死了。	h
 stegosaurus woman	剑龙人	wi
 stegosaurus women	剑龙人	wi
-still blue fabric	静蓝的丝质	hMi
+still blue fabric	静蓝的丝	hMi
 still blue fabric	静蓝的丝绸	wim
 strand body parts	丝状身体部位	wi
 strawberry plants	草莓植株	wi
@@ -93326,7 +93326,7 @@ tomatillo flowers	灯笼番茄花	wi
 took up residence	住了下来	h
 torvosaurus woman	蛮龙人	wi
 torvosaurus women	蛮龙人	wi
-translucent cloth	半透明的丝质	hMi
+translucent cloth	半透明的丝	hMi
 translucent cloth	半透明的丝绸	wim
 translucent metal	透明金属	hMi
 translucent metal	透明金属	wim
@@ -94647,7 +94647,7 @@ chinchilla woman	毛丝鼠人	wi
 chinchilla women	毛丝鼠人	wi
 citron wood logs	香橼树原木	wi
 clashed with {a}	与{a1}发生了冲突	ht
-clear blue cloth	澄蓝的丝质	hMi
+clear blue cloth	澄蓝的丝	hMi
 clear blue cloth	澄蓝的丝绸	wim
 clear blue metal	湛蓝金属	hMi
 clear blue metal	湛蓝金属	wim
@@ -94670,9 +94670,9 @@ constructed {p}.	建造了{p1}。	ht
 copperhead snake	铜头蛇	wi
 cornering of {a}	将{a1}逼入绝境	htEi
 corrupt dealings	腐败交易	h
-cosmic lightning	宇宙雷质	hMi
+cosmic lightning	宇宙雷	hMi
 cosmic lightning	宇宙闪电	wim
-cosmic moonstone	宇宙月石质	hMi
+cosmic moonstone	宇宙月石	hMi
 cosmic moonstone	宇宙月石	wim
 cottongrass buds	棉草花苞	wi
 cottongrass tuft	棉草丛	wi
@@ -95188,7 +95188,7 @@ first worshipper	第一信徒	hi
 first yellowness	第一黄色	hi
 fled {p} at {p}.	在{p2}逃离了{p1}。	ht
 fled {p} in {p}.	在{p2}逃离了{p1}。	ht
-flickering cloth	明灭的丝质	hMi
+flickering cloth	明灭的丝	hMi
 flickering cloth	明灭的丝绸	wim
 flickering metal	闪烁金属	hMi
 flickering metal	闪烁金属	wim
@@ -97518,19 +97518,19 @@ possible comrade	可能的同志	h
 preached to {a}.	向{a1}布道。	ht
 predatory nature	掠夺的天性	wi
 prehensile tails	可缠绕的尾巴	wi
-primal lightning	原始雷质	hMi
+primal lightning	原始雷	hMi
 primal lightning	原始闪电	wim
-primal moonstone	原始月石质	hMi
+primal moonstone	原始月石	hMi
 primal moonstone	原始月石	wim
-primeval crystal	太古晶质	hMi
+primeval crystal	太古晶	hMi
 primeval crystal	太古水晶	wim
-primordial chaos	原初混沌质	hMi
+primordial chaos	原初混沌	hMi
 primordial chaos	原初混沌	wim
-primordial light	原初光质	hMi
+primordial light	原初光	hMi
 primordial light	原初光	wim
-primordial metal	原初金属质	hMi
+primordial metal	原初金属	hMi
 primordial metal	原初金属	wim
-primordial stone	原初石质	hMi
+primordial stone	原初石	hMi
 primordial stone	原初石头	wim
 procompsognathus	始秀颌龙	wi
 purple amaranths	紫苋	wi
@@ -97793,7 +97793,7 @@ saguaro rib logs	巨刺柱肋木原木	wi
 saguaro rib wood	巨刺柱肋木	wi
 sand pear flower	沙梨花	wi
 sand pear leaves	沙梨叶	wi
-screaming mouths	尖啸之口的丝质	hMi
+screaming mouths	尖啸之口的丝	hMi
 screaming mouths	尖啸之口	wim
 second left hand	第二左手	h
 second right toe	右脚食趾	h
@@ -97802,7 +97802,7 @@ seventy thousand	七万	wi
 sewer caretakers	下水道管护员	hi
 shadowy military	隐秘的军事	h
 shields/bucklers	盾牌/小盾	wi
-shimmering cloth	微光的丝质	hMi
+shimmering cloth	微光的丝	hMi
 shimmering cloth	微光的丝绸	wim
 sinopterus woman	小型冠翼龙人	wi
 sinopterus women	小型冠翼龙人	wi
@@ -97887,7 +97887,7 @@ tunnel officials	隧道官员	hi
 tunnel tube logs	隧管菌原木	wi
 two-handed sword	双手剑	wi
 two-humped camel	双峰骆驼	wi
-undulating cloth	波动的丝质	hMi
+undulating cloth	波动的丝	hMi
 undulating cloth	波动的丝绸	wim
 unknown creature	未知生物	wi
 unknown material	未知材料	h
@@ -99258,15 +99258,15 @@ confronted {a}.	与{a1}对峙。	ht
 constructed {p}	建造了{p1}	ht
 corrupt dealing	腐败交易	h
 corrupted blood	腐败血液	wi
-cosmic darkness	宇宙暗质	hMi
+cosmic darkness	宇宙暗	hMi
 cosmic darkness	宇宙黑暗	wim
-cosmic mudstone	宇宙泥石质	hMi
+cosmic mudstone	宇宙泥石	hMi
 cosmic mudstone	宇宙泥石	wim
-cosmic obsidian	宇宙黑曜石质	hMi
+cosmic obsidian	宇宙黑曜石	hMi
 cosmic obsidian	宇宙黑曜石	wim
-cosmic stardust	宇宙星尘质	hMi
+cosmic stardust	宇宙星尘	hMi
 cosmic stardust	宇宙星尘	wim
-cosmic sunstone	宇宙日石质	hMi
+cosmic sunstone	宇宙日石	hMi
 cosmic sunstone	宇宙日石	wim
 cottongrass bud	棉草花苞	wi
 craft shop sign	工艺品商店招牌	wi
@@ -99311,18 +99311,18 @@ durian wood log	榴梿树原木	wi
 eggplant flower	茄子花	wi
 eggplant leaves	茄子叶	wi
 eighty thousand	八万	wi
-elder lightning	上古雷质	hMi
+elder lightning	上古雷	hMi
 elder lightning	上古闪电	wim
-elder moonstone	上古月石质	hMi
+elder moonstone	上古月石	hMi
 elder moonstone	上古月石	wim
 eldest daughter	长女	h
-elemental chaos	元素混沌质	hMi
+elemental chaos	元素混沌	hMi
 elemental chaos	元素混沌	wim
-elemental light	元素光质	hMi
+elemental light	元素光	hMi
 elemental light	元素光	wim
-elemental metal	元素金属质	hMi
+elemental metal	元素金属	hMi
 elemental metal	元素金属	wim
-elemental stone	元素石质	hMi
+elemental stone	元素石	hMi
 elemental stone	元素石头	wim
 elephant calves	大象幼崽	wi
 emperor penguin	帝企鹅	wi
@@ -100030,7 +100030,7 @@ first whiteness	第一白	hi
 first winnowers	第一扬场者	hi
 first yearlings	第一一岁幼兽	hi
 fishing ability	捕鱼能力	wi
-flashing sparks	闪光火花的丝质	hMi
+flashing sparks	闪光火花的丝	hMi
 flashing sparks	闪光火花	wim
 fled {p} at {p}	在{p2}逃离了{p1}	ht
 fled {p} in {p}	在{p2}逃离了{p1}	ht
@@ -100517,7 +100517,7 @@ legendary thief	传奇盗贼	h
 less altruistic	不那么无私	wi
 lesser yam leaf	小山药叶	wi
 limb/body casts	肢体/身体石膏	wi
-liquid darkness	液态黑暗的丝质	hMi
+liquid darkness	液态黑暗的丝	hMi
 liquid darkness	液态黑暗	wim
 little penguins	小企鹅	wi
 loathsome filth	令人厌恶的污垢制	hMi
@@ -102164,23 +102164,23 @@ porcupine women	豪猪人	wi
 possibly polite	可能彬彬有礼	h
 preached to {a}	向{a1}布道	ht
 prickle berries	刺莓	wi
-primal darkness	原始暗质	hMi
+primal darkness	原始暗	hMi
 primal darkness	原始黑暗	wim
-primal mudstone	原始泥石质	hMi
+primal mudstone	原始泥石	hMi
 primal mudstone	原始泥石	wim
-primal obsidian	原始黑曜石质	hMi
+primal obsidian	原始黑曜石	hMi
 primal obsidian	原始黑曜石	wim
-primal stardust	原始星尘质	hMi
+primal stardust	原始星尘	hMi
 primal stardust	原始星尘	wim
-primal sunstone	原始日石质	hMi
+primal sunstone	原始日石	hMi
 primal sunstone	原始日石	wim
-primordial fire	原初火质	hMi
+primordial fire	原初火	hMi
 primordial fire	原初火焰	wim
-primordial leaf	原初叶质	hMi
+primordial leaf	原初叶	hMi
 primordial leaf	原初叶	wim
-primordial salt	原初盐质	hMi
+primordial salt	原初盐	hMi
 primordial salt	原初盐	wim
-primordial wood	原初木质	hMi
+primordial wood	原初木	hMi
 primordial wood	原初木头	wim
 proposed by {a}	由{a1}提出	ht
 psephoderma man	楯齿龙人	wi
@@ -102278,7 +102278,7 @@ rumored brigand	传闻中的强盗	h
 rumored fighter	传闻中的战士	h
 rumored monster	传闻中的怪物	h
 rumored villain	传闻中的恶棍	h
-rustling fabric	窸窣的丝质	hMi
+rustling fabric	窸窣的丝	hMi
 rustling fabric	窸窣的丝绸	wim
 sacred accident	神圣意外	hi
 sacred admirers	神圣仰慕者	hi
@@ -104129,7 +104129,7 @@ conger eel fry	康吉鳗幼崽	wi
 conquered {p}.	征服了{p1}。	ht
 copper nuggets	铜块	wi
 corrupted {a}.	拉拢了{a1}。	ht
-cosmic crystal	宇宙晶质	hMi
+cosmic crystal	宇宙晶	hMi
 cosmic crystal	宇宙水晶	wim
 cotton flowers	棉花花	wi
 cottonseed oil	棉花籽油	wi
@@ -104190,23 +104190,23 @@ dwarven babies	矮人宝宝	wi
 dwarven cheese	矮人奶酪	wi
 eggplant seeds	茄子种子	wi
 eight thousand	八千	wi
-elder darkness	上古暗质	hMi
+elder darkness	上古暗	hMi
 elder darkness	上古黑暗	wim
-elder mudstone	上古泥石质	hMi
+elder mudstone	上古泥石	hMi
 elder mudstone	上古泥石	wim
-elder obsidian	上古黑曜石质	hMi
+elder obsidian	上古黑曜石	hMi
 elder obsidian	上古黑曜石	wim
-elder stardust	上古星尘质	hMi
+elder stardust	上古星尘	hMi
 elder stardust	上古星尘	wim
-elder sunstone	上古日石质	hMi
+elder sunstone	上古日石	hMi
 elder sunstone	上古日石	wim
-elemental fire	元素火质	hMi
+elemental fire	元素火	hMi
 elemental fire	元素火焰	wim
-elemental leaf	元素叶质	hMi
+elemental leaf	元素叶	hMi
 elemental leaf	元素叶	wim
-elemental salt	元素盐质	hMi
+elemental salt	元素盐	hMi
 elemental salt	元素盐	wim
-elemental wood	元素木质	hMi
+elemental wood	元素木	hMi
 elemental wood	元素木头	wim
 elephant seals	象海豹	wi
 elephant woman	大象人	wi
@@ -105205,7 +105205,7 @@ flashing metal	闪耀金属	wim
 fled from {p}.	逃离了{p1}。	ht
 fled into {p}.	逃进了{p1}。	ht
 flightlessness	不可飞行	wi
-flowing fabric	流淌的丝质	hMi
+flowing fabric	流淌的丝	hMi
 flowing fabric	流淌的丝绸	wim
 fluffy wambler	蓬松毛球	wi
 food shop sign	食物商店招牌	wi
@@ -106797,7 +106797,7 @@ most holy yell	至圣叫声	hi
 most holy yore	至圣从前	hi
 most holy zeal	至圣热忱	hi
 most sacred ox	至圣牛	hi
-motes of light	光尘的丝质	hMi
+motes of light	光尘的丝	hMi
 motes of light	光尘	wim
 mountain avens	山蔷薇	wi
 mountain gnome	山岭地精	wi
@@ -106895,17 +106895,17 @@ potato flowers	马铃薯花	wi
 powerful bites	强咬	wi
 prepared foods	熟食	wi
 prepared meals	预备的餐点	wi
-primal crystal	原始晶质	hMi
+primal crystal	原始晶	hMi
 primal crystal	原始水晶	wim
-primeval chaos	太古混沌质	hMi
+primeval chaos	太古混沌	hMi
 primeval chaos	太古混沌	wim
-primeval light	太古光质	hMi
+primeval light	太古光	hMi
 primeval light	太古光	wim
-primeval metal	太古金属质	hMi
+primeval metal	太古金属	hMi
 primeval metal	太古金属	wim
-primeval stone	太古石质	hMi
+primeval stone	太古石	hMi
 primeval stone	太古石头	wim
-primordial ice	原初冰质	hMi
+primordial ice	原初冰	hMi
 primordial ice	原初冰	wim
 profaning {p}.	亵渎{p1}。	htEi
 prominent-chin	下巴突出	wi
@@ -107512,7 +107512,7 @@ somewhat round	略圆	wi
 somewhat short	略矮	wi
 somewhat small	略小	wi
 somewhat tall.	略高。	wil
-sonorous lines	鸣响丝线的丝质	hMi
+sonorous lines	鸣响丝线的丝	hMi
 sonorous lines	鸣响丝线	wim
 sorghum leaves	高粱叶	wi
 soybean flower	黄豆花	wi
@@ -107582,7 +107582,7 @@ truly splendid	极其精美的	wi
 tunnel masters	隧道主管	hi
 turkey gobbler	火鸡	wi
 turnip flowers	芜菁花	wi
-twisted fabric	扭曲的丝质	hMi
+twisted fabric	扭曲的丝	hMi
 twisted fabric	扭曲的丝绸	wim
 twisting metal	扭曲金属	hMi
 twisting metal	扭曲金属	wim
@@ -108672,7 +108672,7 @@ black diamond	黑钻石	wi
 black pyropes	黑榴石	wi
 black zircons	黑锆石	wi
 black-cap log	黑菇原木	wi
-blazing cloth	炽燃的丝质	hMi
+blazing cloth	炽燃的丝	hMi
 blazing cloth	炽燃的丝绸	wim
 blazing metal	燃烧金属	hMi
 blazing metal	燃烧金属	wim
@@ -108821,7 +108821,7 @@ curious juice	奇异汁液	wim
 custard-apple	番荔枝	wi
 damselfly man	蓝蜻蛉人	wi
 damselfly men	蓝蜻蛉人	wi
-dancing wisps	舞动灵缕的丝质	hMi
+dancing wisps	舞动灵缕的丝	hMi
 dancing wisps	舞动灵缕	wim
 dark chestnut	深栗色	wi
 deep sea blue	深海蓝	wi
@@ -108869,10 +108869,10 @@ echidna women	针鼹人	wi
 echoing howls	回荡的咆哮声	wi
 eggplant leaf	茄子叶	wi
 eighth eldest	第八大的	wi
-elder crystal	上古晶质	hMi
+elder crystal	上古晶	hMi
 elder crystal	上古水晶	wim
 elegant horns	优雅的角	wi
-elemental ice	元素冰质	hMi
+elemental ice	元素冰	hMi
 elemental ice	元素冰	wim
 elephant calf	大象幼崽	wi
 elephant seal	象海豹	wi
@@ -109592,7 +109592,7 @@ execrable fog	可憎的雾	wim
 executed {a}.	处决了{a1}。	ht
 expelled {a}.	驱逐了{a1}。	ht
 eyes are {s}.	眼睛{s}。	wtlx
-faceted cloth	晶面的丝质	hMi
+faceted cloth	晶面的丝	hMi
 faceted cloth	晶面的丝绸	wim
 faceted metal	多面金属	hMi
 faceted metal	多面金属	wim
@@ -110106,7 +110106,7 @@ five thousand	五千	wi
 fled from {p}	逃离了{p1}	ht
 fled into {p}	逃进了{p1}	ht
 floating guts	浮脏怪	wi
-flowing cloth	飘流的丝质	hMi
+flowing cloth	飘流的丝	hMi
 flowing cloth	飘流的丝绸	wim
 flowing metal	流动金属	hMi
 flowing metal	流动金属	wim
@@ -110190,7 +110190,7 @@ ginkgo leaves	银杏叶	wi
 giraffe woman	长颈鹿人	wi
 giraffe women	长颈鹿人	wi
 gizzard stone	砂囊石	wi
-glowing cloth	荧光的丝质	hMi
+glowing cloth	荧光的丝	hMi
 glowing cloth	荧光的丝绸	wim
 glowing metal	柔和金属	hMi
 glowing metal	柔和金属	wim
@@ -111029,7 +111029,7 @@ milk quartzes	乳石英	wi
 miohippus man	中新马人	wi
 miohippus men	中新马人	wi
 moa hatchling	恐鸟幼崽	wi
-molten liquid	熔融液的丝质	hMi
+molten liquid	熔融液的丝	hMi
 molten liquid	熔融液	wim
 mongoose pups	獴幼崽	wi
 mononykus man	单爪龙人	wi
@@ -111349,13 +111349,13 @@ prepared food	熟食	wi
 prepared meal	预备的餐点	wi
 pretty decent	相当不错的	wi
 prickle berry	刺莓	wi
-primeval fire	太古火质	hMi
+primeval fire	太古火	hMi
 primeval fire	太古火焰	wim
-primeval leaf	太古叶质	hMi
+primeval leaf	太古叶	hMi
 primeval leaf	太古叶	wim
-primeval salt	太古盐质	hMi
+primeval salt	太古盐	hMi
 primeval salt	太古盐	wim
-primeval wood	太古木质	hMi
+primeval wood	太古木	hMi
 primeval wood	太古木头	wim
 profane gloom	亵渎的阴霾制	hMi
 profane gloom	亵渎的阴霾	wim
@@ -111431,7 +111431,7 @@ roc hatchling	大鹏鸟幼崽	wi
 rock crystals	岩石水晶	wi
 rock nut soap	石头坚果皂	wi
 rose quartzes	蔷薇石英	wi
-rotted fabric	腐朽的丝质	hMi
+rotted fabric	腐朽的丝	hMi
 rotted fabric	腐朽的丝绸	wim
 rotten sludge	腐烂的软泥制	hMi
 rotten sludge	腐烂的软泥	wim
@@ -112102,7 +112102,7 @@ serpent women	地底蛇人	wi
 set far apart	间距很大	hv
 sewer masters	下水道主管	hi
 sharovipteryx	沙洛维龙	wi
-shining cloth	闪耀的丝质	hMi
+shining cloth	闪耀的丝	hMi
 shining cloth	闪耀的丝绸	wim
 shining metal	发光金属	hMi
 shining metal	发光金属	wim
@@ -112368,7 +112368,7 @@ Clear output	清除输出	w
 Climb to {s}	攀向{s1}	hPt
 Close friend	亲密的朋友	w
 Closed cases	已结案件	w
-Cloth (Silk)	丝质布	wi
+Cloth (Silk)	丝布	wi
 Cloth (Yarn)	布料（毛线）	wi
 Collect clay	收集黏土	wi
 Collect sand	收集沙	wi
@@ -112874,7 +112874,7 @@ boning knife	剔骨刀	wi
 book binding	书壳	wi
 breached {p}	突破了{p1}	ht
 breastplates	板甲	wi
-bright cloth	明亮的丝质	hMi
+bright cloth	明亮的丝	hMi
 bright cloth	明亮的丝绸	wim
 bright green	亮绿色	wi
 bright metal	明亮金属	hMi
@@ -112950,13 +112950,13 @@ confused {s}	困惑的{s1}	hIit
 conglomerate	砾岩	wi
 contemptuous	轻蔑	w
 cornered {a}	将{a1}逼入绝境	ht
-cosmic chaos	宇宙混沌质	hMi
+cosmic chaos	宇宙混沌	hMi
 cosmic chaos	宇宙混沌	wim
-cosmic light	宇宙光质	hMi
+cosmic light	宇宙光	hMi
 cosmic light	宇宙光	wim
-cosmic metal	宇宙金属质	hMi
+cosmic metal	宇宙金属	hMi
 cosmic metal	宇宙金属	wim
-cosmic stone	宇宙石质	hMi
+cosmic stone	宇宙石	hMi
 cosmic stone	宇宙石头	wim
 cotton plant	棉花植株	wi
 cotton seeds	棉花种子	wi
@@ -112991,7 +112991,7 @@ devilish fog	恶魔般的雾	wim
 devoured {a}	吞噬了{a1}	ht
 dictionaries	词典	h
 died in {d}.	卒于第{d}年。	ht
-dirty fabric	污秽的丝质	hMi
+dirty fabric	污秽的丝	hMi
 dirty fabric	污秽的丝绸	wim
 disappointed	失望	w
 discussions.	讨论中较为被动。	l
@@ -115377,7 +115377,7 @@ less private	不那么内敛	wi
 lettuce leaf	生菜叶	wi
 lime flowers	酸橙花	wi
 lion tamarin	狮狨猴	wi
-liquid cloth	液态的丝质	hMi
+liquid cloth	液态的丝	hMi
 liquid cloth	液态的丝绸	wim
 liver tissue	肝脏组织	wi
 lizard woman	蜥蜴人	wi
@@ -115424,7 +115424,7 @@ middle spine	背部脊柱	wi
 mighty leaps	强大的跳跃能力	wi
 milk of lime	石灰乳	wi
 milkfish fry	遮目鱼幼崽	wi
-moist fabric	湿润的丝质	hMi
+moist fabric	湿润的丝	hMi
 moist fabric	湿润的丝绸	wim
 mongoose man	獴人	wi
 mongoose men	獴人	wi
@@ -115502,7 +115502,7 @@ parakeet man	长尾鹦鹉人	wi
 parakeet men	长尾鹦鹉人	wi
 parsnip leaf	防风草叶	wi
 parsnip wine	防风草果酒	wi
-patchy cloth	斑驳的丝质	hMi
+patchy cloth	斑驳的丝	hMi
 patchy cloth	斑驳的丝绸	wim
 peach flower	桃花	wi
 peach leaves	桃叶	wi
@@ -115541,15 +115541,15 @@ pond turtles	池龟	wi
 potash slush	草碱渣	wi
 potato plant	马铃薯植株	wi
 potato seeds	马铃薯种子	wi
-primal chaos	原始混沌质	hMi
+primal chaos	原始混沌	hMi
 primal chaos	原始混沌	wim
-primal light	原始光质	hMi
+primal light	原始光	hMi
 primal light	原始光	wim
-primal metal	原始金属质	hMi
+primal metal	原始金属	hMi
 primal metal	原始金属	wim
-primal stone	原始石质	hMi
+primal stone	原始石	hMi
 primal stone	原始石头	wim
-primeval ice	太古冰质	hMi
+primeval ice	太古冰	hMi
 primeval ice	太古冰	wim
 profane dust	亵渎的灰尘制	hMi
 profane dust	亵渎的灰尘	wim
@@ -116345,7 +116345,7 @@ self-control	自制	wi
 seventh head	第七头	h
 seventh neck	第七颈	h
 sewer master	下水道主管	hi
-shadow stuff	暗影的丝质	hMi
+shadow stuff	暗影的丝	hMi
 shadow stuff	暗影物质	wim
 sheep cheese	羊奶酪	wi
 sheep's milk	羊奶	wi
@@ -116444,7 +116444,7 @@ velociraptor	伶盗龙	wi
 velvet grass	丝绒草	wi
 very shallow	非常浅	wi
 visited {p}.	造访了{p1}。	ht
-wagon wooden	货车木质	wi
+wagon wooden	货车木	wi
 walnut trees	核桃树	wi
 walrus woman	海象人	wi
 walrus women	海象人	wi
@@ -117071,13 +117071,13 @@ conger eels	康吉鳗	wi
 consolation	慰藉	r
 constructed	建造了	h
 cooperation	合作	wi
-cosmic fire	宇宙火质	hMi
+cosmic fire	宇宙火	hMi
 cosmic fire	宇宙火焰	wim
-cosmic leaf	宇宙叶质	hMi
+cosmic leaf	宇宙叶	hMi
 cosmic leaf	宇宙叶	wim
-cosmic salt	宇宙盐质	hMi
+cosmic salt	宇宙盐	hMi
 cosmic salt	宇宙盐	wim
-cosmic wood	宇宙木质	hMi
+cosmic wood	宇宙木	hMi
 cosmic wood	宇宙木头	wim
 cotton leaf	棉花叶	wi
 cotton seed	棉花种子	wi
@@ -117145,13 +117145,13 @@ eerie smoke	诡异的烟制	hMi
 eerie smoke	诡异的烟	wim
 eerie vapor	诡异的蒸气制	hMi
 eerie vapor	诡异的蒸气	wim
-elder chaos	上古混沌质	hMi
+elder chaos	上古混沌	hMi
 elder chaos	上古混沌	wim
-elder light	上古光质	hMi
+elder light	上古光	hMi
 elder light	上古光	wim
-elder metal	上古金属质	hMi
+elder metal	上古金属	hMi
 elder metal	上古金属	wim
-elder stone	上古石质	hMi
+elder stone	上古石	hMi
 elder stone	上古石头	wim
 embarrassed	尴尬	w
 emerald cut	祖母绿切工	wi
@@ -118113,7 +118113,7 @@ hazel trees	榛树	wi
 head butler	首席管家	hi
 head doctor	首席医生	hi
 headscarves	丝巾	wi
-heavy cloth	厚重的丝质	hMi
+heavy cloth	厚重的丝	hMi
 heavy cloth	厚重的丝绸	wim
 heinous ash	邪恶的灰烬制	hMi
 heinous ash	邪恶的灰烬	wim
@@ -119526,7 +119526,7 @@ meadowsweet	绣线菊	wi
 megatherium	大地懒	wi
 milk quartz	乳石英	wi
 mini-forges	迷你锻砧	wi
-misty cloth	雾霭的丝质	hMi
+misty cloth	雾霭的丝	hMi
 misty cloth	雾霭的丝绸	wim
 molemarians	半身鼹鼠兽	wi
 moon snails	月亮蜗牛	wi
@@ -119575,7 +119575,7 @@ otter women	海獭人	wi
 outcast {s}	流亡的{s1}	hIit
 oval-shaped	呈椭圆形	hv
 overlapping	相互重叠	hv
-pale fabric	苍白的丝质	hMi
+pale fabric	苍白的丝	hMi
 pale fabric	苍白的丝绸	wim
 panda woman	熊猫人	wi
 panda women	熊猫人	wi
@@ -119615,13 +119615,13 @@ potato leaf	马铃薯叶	wi
 potato wine	马铃薯果酒	wi
 prase opals	苍绿欧泊	wi
 praying {s}	正在祈祷的{s1}	hIit
-primal fire	原始火质	hMi
+primal fire	原始火	hMi
 primal fire	原始火焰	wim
-primal leaf	原始叶质	hMi
+primal leaf	原始叶	hMi
 primal leaf	原始叶	wim
-primal salt	原始盐质	hMi
+primal salt	原始盐	hMi
 primal salt	原始盐	wim
-primal wood	原始木质	hMi
+primal wood	原始木	hMi
 primal wood	原始木头	wim
 proboscises	长鼻	h
 profane ash	亵渎的灰烬制	hMi
@@ -120338,7 +120338,7 @@ weird juice	怪异汁液制	hMi
 weird juice	怪异汁液	wim
 whale shark	鲸鲨	wi
 wheelbarrow	手推车	wi
-white cloth	洁白的丝质	hMi
+white cloth	洁白的丝	hMi
 white cloth	洁白的丝绸	wim
 white jades	白翡翠	wi
 white opals	白欧泊	wi
@@ -120354,7 +120354,7 @@ wicked soot	邪恶的煤烟	wim
 wild beasts	野兽	h
 willow leaf	柳树叶	wi
 willow logs	柳树原木	wi
-wispy cloth	缥缈的丝质	hMi
+wispy cloth	缥缈的丝	hMi
 wispy cloth	缥缈的丝绸	wim
 wiwaxia man	鳞刺软体虫人	wi
 wiwaxia men	鳞刺软体虫人	wi
@@ -120872,7 +120872,7 @@ constables	统领	h
 cooked {s}	烹熟的{s1}	hIit
 corkscrews	螺杆	wi
 cornflower	矢车菊蓝	wi
-cosmic ice	宇宙冰质	hMi
+cosmic ice	宇宙冰	hMi
 cosmic ice	宇宙冰	wim
 cougar cub	美洲狮幼崽	wi
 cougar man	美洲狮人	wi
@@ -120941,13 +120941,13 @@ eerie soot	诡异的煤烟制	hMi
 eerie soot	诡异的煤烟	wim
 egg-laying	产卵	wi
 eighth arm	第八上肢	h
-elder fire	上古火质	hMi
+elder fire	上古火	hMi
 elder fire	上古火焰	wim
-elder leaf	上古叶质	hMi
+elder leaf	上古叶	hMi
 elder leaf	上古叶	wim
-elder salt	上古盐质	hMi
+elder salt	上古盐	hMi
 elder salt	上古盐	wim
-elder wood	上古木质	hMi
+elder wood	上古木	hMi
 elder wood	上古木头	wim
 eldest son	长子	h
 emu chicks	鸸鹋幼崽	wi
@@ -123214,7 +123214,7 @@ polar bear	北极熊	wi
 porcupines	豪猪	wi
 prase opal	苍绿欧泊	wi
 preserved 	保存的	wi
-primal ice	原始冰质	hMi
+primal ice	原始冰	hMi
 primal ice	原始冰	wim
 princesses	公主	wi
 protruding	突出	wi
@@ -123515,7 +123515,7 @@ vile smoke	卑劣的烟制	hMi
 vile smoke	卑劣的烟	wim
 vile vapor	卑劣的蒸气制	hMi
 vile vapor	卑劣的蒸气	wim
-wagon wood	货车木质	wi
+wagon wood	货车木	wi
 wall grate	墙壁格栅	wi
 walrus man	海象人	wi
 walrus men	海象人	wi
@@ -124066,7 +124066,7 @@ eerie fog	诡异的雾制	hMi
 eerie fog	诡异的雾	wim
 egg white	蛋白	wi
 eggplants	茄子	wi
-elder ice	上古冰质	hMi
+elder ice	上古冰	hMi
 elder ice	上古冰	wim
 elephants	大象	wi
 elk birds	麋鹿鸟	wi
@@ -128659,7 +128659,7 @@ zoysia	结缕草	wi
  clay	黏土	wi
  fine	非常精美的	wi
  sand	沙	wi
- silk	丝质布	wi
+ silk	丝布	wi
  webs	网	wi
 "{b}"	《{b1}》	ht
 "{n}"	“{n1}”	htN
@@ -130623,7 +130623,7 @@ seat	座位	wi
 seed	种子	wi
 shad	河鲱	wi
 shoe	鞋	wi
-silk	丝质布	wi
+silk	丝布	wi
 silt	淤泥	wi
 site	地点	hv
 size	巨大	wi

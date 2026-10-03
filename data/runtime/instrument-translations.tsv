@@ -149,15 +149,15 @@ f	thread	线
 f	cloth	线
 m	silk	丝
 m	gut	肠线
-m	ceramic	陶瓷质
-m	wooden	木质
-m	shell	壳质
-m	bone	骨质
-m	metal	金属质
-m	glass	玻璃质
-m	stone	石质
-m	wood	木质
-m	leather	皮革质
+m	ceramic	陶瓷
+m	wooden	木
+m	shell	壳
+m	bone	骨
+m	metal	金属
+m	glass	玻璃
+m	stone	石
+m	wood	木
+m	leather	皮革
 m	mysterious	神秘
 z	huge stationary	巨型固定式
 z	large stationary	大型固定式
@@ -432,8 +432,8 @@ piece	block	音块
 piece	blocks	音块
 piece	bowl	碗
 piece	bowls	碗
-m	cloth	布质
-p	cloth	布质
+m	cloth	布
+p	cloth	布
 p	tube	管
 p	tubes	管
 p	{p1} attached to {p2}	{p1}，固定在{p2}上

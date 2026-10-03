@@ -2687,9 +2687,9 @@ I am ready!	准备好了！	w
 {d} dwarven rum	{d} 份矮人朗姆酒	wt
 {d} plump helmets	{d} 份肉盔菇	wt
 Cloth (Plant)	植物布	wi
-Cloth (Silk)	丝质布	wi
-silk	丝质布	wi
- silk	丝质布	wi
+Cloth (Silk)	丝布	wi
+silk	丝布	wi
+ silk	丝布	wi
 # Project terminology: thread/threads and case variants share the item noun 线.
 thread	线	wi
 threads	线	wi
@@ -5640,8 +5640,8 @@ goblin-caps	哥布林菇	wi
 pear	白梨	wi
 pears	白梨	wi
 pear wood	白梨木	wi
-wagon wood	货车木质	wi
-wagon wooden	货车木质	wi
+wagon wood	货车木	wi
+wagon wooden	货车木	wi
 
 # Preserve the selected drink family names: cider=西打酒, wine=果酒,
 # beer=啤酒, ale=艾尔啤酒, rum=朗姆酒. Complete material names and

@@ -147,7 +147,7 @@ name = "plural::adjective::main"
 [[rulesets]]
 name = "materials"
 [rulesets.rules]
-"bone" = "骨质"
+"bone" = "骨"
 "{materials::glasses}" = "{materials::glasses}"
 "{::gems::materials::singular}" = "{::gems::materials::singular}"
 "{::materials}" = "{::materials}"
