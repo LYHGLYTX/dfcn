@@ -3,7 +3,7 @@ Byayoi 同人社区：https://byayoi.org/
 GitHub：https://github.com/pokemonchw/dfcn
 Releases：https://github.com/pokemonchw/dfcn/releases
 
-当前汉化版本：53.16-20261002.2（2026-10-02）。逐条更新日志见本目录 CHANGELOG.txt。
+当前汉化版本：53.16-20261003（2026-10-03）。逐条更新日志见本目录 CHANGELOG.txt。
 
 适用：Dwarf Fortress 53.16，Windows x64；支持 Steam 版与官网免费版。
 运行文件已经解压，统一放在本订阅目录的 DFCN 文件夹中。
@@ -57,6 +57,10 @@ C:/Program Files (x86)/Steam/steamapps/workshop/content/975370/3811193379/DFCN/d
 四、开启与关闭
 
 在游戏中按 Shift+F10 可以开启或关闭汉化，再次按下即可切换。
+
+Windows 同时安装 DFHack 53.16-r2 时，可按 Shift+F11 独立暂停或恢复 DFHack 工具。
+插件配置和状态会保留；关闭时已经打开的 DFHack 界面会关闭，此前对游戏或存档执行的修改不会回滚。
+本版本同时汉化 DFHack 帮助、控制面板、常用弹窗及本地命令输出，可执行命令、快捷键和导出内容保留原文。
 
 五、卸载
 

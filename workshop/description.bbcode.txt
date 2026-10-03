@@ -4,7 +4,7 @@ DFCN 是 Byayoi 同人社区的《Dwarf Fortress（矮人要塞）》汉化作�
 
 [b]当前适配游戏版本：53.16。本工坊项目提供 Windows x64 运行文件，支持 Steam 版与官网免费版。[/b]项目同时提供 Linux 原生适配，相关说明见 GitHub。
 
-[b]当前汉化版本：53.16-20261002.2（2026-10-02）。[/b]完整逐条更新日志见本项目的改动说明及订阅目录中的 CHANGELOG.txt。
+[b]当前汉化版本：53.16-20261003（2026-10-03）。[/b]完整逐条更新日志见本项目的改动说明及订阅目录中的 CHANGELOG.txt。
 
 [url=https://github.com/pokemonchw/dfcn]GitHub 项目主页[/url]
 [url=https://github.com/pokemonchw/dfcn/releases]GitHub Releases[/url]
@@ -44,6 +44,8 @@ D:/SteamLibrary/steamapps/workshop/content/975370/3811193379/DFCN/dfcn/dfhooks_d
 [h1]开启、关闭与卸载[/h1]
 
 在游戏中按 [b]Shift+F10[/b] 可以开启或关闭汉化；再次按下即可切换。
+
+Windows 同时安装 [b]DFHack 53.16-r2[/b] 时，可按 [b]Shift+F11[/b] 独立暂停或恢复 DFHack 工具，保留插件配置和状态；关闭时已经打开的 DFHack 界面会关闭，此前对游戏或存档执行的修改不会回滚。本版本同时汉化 DFHack 帮助、控制面板、常用弹窗及本地命令输出，可执行命令、快捷键和导出内容保留原文。
 
 [b]取消订阅不会自动删除手动复制到游戏目录中的文件。[/b]卸载时，手动删除本次添加到游戏根目录的 [b]dfhooks.dll[/b] 与 [b]dfhooks_dfcn.ini[/b]，再取消订阅。旧版整包安装遗留的汉化文件也需自行移除。无需删除游戏本体或存档。
 

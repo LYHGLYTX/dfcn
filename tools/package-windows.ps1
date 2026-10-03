@@ -56,9 +56,15 @@ try {
         'dfcn_core.dll', 'dfhooks_dfcn.dll', 'data/runtime/config.ini',
         'data/runtime/translations.tsv', 'data/runtime/name-editor.tsv',
         'data/runtime/instrument-translations.tsv', 'data/runtime/procedural-terms.tsv',
-        'data/runtime/procedural-word-senses.tsv', 'data/runtime/adventure-target-translations.tsv'
+        'data/runtime/procedural-word-senses.tsv', 'data/runtime/adventure-target-translations.tsv',
+        'data/runtime/dfhack-help-translations.tsv', 'data/runtime/dfhack-help-overrides.tsv',
+        'data/runtime/dfhack-help-command-overrides.tsv', 'data/runtime/dfhack-output-core.tsv',
+        'data/runtime/dfhack-output-translations.tsv', 'data/runtime/dfhack-output-stonesense.tsv'
     )) {
         Add-RuntimeFile (Join-Path $projectRoot $name) ('dfcn/' + $name)
+    }
+    foreach ($name in @('dfhack-help.LICENSE', 'lua-output.LICENSE')) {
+        Add-RuntimeFile (Join-Path $projectRoot ('third_party/' + $name)) ('dfcn/data/runtime/' + $name)
     }
 
     $rulesRoot = Join-Path $projectRoot 'data\runtime\rulesets\zh-Hans'
@@ -88,7 +94,8 @@ try {
     foreach ($relative in @(
         'data/upstream/licenses/dfi18n-data.LICENSE.md', 'data/upstream/licenses/dfzh-data.LICENSE.md',
         'third_party/dfzh-rules-engine.LICENSE', 'third_party/tomlplusplus/LICENSE',
-        'third_party/dfhooks.LICENSE', 'data/upstream/licenses/ECDICT.LICENSE'
+        'third_party/dfhooks.LICENSE', 'data/upstream/licenses/ECDICT.LICENSE',
+        'third_party/dfhack-help.LICENSE', 'third_party/lua-output.LICENSE'
     )) {
         [void]$notices.AppendLine()
         [void]$notices.AppendLine('## ' + $relative)
