@@ -902,13 +902,14 @@ std::vector<WorkshopTaskCard> Overlay::capture_workshop_task_rows(
                         return current(field.start, tabs_y, field.text);
                     })) continue;
             const auto panel = native_panel_interior(borders, *gps_, first, last, tabs_y);
-            if (!panel) continue;
-            const int right = panel->x + panel->w, bottom = panel->y + panel->h;
+            const int panel_left = panel ? panel->x : 0;
+            const int right = panel ? panel->x + panel->w : gps_->dimx;
+            const int bottom = panel ? panel->y + panel->h : gps_->dimy;
 
             // Queued jobs have no search field or Cancel/Back action. Their
             // complete native action strip identifies each three-row record,
             // including repeat/quota and suspended state variants.
-            for (int y = tabs_y + 1; y + 3 <= bottom; ++y) {
+            for (int y = tabs_y + 1; panel && y + 3 <= bottom; ++y) {
                 const auto bounds = native_workshop_task_bounds(*gps_, *panel, y);
                 if (!bounds) continue;
                 auto card = capture_panel_text_card(bounds->source, true);
@@ -927,8 +928,15 @@ std::vector<WorkshopTaskCard> Overlay::capture_workshop_task_rows(
             if (!choices.empty()) return choices;
 
             std::optional<SDL_Rect> search;
-            for (int y = tabs_y + 1; y + 3 <= bottom && !search; ++y) {
-                for (int x = panel->x; x < right; ++x) {
+            // The building selector opens the right edge beside these tabs.
+            // Its attached selected icon is not a rectangular panel border.
+            // The chooser's ordered tabs, adjacent complete filter and return
+            // button still prove the page; each candidate proves its own skin.
+            // Native 53.16 places FILTER immediately below the three-row tabs
+            // (PE 0x1844f1), including either physical half of their captions.
+            const int search_bottom = panel ? bottom : std::min(bottom, tabs_y + 6);
+            for (int y = tabs_y + 1; y + 3 <= search_bottom && !search; ++y) {
+                for (int x = panel_left; x <= first; ++x) {
                     const auto box = native_textbox_rect_at(*gps_, x, y);
                     if (box && box->x <= first && box->x + box->w >= last &&
                         box->x + box->w <= right) {
@@ -945,12 +953,26 @@ std::vector<WorkshopTaskCard> Overlay::capture_workshop_task_rows(
             for (int y = tabs_y; y < search->y && !chooser; ++y) {
                 for (const auto &field : split_text_fields(rows[y])) {
                     if ((field.text == "Cancel" || field.text == "Back") &&
-                        field.start >= panel->x && field.end <= right &&
-                        current(field.start, y, field.text)) chooser = true;
+                        field.start >= search->x && field.end <= search->x + search->w &&
+                        current(field.start, y, field.text) &&
+                        native_button_text_rect(*gps_, field.start, field.end, y))
+                        chooser = true;
                 }
             }
             if (!chooser) continue;
-            append_candidates(*search, right, bottom, last);
+            const int list_right = search->x + search->w;
+            int list_bottom = bottom;
+            if (!panel) {
+                // A complete bottom rail bounds this column even though its
+                // upper right edge has the building-selector attachment.
+                for (int y = search->y + search->h; y < bottom; ++y) {
+                    bool rail = true;
+                    for (int x = search->x; x < list_right && rail; ++x)
+                        rail = borders.at(x, y, 7);
+                    if (rail) { list_bottom = y; break; }
+                }
+            }
+            append_candidates(*search, list_right, list_bottom, last);
             if (!choices.empty()) return choices;
         }
     }
