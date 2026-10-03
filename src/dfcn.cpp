@@ -276,7 +276,8 @@ static void log_translation_state_timing(const TranslationStateTiming &sample) {
 }
 
 struct Config {
-    static constexpr double default_font_scale = 0.92;
+    static constexpr double default_font_scale = 1.1;
+    static constexpr double font_scale_baseline = 0.92;
     bool enabled = true;
     bool hot_reload = true;
     bool clear_background = true;
@@ -5553,12 +5554,12 @@ void Overlay::clear_fallback_fonts() {
 
 int Overlay::unified_font_pixels() const {
     if (config_.font_pixels > 0) return config_.font_pixels;
-    // Preserve the native-ink calibration at the established default scale.
+    // Preserve the native-ink calibration at the established scale baseline.
     // User scaling changes this one shared size, never a page-specific fit.
     const auto scaled_pixels = [this](int pixels) {
         return std::clamp(std::max(config_.min_font_pixels,
             static_cast<int>(std::lround(pixels * config_.font_scale /
-                Config::default_font_scale))), 1, 512);
+                Config::font_scale_baseline))), 1, 512);
     };
     const int row_height = gps_ && gps_->tile_pixel_y > 0 ? gps_->tile_pixel_y : 16;
     const int line_limit = std::max(1, row_height - 2);
