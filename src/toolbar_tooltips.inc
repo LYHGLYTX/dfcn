@@ -156,6 +156,70 @@ std::string Overlay::translate_toolbar_tooltip(std::string_view source, bool cat
     return tooltip_translation_cache_target_;
 }
 
+// Temple selection emits a count followed by one sphere per row. Both the
+// captured widget and the closed-frame reader use this complete field grammar
+// before generic skills or generated names can claim any part of the card.
+bool Overlay::translate_deity_tooltip_fields(NativeToolbarTooltip &card) const {
+    std::vector<NativeToolbarTooltip::DeityField> fields(card.rows.size());
+    constexpr uint32_t top_half = 1u << 3, bottom_half = 1u << 4;
+    const int body_x = card.body_x >= 0 ? card.body_x : card.text_x;
+    const auto text_half = [&](size_t line) {
+        const int y = card.text_y + static_cast<int>(line);
+        uint32_t half = UINT32_MAX;
+        for (size_t at = 0; at < card.rows[line].size(); ++at) {
+            if (card.rows[line][at] == ' ') continue;
+            const int x = body_x + static_cast<int>(at);
+            if (x < 0 || x >= gps_->dimx || y < 0 || y >= gps_->dimy) return UINT32_MAX;
+            bool top = card.widget_top_layer;
+            const auto *grid = top ? gps_->screen_top : gps_->screen;
+            const auto *cell = card.widget_frame ? (grid ? grid +
+                (static_cast<size_t>(x) * gps_->dimy + y) * 8 : nullptr) : cell_at(x, y, &top);
+            if (!cell || cell[0] != static_cast<unsigned char>(card.rows[line][at])) return UINT32_MAX;
+            const auto *flags = top ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+            const uint32_t current = flags ? flags[static_cast<size_t>(x) * gps_->dimy + y]
+                & (top_half | bottom_half) : 0;
+            if (current == (top_half | bottom_half) ||
+                (half != UINT32_MAX && half != current)) return UINT32_MAX;
+            half = current;
+        }
+        return half;
+    };
+    bool count_seen = false, sphere_seen = false;
+    for (size_t line = 0; line < card.rows.size(); ++line) {
+        const auto source = trim_view(card.rows[line]);
+        if (source.empty()) continue;
+        std::optional<std::string> target;
+        if (!count_seen) {
+            if (source == "No worshippers" || source == "No worshipper")
+                target = "没有信徒";
+            else for (const std::string_view suffix : {" worshippers", " worshipper"}) {
+                if (!source.ends_with(suffix)) continue;
+                const auto digits = source.substr(0, source.size() - suffix.size());
+                if (!digits.empty() && std::all_of(digits.begin(), digits.end(),
+                        [](unsigned char ch) { return ch >= '0' && ch <= '9'; }))
+                    target = std::string(digits) + " 名信徒";
+                break;
+            }
+            count_seen = target.has_value();
+        } else if (deity_sphere_translations_.contains(lower(std::string(source)))) {
+            target = translate_deity_spheres(source);
+            sphere_seen = target.has_value();
+        }
+        if (!target) return false;
+        fields[line].target = std::move(*target);
+        // Only a complete duplicate pair proves a split-font line. Ordinary
+        // addst rows retain unrelated half flags from the covered page.
+        if (line + 1 < card.rows.size() && card.rows[line + 1] == card.rows[line] &&
+                text_half(line) == top_half && text_half(line + 1) == bottom_half) {
+            fields[line].pixel_y = gps_->tile_pixel_y / 2;
+            ++line;
+        }
+    }
+    if (!count_seen || !sphere_seen) return false;
+    card.deity_fields = std::move(fields);
+    return true;
+}
+
 std::optional<NativeToolbarTooltip> Overlay::find_toolbar_tooltip(
         const std::vector<std::string> &rows) const {
     if (!gps_ || gps_->dimx <= 0 || gps_->dimy <= 0 ||
@@ -380,6 +444,10 @@ std::optional<NativeToolbarTooltip> Overlay::find_toolbar_tooltip(
                 card.source += source;
             }
             if (!intact || card.source.empty()) continue;
+            if (translate_deity_tooltip_fields(card)) {
+                card.native_frame = card.whole_frame = true;
+                return card;
+            }
             std::string identity;
             for (unsigned char ch : card.source)
                 if (!std::isspace(ch)) identity.push_back(ch);
@@ -621,6 +689,7 @@ void Overlay::capture_toolbar_tooltip(
             }
             if (!widget->body_source.empty()) card.source = widget->body_source;
             if (!card.source.empty()) {
+                translate_deity_tooltip_fields(card);
                 g_native_toolbar_tooltip = std::move(card);
                 return;
             }
@@ -689,8 +758,10 @@ void Overlay::append_toolbar_tooltip_matches(std::vector<std::string> &rows,
             }
         }
     }
-    const std::string target = translate_toolbar_tooltip(card.source);
-    if (target.empty()) {
+    const bool deity_card = card.deity_fields.size() == card.rows.size() &&
+        !card.deity_fields.empty();
+    const std::string target = deity_card ? std::string{} : translate_toolbar_tooltip(card.source);
+    if (target.empty() && !deity_card) {
         if (card.whole_frame) {
             // The complete original card was validated above. Hide it only
             // from subsequent word matching, without creating suppression or
@@ -717,12 +788,27 @@ void Overlay::append_toolbar_tooltip_matches(std::vector<std::string> &rows,
             while (cursor < length && rows[y][body_x + cursor] == source[cursor]) ++cursor;
             if (begin == cursor) continue;
             Match match{body_x + begin, y, cursor - begin,
-                kToolbarTooltipBodyRule, !raw_layer && owner ? target : std::string{},
+                kToolbarTooltipBodyRule, raw_layer ? std::string{}
+                    : deity_card ? card.deity_fields[line].target
+                    : owner ? target : std::string{},
                 source.substr(begin, cursor - begin)};
             owner = false;
             match.layout_x = card.text_x;
             match.layout_length = card.text_right - card.text_x;
             match.layout_left = true;
+            if (deity_card) {
+                match.layout_y = y;
+                match.layout_pixel_y = card.deity_fields[line].pixel_y;
+                match.layout_fixed_baseline = true;
+                const size_t first = source.find_first_not_of(' ');
+                bool top = card.widget_top_layer;
+                const auto *grid = top ? gps_->screen_top : gps_->screen;
+                const auto *cell = first == std::string::npos ? nullptr : card.widget_frame
+                    ? (grid ? grid + (static_cast<size_t>(body_x + first) * gps_->dimy + y) * 8 : nullptr)
+                    : cell_at(body_x + static_cast<int>(first), y, &top);
+                if (cell) match.layout_foreground_rgb =
+                    (cell[1] << 16) | (cell[2] << 8) | cell[3];
+            }
             if (!raw_layer && card.whole_frame) {
                 bool suppressed = true;
                 for (int offset = 0; suppressed && offset < match.length; ++offset) {
@@ -799,6 +885,34 @@ void Overlay::layout_toolbar_tooltip(SDL_Renderer *renderer) {
     if (!g_native_toolbar_tooltip || !renderer || !face_ ||
         gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return;
     const auto &card = *g_native_toolbar_tooltip;
+    if (!card.deity_fields.empty()) {
+        const int left = card.left + 1;
+        const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
+        const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
+        const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
+        for (Match &match : prepared_matches_) {
+            if (match.rule != kToolbarTooltipBodyRule) continue;
+            match.layout_x = left;
+            match.layout_length = card.text_right - left;
+            match.layout_y = match.y;
+            match.layout_box_pixel_x = -1;
+            match.layout_box_pixel_width = 0;
+            match.layout_left = true;
+            match.layout_right = false;
+            match.layout_clip_right = card.text_right;
+            match.layout_native_clip = SDL_Rect{origin_x + left * tile_w,
+                origin_y + (card.top + 1) * tile_h,
+                (card.text_right - left) * tile_w, (card.bottom - card.top - 1) * tile_h};
+            match.layout_fixed_baseline = true;
+            match.layout_font_pixels = unified_font_pixels();
+            match.layout_lock_font_pixels = true;
+            match.layout_visual_height_pixels = 0;
+            match.layout_line_height_pixels = tile_h;
+            match.native_split_text = match.native_split_duplicate = false;
+            match.native_split_top_y = -1;
+        }
+        return;
+    }
     std::vector<size_t> body, keys;
     std::string target;
     for (size_t i = 0; i < prepared_matches_.size(); ++i) {

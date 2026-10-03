@@ -872,6 +872,13 @@ struct NativeToolbarTooltip {
     std::vector<SDL_Rect> occlusions;
     std::string source;
     std::vector<std::string> rows;
+    // Deity hover cards contain a count and independent sphere rows. Keep
+    // each field's translation and baseline instead of reflowing them as prose.
+    struct DeityField {
+        std::string target;
+        int pixel_y = 0;
+    };
+    std::vector<DeityField> deity_fields;
 };
 static std::optional<NativeToolbarTooltip> g_native_toolbar_tooltip;
 static constexpr std::array<std::string_view, 3> embark_introduction_templates = {{
@@ -3762,6 +3769,7 @@ private:
     void layout_embark_site_card(SDL_Renderer *renderer);
     void layout_map_hover(SDL_Renderer *renderer);
     std::string translate_toolbar_tooltip(std::string_view source, bool catalog_only = false) const;
+    bool translate_deity_tooltip_fields(NativeToolbarTooltip &card) const;
     std::optional<NativeToolbarTooltip> find_toolbar_tooltip(
         const std::vector<std::string> &rows) const;
     void capture_toolbar_tooltip(
