@@ -89,7 +89,8 @@ for (bool top_layer : {false, true}) {
             // person field. Their remaining spans can exist only to suppress
             // native ink; never replace a reflowed message with a name label.
             if (match.rule == kFortressLaborWorkerRule ||
-                match.rule == kFortressUnitChooserRule || match.rule == kUiMessageRule) {
+                match.rule == kFortressUnitChooserRule || match.rule == kUiMessageRule ||
+                match.rule == kAdventureCombatFieldRule) {
                 claimed = true;
                 break;
             }

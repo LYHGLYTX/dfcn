@@ -11,6 +11,26 @@ Renderer
   reference [0x878600,0x880118), classic [0x875e80,0x87d998).
   screen = RCX; screen.stage = *(int*)(screen+4).
   Bounds helper 0x872d70 fills L,R,T,B. It contains no user-visible text.
+  Its stage-one branch 0x872df3 sets the outer height limit to 7. At
+  0x872ec4, when B-T+1 exceeds that limit, T becomes B-7+1. Thus the
+  confirmation's complete outer frame has 7 rows and its interior has 5;
+  the other stages' larger-height recognition does not apply to stage one.
+  Horizontal bounds use M=(input_left+input_right)/2, L=M-50,R=M+50:
+  101 outer columns and 99 interior columns. Classic helper is 0x8705f0;
+  the corresponding height selection/clamp instructions are 0x870673/0x870744.
+  At 0x872dd1, stage zero's outer height is min(39,8*candidate_count+6):
+  an empty target list has 6 outer rows and 4 interior rows. Its heading
+  and Done are drawn before the candidate loop's empty-vector branch at
+  0x878cc4/0x878cc6. At 0x872e75..0x872ebf, wrestling height is
+  min(39,3*(min(relationship_count,5)+move_count)+7); no relationships or
+  moves yields 7 outer rows and 5 interior rows. The renderer still draws
+  Wrestle {unit_reference} and Done before entering those empty loops.
+  Opening helper 0x8a1f70 activates stage zero only for more than one
+  candidate (0x8a2408..0x8a2412); zero candidates do not open the panel.
+  The six-row case above is its defined renderer allocation, not evidence
+  of a normally opened empty target chooser. In contrast, input branch
+  0x88a3f3..0x88a423 enters wrestling stage eight without requiring either
+  relationship or move vectors to be nonempty.
   Classic instruction RVAs in this renderer are reference RVAs - 0x2780.
   Reference heading dispatch table 0x880044 and content dispatch table 0x88006c:
     stage  heading entry  content entry  meaning
@@ -40,11 +60,22 @@ Reconstructed main renderer
       break;
     case 1:
       target = screen.target_at_0x30;
+      // The unit formatter is 0x132e430. It and each fixed prose fragment
+      // call addst separately, retaining the same advancing x/y cursor.
+      // Bind the person's NativeString owner before filling the whole prompt.
       if (target.flags_0x118 & 0x400000)
         text(unit_identity(target) + " has yielded.  Attack anyway?");
       else if (conflict_lookup(controlled_unit,target) == -1)
         text("Really start a conflict with " + unit_identity(target) + "?");
       else text("Really attack " + unit_identity(target) + "?");
+      // Yielded: identity formatter/draw 0x878939/0x87894b, fixed suffix
+      // load/draw 0x878950/0x87896e (literal 0x16b39c0, TWO spaces).
+      // Conflict: prefix load/draw 0x8789a7/0x8789c1 (0x16b39a0), identity
+      // formatter/draw 0x8789ed/0x8789ff, '?' load/draw 0x878a04/0x878a22.
+      // Attack: prefix load/draw 0x878a3b/0x878a55 (0x16b3a00), identity
+      // formatter/draw 0x878a81/0x878a93, '?' load/draw 0x878a98/0x878ab6.
+      // Corresponding classic instructions are these RVAs minus 0x2780;
+      // fixed literals are 0x16aea38/0x16aea18/0x16aea78 and '?' 0x160fd10.
       break;
     case 2: case 5: case 6: case 7:
       // 0x878acf calls 0x872f10 using bounds L+2,R-10,T+2.

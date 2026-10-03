@@ -207,7 +207,9 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 // control and complete combat prompt establish this scope.
                 const auto bounds = adventure_combat_closed_panel_at(*gps_,
                     static_cast<int>(at), static_cast<int>(at + 4), y, classic);
-                if (!bounds || bounds->w <= 30 || bounds->h <= 5) continue;
+                // Empty target lists have six outer rows; empty wrestling
+                // lists have seven. Both still draw their prompt and Done.
+                if (!bounds || bounds->w <= 30 || bounds->h < 4) continue;
                 const int right = bounds->x + bounds->w;
                 if (!adventure_combat_done_box_at(*gps_, *bounds, classic)) continue;
                 bool combat_prompt = false;
@@ -248,7 +250,9 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
             if (at == std::string::npos) continue;
             const auto bounds = adventure_combat_closed_panel_at(*gps_,
                 static_cast<int>(at), static_cast<int>(at + cue.size()), y, classic);
-            if (!bounds || bounds->h <= 5 || y < bounds->y || y >= bounds->y + 3)
+            // The stage-one bounds helper allocates seven outer rows, hence
+            // exactly five interior rows. Its compact confirmation is valid.
+            if (!bounds || bounds->h < 5 || y < bounds->y || y >= bounds->y + 3)
                 continue;
             const std::string_view prompt = trim_view(std::string_view(row).substr(
                 bounds->x + 1, bounds->w - 1));
@@ -313,6 +317,7 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 lookup_source.resize(tail + 1);
             }
             std::optional<std::string> target;
+            std::vector<int> target_colors;
             // Use the exact native formatter's identity before a lexical
             // fallback. A shortened name retains its complete translation.
             const auto &layer_draws = layer ? top_draws : draws;
@@ -324,6 +329,44 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 if (!target && !draw->complete_source.empty())
                     target = translate_adventure_target_text(draw->complete_source, kind);
                 break;
+            }
+            if (!target && kind == 's') {
+                // All three native confirmation branches split the person
+                // from their prose. Match the complete authored template to
+                // THIS formatter-owned draw, including name-first yielded
+                // prompts, before any lexical resolver can reinterpret it.
+                const std::string complete = normalize_utterance(lookup_source);
+                for (auto draw = layer_draws.rbegin(); draw != layer_draws.rend() && !target; ++draw) {
+                    if (!draw->unit_identity_target || draw->unit_identity_target->empty() ||
+                            draw->y != y || draw->x < first || draw->x >= end ||
+                            draw->source.empty() ||
+                            draw->source.size() > static_cast<size_t>(end - draw->x) ||
+                            source.compare(draw->x - first, draw->source.size(), draw->source) != 0)
+                        continue;
+                    for (const Rule &entry : adventure_target_templates_) {
+                        if (entry.template_kinds.size() != 1 || entry.template_kinds.front() != 'n' ||
+                                entry.template_literals.size() != 2 ||
+                                entry.target_template_literals.size() != 2 ||
+                                entry.target_capture_order.size() != 1 ||
+                                entry.target_capture_order.front() != 0 ||
+                                normalize_utterance(entry.template_literals.front() + draw->source +
+                                    entry.template_literals.back()) != complete) continue;
+                        const std::vector<std::optional<std::string>> resolved{draw->unit_identity_target};
+                        target = fill_template(entry, {draw->source}, nullptr, nullptr, &resolved);
+                        const auto color_text = [&](std::string_view text, int x) {
+                            bool color_layer = false;
+                            const auto *cell = cell_at(x, y, &color_layer);
+                            const int rgb = cell ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : 0xffffff;
+                            std::vector<uint32_t> codepoints;
+                            if (decode_utf8(std::string(text), codepoints))
+                                target_colors.insert(target_colors.end(), codepoints.size(), rgb);
+                        };
+                        color_text(entry.target_template_literals.front(), first);
+                        color_text(*draw->unit_identity_target, draw->x);
+                        color_text(entry.target_template_literals.back(), end - 1);
+                        break;
+                    }
+                }
             }
             if (!target) target = translate_adventure_target_text(lookup_source, kind);
             // The native renderer positions several independently formatted
@@ -366,6 +409,7 @@ void Overlay::append_adventure_combat_fields(std::vector<std::string> &screen_ro
                 match.layout_length * tile_w, match.native_picture_caption_box->h * tile_h};
             match.layout_foreground_rgb =
                 (first_cell[1] << 16) | (first_cell[2] << 8) | first_cell[3];
+            match.layout_glyph_foreground_rgb = std::move(target_colors);
             if (combat_quality) {
                 // Difficulty and contact quality are separate native color
                 // runs. Compose their complete Chinese fields as one line
