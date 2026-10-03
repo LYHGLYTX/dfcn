@@ -130,12 +130,16 @@ def symbol_pairs(reference: Image, image: Image, symbols: Path):
     return result
 
 
+def binding_sources() -> list[Path]:
+    return [*sorted((ROOT / "src").glob("native_*search_profile.inc")),
+            ROOT / "src/native_history_profile_elf.inc",
+            ROOT / "src/native_journal_search_hooks.inc"]
+
+
 def generate(reference: Image, image: Image, symbols: Path, output: Path):
     # Address ranges serve every native snapshot. Relocated expected bytes
     # are needed only for the explicit hook signatures, not the entire game.
-    profiles = [*sorted((ROOT / "src").glob("native_*search_profile.inc")),
-                ROOT / "src/native_history_profile_elf.inc"]
-    source_text = "\n".join(path.read_text() for path in profiles)
+    source_text = "\n".join(path.read_text() for path in binding_sources())
     signature_lengths = {}
     for address, byte_list in re.findall(
             r"\{(0x[0-9a-f]+),\s*\{((?:\s*0x[0-9a-f]{1,2}\s*,?)+)\}\}", source_text):
