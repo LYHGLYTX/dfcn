@@ -253,9 +253,13 @@ std::vector<Match> dfhack_auxiliary_matches;
             } else if (viewer) {
                 dfhack_auxiliary_regions.push_back(*frame);
                 gui_literal(action_x, footer_y, action, right - 1, "Viewer action");
-                if (const auto status = gui_prompt(
-                        "Viewer status", left, top, right - 4, footer_y - 2))
-                    append_gui_prompt(*status, left, right - 4);
+                auto status = gui_prompt("Viewer status", left, top, right - 4, footer_y - 2);
+                if (!status)
+                    status = gui_prompt("Viewer status", left, top, right - 1, footer_y - 2);
+                if (status) {
+                    gui_literal(at, title_y, title, title_end, "Title", true);
+                    append_gui_prompt(*status, left, right - 1);
+                }
                 // Viewer titles and all other output are user/command data.
             }
         }
@@ -414,6 +418,7 @@ std::vector<Match> dfhack_auxiliary_matches;
             auxiliary_literal(static_cast<int>(all), footer_y, "Cycle all", right);
         }
     }
+#include "dfhack_control_panel.inc"
     // Ownership prevents generic rules from translating isolated help words
     // or key names. Unmapped source remains native until its complete entry
     // is supplied; no incomplete sentence is drawn or silently discarded.

@@ -149,3 +149,386 @@ DFHack help: List all commands, including developer and modding commands, that m
 DFHack help: Don't print out the tags associated with each command.	不显示命令关联的标签。	l
 DFHack help: Include commands intended for developers and modders.	包含面向开发者和模组作者的命令。	l
 DFHack help: Exclude commands that match any of the given strings.	排除名称匹配任一指定文字的命令。	l
+# Control panel registry descriptions, preference labels, and display names. Command identifiers remain literal.
+DFHack help: Enable if you usually want to raise geese.	如果通常要饲养鹅，可启用此项。	l
+DFHack help: Enable if you usually want to raise turkeys.	如果通常要饲养火鸡，可启用此项。	l
+DFHack help: Enable if you usually want to raise chickens.	如果通常要饲养鸡，可启用此项。	l
+DFHack help: Enable if you usually want to raise peafowl.	如果通常要饲养孔雀，可启用此项。	l
+DFHack help: Enable if you usually farm pig tails for the clothing industry.	如果通常种植猪尾草供制衣使用，可启用此项。	l
+DFHack help: Automatically assign labors. Runs in the mode selected on the work details screen or with the mode command (legacy autolabor, modern labormanager, or starvation-only monitor).	自动分配劳动。使用工作分工界面或 mode 命令选定的模式：传统 autolabor、现代 labormanager，或仅防饥饿监控。	l
+DFHack help: Automatically milk creatures that are ready for milking.	自动为可以挤奶的动物安排挤奶。	l
+DFHack help: Automatically shear creatures that are ready for shearing.	自动为可以剪毛的动物安排剪毛。	l
+DFHack help: Automatically assign units with training needs to training squads.	自动将需要训练的单位编入训练小队。	l
+DFHack help: Enable if you usually don't want to use boulders for construction.	如果通常不想用石块建造，可启用此项。	l
+DFHack help: Enable if you usually don't want to use logs for construction.	如果通常不想用原木建造，可启用此项。	l
+DFHack help: Encourage dwarves to discard tattered clothing at the dump when there is new available clothing.	有新衣可穿时，促使矮人把破烂衣物丢到垃圾堆。	l
+DFHack help: Drop tattered clothing, but don't mark it for dumping. Pairs well with tailor and tailor confiscate false.	脱下破烂衣物，不标记为倾倒。适合搭配 tailor 和 tailor confiscate false 使用。	l
+DFHack help: Go to the Standing Orders tab in the Labor screen to save your current settings.	在劳动界面的常规命令标签页保存当前设置。	l
+DFHack help: Go to the Work Details tab in the Labor screen to save your current definitions.	在劳动界面的工作分工标签页保存当前分工定义。	l
+DFHack help: Automatically assign trainers to partially trained livestock so they don't revert to wild.	自动给尚未完全驯服的牲畜安排驯兽员，防止重新野化。	l
+DFHack help: Sort manager orders by repeat frequency so one-time orders can be completed.	按重复频率排序生产订单，让一次性订单也能完成。	l
+DFHack help: Enable if you don't want old clothes to be dumped. Pairs well with cleanowned-nodump.	如果不想倾倒旧衣，可启用此项。适合搭配 cleanowned-nodump 使用。	l
+DFHack help: Prevents adamantine clothing from wearing out while being worn.	防止精金衣物在穿着时磨损。	l
+DFHack help: Allows items crafted from organic materials to wear out over time.	使有机材料制品随时间逐渐磨损。	l
+DFHack help: Fix units still being assigned to burrows after death.	修复单位死后仍被分配到活动区域的问题。	l
+DFHack help: Allow discarded water buckets and clogged wells to be used again.	使被弃置的水桶和堵塞的水井恢复可用。	l
+DFHack help: Make abandoned full wheelbarrows usable again.	使被遗弃的满载手推车恢复可用。	l
+DFHack help: Prevent dwarves from getting stuck and refusing to work.	防止矮人陷入停滞状态而拒绝工作。	l
+DFHack help: Fixes instances of units claiming the same item or an item they don't own.	修复多个单位占有同一物品，或单位占有不属于自己物品的问题。	l
+DFHack help: Displays flask contents in the item name, similar to barrels and bins.	在水壶名称中显示其内容，类似桶和箱的显示方式。	l
+DFHack help: Displays titles for books instead of a material description.	书籍显示书名，不再只显示材料描述。	l
+DFHack help: Fixes reactions not producing gloves in sets with correct handedness.	修复生产配方无法正确产出左右成对手套的问题。	l
+DFHack help: Ensure that your maps have no more than 2 layers of aquifer.	使地图上的含水层不超过两层。	l
+DFHack help: Combine partial stacks in stockpiles into full stacks.	将储物区中零散的物品堆合并为满堆。	l
+DFHack help: Enable if you want deteriorate to run on all supported categories instead of just corpses.	启用后，deteriorate 会处理所有支持的物品类别，而不只处理尸体。	l
+DFHack help: Enable if you want to speed item deterioration up so they take less than a month to rot away.	启用后加快物品腐朽速度，使其在不到一个月内腐朽消失。	l
+DFHack help: Enable if you want to slow item deterioration down so they take about a year to rot away.	启用后减慢物品腐朽速度，使其约一年后腐朽消失。	l
+DFHack help: Displays an indicator on fertile eggs.	给已受精的蛋显示标记。	l
+DFHack help: Improves temperature update performance.	提升温度更新的运行效率。	l
+DFHack help: Invalidates all work orders once a month, allowing conditions to be rechecked.	每月重置所有生产订单的条件判定，促使重新检查条件。	l
+DFHack help: Displays percentages on partially-consumed items like hospital cloth.	对医院用布等已部分消耗的物品显示剩余百分比。	l
+DFHack help: Fixes metal duplication exploits by setting the melt return for all items to ~95%, reduced by 10% for each wear level.	将所有物品的熔炼回收率设为约 95%，每级磨损再降 10%，防止利用熔炼复制金属。	l
+DFHack help: Automatically butcher excess livestock.	自动屠宰超过目标数量的牲畜。	l
+DFHack help: Auto-harvest trees when low on stockpiled logs.	原木库存不足时自动标记树木进行砍伐。	l
+DFHack help: Schedule cheese making jobs based on milk reserves.	根据奶的储量安排制作奶酪。	l
+DFHack help: Automatically manage clothing work orders.	自动管理衣物生产订单。	l
+DFHack help: Automatically manage clothing work orders	自动管理衣物生产订单。	l
+DFHack help: Automatically manage farm crop selection.	自动为农田选择种植作物。	l
+DFHack help: Auto-manage fishing labors to control your stock of fish.	自动管理捕鱼劳动，控制鱼类库存。	l
+DFHack help: Auto-assign egg-laying adult female pets to nestbox zones.	自动将成年雌性产卵动物分配到巢箱区域。	l
+DFHack help: Auto-assign egg-laying female pets to nestbox zones.	自动将雌性产卵动物分配到巢箱区域。	l
+DFHack help: Automatically engrave slabs for ghostly citizens.	自动为变成幽灵的居民雕刻纪念石板。	l
+DFHack help: Protect useful items from being cooked.	禁止烹饪有其他重要用途的物品。	l
+DFHack help: Automatically allocate new z-levels of sky.	自动在地图顶部增设天空层。	l
+DFHack help: Protect fertile eggs incubating in a nestbox.	保护巢箱中正在孵化的受精蛋，防止被取走。	l
+DFHack help: Automatically boost the priority of important job types.	自动提高重要工作类型的优先级。	l
+DFHack help: Manages seed and plant cooking based on seed stock levels.	根据种子库存管理种子与植物的烹饪许可。	l
+DFHack help: Automatically toggle seed cooking based on quantity available.	根据种子现有数量自动切换烹饪许可。	l
+DFHack help: Queue manager jobs based on free space in stockpiles.	根据储物区的空余容量安排生产订单。	l
+DFHack help: Intelligently suspend and unsuspend jobs.	智能暂停工作并恢复被暂停的工作。	l
+DFHack help: Automatically keep your dwarves in fresh clothing.	自动为矮人补充新衣并更换破衣。	l
+DFHack help: Removes unusable liquids from caravan manifests.	从商队货单中移除无法使用的液体。	l
+DFHack help: Fixes unengravable corrupted tiles so they are able to be engraved.	修复损坏而无法雕刻的地块，使其恢复可雕刻。	l
+DFHack help: Fix nicknames being erased or not displayed.	修复昵称被抹除或不显示的问题。	l
+DFHack help: Allow bugged instruments to be interacted with again.	修复卡住的乐器，使其恢复可搬运和使用。	l
+DFHack help: Allow squads and messengers to rescue lost squads.	允许返回的小队和信使沿途救回迷失的小队。	l
+DFHack help: Prevent dwarves from getting stuck in Worship! states.	防止矮人一直陷于“祈祷！”状态。	l
+DFHack help: Allow bugged written materials to be interacted with again.	修复卡住的书籍、书帖和卷轴，使其恢复可搬运和使用。	l
+DFHack help: Prevents NOEXERT units from getting tired when training.	防止带 NOEXERT 标记的单位因训练而疲倦。	l
+DFHack help: Moves stuck wildlife off the map so new waves can enter.	将卡住的野生动物移出地图，使新的动物群能够进入。	l
+DFHack help: Preserve tomb assignments when assigned units die.	单位死后保留其陵墓分配。	l
+DFHack help: Make agitated wildlife and cavern invasions less persistent.	减少躁动野生动物和洞穴入侵的持续骚扰。	l
+DFHack help: Cause corpses, clothes, and/or food to rot away over time.	使尸体、衣物和食物逐渐腐朽消失。	l
+DFHack help: Allow animals to be treated at hospitals.	允许在医院治疗动物。	l
+DFHack help: Allow dwarves to emigrate from the fortress when stressed.	允许压力过大的矮人迁离要塞。	l
+DFHack help: Citizens walk fast and and finish jobs instantly.	居民快速移动并瞬间完成工作。	l
+DFHack help: Go it alone in your fortress and attempt the hermit challenge.	阻止外来访客进入要塞，进行隐士挑战。	l
+DFHack help: Hide new fort tutorial popups.	隐藏新要塞的教程弹窗。	l
+DFHack help: Allow immortals to satisfy their cravings for food and drink.	允许不朽者满足进食和饮酒的欲望。	l
+DFHack help: Change heavy and varied aquifers to light aquifers.	将重度或混合含水层改为轻度含水层。	l
+DFHack help: Make citizens more miserable.	增加居民的负面感受，提高维持幸福的难度。	l
+DFHack help: Limit the maximum size of migrant waves.	限制每批移民的最大人数。	l
+DFHack help: Prevent infinite accumulation of roaming undead.	防止游荡的不死生物无限累积。	l
+DFHack help: Fix FPS death.	调整模拟速度，缓解要塞后期的帧率崩溃。	l
+DFHack help: Reduce the time that dwarves idle after completing a job.	缩短矮人完成工作后的闲逛时间。	l
+DFHack help: Report on dwarf preferences and efficiency.	显示矮人的偏好和工作效率。	l
+DFHack help: Mortal mode: hide "armok" tools	凡人模式：隐藏 armok 工具	l
+DFHack help: DFHack searches full text	DFHack 使用全文搜索	l
+DFHack help: Hide console on startup (MS Windows only)	启动时隐藏控制台（仅 Windows）	l
+DFHack help: DFHack tools autopause game	DFHack 工具自动暂停游戏	l
+DFHack help: Large number formatting	大数显示格式	l
+DFHack help: Intercept handled hotkeys	拦截已处理的快捷键	l
+DFHack help: Mouse double click speed (ms)	鼠标双击间隔（毫秒）	l
+DFHack help: Mouse scroll repeat delay (ms)	鼠标连续滚动间隔（毫秒）	l
+DFHack help: Mouse initial scroll repeat delay (ms)	鼠标连续滚动初始延迟（毫秒）	l
+DFHack help: Don't show tools that give you god-like powers wherever DFHack tools are listed.	所有 DFHack 工具列表都隐藏赋予神一般能力的工具。	l
+DFHack help: When searching, whether to match anywhere in the text (true) or just at the start of words (false).	搜索时匹配文字中的任意位置（true），或仅匹配单词开头（false）。	l
+DFHack help: Hide the external DFHack terminal window on startup. Use the "show" command to unhide it.	启动时隐藏外部 DFHack 终端窗口。使用 show 命令可重新显示。	l
+DFHack help: Always pause the game when a DFHack tool window is shown (you can still unpause afterwards).	打开 DFHack 工具窗口时自动暂停游戏，之后仍可恢复运行。	l
+DFHack help: Number formatting style for DFHack tool UIs.	DFHack 工具界面的数字显示格式。	l
+DFHack help: Prevent key events handled by DFHack windows from also affecting the vanilla widgets.	防止 DFHack 窗口已处理的按键同时影响原版界面的控件。	l
+DFHack help: How long to wait for the second click of a double click, in ms.	双击时等待第二次点击的最长间隔，单位为毫秒。	l
+DFHack help: The delay between events when holding the mouse button down on a scrollbar, in ms.	按住滚动条时，两次连续滚动之间的间隔，单位为毫秒。	l
+DFHack help: The delay before scrolling quickly when holding the mouse button down on a scrollbar, in ms.	按住滚动条后，开始快速连续滚动前的等待时间，单位为毫秒。	l
+DFHack help: None (ex: 1234567)	无格式（例：1234567）	l
+DFHack help: English (ex: 1,234,567)	英文格式（例：1,234,567）	l
+DFHack help: System locale	系统区域格式	l
+DFHack help: SI suffix (ex: 1.23M)	国际单位前缀（例：1.23M）	l
+DFHack help: Scientific (ex: 1.2e+06)	科学计数法（例：1.2e+06）	l
+DFHack GUI Control tool: autobutcher	自动屠宰（autobutcher）	l
+DFHack GUI Control tool: autobutcher target 10 10 14 2 BIRD_GOOSE	饲养鹅（autobutcher target 10 10 14 2 BIRD_GOOSE）	l
+DFHack GUI Control tool: autobutcher target 10 10 14 2 BIRD_TURKEY	饲养火鸡（autobutcher target 10 10 14 2 BIRD_TURKEY）	l
+DFHack GUI Control tool: autobutcher target 10 10 14 2 BIRD_CHICKEN	饲养鸡（autobutcher target 10 10 14 2 BIRD_CHICKEN）	l
+DFHack GUI Control tool: autobutcher target 10 10 14 2 BIRD_PEAFOWL_BLUE	饲养孔雀（autobutcher target 10 10 14 2 BIRD_PEAFOWL_BLUE）	l
+DFHack GUI Control tool: autochop	自动伐木（autochop）	l
+DFHack GUI Control tool: autocheese	自动制作奶酪（autocheese）	l
+DFHack GUI Control tool: autoclothing	自动衣物订单（autoclothing）	l
+DFHack GUI Control tool: autofarm	自动种植（autofarm）	l
+DFHack GUI Control tool: autofarm threshold 150 grass_tail_pig	猪尾草目标库存 150（autofarm threshold 150 grass_tail_pig）	l
+DFHack GUI Control tool: autofish	自动捕鱼（autofish）	l
+DFHack GUI Control tool: autolabor	自动分配劳动（autolabor）	l
+DFHack GUI Control tool: automilk	自动挤奶（automilk）	l
+DFHack GUI Control tool: autonestbox	自动分配巢箱（autonestbox）	l
+DFHack GUI Control tool: autoshear	自动剪毛（autoshear）	l
+DFHack GUI Control tool: autoslab	自动雕刻纪念石板（autoslab）	l
+DFHack GUI Control tool: autotraining	自动安排训练（autotraining）	l
+DFHack GUI Control tool: ban-cooking all	保护烹饪原料（ban-cooking all）	l
+DFHack GUI Control tool: buildingplan set boulders false	建造不用石块（buildingplan set boulders false）	l
+DFHack GUI Control tool: buildingplan set logs false	建造不用原木（buildingplan set logs false）	l
+DFHack GUI Control tool: cleanowned	丢弃破衣（cleanowned）	l
+DFHack GUI Control tool: cleanowned-nodump	脱下破衣不倾倒（cleanowned-nodump）	l
+DFHack GUI Control tool: gui/settings-manager load-standing-orders	载入常规命令（gui/settings-manager load-standing-orders）	l
+DFHack GUI Control tool: gui/settings-manager load-work-details	载入工作分工（gui/settings-manager load-work-details）	l
+DFHack GUI Control tool: infinite-sky	无限天空层（infinite-sky）	l
+DFHack GUI Control tool: logistics enable autoretrain	自动重新驯养（logistics enable autoretrain）	l
+DFHack GUI Control tool: nestboxes	保护巢箱受精蛋（nestboxes）	l
+DFHack GUI Control tool: orders-sort	排序生产订单（orders-sort）	l
+DFHack GUI Control tool: prioritize	提高重要工作优先级（prioritize）	l
+DFHack GUI Control tool: seedwatch	保护种子库存（seedwatch）	l
+DFHack GUI Control tool: stockflow	按储物容量安排生产（stockflow）	l
+DFHack GUI Control tool: suspendmanager	智能管理暂停工作（suspendmanager）	l
+DFHack GUI Control tool: tailor	自动补充新衣（tailor）	l
+DFHack GUI Control tool: tailor confiscate false	保留旧衣不倾倒（tailor confiscate false）	l
+DFHack GUI Control tool: adamantine-cloth-wear	精金衣物不磨损（adamantine-cloth-wear）	l
+DFHack GUI Control tool: craft-age-wear	有机制品自然磨损（craft-age-wear）	l
+DFHack GUI Control tool: fix/blood-del	移除商队无用液体（fix/blood-del）	l
+DFHack GUI Control tool: fix/dead-units	清理死者区域分配（fix/dead-units）	l
+DFHack GUI Control tool: fix/dry-buckets	修复水桶和水井（fix/dry-buckets）	l
+DFHack GUI Control tool: fix/empty-wheelbarrows	清空卡住的手推车（fix/empty-wheelbarrows）	l
+DFHack GUI Control tool: fix/engravings	修复无法雕刻的地块（fix/engravings）	l
+DFHack GUI Control tool: fix/general-strike	解除矮人停工（fix/general-strike）	l
+DFHack GUI Control tool: fix/ownership	修复物品所有权（fix/ownership）	l
+DFHack GUI Control tool: fix/protect-nicks	保护昵称（fix/protect-nicks）	l
+DFHack GUI Control tool: fix/stuck-instruments	修复卡住的乐器（fix/stuck-instruments）	l
+DFHack GUI Control tool: fix/stuck-squad	救回迷失的小队（fix/stuck-squad）	l
+DFHack GUI Control tool: fix/stuck-worship	修复祈祷停滞（fix/stuck-worship）	l
+DFHack GUI Control tool: fix/stuck-written-materials	修复卡住的书籍（fix/stuck-written-materials）	l
+DFHack GUI Control tool: fix/noexert-exhaustion	修复不朽者训练疲倦（fix/noexert-exhaustion）	l
+DFHack GUI Control tool: fix/wildlife	移出卡住的野生动物（fix/wildlife）	l
+DFHack GUI Control tool: flask-contents	显示水壶内容（flask-contents）	l
+DFHack GUI Control tool: named-codices	显示书名（named-codices）	l
+DFHack GUI Control tool: preserve-tombs	保留陵墓分配（preserve-tombs）	l
+DFHack GUI Control tool: reaction-gloves	修复左右手套配对（reaction-gloves）	l
+DFHack GUI Control tool: agitation-rebalance	平衡自然躁动（agitation-rebalance）	l
+DFHack GUI Control tool: aquifer drain --all --skip-top 2	含水层最多两层（aquifer drain --all --skip-top 2）	l
+DFHack GUI Control tool: combine	合并物品堆（combine）	l
+DFHack GUI Control tool: deteriorate	物品自然腐朽（deteriorate）	l
+DFHack GUI Control tool: deteriorate enable all	全部物品类别腐朽（deteriorate enable all）	l
+DFHack GUI Control tool: deteriorate frequency 0.15 all	腐朽速度：不到一个月（deteriorate frequency 0.15 all）	l
+DFHack GUI Control tool: deteriorate frequency 3 all	腐朽速度：约一年（deteriorate frequency 3 all）	l
+DFHack GUI Control tool: dwarfvet	兽医治疗（dwarfvet）	l
+DFHack GUI Control tool: eggs-fertile	标记受精蛋（eggs-fertile）	l
+DFHack GUI Control tool: emigration	允许居民迁离（emigration）	l
+DFHack GUI Control tool: fast-heat	加速温度更新（fast-heat）	l
+DFHack GUI Control tool: fastdwarf	矮人瞬间工作（fastdwarf）	l
+DFHack GUI Control tool: hermit	隐士挑战（hermit）	l
+DFHack GUI Control tool: hide-tutorials	隐藏教程（hide-tutorials）	l
+DFHack GUI Control tool: immortal-cravings	满足不朽者食欲（immortal-cravings）	l
+DFHack GUI Control tool: light-aquifers-only	仅保留轻度含水层（light-aquifers-only）	l
+DFHack GUI Control tool: misery	增加居民痛苦（misery）	l
+DFHack GUI Control tool: orders-reevaluate	每月重查订单条件（orders-reevaluate）	l
+DFHack GUI Control tool: partial-items	显示物品剩余百分比（partial-items）	l
+DFHack GUI Control tool: pop-control	控制移民人数（pop-control）	l
+DFHack GUI Control tool: realistic-melting	真实熔炼回收率（realistic-melting）	l
+DFHack GUI Control tool: starvingdead	不死生物衰朽（starvingdead）	l
+DFHack GUI Control tool: timestream	缓解后期帧率崩溃（timestream）	l
+DFHack GUI Control tool: work-now	缩短工作间歇（work-now）	l
+# Control panel overlay descriptions and registered widget display names from installed DFHack Lua sources.
+DFHack help: Adds a link to launch the animal assignment UI to pastures and ponds.	在牧场和池塘界面添加动物分配入口。	l
+DFHack help: Adds a link to launch the animal assignment UI to cages and chains.	在笼子和锁链界面添加动物分配入口。	l
+DFHack help: Adds a button to retire unneeded locations to the location details screen.	在场所详情界面添加撤销闲置场所的按钮。	l
+DFHack help: Add options to tamed animals view sheet.	在驯服动物的详情面板中添加操作选项。	l
+DFHack help: Monitors irritation and shows chances of invasion.	监控自然躁动程度并显示入侵概率。	l
+DFHack help: Adds keywords to conversation entries.	为对话条目添加关键词。	l
+DFHack help: Skip combat animations and announcements with a click or key press.	点击或按键即可跳过战斗动画与通知。	l
+DFHack help: Detects dangerous actions and prompts with confirmation dialogs.	识别危险操作并弹出确认对话框。	l
+DFHack help: Adds toggle to pets screen for autoretraining partially trained pets.	在动物界面添加开关，自动重新训练尚未完全驯服的动物。	l
+DFHack help: Adds information to suspended building panels about why it is suspended.	在暂停施工的建筑面板中显示暂停原因。	l
+DFHack help: Adds a link to suspended building panels for enabling suspendmanager.	在暂停施工的建筑面板中添加 suspendmanager 启用入口。	l
+DFHack help: Annotates suspended buildings with a visible marker.	给暂停施工的建筑显示醒目标记。	l
+DFHack help: Adds productivity actions to the stocks page.	在库存界面添加便捷操作。	l
+DFHack help: Shows a panel when a stockpile is selected for stockpile automation.	选择储物区时显示自动化设置面板。	l
+DFHack help: Shows a panel when minecart route stop conditions are being edited.	编辑矿车路线的站点条件时显示设置面板。	l
+DFHack help: Shows whether a zone has been reserved for a unit or role.	显示区域是否已为某个单位或职位预留。	l
+DFHack help: Adds flood fill and 3D box select functionality to burrow designations.	为活动区域划定添加连通填充和三维框选功能。	l
+DFHack help: Show DFHack version number and quick links on the DF title page.	在游戏标题界面显示 DFHack 版本号和快捷入口。	l
+DFHack help: Shows the DFHack logo context menu button on most screens.	在大多数界面显示带 DFHack 标志的快捷菜单按钮。	l
+DFHack help: Shows the DFHack logo context menu button on the embark and new game screens.	在定居和新建游戏界面显示 DFHack 快捷菜单按钮。	l
+DFHack help: Shows the DFHack logo context menu button on the legends screen.	在传奇界面显示 DFHack 快捷菜单按钮。	l
+DFHack help: Shows the DFHack logo context menu button on adventure mode screens.	在冒险模式界面显示 DFHack 快捷菜单按钮。	l
+DFHack help: Shows the DFHack logo context menu button on the new adventure screen.	在新建冒险界面显示 DFHack 快捷菜单按钮。	l
+DFHack help: Adds import, export, and other functions to the manager orders screen.	在生产订单界面添加导入、导出等功能。	l
+DFHack help: Adds a button to the work order details page to tell the manager to recheck conditions.	在生产订单详情页添加按钮，让管理者重新检查订单条件。	l
+DFHack help: Adds a UI to the Workers tab for vanilla workshop labor restrictions.	在工人标签页添加界面，设置原版工坊的劳动限制。	l
+DFHack help: When adjusting condition details, makes right click cancel selection instead of exiting.	编辑条件详情时，右键取消选择并保留当前界面。	l
+DFHack help: When adjusting condition quantities, makes right click cancel selection instead of exiting.	编辑条件数量时，右键取消选择并保留当前界面。	l
+DFHack help: When adjusting order quantity details, makes right click cancel selection instead of exiting.	编辑订单数量详情时，右键取消选择并保留当前界面。	l
+DFHack help: Adds a search box to find and navigate to matching manager orders.	添加搜索框，查找并跳转到匹配的生产订单。	l
+DFHack help: Displays and adjusts stockflow work order settings for the selected stockpile.	显示并调整当前储物区的 stockflow 生产订单设置。	l
+DFHack help: Adds widgets to the dig interface to allow uninterrupted digging through warm and damp tiles.	在挖掘界面添加控件，允许连续挖掘温暖和潮湿地块。	l
+DFHack help: Visibility improvements for warm and damp map tiles.	让温暖和潮湿地块的标记更清晰。	l
+DFHack help: Makes existing carving designations visible when in ASCII mode.	在 ASCII 模式中显示已有的挖掘标记。	l
+DFHack help: Adds info tooltips that follow units or appear when you hover the mouse.	添加信息提示，可跟随单位或在鼠标悬停时显示。	l
+DFHack help: Adds spectate widgets to the vanilla follow panel.	在原版跟随面板中添加观战控件。	l
+DFHack help: Adds sort and annotation capabilities to the squad assignment panel.	为小队成员分配面板添加排序和信息标注。	l
+DFHack help: Adds filter capabilities to the squad assignment panel.	为小队成员分配面板添加筛选功能。	l
+DFHack help: Adds a toggle for recreational crafting to Craftdwarf's workshops.	在工艺工坊中添加休闲制作开关。	l
+DFHack help: Allows unlinking mechanisms and pulling linked levers from buildings.	允许解除建筑的机关连接，并拉动与其连接的拉杆。	l
+DFHack help: Allows freeing unlinked mechanisms from buildings.	允许取出建筑中已解除连接的机关。	l
+DFHack help: Shows the building planner interface panel when building buildings.	放置建筑时显示建筑规划面板。	l
+DFHack help: Adds information to planned buildings about what materials are still needed.	在规划中的建筑上显示仍缺少的材料。	l
+DFHack help: Adds mechanism selection capabilities to the link lever/pressure plate screens.	在连接拉杆或压力板时添加机关选择功能。	l
+DFHack help: Adds a button for activating a civilian alert when the squads panel is open.	打开小队面板时添加启动平民警报的按钮。	l
+DFHack help: Click a stress icon in the top bar to list the citizens in that stress category.	点击顶部的压力图标，查看该压力等级的居民列表。	l
+DFHack help: Adds link to trade depot building to launch the DFHack trade goods UI.	在贸易站建筑面板中添加 DFHack 贸易货物界面入口。	l
+DFHack help: Hides the vanilla trade goods selection button.	隐藏原版贸易货物选择按钮。	l
+DFHack help: Adds link to the trade goods screen to launch the DFHack trade goods UI.	在贸易货物界面添加 DFHack 贸易货物界面入口。	l
+DFHack help: Adds a tooltip that shows the selected dimensions when drawing boxes.	框选时显示所选区域尺寸的提示。	l
+DFHack help: When drawing boxes, makes right click cancel selection instead of exiting.	框选时，右键取消选择并保留当前界面。	l
+DFHack help: Display progress bars for learning skills on unit viewsheets.	在单位详情面板中显示技能学习进度条。	l
+DFHack help: Adds convenience functions for working with bins to the trade screen.	在交易界面添加方便管理箱内物品的功能。	l
+DFHack help: Adds link to the trade screen to launch the DFHack trade UI.	在交易界面添加 DFHack 交易界面入口。	l
+DFHack help: Adds warning to the trade screen when you are about to offend the elves.	交易即将冒犯精灵时显示警告。	l
+DFHack help: Adds quick toggles for groups of trade agreement items.	为贸易协议的物品类别添加批量切换按钮。	l
+DFHack help: Adds link to the display furniture building panel to launch the DFHack display assignment UI.	在展示家具面板中添加 DFHack 展品分配入口。	l
+DFHack help: Show the viewed unit's current and long-term mood on their sheet.	在单位详情面板中显示当前及长期心情。	l
+DFHack help: Adds search and filter functionality to info screens.	为信息界面添加搜索和筛选功能。	l
+DFHack help: Adds search functionality to the noble assignment page.	为贵族任命界面添加搜索功能。	l
+DFHack help: Annotates units with how many work animals they have assigned on the assign work animal screen.	在工作动物分配界面标注每个单位已有的工作动物数量。	l
+DFHack help: Adds filter capabilities to the work animal assignment screen.	为工作动物分配界面添加筛选功能。	l
+DFHack help: Adds filter capabilities to the interrogation screen.	为审讯界面添加筛选功能。	l
+DFHack help: Adds filter capabilities to the conviction screen.	为定罪界面添加筛选功能。	l
+DFHack help: Adds search and filter capabilities to the temple and guildhall establishment screens.	为建立神殿和行会大厅的界面添加搜索与筛选功能。	l
+DFHack help: Adds search and filter functionality to the slab engraving panel.	为纪念石板雕刻面板添加搜索和筛选功能。	l
+DFHack help: Adds search functionality to the artifact list on the world raid screen.	为世界远征界面的神器列表添加搜索功能。	l
+DFHack help: Adds search functionality to the places overview screens.	为场所总览界面添加搜索功能。	l
+DFHack help: Adds the ability to filter historical figures by race in legends mode.	在传奇模式中添加按种族筛选历史人物的功能。	l
+DFHack help: Adds extended export progress bar to the legends main screen.	在传奇主界面显示扩展导出的进度条。	l
+DFHack help: Prevents legends mode from being exited while an export is in progress.	导出期间禁止退出传奇模式。	l
+DFHack help: Adds search and sort functionality to the elevate unit to barony screen.	为晋升男爵界面添加搜索和排序功能。	l
+DFHack help: Adds information about unit preferences to the elevate unit to barony screen.	在晋升男爵界面显示候选人的偏好。	l
+DFHack help: Adds a button to view death cause on the dead/missing tab.	在死亡与失踪标签页添加查看死因的按钮。	l
+DFHack help: Render map notes.	显示地图注记。	l
+DFHack help: Adds widgets for reconfiguring pressure plates after construction.	允许在压力板建成后重新配置。	l
+DFHack help: Adds widget for toggling gear assemblies.	添加齿轮组启停控件。	l
+DFHack help: Adds a button to the erase toolbar to open the mass removal tool.	在清除工具栏中添加批量移除工具入口。	l
+DFHack help: Adds a hotkey to the vanilla units screen to launch the DFHack units interface.	在原版单位界面添加打开 DFHack 单位管理界面的快捷键。	l
+DFHack help: Shows list of active notifications in fort mode.	在要塞模式中显示当前通知列表。	l
+DFHack help: Shows list of active notifications in adventure mode.	在冒险模式中显示当前通知列表。	l
+DFHack help: Adds a link to the mod selection screen for accessing the mod manager.	在模组选择界面添加模组管理器入口。	l
+DFHack help: Displays a message when a mod preset has been automatically applied.	自动应用模组预设后显示提示。	l
+DFHack help: Adds a button for renaming newly generated worlds.	添加为新生成世界改名的按钮。	l
+DFHack help: Allows editing of unit nicknames on the embark preparation screen.	允许在定居准备界面编辑单位昵称。	l
+DFHack help: Adds buttons to the embark difficulty screen for saving and restoring settings.	在定居难度界面添加保存和恢复设置的按钮。	l
+DFHack help: Displays a message when saved difficulty settings have been automatically applied.	自动应用已保存的难度设置后显示提示。	l
+DFHack help: Adds buttons to the fort difficulty screen for saving and restoring settings.	在要塞难度界面添加保存和恢复设置的按钮。	l
+DFHack help: Adds buttons to the standing orders screen for saving and restoring settings.	在常规命令界面添加保存和恢复设置的按钮。	l
+DFHack help: Exposes the setting for reserved barrels on the standing orders screen.	在常规命令界面显示预留空桶数量设置。	l
+DFHack help: Adds buttons to the work details screen for saving and restoring settings and for controlling labor automation.	在工作分工界面添加保存、恢复设置及管理劳动自动化的按钮。	l
+DFHack help: Adds a button to the toolbar at the bottom left corner of the screen for launching gui/sitemap.	在左下角工具栏添加 gui/sitemap 地图总览入口。	l
+DFHack help: Adds a panel to unbuilt buildings indicating whether a dwarf is on their way to build.	为尚未建成的建筑显示是否已有矮人前来施工。	l
+DFHack help: Adds widgets for reconfiguring trackstops after construction.	允许在轨道停靠点建成后重新配置。	l
+DFHack help: Adds widgets for reconfiguring rollers after construction.	允许在滚轮建成后重新配置。	l
+DFHack help: Adds a link to the equip screen to fix equipment conflicts.	在装备界面添加修复装备冲突的入口。	l
+DFHack help: Adds a scrollbar (if necessary) to the list of starting dwarves.	需要时为初始矮人列表添加滚动条。	l
+DFHack GUI Control tool: zone.pasturepond	牧场与池塘动物分配（zone.pasturepond）	l
+DFHack GUI Control tool: zone.cagechain	笼子与锁链动物分配（zone.cagechain）	l
+DFHack GUI Control tool: zone.retirelocation	撤销闲置场所（zone.retirelocation）	l
+DFHack GUI Control tool: zone.animal_actions	驯服动物操作（zone.animal_actions）	l
+DFHack GUI Control tool: agitation-rebalance.monitor	自然躁动监控（agitation-rebalance.monitor）	l
+DFHack GUI Control tool: advtools.conversation	对话关键词（advtools.conversation）	l
+DFHack GUI Control tool: advtools.fastcombat	快速战斗（advtools.fastcombat）	l
+DFHack GUI Control tool: suspendmanager.status	施工暂停原因（suspendmanager.status）	l
+DFHack GUI Control tool: suspendmanager.toggle	智能施工暂停开关（suspendmanager.toggle）	l
+DFHack GUI Control tool: suspendmanager.overlay	暂停施工标记（suspendmanager.overlay）	l
+DFHack GUI Control tool: stocks.overlay	库存便捷操作（stocks.overlay）	l
+DFHack GUI Control tool: stockpiles.overlay	储物区自动化（stockpiles.overlay）	l
+DFHack GUI Control tool: stockpiles.hauling	矿车站点条件（stockpiles.hauling）	l
+DFHack GUI Control tool: stockflow.stockflow	储物区生产设置（stockflow.stockflow）	l
+DFHack GUI Control tool: exportlegends.export	传奇导出进度（exportlegends.export）	l
+DFHack GUI Control tool: exportlegends.mask	传奇导出退出保护（exportlegends.mask）	l
+DFHack GUI Control tool: exportlegends.histfigfilter	历史人物种族筛选（exportlegends.histfigfilter）	l
+DFHack GUI Control tool: spectate.followpanel	观战跟随面板（spectate.followpanel）	l
+DFHack GUI Control tool: spectate.tooltip	观战信息提示（spectate.tooltip）	l
+DFHack GUI Control tool: sort.squad_annotation	小队成员排序与标注（sort.squad_annotation）	l
+DFHack GUI Control tool: sort.squad_filter	小队成员筛选（sort.squad_filter）	l
+DFHack GUI Control tool: sort.info	信息界面搜索与筛选（sort.info）	l
+DFHack GUI Control tool: sort.workanimals	工作动物数量标注（sort.workanimals）	l
+DFHack GUI Control tool: sort.workanimals_filter	工作动物分配筛选（sort.workanimals_filter）	l
+DFHack GUI Control tool: sort.candidates	贵族任命搜索（sort.candidates）	l
+DFHack GUI Control tool: sort.interrogation	审讯对象筛选（sort.interrogation）	l
+DFHack GUI Control tool: sort.conviction	定罪对象筛选（sort.conviction）	l
+DFHack GUI Control tool: sort.deathcause_button	查看死因（sort.deathcause_button）	l
+DFHack GUI Control tool: sort.location_selector	神殿与行会筛选（sort.location_selector）	l
+DFHack GUI Control tool: sort.slab	纪念石板搜索与筛选（sort.slab）	l
+DFHack GUI Control tool: sort.world	世界神器搜索（sort.world）	l
+DFHack GUI Control tool: sort.places	场所总览搜索（sort.places）	l
+DFHack GUI Control tool: sort.elevate_barony	男爵候选排序（sort.elevate_barony）	l
+DFHack GUI Control tool: sort.elevate_barony_preferences	男爵候选偏好（sort.elevate_barony_preferences）	l
+DFHack GUI Control tool: sort.stress_icons	居民压力分类列表（sort.stress_icons）	l
+DFHack GUI Control tool: confirm.overlay	危险操作确认（confirm.overlay）	l
+DFHack GUI Control tool: caravan.trade	交易箱内物品管理（caravan.trade）	l
+DFHack GUI Control tool: caravan.tradebanner	DFHack 交易入口（caravan.tradebanner）	l
+DFHack GUI Control tool: caravan.tradeethics	精灵交易警告（caravan.tradeethics）	l
+DFHack GUI Control tool: caravan.tradeagreement	贸易协议批量设置（caravan.tradeagreement）	l
+DFHack GUI Control tool: caravan.movegoods	贸易站货物管理（caravan.movegoods）	l
+DFHack GUI Control tool: caravan.movegoods_hider	隐藏原版货物按钮（caravan.movegoods_hider）	l
+DFHack GUI Control tool: caravan.assigntrade	贸易货物界面入口（caravan.assigntrade）	l
+DFHack GUI Control tool: caravan.displayitemselector	展品分配入口（caravan.displayitemselector）	l
+DFHack GUI Control tool: idle-crafting.idlecrafting	休闲制作开关（idle-crafting.idlecrafting）	l
+DFHack GUI Control tool: notes.map_notes	地图注记（notes.map_notes）	l
+DFHack GUI Control tool: machine-toggle.pressureplate	压力板设置（machine-toggle.pressureplate）	l
+DFHack GUI Control tool: machine-toggle.gearassembly	齿轮组开关（machine-toggle.gearassembly）	l
+DFHack GUI Control tool: preserve-rooms.reserved	区域预留信息（preserve-rooms.reserved）	l
+DFHack GUI Control tool: overlay.title_version	DFHack 版本与快捷入口（overlay.title_version）	l
+DFHack GUI Control tool: orders.recheck	重查生产订单条件（orders.recheck）	l
+DFHack GUI Control tool: orders.importexport	生产订单导入与导出（orders.importexport）	l
+DFHack GUI Control tool: orders.search	生产订单搜索（orders.search）	l
+DFHack GUI Control tool: orders.skillrestrictions	工坊技能限制（orders.skillrestrictions）	l
+DFHack GUI Control tool: orders.laborrestrictions	工坊劳动限制（orders.laborrestrictions）	l
+DFHack GUI Control tool: orders.conditionsrightclick	条件详情右键取消（orders.conditionsrightclick）	l
+DFHack GUI Control tool: orders.conditionsquantityrightclick	条件数量右键取消（orders.conditionsquantityrightclick）	l
+DFHack GUI Control tool: orders.quantityrightclick	订单数量右键取消（orders.quantityrightclick）	l
+DFHack GUI Control tool: uniform-unstick.overlay	装备冲突修复入口（uniform-unstick.overlay）	l
+DFHack GUI Control tool: trackstop.trackstop	轨道停靠点设置（trackstop.trackstop）	l
+DFHack GUI Control tool: trackstop.rollers	滚轮设置（trackstop.rollers）	l
+DFHack GUI Control tool: logistics.autoretrain	自动重新驯养开关（logistics.autoretrain）	l
+DFHack GUI Control tool: prioritize.enroute	施工人员在途提示（prioritize.enroute）	l
+DFHack GUI Control tool: hotkeys.menu	DFHack 快捷菜单（hotkeys.menu）	l
+DFHack GUI Control tool: hotkeys.embarkmenu	定居界面快捷菜单（hotkeys.embarkmenu）	l
+DFHack GUI Control tool: hotkeys.legendsmenu	传奇界面快捷菜单（hotkeys.legendsmenu）	l
+DFHack GUI Control tool: hotkeys.adventuremenu	冒险界面快捷菜单（hotkeys.adventuremenu）	l
+DFHack GUI Control tool: hotkeys.newadventuremenu	新建冒险快捷菜单（hotkeys.newadventuremenu）	l
+DFHack GUI Control tool: gui/unit-info-viewer.skillprogress	技能学习进度（gui/unit-info-viewer.skillprogress）	l
+DFHack GUI Control tool: gui/unit-info-viewer.mood	单位当前与长期心情（gui/unit-info-viewer.mood）	l
+DFHack GUI Control tool: startdwarf.overlay	初始矮人列表滚动（startdwarf.overlay）	l
+DFHack GUI Control tool: buildingplan.planner	建筑规划面板（buildingplan.planner）	l
+DFHack GUI Control tool: buildingplan.inspector	建筑缺料信息（buildingplan.inspector）	l
+DFHack GUI Control tool: buildingplan.mechanisms	连接机关选择（buildingplan.mechanisms）	l
+DFHack GUI Control tool: buildingplan.mechanism_free	取出未连接机关（buildingplan.mechanism_free）	l
+DFHack GUI Control tool: buildingplan.mechanism_unlink	解除机关连接（buildingplan.mechanism_unlink）	l
+DFHack GUI Control tool: dwarfmonitor.cursor	光标坐标（dwarfmonitor.cursor）	l
+DFHack GUI Control tool: dwarfmonitor.date	当前日期（dwarfmonitor.date）	l
+DFHack GUI Control tool: dwarfmonitor.misery	居民压力统计（dwarfmonitor.misery）	l
+DFHack GUI Control tool: dwarfmonitor.weather	当前天气（dwarfmonitor.weather）	l
+DFHack GUI Control tool: dig.asciidesignated	ASCII 挖掘标记（dig.asciidesignated）	l
+DFHack GUI Control tool: dig.warmdamp	温暖与潮湿地块提示（dig.warmdamp）	l
+DFHack GUI Control tool: dig.warmdamptoolbar	连续挖掘温暖潮湿地块（dig.warmdamptoolbar）	l
+DFHack GUI Control tool: burrow.designation	活动区域填充与框选（burrow.designation）	l
+DFHack GUI Control tool: gui/civ-alert.big_red_button	平民警报按钮（gui/civ-alert.big_red_button）	l
+DFHack GUI Control tool: gui/sitemap.toolbar	地图总览入口（gui/sitemap.toolbar）	l
+DFHack GUI Control tool: gui/design.dimensions	框选尺寸提示（gui/design.dimensions）	l
+DFHack GUI Control tool: gui/design.rightclick	框选右键取消（gui/design.rightclick）	l
+DFHack GUI Control tool: gui/notify.panel	要塞通知列表（gui/notify.panel）	l
+DFHack GUI Control tool: gui/notify.advpanel	冒险通知列表（gui/notify.advpanel）	l
+DFHack GUI Control tool: gui/settings-manager.embark_difficulty	保存定居难度设置（gui/settings-manager.embark_difficulty）	l
+DFHack GUI Control tool: gui/settings-manager.embark_notification	定居难度应用提示（gui/settings-manager.embark_notification）	l
+DFHack GUI Control tool: gui/settings-manager.settings_difficulty	保存要塞难度设置（gui/settings-manager.settings_difficulty）	l
+DFHack GUI Control tool: gui/settings-manager.standing_orders	保存常规命令设置（gui/settings-manager.standing_orders）	l
+DFHack GUI Control tool: gui/settings-manager.reserved_barrels	预留空桶设置（gui/settings-manager.reserved_barrels）	l
+DFHack GUI Control tool: gui/settings-manager.work_details	工作分工与劳动自动化（gui/settings-manager.work_details）	l
+DFHack GUI Control tool: gui/mod-manager.button	模组管理器入口（gui/mod-manager.button）	l
+DFHack GUI Control tool: gui/mod-manager.notification	模组预设应用提示（gui/mod-manager.notification）	l
+DFHack GUI Control tool: gui/mass-remove.toolbar	批量移除工具入口（gui/mass-remove.toolbar）	l
+DFHack GUI Control tool: gui/rename.unit_embark	定居准备单位昵称（gui/rename.unit_embark）	l
+DFHack GUI Control tool: gui/rename.world	新世界改名（gui/rename.world）	l

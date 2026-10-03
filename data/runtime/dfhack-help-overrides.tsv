@@ -160,3 +160,85 @@ DFHack GUI Confirmation action: Yes, proceed	确认继续	l
 DFHack GUI Viewer action: Close	关闭	l
 DFHack GUI Viewer status: No output	无输出	l
 DFHack GUI Viewer status: Command finished successfully	命令执行成功	l
+
+# DFHack control-panel: complete tab descriptions, controls and dialogs.
+DFHack help: DFHack Control Panel	DFHack 控制面板	l
+DFHack help: Automation	自动化	l
+DFHack help: Bug Fixes	漏洞修复	l
+DFHack help: Gameplay	游戏性	l
+DFHack help: UI Overlays	界面覆盖层	l
+DFHack help: Preferences	偏好	l
+DFHack help: Enabled	已启用	l
+DFHack help: Autostart	自动启动	l
+DFHack help: These run in the background and help you manage your fort. They are always safe to enable, and allow you to concentrate on other aspects of gameplay that you find more enjoyable.	这些工具会在后台运行，协助管理要塞。它们可以放心启用，让你专注于更喜欢的游戏内容。	l
+DFHack help: These automatically fix dangerous or annoying vanilla bugs. You should generally have all of these enabled.	这些工具会自动修复原版游戏中危险或烦人的漏洞。通常建议全部启用。	l
+DFHack help: These change or extend gameplay. Read their help docs to see what they do and enable the ones that appeal to you.	这些工具会改变或扩展玩法。请阅读帮助说明，了解各项功能，再启用你感兴趣的工具。	l
+DFHack help: These are DFHack overlays that add information and functionality to native DF screens. You can toggle whether they are enabled here, or you can reposition them with gui/overlay.	这些 DFHack 界面覆盖层会为游戏原有界面补充信息和功能。可以在这里切换启用状态，也可以使用 gui/overlay 调整位置。	l
+DFHack help: These are the customizable DFHack system settings.	这里可以调整 DFHack 的系统设置。	l
+DFHack help: These are the tools that can be enabled right now. Most tools can only be enabled when you have a fort loaded. Once enabled, tools will stay enabled when you save and reload your fort. If you want them to be auto-enabled for new forts, please see the "Autostart" tab.	这里列出当前可以启用的工具。大多数工具需要载入要塞后才能启用。启用状态会随要塞保存，重新载入后继续生效。若要让工具在新要塞中自动启用，请切换到“自动启动”标签页。	l
+DFHack help: Tools that are enabled on this page will be auto-run or auto-enabled for you when you start a new fort (or, for "global" tools, when you start the game). To see tools that are enabled right now, please click on the "Enabled" tab.	在此页启用的工具会在创建新要塞时自动运行或启用；标有“全局”的工具则在启动游戏时自动运行或启用。若要查看当前已启用的工具，请切换到“已启用”标签页。	l
+DFHack help: Please load a fort to see the fort-mode tools. Alternately, please switch to the "Autostart" tab to configure which tools should be run or enabled on embark.	载入要塞后即可查看要塞模式的工具。也可以切换到“自动启动”标签页，设置开始新要塞时自动运行或启用的工具。	l
+DFHack help: Please load a fort to see the fort-mode tools. Alternately,	载入要塞后即可查看要塞模式的工具。	l
+DFHack help: please switch to the "Autostart" tab to configure which	也可以切换到“自动启动”标签页，设置哪些工具	l
+DFHack help: tools should be run or enabled on embark.	在开始新要塞时自动运行或启用。	l
+DFHack help: Restore defaults	恢复默认设置	l
+DFHack help: Toggle enabled	切换启用状态	l
+DFHack help: Show full tool help or run custom command	查看工具完整帮助或执行自定义命令	l
+DFHack help: Launch tool-specific config UI	打开工具配置界面	l
+DFHack help: Toggle overlay	切换覆盖层状态	l
+DFHack help: Show overlay help	查看覆盖层帮助	l
+DFHack help: Launch widget position adjustment UI	打开控件位置调整界面	l
+DFHack help: Toggle/edit setting	切换或编辑设置	l
+DFHack help: Edit setting	编辑设置	l
+DFHack help: Please set a new value for	请为以下设置输入新值：	l
+DFHack help: Save	保存	l
+DFHack help: Reset to default	恢复默认值	l
+DFHack help: Are you sure?	确认操作	l
+DFHack help: Success	完成	l
+DFHack help: Are you sure you want to restore overlay defaults?	确定要将所有界面覆盖层恢复为默认设置吗？	l
+DFHack help: Overlay defaults restored.	界面覆盖层已恢复为默认设置。	l
+DFHack help: Are you sure you want to restore default preferences?	确定要将所有偏好恢复为默认设置吗？	l
+DFHack help: Default preferences restored.	偏好已恢复为默认设置。	l
+DFHack help: Are you sure you want to restore Enabled defaults for automation tools?	确定要将自动化工具的当前启用状态恢复为默认设置吗？	l
+DFHack help: Are you sure you want to restore Autostart defaults for automation tools?	确定要将自动化工具的自动启动状态恢复为默认设置吗？	l
+DFHack help: Are you sure you want to restore Enabled defaults for bugfix tools?	确定要将漏洞修复工具的当前启用状态恢复为默认设置吗？	l
+DFHack help: Are you sure you want to restore Autostart defaults for bugfix tools?	确定要将漏洞修复工具的自动启动状态恢复为默认设置吗？	l
+DFHack help: Are you sure you want to restore Enabled defaults for gameplay tools?	确定要将玩法扩展工具的当前启用状态恢复为默认设置吗？	l
+DFHack help: Are you sure you want to restore Autostart defaults for gameplay tools?	确定要将玩法扩展工具的自动启动状态恢复为默认设置吗？	l
+DFHack help: Enabled defaults restored for automation tools.	自动化工具的当前启用状态已恢复为默认设置。	l
+DFHack help: Autostart defaults restored for automation tools.	自动化工具的自动启动状态已恢复为默认设置。	l
+DFHack help: Enabled defaults restored for bugfix tools.	漏洞修复工具的当前启用状态已恢复为默认设置。	l
+DFHack help: Autostart defaults restored for bugfix tools.	漏洞修复工具的自动启动状态已恢复为默认设置。	l
+DFHack help: Enabled defaults restored for gameplay tools.	玩法扩展工具的当前启用状态已恢复为默认设置。	l
+DFHack help: Autostart defaults restored for gameplay tools.	玩法扩展工具的自动启动状态已恢复为默认设置。	l
+DFHack help: (global)	（全局）	l
+DFHack help: default: {d}	默认值：{d}	l
+DFHack help: at least {d}	最小值：{d}	l
+DFHack help: at most {d}	最大值：{d}	l
+DFHack help: (default: {s},	（默认值：{s}，	l
+DFHack help: current: {s}	当前值：{s}	l
+DFHack help: current: {d}	当前值：{d}	l
+DFHack help: true	是	l
+DFHack help: false	否	l
+DFHack GUI Title: DFHack Control Panel	DFHack 控制面板	l
+DFHack GUI Title: Edit setting	编辑设置	l
+DFHack GUI Title: Are you sure?	确认操作	l
+DFHack GUI Title: Success	完成	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for automation tools?	确定要将自动化工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for automation tools?	确定要将自动化工具的自动启动状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for bugfix tools?	确定要将漏洞修复工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for bugfix tools?	确定要将漏洞修复工具的自动启动状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for gameplay tools?	确定要将玩法扩展工具的当前启用状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for gameplay tools?	确定要将玩法扩展工具的自动启动状态恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore overlay defaults?	确定要将所有界面覆盖层恢复为默认设置吗？	l
+DFHack GUI Confirmation prompt: Are you sure you want to restore default preferences?	确定要将所有偏好恢复为默认设置吗？	l
+DFHack GUI Viewer action: Ok	确定	l
+DFHack GUI Viewer status: Enabled defaults restored for automation tools.	自动化工具的当前启用状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Autostart defaults restored for automation tools.	自动化工具的自动启动状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Enabled defaults restored for bugfix tools.	漏洞修复工具的当前启用状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Autostart defaults restored for bugfix tools.	漏洞修复工具的自动启动状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Enabled defaults restored for gameplay tools.	玩法扩展工具的当前启用状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Autostart defaults restored for gameplay tools.	玩法扩展工具的自动启动状态已恢复为默认设置。	l
+DFHack GUI Viewer status: Overlay defaults restored.	界面覆盖层已恢复为默认设置。	l
+DFHack GUI Viewer status: Default preferences restored.	偏好已恢复为默认设置。	l
+DFHack help: No matches	没有匹配项	l
