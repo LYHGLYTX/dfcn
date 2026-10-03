@@ -8425,6 +8425,21 @@ Forbidding	禁用	w
 # Main HUD notification draws PETITIONS; the standing-orders tab draws Petitions.
 # Both captions share the same case-insensitive UI term.
 Petitions	申请	wi
+# Petitions renderer, Steam RVA 0x418680..0x41b597 (classic 0x416240..0x419157).
+# Complete captions/prose live in ui-messages.tsv. These fixed title prefixes
+# also cover the native list's shortened names without changing name identity
+# or sending Status through the unrelated health-tab vocabulary.
+A Priest for	祭司申请：	wi
+A High Priest for	高阶祭司申请：	wi
+A Guildhall for	行会大厅申请：	wi
+A Grand Guildhall for	大行会大厅申请：	wi
+Parley with	和谈对象：	wi
+Citizenship of	公民资格申请：	wi
+Status of	状态：	wi
+# All five petition kinds share these controls; Deny is an inline immediate,
+# not a .rdata string. Semantic literals must precede personal-name fallback.
+Approve	批准	wi
+Deny	拒绝	wi
 Chores	杂务	w
 # Complete policy captions from the native executable, including alternate
 # states. The widget owns left alignment; l is for prose, not button captions.

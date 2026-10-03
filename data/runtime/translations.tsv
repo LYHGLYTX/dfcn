@@ -8958,6 +8958,7 @@ From the Library Info Menu you can assign Scholars who discuss their interests w
 If you don't have a Bookkeeper, or they don't have an Office to work in, numbers may be approximate.	[C:7:0:0]如果没有[C:5:0:0]簿记员[C:7:0:0]，或者簿记员没有可用的[C:3:0:0]办公室[C:7:0:0]，数量可能只是估计值。	hq
 If you speak to a priest at a temple or select the Chosen destiny, you might receive a divine quest.	如果与神殿中的祭司交谈，或选择了天选命运，就可能接到神圣任务。	hq
 Make sure your parameters and presets can support mid-elevation, very high drainage, freezing areas.	请确保参数和预设支持中等海拔、极高排水且会冻结的区域。	l
+This visitor has come seeking work as a {s}. She heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。她听说可以在{e1}找到长期工作。	hPt
 You can alternate between standing and a prone position by clicking the indicated button or pressing	点击图示按钮，或按相应热键，即可在站立和俯卧之间切换：	hq
 You can strike, wrestle, or shoot to engage in combat. You can also throw objects in your inventory.	可以通过打击、摔跤或射击战斗，也可以投掷物品栏中的物品。	hq
 and became obsessed with their own mortality and sought to extend their life by any means during {e}	并在{e1}期间开始执着于自身终将死亡的命运，并不择手段地寻求延寿	ht
@@ -9140,6 +9141,9 @@ I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, 
 I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, and prepare a coup.	我雇{n1}渗透{e1}，以窃取宝藏、开展破坏活动和策划政变。	hPt
 Join me and we can shake off the yoke of {e} from the weary shoulders of the people of {e} forever!	加入我，我们就能让{e2}饱受压迫的人民永远摆脱{e1}的枷锁！	hPt
 This night creature was first created by {n} after horrible experiments on the {n} in the year {d}.	第{d1}年，{n1}对{n2}进行了可怕的实验后，首次创造出了这种夜行生物。	ht
+This visitor has come seeking work as a {s}. He heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come seeking work as a {s}. It heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
 To have a fully functioning Tavern you must have a Stockpile with Booze in it, preferably close by.	[C:7:0:0]要让[C:1:0:1]酒馆[C:7:0:0]正常运作，必须有一个存放[C:6:0:1]酒[C:7:0:0]的[C:6:0:0]储物堆[C:7:0:0]，最好就在附近。	hq
 When deciding which guild to dedicate the Guildhall to, you can scroll over the names of the guilds	[C:7:0:0]决定将[C:1:0:1]行会大厅[C:7:0:0]划归哪个行会时，可以将鼠标移到各个行会的名字上，	hq
 When trading you select which goods you want from the list on the left, and which goods of yours to	交易时，从左侧列表选择你想买的商品，再从右侧列表选择你要	hq
@@ -9353,6 +9357,9 @@ The world generator is having trouble setting volcanism in the manner specified 
 There's some food on the embark Wagon, and you can trade for food, but you can also grow your own.	[C:7:0:0]启程时的[C:6:0:0]货车[C:7:0:0]上有一些食物，你也可以通过交易获得食物，但还可以自己种植。	hq
 These work orders are set to complete a certain number of Tasks and can be given start conditions.	[C:7:0:0]可以设置订单完成一定数量的[C:3:0:1]任务[C:7:0:0]，并为其指定启动条件。	hq
 This night creature was first created by {n} through the fiend's terrifying power in the year {d}.	第{d1}年，{n1}释放邪魔的可怕力量后，首次创造出了这种夜行生物。	ht
+This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
+This visitor has come seeking work as a {s}. She heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。她听说{e1}适合作为佣兵的基地。	hPt
 Workshops are one of many buildings you can place with the highlighted Build button. Click it now.	[C:6:0:0]工坊[C:7:0:0]只是众多可建建筑中的一种，点击已高亮的“[C:5:0:1]建造[C:7:0:0]”按钮即可放置。现在点击它。	hq
 Workshops are one of many buildings you can place with the highlighted Build button. Click it now.	工坊是众多可建造建筑中的一类，你可以点击高亮显示的「建造」按钮来放置它们。现在按下它。	w
 You've finally got your equipment together, such as it is. Now it's time for action and adventure!	你终于把装备凑齐了，虽然算不上多好。现在正是行动与冒险之时！	hq
@@ -9528,6 +9535,8 @@ The world generator is having trouble placing savagery in the manner specified b
 The world generator is having trouble setting drainage in the manner specified by the parameters.	世界生成器无法按参数要求设置排水性。	l
 The {s} of {e} has been founded {s} and looks to your thriving economy for its future prosperity.	{s1}{e1}已建于{s2}，期盼你的繁荣经济带动它发展。	hPt
 There are several ways to mine. Stairwells (selected) start at one elevation and are completed at	采矿有多种方式。当前选中的楼梯井从一个高度层开始，延伸至	hq
+This visitor has come seeking work as a {s}. He heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come seeking work as a {s}. It heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。它听说{e1}适合作为佣兵的基地。	hPt
 This worker is not specialized and will do any free tasks that become available. Click to toggle.	此工人未设为专职，会执行任何可接手的空闲任务。点击切换。	hj
 Through {n}, I told {n} to ask {n} to grant an important position to {n} when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予{n4}。	hPt
 To do this select the Nobles and administrators menu and click the add button to assign somebody.	[C:7:0:0]打开“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单，点击添加按钮，选择任命人选。	hq
@@ -31406,7 +31415,7 @@ The waxing half moon is high in the eastern sky.	上弦月位于东方高空。	
 The waxing half moon is high in the eastern sky.	上弦月位于东方高空。	hj
 The waxing half moon is high in the western sky.	上弦月位于西方高空。	hP
 The waxing half moon is high in the western sky.	上弦月位于西方高空。	hj
-There are no petitions that need your attention.	目前没有需要你处理的请愿。	hP
+There are no petitions that need your attention.	目前没有需要你处理的申请。	hP
 There is a gentle breeze blowing from the north.	一阵微风从北方吹来。	hP
 There is a gentle breeze blowing from the north.	一阵微风从北方吹来。	hj
 There is a gentle breeze blowing from the south.	一阵微风从南方吹来。	hP
@@ -130972,13 +130981,56 @@ of	所属	h
 :	：	h
 ;	；	h
 
-# Complete visitor employment paragraphs; maintained in local-overrides.tsv.
-This visitor has come seeking work as a {s}. He heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。他听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. She heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。她听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。它听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. He heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。他听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. She heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。她听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. It heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。它听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
+# Petitions: complete native Windows 53.16 branch family; authored in ui-messages.tsv.
+A Priest for {e}	祭司申请：{e1}	hPt
+A High Priest for {e}	高阶祭司申请：{e1}	hPt
+A Guildhall for {e}	行会大厅申请：{e1}	hPt
+A Grand Guildhall for {e}	大行会大厅申请：{e1}	hPt
+Parley with {e}	和谈对象：{e1}	hPt
+Citizenship of {p}	公民资格申请：{p1}	hPt
+Status of {p}	状态：{p1}	hPt
+Some corrupt data	部分数据损坏	hP
+has many worshippers in	在以下地点拥有众多信徒：	hP
+has many worshippers here	在这里拥有众多信徒	hP
+and now requires	现提出以下要求：	hP
+a temple complex and high priest	建造神殿建筑群并任命高阶祭司	hP
+a temple and priest	建造神殿并任命祭司	hP
+The location must be built and furnished,	必须建好并布置该场所，	hP
+with the new position appointed by you.	并由你任命新职位的人员。	hP
+Approve	批准	hP
+Deny	拒绝	hP
+has many members in	在以下地点拥有众多成员：	hP
+has many members here	在这里拥有众多成员	hP
+a grand guildhall	大行会大厅	hP
+a guildhall	行会大厅	hP
+with the hall designated for a	并将大厅指定给以下行会：	hP
+{s} guild.	{s1}行会。	hPt
+wishes to parley	希望进行和谈	hP
+in order to avert	以避免	hP
+loss of life.	人员伤亡。	hP
+wishes to join	希望加入	hP
+as a citizen of	成为以下地点的公民：	hP
+desires citizenship.	希望取得公民资格。	hP
+Future such petitions: prompt	今后同类申请：询问	hP
+Future such petitions: accept	今后同类申请：接受	hP
+Future such petitions: reject	今后同类申请：拒绝	hP
+This can also be changed in	也可在以下位置修改：	hP
+Labor -> Standing orders -> Petitions.	劳动 → 劳动规则 → 申请。	hP
+wishes to reside in	希望居住于	hP
+wishes to reside here	希望在这里居住	hP
+for the purpose of	居留目的：	hP
+sanctuary.	寻求庇护。	hP
+study.	从事学术研究。	hP
+soldiering.	提供军事服务。	hP
+entertaining citizens and visitors.	为公民和访客表演。	hP
+eradicating monsters.	消灭怪物。	hP
+# Fixed prefixes cover native shortened titles; controls retain semantic priority.
+A Priest for	祭司申请：	wi
+A High Priest for	高阶祭司申请：	wi
+A Guildhall for	行会大厅申请：	wi
+A Grand Guildhall for	大行会大厅申请：	wi
+Parley with	和谈对象：	wi
+Citizenship of	公民资格申请：	wi
+Status of	状态：	wi
+Approve	批准	wi
+Deny	拒绝	wi

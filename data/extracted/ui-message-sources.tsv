@@ -180,6 +180,70 @@ reports.diplomacy	0x1785020	You can recenter on the locations of the announcemen
 reports.diplomacy	0x16ae298	No recent announcements.
 reports.diplomacy	0x1639710	You do not have an official capable of handling these matters.
 reports.diplomacy	0x16396d0	Do you approve this request?
+# Petitions, Windows 53.16: static disassembly of the complete native renderer.
+# Steam VA 0x140418680..0x14041b597; classic VA 0x140416240..0x140419157.
+# All 45 natural-language literals are accounted for below, including SIMD
+# copies and the inline DWORD 0x796e6544 (Deny). A separately drawn period is
+# shared punctuation, not a new message. Addresses below are Steam source RVAs.
+# Types: agreement+0x18 = 2 residency, 3 citizenship, 4 parley, 12 location.
+# Location data+0xc = 2 temple / 11 guild; data+0x1c = 1 ordinary / 2 advanced.
+# Residency data[0] = 41 monster slayer, 42 performer, 43 soldier, 44 scholar,
+# 75 sanctuary. A missing site selects the complete "here" alternative.
+# Party entity/histfig vectors supply names via 0x140a946e0; Status uses the
+# personal-name grammar, which also accepts the generated entity-title form.
+# List headings append the party name before native clipping at
+# 0x1404190f8..0x140419129; authored fixed-prefix aliases retain their meaning.
+# Guild occupation is a single native constructor field: 0x140419d9c calls
+# 0x14132e0c0 with plural=true, capitalize=false and current race as both race
+# and reference race. It has RAW profession aliases and peasant+s fallback,
+# but no race prefix; reuse the complete existing plural-profession grammar.
+# Future handling modes are 0 reject, 1 prompt, 2 accept; citizenship and all
+# five residency purposes independently use the same three complete labels.
+reports.petitions	0x163a510	You do not have an official capable of handling these matters.
+reports.petitions	0x163a550	There are no petitions that need your attention.
+reports.petitions	0x163a5c8	A Priest for {e}
+reports.petitions	0x163a5a0	A High Priest for {e}
+reports.petitions	0x163a588	A Guildhall for {e}
+reports.petitions	0x163a488	A Grand Guildhall for {e}
+reports.petitions	0x163a4f0	Parley with {e}
+reports.petitions	0x163a5b8	Citizenship of {p}
+reports.petitions	0x163a500	Status of {p}
+reports.petitions	0x163a4a0	Some corrupt data
+reports.petitions	0x163aae8	has many worshippers in
+reports.petitions	0x163ab00	has many worshippers here
+reports.petitions	0x163aaa8	and now requires
+reports.petitions	0x163aac0	a temple complex and high priest
+reports.petitions	0x163ab60	a temple and priest
+reports.petitions	0x163ab78	The location must be built and furnished,
+reports.petitions	0x163ab20	with the new position appointed by you.
+reports.petitions	0x163a4d0	Do you approve this request?
+reports.petitions	0x163a4b8	Approve
+reports.petitions	0x4197e1+0x419fef+0x41a42f+0x41a8e5+0x41b195	Deny
+reports.petitions	0x163ab48	has many members in
+reports.petitions	0x163a9e8	has many members here
+reports.petitions	0x1628a10	a grand guildhall
+reports.petitions	0x1628b50	a guildhall
+reports.petitions	0x163aa00	with the hall designated for a
+reports.petitions	0x132e0c0+0x16305a8	{s} guild.
+reports.petitions	0x163a458	wishes to parley
+reports.petitions	0x163a470	in order to avert
+reports.petitions	0x163a4c0	loss of life.
+reports.petitions	0x163ac78	wishes to join
+reports.petitions	0x163ac40	as a citizen of
+reports.petitions	0x163ac28	desires citizenship.
+reports.petitions	0x163abe8	Future such petitions: prompt
+reports.petitions	0x163ac08	Future such petitions: accept
+reports.petitions	0x163aba8	Future such petitions: reject
+reports.petitions	0x163abc8	This can also be changed in
+reports.petitions	0x163ac50	Labor -> Standing orders -> Petitions.
+reports.petitions	0x163acb8	wishes to reside in
+reports.petitions	0x163acd0	wishes to reside here
+reports.petitions	0x163ac88	for the purpose of
+reports.petitions	0x163acf0	sanctuary.
+reports.petitions	0x163ace8	study.
+reports.petitions	0x163ad28	soldiering.
+reports.petitions	0x163ad00	entertaining citizens and visitors.
+reports.petitions	0x163aca0	eradicating monsters.
 reports.diplomacy	0x1639a10	Make requests for next year's caravan. They'll charge more for these items.
 reports.diplomacy	0x1639a60	No recommendations available
 reports.diplomacy	0x1639a80	No positions available

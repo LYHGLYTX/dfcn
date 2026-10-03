@@ -147,7 +147,7 @@ Citizens and long-term residents only	仅限公民和长期居民。
 You can recognize a priesthood once this is a temple.	此处成为神殿后，即可认可祭司团。
 You can recognize a high priest when this is a temple complex.	此处成为神殿建筑群后，即可认可高阶祭司。
 Only organized religions can have recognized priesthoods.	只有有组织的宗教才能获得祭司团认可。
-There are no petitions that need your attention.	目前没有需要你处理的请愿。
+There are no petitions that need your attention.	目前没有需要你处理的申请。
 The location must be built and furnished, with the new position appointed by you.	必须建好并布置该地点，并由你任命新职位的人员。
 A priest must then be elevated.	随后必须擢升一名祭司。
 A high priest must then be elevated.	随后必须擢升一名高阶祭司。
@@ -232,6 +232,52 @@ You can recenter on the locations of the announcements. You may also toggle paus
 No recent announcements.	最近没有公告。
 You do not have an official capable of handling these matters.	你没有能够处理这些事务的官员。
 Do you approve this request?	是否批准此请求？
+# Petitions renderer: all branches from the native Windows 53.16 function,
+# including its separate addst records, not only the visitor-residency page.
+# Names stay in their existing typed grammar; guild occupations use the full
+# plural profession field (RAW aliases and the peasant fallback included).
+A Priest for {e}	祭司申请：{e1}
+A High Priest for {e}	高阶祭司申请：{e1}
+A Guildhall for {e}	行会大厅申请：{e1}
+A Grand Guildhall for {e}	大行会大厅申请：{e1}
+Parley with {e}	和谈对象：{e1}
+Citizenship of {p}	公民资格申请：{p1}
+Status of {p}	状态：{p1}
+Some corrupt data	部分数据损坏
+has many worshippers in	在以下地点拥有众多信徒：
+has many worshippers here	在这里拥有众多信徒
+and now requires	现提出以下要求：
+a temple complex and high priest	建造神殿建筑群并任命高阶祭司
+a temple and priest	建造神殿并任命祭司
+The location must be built and furnished,	必须建好并布置该场所，
+with the new position appointed by you.	并由你任命新职位的人员。
+Approve	批准
+Deny	拒绝
+has many members in	在以下地点拥有众多成员：
+has many members here	在这里拥有众多成员
+a grand guildhall	大行会大厅
+a guildhall	行会大厅
+with the hall designated for a	并将大厅指定给以下行会：
+{s} guild.	{s1}行会。
+wishes to parley	希望进行和谈
+in order to avert	以避免
+loss of life.	人员伤亡。
+wishes to join	希望加入
+as a citizen of	成为以下地点的公民：
+desires citizenship.	希望取得公民资格。
+Future such petitions: prompt	今后同类申请：询问
+Future such petitions: accept	今后同类申请：接受
+Future such petitions: reject	今后同类申请：拒绝
+This can also be changed in	也可在以下位置修改：
+Labor -> Standing orders -> Petitions.	劳动 → 劳动规则 → 申请。
+wishes to reside in	希望居住于
+wishes to reside here	希望在这里居住
+for the purpose of	居留目的：
+sanctuary.	寻求庇护。
+study.	从事学术研究。
+soldiering.	提供军事服务。
+entertaining citizens and visitors.	为公民和访客表演。
+eradicating monsters.	消灭怪物。
 Make requests for next year's caravan. They'll charge more for these items.	向明年的商队提出商品需求。他们会对这些商品收取更高的价格。
 No recommendations available	没有可供参考的建议。
 No positions available	没有可任命的职位。
