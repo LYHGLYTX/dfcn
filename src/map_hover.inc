@@ -2,6 +2,18 @@
 // terrain word or the coverage of a dictionary entry, owns every text row.
 // Translation remains in the shared phrase/matching machinery; this layer
 // only captures the widget and composes its translated/native inline runs.
+static size_t map_hover_conflict_identity_offset(std::string_view source) {
+    // A conflict indicator and the unit caption can be separate native draws
+    // on one hover row. Only the game's finite conflict labels own this split.
+    for (const std::string_view level : {"Encounter", "Horseplay", "Training",
+            "Brawl", "Non-lethal", "Lethal", "No Quarter"}) {
+        if (source.starts_with(level) && source.substr(level.size()).starts_with(": ") &&
+                source.size() > level.size() + 2)
+            return level.size() + 2;
+    }
+    return 0;
+}
+
 std::optional<NativeTextCard> Overlay::capture_map_hover_card(
         std::vector<std::string> &rows, const unsigned char *screen_override) const {
     if (gps_->tile_pixel_x <= 0 || gps_->tile_pixel_y <= 0) return std::nullopt;
@@ -328,7 +340,24 @@ std::optional<NativeTextCard> Overlay::capture_map_hover_card(
         const std::string visible = source.substr(first, end - first);
         const Match physical{first_x, y, static_cast<int>(visible.size()),
             kMapHoverPhraseRule, {}, visible};
-        const auto map_drawn = native_map_hover_draw_for_row(*gps_, physical, edge_x);
+        auto map_drawn = native_map_hover_draw_for_row(*gps_, physical, edge_x);
+        const size_t conflict_identity_at = map_hover_conflict_identity_offset(visible);
+        if (!map_drawn && conflict_identity_at) {
+            const Match identity{first_x + static_cast<int>(conflict_identity_at), y,
+                static_cast<int>(visible.size() - conflict_identity_at),
+                kMapHoverPhraseRule, {}, visible.substr(conflict_identity_at)};
+            auto unit_draw = native_map_hover_draw_for_row(*gps_, identity, edge_x);
+            if (unit_draw && unit_draw->map_hover.kind == NativeMapHoverKind::Unit) {
+                // Keep the exact formatter-owned identity and its unclipped
+                // source, while the physical row also owns the colored level.
+                const std::string prefix = visible.substr(0, conflict_identity_at);
+                unit_draw->x = first_x;
+                unit_draw->source.insert(0, prefix);
+                if (!unit_draw->complete_source.empty())
+                    unit_draw->complete_source.insert(0, prefix);
+                map_drawn = std::move(unit_draw);
+            }
+        }
         const auto drawn = map_drawn ? std::optional<std::string>(map_drawn->source)
             : native_drawn_text_for_row(physical, edge_x);
         auto drawn_source = drawn ? std::string_view(*drawn) : std::string_view{};
@@ -437,6 +466,16 @@ std::optional<NativeTextCard> Overlay::capture_map_hover_card(
                 row.complete_source = map_drawn->complete_source;
             else if (drawn_source.size() > visible.size())
                 row.complete_source = drawn_source;
+        } else if (conflict_identity_at) {
+            // Colored/cached hover rows need not retain the lookinfost draw.
+            // This finite level plus a complete actor article still owns a
+            // unit field inside the already established native hover frame.
+            const auto identity = trim_view(std::string_view(visible).substr(conflict_identity_at));
+            if (identity.starts_with("The ") || identity.starts_with("the ") ||
+                    identity.starts_with("A ") || identity.starts_with("a ") ||
+                    identity.starts_with("An ") || identity.starts_with("an ") ||
+                    native_unit_identity_source_target(identity))
+                card.rows.back().map_hover.kind = NativeMapHoverKind::Unit;
         }
     }
     if (adventure) {
@@ -657,9 +696,18 @@ std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view 
                 return target;
         return exact_literal_translation(source);
     case NativeMapHoverKind::Unit: {
-        if (unit_target) return unit_target;
-        if (auto target = translate_arena_numbered_creature(source)) return target;
-        if (auto target = scoped(source, "::map_hover::unit")) return target;
+        std::string prefix;
+        const size_t conflict_identity_at = map_hover_conflict_identity_offset(source);
+        if (conflict_identity_at) {
+            const auto level = exact_literal_translation(source.substr(0, conflict_identity_at - 2));
+            if (!level) return std::nullopt;
+            prefix = *level + "：";
+            source = trim_view(source.substr(conflict_identity_at));
+        }
+        if (unit_target) return prefix + *unit_target;
+        if (auto target = native_unit_identity_source_target(source)) return prefix + *target;
+        if (auto target = translate_arena_numbered_creature(source)) return prefix + *target;
+        if (auto target = scoped(source, "::map_hover::unit")) return prefix + *target;
         // Adventure's formatter puts species and profession before the name.
         // The native Unit kind licenses the complete identity grammar; a
         // name-only parser would preserve this whole caption as authored text.
@@ -670,7 +718,10 @@ std::optional<std::string> Overlay::translate_map_hover_phrase(std::string_view 
                 identity.starts_with("An "))
             identity.front() = static_cast<char>(std::tolower(
                 static_cast<unsigned char>(identity.front())));
-        if (auto target = translate_legends_actor(identity, 0, true)) return target;
+        if (auto target = translate_legends_actor(identity, 0, true)) return prefix + *target;
+        // A failed conflict actor must not be declared an authored name by
+        // the name-only fallback, which would leave its whole role in English.
+        if (conflict_identity_at) return std::nullopt;
         return translate_unit_identity(source, true);
     }
     case NativeMapHoverKind::Building:
