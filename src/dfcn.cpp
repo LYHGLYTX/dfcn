@@ -789,6 +789,7 @@ static constexpr int kAdventureCombatFieldRule = -142;
 static constexpr int kAnnouncementListRule = -143;
 static constexpr int kFortressLaborCaptionRule = -144;
 static constexpr int kFortressTradeFieldRule = -145;
+static constexpr int kSettingsAnnouncementNameRule = -147;
 
 static bool is_fortress_justice_field(const Match &match) {
     return match.rule == kFortressJusticeCaseRule || match.rule == kFortressJusticeDetailRule ||
@@ -3677,6 +3678,8 @@ private:
     void layout_fortress_depot(SDL_Renderer *renderer);
     void append_fortress_trade_fields(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y, bool raw_layer = false) const;
+    void append_settings_announcement_names(std::vector<std::string> &rows,
+        std::vector<Match> &matches, int only_y) const;
     std::vector<NativeTextCard> capture_fortress_trade_request_rows() const;
     void layout_fortress_trade_requests(SDL_Renderer *renderer);
     std::optional<NativeTextCard> capture_map_hover_card(
@@ -20279,6 +20282,7 @@ static std::optional<AsciiPanelFrame> find_character_overview_frame(
 #include "health_history_rows.inc"
 #include "native_split_ui_messages.inc"
 #include "native_message_paragraphs.inc"
+#include "settings_announcements.inc"
 
 static bool help_background_covered(const Match &match, int x, int y) {
     if (match.native_help_occluder) {
@@ -20555,6 +20559,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    append_settings_announcement_names(screen_rows, result, only_y);
     // The trade controls and totals are independent native fields. Claim
     // them before paragraph/item readers or generic word translations.
     append_fortress_trade_fields(screen_rows, result, only_y, screen_override != nullptr);
@@ -28523,6 +28528,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 if (help_background_covered(match, x, match_y)) continue;
                 const unsigned char ch = raw[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
+                     match.rule == kSettingsAnnouncementNameRule ||
                      match.rule == kFortressLaborCaptionRule ||
                      match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
@@ -28592,6 +28598,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 const unsigned char top_ch = raw[tile * 8];
                 const unsigned char base_ch = gps_->screen[tile * 8];
                 if ((is_credits_row(match) || is_help_text(match) || match.rule == kCharacterRoomStatusRule ||
+                     match.rule == kSettingsAnnouncementNameRule ||
                      match.rule == kFortressLaborCaptionRule ||
                      match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
@@ -28916,6 +28923,7 @@ void Overlay::normalize_native_split_text() {
              rules_[static_cast<size_t>(match.rule)].source == "Total Power Needed: {d}");
         const bool structured_span = match.native_adventure_target_row ||
             machine_power || is_credits_row(match) || match.rule == kSaveListCaptionRule ||
+            match.rule == kSettingsAnnouncementNameRule ||
             match.rule == kColorPickerChoiceRule ||
             match.rule == kCharacterHeaderRule ||
             match.rule == kCharacterOverviewRowRule ||
@@ -36026,6 +36034,7 @@ void Overlay::prepare_frame() {
                 // transition from suppressing unrelated text at the same cell.
                 if (cell && cell[0] != 0 && cell[0] != ' ') {
                     if ((match.native_hover_background || is_help_text(match) ||
+                         match.rule == kSettingsAnnouncementNameRule ||
                          match.rule == kFortressLaborCaptionRule ||
                          match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                          match.rule == kCharacterHeaderRule ||
@@ -42326,6 +42335,7 @@ void Overlay::layout_multiline_matches() {
             continue;
         }
         if (match.layout_ellipsize || is_fortress_justice_field(match) ||
+            match.rule == kSettingsAnnouncementNameRule ||
             match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
             match.rule == kCharacterHeaderRule || match.rule == kCharacterRoomStatusRule ||
             match.rule == kFortressStandingOrderRule ||
