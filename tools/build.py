@@ -85,6 +85,8 @@ def deploy_runtime_data(directory: Path) -> None:
 
     for name in ("translations.tsv", "name-editor.tsv", "instrument-translations.tsv",
                  "adventure-target-translations.tsv",
+                 "dfhack-help-translations.tsv", "dfhack-help-overrides.tsv",
+                 "dfhack-help-command-overrides.tsv",
                  "procedural-terms.tsv", "procedural-word-senses.tsv"):
         install(runtime / name, (RUNTIME / name).read_bytes())
     for source in sorted((RUNTIME / "rulesets").rglob("*.toml")):

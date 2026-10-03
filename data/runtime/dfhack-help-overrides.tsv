@@ -1,0 +1,137 @@
+# Complete DFHack help paragraphs and semantic GUI fields. Command names,
+# arguments, file paths, key bindings and tag identifiers remain executable.
+# source<TAB>Chinese<TAB>l; loaded after the general DFHack help catalog.
+DFHack help: DFHack Launcher	DFHack 命令启动器	l
+DFHack help: Welcome to DFHack!	欢迎使用 DFHack！	l
+DFHack help: Type a command or click on it in the autocomplete panel to see its help text here. Hit Enter or click on the "run" button to run the command as typed. You can also run a command without parameters by double clicking on it in the autocomplete list.	输入命令，或点击右侧自动补全列表中的命令，即可在这里查看完整帮助。按 Enter 或点击“运行”按钮，可执行输入的命令。也可以双击列表中的命令，直接执行不带参数的命令。	l
+DFHack help: You can filter the autocomplete list by clicking on the "Tags" button. Tap backtick (`) or hit ESC to close this dialog. This dialog also closes automatically if you run a command that shows a new GUI screen.	点击“标签”按钮，可以筛选自动补全列表。按反引号（`）或 Esc 可关闭此窗口。如果执行的命令会打开新的图形界面，此窗口也会自动关闭。	l
+DFHack help: Not sure what to do? You can browse and configure DFHack most important tools in "gui/control-panel". Please also run "quickstart-guide" to get oriented with DFHack and its capabilities.	不知道从哪里开始？运行 gui/control-panel，可以浏览和配置 DFHack 的主要工具。也可以运行 quickstart-guide，了解 DFHack 的功能与使用方法。	l
+DFHack help: To see more detailed help for this command launcher (including info on keyboard and mouse controls), type "gui/launcher".	输入 gui/launcher，可以查看此命令启动器的详细帮助，包括键盘和鼠标操作说明。	l
+DFHack help: You're running DFHack	当前 DFHack 版本：	l
+DFHack help: run	运行	l
+DFHack help: history search	搜索命令历史	l
+DFHack help: history search:	搜索命令历史：	l
+DFHack help: Help	帮助	l
+DFHack help: Output	输出	l
+DFHack help: Tags	标签	l
+DFHack help: Tags:	标签：	l
+DFHack help: tag filter	标签筛选	l
+DFHack help: Default	默认	l
+DFHack help: Dev default	开发默认	l
+DFHack help: Custom	自定义	l
+DFHack help: Reset	重置	l
+DFHack help: Reset tag filter	重置标签筛选	l
+DFHack help: Click or select via	点击或按快捷键选择	l
+DFHack help: Showing:	显示：	l
+DFHack help: Matching tools	匹配的工具	l
+DFHack help: Similar tools	相关工具	l
+DFHack help: Tagged tools	带此标签的工具	l
+DFHack help: Clear output	清除输出	l
+DFHack help: Copy output to clipboard	复制输出到剪贴板	l
+DFHack help: Copied	已复制	l
+DFHack help: Cycle filter	切换筛选状态	l
+DFHack help: Cycle all	切换全部状态	l
+DFHack help: DFHack Quickstart Guide	DFHack 快速入门指南	l
+DFHack help: Quickstart guide	快速入门指南	l
+DFHack help: Back	上一页	l
+DFHack help: Next	下一页	l
+DFHack help: Page {d} of {d}	第{d}页，共{d}页	l
+DFHack help: Guide text not found!	未找到指南文本！	l
+DFHack help: Welcome to DFHack! This guide will help get you oriented with the DFHack system and teach you how to find and use the tools productively. If you're reading this in the in-game quickstart-guide reader, hit the right arrow key or click on the hotkey hint in the lower right corner of the window to go to the next page.	欢迎使用 DFHack！本指南将介绍 DFHack 系统，并说明如何查找工具、有效使用工具。如果你正在游戏内的 quickstart-guide 阅读器中查看本指南，可以按右方向键，或点击窗口右下角的快捷键提示，前往下一页。	l
+DFHack help: What is DFHack?	DFHack 是什么？	l
+DFHack help: DFHack is an add-on for Dwarf Fortress that enables mods and tools to significantly extend the game. The default DFHack distribution contains a wide variety of these mods and tools, including bugfixes, interface improvements, automation agents, design blueprints, modding building blocks, and more. Third-party tools (e.g. mods downloaded from Steam Workshop or the forums) can also seamlessly integrate with the DFHack framework and extend the game far beyond what can be done by just modding the raws.	DFHack 是 Dwarf Fortress 的扩展框架，让模组和工具能够大幅扩展游戏功能。标准发行版包含多种工具，涵盖错误修复、界面改进、自动管理、设计蓝图、模组开发组件等。第三方工具，例如从 Steam 创意工坊或论坛下载的模组，也能接入 DFHack 框架，实现仅修改 RAW 数据无法完成的功能。	l
+DFHack help: DFHack's mission is to provide tools and interfaces for players and modders to:	DFHack 为玩家和模组作者提供工具与接口，用来：	l
+DFHack help: * expand the bounds of what is possible in Dwarf Fortress	* 拓展 Dwarf Fortress 能实现的玩法与功能	l
+DFHack help: * reduce the impact of game bugs	* 减少游戏错误带来的影响	l
+DFHack help: * give the player more agency and control over the game	* 让玩家更自主地掌控游戏	l
+DFHack help: * provide alternatives to toilsome or frustrating aspects of gameplay	* 为繁琐或令人烦恼的操作提供替代方案	l
+DFHack help: * **make the game more fun**	* **让游戏更有趣**	l
+DFHack help: What can I do with DFHack tools?	DFHack 工具能做什么？	l
+DFHack help: DFHack has been around for a long time -- almost as long as Dwarf Fortress itself. Many of the game's rough edges have been smoothed with DFHack tools. Here are some common tasks people use DFHack tools to accomplish:	DFHack 的历史几乎与 Dwarf Fortress 一样悠久。它的工具改善了游戏中许多不方便的地方。玩家经常用 DFHack 完成以下任务：	l
+DFHack help: * Automatically chop trees when log stocks are low	* 在原木库存不足时自动指定伐木	l
+DFHack help: * Mark all damaged items for trade in a single click	* 一键将所有损坏物品标记为交易货物	l
+DFHack help: * Copy and paste fort layouts	* 复制和粘贴要塞布局	l
+DFHack help: * Import and export lists of manager orders	* 导入和导出管理者工作订单	l
+DFHack help: * Clean contaminants from map squares that dwarves can't reach	* 清除矮人无法到达的格子上的污染物	l
+DFHack help: * Automatically butcher excess livestock so you don't become overrun with animals	* 自动屠宰多余牲畜，避免动物数量失控	l
+DFHack help: * Promote time-sensitive job types (e.g. food hauling) so they are done expediently	* 提高食品搬运等紧急工作的优先级，使其及时完成	l
+DFHack help: * Quickly scan the map for visible ores of specific types so you can focus your mining efforts	* 快速查找地图上已发现的指定矿石，便于集中开采	l
+DFHack help: Some tools are one-shot commands. For example, you can run unforbid all to claim all (reachable) items on the map after a messy siege.	有些工具只需执行一次。例如，在一场混乱的围攻结束后，可以运行 unforbid all，解除地图上所有可到达物品的禁用状态。	l
+DFHack help: Other tools must be enabled once and then they will run in the background. For example, once enabled, seedwatch will start monitoring your stocks of seeds and prevent your chefs from cooking seeds that you need for planting. Tools that are enabled in the context of a fort will save their state with that fort, and they will remember that they are enabled the next time you load your save. You can see which tools you have enabled and toggle their states in gui/control-panel.	另一些工具启用后会持续在后台运行。例如，seedwatch 会监控种子库存，防止厨师烹饪仍需用于播种的种子。在要塞中启用的工具会随要塞保存状态，下次读档时继续保持启用。可以在 gui/control-panel 中查看已启用的工具，并切换它们的状态。	l
+DFHack help: A third class of tools adds information to the screen or provides new integrated functionality via the DFHack overlay framework. For example, the sort tool adds widgets to the squad member selection screen that allow you to sort and filter the list of military candidates. You don't have to run any command to get the benefits of the tool, it appears automatically when you're on the relevant screen.	第三类工具通过 DFHack 的界面覆盖框架，在游戏画面上补充信息或集成新功能。例如，sort 会在小队成员选择界面添加控件，便于排序和筛选候选军人。这类工具会在相关界面自动出现，无需执行命令。	l
+DFHack help: How can I figure out which commands to run?	如何找到需要运行的命令？	l
+DFHack help: There are several ways to scan DFHack tools and find the ones you need right now.	可以通过几种方式浏览 DFHack 工具，找到当前需要的功能。	l
+DFHack help: The first place to check is the DFHack logo menu. It's in the upper left corner of the screen by default, though you can move it anywhere you want with the gui/overlay configuration UI.	首先可以查看 DFHack 徽标菜单。它默认位于屏幕左上角，也可以通过 gui/overlay 的配置界面移动到其他位置。	l
+DFHack help: When you click on the logo (or hit the Ctrl-Shift-C keyboard shortcut), a short list of popular, relevant DFHack tools comes up. These are the tools that have been assigned hotkeys that are active in the current context. For example, when you're looking at a fort map, the list will contain fortress design tools like gui/quickfort and gui/design. You can click on the tools in the list, or note the hotkeys listed next to them and maybe use them to launch the tool next time without even opening the logo menu.	点击徽标，或按 Ctrl-Shift-C，会显示一份与当前界面相关的常用工具列表。这些工具都绑定了当前有效的快捷键。例如，查看要塞地图时，列表会包含 gui/quickfort、gui/design 等设计工具。可以点击列表中的工具，也可以记住旁边的快捷键，以后直接打开工具。	l
+DFHack help: The second place to check is the DFHack control panel: gui/control-panel. It will give you an overview of which tools are currently enabled, and will allow you to toggle tools on or off, see help text for them, or launch their dedicated configuration UIs. You can open the control panel from anywhere with the Ctrl-Shift-E hotkey or by selecting it from the logo menu list.	第二种方式是打开 DFHack 控制面板 gui/control-panel。这里可以查看当前启用的工具，切换开关，阅读帮助，或打开工具各自的配置界面。在任意界面按 Ctrl-Shift-E，或在徽标菜单中选择控制面板，即可打开。	l
+DFHack help: In the control panel, you can also select which tools you'd like to be automatically enabled and popular commands you'd like to run when you start a new fort. On the "Preferences" tab, there are settings you can change, like "mortal mode" (you'll learn more about this in the next section) or whether you want DFHack windows to pause the game when they come up.	控制面板还可以设置在新建要塞时自动启用哪些工具、执行哪些常用命令。“偏好”标签页提供其他设置，例如下文介绍的“凡人模式”，以及打开 DFHack 窗口时是否暂停游戏。	l
+DFHack help: Finally, you can explore the full extent of the DFHack catalog in gui/launcher, which is always listed first in the DFHack logo menu list. You can bring up the launcher by tapping the backtick key (`) or hitting Ctrl-Shift-D. In the launcher, you can quickly autocomplete any command name by selecting it in the list on the right side of the window. You can filter the list by command tag, for example, you can see only productivity tools by setting the "productivity" tag to "include" in the filter panel. Commands are ordered by how often you run them, so your favorite commands will always be on top. You can also pull full commandlines out of your history with Alt-S or by clicking on the "history search" button.	最后，可以在 gui/launcher 中浏览完整的 DFHack 工具目录。命令启动器始终位于徽标菜单的首项，按反引号（`）或 Ctrl-Shift-D 也能打开。选择窗口右侧列表中的条目，可以快速补全命令名。列表支持按标签筛选，例如将 productivity 标签设为“包含”，就只显示提高操作效率的工具。命令按使用频率排序，常用命令会排在前面。按 Alt-S，或点击“搜索命令历史”按钮，还能从历史记录中取回完整的命令行。	l
+DFHack help: Once you have typed (or autocompleted, or searched for) a command, other commands related to the one you have selected will appear in the right-hand panel. Scanning through that list is a great way to learn about new tools that you might find useful.	输入、自动补全或搜索得到一个命令后，右侧面板会显示与它相关的其他命令。浏览这个列表，可以发现更多有用的工具。	l
+DFHack help: The bottom panel will show the full help text for the command you are running, allowing you to refer to the usage documentation and examples when you are typing your command. After you run a command, the bottom panel switches to command output mode, but you can get back to the help text by hitting Ctrl-T or clicking on the "Help" tab.	下方面板会显示所选命令的完整帮助，输入命令时可以参照用法与示例。执行命令后，面板会切换到输出模式。按 Ctrl-T，或点击“帮助”标签页，即可返回帮助文本。	l
+DFHack help: What if I don't want to be tempted by god-mode tools?	不想使用上帝模式工具怎么办？	l
+DFHack help: DFHack can give you god-like powers over the game. Sometimes, this is necessary to recover from game-breaking bugs. Sometimes, this is desirable so players can create specific role playing environments and situations. Sometimes, this is just fun : )	DFHack 能让你获得近乎全能的游戏控制权。有时需要借助它修复导致游戏无法继续的错误；有时可以用它构建特定的角色扮演环境与情景；有时这样玩本身就很有趣 : )	l
+DFHack help: But sometimes the knowledge that you can just "Armok" your way out of trouble detracts from the game experience. If this is the way you feel, you can hide DFHack's god-mode tools -- they all have the tag "armok" -- from the game. Open gui/control-panel and go to the "Preferences" tab. Enable "Mortal mode" to hide all "armok" tools. You can still access them in gui/launcher if you type their names in full, but they won't show up in autocomplete lists, in the output of ls, or anywhere else. Any global hotkeys that run "armok" tools will be disabled.	不过，知道自己随时能用 Armok 的力量摆脱困难，也可能影响游戏体验。如果你有这种感受，可以隐藏所有带 armok 标签的上帝模式工具。打开 gui/control-panel，在“偏好”标签页启用“凡人模式”，即可隐藏这些工具。仍然可以在 gui/launcher 中输入完整命令名来运行它们，但它们不会出现在自动补全列表、ls 的输出或其他工具列表中。运行 armok 工具的全局快捷键也会停用。	l
+DFHack help: How do DFHack in-game windows work?	如何使用游戏内的 DFHack 窗口？	l
+DFHack help: Many DFHack tools have graphical interfaces that appear in-game. You can tell which windows belong to DFHack tools because they will have the word "DFHack" printed across their bottom frame edge. DFHack provides an advanced windowing system that gives the player a lot of control over where the windows appear and whether they capture keyboard and mouse input.	许多 DFHack 工具有游戏内图形界面，窗口下边框上的 DFHack 标记可以帮助你识别它们。DFHack 的窗口系统允许自由调整窗口位置，并控制键盘和鼠标输入由窗口还是游戏接收。	l
+DFHack help: The DFHack windowing system allows multiple overlapping windows to be active at once. The one with the highlighted title bar has focus and will receive anything you type at the keyboard. Hit Esc or right click to close the window or cancel the current action. You can click anywhere on the screen that is not a DFHack window to unfocus the window and let it just sit in the background. It won't respond to key presses or mouse clicks until you click on it again to give it focus. If no DFHack windows are focused, you can right click directly on a window to close it without left clicking to focus it first.	DFHack 允许同时打开多个相互重叠的窗口。标题栏高亮的窗口具有焦点，会接收键盘输入。按 Esc 或右键单击，可以关闭窗口或取消当前操作。点击 DFHack 窗口以外的位置，会取消窗口焦点，让它留在背景中；再次点击窗口之前，它不会响应键盘或鼠标输入。如果没有 DFHack 窗口具有焦点，可以直接右键单击某个窗口将其关闭，无需先用左键选中。	l
+DFHack help: DFHack windows are draggable from the title bar or from anywhere on the window that doesn't have a mouse-clickable widget on it. Many are resizable as well (if the tool window has components that can reasonably be resized).	拖动标题栏，或窗口中没有可点击控件的区域，可以移动窗口。许多工具窗口还支持调整大小，具体取决于内部控件是否适合缩放。	l
+DFHack help: You can generally use DFHack tools without interrupting the game. That is, if the game is unpaused, it can continue to run while a DFHack window is open. If configured to do so in gui/control-panel, tools will initially pause the game to let you focus on the task at hand, but you can unpause like normal if you want. You can also interact with the map, scrolling it with the keyboard or mouse and selecting units, buildings, and items. Some tools, like gui/blueprint, will intercept all mouse clicks to allow you to select regions of the map. When these tools have focus, you will not be able to use the mouse to interact with map elements or pause/unpause the game. Therefore, these tools will pause the game when they open, regardless of your settings in gui/control-panel. You can still unpause with the keyboard (spacebar by default), though.	通常可以在不中断游戏的情况下使用 DFHack 工具：游戏未暂停时，打开 DFHack 窗口后仍会继续运行。如果在 gui/control-panel 中设置了自动暂停，工具会在打开时暂停游戏，但仍可以照常恢复运行。也可以用键盘或鼠标移动地图，选择单位、建筑和物品。gui/blueprint 等工具为了让你选择地图区域，会接收所有鼠标点击；它们具有焦点时，鼠标无法操作地图上的其他对象，也无法点击暂停按钮。因此，这类工具打开时会始终暂停游戏。仍然可以使用键盘暂停键恢复运行，默认是空格。	l
+DFHack help: Where do I go next?	接下来做什么？	l
+DFHack help: To recap:	回顾一下：	l
+DFHack help: You can get to popular, relevant tools for the current context by clicking on the DFHack logo or by hitting Ctrl-Shift-C.	点击 DFHack 徽标，或按 Ctrl-Shift-C，可以打开与当前界面相关的常用工具。	l
+DFHack help: You can enable DFHack tools and configure settings with gui/control-panel, which you can open from the DFHack logo or access directly with the Ctrl-Shift-E hotkey.	gui/control-panel 可以启用工具并修改设置。通过 DFHack 徽标菜单，或按 Ctrl-Shift-E，可以打开控制面板。	l
+DFHack help: You can get to the launcher and its integrated autocomplete, history search, and help text by hitting backtick (`) or Ctrl-Shift-D, or, of course, by running it from the logo menu list.	按反引号（`）或 Ctrl-Shift-D，可以打开集成自动补全、历史搜索和帮助的命令启动器。也可以从徽标菜单打开。	l
+DFHack help: With those three interfaces, you have the complete DFHack tool suite at your fingertips. So what to run first? Here are a few examples to get you started.	通过这三个入口，就能使用完整的 DFHack 工具集。下面几个例子可以帮助你开始。	l
+DFHack help: First, let's import some useful manager orders to keep your fort stocked with basic necessities. Run "orders import library/basic". If you go to your manager orders screen, you can see all the orders that have been created for you. Note that you could have imported the orders directly from this screen as well, using the DFHack overlay widget at the bottom of the manager orders panel.	首先，导入一些实用的管理者订单，维持要塞日用品的库存。运行 orders import library/basic，然后打开管理者订单界面，就能看到新建的全部订单。也可以直接使用该界面底部的 DFHack 控件导入订单。	l
+DFHack help: Next, try setting up autochop to automatically designate trees for chopping when you get low on usable logs. Run gui/control-panel and enable "autochop" in the "Automation" -> "Enabled" tab. Click on the button to the left of the name or hit Enter to enable it. You can then click on the configure button (the gear icon) to launch gui/autochop if you'd like to customize its settings (the defaults are usually fine). If you have the extra screen space, you can go ahead and set the gui/autochop window to minimal mode (click on the button near the upper right corner of the window or hit Alt-M) and click on the map so the window loses keyboard focus. As you play the game, you can glance at the live status panel to check on your stocks of wood.	接着，启用 autochop，让可用原木不足时自动指定伐木。运行 gui/control-panel，在“自动化”→“已启用”标签页中选择 autochop，点击名称左侧的按钮，或按 Enter 将其启用。若要调整设置，可点击齿轮图标，打开 gui/autochop；通常默认设置就足够。如果屏幕有空余位置，可以点击窗口右上方的按钮，或按 Alt-M，将 gui/autochop 切换为精简模式，再点击地图取消窗口焦点。游戏过程中就能随时查看状态面板，了解木材库存。	l
+DFHack help: Finally, let's do some fort design copy-pasting. Go to some bedrooms that you have set up in your fort. Run gui/blueprint, set a name for your blueprint by clicking on the name field (or hitting the 'n' hotkey). Type "rooms" (or whatever) and hit Enter to set. Then draw a box around the target area by clicking with the mouse. When you select the second corner, the blueprint will be saved to your "dfhack-config/blueprints" subfolder.	最后，试试复制和粘贴要塞布局。找到要塞中已经布置好的卧室，运行 gui/blueprint。点击名称栏，或按 n，输入 rooms 或其他蓝图名称，再按 Enter 确定。接着用鼠标选择目标区域的两个对角点。选择第二个角后，蓝图就会保存到 dfhack-config/blueprints 子目录。	l
+DFHack help: Now open up gui/quickfort (the hotkey is Ctrl-Shift-Q). You can search for the blueprint you just created by typing its name, but it should be up near the top already. If you copied a dug-out area with furniture in it, you will see two blueprints with the labels "/dig" and "/build". Click on the "/dig" blueprint or select it with the keyboard arrow keys and hit Enter. You can rotate or flip the blueprint around if you need to with the transform hotkeys. You'll see a preview of where the blueprint will be applied as you move the mouse cursor around the map. Red outlines mean that the blueprint may fail to fully apply at that location, so be sure to choose a spot where all the preview tiles are shown with green diamonds. Click the mouse or hit Enter to apply the blueprint and designate the tiles for digging. Your dwarves will come and dig it out as if you had designated the tiles yourself.	现在打开 gui/quickfort，快捷键是 Ctrl-Shift-Q。输入蓝图名称可以搜索，刚创建的蓝图通常已在列表顶部附近。如果复制的区域已经挖掘并放置了家具，会出现分别带 /dig 和 /build 标记的两份蓝图。点击 /dig 蓝图，或用方向键选中后按 Enter。需要时可用变换快捷键旋转或翻转蓝图。在地图上移动鼠标，会显示应用位置的预览。红色轮廓表示蓝图可能无法在该位置完整应用，应选择所有格子都显示绿色菱形的位置。点击鼠标，或按 Enter，可应用蓝图并指定挖掘；矮人会像处理手动指定的挖掘任务一样施工。	l
+DFHack help: Once the area is dug out, run gui/quickfort again and select the "/build" blueprint this time. Hit "o" to generate manager orders for the required furniture. Click to apply the blueprint in the dug-out area, and your furniture will be designated. It's just that easy! Note that quickfort uses buildingplan to place buildings, so you don't even need to have the relevant furniture or building materials in stock yet. The planned furniture/buildings will get built whenever you are able to produce the building materials.	区域挖掘完成后，再次运行 gui/quickfort，这次选择 /build 蓝图。按 o，为所需家具生成管理者订单，然后点击已挖掘区域应用蓝图，指定家具的位置。quickfort 使用 buildingplan 放置建筑，因此不必事先备齐家具和建材；等材料生产出来，规划的家具和建筑就会自动施工。	l
+DFHack help: There are many, many more tools to explore. Poke around or ask other player for advice. Have fun, and dig deep!	还有许多工具值得探索。可以自己浏览，也可以向其他玩家请教。祝你玩得开心，挖得更深！	l
+DFHack help: Tools that are useful while in adventure mode.	适用于冒险模式的工具。	l
+DFHack help: Tools that you use to run DFHack commands or interact with the DFHack or DF system.	用于执行 DFHack 命令，或操作 DFHack 与游戏系统的工具。	l
+DFHack help: Tools that are useful while on the fort embark screen or while creating an adventurer.	适用于要塞出发界面或创建冒险者时的工具。	l
+DFHack help: Tools that are useful while in fort mode.	适用于要塞模式的工具。	l
+DFHack help: Tools that are useful while in legends mode.	适用于传奇模式的工具。	l
+DFHack help: Tools which give the player god-like powers or the ability to access information the game intentionally keeps hidden. Players that do not wish to see these tools can hide them in the "Preferences" tab of gui/control-panel.	赋予玩家近乎全能的控制权，或允许查看游戏刻意隐藏的信息。不想看到这些工具时，可以在 gui/control-panel 的“偏好”标签页中将其隐藏。	l
+DFHack help: Tools that run in the background and automatically manage routine, toilsome aspects of your fortress.	在后台运行，自动管理要塞中重复、繁琐事务的工具。	l
+DFHack help: Tools that fix specific bugs, either permanently or on-demand.	自动或按需修复特定游戏错误的工具。	l
+DFHack help: Tools that help you with fort layout.	帮助设计要塞布局的工具。	l
+DFHack help: Tools that are useful when debugging or developing mods.	用于调试或开发模组的工具。	l
+DFHack help: Tools that help you prevent impact to your FPS.	帮助减少游戏帧率损失的工具。	l
+DFHack help: Tools that introduce new gameplay elements.	添加新玩法的工具。	l
+DFHack help: Tools that let you view information that is otherwise difficult to find.	用于查看通常难以找到的信息的工具。	l
+DFHack help: Tools that help you perform common tasks quickly and easily.	让常用操作更快捷、方便的工具。	l
+DFHack help: Tools that interact with animals.	用于操作动物的工具。	l
+DFHack help: Tools that interact with buildings and furniture.	用于操作建筑与家具的工具。	l
+DFHack help: Tools that interact with game graphics.	用于操作游戏图形的工具。	l
+DFHack help: Tools that interact with or extend the DF user interface.	用于操作或扩展游戏界面的工具。	l
+DFHack help: Tools that interact with in-game items.	用于操作游戏内物品的工具。	l
+DFHack help: Tools that interact with jobs.	用于操作工作任务的工具。	l
+DFHack help: Tools that deal with labor assignment.	用于分配劳动的工具。	l
+DFHack help: Tools that interact with the game map.	用于操作游戏地图的工具。	l
+DFHack help: Tools that interact with the military.	用于管理军队的工具。	l
+DFHack help: Tools that interact with grass, trees, shrubs, and crops.	用于操作草、树木、灌木和作物的工具。	l
+DFHack help: Tools that interact with stockpiles.	用于操作堆料场的工具。	l
+DFHack help: Tools that interact with units.	用于操作单位的工具。	l
+DFHack help: Tools that interact with workorders.	用于操作工作订单的工具。	l
+DFHack help: Tools that are not yet available for the current release.	尚不支持当前版本的工具。	l
+DFHack help: gui/design Help	gui/design 帮助	l
+DFHack help: Building filters	建筑材料筛选	l
+DFHack help: Use the DFHack building planner to configure filters for the desired construction types. This tool will use the current buildingplan filters for a building type.	使用 DFHack 的建筑规划工具，设置所需建筑类型的材料筛选条件。本工具会沿用 buildingplan 中对应建筑类型的当前筛选设置。	l
+DFHack help: Help!?!	帮助	l
+DFHack help: This tool allow you to perform jobs as a dwarf would in dwarf mode. When cursor is available you can press {k} to enqueue a job from pointer location. If job is 'Build' and there is no planed construction at cursor this tool show possible building choices.	此工具让冒险者像要塞模式的矮人一样执行工作。出现光标时，按{k}可以在光标位置添加当前工作。如果工作为 Build，且光标位置尚未规划建筑，工具会显示可以建造的建筑。	l
+DFHack help: Keybindings:	快捷键：	l
+DFHack help: Next job in the list	选择列表中的下一项工作	l
+DFHack help: Previous job in the list	选择列表中的上一项工作	l
+DFHack help: Continue job if available	如果可以，继续当前工作	l
+DFHack help: Use job down	在下层执行当前工作	l
+DFHack help: Use job up	在上层执行当前工作	l
+DFHack help: Use job at the tile you are standing	在当前站立的格子执行工作	l
+DFHack help: Show building menu	显示建造菜单	l
+DFHack help: Toggle quick item select	切换快速物品选择	l
+DFHack help: CAREFULL MOVE	谨慎移动	l
+DFHack help: use job in that direction	在移动方向执行当前工作	l
+DFHack help: The Gathering Against Goblin Oppresion (TGAGO) is not responsible for all the damage that this tool can (and will) cause to you and your loved worlds and/or sanity.Please use with caution. Magma not included.	反地精压迫联合会（TGAGO）不对本工具可能且必然给你、你钟爱的世界或你的理智造成的损害负责。请谨慎使用。本工具不附赠岩浆。	l
+DFHack help: No help available.	暂无帮助信息。	l
+DFHack help: Command not found	未找到命令	l

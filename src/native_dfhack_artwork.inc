@@ -25,6 +25,10 @@ static std::array<NativeDfhackTileWrite, 12> g_native_dfhack_tile_writes{};
 static size_t g_native_dfhack_tile_next = 0, g_native_dfhack_tile_count = 0;
 static std::array<NativeDfhackLogoCapture, 16> g_native_dfhack_logos{};
 static size_t g_native_dfhack_logo_count = 0, g_native_dfhack_logo_next = 0;
+// DFHack paints its window and divider characters as textured tiles too.
+// Keep their original CP437 identity without reviving covered old artwork.
+static std::vector<NativeDfhackTileWrite> g_native_dfhack_border_tiles;
+static int g_native_dfhack_border_dimx = 0, g_native_dfhack_border_dimy = 0;
 
 static bool native_dfhack_logo_grid_valid(const graphicst *gps) {
     return gps && gps->dimx > 0 && gps->dimx <= 1000 &&
@@ -37,6 +41,8 @@ static void clear_native_dfhack_logo_captures() {
     g_native_dfhack_tile_next = g_native_dfhack_tile_count = 0;
     g_native_dfhack_logos = {};
     g_native_dfhack_logo_count = g_native_dfhack_logo_next = 0;
+    g_native_dfhack_border_tiles.clear();
+    g_native_dfhack_border_dimx = g_native_dfhack_border_dimy = 0;
 }
 
 static void record_native_dfhack_tile_write(const graphicst *gps,
@@ -58,6 +64,18 @@ static void record_native_dfhack_tile_write(const graphicst *gps,
     // A callback already in flight when the hook was detached must not
     // repopulate records that shutdown has just cleared.
     if (!native_dfhack_capture_hook_active()) return;
+    if (g_native_dfhack_border_dimx != write.dimx ||
+            g_native_dfhack_border_dimy != write.dimy) {
+        g_native_dfhack_border_tiles.assign(
+            static_cast<size_t>(write.dimx) * write.dimy * 2, {});
+        g_native_dfhack_border_dimx = write.dimx;
+        g_native_dfhack_border_dimy = write.dimy;
+    }
+    const size_t border_at = (static_cast<size_t>(write.x) * write.dimy + write.y) * 2 +
+        static_cast<size_t>(write.top_layer);
+    g_native_dfhack_border_tiles[border_at] =
+        write.ch >= 0xb3 && write.ch <= 0xda && write.texture > 0
+            ? write : NativeDfhackTileWrite{};
     g_native_dfhack_tile_writes[g_native_dfhack_tile_next] = write;
     g_native_dfhack_tile_next = (g_native_dfhack_tile_next + 1) %
         g_native_dfhack_tile_writes.size();
@@ -108,6 +126,26 @@ static std::vector<NativeDfhackLogoCapture> native_dfhack_logo_captures() {
     std::lock_guard<std::mutex> lock(g_native_dfhack_logo_mutex);
     return {g_native_dfhack_logos.begin(),
         g_native_dfhack_logos.begin() + g_native_dfhack_logo_count};
+}
+
+static void retain_native_dfhack_border_chars(const graphicst &gps,
+        std::vector<std::string> &rows) {
+    std::lock_guard<std::mutex> lock(g_native_dfhack_logo_mutex);
+    if (gps.dimx != g_native_dfhack_border_dimx ||
+            gps.dimy != g_native_dfhack_border_dimy ||
+            rows.size() != static_cast<size_t>(gps.dimy)) return;
+    for (int x = 0; x < gps.dimx; ++x) {
+        for (int y = 0; y < gps.dimy; ++y) {
+            if (rows[y][x] != ' ') continue;
+            const size_t tile = static_cast<size_t>(x) * gps.dimy + y;
+            const bool top = native_ui_top_layer_at(gps, tile);
+            const auto &write = g_native_dfhack_border_tiles[tile * 2 + top];
+            const auto *textures = top ? gps.screentexpos_top : gps.screentexpos;
+            if (write.graphics == &gps && write.texture > 0 && textures &&
+                    textures[tile] == write.texture)
+                rows[y][x] = static_cast<char>(write.ch);
+        }
+    }
 }
 
 // Caller holds the record mutex. Exact current textures reject an old draw

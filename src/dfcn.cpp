@@ -3358,6 +3358,7 @@ private:
     std::atomic<bool> dump_requested_{false};
     fs::file_time_type config_mtime_{};
     fs::file_time_type mapping_mtime_{};
+    std::array<fs::file_time_type, 3> dfhack_help_mtimes_{};
     std::chrono::steady_clock::time_point last_reload_check_{};
     std::chrono::steady_clock::time_point last_untranslated_collect_{};
     bool dumped_first_ = false;
@@ -3906,6 +3907,18 @@ private:
         const std::vector<int> &source_foregrounds,
         std::vector<int> &target_foregrounds, bool ui_message = false,
         int required_rule = -1, bool literal_only = false) const;
+    struct DfhackHelpParagraph {
+        std::string source, target;
+    };
+    std::vector<DfhackHelpParagraph> dfhack_help_paragraphs_;
+    std::unordered_map<std::string, size_t> dfhack_help_source_index_;
+    std::unordered_map<std::string, std::vector<size_t>> dfhack_help_words_;
+    void index_dfhack_help_paragraph(const Rule &rule);
+    void load_dfhack_help_catalog();
+    std::optional<std::string> translate_dfhack_help_rows(
+        const std::vector<Match> &rows, int native_width,
+        NativeParagraphViewport *viewport = nullptr,
+        std::string *complete_source = nullptr) const;
     bool match_catalog_template(const Rule &rule, std::string_view source,
         size_t start, std::vector<std::string> &captures,
         std::vector<std::pair<size_t, size_t>> &ranges,
@@ -5100,6 +5113,9 @@ void Overlay::build_trie() {
     adventure_background_translation_cache_.clear();
     capture_translations_.clear();
     capture_prefix_translations_.clear();
+    dfhack_help_paragraphs_.clear();
+    dfhack_help_source_index_.clear();
+    dfhack_help_words_.clear();
     map_track_translations_.clear();
     adventure_item_action_rules_.clear();
     overview_quote_translations_.clear();
@@ -5151,6 +5167,11 @@ void Overlay::build_trie() {
     };
     for (size_t rule_index = 0; rule_index < rules_.size(); ++rule_index) {
         const Rule &material_rule = rules_[rule_index];
+        if (material_rule.source.starts_with("DFHack help: ")) {
+            index_capture_literal(material_rule);
+            index_dfhack_help_paragraph(material_rule);
+            continue;
+        }
         constexpr std::string_view world_site_type_scope = "World site type: ";
         if (material_rule.source.starts_with(world_site_type_scope)) {
             // Native site-kind leaves are lookup-only data. Keep their finite
@@ -5468,6 +5489,7 @@ void Overlay::build_trie() {
     }
     log_line("INFO", "Loaded " + std::to_string(g_magical_materials.size()) +
         " magical material noun/qualifier pairs");
+    load_dfhack_help_catalog();
 }
 
 void Overlay::clear_fallback_fonts() {
@@ -6879,6 +6901,16 @@ void Overlay::maybe_reload() {
             (!ec4 && im != instrument_translations_mtime_) ||
             (!ec1 && cm != config_mtime_) || (!ec2 && mm != mapping_mtime_) ||
             (!ec3 && nm != name_editor_mtime_);
+        constexpr std::array<const char *, 3> help_catalogs = {
+            "dfhack-help-translations.tsv", "dfhack-help-overrides.tsv",
+            "dfhack-help-command-overrides.tsv"};
+        const auto catalog_directory = fs::u8path(config_.mapping_path).parent_path();
+        for (size_t index = 0; index < help_catalogs.size(); ++index) {
+            std::error_code catalog_error;
+            auto modified = fs::last_write_time(catalog_directory / help_catalogs[index], catalog_error);
+            if (catalog_error) modified = {};
+            if (modified != dfhack_help_mtimes_[index]) reload = true;
+        }
     }
     if (!reload) return;
     log_line("INFO", "Reloading configuration and translations");
@@ -19922,6 +19954,7 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
 #include "fortress_nobles.inc"
 #include "fortress_build_placement.inc"
 #include "text_paragraphs.inc"
+#include "dfhack_help_translation.inc"
 #include "native_text_rows.inc"
 #include "fortress_justice.inc"
 #include "credits.inc"
@@ -20442,6 +20475,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
 #include "pause_menu_fields.inc"
 #include "dfhack_stocks_hint.inc"
 #include "dfhack_hotkeys_menu.inc"
+#include "dfhack_launcher_help.inc"
+#include "dfhack_auxiliary_help.inc"
     // Native chooser callers own these whole fields even when the map has
     // replaced the live outer frame by the time SDL presents its captions.
     const bool classic_location_fields = native_ui_classic().value_or(false);
@@ -20886,6 +20921,19 @@ std::vector<Match> Overlay::find_matches(int only_y,
         });
         result.insert(result.end(), std::make_move_iterator(dfhack_hotkeys_matches.begin()),
             std::make_move_iterator(dfhack_hotkeys_matches.end()));
+        // The launcher and auxiliary help widgets own their complete native
+        // regions, including executable command rows and English examples.
+        for (const auto *regions : {&dfhack_launcher_regions, &dfhack_auxiliary_regions})
+            std::erase_if(result, [&](const Match &match) {
+                return std::any_of(regions->begin(), regions->end(), [&](const SDL_Rect &owned) {
+                    return match.y >= owned.y && match.y < owned.y + owned.h &&
+                        match.x < owned.x + owned.w && owned.x < match.x + match.length;
+                });
+            });
+        result.insert(result.end(), std::make_move_iterator(dfhack_launcher_matches.begin()),
+            std::make_move_iterator(dfhack_launcher_matches.end()));
+        result.insert(result.end(), std::make_move_iterator(dfhack_auxiliary_matches.begin()),
+            std::make_move_iterator(dfhack_auxiliary_matches.end()));
         return std::move(result);
     };
 

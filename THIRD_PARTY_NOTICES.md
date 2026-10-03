@@ -56,6 +56,14 @@ DFCN 的原创内容采用知识共享署名—非商业性使用—相同方式
    - 许可：MIT；许可文本见 `data/upstream/licenses/ECDICT.LICENSE`
    - 著作权：Copyright (c) 2025 Linwei
 
+7. **DFHack 53.16-r2 帮助文档**
+   - 项目：https://github.com/DFHack/dfhack
+   - 来源：本机安装的工具帮助、快速入门、标签说明及脚本内嵌帮助
+   - 本地文件：`data/runtime/dfhack-help-translations.tsv`、`dfhack-help-overrides.tsv`、`dfhack-help-command-overrides.tsv`
+   - 处理：保留英文来源与命令语法；主体机器翻译并统一术语，常用帮助另有人工译文修订。这些译文是 DFCN 的修改版本，并非 DFHack 官方中文文档。
+   - 许可：Zlib；许可文本见 `third_party/dfhack-help.LICENSE`
+   - 著作权：DFHack 作者及贡献者；DFHack 原始声明为 (c) 2009-2012, Petr Mrázek
+
 完整许可文本分别保存在 `data/upstream/licenses/dfi18n-data.LICENSE.md` 和
 `data/upstream/licenses/dfzh-data.LICENSE.md`。DFCN 对数据做了格式转换、冲突过滤、数字模板转换、
 RAW 空白归一化和 CP437 屏幕编码转换；本地 dfzh 词表另按项目约定将居民管理

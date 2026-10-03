@@ -115,7 +115,9 @@ std::vector<Match> dfhack_hotkeys_matches;
             rows.push_back({x, y, static_cast<int>(text.size()), kDfhackHotkeysHintRule, {}, text});
         }
         if (!intact || rows.empty()) continue;
-        const auto target = exact_literal_translation("DFHack hotkeys hint: " + source);
+        auto target = exact_literal_translation("DFHack hotkeys hint: " + source);
+        if (!target) target = exact_literal_translation("DFHack help: " +
+            normalize_dfhack_help(source));
         if (!target) continue;
         const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
         const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
