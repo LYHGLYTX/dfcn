@@ -1,0 +1,5 @@
+{
+  "reference": "../dwarfort",
+  "classic": "/opt/dwarffortress/dwarfort",
+  "deploy_classic": false
+}

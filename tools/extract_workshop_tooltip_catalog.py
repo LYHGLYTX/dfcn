@@ -108,18 +108,26 @@ class NativeELF:
             yield disk, self.raw[disk:disk + size]
 
 
-def native_game_directory(project_root: Path | None = None) -> Path:
-    """Use the configured Windows reference image's game directory.
-
-    Linux retains the project-parent installation layout. This resolves the
-    configured source only; it never searches for another game installation.
-    """
+def native_edition_sources(project_root: Path | None = None) -> dict:
+    """Resolve this host's configured images without searching installations."""
     root = Path(project_root).resolve() if project_root is not None else Path(__file__).resolve().parents[1]
-    if sys.platform == "win32":
-        config_path = root / "data/runtime/native-pe-images.json"
-        if config_path.is_file():
-            config = json.loads(config_path.read_text(encoding="utf-8"))
-            return (root / config["reference"]).resolve().parent
+    config_name = {"win32": "native-pe-images.json", "linux": "native-elf-images.json"}.get(sys.platform)
+    if config_name is None:
+        return {}
+    config_path = root / "data/runtime" / config_name
+    if not config_path.is_file():
+        return {}
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    return {**config, **{name: (root / Path(config[name]).expanduser()).resolve()
+                        for name in ("reference", "classic", "bootstrap") if config.get(name)}}
+
+
+def native_game_directory(project_root: Path | None = None) -> Path:
+    """Use the configured reference game, or the existing in-game layout."""
+    root = Path(project_root).resolve() if project_root is not None else Path(__file__).resolve().parents[1]
+    sources = native_edition_sources(root)
+    if sources:
+        return sources["reference"].parent
     return root.parent
 
 

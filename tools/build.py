@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import ctypes
-import json
 import os
 from pathlib import Path
 import platform
@@ -18,11 +17,11 @@ import sys
 import tempfile
 
 sys.dont_write_bytecode = True
-from extract_workshop_tooltip_catalog import native_game_executable
+from extract_workshop_tooltip_catalog import native_edition_sources, native_game_directory, native_game_executable
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GAME = ROOT.parent
+GAME = native_game_directory(ROOT)
 DATA = ROOT / "data"
 EXTRACTED = DATA / "extracted"
 UPSTREAM = DATA / "upstream"
@@ -30,25 +29,8 @@ RUNTIME = DATA / "runtime"
 SCRIPT = Path(__file__).resolve()
 TEMP = Path(tempfile.gettempdir())
 
-def pe_edition_sources():
-    config_path = RUNTIME / "native-pe-images.json"
-    if sys.platform != "win32" or not config_path.is_file():
-        return {}
-    config = json.loads(config_path.read_text(encoding="utf-8"))
-    return {**config, **{name: (ROOT / config[name]).resolve()
-                        for name in ("reference", "classic", "bootstrap") if config.get(name)}}
-
-
-if sys.platform == "win32":
-    configured_sources = pe_edition_sources()
-    if configured_sources:
-        GAME = configured_sources["reference"].parent
-
-
-def windows_game_directories():
-    if sys.platform != "win32":
-        return ()
-    sources = pe_edition_sources()
+def native_game_directories():
+    sources = native_edition_sources(ROOT)
     directories = [GAME.resolve()]
     if sources and sources.get("deploy_classic", False):
         directories.append(sources["classic"].parent)
@@ -56,7 +38,7 @@ def windows_game_directories():
 
 
 def edition_destinations():
-    destinations = ((directory / "dfcn").resolve() for directory in windows_game_directories())
+    destinations = ((directory / "dfcn").resolve() for directory in native_game_directories())
     return tuple(dict.fromkeys(directory for directory in destinations if directory != ROOT))
 
 
@@ -314,7 +296,7 @@ def loader_inputs() -> list[Path]:
 
 def checked_path(path: Path) -> Path:
     absolute = path.absolute()
-    if absolute.parent not in (ROOT, GAME, *windows_game_directories(), *edition_destinations()) or absolute.is_symlink():
+    if absolute.parent not in (ROOT, GAME, *native_game_directories(), *edition_destinations()) or absolute.is_symlink():
         raise RuntimeError(f"Refusing file operation outside build destinations: {absolute}")
     if absolute.exists() and not stat.S_ISREG(absolute.lstat().st_mode):
         raise RuntimeError(f"Expected a regular build file: {absolute}")
@@ -506,7 +488,8 @@ def main() -> int:
         raise RuntimeError(f"No native build configuration for this host: {sys.platform}")
     core = ROOT / abi["core"]
     loader = ROOT / abi["loader"]
-    game_loaders = [] if sys.platform == "win32" else [GAME / abi["loader"]]
+    game_loaders = [] if sys.platform == "win32" else [directory / abi["loader"]
+                                                      for directory in native_game_directories()]
     core_candidate = core.with_name(core.stem + ".candidate" + core.suffix)
     loader_candidate = loader.with_name(loader.stem + ".candidate" + loader.suffix)
     staging = [core_candidate, loader_candidate,
@@ -516,7 +499,7 @@ def main() -> int:
     if sys.platform == "win32":
         staging.extend([bootstrap_candidate, bootstrap_config_candidate])
         staging.extend(directory / (name + ".publish")
-                       for directory in windows_game_directories()
+                       for directory in native_game_directories()
                        for name in ("dfhooks.dll", "dfhooks_dfcn.ini"))
     pending_replacements: set[Path] = set()
     if args.clean:
@@ -540,8 +523,10 @@ def main() -> int:
     try:
         for path in staging:
             remove_file(path)
-        pe_sources = pe_edition_sources()
-        missing_bootstraps = [directory for directory in windows_game_directories()
+        sources = native_edition_sources(ROOT)
+        pe_sources = sources if sys.platform == "win32" else {}
+        missing_bootstraps = [directory for directory in native_game_directories()
+                              if sys.platform == "win32"
                               if not (directory / "dfhooks.dll").is_file()]
         if missing_bootstraps:
             bootstrap_source = pe_sources.get("bootstrap")
@@ -564,10 +549,21 @@ def main() -> int:
                 if not objdump.is_file():
                     raise RuntimeError(f"Required native disassembler is missing: {objdump}")
                 generate_pe_bindings(pe_sources["reference"], pe_sources["classic"], objdump, output)
+        elif sys.platform == "linux" and sources.get("classic"):
+            from build_native_image_bindings import (
+                Image, binding_sources, generate as generate_elf_bindings,
+            )
+            output = ROOT / "src/native_elf_build_bindings.inc"
+            inputs = [ROOT / "tools/build_native_image_bindings.py", RUNTIME / "native-elf-images.json",
+                      UPSTREAM / "df-structures/symbols.xml", sources["reference"], sources["classic"],
+                      *binding_sources()]
+            if needs_update([output], inputs):
+                generate_elf_bindings(Image(sources["reference"]), Image(sources["classic"]),
+                                      UPSTREAM / "df-structures/symbols.xml", output)
         compile_flags = ["-std=c++20", *split_arguments(env.get("CXXFLAGS", "-O2")),
                          "-Wall", "-Wextra", "-Wpedantic", *abi["compile"],
                          "-Icompat", "-Isrc", "-Ithird_party/tomlplusplus/include", "-iquote",
-                         str(GAME / "g_src") if sys.platform == "win32" else "../g_src",
+                         str(GAME / "g_src"),
                          *dependency_includes, *split_arguments(env.get("CPPFLAGS", ""))]
         link_flags = ["-shared", *split_arguments(env.get("LDFLAGS", "")),
                       *dependency_libraries, *abi["link"], *split_arguments(env.get("LDLIBS", ""))]
@@ -606,7 +602,7 @@ def main() -> int:
                 publish_ready(loader_candidate, destination, keep_candidate=True)
             publish_ready(loader_candidate, loader, keep_candidate=bool(game_loaders))
             for destination in game_loaders:
-                publish_ready(loader_candidate, destination)
+                publish_ready(loader_candidate, destination, keep_candidate=True)
             print("Core and resident loader deployed to the configured game directories.")
         elif rebuild_core:
             print("Core deployed to the configured game directories.")
@@ -618,13 +614,13 @@ def main() -> int:
             # independently of where this source checkout lives.
             bootstrap_config = b"dfcn/dfhooks_dfcn.dll\n"
             bootstrap_config_candidate.write_bytes(bootstrap_config)
-            for directory in windows_game_directories():
+            for directory in native_game_directories():
                 destination = directory / "dfhooks_dfcn.ini"
                 if not destination.is_file() or destination.read_bytes() != bootstrap_config:
                     publish_ready(bootstrap_config_candidate, destination, keep_candidate=True)
             for directory in missing_bootstraps:
                 publish_ready(bootstrap_candidate, directory / "dfhooks.dll", keep_candidate=True)
-            for directory in windows_game_directories():
+            for directory in native_game_directories():
                 redundant_loader = directory / abi["loader"]
                 if redundant_loader.is_file():
                     print(f"Removing redundant game-root loader: {redundant_loader}", flush=True)
