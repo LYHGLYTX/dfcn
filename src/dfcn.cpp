@@ -2106,6 +2106,7 @@ public:
         if (activate) active = true;
         current_ = this;
         installed_ = true;
+        NativeUiReadScope::invalidate_reads();
     }
     // Borrow a view prepared for this draw pass. Its owner outlives each
     // row scope, so neither the grid nor the ABI view is copied per caption.
@@ -2116,6 +2117,7 @@ public:
         active = true;
         current_ = this;
         installed_ = true;
+        NativeUiReadScope::invalidate_reads();
     }
     static std::optional<NativeTextGridOrigin> grid_origin(const graphicst &gps, size_t at) {
         // Foreground scopes can install a copy with activate=false. Track
@@ -2134,6 +2136,7 @@ public:
             current_ = previous_scope_;
             installed_ = false;
             view_.reset();
+            NativeUiReadScope::invalidate_reads();
         }
     }
 private:
@@ -3498,6 +3501,60 @@ private:
     bool dumped_first_ = false;
     bool captured_first_ = false;
     mutable RenderTimings render_timings_;
+    struct CellReadCache {
+        enum : uint8_t { Known = 1, Top = 2, Ignored = 4, VisibleKnown = 8 };
+        struct Cell {
+            uint64_t epoch = 0;
+            uint8_t flags = 0;
+            unsigned char visible = 0;
+        };
+        const uint64_t *revision_slot = &NativeUiReadScope::read_revision;
+        uint64_t revision = 0, composite_epoch = 0, epoch = 0;
+        const graphicst *graphics = nullptr;
+        const unsigned char *screen = nullptr, *screen_top = nullptr;
+        int dimx = 0, dimy = 0;
+        bool top_in_use = false;
+        std::vector<Cell> cells;
+
+        Cell &at(const graphicst *gps, uint64_t read_epoch, size_t tile) {
+            const uint64_t current_revision = *revision_slot;
+            if (graphics != gps || revision != current_revision ||
+                    composite_epoch != read_epoch || dimx != gps->dimx ||
+                    dimy != gps->dimy || screen != gps->screen ||
+                    screen_top != gps->screen_top || top_in_use != gps->top_in_use) {
+                graphics = gps;
+                revision = current_revision;
+                composite_epoch = read_epoch;
+                dimx = gps->dimx;
+                dimy = gps->dimy;
+                screen = gps->screen;
+                screen_top = gps->screen_top;
+                top_in_use = gps->top_in_use;
+                ++epoch;
+                cells.resize(static_cast<size_t>(dimx) * dimy);
+            }
+            auto &cell = cells[tile];
+            if (cell.epoch != epoch) {
+                cell.epoch = epoch;
+                cell.flags = 0;
+            }
+            return cell;
+        }
+    };
+    mutable CellReadCache *cell_read_cache_ = nullptr;
+    class CellReadCacheScope {
+        const Overlay &owner_;
+        CellReadCache cache_;
+        CellReadCache *previous_;
+    public:
+        explicit CellReadCacheScope(const Overlay &owner)
+            : owner_(owner), previous_(owner.cell_read_cache_) {
+            owner_.cell_read_cache_ = &cache_;
+        }
+        ~CellReadCacheScope() { owner_.cell_read_cache_ = previous_; }
+        CellReadCacheScope(const CellReadCacheScope &) = delete;
+        CellReadCacheScope &operator=(const CellReadCacheScope &) = delete;
+    };
     uint64_t frame_count_ = 0;
     uint64_t total_match_count_ = 0;
     uint64_t total_compositional_match_count_ = 0;
@@ -7207,13 +7264,23 @@ void Overlay::maybe_reload() {
 const unsigned char *Overlay::cell_at(int x, int y, bool *top) const {
     *top = false;
     if (!gps_ || x < 0 || y < 0 || x >= gps_->dimx || y >= gps_->dimy) return nullptr;
-    if (native_capture_ignored_cell(gps_, x, y)) return nullptr;
     const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
-    if (gps_->screen_top && native_ui_top_layer_at(*gps_, tile)) {
-        *top = true;
-        return gps_->screen_top + tile * 8;
+    auto *cached = cell_read_cache_
+        ? &cell_read_cache_->at(gps_, composite_read_epoch_, tile) : nullptr;
+    if (cached && (cached->flags & CellReadCache::Known)) {
+        if (cached->flags & CellReadCache::Ignored) return nullptr;
+        *top = (cached->flags & CellReadCache::Top) != 0;
+    } else {
+        const bool ignored = native_capture_ignored_cell(gps_, x, y);
+        if (!ignored)
+            *top = gps_->screen_top && native_ui_top_layer_at(*gps_, tile);
+        if (cached)
+            cached->flags |= CellReadCache::Known |
+                (*top ? CellReadCache::Top : 0) | (ignored ? CellReadCache::Ignored : 0);
+        if (ignored) return nullptr;
     }
-    return gps_->screen ? gps_->screen + tile * 8 : nullptr;
+    const auto *screen = *top ? gps_->screen_top : gps_->screen;
+    return screen ? screen + tile * 8 : nullptr;
 }
 
 static bool graphically_occluded(uint8_t state, uint64_t cell_epoch,
@@ -7224,6 +7291,16 @@ static bool graphically_occluded(uint8_t state, uint64_t cell_epoch,
 unsigned char Overlay::visible_char_at(int x, int y) const {
     if (!gps_ || x < 0 || y < 0 || x >= gps_->dimx || y >= gps_->dimy) return 0;
     const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
+    auto *cached = cell_read_cache_
+        ? &cell_read_cache_->at(gps_, composite_read_epoch_, tile) : nullptr;
+    if (cached && (cached->flags & CellReadCache::VisibleKnown)) return cached->visible;
+    const auto remember = [cached](unsigned char ch) {
+        if (cached) {
+            cached->visible = ch;
+            cached->flags |= CellReadCache::VisibleKnown;
+        }
+        return ch;
+    };
     // Composite order is authoritative across both logical layers. A popup
     // can copy base/top glyphs into the logical grid and then cover them with
     // an SDL texture (the resolution menu does exactly this). If
@@ -7235,7 +7312,7 @@ unsigned char Overlay::visible_char_at(int x, int y) const {
                              cell_composite_epoch_[tile],
                              composite_read_epoch_) &&
         !NativeUiReadScope::base_at(gps_, tile)) {
-        return 0;
+        return remember(0);
     }
     // Opaque graphical copies above remain authoritative: their transparent
     // text gaps must not revive covered base text. With no such covering,
@@ -7243,7 +7320,7 @@ unsigned char Overlay::visible_char_at(int x, int y) const {
     // a transparent top space cannot hide a visible base caption.
     bool top = false;
     const auto *cell = cell_at(x, y, &top);
-    return cell ? cell[0] : 0;
+    return remember(cell ? cell[0] : 0);
 }
 
 static bool ascii_word_byte(unsigned char ch) {
@@ -20877,6 +20954,10 @@ std::vector<Match> Overlay::find_matches(int only_y,
             return background;
         }
     }
+    // The composed/background recursion above has selected this pass's
+    // source view. Reuse cell decisions only until this match pass returns;
+    // view/mask revisions invalidate entries before any nested read resumes.
+    CellReadCacheScope cell_reads(*this);
     const auto tooltip_widget = captured_native_tooltip_widget(*gps_);
     auto read_row = [&](int row_y) {
         std::string rendered(static_cast<size_t>(gps_->dimx), ' ');

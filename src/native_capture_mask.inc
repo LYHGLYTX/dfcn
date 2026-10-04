@@ -148,6 +148,7 @@ public:
         previous_ = active_;
         active_ = this;
         installed_ = true;
+        NativeUiReadScope::invalidate_reads();
     }
 
     ~NativeCaptureMaskScope() noexcept { reset(); }
@@ -167,6 +168,7 @@ public:
         while (*link && *link != this) link = &(*link)->previous_;
         if (*link == this) *link = previous_;
         installed_ = false;
+        NativeUiReadScope::invalidate_reads();
     }
 };
 

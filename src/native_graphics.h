@@ -9,12 +9,25 @@ namespace dfcn {
 class NativeUiReadScope {
 public:
     inline static thread_local const NativeUiReadScope *active = nullptr;
+    // Matching passes borrow this TLS address once, then read the revision
+    // without a dynamic TLS lookup for every character. A new view, even at
+    // a reused scope address, must invalidate the pass's cached cell choices.
+    inline static thread_local uint64_t read_revision = 0;
+    static void invalidate_reads() noexcept { ++read_revision; }
     NativeUiReadScope(const void *graphics, const std::vector<uint8_t> *base_cells)
-        : graphics_(graphics), base_cells_(base_cells), previous_(active) { active = this; }
+        : graphics_(graphics), base_cells_(base_cells), previous_(active) {
+        active = this;
+        invalidate_reads();
+    }
     ~NativeUiReadScope() { reset(); }
     NativeUiReadScope(const NativeUiReadScope &) = delete;
     NativeUiReadScope &operator=(const NativeUiReadScope &) = delete;
-    void reset() { if (active == this) active = previous_; }
+    void reset() {
+        if (active == this) {
+            active = previous_;
+            invalidate_reads();
+        }
+    }
     static bool base_at(const void *graphics, size_t at) {
         return active && active->graphics_ == graphics && active->base_cells_ &&
             at < active->base_cells_->size() && (*active->base_cells_)[at];
