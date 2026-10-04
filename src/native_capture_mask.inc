@@ -192,7 +192,8 @@ static std::vector<SDL_Rect> native_capture_mask_regions(const graphicst *gps) {
         if (!screen) continue;
         for (int y = 0; y <= gps->dimy - 3; ++y)
             for (int x = 0; x <= gps->dimx - 4; ++x)
-                if (native_capture_logo_at(gps, screen, x, y))
+                if (screen[(static_cast<size_t>(x) * gps->dimy + y) * 8] == 0xb3 &&
+                        native_capture_logo_at(gps, screen, x, y))
                     native_capture_append_region(regions, SDL_Rect{x, y, 4, 3});
     }
     return regions;
