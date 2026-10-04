@@ -23,6 +23,29 @@ static bool native_capture_grid_valid(const graphicst *gps) {
         gps->dimy > 0 && gps->dimy <= 1000;
 }
 
+// The caller has bounded x/y. A cell can belong to an ASCII logo only at
+// the positions carrying its current character; ordinary glyphs need no
+// neighboring-anchor reads. Still prove the entire logo before ignoring it.
+static bool native_capture_logo_owns_cell(const graphicst *gps,
+        const unsigned char *screen, int x, int y) {
+    if (!screen) return false;
+    const size_t at = static_cast<size_t>(x) * gps->dimy + y;
+    switch (screen[at * 8]) {
+    case 0xb3:
+        for (int dy = 0; dy < 3; ++dy)
+            for (const int dx : {0, 3})
+                if (native_capture_logo_at(gps, screen, x - dx, y - dy)) return true;
+        return false;
+    case 'D': return native_capture_logo_at(gps, screen, x - 1, y);
+    case 'F': return native_capture_logo_at(gps, screen, x - 2, y);
+    case 'H': return native_capture_logo_at(gps, screen, x - 1, y - 1);
+    case 'a': return native_capture_logo_at(gps, screen, x - 2, y - 1);
+    case 'c': return native_capture_logo_at(gps, screen, x - 1, y - 2);
+    case 'k': return native_capture_logo_at(gps, screen, x - 2, y - 2);
+    default: return false;
+    }
+}
+
 static bool native_capture_rect_contains(const SDL_Rect &box, int x, int y) {
     return x >= box.x && x < box.x + box.w &&
         y >= box.y && y < box.y + box.h;
@@ -183,16 +206,8 @@ static bool native_capture_ignored_cell(const graphicst *gps, int x, int y) {
             if (ignored || scope->graphics_ == gps) return ignored;
         }
     if (native_dfhack_logo_owns_cell(gps, x, y)) return true;
-    // Only twelve possible anchors can own this particular cell. Avoid a
-    // full-grid scan in the glyph and individual-cell hot paths.
-    for (int dy = 0; dy < 3; ++dy)
-        for (int dx = 0; dx < 4; ++dx) {
-            const int left = x - dx, top = y - dy;
-            if (native_capture_logo_at(gps, gps->screen, left, top) ||
-                    (gps->top_in_use &&
-                    native_capture_logo_at(gps, gps->screen_top, left, top))) return true;
-        }
-    return false;
+    return native_capture_logo_owns_cell(gps, gps->screen, x, y) ||
+        (gps->top_in_use && native_capture_logo_owns_cell(gps, gps->screen_top, x, y));
 }
 
 static int native_capture_read_pixels(const graphicst *gps, SDL_Renderer *renderer,

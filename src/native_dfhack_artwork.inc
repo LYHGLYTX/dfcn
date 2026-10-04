@@ -34,6 +34,9 @@ static std::array<NativeDfhackTileWrite, 12> g_native_dfhack_tile_writes{};
 static size_t g_native_dfhack_tile_next = 0, g_native_dfhack_tile_count = 0;
 static std::array<NativeDfhackLogoCapture, 16> g_native_dfhack_logos{};
 static size_t g_native_dfhack_logo_count = 0, g_native_dfhack_logo_next = 0;
+// Empty capture queries occur for every native glyph. Avoid taking the
+// record mutex until a complete logo has actually been published.
+static std::atomic_bool g_native_dfhack_has_logos{false};
 // DFHack paints its window and divider characters as textured tiles too.
 // Keep their original CP437 identity without reviving covered old artwork.
 static std::vector<NativeDfhackTileWrite> g_native_dfhack_border_tiles;
@@ -52,6 +55,7 @@ static void clear_native_dfhack_logo_captures() {
     g_native_dfhack_logo_count = g_native_dfhack_logo_next = 0;
     g_native_dfhack_border_tiles.clear();
     g_native_dfhack_border_dimx = g_native_dfhack_border_dimy = 0;
+    g_native_dfhack_has_logos.store(false, std::memory_order_release);
 }
 
 static void record_native_dfhack_tile_write(const graphicst *gps,
@@ -129,9 +133,11 @@ static void record_native_dfhack_tile_write(const graphicst *gps,
         g_native_dfhack_logo_next = (g_native_dfhack_logo_next + 1) %
             g_native_dfhack_logos.size();
     }
+    g_native_dfhack_has_logos.store(true, std::memory_order_release);
 }
 
 static std::vector<NativeDfhackLogoCapture> native_dfhack_logo_captures() {
+    if (!g_native_dfhack_has_logos.load(std::memory_order_acquire)) return {};
     std::lock_guard<std::mutex> lock(g_native_dfhack_logo_mutex);
     return {g_native_dfhack_logos.begin(),
         g_native_dfhack_logos.begin() + g_native_dfhack_logo_count};
@@ -178,7 +184,8 @@ static bool native_dfhack_logo_still_visible(const graphicst *gps,
 
 static std::vector<SDL_Rect> native_dfhack_logo_regions(const graphicst *gps) {
     std::vector<SDL_Rect> regions;
-    if (!native_dfhack_logo_grid_valid(gps)) return regions;
+    if (!native_dfhack_logo_grid_valid(gps) ||
+            !g_native_dfhack_has_logos.load(std::memory_order_acquire)) return regions;
     std::lock_guard<std::mutex> lock(g_native_dfhack_logo_mutex);
     for (size_t i = 0; i < g_native_dfhack_logo_count; ++i) {
         const auto &capture = g_native_dfhack_logos[i];
@@ -192,7 +199,8 @@ static std::vector<SDL_Rect> native_dfhack_logo_regions(const graphicst *gps) {
 
 static bool native_dfhack_logo_owns_cell(const graphicst *gps, int x, int y) {
     if (!native_dfhack_logo_grid_valid(gps) || x < 0 || y < 0 ||
-            x >= gps->dimx || y >= gps->dimy) return false;
+            x >= gps->dimx || y >= gps->dimy ||
+            !g_native_dfhack_has_logos.load(std::memory_order_acquire)) return false;
     std::lock_guard<std::mutex> lock(g_native_dfhack_logo_mutex);
     for (size_t i = 0; i < g_native_dfhack_logo_count; ++i) {
         const auto &capture = g_native_dfhack_logos[i];

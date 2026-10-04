@@ -195,35 +195,43 @@ static size_t capture_native_announcement_page_rows(const void *paragraph) {
 
 static void capture_native_help_cell(graphicst *gps) {
     try {
-        NativeCaptureMaskScope capture_mask(gps);
-        const auto settings = native_ui_settings();
-        if (settings && settings->classic && gps && gps->screen &&
-            gps->dimx > 0 && gps->dimx <= 1000 && gps->dimy > 0 && gps->dimy <= 1000 &&
-            gps->screenx >= 0 && gps->screenx < gps->dimx &&
-            gps->screeny >= 0 && gps->screeny < gps->dimy &&
-            gps->screenx >= gps->clipx[0] && gps->screenx <= gps->clipx[1] &&
-            gps->screeny >= gps->clipy[0] && gps->screeny <= gps->clipy[1]) {
-                const auto epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
-                std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
-                if (!g_native_help_page || g_native_help_page_epoch != epoch ||
-                    g_native_help_page_dimx != gps->dimx || g_native_help_page_dimy != gps->dimy) {
-                    g_native_help_page = std::make_shared<NativeTooltipPage>(*gps);
-                    std::fill(g_native_help_page->cells.begin(), g_native_help_page->cells.end(), 0);
-                    g_native_help_page_epoch = epoch;
-                    g_native_help_page_dimx = gps->dimx;
-                    g_native_help_page_dimy = gps->dimy;
-                }
-                // Save each cell immediately before its first top-layer write,
-                // not the whole page at the first (possibly unrelated) tile.
-                // Only recognized help rectangles consume these saved bytes.
-                const size_t at = static_cast<size_t>(gps->screenx) * gps->dimy + gps->screeny;
-                if (!g_native_help_page->cells[at]) {
-                    std::memcpy(g_native_help_page->screen.data() + at * 8, gps->screen + at * 8, 8);
-                    if (!g_native_help_page->texture.empty())
-                        g_native_help_page->texture[at] = gps->screentexpos ? gps->screentexpos[at] : 0;
-                    g_native_help_page->cells[at] = 1;
-                }
+        if (!native_capture_grid_valid(gps) || !gps->screen ||
+            gps->screenx < 0 || gps->screenx >= gps->dimx ||
+            gps->screeny < 0 || gps->screeny >= gps->dimy ||
+            gps->screenx < gps->clipx[0] || gps->screenx > gps->clipx[1] ||
+            gps->screeny < gps->clipy[0] || gps->screeny > gps->clipy[1]) return;
+        // Graphical mode needs no help-background capture. Read just this
+        // flag instead of copying all of the UI's skin/texture settings.
+        const auto classic = native_ui_classic();
+        if (!classic || !*classic) return;
+        const auto epoch = g_embark_item_capture_epoch.load(std::memory_order_acquire);
+        std::lock_guard<std::mutex> lock(g_native_drawn_text_mutex);
+        if (!g_native_help_page || g_native_help_page_epoch != epoch ||
+            g_native_help_page_dimx != gps->dimx || g_native_help_page_dimy != gps->dimy) {
+            g_native_help_page = std::make_shared<NativeTooltipPage>(*gps);
+            std::fill(g_native_help_page->cells.begin(), g_native_help_page->cells.end(), 0);
+            g_native_help_page_epoch = epoch;
+            g_native_help_page_dimx = gps->dimx;
+            g_native_help_page_dimy = gps->dimy;
         }
+        // Save each cell immediately before its first top-layer write.
+        // Only recognized help rectangles consume these saved bytes.
+        const size_t at = static_cast<size_t>(gps->screenx) * gps->dimy + gps->screeny;
+        if (g_native_help_page->cells[at]) return;
+        // The page constructor masks the full snapshot once per epoch. Each
+        // later tile needs only a local logo lookup, not another grid scan.
+        const bool ignored = native_capture_ignored_cell(gps, gps->screenx, gps->screeny);
+        auto *destination = g_native_help_page->screen.data() + at * 8;
+        if (ignored) {
+            std::memset(destination, 0, 8);
+            destination[0] = ' ';
+        } else {
+            std::memcpy(destination, gps->screen + at * 8, 8);
+        }
+        if (!g_native_help_page->texture.empty())
+            g_native_help_page->texture[at] = !ignored && gps->screentexpos
+                ? gps->screentexpos[at] : 0;
+        g_native_help_page->cells[at] = 1;
     } catch (...) {}
 }
 static void capture_native_help_tile(graphicst *gps, long tile) {
