@@ -914,7 +914,7 @@ void Overlay::layout_toolbar_tooltip(SDL_Renderer *renderer) {
             match.layout_font_pixels = unified_font_pixels();
             match.layout_lock_font_pixels = true;
             match.layout_visual_height_pixels = 0;
-            match.layout_line_height_pixels = tile_h;
+            match.layout_line_height_pixels = native_text_row_height(gps_);
             match.native_split_text = match.native_split_duplicate = false;
             match.native_split_top_y = -1;
         }
@@ -1110,19 +1110,7 @@ void Overlay::layout_toolbar_tooltip(SDL_Renderer *renderer) {
         tooltip_layout_cache_key_widths_ = key_widths;
         tooltip_layout_cache_pixels_ = pixels;
     }
-    int line_height = tile_h;
-    for (const auto &line : lines) {
-        if (line.empty()) continue;
-        const auto *glyph = get_glyph_texture(renderer, line, width, tile_h, pixels, 0, true);
-        if (!glyph || !glyph->texture) continue;
-        line_height = std::max(line_height, glyph->line_height);
-    }
-    for (size_t i = 0; i < keys.size(); ++i) {
-        const Match &key = prepared_matches_[keys[i]];
-        const auto *glyph = get_glyph_texture(renderer, key.target,
-            key_widths[i], tile_h, pixels, 0, true);
-        if (glyph && glyph->texture) line_height = std::max(line_height, glyph->line_height);
-    }
+    const int line_height = native_text_row_height(gps_);
     const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
     const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
     const int box_width = width + 2 * padding;

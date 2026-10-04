@@ -54,7 +54,6 @@ std::vector<Match> Overlay::layout_save_confirmation(SDL_Renderer *renderer) {
     };
     const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
     const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
-    const int padding = std::max(0, config_.horizontal_padding);
     const auto source_top = [tile_h](const Match &match) {
         return match.native_split_text
             ? match.native_split_top_y * tile_h + tile_h / 2 : match.y * tile_h;
@@ -187,8 +186,7 @@ std::vector<Match> Overlay::layout_save_confirmation(SDL_Renderer *renderer) {
             origin_x + button.box.x * tile_w, button.box.w * tile_w,
             button.box.y * tile_h + (button.box.h - 1) * tile_h / 2, true});
 
-    int pixels = std::clamp(std::max(config_.min_font_pixels,
-        static_cast<int>(tile_h * config_.font_scale)), 1, tile_h);
+    const int pixels = unified_font_pixels();
     if (inactive_copy) {
         // These warnings are three independent native lines. Keep each
         // sentence's baseline and the title's shared left inset; joining
@@ -221,7 +219,6 @@ std::vector<Match> Overlay::layout_save_confirmation(SDL_Renderer *renderer) {
             std::string(static_cast<size_t>(gps_->dimx), ' '));
         if (!append_bounded_paragraph(std::move(rows), text, scratch, fitted, -1,
                 text_right, text_right, colors, false, left, std::nullopt, {})) return {};
-        pixels = fitted.front().layout_font_pixels;
         for (Match &row : fitted) {
             if (row.target.empty()) continue;
             fields.push_back({matches.size(), std::move(row), origin_x + left * tile_w,
@@ -230,21 +227,9 @@ std::vector<Match> Overlay::layout_save_confirmation(SDL_Renderer *renderer) {
             field.top = field.match.layout_y * tile_h + question_top % tile_h;
         }
     }
-    for (; pixels > 0; --pixels) {
-        bool fits = true;
-        for (const Field &field : fields) {
-            const int width = field.width - 2 * padding;
-            if (width <= 0) { fits = false; break; }
-            const auto *glyph = get_glyph_texture(renderer, field.match.target, width,
-                tile_h, pixels, 0, true);
-            if (!glyph || !glyph->texture || glyph->line_height > tile_h || glyph->width > width) {
-                fits = false;
-                break;
-            }
-        }
-        if (fits) break;
-    }
-    if (pixels == 0) return {};
+    // The native dialog owns each field and baseline. Font ink may extend
+    // beyond one row without invalidating its translation; prose already
+    // wraps in the shared paragraph layout at the same UI font size.
 
     std::vector<Match> result;
     for (size_t i : owned) {

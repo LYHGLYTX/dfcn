@@ -244,7 +244,6 @@ bool Overlay::layout_embark_introduction(SDL_Renderer *renderer) {
     {
         if (!set_font_pixel_size(pixels)) return false;
         std::unordered_map<uint32_t, Metrics> glyphs;
-        int ink_top = 0, ink_bottom = 0;
         for (const auto &paragraph : codepoints) {
             for (uint32_t cp : paragraph) {
                 if (glyphs.contains(cp)) continue;
@@ -254,14 +253,10 @@ bool Overlay::layout_embark_introduction(SDL_Renderer *renderer) {
                 if (FT_Render_Glyph(face_->glyph, FT_RENDER_MODE_NORMAL) != 0) return false;
                 metrics.left = face_->glyph->bitmap_left;
                 metrics.right = metrics.left + static_cast<int>(face_->glyph->bitmap.width);
-                ink_top = std::min(ink_top, -face_->glyph->bitmap_top);
-                ink_bottom = std::max(ink_bottom, -face_->glyph->bitmap_top +
-                    static_cast<int>(face_->glyph->bitmap.rows));
                 glyphs.emplace(cp, metrics);
             }
         }
-        const int line_height = std::max(tile_h,
-            ink_bottom - ink_top + 2);
+        const int line_height = native_text_row_height(gps_);
         const int gap = std::max(2, pixels / 2);
         int offset = 0;
         bool fits = true;
@@ -313,19 +308,17 @@ bool Overlay::layout_embark_introduction(SDL_Renderer *renderer) {
             }
         }
         if (!fits) return false;
-        // Shared font metrics choose line advance, never the modal's width.
-        int actual_line_height = line_height;
+        // Texture ink retains the shared font size; the native modal keeps
+        // its row spacing independently of each line's bitmap height.
         for (const Match &line : output) {
             const auto *glyph = get_glyph_texture(renderer, line.target,
                 width, line_height, pixels, 0, true);
             if (!glyph || !glyph->texture) return false;
-            actual_line_height = std::max(actual_line_height, glyph->line_height);
         }
         const int box_width = width + 2 * padding;
         const int box_x = origin_x + left * tile_w;
         const int box_y = origin_y + top * tile_h;
-        for (size_t i = 0; i < output.size(); ++i) {
-            Match &line = output[i];
+        for (Match &line : output) {
             line.layout_x = left;
             line.layout_length = right - left;
             line.layout_box_pixel_x = box_x;
@@ -333,8 +326,7 @@ bool Overlay::layout_embark_introduction(SDL_Renderer *renderer) {
             line.layout_clip_right = right;
             line.layout_native_clip = SDL_Rect{box_x, box_y, box_width, height};
             line.layout_y = top;
-            line.layout_pixel_y += static_cast<int>(i) * (actual_line_height - line_height);
-            line.layout_line_height_pixels = actual_line_height;
+            line.layout_line_height_pixels = line_height;
             line.layout_fixed_baseline = true;
         }
         std::erase_if(prepared_matches_, [](const Match &match) {

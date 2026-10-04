@@ -164,8 +164,9 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 return Match{x, y, static_cast<int>(text.size()), kAnnouncementListRule,
                     {}, std::string(text)};
             };
-            // Staging layout never changes the live record's source ownership
-            // until its entire translation fits its own native row allocation.
+            // Independent log records retain their native row allocation.
+            // Shared layout owns row advance and font-reference placement;
+            // only additional wrapped lines can consume another record.
             auto layout_rows = screen_rows;
             for (int y = body_top; y < bottom; ++y) {
                 const auto first = record_row(y);
@@ -259,32 +260,15 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                         if (std::string_view(".!?").find(candidate_source.back()) != std::string_view::npos) break;
                     }
                 }
-                const SDL_Rect clip{origin_x + first->x * tile_w, origin_y + first->y * tile_h,
-                    (right - first->x) * tile_w, static_cast<int>(rows.size()) * tile_h};
-                for (auto &row : rows) row.layout_native_clip = clip;
+                const SDL_Rect viewport{origin_x + first->x * tile_w,
+                    origin_y + body_top * tile_h, (right - first->x) * tile_w,
+                    (bottom - body_top) * tile_h};
+                for (auto &row : rows) row.layout_native_clip = viewport;
                 std::vector<Match> output;
                 const bool fitted = target && append_bounded_paragraph(rows, *target,
                     layout_rows, output, -1, right, right, target_colors, false, first->x) &&
                     output.size() <= rows.size();
                 if (fitted) {
-                    // The compact log allocates native rows to each record,
-                    // not the paragraph fitter's enlarged font-reference box.
-                    // Keep its row spacing and the shared font size: otherwise
-                    // every one-row report falls back to English at font_scale
-                    // 1.1 while a two-row cancellation happens to survive.
-                    // Clip at the actual list viewport, allowing the complete
-                    // glyph ink around each baseline instead of cropping it
-                    // to an artificial one-record font box.
-                    const SDL_Rect viewport{origin_x + first->x * tile_w,
-                        origin_y + body_top * tile_h, (right - first->x) * tile_w,
-                        (bottom - body_top) * tile_h};
-                    for (size_t line = 0; line < output.size(); ++line) {
-                        auto &row = output[line];
-                        row.layout_y = first->y + static_cast<int>(line);
-                        row.layout_pixel_y = 0;
-                        row.layout_line_height_pixels = tile_h;
-                        row.layout_native_clip = viewport;
-                    }
                     for (auto &row : output)
                         if (only_y < 0 || only_y == row.y) result.push_back(std::move(row));
                 } else {

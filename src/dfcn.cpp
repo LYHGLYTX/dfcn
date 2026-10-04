@@ -960,6 +960,13 @@ struct ColoredText {
     Uint8 r = 255, g = 255, b = 255;
 };
 
+// Native controls advance their cursor by a grid row. Font reference bounds
+// describe glyph placement inside that row, never its allocation or whether
+// an already translated field may be displayed.
+static int native_text_row_height(const graphicst *graphics) {
+    return graphics && graphics->tile_pixel_y > 0 ? graphics->tile_pixel_y : 16;
+}
+
 struct GlyphTexture {
     struct Tile {
         SDL_Texture *texture = nullptr;
@@ -971,9 +978,10 @@ struct GlyphTexture {
     int width = 0;
     int height = 0;
     int pixel_size = 0;
-    // Content-independent line box and the tight bitmap's offset within it.
-    // A blinking underscore changes the bitmap, never the text baseline.
+    // Keep native layout advance separate from the font reference envelope.
+    // Tall ink/cursors never turn one native row into two allocated rows.
     int line_height = 0;
+    int font_reference_height = 0;
     int line_offset_y = 0;
     uint64_t last_used = 0;
 
@@ -981,7 +989,7 @@ struct GlyphTexture {
         // The full glyph run owns its drawing area. Font size and bitmap
         // dimensions never depend on the English caption's allocation.
         return {left ? line.x : line.x + (line.w - width) / 2,
-            line.y + (line.h - line_height) / 2 + line_offset_y,
+            line.y + (line.h - font_reference_height) / 2 + line_offset_y,
             width, height};
     }
     void destroy() {
@@ -4114,7 +4122,7 @@ private:
     void ensure_adventure_background_matches();
     void prepare_adventure_hover_suppression();
     void draw_hover_clipped_match(SDL_Renderer *renderer, const Match &match);
-    SDL_Rect native_text_draw_region(const Match &match) const;
+    SDL_Rect native_text_draw_region(const Match &match, bool *owner_bounds = nullptr) const;
     SDL_Rect native_paragraph_draw_region(const std::vector<Match> &rows) const;
     void draw_help_clipped_match(SDL_Renderer *renderer, const Match &match,
         const std::vector<SDL_Rect> &frames,
@@ -19639,7 +19647,7 @@ const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
         }
         bool font_ready = false;
         if (!targets.empty() && set_font_pixel_size(next.font_pixels)) {
-            int ink_top = INT32_MAX, ink_bottom = INT32_MIN;
+            int ink_top = INT32_MAX;
             int widest_glyph = 0;
             for (auto &[cp, metrics] : glyphs) {
                 metrics = {};
@@ -19653,17 +19661,12 @@ const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
                     metrics.left = bitmap->left;
                     metrics.right = metrics.left + static_cast<int>(bitmap->width);
                     ink_top = std::min(ink_top, -bitmap->top);
-                    ink_bottom = std::max(ink_bottom,
-                        -bitmap->top + static_cast<int>(bitmap->rows));
                 }
                 widest_glyph = std::max(widest_glyph,
                     std::max(metrics.advance, metrics.right) - std::min(0, metrics.left));
             }
             if (ink_top != INT32_MAX && widest_glyph <= max_pixels) {
-                const auto reference = font_line_metrics(next.font_pixels);
-                next.line_height_pixels = std::max({gps_->tile_pixel_y,
-                    reference ? reference->bottom - reference->top + 2 : 0,
-                    ink_bottom - ink_top + 2});
+                next.line_height_pixels = native_text_row_height(gps_);
                 font_ready = true;
             }
         }
@@ -27164,9 +27167,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                             static_cast<int>(rendered_lines.size()));
                     }
                     const int visible_target_lines = last_target_line - first_target_line;
-                    const auto line_metrics = font_line_metrics(font_pixels);
-                    const int line_height = std::max(gps_->tile_pixel_y,
-                        line_metrics ? line_metrics->bottom - line_metrics->top + 2 : font_pixels + 2);
+                    const int line_height = native_text_row_height(gps_);
                     const int display_top = std::clamp(
                         poetic_description_rows.front().y * gps_->tile_pixel_y, 0,
                         std::max(0, gps_->dimy * gps_->tile_pixel_y -
@@ -27817,9 +27818,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 static_cast<int>(rendered_lines.size()));
         }
         const int visible_target_lines = last_target_line - first_target_line;
-        const auto line_metrics = font_line_metrics(font_pixels);
-        const int line_height = std::max(gps_->tile_pixel_y,
-            line_metrics ? line_metrics->bottom - line_metrics->top + 2 : font_pixels + 2);
+        const int line_height = native_text_row_height(gps_);
         const int display_top = std::clamp(
             paragraph.rows.front().y * gps_->tile_pixel_y, 0,
             std::max(0, gps_->dimy * gps_->tile_pixel_y -
@@ -28576,9 +28575,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 8, (span_pixels * 2) / std::max(1, font_pixels));
             const int line_count = std::max(1,
                 (total_units + capacity_units - 1) / capacity_units);
-            const auto metrics = font_line_metrics(font_pixels);
-            const int line_height = std::max(gps_->tile_pixel_y,
-                metrics ? metrics->bottom - metrics->top + 2 : font_pixels);
+            const int line_height = native_text_row_height(gps_);
             const int display_top = std::max(personality_display_bottom,
                 block.rows.front().y * gps_->tile_pixel_y);
             personality_display_bottom = display_top + line_count * line_height;
@@ -38343,21 +38340,6 @@ bool Overlay::layout_adventure_setup_selection(SDL_Renderer *renderer) {
         const int available_pixels = (right - left) * tile_w -
             2 * config_.horizontal_padding;
         if (origins.empty() || available_pixels <= 0) return true;
-        int shared_font = font_pixels;
-        for (; shared_font > 0; --shared_font) {
-            bool fits = true;
-            for (const Match *origin : origins) {
-                const GlyphTexture *glyph = get_glyph_texture(renderer, origin->target,
-                    available_pixels, tile_h, shared_font, 0, true);
-                if (!glyph || !glyph->texture) return true;
-                if (glyph->width > available_pixels || glyph->line_height > tile_h) {
-                    fits = false;
-                    break;
-                }
-            }
-            if (fits) break;
-        }
-        if (shared_font == 0) return true;
         for (Match *origin : origins) {
             origin->layout_x = left;
             origin->layout_length = right - left;
@@ -38365,7 +38347,7 @@ bool Overlay::layout_adventure_setup_selection(SDL_Renderer *renderer) {
             origin->layout_box_pixel_width = 0;
             origin->layout_clip_right = right;
             origin->layout_left = true;
-            origin->layout_font_pixels = shared_font;
+            origin->layout_font_pixels = font_pixels;
             origin->layout_lock_font_pixels = true;
         }
         // The two card paragraphs already own their captured source rows and
@@ -43864,8 +43846,7 @@ GlyphTexture Overlay::rasterize(SDL_Renderer *renderer, const std::string &text,
         int pen_x = 0;
         int pen_y = 0;
         measured_width = 0;
-        const int native_row_height = gps_ && gps_->tile_pixel_y > 0 ? gps_->tile_pixel_y : 16;
-        const int line_step = std::max(native_row_height, reference_height + 2);
+        const int line_step = native_text_row_height(gps_);
         FT_UInt previous = 0;
         FT_Face previous_face = nullptr;
         const auto new_line = [&] {
@@ -43920,7 +43901,7 @@ GlyphTexture Overlay::rasterize(SDL_Renderer *renderer, const std::string &text,
             previous_face = glyph.face;
         }
         measured_width = std::max({measured_width, pen_x, 1});
-        total_line_height = pen_y + reference_height;
+        total_line_height = pen_y + native_text_row_height(gps_);
 
         // Actual hinted ink, rather than nominal ascender/descender, defines
         // precisely the coverage copied into the texture below.
@@ -44000,6 +43981,7 @@ GlyphTexture Overlay::rasterize(SDL_Renderer *renderer, const std::string &text,
     result.height = raster_height;
     result.pixel_size = chosen_size;
     result.line_height = total_line_height;
+    result.font_reference_height = total_line_height - native_text_row_height(gps_) + reference_height;
     result.line_offset_y = ink_min_y - line_metrics.top - 1;
     return result;
 }
@@ -45291,12 +45273,13 @@ void Overlay::capture(SDL_Renderer *renderer) {
     SDL_FreeSurface(surface);
 }
 
-SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
+SDL_Rect Overlay::native_text_draw_region(const Match &match, bool *owner_bounds) const {
     NativeCaptureMaskScope capture_mask(gps_);
     SDL_Rect region{0, 0, gps_->screen_pixel_x, gps_->screen_pixel_y};
     const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
     const int origin_x = (gps_->screen_pixel_x - tile_w * gps_->dimx) / 2;
     const int origin_y = (gps_->screen_pixel_y - tile_h * gps_->dimy) / 2;
+    bool bounded_owner = false;
     const auto intersect = [&](const SDL_Rect &bounds) {
         SDL_Rect visible{};
         region = SDL_IntersectRect(&region, &bounds, &visible)
@@ -45310,8 +45293,10 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
         // A structured owner can move/color individual runs within its box.
         // Those measured run boxes must never replace the native allocation.
         intersect(*match.layout_native_clip);
+        bounded_owner = true;
     } else if (match.native_picture_caption_box) {
         intersect(pixels(*match.native_picture_caption_box));
+        bounded_owner = true;
     } else if (match.x >= 0 && match.y >= 0 && match.y < gps_->dimy &&
             match.length > 0 && match.length <= gps_->dimx - match.x) {
         // Query real widget skins first, then its enclosing native panel.
@@ -45319,19 +45304,24 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
         if (const auto button = native_button_text_rect(*gps_, match.x,
                 match.x + match.length, match.y)) {
             intersect(pixels(*button));
+            bounded_owner = true;
         } else if (const auto tab = native_classic_tab_text_span(*gps_, match.x, match.y);
                 tab && tab->first <= match.x && tab->second >= match.x + match.length) {
             intersect({origin_x + tab->first * tile_w,
                 origin_y + match.y * tile_h, (tab->second - tab->first) * tile_w,
                 (match.native_split_text ? 2 : 1) * tile_h});
+            bounded_owner = true;
         } else if (const auto button = match.layout_reflowed_paragraph
                 ? std::nullopt : native_caption_button_rect(match)) {
             intersect(*button);
+            bounded_owner = true;
         } else {
             const NativePanelBorders borders(*gps_);
             if (const auto panel = native_panel_interior(borders, *gps_,
-                    match.x, match.x + match.length, match.y))
+                    match.x, match.x + match.length, match.y)) {
                 intersect(pixels(*panel));
+                bounded_owner = true;
+            }
         }
     }
     // A paragraph's source rows can each have their own one-row writer clip.
@@ -45342,6 +45332,15 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
     if (!match.layout_reflowed_paragraph) {
         if (const auto draw_clip = native_captured_text_clip(*gps_, match)) {
             SDL_Rect writer_clip = pixels(*draw_clip);
+            // A one-row addst clip limits source-cell writes. The complete
+            // current control/panel owns glyph ink around that baseline;
+            // font ascenders must not be cropped to the source tile. Explicit
+            // control viewports and wider native scroll clips remain binding.
+            if (bounded_owner && !match.layout_native_clip &&
+                    draw_clip->y == match.y && draw_clip->h == 1) {
+                writer_clip.y = region.y;
+                writer_clip.h = region.h;
+            }
             if (match.layout_reflowed_control && match.layout_native_clip &&
                     match.native_picture_caption_box) {
                 const auto &box = *match.native_picture_caption_box;
@@ -45365,6 +45364,7 @@ SDL_Rect Overlay::native_text_draw_region(const Match &match) const {
         const int right = origin_x + match.layout_clip_right * tile_w;
         intersect({left, 0, std::max(0, right - left), gps_->screen_pixel_y});
     }
+    if (owner_bounds) *owner_bounds = bounded_owner;
     return region;
 }
 
@@ -45373,24 +45373,40 @@ SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) c
     if (rows.empty()) return {};
     Match owner = rows.front();
     owner.layout_reflowed_paragraph = true;
-    SDL_Rect region = native_text_draw_region(owner);
+    bool owner_bounds = false;
+    SDL_Rect region = native_text_draw_region(owner, &owner_bounds);
     // An explicit paragraph/control viewport already bounds the complete
     // layout. Otherwise combine all current source writes, not just the
     // first row: vertical row clips form one paragraph, while every row's
     // horizontal limit still protects the common column and scroll gutter.
     if (owner.layout_native_clip) return region;
     std::optional<SDL_Rect> writer_region;
+    std::optional<std::pair<int, int>> viewport_rows;
     for (const Match &row : rows) {
         const auto clip = native_captured_text_clip(*gps_, row);
         if (!clip) continue;
+        SDL_Rect allocation = *clip;
+        if (owner_bounds && allocation.y == row.y && allocation.h == 1) {
+            const int tile_h = native_text_row_height(gps_);
+            const int origin_y = (gps_->screen_pixel_y - tile_h * gps_->dimy) / 2;
+            allocation.y = (region.y - origin_y) / tile_h;
+            allocation.h = region.h / tile_h;
+        } else if (owner_bounds) {
+            const int top = clip->y, bottom = clip->y + clip->h;
+            if (!viewport_rows) viewport_rows = std::pair{top, bottom};
+            else {
+                viewport_rows->first = std::max(viewport_rows->first, top);
+                viewport_rows->second = std::min(viewport_rows->second, bottom);
+            }
+        }
         if (!writer_region) {
-            writer_region = clip;
+            writer_region = allocation;
             continue;
         }
-        const int left = std::max(writer_region->x, clip->x);
-        const int right = std::min(writer_region->x + writer_region->w, clip->x + clip->w);
-        const int top = std::min(writer_region->y, clip->y);
-        const int bottom = std::max(writer_region->y + writer_region->h, clip->y + clip->h);
+        const int left = std::max(writer_region->x, allocation.x);
+        const int right = std::min(writer_region->x + writer_region->w, allocation.x + allocation.w);
+        const int top = std::min(writer_region->y, allocation.y);
+        const int bottom = std::max(writer_region->y + writer_region->h, allocation.y + allocation.h);
         writer_region = SDL_Rect{left, top, std::max(0, right - left), bottom - top};
     }
     if (writer_region) {
@@ -45402,6 +45418,11 @@ SDL_Rect Overlay::native_paragraph_draw_region(const std::vector<Match> &rows) c
             writer_region->h * tile_h};
         SDL_Rect visible{};
         region = SDL_IntersectRect(&region, &pixels, &visible) ? visible : SDL_Rect{};
+        if (viewport_rows) {
+            const SDL_Rect viewport{region.x, origin_y + viewport_rows->first * tile_h,
+                region.w, std::max(0, viewport_rows->second - viewport_rows->first) * tile_h};
+            region = SDL_IntersectRect(&region, &viewport, &visible) ? visible : SDL_Rect{};
+        }
     }
     return region;
 }

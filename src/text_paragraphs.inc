@@ -113,11 +113,12 @@ bool Overlay::append_bounded_paragraph(std::vector<Match> rows,
     if (clip_right >= 0) right = std::min(right, clip_right);
     left = std::max(left, (native_region.x - origin_x + tile_w - 1) / tile_w);
     right = std::min(right, (native_region.x + native_region.w - origin_x) / tile_w);
-    const int native_top = origin_y + first_y * tile_h;
+    int native_top = native_region.y;
     int native_bottom = native_region.y + native_region.h;
     if (scrollable) {
         // These rows are the visible native scroll allocation, not extra
         // space that the translation may grow into below the viewport.
+        native_top = std::max(native_top, origin_y + first_y * tile_h);
         native_bottom = std::min(native_bottom, origin_y + (rows.back().y + 1) * tile_h);
     }
     const SDL_Rect paragraph_region{origin_x + left * tile_w, native_top,
@@ -130,9 +131,9 @@ bool Overlay::append_bounded_paragraph(std::vector<Match> rows,
         2 * config_.horizontal_padding - 2;
     if (span_pixels <= 0) return false;
     const int font_pixels = unified_font_pixels();
-    const auto line_metrics = font_line_metrics(font_pixels);
-    const int line_height = std::max(gps_->tile_pixel_y,
-        line_metrics ? line_metrics->bottom - line_metrics->top + 2 : font_pixels + 2);
+    // Native row spacing belongs to the widget. A taller font bitmap can
+    // extend around its baseline without creating additional layout rows.
+    const int line_height = native_text_row_height(gps_);
     // A stable paragraph repeats the same fixed-size kerning and wrapping
     // during early suppression and final drawing. Cache only that
     // pure result; none of its source rows, ownership or coordinates survive.
