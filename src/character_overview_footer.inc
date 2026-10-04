@@ -110,6 +110,28 @@ void Overlay::append_character_overview_footer(
         const auto *cell = cell_at(x, y, &top);
         return cell ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : -1;
     };
+    auto paired_rows = [&](int x, int y, int end) {
+        if (y + 1 >= frame->bottom ||
+            native_rows[static_cast<size_t>(y)].compare(x, end - x,
+                native_rows[static_cast<size_t>(y + 1)], x, end - x) != 0)
+            return false;
+        constexpr uint32_t upper = 1u << 3, lower = 1u << 4;
+        bool ink = false;
+        for (int column = x; column < end; ++column) {
+            const auto ch = static_cast<unsigned char>(native_rows[y][column]);
+            if (ch == ' ') continue;
+            bool a_top = false, b_top = false;
+            const auto *a = cell_at(column, y, &a_top);
+            const auto *b = cell_at(column, y + 1, &b_top);
+            const auto *flags = a_top ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+            const size_t at = static_cast<size_t>(column) * gps_->dimy + y;
+            if (!a || !b || a_top != b_top || a[0] != ch || b[0] != ch ||
+                !flags || (flags[at] & (upper | lower)) != upper ||
+                (flags[at + 1] & (upper | lower)) != lower) return false;
+            ink = true;
+        }
+        return ink;
+    };
     auto add_row = [&](Paragraph &paragraph, int x, int y, int end) {
         const auto part = native_rows[static_cast<size_t>(y)].substr(x, end - x);
         if (!paragraph.source.empty()) {
@@ -119,6 +141,13 @@ void Overlay::append_character_overview_footer(
         paragraph.source += part;
         for (int i = x; i < end; ++i) paragraph.colors.push_back(rgb_at(i, y));
         paragraph.rows.push_back({x, y, end - x, kCharacterOverviewQuoteRule, {}, part});
+        // A native two-row glyph is one logical sentence row. Keep both
+        // physical spans for suppression, but append its source and colors
+        // only once so clause parsing and color origins remain aligned.
+        if (paired_rows(x, y, end))
+            paragraph.rows.push_back({x, y + 1, end - x,
+                kCharacterOverviewQuoteRule, {}, part});
+        return paragraph.rows.back().y;
     };
     auto bounds = [&](int y, int left) {
         const auto &row = native_rows[static_cast<size_t>(y)];
@@ -127,7 +156,19 @@ void Overlay::append_character_overview_footer(
         while (end > begin && row[static_cast<size_t>(end - 1)] == ' ') --end;
         return std::pair{begin, end};
     };
+    auto claim_rows = [&](const std::vector<Match> &rows) {
+        // The immutable snapshot can recover bytes that an earlier field
+        // reader already reserved. The complete footer owner replaces those
+        // physical fragments before publishing either translation or source.
+        std::erase_if(matches, [&](const Match &match) {
+            return std::any_of(rows.begin(), rows.end(), [&](const Match &row) {
+                return match.y == row.y && match.length > 0 &&
+                    match.x < row.x + row.length && row.x < match.x + match.length;
+            });
+        });
+    };
     auto reserve_unknown = [&](const Paragraph &paragraph) {
+        claim_rows(paragraph.rows);
         for (const Match &row : paragraph.rows) {
             std::fill_n(screen_rows[static_cast<size_t>(row.y)].begin() + row.x, row.length, ' ');
             if (only_y >= 0 && only_y != row.y) continue;
@@ -200,7 +241,7 @@ void Overlay::append_character_overview_footer(
                 }
             }
             if (end <= begin) break;
-            add_row(quote, begin, row_y, end);
+            row_y = add_row(quote, begin, row_y, end);
             if (closed || end < row_end) break;
         }
         if (has_quote && !closed) continue;
@@ -241,7 +282,7 @@ void Overlay::append_character_overview_footer(
                     const auto &row = native_rows[static_cast<size_t>(row_y)];
                     if (std::any_of(row.begin() + start, row.begin() + stop,
                         [](unsigned char ch) { return is_cp437_box_drawing_byte(ch); })) break;
-                    add_row(memory, start, row_y, stop);
+                    row_y = add_row(memory, start, row_y, stop);
                 }
                 // Own the complete native paragraph before parsing. A line
                 // ending at a shorter valid event (or before its punctuation)
@@ -295,6 +336,17 @@ void Overlay::append_character_overview_footer(
             if (found != source_rows.end()) slots.push_back(*found);
             else slots.push_back({opening, row_y, 0, kCharacterOverviewQuoteRule, {}, {}});
         }
+        // This complete footer frame, together with the following unclaimed
+        // blank rows, owns the document's viewport. Quote and memory writers
+        // can have separate clips; intersecting those clips would reject the
+        // complete translation or crop its measured continuation rows.
+        const int tile_w = gps_->tile_pixel_x, tile_h = gps_->tile_pixel_y;
+        const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
+        const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
+        const SDL_Rect viewport{origin_x + (frame->left + 1) * tile_w,
+            origin_y + y * tile_h, (frame->right - frame->left - 1) * tile_w,
+            (limit - y) * tile_h};
+        for (Match &slot : slots) slot.layout_native_clip = viewport;
         std::vector<Match> fitted;
         if (!append_bounded_paragraph(std::move(slots), target, screen_rows,
                 fitted, only_y, frame->right, frame->right, foregrounds,
@@ -304,6 +356,7 @@ void Overlay::append_character_overview_footer(
             y = last_source_y;
             continue;
         }
+        claim_rows(source_rows);
         // Clear native ink BEFORE drawing either Chinese paragraph. Each
         // native color run needs its own clear color: a white-only erase can
         // leave the colored English emotion word underneath the translation.

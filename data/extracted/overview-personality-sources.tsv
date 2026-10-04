@@ -3,6 +3,7 @@
 # Function 0x140664be0..0x140666470: all value-motto branches.
 # Sphere formatter 0x140756500..0x140756688; leaf table 0x140756690..0x140757174 (130 values plus fallback).
 # Hissing voice 0x14067b6c0..0x14067bc4d; inline syllable immediates recorded separately.
+# Classic equivalents: ordinary 0x140663e90; values 0x140662600; sphere formatter/leaf 0x140753f20/0x1407540b0; hissing 0x1406790e0. Both images emit the same source text.
 # This is a native source inventory, not a test or game-display result. Fixed translations reuse the existing quoted local glossary.
 # formatter	reference	source	translation	handler
 0x140666470	0x1406664c5 -> 0x1416672c8	"Uhh..."	“呃……”	overview-quote-literal
@@ -440,7 +441,8 @@
 0x140666470	0x1406675a3..0x1406677ec	[I have|I've] been praying on [the subject of |the concept of |the idea of |the theme of |]{sphere}.		grammar:worship-reflection; translate_deity_spheres
 0x140666470	0x1406675a3..0x14066788d	[I have|I've] been [considering|contemplating] {deity-name}.		grammar:worship-reflection; native entity-name formatter 0x140b92f10
 0x140666470	0x1406675a3..0x14066788d	[I have|I've] been praying to {deity-name}.		grammar:worship-reflection; native entity-name formatter 0x140b92f10
-0x140756500	0x14075653d..0x1407565b3	[the ]{sphere}		grammar:worship-sphere; article dispatch for sphere indices 0x13..0x7e; names from 0x140756690
+0x140756500	0x140756568 -> 0x1415e8e48; classic 0x140753f88 -> 0x1415e3e34	the 		grammar:worship-sphere; article for sphere indices 19,70,76,87,98,100,103,107,125,126
+0x140756500	0x14075653d..0x1407565b3	[the ]{sphere}		grammar:worship-sphere; article dispatch for sphere indices 19,70,76,87,98,100,103,107,125,126; names from 0x140756690
 0x140666470	0x140667c85..0x140667e56	I'm [fine|well|alright|good].		grammar:low-stress-status; 4 native choices
 0x140666470	0x140667cf0..0x140667e56	I feel [fine|well|alright|good|just fine].		grammar:low-stress-status; 5 native choices
 0x140666470	0x140667d74..0x140667e56	I've been [fine|well|alright].		grammar:low-stress-status; 3 native choices

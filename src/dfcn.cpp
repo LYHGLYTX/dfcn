@@ -24247,22 +24247,26 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // Compose the CURRENT logical layers for that early scan; only the final
     // draw scan should honor graphical occlusion. Tabs and footer need the
     // same snapshot because they can belong to different native layers.
-    std::vector<std::string> quote_rows = screen_rows;
-    int character_quote_tabs_y = character_items_tabs_y;
+    // Earlier semantic owners may already have reserved source bytes in
+    // screen_rows. Read the intact native document with the same current
+    // layer/occlusion policy as the header, in every rendering mode.
+    std::vector<std::string> quote_rows(static_cast<size_t>(gps_->dimy),
+        std::string(static_cast<size_t>(gps_->dimx), ' '));
+    int character_quote_tabs_y = -1;
     const auto quote_settings = native_ui_settings();
-    if (screen_override || (quote_settings && quote_settings->classic)) {
-        character_quote_tabs_y = -1;
-        for (int y = 0; y < gps_->dimy; ++y) {
-            std::string &row = quote_rows[static_cast<size_t>(y)];
-            for (int x = 0; x < gps_->dimx; ++x) {
+    for (int y = 0; y < gps_->dimy; ++y) {
+        std::string &row = quote_rows[static_cast<size_t>(y)];
+        for (int x = 0; x < gps_->dimx; ++x) {
+            unsigned char ch = 0;
+            if (screen_override || (quote_settings && quote_settings->classic)) {
                 bool top = false;
                 const unsigned char *cell = cell_at(x, y, &top);
-                row[static_cast<size_t>(x)] = cell && cell[0]
-                    ? static_cast<char>(cell[0]) : ' ';
-            }
-            if (is_character_information_tabs_row(row))
-                character_quote_tabs_y = y;
+                ch = cell ? cell[0] : 0;
+            } else ch = visible_char_at(x, y);
+            row[static_cast<size_t>(x)] = ch ? static_cast<char>(ch) : ' ';
         }
+        if (character_quote_tabs_y < 0 && is_character_information_tabs_row(row))
+            character_quote_tabs_y = y;
     }
     // Room labels can span both logical widget layers. Matching either raw
     // layer in isolation can recognize only `No`, while the final composite
@@ -29334,6 +29338,11 @@ void Overlay::normalize_native_split_text() {
         // Flags retained from a covered picture caption cannot turn those
         // lines into duplicate halves or move their final Chinese baseline.
         if (match.rule == kToolbarTooltipBodyRule || match.rule == kToolbarTooltipKeyRule) continue;
+        // The overview document has already folded native text halves while
+        // retaining both physical suppression spans. Its translated rows
+        // have independent measured baselines and must not become captions
+        // whose lower half is discarded here.
+        if (match.rule == kCharacterOverviewQuoteRule) continue;
         // The alert flyout draws ordinary one-row addst text after clearing
         // the base cells. Those native writes leave the covered page's font
         // flags behind; they do not make the report a pair of text halves.
