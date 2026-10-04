@@ -4,12 +4,13 @@
 // the fields, including immediate glyph suppression on either screen layer.
     {
         std::vector<std::string> context = screen_rows;
-        if (screen_override) {
-            for (int y = 0; y < gps_->dimy; ++y) {
-                for (int x = 0; x < gps_->dimx; ++x) {
-                    const unsigned char ch = visible_char_at(x, y);
-                    context[y][x] = ch ? static_cast<char>(ch) : ' ';
-                }
+        // Shortcut protection has already removed a-f from the work buffer.
+        // Read the same native menu for glyph suppression and final drawing;
+        // otherwise the raw pass hides a gait that the composed pass misses.
+        for (int y = 0; y < gps_->dimy; ++y) {
+            for (int x = 0; x < gps_->dimx; ++x) {
+                const unsigned char ch = visible_char_at(x, y);
+                context[y][x] = ch ? static_cast<char>(ch) : ' ';
             }
         }
         const auto find_caption = [&](int y, int left, int right,
@@ -29,30 +30,30 @@
             return std::nullopt;
         };
         const NativePanelBorders borders(*gps_);
-        for (int headings_y = 0; headings_y < gps_->dimy; ++headings_y) {
-            const auto score = find_caption(headings_y, 0, gps_->dimx,
-                "Visual Stealth (w/o Skill)");
-            if (!score) continue;
-            const auto factors = find_caption(headings_y, score->end, gps_->dimx,
-                "Visual Stealth Factors");
-            if (!factors) continue;
+        for (int title_y = 0; title_y < gps_->dimy; ++title_y) {
+            const auto title = find_caption(title_y, 0, gps_->dimx, "How will");
+            if (!title) continue;
+            const auto ending = find_caption(title_y, title->end, gps_->dimx, "move?");
+            if (!ending) continue;
             const auto panel = native_panel_interior(borders, *gps_,
-                score->start, factors->end, headings_y);
+                title->start, ending->end, title_y);
             if (!panel) continue;
             const int right = panel->x + panel->w;
             const int bottom = panel->y + panel->h;
-            int title_y = -1, swimming_y = -1;
-            for (int y = panel->y; y < headings_y; ++y) {
-                const auto title = find_caption(y, panel->x, right, "How will");
-                if (title && find_caption(y, title->end, right, "move?")) title_y = y;
-            }
-            for (int y = headings_y + 1; y < bottom; ++y) {
-                if (find_caption(y, panel->x, right, "Swimming Preference")) {
-                    swimming_y = y;
+            // Gaits belong to the movement heading and its closed modal.
+            // Optional stealth/swimming sections bound only their own fields.
+            int headings_y = bottom;
+            std::optional<LogicalTextField> factors;
+            for (int y = title_y + 1; y < bottom; ++y) {
+                const auto score = find_caption(y, panel->x, right,
+                    "Visual Stealth (w/o Skill)");
+                if (!score) continue;
+                factors = find_caption(y, score->end, right, "Visual Stealth Factors");
+                if (factors) {
+                    headings_y = y;
                     break;
                 }
             }
-            if (title_y < 0 || swimming_y < 0) continue;
 
             const auto append_field = [&](int y, int first, int end, int field_right) {
                 if (first >= end || first < panel->x || end > field_right ||
@@ -116,6 +117,16 @@
                 append_field(y, first, end, speed->start);
             }
 
+            if (!factors) continue;
+            int swimming_y = -1;
+            for (int y = headings_y + 1; y < bottom; ++y) {
+                if (find_caption(y, panel->x, right, "Swimming Preference")) {
+                    swimming_y = y;
+                    break;
+                }
+            }
+            if (swimming_y < 0) continue;
+
             // The two headings divide the grade and factor columns. Only a
             // complete column field can use a scoped alias, so a word inside
             // the explanatory sentence cannot acquire a grade's meaning.
@@ -133,6 +144,6 @@
             }
             // Double-height native headings may occupy the adjacent row;
             // the same modal has already supplied all of its owned fields.
-            headings_y = swimming_y;
+            title_y = swimming_y;
         }
     }
