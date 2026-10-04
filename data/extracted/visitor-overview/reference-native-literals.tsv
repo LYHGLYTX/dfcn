@@ -1,0 +1,256 @@
+edition	image	function_rva	instruction_rva	literal_rva	source
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a63eb	0x1602168	This visitor is ready to leave.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a647d	0x1602150	This visitor has come 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a64eb	0x1602148	to pray
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a64f4	0x1602138	to study
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a64fd	0x1602128	to relax
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6506	0x1602118	to perform
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a650f	0x1602108	to slay beasts
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6518	0x16020e8	seeking work as a performer
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6521	0x16020c8	seeking work as a mercenary
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a652a	0x16020a8	seeking work as a scholar
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6533	0x1602098	for diplomacy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a653c	0x1602080	seeking sanctuary
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6545	0x1602068	asking questions
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a659a	0x160205c	 at 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a65e2	0x15e90d8	, 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a65f0	0x15e9110	 and 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a662b	0x15e85b4	.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a66ab	0x15fcfe8	  
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a66e6	0x15e873c	 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a672a	0x1602028	heard this was a good place to search for monsters.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6736	0x1601ff0	heard this was the place for those seeking danger.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6742	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a675d	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6769	0x1602370	 was the place for prayer.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a677e	0x1602370	 was the place for prayer.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6795	0x1602348	went on this journey out of curiosity.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a67a1	0x1602330	was curious about 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a67bf	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a67da	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a67e6	0x1602308	 was the place for a good drink.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a67fb	0x1602308	 was the place for a good drink.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6807	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6822	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a682e	0x16022d8	 was the place to admire fine architecture.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6843	0x16022d8	 was the place to admire fine architecture.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a684f	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a686a	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6876	0x16022b0	 was the place to enjoy oneself.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a688b	0x16022b0	 was the place to enjoy oneself.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6897	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a68b2	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a68be	0x1602288	 was the place to entertain people.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a68d3	0x1602288	 was the place to entertain people.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a68df	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a68fa	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6906	0x1602260	 was the place to perform research.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a691b	0x1602260	 was the place to perform research.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6927	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6942	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a694e	0x1602230	 was the place for long-term scholarship.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6963	0x1602230	 was the place for long-term scholarship.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a696f	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a698a	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6996	0x1602200	 would make a good base for a mercenary.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69ab	0x1602200	 would make a good base for a mercenary.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69b7	0x1602394	heard 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69d2	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69de	0x16021d0	 was the place to look for long-term work.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69f3	0x16021d0	 was the place to look for long-term work.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a69ff	0x16021c0	believes 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a1a	0x160238c	this
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a26	0x16021a0	 would be a safe place to stay.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a38	0x16021a0	 would be a safe place to stay.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a41	0x1602188	is seeking information
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a66	0x1602498	 about the location of 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6a93	0x15e85b4	.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6ab9	0x1602450	You can learn more about this visitor after they chat with a local.
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6b82	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6be8	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6d4f	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6d72	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6f2b	0x15fcfe8	  
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6f79	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a6f9c	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7026	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7049	0x15e9718	""""
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7390	0x1602440	[C:7:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a73ad	0x1602430	[C:7:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a73ba	0x1602438	]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a73eb	0x16ceccc	he
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a73f8	0x16cecc8	she
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7407	0x15ee4d4	it
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7460	0x15e873c	 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a749c	0x16023f0	didn't feel 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a74d8	0x1602424	was 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a74df	0x1602420	is 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a74fc	0x1602418	felt 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7503	0x1602410	feels 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a750c	0x1602408	was in 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7513	0x1602400	is in 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a751c	0x16023e0	doesn't feel 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7558	0x16023d0	[C:6:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7571	0x16023c0	[C:2:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a758a	0x16023b0	[C:3:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a75a3	0x16023a0	[C:5:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a75b9	0x1602568	[C:4:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a75cf	0x1602558	[C:6:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a75e5	0x1602440	[C:7:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a75fb	0x1602548	[C:1:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7635	0x1602540	annoyed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7641	0x1602530	satisfied
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a764d	0x1602528	grouchy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7659	0x160251c	grumpy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7665	0x1602510	fondness
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7671	0x1602500	suspicious
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a767d	0x16024f8	alarmed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7689	0x16024f0	shocked
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7695	0x16024e0	horrified
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76a1	0x16024c8	grim satisfaction
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76b6	0x16024c0	grieved
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76c2	0x16024b8	grieves
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76ce	0x16024b0	triumph
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76e3	0x1602628	raged
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76ef	0x1602620	rages
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a76fb	0x1602618	excited
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7707	0x160260c	gaiety
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7713	0x1602608	sad
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a771f	0x1602604	joy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a772b	0x16025f8	blissful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7737	0x16025ec	love
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7743	0x16025e0	vengeful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a774f	0x16025d0	accepting
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a775b	0x16025c0	admiration
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7767	0x16025b0	adoration
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7773	0x16025a0	affection
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a777f	0x1602590	agitated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a778b	0x1602580	aggravated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7797	0x1602574	agony
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77a3	0x16026c8	alienated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77af	0x16026bc	amazed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77bb	0x16026b0	ambivalent
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77c7	0x16026a8	amused
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77d3	0x16026a0	angry
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77df	0x1602698	anguish
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77eb	0x1602690	anxious
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a77f7	0x1602680	apathetic
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7803	0x1602678	aroused
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a780f	0x1602668	astonished
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a781b	0x1602658	aversion
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7827	0x1602654	awe
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7833	0x160264c	bitter
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a783f	0x1602644	bored
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a784b	0x160263c	caring
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7857	0x1602630	confused
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7863	0x1602798	contemptuous
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a786f	0x1602790	content
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a787b	0x1602780	dejected
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7887	0x1602770	delighted
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7893	0x1602768	despair
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a789f	0x1602758	disappointed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78ab	0x1602748	disgusted
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78b7	0x1602738	disillusioned
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78c3	0x1602730	dislike
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78cf	0x1602720	dismayed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78db	0x1602710	displeasure
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78e7	0x1602700	distressed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78f3	0x16026f4	eager
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a78ff	0x16026ec	elated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a790b	0x16026e0	embarrassed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7917	0x16026d8	empathy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7923	0x1602854	empty
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a792f	0x1602848	enjoyment
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a793b	0x1602838	exasperated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7947	0x1602828	exhilarated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7953	0x160281c	afraid
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a795f	0x1602810	ferocity
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a796b	0x1602804	free
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7977	0x16027f8	frightened
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7983	0x16027e8	frustrated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a798f	0x16027e0	gleeful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a799b	0x16027d4	gloomy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79a7	0x16027cc	glum
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79b3	0x16027c0	gratitude
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79bf	0x16027b8	guilty
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79cb	0x16027b0	happy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79d7	0x16027a8	hateful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79e3	0x1602924	hope
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79ef	0x1602918	hopeless
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a79fb	0x1602908	humiliated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a07	0x16028f8	insulted
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a13	0x16028e8	interested
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a1f	0x16028d8	irritated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a2b	0x16028c8	isolated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a37	0x16028bc	jolly
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a43	0x16028b4	jovial
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a4f	0x16028a8	jubilant
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a5b	0x1602898	loathing
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a67	0x1602890	lonely
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a73	0x1602888	lustful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a7f	0x1602878	miserable
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a8b	0x1602868	mortified
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7a97	0x1602860	nervous
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7aa3	0x1602a08	nostalgic
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7aaf	0x16029f8	optimistic
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7abb	0x16029e8	outraged
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7ad0	0x16029d8	panicked
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7adc	0x16029d0	panics
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7ae8	0x16029c8	patient
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7af4	0x16029b8	passionate
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b00	0x16029a8	pleasure
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b0c	0x160299c	proud
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b18	0x1602990	enraptured
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b24	0x1602980	rejected
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b30	0x1602970	relieved
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b3c	0x1602960	regretful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b48	0x1602950	remorseful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b54	0x1602940	repentant
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b60	0x1602930	resentful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b6c	0x1602ac8	restless
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b78	0x1602ab8	indignant
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b84	0x1602aa8	self-pity
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b90	0x1602aa0	servile
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7b9c	0x1602a98	shaken
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7ba8	0x1602a90	ashamed
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bb4	0x1602a80	sympathy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bc0	0x1602a70	tenderness
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bcc	0x1602a60	terrified
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bd8	0x1602a50	thrilled
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7be1	0x1602a48	uneasy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bea	0x1602a40	unhappy
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bf3	0x1602a38	wonder
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7bfc	0x1602a30	worried
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c05	0x1602a20	wrathful
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c0e	0x1602a18	zealous
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c17	0x1602bc0	existential crisis
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c20	0x1602bb0	defeated
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c29	0x1602ba0	expectant
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c32	0x1602b98	doubt
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c3b	0x1602b88	enthusiastic
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c44	0x1602b78	pessimistic
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c4d	0x1602b68	euphoric
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c56	0x1602b58	anything
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c7a	0x1602b48	 [C:5:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7c83	0x1602b38	 [C:5:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7cb1	0x1602b28	reliving 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7cba	0x1602b18	dwelling upon 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7cc3	0x1602b08	remembering 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7cda	0x1602af8	 [C:7:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7ce3	0x1602ae8	 [C:7:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7d62	0x1602ad8	, [C:5:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7d6b	0x1602d10	, [C:5:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7d77	0x1602ce8	and mulling over the recurring memory 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7d9b	0x1602cd8	allowed 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7db8	0x1602cc8	 to rethink 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7dd5	0x1602ca0	 intellectual values and changed 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7df2	0x1602c88	 personal tendencies
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e03	0x1602c78	changed 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e0c	0x1602cd8	allowed 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e25	0x1602cc8	 to rethink 
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e42	0x1602c60	 intellectual values
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e59	0x1602440	[C:7:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e62	0x1602430	[C:7:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e87	0x1602af8	 [C:7:0:0]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7e90	0x1602ae8	 [C:7:0:1]
+reference	PE:6a70a6d9:02711000	0x1a5b70	0x1a7ec5	0x15e85b4	.

@@ -1,0 +1,8 @@
+image	function_va	instruction_va	string_va	text
+reference	0x140658e20	0x140658f73	0x141662ef8	myself
+reference	0x140658e20	0x140658f8d	0x141662ef4	my
+reference	0x140658e20	0x140658fa7	0x1415edcf8	me
+reference	0x140658e20	0x140658fc1	0x141662fb4	I
+reference	0x140658e20	0x140658ffc	0x141662ee0	yourself
+reference	0x140658e20	0x140659013	0x1415ee960	your
+reference	0x140658e20	0x14065902a	0x1415ec550	you

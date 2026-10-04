@@ -1,0 +1,10 @@
+# Native helper 0x140b91440..0x140b91750 from PE:6a70b91c:0270a000
+# instruction	literal	text
+0x140b914ff	0x1415f8a20	[LPAGE:ARTIFACT:
+0x140b9150e	0x1416da4e8	[LPAGE:BOOK:
+0x140b91533	0x1415f8664	]
+0x140b916c6	0x1415f8b50	[/LPAGE]
+0x140b9171e	0x1416da4d0	an unknown artifact
+# Short source assembled by immediate stores, not RIP-relative pointers.
+0x140b915f0	imm64:0x64656c7469746e55	Untitled
+0x140b9164b	imm64:0x64656c7469746e55	Untitled

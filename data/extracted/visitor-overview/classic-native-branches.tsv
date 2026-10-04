@@ -1,0 +1,48 @@
+# Read-only branch extraction from classic image PE:6a70b91c:0270a000
+# family	native-value	branch	literal-text
+itinerary	0	0x1401a647b	to pray
+itinerary	1	0x1401a6484	to study
+itinerary	2	0x1401a648d	to relax
+itinerary	3	0x1401a6496	to perform
+itinerary	4	0x1401a649f	to slay beasts
+itinerary	5	0x1401a64a8	seeking work as a performer
+itinerary	6	0x1401a64b1	seeking work as a mercenary
+itinerary	7	0x1401a64ba	seeking work as a scholar
+itinerary	8	0x1401a64c3	for diplomacy
+itinerary	9	0x1401a64cc	seeking sanctuary
+itinerary	10	0x1401a64d5	asking questions
+rumour	41	0x1401a66ba	heard this was a good place to search for monsters.
+rumour	42	0x1401a6827	heard 
+rumour	43	0x1401a6a34	default (no reason clause)
+rumour	44	0x1401a686f	heard 
+rumour	45	0x1401a6a34	default (no reason clause)
+rumour	46	0x1401a6a34	default (no reason clause)
+rumour	47	0x1401a6a34	default (no reason clause)
+rumour	48	0x1401a6a34	default (no reason clause)
+rumour	49	0x1401a6a34	default (no reason clause)
+rumour	50	0x1401a6a34	default (no reason clause)
+rumour	51	0x1401a6a34	default (no reason clause)
+rumour	52	0x1401a6a34	default (no reason clause)
+rumour	53	0x1401a6a34	default (no reason clause)
+rumour	54	0x1401a671a	went on this journey out of curiosity.
+rumour	55	0x1401a68ff	heard 
+rumour	56	0x1401a6947	heard 
+rumour	57	0x1401a68b7	heard 
+rumour	58	0x1401a674f	heard 
+rumour	59	0x1401a6797	heard 
+rumour	60	0x1401a66d2	heard 
+rumour	61	0x1401a67df	heard 
+rumour	62	0x1401a66c6	heard this was the place for those seeking danger.
+rumour	63	0x1401a6a34	default (no reason clause)
+rumour	64	0x1401a6a34	default (no reason clause)
+rumour	65	0x1401a6a34	default (no reason clause)
+rumour	66	0x1401a6a34	default (no reason clause)
+rumour	67	0x1401a6a34	default (no reason clause)
+rumour	68	0x1401a6a34	default (no reason clause)
+rumour	69	0x1401a6a34	default (no reason clause)
+rumour	70	0x1401a6a34	default (no reason clause)
+rumour	71	0x1401a6a34	default (no reason clause)
+rumour	72	0x1401a6a34	default (no reason clause)
+rumour	73	0x1401a6a34	default (no reason clause)
+rumour	74	0x1401a69d1	is seeking information
+rumour	75	0x1401a698f	believes 

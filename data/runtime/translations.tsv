@@ -5603,6 +5603,7 @@ A {s} caravan from {e} has arrived. The presence of your ruler has attracted gre
 Announcement combat agreement-title-core [agreement-party-list,agreement-party-list]: the promise by {s} to {s} of a position	{s1}答应给{s2}安排职位的承诺	l
 Announcement combat justice-interrogation-sentence [$unit]: Appealed to shared worship of {s} in order to elicit information.	以共同信奉{s1}为由规劝受审者，试图获取情报。	l
 Announcement combat justice-interrogation-sentence []: Attempted to make intimidating remarks in order to elicit information.	试图以言语恐吓受审者，以获取情报。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be speaking to {s}.	{s1}当时将正在对{s2}说话。	l
 Continue moving in the same direction to build up speed. If you or your mount are moving quickly, your attacks gain velocity.	持续朝同一方向移动可以加速。你或坐骑高速移动时，攻击也会获得额外速度。	hq
 DFHack help: "--maxlength <value>" Limits the number of items that the script will iterate through in a list (default: 2048).	"--maxlength <value>" 限制脚本将在列表中迭代的项目数（默认值：2048）。	l
 DFHack help: "-d", "--debug" Display selected target IDs in the finder window title bar. Doesn't persist between invocations.	"-d"、"--debug" 在查找器窗口标题栏中显示选定的目标 ID。在调用之间不会持续存在。	l
@@ -5726,6 +5727,8 @@ Announcement combat justice-intrigue-predicate [justice-intrigue-actor,justice-i
 Announcement combat negotiation-sentence []: The task was made much easier by the relative populations of the civilizations.	双方文明的人口差距让这项任务容易了许多。	l
 Announcement combat rumor-event [rumor-person,rumor-owner,$name,$name]: {s} agreed to {s} demand of tribute from {s} to {s}.	{s1}答应了{s2}要求，让{s3}向{s4}进贡。	l
 Announcement combat sentence [diplomacy-group]: {s} is not at war with us, and there is no hard feeling between our peoples.	{s1}没有与我们交战，双方百姓也没什么芥蒂。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be speaking to {s}.	{s1}当时将正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be destroying {s}.	{s1}当时将正在毁灭{s2}。	l
 DFHack help: "--average" Sets trait to the creature's caste's average value (as defined in the PERSONALITY creature tokens).	"--average" 将特质设置为生物种姓的平均值（如 PERSONALITY 生物标记中所定义）。	l
 DFHack help: "allneeds" Show the cumulative needs for the entire fort, or just for one unit if a unit is selected in the UI.	"allneeds" 显示整个要塞的累积需求，或者如果在 UI 中选择了一个单位，则仅显示一个单位的累积需求。	l
 DFHack help: "debugfilter disable <id> [<id> ...]" Disable a space separated list of filters but keep it in the filter list.	"debugfilter disable <id> [<id> ...]" 禁用空格分隔的过滤器列表，但将其保留在过滤器列表中。	l
@@ -5841,6 +5844,9 @@ Announcement combat negotiation-response []: replied with a grand oration of the
 Announcement combat rumor-event [$name,$name,$name]: I hear that a group calling itself {s} reclaimed {s} on behalf of {s}.	听说一个自称{s1}的势力代表{s3}收复了{s2}。	l
 Announcement combat rumor-event [rumor-person,rumor-owner,$name,$name]: {s} agreed to {s} offer of tribute from {s} to {s}.	{s1}同意了{s2}提议，让{s3}向{s4}进贡。	l
 Announcement combat sentence [diplomacy-group]: {s} is paying us tribute, and there is no hard feeling between our peoples.	{s1}正在向我们进贡，双方百姓也没什么芥蒂。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be destroying {s}.	{s1}当时将正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be appearing {s}.	{s1}当时将正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be rewarding {s}.	{s1}当时将正在奖赏{s2}。	l
 Cabinets are used in personal bedrooms for storing clothing objects. A cabinet object must be made before it can be placed.	橱柜用于在私人卧室存放衣物。须先制作橱柜，才能放置。	hj
 DFHack help: "-g", "--gender (male|female|neuter)" The gender of the god. If not specified, a random gender will be chosen.	"-g"，"--gender (male|female|neuter)" 神的性别。如果未指定，将选择随机性别。	l
 DFHack help: "animal-control --gelded --markedfor slaughter --unmarkfor slaughter" Unmark all gelded animals for slaughter.	"animal-control --gelded --markedfor slaughter --unmarkfor slaughter" 取消所有阉割动物的屠宰标记。	l
@@ -5967,6 +5973,9 @@ Announcement combat negotiation-response []: attempted to read their opposite's 
 Announcement combat rumor-event [rumor-person,rumor-owner,$name,$name]: {s} refused {s} demand of tribute from {s} to {s}.	{s1}拒绝了{s2}要求：让{s3}向{s4}进贡。	l
 Announcement combat sentence [actor,unit,$person]: {s} misses {s} badly, blocked by the divine intervention of mighty {s}!	{s1}远远偏离了{s2}，攻击被强大的{s3}以神力阻止了！	l
 Announcement combat sentence [diplomacy-group]: {s} accepts our tribute, and there is no hard feeling between our peoples.	{s1}接受我们的贡品，双方百姓也没什么芥蒂。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be appearing {s}.	{s1}当时将正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be rewarding {s}.	{s1}当时将正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be flooding {s}.	{s1}当时将正在淹没{s2}。	l
 DFHack help: "--group-by-date" Create a folder with name "year-month" inside the world folder. Implies "--group-by-world".	"--group-by-date" 在world文件夹中创建一个名为"year-month"的文件夹。意味着 "--group-by-world"。	l
 DFHack help: "burrow units clear Farmhouse Workshops" Remove all units from the burrows named "Farmhouse" and "Workshops".	"burrow units clear Farmhouse Workshops" 移除活动区中名为"农舍"和"车间"的所有单位。	l
 DFHack help: "caravan extend" Force a caravan that is leaving to return to the depot and extend their stay another 7 days.	"caravan extend" 强制即将出发的商队返回仓库并延长停留时间7天。	l
@@ -6089,6 +6098,8 @@ Announcement combat justice-interrogation-sentence [$person]: Subject revealed t
 Announcement combat merchant-hawk-origin [merchant-genuine-item,merchant-advert-origin]: your very own {s} clear from {s}	专属于你的远从{s2}运来的{s1}	l
 Announcement combat negotiation-response []: attempted to put their opposite at ease as well but did not ultimately agree	也试着让对方放松下来，但最终仍未同意	l
 Announcement combat rumor-event [rumor-person,rumor-owner,$name,$name]: {s} refused {s} offer of tribute from {s} to {s}.	{s1}拒绝了{s2}进贡提议：由{s3}向{s4}纳贡。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be flooding {s}.	{s1}当时将正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be burning {s}.	{s1}当时将正在焚烧{s2}。	l
 DFHack GUI Notification settings: Describes the status of the current moody dwarf: gathering materials, working, or stuck	显示处于怪异心境的矮人正在收集材料、制作，还是因缺少材料或工坊而受阻。	l
 DFHack help: "--clean <value>" Checks for skills with a rating of "<value>" and removes them from the dwarf's skill list.	"--clean <value>" 检查评级为"<值>"的技能并将其从矮人的技能列表中删除。	l
 DFHack help: "--tile" Selects the highlighted tile's block, and then uses the tile's local position to index the 2D data.	"--tile" 选择突出显示的图块的块，然后使用图块的本地位置来索引 2D 数据。	l
@@ -6210,6 +6221,8 @@ Announcement combat negotiation-response []: joined in the discussion of history
 Announcement combat sentence [actor,unit,$person]: {s} miss {s} badly, blocked by the divine intervention of mighty {s}!	{s1}远远偏离了{s2}，攻击被强大的{s3}以神力阻止了！	l
 Announcement combat site-rumor-event [site-rumor-artifact,site-rumor-building,$name]: {s} was known to be in {s} in {s}.	当时已知{s1}位于{s3}的{s2}。	l
 Announcement combat site-rumor-event [site-rumor-person,$name,site-rumor-predecessor]: {s} became of {s}, replacing {s}.	{s1}取代{s3}，在{s2}任职了。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be burning {s}.	{s1}当时将正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be speaking to {s}.	{s1}将正在对{s2}说话。	l
 Assign a station order. The soldiers will stand near the point selected and engage any hostile creatures that come near.	下达驻守命令。士兵会站在选定位置附近，与靠近的敌对生物交战。	hj
 Be warned that shooting a projectile currently has a long recovery time, so you may be subject to attack after you fire.	请注意，目前发射弹药后的恢复时间较长，因此射击后可能遭到攻击。	hq
 DFHack GUI Notification settings: Notifies when you have agreed to build (but have not yet built) a guildhall or temple.	已承诺建造公会大厅或寺庙，却尚未建成时发出通知。	l
@@ -6327,6 +6340,7 @@ Announcement combat agreement-title-core [agreement-party-list,$office,$name]: t
 Announcement combat negotiation-sentence []: The task was made easier by the relative populations of the civilizations.	双方文明的人口差距让这项任务更容易了。	l
 Announcement combat rumor-event []: The world is safer for travelers when night creatures no longer stalk the darkness.	夜行生物不再潜伏于黑暗中，旅人出门也能更安全。	l
 Announcement combat sentence [diplomacy-group]: {s} is not at war with us, and there is friendship between our peoples.	{s1}没有与我们交战，双方百姓也相处和睦。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be destroying {s}.	{s1}将正在毁灭{s2}。	l
 Citizens assigned to the fishing work detail will fish in this zone if it exists. Otherwise, they will fish everywhere.	若设有捕鱼区，被分配到捕鱼劳动分组的居民会在这里捕鱼；否则会在各处捕鱼。	hj
 Codices and scrolls in your library can be stored in bookcases. A bookcase object must be made before it can be placed.	图书馆中的书册和卷轴可以存放在书柜里。须先制作书柜，才能放置。	hj
 DFHack help: "--eraseClass <class id>" Erase every instance of every syndrome with the given SYN_CLASS (an integer id).	"--eraseClass <class id>" 擦除具有给定 SYN_CLASS（整数 ID）的每个综合症的每个实例。	l
@@ -6445,6 +6459,8 @@ Announcement combat inscription [$person,$person]: I am {s}, {s}, once of the Un
 Announcement combat rumor-event [$name,$name]: A bandit gang calling itself {s} has been harassing people over in {s}.	有伙土匪自称{s1}，一直在{s2}那边骚扰百姓。	l
 Announcement combat sentence [$name,dialogue-family,$unit]: I'm going to {s} to move into my new home with my {s} {s}.	我正前往{s1}，与我的{s2}{s3}搬入我们的新家。	l
 Announcement combat sentence [diplomacy-group]: {s} is paying us tribute, and there is friendship between our peoples.	{s1}正在向我们进贡，双方百姓也相处和睦。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be appearing {s}.	{s1}将正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be rewarding {s}.	{s1}将正在奖赏{s2}。	l
 DFHack GUI Confirmation prompt: Would you like to save now? (Note: You can also close this reminder and save manually)	现在要保存吗？（也可以关闭此提醒并手动保存。）	l
 DFHack help: "--citizens" All citizens and residents of your fort will be affected. Will do nothing in adventure mode.	"--citizens" 所有居民以及您的要塞的居民都将受到影响。在冒险模式下什么也不做。	l
 DFHack help: "armoks-blessing" Adjust stats and personalities to an ideal for all dwarves. No skills will be modified.	"armoks-blessing" 将统计数据和个性调整为所有矮人的理想状态。不会修改任何技能。	l
@@ -6568,6 +6584,8 @@ Announcement combat merchant-hawk-origin [merchant-genuine-item,merchant-advert-
 Announcement combat rumor-event []: Something truly horrifying has vomited itself forth from the depths of the world.	有个骇人至极的东西从世界深处喷涌而出。	l
 Announcement combat sentence [diplomacy-group]: {s} accepts our tribute, and there is friendship between our peoples.	{s1}接受我们的贡品，双方百姓也相处和睦。	l
 Announcement combat sentence [diplomacy-group]: {s} is not at war with us, but there is ill-will between our peoples.	{s1}没有与我们交战，可双方百姓却互有敌意。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were speaking to {s}.	{s1}当时正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be flooding {s}.	{s1}将正在淹没{s2}。	l
 Chosen mode is only available in worlds with developed religions. There are no temples available. Try an older world.	天选模式需要宗教发展完善的世界。当前没有可用的神殿，请尝试历史更悠久的世界。	l
 Cut rough gems here to increase their value, and improve the value of other objects by encrusting them with cut gems.	在这里切割宝石原石以提高价值，也可将切割宝石镶嵌到其他物品上以提升其价值。	hj
 DFHack GUI Mass remove: Please deselect any selected buildings, stockpiles or zones before attempting to remove them.	移除前请取消已选中的建筑、储物堆或区域。	l
@@ -6679,6 +6697,10 @@ Announcement combat sentence [unit,$book]: {s} was spotted sneaking around! "You
 Announcement combat sentence [unit,owned-object,owned-object]: {s} struggles in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	l
 Announcement combat site-rumor-event [$name,$name,$name]: a group calling itself {s} reclaimed {s} on behalf of {s}.	自称{s1}的势力代表{s3}收复了{s2}。	l
 Announcement combat site-rumor-event [site-rumor-person,$name,site-rumor-person]: {s} was kidnapped from {s} by {s}.	{s3}从{s2}绑架了{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are speaking to {s}.	{s1}正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was speaking to {s}.	{s1}当时正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were destroying {s}.	{s1}当时正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be burning {s}.	{s1}将正在焚烧{s2}。	l
 DFHack GUI Notification settings: Shows number of injured citizens and a warning if there is no functional hospital.	显示受伤居民数量，并在没有可正常运作的医院时发出警告。	l
 DFHack help: "control-panel autostart fix/blood-del" Configures fix/blood-del to run once when you start a new fort.	"control-panel autostart fix/blood-del" 配置 fix/blood-del 在启动新的要塞时运行一次。	l
 DFHack help: "enable dwarfmonitor" Enable tracking of job efficiency for display on the "dwarfmonitor stats" screen.	"enable dwarfmonitor" 启用工作效率跟踪并显示在 "dwarfmonitor stats" 屏幕上。	l
@@ -6799,6 +6821,13 @@ Announcement combat rumor-event []: A great monster from the underground is said
 Announcement combat rumor-event [rumor-time,rumor-person,rumor-person]: I heard that {s}, {s} was kidnapped by {s}.	听说{s1}，{s2}被{s3}绑走了。	l
 Announcement combat sentence [diplomacy-group]: {s} accepts our tribute, but there is ill-will between our peoples.	{s1}接受我们的贡品，可双方百姓却互有敌意。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} struggle in vain against the grip of {s} on {s}.	{s1}试图挣脱{s2}对{s3}的抓握，却徒劳无功。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am speaking to {s}.	{s1}正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are destroying {s}.	{s1}正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is speaking to {s}.	{s1}正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was destroying {s}.	{s1}当时正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were appearing {s}.	{s1}当时正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were rewarding {s}.	{s1}当时正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will destroyed {s}.	{s1}将已毁灭{s2}。	l
 DFHack GUI Teleport: Draw boxes around units to select, or double click on a tile to teleport {d} selected unit(s).	用鼠标框选单位，或双击格子将已选中的 {d} 个单位传送至该处。	l
 DFHack help: "--script <script>" Selects the specified script (which must support being included with reqscript()).	"--script <script>" 选择指定的脚本（必须支持包含在 reqscript() 中）。	l
 DFHack help: "deteriorate frequency 0.5 all" Deteriorate items of the enabled categories at twice the default rate.	"deteriorate frequency 0.5 all" 以默认速率的两倍恶化启用类别的项目。	l
@@ -6934,6 +6963,17 @@ Announcement combat negotiation-response []: joined in the discussion of history
 Announcement combat rumor-event [$name,$name]: I hear that a group from {s} left to found a new settlement in {s}.	听说一群来自{s1}的人出发去{s2}建立新的定居点了。	l
 Announcement combat rumor-event []: Demons from the underworld must not be permitted to walk freely upon the land.	绝不能让地下世界的恶魔在地上横行！	l
 Announcement combat sentence [diplomacy-group]: {s} is our ally, and there is no hard feeling between our peoples.	{s1}是我们的盟友，双方百姓也没什么芥蒂。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am destroying {s}.	{s1}正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are appearing {s}.	{s1}正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are rewarding {s}.	{s1}正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is destroying {s}.	{s1}正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was appearing {s}.	{s1}当时正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was rewarding {s}.	{s1}当时正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were flooding {s}.	{s1}当时正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will appeared {s}.	{s1}将已出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will rewarded {s}.	{s1}将已奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will speak to {s}.	{s1}将对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will spoke to {s}.	{s1}将已对{s2}说话。	l
 Announcement combat work-sentence [work-reference]: For musical accompaniment, the choreographer has selected {s}.	编舞者选用{s1}作为伴奏音乐。	l
 Combat with any creature will put you in immediate peril. Wounds can be serious and long-lasting, and most enemies	与任何生物战斗都会让你立即陷入危险。伤势可能严重而且长久，大多数敌人	hq
 Compositions take more time, and you'll pass through a period of time similar to sleeping, resting, and traveling.	创作耗时更长，会像睡眠、休息和旅行一样，让一段时间连续流逝。	hq
@@ -7065,6 +7105,16 @@ Announcement combat negotiation-response []: spun a web of deceit of their own b
 Announcement combat sentence [$book,$item,$name]: I am searching for {s} {s}, and this quest is taking me to {s}.	我正在寻找{s1}{s2}，为此要前往{s3}。	l
 Announcement combat sentence [$name,$number]: {s} trades directly with no fewer than {s} other major settlements.	与{s1}直接做买卖的其他主要定居点，少说也有{s2}座。	l
 Announcement combat sentence [$person]: Not that it matters, as the seat of {s} is here, and the law is absolute.	不过这也没什么要紧，{s1}的统治中心就在这里，法律说一不二。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am appearing {s}.	{s1}正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am rewarding {s}.	{s1}正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are flooding {s}.	{s1}正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is appearing {s}.	{s1}正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is rewarding {s}.	{s1}正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was flooding {s}.	{s1}当时正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were burning {s}.	{s1}当时正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were will be {s}.	{s1}曾将……{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will destroy {s}.	{s1}将毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will flooded {s}.	{s1}将已淹没{s2}。	l
 Announcement combat work-sentence [work-reference]: It asks the question, "What if {s} had unfolded differently?"	作品提出了这样的问题：“如果{s1}的发展有所不同，会怎样？”	l
 DFHack help: "--itemType <type>" Trigger the command for items of this type (as specified in the raws). Examples:	"--itemType <type>" 触发此类型项目的命令（如原始文件中所指定）。示例：	l
 DFHack help: "--setPrevRace" Remember the previous race so that you can change the unit back with "--untransform"	"--setPrevRace" 记住之前的比赛，这样你就可以用"--untransform"把单位改回来	l
@@ -7199,6 +7249,15 @@ Announcement combat negotiation-sentence []: The great number of lost invaders m
 Announcement combat negotiation-sentence []: The sheer number of lost invaders made the task seem more possible.	侵略军死伤之惨重让这项任务显得更有希望完成。	l
 Announcement combat rumor-event []: Body corrupted beyond reckoning, she assumes a beastly form to terrorize us.	她的身体已经彻底腐化，还会变成野兽来吓唬我们。	l
 Announcement combat sentence []: This place is insulated from the rest of the world, at least in terms of trade.	这里与外界没有往来，至少做买卖是如此。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am flooding {s}.	{s1}正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are burning {s}.	{s1}正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is flooding {s}.	{s1}正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} speaking to {s}.	{s1}正在对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was burning {s}.	{s1}当时正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was will be {s}.	{s1}曾将……{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will appear {s}.	{s1}将出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will burned {s}.	{s1}将已焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will reward {s}.	{s1}将奖赏{s2}。	l
 Congratulations! This fortress is now a Mountainhome, proof that any suggestion of hubris was childish nonsense.	祝贺你！这座要塞如今已成为山国都城，证明那些狂妄自大的指责不过是幼稚的胡言乱语。	hP
 DFHack GUI Confirmation prompt: Close this popup to open the options menu and select "Save and continue playing"	关闭此窗口后，在选项菜单中选择“保存并继续游戏”。	l
 DFHack help: "-d", "--dry-run" Dry run: report how many designations would be (un)set without changing anything.	"-d"、"--dry-run" 试运行：报告在不更改任何内容的情况下将设置（取消）设置多少个规划标记。	l
@@ -7335,6 +7394,10 @@ Announcement combat rumor-event []: A vile monster from the bowels of the earth 
 Announcement combat rumor-event []: Body corrupted beyond reckoning, he assumes a beastly form to terrorize us.	他的身体已经彻底腐化，还会变成野兽来吓唬我们。	l
 Announcement combat rumor-event []: Body corrupted beyond reckoning, it assumes a beastly form to terrorize us.	它的身体已经彻底腐化，还会变成野兽来吓唬我们。	l
 Announcement combat sentence [$name]: The village {s} is the only other settlement to utilize the market there.	只有{s1}这座村庄也去那里赶集。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am burning {s}.	{s1}正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} destroying {s}.	{s1}正在毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is burning {s}.	{s1}正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will flood {s}.	{s1}将淹没{s2}。	l
 DFHack help: "--death-threshold <months>" How many months should undead lose strength for before being removed.	"--death-threshold <months>" 不死者需要多少个月失去力量才被移除。	l
 DFHack help: "--oil" Restrict the selection to plants with seeds, nuts, or fruits that can be pressed into oil.	"--oil" 将选择限制为含有种子、坚果或可榨油的水果的植物。	l
 DFHack help: "--time <delay>" Sets the delay between invocations of the command. It must be a positive integer.	"--time <delay>" 设置命令调用之间的延迟。它必须是一个正整数。	l
@@ -7474,6 +7537,11 @@ Announcement combat rumor-event [rumor-time,rumor-person,$name]: I heard that {s
 Announcement combat rumor-flight [$name,rumor-army]: from {s} just before an army {s} descended upon the place	了{s1}，随后一支军队{s2}便袭击了那里	l
 Announcement combat sentence [$name]: The village {s} is the only other settlement to utilize the market here.	只有{s1}这座村庄也来这里赶集。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} are unable to break the grip of {s} on {s}!	{s1}无法挣脱{s2}对{s3}的抓握！	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} appearing {s}.	{s1}正在出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} destroyed {s}.	{s1}曾毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} rewarding {s}.	{s1}正在奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} speaks to {s}.	{s1}对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will burn {s}.	{s1}将焚烧{s2}。	l
 Burrows can be suspended and unsuspended freely. When a Burrow is suspended, assigned citizens will ignore it.	[C:1:0:0]活动区[C:7:0:0]可以随时停用或重新启用。停用时，已分配的居民会忽略该[C:1:0:0]活动区[C:7:0:0]。	hq
 DFHack help: "--unit <id>" The target unit ID. If not present, the currently selected unit will be the target.	​​"--unit <id>" 目标单位ID。如果不存在，则当前选定的单位将成为目标。	l
 DFHack help: "aliases" A map of blueprint alias names to their expansions. If not specified, defaults to "{}".	"aliases" 蓝图别名与其扩展的映射。如果未指定，则默认为"{}"。	l
@@ -7607,6 +7675,13 @@ Announcement combat rumor-event [$name,$name]: I hear that a group from {s} left
 Announcement combat rumor-event []: Mastering the forces of nature would glorify us in the eyes of the world.	要是能驾驭自然之力，世人都会敬重我们。	l
 Announcement combat sentence [diplomacy-group]: {s} is our ally, and there is friendship between our peoples.	{s1}是我们的盟友，双方百姓也相处和睦。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} is unable to break the grip of {s} on {s}!	{s1}无法挣脱{s2}对{s3}的抓握！	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} will be {s}.	{s1}将{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} appeared {s}.	{s1}曾出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} destroys {s}.	{s1}毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} flooding {s}.	{s1}正在淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} rewarded {s}.	{s1}曾奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} speak to {s}.	{s1}对{s2}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} spoke to {s}.	{s1}曾对{s2}说话。	l
 Attacks target specific body parts and have various modifiers. You will select these in the subsequent menus.	攻击针对具体身体部位，并带有各种修正项。接下来的菜单会让你选择这些内容。	hq
 DFHack GUI Design: Click to place the first point with the mouse. Use right-click to dismiss points in order.	点击鼠标放置起点。右键可依次撤销已放置的点。	l
 DFHack GUI Notification settings: Shows a reminder if it has been more than {d} minutes since your last save.	距离上次保存超过 {d} 分钟时发出提醒。	l
@@ -7754,6 +7829,12 @@ Announcement combat justice-interrogation-sentence []: Attempted to appeal to su
 Announcement combat negotiation-response []: joined the conversation and over time came around on the matter	加入了闲谈，并渐渐改变了对此事的看法	l
 Announcement combat negotiation-response []: made light conversation and over time came around on the matter	轻松地闲谈，并渐渐改变了对此事的看法	l
 Announcement combat rumor-event []: A small but organized military order have been causing us much hardship.	一个军事修会人数不多，却组织严密，害得我们吃尽苦头。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} appears {s}.	{s1}出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} burning {s}.	{s1}正在焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} destroy {s}.	{s1}毁灭{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} flooded {s}.	{s1}曾淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} rewards {s}.	{s1}奖赏{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will be {s}.	{s1}将……{s2}。	l
 Call visitors from all over the world with the greatest tavern, library, or temple the world has ever known.	建造举世无双的酒馆、图书馆或神殿，吸引世界各地的访客。	hq
 DFHack GUI Notification settings: Notifies when there are non-invader hostiles (e.g. megabeasts) on the map.	地图上出现不属于入侵军队的敌对生物（如巨兽）时发出通知。	l
 DFHack GUI Notification settings: Shows a reminder if it has been more than {d} minute since your last save.	距离上次保存超过 {d} 分钟时发出提醒。	l
@@ -7878,6 +7959,10 @@ Announcement combat justice-intrigue-factors [justice-intrigue-factor,justice-in
 Announcement combat rumor-event [$name,rumor-flight]: I hear that refugees calling themselves {s} fled {s}.	听说有群难民自称{s1}，逃离{s2}。	l
 Announcement combat rumor-event []: A terror most foul from the evil depths nigh the underworld plagues us.	有个极其凶恶的东西在祸害我们，它来自靠近地下世界的邪恶深渊。	l
 Announcement combat sentence [diplomacy-group]: {s} is our ally, but there is ill-will between our peoples.	{s1}是我们的盟友，可双方百姓却互有敌意。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} appear {s}.	{s1}出现在{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} burned {s}.	{s1}曾焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} floods {s}.	{s1}淹没{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} reward {s}.	{s1}奖赏{s2}。	l
 Consider that most Workshops are 3x3 squares. Mining through the stone layers further down may take longer,	[C:7:0:0]请记住，大多数[C:6:0:0]工坊[C:7:0:0]占地 3×3 格。挖掘更深处的岩层可能耗时更久，	hq
 DFHack help: "-u", "--unit <id>" Emigrate noble matching specified unit ID that does not rule your fortress	"-u"、"--unit <id>" 迁移贵族匹配不统治您的要塞的指定单位 ID	l
 DFHack help: "autobutcher list_export" Print commands required to set the current settings in another fort.	"autobutcher list_export" 打印在另一个要塞中设置当前设置所需的命令。	l
@@ -8026,6 +8111,9 @@ Announcement combat negotiation-response []: attempted to put their opposite at 
 Announcement combat negotiation-response []: made a great show of flattery but left the matter unaddressed	大献殷勤，却避而不谈正事	l
 Announcement combat rumor-event []: Vanquishing a great beast on our behalf would bring us all much glory.	若能替我们打败一头巨兽，我们所有人都将引以为荣。	l
 Announcement combat rumor-event [rumor-person,rumor-position,rumor-person]: {s} became {s}, replacing {s}.	{s1}取代{s3}，成为了{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} were {s}.	{s1}曾{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} burns {s}.	{s1}焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} flood {s}.	{s1}淹没{s2}。	l
 DFHack help: "--resetall" Forget which dwarves have been optimized and remove the saved optimization data.	"--resetall" 忘记哪个矮人已经优化过，并删除保存的优化数据。	l
 DFHack help: "allneeds --sort strength" Sort the list of needs by how strongly the people feel about them.	"allneeds --sort strength" 根据人们对需求的感受有多强烈对需求列表进行排序。	l
 DFHack help: "exterminate BIRD_RAVEN:MALE" Kill the ravens flying around the map (but only the male ones).	"exterminate BIRD_RAVEN:MALE" 杀死在地图上飞来飞去的乌鸦（但仅限雄性乌鸦）。	l
@@ -8170,6 +8258,11 @@ Announcement combat sentence [$person]: [{s} looks around nervously and leans fo
 Announcement combat sentence [unit,owned-object,owned-object]: {s} releases the choke hold of {s} on {s}.	{s1}解除了{s2}对{s3}的勒颈控制。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} releases the joint lock of {s} on {s}.	{s1}解除了{s2}对{s3}的关节锁技。	l
 Announcement combat site-rumor-event [site-rumor-person,$name,$name]: {s} claimed {s} in the name of {s}.	{s1}以{s3}的名义取得了{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} are {s}.	{s1}{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} was {s}.	{s1}曾{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} burn {s}.	{s1}焚烧{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} were {s}.	{s1}曾……{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} will {s}.	{s1}将……{s2}。	l
 Can you imagine the trade wagons? Of course, there are responsibilities, and the nobility must live well.	你能想象那些贸易货车吗？当然，也有相应的责任，而且贵族必须享有优渥的生活。	hP
 DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for automation tools?	确定要将自动化工具的自动启动状态恢复为默认设置吗？	l
 DFHack help: "--renamejob <name>" Renames the selected dwarves' custom professions to the specified name.	"--renamejob <name>" 将选定的矮人的自定义职业重命名为指定名称。	l
@@ -8315,6 +8408,10 @@ Announcement combat sentence [unit,owned-object,owned-object]: {s} loosens the c
 Announcement combat sentence [unit,owned-object,owned-object]: {s} loosens the joint lock of {s} on {s}.	{s1}松开了{s2}对{s3}的关节锁技。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the choke hold of {s} on {s}.	{s1}解除了{s2}对{s3}的勒颈控制。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the joint lock of {s} on {s}.	{s1}解除了{s2}对{s3}的关节锁技。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} am {s}.	{s1}{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-emotion]: {s} is {s}.	{s1}{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} are {s}.	{s1}……{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} was {s}.	{s1}曾……{s2}。	l
 DFHack GUI Design: Move any draggable points with the mouse. Use right-click to dismiss points in order.	用鼠标移动可拖动的点。右键可依次撤销已放置的点。	l
 DFHack help: "-a", "--aquifer" Whether the tile is considered an aquifer. [number ID] (NONE/LIGHT/HEAVY)	"-a", "--aquifer" 该图块是否被视为含水层。 [号码ID](NONE/LIGHT/HEAVY)	l
 DFHack help: "-x" eXcept: Apply selected action to all plants except those specified (invert selection).	"-x" eXcept：将选定的操作应用于除指定植物之外的所有植物（反向选择）。	l
@@ -8447,6 +8544,8 @@ Announcement combat sentence []: I would give anything to be away from here. I c
 Announcement combat sentence [unit,owned-object,owned-object]: {s} loosen the choke hold of {s} on {s}.	{s1}松开了{s2}对{s3}的勒颈控制。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} loosen the joint lock of {s} on {s}.	{s1}松开了{s2}对{s3}的关节锁技。	l
 Announcement combat sentence [unit]: {s} was spotted sneaking around! "I'll live to fight another day!"	发现{s1}在附近鬼鬼祟祟地活动！“我会活下来，改日再战！”	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} am {s}.	{s1}……{s2}。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} is {s}.	{s1}……{s2}。	l
 Certain livestock need to graze on grass. Assign these animals to a pasture zone. No fencing is needed.	某些牲畜需要吃草。可划定畜栏／牧场，将这些动物分配到有草的区域，无需建造围栏。	hj
 DFHack GUI Confirmation prompt: Are you sure you want to restore Autostart defaults for gameplay tools?	确定要将玩法扩展工具的自动启动状态恢复为默认设置吗？	l
 DFHack GUI Confirmation prompt: Are you sure you want to restore Enabled defaults for automation tools?	确定要将自动化工具的当前启用状态恢复为默认设置吗？	l
@@ -8927,6 +9026,7 @@ Announcement combat sentence []: It is I that would lead you, but I have no need
 Announcement combat sentence [unit,owned-object,owned-object]: {s} release the grip of {s} from {s}.	{s1}解除了{s2}对{s3}的抓握。	l
 Announcement combat sentence [unit,unit,object,owned-object]: {s} take {s} down by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其摔倒了！	l
 Announcement combat site-rumor-event [$name,$name]: {s} was overthrown after an insurrection in {s}.	{s1}在{s2}的一场叛乱后被推翻了。	l
+Announcement combat visitor-statement [visitor-statement-subject,visitor-statement-object]: {s} {s}.	{s1}……{s2}。	l
 Assign a burrow defense order. The soldiers will patrol the burrow and attack any hostile creatures.	下达活动区防卫命令。士兵会在活动区内巡逻并攻击敌对生物。	hj
 Assign a training order. The squad must be assigned to a barracks zone with the training option set.	下达训练命令。小队必须已被分配到开启训练用途的兵营区域。	hj
 DFHack GUI Design: Move the center point with the mouse. Use right-click to dismiss points in order.	用鼠标移动中心点。右键可依次撤销已放置的点。	l
@@ -8963,7 +9063,6 @@ From the Library Info Menu you can assign Scholars who discuss their interests w
 If you don't have a Bookkeeper, or they don't have an Office to work in, numbers may be approximate.	[C:7:0:0]如果没有[C:5:0:0]簿记员[C:7:0:0]，或者簿记员没有可用的[C:3:0:0]办公室[C:7:0:0]，数量可能只是估计值。	hq
 If you speak to a priest at a temple or select the Chosen destiny, you might receive a divine quest.	如果与神殿中的祭司交谈，或选择了天选命运，就可能接到神圣任务。	hq
 Make sure your parameters and presets can support mid-elevation, very high drainage, freezing areas.	请确保参数和预设支持中等海拔、极高排水且会冻结的区域。	l
-This visitor has come seeking work as a {s}. She heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。她听说可以在{e1}找到长期工作。	hPt
 You can alternate between standing and a prone position by clicking the indicated button or pressing	点击图示按钮，或按相应热键，即可在站立和俯卧之间切换：	hq
 You can strike, wrestle, or shoot to engage in combat. You can also throw objects in your inventory.	可以通过打击、摔跤或射击战斗，也可以投掷物品栏中的物品。	hq
 and became obsessed with their own mortality and sought to extend their life by any means during {e}	并在{e1}期间开始执着于自身终将死亡的命运，并不择手段地寻求延寿	ht
@@ -9146,9 +9245,6 @@ I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, 
 I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, and prepare a coup.	我雇{n1}渗透{e1}，以窃取宝藏、开展破坏活动和策划政变。	hPt
 Join me and we can shake off the yoke of {e} from the weary shoulders of the people of {e} forever!	加入我，我们就能让{e2}饱受压迫的人民永远摆脱{e1}的枷锁！	hPt
 This night creature was first created by {n} after horrible experiments on the {n} in the year {d}.	第{d1}年，{n1}对{n2}进行了可怕的实验后，首次创造出了这种夜行生物。	ht
-This visitor has come seeking work as a {s}. He heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。他听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。它听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
 To have a fully functioning Tavern you must have a Stockpile with Booze in it, preferably close by.	[C:7:0:0]要让[C:1:0:1]酒馆[C:7:0:0]正常运作，必须有一个存放[C:6:0:1]酒[C:7:0:0]的[C:6:0:0]储物堆[C:7:0:0]，最好就在附近。	hq
 When deciding which guild to dedicate the Guildhall to, you can scroll over the names of the guilds	[C:7:0:0]决定将[C:1:0:1]行会大厅[C:7:0:0]划归哪个行会时，可以将鼠标移到各个行会的名字上，	hq
 When trading you select which goods you want from the list on the left, and which goods of yours to	交易时，从左侧列表选择你想买的商品，再从右侧列表选择你要	hq
@@ -9363,9 +9459,6 @@ The world generator is having trouble setting volcanism in the manner specified 
 There's some food on the embark Wagon, and you can trade for food, but you can also grow your own.	[C:7:0:0]启程时的[C:6:0:0]货车[C:7:0:0]上有一些食物，你也可以通过交易获得食物，但还可以自己种植。	hq
 These work orders are set to complete a certain number of Tasks and can be given start conditions.	[C:7:0:0]可以设置订单完成一定数量的[C:3:0:1]任务[C:7:0:0]，并为其指定启动条件。	hq
 This night creature was first created by {n} through the fiend's terrifying power in the year {d}.	第{d1}年，{n1}释放邪魔的可怕力量后，首次创造出了这种夜行生物。	ht
-This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. She heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。她听说{e1}适合作为佣兵的基地。	hPt
 Workshops are one of many buildings you can place with the highlighted Build button. Click it now.	[C:6:0:0]工坊[C:7:0:0]只是众多可建建筑中的一种，点击已高亮的“[C:5:0:1]建造[C:7:0:0]”按钮即可放置。现在点击它。	hq
 Workshops are one of many buildings you can place with the highlighted Build button. Click it now.	工坊是众多可建造建筑中的一类，你可以点击高亮显示的「建造」按钮来放置它们。现在按下它。	w
 You've finally got your equipment together, such as it is. Now it's time for action and adventure!	你终于把装备凑齐了，虽然算不上多好。现在正是行动与冒险之时！	hq
@@ -9483,6 +9576,7 @@ Announcement combat sentence []: Surely any place is better than this. Let's set
 Announcement combat sentence [unit,owned-object,owned-object]: {s} adjust the grip of {s} on {s}.	{s1}调整了{s2}对{s3}的抓握。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} breaks the grip of {s} on {s}.	{s1}挣脱了{s2}对{s3}的抓握。	l
 Announcement combat sentence [unit,unit,object,owned-object]: {s} throws {s} by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其抛了出去！	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be speaking to .	{s1}当时将正在说话。	l
 By now you should have a room underground where your residents can hide from the creatures above.	现在，你应该已有一间地下房间，可供居民躲避地表的生物。	hq
 Can volcanism be placed at the value 100 enough times to provide space for each of your volcanos?	火山活动度为 100 的方格是否足以容纳所有火山？	l
 Carve a track in a stone floor. Tracks are used by minecarts with routes set in the hauling menu.	在石地板上雕凿轨道。矿车沿轨道行驶，路线在搬运菜单中设置。	hj
@@ -9541,8 +9635,6 @@ The world generator is having trouble placing savagery in the manner specified b
 The world generator is having trouble setting drainage in the manner specified by the parameters.	世界生成器无法按参数要求设置排水性。	l
 The {s} of {e} has been founded {s} and looks to your thriving economy for its future prosperity.	{s1}{e1}已建于{s2}，期盼你的繁荣经济带动它发展。	hPt
 There are several ways to mine. Stairwells (selected) start at one elevation and are completed at	采矿有多种方式。当前选中的楼梯井从一个高度层开始，延伸至	hq
-This visitor has come seeking work as a {s}. He heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。他听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. It heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。它听说{e1}适合作为佣兵的基地。	hPt
 This worker is not specialized and will do any free tasks that become available. Click to toggle.	此工人未设为专职，会执行任何可接手的空闲任务。点击切换。	hj
 Through {n}, I told {n} to ask {n} to grant an important position to {n} when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予{n4}。	hPt
 To do this select the Nobles and administrators menu and click the add button to assign somebody.	[C:7:0:0]打开“[C:5:0:1]贵族和管理员[C:7:0:0]”菜单，点击添加按钮，选择任命人选。	hq
@@ -9685,6 +9777,8 @@ Announcement combat sentence [boast-victim,boast-slain-clause]: I am the vanquis
 Announcement combat sentence [unit,owned-object,owned-object]: {s} break the grip of {s} on {s}.	{s1}挣脱了{s2}对{s3}的抓握。	l
 Announcement combat sentence [unit,unit,object,owned-object]: {s} throw {s} by the {s} with {s}!	{s1}用{s4}抓住{s2}的{s3}将其抛了出去！	l
 Announcement combat site-rumor-event [site-rumor-artifact,$name]: {s} was known to be in in {s}.	当时已知{s1}位于{s2}的一座建筑里。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be speaking to .	{s1}当时将正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be destroying .	{s1}当时将正在毁灭。	l
 Archery targets, siege weapons, and some ornamental display items can be found in this category.	此类别包含射箭靶、攻城武器和一些装饰展示物品。	hj
 But my chosen, you are in need of drink and sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水和睡眠！面对前方的挑战之前，先照顾好自己。	hq
 DFHack GUI Notification settings: Reports units that are dangerously hungry, thirsty, or drowsy.	报告饥饿、口渴或困倦已达到危险程度的生物。	l
@@ -9898,6 +9992,11 @@ Announcement combat rumor-flight [rumor-army]: just before an army {s} descended
 Announcement combat sentence [boast-victim,boast-slain-clause]: I am the conqueror of {s}, {s}!	我就是{s1}的征服者，{s2}！	l
 Announcement combat sentence [boast-victim,boast-slain-clause]: I am the strangler of {s}, {s}!	绞杀{s1}的正是我，{s2}！	l
 Announcement combat site-rumor-event [site-rumor-person,$name]: the army of {s} marched on {s}.	{s1}的军队向{s2}进军了。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be speaking to {s}.	当时将正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be destroying .	{s1}当时将正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be appearing .	{s1}当时将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be destroying.	{s1}当时将正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be rewarding .	{s1}当时将正在施予奖赏。	l
 Click Workshops -> Carpenter and place the shop in an empty area on the surface or underground.	[C:7:0:0]点击“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]木匠工坊[C:7:0:0]”，在地表或地下的空地上放置工坊。	hq
 DFHack help: "--material <mat>" Trigger the command on items with the given material. Examples:	"--material <mat>" 对具有给定材质的物品触发命令。示例：	l
 DFHack help: "-X", "--include-worn" Include worn (X) and tattered (XX) items when unforbidding.	"-X"、"--include-worn" 不禁止时包括磨损 (X) 和破烂 (XX) 的物品。	l
@@ -10128,6 +10227,14 @@ Announcement combat sentence [boast-victim,boast-slain-clause]: I am the murdere
 Announcement combat sentence [head]: {s} and it is mostly cut away from the rest of the torso!	{s1}，它与躯干其余部分的连接大多被切断了！	l
 Announcement combat sentence [memory-person,memory-person]: {s} escalated a conflict with {s}.	{s1}升级了与{s2}的冲突。	l
 Announcement combat site-rumor-event [$name,site-rumor-person]: was kidnapped from {s} by {s}.	{s2}从{s1}绑架了一个人。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be speaking to {s}.	当时将正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be destroying {s}.	当时将正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be appearing .	{s1}当时将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be destroying.	{s1}当时将正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be rewarding .	{s1}当时将正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be appearing.	{s1}当时将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be flooding .	{s1}当时将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be rewarding.	{s1}当时将正在施予奖赏。	l
 Announcement combat work-sentence [work-reference]: For lyrics, the composer has selected {s}.	作曲者选用{s1}作为歌词。	l
 Build an elaborate water-powered contraption or domesticate previously untameable wild beasts.	建造精巧的水力机械，或驯服此前无法驯服的野兽。	hq
 DFHack GUI Notification settings: Shows a suffocation bar when you are drowning or breathless.	溺水或呼吸困难时显示剩余呼吸量。	l
@@ -10300,6 +10407,15 @@ Announcement combat sentence [object,owner]: The {s} is ripped away and remains 
 Announcement combat site-rumor-event [$name,$name]: an insurrection against {s} began in {s}.	{s2}发生了反抗{s1}的叛乱。	l
 Announcement combat site-rumor-event [site-rumor-artifact,$name]: {s} was known to be in {s}.	当时已知{s1}位于{s2}。	l
 Announcement combat site-rumor-event [site-rumor-person,site-rumor-position]: {s} became {s}.	{s1}成为了{s2}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be destroying {s}.	当时将正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be appearing {s}.	当时将正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be rewarding {s}.	当时将正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be appearing.	{s1}当时将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be flooding .	{s1}当时将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be rewarding.	{s1}当时将正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be burning .	{s1}当时将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be flooding.	{s1}当时将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be speaking.	{s1}当时将正在说话。	l
 Aquifers can block the downward progress of your fortress, but it is possible to bypass them.	含水层会阻碍要塞向下扩展，但仍有办法穿过。	hq
 DFHack help: "--value <num>" A percent value (0 to 100, inclusive) to set combat hardened to.	"--value <num>" 设置战斗强度的百分比值（0 到 100，含）。	l
 DFHack help: "-a", "--add" Prioritize all current and future jobs of the specified job types.	"-a"、"--add" 优先考虑指定作业类型的所有当前和未来作业。	l
@@ -10516,6 +10632,14 @@ Announcement combat sentence [boast-victim,boast-slain-clause]: I am the master 
 Announcement combat sentence [boast-victim,boast-slain-clause]: I am the slayer of {s}, {s}!	杀死{s1}的正是我，{s2}！	l
 Announcement combat sentence [object,owner]: The {s} is ripped away and remains in {s} grip!	{s1}被撕了下来，仍未脱离{s2}抓握！	l
 Announcement combat sentence [trade-places]: The villages {s} also utilize the market there.	{s1}这些村庄也去那里赶集。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be appearing {s}.	当时将正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be rewarding {s}.	当时将正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be flooding {s}.	当时将正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be burning .	{s1}当时将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be flooding.	{s1}当时将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be speaking.	{s1}当时将正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be burning.	{s1}当时将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be speaking to .	{s1}将正在说话。	l
 Announcement combat work-sentence [work-ordinal,work-reference]: The {s} chapter covers {s}.	第{s1}章的内容涵盖{s2}。	l
 Beds are found in the Furniture category. Unlike Workshops, Beds must be placed underground.	[C:5:0:1]床[C:7:0:0]位于“[C:5:0:1]家具[C:7:0:0]”分类下。与[C:6:0:0]工坊[C:7:0:0]不同，[C:6:0:0]床[C:7:0:0]必须放在地下。	hq
 Change the work order priority. Work orders at the top of the list will use workshops first.	修改工单优先级。列表顶部的工单会优先使用工坊。	hj
@@ -10771,6 +10895,10 @@ Announcement combat site-rumor-event [site-rumor-person,$name]: {s} was kidnappe
 Announcement combat site-rumor-predecessor [dialogue-family,site-rumor-person]: her {s} {s}	她的{s1}{s2}	l
 Announcement combat site-rumor-predecessor [dialogue-family,site-rumor-person]: his {s} {s}	他的{s1}{s2}	l
 Announcement combat site-rumor-predecessor [dialogue-family,site-rumor-person]: its {s} {s}	它的{s1}{s2}	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be flooding {s}.	当时将正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be burning {s}.	当时将正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be burning.	{s1}当时将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be destroying .	{s1}将正在毁灭。	l
 Blocking is done with a shield and works on any attack, including fire and natural attacks.	格挡使用盾牌，能抵挡各种攻击，包括火焰和生物的天生攻击。	hq
 But my chosen, you are in need of sustenance! See to yourself before you face what's ahead.	但是，我的天选者，你需要食物！面对前方的挑战之前，先照顾好自己。	hq
 DFHack help: "--brewable" Restrict the selection to plants that can be brewed into alcohol.	"--brewable" 将选择限制为可以酿造酒精的植物。	l
@@ -11025,6 +11153,11 @@ Announcement combat sentence [unit,actor,equipment]: {s} bats {s} out of the air
 Announcement combat sentence [unit,object,unit]: {s} let the {s} drop away as {s} attacks.	{s1}在{s3}攻击时放开了{s2}。	l
 Announcement combat sentence [unit,object,unit]: {s} lets the {s} drop away as {s} attack.	{s1}在{s3}攻击时放开了{s2}。	l
 Announcement combat site-rumor-event [$name,$name]: {s} waited out an insurrection in {s}.	{s1}在{s2}按兵不动，一直等到叛乱平息。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be burning {s}.	当时将正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be speaking to {s}.	将正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be appearing .	{s1}将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be destroying.	{s1}将正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be rewarding .	{s1}将正在施予奖赏。	l
 DFHack help: "--checkAttackEvery <n>" Check for attack events at least once every n ticks.	"--checkAttackEvery <n>" 至少每 n 个周期检查一次攻击事件。	l
 DFHack help: "--edible" Restrict the selection to plants with parts that can be eaten raw.	"--edible" 限制选择具有可生吃部分的植物。	l
 DFHack help: "-r", "--randomize" Randomize the polarity and timer value for all windmills.	"-r"、"--randomize" 随机化所有风车的极性和计时器值。	l
@@ -11235,6 +11368,11 @@ Announcement combat sentence [$name,description-building]: Search first in {s}, 
 Announcement combat sentence [boast-victim,boast-slain-clause]: I am the foe of {s}, {s}!	我就是{s1}的敌人，{s2}！	l
 Announcement combat sentence [unit,actor,equipment]: {s} bat {s} out of the air with {s}!	{s1}用{s3}将{s2}从空中击落了！	l
 Announcement combat sentence [unit,object,unit]: {s} let the {s} drop away as {s} attack.	{s1}在{s3}攻击时放开了{s2}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be destroying {s}.	将正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were speaking to .	{s1}当时正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be appearing.	{s1}将正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be flooding .	{s1}将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be rewarding.	{s1}将正在施予奖赏。	l
 Announcement combat work-reference-list [work-reference,work-reference-list]: {s} and {s}	{s1}和{s2}	l
 DFHack help: "--depot" Task the selected owned item to be dropped off at the trade depot.	"--depot" 任务将选定的拥有物品投放到贸易站。	l
 DFHack help: "--same <INTEREST>" Set the interest level towards the same sex as the unit.	"--same <INTEREST>" 设置对单位同性别的兴趣程度。	l
@@ -11471,6 +11609,14 @@ Announcement combat negotiation-response []: negotiated with humor but was outma
 Announcement combat sentence [$item,merchant-address]: Might I interest you in {s}, {s}?	{s2}，我能让你对{s1}感兴趣吗？	l
 Announcement combat sentence [$sphere]: There is also the issue of their worship of {s}.	还有，他们崇拜{s1}，这也是个问题。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} catches {s} with {s}!	{s1}用{s3}抓住了{s2}！	l
+Announcement combat visitor-statement [visitor-statement-object]: will be appearing {s}.	将正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be rewarding {s}.	将正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are speaking to .	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was speaking to .	{s1}当时正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were destroying .	{s1}当时正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be burning .	{s1}将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be flooding.	{s1}将正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be speaking.	{s1}将正在说话。	l
 But if one of these brave workers falls, you'll need to assign somebody to these duties.	但如果这些勇敢的工人有人倒下，你就需要另外指派人手接替。	hq
 DFHack GUI Notification settings: Notifies when traders are ready to trade at the depot.	商人在贸易站准备好交易时发出通知。	l
 DFHack help: "-q", "--quality <num>" (default: "0", equal to "df.item_quality.Ordinary")	"-q"、"--quality <num>"（默认值："0"，等于"df.item_quality.Ordinary"）	l
@@ -11701,6 +11847,17 @@ Announcement combat sentence []: It would be so great to perform and make people
 Announcement combat sentence [dialogue-trouble-list]: Well, let's see... we've got {s}.	嗯，让我想想……我们这里有{s1}。	l
 Announcement combat sentence [head,equipment]: {s}, but the attack is deflected by {s}!	{s1}，但攻击被{s2}挡开了！	l
 Announcement combat site-rumor-event [$name,$name]: {s} crushed an insurrection in {s}.	{s1}镇压了{s2}的一场叛乱。	l
+Announcement combat visitor-statement [visitor-statement-object]: were speaking to {s}.	当时正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be flooding {s}.	将正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am speaking to .	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are destroying .	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is speaking to .	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was destroying .	{s1}当时正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were appearing .	{s1}当时正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were destroying.	{s1}当时正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were rewarding .	{s1}当时正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be burning.	{s1}将正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will destroyed .	{s1}将已毁灭。	l
 Before you start chopping down trees you may want to create a dedicated Wood Stockpile.	[C:7:0:0]开始砍树之前，不妨先设置一个[C:6:0:0]专门存放木头的储物堆[C:7:0:0]。	hq
 But this is only the beginning. Ultimately, your true goals are up to your imagination.	但这也只是开始。归根结底，你真正的目标由想象力决定。	hq
 Change whether the work order must be activated or completed to satisfy this condition.	切换满足此条件所需的工单状态：已启动或已完成。	hj
@@ -11933,6 +12090,26 @@ Announcement combat sentence [dialogue-object]: Perhaps you'd be willing to trad
 Announcement combat sentence [trade-places]: The villages {s} utilize the market here.	{s1}这些村庄都来这里赶集。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} catch {s} with {s}!	{s1}用{s3}抓住了{s2}！	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} locks {s} with {s}!	{s1}用{s3}锁住{s2}！	l
+Announcement combat visitor-statement [visitor-statement-object]: are speaking to {s}.	正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: was speaking to {s}.	当时正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: were destroying {s}.	当时正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be burning {s}.	将正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am destroying .	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are appearing .	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are destroying.	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are rewarding .	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is destroying .	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was appearing .	{s1}当时正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was destroying.	{s1}当时正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was rewarding .	{s1}当时正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were appearing.	{s1}当时正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were flooding .	{s1}当时正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were rewarding.	{s1}当时正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will appeared .	{s1}将已出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will destroyed.	{s1}将已毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will rewarded .	{s1}将已施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will speak to .	{s1}将说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will spoke to .	{s1}将已说话。	l
 Announcement combat work-reference-list [work-reference,work-reference-list]: {s}, {s}	{s1}、{s2}	l
 But my chosen, you are in need of drink! See to yourself before you face what's ahead.	但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。	hq
 But my chosen, you are in need of sleep! See to yourself before you face what's ahead.	但是，我的天选者，你需要睡眠！面对前方的挑战之前，先照顾好自己。	hq
@@ -12163,6 +12340,33 @@ Announcement combat sentence [$item,merchant-town]: {s} was tanned right here in
 Announcement combat sentence [guard-building,$distance]: There are guards in {s} {s}.	{s2}的{s1}里有卫兵。	l
 Announcement combat sentence [unit,owned-object,owned-object]: {s} lock {s} with {s}!	{s1}用{s3}锁住{s2}！	l
 Announcement combat sentence [unit]: {s} are propelled away by the force of the blow!	{s1}被这一击打飞了！	l
+Announcement combat visitor-statement [visitor-statement-object]: am speaking to {s}.	正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: are destroying {s}.	正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is speaking to {s}.	正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: was destroying {s}.	当时正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were appearing {s}.	当时正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were rewarding {s}.	当时正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will destroyed {s}.	将已毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am appearing .	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am destroying.	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am rewarding .	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are appearing.	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are flooding .	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are rewarding.	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is appearing .	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is destroying.	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is rewarding .	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was appearing.	{s1}当时正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was flooding .	{s1}当时正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was rewarding.	{s1}当时正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were burning .	{s1}当时正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were flooding.	{s1}当时正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were speaking.	{s1}当时正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were will be .	{s1}曾将……。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will appeared.	{s1}将已出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will destroy .	{s1}将毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will flooded .	{s1}将已泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will rewarded.	{s1}将已施予奖赏。	l
 Certainly. It would be terrible to leave someone to fend for themselves after sunset.	当然。日落之后，让人独自在外面自生自灭就太糟了。	hP
 DFHack GUI Confirmation prompt: Are you sure you want to restore default preferences?	确定要将所有偏好恢复为默认设置吗？	l
 DFHack GUI Notification settings: Notifies when there are active invaders on the map.	地图上有正在活动的入侵者时发出通知。	l
@@ -12403,6 +12607,37 @@ Announcement combat rumor-event []: A lurking pest has come up from the undergro
 Announcement combat sentence [$item,merchant-town]: {s} were made right here in {s}.	{s1}就是在{s2}制作的。	l
 Announcement combat sentence [shot,equipment]: {s} but the shot is blocked with {s}!	{s1}，但射来的攻击被{s2}挡住了！	l
 Announcement combat sentence [unit]: {s} is propelled away by the force of the blow!	{s1}被这一击打飞了！	l
+Announcement combat visitor-statement [visitor-statement-object]: am destroying {s}.	正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: are appearing {s}.	正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: are rewarding {s}.	正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is destroying {s}.	正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was appearing {s}.	当时正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was rewarding {s}.	当时正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were flooding {s}.	当时正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will appeared {s}.	将已出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will rewarded {s}.	将已奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will speak to {s}.	将对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: will spoke to {s}.	将已对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am appearing.	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am flooding .	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am rewarding.	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are burning .	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are flooding.	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are speaking.	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is appearing.	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is flooding .	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is rewarding.	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speaking to .	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was burning .	{s1}当时正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was flooding.	{s1}当时正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was speaking.	{s1}当时正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was will be .	{s1}曾将……。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were burning.	{s1}当时正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will appear .	{s1}将出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will burned .	{s1}将已燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will destroy.	{s1}将毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will flooded.	{s1}将已泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will reward .	{s1}将施予奖赏。	l
 Announcement combat work-sentence [work-reference]: The overall text emphasizes {s}.	全文着重强调{s1}。	l
 DFHack help: "--cloth" Restrict the selection to plants that yield thread for cloth.	"--cloth" 将选择限制为生产布料线的植物。	l
 DFHack help: "--nopointers" Disables printing values which contain memory addresses.	"--nopointers" 禁用打印包含内存地址的值。	l
@@ -12512,6 +12747,7 @@ Left click on an alert for recentering options, and right click to dismiss an al
 Overview sentence: The victim of a crime was somehow convicted of that very offense.	明明是受害者，反倒被判成了犯人。	l
 Saves starting here will be grouped on the title screen, with their own active save.	从此处开始的存档将在标题菜单中归为一组，并拥有独立的当前存档。	P
 The Schedule menu is a powerful tool to give automatic orders to the selected squad.	[C:7:0:0]“[C:5:0:1]日程[C:7:0:0]”菜单是向所选小队自动下达命令的强大工具。	hq
+This visitor has come {s}. She heard this was the place to admire fine architecture.	这位访客前来{s1}。她听说这里能欣赏精美的建筑。	hPt
 With a Bed placed, your workers will have somewhere to sleep. Later you can create a	[C:7:0:0]放好[C:6:0:0]床[C:7:0:0]后，工人就有地方睡觉了。之后可以建造	hq
 You can also compose poems, songs, and choreography if you know a relevant art form.	如果掌握了相关艺术形式，还可以创作诗歌、歌曲或舞蹈编排。	hq
 You might want to check your maximum elevation value and other elevation parameters.	请检查最高海拔值及其他海拔参数。	l
@@ -12648,6 +12884,29 @@ Announcement combat sentence [$item,merchant-town]: {s} were cut right here in {
 Announcement combat sentence [dialogue-family-indef,$person]: I have {s} named {s}.	我有{s1}，名叫{s2}。	l
 Announcement combat sentence [diplomacy-cause]: The trouble started because of {s}.	最初是因为{s1}，才起了冲突。	l
 Announcement combat site-rumor-event [$name,$name]: the army of {s} marched on {s}.	{s1}的军队向{s2}进军了。	l
+Announcement combat visitor-statement [visitor-statement-object]: am appearing {s}.	正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: am rewarding {s}.	正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: are flooding {s}.	正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is appearing {s}.	正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is rewarding {s}.	正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was flooding {s}.	当时正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were burning {s}.	当时正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were will be {s}.	曾将……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will destroy {s}.	将毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will flooded {s}.	将已淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am burning .	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am flooding.	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am speaking.	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are burning.	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroying .	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is burning .	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is flooding.	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is speaking.	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was burning.	{s1}当时正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will appear.	{s1}将出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will burned.	{s1}将已燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will flood .	{s1}将泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will reward.	{s1}将施予奖赏。	l
 Announcement combat work-sentence [work-reference]: It concerns the lineage of {s}.	内容涉及{s1}的家系。	l
 Assigned residents will only perform tasks in any of their active assigned burrows.	已分配的居民只会在分配给他们且已启用的任一活动区内执行任务。	hP
 DFHack help: "-f", "--histfig <id>" Rename the historical figure with the given ID.	"-f", "--histfig <id>" 使用给定的ID重命名历史人物。	l
@@ -12758,6 +13017,10 @@ Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let some days pa
 Prepare to guide your stout charges to fortune in a world fraught with many perils.	准备好带领这些矮人，在危机四伏的世界中追寻财富吧。	hq
 Skins are tanned at the Tanner's Shop, and made into Clothing at the Leather Works.	[C:6:0:1]兽皮[C:7:0:0]在[C:6:0:0]制革工坊[C:7:0:0]鞣制，再由[C:6:0:0]皮革工坊[C:7:0:0]加工成[C:6:0:1]衣服[C:7:0:0]。	hq
 The world generator is having trouble placing enough ocean squares along the edges.	世界生成器无法在地图边缘放置足够的海洋方格。	l
+This visitor has come {s}. He heard this was the place to admire fine architecture.	这位访客前来{s1}。他听说这里能欣赏精美的建筑。	hPt
+This visitor has come {s}. It heard this was the place to admire fine architecture.	这位访客前来{s1}。它听说这里能欣赏精美的建筑。	hPt
+This visitor has come {s}. She heard this was the place to look for long-term work.	这位访客前来{s1}。她听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. She heard {e} was the place to admire fine architecture.	这位访客前来{s1}。她听说可以在{e1}欣赏精美的建筑。	hPt
 To trade with the autumn caravan, you must build a Trade Depot from the Build menu.	[C:7:0:0]要与秋季商队交易，必须先通过“[C:5:0:1]建造[C:7:0:0]”菜单修建[C:6:0:0]贸易站[C:7:0:0]。	hq
 Toggle whether the squad will store squad-level equipment here, such as ammunition.	切换此小队是否在这里存放弹药等小队共用装备。	hj
 a telling of the story of the ascension of {n} to the position of {s} of {p} in {d}	讲述{n1}于{d1}年就任{p1}{s1}的故事	ht
@@ -12888,6 +13151,26 @@ Announcement combat sentence []: Excitement! Adventure! I am thrilled to join yo
 Announcement combat sentence [dialogue-family-indef,$person]: I had {s} named {s}.	我曾有{s1}，名叫{s2}。	l
 Announcement combat sentence [head]: {s} and the severed part sails off in an arc!	{s1}，断肢划着弧线飞了出去！	l
 Announcement combat site-rumor-event [site-rumor-person,$name]: {s} became of {s}.	{s1}在{s2}任职了。	l
+Announcement combat visitor-statement [visitor-statement-object]: am flooding {s}.	正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: are burning {s}.	正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is flooding {s}.	正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: speaking to {s}.	正在对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: was burning {s}.	当时正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was will be {s}.	曾将……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will appear {s}.	将出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will burned {s}.	将已焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will reward {s}.	将奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am burning.	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appearing .	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroyed .	{s1}曾毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroying.	{s1}正在毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is burning.	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewarding .	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speaks to .	{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will burn .	{s1}将燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will flood.	{s1}将泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will speak.	{s1}将说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will spoke.	{s1}将已说话。	l
 DFHack GUI Confirmation prompt: Are you sure you want to restore overlay defaults?	确定要将所有界面覆盖层恢复为默认设置吗？	l
 DFHack GUI Notification settings: Notifies when a squad is stuck on the world map.	小队受困于世界地图时发出通知。	l
 DFHack help: "--keepInventory" Move items back into inventory after transformation	"--keepInventory" 改造后将物品移回库存	l
@@ -13000,6 +13283,13 @@ No one even considered making the journey to such a cursed death-trap this seaso
 Praise {p} for ignoring your hubris. You have been granted mercy. Let a week pass.	赞美{p1}，宽恕了你的狂妄。你已蒙受仁慈。等上一周。	hPt
 The sky above you is completely gray, with dark cloud pillars pressing through it.	你头顶的天空一片灰暗，深色的云柱挤入其中。	hP
 The sky above you is completely gray, with dark cloud pillars pressing through it.	你头顶的天空一片灰暗，深色的云柱挤入其中。	hj
+This visitor has come {s}. He heard this was the place to look for long-term work.	这位访客前来{s1}。他听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. He heard {e} was the place to admire fine architecture.	这位访客前来{s1}。他听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. It heard this was the place to look for long-term work.	这位访客前来{s1}。它听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. It heard {e} was the place to admire fine architecture.	这位访客前来{s1}。它听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. She heard this was a good place to search for monsters.	这位访客前来{s1}。她听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. She heard this was the place for long-term scholarship.	这位访客前来{s1}。她听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. She heard {e} was the place to look for long-term work.	这位访客前来{s1}。她听说可以在{e1}找到长期工作。	hPt
 Though I cannot agree fully on a slight technicality, no one can deny your genius!	虽说有个小细节我还不赞同，但谁也不能否认你是个天才！	hP
 You can then build Walls around the stairs until the leaking water is blocked off.	[C:7:0:0]然后在楼梯周围建[C:6:0:0]墙[C:7:0:0]，直到堵住渗水。	hq
 a group calling itself {p} founded {p} after a long journey from the lands of {p}.	自称{p1}的势力从{p3}的领土长途跋涉而来，建立了{p2}。	ht
@@ -13192,6 +13482,20 @@ Announcement combat sentence []: Can you lead me to battle and a warrior's death
 Announcement combat sentence []: Cavern dwellers! Send them back to the darkness!	洞穴居民！把他们赶回黑暗中去！	l
 Announcement combat sentence []: It's such a noble pursuit. Let's go immediately!	这是多么崇高的追求。我们马上走吧！	l
 Announcement combat sentence [unit,actor,equipment]: {s} bats {s} aside with {s}!	{s1}用{s3}将{s2}拨到了一旁！	l
+Announcement combat visitor-statement [visitor-statement-object]: am burning {s}.	正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: destroying {s}.	正在毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is burning {s}.	正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will flood {s}.	将淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appeared .	{s1}曾出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appearing.	{s1}正在出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroyed.	{s1}曾毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroys .	{s1}毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flooding .	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewarded .	{s1}曾施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewarding.	{s1}正在施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speak to .	{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} spoke to .	{s1}曾说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will burn.	{s1}将燃烧。	l
 Click on a Resident to see their needs, inventory, thoughts, relations, and more.	[C:7:0:0]点击[C:2:0:0]居民[C:7:0:0]，可查看其需求、物品栏、想法、人际关系等信息。	hq
 DFHack GUI Notification settings: Gives a summary of visible wildlife on the map.	汇总地图上可见的野生动物。	l
 DFHack GUI Notification settings: Shows a bleeding bar when you are losing blood.	正在失血时显示剩余血量。	l
@@ -13322,6 +13626,16 @@ No one else even considered making the journey to this cursed unhappy death-trap
 Not useful unless you retire and subsequently become a resident in Fortress mode.	只有在退役后成为要塞模式居民时才有用。	w
 The artwork relates to the ascension of {n} to the position of {s} of {p} in {d}.	图案描绘了{n1}于第{d1}年就任「{p1}」的{s1}的情景。	hHt
 The location must be built and furnished, with the new position appointed by you.	必须建好并布置该地点，并由你任命新职位的人员。	hP
+This visitor has come . She heard this was the place to admire fine architecture.	这位访客已经到来。她听说这里能欣赏精美的建筑。	hP
+This visitor has come {s}. He heard this was a good place to search for monsters.	这位访客前来{s1}。他听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. He heard this was the place for long-term scholarship.	这位访客前来{s1}。他听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. He heard {e} was the place to look for long-term work.	这位访客前来{s1}。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. It heard this was a good place to search for monsters.	这位访客前来{s1}。它听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. It heard this was the place for long-term scholarship.	这位访客前来{s1}。它听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. It heard {e} was the place to look for long-term work.	这位访客前来{s1}。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. She heard this was the place for those seeking danger.	这位访客前来{s1}。她听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. She heard this would make a good base for a mercenary.	这位访客前来{s1}。她听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. She heard {e} was the place for long-term scholarship.	这位访客前来{s1}。她听说{e1}适合长期从事学术研究。	hPt
 Would you agree to become {s} of {e}, taking over my duties and responsibilities?	你愿意接任{e1}的{s1}，承担我的职责吗？	hPt
 You must designate a dungeon before this restraint will be used for imprisonment.	必须先划定监牢，才能用这件束缚器具关押囚犯。	hP
 Your view is focused on one elevation at a time. To move the camera around, press	视野一次只显示一个高度层。要移动视角，请按	hq
@@ -13505,6 +13819,23 @@ Announcement combat sentence [unit,owner]: {s} scrambles out of {s} flight path!
 Announcement combat sentence [unit]: {s} slams into an obstacle and blows apart!	{s1}猛撞在障碍物上，四分五裂了！	l
 Announcement combat sentence [work,work-description]: You have authored {s}. {s}	你著成了{s1}。{s2}	l
 Announcement combat sentence [work,work-description]: You have composed {s}. {s}	你创作了{s1}。{s2}	l
+Announcement combat visitor-statement [visitor-statement-object]: appearing {s}.	正在出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: destroyed {s}.	曾毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: rewarding {s}.	正在奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: speaks to {s}.	对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: will burn {s}.	将焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appeared.	{s1}曾出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appears .	{s1}出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burning .	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroy .	{s1}毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroys.	{s1}毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flooded .	{s1}曾泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flooding.	{s1}正在泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewarded.	{s1}曾施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewards .	{s1}施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speaking.	{s1}正在说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will be .	{s1}将……。	l
+Announcement combat visitor-statement-subject [visitor-statement-reference]: {s}	{s1}	l
 But my chosen, you are in a state! See to yourself before you face what's ahead.	但是，我的天选者，你现在的状态很糟！面对前方的挑战之前，先照顾好自己。	hq
 Chop down more trees if necessary. Unpause and wait for the Bed to be completed.	[C:7:0:0]必要时再砍一些树。解除暂停，等待[C:6:0:1]床[C:7:0:0]制作完成。	hq
 Civilizations use available plants in their surroundings as their initial crops.	文明会使用周边可用植物作为初始作物。	l
@@ -13608,6 +13939,18 @@ Nobles and certain administrators require rooms, and some may also make demands.
 Once a strike hits, the materials and velocity are used to determine the damage.	打击命中后，会根据材料和速度计算伤害。	hq
 Praise {p} for ignoring your hubris. Such is the spirit of {r}. Let a week pass.	赞美{p1}，宽恕了你的狂妄。这就是{r1}的精神。等上一周。	hPt
 The peaceful town of {e} is threatened! The forces of darkness are on the march.	宁静的城镇{e1}正受到威胁！黑暗势力的大军正在进逼。	hqt
+This visitor has come . He heard this was the place to admire fine architecture.	这位访客已经到来。他听说这里能欣赏精美的建筑。	hP
+This visitor has come . It heard this was the place to admire fine architecture.	这位访客已经到来。它听说这里能欣赏精美的建筑。	hP
+This visitor has come . She heard this was the place to look for long-term work.	这位访客已经到来。她听说可以在这里找到长期工作。	hP
+This visitor has come . She heard {e} was the place to admire fine architecture.	这位访客已经到来。她听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. He heard this was the place for those seeking danger.	这位访客前来{s1}。他听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. He heard this would make a good base for a mercenary.	这位访客前来{s1}。他听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. He heard {e} was the place for long-term scholarship.	这位访客前来{s1}。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come {s}. It heard this was the place for those seeking danger.	这位访客前来{s1}。它听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. It heard this would make a good base for a mercenary.	这位访客前来{s1}。它听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. It heard {e} was the place for long-term scholarship.	这位访客前来{s1}。它听说{e1}适合长期从事学术研究。	hPt
+This visitor has come {s}. She heard {e} would make a good base for a mercenary.	这位访客前来{s1}。她听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. She is seeking information about the location of {b}.	这位访客前来{s1}。她正在打听{b1}的下落。	hPt
 Water flows from the adjacent input tile and from the tile below the input tile.	水会从相邻的输入格及输入格下方的格子流入。	hP
 Wrestling involves specific attacking body parts and specific target body parts.	摔跤涉及具体的攻击身体部位和目标身体部位。	hq
 You are approaching your destination. End your travels now and prepare yourself.	你正接近目的地。现在结束旅行，做好准备。	hq
@@ -13745,6 +14088,23 @@ Announcement combat sentence [unit,owner]: {s} scramble out of {s} flight path!	
 Announcement combat sentence [unit]: {s} slam into an obstacle and blows apart!	{s1}猛撞在障碍物上，四分五裂了！	l
 Announcement combat sentence [unit]: {s} slams into an obstacle and blow apart!	{s1}猛撞在障碍物上，四分五裂了！	l
 Announcement combat site-rumor-event [site-rumor-person]: was kidnapped by {s}.	有人被{s1}绑架了。	l
+Announcement combat visitor-statement [visitor-statement-emotion]: will be {s}.	将{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: appeared {s}.	曾出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: destroys {s}.	毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: flooding {s}.	正在淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: rewarded {s}.	曾奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: speak to {s}.	对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-object]: spoke to {s}.	曾对{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appear .	{s1}出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appears.	{s1}出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burned .	{s1}曾燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burning.	{s1}正在燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} destroy.	{s1}毁灭。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flooded.	{s1}曾泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} floods .	{s1}泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} reward .	{s1}施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} rewards.	{s1}施予奖赏。	l
+Announcement combat visitor-statement-object [visitor-statement-reference]: {s}	{s1}	l
 Barrels, and Bags. Barrels are used to store Food. Bags are used to store Seeds	[C:6:0:1]桶[C:7:0:0]和[C:6:0:1]袋子[C:7:0:0]来腾出空间。[C:6:0:1]桶[C:7:0:0]用来储存[C:6:0:1]食物[C:7:0:0]，[C:6:0:1]袋子[C:7:0:0]用来储存[C:6:0:1]种子[C:7:0:0]	hq
 DFHack GUI Mass remove: Designate buildings or constructions to cancel removal.	指定建筑或构筑物，取消其移除安排。	l
 DFHack help: "--years <num>", "--months <num>", "--days <num>", "--hours <num>"	"--years <num>"、"--months <num>"、"--days <num>"、"--hours <num>"	l
@@ -13862,6 +14222,17 @@ This isn't rich soil, but will suffice for now. Dig deeper to find better soil.	
 This leaves a "ceiling" above and "floor" below the empty space you have mined.	挖出的空间上方会保留“顶层”，下方保留“地板”。	hq
 This place is insulated from the rest of the world, at least in terms of trade.	这里与外界隔绝，至少贸易方面是如此。	hP
 This terrifying wilderness monster threatens our people with its very presence.	这可怕的荒野怪物只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He heard this was the place to look for long-term work.	这位访客已经到来。他听说可以在这里找到长期工作。	hP
+This visitor has come . He heard {e} was the place to admire fine architecture.	这位访客已经到来。他听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come . It heard this was the place to look for long-term work.	这位访客已经到来。它听说可以在这里找到长期工作。	hP
+This visitor has come . It heard {e} was the place to admire fine architecture.	这位访客已经到来。它听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come . She heard this was a good place to search for monsters.	这位访客已经到来。她听说这里是寻找怪兽的好地方。	hP
+This visitor has come . She heard this was the place for long-term scholarship.	这位访客已经到来。她听说这里适合长期从事学术研究。	hP
+This visitor has come . She heard {e} was the place to look for long-term work.	这位访客已经到来。她听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. He heard {e} would make a good base for a mercenary.	这位访客前来{s1}。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. He is seeking information about the location of {b}.	这位访客前来{s1}。他正在打听{b1}的下落。	hPt
+This visitor has come {s}. It heard {e} would make a good base for a mercenary.	这位访客前来{s1}。它听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. It is seeking information about the location of {b}.	这位访客前来{s1}。它正在打听{b1}的下落。	hPt
 Wrestle somebody adjacent. Also allows available parry, block, and dodge moves.	与相邻目标摔跤。也可选择当前可用的招架、格挡和闪避动作。	hj
 You can stop traveling using the stop travel button below or by pressing .{k} .	点击下方的停止旅行按钮，或按{k1}，即可停止旅行。	hqt
 You may switch to other forms of Fuel later, such as Coal, but you will usually	[C:7:0:0]以后可以改用[C:6:0:1]煤[C:7:0:0]等其他[C:6:0:1]燃料[C:7:0:0]，但通常仍	hq
@@ -14010,6 +14381,19 @@ Announcement combat sentence [head]: {s}, but the attack passes right through!	{
 Announcement combat sentence [unit]: {s} has become entangled in a hidden web!	{s1}被隐藏的蛛网缠住了！	l
 Announcement combat sentence [unit]: {s} slam into an obstacle and blow apart!	{s1}猛撞在障碍物上，四分五裂了！	l
 Announcement combat site-rumor [site-rumor-date,site-rumor-event]: In {s}, {s}	在{s1}，{s2}	l
+Announcement combat visitor-statement [visitor-statement-object]: appears {s}.	出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: burning {s}.	正在焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: destroy {s}.	毁灭{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: flooded {s}.	曾淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: rewards {s}.	奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will be {s}.	将……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} appear.	{s1}出现。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burned.	{s1}曾燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burns .	{s1}燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flood .	{s1}泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} floods.	{s1}泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} reward.	{s1}施予奖赏。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speaks.	{s1}说话。	l
 Announcement combat work-description [work-sentence,work-description]: {s} {s}	{s1}{s2}	l
 Announcement combat work-reference [reference-population]: a population of {s}	一群{s1}	l
 Announcement combat work-reference [reference-value]: the worthlessness of {s}	{s1}毫无价值这一观点	l
@@ -14131,6 +14515,15 @@ The details of its form are easily forgotten without deliberate concentration.	�
 The gang has even sent some troublemakers to harass people right here in town.	这伙强盗甚至派了些暴徒，就在镇上骚扰居民。	hq
 The {s} of {e}, {s}, looks to your thriving economy for its future prosperity.	位于{s2}的{s1}{e1}将未来的繁荣寄望于你蓬勃发展的经济。	hPt
 This option allows long-term residents of the fortress to enter this location.	此选项允许要塞的长期居民进入此地点。	hj
+This visitor has come . He heard this was a good place to search for monsters.	这位访客已经到来。他听说这里是寻找怪兽的好地方。	hP
+This visitor has come . He heard this was the place for long-term scholarship.	这位访客已经到来。他听说这里适合长期从事学术研究。	hP
+This visitor has come . He heard {e} was the place to look for long-term work.	这位访客已经到来。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come . It heard this was a good place to search for monsters.	这位访客已经到来。它听说这里是寻找怪兽的好地方。	hP
+This visitor has come . It heard this was the place for long-term scholarship.	这位访客已经到来。它听说这里适合长期从事学术研究。	hP
+This visitor has come . It heard {e} was the place to look for long-term work.	这位访客已经到来。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come . She heard this was the place for those seeking danger.	这位访客已经到来。她听说这里适合寻求冒险的人。	hP
+This visitor has come . She heard this would make a good base for a mercenary.	这位访客已经到来。她听说这里适合作为佣兵的基地。	hP
+This visitor has come . She heard {e} was the place for long-term scholarship.	这位访客已经到来。她听说{e1}适合长期从事学术研究。	hPt
 Water wheels are 1x3 or 3x1. The long side should align with the water's flow.	水车占地为 1×3 或 3×1 格，长边应与水流方向一致。	hP
 With a subterranean soil floor exposed, you can place an underground Farmplot.	[C:7:0:0]露出地下土壤地面后，就可以设置地下[C:6:0:0]农田[C:7:0:0]。	hq
 You can look at trade information once you have a broker with appraisal skill.	任命一名拥有估价技能的交易员后，即可查看贸易信息。	hP
@@ -14306,6 +14699,17 @@ Announcement combat sentence [memory-person,memory-person]: {s} attacked {s}.	{s
 Announcement combat sentence [unit,actor,equipment]: {s} blocks {s} with {s}!	{s1}用{s3}挡住了{s2}！	l
 Announcement combat sentence [unit,owned-object]: {s} latch on firmly to {s}!	{s1}牢牢咬住了{s2}！	l
 Announcement combat site-rumor-event [$name,$name]: {s} was conquered by {s}.	{s1}被{s2}征服了。	l
+Announcement combat visitor-statement [visitor-statement-object]: appear {s}.	出现在{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: burned {s}.	曾焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: floods {s}.	淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: reward {s}.	奖赏{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burn .	{s1}燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burns.	{s1}燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} flood.	{s1}泛滥。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} speak.	{s1}说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} spoke.	{s1}曾说话。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} were .	{s1}曾……。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} will .	{s1}将……。	l
 Announcement combat work-reference [$creature]: a ghostly animated {s} corpse	幽灵形态的复活{s1}尸体	l
 Assemble complete musical instruments and construct single-piece instruments.	组装完整乐器，并制作一体式乐器。	hj
 Before you begin your travels, we'll familiarize you with the basic controls.	出发旅行之前，先来熟悉基本操作。	hq
@@ -14443,6 +14847,14 @@ There are also predesigned traps, such as Weapon, Cage, and Stone-Fall Traps.	[C
 There are several kinds of Zones, which you can see in the panel on the left.	[C:3:0:0]区域[C:7:0:0]有多种类型，可在左侧面板中查看。	hq
 This option allows visitors from outside the fortress to enter this location.	此选项允许来自要塞外的访客进入此地点。	hj
 This terror from the evil depths threatens our people with its very presence.	这来自邪恶深处的恐怖之物只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He heard this was the place for those seeking danger.	这位访客已经到来。他听说这里适合寻求冒险的人。	hP
+This visitor has come . He heard this would make a good base for a mercenary.	这位访客已经到来。他听说这里适合作为佣兵的基地。	hP
+This visitor has come . He heard {e} was the place for long-term scholarship.	这位访客已经到来。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come . It heard this was the place for those seeking danger.	这位访客已经到来。它听说这里适合寻求冒险的人。	hP
+This visitor has come . It heard this would make a good base for a mercenary.	这位访客已经到来。它听说这里适合作为佣兵的基地。	hP
+This visitor has come . It heard {e} was the place for long-term scholarship.	这位访客已经到来。它听说{e1}适合长期从事学术研究。	hPt
+This visitor has come . She heard {e} would make a good base for a mercenary.	这位访客已经到来。她听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . She is seeking information about the location of {b}.	这位访客已经到来。她正在打听{b1}的下落。	hPt
 You will need to assign a Doctor to the Hospital from the Hospital Info Menu.	[C:7:0:0]你需要在“[C:5:0:1]医院信息[C:7:0:0]”菜单中为[C:1:0:1]医院[C:7:0:0]指派[C:5:0:0]医生[C:7:0:0]。	hq
 You'll begin by creating your world and watching the region's history unfold.	你首先要创建世界，见证这片土地的历史徐徐展开。	hq
 accepted out of loyalty to {a}, despite being swayed by the emotional appeal.	虽然被动情的劝说打动，但忠于{a1}，因此答应了。	ht
@@ -14640,6 +15052,12 @@ Announcement combat sentence [unit,actor,equipment]: {s} block {s} with {s}!	{s1
 Announcement combat sentence [unit,owner]: {s} jumps out of {s} flight path!	{s1}跳开，避过了{s2}飞行路线！	l
 Announcement combat sentence [unit,owner]: {s} rolls out of {s} flight path!	{s1}翻滚着避开了{s2}飞行路线！	l
 Announcement combat site-rumor-event [site-rumor-person]: {s} was kidnapped.	{s1}被绑架了。	l
+Announcement combat visitor-statement [visitor-statement-emotion]: were {s}.	曾{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: burns {s}.	焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: flood {s}.	淹没{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} are .	{s1}……。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} burn.	{s1}燃烧。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} was .	{s1}曾……。	l
 Assign a minecart to this route. Only one vehicle can operate on each route.	为此路线分配矿车。每条路线只能使用一辆车。	hj
 DFHack help: "--flowSize <size>" Specify how big the flow is (default: 100).	"--flowSize <size>" 指定流量有多大（默认：100）。	l
 DFHack help: "--level <level>" The amount of liquid units to spawn from 1-7.	"--level <level>" 生成的液体单位数量为 1-7。	l
@@ -14773,6 +15191,12 @@ The army is commanded by {n}, a seasoned commander and middling warrior. {v}	这
 The army is commanded by {n}, a talented commander and middling warrior. {v}	这支军队的统领是{n1}，是一位才华出众的统帅，也是武艺平平的战士。{v1}	hPt
 The {s} of {e}, {s}, has been conquered and incorporated into your holdings.	位于{s2}的{s1}{e1}已被征服，并入了你的领地。	hPt
 This item is a semi-permanent part of the building, like an item on display.	此物品是建筑的半固定组成部分，例如正在展示的物品。	hj
+This visitor has come . He heard {e} would make a good base for a mercenary.	这位访客已经到来。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . He is seeking information about the location of {b}.	这位访客已经到来。他正在打听{b1}的下落。	hPt
+This visitor has come . It heard {e} would make a good base for a mercenary.	这位访客已经到来。它听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . It is seeking information about the location of {b}.	这位访客已经到来。它正在打听{b1}的下落。	hPt
+This visitor has come {s}. She heard this was the place to entertain people.	这位访客前来{s1}。她听说这里适合为人们表演。	hPt
+This visitor has come {s}. She heard this was the place to perform research.	这位访客前来{s1}。她听说这里适合开展研究。	hPt
 a telling of the story of the ascension of {n} to the position of {s} of {p}	讲述{n1}就任{p1}{s1}的故事	ht
 aided {a} in becoming a permanent part of the living world {s} in the wilds.	在荒野中协助{a1}永久留在生者的世界，{s1}。	ht
 and aided {a} in becoming a permanent part of the living world in the wilds.	并在荒野中协助{a1}永久留在生者的世界。	ht
@@ -14948,6 +15372,14 @@ Announcement combat sentence [unit,$term]: {s} is caught in a cloud of {s}!	{s1}
 Announcement combat sentence [unit,owner]: {s} jump out of {s} flight path!	{s1}跳开，避过了{s2}飞行路线！	l
 Announcement combat sentence [unit,owner]: {s} roll out of {s} flight path!	{s1}翻滚着避开了{s2}飞行路线！	l
 Announcement combat sentence [unit]: {s} are having more trouble breathing!	{s1}呼吸更加困难了！	l
+Announcement combat visitor-statement [visitor-statement-emotion]: are {s}.	{s1}。	l
+Announcement combat visitor-statement [visitor-statement-emotion]: was {s}.	曾{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: burn {s}.	焚烧{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: were {s}.	曾……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: will {s}.	将……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} am .	{s1}……。	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} is .	{s1}……。	l
+Announcement combat visitor-statement-emotion []: feeling grim satisfaction	感到冷酷的满足	l
 Assign a kill order. The soldiers will attempt to kill a targeted creature.	下达击杀命令。士兵会尝试杀死指定目标生物。	hj
 Assign a patrol order. The soldiers will walk a specified route repeatedly.	下达巡逻命令。士兵会反复沿指定路线行进。	hj
 Conversation prompt: What will you say about the refusal to accept tribute?	关于拒收贡品，你想说些什么？	l
@@ -15063,6 +15495,13 @@ The army is commanded by {n}, a talented commander and skilled warrior. {v}	这�
 The peaceful town of {e} is threatened! The forces of {p} are on the march.	宁静的城镇{e1}正受到威胁！{p1}的大军正在进逼。	hqt
 This ferocious unnatural beast threatens our people with its very presence.	这凶猛的反常野兽只要还在，我们的百姓就不得安宁。	hP
 This includes everything from Bones and other Remains to worn-out Clothing.	[C:7:0:0]垃圾包括[C:6:0:1]骨头[C:7:0:0]和其他[C:6:0:1]残骸[C:7:0:0]，也包括破旧[C:6:0:1]衣服[C:7:0:0]。	hq
+This visitor has come {s}. He heard this was the place to entertain people.	这位访客前来{s1}。他听说这里适合为人们表演。	hPt
+This visitor has come {s}. He heard this was the place to perform research.	这位访客前来{s1}。他听说这里适合开展研究。	hPt
+This visitor has come {s}. It heard this was the place to entertain people.	这位访客前来{s1}。它听说这里适合为人们表演。	hPt
+This visitor has come {s}. It heard this was the place to perform research.	这位访客前来{s1}。它听说这里适合开展研究。	hPt
+This visitor has come {s}. She believes this would be a safe place to stay.	这位访客前来{s1}。她相信这里可以安全居留。	hPt
+This visitor has come {s}. She heard {e} was the place to entertain people.	这位访客前来{s1}。她听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. She heard {e} was the place to perform research.	这位访客前来{s1}。她听说{e1}适合开展研究。	hPt
 You've found {p}! My chosen, you must speak to them and offer your service.	你找到了{p1}！我的天选者，你必须与其交谈，表示愿意效劳。	hqt
 Your archers can train in this zone if there is an archery target included.	此区域若包含射箭靶，弓弩手就可以在这里训练。	hj
 aided {a} in becoming a permanent part of the living world {s} in the wilds	在荒野中协助{a1}永久留在生者的世界，{s1}	ht
@@ -15270,6 +15709,10 @@ Announcement combat sentence [unit,$term]: {s} has transformed into a {s}!	{s1}�
 Announcement combat sentence [unit-list]: {s} are stunned by divine power!	{s1}被神力震慑了！	l
 Announcement combat sentence [unit]: {s} is having more trouble breathing!	{s1}呼吸更加困难了！	l
 Announcement combat sentence [work,$item]: You have written {s} on to {s}.	你将{s1}写到了{s2}上。	l
+Announcement combat visitor-statement [visitor-statement-emotion]: am {s}.	{s1}。	l
+Announcement combat visitor-statement [visitor-statement-emotion]: is {s}.	{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: are {s}.	……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: was {s}.	曾……{s1}。	l
 DFHack help: "--dev" Include commands intended for developers and modders.	"--dev" 包括供开发人员和模组制作者使用的命令。	l
 DFHack help: "--female <INTEREST>" Set the interest level towards females.	"--female <INTEREST>" 设置对女性的兴趣程度。	l
 DFHack help: "--notStraight" Only creatures who are not strictly straight.	"--notStraight" 仅限非严格意义上的异性恋生物。	l
@@ -15387,6 +15830,13 @@ The artwork relates to the ascension of {n} to the position of {s} of {p}.	图�
 The world generator is having trouble placing a controllable civilization.	世界生成器无法放置可操控文明。	l
 The world generator is having trouble placing enough mid-level elevations.	世界生成器无法放置足够的中等海拔方格。	l
 This option indicates that the location is only open to fortress citizens.	此选项表示此地点仅对要塞公民开放。	hj
+This visitor has come {s}. He believes this would be a safe place to stay.	这位访客前来{s1}。他相信这里可以安全居留。	hPt
+This visitor has come {s}. He heard {e} was the place to entertain people.	这位访客前来{s1}。他听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. He heard {e} was the place to perform research.	这位访客前来{s1}。他听说{e1}适合开展研究。	hPt
+This visitor has come {s}. It believes this would be a safe place to stay.	这位访客前来{s1}。它相信这里可以安全居留。	hPt
+This visitor has come {s}. It heard {e} was the place to entertain people.	这位访客前来{s1}。它听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. It heard {e} was the place to perform research.	这位访客前来{s1}。它听说{e1}适合开展研究。	hPt
+This visitor has come {s}. She believes {e} would be a safe place to stay.	这位访客前来{s1}。她相信可以安全地居留在{e1}。	hPt
 You already know the will of {p}. Do not tempt fate. Let another day pass.	你已经知晓{p1}的意志。不要试探命运。再等一天。	hPt
 You are distracted by unmet needs.  View your status for more information.	需求未得到满足，使你分心。请查看状态页了解详情。	l
 You can stop traveling using the stop travel button below or by pressing .	点击下方的停止旅行按钮，或按相应热键，即可停止旅行。	hq
@@ -15606,6 +16056,8 @@ Announcement combat sentence [unit,$item]: {s} pulls on the embedded {s}.	{s1}�
 Announcement combat sentence [unit-list]: {s} is stunned by divine power!	{s1}被神力震慑了！	l
 Announcement combat sentence [unit]: {s} are caught in a cloud of flames!	{s1}被火焰云吞没了！	l
 Announcement combat sentence [unit]: {s} is stumbling around obliviously!	{s1}浑浑噩噩地四处踉跄！	l
+Announcement combat visitor-statement [visitor-statement-object]: am {s}.	……{s1}。	l
+Announcement combat visitor-statement [visitor-statement-object]: is {s}.	……{s1}。	l
 Announcement combat work-reference [reference-building,$name]: {s} in {s}	{s2}的{s1}	l
 Announcement combat work-sentence [work-reference-list]: It concerns {s}.	内容涉及{s1}。	l
 As your dwarves live and work in your fortress they will generate Refuse.	[C:7:0:0]矮人在要塞中生活和工作时，会产生[C:6:0:1]垃圾[C:7:0:0]。	hq
@@ -15729,6 +16181,12 @@ The performers are in the middle of a sermon on the worthlessness of {s}.	表演
 The written portion consists of a {d} page untitled {s}, authored by {n}.	文字部分为{n1}撰写的无题{s1}，共{d1}页。	ht
 There is a folder with this name already. Would you like to overwrite it?	已存在同名文件夹。是否覆盖？	P
 This ancient force of nature threatens our people with its very presence.	这古老的自然之力只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . She heard this was the place to entertain people.	这位访客已经到来。她听说这里适合为人们表演。	hP
+This visitor has come . She heard this was the place to perform research.	这位访客已经到来。她听说这里适合开展研究。	hP
+This visitor has come {s}. He believes {e} would be a safe place to stay.	这位访客前来{s1}。他相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. It believes {e} would be a safe place to stay.	这位访客前来{s1}。它相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. She heard this was the place for a good drink.	这位访客前来{s1}。她听说这里能喝到好酒。	hPt
+This visitor has come {s}. She heard this was the place to enjoy oneself.	这位访客前来{s1}。她听说这里适合享乐。	hPt
 Why is there a riddle in the lyrics of the accompaniment? I hate riddles.	为什么伴奏的歌词里有谜语？我讨厌谜语。	hP
 Workshops are placed using the building menu at the bottom of the screen.	可通过屏幕底部的建筑菜单放置工坊。	hP
 You are distracted by unmet needs. View your status for more information.	需求未得到满足，使你分心。请查看状态页了解详情。	hj
@@ -15944,6 +16402,7 @@ Announcement combat sentence [unit,$item]: {s} pull on the embedded {s}.	{s1}拉
 Announcement combat sentence [unit]: {s} are caught in a burst of steam!	{s1}被喷涌的蒸汽笼罩了！	l
 Announcement combat sentence [unit]: {s} are struck by a ball of flames!	{s1}被一团火球击中了！	l
 Announcement combat sentence [unit]: {s} is caught in a cloud of flames!	{s1}被火焰云吞没了！	l
+Announcement combat visitor-statement [visitor-statement-subject]: {s} .	{s1}……。	l
 Conversation prompt: How will you respond to the request for directions?	你将如何回应问路的请求？	l
 Conversation prompt: What will you say about the artifact's destruction?	关于造物被毁，你想说些什么？	l
 Conversation prompt: What will you say about the failed peace agreement?	关于和平协议破裂，你想说些什么？	l
@@ -16069,6 +16528,19 @@ The sky is alive with vortices of purple light and dark, boiling clouds.	天空�
 The sky is alive with vortices of purple light and dark, boiling clouds.	天空中紫光旋涡涌动，乌云翻滚。	hj
 The {s} of {e} has been founded {s} and incorporated into your holdings.	{s1}{e1}已建于{s2}，并入了你的领地。	hPt
 This beast from underground threatens our people with its very presence.	这地下野兽只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He heard this was the place to entertain people.	这位访客已经到来。他听说这里适合为人们表演。	hP
+This visitor has come . He heard this was the place to perform research.	这位访客已经到来。他听说这里适合开展研究。	hP
+This visitor has come . It heard this was the place to entertain people.	这位访客已经到来。它听说这里适合为人们表演。	hP
+This visitor has come . It heard this was the place to perform research.	这位访客已经到来。它听说这里适合开展研究。	hP
+This visitor has come . She believes this would be a safe place to stay.	这位访客已经到来。她相信这里可以安全居留。	hP
+This visitor has come . She heard {e} was the place to entertain people.	这位访客已经到来。她听说可以在{e1}为人们表演。	hPt
+This visitor has come . She heard {e} was the place to perform research.	这位访客已经到来。她听说{e1}适合开展研究。	hPt
+This visitor has come {s}. He heard this was the place for a good drink.	这位访客前来{s1}。他听说这里能喝到好酒。	hPt
+This visitor has come {s}. He heard this was the place to enjoy oneself.	这位访客前来{s1}。他听说这里适合享乐。	hPt
+This visitor has come {s}. It heard this was the place for a good drink.	这位访客前来{s1}。它听说这里能喝到好酒。	hPt
+This visitor has come {s}. It heard this was the place to enjoy oneself.	这位访客前来{s1}。它听说这里适合享乐。	hPt
+This visitor has come {s}. She heard {e} was the place for a good drink.	这位访客前来{s1}。她听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. She heard {e} was the place to enjoy oneself.	这位访客前来{s1}。她听说{e1}适合享乐。	hPt
 Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate	狂野攻击：出手快、恢复慢，打击有力，但会失去平衡且命中不准。	hP
 You already know the will of {p}. Do not tempt fate. Let some days pass.	你已经知晓{p1}的意志。不要试探命运。等上几天。	hPt
 You might want to adjust the parameters governing elevation frequencies.	请调整控制海拔分布频率的参数。	l
@@ -16288,6 +16760,8 @@ Announcement combat sentence [unit]: {s} has slipped into depression...	{s1}陷�
 Announcement combat sentence [unit]: {s} have been knocked unconscious!	{s1}被击昏了！	l
 Announcement combat sentence [unit]: {s} is caught in a burst of steam!	{s1}被喷涌的蒸汽笼罩了！	l
 Announcement combat sentence [unit]: {s} is struck by a ball of flames!	{s1}被一团火球击中了！	l
+Announcement combat visitor-statement-emotion []: in existential crisis	陷入存在危机	l
+Announcement combat visitor-statement-reference []: an unknown creature	未知生物	l
 Choose a stockpile from which the track stop's vehicle will take items.	选择轨道站点的车辆要从其取货的储物堆。	hj
 Claim a forbidden item or building so it will be used by your citizens.	解除物品或建筑的禁用状态，使居民能够使用。	hj
 DFHack GUI Viewer status: Autostart defaults restored for bugfix tools.	漏洞修复工具的自动启动状态已恢复为默认设置。	l
@@ -16424,6 +16898,17 @@ The enemy have come and are preparing to lay siege. They seek a parley!	敌军�
 The sky above you is nearly black, ripped through with towering clouds.	你头顶的天空近乎漆黑，高耸的云层从中穿过。	hP
 The sky above you is nearly black, ripped through with towering clouds.	你头顶的天空近乎漆黑，高耸的云层从中穿过。	hj
 This ferocious wild animal threatens our people with its very presence.	这凶猛的野生动物只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He believes this would be a safe place to stay.	这位访客已经到来。他相信这里可以安全居留。	hP
+This visitor has come . He heard {e} was the place to entertain people.	这位访客已经到来。他听说可以在{e1}为人们表演。	hPt
+This visitor has come . He heard {e} was the place to perform research.	这位访客已经到来。他听说{e1}适合开展研究。	hPt
+This visitor has come . It believes this would be a safe place to stay.	这位访客已经到来。它相信这里可以安全居留。	hP
+This visitor has come . It heard {e} was the place to entertain people.	这位访客已经到来。它听说可以在{e1}为人们表演。	hPt
+This visitor has come . It heard {e} was the place to perform research.	这位访客已经到来。它听说{e1}适合开展研究。	hPt
+This visitor has come . She believes {e} would be a safe place to stay.	这位访客已经到来。她相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. He heard {e} was the place for a good drink.	这位访客前来{s1}。他听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. He heard {e} was the place to enjoy oneself.	这位访客前来{s1}。他听说{e1}适合享乐。	hPt
+This visitor has come {s}. It heard {e} was the place for a good drink.	这位访客前来{s1}。它听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. It heard {e} was the place to enjoy oneself.	这位访客前来{s1}。它听说{e1}适合享乐。	hPt
 Valuable gems and precious metals can be found, along with richer soil,	在那里可以找到珍贵宝石和贵金属，还有更肥沃的土壤、	hq
 What do you want to do? Items must be in a grasp or on the ground here.	你想做什么？物品必须拿在手中或放在此处的地面上。	hP
 Why wasn't {p}, a jealous deity, consulted first? Let another day pass.	为什么没有先向善妒的神祇{p1}问卜？再等一天。	hPt
@@ -16683,6 +17168,8 @@ Announcement combat site-rumor-date [$digits]: the early autumn of {s}	第{s1}�
 Announcement combat site-rumor-date [$digits]: the early spring of {s}	第{s1}年初春	l
 Announcement combat site-rumor-date [$digits]: the early summer of {s}	第{s1}年初夏	l
 Announcement combat site-rumor-date [$digits]: the early winter of {s}	第{s1}年初冬	l
+Announcement combat visitor-statement [visitor-statement-object]: {s}.	……{s1}。	l
+Announcement combat visitor-statement-reference [$memorial-actor]: {s}	{s1}	l
 Announcement combat work-reference [$name]: the important location {s}	重要地点{s1}	l
 Announcement combat work-reference [reference-kind,$name]: the {s} {s}	{s1}{s2}	l
 Announcement combat work-reference [reference-value]: the value of {s}	{s1}的价值	l
@@ -16837,6 +17324,10 @@ Praise {p} for ignoring your hubris. Infinite {r}! Let some days pass.	赞美{p1
 Praise {p} for ignoring your hubris. Oh sweet {r}! Let some days pass.	赞美{p1}，宽恕了你的狂妄。啊，甘美的{r1}！等上几天。	hPt
 Praise {p} for ignoring your hubris. You are free to do as you choose.	赞美{p1}，宽恕了你的狂妄。你可以自由选择自己的行动。	hPt
 This beast from the wilds threatens our people with its very presence.	这荒野野兽只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He believes {e} would be a safe place to stay.	这位访客已经到来。他相信可以安全地居留在{e1}。	hPt
+This visitor has come . It believes {e} would be a safe place to stay.	这位访客已经到来。它相信可以安全地居留在{e1}。	hPt
+This visitor has come . She heard this was the place for a good drink.	这位访客已经到来。她听说这里能喝到好酒。	hP
+This visitor has come . She heard this was the place to enjoy oneself.	这位访客已经到来。她听说这里适合享乐。	hP
 Toggle the dump status of the item. Items are dumped in dumping zones.	切换物品的倾倒状态。物品会被运到物品倾倒区。	hj
 Toggle whether workshops can source materials from outside the burrow.	切换工坊是否可以从活动区外获取材料。	hj
 We have a free room. Let me know and you can stay as long as you like.	我们有一间免费的客房。告诉我一声，你想住多久都行。	hP
@@ -17240,6 +17731,13 @@ The moon is high in the eastern sky hardly visible behind the clouds.	月亮位�
 The moon is high in the western sky hardly visible behind the clouds.	月亮位于西方高空，在云后几乎不可见。	hP
 The moon is high in the western sky hardly visible behind the clouds.	月亮位于西方高空，在云后几乎不可见。	hj
 The world generator is having trouble placing enough high elevations.	世界生成器无法放置足够的高海拔方格。	l
+This visitor has come . He heard this was the place for a good drink.	这位访客已经到来。他听说这里能喝到好酒。	hP
+This visitor has come . He heard this was the place to enjoy oneself.	这位访客已经到来。他听说这里适合享乐。	hP
+This visitor has come . It heard this was the place for a good drink.	这位访客已经到来。它听说这里能喝到好酒。	hP
+This visitor has come . It heard this was the place to enjoy oneself.	这位访客已经到来。它听说这里适合享乐。	hP
+This visitor has come . She heard {e} was the place for a good drink.	这位访客已经到来。她听说可以在{e1}喝到好酒。	hPt
+This visitor has come . She heard {e} was the place to enjoy oneself.	这位访客已经到来。她听说{e1}适合享乐。	hPt
+This visitor has come {s}. She went on this journey out of curiosity.	这位访客前来{s1}。她出于好奇踏上了这段旅程。	hPt
 We have free rooms. Let me know and you can stay as long as you like.	我们有免费的客房。告诉我一声，你想住多久都行。	hP
 Why wasn't {p}, a jealous deity, consulted first? Let some days pass.	为什么没有先向善妒的神祇{p1}问卜？等上几天。	hPt
 With them come monstrous siege engineers and {s} from the {s} of {e}!	随军而来的还有可怕的攻城巨兽和{s1}，来自{e1}的{s2}！	hPt
@@ -17484,6 +17982,11 @@ Announcement combat sentence [unit,$item]: {s} has guzzled some {s}!	{s1}猛喝�
 Announcement combat sentence [unit,$term]: {s} skips across the {s}!	{s1}在{s2}表面弹跳着掠过！	l
 Announcement combat sentence [unit]: {s} have fewer damaged tissues.	{s1}的一些受损组织恢复了。	l
 Announcement combat sentence [unit]: {s} recovers from nerve damage.	{s1}受损的神经恢复了。	l
+Announcement combat visitor-statement []: were will be speaking to .	当时将正在说话。	l
+Announcement combat visitor-statement-emotion []: feeling admiration	心怀钦佩	l
+Announcement combat visitor-statement-emotion []: feeling ambivalent	没什么特别的感觉	l
+Announcement combat visitor-statement-emotion []: feeling tenderness	满怀温柔	l
+Announcement combat visitor-statement-emotion []: feeling triumphant	洋洋得意	l
 Announcement combat work-reference []: the fiery bowels of the earth	大地的炽热深处	l
 Announcement combat work-reference [reference-value]: nuances of {s}	{s1}的微妙之处	l
 Announcement music passage: a recapitulation of the previous passage	前一乐段再现部	w
@@ -17643,6 +18146,12 @@ The sun will set soon. Be careful that the bogeyman doesn't get you.	太阳就�
 The world generator is having trouble placing enough low elevations.	世界生成器无法放置足够的低海拔方格。	l
 The world generator is having trouble placing enough mountain peaks.	世界生成器无法放置足够的山峰。	l
 The world generator is having trouble placing farming civilizations.	世界生成器无法放置农耕文明。	l
+This visitor has come . He heard {e} was the place for a good drink.	这位访客已经到来。他听说可以在{e1}喝到好酒。	hPt
+This visitor has come . He heard {e} was the place to enjoy oneself.	这位访客已经到来。他听说{e1}适合享乐。	hPt
+This visitor has come . It heard {e} was the place for a good drink.	这位访客已经到来。它听说可以在{e1}喝到好酒。	hPt
+This visitor has come . It heard {e} was the place to enjoy oneself.	这位访客已经到来。它听说{e1}适合享乐。	hPt
+This visitor has come {s}. He went on this journey out of curiosity.	这位访客前来{s1}。他出于好奇踏上了这段旅程。	hPt
+This visitor has come {s}. It went on this journey out of curiosity.	这位访客前来{s1}。它出于好奇踏上了这段旅程。	hPt
 Toggle the melt status of the item. Items are melted at any smelter.	切换物品的熔化状态。物品可在任意熔炉中熔化。	hj
 View your companions and tactical settings, or switch party members.	查看同伴和战术设置，或切换队伍成员。	hj
 We cannot stop production just because of your quaint sensibilities.	我们不会仅仅因为你们古怪的顾忌就停止生产。	hP
@@ -17886,6 +18395,17 @@ Announcement combat site-rumor-date [$digits]: the midsummer of {s}	第{s1}年�
 Announcement combat site-rumor-date [$digits]: the midwinter of {s}	第{s1}年仲冬	l
 Announcement combat site-rumor-position [$office,$name]: {s} of {s}	{s2}的{s1}	l
 Announcement combat site-rumor-predecessor [site-rumor-person]: {s}	{s1}	l
+Announcement combat visitor-statement []: was will be speaking to .	当时将正在说话。	l
+Announcement combat visitor-statement []: were will be destroying .	当时将正在毁灭。	l
+Announcement combat visitor-statement-emotion []: feeling affection	感到喜爱	l
+Announcement combat visitor-statement-emotion []: feeling alienated	感到被疏离	l
+Announcement combat visitor-statement-emotion []: feeling apathetic	感到冷漠	l
+Announcement combat visitor-statement-emotion []: feeling enjoyment	感到愉快	l
+Announcement combat visitor-statement-emotion []: feeling expectant	满怀期待	l
+Announcement combat visitor-statement-emotion []: feeling ferocious	心生凶意	l
+Announcement combat visitor-statement-emotion []: feeling gratitude	满怀感激	l
+Announcement combat visitor-statement-emotion []: feeling self-pity	心生自怜	l
+Announcement combat visitor-statement-reference []: an unknown site	未知地点	l
 Can your parameters achieve elevations between 0 and 99 frequently?	这些参数能否频繁产生 0 至 99 的海拔？	l
 Choose a stockpile to which the selected stockpile will give items.	选择当前储物堆要向其供货的储物堆。	hj
 Conversation prompt: What will you say about the failed occupation?	关于占领失败，你想说些什么？	l
@@ -18032,6 +18552,7 @@ The view is dark underground. You can recenter on yourself with the	地下视野
 The world generator is having trouble placing deserts and badlands.	世界生成器无法放置沙漠和荒地。	l
 The world generator is having trouble placing enough civilizations.	世界生成器无法放置足够的文明。	l
 This person is one of the {s} of {p} and your military subordinate.	此人是{p}的{s}之一，也是你的军事下属。	ht
+This visitor has come {s}. She heard this was the place for prayer.	这位访客前来{s1}。她听说这里适合祈祷。	hPt
 You can also click on details to customize each individual soldier.	还可以点击“详情”，分别调整每位士兵的装备。	hq
 You can learn more about this visitor after they chat with a local.	这位访客与当地居民交谈后，你就能了解更多关于他们的信息。	hP
 Zones can be added using the zone menu at the bottom of the screen.	可通过屏幕底部的区域菜单添加区域。	hP
@@ -18326,6 +18847,16 @@ Announcement combat sentence [unit,actor]: {s} roll away from {s}!	{s1}翻滚躲
 Announcement combat sentence [unit]: {s} are caught in dragonfire!	{s1}被龙焰吞没了！	l
 Announcement combat sentence [unit]: {s} are caught up in the web!	{s1}被蛛网缠住了！	l
 Announcement combat sentence [unit]: {s} is caught in a lava mist!	{s1}被熔岩雾笼罩了！	l
+Announcement combat visitor-statement []: was will be destroying .	当时将正在毁灭。	l
+Announcement combat visitor-statement []: were will be appearing .	当时将正在出现。	l
+Announcement combat visitor-statement []: were will be destroying.	当时将正在毁灭。	l
+Announcement combat visitor-statement []: were will be rewarding .	当时将正在施予奖赏。	l
+Announcement combat visitor-statement-emotion []: feeling aversion	感到厌恶	l
+Announcement combat visitor-statement-emotion []: feeling defeated	感到失败	l
+Announcement combat visitor-statement-emotion []: feeling hopeless	感到毫无希望	l
+Announcement combat visitor-statement-emotion []: feeling loathing	满心憎恶	l
+Announcement combat visitor-statement-emotion []: feeling rejected	感到被拒绝	l
+Announcement combat visitor-statement-reference [$creature]: a {s}	一个{s1}	l
 Announcement combat work-reference [$name]: the forest retreat {s}	森林聚落{s1}	l
 Announcement combat work-reference [$name]: the mountain halls {s}	山地大厅{s1}	l
 Announcement combat work-sentence [work-reference]: It covers {s}.	内容涵盖{s1}。	l
@@ -18481,6 +19012,10 @@ Start immediately with the default skills, equipment, and animals.	使用默认�
 The agreement to establish a guildhall for {e} has been abandoned.	为{e1}建立行会大厅的协议已被放弃。	hPt
 There is no furniture, building, or vehicle to interact with here.	这里没有可互动的家具、建筑或车辆。	hP
 This item is tagged by a task and will not be used by other tasks.	此物品已被某项任务占用，不会用于其他任务。	hj
+This visitor has come . She went on this journey out of curiosity.	这位访客已经到来。她出于好奇踏上了这段旅程。	hP
+This visitor has come {s}. He heard this was the place for prayer.	这位访客前来{s1}。他听说这里适合祈祷。	hPt
+This visitor has come {s}. It heard this was the place for prayer.	这位访客前来{s1}。它听说这里适合祈祷。	hPt
+This visitor has come {s}. She heard {e} was the place for prayer.	这位访客前来{s1}。她听说{e1}适合祈祷。	hPt
 We will drown out the call with the screams of your dying. Begone.	我们会用你们临死的惨叫淹没那呼唤。滚吧。	hP
 Why wasn't {p}, a jealous deity, consulted first? Let a week pass.	为什么没有先向善妒的神祇{p1}问卜？等上一周。	hPt
 You can also unretire characters directly if they are still alive.	只要角色还活着，也可以直接让其结束退役，重返冒险。	hq
@@ -18744,6 +19279,14 @@ Announcement combat sentence [unit,$item]: {s} try to remove {s}.	{s1}试图取�
 Announcement combat sentence [unit]: {s} have been stunned again!	{s1}又被击晕了！	l
 Announcement combat sentence [unit]: {s} is caught in dragonfire!	{s1}被龙焰吞没了！	l
 Announcement combat sentence [unit]: {s} is caught up in the web!	{s1}被蛛网缠住了！	l
+Announcement combat visitor-statement []: was will be appearing .	当时将正在出现。	l
+Announcement combat visitor-statement []: was will be destroying.	当时将正在毁灭。	l
+Announcement combat visitor-statement []: was will be rewarding .	当时将正在施予奖赏。	l
+Announcement combat visitor-statement []: were will be appearing.	当时将正在出现。	l
+Announcement combat visitor-statement []: were will be flooding .	当时将正在泛滥。	l
+Announcement combat visitor-statement []: were will be rewarding.	当时将正在施予奖赏。	l
+Announcement combat visitor-statement-emotion []: feeling dislike	感到不喜欢	l
+Announcement combat visitor-statement-emotion []: feeling servile	觉得自己卑躬屈膝	l
 Announcement combat work-reference [$name]: the dark fortress {s}	黑暗要塞{s1}	l
 Announcement combat work-reference [$name]: {s} as a musical form	音乐形式{s1}	l
 As a member of {e}, you can now seek the higher mysteries of {p}.	作为{e1}的一员，你现在可以探寻{p1}更高深的奥秘。	hPt
@@ -18882,6 +19425,10 @@ The performers are in the middle of a sermon on the value of {s}.	表演者们�
 The performers are in the middle of an improvised recital of {e}.	表演者们正在以{e1}的形式即兴朗诵。	hPt
 The rest of the vomit splatters into the shallow puddle of water.	其余呕吐物溅进了浅水洼。	hP
 The world generator is having trouble placing swamps and marshes.	世界生成器无法放置沼泽和湿地。	l
+This visitor has come . He went on this journey out of curiosity.	这位访客已经到来。他出于好奇踏上了这段旅程。	hP
+This visitor has come . It went on this journey out of curiosity.	这位访客已经到来。它出于好奇踏上了这段旅程。	hP
+This visitor has come {s}. He heard {e} was the place for prayer.	这位访客前来{s1}。他听说{e1}适合祈祷。	hPt
+This visitor has come {s}. It heard {e} was the place for prayer.	这位访客前来{s1}。它听说{e1}适合祈祷。	hPt
 We can grant this request. Let's discuss the specifics, though...	我们可以答应。不过，让我们先谈谈具体细节……	hP
 You can initiate throwing from the inventory menu, or by pressing	可以从物品栏菜单发起投掷，也可以按	hq
 accepted in admiration of power, despite being unafraid of death.	虽然不惧死亡，但崇拜权力，因此答应了。	h
@@ -19124,6 +19671,15 @@ Announcement combat sentence [unit]: {s} has been stunned again!	{s1}又被击�
 Announcement combat sentence [unit]: {s} has moved out of range!	{s1}已经离开了攻击范围！	l
 Announcement combat sentence [unit]: {s} slams into an obstacle!	{s1}猛撞在了障碍物上！	l
 Announcement combat site-rumor-event [$name]: {s} was conquered.	{s1}被征服了。	l
+Announcement combat visitor-statement []: was will be appearing.	当时将正在出现。	l
+Announcement combat visitor-statement []: was will be flooding .	当时将正在泛滥。	l
+Announcement combat visitor-statement []: was will be rewarding.	当时将正在施予奖赏。	l
+Announcement combat visitor-statement []: were will be burning .	当时将正在燃烧。	l
+Announcement combat visitor-statement []: were will be flooding.	当时将正在泛滥。	l
+Announcement combat visitor-statement []: were will be speaking.	当时将正在说话。	l
+Announcement combat visitor-statement-emotion []: feeling caring	心怀关爱	l
+Announcement combat visitor-statement-emotion []: feeling gaiety	感到欢快	l
+Announcement combat visitor-statement-emotion []: feeling guilty	感到内疚	l
 Announcement combat work-reference [$name]: {s} as a poetic form	诗歌形式{s1}	l
 Announcement music passage: a recapitulation of the second theme	第二主题再现部	w
 Conversation prompt: How will you respond about your profession?	你将如何回答关于你职业的问题？	l
@@ -19293,6 +19849,7 @@ This fearsome beast threatens our people with its very presence.	这可怕的野
 This horrible beast threatens our people with its very presence.	这骇人的野兽只要还在，我们的百姓就不得安宁。	hP
 This night creature threatens our people with its very presence.	这夜行生物只要还在，我们的百姓就不得安宁。	hP
 This option indicates that the location is only open to members.	此选项表示此地点仅对成员开放。	hj
+This visitor has come . She heard this was the place for prayer.	这位访客已经到来。她听说这里适合祈祷。	hP
 You can also cause trouble if you'd like to raid your neighbors.	你也可以主动出击，袭击邻居。	hq
 You can recenter on certain announcements. Right click to close.	部分公告可以定位到相关位置。右键点击关闭。	hP
 You do not have a free grasp and your quiver and packs are full.	你没有空闲的抓握部位，而且箭筒和所有背包都已装满。	hP
@@ -19607,6 +20164,14 @@ Announcement combat sentence [unit]: {s} slam into an obstacle!	{s1}猛撞在了
 Announcement combat shot-result [defense-adverb]: {s} deflected	{s1}挡开了	l
 Announcement combat site-rumor-event [$name,$name]: {s} in {s}.	{s1}在{s2}。	l
 Announcement combat trade-places [$name,trade-places]: {s}, {s}	{s1}、{s2}	l
+Announcement combat visitor-statement []: was will be burning .	当时将正在燃烧。	l
+Announcement combat visitor-statement []: was will be flooding.	当时将正在泛滥。	l
+Announcement combat visitor-statement []: was will be speaking.	当时将正在说话。	l
+Announcement combat visitor-statement []: were will be burning.	当时将正在燃烧。	l
+Announcement combat visitor-statement []: will be speaking to .	将正在说话。	l
+Announcement combat visitor-statement-emotion []: disillusioned	感到幻灭	l
+Announcement combat visitor-statement-emotion []: feeling empty	感到空虚	l
+Announcement combat visitor-statement-emotion []: in acceptance	心怀接纳	l
 Announcement combat work-reference [$event,$digits]: {s} in {s}	{s2}年的{s1}	l
 Announcement combat work-reference [$name]: {s} as a dance form	舞蹈形式{s1}	l
 Announcement music passage: a recapitulation of the first theme	第一主题再现部	w
@@ -19773,6 +20338,9 @@ The agreement to establish a temple for {e} has been abandoned.	为{e1}建立神
 The door is operated by a remote mechanism. You cannot proceed.	这扇门由远程机关控制，无法继续操作。	hP
 The world generator couldn't find any civilization definitions.	世界生成器找不到任何文明定义。	l
 There are five types of Locations, which we'll go over in turn.	[C:1:0:1]场所[C:7:0:0]分为五类，下面逐一介绍。	hq
+This visitor has come . He heard this was the place for prayer.	这位访客已经到来。他听说这里适合祈祷。	hP
+This visitor has come . It heard this was the place for prayer.	这位访客已经到来。它听说这里适合祈祷。	hP
+This visitor has come . She heard {e} was the place for prayer.	这位访客已经到来。她听说{e1}适合祈祷。	hPt
 You begin loading {s} into {s} with intentions of shooting {n}.	你开始将{s1}装入{s2}，准备射击{n1}。	hPt
 You can prepare in advance with {k} or from the inventory menu.	可以按 {k1} 提前准备，也可以通过物品栏菜单准备。	hPt
 You do not have a free grasp and your quiver and pack are full.	你没有空闲的抓握部位，而且箭筒和背包都已装满。	hP
@@ -20141,6 +20709,15 @@ Announcement combat sentence [head]: {s}, but it glances away!	{s1}，却擦过�
 Announcement combat sentence [merchant-hawk]: {s}! Today only!	{s1}！仅限今天！	l
 Announcement combat sentence [unit,actor]: {s} bats {s} aside!	{s1}将{s2}拨到了一旁！	l
 Announcement combat sentence [unit]: {s} looks even more sick!	{s1}看起来更加想吐了！	l
+Announcement combat visitor-statement []: was will be burning.	当时将正在燃烧。	l
+Announcement combat visitor-statement []: will be destroying .	将正在毁灭。	l
+Announcement combat visitor-statement-emotion []: contemptuous	心怀轻蔑	l
+Announcement combat visitor-statement-emotion []: disappointed	感到失望	l
+Announcement combat visitor-statement-emotion []: enthusiastic	充满热情	l
+Announcement combat visitor-statement-emotion []: feeling fond	感到喜欢	l
+Announcement combat visitor-statement-emotion []: feeling free	感到自由	l
+Announcement combat visitor-statement-emotion []: feeling love	心怀爱意	l
+Announcement combat visitor-statement-emotion []: in adoration	心怀崇拜	l
 Announcement music passage: the exposition of the second theme	第二主题呈示部	w
 Announcement music passage: the synthesis of previous passages	前述乐段综合部	w
 Assume an appropriate identity first if you'd like to pretend.	如果想冒充他人，请先采用合适的身份。	hP
@@ -20326,6 +20903,8 @@ The {s} of {e}, {s}, has been incorporated into your holdings.	位于{s2}的{s1}
 They live only on savage islands and very small savage biomes.	它们只栖息在凶险岛屿和非常小的凶险生物群系中。	l
 This cursed demon threatens our people with its very presence.	这受诅咒的恶魔只要还在，我们的百姓就不得安宁。	hP
 This savage beast threatens our people with its very presence.	这凶残野兽只要还在，我们的百姓就不得安宁。	hP
+This visitor has come . He heard {e} was the place for prayer.	这位访客已经到来。他听说{e1}适合祈祷。	hPt
+This visitor has come . It heard {e} was the place for prayer.	这位访客已经到来。它听说{e1}适合祈祷。	hPt
 To save these settings, choose a name for this embark profile:	要保存这些设置，请为此出发配置命名：	wl
 Vertical axles transfer power between two adjacent elevations.	垂直传动轴在相邻的两个高度层之间传递动力。	hj
 Warning!  The following embark profile name is already in use:	警告！以下出发配置名称已被使用：	wl
@@ -20711,6 +21290,16 @@ Announcement combat sentence [unit]: {s} looks less feverish.	{s1}的发热减�
 Announcement combat sentence [unit]: {s} looks less sluggish.	{s1}没那么迟缓了。	l
 Announcement combat shot-result [defense-adverb]: {s} parried	{s1}招架住了	l
 Announcement combat site-rumor-artifact [$memorial-item]: {s}	{s1}	l
+Announcement combat visitor-statement []: will be appearing .	将正在出现。	l
+Announcement combat visitor-statement []: will be destroying.	将正在毁灭。	l
+Announcement combat visitor-statement []: will be rewarding .	将正在施予奖赏。	l
+Announcement combat visitor-statement-emotion []: embarrassed	感到尴尬	l
+Announcement combat visitor-statement-emotion []: emotionless	毫无情绪	l
+Announcement combat visitor-statement-emotion []: exasperated	感到恼怒	l
+Announcement combat visitor-statement-emotion []: exhilarated	感到振奋	l
+Announcement combat visitor-statement-emotion []: pessimistic	感到悲观	l
+Announcement combat visitor-statement-emotion []: sympathetic	心怀同情	l
+Announcement combat visitor-statement-emotion []: taking hope	心怀希望	l
 Announcement combat work-reference [$creature]: a ghostly {s}	幽灵形态的{s1}	l
 Announcement combat work-reference [$item,$book]: the {s} {s}	{s1}{s2}	l
 Announcement distance: nearly a day's travel to the northeast	距此近一天路程的东北方	l
@@ -21212,6 +21801,26 @@ Announcement combat sentence [unit]: {s} has become enraged!	{s1}暴怒了！	l
 Announcement combat sentence [unit]: {s} have less swelling.	{s1}肿胀减轻了。	l
 Announcement combat site-rumor-person [$memorial-actor]: {s}	{s1}	l
 Announcement combat unit-list [unit,unit-list]: {s}, and {s}	{s1}和{s2}	l
+Announcement combat visitor-statement []: were speaking to .	当时正在说话。	l
+Announcement combat visitor-statement []: will be appearing.	将正在出现。	l
+Announcement combat visitor-statement []: will be flooding .	将正在泛滥。	l
+Announcement combat visitor-statement []: will be rewarding.	将正在施予奖赏。	l
+Announcement combat visitor-statement-emotion []: aggravated	感到恼火	l
+Announcement combat visitor-statement-emotion []: astonished	感到惊讶	l
+Announcement combat visitor-statement-emotion []: displeased	感到不满	l
+Announcement combat visitor-statement-emotion []: distressed	感到痛苦	l
+Announcement combat visitor-statement-emotion []: empathetic	感同身受	l
+Announcement combat visitor-statement-emotion []: enraptured	感到陶醉	l
+Announcement combat visitor-statement-emotion []: frightened	感到惊恐	l
+Announcement combat visitor-statement-emotion []: frustrated	感到挫败	l
+Announcement combat visitor-statement-emotion []: humiliated	感到屈辱	l
+Announcement combat visitor-statement-emotion []: in despair	陷入绝望	l
+Announcement combat visitor-statement-emotion []: interested	兴趣盎然	l
+Announcement combat visitor-statement-emotion []: optimistic	感到乐观	l
+Announcement combat visitor-statement-emotion []: passionate	充满热情	l
+Announcement combat visitor-statement-emotion []: remorseful	感到懊悔	l
+Announcement combat visitor-statement-emotion []: suspicious	心怀怀疑	l
+Announcement combat visitor-statement-reference [$name]: {s}	{s1}	l
 Announcement combat work-reference [$term]: the {s} language	{s1}语	l
 Announcement combat work-reference [reference-building]: {s}	{s1}	l
 Argue the worthlessness of martial prowess (not your values)	争辩武艺毫无价值（并非你的价值观）	hP
@@ -21809,6 +22418,27 @@ Announcement combat sentence [work]: You have authored {s}.	你著成了{s1}。	
 Announcement combat sentence [work]: You have composed {s}.	你创作了{s1}。	l
 Announcement combat trade-places [$name,$name]: {s} and {s}	{s1}与{s2}	l
 Announcement combat unit-list [unit,unit-list]: {s} and {s}	{s1}和{s2}	l
+Announcement combat visitor-statement []: are speaking to .	正在说话。	l
+Announcement combat visitor-statement []: was speaking to .	当时正在说话。	l
+Announcement combat visitor-statement []: were destroying .	当时正在毁灭。	l
+Announcement combat visitor-statement []: will be burning .	将正在燃烧。	l
+Announcement combat visitor-statement []: will be flooding.	将正在泛滥。	l
+Announcement combat visitor-statement []: will be speaking.	将正在说话。	l
+Announcement combat visitor-statement-emotion []: anguished	痛苦万分	l
+Announcement combat visitor-statement-emotion []: delighted	感到欣喜	l
+Announcement combat visitor-statement-emotion []: disgusted	感到厌恶	l
+Announcement combat visitor-statement-emotion []: horrified	感到惊骇	l
+Announcement combat visitor-statement-emotion []: in wonder	惊叹不已	l
+Announcement combat visitor-statement-emotion []: indignant	愤慨不已	l
+Announcement combat visitor-statement-emotion []: irritated	感到恼火	l
+Announcement combat visitor-statement-emotion []: miserable	感到悲惨	l
+Announcement combat visitor-statement-emotion []: mortified	羞愧难当	l
+Announcement combat visitor-statement-emotion []: nostalgic	怀念往昔	l
+Announcement combat visitor-statement-emotion []: regretful	感到后悔	l
+Announcement combat visitor-statement-emotion []: repentant	心怀忏悔	l
+Announcement combat visitor-statement-emotion []: resentful	心怀怨恨	l
+Announcement combat visitor-statement-emotion []: satisfied	感到满意	l
+Announcement combat visitor-statement-emotion []: terrified	极度恐惧	l
 Announcement distance: a half day's travel to the northeast	距此半天路程的东北方	l
 Announcement distance: a half day's travel to the northwest	距此半天路程的西北方	l
 Announcement distance: a half day's travel to the southeast	距此半天路程的东南方	l
@@ -22486,6 +23116,34 @@ Announcement combat sentence [unit]: {s} has been stunned!	{s1}被击晕了！	l
 Announcement combat sentence [unit]: {s} has fewer wounds.	{s1}的一些伤口愈合了。	l
 Announcement combat sentence [unit]: {s} looks less dizzy.	{s1}的眩晕减轻了。	l
 Announcement combat site-rumor-date []: a time before time	时间开始之前	l
+Announcement combat visitor-statement []: am speaking to .	正在说话。	l
+Announcement combat visitor-statement []: are destroying .	正在毁灭。	l
+Announcement combat visitor-statement []: is speaking to .	正在说话。	l
+Announcement combat visitor-statement []: was destroying .	当时正在毁灭。	l
+Announcement combat visitor-statement []: were appearing .	当时正在出现。	l
+Announcement combat visitor-statement []: were destroying.	当时正在毁灭。	l
+Announcement combat visitor-statement []: were rewarding .	当时正在施予奖赏。	l
+Announcement combat visitor-statement []: will be burning.	将正在燃烧。	l
+Announcement combat visitor-statement []: will destroyed .	将已毁灭。	l
+Announcement combat visitor-statement-emotion []: agitated	感到焦躁	l
+Announcement combat visitor-statement-emotion []: blissful	感到极度幸福	l
+Announcement combat visitor-statement-emotion []: confused	感到困惑	l
+Announcement combat visitor-statement-emotion []: dejected	感到沮丧	l
+Announcement combat visitor-statement-emotion []: dismayed	感到沮丧	l
+Announcement combat visitor-statement-emotion []: euphoric	感到欣快	l
+Announcement combat visitor-statement-emotion []: in agony	陷入极度痛苦	l
+Announcement combat visitor-statement-emotion []: in doubt	心怀怀疑	l
+Announcement combat visitor-statement-emotion []: in grief	陷入悲痛	l
+Announcement combat visitor-statement-emotion []: insulted	感到受辱	l
+Announcement combat visitor-statement-emotion []: isolated	感到被孤立	l
+Announcement combat visitor-statement-emotion []: jubilant	欢腾不已	l
+Announcement combat visitor-statement-emotion []: outraged	暴怒不已	l
+Announcement combat visitor-statement-emotion []: panicked	惊慌失措	l
+Announcement combat visitor-statement-emotion []: relieved	放下心来	l
+Announcement combat visitor-statement-emotion []: restless	坐立不安	l
+Announcement combat visitor-statement-emotion []: thrilled	感到兴奋	l
+Announcement combat visitor-statement-emotion []: vengeful	复仇心切	l
+Announcement combat visitor-statement-emotion []: wrathful	暴怒	l
 Announcement combat work-reference [reference-kind]: a {s}	{s1}	l
 Argue the worthlessness of craftsmanship (not your values)	争辩工艺毫无价值（并非你的价值观）	hP
 Argue the worthlessness of introspection (not your values)	争辩自省毫无价值（并非你的价值观）	hP
@@ -23171,6 +23829,41 @@ Announcement combat sentence [unit,actor]: {s} block {s}!	{s1}挡住了{s2}！	l
 Announcement combat sentence [unit]: {s} feel less dizzy.	{s1}的眩晕减轻了。	l
 Announcement combat sentence [unit]: {s} latch on firmly!	{s1}牢牢咬住了！	l
 Announcement combat shot [actor,unit]: {s} strikes at {s}	{s1}向{s2}发动射击	l
+Announcement combat visitor-statement []: am destroying .	正在毁灭。	l
+Announcement combat visitor-statement []: are appearing .	正在出现。	l
+Announcement combat visitor-statement []: are destroying.	正在毁灭。	l
+Announcement combat visitor-statement []: are rewarding .	正在施予奖赏。	l
+Announcement combat visitor-statement []: is destroying .	正在毁灭。	l
+Announcement combat visitor-statement []: was appearing .	当时正在出现。	l
+Announcement combat visitor-statement []: was destroying.	当时正在毁灭。	l
+Announcement combat visitor-statement []: was rewarding .	当时正在施予奖赏。	l
+Announcement combat visitor-statement []: were appearing.	当时正在出现。	l
+Announcement combat visitor-statement []: were flooding .	当时正在泛滥。	l
+Announcement combat visitor-statement []: were rewarding.	当时正在施予奖赏。	l
+Announcement combat visitor-statement []: will appeared .	将已出现。	l
+Announcement combat visitor-statement []: will destroyed.	将已毁灭。	l
+Announcement combat visitor-statement []: will rewarded .	将已施予奖赏。	l
+Announcement combat visitor-statement []: will speak to .	将说话。	l
+Announcement combat visitor-statement []: will spoke to .	将已说话。	l
+Announcement combat visitor-statement-emotion []: alarmed	感到惊慌	l
+Announcement combat visitor-statement-emotion []: annoyed	感到烦恼	l
+Announcement combat visitor-statement-emotion []: anxious	感到焦虑	l
+Announcement combat visitor-statement-emotion []: aroused	感到兴奋	l
+Announcement combat visitor-statement-emotion []: ashamed	感到羞愧	l
+Announcement combat visitor-statement-emotion []: content	感到满足	l
+Announcement combat visitor-statement-emotion []: enraged	怒不可遏	l
+Announcement combat visitor-statement-emotion []: excited	感到兴奋	l
+Announcement combat visitor-statement-emotion []: gleeful	感到欢喜	l
+Announcement combat visitor-statement-emotion []: grouchy	脾气暴躁	l
+Announcement combat visitor-statement-emotion []: hateful	满怀仇恨	l
+Announcement combat visitor-statement-emotion []: lustful	欲望难抑	l
+Announcement combat visitor-statement-emotion []: nervous	感到紧张	l
+Announcement combat visitor-statement-emotion []: patient	心怀耐心	l
+Announcement combat visitor-statement-emotion []: pleased	感到愉悦	l
+Announcement combat visitor-statement-emotion []: shocked	感到震惊	l
+Announcement combat visitor-statement-emotion []: unhappy	感到不快乐	l
+Announcement combat visitor-statement-emotion []: worried	感到担心	l
+Announcement combat visitor-statement-emotion []: zealous	满怀热忱	l
 Announcement combat work-description [work-sentence]: {s}	{s1}	l
 Announcement distance: nearly a day's travel to the north	距此近一天路程的北方	l
 Announcement distance: nearly a day's travel to the south	距此近一天路程的南方	l
@@ -23893,6 +24586,38 @@ Announcement combat sentence [actor,unit]: {s} miss {s}!	{s1}未能击中{s2}！
 Announcement combat sentence [owned-layer]: {s} regrows!	{s1}重新长出来了！	l
 Announcement combat shot [actor,unit]: {s} strike at {s}	{s1}向{s2}发动射击	l
 Announcement combat unit-list [unit,unit-list]: {s}, {s}	{s1}和{s2}	l
+Announcement combat visitor-statement []: am appearing .	正在出现。	l
+Announcement combat visitor-statement []: am destroying.	正在毁灭。	l
+Announcement combat visitor-statement []: am rewarding .	正在施予奖赏。	l
+Announcement combat visitor-statement []: are appearing.	正在出现。	l
+Announcement combat visitor-statement []: are flooding .	正在泛滥。	l
+Announcement combat visitor-statement []: are rewarding.	正在施予奖赏。	l
+Announcement combat visitor-statement []: is appearing .	正在出现。	l
+Announcement combat visitor-statement []: is destroying.	正在毁灭。	l
+Announcement combat visitor-statement []: is rewarding .	正在施予奖赏。	l
+Announcement combat visitor-statement []: was appearing.	当时正在出现。	l
+Announcement combat visitor-statement []: was flooding .	当时正在泛滥。	l
+Announcement combat visitor-statement []: was rewarding.	当时正在施予奖赏。	l
+Announcement combat visitor-statement []: were burning .	当时正在燃烧。	l
+Announcement combat visitor-statement []: were flooding.	当时正在泛滥。	l
+Announcement combat visitor-statement []: were speaking.	当时正在说话。	l
+Announcement combat visitor-statement []: were will be .	曾将……。	l
+Announcement combat visitor-statement []: will appeared.	将已出现。	l
+Announcement combat visitor-statement []: will destroy .	将毁灭。	l
+Announcement combat visitor-statement []: will flooded .	将已泛滥。	l
+Announcement combat visitor-statement []: will rewarded.	将已施予奖赏。	l
+Announcement combat visitor-statement-emotion []: afraid	感到害怕	l
+Announcement combat visitor-statement-emotion []: amazed	感到惊奇	l
+Announcement combat visitor-statement-emotion []: amused	感到好笑	l
+Announcement combat visitor-statement-emotion []: bitter	感到苦涩	l
+Announcement combat visitor-statement-emotion []: elated	兴高采烈	l
+Announcement combat visitor-statement-emotion []: gloomy	感到阴郁	l
+Announcement combat visitor-statement-emotion []: grumpy	感到暴躁	l
+Announcement combat visitor-statement-emotion []: jovial	快乐开朗	l
+Announcement combat visitor-statement-emotion []: joyful	满心喜悦	l
+Announcement combat visitor-statement-emotion []: lonely	感到孤独	l
+Announcement combat visitor-statement-emotion []: shaken	震惊不已	l
+Announcement combat visitor-statement-emotion []: uneasy	感到不安	l
 Announcement combat work-description [$description]: {s}	{s1}	l
 Announcement distance: nearly a day's travel to the east	距此近一天路程的东方	l
 Announcement distance: nearly a day's travel to the west	距此近一天路程的西方	l
@@ -24700,6 +25425,32 @@ Announcement combat sentence []: An ambush! Curse them!	有埋伏！诅咒他们
 Announcement combat sentence []: I would... rather not.	我……还是不去了。	l
 Announcement combat sentence []: That place is blessed.	那里是受祝福之地。	l
 Announcement combat site-rumor-event []: was kidnapped.	有人被绑架了。	l
+Announcement combat visitor-statement []: am appearing.	正在出现。	l
+Announcement combat visitor-statement []: am flooding .	正在泛滥。	l
+Announcement combat visitor-statement []: am rewarding.	正在施予奖赏。	l
+Announcement combat visitor-statement []: are burning .	正在燃烧。	l
+Announcement combat visitor-statement []: are flooding.	正在泛滥。	l
+Announcement combat visitor-statement []: are speaking.	正在说话。	l
+Announcement combat visitor-statement []: is appearing.	正在出现。	l
+Announcement combat visitor-statement []: is flooding .	正在泛滥。	l
+Announcement combat visitor-statement []: is rewarding.	正在施予奖赏。	l
+Announcement combat visitor-statement []: speaking to .	正在说话。	l
+Announcement combat visitor-statement []: was burning .	当时正在燃烧。	l
+Announcement combat visitor-statement []: was flooding.	当时正在泛滥。	l
+Announcement combat visitor-statement []: was speaking.	当时正在说话。	l
+Announcement combat visitor-statement []: was will be .	曾将……。	l
+Announcement combat visitor-statement []: were burning.	当时正在燃烧。	l
+Announcement combat visitor-statement []: will appear .	将出现。	l
+Announcement combat visitor-statement []: will burned .	将已燃烧。	l
+Announcement combat visitor-statement []: will destroy.	将毁灭。	l
+Announcement combat visitor-statement []: will flooded.	将已泛滥。	l
+Announcement combat visitor-statement []: will reward .	将施予奖赏。	l
+Announcement combat visitor-statement-emotion []: angry	感到愤怒	l
+Announcement combat visitor-statement-emotion []: bored	感到无聊	l
+Announcement combat visitor-statement-emotion []: eager	满怀渴望	l
+Announcement combat visitor-statement-emotion []: happy	感到开心	l
+Announcement combat visitor-statement-emotion []: jolly	感到开心	l
+Announcement combat visitor-statement-emotion []: proud	感到自豪	l
 Announcement combat work-reference []: an unnamed group	一个无名势力	l
 Announcement distance: a half day's travel to the north	距此半天路程的北方	l
 Announcement distance: a half day's travel to the south	距此半天路程的南方	l
@@ -25462,6 +26213,21 @@ Announcement combat sentence [$item]: Great {s} there.	那里的很棒的{s1}。
 Announcement combat sentence []: It is a gelding blow!	这一击造成了阉割！	l
 Announcement combat sentence []: Let's spread the joy!	让我们传播欢乐吧！	l
 Announcement combat site-rumor-position [$office]: {s}	{s1}	l
+Announcement combat visitor-statement []: am burning .	正在燃烧。	l
+Announcement combat visitor-statement []: am flooding.	正在泛滥。	l
+Announcement combat visitor-statement []: am speaking.	正在说话。	l
+Announcement combat visitor-statement []: are burning.	正在燃烧。	l
+Announcement combat visitor-statement []: destroying .	正在毁灭。	l
+Announcement combat visitor-statement []: is burning .	正在燃烧。	l
+Announcement combat visitor-statement []: is flooding.	正在泛滥。	l
+Announcement combat visitor-statement []: is speaking.	正在说话。	l
+Announcement combat visitor-statement []: was burning.	当时正在燃烧。	l
+Announcement combat visitor-statement []: will appear.	将出现。	l
+Announcement combat visitor-statement []: will burned.	将已燃烧。	l
+Announcement combat visitor-statement []: will flood .	将泛滥。	l
+Announcement combat visitor-statement []: will reward.	将施予奖赏。	l
+Announcement combat visitor-statement-emotion []: awed	心怀敬畏	l
+Announcement combat visitor-statement-emotion []: glum	感到郁闷	l
 Announcement distance: a day's travel to the northeast	距此一天路程的东北方	l
 Announcement distance: a day's travel to the northwest	距此一天路程的西北方	l
 Announcement distance: a day's travel to the southeast	距此一天路程的东南方	l
@@ -25709,6 +26475,7 @@ This event occurred on the {d}st Opal in the year {d}.	第{d2}年蛋白石月{d1
 This event occurred on the {d}th Opal in the year {d}.	第{d2}年蛋白石月{d1}日发生了这件事。	wtl
 This person is {s} of {p} and your military commander.	此人是{p}的{s}，也是你的军事指挥官。	ht
 This version of DF uses SDL: Simple DirectMedia Layer,	本版本《矮人要塞》使用 SDL（Simple DirectMedia Layer）、	wl
+This visitor has come {s}. She is seeking information.	这位访客前来{s1}。她正在打听消息。	hPt
 To attract migrants and build a successful settlement,	要吸引移民、建设繁荣的聚居地，	hq
 Toggle whether the task will be repeated indefinitely.	切换此任务是否无限重复。	hj
 We checked that stone for heat! What devilry is this?!	我们明明检查过那块石头的温度！这是什么邪术？！	hP
@@ -26276,6 +27043,19 @@ Announcement combat reference-value []: introspection	自省	l
 Announcement combat rumor-owner [rumor-person]: {s}'s	{s1}的	l
 Announcement combat sentence [$item]: Good {s} there.	那里的优质的{s1}。	l
 Announcement combat sentence [equipment]: {s} breaks!	{s1}断裂了！	l
+Announcement combat visitor-statement []: am burning.	正在燃烧。	l
+Announcement combat visitor-statement []: appearing .	正在出现。	l
+Announcement combat visitor-statement []: destroyed .	曾毁灭。	l
+Announcement combat visitor-statement []: destroying.	正在毁灭。	l
+Announcement combat visitor-statement []: is burning.	正在燃烧。	l
+Announcement combat visitor-statement []: rewarding .	正在施予奖赏。	l
+Announcement combat visitor-statement []: speaks to .	说话。	l
+Announcement combat visitor-statement []: will burn .	将燃烧。	l
+Announcement combat visitor-statement []: will flood.	将泛滥。	l
+Announcement combat visitor-statement []: will speak.	将说话。	l
+Announcement combat visitor-statement []: will spoke.	将已说话。	l
+Announcement combat visitor-statement-emotion []: sad	感到悲伤	l
+Announcement combat visitor-statement-subject []: you	你	l
 Announcement combat work-sentence [$description]: {s}	{s1}	l
 Argue the worthlessness of commerce (not your values)	争辩商业毫无价值（并非你的价值观）	hP
 Argue the worthlessness of fairness (not your values)	争辩公道毫无价值（并非你的价值观）	hP
@@ -26493,6 +27273,11 @@ These require a Weapon, Cage, or Boulder to function.	[C:7:0:0]它们分别需�
 This artwork appears on a {i} and was crafted in {p}.	这件艺术品位于{i1}上，在「{p1}」制成。	hHt
 This item is part of the creature's regular clothing.	此物品属于此生物平时穿着的衣物。	hj
 This legendary hunt has saved us from a mighty enemy!	这场传奇狩猎从强大的敌人手中拯救了我们！	hP
+This visitor has come {s}. He is seeking information.	这位访客前来{s1}。他正在打听消息。	hPt
+This visitor has come {s}. It is seeking information.	这位访客前来{s1}。它正在打听消息。	hPt
+This visitor has come {s}. She was curious about {e}.	这位访客前来{s1}。她对{e1}感到好奇。	hPt
+Visitor overview purpose: seeking work as a mercenary	寻找佣兵的工作	hl
+Visitor overview purpose: seeking work as a performer	寻找表演者的工作	hl
 With singular purpose it seeks to destroy the living.	它一心要毁灭生者。	h
 Workshop recipe: state extract-bearing small creature	含可提取物	l
 Writing materials include paper and parchment sheets.	书写材料包括纸张和兽皮纸。	hP
@@ -27161,6 +27946,17 @@ Announcement combat sentence [work-description]: {s}	{s1}	l
 Announcement combat site-rumor-artifact [$book]: {s}	{s1}	l
 Announcement combat site-rumor-artifact [$item]: {s}	{s1}	l
 Announcement combat site-rumor-building [$name]: {s}	{s1}	l
+Announcement combat visitor-statement []: appeared .	曾出现。	l
+Announcement combat visitor-statement []: appearing.	正在出现。	l
+Announcement combat visitor-statement []: destroyed.	曾毁灭。	l
+Announcement combat visitor-statement []: destroys .	毁灭。	l
+Announcement combat visitor-statement []: flooding .	正在泛滥。	l
+Announcement combat visitor-statement []: rewarded .	曾施予奖赏。	l
+Announcement combat visitor-statement []: rewarding.	正在施予奖赏。	l
+Announcement combat visitor-statement []: speak to .	说话。	l
+Announcement combat visitor-statement []: spoke to .	曾说话。	l
+Announcement combat visitor-statement []: will burn.	将燃烧。	l
+Announcement combat visitor-statement-object []: you	你	l
 Announcement combat work-reference [$reference]: {s}	{s1}	l
 Announcement distance: a short walk to the northeast	步行不远即可到达的东北方	l
 Announcement distance: a short walk to the northwest	步行不远即可到达的西北方	l
@@ -27462,6 +28258,8 @@ There is nothing to catch in the southern magma sea.	南部的岩浆海中没有
 There is nothing to catch in the southwestern ocean.	西南部的海洋中没有可捕捉的东西。	hP
 This great hunt has saved us from a dangerous enemy!	这场出色的狩猎从危险的敌人手中拯救了我们！	hP
 This storyteller. How can I even describe the skill?	这位讲故事的人的技艺，我简直不知该如何形容！	hP
+This visitor has come {s}. He was curious about {e}.	这位访客前来{s1}。他对{e1}感到好奇。	hPt
+This visitor has come {s}. It was curious about {e}.	这位访客前来{s1}。它对{e1}感到好奇。	hPt
 Verbally struggle against looming existential crisis	说出你与迫近的存在危机的抗争	hP
 Villains! The seizure of {b} will not go unanswered.	恶徒！你们强征{b1}的行为必将遭到报复。	hPt
 What will you say about the end of the insurrection?	关于起义结束，你想说些什么？	hP
@@ -28108,6 +28906,19 @@ Announcement combat rumor-time []: several days ago	数天前	l
 Announcement combat sentence [$item]: Splendid {s}.	出色的{s1}。	l
 Announcement combat sentence [memory-sentence]: {s}	{s1}	l
 Announcement combat sentence [unit]: {s} feel sick!	{s1}觉得恶心！	l
+Announcement combat visitor-statement []: appeared.	曾出现。	l
+Announcement combat visitor-statement []: appears .	出现。	l
+Announcement combat visitor-statement []: burning .	正在燃烧。	l
+Announcement combat visitor-statement []: destroy .	毁灭。	l
+Announcement combat visitor-statement []: destroys.	毁灭。	l
+Announcement combat visitor-statement []: flooded .	曾泛滥。	l
+Announcement combat visitor-statement []: flooding.	正在泛滥。	l
+Announcement combat visitor-statement []: rewarded.	曾施予奖赏。	l
+Announcement combat visitor-statement []: rewards .	施予奖赏。	l
+Announcement combat visitor-statement []: speaking.	正在说话。	l
+Announcement combat visitor-statement []: will be .	将……。	l
+Announcement combat visitor-statement-object []: me	我	l
+Announcement combat visitor-statement-subject []: I	我	l
 Announcement unit: somebody whose name I don't know	一个我不知道名字的人	l
 Argue the worthlessness of family (not your values)	争辩家庭毫无价值（并非你的价值观）	hP
 Argue the worthlessness of nature (not your values)	争辩自然毫无价值（并非你的价值观）	hP
@@ -28363,9 +29174,11 @@ There's absolutely nothing interesting around here.	这附近完全没有什么�
 These are the default Dwarf Fortress civilizations.	这些是《矮人要塞》的默认文明。	wl
 This person is one of the {s} of {p} alongside you.	此人与你同为{p}的{s}。	ht
 This recitation. How can I even describe the skill?	这场朗诵的技艺，我简直不知该如何形容！	hP
+This visitor has come . She is seeking information.	这位访客已经到来。她正在打听消息。	hP
 This {s} player. How can I even describe the skill?	这位{s1}演奏者的技艺，我简直不知该如何形容！	hPt
 To fully function your Hospital needs to have Beds,	[C:7:0:0]要让[C:1:0:1]医院[C:7:0:0]正常运作，需要[C:6:0:0]床[C:7:0:0]、	hq
 Tribute is being unloaded. (A report is available.)	正在卸下贡品。（可查看报告。）	hP
+Visitor overview purpose: seeking work as a scholar	寻找学者的工作	hl
 What a dancer! It's such an honor to have you here.	多么出色的舞者！你能来这里，真是荣幸。	hP
 What will you say about the artifact's destruction?	关于造物被毁，你想说些什么？	hP
 What will you say about the failed peace agreement?	关于和平协议破裂，你想说些什么？	hP
@@ -29040,6 +29853,15 @@ Announcement combat sentence [merchant-hawk]: {s}!	{s1}！	l
 Announcement combat sentence [unit]: {s} has come!	{s1}来了！	l
 Announcement combat sentence [unit]: {s} pass out.	{s1}昏过去了。	l
 Announcement combat site-rumor-date [$digits]: {s}	第{s1}年	l
+Announcement combat visitor-statement []: appear .	出现。	l
+Announcement combat visitor-statement []: appears.	出现。	l
+Announcement combat visitor-statement []: burned .	曾燃烧。	l
+Announcement combat visitor-statement []: burning.	正在燃烧。	l
+Announcement combat visitor-statement []: destroy.	毁灭。	l
+Announcement combat visitor-statement []: flooded.	曾泛滥。	l
+Announcement combat visitor-statement []: floods .	泛滥。	l
+Announcement combat visitor-statement []: reward .	施予奖赏。	l
+Announcement combat visitor-statement []: rewards.	施予奖赏。	l
 Announcement distance: a day's travel to the north	距此一天路程的北方	l
 Announcement distance: a day's travel to the south	距此一天路程的南方	l
 Announcement music passage: a series of variations	变奏组	w
@@ -29319,6 +30141,9 @@ This is the {i} currency of {r} from the year {c}.	这是「{r1}」第{c1}年使
 This item is a symbol of a noble or administrator.	此物品是贵族或管理员的身份象征。	hj
 This item is part of the assigned squad equipment.	此物品属于已分配的小队装备。	hj
 This must be stopped by any means at our disposal.	我们必须用尽一切办法制止此事。	hP
+This visitor has come . He is seeking information.	这位访客已经到来。他正在打听消息。	hP
+This visitor has come . It is seeking information.	这位访客已经到来。它正在打听消息。	hP
+This visitor has come . She was curious about {e}.	这位访客已经到来。她对{e1}感到好奇。	hPt
 This work order has been validated by the manager.	此工单已由经理人批准。	hj
 Victory was spread among {c} winners in the wilds.	在荒野中，共有{c1}名参赛者共同获得了胜利。	ht
 Water might need to be pumped out or carried away.	可能需要把水抽出或运走。	l
@@ -30048,6 +30873,13 @@ Announcement combat sentence []: Night creatures!	夜行生物！	l
 Announcement combat sentence []: You feel uneasy.	你感到不安。	l
 Announcement combat sentence [inscription]: "{s}"	“{s1}”	l
 Announcement combat site-rumor-position []: ruler	统治者	l
+Announcement combat visitor-statement []: appear.	出现。	l
+Announcement combat visitor-statement []: burned.	曾燃烧。	l
+Announcement combat visitor-statement []: burns .	燃烧。	l
+Announcement combat visitor-statement []: flood .	泛滥。	l
+Announcement combat visitor-statement []: floods.	泛滥。	l
+Announcement combat visitor-statement []: reward.	施予奖赏。	l
+Announcement combat visitor-statement []: speaks.	说话。	l
 Announcement combat work-ordinal [$digits]: {s}nd	{s1}	l
 Announcement combat work-ordinal [$digits]: {s}rd	{s1}	l
 Announcement combat work-ordinal [$digits]: {s}st	{s1}	l
@@ -30323,6 +31155,8 @@ There is nothing to catch in the southern swamps.	南部的沼泽中没有可捕
 They consider you a key figure in the opposition.	他们把你视为反对者中的关键人物。	hP
 This creature is assigned to a specific workshop.	此生物被分配到指定工坊。	hj
 This preacher. How can I even describe the skill?	这位传道者的技艺，我简直不知该如何形容！	hP
+This visitor has come . He was curious about {e}.	这位访客已经到来。他对{e1}感到好奇。	hPt
+This visitor has come . It was curious about {e}.	这位访客已经到来。它对{e1}感到好奇。	hPt
 This work of art is a {i} and was crafted in {p}.	这件艺术品是{i1}，在「{p1}」制成。	hHt
 Victory was spread among {c} winners in the wilds	在荒野中，共有{c1}名参赛者共同获得了胜利	ht
 Why wasn't {p}, a jealous deity, consulted first?	为什么没有先向善妒的神祇{p1}问卜？	hPt
@@ -31137,6 +31971,13 @@ Announcement combat rumor-time []: in the future	将来	l
 Announcement combat sentence [$item]: Great {s}.	很棒的{s1}。	l
 Announcement combat sentence []: Night creature!	夜行生物！	l
 Announcement combat sentence [injury-list]: {s}!	{s1}！	l
+Announcement combat visitor-statement []: burn .	燃烧。	l
+Announcement combat visitor-statement []: burns.	燃烧。	l
+Announcement combat visitor-statement []: flood.	泛滥。	l
+Announcement combat visitor-statement []: speak.	说话。	l
+Announcement combat visitor-statement []: spoke.	曾说话。	l
+Announcement combat visitor-statement []: were .	曾……。	l
+Announcement combat visitor-statement []: will .	将……。	l
 Announcement combat work-ordinal []: seventeenth	17	l
 Announcement distance: a short walk to the north	步行不远即可到达的北方	l
 Announcement distance: a short walk to the south	步行不远即可到达的南方	l
@@ -32330,6 +33171,9 @@ Announcement combat rumor-person [$person]: {s}	{s1}	l
 Announcement combat rumor-position [$term]: {s}	{s1}	l
 Announcement combat sentence [$item]: Good {s}.	优质的{s1}。	l
 Announcement combat sentence [rumor-event]: {s}	{s1}	l
+Announcement combat visitor-statement []: are .	……。	l
+Announcement combat visitor-statement []: burn.	燃烧。	l
+Announcement combat visitor-statement []: was .	曾……。	l
 Announcement combat work-ordinal []: eighteenth	18	l
 Announcement combat work-ordinal []: fourteenth	14	l
 Announcement combat work-ordinal []: nineteenth	19	l
@@ -33501,6 +34345,8 @@ Announcement combat reference-value []: family	亲情	l
 Announcement combat reference-value []: nature	自然	l
 Announcement combat rumor-army [$name]: of {s}	（隶属{s1}）	l
 Announcement combat rumor-time []: a month ago	一个月前	l
+Announcement combat visitor-statement []: am .	……。	l
+Announcement combat visitor-statement []: is .	……。	l
 Announcement combat work-ordinal []: fifteenth	15	l
 Announcement combat work-ordinal []: sixteenth	16	l
 Argue nuances of competition (not your values)	争辩竞争的复杂之处（并非你的价值观）	hP
@@ -37333,6 +38179,7 @@ Announcement combat reference-value []: law	法律	l
 Announcement combat rumor-time []: just now	刚才	l
 Announcement combat rumor-time []: long ago	很久以前	l
 Announcement combat shot-result []: parried	招架住了	l
+Announcement combat visitor-statement []: .	……。	l
 Announcement combat work-ordinal []: eighth	8	l
 Announcement combat work-ordinal []: fourth	4	l
 Announcement combat work-ordinal []: second	2	l
@@ -37681,6 +38528,7 @@ This engraving appears on a wall somewhere.	这幅雕刻位于某处的墙上。
 This furniture is a part of multiple rooms.	此家具属于多个房间。	hP
 Victory was spread among {c} winners at {p}	在{p1}，共有{c1}名参赛者共同获得了胜利	ht
 Victory was spread among {c} winners in {p}	在{p1}，共有{c1}名参赛者共同获得了胜利	ht
+Visitor overview purpose: seeking sanctuary	寻求庇护	hl
 What will you say about the new leadership?	关于新的领导者，你想说些什么？	hP
 Workshop recipe: kind extract-bearing plant	植物	l
 Workshop recipe: powder grinding receptacle	粉末研磨容器	l
@@ -39103,6 +39951,7 @@ There is a shallow {s} imprint in the {s}.	{s2}中有一个{s1}留下的浅压�
 This is the {i} currency of {r} under {r}.	这是「{r1}」在{r2}统治时期使用的{i1}币。	hHt
 This task has been assigned and is active.	此任务已分配工人，正在执行。	hj
 Vanilla Extinct Creatures Graphics {d}.{d}	原版灭绝生物图像 {d}.{d}	wt
+Visitor overview purpose: asking questions	询问信息	hl
 We don't offer any specific services here.	我们这儿不提供什么专门的服务。	hP
 What will you say about tribute agreement?	关于进贡协议，你想说些什么？	hP
 What would you like to name this timeline?	你想将这条时间线命名为什么？	w
@@ -40663,6 +41512,7 @@ Toggle whether the squad will sleep here.	切换此小队是否在这里睡觉�
 Toggle whether the squad will train here.	切换此小队是否在这里训练。	hj
 Use Ctrl+p to play back a recorded macro.	使用 Ctrl+P 回放已录制的宏。	l
 Verbally struggle against great pessimism	说出你与强烈悲观的抗争	hP
+Visitor overview purpose separator: comma	、	hl
 What will you say about the insurrection?	关于这场起义，你想说些什么？	hP
 Who dares to enter my house? I curse you!	谁敢闯入我的居所？我诅咒你！	hP
 With them come monstrous siege engineers!	可怕的攻城巨兽也随军而来！	hP
@@ -42213,6 +43063,7 @@ This worthy hunt has rid us of an enemy.	这场狩猎很值得，为我们除去
 This. How can I even describe the skill?	这番技艺，叫我怎么形容才好！	hP
 Unit custom profession: Militia Comander	军事指挥官	l
 Verbally struggle against great distress	说出你与强烈苦恼的抗争	hP
+Visitor overview purpose: to slay beasts	猎杀野兽	hl
 Workshop recipe: format state -producing	可产出{s}	l
 Workshop recipe: state possibly buriable	可能可安葬	l
 Workshop recipe: state writing container	用于存放文字内容	l
@@ -43676,6 +44527,8 @@ Verbally struggle against great anguish	说出你与强烈痛苦万分的抗争	
 Verbally struggle against great despair	说出你与强烈绝望的抗争	hP
 Verbally struggle against great sadness	说出你与强烈悲伤的抗争	hP
 Verbally struggle against mortification	说出你与羞愧难当的抗争	hP
+Visitor overview purpose separator: and	及	hl
+Visitor overview purpose: for diplomacy	开展外交	hl
 Werebeast Attack Exported Wealth Rating	狂化生物来袭出口财富阈值
 What have you done? This is horrifying!	你都做了什么？太可怕了！	hP
 What will you say about the occupation?	关于占领行动，你想说些什么？	hP
@@ -45341,6 +46194,7 @@ Verbally struggle against great horror	说出你与强烈恐怖的抗争	hP
 Verbally struggle against great misery	说出你与强烈悲惨的抗争	hP
 Verbally struggle against great terror	说出你与强烈恐惧的抗争	hP
 Vertical keyboard scroll tiles (world)	垂直键盘滚动图块(世界)	w
+Visitor overview purpose location: {e}	访问{e1}	hlt
 Werebeast Attack Created Wealth Rating	狂化生物来袭创造财富阈值
 What will you say about the abduction?	关于这次绑架，你想说些什么？	hP
 What will you say about the agreement?	关于这项约定，你想说些什么？	hP
@@ -48820,6 +49674,8 @@ This {s} player doesn't belong here.	这位{s1}演奏者不该出现在这里。
 Vanilla Descriptors Graphics {d}.{d}	原版描述词图像 {d}.{d}	wt
 Verbally struggle against great fear	说出你与强烈恐惧的抗争	hP
 Victory was spread among {c} winners	共有{c1}名参赛者共同获得了胜利	ht
+Visitor overview purpose at {s}: {e}	在{e1}{s1}	hlt
+Visitor overview purpose: to perform	表演	hl
 We are saved from a dangerous enemy!	我们从危险的敌人手中获救了！	hP
 Were you trying to make an argument?	你刚才那也叫讲道理？	hP
 What can you tell me about yourself?	能说说你自己吗？	hP
@@ -52597,6 +53453,8 @@ Vanilla Extinct Creatures Graphics	原版灭绝生物图像包	l
 Vanilla Procedural Objects {d}.{d}	原版程序生成对象 {d}.{d}	wt
 Verbally struggle against distress	说出你与苦恼的抗争	hP
 View details about this knowledge.	查看此项知识的详细信息。	hj
+Visitor overview purpose: to relax	放松	hl
+Visitor overview purpose: to study	学习	hl
 Volcanism Weighted Range ({d}-{d})	火山活动度加权范围（{d}-{d}）	wt
 Walking spreads spatter (adv mode)	行走传播飞溅(冒险模式)	w
 We rent out rooms for {d} a night.	我们出租客房，每晚{d1}。	hPt
@@ -54533,6 +55391,7 @@ Verbally struggle against despair	说出你与绝望的抗争	hP
 Verbally struggle against sadness	说出你与悲伤的抗争	hP
 Verbally struggle, greatly shaken	说出内心挣扎，受到极大震动	hP
 View the positions in this squad.	查看此小队的各个职位。	hj
+Visitor overview purpose: to pray	祈祷	hl
 Wagons bypassed inaccessible site	货车绕过了无法进入的地点	w
 We are saved from a mighty enemy!	我们从强大的敌人手中获救了！	hP
 We can no longer pay them homage.	我们不能再向他们称臣了。	hP
@@ -58337,6 +59196,7 @@ This servant of {r} greets you.	我以{r1}仆人的身份，向你问好。	hPt
 This singer is a waste of time.	看这位歌手表演，简直浪费时间。	hP
 This site is a fortress of {p}.	此地是{p}的一座要塞。	ht
 This site is controlled by {p}.	此地由{p}统治。	ht
+This visitor is ready to leave.	这位访客准备离开了。	hP
 This {s} player could be worse.	这位{s1}演奏者倒也不算差。	hPt
 This {s} player is magnificant!	这位{s1}演奏者太出色了！	hPt
 This {s} player is pretty good.	这位{s1}演奏者相当不错。	hPt
@@ -60525,12 +61385,14 @@ This preacher could be better.	这位传道者还有进步的余地。	hP
 This singer shows such talent.	这位歌手展现出非凡的才华。	hP
 This storyteller is fantastic!	这位讲故事的人讲得太精彩了！	hP
 This storyteller is legendary.	这位讲故事的人堪称传奇。	hP
+This visitor has come {s}. She	这位访客前来{s1}。她	hPt
 Titan Attack Population Rating	泰坦来袭人口阈值
 Today, somebody will be cruel.	今天会有人做出残酷之举。	hP
 Vanilla Items Graphics {d}.{d}	原版物品图像 {d}.{d}	wt
 Verbally struggle against fear	说出你与恐惧的抗争	hP
 Verbally struggle against rage	说出你与狂怒的抗争	hP
 Vertical keyboard scroll tiles	垂直键盘滚动图块	w
+Visitor overview purpose empty	此地	hl
 Well over a hundred live there	那里住着一百多人	al
 Workshop recipe: format -bound	{s1}装订的{s2}	l
 Workshop recipe: format join ,	{s1}、{s2}	l
@@ -62603,6 +63465,8 @@ This storyteller is middling.	这位讲故事的人水平一般。	hP
 This storyteller is splendid.	这位讲故事的人很出色。	hP
 This storyteller is terrible.	这位讲故事的人很糟糕。	hP
 This task has been suspended.	此任务已暂停。	hj
+This visitor has come {s}. He	这位访客前来{s1}。他	hPt
+This visitor has come {s}. It	这位访客前来{s1}。它	hPt
 This {s} player is fantastic!	这位{s1}演奏者太精彩了！	hPt
 This {s} player is legendary.	这位{s1}演奏者堪称传奇。	hPt
 Toward you: Negative attitude	对你的态度：负面	hP
@@ -66553,6 +67417,7 @@ This singer could be worse.	这位歌手倒也不算差。	hP
 This singer is magnificant!	这位歌手太出色了！	hP
 This singer is pretty good.	这位歌手相当不错。	hP
 This singer makes me retch.	这位歌手让我想吐。	hP
+This visitor has come . She	这位访客已经到来。她	hP
 This {s} player is alright!	这位{s1}演奏者还不错！	hPt
 This {s} player is alright.	这位{s1}演奏者还不错。	hPt
 This {s} player is awesome!	这位{s1}演奏者太棒了！	hPt
@@ -68586,6 +69451,9 @@ This preacher is splendid.	这位传道者很出色。	hP
 This preacher is terrible.	这位传道者很糟糕。	hP
 This storyteller is great.	这位讲故事的人很棒。	hP
 This storyteller is lousy.	这位讲故事的人很差劲。	hP
+This visitor has come . He	这位访客已经到来。他	hP
+This visitor has come . It	这位访客已经到来。它	hP
+This visitor has come {s}.	这位访客前来{s1}。	hPt
 This work order is active.	此工单正在执行。	hj
 This? Unbelievable talent!	这才华，简直让人不敢相信！	hP
 Travel building: Dormitory	宿舍	wi
@@ -73991,6 +74859,7 @@ This singer is alright!	这位歌手还不错！	hP
 This singer is alright.	这位歌手还不错。	hP
 This singer is awesome!	这位歌手太棒了！	hP
 This singer is no good.	这位歌手不怎么样。	hP
+This visitor has come .	这位访客已经到来。	hP
 This {s} player stinks!	这位{s1}演奏者糟透了！	hPt
 This {s} player? Awful.	这位{s1}演奏者？糟透了。	hPt
 Total Power Needed: {d}	总动力需求：{d}	wtl
@@ -129144,6 +130013,7 @@ zoysia	结缕草	wi
  webs	网	wi
 "{b}"	《{b1}》	ht
 "{n}"	“{n1}”	htN
+"{q}"	“{q1}”	hPt
 (NEW)	（北东西）	wi
 (NSE)	（南北东）	wi
 (NSW)	（南北西）	wi
@@ -131435,6 +132305,7 @@ you	你	wi
 {c}	{c1}	hIit
 {s}	{s1}	htC
 \x90th	埃斯	wi
+""	“”	hP
 He	他	h
 He	他	w
 It	它	h

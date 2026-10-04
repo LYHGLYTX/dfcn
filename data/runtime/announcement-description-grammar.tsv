@@ -1,4 +1,573 @@
 # scope	source	target	semantic field scopes	native construction evidence
+# Visitor Overview prophet statements: all native action/tense/default productions.
+# Subjects and objects retain complete HF/site/world fields; emotion leaves follow below.
+visitor-statement-subject	I	我		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-subject	you	你		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-object	me	我		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-object	you	你		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-reference	an unknown creature	未知生物		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-reference	an unknown site	未知地点		PE classic 0x140656840..0x140656a95; HF role0, SITE mode0, REGION world_data.name
+visitor-statement-subject	{s}	{s1}	visitor-statement-reference	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement-object	{s}	{s1}	visitor-statement-reference	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement-reference	a {s}	一个{s1}	$creature	PE classic 0x140b8ff50; unnamed HF: a + zombie/ghostly + caste + optional animated name
+visitor-statement-reference	{s}	{s1}	$memorial-actor	PE classic 0x140656840; complete HF name, nickname, or unnamed caste identity
+visitor-statement-reference	{s}	{s1}	$name	PE classic 0x140b90970 SITE; 0x140a91760 world_data.name
+visitor-statement	{s} appear.	{s1}出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appear {s}.	{s1}出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appear .	{s1}出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appear.	出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appear {s}.	出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appear .	出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appears.	{s1}出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appears {s}.	{s1}出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appears .	{s1}出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appears.	出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appears {s}.	出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appears .	出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appeared.	{s1}曾出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appeared {s}.	{s1}曾出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appeared .	{s1}曾出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appeared.	曾出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appeared {s}.	曾出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appeared .	曾出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appear.	{s1}将出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appear {s}.	{s1}将出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appear .	{s1}将出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appear.	将出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appear {s}.	将出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appear .	将出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appeared.	{s1}将已出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appeared {s}.	{s1}将已出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will appeared .	{s1}将已出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appeared.	将已出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appeared {s}.	将已出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will appeared .	将已出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appearing.	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appearing {s}.	{s1}正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} appearing .	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appearing.	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appearing {s}.	正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	appearing .	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am appearing.	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am appearing {s}.	{s1}正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am appearing .	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am appearing.	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am appearing {s}.	正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am appearing .	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are appearing.	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are appearing {s}.	{s1}正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are appearing .	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are appearing.	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are appearing {s}.	正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are appearing .	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is appearing.	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is appearing {s}.	{s1}正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is appearing .	{s1}正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is appearing.	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is appearing {s}.	正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is appearing .	正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was appearing.	{s1}当时正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was appearing {s}.	{s1}当时正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was appearing .	{s1}当时正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was appearing.	当时正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was appearing {s}.	当时正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was appearing .	当时正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were appearing.	{s1}当时正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were appearing {s}.	{s1}当时正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were appearing .	{s1}当时正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were appearing.	当时正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were appearing {s}.	当时正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were appearing .	当时正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be appearing.	{s1}将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be appearing {s}.	{s1}将正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be appearing .	{s1}将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be appearing.	将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be appearing {s}.	将正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be appearing .	将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be appearing.	{s1}当时将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be appearing {s}.	{s1}当时将正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be appearing .	{s1}当时将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be appearing.	当时将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be appearing {s}.	当时将正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be appearing .	当时将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be appearing.	{s1}当时将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be appearing {s}.	{s1}当时将正在出现在{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be appearing .	{s1}当时将正在出现。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be appearing.	当时将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be appearing {s}.	当时将正在出现在{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be appearing .	当时将正在出现。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroy.	{s1}毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroy {s}.	{s1}毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroy .	{s1}毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroy.	毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroy {s}.	毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroy .	毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroys.	{s1}毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroys {s}.	{s1}毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroys .	{s1}毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroys.	毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroys {s}.	毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroys .	毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroyed.	{s1}曾毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroyed {s}.	{s1}曾毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroyed .	{s1}曾毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroyed.	曾毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroyed {s}.	曾毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroyed .	曾毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroy.	{s1}将毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroy {s}.	{s1}将毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroy .	{s1}将毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroy.	将毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroy {s}.	将毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroy .	将毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroyed.	{s1}将已毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroyed {s}.	{s1}将已毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will destroyed .	{s1}将已毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroyed.	将已毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroyed {s}.	将已毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will destroyed .	将已毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroying.	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroying {s}.	{s1}正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} destroying .	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroying.	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroying {s}.	正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	destroying .	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am destroying.	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am destroying {s}.	{s1}正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am destroying .	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am destroying.	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am destroying {s}.	正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am destroying .	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are destroying.	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are destroying {s}.	{s1}正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are destroying .	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are destroying.	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are destroying {s}.	正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are destroying .	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is destroying.	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is destroying {s}.	{s1}正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is destroying .	{s1}正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is destroying.	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is destroying {s}.	正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is destroying .	正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was destroying.	{s1}当时正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was destroying {s}.	{s1}当时正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was destroying .	{s1}当时正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was destroying.	当时正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was destroying {s}.	当时正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was destroying .	当时正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were destroying.	{s1}当时正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were destroying {s}.	{s1}当时正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were destroying .	{s1}当时正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were destroying.	当时正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were destroying {s}.	当时正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were destroying .	当时正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be destroying.	{s1}将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be destroying {s}.	{s1}将正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be destroying .	{s1}将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be destroying.	将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be destroying {s}.	将正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be destroying .	将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be destroying.	{s1}当时将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be destroying {s}.	{s1}当时将正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be destroying .	{s1}当时将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be destroying.	当时将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be destroying {s}.	当时将正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be destroying .	当时将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be destroying.	{s1}当时将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be destroying {s}.	{s1}当时将正在毁灭{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be destroying .	{s1}当时将正在毁灭。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be destroying.	当时将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be destroying {s}.	当时将正在毁灭{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be destroying .	当时将正在毁灭。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speak.	{s1}说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speak to {s}.	{s1}对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speak to .	{s1}说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speak.	说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speak to {s}.	对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speak to .	说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaks.	{s1}说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaks to {s}.	{s1}对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaks to .	{s1}说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaks.	说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaks to {s}.	对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaks to .	说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} spoke.	{s1}曾说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} spoke to {s}.	{s1}曾对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} spoke to .	{s1}曾说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	spoke.	曾说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	spoke to {s}.	曾对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	spoke to .	曾说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will speak.	{s1}将说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will speak to {s}.	{s1}将对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will speak to .	{s1}将说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will speak.	将说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will speak to {s}.	将对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will speak to .	将说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will spoke.	{s1}将已说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will spoke to {s}.	{s1}将已对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will spoke to .	{s1}将已说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will spoke.	将已说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will spoke to {s}.	将已对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will spoke to .	将已说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaking.	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaking to {s}.	{s1}正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} speaking to .	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaking.	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaking to {s}.	正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	speaking to .	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am speaking.	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am speaking to {s}.	{s1}正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am speaking to .	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am speaking.	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am speaking to {s}.	正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am speaking to .	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are speaking.	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are speaking to {s}.	{s1}正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are speaking to .	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are speaking.	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are speaking to {s}.	正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are speaking to .	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is speaking.	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is speaking to {s}.	{s1}正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is speaking to .	{s1}正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is speaking.	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is speaking to {s}.	正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is speaking to .	正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was speaking.	{s1}当时正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was speaking to {s}.	{s1}当时正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was speaking to .	{s1}当时正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was speaking.	当时正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was speaking to {s}.	当时正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was speaking to .	当时正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were speaking.	{s1}当时正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were speaking to {s}.	{s1}当时正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were speaking to .	{s1}当时正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were speaking.	当时正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were speaking to {s}.	当时正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were speaking to .	当时正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be speaking.	{s1}将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be speaking to {s}.	{s1}将正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be speaking to .	{s1}将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be speaking.	将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be speaking to {s}.	将正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be speaking to .	将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be speaking.	{s1}当时将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be speaking to {s}.	{s1}当时将正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be speaking to .	{s1}当时将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be speaking.	当时将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be speaking to {s}.	当时将正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be speaking to .	当时将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be speaking.	{s1}当时将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be speaking to {s}.	{s1}当时将正在对{s2}说话。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be speaking to .	{s1}当时将正在说话。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be speaking.	当时将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be speaking to {s}.	当时将正在对{s1}说话。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be speaking to .	当时将正在说话。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burn.	{s1}燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burn {s}.	{s1}焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burn .	{s1}燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burn.	燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burn {s}.	焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burn .	燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burns.	{s1}燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burns {s}.	{s1}焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burns .	{s1}燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burns.	燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burns {s}.	焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burns .	燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burned.	{s1}曾燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burned {s}.	{s1}曾焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burned .	{s1}曾燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burned.	曾燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burned {s}.	曾焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burned .	曾燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burn.	{s1}将燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burn {s}.	{s1}将焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burn .	{s1}将燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burn.	将燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burn {s}.	将焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burn .	将燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burned.	{s1}将已燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burned {s}.	{s1}将已焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will burned .	{s1}将已燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burned.	将已燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burned {s}.	将已焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will burned .	将已燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burning.	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burning {s}.	{s1}正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} burning .	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burning.	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burning {s}.	正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	burning .	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am burning.	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am burning {s}.	{s1}正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am burning .	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am burning.	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am burning {s}.	正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am burning .	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are burning.	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are burning {s}.	{s1}正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are burning .	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are burning.	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are burning {s}.	正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are burning .	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is burning.	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is burning {s}.	{s1}正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is burning .	{s1}正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is burning.	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is burning {s}.	正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is burning .	正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was burning.	{s1}当时正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was burning {s}.	{s1}当时正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was burning .	{s1}当时正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was burning.	当时正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was burning {s}.	当时正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was burning .	当时正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were burning.	{s1}当时正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were burning {s}.	{s1}当时正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were burning .	{s1}当时正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were burning.	当时正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were burning {s}.	当时正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were burning .	当时正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be burning.	{s1}将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be burning {s}.	{s1}将正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be burning .	{s1}将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be burning.	将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be burning {s}.	将正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be burning .	将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be burning.	{s1}当时将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be burning {s}.	{s1}当时将正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be burning .	{s1}当时将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be burning.	当时将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be burning {s}.	当时将正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be burning .	当时将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be burning.	{s1}当时将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be burning {s}.	{s1}当时将正在焚烧{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be burning .	{s1}当时将正在燃烧。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be burning.	当时将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be burning {s}.	当时将正在焚烧{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be burning .	当时将正在燃烧。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flood.	{s1}泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flood {s}.	{s1}淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flood .	{s1}泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flood.	泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flood {s}.	淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flood .	泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} floods.	{s1}泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} floods {s}.	{s1}淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} floods .	{s1}泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	floods.	泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	floods {s}.	淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	floods .	泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooded.	{s1}曾泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooded {s}.	{s1}曾淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooded .	{s1}曾泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooded.	曾泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooded {s}.	曾淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooded .	曾泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flood.	{s1}将泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flood {s}.	{s1}将淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flood .	{s1}将泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flood.	将泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flood {s}.	将淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flood .	将泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flooded.	{s1}将已泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flooded {s}.	{s1}将已淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will flooded .	{s1}将已泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flooded.	将已泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flooded {s}.	将已淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will flooded .	将已泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooding.	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooding {s}.	{s1}正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} flooding .	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooding.	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooding {s}.	正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	flooding .	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am flooding.	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am flooding {s}.	{s1}正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am flooding .	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am flooding.	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am flooding {s}.	正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am flooding .	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are flooding.	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are flooding {s}.	{s1}正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are flooding .	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are flooding.	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are flooding {s}.	正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are flooding .	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is flooding.	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is flooding {s}.	{s1}正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is flooding .	{s1}正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is flooding.	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is flooding {s}.	正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is flooding .	正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was flooding.	{s1}当时正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was flooding {s}.	{s1}当时正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was flooding .	{s1}当时正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was flooding.	当时正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was flooding {s}.	当时正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was flooding .	当时正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were flooding.	{s1}当时正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were flooding {s}.	{s1}当时正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were flooding .	{s1}当时正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were flooding.	当时正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were flooding {s}.	当时正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were flooding .	当时正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be flooding.	{s1}将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be flooding {s}.	{s1}将正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be flooding .	{s1}将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be flooding.	将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be flooding {s}.	将正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be flooding .	将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be flooding.	{s1}当时将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be flooding {s}.	{s1}当时将正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be flooding .	{s1}当时将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be flooding.	当时将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be flooding {s}.	当时将正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be flooding .	当时将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be flooding.	{s1}当时将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be flooding {s}.	{s1}当时将正在淹没{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be flooding .	{s1}当时将正在泛滥。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be flooding.	当时将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be flooding {s}.	当时将正在淹没{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be flooding .	当时将正在泛滥。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} reward.	{s1}施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} reward {s}.	{s1}奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} reward .	{s1}施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	reward.	施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	reward {s}.	奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	reward .	施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewards.	{s1}施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewards {s}.	{s1}奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewards .	{s1}施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewards.	施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewards {s}.	奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewards .	施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarded.	{s1}曾施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarded {s}.	{s1}曾奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarded .	{s1}曾施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarded.	曾施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarded {s}.	曾奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarded .	曾施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will reward.	{s1}将施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will reward {s}.	{s1}将奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will reward .	{s1}将施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will reward.	将施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will reward {s}.	将奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will reward .	将施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will rewarded.	{s1}将已施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will rewarded {s}.	{s1}将已奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will rewarded .	{s1}将已施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will rewarded.	将已施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will rewarded {s}.	将已奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will rewarded .	将已施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarding.	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarding {s}.	{s1}正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} rewarding .	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarding.	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarding {s}.	正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	rewarding .	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am rewarding.	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am rewarding {s}.	{s1}正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am rewarding .	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am rewarding.	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am rewarding {s}.	正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am rewarding .	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are rewarding.	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are rewarding {s}.	{s1}正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are rewarding .	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are rewarding.	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are rewarding {s}.	正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are rewarding .	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is rewarding.	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is rewarding {s}.	{s1}正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is rewarding .	{s1}正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is rewarding.	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is rewarding {s}.	正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is rewarding .	正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was rewarding.	{s1}当时正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was rewarding {s}.	{s1}当时正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was rewarding .	{s1}当时正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was rewarding.	当时正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was rewarding {s}.	当时正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was rewarding .	当时正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were rewarding.	{s1}当时正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were rewarding {s}.	{s1}当时正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were rewarding .	{s1}当时正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were rewarding.	当时正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were rewarding {s}.	当时正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were rewarding .	当时正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be rewarding.	{s1}将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be rewarding {s}.	{s1}将正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be rewarding .	{s1}将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be rewarding.	将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be rewarding {s}.	将正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be rewarding .	将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be rewarding.	{s1}当时将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be rewarding {s}.	{s1}当时将正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be rewarding .	{s1}当时将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be rewarding.	当时将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be rewarding {s}.	当时将正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be rewarding .	当时将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be rewarding.	{s1}当时将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be rewarding {s}.	{s1}当时将正在奖赏{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be rewarding .	{s1}当时将正在施予奖赏。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be rewarding.	当时将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be rewarding {s}.	当时将正在奖赏{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be rewarding .	当时将正在施予奖赏。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} {s}.	{s1}……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} .	{s1}……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s}.	……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	.	……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will {s}.	{s1}将……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will .	{s1}将……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will {s}.	将……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will .	将……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am {s}.	{s1}……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am .	{s1}……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am {s}.	……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am .	……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are {s}.	{s1}……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are .	{s1}……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are {s}.	……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are .	……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is {s}.	{s1}……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is .	{s1}……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is {s}.	……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is .	……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was {s}.	{s1}曾……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was .	{s1}曾……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was {s}.	曾……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was .	曾……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were {s}.	{s1}曾……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were .	{s1}曾……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were {s}.	曾……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were .	曾……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be {s}.	{s1}将……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be .	{s1}将……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be {s}.	将……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be .	将……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be {s}.	{s1}曾将……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was will be .	{s1}曾将……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be {s}.	曾将……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was will be .	曾将……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be {s}.	{s1}曾将……{s2}。	visitor-statement-subject,visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were will be .	{s1}曾将……。	visitor-statement-subject	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be {s}.	曾将……{s1}。	visitor-statement-object	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were will be .	曾将……。		PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} am {s}.	{s1}{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	am {s}.	{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} are {s}.	{s1}{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	are {s}.	{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} is {s}.	{s1}{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	is {s}.	{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} was {s}.	{s1}曾{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	was {s}.	曾{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} were {s}.	{s1}曾{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	were {s}.	曾{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	{s} will be {s}.	{s1}将{s2}。	visitor-statement-subject,visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
+visitor-statement	will be {s}.	将{s1}。	visitor-statement-emotion	PE reference 0x140659090; classic 0x140656ab0..0x14065799c; visitor +0x1970 prophet quotation
 # Indirect adventure dialogue helpers. Sources are reconstructed through complete native control flow, including shared tails before return.
 # Full names, directions, regions, institutions and historical descriptions reuse the shared dictionaries.
 # ELF 53.16 event-memory formatter: death switch 0x10182a0..0x10187d9,
@@ -465,3 +1034,138 @@ memory-sentence	Somebody named themself to {s}.	有人向{s1}报上了自己的�
 memory-sentence	You refused to name yourself to {s}.	你不肯向{s1}透露自己的名字。	$name	0x14066edc1 -> 0x14066ebb5
 memory-sentence	{s} refused to give a name to {s}.	{s1}不肯向{s2}透露自己的名字。	memory-person,$name	0x14066ee43 -> 0x14066ebb5
 memory-sentence	Somebody refused to name themself to {s}.	有人不肯向{s1}透露自己的名字。	$name	0x14066ee6a -> 0x14066ebb5
+
+# scope	source	target	semantic field scopes	native construction evidence
+# Visitor prophet quote, classic PE 53.16 statement formatter 0x140656ab0.
+# Only nonempty branches in the complete emotion enum switch are leaves.
+# Targets are complete predicates; their native feeling/in wording is retained.
+visitor-statement-emotion	emotionless	毫无情绪		classic 0x140656ab0; enum -1; branch 0x14065796b; literal 0x14165e438
+visitor-statement-emotion	in acceptance	心怀接纳		classic 0x140656ab0; enum 0; branch 0x140657230; literal 0x14165de48
+visitor-statement-emotion	in adoration	心怀崇拜		classic 0x140656ab0; enum 1; branch 0x140657254; literal 0x14165de20
+visitor-statement-emotion	feeling affection	感到喜爱		classic 0x140656ab0; enum 2; branch 0x140657266; literal 0x14165de30
+visitor-statement-emotion	agitated	感到焦躁		classic 0x140656ab0; enum 3; branch 0x140657278; literal 0x1415fd5c8
+visitor-statement-emotion	aggravated	感到恼火		classic 0x140656ab0; enum 4; branch 0x140657287; literal 0x1415fd5b8
+visitor-statement-emotion	in agony	陷入极度痛苦		classic 0x140656ab0; enum 5; branch 0x140657299; literal 0x14165ddf8
+visitor-statement-emotion	alarmed	感到惊慌		classic 0x140656ab0; enum 6; branch 0x14065713d; literal 0x1415fd540
+visitor-statement-emotion	feeling alienated	感到被疏离		classic 0x140656ab0; enum 7; branch 0x1406572a8; literal 0x14165de08
+visitor-statement-emotion	amazed	感到惊奇		classic 0x140656ab0; enum 8; branch 0x1406572ba; literal 0x1415fd594
+visitor-statement-emotion	feeling ambivalent	没什么特别的感觉		classic 0x140656ab0; enum 9; branch 0x1406572cc; literal 0x14165e410
+visitor-statement-emotion	amused	感到好笑		classic 0x140656ab0; enum 10; branch 0x1406572de; literal 0x1415fd580
+visitor-statement-emotion	angry	感到愤怒		classic 0x140656ab0; enum 11; branch 0x1406572f0; literal 0x1415fd578
+visitor-statement-emotion	in existential crisis	陷入存在危机		classic 0x140656ab0; enum 12; branch 0x14065790e; literal 0x14165e480
+visitor-statement-emotion	anguished	痛苦万分		classic 0x140656ab0; enum 13; branch 0x140657302; literal 0x14165e428
+visitor-statement-emotion	annoyed	感到烦恼		classic 0x140656ab0; enum 14; branch 0x1406570d1; literal 0x1415fd418
+visitor-statement-emotion	anxious	感到焦虑		classic 0x140656ab0; enum 16; branch 0x140657314; literal 0x1415fd6f0
+visitor-statement-emotion	feeling apathetic	感到冷漠		classic 0x140656ab0; enum 17; branch 0x140657326; literal 0x14165e3e0
+visitor-statement-emotion	aroused	感到兴奋		classic 0x140656ab0; enum 19; branch 0x140657338; literal 0x1415fd6d8
+visitor-statement-emotion	astonished	感到惊讶		classic 0x140656ab0; enum 20; branch 0x14065734a; literal 0x1415fd6c8
+visitor-statement-emotion	feeling aversion	感到厌恶		classic 0x140656ab0; enum 22; branch 0x14065735c; literal 0x14165e3f8
+visitor-statement-emotion	awed	心怀敬畏		classic 0x140656ab0; enum 23; branch 0x14065736e; literal 0x14165e3c8
+visitor-statement-emotion	bitter	感到苦涩		classic 0x140656ab0; enum 24; branch 0x140657380; literal 0x1415fd6ac
+visitor-statement-emotion	blissful	感到极度幸福		classic 0x140656ab0; enum 25; branch 0x140657200; literal 0x1415fd630
+visitor-statement-emotion	bored	感到无聊		classic 0x140656ab0; enum 26; branch 0x140657392; literal 0x1415fd6a4
+visitor-statement-emotion	feeling caring	心怀关爱		classic 0x140656ab0; enum 27; branch 0x1406573a4; literal 0x14165e3d0
+visitor-statement-emotion	confused	感到困惑		classic 0x140656ab0; enum 29; branch 0x1406573b6; literal 0x1415fd690
+visitor-statement-emotion	contemptuous	心怀轻蔑		classic 0x140656ab0; enum 30; branch 0x1406573c5; literal 0x1415fd680
+visitor-statement-emotion	content	感到满足		classic 0x140656ab0; enum 31; branch 0x1406573d7; literal 0x1415fd678
+visitor-statement-emotion	feeling defeated	感到失败		classic 0x140656ab0; enum 34; branch 0x14065791d; literal 0x14165e498
+visitor-statement-emotion	dejected	感到沮丧		classic 0x140656ab0; enum 35; branch 0x1406573e9; literal 0x1415fd668
+visitor-statement-emotion	delighted	感到欣喜		classic 0x140656ab0; enum 36; branch 0x1406573f8; literal 0x1415fd658
+visitor-statement-emotion	in despair	陷入绝望		classic 0x140656ab0; enum 39; branch 0x14065740a; literal 0x14165e3a8
+visitor-statement-emotion	disappointed	感到失望		classic 0x140656ab0; enum 40; branch 0x14065741c; literal 0x1415fd640
+visitor-statement-emotion	disgusted	感到厌恶		classic 0x140656ab0; enum 41; branch 0x14065742e; literal 0x1415fd7b8
+visitor-statement-emotion	disillusioned	感到幻灭		classic 0x140656ab0; enum 42; branch 0x140657440; literal 0x1415fd7a8
+visitor-statement-emotion	feeling dislike	感到不喜欢		classic 0x140656ab0; enum 43; branch 0x140657452; literal 0x14165e3b8
+visitor-statement-emotion	dismayed	感到沮丧		classic 0x140656ab0; enum 44; branch 0x140657464; literal 0x1415fd790
+visitor-statement-emotion	displeased	感到不满		classic 0x140656ab0; enum 45; branch 0x140657473; literal 0x14165e388
+visitor-statement-emotion	distressed	感到痛苦		classic 0x140656ab0; enum 46; branch 0x140657485; literal 0x1415fd770
+visitor-statement-emotion	in doubt	心怀怀疑		classic 0x140656ab0; enum 47; branch 0x14065793b; literal 0x14165e470
+visitor-statement-emotion	eager	满怀渴望		classic 0x140656ab0; enum 49; branch 0x140657497; literal 0x1415fd764
+visitor-statement-emotion	elated	兴高采烈		classic 0x140656ab0; enum 51; branch 0x1406574a9; literal 0x1415fd75c
+visitor-statement-emotion	embarrassed	感到尴尬		classic 0x140656ab0; enum 52; branch 0x1406574bb; literal 0x1415fd750
+visitor-statement-emotion	empathetic	感同身受		classic 0x140656ab0; enum 53; branch 0x1406574c7; literal 0x14165e398
+visitor-statement-emotion	feeling empty	感到空虚		classic 0x140656ab0; enum 54; branch 0x1406574d9; literal 0x14165e360
+visitor-statement-emotion	feeling enjoyment	感到愉快		classic 0x140656ab0; enum 55; branch 0x1406574eb; literal 0x14165e370
+visitor-statement-emotion	enthusiastic	充满热情		classic 0x140656ab0; enum 57; branch 0x140657947; literal 0x1415fda40
+visitor-statement-emotion	euphoric	感到欣快		classic 0x140656ab0; enum 59; branch 0x14065795f; literal 0x1415fdc30
+visitor-statement-emotion	exasperated	感到恼怒		classic 0x140656ab0; enum 60; branch 0x1406574fd; literal 0x1415fd720
+visitor-statement-emotion	excited	感到兴奋		classic 0x140656ab0; enum 61; branch 0x1406571b8; literal 0x1415fd4e0
+visitor-statement-emotion	exhilarated	感到振奋		classic 0x140656ab0; enum 62; branch 0x140657509; literal 0x1415fd710
+visitor-statement-emotion	feeling expectant	满怀期待		classic 0x140656ab0; enum 63; branch 0x14065792c; literal 0x14165e458
+visitor-statement-emotion	afraid	感到害怕		classic 0x140656ab0; enum 64; branch 0x140657515; literal 0x1415fd704
+visitor-statement-emotion	feeling ferocious	心生凶意		classic 0x140656ab0; enum 65; branch 0x140657527; literal 0x14165e338
+visitor-statement-emotion	feeling fond	感到喜欢		classic 0x140656ab0; enum 66; branch 0x140657119; literal 0x14165dec8
+visitor-statement-emotion	feeling free	感到自由		classic 0x140656ab0; enum 67; branch 0x140657539; literal 0x14165e350
+visitor-statement-emotion	frightened	感到惊恐		classic 0x140656ab0; enum 68; branch 0x14065754b; literal 0x1415fd870
+visitor-statement-emotion	frustrated	感到挫败		classic 0x140656ab0; enum 69; branch 0x14065755d; literal 0x1415fd860
+visitor-statement-emotion	feeling gaiety	感到欢快		classic 0x140656ab0; enum 71; branch 0x1406571ca; literal 0x14165de90
+visitor-statement-emotion	gleeful	感到欢喜		classic 0x140656ab0; enum 73; branch 0x14065756f; literal 0x1415fd858
+visitor-statement-emotion	gloomy	感到阴郁		classic 0x140656ab0; enum 74; branch 0x140657581; literal 0x1415fd84c
+visitor-statement-emotion	glum	感到郁闷		classic 0x140656ab0; enum 75; branch 0x140657593; literal 0x1415fd844
+visitor-statement-emotion	feeling gratitude	满怀感激		classic 0x140656ab0; enum 76; branch 0x1406575a5; literal 0x14165e310
+visitor-statement-emotion	in grief	陷入悲痛		classic 0x140656ab0; enum 78; branch 0x140657185; literal 0x14165dea0
+visitor-statement-emotion	feeling grim satisfaction	感到冷酷的满足		classic 0x140656ab0; enum 79; branch 0x140657173; literal 0x14165ded8
+visitor-statement-emotion	grouchy	脾气暴躁		classic 0x140656ab0; enum 80; branch 0x1406570f5; literal 0x1415fd400
+visitor-statement-emotion	grumpy	感到暴躁		classic 0x140656ab0; enum 81; branch 0x140657107; literal 0x1415fd564
+visitor-statement-emotion	feeling guilty	感到内疚		classic 0x140656ab0; enum 82; branch 0x1406575b7; literal 0x14165e328
+visitor-statement-emotion	happy	感到开心		classic 0x140656ab0; enum 83; branch 0x1406575c9; literal 0x1415fd828
+visitor-statement-emotion	hateful	满怀仇恨		classic 0x140656ab0; enum 84; branch 0x1406575db; literal 0x1415fd820
+visitor-statement-emotion	taking hope	心怀希望		classic 0x140656ab0; enum 86; branch 0x1406575ed; literal 0x14165e548
+visitor-statement-emotion	feeling hopeless	感到毫无希望		classic 0x140656ab0; enum 87; branch 0x1406575f9; literal 0x14165e558
+visitor-statement-emotion	horrified	感到惊骇		classic 0x140656ab0; enum 88; branch 0x140657161; literal 0x1415fd528
+visitor-statement-emotion	humiliated	感到屈辱		classic 0x140656ab0; enum 90; branch 0x14065760b; literal 0x1415fd7f8
+visitor-statement-emotion	insulted	感到受辱		classic 0x140656ab0; enum 95; branch 0x14065761d; literal 0x1415fd7e8
+visitor-statement-emotion	interested	兴趣盎然		classic 0x140656ab0; enum 96; branch 0x14065762c; literal 0x1415fd7d8
+visitor-statement-emotion	irritated	感到恼火		classic 0x140656ab0; enum 97; branch 0x14065763e; literal 0x1415fd7c8
+visitor-statement-emotion	isolated	感到被孤立		classic 0x140656ab0; enum 98; branch 0x140657650; literal 0x1415fd940
+visitor-statement-emotion	jolly	感到开心		classic 0x140656ab0; enum 100; branch 0x14065765f; literal 0x1415fd934
+visitor-statement-emotion	jovial	快乐开朗		classic 0x140656ab0; enum 101; branch 0x140657671; literal 0x1415fd92c
+visitor-statement-emotion	joyful	满心喜悦		classic 0x140656ab0; enum 102; branch 0x1406571ee; literal 0x14165de6c
+visitor-statement-emotion	jubilant	欢腾不已		classic 0x140656ab0; enum 103; branch 0x140657683; literal 0x1415fd920
+visitor-statement-emotion	feeling loathing	满心憎恶		classic 0x140656ab0; enum 104; branch 0x140657692; literal 0x14165e528
+visitor-statement-emotion	lonely	感到孤独		classic 0x140656ab0; enum 105; branch 0x1406576a4; literal 0x1415fd908
+visitor-statement-emotion	feeling love	心怀爱意		classic 0x140656ab0; enum 107; branch 0x14065720f; literal 0x14165de78
+visitor-statement-emotion	lustful	欲望难抑		classic 0x140656ab0; enum 109; branch 0x1406576b6; literal 0x1415fd900
+visitor-statement-emotion	miserable	感到悲惨		classic 0x140656ab0; enum 111; branch 0x1406576c8; literal 0x1415fd8f0
+visitor-statement-emotion	mortified	羞愧难当		classic 0x140656ab0; enum 112; branch 0x1406576da; literal 0x1415fd8e0
+visitor-statement-emotion	nervous	感到紧张		classic 0x140656ab0; enum 114; branch 0x1406576ec; literal 0x1415fd8d8
+visitor-statement-emotion	nostalgic	怀念往昔		classic 0x140656ab0; enum 115; branch 0x1406576fe; literal 0x1415fd8c8
+visitor-statement-emotion	optimistic	感到乐观		classic 0x140656ab0; enum 116; branch 0x140657710; literal 0x1415fd8b8
+visitor-statement-emotion	outraged	暴怒不已		classic 0x140656ab0; enum 117; branch 0x140657722; literal 0x1415fd8a8
+visitor-statement-emotion	panicked	惊慌失措		classic 0x140656ab0; enum 118; branch 0x140657731; literal 0x1415fd898
+visitor-statement-emotion	patient	心怀耐心		classic 0x140656ab0; enum 119; branch 0x140657740; literal 0x1415fd888
+visitor-statement-emotion	passionate	充满热情		classic 0x140656ab0; enum 120; branch 0x140657752; literal 0x1415fda20
+visitor-statement-emotion	pessimistic	感到悲观		classic 0x140656ab0; enum 121; branch 0x140657956; literal 0x1415fda30
+visitor-statement-emotion	pleased	感到愉悦		classic 0x140656ab0; enum 123; branch 0x140657764; literal 0x14165e540
+visitor-statement-emotion	proud	感到自豪		classic 0x140656ab0; enum 124; branch 0x140657776; literal 0x1415fda04
+visitor-statement-emotion	enraged	怒不可遏		classic 0x140656ab0; enum 125; branch 0x1406571a6; literal 0x14165de88
+visitor-statement-emotion	enraptured	感到陶醉		classic 0x140656ab0; enum 126; branch 0x140657788; literal 0x1415fd9f8
+visitor-statement-emotion	feeling rejected	感到被拒绝		classic 0x140656ab0; enum 127; branch 0x14065779a; literal 0x14165e4f8
+visitor-statement-emotion	relieved	放下心来		classic 0x140656ab0; enum 128; branch 0x1406577ac; literal 0x1415fd9d8
+visitor-statement-emotion	regretful	感到后悔		classic 0x140656ab0; enum 129; branch 0x1406577bb; literal 0x1415fd9c8
+visitor-statement-emotion	remorseful	感到懊悔		classic 0x140656ab0; enum 130; branch 0x1406577cd; literal 0x1415fd9b8
+visitor-statement-emotion	repentant	心怀忏悔		classic 0x140656ab0; enum 131; branch 0x1406577df; literal 0x1415fd9a8
+visitor-statement-emotion	resentful	心怀怨恨		classic 0x140656ab0; enum 132; branch 0x1406577f1; literal 0x1415fd998
+visitor-statement-emotion	indignant	愤慨不已		classic 0x140656ab0; enum 134; branch 0x140657812; literal 0x1415fd978
+visitor-statement-emotion	sad	感到悲伤		classic 0x140656ab0; enum 135; branch 0x1406571dc; literal 0x1415fd4d4
+visitor-statement-emotion	satisfied	感到满意		classic 0x140656ab0; enum 136; branch 0x1406570e3; literal 0x1415fd408
+visitor-statement-emotion	feeling self-pity	心生自怜		classic 0x140656ab0; enum 138; branch 0x140657824; literal 0x14165e510
+visitor-statement-emotion	feeling servile	觉得自己卑躬屈膝		classic 0x140656ab0; enum 140; branch 0x140657836; literal 0x14165e4d8
+visitor-statement-emotion	shaken	震惊不已		classic 0x140656ab0; enum 141; branch 0x140657848; literal 0x1415fd958
+visitor-statement-emotion	ashamed	感到羞愧		classic 0x140656ab0; enum 142; branch 0x14065785a; literal 0x1415fd950
+visitor-statement-emotion	shocked	感到震惊		classic 0x140656ab0; enum 143; branch 0x14065714f; literal 0x1415fd538
+visitor-statement-emotion	suspicious	心怀怀疑		classic 0x140656ab0; enum 148; branch 0x14065712b; literal 0x1415fd548
+visitor-statement-emotion	sympathetic	心怀同情		classic 0x140656ab0; enum 149; branch 0x14065786c; literal 0x14165e4e8
+visitor-statement-emotion	feeling tenderness	满怀温柔		classic 0x140656ab0; enum 150; branch 0x140657878; literal 0x14165e4b0
+visitor-statement-emotion	terrified	极度恐惧		classic 0x140656ab0; enum 152; branch 0x14065788a; literal 0x1415fdad8
+visitor-statement-emotion	thrilled	感到兴奋		classic 0x140656ab0; enum 153; branch 0x14065789c; literal 0x1415fdac8
+visitor-statement-emotion	feeling triumphant	洋洋得意		classic 0x140656ab0; enum 155; branch 0x140657194; literal 0x14165deb0
+visitor-statement-emotion	uneasy	感到不安		classic 0x140656ab0; enum 156; branch 0x1406578ab; literal 0x1415fdac0
+visitor-statement-emotion	unhappy	感到不快乐		classic 0x140656ab0; enum 157; branch 0x1406578bd; literal 0x1415fdab8
+visitor-statement-emotion	vengeful	复仇心切		classic 0x140656ab0; enum 158; branch 0x140657221; literal 0x1415fd618
+visitor-statement-emotion	in wonder	惊叹不已		classic 0x140656ab0; enum 160; branch 0x1406578cf; literal 0x14165e4c8
+visitor-statement-emotion	worried	感到担心		classic 0x140656ab0; enum 161; branch 0x1406578e1; literal 0x1415fdaa8
+visitor-statement-emotion	wrathful	暴怒		classic 0x140656ab0; enum 162; branch 0x1406578f3; literal 0x1415fda98
+visitor-statement-emotion	zealous	满怀热忱		classic 0x140656ab0; enum 163; branch 0x1406578ff; literal 0x1415fda90
+visitor-statement-emotion	restless	坐立不安		classic 0x140656ab0; enum 167; branch 0x140657803; literal 0x1415fd988
+visitor-statement-emotion	feeling admiration	心怀钦佩		classic 0x140656ab0; enum 168; branch 0x140657242; literal 0x14165de58

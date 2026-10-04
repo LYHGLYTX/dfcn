@@ -1,0 +1,7 @@
+image	function_va	enum_value	enum_name	branch_va	base	third_person	past	continuous	object_separator
+classic	0x140656ab0	0	APPEAR	0x140656cad	appear	appears	appeared	appearing	 
+classic	0x140656ab0	1	DESTROY	0x140656d13	destroy	destroys	destroyed	destroying	 
+classic	0x140656ab0	2	SPOKE	0x140656d79	speak	speaks	spoke	speaking	 to 
+classic	0x140656ab0	3	BURN	0x140656ddf	burn	burns	burned	burning	 
+classic	0x140656ab0	4	FLOOD	0x140656e4a	flood	floods	flooded	flooding	 
+classic	0x140656ab0	5	REWARD	0x140656eaa	reward	rewards	rewarded	rewarding	 

@@ -10462,19 +10462,193 @@ Popup: Work orders	弹窗：工作指令	w
 Popup: The world	弹窗：世界	w
 Bins, bags, and barrels	箱子、袋子与桶	w
 
-# Visitor Overview employment paragraphs. Native Windows literals at file
-# offsets 0x16012a8..0x1601594 assemble the purpose, pronoun and named location
-# before wrapping. Keep both sentences together; {s} is the complete role and
-# {e} uses the shared generated-location name grammar.
-This visitor has come seeking work as a {s}. He heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。他听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. She heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。她听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place to look for long-term work.	这位访客前来寻找{s1}的工作。它听说可以在{e1}找到长期工作。	hPt
-This visitor has come seeking work as a {s}. He heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。他听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. She heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。她听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. It heard {e} would make a good base for a mercenary.	这位访客前来寻找{s1}的工作。它听说{e1}适合作为佣兵的基地。	hPt
-This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
-This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
+# Visitor Overview: native itinerary and rumour constructors, both Windows images.
+# Original functions, jump tables and decompiled grammar: data/extracted/visitor-overview/.
+# {s} owns the entire itinerary vector, including each optional at <location>.
+# {e} is a complete generated location name; {b} is the native artifact identity.
+Visitor overview purpose: to pray	祈祷	hl
+"{q}"	“{q1}”	hPt
+""	“”	hP
+Visitor overview purpose: to study	学习	hl
+Visitor overview purpose: to relax	放松	hl
+Visitor overview purpose: to perform	表演	hl
+Visitor overview purpose: to slay beasts	猎杀野兽	hl
+Visitor overview purpose: seeking work as a performer	寻找表演者的工作	hl
+Visitor overview purpose: seeking work as a mercenary	寻找佣兵的工作	hl
+Visitor overview purpose: seeking work as a scholar	寻找学者的工作	hl
+Visitor overview purpose: for diplomacy	开展外交	hl
+Visitor overview purpose: seeking sanctuary	寻求庇护	hl
+Visitor overview purpose: asking questions	询问信息	hl
+Visitor overview purpose at {s}: {e}	在{e1}{s1}	hlt
+Visitor overview purpose location: {e}	访问{e1}	hlt
+Visitor overview purpose empty	此地	hl
+Visitor overview purpose separator: comma	、	hl
+Visitor overview purpose separator: and	及	hl
+This visitor is ready to leave.	这位访客准备离开了。	hP
+This visitor has come {s}.	这位访客前来{s1}。	hPt
+This visitor has come {s}. He heard this was a good place to search for monsters.	这位访客前来{s1}。他听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. He heard this was the place for those seeking danger.	这位访客前来{s1}。他听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. He went on this journey out of curiosity.	这位访客前来{s1}。他出于好奇踏上了这段旅程。	hPt
+This visitor has come {s}. He was curious about {e}.	这位访客前来{s1}。他对{e1}感到好奇。	hPt
+This visitor has come {s}. He heard this was the place for prayer.	这位访客前来{s1}。他听说这里适合祈祷。	hPt
+This visitor has come {s}. He heard {e} was the place for prayer.	这位访客前来{s1}。他听说{e1}适合祈祷。	hPt
+This visitor has come {s}. He heard this was the place for a good drink.	这位访客前来{s1}。他听说这里能喝到好酒。	hPt
+This visitor has come {s}. He heard {e} was the place for a good drink.	这位访客前来{s1}。他听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. He heard this was the place to admire fine architecture.	这位访客前来{s1}。他听说这里能欣赏精美的建筑。	hPt
+This visitor has come {s}. He heard {e} was the place to admire fine architecture.	这位访客前来{s1}。他听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. He heard this was the place to enjoy oneself.	这位访客前来{s1}。他听说这里适合享乐。	hPt
+This visitor has come {s}. He heard {e} was the place to enjoy oneself.	这位访客前来{s1}。他听说{e1}适合享乐。	hPt
+This visitor has come {s}. He heard this was the place to entertain people.	这位访客前来{s1}。他听说这里适合为人们表演。	hPt
+This visitor has come {s}. He heard {e} was the place to entertain people.	这位访客前来{s1}。他听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. He heard this was the place to perform research.	这位访客前来{s1}。他听说这里适合开展研究。	hPt
+This visitor has come {s}. He heard {e} was the place to perform research.	这位访客前来{s1}。他听说{e1}适合开展研究。	hPt
+This visitor has come {s}. He heard this was the place for long-term scholarship.	这位访客前来{s1}。他听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. He heard {e} was the place for long-term scholarship.	这位访客前来{s1}。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come {s}. He heard this would make a good base for a mercenary.	这位访客前来{s1}。他听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. He heard {e} would make a good base for a mercenary.	这位访客前来{s1}。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. He heard this was the place to look for long-term work.	这位访客前来{s1}。他听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. He heard {e} was the place to look for long-term work.	这位访客前来{s1}。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. He believes this would be a safe place to stay.	这位访客前来{s1}。他相信这里可以安全居留。	hPt
+This visitor has come {s}. He believes {e} would be a safe place to stay.	这位访客前来{s1}。他相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. He is seeking information.	这位访客前来{s1}。他正在打听消息。	hPt
+This visitor has come {s}. He is seeking information about the location of {b}.	这位访客前来{s1}。他正在打听{b1}的下落。	hPt
+This visitor has come {s}. He	这位访客前来{s1}。他	hPt
+This visitor has come {s}. She heard this was a good place to search for monsters.	这位访客前来{s1}。她听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. She heard this was the place for those seeking danger.	这位访客前来{s1}。她听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. She went on this journey out of curiosity.	这位访客前来{s1}。她出于好奇踏上了这段旅程。	hPt
+This visitor has come {s}. She was curious about {e}.	这位访客前来{s1}。她对{e1}感到好奇。	hPt
+This visitor has come {s}. She heard this was the place for prayer.	这位访客前来{s1}。她听说这里适合祈祷。	hPt
+This visitor has come {s}. She heard {e} was the place for prayer.	这位访客前来{s1}。她听说{e1}适合祈祷。	hPt
+This visitor has come {s}. She heard this was the place for a good drink.	这位访客前来{s1}。她听说这里能喝到好酒。	hPt
+This visitor has come {s}. She heard {e} was the place for a good drink.	这位访客前来{s1}。她听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. She heard this was the place to admire fine architecture.	这位访客前来{s1}。她听说这里能欣赏精美的建筑。	hPt
+This visitor has come {s}. She heard {e} was the place to admire fine architecture.	这位访客前来{s1}。她听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. She heard this was the place to enjoy oneself.	这位访客前来{s1}。她听说这里适合享乐。	hPt
+This visitor has come {s}. She heard {e} was the place to enjoy oneself.	这位访客前来{s1}。她听说{e1}适合享乐。	hPt
+This visitor has come {s}. She heard this was the place to entertain people.	这位访客前来{s1}。她听说这里适合为人们表演。	hPt
+This visitor has come {s}. She heard {e} was the place to entertain people.	这位访客前来{s1}。她听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. She heard this was the place to perform research.	这位访客前来{s1}。她听说这里适合开展研究。	hPt
+This visitor has come {s}. She heard {e} was the place to perform research.	这位访客前来{s1}。她听说{e1}适合开展研究。	hPt
+This visitor has come {s}. She heard this was the place for long-term scholarship.	这位访客前来{s1}。她听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. She heard {e} was the place for long-term scholarship.	这位访客前来{s1}。她听说{e1}适合长期从事学术研究。	hPt
+This visitor has come {s}. She heard this would make a good base for a mercenary.	这位访客前来{s1}。她听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. She heard {e} would make a good base for a mercenary.	这位访客前来{s1}。她听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. She heard this was the place to look for long-term work.	这位访客前来{s1}。她听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. She heard {e} was the place to look for long-term work.	这位访客前来{s1}。她听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. She believes this would be a safe place to stay.	这位访客前来{s1}。她相信这里可以安全居留。	hPt
+This visitor has come {s}. She believes {e} would be a safe place to stay.	这位访客前来{s1}。她相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. She is seeking information.	这位访客前来{s1}。她正在打听消息。	hPt
+This visitor has come {s}. She is seeking information about the location of {b}.	这位访客前来{s1}。她正在打听{b1}的下落。	hPt
+This visitor has come {s}. She	这位访客前来{s1}。她	hPt
+This visitor has come {s}. It heard this was a good place to search for monsters.	这位访客前来{s1}。它听说这里是寻找怪兽的好地方。	hPt
+This visitor has come {s}. It heard this was the place for those seeking danger.	这位访客前来{s1}。它听说这里适合寻求冒险的人。	hPt
+This visitor has come {s}. It went on this journey out of curiosity.	这位访客前来{s1}。它出于好奇踏上了这段旅程。	hPt
+This visitor has come {s}. It was curious about {e}.	这位访客前来{s1}。它对{e1}感到好奇。	hPt
+This visitor has come {s}. It heard this was the place for prayer.	这位访客前来{s1}。它听说这里适合祈祷。	hPt
+This visitor has come {s}. It heard {e} was the place for prayer.	这位访客前来{s1}。它听说{e1}适合祈祷。	hPt
+This visitor has come {s}. It heard this was the place for a good drink.	这位访客前来{s1}。它听说这里能喝到好酒。	hPt
+This visitor has come {s}. It heard {e} was the place for a good drink.	这位访客前来{s1}。它听说可以在{e1}喝到好酒。	hPt
+This visitor has come {s}. It heard this was the place to admire fine architecture.	这位访客前来{s1}。它听说这里能欣赏精美的建筑。	hPt
+This visitor has come {s}. It heard {e} was the place to admire fine architecture.	这位访客前来{s1}。它听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come {s}. It heard this was the place to enjoy oneself.	这位访客前来{s1}。它听说这里适合享乐。	hPt
+This visitor has come {s}. It heard {e} was the place to enjoy oneself.	这位访客前来{s1}。它听说{e1}适合享乐。	hPt
+This visitor has come {s}. It heard this was the place to entertain people.	这位访客前来{s1}。它听说这里适合为人们表演。	hPt
+This visitor has come {s}. It heard {e} was the place to entertain people.	这位访客前来{s1}。它听说可以在{e1}为人们表演。	hPt
+This visitor has come {s}. It heard this was the place to perform research.	这位访客前来{s1}。它听说这里适合开展研究。	hPt
+This visitor has come {s}. It heard {e} was the place to perform research.	这位访客前来{s1}。它听说{e1}适合开展研究。	hPt
+This visitor has come {s}. It heard this was the place for long-term scholarship.	这位访客前来{s1}。它听说这里适合长期从事学术研究。	hPt
+This visitor has come {s}. It heard {e} was the place for long-term scholarship.	这位访客前来{s1}。它听说{e1}适合长期从事学术研究。	hPt
+This visitor has come {s}. It heard this would make a good base for a mercenary.	这位访客前来{s1}。它听说这里适合作为佣兵的基地。	hPt
+This visitor has come {s}. It heard {e} would make a good base for a mercenary.	这位访客前来{s1}。它听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come {s}. It heard this was the place to look for long-term work.	这位访客前来{s1}。它听说可以在这里找到长期工作。	hPt
+This visitor has come {s}. It heard {e} was the place to look for long-term work.	这位访客前来{s1}。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come {s}. It believes this would be a safe place to stay.	这位访客前来{s1}。它相信这里可以安全居留。	hPt
+This visitor has come {s}. It believes {e} would be a safe place to stay.	这位访客前来{s1}。它相信可以安全地居留在{e1}。	hPt
+This visitor has come {s}. It is seeking information.	这位访客前来{s1}。它正在打听消息。	hPt
+This visitor has come {s}. It is seeking information about the location of {b}.	这位访客前来{s1}。它正在打听{b1}的下落。	hPt
+This visitor has come {s}. It	这位访客前来{s1}。它	hPt
+This visitor has come .	这位访客已经到来。	hP
+This visitor has come . He heard this was a good place to search for monsters.	这位访客已经到来。他听说这里是寻找怪兽的好地方。	hP
+This visitor has come . He heard this was the place for those seeking danger.	这位访客已经到来。他听说这里适合寻求冒险的人。	hP
+This visitor has come . He went on this journey out of curiosity.	这位访客已经到来。他出于好奇踏上了这段旅程。	hP
+This visitor has come . He was curious about {e}.	这位访客已经到来。他对{e1}感到好奇。	hPt
+This visitor has come . He heard this was the place for prayer.	这位访客已经到来。他听说这里适合祈祷。	hP
+This visitor has come . He heard {e} was the place for prayer.	这位访客已经到来。他听说{e1}适合祈祷。	hPt
+This visitor has come . He heard this was the place for a good drink.	这位访客已经到来。他听说这里能喝到好酒。	hP
+This visitor has come . He heard {e} was the place for a good drink.	这位访客已经到来。他听说可以在{e1}喝到好酒。	hPt
+This visitor has come . He heard this was the place to admire fine architecture.	这位访客已经到来。他听说这里能欣赏精美的建筑。	hP
+This visitor has come . He heard {e} was the place to admire fine architecture.	这位访客已经到来。他听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come . He heard this was the place to enjoy oneself.	这位访客已经到来。他听说这里适合享乐。	hP
+This visitor has come . He heard {e} was the place to enjoy oneself.	这位访客已经到来。他听说{e1}适合享乐。	hPt
+This visitor has come . He heard this was the place to entertain people.	这位访客已经到来。他听说这里适合为人们表演。	hP
+This visitor has come . He heard {e} was the place to entertain people.	这位访客已经到来。他听说可以在{e1}为人们表演。	hPt
+This visitor has come . He heard this was the place to perform research.	这位访客已经到来。他听说这里适合开展研究。	hP
+This visitor has come . He heard {e} was the place to perform research.	这位访客已经到来。他听说{e1}适合开展研究。	hPt
+This visitor has come . He heard this was the place for long-term scholarship.	这位访客已经到来。他听说这里适合长期从事学术研究。	hP
+This visitor has come . He heard {e} was the place for long-term scholarship.	这位访客已经到来。他听说{e1}适合长期从事学术研究。	hPt
+This visitor has come . He heard this would make a good base for a mercenary.	这位访客已经到来。他听说这里适合作为佣兵的基地。	hP
+This visitor has come . He heard {e} would make a good base for a mercenary.	这位访客已经到来。他听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . He heard this was the place to look for long-term work.	这位访客已经到来。他听说可以在这里找到长期工作。	hP
+This visitor has come . He heard {e} was the place to look for long-term work.	这位访客已经到来。他听说可以在{e1}找到长期工作。	hPt
+This visitor has come . He believes this would be a safe place to stay.	这位访客已经到来。他相信这里可以安全居留。	hP
+This visitor has come . He believes {e} would be a safe place to stay.	这位访客已经到来。他相信可以安全地居留在{e1}。	hPt
+This visitor has come . He is seeking information.	这位访客已经到来。他正在打听消息。	hP
+This visitor has come . He is seeking information about the location of {b}.	这位访客已经到来。他正在打听{b1}的下落。	hPt
+This visitor has come . He	这位访客已经到来。他	hP
+This visitor has come . She heard this was a good place to search for monsters.	这位访客已经到来。她听说这里是寻找怪兽的好地方。	hP
+This visitor has come . She heard this was the place for those seeking danger.	这位访客已经到来。她听说这里适合寻求冒险的人。	hP
+This visitor has come . She went on this journey out of curiosity.	这位访客已经到来。她出于好奇踏上了这段旅程。	hP
+This visitor has come . She was curious about {e}.	这位访客已经到来。她对{e1}感到好奇。	hPt
+This visitor has come . She heard this was the place for prayer.	这位访客已经到来。她听说这里适合祈祷。	hP
+This visitor has come . She heard {e} was the place for prayer.	这位访客已经到来。她听说{e1}适合祈祷。	hPt
+This visitor has come . She heard this was the place for a good drink.	这位访客已经到来。她听说这里能喝到好酒。	hP
+This visitor has come . She heard {e} was the place for a good drink.	这位访客已经到来。她听说可以在{e1}喝到好酒。	hPt
+This visitor has come . She heard this was the place to admire fine architecture.	这位访客已经到来。她听说这里能欣赏精美的建筑。	hP
+This visitor has come . She heard {e} was the place to admire fine architecture.	这位访客已经到来。她听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come . She heard this was the place to enjoy oneself.	这位访客已经到来。她听说这里适合享乐。	hP
+This visitor has come . She heard {e} was the place to enjoy oneself.	这位访客已经到来。她听说{e1}适合享乐。	hPt
+This visitor has come . She heard this was the place to entertain people.	这位访客已经到来。她听说这里适合为人们表演。	hP
+This visitor has come . She heard {e} was the place to entertain people.	这位访客已经到来。她听说可以在{e1}为人们表演。	hPt
+This visitor has come . She heard this was the place to perform research.	这位访客已经到来。她听说这里适合开展研究。	hP
+This visitor has come . She heard {e} was the place to perform research.	这位访客已经到来。她听说{e1}适合开展研究。	hPt
+This visitor has come . She heard this was the place for long-term scholarship.	这位访客已经到来。她听说这里适合长期从事学术研究。	hP
+This visitor has come . She heard {e} was the place for long-term scholarship.	这位访客已经到来。她听说{e1}适合长期从事学术研究。	hPt
+This visitor has come . She heard this would make a good base for a mercenary.	这位访客已经到来。她听说这里适合作为佣兵的基地。	hP
+This visitor has come . She heard {e} would make a good base for a mercenary.	这位访客已经到来。她听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . She heard this was the place to look for long-term work.	这位访客已经到来。她听说可以在这里找到长期工作。	hP
+This visitor has come . She heard {e} was the place to look for long-term work.	这位访客已经到来。她听说可以在{e1}找到长期工作。	hPt
+This visitor has come . She believes this would be a safe place to stay.	这位访客已经到来。她相信这里可以安全居留。	hP
+This visitor has come . She believes {e} would be a safe place to stay.	这位访客已经到来。她相信可以安全地居留在{e1}。	hPt
+This visitor has come . She is seeking information.	这位访客已经到来。她正在打听消息。	hP
+This visitor has come . She is seeking information about the location of {b}.	这位访客已经到来。她正在打听{b1}的下落。	hPt
+This visitor has come . She	这位访客已经到来。她	hP
+This visitor has come . It heard this was a good place to search for monsters.	这位访客已经到来。它听说这里是寻找怪兽的好地方。	hP
+This visitor has come . It heard this was the place for those seeking danger.	这位访客已经到来。它听说这里适合寻求冒险的人。	hP
+This visitor has come . It went on this journey out of curiosity.	这位访客已经到来。它出于好奇踏上了这段旅程。	hP
+This visitor has come . It was curious about {e}.	这位访客已经到来。它对{e1}感到好奇。	hPt
+This visitor has come . It heard this was the place for prayer.	这位访客已经到来。它听说这里适合祈祷。	hP
+This visitor has come . It heard {e} was the place for prayer.	这位访客已经到来。它听说{e1}适合祈祷。	hPt
+This visitor has come . It heard this was the place for a good drink.	这位访客已经到来。它听说这里能喝到好酒。	hP
+This visitor has come . It heard {e} was the place for a good drink.	这位访客已经到来。它听说可以在{e1}喝到好酒。	hPt
+This visitor has come . It heard this was the place to admire fine architecture.	这位访客已经到来。它听说这里能欣赏精美的建筑。	hP
+This visitor has come . It heard {e} was the place to admire fine architecture.	这位访客已经到来。它听说可以在{e1}欣赏精美的建筑。	hPt
+This visitor has come . It heard this was the place to enjoy oneself.	这位访客已经到来。它听说这里适合享乐。	hP
+This visitor has come . It heard {e} was the place to enjoy oneself.	这位访客已经到来。它听说{e1}适合享乐。	hPt
+This visitor has come . It heard this was the place to entertain people.	这位访客已经到来。它听说这里适合为人们表演。	hP
+This visitor has come . It heard {e} was the place to entertain people.	这位访客已经到来。它听说可以在{e1}为人们表演。	hPt
+This visitor has come . It heard this was the place to perform research.	这位访客已经到来。它听说这里适合开展研究。	hP
+This visitor has come . It heard {e} was the place to perform research.	这位访客已经到来。它听说{e1}适合开展研究。	hPt
+This visitor has come . It heard this was the place for long-term scholarship.	这位访客已经到来。它听说这里适合长期从事学术研究。	hP
+This visitor has come . It heard {e} was the place for long-term scholarship.	这位访客已经到来。它听说{e1}适合长期从事学术研究。	hPt
+This visitor has come . It heard this would make a good base for a mercenary.	这位访客已经到来。它听说这里适合作为佣兵的基地。	hP
+This visitor has come . It heard {e} would make a good base for a mercenary.	这位访客已经到来。它听说{e1}适合作为佣兵的基地。	hPt
+This visitor has come . It heard this was the place to look for long-term work.	这位访客已经到来。它听说可以在这里找到长期工作。	hP
+This visitor has come . It heard {e} was the place to look for long-term work.	这位访客已经到来。它听说可以在{e1}找到长期工作。	hPt
+This visitor has come . It believes this would be a safe place to stay.	这位访客已经到来。它相信这里可以安全居留。	hP
+This visitor has come . It believes {e} would be a safe place to stay.	这位访客已经到来。它相信可以安全地居留在{e1}。	hPt
+This visitor has come . It is seeking information.	这位访客已经到来。它正在打听消息。	hP
+This visitor has come . It is seeking information about the location of {b}.	这位访客已经到来。它正在打听{b1}的下落。	hPt
+This visitor has come . It	这位访客已经到来。它	hP
 
 Mod details label: Author	作者：	l
 Mod details label: Version	版本：	l

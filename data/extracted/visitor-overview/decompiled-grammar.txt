@@ -1,0 +1,443 @@
+Visitor Overview: native construction grammar (source extraction)
+
+Images read: native-pe-images.json reference and classic, DF 53.16.
+The classic source identity is PE:6a70b91c:0270a000.
+Classic owner: 0x1401a5b00..0x1401a8679.
+Visitor construction: 0x1401a6320..0x1401a6a6f.
+This file records source semantics, not a test or a game-observation report.
+
+The source is assembled once, then passed to curses_text_boxst::add_paragraph
+(classic 0x1408e4b80) with width 28 at 0x1401a6a6a. Physical English line
+breaks do not identify independent sentences or independent translation keys.
+
+State and itinerary pseudocode
+-----------------------------
+if unit.travel_log == null:
+    do not create this visitor paragraph
+if the existing overview paragraph vector is nonempty:
+    do not construct the visitor paragraph again in this branch
+
+if travel_log.flags & 4:                       # WANT_TO_LEAVE
+    source = "This visitor is ready to leave."
+else if not (travel_log.flags & 1):             # CHATTED_WITH_LOCAL
+    source = "You can learn more about this visitor after they chat with a local."
+else:
+    source = "This visitor has come "
+    remaining = travel_log.itinerary.size
+    for entry in travel_log.itinerary:          # original vector order
+        switch entry.type:
+            0:  source += "to pray"
+            1:  source += "to study"
+            2:  source += "to relax"
+            3:  source += "to perform"
+            4:  source += "to slay beasts"
+            5:  source += "seeking work as a performer"
+            6:  source += "seeking work as a mercenary"
+            7:  source += "seeking work as a scholar"
+            8:  source += "for diplomacy"
+            9:  source += "seeking sanctuary"
+            10: source += "asking questions"
+            default: append no purpose literal
+
+        if entry.site_id != -1 and entry.location_id != -1:
+            site = find_site(entry.site_id)
+            location = site ? find_abstract_building(site, entry.location_id) : null
+            language_name = location ? location.virtual(+0x10)() : null
+            if language_name != null:
+                source += " at "
+                source += format_language_name(language_name, capitalized=true,
+                                               last_option=false)
+
+        if remaining >= 3: source += ", "
+        else if remaining == 2: source += " and "
+        remaining -= 1
+    source += "."
+
+    if travel_log.original_reason != -1:
+        destination = ""
+        if travel_log.original_goal_ab_id != -1:
+            site = find_site(current_site_id)
+            location = site ? find_abstract_building(site,
+                              travel_log.original_goal_ab_id) : null
+            language_name = location ? location.virtual(+0x10)() : null
+            if language_name != null:
+                destination = format_language_name(language_name,
+                               capitalized=true, last_option=false)
+        source += "  "
+        source += personal_pronoun(unit.sex, capitalized=true)
+        source += " "
+        source += rumor_clause(travel_log.original_reason, destination, unit)
+
+The two-space sentence separator is native authored whitespace. A missing
+destination lookup, null language-name pointer, or empty rendered name selects
+the literal "this" branch for the clauses below. It is not an unnamed place
+type. Each itinerary item independently has its optional " at NAME" suffix.
+The itinerary count, repeated types, and combinations are dynamic source data;
+there is no single-purpose-only restriction in this constructor.
+
+Rumor-clause pseudocode
+----------------------
+place = destination != "" ? destination : "this"
+switch original_reason:
+    41: return "heard this was a good place to search for monsters."
+    42: return "heard " + place + " was the place to entertain people."
+    44: return "heard " + place + " was the place to perform research."
+    54: if destination == "":
+            return "went on this journey out of curiosity."
+        return "was curious about " + destination + "."
+    55: return "heard " + place + " would make a good base for a mercenary."
+    56: return "heard " + place + " was the place to look for long-term work."
+    57: return "heard " + place + " was the place for long-term scholarship."
+    58: return "heard " + place + " was the place for a good drink."
+    59: return "heard " + place + " was the place to admire fine architecture."
+    60: return "heard " + place + " was the place for prayer."
+    61: return "heard " + place + " was the place to enjoy oneself."
+    62: return "heard this was the place for those seeking danger."
+    74: clause = "is seeking information"
+        if unit.current_action != null and unit.current_action.type == 17:
+            artifact_id = first_int32(unit.current_action.data)
+            clause += " about the location of "
+            clause += format_artifact_name(artifact_id, mode=0)
+        return clause + "."
+    75: return "believes " + place + " would be a safe place to stay."
+    default: return ""
+
+The switch addresses and all values 41..75 are retained in
+classic-native-branches.tsv. The default branch is also selected by values
+outside that range. No source period is appended by the default rumor branch:
+the previously appended capitalized pronoun and trailing space remain in the
+source. original_reason == -1 skips the complete second-sentence prefix.
+An empty itinerary vector produces the literal source
+"This visitor has come ." before any optional rumor text. An unknown itinerary
+type appends no purpose literal but can still append a location and a list
+separator. These are native fallthrough semantics, not invented purpose names.
+
+Personal pronoun helper
+-----------------------
+Classic 0x140aa17b0..0x140aa1824 (full source in classic-pronoun-helper.asm).
+sex == 1: "he"; sex == 0: "she"; otherwise: "it".
+The visitor call at 0x1401a6664 uses capitalized=true, producing He/She/It.
+The helper has no additional pronoun or plural branch.
+
+Artifact-name helper and all fallback fields
+-------------------------------------------
+Classic 0x140b91440..0x140b91750; reference 0x140b94400.
+The visitor call at 0x1401a6a1e passes r9d=0. The helper's only mode bit
+used here is bit 2 (mode & 2), which creates Legends link markup. Mode 0
+therefore creates plain visible field text and cannot produce LPAGE markup.
+
+function format_artifact_name(id, mode):
+    artifact = binary_find(world.artifacts, id)
+    if artifact == null or id == -1:
+        return "an unknown artifact"
+    item = artifact.item                        # artifact + 0x90
+    is_book_kind() = item.type == 89 or item.type == 87 or item.has_tool_use(20)
+    # Native predicates run lazily; named plain output need not dereference
+    # the item. Link mode runs these predicates before the name formatter.
+    if mode & 2:
+        output += is_book_kind() ? "[LPAGE:BOOK:" : "[LPAGE:ARTIFACT:"
+        output += decimal(artifact.id) + "]"
+    name = format_language_name(artifact.name, capitalized=true,
+                                last_option=false)
+    if name != "":
+        output += name
+    else if is_book_kind():
+        output += "Untitled"
+    else:
+        output += item_identity(item, ignore_artifact=false, article_mode=1)
+    if mode & 2:
+        output += "[/LPAGE]"
+    return output
+
+"Untitled" is assembled by immediate integer stores of
+0x64656c7469746e55 at 0x140b915f0 and 0x140b9164b, then an explicit NUL.
+It is therefore not found by a RIP-relative literal-only inventory.
+The book-kind conditions are native type 89 (book), type 87 (slab), or the
+item virtual +0xe0 tool-use predicate with value 20. A successful named
+language field is retained even for those kinds; empty book names use Untitled.
+The name formatter handles generated language word forms, authored first
+names/nicknames, The/the and of/Of structure. It supplies capitalization for
+the artifact language name; it does not capitalize the ordinary item fallback.
+
+The item fallback is classic 0x140c62490..0x140c62f4a, reference 0x140c65450.
+It spans consecutive unwind records split at 0x140c6275d; the complete
+continuation is in classic-artifact-item-fallback.asm.
+Its arguments in this constructor are ignore_artifact=false and article_mode=1.
+It first honors an artifact-reference language name when present. If the
+record has no rendered name, it enters the native quality/count/identity
+formatter, including item virtual +0x5f0 (article) and +0x5e8 (complete noun).
+The same item-identity helper also has a title-copy production before that
+noun path: when ignore_artifact=false, a book item's nonempty stored title,
+or a tool's first nonempty written-content title reached through improvement
+kind 12 (writing) or kind 9 (pages), produces TITLE + " (copy)". The outer
+artifact helper's book-kind branches intercept ordinary books and tools
+with use 20 before this fallback, but the item helper retains that production
+for other written tools. This is an article-free written title field, not a
+material/type phrase. The suffix is at 0x140c62734 and remains literal syntax.
+
+The ordinary article helper is classic 0x140c62420..0x140c62485, reference
+0x140c653e0. It returns lowercase "the " for article_mode==1. For mode 0 it
+returns "a " only for non-artifact items of quantity 1; other modes omit the
+article. Consequently the ordinary unnamed visitor fallback begins "the ",
+even though a generated named artifact can begin uppercase "The ".
+
+Body-component/corpse/corpse-piece classes override article formatting at
+classic 0x140c9dda0..0x140c9de84, reference 0x140ca0d60. A named associated
+historical figure/unit, or the current named adventure figure, suppresses
+the article; otherwise the same mode 1 "the "/mode 0 "a " cases apply.
+The following typed noun formatter owns that whole corpse/body identity.
+
+After the article, the item fallback retains its actual typed item name,
+material/species components, quantities, pair/plural variants, description
+subjects, and quality/wear/improvement/state/magic designation characters.
+Its native semantic noun inventory is already recorded in
+data/extracted/item-description-sources.tsv and item-info-title-sources.tsv,
+including all 98 RTTI owners and the title/article slots. This field must
+resolve through that complete item grammar before a broad generated-name
+fallback is allowed to consume ordinary item nouns. It is not a finite
+list of observed artifact names and is not the full multi-sentence item
+description constructor at reference 0x140c75000.
+
+Saved local helper source files
+------------------------------
+classic-pronoun-helper.asm / classic-pronoun-helper-literals.tsv
+classic-artifact-name-helper.asm / classic-artifact-name-helper-literals.tsv
+classic-artifact-item-fallback.asm
+classic-item-article-helper.asm
+classic-body-component-article-helper.asm
+
+
+Additional paragraph in the SAME visitor text cell: prophet quotation
+--------------------------------------------------------------------
+Source image: classic PE:6a70b91c:0270a000
+Outer construction: classic 0x1401a6a6f..0x1401a6bc5;
+reference Steam 0x1401a6adf..0x1401a6c35.
+Mental-picture formatter: classic 0x140656ab0..0x1406579ad executable
+instructions, embedded switch tables through unwind end 0x140657c70;
+reference Steam entry 0x140659090.
+Subject/object formatter: classic 0x140656840..0x140656aaa.
+Profession enum 0x83 is PROPHET, from df.d_basics.xml / native profession
+source inventory; it is not HUNTER. The quotation is an additional paragraph
+in the visitor overview cell, rather than the bottom personality quote.
+
+if (unit.travel_log.flags & 1) && unit.profession == 0x83:
+    belief_id = unit_belief_id(unit)                 // 0x1413f48f0
+    if belief_id == -1: stop additional-paragraph branch
+    belief = find_by_id(world.belief_systems.all, belief_id) // 0x140072500
+    if belief == null || belief.story.empty(): stop
+    story = belief.story[random_index(belief.story.size())]
+    if story.story_frame.empty(): stop
+    frame_index = random_index(story.story_frame.size())
+    if frame_index == -1: stop
+    actor_context = { -1, unit.hist_figure_id }     // stack +0x50/+0x54
+    listener_context = { -1, -1 }                  // stack +0x40/+0x44
+    body = format_picture(story.story_frame[frame_index].mental_picture,
+                          actor_context, listener_context)
+    add_line(owner + 0x1970, "")                    // native blank spacer
+    add_paragraph(owner + 0x1970, '"' + body + '"', width=28)
+
+unit_belief_id first consults the historical figure's current identity via
+0x1413adfa0; if its identity.belief_system at +0x9c is not -1, return it.
+Otherwise collect up to the first ten IDs from the figure's
+knowledge/religious_data.belief_system_id list. No entries returns -1;
+otherwise select one ID (randomly if more than one). This can return -1
+and therefore prevent the extra quotation. Selection of a story/frame is
+random each time this source is constructed. Frame.relation and its related
+frame index are not formatted or recursively followed by this helper.
+
+format_picture(picture, actor_context, listener_context):
+    output = ""
+    time = first property with virtual getType() == 8  // TIME
+    action = first property with getType() == 1         // ACTION
+    if action exists:
+        if action.actor_element == -1: return ""
+        subject = picture.elements[action.actor_element]
+        output += format_element(subject, grammar_role=0)
+        output += " "
+        first_person = subject.type == HF && subject.hf == actor_context.hf
+        second_person = !first_person && subject.type == HF &&
+                        subject.hf == listener_context.hf
+        past = time != null && (time.spec_flag & 1)
+        future = time != null && (time.spec_flag & 2)
+        continuous = action.spec_flag & 1
+        if continuous:
+            if time != null:
+                if past: output += (second_person ? "were " : "was ")
+                if future: output += "will be "
+                // Existing TIME with no flags adds NO present copula.
+                // Both flags add both past and future strings in this order.
+            else:
+                output += first_person ? "am " : second_person ? "are " : "is "
+        else if future:
+            output += "will "
+        switch action.action:
+            0 APPEAR:  forms = { appear, appears, appeared, appearing }
+            1 DESTROY: forms = { destroy, destroys, destroyed, destroying }
+            2 SPOKE:   forms = { speak, speaks, spoke, speaking }
+            3 BURN:    forms = { burn, burns, burned, burning }
+            4 FLOOD:   forms = { flood, floods, flooded, flooding }
+            5 REWARD:  forms = { reward, rewards, rewarded, rewarding }
+            default:   forms = empty; append NO verb
+        if forms not empty:
+            if continuous: append forms.continuous
+            else if past: append forms.past
+            else if future || first_person || second_person: append forms.base
+            else: append forms.third_person
+        if action.target_element != -1:
+            output += " "
+            if action.action == 2: output += "to "
+            output += format_element(picture.elements[action.target_element],1)
+        output += "."
+        return output
+
+    emotion = first property with getType() == 3        // EMOTION
+    if emotion exists:
+        if emotion.element == -1: return ""
+        subject = picture.elements[emotion.element]
+        output += format_element(subject, grammar_role=0)
+        output += " "
+        first_person / second_person as above
+        if time != null && (time.spec_flag & 1):
+            output += second_person ? "were " : "was "
+        else if time != null && (time.spec_flag & 2):
+            output += "will be "
+        else:
+            output += first_person ? "am " : second_person ? "are " : "is "
+        output += emotion_switch(emotion.emotion)
+        output += "."
+        return output
+
+    // DATE, TOOL, COLOR_PATTERN, SHAPE, ADJECTIVE and POSITION properties
+    // do not produce any text through this helper. No subject fallback.
+    capitalize_first_letter(output)                  // 0x14052b070
+    return output                                   // still empty
+
+The native action and emotion switch are not transitive/passive inference:
+the formatter literally selects the six verb forms and the subject/object
+from separate indexed elements. All temporal flag branches above follow
+the binary, including TIME with flags=0, TIME with both bits, unrecognized
+action values, and unrecognized emotion values. A subject element of an
+unrecognized type contributes an empty string, but following spaces, verbs,
+copulas, targets and punctuation still survive.
+
+The complete indexed emotion switch (-1..168, 170 table entries) is saved
+in classic-prophet-emotion-branches.tsv. It records enum numeric value,
+upstream enum name, native case address, native string address, and literal.
+-1 (ANYTHING) emits "emotionless". Empty literal rows jump to 0x140657980:
+no adjective/emotion is appended, but the already-appended subject/copula
+and final period remain. Values outside [-1,168] do the same. Thus a native
+source such as "I am ." is a real default production, not a missing capture.
+All static helper references are preserved in
+classic-visitor-extra-quote-helper-literals.tsv; action forms and each
+object separator are in classic-prophet-action-branches.tsv.
+
+format_element(element, grammar_role):
+    // This helper APPENDS to its caller's string.
+    switch element.getType():
+        0 HF:
+            if element.hf == actor_context.hf:
+                0 -> "I"; 1 -> "me"; 2 -> "my"; 3 -> "myself"
+                other role -> empty
+            else if element.hf == listener_context.hf:
+                0 or 1 -> "you"; 2 -> "your"; 3 -> "yourself"
+                other role -> empty
+            else:
+                context = init_hf_name_context()     // 0x140072010
+                // flags=0, pointers=null, all subject/object IDs=-1
+                format_hf_name(world.history.figures, element.hf, context,
+                               grammar_role=0, descriptor_mode=1)
+                               // 0x140b8ff50
+        1 SITE:
+            format_site_name(world.world_data, element.site, mode=0)
+                               // 0x140b90970
+        2 REGION:
+            // Deliberately ignores element.region: source uses world's name.
+            language_name(world.world_data.name, capitalize=true, native=false)
+                               // 0x140a91760
+        other type:
+            append empty
+
+In THIS outer paragraph actor_context.hf is the visitor's historical-figure
+ID and listener_context.hf is -1. Normally this produces first-person I/me
+or actual historical-figure/site/world names; the raw helper still has a
+"you" branch for an element ID of -1. The sentence constructor calls role
+0 for subjects and role 1 for action targets. At classic 0x140656f09
+(reference 0x1406594e9) mov r12d,1 explicitly overwrites the earlier
+first-person boolean before r12w is stored as the object grammar role.
+Consequently an action object naming the speaker is "me", never "I".
+It never calls possessive or reflexive roles (2,3), although their literal
+branches are saved as source.
+Neither subject formatter nor sentence formatter capitalizes a lowercase
+unnamed/unknown subject after successful action/emotion construction.
+
+Reachable historical-figure name branches under the initialized context
+and descriptor_mode=1:
+    no figure with this ID -> "an unknown creature"
+    figure has a language_name -> capitalized generated historical-figure name
+    figure has NO language_name ->
+        "a " + optional "zombie " + optional "ghostly " +
+        creature/caste singular name + optional " " + interaction_profile.name
+The generic helper's named-figure species/undead prefixes are disabled by
+descriptor_mode=1. Unnamed figures still retain those typed prefixes.
+Caste-singular naming at 0x140aa0c50 uses caste singular name if valid and
+nonempty, otherwise creature singular name; invalid race can be empty.
+No hardcoded replacement such as "creature" is inserted by that helper.
+The helper receives plural=false and the historical figure's race and caste.
+These are semantic creature nouns, not proper names.
+The prefix "zombie " depends on interaction_profile.undead_name at +0x150
+being nonempty (its string length is at +0x160). The appended final display
+name is a DIFFERENT field: interaction_profile.use_display_name at +0x88
+requests " " + interaction_profile.name at +0x90. This spacer is appended
+even if that display-name string is empty. The "ghostly " prefix depends
+on the first historical-figure flag byte having bit 0x80 and
+use_display_name being false; it is not combined with a display-name suffix.
+Thus all reachable suffixes use the existing native interaction display-name
+semantics. src/creature_descriptors.inc recognizes the full known display
+name after a complete species (including generated species) and handles
+the preceding zombie/ghostly prefixes. Those display-name families are
+already extracted from CE_DISPLAY_NAME and the resurrection/ghoul/ghost/
+mummy adjective+noun native generator tables by
+tools/build_creature_vocabulary.py. They do not need a broad personal-name
+fallback to consume their semantic nouns.
+
+The generic HF formatter also contains context-dependent "interrogator",
+"subject", "Nameless", "an unidentified creature", article "the ",
+possessive "'s", additional name + " the " + species/undead description,
+and [LPAGE:HF:ID] markup branches. The mental-picture caller's initialized
+context/role0/descriptor_mode1 make those branches unreachable in this
+visitor paragraph. Their complete native instructions and literal refs are
+saved to preserve the original helper rather than omit them as source.
+
+Reachable site helper mode0:
+    no site with this ID -> "an unknown site"
+    site exists -> capitalized generated site language_name (possibly empty)
+The helper's LPAGE:SITE markup mode is not requested by this caller.
+The REGION case directly formats world_data.name at structure offset0:
+this is confirmed by df.region.xml's world_data.name definition (world name).
+It does not format a subregion's geographic name or an entity name.
+
+Saved additional native source files
+-----------------------------------
+classic-prophet-extra-paragraph.asm
+classic-visitor-extra-quote-helper.asm
+classic-visitor-extra-quote-helper-literals.tsv
+classic-prophet-action-branches.tsv
+classic-prophet-emotion-branches.tsv
+classic-prophet-quote-subject-helper.asm
+classic-prophet-quote-subject-helper-literals.tsv
+classic-prophet-hf-context-init.asm
+classic-prophet-hf-name-helper.asm / classic-prophet-hf-name-helper-literals.tsv
+classic-prophet-unnamed-creature-helper.asm
+classic-prophet-site-name-helper.asm / classic-prophet-site-name-helper-literals.tsv
+classic-prophet-belief-selector.asm
+classic-prophet-empty-fallback-helper.asm
+
+Reference Steam quotation helper source is also preserved:
+identity PE:6a70a6d9:02711000; quote helper entry 0x140659090,
+code return 0x140659f8c, unwind end 0x14065a250, embedded six-action
+table 0x140659f90 and 170-entry emotion table 0x140659fa8.
+Subject helper entry 0x140658e20, return 0x140659089, end 0x14065908a.
+reference-visitor-extra-quote-helper.asm /
+reference-visitor-extra-quote-helper-literals.tsv
+reference-prophet-quote-subject-helper.asm /
+reference-prophet-quote-subject-helper-literals.tsv

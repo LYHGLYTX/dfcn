@@ -4059,6 +4059,8 @@ private:
         size_t start, std::vector<std::string> &captures,
         std::vector<std::pair<size_t, size_t>> &ranges,
         const std::vector<int> *foregrounds = nullptr) const;
+    std::optional<std::string> translate_visitor_overview_purposes(
+        std::string_view source) const;
     std::optional<std::string> translate_ui_catalog_capture(
         const Rule &rule, size_t index, std::string_view source) const;
     void load_untranslated_index();
@@ -10584,6 +10586,11 @@ static bool catalog_scoped_term_capture(const Rule &rule, size_t index) {
 
 std::optional<std::string> Overlay::translate_ui_catalog_capture(
         const Rule &rule, size_t index, std::string_view source) const {
+    // The native visitor constructor walks an itinerary vector. Its first
+    // field is a complete list of purposes, each with an optional named place.
+    if (rule.ui_message && index == 0 &&
+            rule.source.starts_with("This visitor has come {s}."))
+        return translate_visitor_overview_purposes(source);
     // Trade pane titles store the civilization/fortress native-language
     // name as one field. Reuse settlement-name transliteration, without
     // interpreting a native root as an unrelated English UI word.
@@ -20305,6 +20312,7 @@ static NativeKeybindingScope capture_native_keybinding_scope(const graphicst &gp
 #include "native_calendar_date.inc"
 #include "justice_case_translation.inc"
 #include "fortress_stocks.inc"
+#include "visitor_overview.inc"
 #include "fortress_help.inc"
 #include "announcement_performance.inc"
 #include "announcement_dialogue.inc"

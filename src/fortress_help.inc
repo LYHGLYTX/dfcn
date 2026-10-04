@@ -293,7 +293,15 @@ std::optional<std::string> Overlay::translate_help_paragraph(
                     case 'e': translated = translate_legends_name(captures[i], false); break;
                     case 'r': translated = translate_deity_spheres(captures[i]); break;
                     case 'q':
-                        if (ui_message) translated = translate_legends_text(captures[i], false, false);
+                        if (ui_message) {
+                            // A prophet appends a separately quoted mental-picture
+                            // statement to the visitor Overview box. Its finite
+                            // predicates and typed figure/place fields are owned
+                            // by that constructor, rather than general quotations.
+                            translated = rule.source == "\"{q}\""
+                                ? translate_announcement_combat(captures[i], "visitor-statement")
+                                : translate_legends_text(captures[i], false, false);
+                        }
                         break;
                     case 'v':
                         if (ui_message) {
@@ -328,22 +336,42 @@ std::optional<std::string> Overlay::translate_help_paragraph(
                                 sentence == "You honor {e} with the presentation of {b}." ||
                                 sentence == "Villains! The seizure of {b} will not go unanswered." ||
                                 sentence == "{b} is a great treasure. We respect that this is no mere trade.";
-                            if (trade_artifact) {
+                            // The visitor's information quest calls the same
+                            // artifact formatter in mode 0: an unnamed item
+                            // is its full object description, not a title.
+                            const bool visitor_artifact =
+                                sentence.starts_with("This visitor has come ") &&
+                                sentence.ends_with(" is seeking information about the location of {b}.");
+                            const bool visitor_item = visitor_artifact &&
+                                trim_view(captures[i]).starts_with("the ");
+                            if (trade_artifact || visitor_artifact) {
                                 auto item = trim_view(captures[i]);
                                 // c65450 mode 1 emits lowercase "the "; the
                                 // treasure reply capitalizes only that first
                                 // byte. Generated titles such as The Silver
                                 // Axe retain their proper-name grammar.
                                 if (item.starts_with("the ") ||
-                                        (item.starts_with("The ") && !generated_title_shape(item))) {
+                                        (trade_artifact && item.starts_with("The ") &&
+                                         !generated_title_shape(item))) {
                                     item.remove_prefix(4);
                                     translated = translate_item_caption_grammar(item);
+                                    if (!translated && visitor_artifact)
+                                        translated = translate_item_description_term(item);
                                 }
                             }
-                            if (!translated)
+                            // Named body components can omit the article.
+                            // Their complete unit/body noun grammar also owns
+                            // this artifact formatter's item fallback.
+                            if (!translated && visitor_artifact &&
+                                    trim_view(captures[i]).ends_with(" (copy)"))
+                                translated = translate_item_description_term(captures[i]);
+                            if (!translated && visitor_artifact && !visitor_item)
+                                translated = translate_corpsepiece_item_name(captures[i]);
+                            if (!translated && !visitor_item)
                                 translated = translate_legends_artifact_identity(captures[i]);
-                            if (!translated) translated = translate_legends_book(captures[i]);
-                            if (!translated && trade_artifact)
+                            if (!translated && !visitor_item)
+                                translated = translate_legends_book(captures[i]);
+                            if (!translated && (trade_artifact || visitor_artifact))
                                 translated = translate_item_description_term(captures[i]);
                         }
                         break;
