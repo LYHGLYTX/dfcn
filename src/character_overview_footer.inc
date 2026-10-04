@@ -8,9 +8,10 @@ std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote
         draw = g_native_overview_quote_draw;
     }
     if (draw) {
-        // The native buffer swap precedes UI writing. A completed current
-        // draw must belong to this frame's buffer as well as its visible cells.
-        bool current = draw->grid == gps_->screen && draw->dimx == gps_->dimx &&
+        // Saved buffer addresses can differ in copied background/composited
+        // read views. Prove the complete visible source against this view;
+        // never dereference a saved buffer or use its address as page lifetime.
+        bool current = draw->dimx == gps_->dimx &&
             draw->dimy == gps_->dimy && draw->left >= 0 &&
             draw->right > draw->left && draw->right <= gps_->dimx &&
             draw->top >= 0 && draw->bottom > draw->top && draw->bottom <= gps_->dimy &&
@@ -25,19 +26,105 @@ std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote
             const size_t count = std::min(text.size(),
                 static_cast<size_t>(draw->right - draw->left));
             for (size_t i = 0; i < count; ++i) {
+                // Spaces contribute no visible glyph to this source proof.
+                // Prove every ink byte, as with the rich reading rows.
+                if (text[i] == ' ') continue;
                 bool top = false;
-                const auto *cell = cell_at(draw->left + static_cast<int>(i),
-                    draw->top + static_cast<int>(line), &top);
+                const int x = draw->left + static_cast<int>(i);
+                const int y = draw->top + static_cast<int>(line);
+                const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
+                // This addst loop writes the base grid. Its current write
+                // must not be rejected by unrelated/stale top artwork.
+                const auto *cell = draw->grid == gps_->screen
+                    ? gps_->screen + tile * 8 : cell_at(x, y, &top);
                 if (!cell || cell[0] != static_cast<unsigned char>(text[i])) {
                     current = false;
                     break;
                 }
-                ink |= text[i] != ' ';
+                ink = true;
             }
         }
         if (!current || !ink) draw.reset();
     }
     return draw;
+}
+
+std::optional<int> Overlay::character_overview_display_bottom(
+        int left, int top, int width, int source_height) const {
+    if (!gps_ || gps_->dimx <= 0 || gps_->dimy <= 0 || left < 0 || top < 0 ||
+        left >= gps_->dimx || top >= gps_->dimy || width <= 0 ||
+        width > gps_->dimx - left || source_height <= 0 ||
+        source_height > gps_->dimy - top) return std::nullopt;
+    int bottom = -1;
+    if (const auto quote = current_character_overview_quote()) {
+        if (left == quote->left && left + width <= quote->right &&
+            top >= quote->top && top + source_height <= quote->bottom)
+            bottom = quote->bottom;
+    }
+    if (bottom < 0) {
+        const auto read_char = [&](int x, int y) -> unsigned char {
+            bool top_layer = false;
+            const auto *cell = cell_at(x, y, &top_layer);
+            return cell && cell[0] ? cell[0] : ' ';
+        };
+        const auto settings = native_ui_settings();
+        const bool classic = settings && settings->classic;
+        for (int tabs_y = 0; tabs_y < top && bottom < 0; ++tabs_y) {
+            std::string row(static_cast<size_t>(gps_->dimx), ' ');
+            for (int x = 0; x < gps_->dimx; ++x) row[x] = static_cast<char>(read_char(x, tabs_y));
+            const auto tabs = character_information_tab_fields(row);
+            if (tabs.empty()) continue;
+            const int first = tabs.front().start, last = tabs.back().end;
+            auto frame = find_ascii_panel_frame(first, last, tabs_y,
+                gps_->dimx, gps_->dimy, read_char);
+            if (!frame) frame = find_graphical_character_panel_frame(*gps_, first, last, tabs_y);
+            if (!frame) frame = find_character_overview_frame(*gps_, first, last, tabs_y, read_char);
+            if (!frame || left != frame->left + 1 || left + width > frame->right ||
+                top + source_height > frame->bottom - 1) continue;
+            int content_top = tabs_y + 1;
+            for (const auto &tab : tabs) {
+                bool top_layer = false;
+                (void)cell_at(tab.start, tabs_y, &top_layer);
+                const auto *flags = top_layer ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+                const size_t at = static_cast<size_t>(tab.start) * gps_->dimy + tabs_y;
+                if (flags && (flags[at] & (1u << 3))) content_top = tabs_y + 2;
+            }
+            const int divider = (frame->left + frame->right) / 2;
+            for (int y = content_top; y < top && y < frame->bottom; ++y) {
+                bool complete = native_ui_skin_at(*gps_, divider, y,
+                    native_texture_interior_border_n_w_e(*gps_), classic);
+                for (int x = frame->left + 1; complete && x < frame->right; ++x)
+                    if (x != divider && !native_ui_skin_at(*gps_, x, y,
+                            native_texture_interior_border_w_e(*gps_), classic)) complete = false;
+                // The native prose limit excludes B-1 as well as the outer
+                // bottom border. Arena's lower action/widget stops the blank
+                // budget below; a captured quote carries its stricter B-4.
+                if (complete) bottom = frame->bottom - 1;
+            }
+        }
+    }
+    if (bottom < top + source_height) return std::nullopt;
+    const auto overlays = native_text_overlay_frames(*gps_);
+    int limit = top + source_height;
+    for (; limit < bottom; ++limit) {
+        // Borrow only actual blank rows. A different document, action or
+        // foreground widget owns its space even if some of its cells are blank.
+        const bool overlay = std::any_of(overlays.begin(), overlays.end(), [&](const SDL_Rect &box) {
+            return limit >= box.y && limit < box.y + box.h &&
+                left < box.x + box.w && box.x < left + width;
+        });
+        if (overlay || native_button_text_rect(*gps_, left, left + width, limit)) break;
+        bool blank = true;
+        for (int x = left; blank && x < left + width; ++x) {
+            bool top_layer = false;
+            const auto *cell = cell_at(x, limit, &top_layer);
+            if (!cell || (cell[0] != 0 && cell[0] != ' ') ||
+                native_foreground_picture_at(*gps_, x, limit) ||
+                native_item_action_at(*gps_, x, limit)) blank = false;
+        }
+        if (!blank) break;
+    }
+    return limit;
 }
 
 // Overview's optional quote and third-person memory are one bounded footer document.
@@ -54,7 +141,9 @@ void Overlay::append_character_overview_footer(
         for (int y = draw->top; y < draw->bottom; ++y) {
             for (int x = draw->left; x < draw->right; ++x) {
                 bool top = false;
-                const auto *cell = cell_at(x, y, &top);
+                const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
+                const auto *cell = draw->grid == gps_->screen
+                    ? gps_->screen + tile * 8 : cell_at(x, y, &top);
                 draw_rows[y][x] = cell && cell[0] ? static_cast<char>(cell[0]) : ' ';
             }
         }
@@ -133,7 +222,21 @@ void Overlay::append_character_overview_footer(
         grid->bottom < frame->bottom) {
         footer_top = grid->bottom + 1;
     } else if (!draw) {
+        const auto settings = native_ui_settings();
+        const bool classic = settings && settings->classic;
+        const int divider = (frame->left + frame->right) / 2;
         for (int y = content_top; y < frame->bottom; ++y) {
+            // The final separator establishes the prose viewport on its
+            // own. Long summary fields can erase an earlier middle border;
+            // graphical separators have texture IDs, not CP437 row bytes.
+            bool native_separator = native_ui_skin_at(*gps_, divider, y,
+                native_texture_interior_border_n_w_e(*gps_), classic);
+            for (int x = frame->left + 1; native_separator && x < frame->right; ++x) {
+                if (x != divider && !native_ui_skin_at(*gps_, x, y,
+                        native_texture_interior_border_w_e(*gps_), classic))
+                    native_separator = false;
+            }
+            if (native_separator) footer_top = y + 1;
             int junctions = 0;
             bool horizontal = true;
             for (int x = frame->left + 1; x < frame->right; ++x) {
@@ -166,7 +269,10 @@ void Overlay::append_character_overview_footer(
     };
     auto rgb_at = [&](int x, int y) {
         bool top = false;
-        const auto *cell = cell_at(x, y, &top);
+        const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
+        const auto *cell = draw && draw->grid == gps_->screen &&
+                x >= draw->left && x < draw->right && y >= draw->top && y < draw->bottom
+            ? gps_->screen + tile * 8 : cell_at(x, y, &top);
         return cell ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : -1;
     };
     auto paired_rows = [&](int x, int y, int end) {
@@ -266,6 +372,18 @@ void Overlay::append_character_overview_footer(
         paragraph.target = translate_character_thought_paragraph(
             paragraph.source, &paragraph.origins);
     };
+    const auto rich_memory_owns = [&](int row_y) {
+        // Overview's native rich-text calls now bind the actual recent-
+        // thought source vector. Keep that complete document's ownership and
+        // semantic colors; a quote must not erase or reparse its screen rows.
+        if (!native_knowledge_frame_.document || !native_knowledge_frame_.document->thoughts ||
+                !native_knowledge_frame_matches_) return false;
+        return std::any_of(native_knowledge_frame_matches_->begin(),
+            native_knowledge_frame_matches_->end(), [&](const Match &row) {
+                return row.rule == kNativeKnowledgeDocumentRule && row.y == row_y &&
+                    row.x >= frame->left + 1 && row.x < frame->right;
+            });
+    };
     auto append_colors = [](const Paragraph &paragraph, std::vector<int> &colors) {
         // The grammar maps output bytes through reordered semantic references;
         // rasterization consumes one color per UTF-32 glyph, not per UTF-8 byte.
@@ -284,6 +402,7 @@ void Overlay::append_character_overview_footer(
         const bool memory_only = footer_top >= 0 &&
             (first.starts_with("He ") || first.starts_with("She ") || first.starts_with("It "));
         if (!has_quote && !memory_only) continue;
+        if (memory_only && rich_memory_owns(y)) continue;
         Paragraph quote;
         bool closed = false;
         if (draw && y == draw->top && has_quote) {
@@ -303,6 +422,7 @@ void Overlay::append_character_overview_footer(
             closed = true;
         }
         for (int row_y = y; !draw && has_quote && row_y < frame->bottom; ++row_y) {
+            if (rich_memory_owns(row_y)) break;
             const auto [begin, row_end] = bounds(row_y, frame->left + 1);
             if (begin >= row_end) break;
             int end = begin;
@@ -319,7 +439,13 @@ void Overlay::append_character_overview_footer(
             row_y = add_row(quote, begin, row_y, end);
             if (closed || end < row_end) break;
         }
-        if (has_quote && !closed) continue;
+        if (has_quote && !closed) {
+            if (footer_top >= 0 && !quote.rows.empty()) {
+                reserve_unknown(quote);
+                y = quote.rows.back().y;
+            }
+            continue;
+        }
         if (has_quote) quote.target = translate_overview_quote(quote.source, &quote.origins);
         if (has_quote && !quote.target) {
             const auto captures = captured_native_paragraphs();
@@ -333,9 +459,7 @@ void Overlay::append_character_overview_footer(
             }
         }
         if (has_quote && !quote.target) {
-            if (age_y >= 0) reserve_unknown(quote);
-            y = quote.rows.back().y;
-            continue;
+            reserve_unknown(quote);
         }
 
         Paragraph memory;
@@ -350,7 +474,8 @@ void Overlay::append_character_overview_footer(
         if (next_y < frame->bottom) {
             const auto [begin, end] = bounds(next_y, frame->left + 1);
             const auto first = std::string_view(native_rows[static_cast<size_t>(next_y)]).substr(begin, end - begin);
-            if (first.starts_with("He ") || first.starts_with("She ") || first.starts_with("It ")) {
+            if (!rich_memory_owns(next_y) &&
+                    (first.starts_with("He ") || first.starts_with("She ") || first.starts_with("It "))) {
                 for (int row_y = next_y; row_y < frame->bottom; ++row_y) {
                     const auto [start, stop] = bounds(row_y, frame->left + 1);
                     if (start >= stop) break;
@@ -375,8 +500,9 @@ void Overlay::append_character_overview_footer(
         }
         std::string target;
         std::vector<int> foregrounds;
-        std::vector<Match> source_rows = quote.rows;
+        std::vector<Match> source_rows;
         if (quote.target) {
+            source_rows = quote.rows;
             target = *quote.target;
             append_colors(quote, foregrounds);
         }
@@ -400,12 +526,14 @@ void Overlay::append_character_overview_footer(
         // Extra wrap rows must be blank inside this actual frame. Never force
         // Chinese into the English line count or silently truncate its tail.
         while (limit < frame->bottom) {
+            if (rich_memory_owns(limit)) break;
             const auto [begin, end] = bounds(limit, frame->left + 1);
             if (begin < end) break;
             ++limit;
         }
         std::vector<Match> slots;
-        for (int row_y = y; row_y < limit; ++row_y) {
+        const int target_y = source_rows.front().y;
+        for (int row_y = target_y; row_y < limit; ++row_y) {
             const auto found = std::find_if(source_rows.begin(), source_rows.end(),
                 [&](const Match &row) { return row.y == row_y; });
             if (found != source_rows.end()) slots.push_back(*found);
@@ -419,8 +547,8 @@ void Overlay::append_character_overview_footer(
         const int origin_x = (gps_->screen_pixel_x - gps_->dimx * tile_w) / 2;
         const int origin_y = (gps_->screen_pixel_y - gps_->dimy * tile_h) / 2;
         const SDL_Rect viewport{origin_x + (frame->left + 1) * tile_w,
-            origin_y + y * tile_h, (frame->right - frame->left - 1) * tile_w,
-            (limit - y) * tile_h};
+            origin_y + target_y * tile_h, (frame->right - frame->left - 1) * tile_w,
+            (limit - target_y) * tile_h};
         for (Match &slot : slots) slot.layout_native_clip = viewport;
         std::vector<Match> fitted;
         if (!append_bounded_paragraph(std::move(slots), target, screen_rows,

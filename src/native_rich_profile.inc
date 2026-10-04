@@ -92,11 +92,13 @@ static bool resolve_native_rich_profile(NativeRichProfile &profile) {
         // The intervening character-page calls use the same sheet argument.
         // Their exact live box/source pair selects recent thoughts or memories;
         // other character documents retain generic capture, never guessed prose.
-        const bool thought_render = address == 0x17cb6d || address == 0x17d9e2 || address == 0x17e10b;
+        const bool thought_render = address == 0x16906d || address == 0x17cb6d ||
+            address == 0x17d9e2 || address == 0x17e10b;
         const bool thought_mouse = address == 0x1b67f7 || address == 0x1b7167 || address == 0x1b7577;
         const bool thought_input = address == 0x8dacf6 || address == 0x8dafe5 || address == 0x8db1a6;
         if (!health && !personality && !thought_render && !thought_mouse && !thought_input) continue;
-        const auto kind = health ? NativeRichCallKind::Health
+        const auto kind = address == 0x16906d ? NativeRichCallKind::OverviewThoughts
+            : health ? NativeRichCallKind::Health
             : personality ? NativeRichCallKind::Personality : NativeRichCallKind::Thoughts;
         // Preserve RCX/RDX; the third argument is the native sheet in R8.
         if (address == 0x16ca53 || address == 0x17f070 || thought_render)
@@ -111,11 +113,12 @@ static bool resolve_native_rich_profile(NativeRichProfile &profile) {
     }
     for (uintptr_t address : draw_calls) {
         profile.call_signatures.push_back({address,draw_rva});
-        if (address == 0x17de1f || address == 0x17e548) {
+        if (address == 0x1692ee || address == 0x17de1f || address == 0x17e548) {
             // The render frame retains the sheet at caller RSP+0xb260.
             // Preserve graphics/text/colors; CALL adds eight bytes before
             // this relay loads the fourth argument into R9.
-            profile.calls.push_back({address,draw_rva,NativeRichCallKind::ThoughtsDraw,
+            profile.calls.push_back({address,draw_rva,
+                address == 0x1692ee ? NativeRichCallKind::OverviewThoughtsDraw : NativeRichCallKind::ThoughtsDraw,
                 {0x4c,0x8b,0x8c,0x24,0x68,0xb2,0x00,0x00}});
         }
     }

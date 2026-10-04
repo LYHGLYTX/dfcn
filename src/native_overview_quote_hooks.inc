@@ -114,6 +114,7 @@ static void capture_native_overview_quote_row(graphicst *graphics,
         // were not. Publish only after the final visible row's actual write.
         try {
             if (pending) {
+                prepare_native_overview_thoughts_cache(sheet);
                 std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
                 const auto &previous = g_native_overview_quote_draw;
                 const bool changed = !previous || previous->owner != pending->owner ||

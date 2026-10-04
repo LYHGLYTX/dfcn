@@ -2823,6 +2823,7 @@ struct NativeKnowledgeDocument {
     bool personality = false;
     bool health = false;
     bool thoughts = false;
+    bool overview_footer = false;
     unsigned char foreground = 7;
     std::vector<std::string> rows;
     std::vector<uintptr_t> row_addresses;
@@ -3323,6 +3324,8 @@ private:
     std::optional<std::string> translate_overview_quote(
         std::string_view source, std::vector<size_t> *origins = nullptr) const;
     std::optional<NativeOverviewQuoteDraw> current_character_overview_quote() const;
+    std::optional<int> character_overview_display_bottom(
+        int left, int top, int width, int source_height) const;
     void refresh_character_overview_context(bool force = false);
     void append_character_overview_footer(
         const std::vector<std::string> &native_rows,
@@ -19888,7 +19891,9 @@ std::vector<Match> Overlay::native_knowledge_matches(
         (native_knowledge_frame_.geometry != geometry ||
          std::any_of(native_knowledge_frame_matches_->begin(),
                      native_knowledge_frame_matches_->end(), [&](const Match &match) {
-             return match.x < 0 || match.y < 0 || match.length <= 0 ||
+             return match.x < 0 || match.y < 0 || match.length < 0 ||
+                 (match.length == 0 && (!native_knowledge_frame_.document ||
+                     !native_knowledge_frame_.document->overview_footer || !match.source.empty())) ||
                  match.y >= gps_->dimy || match.x >= gps_->dimx ||
                  match.length > gps_->dimx - match.x;
          }))) {
@@ -19910,6 +19915,7 @@ std::vector<Match> Overlay::native_knowledge_matches(
 
         const auto &frame = native_knowledge_frame_;
         if (allow_transition && matches.empty() && current_draw && !draws.empty() &&
+            frame.document && !frame.document->overview_footer &&
             !frame.matches.empty() && pause_menu.empty() && gps_ &&
             draws.front().document == frame.document &&
             draws.front().x == frame.left && draws.front().y == frame.top &&
@@ -20129,16 +20135,29 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
         document.source, width, document.personality, document.health, document.thoughts);
     if (layout.lines.empty()) return result;
 
+    int display_height = height;
+    if (document.overview_footer) {
+        // Overview has no scrollbar. Its native rows prove source ownership;
+        // the actual footer's remaining blank space supplies the Chinese
+        // budget without changing that source extent or its retained hash.
+        if (first_native_line != 0) return result;
+        const auto bottom = character_overview_display_bottom(left, top, width, height);
+        if (!bottom) return result;
+        display_height = *bottom - top;
+        if (display_height < height ||
+            int64_t(layout.lines.size()) * layout.line_height_pixels >
+                int64_t(display_height) * gps_->tile_pixel_y) return result;
+    }
     // Map the native scrollbar's entire range to the complete Chinese
     // document, with exact top/bottom endpoints. Never compact just the
     // currently visible paragraphs: that changed both spacing and translation
     // ownership whenever one source row entered or left the viewport.
     const int native_range = std::max(0, static_cast<int>(document.rows.size()) - height);
-    const int visible_lines = height * gps_->tile_pixel_y / layout.line_height_pixels;
+    const int visible_lines = display_height * gps_->tile_pixel_y / layout.line_height_pixels;
     if (visible_lines <= 0) return result;
     const int target_range = std::max(0,
         static_cast<int>(layout.lines.size()) - visible_lines);
-    const int target_start = native_range > 0
+    const int target_start = !document.overview_footer && native_range > 0
         ? static_cast<int>((static_cast<int64_t>(first_native_line) * target_range +
                             native_range / 2) / native_range) : 0;
     int clip_left = left, clip_right = left + width;
@@ -20156,8 +20175,8 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
     // draw prefix; a source row's writer clip must not cut its target line.
     const SDL_Rect document_clip{origin_x + clip_left * gps_->tile_pixel_x,
         origin_y + top * gps_->tile_pixel_y,
-        (clip_right - clip_left) * gps_->tile_pixel_x, height * gps_->tile_pixel_y};
-    for (int row = 0; row < height; ++row) {
+        (clip_right - clip_left) * gps_->tile_pixel_x, display_height * gps_->tile_pixel_y};
+    for (int row = 0; row < display_height; ++row) {
         const int y = top + row;
         // Every native row remains suppressed, even when it lies between two
         // taller Chinese lines. Only the row containing a line's pixel top
@@ -20169,9 +20188,12 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
         const bool owns_line = line < visible_lines &&
             pixel_top < (row + 1) * gps_->tile_pixel_y &&
             target_line < static_cast<int>(layout.lines.size());
-        Match match{left, y, width, kNativeKnowledgeDocumentRule,
+        // Extra Chinese slots own placement only. They must never suppress
+        // a source byte or pretend that DF drew a longer native document.
+        const bool source_row = row < height;
+        Match match{left, y, source_row ? width : 0, kNativeKnowledgeDocumentRule,
             owns_line ? layout.lines[static_cast<size_t>(target_line)] : std::string{},
-            document.rows[static_cast<size_t>(first_native_line + row)]};
+            source_row ? document.rows[static_cast<size_t>(first_native_line + row)] : std::string{}};
         match.layout_x = left;
         match.layout_y = y;
         match.layout_length = width;
@@ -24271,33 +24293,34 @@ std::vector<Match> Overlay::find_matches(int only_y,
     // Overview's footer is full-width prose (with or without a quoted
     // utterance), not another pair of summary cells. Resolve it before generic words, names and two-space
     // field splitting can claim any fragment. During glyph suppression the
-    // renderer has not yet composed this frame, so visible_char_at() still
-    // consults the preceding frame's occlusion epoch. Reading it here can
-    // lose the tabs, age or parts of the quote and cache a word-only mask,
-    // even though Present later recognizes and draws the complete Chinese.
-    // Compose the CURRENT logical layers for that early scan; only the final
-    // draw scan should honor graphical occlusion. Tabs and footer need the
-    // same snapshot because they can belong to different native layers.
+    // renderer's graphical-copy bookkeeping is not a text source. It can
+    // hide a quote's opening byte even while its native row is intact. Read
+    // the current logical layers for the footer in both passes; its proven
+    // viewport and foreground widget clips determine where it can draw.
     // Earlier semantic owners may already have reserved source bytes in
     // screen_rows. Read the intact native document with the same current
-    // layer/occlusion policy as the header, in every rendering mode.
+    // layer policy in every rendering mode.
     std::vector<std::string> quote_rows(static_cast<size_t>(gps_->dimy),
         std::string(static_cast<size_t>(gps_->dimx), ' '));
+    auto footer_rows = quote_rows;
     int character_quote_tabs_y = -1;
+    int character_footer_tabs_y = -1;
     const auto quote_settings = native_ui_settings();
     for (int y = 0; y < gps_->dimy; ++y) {
         std::string &row = quote_rows[static_cast<size_t>(y)];
         for (int x = 0; x < gps_->dimx; ++x) {
-            unsigned char ch = 0;
-            if (screen_override || (quote_settings && quote_settings->classic)) {
-                bool top = false;
-                const unsigned char *cell = cell_at(x, y, &top);
-                ch = cell ? cell[0] : 0;
-            } else ch = visible_char_at(x, y);
+            bool top = false;
+            const unsigned char *cell = cell_at(x, y, &top);
+            const unsigned char native = cell ? cell[0] : 0;
+            footer_rows[y][x] = native ? static_cast<char>(native) : ' ';
+            const unsigned char ch = screen_override ||
+                (quote_settings && quote_settings->classic) ? native : visible_char_at(x, y);
             row[static_cast<size_t>(x)] = ch ? static_cast<char>(ch) : ' ';
         }
         if (character_quote_tabs_y < 0 && is_character_information_tabs_row(row))
             character_quote_tabs_y = y;
+        if (character_footer_tabs_y < 0 && is_character_information_tabs_row(footer_rows[y]))
+            character_footer_tabs_y = y;
     }
     // Room labels can span both logical widget layers. Matching either raw
     // layer in isolation can recognize only `No`, while the final composite
@@ -24353,8 +24376,8 @@ std::vector<Match> Overlay::find_matches(int only_y,
             header_tabs_y = y;
     }
     append_character_header(header_rows, screen_rows, result, header_tabs_y, only_y);
-    append_character_overview_footer(quote_rows, screen_rows, result,
-        character_quote_tabs_y, only_y, screen_override != nullptr);
+    append_character_overview_footer(footer_rows, screen_rows, result,
+        character_footer_tabs_y, only_y, screen_override != nullptr);
     // Footer ownership needs the intact age/context row first. Summary
     // composition then reserves each column before generic field matching.
     append_character_overview_identities(character_overview_rows, screen_rows, result, only_y);
@@ -28805,7 +28828,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
         std::erase_if(result, [&](const Match &match) {
             return std::any_of(native_knowledge.begin(), native_knowledge.end(),
                 [&](const Match &owned) {
-                    return match.y == owned.y && match.x < owned.x + owned.length &&
+                    return owned.length > 0 && match.y == owned.y && match.x < owned.x + owned.length &&
                         owned.x < match.x + match.length;
                 });
         });
@@ -28880,12 +28903,6 @@ void Overlay::refresh_character_overview_context(bool force) {
     immediate_base_full_scan_epoch_ = immediate_top_full_scan_epoch_ = 0;
     immediate_base_matches_epoch_ = 0;
     frame_prepared_ = false;
-    // DF reuses native cell textures on partial redraws. A newly owned
-    // document needs fresh glyph copies after an earlier empty mask, just
-    // as the existing translation switch does. This is a normal redraw
-    // request; it neither changes the translation setting nor the window.
-    if (config_.enabled) gps_->force_full_display_count =
-        std::max<decltype(gps_->force_full_display_count)>(gps_->force_full_display_count, 2);
 }
 
 const std::vector<Match> &Overlay::prepare_immediate_base_matches() {

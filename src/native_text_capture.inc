@@ -210,13 +210,13 @@ static std::shared_ptr<NativeKnowledgeDocument> read_native_reading_box(
 
 static void capture_native_reading_box(
         NativeKnowledgeTextBox *box, const NativeString *source, bool personality,
-        bool health, bool thoughts, NativeWrapTiming &timing) {
+        bool health, bool thoughts, NativeWrapTiming &timing, bool grow_rows = true) {
     auto capture_timing = timing.phase(NativeWrapTiming::Stage::Capture);
     const uintptr_t owner = reinterpret_cast<uintptr_t>(box);
     forget_native_knowledge_document(owner);
     auto document = read_native_reading_box(box, source, personality, health, thoughts);
     if (!document) return;
-    if (!personality && !health && !thoughts) {
+    if (grow_rows && !personality && !health && !thoughts) {
         int required_rows = 0;
         {
             auto required_timing = timing.phase(NativeWrapTiming::Stage::RequiredRows);
@@ -248,10 +248,44 @@ static void dfcn_capture_native_knowledge_wrap(
     }
 }
 
+static void prepare_native_overview_thoughts_cache(const void *sheet,
+        bool overview = true, const char *current_row = nullptr) {
+    if (!sheet) return;
+    const auto [source_offset, box_offset] = native_character_layout.thought_vectors.front();
+    const auto *bytes = static_cast<const unsigned char *>(sheet);
+    const auto sources = NativeBorrowedVector<const NativeString *>::read(bytes + source_offset);
+    if (!sources.valid(16384) || sources.size() == 0) return;
+    {
+        std::lock_guard<std::mutex> lock(g_native_knowledge_mutex);
+        const auto page = g_native_knowledge_documents.find(
+            reinterpret_cast<uintptr_t>(sheet) + source_offset);
+        if (overview) {
+            if (page != g_native_knowledge_documents.end() && page->second->overview_footer) return;
+        } else {
+            // Returning to the scrolling Recent thoughts page restores its
+            // own padding through the same native width-change branch.
+            const auto row = g_native_knowledge_row_owners.find(
+                reinterpret_cast<uintptr_t>(current_row));
+            if (page == g_native_knowledge_documents.end() || !page->second->overview_footer ||
+                    row == g_native_knowledge_row_owners.end() || row->second.first != page->first)
+                return;
+        }
+    }
+    // Recent thoughts and Overview reuse the same boxes and cached width.
+    // The scrolling page may have extended those boxes with native padding.
+    // Let DF rebuild them once at its own width-change branch before the
+    // bounded footer's whole-box fit calculation; do not trim live iterators
+    // or free allocations belonging to the game's C++ runtime.
+    const int32_t invalid_width = -1;
+    std::memcpy(const_cast<unsigned char *>(bytes) + box_offset +
+        sizeof(NativeBorrowedVector<NativeKnowledgeTextBox *>),
+        &invalid_width, sizeof(invalid_width));
+}
+
 static void capture_native_character_document(
         NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet,
         bool health, bool thoughts, NativeWrapTiming &timing,
-        const char *current_row = nullptr) {
+        const char *current_row = nullptr, bool grow_rows = true) {
     try {
         auto translation_wait = timing.phase(NativeWrapTiming::Stage::TranslationLock);
         dfcn::TranslationStateScope translation_scope;
@@ -270,6 +304,7 @@ static void capture_native_character_document(
                     if (row->second.first != owner) continue;
                     const auto found = g_native_knowledge_documents.find(owner);
                     if (found != g_native_knowledge_documents.end() && found->second->thoughts &&
+                        found->second->overview_footer == !grow_rows &&
                         row->second.second >= 0 &&
                         static_cast<size_t>(row->second.second) < found->second->rows.size() &&
                         found->second->rows[static_cast<size_t>(row->second.second)] == current_row)
@@ -288,7 +323,7 @@ static void capture_native_character_document(
         if (!native_character_page(sheet, health, sources, boxes, thoughts,
                 thoughts ? box : nullptr, thoughts ? source : nullptr, &owner, current_row)) {
             if (thoughts && !current_row)
-                capture_native_reading_box(box, source, false, false, false, timing);
+                capture_native_reading_box(box, source, false, false, false, timing, grow_rows);
             return;
         }
         // Invalidate only this page's aggregate. Using the enclosing sheet
@@ -306,6 +341,7 @@ static void capture_native_character_document(
         page->personality = personality;
         page->health = health;
         page->thoughts = thoughts;
+        page->overview_footer = thoughts && !grow_rows;
         page->width = boxes.front()->width;
         NativeKnowledgeTextBox *last_box = nullptr;
         std::shared_ptr<const NativeKnowledgeDocument> last_document;
@@ -366,7 +402,7 @@ static void capture_native_character_document(
             last_document = parts[i];
         }
         int required_rows = 0;
-        if (!current_row) {
+        if (!current_row && grow_rows) {
             auto required_timing = timing.phase(NativeWrapTiming::Stage::RequiredRows);
             required_rows = g_overlay.native_knowledge_required_rows(
                 page->source, page->width, personality, health, thoughts);
@@ -396,7 +432,7 @@ static void capture_native_character_document(
 
 static void capture_native_character_wrap(
         NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet,
-        bool health, bool thoughts = false);
+        bool health, bool thoughts = false, bool grow_rows = true);
 
 static void dfcn_capture_native_personality_wrap(
         NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet) {
@@ -411,6 +447,14 @@ static void dfcn_capture_native_health_wrap(
 static void dfcn_capture_native_thoughts_wrap(
         NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet) {
     capture_native_character_wrap(box, source, sheet, false, true);
+}
+
+static void dfcn_capture_native_overview_thoughts_wrap(
+        NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet) {
+    // Overview decides whether a complete box fits below the quote before
+    // drawing it. This bounded footer has no scrollbar; scroll-padding growth
+    // can make the native renderer skip an otherwise visible whole box.
+    capture_native_character_wrap(box, source, sheet, false, true, false);
 }
 
 static void dfcn_capture_native_knowledge_draw(
@@ -496,14 +540,15 @@ static void dfcn_capture_native_knowledge_draw(
 
 static void capture_native_character_wrap(
         NativeKnowledgeTextBox *box, const NativeString *source, const void *sheet,
-        bool health, bool thoughts) {
+        bool health, bool thoughts, bool grow_rows) {
     NativeWrapTiming timing(thoughts ? "thoughts" : health ? "health" : "personality",
         box, source, !health && !thoughts, health, thoughts);
     {
         auto native_timing = timing.phase(NativeWrapTiming::Stage::Native);
         if (g_real_native_knowledge_wrap) g_real_native_knowledge_wrap(box, source);
     }
-    capture_native_character_document(box, source, sheet, health, thoughts, timing);
+    capture_native_character_document(box, source, sheet, health, thoughts, timing,
+        nullptr, grow_rows);
 }
 
 
@@ -514,8 +559,19 @@ static void dfcn_capture_native_thoughts_draw(graphicst *graphics,
     // Recovery only reads rows: the native loop already holds vector iterators,
     // so any required scroll padding must wait for the normal wrap callback.
     if (graphics && text && sheet) {
+        prepare_native_overview_thoughts_cache(sheet, false, text);
         NativeWrapTiming timing("thoughts-draw", nullptr, nullptr, false, false, true);
         capture_native_character_document(nullptr, nullptr, sheet, false, true, timing, text);
+    }
+    dfcn_capture_native_knowledge_draw(graphics, text, colors);
+}
+
+static void dfcn_capture_native_overview_thoughts_draw(graphicst *graphics,
+        const char *text, const char *colors, const void *sheet) {
+    if (graphics && text && sheet) {
+        prepare_native_overview_thoughts_cache(sheet);
+        NativeWrapTiming timing("overview-thoughts-draw", nullptr, nullptr, false, false, true);
+        capture_native_character_document(nullptr, nullptr, sheet, false, true, timing, text, false);
     }
     dfcn_capture_native_knowledge_draw(graphics, text, colors);
 }
