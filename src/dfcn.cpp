@@ -1654,6 +1654,7 @@ struct NativeOverviewQuoteDraw {
     const unsigned char *grid = nullptr;
     int dimx = 0, dimy = 0;
     int left = 0, right = 0, top = 0, bottom = 0;
+    int thoughts_bottom = 0;
     std::string source;
     std::vector<std::string> wrapped_lines;
 };
@@ -2817,6 +2818,11 @@ static std::optional<std::string> complete_origin_caption(
 // colored rich-text rows. Ordered boxes form one scrolling document.
 // Keep the complete source and exact row identities together rather than
 // guessing a paragraph from a few English words left in the viewport.
+struct NativeKnowledgeBoxBoundary {
+    size_t source_end = 0;
+    size_t native_row_end = 0;
+};
+
 struct NativeKnowledgeDocument {
     std::string source;
     int width = 0;
@@ -2827,6 +2833,7 @@ struct NativeKnowledgeDocument {
     unsigned char foreground = 7;
     std::vector<std::string> rows;
     std::vector<uintptr_t> row_addresses;
+    std::vector<NativeKnowledgeBoxBoundary> box_boundaries;
 };
 
 struct NativeKnowledgeDraw {
@@ -2843,9 +2850,11 @@ struct NativeKnowledgeDraw {
 static bool native_knowledge_draw_owns_base(
         const NativeKnowledgeDraw &draw, const graphicst &gps) {
     // The colored native writer writes screen, not the composited top layer.
-    // A saved buffer address is identity only; never dereference it after DF
-    // exchanges its buffers. A clipped call does not prove a whole row.
-    return draw.screen == reinterpret_cast<uintptr_t>(gps.screen) &&
+    // Overview proves its complete current base bytes after buffer rotation;
+    // other reading pages retain their existing draw-buffer identity gate.
+    // A clipped call does not prove a whole row.
+    return ((draw.document && draw.document->overview_footer) ||
+        draw.screen == reinterpret_cast<uintptr_t>(gps.screen)) &&
         draw.dimx == gps.dimx && draw.dimy == gps.dimy && draw.document &&
         draw.x >= draw.clip[0] && draw.x + draw.document->width - 1 <= draw.clip[1] &&
         draw.y >= draw.clip[2] && draw.y <= draw.clip[3];
@@ -2889,6 +2898,7 @@ struct NativeKnowledgeLayout {
     bool personality = false;
     bool health = false;
     bool thoughts = false;
+    bool overview_footer = false;
     int tile_x = 0;
     int tile_y = 0;
     int padding = 0;
@@ -4097,7 +4107,7 @@ private:
     const std::vector<Match> &prepare_immediate_base_matches();
     const NativeKnowledgeLayout &prepare_native_knowledge_layout(
         const std::string &source, int width, bool personality = false,
-        bool health = false, bool thoughts = false) const;
+        bool health = false, bool thoughts = false, bool overview_footer = false) const;
     std::optional<std::string> translate_character_thought_paragraph(
         std::string_view source, std::vector<size_t> *origins = nullptr) const;
     std::optional<std::string> translate_health_description_block(
@@ -19357,7 +19367,8 @@ static std::string normalize_art_utterance(std::string_view source);
 #include "character_thoughts.inc"
 
 const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
-        const std::string &source, int width, bool personality, bool health, bool thoughts) const {
+        const std::string &source, int width, bool personality, bool health, bool thoughts,
+        bool overview_footer) const {
     // Documents share the native UI size with buttons, labels and popups.
     // Grow the line box around the ink; never resize the font to fit a page.
     const int nominal_font_pixels = unified_font_pixels();
@@ -19365,6 +19376,7 @@ const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
         native_knowledge_layouts_.end(), [&](const NativeKnowledgeLayout &layout) {
             return layout.width == width && layout.personality == personality &&
                 layout.health == health && layout.thoughts == thoughts &&
+                layout.overview_footer == overview_footer &&
                 layout.tile_x == gps_->tile_pixel_x && layout.tile_y == gps_->tile_pixel_y &&
                 layout.padding == config_.horizontal_padding &&
                 layout.nominal_font_pixels == nominal_font_pixels && layout.source == source;
@@ -19381,6 +19393,7 @@ const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
         next.personality = personality;
         next.health = health;
         next.thoughts = thoughts;
+        next.overview_footer = overview_footer;
         next.tile_x = gps_->tile_pixel_x;
         next.tile_y = gps_->tile_pixel_y;
         next.padding = config_.horizontal_padding;
@@ -19727,7 +19740,7 @@ const NativeKnowledgeLayout &Overlay::prepare_native_knowledge_layout(
                 if ((static_cast<unsigned char>(target[i]) & 0xc0) != 0x80)
                     foregrounds.push_back((personality || health || thoughts) ? target_foregrounds[target_index][i] : -1);
             }
-            if (!next.lines.empty()) {
+            if (!next.lines.empty() && !overview_footer) {
                 next.lines.emplace_back();
                 next.line_foregrounds.emplace_back();
             }
@@ -19993,11 +20006,10 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
         gps_->tile_pixel_x, gps_->tile_pixel_y, gps_->screen_pixel_x,
         gps_->screen_pixel_y, gps_->top_in_use ? 1 : 0}};
     const auto &frame = native_knowledge_frame_;
-    // A new native redraw replaces its capture batch row by row. Its prefix
-    // must not shrink the viewport and change the scrollbar-to-Chinese line
-    // mapping. Keep the proven extent for the same document and geometry;
-    // the complete source window is validated below before it can be used.
-    if (frame.document == draws.front().document && frame.left == left &&
+    // A scrolling redraw must keep its proven extent while rows arrive.
+    // Overview instead owns exactly this complete drawn-box prefix; a prior
+    // frame's longer footer must not extend the current source allocation.
+    if (!document.overview_footer && frame.document == draws.front().document && frame.left == left &&
         frame.top == top && frame.geometry == geometry) {
         height = std::max(height, frame.height);
     }
@@ -20011,11 +20023,10 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
         if (draw.document != draws.front().document || draw.x != left ||
             draw.y != top + i || draw.line != first_native_line + i) return result;
     }
-    // A fresh capture belongs to the actual base writer. Top artwork or old
-    // top glyphs can cover it without changing which document was written.
-    // Retained captures still use the composed visibility gate below, so a
-    // page closed without another document draw cannot survive underneath it.
-    const bool current_base_draw = current_draw && gps_->screen &&
+    // A fresh capture belongs to the actual base writer. Overview also
+    // proves retained rows against the current base after buffer rotation.
+    // Top artwork does not change which source document was written.
+    const bool current_base_draw = (current_draw || document.overview_footer) && gps_->screen &&
         std::all_of(draws.begin(), draws.end(), [&](const NativeKnowledgeDraw &draw) {
             return native_knowledge_draw_owns_base(draw, *gps_);
         });
@@ -20131,8 +20142,26 @@ std::vector<Match> Overlay::resolve_native_knowledge_matches(
     }
     if (!current_draw && !retained_frame && !paused_document && visible_bytes < 12)
         return result;
+    std::string overview_source;
+    const std::string *layout_source = &document.source;
+    if (document.overview_footer) {
+        // Overview draws only complete boxes that fit below its quote. The
+        // source vector also contains boxes that DF did not draw this time.
+        // Select a complete source prefix by its original box boundaries;
+        // a partly arriving box never becomes a truncated grammar input.
+        if (first_native_line != 0) return result;
+        size_t source_end = 0;
+        for (const auto &boundary : document.box_boundaries) {
+            if (boundary.native_row_end == static_cast<size_t>(captured_height))
+                source_end = boundary.source_end;
+        }
+        if (!source_end || source_end > document.source.size()) return result;
+        overview_source = document.source.substr(0, source_end);
+        layout_source = &overview_source;
+    }
     const auto &layout = prepare_native_knowledge_layout(
-        document.source, width, document.personality, document.health, document.thoughts);
+        *layout_source, width, document.personality, document.health, document.thoughts,
+        document.overview_footer);
     if (layout.lines.empty()) return result;
 
     int display_height = height;
@@ -21383,6 +21412,31 @@ std::vector<Match> Overlay::find_matches(int only_y,
             compose_native_text_rows(field, result, only_y, kWorkshopMaterialFieldRule, false, true);
         for (const auto &row : trade_request_rows)
             compose_native_text_rows(row, result, only_y, kFortressTradeRequestRowRule, false, true);
+        // A generic quoted-message probe can reserve Overview's native
+        // source before its complete footer owner resolves it. Retire that
+        // earlier reservation only when successful paragraph owners prove
+        // every ink byte at the same physical coordinates. Layout capacity
+        // and overlapping viewports alone never replace unknown help text.
+        std::erase_if(untranslated_help_rows, [&](const Match &claim) {
+            if (claim.length <= 0 || claim.source.size() != static_cast<size_t>(claim.length))
+                return false;
+            bool ink = false;
+            for (size_t at = 0; at < claim.source.size(); ++at) {
+                if (claim.source[at] == ' ') continue;
+                ink = true;
+                const int x = claim.x + static_cast<int>(at);
+                const bool covered = std::any_of(result.begin(), result.end(), [&](const Match &owned) {
+                    if (owned.native_help_source_only || owned.y != claim.y || owned.length <= 0 ||
+                            (owned.rule != kCharacterOverviewQuoteRule &&
+                             owned.rule != kNativeKnowledgeDocumentRule) ||
+                            x < owned.x || x - owned.x >= owned.length) return false;
+                    const size_t offset = static_cast<size_t>(x - owned.x);
+                    return offset < owned.source.size() && owned.source[offset] == claim.source[at];
+                });
+                if (!covered) return false;
+            }
+            return ink;
+        });
         // A missed help production is still one native paragraph. Prevent
         // later raw-layer recoveries or generic words from translating just
         // its easy fragments, while keeping all its original glyphs visible.
@@ -28881,7 +28935,7 @@ void Overlay::refresh_character_overview_context(bool force) {
         // Native buffer rotation keeps the same document. Its current-cell
         // proof above, source and sheet identity define translation context.
         for (int value : {draw->dimx, draw->dimy, draw->left, draw->right,
-                draw->top, draw->bottom}) number(static_cast<uint32_t>(value));
+                draw->top, draw->bottom, draw->thoughts_bottom}) number(static_cast<uint32_t>(value));
         const auto text = [&](std::string_view value) {
             number(value.size());
             for (unsigned char ch : value) number(ch);

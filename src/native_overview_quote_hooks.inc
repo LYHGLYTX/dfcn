@@ -62,6 +62,10 @@ static void capture_native_overview_quote_row(graphicst *graphics,
             if (graphics->clipx[0] > writer_x || graphics->clipy[0] > top) return;
             right = static_cast<int>(std::min<int64_t>(right,
                 std::min<int64_t>(graphics->dimx, int64_t(graphics->clipx[1]) + 1)));
+            // Quote stops at y < limit; reading boxes below it are accepted
+            // through last_y <= limit. Keep their distinct exclusive edges.
+            const int thoughts_bottom = static_cast<int>(std::min<int64_t>(int64_t(bottom) + 1,
+                std::min<int64_t>(graphics->dimy, int64_t(graphics->clipy[1]) + 1)));
             bottom = static_cast<int>(std::min<int64_t>(bottom,
                 std::min<int64_t>(graphics->dimy, int64_t(graphics->clipy[1]) + 1)));
             if (right <= writer_x || bottom <= top || graphics->screeny < top ||
@@ -79,6 +83,7 @@ static void capture_native_overview_quote_row(graphicst *graphics,
             captured.right = right;
             captured.top = top;
             captured.bottom = bottom;
+            captured.thoughts_bottom = thoughts_bottom;
             if (!native_history_copy_string(object + 0x1cc0, captured.source) ||
                     captured.source.empty()) return;
             captured.wrapped_lines.reserve(rows.size());
@@ -121,7 +126,9 @@ static void capture_native_overview_quote_row(graphicst *graphics,
                     previous->dimx != pending->dimx ||
                     previous->dimy != pending->dimy || previous->left != pending->left ||
                     previous->right != pending->right || previous->top != pending->top ||
-                    previous->bottom != pending->bottom || previous->source != pending->source ||
+                    previous->bottom != pending->bottom ||
+                    previous->thoughts_bottom != pending->thoughts_bottom ||
+                    previous->source != pending->source ||
                     previous->wrapped_lines != pending->wrapped_lines;
                 // Keep the latest writer address as draw metadata, but a
                 // normal native buffer rotation is not a new source owner.

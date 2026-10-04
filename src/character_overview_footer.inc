@@ -1,7 +1,7 @@
 // Footer layout and immediate suppression must agree on whether the complete
 // native quote currently owns these cells, including every visible wrap row.
 std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote() const {
-    if (!gps_) return std::nullopt;
+    if (!gps_ || !gps_->screen) return std::nullopt;
     std::optional<NativeOverviewQuoteDraw> draw;
     {
         std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
@@ -15,6 +15,7 @@ std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote
             draw->dimy == gps_->dimy && draw->left >= 0 &&
             draw->right > draw->left && draw->right <= gps_->dimx &&
             draw->top >= 0 && draw->bottom > draw->top && draw->bottom <= gps_->dimy &&
+            draw->thoughts_bottom >= draw->bottom && draw->thoughts_bottom <= gps_->dimy &&
             !draw->wrapped_lines.empty();
         bool ink = false;
         // Cached native grids can outlive the draw epoch. Prove their actual
@@ -29,14 +30,12 @@ std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote
                 // Spaces contribute no visible glyph to this source proof.
                 // Prove every ink byte, as with the rich reading rows.
                 if (text[i] == ' ') continue;
-                bool top = false;
                 const int x = draw->left + static_cast<int>(i);
                 const int y = draw->top + static_cast<int>(line);
                 const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
                 // This addst loop writes the base grid. Its current write
                 // must not be rejected by unrelated/stale top artwork.
-                const auto *cell = draw->grid == gps_->screen
-                    ? gps_->screen + tile * 8 : cell_at(x, y, &top);
+                const auto *cell = gps_->screen + tile * 8;
                 if (!cell || cell[0] != static_cast<unsigned char>(text[i])) {
                     current = false;
                     break;
@@ -58,8 +57,8 @@ std::optional<int> Overlay::character_overview_display_bottom(
     int bottom = -1;
     if (const auto quote = current_character_overview_quote()) {
         if (left == quote->left && left + width <= quote->right &&
-            top >= quote->top && top + source_height <= quote->bottom)
-            bottom = quote->bottom;
+            top >= quote->top && top + source_height <= quote->thoughts_bottom)
+            bottom = quote->thoughts_bottom;
     }
     if (bottom < 0) {
         const auto read_char = [&](int x, int y) -> unsigned char {
@@ -80,7 +79,7 @@ std::optional<int> Overlay::character_overview_display_bottom(
             if (!frame) frame = find_graphical_character_panel_frame(*gps_, first, last, tabs_y);
             if (!frame) frame = find_character_overview_frame(*gps_, first, last, tabs_y, read_char);
             if (!frame || left != frame->left + 1 || left + width > frame->right ||
-                top + source_height > frame->bottom - 1) continue;
+                top + source_height > frame->bottom) continue;
             int content_top = tabs_y + 1;
             for (const auto &tab : tabs) {
                 bool top_layer = false;
@@ -96,10 +95,10 @@ std::optional<int> Overlay::character_overview_display_bottom(
                 for (int x = frame->left + 1; complete && x < frame->right; ++x)
                     if (x != divider && !native_ui_skin_at(*gps_, x, y,
                             native_texture_interior_border_w_e(*gps_), classic)) complete = false;
-                // The native prose limit excludes B-1 as well as the outer
-                // bottom border. Arena's lower action/widget stops the blank
-                // budget below; a captured quote carries its stricter B-4.
-                if (complete) bottom = frame->bottom - 1;
+                // Native reading boxes may end at B-1. Arena's lower
+                // action/widget stops blank growth; a captured native footer
+                // carries its stricter reading-box edge directly.
+                if (complete) bottom = frame->bottom;
             }
         }
     }
@@ -138,12 +137,12 @@ void Overlay::append_character_overview_footer(
     std::vector<std::string> draw_rows;
     if (draw) {
         draw_rows = input_rows;
-        for (int y = draw->top; y < draw->bottom; ++y) {
+        for (int y = draw->top; y < draw->thoughts_bottom; ++y) {
             for (int x = draw->left; x < draw->right; ++x) {
-                bool top = false;
                 const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
-                const auto *cell = draw->grid == gps_->screen
-                    ? gps_->screen + tile * 8 : cell_at(x, y, &top);
+                // The native quote writer always owns base cells, including
+                // copied page views whose buffer has a different address.
+                const auto *cell = gps_->screen + tile * 8;
                 draw_rows[y][x] = cell && cell[0] ? static_cast<char>(cell[0]) : ' ';
             }
         }
@@ -169,7 +168,7 @@ void Overlay::append_character_overview_footer(
         first_tab, last_tab_end, content_top);
     std::optional<AsciiPanelFrame> frame;
     if (draw) frame = AsciiPanelFrame{
-        draw->left - 1, draw->top - 1, draw->right, draw->bottom};
+        draw->left - 1, draw->top - 1, draw->right, draw->thoughts_bottom};
     if (grid && grid->left > 0 && grid->right < gps_->dimx) {
         // The overview's four summary bands establish the footer's width.
         // Header side tabs can interrupt the upper outer frame, and summary
@@ -270,8 +269,8 @@ void Overlay::append_character_overview_footer(
     auto rgb_at = [&](int x, int y) {
         bool top = false;
         const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
-        const auto *cell = draw && draw->grid == gps_->screen &&
-                x >= draw->left && x < draw->right && y >= draw->top && y < draw->bottom
+        const auto *cell = draw &&
+                x >= draw->left && x < draw->right && y >= draw->top && y < draw->thoughts_bottom
             ? gps_->screen + tile * 8 : cell_at(x, y, &top);
         return cell ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : -1;
     };
@@ -393,7 +392,10 @@ void Overlay::append_character_overview_footer(
         }
     };
 
-    for (int y = std::max({tabs_y + 1, age_y + 1, footer_top}); y < frame->bottom; ++y) {
+    // A proven native quote owns its start independently of tab bytes in
+    // other layers. Only the screen-derived fallback needs those landmarks.
+    const int prose_top = draw ? draw->top : std::max({tabs_y + 1, age_y + 1, footer_top});
+    for (int y = prose_top; y < frame->bottom; ++y) {
         const auto [opening, first_end] = bounds(y, frame->left + 1);
         if (opening >= first_end) continue;
         const auto first = std::string_view(native_rows[static_cast<size_t>(y)]).substr(
@@ -410,7 +412,7 @@ void Overlay::append_character_overview_footer(
             // native line is clipped. Its original string, rather than a
             // reconstructed prefix, selects every quote grammar branch.
             for (size_t line = 0; line < draw->wrapped_lines.size() &&
-                    int64_t(y) + int64_t(line) < frame->bottom; ++line) {
+                    int64_t(y) + int64_t(line) < draw->bottom; ++line) {
                 const int row_y = y + static_cast<int>(line);
                 const int end = opening + static_cast<int>(std::min(
                     draw->wrapped_lines[line].size(),

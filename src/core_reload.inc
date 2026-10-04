@@ -379,14 +379,22 @@ static bool save_reload_captures(DfcnStateSink sink, void *context) {
             out.number(owner);
             out.string(document.source);
             out.number(document.width);
-            // Reuse the existing kind slot: 0/1 snapshots from older cores
-            // remain readable; 2 denotes a complete Thoughts document.
-            out.number(document.thoughts ? 2 : document.personality ? 1 : 0);
+            // Kind 3 retains Thoughts' bounded/scroll mode and complete-box
+            // boundaries. The reader still accepts older kinds 0/1/2.
+            out.number(document.thoughts ? 3 : document.personality ? 1 : 0);
             out.number(document.health);
             out.number(document.foreground);
             out.strings(document.rows);
             out.number(document.row_addresses.size());
             for (uintptr_t address : document.row_addresses) out.number(address);
+            if (document.thoughts) {
+                out.number(document.overview_footer);
+                out.number(document.box_boundaries.size());
+                for (const auto &boundary : document.box_boundaries) {
+                    out.number(boundary.source_end);
+                    out.number(boundary.native_row_end);
+                }
+            }
         }
         // Aggregate personality documents can own rows also present in their
         // component boxes. Preserve the exact registry rather than guessing
@@ -459,9 +467,9 @@ static bool restore_reload_captures(const void *data, size_t size) {
             auto document = std::make_shared<NativeKnowledgeDocument>();
             document->source = in.string();
             document->width = static_cast<int>(in.count(768));
-            const auto kind = in.count(2);
+            const auto kind = in.count(3);
             document->personality = kind == 1;
-            document->thoughts = kind == 2;
+            document->thoughts = kind >= 2;
             document->health = in.count(1) != 0;
             document->foreground = static_cast<unsigned char>(in.count(255));
             document->rows = in.strings();
@@ -469,6 +477,25 @@ static bool restore_reload_captures(const void *data, size_t size) {
             if (count != document->rows.size()) return false;
             for (size_t row = 0; row < count; ++row)
                 document->row_addresses.push_back(in.number());
+            if (kind == 3) {
+                document->overview_footer = in.count(1) != 0;
+                const size_t box_count = in.count(16384);
+                document->box_boundaries.reserve(box_count);
+                size_t source_end = 0, native_row_end = 0;
+                for (size_t box = 0; box < box_count; ++box) {
+                    NativeKnowledgeBoxBoundary boundary;
+                    boundary.source_end = in.count(document->source.size());
+                    boundary.native_row_end = in.count(document->rows.size());
+                    if (boundary.source_end <= source_end ||
+                            boundary.native_row_end < native_row_end) return false;
+                    source_end = boundary.source_end;
+                    native_row_end = boundary.native_row_end;
+                    document->box_boundaries.push_back(boundary);
+                }
+                if ((!box_count && document->overview_footer) ||
+                        (box_count && (source_end != document->source.size() ||
+                            native_row_end != document->rows.size()))) return false;
+            }
             if (!documents.emplace(owner, std::move(document)).second) return false;
             order.push_back(owner);
         }

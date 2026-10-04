@@ -388,6 +388,7 @@ static void capture_native_character_document(
         page->source.reserve(total_source_bytes);
         page->rows.reserve(total_rows);
         page->row_addresses.reserve(total_rows);
+        page->box_boundaries.reserve(count);
         for (size_t i = 0; i < count; ++i) {
             const auto &part = *parts[i];
             if (i == 0) page->foreground = part.foreground;
@@ -398,6 +399,7 @@ static void capture_native_character_document(
             page->rows.insert(page->rows.end(), part.rows.begin(), part.rows.end());
             page->row_addresses.insert(page->row_addresses.end(),
                 part.row_addresses.begin(), part.row_addresses.end());
+            page->box_boundaries.push_back({page->source.size(), page->rows.size()});
             last_box = boxes[i];
             last_document = parts[i];
         }
@@ -421,6 +423,7 @@ static void capture_native_character_document(
             page->row_addresses.insert(page->row_addresses.end(),
                 extended->row_addresses.begin() + static_cast<std::ptrdiff_t>(before),
                 extended->row_addresses.end());
+            page->box_boundaries.back().native_row_end = page->rows.size();
             if (!thoughts) remember_native_knowledge_document(
                 reinterpret_cast<uintptr_t>(last_box), std::move(extended));
         }
