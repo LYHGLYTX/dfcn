@@ -265,11 +265,26 @@ void Overlay::append_native_message_paragraphs(std::vector<std::string> &screen_
                 std::vector<Match> output;
                 const bool fitted = target && append_bounded_paragraph(rows, *target,
                     layout_rows, output, -1, right, right, target_colors, false, first->x) &&
-                    std::none_of(output.begin(), output.end(), [&](const Match &row) {
-                        return !row.target.empty() && row.layout_y * tile_h + row.layout_pixel_y +
-                            row.layout_line_height_pixels > (y + 1) * tile_h;
-                    });
+                    output.size() <= rows.size();
                 if (fitted) {
+                    // The compact log allocates native rows to each record,
+                    // not the paragraph fitter's enlarged font-reference box.
+                    // Keep its row spacing and the shared font size: otherwise
+                    // every one-row report falls back to English at font_scale
+                    // 1.1 while a two-row cancellation happens to survive.
+                    // Clip at the actual list viewport, allowing the complete
+                    // glyph ink around each baseline instead of cropping it
+                    // to an artificial one-record font box.
+                    const SDL_Rect viewport{origin_x + first->x * tile_w,
+                        origin_y + body_top * tile_h, (right - first->x) * tile_w,
+                        (bottom - body_top) * tile_h};
+                    for (size_t line = 0; line < output.size(); ++line) {
+                        auto &row = output[line];
+                        row.layout_y = first->y + static_cast<int>(line);
+                        row.layout_pixel_y = 0;
+                        row.layout_line_height_pixels = tile_h;
+                        row.layout_native_clip = viewport;
+                    }
                     for (auto &row : output)
                         if (only_y < 0 || only_y == row.y) result.push_back(std::move(row));
                 } else {
