@@ -1646,6 +1646,19 @@ struct NativeParagraphCapture {
     // Candidate indices must retain the original reverse-list traversal.
     uint64_t registry_order = 0;
 };
+// Overview has its own addst row loop, separate from multiline widgets.
+// Its draw call binds the cached wrap output to the sheet's complete quote;
+// reading that owner also works when the page does not wrap again.
+struct NativeOverviewQuoteDraw {
+    uintptr_t owner = 0;
+    const unsigned char *grid = nullptr;
+    int dimx = 0, dimy = 0;
+    int left = 0, right = 0, top = 0, bottom = 0;
+    std::string source;
+    std::vector<std::string> wrapped_lines;
+};
+static std::mutex g_native_overview_quote_mutex;
+static std::optional<NativeOverviewQuoteDraw> g_native_overview_quote_draw;
 static std::vector<NativeParagraphCapture> captured_native_workshop_requirements();
 static int native_workshop_recipe_paragraph_width();
 

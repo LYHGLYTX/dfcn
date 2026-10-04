@@ -2,14 +2,60 @@
 // Keep native source ownership separate from Chinese placement, and use the
 // shared measured paragraph fitter rather than English-width centering.
 void Overlay::append_character_overview_footer(
-        const std::vector<std::string> &native_rows,
+        const std::vector<std::string> &input_rows,
         std::vector<std::string> &screen_rows, std::vector<Match> &matches,
         int tabs_y, int only_y, bool source_scan) const {
-    if (tabs_y < 0) return;
-    const std::string &tabs = native_rows[static_cast<size_t>(tabs_y)];
+    std::optional<NativeOverviewQuoteDraw> draw;
+    {
+        std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
+        draw = g_native_overview_quote_draw;
+    }
+    if (draw) {
+        bool current = draw->grid == gps_->screen && draw->dimx == gps_->dimx &&
+            draw->dimy == gps_->dimy && draw->left >= 0 &&
+            draw->right > draw->left && draw->right <= gps_->dimx &&
+            draw->top >= 0 && draw->bottom > draw->top && draw->bottom <= gps_->dimy &&
+            !draw->wrapped_lines.empty();
+        bool ink = false;
+        // Cached native grids can outlive the draw epoch. Prove their actual
+        // current cells against the owned wrap rows, without consulting the
+        // previous graphical composition's occlusion or mutated match rows.
+        for (size_t line = 0; current && line < draw->wrapped_lines.size() &&
+                int64_t(draw->top) + int64_t(line) < draw->bottom; ++line) {
+            const auto &text = draw->wrapped_lines[line];
+            const size_t count = std::min(text.size(),
+                static_cast<size_t>(draw->right - draw->left));
+            for (size_t i = 0; i < count; ++i) {
+                bool top = false;
+                const auto *cell = cell_at(draw->left + static_cast<int>(i),
+                    draw->top + static_cast<int>(line), &top);
+                if (!cell || cell[0] != static_cast<unsigned char>(text[i])) {
+                    current = false;
+                    break;
+                }
+                ink |= text[i] != ' ';
+            }
+        }
+        if (!current || !ink) draw.reset();
+    }
+    std::vector<std::string> draw_rows;
+    if (draw) {
+        draw_rows = input_rows;
+        for (int y = draw->top; y < draw->bottom; ++y) {
+            for (int x = draw->left; x < draw->right; ++x) {
+                bool top = false;
+                const auto *cell = cell_at(x, y, &top);
+                draw_rows[y][x] = cell && cell[0] ? static_cast<char>(cell[0]) : ' ';
+            }
+        }
+    }
+    const auto &native_rows = draw ? draw_rows : input_rows;
+    if (tabs_y < 0 && !draw) return;
+    const std::string tabs = tabs_y < 0 ? std::string{} : native_rows[static_cast<size_t>(tabs_y)];
     const auto tab_fields = character_information_tab_fields(tabs);
-    if (tab_fields.empty()) return;
-    const int first_tab = tab_fields.front().start, last_tab_end = tab_fields.back().end;
+    if (tab_fields.empty() && !draw) return;
+    const int first_tab = tab_fields.empty() ? draw->left : tab_fields.front().start;
+    const int last_tab_end = tab_fields.empty() ? draw->right : tab_fields.back().end;
     int content_top = tabs_y + 1;
     for (const auto &field : tab_fields) {
         bool top = false;
@@ -19,9 +65,12 @@ void Overlay::append_character_overview_footer(
         if (flags && (flags[tile] & (1u << 3)))
             content_top = std::max(content_top, tabs_y + 2);
     }
-    const auto grid = find_character_summary_grid(*gps_,
+    const auto grid = draw ? decltype(find_character_summary_grid(*gps_,
+        first_tab, last_tab_end, content_top)){} : find_character_summary_grid(*gps_,
         first_tab, last_tab_end, content_top);
     std::optional<AsciiPanelFrame> frame;
+    if (draw) frame = AsciiPanelFrame{
+        draw->left - 1, draw->top - 1, draw->right, draw->bottom};
     if (grid && grid->left > 0 && grid->right < gps_->dimx) {
         // The overview's four summary bands establish the footer's width.
         // Header side tabs can interrupt the upper outer frame, and summary
@@ -69,11 +118,11 @@ void Overlay::append_character_overview_footer(
     // have only a third-person memory, so a leading quote cannot be the sole
     // signal that this is footer prose. Share the grid reader with summary
     // placement, and never claim prose from another character subtab.
-    int footer_top = -1;
+    int footer_top = draw ? draw->top : -1;
     if (grid && grid->left == frame->left + 1 && grid->right == frame->right &&
         grid->bottom < frame->bottom) {
         footer_top = grid->bottom + 1;
-    } else {
+    } else if (!draw) {
         for (int y = content_top; y < frame->bottom; ++y) {
             int junctions = 0;
             bool horizontal = true;
@@ -87,7 +136,7 @@ void Overlay::append_character_overview_footer(
     }
 
     int age_y = -1;
-    for (int y = tabs_y + 1; y < frame->bottom; ++y) {
+    for (int y = tabs_y + 1; !draw && y < frame->bottom; ++y) {
         const std::string row = lower(normalize_utterance(std::string_view(
             native_rows[static_cast<size_t>(y)]).substr(
                 frame->left + 1, frame->right - frame->left - 1)));
@@ -227,7 +276,23 @@ void Overlay::append_character_overview_footer(
         if (!has_quote && !memory_only) continue;
         Paragraph quote;
         bool closed = false;
-        for (int row_y = y; has_quote && row_y < frame->bottom; ++row_y) {
+        if (draw && y == draw->top && has_quote) {
+            // The renderer owns the complete sentence even when its final
+            // native line is clipped. Its original string, rather than a
+            // reconstructed prefix, selects every quote grammar branch.
+            for (size_t line = 0; line < draw->wrapped_lines.size() &&
+                    int64_t(y) + int64_t(line) < frame->bottom; ++line) {
+                const int row_y = y + static_cast<int>(line);
+                const int end = opening + static_cast<int>(std::min(
+                    draw->wrapped_lines[line].size(),
+                    static_cast<size_t>(frame->right - opening)));
+                if (end > opening) add_row(quote, opening, row_y, end);
+            }
+            quote.source = draw->source;
+            quote.colors.assign(quote.source.size(), rgb_at(opening, y));
+            closed = true;
+        }
+        for (int row_y = y; !draw && has_quote && row_y < frame->bottom; ++row_y) {
             const auto [begin, row_end] = bounds(row_y, frame->left + 1);
             if (begin >= row_end) break;
             int end = begin;

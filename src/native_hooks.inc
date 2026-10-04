@@ -63,6 +63,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #endif
 #include "native_caption_hooks.inc"
 #include "native_character_relations.inc"
+#include "native_overview_quote_hooks.inc"
 #include "native_paragraph_hooks.inc"
 #include "native_trade_paragraph_hooks.inc"
 #include "native_workshop_recipe_hooks.inc"
@@ -117,6 +118,7 @@ static bool install_sdl_hooks() {
 #endif
         {"Complete caption capture", install_native_caption_hooks},
         {"Character kinship captions", install_native_character_relations_hook},
+        {"Native overview quote draw", install_native_overview_quote_hooks},
         {"Complete paragraph capture", install_native_paragraph_hook},
         {"Complete trade reply capture", install_native_trade_paragraph_hooks},
         {"Complete workshop requirement capture", install_native_workshop_recipe_hooks},
@@ -166,6 +168,7 @@ static void uninstall_sdl_hooks() {
     uninstall_native_workshop_recipe_hooks();
     uninstall_native_trade_paragraph_hooks();
     uninstall_native_paragraph_hook();
+    uninstall_native_overview_quote_hooks();
     uninstall_native_character_relations_hook();
     uninstall_native_caption_hooks();
 #ifdef _WIN32
@@ -216,6 +219,7 @@ static bool native_hooks_detached() {
         !native_workshop_recipe_hooks_active() &&
         !native_caption_hooks_active() && !native_conversation_search_hook_active() &&
         !native_character_relations_hook_active() &&
+        !native_overview_quote_hooks_active() &&
         !native_journal_search_hook_active() &&
 #ifdef _WIN32
         !native_item_picker_search_hook_active() &&
