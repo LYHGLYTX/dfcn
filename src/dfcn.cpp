@@ -7229,11 +7229,12 @@ unsigned char Overlay::visible_char_at(int x, int y) const {
     // an SDL texture (the resolution menu does exactly this). If
     // the later graphical copy wins the cell, the hidden glyph must not be
     // returned merely because screen_top still contains its byte.
-    if (!NativeUiReadScope::base_at(gps_, tile) && tile < cell_composite_state_.size() &&
+    if (tile < cell_composite_state_.size() &&
         tile < cell_composite_epoch_.size() &&
         graphically_occluded(cell_composite_state_[tile],
                              cell_composite_epoch_[tile],
-                             composite_read_epoch_)) {
+                             composite_read_epoch_) &&
+        !NativeUiReadScope::base_at(gps_, tile)) {
         return 0;
     }
     // Opaque graphical copies above remain authoritative: their transparent

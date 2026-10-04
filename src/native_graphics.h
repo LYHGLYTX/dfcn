@@ -33,8 +33,8 @@ private:
 // cell. Share this decision between source capture, colors and widget borders.
 template <typename Graphics>
 bool native_ui_top_layer_at(const Graphics &gps, std::size_t at) {
-    if (NativeUiReadScope::base_at(&gps, at)) return false;
     if (!gps.top_in_use) return false;
+    if (NativeUiReadScope::base_at(&gps, at)) return false;
     if ((gps.screentexpos_top && gps.screentexpos_top[at]) ||
         (gps.screentexpos_top_lower && gps.screentexpos_top_lower[at]) ||
         (gps.screentexpos_top_anchored && gps.screentexpos_top_anchored[at])) return true;
