@@ -11327,6 +11327,24 @@ std::optional<std::string> Overlay::translate_ui_message_capture(
                 if (translation_complete_with_native_nicknames(identity, identity_source))
                     return *identity + status;
             }
+            // The native unit formatter can select only a profession/office
+            // when the personal name is omitted (PE 0x14132e430). Its `the`
+            // belongs to the unit syntax, just as it does before a caste;
+            // the complete role still owns modifiers, status and territory.
+            // Do not send `The woodcutter` through the final word compositor:
+            // that path cannot account for the article even when the role is
+            // known. Authored identities and named caste forms above retain
+            // precedence, and this remains inside an explicit unit slot.
+            if (definite_identity || unnamed_identity) {
+                std::string_view role_source(label);
+                if (unnamed_identity) {
+                    const size_t article = role_source.find(' ');
+                    if (article != std::string_view::npos)
+                        role_source = trim_view(role_source.substr(article + 1));
+                }
+                const auto role = translate_unit_profession(role_source, false);
+                if (complete(role)) return *role + status;
+            }
             // A conversation list's conjunction cannot become part of the
             // personal-name field after a caste merely because names permit
             // title connectors. Complete species were already handled above.
