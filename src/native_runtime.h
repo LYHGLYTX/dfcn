@@ -57,7 +57,10 @@ inline graphicst *native_graphics() {
     return executable ? reinterpret_cast<graphicst *>(
         native_pe_address(reinterpret_cast<uintptr_t>(executable), gps_rva)) : nullptr;
 #else
-    return reinterpret_cast<graphicst *>(dlsym(RTLD_DEFAULT, "gps"));
+    // gps is a process-lifetime object; keep symbol lookup out of native
+    // caption and DFHack tile callbacks while reading its live buffers.
+    static auto *graphics = reinterpret_cast<graphicst *>(dlsym(RTLD_DEFAULT, "gps"));
+    return graphics;
 #endif
 }
 
@@ -148,7 +151,9 @@ inline const auto *native_ui_settings_source() {
     const auto *settings = executable ? reinterpret_cast<const NativeUiSettingsAbi *>(
         native_pe_address(reinterpret_cast<uintptr_t>(executable), init_rva)) : nullptr;
 #else
-    const auto *settings = static_cast<const initst *>(dlsym(RTLD_DEFAULT, "init"));
+    // The game library and its init object stay loaded for the process
+    // lifetime. Cache only the address; callers still read live settings.
+    static const auto *settings = static_cast<const initst *>(dlsym(RTLD_DEFAULT, "init"));
 #endif
     return settings;
 }
