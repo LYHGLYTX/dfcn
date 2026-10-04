@@ -3,7 +3,9 @@
 // never changes and the native paragraph wrapper is not called again.
 static void clear_native_overview_quote_draw() {
     std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
+    if (!g_native_overview_quote_draw) return;
     g_native_overview_quote_draw.reset();
+    g_native_overview_quote_revision.fetch_add(1, std::memory_order_release);
 }
 
 #ifdef _WIN32
@@ -18,6 +20,7 @@ static void capture_native_overview_quote_row(graphicst *graphics,
         const NativeString *source, const void *sheet, const void *caller_frame) {
     NativeInputCallbackScope callback;
     const auto original = g_native_overview_quote_hook.draw;
+    std::optional<NativeOverviewQuoteDraw> pending;
     try {
         const auto capture = [&] {
             const uintptr_t object = reinterpret_cast<uintptr_t>(sheet);
@@ -94,8 +97,10 @@ static void capture_native_overview_quote_row(graphicst *graphics,
             }
             if (current == SIZE_MAX || int64_t(top) + int64_t(current) != graphics->screeny)
                 return;
-            std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
-            g_native_overview_quote_draw = std::move(captured);
+            const size_t visible_rows = std::min(captured.wrapped_lines.size(),
+                static_cast<size_t>(bottom - top));
+            if (!visible_rows || current != visible_rows - 1) return;
+            pending = std::move(captured);
         };
         capture();
     } catch (...) {
@@ -103,7 +108,29 @@ static void capture_native_overview_quote_row(graphicst *graphics,
     }
     // Keep the actual addst entry and its existing caption capture. This
     // caller originally supplies zero for both justification and width.
-    if (original) callback.call_native([&] { original(graphics, source, 0, 0); });
+    if (original) {
+        callback.call_native([&] { original(graphics, source, 0, 0); });
+        // The source vector was complete before this call, but screen cells
+        // were not. Publish only after the final visible row's actual write.
+        try {
+            if (pending) {
+                std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
+                const auto &previous = g_native_overview_quote_draw;
+                const bool changed = !previous || previous->owner != pending->owner ||
+                    previous->dimx != pending->dimx ||
+                    previous->dimy != pending->dimy || previous->left != pending->left ||
+                    previous->right != pending->right || previous->top != pending->top ||
+                    previous->bottom != pending->bottom || previous->source != pending->source ||
+                    previous->wrapped_lines != pending->wrapped_lines;
+                // Keep the latest writer address as draw metadata, but a
+                // normal native buffer rotation is not a new source owner.
+                g_native_overview_quote_draw = std::move(pending);
+                if (changed) {
+                    g_native_overview_quote_revision.fetch_add(1, std::memory_order_release);
+                }
+            }
+        } catch (...) { /* The native row already completed. */ }
+    }
 }
 
 static bool native_overview_quote_hooks_active() {

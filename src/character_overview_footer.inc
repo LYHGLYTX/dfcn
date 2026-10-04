@@ -1,16 +1,15 @@
-// Overview's optional quote and third-person memory are one bounded footer document.
-// Keep native source ownership separate from Chinese placement, and use the
-// shared measured paragraph fitter rather than English-width centering.
-void Overlay::append_character_overview_footer(
-        const std::vector<std::string> &input_rows,
-        std::vector<std::string> &screen_rows, std::vector<Match> &matches,
-        int tabs_y, int only_y, bool source_scan) const {
+// Footer layout and immediate suppression must agree on whether the complete
+// native quote currently owns these cells, including every visible wrap row.
+std::optional<NativeOverviewQuoteDraw> Overlay::current_character_overview_quote() const {
+    if (!gps_) return std::nullopt;
     std::optional<NativeOverviewQuoteDraw> draw;
     {
         std::lock_guard<std::mutex> lock(g_native_overview_quote_mutex);
         draw = g_native_overview_quote_draw;
     }
     if (draw) {
+        // The native buffer swap precedes UI writing. A completed current
+        // draw must belong to this frame's buffer as well as its visible cells.
         bool current = draw->grid == gps_->screen && draw->dimx == gps_->dimx &&
             draw->dimy == gps_->dimy && draw->left >= 0 &&
             draw->right > draw->left && draw->right <= gps_->dimx &&
@@ -38,6 +37,17 @@ void Overlay::append_character_overview_footer(
         }
         if (!current || !ink) draw.reset();
     }
+    return draw;
+}
+
+// Overview's optional quote and third-person memory are one bounded footer document.
+// Keep native source ownership separate from Chinese placement, and use the
+// shared measured paragraph fitter rather than English-width centering.
+void Overlay::append_character_overview_footer(
+        const std::vector<std::string> &input_rows,
+        std::vector<std::string> &screen_rows, std::vector<Match> &matches,
+        int tabs_y, int only_y, bool source_scan) const {
+    auto draw = current_character_overview_quote();
     std::vector<std::string> draw_rows;
     if (draw) {
         draw_rows = input_rows;

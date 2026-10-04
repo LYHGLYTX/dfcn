@@ -1659,6 +1659,7 @@ struct NativeOverviewQuoteDraw {
 };
 static std::mutex g_native_overview_quote_mutex;
 static std::optional<NativeOverviewQuoteDraw> g_native_overview_quote_draw;
+static std::atomic_uint64_t g_native_overview_quote_revision{1};
 static std::vector<NativeParagraphCapture> captured_native_workshop_requirements();
 static int native_workshop_recipe_paragraph_width();
 
@@ -3321,6 +3322,8 @@ private:
         std::string_view source) const;
     std::optional<std::string> translate_overview_quote(
         std::string_view source, std::vector<size_t> *origins = nullptr) const;
+    std::optional<NativeOverviewQuoteDraw> current_character_overview_quote() const;
+    void refresh_character_overview_context(bool force = false);
     void append_character_overview_footer(
         const std::vector<std::string> &native_rows,
         std::vector<std::string> &screen_rows, std::vector<Match> &matches,
@@ -3536,6 +3539,11 @@ private:
     std::vector<Match> immediate_base_matches_;
     uint64_t immediate_base_matches_epoch_ = 0;
     const unsigned char *immediate_base_matches_screen_ = nullptr;
+    uint64_t character_overview_context_ = 0;
+    uint64_t character_overview_context_epoch_ = 0;
+    uint64_t character_overview_context_revision_ = 0;
+    const unsigned char *character_overview_context_grid_ = nullptr;
+    int character_overview_context_dimx_ = 0, character_overview_context_dimy_ = 0;
     std::vector<DeferredGlyphCopy> deferred_resolution_glyphs_;
     std::vector<NativeBorderGlyph> native_border_glyphs_;
     uint64_t native_border_glyph_epoch_ = 0;
@@ -5373,6 +5381,11 @@ void Overlay::build_trie() {
     immediate_base_matches_.clear();
     immediate_base_matches_epoch_ = 0;
     immediate_base_matches_screen_ = nullptr;
+    character_overview_context_ = 0;
+    character_overview_context_epoch_ = 0;
+    character_overview_context_revision_ = 0;
+    character_overview_context_grid_ = nullptr;
+    character_overview_context_dimx_ = character_overview_context_dimy_ = 0;
     immediate_dimx_ = immediate_dimy_ = 0;
     const auto index_capture_literal = [this](const Rule &rule) {
         capture_translations_.try_emplace(rule.source, rule.target);
@@ -7034,6 +7047,11 @@ void Overlay::reset_render_state() {
     immediate_base_matches_.clear();
     immediate_base_matches_epoch_ = 0;
     immediate_base_matches_screen_ = nullptr;
+    character_overview_context_ = 0;
+    character_overview_context_epoch_ = 0;
+    character_overview_context_revision_ = 0;
+    character_overview_context_grid_ = nullptr;
+    character_overview_context_dimx_ = character_overview_context_dimy_ = 0;
     immediate_dimx_ = immediate_dimy_ = 0;
     deferred_resolution_glyphs_.clear();
     resolution_geometry_scan_epoch_ = 0;
@@ -28815,7 +28833,63 @@ std::vector<Match> Overlay::find_matches(int only_y,
     return finish_matches();
 }
 
+void Overlay::refresh_character_overview_context(bool force) {
+    if (!gps_) return;
+    const auto revision = g_native_overview_quote_revision.load(std::memory_order_acquire);
+    if (!force && character_overview_context_epoch_ == draw_epoch_ &&
+            character_overview_context_revision_ == revision &&
+            character_overview_context_grid_ == gps_->screen &&
+            character_overview_context_dimx_ == gps_->dimx &&
+            character_overview_context_dimy_ == gps_->dimy) return;
+    character_overview_context_epoch_ = draw_epoch_;
+    character_overview_context_revision_ = revision;
+    character_overview_context_grid_ = gps_->screen;
+    character_overview_context_dimx_ = gps_->dimx;
+    character_overview_context_dimy_ = gps_->dimy;
+
+    uint64_t context = 0;
+    if (const auto draw = current_character_overview_quote()) {
+        context = 1469598103934665603ULL;
+        const auto number = [&](uint64_t value) {
+            context ^= value;
+            context *= 1099511628211ULL;
+        };
+        number(draw->owner);
+        // Native buffer rotation keeps the same document. Its current-cell
+        // proof above, source and sheet identity define translation context.
+        for (int value : {draw->dimx, draw->dimy, draw->left, draw->right,
+                draw->top, draw->bottom}) number(static_cast<uint32_t>(value));
+        const auto text = [&](std::string_view value) {
+            number(value.size());
+            for (unsigned char ch : value) number(ch);
+        };
+        text(draw->source);
+        number(draw->wrapped_lines.size());
+        for (const auto &line : draw->wrapped_lines) text(line);
+        if (!context) context = 1;
+    }
+    if (context == character_overview_context_) return;
+    character_overview_context_ = context;
+    // Identical source cells can gain or lose complete quote ownership when
+    // a sheet closes, opens or finishes its native draw. Invalidate both
+    // layers BEFORE their same-epoch and unchanged-row fast returns.
+    std::fill(immediate_base_row_epoch_.begin(), immediate_base_row_epoch_.end(), 0);
+    std::fill(immediate_top_row_epoch_.begin(), immediate_top_row_epoch_.end(), 0);
+    std::fill(immediate_base_row_hash_.begin(), immediate_base_row_hash_.end(), 0);
+    std::fill(immediate_top_row_hash_.begin(), immediate_top_row_hash_.end(), 0);
+    immediate_base_full_scan_epoch_ = immediate_top_full_scan_epoch_ = 0;
+    immediate_base_matches_epoch_ = 0;
+    frame_prepared_ = false;
+    // DF reuses native cell textures on partial redraws. A newly owned
+    // document needs fresh glyph copies after an earlier empty mask, just
+    // as the existing translation switch does. This is a normal redraw
+    // request; it neither changes the translation setting nor the window.
+    if (config_.enabled) gps_->force_full_display_count =
+        std::max<decltype(gps_->force_full_display_count)>(gps_->force_full_display_count, 2);
+}
+
 const std::vector<Match> &Overlay::prepare_immediate_base_matches() {
+    refresh_character_overview_context();
     if (immediate_base_matches_epoch_ != draw_epoch_ ||
         immediate_base_matches_screen_ != gps_->screen) {
         immediate_base_matches_ = find_matches(-1, gps_->screen);
@@ -28833,6 +28907,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
     }
     const unsigned char *raw = top_layer ? gps_->screen_top : gps_->screen;
     if (!raw || (top_layer && !gps_->top_in_use)) return false;
+    refresh_character_overview_context();
     const size_t cells = static_cast<size_t>(gps_->dimx) * gps_->dimy;
     if (immediate_dimx_ != gps_->dimx || immediate_dimy_ != gps_->dimy ||
         immediate_suppress_base_.size() != cells || immediate_suppress_top_.size() != cells) {
@@ -28882,6 +28957,10 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
     });
     const auto row_hash = [&](int hash_y) {
         uint64_t hash = 1469598103934665603ULL;
+        // Footer matching depends on the whole captured quote, beyond the
+        // nearby rows below. Keep that same proven owner/readiness in the key.
+        hash ^= character_overview_context_;
+        hash *= 1099511628211ULL;
         // Page ownership can change while a distant name row stays identical.
         // Include the stable field bounds, not capture epochs or draw addresses.
         for (int value : {mod_list ? mod_list->left : -1,
@@ -29023,6 +29102,7 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                      match.rule == kFortressLaborCaptionRule ||
                      match.rule == kDfhackStocksHintRule || match.rule == kDfhackHotkeysHintRule ||
                      match.rule == kCharacterHeaderRule ||
+                     match.rule == kCharacterOverviewQuoteRule ||
                      match.rule == kCharacterOverviewRowRule ||
                      match.rule == kCharacterGroupRowRule || match.rule == kCharacterKillRowRule ||
                      match.rule == kHealthHistoryRowRule || is_fortress_justice_field(match) ||
@@ -45608,6 +45688,10 @@ void Overlay::render(SDL_Renderer *renderer) {
         g_embark_capture_screen_dimy.store(
             gps_->dimy, std::memory_order_release);
     }
+    // A page can finish publishing its quote after the last early glyph
+    // scan, or close without redrawing a quote row. Observe its current
+    // ownership at Present too, before advancing the native draw epoch.
+    refresh_character_overview_context(true);
     ++frame_count_;
     // All game copies issued since the previous Present used the current
     // draw_epoch_.  Freeze that epoch for final-composite reads before
