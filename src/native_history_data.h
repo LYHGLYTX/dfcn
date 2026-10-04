@@ -15,6 +15,24 @@
 
 namespace dfcn {
 
+enum class NativeModScreenKind : uint8_t { None, Title, NewRegion, NewArena };
+
+struct NativeModHeader {
+    std::string id, name, description, author;
+    std::string displayed_version, earliest_compatible_displayed_version;
+    int32_t numeric_version = -1, earliest_compatible_numeric_version = -1;
+    bool vanilla = false;
+};
+
+// Current mod-screen identity survives an empty hover. Native headers and
+// wrapped prose are copied into owned data before the overlay uses them.
+struct NativeModDetails {
+    NativeModScreenKind kind = NativeModScreenKind::None;
+    std::optional<NativeModHeader> header;
+    std::vector<std::string> description_rows;
+    std::optional<std::array<int32_t, 4>> widget_rect;
+};
+
 // One native type catalogue serves both typed snapshots and the type suffix
 // in name/gloss identities. Labels are vocabulary keys, not translations.
 struct NativeHistoryStructureProfile {

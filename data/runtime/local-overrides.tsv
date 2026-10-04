@@ -10658,3 +10658,34 @@ Mod dependency label: Must be after	需后于：	l
 Mod dependency label: Must be before	需先于：	l
 Mod dependency label: Requires	依赖：	l
 Mod dependency label: Conflicts with	冲突：	l
+
+# Official package DESCRIPTION catalog: Steam data/vanilla/vanilla_*/info.txt
+# and Classic data/vanilla/vanilla_*/info.txt (For save compatibility.).
+# Context keys are resolved only for native vanilla mod records; authored names
+# and third-party descriptions never enter this translation domain.
+Vanilla mod description: These are the default Dwarf Fortress reactions, which are various task-like activities.	这些是《矮人要塞》的默认反应，包括各种类似任务的活动。	l
+Vanilla mod description: These are the default Dwarf Fortress interactions, which allow creatures to do some unusual actions.	这些是《矮人要塞》的默认互动，让生物能够执行一些特殊行为。	l
+Vanilla mod description: These are the default Dwarf Fortress bodies for creatures, including randomly generated creatures and tissue templates.	这些是《矮人要塞》的默认生物身体结构，涵盖随机生成的生物和组织模板。	l
+Vanilla mod description: These are the default Dwarf Fortress words and their translations into the in-game languages.	这些是《矮人要塞》的默认词汇，以及这些词汇在游戏内各语言中的译法。	l
+Vanilla mod description: These are the images of the default Dwarf Fortress creatures.  Some parts, like the dwarf wielded equipment images, rely on the vanilla items or equivalents being present.	这些是《矮人要塞》默认生物的图像。其中一些部分，例如矮人所持装备的图像，需要存在原版物品或等效物品。	l
+Vanilla mod description: The graphics for shapes and colors.  Includes the palette which is linked to the defined colors.	用于形状和颜色的图像，包括与已定义颜色关联的调色板。	l
+Vanilla mod description: The default Dwarf Fortress graphics for walls, floors, fluids, and other environmental objects.	《矮人要塞》中墙壁、地板、流体和其他环境对象的默认图像。	l
+Vanilla mod description: The default Dwarf Fortress graphics for the interface buttons, icons, etc.	《矮人要塞》中界面按钮、图标等元素的默认图像。	l
+Vanilla mod description: The default Dwarf Fortress graphics for the world map.	《矮人要塞》世界地图的默认图像。	l
+Vanilla mod description: These are the triggers for the default Dwarf Fortress music and sound effects.	这些是《矮人要塞》默认音乐和音效的触发规则。	l
+Vanilla mod description: Various text strings used by the game.	游戏使用的各种文本。	l
+Vanilla mod description: The object definitions for shapes and colors.	形状和颜色的对象定义。	l
+Vanilla mod description: These are the default Dwarf Fortress generated objects.	这些是《矮人要塞》默认的程序生成对象。	l
+Vanilla mod description: These are the default Dwarf Fortress civilizations.	这些是《矮人要塞》的默认文明。	l
+Vanilla mod description: These are the default Dwarf Fortress creatures.	这些是《矮人要塞》的默认生物。	l
+Vanilla mod description: These are the default Dwarf Fortress extinct creatures.	这些是《矮人要塞》的默认灭绝生物。	l
+Vanilla mod description: These are the default Dwarf Fortress materials.	这些是《矮人要塞》的默认材料。	l
+Vanilla mod description: These are the default Dwarf Fortress items.	这些是《矮人要塞》的默认物品。	l
+Vanilla mod description: These are the default Dwarf Fortress buildings.	这些是《矮人要塞》的默认建筑。	l
+Vanilla mod description: These are the default Dwarf Fortress plants and fungi.	这些是《矮人要塞》的默认植物和真菌。	l
+Vanilla mod description: These are the images of the default Dwarf Fortress extinct creatures.	这些是《矮人要塞》默认灭绝生物的图像。	l
+Vanilla mod description: These are the images used by the default Dwarf Fortress interactions.	这些是《矮人要塞》默认互动所使用的图像。	l
+Vanilla mod description: These are the graphics for the default Dwarf Fortress items.	这些是《矮人要塞》默认物品的图像。	l
+Vanilla mod description: These are the graphics for the default Dwarf Fortress buildings.	这些是《矮人要塞》默认建筑的图像。	l
+Vanilla mod description: These are the graphics for the default Dwarf Fortress plants and fungi.	这些是《矮人要塞》默认植物和真菌的图像。	l
+Vanilla mod description: For save compatibility.	用于保持存档兼容性。	l

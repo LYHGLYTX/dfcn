@@ -5223,6 +5223,35 @@ struct f_language_word {
     uint32_t f_flags;
     Vector f_str;
 };
+struct f_mod_headerst {
+    std::string f_zip_filename;
+    std::string f_unzipped_folder;
+    std::string f_id;
+    int32_t f_numeric_version;
+    std::string f_displayed_version;
+    int32_t f_earliest_compatible_numeric_version;
+    std::string f_earliest_compatible_displayed_version;
+    std::string f_author;
+    std::string f_name;
+    std::string f_description;
+    Vector f_dependencies;
+    Vector f_dependency_type;
+    Vector f_conflicts;
+    uint32_t f_flags;
+    std::filesystem::path f_src_dir;
+    std::filesystem::path f_absolute_path;
+    uint64_t f_steam_file_id;
+    std::string f_steam_title;
+    std::string f_steam_description;
+    Vector f_steam_tag;
+    Vector f_steam_key_tag;
+    Vector f_steam_value_tag;
+    std::string f_steam_metadata;
+    std::string f_steam_changelog;
+    std::string f_steam_upload_message;
+    bool f_steam_upload_success;
+    uint64_t f_mod_upload_handle;
+};
 struct f_name_creator_interfacest {
     bool f_open;
     int32_t f_context;
@@ -5627,6 +5656,43 @@ struct f_viewscreen_legendsst : f_viewscreen {
 struct f_curses_text_boxst {
     Vector f_text;
 };
+struct f_viewscreen_new_arenast : f_viewscreen {
+    bool f_raw_load;
+    int32_t f_progress;
+    int32_t f_cur_step;
+    int32_t f_scroll_position_arena_profile;
+    bool f_scrolling_arena_profile;
+    bool f_doing_mods;
+    int32_t f_scroll_position_available_mods;
+    bool f_scrolling_available_mods;
+    int32_t f_scroll_position_selected_mods;
+    bool f_scrolling_selected_mods;
+    Vector f_base_available_id;
+    Vector f_base_available_numeric_version;
+    Vector f_base_available_earliest_compat_numeric_version;
+    Vector f_base_available_src_dir;
+    Vector f_base_available_name;
+    Vector f_base_available_displayed_version;
+    Vector f_base_available_mod_header;
+    Vector f_object_load_order_id;
+    Vector f_object_load_order_numeric_version;
+    Vector f_object_load_order_earliest_compat_numeric_version;
+    Vector f_object_load_order_src_dir;
+    Vector f_object_load_order_name;
+    Vector f_object_load_order_displayed_version;
+    Vector f_object_load_order_mod_header;
+    Vector f_available_id;
+    Vector f_available_numeric_version;
+    Vector f_available_earliest_compat_numeric_version;
+    Vector f_available_src_dir;
+    Vector f_available_name;
+    Vector f_available_displayed_version;
+    Vector f_available_mod_header;
+    native_history_layout::f_curses_text_boxst f_hover_mod_description;
+    std::string f_last_hover_mod_id;
+    int32_t f_last_hover_mod_version;
+    int32_t f_last_hover_width;
+};
 struct f_viewscreen_new_regionst : f_viewscreen {
     Vector f_worldgen_presets;
     int8_t f_doing_params;
@@ -5706,6 +5772,67 @@ struct f_viewscreen_new_regionst : f_viewscreen {
     std::string f_last_hover_mod_id;
     int32_t f_last_hover_mod_version;
     int32_t f_last_hover_width;
+};
+struct f_viewscreen_titlest : f_viewscreen {
+    std::array<uint8_t, 768> f_str_histories;
+    std::array<uint8_t, 768> f_str;
+    bool f_clean_first;
+    int16_t f_mode;
+    int32_t f_selected;
+    int32_t f_selected_r;
+    int8_t f_game_start_proceed;
+    Vector f_menu_line_id;
+    Vector f_gametype;
+    Vector f_gametype_str;
+    Vector f_region_choice;
+    int32_t f_scroll_position_region_choice;
+    bool f_scrolling_region_choice;
+    Vector f_savegame_header;
+    Vector f_savegame_header_world;
+    int32_t f_scroll_position_world_choice;
+    bool f_scrolling_world_choice;
+    Vector f_savegame_header_game;
+    int32_t f_scroll_position_game_choice;
+    bool f_scrolling_game_choice;
+    Vector f_arena_choice;
+    Vector f_dungeon_choice;
+    Vector f_tutorial_choice;
+    std::string f_str_copyright;
+    std::string f_str_version;
+    std::string f_src_dir;
+    int32_t f_stage_count;
+    bool f_game_start_arena;
+    int32_t f_load_arena_stage;
+    bool f_game_start_tutorial;
+    int32_t f_load_tutorial_stage;
+    bool f_game_start_dungeon;
+    int32_t f_load_dungeon_stage;
+    bool f_managing_mods;
+    Vector f_mod;
+    int32_t f_scroll_position_mods;
+    bool f_scrolling_mods;
+    native_history_layout::f_curses_text_boxst f_hover_mod_description;
+    std::string f_last_hover_mod_id;
+    int32_t f_last_hover_mod_version;
+    int32_t f_last_hover_width;
+    bool f_uploading_mods;
+    int32_t f_scroll_position_upload_mods;
+    bool f_scrolling_upload_mods;
+    native_history_layout::f_curses_text_boxst f_hover_upload_mod_description;
+    std::string f_last_hover_upload_mod_id;
+    int32_t f_last_hover_upload_mod_version;
+    int32_t f_last_hover_upload_width;
+    bool f_deleting_region;
+    bool f_deleting_savegame_game;
+    bool f_deleting_savegame_world;
+    uintptr_t f_deleting_savegame_header;
+    uintptr_t f_deleting_region_header;
+    Vector f_credit_line;
+    Vector f_credit_line_type;
+    int32_t f_scroll_position_about;
+    bool f_scrolling_about;
+    uint8_t f_cur_sort;
+    bool f_sort_ascending;
 };
 struct f_region_print_datast {
     uintptr_t f_rss;
@@ -16642,6 +16769,35 @@ static constexpr std::array<Field, 64> f_material_fields = {{
     {0x6dc, DFCN_NATIVE_FIELD(f_material, f_cheese_texpos2, 0x6dc), 4},
     {0x6e0, DFCN_NATIVE_FIELD(f_material, f_texflag, 0x6e0), 4},
 }};
+static constexpr std::array<Field, 27> f_mod_headerst_fields = {{
+    {0x0, DFCN_NATIVE_FIELD(f_mod_headerst, f_zip_filename, 0x0), 32},
+    {0x20, DFCN_NATIVE_FIELD(f_mod_headerst, f_unzipped_folder, 0x20), 32},
+    {0x40, DFCN_NATIVE_FIELD(f_mod_headerst, f_id, 0x40), 32},
+    {0x60, DFCN_NATIVE_FIELD(f_mod_headerst, f_numeric_version, 0x60), 4},
+    {0x68, DFCN_NATIVE_FIELD(f_mod_headerst, f_displayed_version, 0x68), 32},
+    {0x88, DFCN_NATIVE_FIELD(f_mod_headerst, f_earliest_compatible_numeric_version, 0x88), 4},
+    {0x90, DFCN_NATIVE_FIELD(f_mod_headerst, f_earliest_compatible_displayed_version, 0x90), 32},
+    {0xb0, DFCN_NATIVE_FIELD(f_mod_headerst, f_author, 0xb0), 32},
+    {0xd0, DFCN_NATIVE_FIELD(f_mod_headerst, f_name, 0xd0), 32},
+    {0xf0, DFCN_NATIVE_FIELD(f_mod_headerst, f_description, 0xf0), 32},
+    {0x110, DFCN_NATIVE_FIELD(f_mod_headerst, f_dependencies, 0x110), 24},
+    {0x128, DFCN_NATIVE_FIELD(f_mod_headerst, f_dependency_type, 0x128), 24},
+    {0x140, DFCN_NATIVE_FIELD(f_mod_headerst, f_conflicts, 0x140), 24},
+    {0x158, DFCN_NATIVE_FIELD(f_mod_headerst, f_flags, 0x158), 4},
+    {0x160, DFCN_NATIVE_FIELD(f_mod_headerst, f_src_dir, 0x160), 32},
+    {0x180, DFCN_NATIVE_FIELD(f_mod_headerst, f_absolute_path, 0x180), 32},
+    {0x1a0, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_file_id, 0x1a0), 8},
+    {0x1a8, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_title, 0x1a8), 32},
+    {0x1c8, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_description, 0x1c8), 32},
+    {0x1e8, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_tag, 0x1e8), 24},
+    {0x200, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_key_tag, 0x200), 24},
+    {0x218, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_value_tag, 0x218), 24},
+    {0x230, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_metadata, 0x230), 32},
+    {0x250, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_changelog, 0x250), 32},
+    {0x270, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_upload_message, 0x270), 32},
+    {0x290, DFCN_NATIVE_FIELD(f_mod_headerst, f_steam_upload_success, 0x290), 1},
+    {0x298, DFCN_NATIVE_FIELD(f_mod_headerst, f_mod_upload_handle, 0x298), 8},
+}};
 static constexpr std::array<Field, 30> f_name_creator_interfacest_fields = {{
     {0x0, DFCN_NATIVE_FIELD(f_name_creator_interfacest, f_open, 0x0), 1},
     {0x4, DFCN_NATIVE_FIELD(f_name_creator_interfacest, f_context, 0x4), 4},
@@ -17074,6 +17230,75 @@ static constexpr std::array<Field, 76> f_viewscreen_legendsst_fields = {{
     {0x448, DFCN_NATIVE_FIELD(f_viewscreen_legendsst, f_xml_dump_future, 0x448), 16},
     {0x458, DFCN_NATIVE_FIELD(f_viewscreen_legendsst, f_dumping_xml, 0x458), 1},
 }};
+static constexpr std::array<Field, 67> f_viewscreen_new_arenast_fields = {{
+    {0x8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_child, 0x8), 8},
+    {0x10, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_parent, 0x10), 8},
+    {0x18, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_breakdown_level, 0x18), 1},
+    {0x19, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_option_key_pressed, 0x19), 1},
+    {0x28, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_parent, 0x28), 8},
+    {0x30, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_rect.f_x1, 0x30), 4},
+    {0x34, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_rect.f_y1, 0x34), 4},
+    {0x38, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_rect.f_x2, 0x38), 4},
+    {0x3c, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_rect.f_y2, 0x3c), 4},
+    {0x40, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_custom_feed, 0x40), 24},
+    {0x58, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_custom_logic, 0x58), 24},
+    {0x70, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_custom_render, 0x70), 24},
+    {0x88, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_custom_activated, 0x88), 24},
+    {0xa0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_name, 0xa0), 32},
+    {0xc0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_flag, 0xc0), 1},
+    {0xc4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_offset_bottom, 0xc4), 4},
+    {0xc8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_offset_left, 0xc8), 4},
+    {0xcc, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_offset_right, 0xcc), 4},
+    {0xd0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_offset_top, 0xd0), 4},
+    {0xd4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_anchor_top, 0xd4), 4},
+    {0xd8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_anchor_bottom, 0xd8), 4},
+    {0xdc, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_anchor_left, 0xdc), 4},
+    {0xe0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_anchor_right, 0xe0), 4},
+    {0xe4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_min_w, 0xe4), 4},
+    {0xe8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_min_h, 0xe8), 4},
+    {0xf0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_tooltip, 0xf0), 72},
+    {0x138, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_tooltip_type, 0x138), 1},
+    {0x139, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_displaying_tooltip, 0x139), 1},
+    {0x140, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_search_string, 0x140), 32},
+    {0x160, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_activation_hotkeys, 0x160), 16},
+    {0x170, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_children_by_name, 0x170), 16},
+    {0x180, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_widgets.f_children, 0x180), 24},
+    {0x198, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_raw_load, 0x198), 1},
+    {0x19c, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_progress, 0x19c), 4},
+    {0x1a0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_cur_step, 0x1a0), 4},
+    {0x1a4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scroll_position_arena_profile, 0x1a4), 4},
+    {0x1a8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scrolling_arena_profile, 0x1a8), 1},
+    {0x1a9, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_doing_mods, 0x1a9), 1},
+    {0x1ac, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scroll_position_available_mods, 0x1ac), 4},
+    {0x1b0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scrolling_available_mods, 0x1b0), 1},
+    {0x1b4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scroll_position_selected_mods, 0x1b4), 4},
+    {0x1b8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_scrolling_selected_mods, 0x1b8), 1},
+    {0x1c0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_id, 0x1c0), 24},
+    {0x1d8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_numeric_version, 0x1d8), 24},
+    {0x1f0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_earliest_compat_numeric_version, 0x1f0), 24},
+    {0x208, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_src_dir, 0x208), 24},
+    {0x220, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_name, 0x220), 24},
+    {0x238, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_displayed_version, 0x238), 24},
+    {0x250, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_mod_header, 0x250), 24},
+    {0x268, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_id, 0x268), 24},
+    {0x280, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_numeric_version, 0x280), 24},
+    {0x298, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_earliest_compat_numeric_version, 0x298), 24},
+    {0x2b0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_src_dir, 0x2b0), 24},
+    {0x2c8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_name, 0x2c8), 24},
+    {0x2e0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_displayed_version, 0x2e0), 24},
+    {0x2f8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_mod_header, 0x2f8), 24},
+    {0x310, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_id, 0x310), 24},
+    {0x328, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_numeric_version, 0x328), 24},
+    {0x340, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_earliest_compat_numeric_version, 0x340), 24},
+    {0x358, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_src_dir, 0x358), 24},
+    {0x370, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_name, 0x370), 24},
+    {0x388, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_displayed_version, 0x388), 24},
+    {0x3a0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_mod_header, 0x3a0), 24},
+    {0x3b8, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_hover_mod_description.f_text, 0x3b8), 24},
+    {0x3d0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_last_hover_mod_id, 0x3d0), 32},
+    {0x3f0, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_last_hover_mod_version, 0x3f0), 4},
+    {0x3f4, DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_last_hover_width, 0x3f4), 4},
+}};
 static constexpr std::array<Field, 110> f_viewscreen_new_regionst_fields = {{
     {0x8, DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_child, 0x8), 8},
     {0x10, DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_parent, 0x10), 8},
@@ -17185,6 +17410,99 @@ static constexpr std::array<Field, 110> f_viewscreen_new_regionst_fields = {{
     {0x4d0, DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_last_hover_mod_id, 0x4d0), 32},
     {0x4f0, DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_last_hover_mod_version, 0x4f0), 4},
     {0x4f4, DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_last_hover_width, 0x4f4), 4},
+}};
+static constexpr std::array<Field, 91> f_viewscreen_titlest_fields = {{
+    {0x8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_child, 0x8), 8},
+    {0x10, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_parent, 0x10), 8},
+    {0x18, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_breakdown_level, 0x18), 1},
+    {0x19, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_option_key_pressed, 0x19), 1},
+    {0x28, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_parent, 0x28), 8},
+    {0x30, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_rect.f_x1, 0x30), 4},
+    {0x34, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_rect.f_y1, 0x34), 4},
+    {0x38, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_rect.f_x2, 0x38), 4},
+    {0x3c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_rect.f_y2, 0x3c), 4},
+    {0x40, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_custom_feed, 0x40), 24},
+    {0x58, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_custom_logic, 0x58), 24},
+    {0x70, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_custom_render, 0x70), 24},
+    {0x88, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_custom_activated, 0x88), 24},
+    {0xa0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_name, 0xa0), 32},
+    {0xc0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_flag, 0xc0), 1},
+    {0xc4, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_offset_bottom, 0xc4), 4},
+    {0xc8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_offset_left, 0xc8), 4},
+    {0xcc, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_offset_right, 0xcc), 4},
+    {0xd0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_offset_top, 0xd0), 4},
+    {0xd4, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_anchor_top, 0xd4), 4},
+    {0xd8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_anchor_bottom, 0xd8), 4},
+    {0xdc, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_anchor_left, 0xdc), 4},
+    {0xe0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_anchor_right, 0xe0), 4},
+    {0xe4, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_min_w, 0xe4), 4},
+    {0xe8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_min_h, 0xe8), 4},
+    {0xf0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_tooltip, 0xf0), 72},
+    {0x138, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_tooltip_type, 0x138), 1},
+    {0x139, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_displaying_tooltip, 0x139), 1},
+    {0x140, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_search_string, 0x140), 32},
+    {0x160, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_activation_hotkeys, 0x160), 16},
+    {0x170, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_children_by_name, 0x170), 16},
+    {0x180, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_widgets.f_children, 0x180), 24},
+    {0x198, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_str_histories, 0x198), 768},
+    {0x498, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_str, 0x498), 768},
+    {0x798, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_clean_first, 0x798), 1},
+    {0x79a, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_mode, 0x79a), 2},
+    {0x79c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_selected, 0x79c), 4},
+    {0x7a0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_selected_r, 0x7a0), 4},
+    {0x7a4, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_game_start_proceed, 0x7a4), 1},
+    {0x7a8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_menu_line_id, 0x7a8), 24},
+    {0x7c0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_gametype, 0x7c0), 24},
+    {0x7d8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_gametype_str, 0x7d8), 24},
+    {0x7f0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_region_choice, 0x7f0), 24},
+    {0x808, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_region_choice, 0x808), 4},
+    {0x80c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_region_choice, 0x80c), 1},
+    {0x810, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_savegame_header, 0x810), 24},
+    {0x828, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_savegame_header_world, 0x828), 24},
+    {0x840, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_world_choice, 0x840), 4},
+    {0x844, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_world_choice, 0x844), 1},
+    {0x848, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_savegame_header_game, 0x848), 24},
+    {0x860, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_game_choice, 0x860), 4},
+    {0x864, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_game_choice, 0x864), 1},
+    {0x868, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_arena_choice, 0x868), 24},
+    {0x880, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_dungeon_choice, 0x880), 24},
+    {0x898, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_tutorial_choice, 0x898), 24},
+    {0x8b0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_str_copyright, 0x8b0), 32},
+    {0x8d0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_str_version, 0x8d0), 32},
+    {0x8f0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_src_dir, 0x8f0), 32},
+    {0x910, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_stage_count, 0x910), 4},
+    {0x914, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_game_start_arena, 0x914), 1},
+    {0x918, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_load_arena_stage, 0x918), 4},
+    {0x91c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_game_start_tutorial, 0x91c), 1},
+    {0x920, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_load_tutorial_stage, 0x920), 4},
+    {0x924, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_game_start_dungeon, 0x924), 1},
+    {0x928, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_load_dungeon_stage, 0x928), 4},
+    {0x92c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_managing_mods, 0x92c), 1},
+    {0x930, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_mod, 0x930), 24},
+    {0x948, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_mods, 0x948), 4},
+    {0x94c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_mods, 0x94c), 1},
+    {0x950, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_hover_mod_description.f_text, 0x950), 24},
+    {0x968, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_mod_id, 0x968), 32},
+    {0x988, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_mod_version, 0x988), 4},
+    {0x98c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_width, 0x98c), 4},
+    {0x990, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_uploading_mods, 0x990), 1},
+    {0x994, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_upload_mods, 0x994), 4},
+    {0x998, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_upload_mods, 0x998), 1},
+    {0x9a0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_hover_upload_mod_description.f_text, 0x9a0), 24},
+    {0x9b8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_upload_mod_id, 0x9b8), 32},
+    {0x9d8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_upload_mod_version, 0x9d8), 4},
+    {0x9dc, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_last_hover_upload_width, 0x9dc), 4},
+    {0x9e0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_deleting_region, 0x9e0), 1},
+    {0x9e1, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_deleting_savegame_game, 0x9e1), 1},
+    {0x9e2, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_deleting_savegame_world, 0x9e2), 1},
+    {0x9e8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_deleting_savegame_header, 0x9e8), 8},
+    {0x9f0, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_deleting_region_header, 0x9f0), 8},
+    {0x9f8, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_credit_line, 0x9f8), 24},
+    {0xa10, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_credit_line_type, 0xa10), 24},
+    {0xa28, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scroll_position_about, 0xa28), 4},
+    {0xa2c, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_scrolling_about, 0xa2c), 1},
+    {0xa2d, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_cur_sort, 0xa2d), 1},
+    {0xa2e, DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_sort_ascending, 0xa2e), 1},
 }};
 static constexpr std::array<Field, 162> f_viewscreen_worldst_fields = {{
     {0x8, DFCN_NATIVE_FIELD(f_viewscreen_worldst, f_child, 0x8), 8},
@@ -17758,6 +18076,10 @@ static constexpr size_t textbox_type_offset = DFCN_NATIVE_FIELD(f_widget_textbox
 static constexpr size_t stocks_open_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_open, 0x0);
 static constexpr size_t stocks_filter_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_item_filter, 0x48);
 static constexpr size_t stocks_entering_filter_offset = DFCN_NATIVE_FIELD(f_stocks_interfacest, f_entering_item_filter, 0x68);
+struct ModScreenFields { size_t active, hover_rows; std::array<size_t, 3> headers; };
+static constexpr ModScreenFields mod_title_fields = {DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_managing_mods, 0x92c), DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_hover_mod_description.f_text, 0x950), {{DFCN_NATIVE_FIELD(f_viewscreen_titlest, f_mod, 0x930), SIZE_MAX, SIZE_MAX}}};
+static constexpr ModScreenFields mod_newregion_fields = {DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_doing_mods, 0x2a8), DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_hover_mod_description.f_text, 0x4b8), {{DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_object_load_order_mod_header, 0x3f8), DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_available_mod_header, 0x4a0), DFCN_NATIVE_FIELD(f_viewscreen_new_regionst, f_base_available_mod_header, 0x350)}}};
+static constexpr ModScreenFields mod_newarena_fields = {DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_doing_mods, 0x1a9), DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_hover_mod_description.f_text, 0x3b8), {{DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_object_load_order_mod_header, 0x2f8), DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_available_mod_header, 0x3a0), DFCN_NATIVE_FIELD(f_viewscreen_new_arenast, f_base_available_mod_header, 0x250)}}};
 static constexpr size_t f_abstract_building_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
 static constexpr size_t f_abstract_building_counting_housest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
 static constexpr size_t f_abstract_building_dark_towerst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 64), DFCN_NATIVE_BINDING(64, 72), DFCN_NATIVE_BINDING(72, 80), DFCN_NATIVE_BINDING(80, 88), DFCN_NATIVE_BINDING(88, 96), DFCN_NATIVE_BINDING(96, 104)};
@@ -18023,7 +18345,9 @@ static constexpr size_t f_itemimprovement_writingst_slots[] = {DFCN_NATIVE_BINDI
 static constexpr size_t f_viewscreen_dungeonmodest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_dwarfmodest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_legendsst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
+static constexpr size_t f_viewscreen_new_arenast_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_new_regionst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
+static constexpr size_t f_viewscreen_titlest_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_viewscreen_worldst_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56), DFCN_NATIVE_BINDING(64, 64), DFCN_NATIVE_BINDING(72, 72)};
 static constexpr size_t f_widget_textbox_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32), DFCN_NATIVE_BINDING(40, 40), DFCN_NATIVE_BINDING(48, 48), DFCN_NATIVE_BINDING(56, 56)};
 static constexpr size_t f_world_construction_slots[] = {DFCN_NATIVE_BINDING(0, 0), DFCN_NATIVE_BINDING(8, 8), DFCN_NATIVE_BINDING(16, 16), DFCN_NATIVE_BINDING(24, 24), DFCN_NATIVE_BINDING(32, 32)};
@@ -18389,6 +18713,7 @@ static constexpr Object objects[] = {
     {"language_translation", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_language_translation_fields.data(), std::size(f_language_translation_fields), nullptr, 0},
     {"language_word", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_language_word_fields.data(), std::size(f_language_word_fields), nullptr, 0},
     {"material", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_material_fields.data(), std::size(f_material_fields), nullptr, 0},
+    {"mod_headerst", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_mod_headerst_fields.data(), std::size(f_mod_headerst_fields), nullptr, 0},
     {"name_creator_interfacest", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_name_creator_interfacest_fields.data(), std::size(f_name_creator_interfacest_fields), nullptr, 0},
     {"plant_raw", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_plant_raw_fields.data(), std::size(f_plant_raw_fields), nullptr, 0},
     {"plotinfost", "", DFCN_NATIVE_BINDING(0x0, 0x0), f_plotinfost_fields.data(), std::size(f_plotinfost_fields), nullptr, 0},
@@ -18397,7 +18722,9 @@ static constexpr Object objects[] = {
     {"viewscreen_dungeonmodest", "viewscreen", DFCN_NATIVE_BINDING(0x16b9f48, 0x207fb70), f_viewscreen_dungeonmodest_fields.data(), std::size(f_viewscreen_dungeonmodest_fields), f_viewscreen_dungeonmodest_slots, std::size(f_viewscreen_dungeonmodest_slots)},
     {"viewscreen_dwarfmodest", "viewscreen", DFCN_NATIVE_BINDING(0x16be500, 0x20802e8), f_viewscreen_dwarfmodest_fields.data(), std::size(f_viewscreen_dwarfmodest_fields), f_viewscreen_dwarfmodest_slots, std::size(f_viewscreen_dwarfmodest_slots)},
     {"viewscreen_legendsst", "viewscreen", DFCN_NATIVE_BINDING(0x1711820, 0x2084800), f_viewscreen_legendsst_fields.data(), std::size(f_viewscreen_legendsst_fields), f_viewscreen_legendsst_slots, std::size(f_viewscreen_legendsst_slots)},
+    {"viewscreen_new_arenast", "viewscreen", DFCN_NATIVE_BINDING(0x1721428, 0x2085020), f_viewscreen_new_arenast_fields.data(), std::size(f_viewscreen_new_arenast_fields), f_viewscreen_new_arenast_slots, std::size(f_viewscreen_new_arenast_slots)},
     {"viewscreen_new_regionst", "viewscreen", DFCN_NATIVE_BINDING(0x1721480, 0x2085088), f_viewscreen_new_regionst_fields.data(), std::size(f_viewscreen_new_regionst_fields), f_viewscreen_new_regionst_slots, std::size(f_viewscreen_new_regionst_slots)},
+    {"viewscreen_titlest", "viewscreen", DFCN_NATIVE_BINDING(0x1618bd0, 0x2080a70), f_viewscreen_titlest_fields.data(), std::size(f_viewscreen_titlest_fields), f_viewscreen_titlest_slots, std::size(f_viewscreen_titlest_slots)},
     {"viewscreen_worldst", "viewscreen", DFCN_NATIVE_BINDING(0x1603050, 0x2080698), f_viewscreen_worldst_fields.data(), std::size(f_viewscreen_worldst_fields), f_viewscreen_worldst_slots, std::size(f_viewscreen_worldst_slots)},
     {"widget_textbox", "widget", DFCN_NATIVE_BINDING(0x1710d18, 0x204c190), f_widget_textbox_fields.data(), std::size(f_widget_textbox_fields), f_widget_textbox_slots, std::size(f_widget_textbox_slots)},
     {"world_construction", "", DFCN_NATIVE_BINDING(0x178a508, 0x204bdf8), f_world_construction_fields.data(), std::size(f_world_construction_fields), f_world_construction_slots, std::size(f_world_construction_slots)},

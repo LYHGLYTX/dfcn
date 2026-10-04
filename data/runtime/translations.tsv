@@ -1614,6 +1614,7 @@ DFHack help: "repeat --time 100 --timeUnits ticks --command [ fix/corrupt-equipm
 DFHack help: "unsuspend [-s|--skipblocking] [-q|--quiet] [-f|--force]" Perform a single cycle, suspending and unsuspending jobs as described above, regardless of whether suspendmanager is enabled.	"unsuspend [-s|--skipblocking] [-q|--quiet] [-f|--force]" 执行单个循环，如上所述暂停和取消暂停作业，无论是否启用 suspendmanager。	l
 DFHack help: List all nobles that do not rule your fortress. Nobles that cannot be emigrated (see above) will have a "!" indicator while nobles holding elected positions will have a "*" indicator.	列出所有不统治你的要塞的贵族。无法迁移的贵族（见上文）将有一个"！"当贵族持有当选仓位时，会有"*"指示。	l
 DFHack help: Start the ticker. This needs to be done before any changes will take effect. Note that you can make changes before or after starting the ticker, both options should work equally well.	启动股票行情。这需要在任何更改生效之前完成。请注意，您可以在启动代码之前或之后进行更改，这两个选项应该同样有效。	l
+Vanilla mod description: These are the images of the default Dwarf Fortress creatures.  Some parts, like the dwarf wielded equipment images, rely on the vanilla items or equivalents being present.	这些是《矮人要塞》默认生物的图像。其中一些部分，例如矮人所持装备的图像，需要存在原版物品或等效物品。	l
 "You are close. Follow your senses to the entrance. But my chosen, you are in need of drink! See to yourself before you face what's ahead. Remember that ice and snow can be heated by a campfire."	“你已经很近了。跟随感知，找到入口。但是，我的天选者，你需要饮水！面对前方的挑战之前，先照顾好自己。记住，可以用营火加热冰雪。”	hP
 A caravan from {e} has arrived. Your status as a middling land has attracted more trade than usual. Trade relations remain strengthened by recent negotiations. Overall trade sentiments are great.	来自{e1}的商队已抵达。你作为中等领地的地位吸引来了比平时更多的贸易。近期谈判对贸易关系的促进作用仍在持续。总体贸易意愿很高。	hPt
 DFHack help: "diggingInvaders setDelay <race> <action> <n>" Set the time cost (in ticks) for performing a particular action. This determines how long it takes for invaders to get to their target.	"diggingInvaders setDelay <race> <action> <n>" 设置执行特定操作的时间成本（以滴答为单位）。这决定了入侵者到达目标所需的时间。	l
@@ -3594,6 +3595,7 @@ There are many conversation options. Important ones to note at first are inquiri
 This night creature was first created accidentally by {n} of {p} through the fiend's terrifying power unleashed upon multitudes in the year {d}.	第{d1}年，来自{p1}的{n1}对大批生物释放邪魔的可怕力量后，首次意外创造出了这种夜行生物。	ht
 This night creature was first created accidentally by {n} of {p} through the fiend's terrifying power unleashed upon {s} in {p} in the year {d}.	第{d1}年，来自{p1}的{n1}在{p2}对{s1}释放邪魔的可怕力量后，首次意外创造出了这种夜行生物。	ht
 This night creature was first created accidentally by {n} through the fiend's terrifying power unleashed upon multitudes in {p} in the year {d}.	第{d1}年，{n1}在{p1}对大批生物释放邪魔的可怕力量后，首次意外创造出了这种夜行生物。	ht
+Vanilla mod description: These are the default Dwarf Fortress bodies for creatures, including randomly generated creatures and tissue templates.	这些是《矮人要塞》的默认生物身体结构，涵盖随机生成的生物和组织模板。	l
 You may return the object to the faithful by gifting it to one of the priests, or you may simply drop it in this structure wherever you see fit.	你可以把物品赠予其中一位祭司，将它交还给信众；也可以直接放在这座建筑中任何你认为合适的地方。	hq
 Your citizens will fill sand bags at this zone if a sandy floor or sandy wall is included. This task is initiated manually at the glass furnace.	采沙区若包含沙质地面或墙壁，居民就能在此装沙入袋。采沙任务须在玻璃窑手动发起。	hj
 and received the title of {s} after attaining sufficient skill with {s}, participating in {d} battles, and being a member for a year during {e}.	并在{e1}期间在{s2}方面达到足够的技艺水平、参加{d1}场战斗及入会满一年后，获得了{s1}头衔。	ht
@@ -5649,6 +5651,7 @@ This night creature was first created by {n} of {p} through the fiend's twisted 
 This night creature was first created by {n} through the fiend's chaotic power unleashed upon the {n} in {p} in the year {d}.	第{d1}年，{n1}在{p1}对{n2}释放邪魔的混沌力量后，首次创造出了这种夜行生物。	ht
 This night creature was first created by {n} through the fiend's twisted power unleashed upon the {n} in {p} in the year {d}.	第{d1}年，{n1}在{p1}对{n2}释放邪魔的扭曲力量后，首次创造出了这种夜行生物。	ht
 This tiny insect can be found in huge colonies in the dirt. They overwhelm their enemies with swarms. Some have poison bites.	这种小昆虫可以在泥土中的巨大蚁穴里找到。它们用数量压倒敌人，其中的一些撕咬有毒。	lP
+Vanilla mod description: These are the default Dwarf Fortress interactions, which allow creatures to do some unusual actions.	这些是《矮人要塞》的默认互动，让生物能够执行一些特殊行为。	l
 When speaking to somebody, you'll choose what to say, and then time will pass while you are speaking and waiting for a reply.	与人交谈时，你先选择说什么，然后在说话和等待回复的过程中，时间会继续推进。	hq
 You can assume control of party members. Companions who join you later in the journey can't generally be controlled manually.	你可以接管队伍成员。旅途中后来加入的同伴通常不能手动控制。	hq
 and received the title of {s} after attaining sufficient skill with {s}, serving in combat, and slaying an enemy in the wilds	并在荒野中在{s2}方面达到足够的技艺水平、在战斗中效力及杀死一名敌人后，获得了{s1}头衔	ht
@@ -6136,6 +6139,7 @@ This night creature was first created by {n} through the fiend's chaotic power u
 This night creature was first created by {n} through the fiend's terrifying power unleashed upon the {n} in the year {d}.	第{d1}年，{n1}对{n2}释放邪魔的可怕力量后，首次创造出了这种夜行生物。	ht
 This night creature was first created by {n} through the fiend's twisted power unleashed upon multitudes in the year {d}.	第{d1}年，{n1}对大批生物释放邪魔的扭曲力量后，首次创造出了这种夜行生物。	ht
 This night creature was first created by {n} through the fiend's twisted power unleashed upon {s} in {p} in the year {d}.	第{d1}年，{n1}在{p1}对{s1}释放邪魔的扭曲力量后，首次创造出了这种夜行生物。	ht
+Vanilla mod description: The graphics for shapes and colors.  Includes the palette which is linked to the defined colors.	用于形状和颜色的图像，包括与已定义颜色关联的调色板。	l
 You don't always need to be slain in combat or starve to death. If you are in a friendly community, you can retire there.	冒险不一定非要以战死或饿死结束。身处友善的聚居地时，你可以在那里退役。	hq
 Zones can be assigned to special Locations. Usually one Meeting Area is sufficient, but Locations can span several Zones.	[C:3:0:0]区域[C:7:0:0]可以划归特殊[C:1:0:1]场所[C:7:0:0]。通常一个[C:3:0:0]集会区[C:7:0:0]就足够了，但一个[C:1:0:1]场所[C:7:0:0]也可以横跨多个[C:3:0:0]区域[C:7:0:0]。	hq
 and received the title of {s} after attaining sufficient skill with {s}, serving in combat, and being a member for a year	并在{s2}方面达到足够的技艺水平、在战斗中效力及入会满一年后，获得了{s1}头衔	ht
@@ -6263,6 +6267,7 @@ Make sure your parameters and presets can support mid-elevation, low-to-mid rain
 Make sure your parameters and presets can support mid-elevation, mid-to-high rainfall, low drainage, non-freezing areas.	请确保参数和预设支持中等海拔、中高降雨量、低排水且不冻结的区域。	l
 Some abilities, like the flight of winged creatures, can just be used during regular movement without needing this menu.	某些能力，例如有翼生物的飞行，可以直接在普通移动时使用，无需打开这个菜单。	hq
 Tactical mode can be set by a button near the companion mode button on the main menu if you have multiple party members.	如果有多位队员，可以通过主菜单中同伴模式按钮附近的按钮设置战术模式。	hq
+Vanilla mod description: The default Dwarf Fortress graphics for walls, floors, fluids, and other environmental objects.	《矮人要塞》中墙壁、地板、流体和其他环境对象的默认图像。	l
 and received the title of {s} after attaining sufficient skill with {s}, serving in combat, and slaying an enemy at {p}.	并在{p1}在{s2}方面达到足够的技艺水平、在战斗中效力及杀死一名敌人后，获得了{s1}头衔。	ht
 and received the title of {s} after attaining sufficient skill with {s}, serving in combat, and slaying an enemy in {p}.	并在{p1}在{s2}方面达到足够的技艺水平、在战斗中效力及杀死一名敌人后，获得了{s1}头衔。	ht
 and received the title of {s} after attaining sufficient skill with {s}, serving in combat, and {d} years of membership.	并在{s2}方面达到足够的技艺水平、在战斗中效力及拥有{d1}年会龄后，获得了{s1}头衔。	ht
@@ -6501,6 +6506,7 @@ This night creature was first created accidentally by {n} through the fiend's te
 This night creature was first created by {n} through the fiend's chaotic power unleashed upon the {n} in the year {d}.	第{d1}年，{n1}对{n2}释放邪魔的混沌力量后，首次创造出了这种夜行生物。	ht
 This night creature was first created by {n} through the fiend's twisted power unleashed upon the {n} in the year {d}.	第{d1}年，{n1}对{n2}释放邪魔的扭曲力量后，首次创造出了这种夜行生物。	ht
 This problem cannot be resolved by continuing, so you should either abort or skip all rejects for a legends-only game.	继续生成无法解决此问题；请中止，或忽略所有拒绝以生成仅限传说模式的世界。	l
+Vanilla mod description: These are the default Dwarf Fortress words and their translations into the in-game languages.	这些是《矮人要塞》的默认词汇，以及这些词汇在游戏内各语言中的译法。	l
 and received the title of {s} after attaining sufficient skill with {s} and participating in {d} battles in the wilds.	并在荒野中在{s2}方面达到足够的技艺水平及参加{d1}场战斗后，获得了{s1}头衔。	ht
 and received the title of {s} after attaining sufficient skill with {s}, slaying an enemy, and {d} years of membership	并在{s2}方面达到足够的技艺水平、杀死一名敌人及拥有{d1}年会龄后，获得了{s1}头衔	ht
 and received the title of {s} after participating in {d} battles, slaying an enemy, and {d} years of membership at {p}	并在{p1}参加{d1}场战斗、杀死一名敌人及拥有{d2}年会龄后，获得了{s1}头衔	ht
@@ -7309,6 +7315,7 @@ There is a random element to outcomes and some body parts will be easier or hard
 This night creature was first created accidentally by {n} after horrible experiments gone wrong in the year {d}.	第{d1}年，{n1}进行的可怕实验失控后，首次意外创造出了这种夜行生物。	ht
 This night creature was first created by {n} of {p} through the fiend's terrifying power in {p} in the year {d}.	第{d1}年，来自{p1}的{n1}在{p2}释放邪魔的可怕力量后，首次创造出了这种夜行生物。	ht
 To make sure they spend their free time down there you will need to use the Zones menu to create a Meeting Area.	[C:7:0:0]要让居民在闲暇时待在地下，你还需要通过“[C:5:0:1]区域[C:7:0:0]”菜单设置一个[C:3:0:0]集会区[C:7:0:0]。	hq
+Vanilla mod description: These are the default Dwarf Fortress reactions, which are various task-like activities.	这些是《矮人要塞》的默认反应，包括各种类似任务的活动。	l
 What would you like to name this manual save? It will never be overwritten, but you can delete it while loading.	你想将这个手动存档命名为什么？它不会被自动覆盖，但你可以在加载界面将其删除。	P
 and received the title of {s} after attaining sufficient skill with {s} and being a member for a year during {e}	并在{e1}期间在{s2}方面达到足够的技艺水平及入会满一年后，获得了{s1}头衔	ht
 and received the title of {s} after attaining sufficient skill with {s} and being a member for a year within {p}	并在{p1}在{s2}方面达到足够的技艺水平及入会满一年后，获得了{s1}头衔	ht
@@ -8583,6 +8590,7 @@ Guildhalls are where the workers of specific professions gather to socialize and
 Make sure your parameters and presets can support mid-elevation, very low rainfall, non-freezing areas.	请确保参数和预设支持中等海拔、极低降雨量且不冻结的区域。	l
 Through {n}, I told {n} to ask {n} to grant an important position in {e} to me when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将{e1}的一个重要职位授予我。	hPt
 To change the camera's elevation, press {k} and {k} or roll the mouse wheel. Hold shift to move faster.	要改变视角所在的高度层，请按{k1}和{k2}，或[C:2:0:1]滚动鼠标滚轮[C:7:0:0]。按住 Shift 可加快移动。	hqt
+Vanilla mod description: These are the triggers for the default Dwarf Fortress music and sound effects.	这些是《矮人要塞》默认音乐和音效的触发规则。	l
 You can also assign Performers to the Temple and even Priests once the Temple becomes more established.	[C:7:0:0]你可以为[C:1:0:1]神殿[C:7:0:0]安排[C:5:0:0]表演者[C:7:0:0]；当[C:1:0:1]神殿[C:7:0:0]发展到一定程度后，还可以安排[C:5:0:0]祭司[C:7:0:0]。	hq
 You can find water in wells in towns, or in rivers. Salt and brackish waters are not safe for drinking.	城镇的水井和河流都能取水。咸水和半咸水不能安全饮用。	hq
 You may also leave a cleared space your tavern-goers will use as a dance floor. If you have any Musical	[C:7:0:0]也可以留出一块空地，作为酒馆客人的舞池。如果你拥有[C:6:0:1]乐器[C:7:0:0]，	hq
@@ -9246,6 +9254,7 @@ I engaged {n} to infiltrate {e} in order to steal treasures, initiate sabotage, 
 Join me and we can shake off the yoke of {e} from the weary shoulders of the people of {e} forever!	加入我，我们就能让{e2}饱受压迫的人民永远摆脱{e1}的枷锁！	hPt
 This night creature was first created by {n} after horrible experiments on the {n} in the year {d}.	第{d1}年，{n1}对{n2}进行了可怕的实验后，首次创造出了这种夜行生物。	ht
 To have a fully functioning Tavern you must have a Stockpile with Booze in it, preferably close by.	[C:7:0:0]要让[C:1:0:1]酒馆[C:7:0:0]正常运作，必须有一个存放[C:6:0:1]酒[C:7:0:0]的[C:6:0:0]储物堆[C:7:0:0]，最好就在附近。	hq
+Vanilla mod description: The default Dwarf Fortress graphics for the interface buttons, icons, etc.	《矮人要塞》中界面按钮、图标等元素的默认图像。	l
 When deciding which guild to dedicate the Guildhall to, you can scroll over the names of the guilds	[C:7:0:0]决定将[C:1:0:1]行会大厅[C:7:0:0]划归哪个行会时，可以将鼠标移到各个行会的名字上，	hq
 When trading you select which goods you want from the list on the left, and which goods of yours to	交易时，从左侧列表选择你想买的商品，再从右侧列表选择你要	hq
 You can see how many worshippers of each deity live in your fortress by scrolling over their names.	将鼠标移到神祇名字上，可以查看要塞中有多少位该神祇的信徒。	hq
@@ -9837,6 +9846,7 @@ The Wagon comes with some Seeds, but as you might expect, these crops must be gr
 Through {n}, I told {n} to ask {n} to grant an important position to me when one came available.	我通过{n1}转告{n2}，要求{n3}在职位出现空缺时，将一个重要职位授予我。	hPt
 Toggle the visibility of the item. Hidden items cannot be seen but citizens will still use them.	切换物品的可见性。隐藏物品不可见，但居民仍会使用。	hj
 Use options in this category to place furniture that has already been constructed in a workshop.	使用此类别中的选项，放置已在工坊制作好的家具。	hj
+Vanilla mod description: These are the graphics for the default Dwarf Fortress plants and fungi.	这些是《矮人要塞》默认植物和真菌的图像。	l
 You can zoom in and out of the play area using {k} , Ctrl+mouse wheel, or the indicated buttons.	你可以使用{k1}、[C:2:0:1]Ctrl＋鼠标滚轮[C:7:0:0]或图示按钮，缩放游戏区域。	hqt
 and became obsessed with her own mortality and sought to extend her life by any means during {e}	并在{e1}期间开始执着于自身终将死亡的命运，并不择手段地寻求延寿	ht
 and became obsessed with her own mortality and sought to extend her life by any means within {p}	并在{p1}开始执着于自身终将死亡的命运，并不择手段地寻求延寿	ht
@@ -10304,6 +10314,8 @@ The soldiers can either keep their equipment on at all times, or only when an or
 Then from the Squad menu you can assign your first squad, led by the Commander. First you must	[C:7:0:0]然后，可以在“[C:5:0:1]小队[C:7:0:0]”菜单中建立第一支由[C:5:0:0]指挥官[C:7:0:0]率领的小队。首先需要	hq
 There may be plenty of hillside to dig into, but you'll want to seek wealth below the surface.	即使山坡上有充足的地方可以开挖，你也应该深入地底寻找财富。	hq
 Though I cannot agree fully on a slight technicality, you needn't indulge my trivial thoughts!	虽说有个小细节我还不赞同，但我那点无足轻重的想法，你不必迁就！	hP
+Vanilla mod description: These are the images of the default Dwarf Fortress extinct creatures.	这些是《矮人要塞》默认灭绝生物的图像。	l
+Vanilla mod description: These are the images used by the default Dwarf Fortress interactions.	这些是《矮人要塞》默认互动所使用的图像。	l
 You must drive the ruffians of {e} from {e}. They have been harassing the people for too long.	你必须把{e1}的恶棍赶出{e2}。他们骚扰百姓的日子已经够久了。	hPt
 a group calling itself {p} founded {p} after a long journey from the lands of {p} in the wilds	在荒野中，自称{p1}的势力从{p3}的领土长途跋涉而来，建立了{p2}	ht
 and received the title of {s} after attaining sufficient skill with {s} and serving in combat.	并在{s2}方面达到足够的技艺水平及在战斗中效力后，获得了{s1}头衔。	ht
@@ -11472,6 +11484,7 @@ The gang led by {p} has even sent some troublemakers to harass people right here
 The regular mining command digs a tunnel into the side of a mountain or deep underground.	常规采矿命令会在山体侧面或地下深处挖出隧道。	hq
 This is done by building a Still from the Build menu using Workshops -> Farming -> Still.	[C:7:0:0]打开“[C:5:0:1]建造[C:7:0:0]”菜单，依次选择“[C:5:0:1]工坊[C:7:0:0] → [C:5:0:1]农业[C:7:0:0] → [C:5:0:1]蒸馏工坊[C:7:0:0]”，建造一座[C:6:0:0]蒸馏工坊[C:7:0:0]。	hq
 Though I cannot agree fully on a slight technicality, I am overmastered by your presence!	虽说有个小细节我还不赞同，但你的气势真让我服气！	hP
+Vanilla mod description: These are the graphics for the default Dwarf Fortress buildings.	这些是《矮人要塞》默认建筑的图像。	l
 We were going to entertain the world! It's a shame, but I'll have to make my own way now.	我们原本要为全世界带来欢乐！真遗憾，但现在我得独自闯荡了。	hP
 When placed, a female bird will claim the box and start laying eggs, if one is available.	放置巢箱后，如果有可用的雌鸟，它会占用巢箱并开始产卵。	hj
 You cannot see the sky clearly from here, but the available sunlight indicates the night.	从这里无法看清天空，但根据光照可以判断，现在是夜晚。	hP
@@ -12461,6 +12474,7 @@ Taverns are where your residents gather to drink, socialize, tell stories, and d
 This is an example urgent alert! These are very important. Ignore them at your peril.	这是一条紧急警报示例！此类警报非常重要，无视它们可能造成严重后果。	hq
 Though I cannot agree fully on a slight technicality, I admire how brilliant you are!	虽说有个小细节我还不赞同，但我佩服你的聪明才智！	hP
 To easily see which ramps go up or down, click the Ramp Vision button by the minimap.	[C:7:0:0]点击小地图旁的“[C:5:0:1]斜坡视图[C:7:0:0]”按钮，可更方便地辨别斜坡通向上层还是下层。	hq
+Vanilla mod description: These are the graphics for the default Dwarf Fortress items.	这些是《矮人要塞》默认物品的图像。	l
 Would you agree to become someone of {e}, taking over my duties and responsibilities?	你愿意加入{e1}，接手我的职务、承担我的职责吗？	hPt
 and became obsessed with her own mortality and sought to extend her life by any means	并开始执着于自身终将死亡的命运，并不择手段地寻求延寿	h
 and became obsessed with his own mortality and sought to extend his life by any means	并开始执着于自身终将死亡的命运，并不择手段地寻求延寿	h
@@ -13951,6 +13965,8 @@ This visitor has come {s}. It heard this would make a good base for a mercenary.
 This visitor has come {s}. It heard {e} was the place for long-term scholarship.	这位访客前来{s1}。它听说{e1}适合长期从事学术研究。	hPt
 This visitor has come {s}. She heard {e} would make a good base for a mercenary.	这位访客前来{s1}。她听说{e1}适合作为佣兵的基地。	hPt
 This visitor has come {s}. She is seeking information about the location of {b}.	这位访客前来{s1}。她正在打听{b1}的下落。	hPt
+Vanilla mod description: These are the default Dwarf Fortress extinct creatures.	这些是《矮人要塞》的默认灭绝生物。	l
+Vanilla mod description: These are the default Dwarf Fortress generated objects.	这些是《矮人要塞》默认的程序生成对象。	l
 Water flows from the adjacent input tile and from the tile below the input tile.	水会从相邻的输入格及输入格下方的格子流入。	hP
 Wrestling involves specific attacking body parts and specific target body parts.	摔跤涉及具体的攻击身体部位和目标身体部位。	hq
 You are approaching your destination. End your travels now and prepare yourself.	你正接近目的地。现在结束旅行，做好准备。	hq
@@ -14233,6 +14249,8 @@ This visitor has come {s}. He heard {e} would make a good base for a mercenary.	
 This visitor has come {s}. He is seeking information about the location of {b}.	这位访客前来{s1}。他正在打听{b1}的下落。	hPt
 This visitor has come {s}. It heard {e} would make a good base for a mercenary.	这位访客前来{s1}。它听说{e1}适合作为佣兵的基地。	hPt
 This visitor has come {s}. It is seeking information about the location of {b}.	这位访客前来{s1}。它正在打听{b1}的下落。	hPt
+Vanilla mod description: The default Dwarf Fortress graphics for the world map.	《矮人要塞》世界地图的默认图像。	l
+Vanilla mod description: These are the default Dwarf Fortress plants and fungi.	这些是《矮人要塞》的默认植物和真菌。	l
 Wrestle somebody adjacent. Also allows available parry, block, and dodge moves.	与相邻目标摔跤。也可选择当前可用的招架、格挡和闪避动作。	hj
 You can stop traveling using the stop travel button below or by pressing .{k} .	点击下方的停止旅行按钮，或按{k1}，即可停止旅行。	hqt
 You may switch to other forms of Fuel later, such as Coal, but you will usually	[C:7:0:0]以后可以改用[C:6:0:1]煤[C:7:0:0]等其他[C:6:0:1]燃料[C:7:0:0]，但通常仍	hq
@@ -15197,6 +15215,7 @@ This visitor has come . It heard {e} would make a good base for a mercenary.	这
 This visitor has come . It is seeking information about the location of {b}.	这位访客已经到来。它正在打听{b1}的下落。	hPt
 This visitor has come {s}. She heard this was the place to entertain people.	这位访客前来{s1}。她听说这里适合为人们表演。	hPt
 This visitor has come {s}. She heard this was the place to perform research.	这位访客前来{s1}。她听说这里适合开展研究。	hPt
+Vanilla mod description: These are the default Dwarf Fortress civilizations.	这些是《矮人要塞》的默认文明。	l
 a telling of the story of the ascension of {n} to the position of {s} of {p}	讲述{n1}就任{p1}{s1}的故事	ht
 aided {a} in becoming a permanent part of the living world {s} in the wilds.	在荒野中协助{a1}永久留在生者的世界，{s1}。	ht
 and aided {a} in becoming a permanent part of the living world in the wilds.	并在荒野中协助{a1}永久留在生者的世界。	ht
@@ -16541,6 +16560,9 @@ This visitor has come {s}. It heard this was the place for a good drink.	这位�
 This visitor has come {s}. It heard this was the place to enjoy oneself.	这位访客前来{s1}。它听说这里适合享乐。	hPt
 This visitor has come {s}. She heard {e} was the place for a good drink.	这位访客前来{s1}。她听说可以在{e1}喝到好酒。	hPt
 This visitor has come {s}. She heard {e} was the place to enjoy oneself.	这位访客前来{s1}。她听说{e1}适合享乐。	hPt
+Vanilla mod description: These are the default Dwarf Fortress buildings.	这些是《矮人要塞》的默认建筑。	l
+Vanilla mod description: These are the default Dwarf Fortress creatures.	这些是《矮人要塞》的默认生物。	l
+Vanilla mod description: These are the default Dwarf Fortress materials.	这些是《矮人要塞》的默认材料。	l
 Wild attack: fast strike, slow recovery, hard but unbalancing/inaccurate	狂野攻击：出手快、恢复慢，打击有力，但会失去平衡且命中不准。	hP
 You already know the will of {p}. Do not tempt fate. Let some days pass.	你已经知晓{p1}的意志。不要试探命运。等上几天。	hPt
 You might want to adjust the parameters governing elevation frequencies.	请调整控制海拔分布频率的参数。	l
@@ -17330,6 +17352,7 @@ This visitor has come . She heard this was the place for a good drink.	这位访
 This visitor has come . She heard this was the place to enjoy oneself.	这位访客已经到来。她听说这里适合享乐。	hP
 Toggle the dump status of the item. Items are dumped in dumping zones.	切换物品的倾倒状态。物品会被运到物品倾倒区。	hj
 Toggle whether workshops can source materials from outside the burrow.	切换工坊是否可以从活动区外获取材料。	hj
+Vanilla mod description: The object definitions for shapes and colors.	形状和颜色的对象定义。	l
 We have a free room. Let me know and you can stay as long as you like.	我们有一间免费的客房。告诉我一声，你想住多久都行。	hP
 You emerged from the wilds and managed to prove yourself to the locals	你走出荒野，并成功向当地人证明了自己	al
 You have are seriously injured. View your status for more information.	你受了重伤。打开状态页查看详情。	hj
@@ -18153,6 +18176,7 @@ This visitor has come . It heard {e} was the place to enjoy oneself.	这位访�
 This visitor has come {s}. He went on this journey out of curiosity.	这位访客前来{s1}。他出于好奇踏上了这段旅程。	hPt
 This visitor has come {s}. It went on this journey out of curiosity.	这位访客前来{s1}。它出于好奇踏上了这段旅程。	hPt
 Toggle the melt status of the item. Items are melted at any smelter.	切换物品的熔化状态。物品可在任意熔炉中熔化。	hj
+Vanilla mod description: These are the default Dwarf Fortress items.	这些是《矮人要塞》的默认物品。	l
 View your companions and tactical settings, or switch party members.	查看同伴和战术设置，或切换队伍成员。	hj
 We cannot stop production just because of your quaint sensibilities.	我们不会仅仅因为你们古怪的顾忌就停止生产。	hP
 We will gladly do as you ask and strengthen our bonds of friendship.	我们很乐意照你们的请求去做，增进双方的友谊。	hP
@@ -20341,6 +20365,7 @@ There are five types of Locations, which we'll go over in turn.	[C:1:0:1]场所[
 This visitor has come . He heard this was the place for prayer.	这位访客已经到来。他听说这里适合祈祷。	hP
 This visitor has come . It heard this was the place for prayer.	这位访客已经到来。它听说这里适合祈祷。	hP
 This visitor has come . She heard {e} was the place for prayer.	这位访客已经到来。她听说{e1}适合祈祷。	hPt
+Vanilla mod description: Various text strings used by the game.	游戏使用的各种文本。	l
 You begin loading {s} into {s} with intentions of shooting {n}.	你开始将{s1}装入{s2}，准备射击{n1}。	hPt
 You can prepare in advance with {k} or from the inventory menu.	可以按 {k1} 提前准备，也可以通过物品栏菜单准备。	hPt
 You do not have a free grasp and your quiver and pack are full.	你没有空闲的抓握部位，而且箭筒和背包都已装满。	hP
@@ -32330,6 +32355,7 @@ There is nothing to catch in the southern ocean.	南部的海洋中没有可捕�
 There is nothing to catch in the western cavern.	西部的洞穴中没有可捕捉的东西。	hP
 There is nothing to catch in the western swamps.	西部的沼泽中没有可捕捉的东西。	hP
 This chanter. How can I even describe the skill?	这位吟唱者的技艺，我简直不知该如何形容！	hP
+Vanilla mod description: For save compatibility.	用于保持存档兼容性。	l
 Victory was spread among {c} winners during {e}.	在{e1}期间，共有{c1}名参赛者共同获得了胜利。	ht
 Victory was spread among {c} winners within {p}.	在{p1}，共有{c1}名参赛者共同获得了胜利。	ht
 What will you say about the artifact's location?	关于造物的下落，你想说些什么？	hP

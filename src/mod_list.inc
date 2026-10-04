@@ -1,17 +1,22 @@
-// viewscreen_titlest::managing_mods owns authored package identifiers.
+// Title management and world/arena creation own authored package identifiers.
 // PE 53.16: Steam 0x25a2e8..0x25a7df; classic 0x258a53..0x258db4.
-// Both writers join name + displayed_version, shorten that complete field,
-// and draw Installed and the hover description in separate native columns.
+// World/arena selector renderers: Steam 0xe00178 and 0xdf70b8 onward.
+// Writers join name + displayed_version and shorten that complete field;
+// package metadata and its wrapped prose use a separate native column.
 struct NativeModListLayout {
     int left = 0, right = 0, first_y = 0, bottom = 0;
     int header_right = 0;
     int details_left = 0, details_right = 0, frame_right = 0;
     std::array<Match, 2> headers{};
+    std::vector<SDL_Rect> name_columns;
+    NativeModDetails details;
 
     bool owns_name(const Match &match) const {
-        return match.y >= first_y && match.y < bottom &&
-            (match.y - first_y) % 3 < 2 &&
-            match.x < right && left < match.x + match.length;
+        return std::any_of(name_columns.begin(), name_columns.end(),
+            [&](const SDL_Rect &column) {
+                return match.y >= column.y && match.y < column.y + column.h &&
+                    match.x < column.x + column.w && column.x < match.x + match.length;
+            });
     }
 
     bool owns_details(const Match &match) const {
@@ -37,6 +42,45 @@ static std::optional<NativeModListLayout> native_mod_list_layout(
         return true;
     };
     const NativePanelBorders borders(gps);
+    const NativeModDetails details = native_mod_details();
+    if (details.kind == NativeModScreenKind::NewRegion ||
+            details.kind == NativeModScreenKind::NewArena) {
+        // The current screen's doing_mods flag owns both lists even before
+        // any package is hovered. Native 53.16 places the selector above its
+        // ten-row footer, with two dividers derived from the actual L/R frame.
+        const int bottom = gps.dimy - 11;
+        if (bottom <= 2) return std::nullopt;
+        for (int frame_left = 0; frame_left < gps.dimx; ++frame_left) {
+            if (!borders.at(frame_left, 0, 0) ||
+                    !borders.at(frame_left, 1, 3) ||
+                    !borders.at(frame_left, bottom - 1, 3)) continue;
+            for (int frame_right = gps.dimx - 1; frame_right > frame_left; --frame_right) {
+                if (!borders.at(frame_right, 0, 2) ||
+                        !borders.at(frame_right, 1, 5) ||
+                        !borders.at(frame_right, bottom - 1, 5)) continue;
+                const int details_divider = (frame_left + 2 * frame_right) / 3;
+                const int names_divider = (frame_left + details_divider) / 2;
+                if (names_divider <= frame_left + 1 ||
+                        details_divider <= names_divider + 1 ||
+                        frame_right <= details_divider + 4) continue;
+                NativeModListLayout layout;
+                layout.left = frame_left + 1;
+                layout.right = details_divider;
+                layout.first_y = 2;
+                layout.bottom = bottom;
+                layout.details_left = details_divider + 2;
+                layout.details_right = frame_right - 2;
+                layout.frame_right = frame_right;
+                layout.name_columns = {
+                    {frame_left + 1, 2, names_divider - frame_left - 1, bottom - 2},
+                    {names_divider + 1, 2, details_divider - names_divider - 1, bottom - 2},
+                };
+                layout.details = details;
+                return layout;
+            }
+        }
+        return std::nullopt;
+    }
 #ifdef _WIN32
     // These PE writers use absolute top rows even when L/R are inset.
     // Immediate glyph matching also calls this reader; do not scan the map.
@@ -75,21 +119,31 @@ static std::optional<NativeModListLayout> native_mod_list_layout(
             if (name_right <= x || click_y + 3 >= panel->y + panel->h) continue;
             const auto click_source = literal_at(x, click_y, click_legacy)
                 ? click_legacy : click;
-            NativeModListLayout layout{x, name_right, click_y + 3,
-                panel->y + panel->h, done->x - 1,
-                divider + 2, frame_right - 2, frame_right};
+            NativeModListLayout layout;
+            layout.left = x;
+            layout.right = name_right;
+            layout.first_y = click_y + 3;
+            layout.bottom = panel->y + panel->h;
+            layout.header_right = done->x - 1;
+            layout.details_left = divider + 2;
+            layout.details_right = frame_right - 2;
+            layout.frame_right = frame_right;
             layout.headers = {{
                 Match{x, y, static_cast<int>(install.size()), kUiMessageRule, {}, std::string(install)},
                 Match{x, click_y, static_cast<int>(click_source.size()), kUiMessageRule, {}, std::string(click_source)},
             }};
+            layout.name_columns.push_back({layout.left, layout.first_y,
+                layout.right - layout.left, layout.bottom - layout.first_y});
+            layout.details = details;
             return layout;
         }
     }
     return std::nullopt;
 }
 
-// The hover record is a typed column, not a bag of dictionary words.
-// Translate only fixed labels. Authored content keeps its native rendering.
+// The hover record owns its entire column. Only a native vanilla header can
+// select the official description catalog; all authored names and third-party
+// prose retain their original glyphs, wrapping and spacing.
 void Overlay::append_mod_list_details(const NativeModListLayout &layout,
         std::vector<std::string> &rows, std::vector<Match> &matches) const {
     const int left = layout.details_left, right = layout.details_right;
@@ -143,11 +197,51 @@ void Overlay::append_mod_list_details(const NativeModListLayout &layout,
         const std::string value = row->source.substr(metadata.prefix.size());
         append_field(std::move(*row), metadata.label, value);
     }
+    int description_y = -1;
     for (int y : {6, 7}) {
         auto row = field(y);
         if (!row || row->x != left || row->source != "Description:") continue;
+        description_y = y + 2;
         append_field(std::move(*row), "Description", {});
         break;
+    }
+    const auto &details = layout.details;
+    if (description_y >= 0 && details.header && details.header->vanilla &&
+            !details.header->description.empty() && !details.description_rows.empty()) {
+        const auto target = exact_literal_translation(
+            "Vanilla mod description: " + details.header->description);
+        std::vector<Match> description;
+        bool same = target.has_value();
+        for (size_t line = 0; same && line < details.description_rows.size(); ++line) {
+            const int y = description_y + static_cast<int>(line);
+            if (y >= layout.bottom) break;
+            const auto expected = trim_view(details.description_rows[line]);
+            auto row = field(y);
+            if (expected.empty()) {
+                same = !row;
+                continue;
+            }
+            // The current native wrap output supplies every source row.
+            // A matching prefix or one known word never owns a description.
+            if (!row || row->x != left || row->source != expected ||
+                    rows[y].compare(row->x, row->source.size(), row->source) != 0) {
+                same = false;
+                break;
+            }
+            description.push_back(std::move(*row));
+        }
+        if (same && !description.empty()) {
+            const int bottom = std::min(layout.bottom, description_y +
+                static_cast<int>(details.description_rows.size()));
+            for (Match &row : description)
+                row.layout_native_clip = SDL_Rect{origin_x + left * tile_w,
+                    origin_y + description_y * tile_h, (right - left) * tile_w,
+                    (bottom - description_y) * tile_h};
+            // One measured Chinese paragraph replaces all English rows,
+            // including source-only tails when the translation is shorter.
+            append_bounded_paragraph(std::move(description), *target, rows,
+                matches, -1, right, right, {}, false, left);
+        }
     }
     // Native relationship rows draw a bright-white prefix, then a separate
     // bright-cyan ID at the current cursor. The ID is neither translated nor
@@ -197,9 +291,37 @@ void Overlay::append_mod_list_details(const NativeModListLayout &layout,
             break;
         }
     }
+    // Native prose is white; this exact cyan instruction is a separate game
+    // field after the prose/dependencies. Its translation does not depend on
+    // identifying a package or translating that package's description.
+    if (description_y >= 0) {
+        for (int y = description_y + 1; y < layout.bottom; ++y) {
+            auto row = field(y);
+            if (!row || row->x != left || row->source != "Click now to open to this mod folder." ||
+                    rows[y].compare(row->x, row->source.size(), row->source) != 0) continue;
+            bool instruction = true;
+            for (size_t offset = 0; offset < row->source.size(); ++offset)
+                if (row->source[offset] != ' ' &&
+                        !palette_at(left + static_cast<int>(offset), y, 11)) instruction = false;
+            const auto target = instruction ? exact_literal_translation(row->source) : std::nullopt;
+            if (!target) continue;
+            row->target = *target;
+            row->layout_x = left;
+            row->layout_length = right - left;
+            row->layout_clip_right = right;
+            row->layout_left = true;
+            row->layout_font_pixels = unified_font_pixels();
+            row->layout_line_height_pixels = tile_h;
+            row->layout_lock_font_pixels = true;
+            row->layout_ellipsize = true;
+            row->layout_native_clip = SDL_Rect{origin_x + left * tile_w,
+                origin_y + y * tile_h, (right - left) * tile_w, tile_h};
+            matches.push_back(std::move(*row));
+        }
+    }
     // Reserve the whole right column only in the matching work buffer.
-    // Titles, prose and dependency IDs retain native glyphs, wrapping and
-    // spacing. Only fixed metadata rows and relationship prefixes change.
+    // No generic word, title or captured-paragraph reader can translate an
+    // authored field or bring back fragments of the original description.
     for (int y = 2; y < layout.bottom; ++y)
         std::fill(rows[y].begin() + left, rows[y].begin() + layout.frame_right, ' ');
 }

@@ -238,6 +238,7 @@ class Generator:
                  'itemdef_weaponst', 'entity_entity_link',
                  'general_ref_is_artifactst', 'plant_raw', 'material', 'inorganic_raw',
                  'viewscreen_legendsst', 'viewscreen_new_regionst',
+                 'mod_headerst', 'viewscreen_titlest', 'viewscreen_new_arenast',
                  'viewscreen_dwarfmodest', 'viewscreen_dungeonmodest', 'viewscreen_worldst',
                  'widget_textbox', 'stocks_interfacest',
                  'plotinfost', 'report',
@@ -304,6 +305,23 @@ class Generator:
             legacy = next(offset for offset, _, field in stocks.fields if field == path)
             lines.append(f'static constexpr size_t stocks_{label}_offset = '
                          f'DFCN_NATIVE_FIELD({stocks.cpp}, {path}, 0x{legacy:x});')
+        lines.append('struct ModScreenFields { size_t active, hover_rows; std::array<size_t, 3> headers; };')
+        for name, label, active, headers in (
+                ('viewscreen_titlest', 'title', 'managing_mods', ('mod',)),
+                ('viewscreen_new_regionst', 'newregion', 'doing_mods',
+                 ('object_load_order_mod_header', 'available_mod_header', 'base_available_mod_header')),
+                ('viewscreen_new_arenast', 'newarena', 'doing_mods',
+                 ('object_load_order_mod_header', 'available_mod_header', 'base_available_mod_header'))):
+            screen = self.cache[name]
+            def mod_field(member: str) -> str:
+                path = '.'.join(ident(part) for part in member.split('.'))
+                legacy = next(offset for offset, _, field in screen.fields if field == path)
+                return f'DFCN_NATIVE_FIELD({screen.cpp}, {path}, 0x{legacy:x})'
+            fields = [mod_field(member) for member in (active, 'hover_mod_description.text')]
+            vectors = [mod_field(member) for member in headers]
+            vectors.extend('SIZE_MAX' for _ in range(3 - len(vectors)))
+            lines.append(f'static constexpr ModScreenFields mod_{label}_fields = {{' +
+                         ', '.join(fields) + ', {{' + ', '.join(vectors) + '}}};')
         for name in sorted(roots):
             methods = self.virtuals(name)
             if not methods:

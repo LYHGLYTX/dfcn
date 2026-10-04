@@ -68,6 +68,7 @@ namespace dfcn {
 static std::vector<NativeHistoryDraw> captured_native_history_draws();
 static std::vector<NativeHistoryUnboundDraw> captured_native_history_unbound_draws();
 static bool native_history_worldgen_page();
+static NativeModDetails native_mod_details();
 static bool native_gameplay_map_screen(bool include_world = false);
 static bool native_world_map_screen();
 static bool native_arena_map_screen();
@@ -20812,14 +20813,15 @@ std::vector<Match> Overlay::find_matches(int only_y,
     std::vector<Match> mod_list_headers;
     std::vector<Match> mod_details_matches;
     if (mod_list) {
-        // Reserve the complete native name/version column before words,
+        // Reserve the complete native name/version columns before words,
         // numeric templates or captured captions can consume its fragments.
         // No name Match is emitted: the original font and alignment survive.
-        for (int y = mod_list->first_y; y < mod_list->bottom; ++y)
-            if ((y - mod_list->first_y) % 3 < 2)
-                std::fill(screen_rows[y].begin() + mod_list->left,
-                    screen_rows[y].begin() + mod_list->right, ' ');
+        for (const SDL_Rect &column : mod_list->name_columns)
+            for (int y = column.y; y < column.y + column.h; ++y)
+                std::fill(screen_rows[y].begin() + column.x,
+                    screen_rows[y].begin() + column.x + column.w, ' ');
         for (Match header : mod_list->headers) {
+            if (header.source.empty()) continue;
             auto &row = screen_rows[header.y];
             if (row.compare(header.x, header.source.size(), header.source) != 0) continue;
             const auto target = exact_literal_translation(header.source);
@@ -28871,6 +28873,28 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
                 mod_list ? mod_list->details_right : -1}) {
             hash ^= static_cast<uint32_t>(value);
             hash *= 1099511628211ULL;
+        }
+        if (mod_list) {
+            for (const SDL_Rect &column : mod_list->name_columns)
+                for (int value : {column.x, column.y, column.w, column.h}) {
+                    hash ^= static_cast<uint32_t>(value);
+                    hash *= 1099511628211ULL;
+                }
+            // Identical wrapped rows may belong to a different package.
+            // Include the actual vanilla flag and complete description so
+            // a third-party hover cannot reuse an official source mask.
+            const auto &header = mod_list->details.header;
+            hash ^= header && header->vanilla ? 1 : 0;
+            hash *= 1099511628211ULL;
+            if (header)
+                for (const auto *source : {&header->id, &header->description}) {
+                    for (unsigned char ch : *source) {
+                        hash ^= ch;
+                        hash *= 1099511628211ULL;
+                    }
+                    hash ^= source->size();
+                    hash *= 1099511628211ULL;
+                }
         }
         // Identical continuation rows on different Legends tabs are not the
         // same translation context. Read the same rendered-page snapshot as

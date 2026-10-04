@@ -30,6 +30,7 @@ static bool native_history_war_selection(uintptr_t collection, int32_t &category
 #include "native_history_capture.inc"
 #include "native_dfhack_raw_creatures.inc"
 #include "native_history_hooks.inc"
+#include "native_mod_details.inc"
 #include "native_embark_reclaim_history.inc"
 #include "native_ime_adapter.inc"
 #include "native_input_hooks.inc"
