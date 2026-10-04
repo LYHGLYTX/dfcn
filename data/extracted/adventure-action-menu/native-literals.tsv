@@ -1,0 +1,649 @@
+edition	image_identity	owners	function_rva	instruction_rva	encoding	literal_rva	operand_role	source
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x657fe2	rip-relative	0x1662e48	finite-text-operand-or-substring	specks
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658017	rip-relative	0x1662e40	finite-text-operand-or-substring	dusting
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658027	rip-relative	0x1662df8	finite-text-operand-or-substring	spatter
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x65803b	rip-relative	0x1662e14	finite-text-operand-or-substring	smear
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658050	rip-relative	0x1662e00	finite-text-operand-or-substring	coating
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658065	rip-relative	0x15eb518	finite-text-operand-or-substring	 of 
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x6581c8	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658260	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658293	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x6582e3	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658317	rip-relative	0x1662e40	finite-text-operand-or-substring	dusting
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658320	rip-relative	0x1662e00	finite-text-operand-or-substring	coating
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x658337	rip-relative	0x1662df8	finite-text-operand-or-substring	spatter
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x65834b	rip-relative	0x1662e14	finite-text-operand-or-substring	smear
+steam	PE:6a70a6d9:02711000	unit-contaminant-field	0x657f90	0x65835a	rip-relative	0x1662e08	finite-text-operand-or-substring	covering
+steam	PE:6a70a6d9:02711000	adventure_option_talk_existing_conversationst+8	0x6b7080	0x6b70ba	rip-relative	0x167aec0	finite-text-operand-or-substring	Continue shouting
+steam	PE:6a70a6d9:02711000	adventure_option_talk_existing_conversationst+8	0x6b7080	0x6b70d1	rip-relative	0x167ae70	finite-text-operand-or-substring	Continue conversation with 
+steam	PE:6a70a6d9:02711000	adventure_option_talk_existing_conversationst+8	0x6b7080	0x6b71e3	rip-relative	0x15e90d8	separator	, 
+steam	PE:6a70a6d9:02711000	adventure_option_talk_existing_conversationst+8	0x6b7080	0x6b72af	rip-relative	0x15e90d8	separator	, 
+steam	PE:6a70a6d9:02711000	adventure_option_talk_existing_conversationst+8	0x6b7080	0x6b72c9	rip-relative	0x15e9110	separator	 and 
+steam	PE:6a70a6d9:02711000	adventure_option_view_unitst+8	0x6b7320	0x6b734f	rip-relative	0x167ae8c	finite-text-operand-or-substring	View 
+steam	PE:6a70a6d9:02711000	adventure_option_view_unitst+8	0x6b7320	0x6b737b	rip-relative	0x1662ee0	finite-text-operand-or-substring	yourself
+steam	PE:6a70a6d9:02711000	adventure_option_view_unitst+8	0x6b7320	0x6b747f	inline-immediate-fragment		finite-short-string-fragment	the Void
+steam	PE:6a70a6d9:02711000	adventure_option_talk_new_conversationst+8	0x6b75a0	0x6b75cf	rip-relative	0x167b4a8	finite-text-operand-or-substring	Start new conversation with 
+steam	PE:6a70a6d9:02711000	adventure_option_talk_new_conversationst+8	0x6b75a0	0x6b76cf	inline-immediate-fragment		finite-short-string-fragment	the Void
+steam	PE:6a70a6d9:02711000	adventure_option_start_shoutingst+8	0x6b7990	0x6b7999	rip-relative	0x167b478	finite-text-operand-or-substring	Shout out to everybody
+steam	PE:6a70a6d9:02711000	adventure_option_assume_identityst+8	0x6b79b0	0x6b79b9	rip-relative	0x167b490	finite-text-operand-or-substring	Assume an identity
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f269	rip-relative	0x169f524	finite-text-operand-or-substring	NW
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f282	rip-relative	0x169f52c	finite-text-operand-or-substring	SW
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f299	rip-relative	0x169f534	finite-text-operand-or-substring	West
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f2bc	rip-relative	0x169f528	finite-text-operand-or-substring	NE
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f2d5	rip-relative	0x169f530	finite-text-operand-or-substring	SE
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f2ec	rip-relative	0x169f53c	finite-text-operand-or-substring	East
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f301	rip-relative	0x169f544	finite-text-operand-or-substring	North
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f312	rip-relative	0x169f54c	finite-text-operand-or-substring	South
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f327	rip-relative	0x169f554	finite-text-operand-or-substring	Below
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f338	rip-relative	0x169f55c	finite-text-operand-or-substring	Above
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f347	rip-relative	0x169f564	finite-text-operand-or-substring	Here
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f36f	rip-relative	0x169f56c	finite-text-operand-or-substring	/Below
+steam	PE:6a70a6d9:02711000	direction-helper	0x74f220	0x74f37a	rip-relative	0x169f574	finite-text-operand-or-substring	/Above
+steam	PE:6a70a6d9:02711000	adventure_item_interact_strugglest+8	0x7e12e0	0x7e12e9	rip-relative	0x16ad558	finite-text-operand-or-substring	Gain possession
+steam	PE:6a70a6d9:02711000	adventure_item_interact_pull_outst+8	0x7e1320	0x7e1329	rip-relative	0x16ad548	finite-text-operand-or-substring	Pull it out
+steam	PE:6a70a6d9:02711000	adventure_item_interact_unnockst+8	0x7e1340	0x7e1349	rip-relative	0x16ad570	finite-text-operand-or-substring	Cease nocking
+steam	PE:6a70a6d9:02711000	adventure_item_interact_readst+8	0x7e13d0	0x7e13d9	rip-relative	0x15e8620	finite-text-operand-or-substring	Read
+steam	PE:6a70a6d9:02711000	adventure_item_interact_rollst+8	0x7e13f0	0x7e13f9	rip-relative	0x16ad568	finite-text-operand-or-substring	Roll
+steam	PE:6a70a6d9:02711000	adventure_item_interact_roll_allst+8	0x7e1410	0x7e1419	rip-relative	0x16ad4d0	finite-text-operand-or-substring	Roll all
+steam	PE:6a70a6d9:02711000	adventure_item_interact_load_ranged_weaponst+8	0x834d50	0x834db5	rip-relative	0x16b0f98	finite-text-operand-or-substring	Nock in
+steam	PE:6a70a6d9:02711000	adventure_item_interact_load_ranged_weaponst+8	0x834d50	0x834dd1	rip-relative	0x16b1060	finite-text-operand-or-substring	Load into
+steam	PE:6a70a6d9:02711000	adventure_item_interact_load_ranged_weaponst+8	0x834d50	0x834df1	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_from_containerst+8	0x835260	0x835291	rip-relative	0x16b107c	finite-text-operand-or-substring	Fill 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_from_containerst+8	0x835260	0x8352f1	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_from_containerst+8	0x835260	0x83535c	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_from_containerst+8	0x835260	0x83539f	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x83549a	rip-relative	0x16b107c	finite-text-operand-or-substring	Fill 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x8354fa	rip-relative	0x15ee5e0	finite-text-operand-or-substring	 with 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x83551d	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835790	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x8357dc	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835830	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835897	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x8359d6	rip-relative	0x16b1070	finite-text-operand-or-substring	stagnant 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x8359ef	rip-relative	0x16b1024	finite-text-operand-or-substring	salt 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835b5e	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835bf6	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835c26	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835c71	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_item_interact_fill_with_materialst+8	0x835460	0x835cb8	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_item_interact_give_namest+8	0x835d50	0x835d75	rip-relative	0x16b1018	finite-text-operand-or-substring	Name the 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835e6a	rip-relative	0x16b103c	finite-text-operand-or-substring	Heat 
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f0a	rip-relative	0x16b0ea8	finite-text-operand-or-substring	 near magma
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f11	rip-relative	0x16b1030	finite-text-operand-or-substring	 near lava
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f54	rip-relative	0x16b0e90	finite-text-operand-or-substring	 near burning trunk
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f63	rip-relative	0x16b0ed0	finite-text-operand-or-substring	 near burning branches
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f72	rip-relative	0x16b0eb8	finite-text-operand-or-substring	 near burning twigs
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f81	rip-relative	0x16b0e58	finite-text-operand-or-substring	 near burning cap
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f90	rip-relative	0x16b0e48	finite-text-operand-or-substring	 near fire
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835f9f	rip-relative	0x16b0e80	finite-text-operand-or-substring	 near campfire
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x835fbf	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_item_interact_heat_from_tilest+8	0x835e40	0x836002	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_place_on_pack_animalst+8	0x837ea0	0x837ec5	rip-relative	0x16b0f08	finite-text-operand-or-substring	Put on 
+steam	PE:6a70a6d9:02711000	adventure_environment_place_on_pack_animalst+8	0x837ea0	0x837f33	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_place_on_pack_animalst+8	0x837ea0	0x837f76	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x83802a	rip-relative	0x16b0d58	finite-text-operand-or-substring	Set on
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x83803e	rip-relative	0x16b0d50	finite-text-operand-or-substring	Put 
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x838063	rip-relative	0x1642160	finite-text-operand-or-substring	in
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x83806c	rip-relative	0x16b0d68	finite-text-operand-or-substring	on
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x83807e	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x8380ed	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_bld_containerst+8	0x837ff0	0x838130	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_it_containerst+8	0x8381a0	0x8381c5	rip-relative	0x16b0d60	finite-text-operand-or-substring	Put in 
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_it_containerst+8	0x8381a0	0x838239	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_place_in_it_containerst+8	0x8381a0	0x83827c	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_unit_suck_bloodst+8	0x8382f0	0x83839c	rip-relative	0x16b0d34	finite-text-operand-or-substring	Suck 
+steam	PE:6a70a6d9:02711000	adventure_environment_unit_suck_bloodst+8	0x8382f0	0x8383f1	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_environment_unit_suck_bloodst+8	0x8382f0	0x83860e	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_environment_unit_suck_bloodst+8	0x8382f0	0x8386a8	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_environment_unit_suck_bloodst+8	0x8382f0	0x8386e0	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_from_containerst+8	0x8387d0	0x838878	rip-relative	0x16b0d48	finite-text-operand-or-substring	Eat 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_from_containerst+8	0x8387d0	0x83887f	rip-relative	0x16b0d2c	finite-text-operand-or-substring	Drink 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_from_containerst+8	0x8387d0	0x8388b2	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_from_containerst+8	0x8387d0	0x8388ec	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_from_containerst+8	0x8387d0	0x83892f	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838a39	rip-relative	0x16b0d48	finite-text-operand-or-substring	Eat 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838a40	rip-relative	0x16b0d2c	finite-text-operand-or-substring	Drink 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838a6e	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838ce1	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838d7d	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838dac	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838db5	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838df2	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838e4c	rip-relative	0x1789108	finite-text-operand-or-substring	unknown material
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838f3e	rip-relative	0x16b1070	finite-text-operand-or-substring	stagnant 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x838f57	rip-relative	0x16b1024	finite-text-operand-or-substring	salt 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x8390cf	rip-relative	0x15edb24	separator	's 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x839166	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x8391de	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_ingest_materialst+8	0x8389f0	0x839225	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x8393c3	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x83950f	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x83956a	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x839576	rip-relative	0x1681058	finite-text-operand-or-substring	t
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x8395c9	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_option_view_contaminantst+8	0x8392a0	0x8395f8	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x8398cd	rip-relative	0x16b0d2c	finite-text-operand-or-substring	Drink 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x8398d4	rip-relative	0x16b0d48	finite-text-operand-or-substring	Eat 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x8399e7	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x839b33	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x839b8e	rip-relative	0x1681050	finite-text-operand-or-substring	body part
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x839b9a	rip-relative	0x1681058	finite-text-operand-or-substring	t
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x839bed	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_option_eat_unit_contaminantst+8	0x839850	0x839c1c	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_option_eat_item_contaminantst+8	0x839ca0	0x839d1a	rip-relative	0x16b0d2c	finite-text-operand-or-substring	Drink 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_item_contaminantst+8	0x839ca0	0x839d21	rip-relative	0x16b0d48	finite-text-operand-or-substring	Eat 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_item_contaminantst+8	0x839ca0	0x839d9f	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_option_eat_item_contaminantst+8	0x839ca0	0x839dd2	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_vermin_eventst+8	0x839e40	0x839e7d	rip-relative	0x15ed67c	finite-text-operand-or-substring	A 
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_vermin_eventst+8	0x839e40	0x839fb6	inline-immediate-fragment		finite-short-string-fragment	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_vermin_eventst+8	0x839e40	0x83a05a	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_ignite_vegst+8	0x83a0e0	0x83a119	rip-relative	0x16b0d40	finite-text-operand-or-substring	Ignite 
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_ignite_vegst+8	0x83a0e0	0x83a20d	inline-immediate-fragment		finite-short-string-fragment	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_ignite_vegst+8	0x83a0e0	0x83a2ab	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_make_campfirest+8	0x83a330	0x83a343	rip-relative	0x16b0e08	finite-text-operand-or-substring	Make Campfire
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_make_campfirest+8	0x83a330	0x83a366	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_make_campfirest+8	0x83a330	0x83a3a9	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_chop_treest+8	0x83a3d0	0x83a3e3	rip-relative	0x16b0e00	finite-text-operand-or-substring	Fell 
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_chop_treest+8	0x83a3d0	0x83a451	rip-relative	0x16b0e3c	finite-text-operand-or-substring	tree
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_chop_treest+8	0x83a3d0	0x83a477	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pickup_chop_treest+8	0x83a3d0	0x83a4ba	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83fe3d	rip-relative	0x16b0c20	finite-text-operand-or-substring	Attack error
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83fe54	rip-relative	0x167e668	finite-text-operand-or-substring	Attack 
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83ff87	rip-relative	0x1662fa8	finite-text-operand-or-substring	creature
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83ff96	rip-relative	0x16708b8	finite-text-operand-or-substring	creatures
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83ffb6	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_attack_creaturest+8	0x83fe00	0x83fff9	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_combat_menu_creaturest+8	0x840030	0x840063	rip-relative	0x16b0c10	finite-text-operand-or-substring	Combat error
+steam	PE:6a70a6d9:02711000	adventure_movement_combat_menu_creaturest+8	0x840030	0x84007a	rip-relative	0x16b0c38	finite-text-operand-or-substring	Combat 
+steam	PE:6a70a6d9:02711000	adventure_movement_combat_menu_creaturest+8	0x840030	0x840189	rip-relative	0x1662fa8	finite-text-operand-or-substring	creature
+steam	PE:6a70a6d9:02711000	adventure_movement_combat_menu_creaturest+8	0x840030	0x8401a9	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_combat_menu_creaturest+8	0x840030	0x8401ec	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_pushst+8	0x840220	0x84024a	rip-relative	0x16b0c30	finite-text-operand-or-substring	Push 
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_pushst+8	0x840220	0x84035f	rip-relative	0x15fcfe0	finite-text-operand-or-substring	item
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_pushst+8	0x840220	0x84037f	rip-relative	0x15ed5b4	finite-text-operand-or-substring	 to 
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_ridest+8	0x8403e0	0x84040a	rip-relative	0x16b0d14	finite-text-operand-or-substring	Ride 
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_ridest+8	0x8403e0	0x84051f	rip-relative	0x15fcfe0	finite-text-operand-or-substring	item
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_ridest+8	0x8403e0	0x84053f	rip-relative	0x16b0d00	finite-text-operand-or-substring	, push off toward 
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_guidest+8	0x8405a0	0x8405ca	rip-relative	0x16b0d24	finite-text-operand-or-substring	Guide 
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_guidest+8	0x8405a0	0x8406df	rip-relative	0x15fcfe0	finite-text-operand-or-substring	item
+steam	PE:6a70a6d9:02711000	adventure_movement_item_interact_guidest+8	0x8405a0	0x8406ff	rip-relative	0x15ed5b4	finite-text-operand-or-substring	 to 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_raise_well_bucketst+8	0x840760	0x84078a	rip-relative	0x16b0d1c	finite-text-operand-or-substring	Raise 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_raise_well_bucketst+8	0x840760	0x84089a	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_raise_well_bucketst+8	0x840760	0x8408af	rip-relative	0x16b0ce0	finite-text-operand-or-substring	 bucket
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_raise_well_bucketst+8	0x840760	0x8408cf	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_raise_well_bucketst+8	0x840760	0x840912	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_lower_well_bucketst+8	0x840940	0x84096a	rip-relative	0x16b0cd4	finite-text-operand-or-substring	Lower 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_lower_well_bucketst+8	0x840940	0x840a7a	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_lower_well_bucketst+8	0x840940	0x840a8f	rip-relative	0x16b0ce0	finite-text-operand-or-substring	 bucket
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_lower_well_bucketst+8	0x840940	0x840aaf	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_lower_well_bucketst+8	0x840940	0x840af2	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pull_leverst+8	0x840b20	0x840b4a	rip-relative	0x16b0cf4	finite-text-operand-or-substring	Pull 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pull_leverst+8	0x840b20	0x840c5a	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pull_leverst+8	0x840b20	0x840c7a	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pull_leverst+8	0x840b20	0x840cbd	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_break_in_hatchst+8	0x840cf0	0x840d1a	rip-relative	0x16b0ce8	finite-text-operand-or-substring	Break in 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_break_in_hatchst+8	0x840cf0	0x840e2a	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_break_in_hatchst+8	0x840cf0	0x840e4a	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_break_in_hatchst+8	0x840cf0	0x840e8d	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x840ec0	0x840eea	rip-relative	0x16b136c	finite-text-operand-or-substring	Pick 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x840ec0	0x840ffa	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x840ec0	0x84100f	rip-relative	0x166276c	finite-text-operand-or-substring	 lock
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x840ec0	0x84102f	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x840ec0	0x841072	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_bash_down_doorst+8	0x8410a0	0x8410ca	rip-relative	0x16b1360	finite-text-operand-or-substring	Bash down 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_bash_down_doorst+8	0x8410a0	0x8411da	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_bash_down_doorst+8	0x8410a0	0x8411fa	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_bash_down_doorst+8	0x8410a0	0x84123d	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_topple_statuest+8	0x841270	0x84129a	rip-relative	0x16b1380	finite-text-operand-or-substring	Topple 
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_topple_statuest+8	0x841270	0x8413aa	rip-relative	0x15eb500	finite-text-operand-or-substring	building
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_topple_statuest+8	0x841270	0x8413ca	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_building_interact_topple_statuest+8	0x841270	0x84140d	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x841481	rip-relative	0x16b1340	finite-text-operand-or-substring	Move to 
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x841488	rip-relative	0x16b1378	finite-text-operand-or-substring	Charge 
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x8416da	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x841805	rip-relative	0x16b1338	finite-text-operand-or-substring	/Air
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x841839	rip-relative	0x16b1354	finite-text-operand-or-substring	/Water
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x84186d	rip-relative	0x15eb514	separator	/
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x8418a6	rip-relative	0x16b134c	finite-text-operand-or-substring	Lava
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x8418b5	rip-relative	0x15f73a4	finite-text-operand-or-substring	Magma
+steam	PE:6a70a6d9:02711000	adventure_movement_movest+8	0x841440	0x8418c7	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x84192a	rip-relative	0x16b13d0	finite-text-operand-or-substring	Climb to 
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x8419b4	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841a00	rip-relative	0x16b13c0	finite-text-operand-or-substring	 holding 
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841a42	rip-relative	0x16b13f0	finite-text-operand-or-substring	 releasing hold
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841ab8	rip-relative	0x16b1338	finite-text-operand-or-substring	/Air
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841aeb	rip-relative	0x16b1354	finite-text-operand-or-substring	/Water
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841b1e	rip-relative	0x15eb514	separator	/
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841b56	rip-relative	0x16b134c	finite-text-operand-or-substring	Lava
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841b65	rip-relative	0x15f73a4	finite-text-operand-or-substring	Magma
+steam	PE:6a70a6d9:02711000	adventure_movement_climbst+8	0x841900	0x841b77	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841c2f	rip-relative	0x16b1390	finite-text-operand-or-substring	Hold 
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841c36	rip-relative	0x16b13e0	finite-text-operand-or-substring	Hang from 
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841cc4	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841d25	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841dcb	rip-relative	0x16b1338	finite-text-operand-or-substring	/Air
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841dfe	rip-relative	0x16b1354	finite-text-operand-or-substring	/Water
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841e31	rip-relative	0x15eb514	separator	/
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841e69	rip-relative	0x16b134c	finite-text-operand-or-substring	Lava
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841e75	rip-relative	0x15f73a4	finite-text-operand-or-substring	Magma
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_tilest+8	0x841bf0	0x841e87	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_mountst+8	0x841f00	0x841f25	rip-relative	0x16b1388	finite-text-operand-or-substring	Mount 
+steam	PE:6a70a6d9:02711000	adventure_movement_mountst+8	0x841f00	0x841f93	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_mountst+8	0x841f00	0x841fd6	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_dismountst+8	0x842050	0x842075	rip-relative	0x16b13b0	finite-text-operand-or-substring	Dismount to 
+steam	PE:6a70a6d9:02711000	adventure_movement_dismountst+8	0x842050	0x8420fb	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_dismountst+8	0x842050	0x84213e	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_release_hold_tilest+8	0x8421b0	0x8421d5	rip-relative	0x16b1398	finite-text-operand-or-substring	Release hold on 
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x8422da	rip-relative	0x167d254	finite-text-operand-or-substring	Climb
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x842358	rip-relative	0x15e873c	separator	 
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x842410	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x8424b7	rip-relative	0x16b1338	finite-text-operand-or-substring	/Air
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x8424ea	rip-relative	0x16b1354	finite-text-operand-or-substring	/Water
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x84251d	rip-relative	0x15eb514	separator	/
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x842555	rip-relative	0x16b134c	finite-text-operand-or-substring	Lava
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x842564	rip-relative	0x15f73a4	finite-text-operand-or-substring	Magma
+steam	PE:6a70a6d9:02711000	adventure_movement_hold_itemst+8	0x8422b0	0x842576	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_claim_petst+8	0x8425b0	0x8425d5	rip-relative	0x16b1238	finite-text-operand-or-substring	Claim 
+steam	PE:6a70a6d9:02711000	adventure_movement_claim_petst+8	0x8425b0	0x842643	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_claim_petst+8	0x8425b0	0x842686	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_claim_petst+8	0x8425b0	0x84269b	rip-relative	0x16b1230	finite-text-operand-or-substring	 as pet
+steam	PE:6a70a6d9:02711000	adventure_movement_lead_animalst+8	0x842710	0x842735	rip-relative	0x15e8afc	finite-text-operand-or-substring	Lead 
+steam	PE:6a70a6d9:02711000	adventure_movement_lead_animalst+8	0x842710	0x8427a3	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_lead_animalst+8	0x842710	0x8427e6	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_movement_stop_lead_animalst+8	0x842860	0x842885	rip-relative	0x16b1250	finite-text-operand-or-substring	Stop leading 
+steam	PE:6a70a6d9:02711000	adventure_movement_release_hold_itemst+8	0x842940	0x842962	rip-relative	0x16b1240	finite-text-operand-or-substring	Climb down
+steam	PE:6a70a6d9:02711000	adventure_movement_release_hold_itemst+8	0x842940	0x8429e8	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842acb	rip-relative	0x16b1200	finite-text-operand-or-substring	Go below hatch
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842adc	rip-relative	0x16b11f0	finite-text-operand-or-substring	Path to here
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842afb	rip-relative	0x16b1218	finite-text-operand-or-substring	 (no climbing/jumping)
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842b1e	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842b4c	rip-relative	0x16b1210	finite-text-operand-or-substring	 level
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842b77	rip-relative	0x15e9298	finite-text-operand-or-substring	s
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842b99	rip-relative	0x16b12fc	finite-text-operand-or-substring	 up)
+steam	PE:6a70a6d9:02711000	adventure_movement_pathst+8	0x842ab0	0x842bb5	rip-relative	0x16b12f4	finite-text-operand-or-substring	 down)
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884769	rip-relative	0x16b45f0	finite-text-operand-or-substring	Pick up how many? (0-
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884773	rip-relative	0x16b4600	finite-text-operand-or-substring	? (0-
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x88477c	rip-relative	0x16b4604	finite-text-operand-or-substring	-
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8847a1	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884850	rip-relative	0x15ec82c	finite-text-operand-or-substring	_
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884ceb	inline-immediate-fragment		finite-short-string-fragment	Okay
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884df5	rip-relative	0x15fe724	finite-text-operand-or-substring	Cancel
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884dfe	rip-relative	0x15fe728	finite-text-operand-or-substring	el
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884fe5	rip-relative	0x15fe724	finite-text-operand-or-substring	Cancel
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x884fee	rip-relative	0x15fe728	finite-text-operand-or-substring	el
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8850b6	rip-relative	0x16b4540	finite-text-operand-or-substring	What do you want to do?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8850c0	rip-relative	0x16b4550	finite-text-operand-or-substring	 to do?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8850c9	rip-relative	0x16b4554	finite-text-operand-or-substring	do?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8850d4	rip-relative	0x16b4556	finite-text-operand-or-substring	?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x88529b	rip-relative	0x16b4520	finite-text-operand-or-substring	Where would you like to move?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8852a5	rip-relative	0x16b4530	finite-text-operand-or-substring	like to move?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8852b2	rip-relative	0x16b4538	finite-text-operand-or-substring	move?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x8852bb	rip-relative	0x16b453c	finite-text-operand-or-substring	?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885300	rip-relative	0x178b360	numeric-string-layout-vector	$
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x88530d	rip-relative	0x16b4588	finite-text-operand-or-substring	Who or what would you like to shoot?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885317	rip-relative	0x16b4598	finite-text-operand-or-substring	d you like to shoot?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885322	rip-relative	0x16b45a8	finite-text-operand-or-substring	oot?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885351	rip-relative	0x178b3a0	numeric-string-layout-vector	(
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x88535e	rip-relative	0x16b4558	finite-text-operand-or-substring	At whom or what would you like to throw?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885368	rip-relative	0x16b4568	finite-text-operand-or-substring	would you like to throw?
+steam	PE:6a70a6d9:02711000	chooser-renderer	0x884460	0x885373	rip-relative	0x16b4578	finite-text-operand-or-substring	o throw?
+steam	PE:6a70a6d9:02711000	adventure_environment_take_from_pack_animalst+8	0x8932c0	0x893303	rip-relative	0x16b4350	finite-text-operand-or-substring	Get 
+steam	PE:6a70a6d9:02711000	adventure_environment_take_from_pack_animalst+8	0x8932c0	0x893456	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_environment_take_from_pack_animalst+8	0x8932c0	0x893527	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_take_from_pack_animalst+8	0x8932c0	0x89357a	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x8935f0	0x89362b	rip-relative	0x16b4350	finite-text-operand-or-substring	Get 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x8935f0	0x8937a3	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x8935f0	0x8937f6	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_itemst+8	0x893870	0x8938b3	rip-relative	0x16b4350	finite-text-operand-or-substring	Get 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_itemst+8	0x893870	0x893a06	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_itemst+8	0x893870	0x893ad8	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_itemst+8	0x893870	0x893b2b	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x893bb0	0x893bf3	rip-relative	0x16b4350	finite-text-operand-or-substring	Get 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x893bb0	0x893d46	rip-relative	0x15ed97c	finite-text-operand-or-substring	 from 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x893bb0	0x893e1d	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x893bb0	0x893e70	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_vegetationst+8	0x893ef0	0x893f2c	rip-relative	0x16b136c	finite-text-operand-or-substring	Pick 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_vegetationst+8	0x893ef0	0x893f33	rip-relative	0x16b0cf4	finite-text-operand-or-substring	Pull 
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_vegetationst+8	0x893ef0	0x8940b9	rip-relative	0x1615540	separator	 (
+steam	PE:6a70a6d9:02711000	adventure_environment_pick_vegetationst+8	0x893ef0	0x89410c	rip-relative	0x1615580	separator	)
+steam	PE:6a70a6d9:02711000	adventure_option_view_event_detailst+8	0x894240	0x894249	rip-relative	0x15fdb90	finite-text-operand-or-substring	engraving
+steam	PE:6a70a6d9:02711000	adventure_option_view_event_detailst+16	0x894260	0x894269	rip-relative	0x16b4340	finite-text-operand-or-substring	View engraving
+steam	PE:6a70a6d9:02711000	adventure_option_view_itemst+16	0x894280	0x8942a5	rip-relative	0x167ae8c	finite-text-operand-or-substring	View 
+steam	PE:6a70a6d9:02711000	adventure_option_drop_itemst+16	0x894370	0x894395	rip-relative	0x164558c	finite-text-operand-or-substring	Drop 
+steam	PE:6a70a6d9:02711000	adventure_option_throw_itemst+16	0x894460	0x894485	rip-relative	0x16b4360	finite-text-operand-or-substring	Throw 
+steam	PE:6a70a6d9:02711000	adventure_option_wear_itemst+16	0x894550	0x894575	rip-relative	0x16b4358	finite-text-operand-or-substring	Wear 
+steam	PE:6a70a6d9:02711000	adventure_option_remove_itemst+16	0x894640	0x894665	rip-relative	0x16b4420	finite-text-operand-or-substring	Remove 
+steam	PE:6a70a6d9:02711000	adventure_option_put_itemst+16	0x894730	0x894755	rip-relative	0x16b4410	finite-text-operand-or-substring	Put or place 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_drink_itemst+16	0x894820	0x89485d	rip-relative	0x16b0d48	finite-text-operand-or-substring	Eat 
+steam	PE:6a70a6d9:02711000	adventure_option_eat_drink_itemst+16	0x894820	0x894864	rip-relative	0x16b0d2c	finite-text-operand-or-substring	Drink 
+steam	PE:6a70a6d9:02711000	adventure_movement_jumpst+8	0x8a46d0	0x8a46ec	rip-relative	0x16b4b08	finite-text-operand-or-substring	Jump to the 
+steam	PE:6a70a6d9:02711000	adventure_movement_shoot_creaturest+8	0x8a4890	0x8a492f	rip-relative	0x16b4b20	finite-text-operand-or-substring	Quickly shoot 
+steam	PE:6a70a6d9:02711000	adventure_movement_shoot_creaturest+8	0x8a4890	0x8a4936	rip-relative	0x16b4ae8	finite-text-operand-or-substring	Aim carefully and shoot 
+steam	PE:6a70a6d9:02711000	adventure_movement_shoot_tilest+8	0x8a5540	0x8a556b	rip-relative	0x16b4b18	finite-text-operand-or-substring	Shoot 
+steam	PE:6a70a6d9:02711000	adventure_movement_throw_item_at_creaturest+8	0x8a5e70	0x8a5f0f	rip-relative	0x16b4928	finite-text-operand-or-substring	Quickly throw at 
+steam	PE:6a70a6d9:02711000	adventure_movement_throw_item_at_creaturest+8	0x8a5e70	0x8a5f16	rip-relative	0x16b4940	finite-text-operand-or-substring	Aim carefully and throw at 
+steam	PE:6a70a6d9:02711000	adventure_movement_throw_item_at_tilest+8	0x8a64d0	0x8a64fb	rip-relative	0x16b4988	finite-text-operand-or-substring	Throw at 
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a02	rip-relative	0x165dd28	finite-text-operand-or-substring	specks
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a37	rip-relative	0x165dd20	finite-text-operand-or-substring	dusting
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a47	rip-relative	0x165dcd8	finite-text-operand-or-substring	spatter
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a5b	rip-relative	0x165dcf4	finite-text-operand-or-substring	smear
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a70	rip-relative	0x165dce0	finite-text-operand-or-substring	coating
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655a85	rip-relative	0x15e64d0	finite-text-operand-or-substring	 of 
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655be8	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655c80	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655cb3	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d03	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d37	rip-relative	0x165dd20	finite-text-operand-or-substring	dusting
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d40	rip-relative	0x165dce0	finite-text-operand-or-substring	coating
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d57	rip-relative	0x165dcd8	finite-text-operand-or-substring	spatter
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d6b	rip-relative	0x165dcf4	finite-text-operand-or-substring	smear
+classic	PE:6a70b91c:0270a000	unit-contaminant-field	0x6559b0	0x655d7a	rip-relative	0x165dce8	finite-text-operand-or-substring	covering
+classic	PE:6a70b91c:0270a000	adventure_option_talk_existing_conversationst+8	0x6b4aa0	0x6b4ada	rip-relative	0x1675f38	finite-text-operand-or-substring	Continue shouting
+classic	PE:6a70b91c:0270a000	adventure_option_talk_existing_conversationst+8	0x6b4aa0	0x6b4af1	rip-relative	0x1675f50	finite-text-operand-or-substring	Continue conversation with 
+classic	PE:6a70b91c:0270a000	adventure_option_talk_existing_conversationst+8	0x6b4aa0	0x6b4c03	rip-relative	0x15e40c4	separator	, 
+classic	PE:6a70b91c:0270a000	adventure_option_talk_existing_conversationst+8	0x6b4aa0	0x6b4ccf	rip-relative	0x15e40c4	separator	, 
+classic	PE:6a70b91c:0270a000	adventure_option_talk_existing_conversationst+8	0x6b4aa0	0x6b4ce9	rip-relative	0x15e40bc	separator	 and 
+classic	PE:6a70b91c:0270a000	adventure_option_view_unitst+8	0x6b4d40	0x6b4d6f	rip-relative	0x1675f30	finite-text-operand-or-substring	View 
+classic	PE:6a70b91c:0270a000	adventure_option_view_unitst+8	0x6b4d40	0x6b4d9b	rip-relative	0x165df78	finite-text-operand-or-substring	yourself
+classic	PE:6a70b91c:0270a000	adventure_option_view_unitst+8	0x6b4d40	0x6b4e9f	inline-immediate-fragment		finite-short-string-fragment	the Void
+classic	PE:6a70b91c:0270a000	adventure_option_talk_new_conversationst+8	0x6b4fc0	0x6b4fef	rip-relative	0x1675ef8	finite-text-operand-or-substring	Start new conversation with 
+classic	PE:6a70b91c:0270a000	adventure_option_talk_new_conversationst+8	0x6b4fc0	0x6b50ef	inline-immediate-fragment		finite-short-string-fragment	the Void
+classic	PE:6a70b91c:0270a000	adventure_option_start_shoutingst+8	0x6b53b0	0x6b53b9	rip-relative	0x1675f18	finite-text-operand-or-substring	Shout out to everybody
+classic	PE:6a70b91c:0270a000	adventure_option_assume_identityst+8	0x6b53d0	0x6b53d9	rip-relative	0x1675ee0	finite-text-operand-or-substring	Assume an identity
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cc89	rip-relative	0x169a65c	finite-text-operand-or-substring	NW
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cca2	rip-relative	0x169a664	finite-text-operand-or-substring	SW
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74ccb9	rip-relative	0x169a66c	finite-text-operand-or-substring	West
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74ccdc	rip-relative	0x169a660	finite-text-operand-or-substring	NE
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74ccf5	rip-relative	0x169a668	finite-text-operand-or-substring	SE
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd0c	rip-relative	0x169a674	finite-text-operand-or-substring	East
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd21	rip-relative	0x169a67c	finite-text-operand-or-substring	North
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd32	rip-relative	0x169a684	finite-text-operand-or-substring	South
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd47	rip-relative	0x169a68c	finite-text-operand-or-substring	Below
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd58	rip-relative	0x169a694	finite-text-operand-or-substring	Above
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd67	rip-relative	0x169a69c	finite-text-operand-or-substring	Here
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd8f	rip-relative	0x169a6a4	finite-text-operand-or-substring	/Below
+classic	PE:6a70b91c:0270a000	direction-helper	0x74cc40	0x74cd9a	rip-relative	0x169a508	finite-text-operand-or-substring	/Above
+classic	PE:6a70b91c:0270a000	adventure_item_interact_strugglest+8	0x7deb60	0x7deb69	rip-relative	0x16a86f8	finite-text-operand-or-substring	Gain possession
+classic	PE:6a70b91c:0270a000	adventure_item_interact_pull_outst+8	0x7deba0	0x7deba9	rip-relative	0x16a86e8	finite-text-operand-or-substring	Pull it out
+classic	PE:6a70b91c:0270a000	adventure_item_interact_unnockst+8	0x7debc0	0x7debc9	rip-relative	0x16a8710	finite-text-operand-or-substring	Cease nocking
+classic	PE:6a70b91c:0270a000	adventure_item_interact_readst+8	0x7dec50	0x7dec59	rip-relative	0x15e35dc	finite-text-operand-or-substring	Read
+classic	PE:6a70b91c:0270a000	adventure_item_interact_rollst+8	0x7dec70	0x7dec79	rip-relative	0x16a8708	finite-text-operand-or-substring	Roll
+classic	PE:6a70b91c:0270a000	adventure_item_interact_roll_allst+8	0x7dec90	0x7dec99	rip-relative	0x16a8580	finite-text-operand-or-substring	Roll all
+classic	PE:6a70b91c:0270a000	adventure_item_interact_load_ranged_weaponst+8	0x8325d0	0x832635	rip-relative	0x16ab5b8	finite-text-operand-or-substring	Nock in
+classic	PE:6a70b91c:0270a000	adventure_item_interact_load_ranged_weaponst+8	0x8325d0	0x832651	rip-relative	0x16ab568	finite-text-operand-or-substring	Load into
+classic	PE:6a70b91c:0270a000	adventure_item_interact_load_ranged_weaponst+8	0x8325d0	0x832671	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_from_containerst+8	0x832ae0	0x832b11	rip-relative	0x16ab584	finite-text-operand-or-substring	Fill 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_from_containerst+8	0x832ae0	0x832b71	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_from_containerst+8	0x832ae0	0x832bdc	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_from_containerst+8	0x832ae0	0x832c1f	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x832d1a	rip-relative	0x16ab584	finite-text-operand-or-substring	Fill 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x832d7a	rip-relative	0x15e9590	finite-text-operand-or-substring	 with 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x832d9d	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x833010	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x83305c	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x8330b0	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x833117	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x833256	rip-relative	0x16ab578	finite-text-operand-or-substring	stagnant 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x83326f	rip-relative	0x16abf64	finite-text-operand-or-substring	salt 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x8333de	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x833476	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x8334a6	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x8334f1	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_item_interact_fill_with_materialst+8	0x832ce0	0x833538	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_item_interact_give_namest+8	0x8335d0	0x8335f5	rip-relative	0x16abf58	finite-text-operand-or-substring	Name the 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x8336ea	rip-relative	0x16abf7c	finite-text-operand-or-substring	Heat 
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x83378a	rip-relative	0x16abf18	finite-text-operand-or-substring	 near magma
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x833791	rip-relative	0x16abf70	finite-text-operand-or-substring	 near lava
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x8337d4	rip-relative	0x16abf00	finite-text-operand-or-substring	 near burning trunk
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x8337e3	rip-relative	0x16abf40	finite-text-operand-or-substring	 near burning branches
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x8337f2	rip-relative	0x16abf28	finite-text-operand-or-substring	 near burning twigs
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x833801	rip-relative	0x16abfe0	finite-text-operand-or-substring	 near burning cap
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x833810	rip-relative	0x16abfd0	finite-text-operand-or-substring	 near fire
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x83381f	rip-relative	0x16ac008	finite-text-operand-or-substring	 near campfire
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x83383f	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_item_interact_heat_from_tilest+8	0x8336c0	0x833882	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_place_on_pack_animalst+8	0x835720	0x835745	rip-relative	0x16abe78	finite-text-operand-or-substring	Put on 
+classic	PE:6a70b91c:0270a000	adventure_environment_place_on_pack_animalst+8	0x835720	0x8357b3	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_place_on_pack_animalst+8	0x835720	0x8357f6	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8358aa	rip-relative	0x16abe40	finite-text-operand-or-substring	Set on
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8358be	rip-relative	0x16abe38	finite-text-operand-or-substring	Put 
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8358e3	rip-relative	0x163d138	finite-text-operand-or-substring	in
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8358ec	rip-relative	0x16abe50	finite-text-operand-or-substring	on
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8358fe	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x83596d	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_bld_containerst+8	0x835870	0x8359b0	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_it_containerst+8	0x835a20	0x835a45	rip-relative	0x16abe48	finite-text-operand-or-substring	Put in 
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_it_containerst+8	0x835a20	0x835ab9	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_place_in_it_containerst+8	0x835a20	0x835afc	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_unit_suck_bloodst+8	0x835b70	0x835c1c	rip-relative	0x16abee4	finite-text-operand-or-substring	Suck 
+classic	PE:6a70b91c:0270a000	adventure_environment_unit_suck_bloodst+8	0x835b70	0x835c71	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_environment_unit_suck_bloodst+8	0x835b70	0x835e8e	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_environment_unit_suck_bloodst+8	0x835b70	0x835f28	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_environment_unit_suck_bloodst+8	0x835b70	0x835f60	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_from_containerst+8	0x836050	0x8360f8	rip-relative	0x16abef8	finite-text-operand-or-substring	Eat 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_from_containerst+8	0x836050	0x8360ff	rip-relative	0x16abedc	finite-text-operand-or-substring	Drink 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_from_containerst+8	0x836050	0x836132	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_from_containerst+8	0x836050	0x83616c	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_from_containerst+8	0x836050	0x8361af	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8362b9	rip-relative	0x16abef8	finite-text-operand-or-substring	Eat 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8362c0	rip-relative	0x16abedc	finite-text-operand-or-substring	Drink 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8362ee	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x836561	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8365fd	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x83662c	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x836635	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x836672	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8366cc	rip-relative	0x1782ab0	finite-text-operand-or-substring	unknown material
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8367be	rip-relative	0x16ab578	finite-text-operand-or-substring	stagnant 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8367d7	rip-relative	0x16abf64	finite-text-operand-or-substring	salt 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x83694f	rip-relative	0x15e8b58	separator	's 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x8369e6	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x836a5e	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_ingest_materialst+8	0x836270	0x836aa5	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836c43	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836d8f	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836dea	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836df6	rip-relative	0x167bdf8	finite-text-operand-or-substring	t
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836e49	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_option_view_contaminantst+8	0x836b20	0x836e78	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x83714d	rip-relative	0x16abedc	finite-text-operand-or-substring	Drink 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x837154	rip-relative	0x16abef8	finite-text-operand-or-substring	Eat 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x837267	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x8373b3	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x83740e	rip-relative	0x167bdf0	finite-text-operand-or-substring	body part
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x83741a	rip-relative	0x167bdf8	finite-text-operand-or-substring	t
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x83746d	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_option_eat_unit_contaminantst+8	0x8370d0	0x83749c	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_option_eat_item_contaminantst+8	0x837520	0x83759a	rip-relative	0x16abedc	finite-text-operand-or-substring	Drink 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_item_contaminantst+8	0x837520	0x8375a1	rip-relative	0x16abef8	finite-text-operand-or-substring	Eat 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_item_contaminantst+8	0x837520	0x83761f	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_option_eat_item_contaminantst+8	0x837520	0x837652	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_vermin_eventst+8	0x8376c0	0x8376fd	rip-relative	0x15e85e4	finite-text-operand-or-substring	A 
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_vermin_eventst+8	0x8376c0	0x837836	inline-immediate-fragment		finite-short-string-fragment	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_vermin_eventst+8	0x8376c0	0x8378da	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_ignite_vegst+8	0x837960	0x837999	rip-relative	0x16abef0	finite-text-operand-or-substring	Ignite 
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_ignite_vegst+8	0x837960	0x837a8d	inline-immediate-fragment		finite-short-string-fragment	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_ignite_vegst+8	0x837960	0x837b2b	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_make_campfirest+8	0x837bb0	0x837bc3	rip-relative	0x16abea0	finite-text-operand-or-substring	Make Campfire
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_make_campfirest+8	0x837bb0	0x837be6	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_make_campfirest+8	0x837bb0	0x837c29	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_chop_treest+8	0x837c50	0x837c63	rip-relative	0x16abe98	finite-text-operand-or-substring	Fell 
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_chop_treest+8	0x837c50	0x837cd1	rip-relative	0x16abed4	finite-text-operand-or-substring	tree
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_chop_treest+8	0x837c50	0x837cf7	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pickup_chop_treest+8	0x837c50	0x837d3a	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d6bd	rip-relative	0x16abe18	finite-text-operand-or-substring	Attack error
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d6d4	rip-relative	0x1679028	finite-text-operand-or-substring	Attack 
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d807	rip-relative	0x165dd38	finite-text-operand-or-substring	creature
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d816	rip-relative	0x166b6a0	finite-text-operand-or-substring	creatures
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d836	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_attack_creaturest+8	0x83d680	0x83d879	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_combat_menu_creaturest+8	0x83d8b0	0x83d8e3	rip-relative	0x16abe08	finite-text-operand-or-substring	Combat error
+classic	PE:6a70b91c:0270a000	adventure_movement_combat_menu_creaturest+8	0x83d8b0	0x83d8fa	rip-relative	0x16abe30	finite-text-operand-or-substring	Combat 
+classic	PE:6a70b91c:0270a000	adventure_movement_combat_menu_creaturest+8	0x83d8b0	0x83da09	rip-relative	0x165dd38	finite-text-operand-or-substring	creature
+classic	PE:6a70b91c:0270a000	adventure_movement_combat_menu_creaturest+8	0x83d8b0	0x83da29	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_combat_menu_creaturest+8	0x83d8b0	0x83da6c	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_pushst+8	0x83daa0	0x83daca	rip-relative	0x16abe28	finite-text-operand-or-substring	Push 
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_pushst+8	0x83daa0	0x83dbdf	rip-relative	0x15f7fb0	finite-text-operand-or-substring	item
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_pushst+8	0x83daa0	0x83dbff	rip-relative	0x15e8524	finite-text-operand-or-substring	 to 
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_ridest+8	0x83dc60	0x83dc8a	rip-relative	0x16abdec	finite-text-operand-or-substring	Ride 
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_ridest+8	0x83dc60	0x83dd9f	rip-relative	0x15f7fb0	finite-text-operand-or-substring	item
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_ridest+8	0x83dc60	0x83ddbf	rip-relative	0x16abdd8	finite-text-operand-or-substring	, push off toward 
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_guidest+8	0x83de20	0x83de4a	rip-relative	0x16abdfc	finite-text-operand-or-substring	Guide 
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_guidest+8	0x83de20	0x83df5f	rip-relative	0x15f7fb0	finite-text-operand-or-substring	item
+classic	PE:6a70b91c:0270a000	adventure_movement_item_interact_guidest+8	0x83de20	0x83df7f	rip-relative	0x15e8524	finite-text-operand-or-substring	 to 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_raise_well_bucketst+8	0x83dfe0	0x83e00a	rip-relative	0x16abdf4	finite-text-operand-or-substring	Raise 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_raise_well_bucketst+8	0x83dfe0	0x83e11a	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_raise_well_bucketst+8	0x83dfe0	0x83e12f	rip-relative	0x16abc20	finite-text-operand-or-substring	 bucket
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_raise_well_bucketst+8	0x83dfe0	0x83e14f	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_raise_well_bucketst+8	0x83dfe0	0x83e192	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_lower_well_bucketst+8	0x83e1c0	0x83e1ea	rip-relative	0x16abc18	finite-text-operand-or-substring	Lower 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_lower_well_bucketst+8	0x83e1c0	0x83e2fa	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_lower_well_bucketst+8	0x83e1c0	0x83e30f	rip-relative	0x16abc20	finite-text-operand-or-substring	 bucket
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_lower_well_bucketst+8	0x83e1c0	0x83e32f	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_lower_well_bucketst+8	0x83e1c0	0x83e372	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pull_leverst+8	0x83e3a0	0x83e3ca	rip-relative	0x16abc34	finite-text-operand-or-substring	Pull 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pull_leverst+8	0x83e3a0	0x83e4da	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pull_leverst+8	0x83e3a0	0x83e4fa	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pull_leverst+8	0x83e3a0	0x83e53d	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_break_in_hatchst+8	0x83e570	0x83e59a	rip-relative	0x16abc28	finite-text-operand-or-substring	Break in 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_break_in_hatchst+8	0x83e570	0x83e6aa	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_break_in_hatchst+8	0x83e570	0x83e6ca	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_break_in_hatchst+8	0x83e570	0x83e70d	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x83e740	0x83e76a	rip-relative	0x16abbfc	finite-text-operand-or-substring	Pick 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x83e740	0x83e87a	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x83e740	0x83e88f	rip-relative	0x165d61c	finite-text-operand-or-substring	 lock
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x83e740	0x83e8af	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_pick_door_lockst+8;adventure_movement_building_interact_pick_hatch_lockst+8	0x83e740	0x83e8f2	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_bash_down_doorst+8	0x83e920	0x83e94a	rip-relative	0x16abbf0	finite-text-operand-or-substring	Bash down 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_bash_down_doorst+8	0x83e920	0x83ea5a	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_bash_down_doorst+8	0x83e920	0x83ea7a	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_bash_down_doorst+8	0x83e920	0x83eabd	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_topple_statuest+8	0x83eaf0	0x83eb1a	rip-relative	0x16abc10	finite-text-operand-or-substring	Topple 
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_topple_statuest+8	0x83eaf0	0x83ec2a	rip-relative	0x15e64b8	finite-text-operand-or-substring	building
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_topple_statuest+8	0x83eaf0	0x83ec4a	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_building_interact_topple_statuest+8	0x83eaf0	0x83ec8d	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83ed01	rip-relative	0x16abc88	finite-text-operand-or-substring	Move to 
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83ed08	rip-relative	0x16abc08	finite-text-operand-or-substring	Charge 
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83ef5a	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f085	rip-relative	0x16abc80	finite-text-operand-or-substring	/Air
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f0b9	rip-relative	0x16abc9c	finite-text-operand-or-substring	/Water
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f0ed	rip-relative	0x15e64cc	separator	/
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f126	rip-relative	0x16abc94	finite-text-operand-or-substring	Lava
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f135	rip-relative	0x15f234c	finite-text-operand-or-substring	Magma
+classic	PE:6a70b91c:0270a000	adventure_movement_movest+8	0x83ecc0	0x83f147	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f1aa	rip-relative	0x16abc50	finite-text-operand-or-substring	Climb to 
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f234	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f280	rip-relative	0x16abc40	finite-text-operand-or-substring	 holding 
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f2c2	rip-relative	0x16abc70	finite-text-operand-or-substring	 releasing hold
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f338	rip-relative	0x16abc80	finite-text-operand-or-substring	/Air
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f36b	rip-relative	0x16abc9c	finite-text-operand-or-substring	/Water
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f39e	rip-relative	0x15e64cc	separator	/
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f3d6	rip-relative	0x16abc94	finite-text-operand-or-substring	Lava
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f3e5	rip-relative	0x15f234c	finite-text-operand-or-substring	Magma
+classic	PE:6a70b91c:0270a000	adventure_movement_climbst+8	0x83f180	0x83f3f7	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f4af	rip-relative	0x16ac320	finite-text-operand-or-substring	Hold 
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f4b6	rip-relative	0x16abc60	finite-text-operand-or-substring	Hang from 
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f544	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f5a5	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f64b	rip-relative	0x16abc80	finite-text-operand-or-substring	/Air
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f67e	rip-relative	0x16abc9c	finite-text-operand-or-substring	/Water
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f6b1	rip-relative	0x15e64cc	separator	/
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f6e9	rip-relative	0x16abc94	finite-text-operand-or-substring	Lava
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f6f5	rip-relative	0x15f234c	finite-text-operand-or-substring	Magma
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_tilest+8	0x83f470	0x83f707	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_mountst+8	0x83f780	0x83f7a5	rip-relative	0x16ac318	finite-text-operand-or-substring	Mount 
+classic	PE:6a70b91c:0270a000	adventure_movement_mountst+8	0x83f780	0x83f813	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_mountst+8	0x83f780	0x83f856	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_dismountst+8	0x83f8d0	0x83f8f5	rip-relative	0x16ac340	finite-text-operand-or-substring	Dismount to 
+classic	PE:6a70b91c:0270a000	adventure_movement_dismountst+8	0x83f8d0	0x83f97b	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_dismountst+8	0x83f8d0	0x83f9be	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_release_hold_tilest+8	0x83fa30	0x83fa55	rip-relative	0x16ac328	finite-text-operand-or-substring	Release hold on 
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fb5a	rip-relative	0x167798c	finite-text-operand-or-substring	Climb
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fbd8	rip-relative	0x15e3720	separator	 
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fc90	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fd37	rip-relative	0x16abc80	finite-text-operand-or-substring	/Air
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fd6a	rip-relative	0x16abc9c	finite-text-operand-or-substring	/Water
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fd9d	rip-relative	0x15e64cc	separator	/
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fdd5	rip-relative	0x16abc94	finite-text-operand-or-substring	Lava
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fde4	rip-relative	0x15f234c	finite-text-operand-or-substring	Magma
+classic	PE:6a70b91c:0270a000	adventure_movement_hold_itemst+8	0x83fb30	0x83fdf6	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_claim_petst+8	0x83fe30	0x83fe55	rip-relative	0x16ac2f0	finite-text-operand-or-substring	Claim 
+classic	PE:6a70b91c:0270a000	adventure_movement_claim_petst+8	0x83fe30	0x83fec3	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_claim_petst+8	0x83fe30	0x83ff06	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_claim_petst+8	0x83fe30	0x83ff1b	rip-relative	0x16ac2e8	finite-text-operand-or-substring	 as pet
+classic	PE:6a70b91c:0270a000	adventure_movement_lead_animalst+8	0x83ff90	0x83ffb5	rip-relative	0x15e3ab0	finite-text-operand-or-substring	Lead 
+classic	PE:6a70b91c:0270a000	adventure_movement_lead_animalst+8	0x83ff90	0x840023	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_lead_animalst+8	0x83ff90	0x840066	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_movement_stop_lead_animalst+8	0x8400e0	0x840105	rip-relative	0x16ac308	finite-text-operand-or-substring	Stop leading 
+classic	PE:6a70b91c:0270a000	adventure_movement_release_hold_itemst+8	0x8401c0	0x8401e2	rip-relative	0x16ac2f8	finite-text-operand-or-substring	Climb down
+classic	PE:6a70b91c:0270a000	adventure_movement_release_hold_itemst+8	0x8401c0	0x840268	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x84034b	rip-relative	0x16ac3a0	finite-text-operand-or-substring	Go below hatch
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x84035c	rip-relative	0x16ac390	finite-text-operand-or-substring	Path to here
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x84037b	rip-relative	0x16ac3b8	finite-text-operand-or-substring	 (no climbing/jumping)
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x84039e	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x8403cc	rip-relative	0x16ac3b0	finite-text-operand-or-substring	 level
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x8403f7	rip-relative	0x15e4220	finite-text-operand-or-substring	s
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x840419	rip-relative	0x16ac358	finite-text-operand-or-substring	 up)
+classic	PE:6a70b91c:0270a000	adventure_movement_pathst+8	0x840330	0x840435	rip-relative	0x16ac350	finite-text-operand-or-substring	 down)
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x881fe9	rip-relative	0x16af6e0	finite-text-operand-or-substring	Pick up how many? (0-
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x881ff3	rip-relative	0x16af6f0	finite-text-operand-or-substring	? (0-
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x881ffc	rip-relative	0x16af6f4	finite-text-operand-or-substring	-
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882021	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x8820d0	rip-relative	0x15e783c	finite-text-operand-or-substring	_
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x88256b	inline-immediate-fragment		finite-short-string-fragment	Okay
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882675	rip-relative	0x15f959c	finite-text-operand-or-substring	Cancel
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x88267e	rip-relative	0x15f95a0	finite-text-operand-or-substring	el
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882865	rip-relative	0x15f959c	finite-text-operand-or-substring	Cancel
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x88286e	rip-relative	0x15f95a0	finite-text-operand-or-substring	el
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882936	rip-relative	0x16af510	finite-text-operand-or-substring	What do you want to do?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882940	rip-relative	0x16af520	finite-text-operand-or-substring	 to do?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882949	rip-relative	0x16af524	finite-text-operand-or-substring	do?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882954	rip-relative	0x16af526	finite-text-operand-or-substring	?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b1b	rip-relative	0x16af4f0	finite-text-operand-or-substring	Where would you like to move?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b25	rip-relative	0x16af500	finite-text-operand-or-substring	like to move?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b32	rip-relative	0x16af508	finite-text-operand-or-substring	move?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b3b	rip-relative	0x16af50c	finite-text-operand-or-substring	?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b80	rip-relative	0x1785c60	numeric-string-layout-vector	$
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b8d	rip-relative	0x16af558	finite-text-operand-or-substring	Who or what would you like to shoot?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882b97	rip-relative	0x16af568	finite-text-operand-or-substring	d you like to shoot?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882ba2	rip-relative	0x16af578	finite-text-operand-or-substring	oot?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882bd1	rip-relative	0x1785ca0	numeric-string-layout-vector	(
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882bde	rip-relative	0x16af528	finite-text-operand-or-substring	At whom or what would you like to throw?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882be8	rip-relative	0x16af538	finite-text-operand-or-substring	would you like to throw?
+classic	PE:6a70b91c:0270a000	chooser-renderer	0x881ce0	0x882bf3	rip-relative	0x16af548	finite-text-operand-or-substring	o throw?
+classic	PE:6a70b91c:0270a000	adventure_environment_take_from_pack_animalst+8	0x890b40	0x890b83	rip-relative	0x16af5c8	finite-text-operand-or-substring	Get 
+classic	PE:6a70b91c:0270a000	adventure_environment_take_from_pack_animalst+8	0x890b40	0x890cd6	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_environment_take_from_pack_animalst+8	0x890b40	0x890da7	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_take_from_pack_animalst+8	0x890b40	0x890dfa	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x890e70	0x890eab	rip-relative	0x16af5c8	finite-text-operand-or-substring	Get 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x890e70	0x891023	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_environmentst+8;adventure_environment_pick_up_ground_itemst+8	0x890e70	0x891076	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_itemst+8	0x8910f0	0x891133	rip-relative	0x16af5c8	finite-text-operand-or-substring	Get 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_itemst+8	0x8910f0	0x891286	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_itemst+8	0x8910f0	0x891358	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_itemst+8	0x8910f0	0x8913ab	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x891430	0x891473	rip-relative	0x16af5c8	finite-text-operand-or-substring	Get 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x891430	0x8915c6	rip-relative	0x15e8984	finite-text-operand-or-substring	 from 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x891430	0x89169d	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_up_building_item_contentsst+8;adventure_environment_take_item_from_containerst+8	0x891430	0x8916f0	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_vegetationst+8	0x891770	0x8917ac	rip-relative	0x16abbfc	finite-text-operand-or-substring	Pick 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_vegetationst+8	0x891770	0x8917b3	rip-relative	0x16abc34	finite-text-operand-or-substring	Pull 
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_vegetationst+8	0x891770	0x891939	rip-relative	0x1610298	separator	 (
+classic	PE:6a70b91c:0270a000	adventure_environment_pick_vegetationst+8	0x891770	0x89198c	rip-relative	0x16102d8	separator	)
+classic	PE:6a70b91c:0270a000	adventure_option_view_event_detailst+8	0x891ac0	0x891ac9	rip-relative	0x15f89e8	finite-text-operand-or-substring	engraving
+classic	PE:6a70b91c:0270a000	adventure_option_view_event_detailst+16	0x891ae0	0x891ae9	rip-relative	0x16af5b8	finite-text-operand-or-substring	View engraving
+classic	PE:6a70b91c:0270a000	adventure_option_view_itemst+16	0x891b00	0x891b25	rip-relative	0x1675f30	finite-text-operand-or-substring	View 
+classic	PE:6a70b91c:0270a000	adventure_option_drop_itemst+16	0x891bf0	0x891c15	rip-relative	0x1640934	finite-text-operand-or-substring	Drop 
+classic	PE:6a70b91c:0270a000	adventure_option_throw_itemst+16	0x891ce0	0x891d05	rip-relative	0x16af5d8	finite-text-operand-or-substring	Throw 
+classic	PE:6a70b91c:0270a000	adventure_option_wear_itemst+16	0x891dd0	0x891df5	rip-relative	0x16af5d0	finite-text-operand-or-substring	Wear 
+classic	PE:6a70b91c:0270a000	adventure_option_remove_itemst+16	0x891ec0	0x891ee5	rip-relative	0x16af590	finite-text-operand-or-substring	Remove 
+classic	PE:6a70b91c:0270a000	adventure_option_put_itemst+16	0x891fb0	0x891fd5	rip-relative	0x16af580	finite-text-operand-or-substring	Put or place 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_drink_itemst+16	0x8920a0	0x8920dd	rip-relative	0x16abef8	finite-text-operand-or-substring	Eat 
+classic	PE:6a70b91c:0270a000	adventure_option_eat_drink_itemst+16	0x8920a0	0x8920e4	rip-relative	0x16abedc	finite-text-operand-or-substring	Drink 
+classic	PE:6a70b91c:0270a000	adventure_movement_jumpst+8	0x8a1f50	0x8a1f6c	rip-relative	0x16af9c0	finite-text-operand-or-substring	Jump to the 
+classic	PE:6a70b91c:0270a000	adventure_movement_shoot_creaturest+8	0x8a2110	0x8a21af	rip-relative	0x16af9d8	finite-text-operand-or-substring	Quickly shoot 
+classic	PE:6a70b91c:0270a000	adventure_movement_shoot_creaturest+8	0x8a2110	0x8a21b6	rip-relative	0x16af9a0	finite-text-operand-or-substring	Aim carefully and shoot 
+classic	PE:6a70b91c:0270a000	adventure_movement_shoot_tilest+8	0x8a2dc0	0x8a2deb	rip-relative	0x16af9d0	finite-text-operand-or-substring	Shoot 
+classic	PE:6a70b91c:0270a000	adventure_movement_throw_item_at_creaturest+8	0x8a36f0	0x8a378f	rip-relative	0x16af930	finite-text-operand-or-substring	Quickly throw at 
+classic	PE:6a70b91c:0270a000	adventure_movement_throw_item_at_creaturest+8	0x8a36f0	0x8a3796	rip-relative	0x16af948	finite-text-operand-or-substring	Aim carefully and throw at 
+classic	PE:6a70b91c:0270a000	adventure_movement_throw_item_at_tilest+8	0x8a3d50	0x8a3d7b	rip-relative	0x16af990	finite-text-operand-or-substring	Throw at 

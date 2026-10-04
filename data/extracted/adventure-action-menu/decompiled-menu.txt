@@ -1,0 +1,235 @@
+Native Adventure action chooser source grammar, DF 53.16
+
+Sources: native-owners.tsv, native-literals.tsv, native-calls.tsv,
+steam-captions.asm, classic-captions.asm, and text-productions.tsv. The 77 primary vtables per
+edition were rediscovered through MSVC RTTI class-hierarchy arrays containing
+adventure_optionst. None of these files is a runtime observation or a test.
+The text below is a manual semantic reconstruction of the native instructions.
+RVAs below are Steam; native-owners.tsv provides the actual classic mapping by
+class and slot. Steam PE:6a70a6d9:02711000; classic PE:6a70b91c:0270a000.
+
+NOTATION AND DYNAMIC SOURCES
+Quoted strings are native finite prose. Brackets are conditional clauses;
+vertical bars select alternatives. Dynamic fields are retained as whole names,
+not an enumeration of all generated worlds and modded RAW vocabulary.
+
+DIR := NW | SW | West | NE | SE | East | North | South, optionally /Below or
+       /Above; or pure Below | Above | Here. Exactly 27 native helper outputs.
+       Steam helper 0x74f220; classic helper 0x74cc40.
+LOC := " (" DIR ")"; sentinel origin x=-30000 suppresses the whole group.
+       Get/Pick/Pull also suppress LOC when source and player x/y/z coincide.
+MEDIA := ["/Air"] ["/Water"] ["/Lava" | "/Magma"]. These are separate native
+         gates in that fixed order, not mutually exclusive choices. Air uses
+         tile type plus each liquid depth <=6; Water/Magma gates are >0.
+         Steam 0x8417ba..0x8418bc; the climbing/holding bodies repeat the gates.
+MOVE_LOC := " (" DIR MEDIA ")".
+CLIMB_LOC := " (" DIR (" holding " DIR | " releasing hold") MEDIA ")".
+HOLD_LOC := " (" DIR [" from " DIR] MEDIA ")".
+The directions after holding/from are calls to 0x74f220, not terrain names.
+Entire MOVE_LOC/CLIMB_LOC/HOLD_LOC groups disappear at the origin sentinel;
+media and holding/from cannot survive that omitted group.
+
+ITEM := complete item designation, Steam helper 0xc65450. Includes quality,
+        wear, subtype, material, creature/plant/raw noun, decorations and names.
+        Captions request their actual item-name mode (often r9=-1 or r9=1).
+        Mode -1 is used by Name the, object movement, Climb/Climb down, ingest
+        container, and the quantity popup. Inventory detail uses mode 1.
+UNIT := complete unit designation, Steam helper 0x132e430, using each caller's
+        options. It can contain a generated personal name and RAW caste names.
+TALK_TARGET := simpler unit designation from helper 0x1331500, or a historical
+               figure's identity/name via helper 0xa946e0. Not a terrain field.
+BUILDING := complete building virtual name, slot +0x188 in these constructors;
+            failed lookup falls back to finite "building".
+TILE := complete native terrain description, Steam helper 0xe7d330. Its tile,
+        material, vegetation and fluid grammar is an existing semantic source;
+        the final display fragment, or only a word inside it, is not the field.
+MAT := material field reconstructed inside Fill/ingest/suck constructors:
+       optional historical-figure possessive, RAW NAME_PREFIX, STATE_ADJ and
+       STATE_NAME. Fill/ingest add each eligible type-3 contaminant STATE_ADJ
+       (amount >=100, phase !=2, material differs from target), then target type
+       6 adds independent "stagnant " and "salt " from designation bits30/31.
+       Invalid material emits "unknown material". The actual words are RAW
+       vocabulary and generated names, not an additional finite UI sentence.
+DEPOSIT := Steam helper 0x657f90, classic 0x6559b0; its finite quantity prefixes
+           are specks/dusting/spatter/smear/coating/covering + " of ", followed
+           by material grammar including identity possessive and RAW prefixes.
+BP := entire RAW body-part singular/plural, fallback "body part"/"body parts".
+VERMIN := RAW singular creature/caste name from the vermin event.
+TREE := RAW plant tree name, fallback "tree".
+NAME_LIST := non-player conversation participants from conversation+0x48..50;
+             each has unit id or HF id, joined by ", " and final " and ".
+             Unresolvable participant ids are skipped. This is a typed list of
+             whole TALK_TARGET fields, not one opaque item or terrain field.
+N := native decimal integer, helper 0x52c130.
+
+ORDINARY CAPTION SLOT +0x8
+0x72250  adventure_optionst: empty method; no fixed prose.
+0x6b7080 Continue shouting | Continue conversation with NAME_LIST
+         conversation+0x16c bit1 selects shouting; otherwise participant list.
+0x6b7320 View yourself | View TALK_TARGET | View the Void
+         obj+0x10 equals player id selects yourself; missing unit/HF/name emits
+         inline "the Void". Failed HF name is not a fabricated personal name.
+0x6b75a0 Start new conversation with TALK_TARGET | Start new conversation with the Void
+0x6b7990 Shout out to everybody
+0x6b79b0 Assume an identity
+0x7e12e0 Gain possession
+0x7e1320 Pull it out
+0x7e1340 Cease nocking
+0x7e13d0 Read
+0x7e13f0 Roll
+0x7e1410 Roll all
+0x834d50 Nock in [ITEM] | Load into [ITEM]
+         obj+0x10 item type0x18 and subtype+0x1cc==0 selects Nock in; all other
+         cases Load into. Item missing retains only prefix, with no direction.
+0x835260 Fill ITEM from ITEM [LOC]
+0x835460 Fill ITEM with MAT [LOC]
+0x835d50 Name the ITEM
+0x835e40 Heat ITEM [HEAT_SOURCE] [LOC]
+         HEAT_SOURCE := near magma | near lava | near burning trunk |
+         near burning branches | near burning twigs | near burning cap |
+         near fire | near campfire. Includes its initial space.
+         Magma/lava source is liquid-dependent; remaining source comes from
+         tile enum switch RVA0x836074. No matching source omits this suffix.
+         Direction is independent; neither source nor direction is compulsory.
+0x837ea0 Put on UNIT [LOC]
+0x837ff0 Put in BUILDING [LOC] | Put on BUILDING [LOC] | Set on BUILDING [LOC]
+0x8381a0 Put in ITEM [LOC]
+0x8382f0 Suck UNIT's MAT
+0x8387d0 Eat ITEM from ITEM [LOC] | Drink ITEM from ITEM [LOC]
+         obj+0x28 contains consumed item; obj+0x20 is container. Consumed
+         item's virtual+0x2b0 nonzero selects Drink, otherwise Eat.
+0x8389f0 Eat MAT [LOC] | Drink MAT [LOC]
+0x8392a0 DEPOSIT (BP)
+0x839850 Eat DEPOSIT (BP) | Drink DEPOSIT (BP)
+0x839ca0 Eat DEPOSIT (ITEM) | Drink DEPOSIT (ITEM)
+         phase1 or phase0/type73 selects Drink, other phases Eat. Null deposits
+         or absent owning unit/item produce no text, not a fallback verb.
+0x839e40 A VERMIN (DIR)
+         Native origin sentinel suppresses VERMIN as well as LOC, leaving
+         literal "A ". Invalid RAW with known origin produces "A  (DIR)".
+0x83a0e0 Ignite TILE (DIR) | Ignite
+         Origin sentinel skips both prepared TILE append and LOC. There is
+         no native Ignite TILE form without LOC in this constructor.
+0x83a330 Make Campfire [LOC]
+0x83a3d0 Fell TREE [LOC]
+0x83fe00 Attack error | Attack UNIT [LOC] | Attack creature [LOC] | Attack creatures [LOC]
+         Empty target vector is Attack error; missing one target is creature;
+         multiple targets use creatures. UNIT comes from actual one-target id.
+0x840030 Combat error | Combat UNIT [LOC] | Combat creature [LOC]
+         Target id -1 is Combat error; nonnegative missing id is creature.
+0x840220 Push ITEM [to DIR] | Push item [to DIR]
+0x8403e0 Ride ITEM [, push off toward DIR] | Ride item [, push off toward DIR]
+0x8405a0 Guide ITEM [to DIR] | Guide item [to DIR]
+         The optional direction clause is entirely omitted at origin sentinel;
+         item id lookup failure is finite "item" in all three constructors.
+0x840760 Raise BUILDING bucket [LOC]
+0x840940 Lower BUILDING bucket [LOC]
+0x840b20 Pull BUILDING [LOC]
+0x840cf0 Break in BUILDING [LOC]
+0x840ec0 Pick BUILDING lock [LOC] (shared door/hatch lock caption)
+0x8410a0 Bash down BUILDING [LOC]
+0x841270 Topple BUILDING [LOC]
+0x841440 Move to TILE [MOVE_LOC] | Move to UNIT [MOVE_LOC] |
+         Charge TILE [MOVE_LOC] | Charge UNIT [MOVE_LOC]
+         obj+0x24 bit0 selects Charge and may append visible neutral unit names
+         found at the target tile; if no unit appended the target is TILE.
+0x841900 Climb to TILE [CLIMB_LOC]
+0x841bf0 Hold TILE [HOLD_LOC] | Hang from TILE [HOLD_LOC]
+0x841f00 Mount UNIT [LOC]
+0x842050 Dismount to TILE [LOC]
+0x8421b0 Release hold on TILE
+0x8422b0 Climb [ITEM] [MOVE_LOC]
+         Missing target item retains bare Climb. Target presence and location
+         presence are separate branches. No holding/from clause here.
+0x8425b0 Claim UNIT [LOC] as pet
+0x842710 Lead UNIT [LOC]
+0x842860 Stop leading UNIT
+0x842940 Climb down [from ITEM]
+         Item id is current player+0x4d4; failure retains Climb down.
+0x842ab0 Path to here [ (no climbing/jumping)] [LEVEL_CLAUSE] |
+         Go below hatch [ (no climbing/jumping)] [LEVEL_CLAUSE]
+         LEVEL_CLAUSE := " (" N " level" ["s"] (" up)" | " down)").
+         obj+0x23 selects hatch; obj+0x22==0 adds restriction; differing
+         obj+0x14 versus obj+0x20 z adds positive absolute depth, s if depth>1,
+         up if obj+0x14>obj+0x20, otherwise down. No zero-level clause.
+0x8932c0 Get ITEM from UNIT [LOC]
+0x8935f0 Get ITEM [LOC] (shared environment/ground-item constructor)
+0x893870 Get ITEM from BUILDING [LOC]
+0x893bb0 Get ITEM from ITEM [LOC] (shared container/building-contents constructor)
+0x893ef0 Pick ITEM [LOC] | Pull ITEM [LOC]
+         Native item type0x5b selects Pull; other types Pick.
+0x894180 ITEM (shared inventory/view/drop/throw/wear/remove/put/eat/interact +8)
+0x894240 engraving
+0x8a46d0 Jump to the DIR | DIR
+         obj+0x20==0 omits only action prefix, retains whole DIR, no level count.
+0x8a4890 Quickly shoot UNIT | Aim carefully and shoot UNIT
+         obj+0x38 chooses careful. Missing unit id obj+0x24 emits no caption.
+         After unit append the method returns: no direction/range/weapon text.
+0x8a5540 Shoot TILE | TILE
+         obj+0x20==0 omits prefix; whole terrain description remains.
+0x8a5e70 Quickly throw at UNIT | Aim carefully and throw at UNIT
+         obj+0x30 chooses careful. Same missing-id/terminal-append behavior.
+0x8a64d0 Throw at TILE | TILE
+
+DETAIL CAPTION SLOT +0x10
+0x7e1230 Empty inherited detail caption for ordinary types.
+0x894260 View engraving
+0x894280 View ITEM
+0x894370 Drop ITEM
+0x894460 Throw ITEM
+0x894550 Wear ITEM
+0x894640 Remove ITEM
+0x894730 Put or place ITEM
+0x894820 Eat ITEM | Drink ITEM (item virtual+0x2b0; no location)
+
+CHOOSER RENDERER AND DISPLAY PATHS
+Steam RVA0x884460..0x885768; classic RVA0x881ce0..0x882fe8.
+Steam title jump table0x885748 categories:
+0/3/5/6/7: What do you want to do?
+1/2: Where would you like to move?
+4: Who or what would you like to shoot? OR
+   At whom or what would you like to throw? (global0x18a8a58 flag).
+No additional dynamic heading exists for categories3/6/7 in this renderer.
+Category3/6 has anchored inventory-relative placement (state+0x10/+0x14),
+other categories use screen placement; this changes geometry, not vocabulary.
+All ordinary categories use option virtual+8; categories3/6/7 use virtual+16.
+
+Every option row is 3 native tiles tall. Row loop top starts header-top+2 and
+advances by3; key and caption use y=top+1. Key x=frame-left+8, caption
+x=frame-left+10, independent of whether the row has an item image. With image,
+adad70 draws from frame-left+1/top, parameters2,2,5,3,0. Background row fill is
+also3 tall. The translation capture's half-font surfaces are another layer;
+they must retain this original whole row association instead of demanding a
+single arbitrary picture-grid y. Native key label is option index offset+0x52.
+
+At0x885521..0x885528 the option virtual+0x118 is invoked before caption.
+75/77 types inherit empty leaf0x72250; only shoot/throw-creature use0x8a54d0,
+which resolves the target unit and tail-jumps0x7e4860 to draw its symbol.
+It does not change the caption font or produce caption text.
+
+Caption construction precedes native truncation0x885589..0x885615. Native
+length is compared with frame width, resized to right-(left+1)-13, and if that
+length>3 the final3bytes become literal dots. Rendering is ad9960 at0x885628.
+The truncated field in a picture/screen is not the source sentence. Read the
+owning native option and selected caption slot to recover its complete source.
+
+Quantity popup: state+0x38!=0 selects a separate early-return renderer path.
+Selected option index is state+0x3c; option virtual+0x90 yields ITEM. Complete
+item name is c65450 mode-1. Second line is exactly:
+  Pick up how many? (0-N)
+Maximum N is state+0x40, decimal append0x52c130 at0x884796. Input display
+copies state+0x50 if input-active state+0x48, else formats current state+0x44;
+blinking underscore is finite "_". Buttons: Okay, Cancel. Ordinary chooser
+has Cancel. Neither popup nor action list requests an isolated verb synonym.
+
+EXTRACTION BOUNDARIES
+PE unwind intervals define non-leaf ranges. Methods absent from unwind data
+end at first return or external unconditional tail jump, so adjacent Read/
+Roll/Roll all and Shout/Assume-identity bodies are not assigned to one owner.
+Literal TSV records ASCII data operands and printable immediate fragments.
+operand_role distinguishes separators, finite text/substrings, inline short
+string fragments and numeric std::string layout vectors. Printable bytes such
+as "$" in a length/capacity vector are numeric metadata; they are not labels.
+Substrings from compiler block-copy loads are operands, not separate runtime
+templates. The division-by3 magic 0x55555556 is not inventoried as ASCII.
+Complete sentences and typed clauses are the productions above.

@@ -76,7 +76,11 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
         // neither the outer sheet nor a generic rectangle owns the fields.
         {native_pe_address(profile.base, 0x18b338), NativeInfoTitleKind::Item},
         {native_pe_address(profile.base, 0x18b3c0), NativeInfoTitleKind::DisplayStatus},
-        {native_pe_address(profile.base, 0x18b417), NativeInfoTitleKind::DisplayStatus}};
+        {native_pe_address(profile.base, 0x18b417), NativeInfoTitleKind::DisplayStatus},
+        // The Adventure chooser's quantity popup draws the selected item's
+        // complete c65450 designation immediately above its numeric prompt.
+        // Give that same item-name field to the shared native title reader.
+        {native_pe_address(profile.base, 0x88472f), NativeInfoTitleKind::Item}};
     // Civilization detail draws prefix, entity and value separately, with
     // addchar supplying the colon. These verified addst return addresses
     // identify the fields without accepting unrelated text under the panel.
@@ -211,6 +215,7 @@ static bool resolve_native_caption_profile(NativeCaptionProfile &profile) {
         {0x158a74, {0xe8,0xe7,0x0e,0x98,0x00}},
         {0x158aef, {0xe8,0x6c,0x0e,0x98,0x00}},
         {0x158f6d, {0xe8,0xee,0x09,0x98,0x00}},
+        {0x88472a, {0xe8,0x31,0x52,0x25,0x00}},
         {0x1c66d5, {0xe8,0x86,0x32,0x91,0x00}},
         {0x1c8f3f, {0xe8,0x1c,0x0a,0x91,0x00}},
         {0x3bb2f7, {0xe8,0x64,0xe6,0x71,0x00}},

@@ -1,0 +1,127 @@
+steam_function_rva	role	production	dynamic_fields	branch
+0x72250	empty-base			empty primary caption
+0x7e1230	empty-detail			inherited detail slot
+0x6b7080	conversation	Continue shouting		conversation flag bit1
+0x6b7080	conversation	Continue conversation with {participants}	participants=unit/HF name list	ignore player; join comma and final and; unresolved ids skipped
+0x6b7320	view	View yourself		player id
+0x6b7320	view	View {target}	target=unit/HF name	resolved name
+0x6b7320	view	View the Void		missing unit/HF/name
+0x6b75a0	conversation	Start new conversation with {target}	target=unit/HF name	resolved name
+0x6b75a0	conversation	Start new conversation with the Void		missing unit/HF/name
+0x6b7990	conversation	Shout out to everybody		fixed
+0x6b79b0	identity	Assume an identity		fixed
+0x7e12e0	item-possession	Gain possession		fixed
+0x7e1320	item-pull	Pull it out		fixed
+0x7e1340	item-nocking	Cease nocking		fixed
+0x7e13d0	item-read	Read		fixed
+0x7e13f0	item-dice	Roll		fixed
+0x7e1410	item-dice	Roll all		fixed
+0x834d50	item-load	Nock in {item}	item=whole item designation	type0x18 subtype1cc=0
+0x834d50	item-load	Load into {item}	item=whole item designation	other weapon
+0x834d50	item-load	Nock in		item absent
+0x834d50	item-load	Load into		item absent
+0x835260	item-fill	Fill {item} from {container}[ ({direction})]	item/container=whole item designation; direction=27-output DIR	location optional
+0x835460	material-fill	Fill {item} with {material}[ ({direction})]	item=whole item; material=RAW/identity/stagnant/salt/adjectives; direction=DIR	location optional
+0x835d50	item-name	Name the {item}	item=whole item designation	mode-1
+0x835e40	item-heat	Heat {item}[ ({direction})]	item=whole item; direction=DIR	unmatched source; location optional
+0x835e40	item-heat	Heat {item} near magma[ ({direction})]	item=whole item; direction=DIR	magma
+0x835e40	item-heat	Heat {item} near lava[ ({direction})]	item=whole item; direction=DIR	lava
+0x835e40	item-heat	Heat {item} near burning trunk[ ({direction})]	item=whole item; direction=DIR	burning trunk tile
+0x835e40	item-heat	Heat {item} near burning branches[ ({direction})]	item=whole item; direction=DIR	burning branches tile
+0x835e40	item-heat	Heat {item} near burning twigs[ ({direction})]	item=whole item; direction=DIR	burning twigs tile
+0x835e40	item-heat	Heat {item} near burning cap[ ({direction})]	item=whole item; direction=DIR	burning cap tile
+0x835e40	item-heat	Heat {item} near fire[ ({direction})]	item=whole item; direction=DIR	fire tile
+0x835e40	item-heat	Heat {item} near campfire[ ({direction})]	item=whole item; direction=DIR	campfire tile
+0x837ea0	placement	Put on {unit}[ ({direction})]	unit=whole unit designation; direction=DIR	location optional
+0x837ff0	placement	Put in {building}[ ({direction})]	building=virtual+188 name; direction=DIR	container building
+0x837ff0	placement	Put on {building}[ ({direction})]	building=virtual+188 name; direction=DIR	building surface
+0x837ff0	placement	Set on {building}[ ({direction})]	building=virtual+188 name; direction=DIR	set-on surface
+0x8381a0	placement	Put in {item}[ ({direction})]	item=whole item; direction=DIR	location optional
+0x8382f0	material-suck	Suck {unit}'s {material}	unit=whole unit; material=RAW/state/identity	no location
+0x8387d0	ingest	Eat {item} from {container}[ ({direction})]	item/container=whole item; direction=DIR	consumed virtual+2b0=0
+0x8387d0	ingest	Drink {item} from {container}[ ({direction})]	item/container=whole item; direction=DIR	consumed virtual+2b0!=0
+0x8389f0	ingest	Eat {material}[ ({direction})]	material=RAW/identity/stagnant/salt/adjectives; direction=DIR	phase selects eat
+0x8389f0	ingest	Drink {material}[ ({direction})]	material=RAW/identity/stagnant/salt/adjectives; direction=DIR	phase selects drink
+0x8392a0	deposit-view	{deposit} ({body_part})	deposit=quantity/material grammar; body_part=RAW singular/plural	missing deposit or owner empty
+0x839850	deposit-ingest	Eat {deposit} ({body_part})	deposit=quantity/material grammar; body_part=RAW singular/plural	solid
+0x839850	deposit-ingest	Drink {deposit} ({body_part})	deposit=quantity/material grammar; body_part=RAW singular/plural	phase1 or phase0/type73
+0x839ca0	deposit-ingest	Eat {deposit} ({item})	deposit=quantity/material grammar; item=whole item	solid
+0x839ca0	deposit-ingest	Drink {deposit} ({item})	deposit=quantity/material grammar; item=whole item	phase1 or phase0/type73
+0x839e40	vermin	A {vermin} ({direction})	vermin=RAW singular; direction=DIR	known origin
+0x839e40	vermin	A  ({direction})	direction=DIR	invalid RAW; known origin
+0x839e40	vermin	A 		origin sentinel suppresses name and direction
+0x83a0e0	ignite	Ignite {tile} ({direction})	tile=terrain grammar; direction=DIR	known origin
+0x83a0e0	ignite	Ignite 		origin sentinel suppresses name and direction
+0x83a330	campfire	Make Campfire[ ({direction})]	direction=DIR	location optional
+0x83a3d0	fell	Fell {tree}[ ({direction})]	tree=RAW plant singular or tree; direction=DIR	location optional
+0x83fe00	attack	Attack error		empty target vector
+0x83fe00	attack	Attack {unit}[ ({direction})]	unit=whole unit; direction=DIR	one valid target
+0x83fe00	attack	Attack creature[ ({direction})]	direction=DIR	one missing target
+0x83fe00	attack	Attack creatures[ ({direction})]	direction=DIR	multiple targets
+0x840030	combat	Combat error		target id-1
+0x840030	combat	Combat {unit}[ ({direction})]	unit=whole unit; direction=DIR	valid target
+0x840030	combat	Combat creature[ ({direction})]	direction=DIR	missing nonnegative id
+0x840220	object-movement	Push {item}[ to {direction}]	item=whole item or finite item; direction=DIR	location optional
+0x8403e0	object-movement	Ride {item}[, push off toward {direction}]	item=whole item or finite item; direction=DIR	location optional
+0x8405a0	object-movement	Guide {item}[ to {direction}]	item=whole item or finite item; direction=DIR	location optional
+0x840760	building	Raise {building} bucket[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x840940	building	Lower {building} bucket[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x840b20	building	Pull {building}[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x840cf0	building	Break in {building}[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x840ec0	building	Pick {building} lock[ ({direction})]	building=whole name or building; direction=DIR	shared door/hatch
+0x8410a0	building	Bash down {building}[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x841270	building	Topple {building}[ ({direction})]	building=whole name or building; direction=DIR	location optional
+0x841440	movement	Move to {target}[ ({direction}{media})]	target=terrain grammar or whole unit; direction=DIR; media=MEDIA	bit0=0; full suffix optional
+0x841440	movement	Charge {target}[ ({direction}{media})]	target=terrain grammar or whole unit; direction=DIR; media=MEDIA	bit0=1; full suffix optional
+0x841900	climbing	Climb to {tile}[ ({direction} holding {held_direction}{media})]	tile=terrain grammar; direction/held_direction=DIR; media=MEDIA	full suffix optional
+0x841900	climbing	Climb to {tile}[ ({direction} releasing hold{media})]	tile=terrain grammar; direction=DIR; media=MEDIA	full suffix optional
+0x841bf0	holding	Hold {tile}[ ({direction}[ from {origin_direction}]{media})]	tile=terrain grammar; direction/origin_direction=DIR; media=MEDIA	full suffix optional
+0x841bf0	holding	Hang from {tile}[ ({direction}[ from {origin_direction}]{media})]	tile=terrain grammar; direction/origin_direction=DIR; media=MEDIA	full suffix optional
+0x841f00	mount	Mount {unit}[ ({direction})]	unit=whole unit; direction=DIR	location optional
+0x842050	dismount	Dismount to {tile}[ ({direction})]	tile=terrain grammar; direction=DIR	location optional
+0x8421b0	holding	Release hold on {tile}	tile=terrain grammar	no direction suffix
+0x8422b0	climbing	Climb[ {item}][ ({direction}{media})]	item=whole item; direction=DIR; media=MEDIA	item and suffix independently optional
+0x8425b0	pet	Claim {unit}[ ({direction})] as pet	unit=whole unit; direction=DIR	location optional
+0x842710	pet	Lead {unit}[ ({direction})]	unit=whole unit; direction=DIR	location optional
+0x842860	pet	Stop leading {unit}	unit=whole unit	no location
+0x842940	climbing	Climb down[ from {item}]	item=whole item	player held-item id lookup
+0x842ab0	path	Path to here[ (no climbing/jumping)][ ({depth} level[s] up)]	depth=positive decimal	up; s iff depth>1
+0x842ab0	path	Path to here[ (no climbing/jumping)][ ({depth} level[s] down)]	depth=positive decimal	down; s iff depth>1
+0x842ab0	path	Go below hatch[ (no climbing/jumping)][ ({depth} level[s] up)]	depth=positive decimal	up; s iff depth>1
+0x842ab0	path	Go below hatch[ (no climbing/jumping)][ ({depth} level[s] down)]	depth=positive decimal	down; s iff depth>1
+0x8932c0	get	Get {item} from {unit}[ ({direction})]	item=whole item; unit=whole unit; direction=DIR	location optional
+0x8935f0	get	Get {item}[ ({direction})]	item=whole item; direction=DIR	shared environment/ground item
+0x893870	get	Get {item} from {building}[ ({direction})]	item=whole item; building=virtual+188 name; direction=DIR	location optional
+0x893bb0	get	Get {item} from {container}[ ({direction})]	item/container=whole item; direction=DIR	shared item container/building item contents
+0x893ef0	vegetation	Pick {item}[ ({direction})]	item=whole growth/item; direction=DIR	type!=0x5b
+0x893ef0	vegetation	Pull {item}[ ({direction})]	item=whole growth/item; direction=DIR	type0x5b
+0x894180	inventory	{item}	item=whole item designation	shared item caption mode1
+0x894240	engraving	engraving		primary caption
+0x8a46d0	jump	Jump to the {direction}	direction=DIR	prefix flag nonzero
+0x8a46d0	jump	{direction}	direction=DIR	prefix flag zero
+0x8a4890	shoot	Quickly shoot {unit}	unit=whole unit	quick; missing unit empty
+0x8a4890	shoot	Aim carefully and shoot {unit}	unit=whole unit	careful; no direction/range/weapon suffix
+0x8a5540	shoot	Shoot {tile}	tile=terrain grammar	prefix flag nonzero
+0x8a5540	shoot	{tile}	tile=terrain grammar	prefix flag zero
+0x8a5e70	throw	Quickly throw at {unit}	unit=whole unit	quick; missing unit empty
+0x8a5e70	throw	Aim carefully and throw at {unit}	unit=whole unit	careful; no direction/range/weapon suffix
+0x8a64d0	throw	Throw at {tile}	tile=terrain grammar	prefix flag nonzero
+0x8a64d0	throw	{tile}	tile=terrain grammar	prefix flag zero
+0x894260	engraving-detail	View engraving		fixed
+0x894280	item-detail	View {item}	item=whole item	no location
+0x894370	item-detail	Drop {item}	item=whole item	no location
+0x894460	item-detail	Throw {item}	item=whole item	no location
+0x894550	item-detail	Wear {item}	item=whole item	no location
+0x894640	item-detail	Remove {item}	item=whole item	no location
+0x894730	item-detail	Put or place {item}	item=whole item	no location
+0x894820	item-detail	Eat {item}	item=whole item	virtual+2b0=0
+0x894820	item-detail	Drink {item}	item=whole item	virtual+2b0!=0
+0x884460	chooser-title	What do you want to do?		categories0/3/5/6/7
+0x884460	chooser-title	Where would you like to move?		categories1/2
+0x884460	chooser-title	Who or what would you like to shoot?		category4/shoot flag
+0x884460	chooser-title	At whom or what would you like to throw?		category4/throw flag
+0x884460	quantity-title	{item}	item=whole item	selected option+90; mode-1
+0x884460	quantity-prompt	Pick up how many? (0-{maximum})	maximum=nonnegative decimal state+40	quantity flag state+38
+0x884460	quantity-input	{input}[_]	input=state+50 text or state+44 decimal	input-active state+48; underscore blink
+0x884460	button	Okay		quantity popup
+0x884460	button	Cancel		popup or chooser

@@ -102,6 +102,112 @@ std::optional<std::string> Overlay::translate_inventory_location(
 // including native search candidates that have no screen coordinates.
 std::optional<std::string> Overlay::translate_adventure_item_action(
         const std::string &source, int y, int x) const {
+    const auto complete_term = [](const std::optional<std::string> &target) {
+        return target && !target->empty() && target->find("[C:") == std::string::npos &&
+            target->find_first_of("\r\n") == std::string::npos &&
+            std::none_of(target->begin(), target->end(), [](unsigned char ch) {
+                return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
+            });
+    };
+    // The native 74f220 formatter has 27 complete outputs: eight compass
+    // directions with optional /Above or /Below, then Here/Above/Below.
+    // Reuse the adventure rules first, keeping their compass abbreviations
+    // out of the result when an older ruleset still leaves N/S/E/W literal.
+    const auto direction = [&](std::string_view value) -> std::optional<std::string> {
+        constexpr std::string_view compass[] = {
+            "NW", "NE", "SW", "SE", "North", "South", "East", "West"};
+        const size_t slash = value.find('/');
+        const auto horizontal = value.substr(0, slash);
+        const bool compass_direction = std::find(std::begin(compass), std::end(compass),
+            horizontal) != std::end(compass);
+        if (slash == std::string_view::npos) {
+            if (!compass_direction && value != "Here" && value != "Above" && value != "Below")
+                return std::nullopt;
+        } else if (!compass_direction ||
+                (value.substr(slash + 1) != "Above" && value.substr(slash + 1) != "Below")) {
+            return std::nullopt;
+        }
+        std::vector<size_t> origins;
+        const auto wrapped = RULESETS.translate_with_origins(" (" + std::string(value) + ")",
+            "::adv::direction", origins);
+        if (complete_term(wrapped)) {
+            const auto inner = trim_view(*wrapped);
+            if (inner.starts_with('(') && inner.ends_with(')'))
+                return std::string(trim_view(inner.substr(1, inner.size() - 2)));
+        }
+        return translate_ui_message_capture(value, false);
+    };
+    const auto location = [&](std::string_view value, const Rule &rule)
+            -> std::optional<std::string> {
+        const bool climbing = rule.source.starts_with("Climb to ");
+        const bool holding = rule.source.starts_with("Hold ") ||
+            rule.source.starts_with("Hang from ");
+        const bool media_allowed = climbing || holding ||
+            rule.source.starts_with("Move to ") || rule.source.starts_with("Charge ") ||
+            rule.source == "Climb ({p})" || rule.source.starts_with("Climb {s}");
+        // Air, water and magma are three independent append branches, in
+        // that order. A shallow liquid can therefore emit /Air/Water, and
+        // the direction's own /Above or /Below remains a separate field.
+        std::vector<std::string_view> media;
+        if (media_allowed) {
+            for (;;) {
+                const size_t slash = value.rfind('/');
+                if (slash == std::string_view::npos) break;
+                const auto medium = value.substr(slash + 1);
+                if (medium != "Air" && medium != "Water" && medium != "Lava" && medium != "Magma")
+                    break;
+                media.push_back(medium);
+                value = value.substr(0, slash);
+            }
+            std::reverse(media.begin(), media.end());
+            int previous = -1;
+            for (const auto medium : media) {
+                const int order = medium == "Air" ? 0 : medium == "Water" ? 1 : 2;
+                if (order <= previous) return std::nullopt;
+                previous = order;
+            }
+        }
+        std::optional<std::string> target;
+        const size_t at = climbing ? value.find(" holding ") :
+            holding ? value.find(" from ") : std::string_view::npos;
+        const bool releasing = climbing && value.ends_with(" releasing hold");
+        if (at != std::string_view::npos || releasing) {
+            const auto base = direction(value.substr(0, releasing ?
+                value.size() - std::string_view(" releasing hold").size() : at));
+            if (!base) return std::nullopt;
+            // Existing adv::climb productions own the complete holding or
+            // releasing phrase. Other native directions use the same strict
+            // formatter instead of treating the remainder as a free name.
+            if (climbing) {
+                std::vector<size_t> origins;
+                auto wrapped = RULESETS.translate_with_origins(" (" + std::string(value) + ")",
+                    "::adv::climb::direction", origins);
+                if (complete_term(wrapped)) {
+                    const auto inner = trim_view(*wrapped);
+                    if (inner.starts_with('(') && inner.ends_with(')'))
+                        target = std::string(trim_view(inner.substr(1, inner.size() - 2)));
+                }
+            }
+            const auto qualifier = exact_literal_translation(releasing ?
+                "Adventure movement qualifier: releasing hold" : climbing ?
+                "Adventure movement qualifier: holding" : "Adventure movement qualifier: from");
+            if (!qualifier) return std::nullopt;
+            if (releasing) {
+                if (!target) target = *base + *qualifier;
+            } else {
+                const auto held = direction(value.substr(at + (climbing ? 9 : 6)));
+                if (!held) return std::nullopt;
+                if (!target) target = *base + *qualifier + *held;
+            }
+        } else target = direction(value);
+        if (!target) return std::nullopt;
+        for (const auto medium : media) {
+            const auto term = exact_literal_translation("Adventure movement medium: " + std::string(medium));
+            if (!term) return std::nullopt;
+            *target += "/" + *term;
+        }
+        return target;
+    };
     for (const Rule &rule : adventure_item_action_rules_) {
         if (rule.template_kinds.empty()) {
             if (rule.source == source) return rule.target;
@@ -123,17 +229,16 @@ std::optional<std::string> Overlay::translate_adventure_item_action(
                 const std::string value = source.substr(at, end - at);
                 std::optional<std::string> target;
                 const char kind = rule.template_kinds[slot];
-                if (kind == 'n') target = translate_ui_message_capture(value, true);
-                else if (kind == 'p') {
-                    const size_t slash = value.find('/');
-                    const auto horizontal = std::string_view(value).substr(0, slash);
-                    constexpr std::string_view directions[] = {"Here", "Above", "Below",
-                        "North", "South", "East", "West", "NW", "NE", "SW", "SE"};
-                    const bool direction = std::find(std::begin(directions), std::end(directions),
-                        horizontal) != std::end(directions);
-                    if (direction && (slash == std::string::npos ||
-                        value.substr(slash + 1) == "Above" || value.substr(slash + 1) == "Below"))
-                        target = translate_ui_message_capture(value, false);
+                if (kind == 'n') {
+                    target = exact_literal_translation("Adventure action target: " + value);
+                    if (!target) target = translate_ui_message_capture(value, true);
+                } else if (kind == 'p') target = location(value, rule);
+                else if (kind == 'd') {
+                    // Path captions append the absolute integer level count.
+                    // It stays numeric data and cannot become an item/name.
+                    if (!value.empty() && std::all_of(value.begin(), value.end(),
+                            [](unsigned char ch) { return ch >= '0' && ch <= '9'; }))
+                        target = value;
                 } else if (kind == 's') {
                     // The vermin constructor's article precedes one RAW
                     // singular species field, never an equipment designation.
@@ -159,6 +264,16 @@ std::optional<std::string> Overlay::translate_adventure_item_action(
                             rule.source.find(" from ") == std::string::npos);
                     if (environment_material)
                         target = translate_adventure_environment_material(value);
+                    if (!target) target = exact_literal_translation("Adventure action target: " + value);
+                    const bool terrain = rule.source.starts_with("Move to ") ||
+                        rule.source.starts_with("Charge ") ||
+                        rule.source.starts_with("Climb to ") || rule.source.starts_with("Hold ") ||
+                        rule.source.starts_with("Hang from ") || rule.source.starts_with("Dismount to ") ||
+                        rule.source.starts_with("Release hold on ") || rule.source.starts_with("Fell ") ||
+                        rule.source.starts_with("Ignite ") || rule.source.starts_with("Shoot ") ||
+                        rule.source.starts_with("Throw at ");
+                    if (!target && terrain)
+                        target = RULESETS.translate_tile_description(native_text_to_utf8(value));
                     std::vector<size_t> origins;
                     if (!target) target = RULESETS.translate_with_origins(
                         native_text_to_utf8(value), "::health::contaminant::inventory", origins);

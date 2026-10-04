@@ -14278,6 +14278,7 @@ A tiny burrowing creature, found in moist soil. It is legless, long and thin.	�
 A tiny creature made up of a series of crackling knobs set at strange angles.	一种由一系列龟裂关节以奇怪角度组成的小生物。	lP
 A tiny reptile with a shell on its back. It can be found in rivers and ponds.	一种体型较小的，背上有甲壳的爬行动物，通常生活在河溪边或池塘边。	lP
 A tiny winged creature that hunts at night and rests in caves during the day.	一种有翅膀的小动物，晚上捕食，白天在洞穴里休息。	lP
+Adventure item action: Go below hatch (no climbing/jumping) ({d} levels down)	到舱盖下方（不攀爬或跳跃，下方{d}层）	h
 Alternatively, you can reduce the number of peaks required by the parameters.	也可以减少参数要求的山峰数量。	l
 Announcement combat agreement-goals []: initiate sabotage and steal treasures	展开破坏行动、盗取财宝	l
 Announcement combat diplomacy-cause []: a dispute over a formalized agreement	对正式协议存在争议	l
@@ -14597,6 +14598,7 @@ A medium-sized, hooved herbivore. Some are domesticated as beasts of burden.	一
 A small water bird found in remote lakes. It is known for its haunting call.	一种在偏远湖泊中发现的小型水鸟。它以令人难忘的叫声而闻名。	lP
 A tiny sea mollusk. It can change color and skin patterns for communication.	一种渺小的海洋软体动物。它可以通过改变自身颜色和皮肤样貌进行交流	lP
 A tiny yellow bug. It has pincers and a stinging tail which can prove fatal.	一种小型的黄色昆虫。它有着钳子和致命的毒刺尾巴。	lP
+Adventure item action: Go below hatch (no climbing/jumping) ({d} level down)	到舱盖下方（不攀爬或跳跃，下方{d}层）	h
 Affects charging, your combat opportunities, and enemy combat opportunities.	影响冲锋，以及你与敌人的战斗机会。	w
 Announcement combat agreement-goals []: instill terror and initiate sabotage	制造恐慌、展开破坏行动	l
 Announcement combat agreement-goals []: prepare a coup and initiate sabotage	筹备政变、展开破坏行动	l
@@ -14908,6 +14910,8 @@ A tiny, brightly-colored tree parrot. It uses its tongue to feed on plants.	一�
 A very large feathered dinosaur person with three giant claws on each hand.	一种体型很大的带羽毛恐龙类人形生物，每只手都长有三根巨爪。	lP
 A {s} caravan from {e} has arrived. Overall trade sentiments are fantastic.	来自{e1}的{s1}商队已抵达。总体贸易意愿极其高涨。	hPt
 A {s} caravan from {e} has arrived. Overall trade sentiments are very good.	来自{e1}的{s1}商队已抵达。总体贸易意愿非常良好。	hPt
+Adventure item action: Go below hatch (no climbing/jumping) ({d} levels up)	到舱盖下方（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} levels down)	前往此处（不攀爬或跳跃，下方{d}层）	h
 Affects stamina recover, ability to remain standing when tired, and breath.	影响体力恢复、疲劳时保持站立的能力以及憋气能力。	w
 All work orders must be validated by the manager before they become active.	所有工单必须经经理人批准后才能开始执行。	hP
 Announcement combat dialogue-battle-death [dialogue-battle-group]: {s} died	{s1}丧生了	l
@@ -15235,6 +15239,8 @@ A very large dinosaur person with a ferocious jaw, short arms, and a sail.	一�
 A {s} caravan from {e} has arrived. Overall trade sentiments are cautious.	来自{e1}的{s1}商队已抵达。总体贸易意愿偏于谨慎。	hPt
 A {s} caravan from {e} has arrived. Overall trade sentiments are lukewarm.	来自{e1}的{s1}商队已抵达。总体贸易意愿不冷不热。	hPt
 A {s} caravan from {e} has arrived. Overall trade sentiments are terrible.	来自{e1}的{s1}商队已抵达。总体贸易意愿极差。	hPt
+Adventure item action: Go below hatch (no climbing/jumping) ({d} level up)	到舱盖下方（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} level down)	前往此处（不攀爬或跳跃，下方{d}层）	h
 Announcement combat agreement-goals []: instill terror and steal treasures	制造恐慌、盗取财宝	l
 Announcement combat agreement-goals []: prepare a coup and steal treasures	筹备政变、盗取财宝	l
 Announcement combat dialogue-battle-attacker [dialogue-battle-person]: {s}	{s1}	l
@@ -15576,6 +15582,7 @@ A medium-sized herding animal. It is known for its short horns and beard.	一种
 A small humanoid surrounded by fire which they can hurl at their enemies.	一个被火焰包围的小型人形生物，他们可以向敌人投掷。	lP
 A small myriapod, though very large for a myriapod. It feeds on detritus.	一种小型多足动物，但在同类中体型异常庞大。它以腐屑为食。	lP
 A tiny diving bird found living on seaside cliffs in the colder climates.	一种在气候寒冷的海边悬崖上发现的小型潜鸟。	lP
+Adventure item action: Path to here (no climbing/jumping) ({d} levels up)	前往此处（不攀爬或跳跃，上方{d}层）	h
 Announcement combat agreement-goals []: prepare a coup and instill terror	筹备政变、制造恐慌	l
 Announcement combat damage [layer,layer]: jamming the {s} through the {s}	将{s1}挤压穿过{s2}	l
 Announcement combat damage-list [damage-list,fluid]: {s} and spilling {s}	{s1}，使{s2}洒出	l
@@ -15907,6 +15914,7 @@ A small, nocturnal bird of prey with large eyes and protruding feathers.	一种�
 A small, nocturnal, marine fish. It can be found hunting in coral reefs.	一种夜间活动的小型海鱼。它可以在珊瑚礁中狩猎。	lP
 A small, stocky mammal. It is found from the mountains to the woodlands.	矮胖的小型哺乳动物。从山区到林地都能找到它。	lP
 A very large aquatic reptile with fish-like fins and an elongated snout.	一种体型很大的水生爬行动物，长有鱼鳍般的鳍状肢和细长的吻部。	lP
+Adventure item action: Path to here (no climbing/jumping) ({d} level up)	前往此处（不攀爬或跳跃，上方{d}层）	h
 An invertebrate found off the coast. It has a sting which can be severe.	在海岸边发现的一种无脊椎动物。它有一种可能很严重的刺痛感。	lP
 Announcement combat agreement-followup [justice-intrigue-paragraph]: {s}	{s1}	l
 Announcement combat attack [attack-verb,unit,object]: {s} {s} by the {s}	{s1}{s2}的{s3}	l
@@ -21758,6 +21766,7 @@ A tiny venomous snake. It is the longest of the pit vipers.	一条小小的毒�
 A trade depot is requiered for the delivery of the tribute.	运送贡品需要贸易站。	hP
 A venomous person with the head and tail of a gila monster.	一种长着毒蜥头和尾的具有剧毒的人形生物。	lP
 A very large person with a bony head frill and three horns.	一种体型很大的人形生物，长有骨质头盾和三根角。	lP
+Adventure item action: Go below hatch (no climbing/jumping)	到舱盖下方（不攀爬或跳跃）	h
 Adventure item action: Heat {s} near burning branches ({p})	在燃烧的树枝旁加热{s}（{p}）	h
 Adventurer log reputation: legendary preserver of knowledge	传奇博学大师	h
 After being interrogated by {a}, {a} implicated {a} at {p}.	在{p1}，经过{a1}审讯后，{a2}供出了{a3}。	ht
@@ -23103,6 +23112,7 @@ A person with the head and tail of a saltwater crocodile.	一种长着咸水鳄�
 A slender, horned man with the head and tail of a impala.	一种长着黑斑羚头和尾巴的有角的身形细长的人形生物。	lP
 A small four-eyed fish person with a pronounced back fin.	一种小型四眼鱼类人形生物，背鳍十分醒目。	lP
 A small whiskered fish found scavenging in inland waters.	一种在内陆水域觅食的带须的小鱼。	lP
+Adventure item action: Path to here (no climbing/jumping)	前往此处（不攀爬或跳跃）	h
 Adventurer log reputation: rumored preserver of knowledge	传闻中的博学大师	h
 After being interrogated, {a} implicated {a} in the wilds	在荒野中，经过审讯后，{a1}供出了{a2}	ht
 After enduring an interrogation by {a}, {a} was released.	忍受{a1}的审讯后，{a2}被释放了。	ht
@@ -24637,6 +24647,7 @@ A small horse person with three fingers and three toes.	一种小型马类人形
 A small winged reptile person with a long narrow mouth.	一种长有双翼的小型爬行类人形生物，嘴部细长。	lP
 A tiny feathered dinosaur with wings capable of flight.	一种微小的带羽毛恐龙，双翼能够飞行。	lP
 A vile force of darkness has arrived, seeking a parley!	一支邪恶的黑暗势力已经到来，要求谈判！	hP
+Adventure item action: Go below hatch ({d} levels down)	到舱盖下方（下方{d}层）	h
 Adventurer log reputation: famous protector of the weak	声名显赫的庇护者	h
 Adventurer log reputation: known preserver of knowledge	众所周知的博学大师	h
 Adventurer log reputation: legendary information source	传奇情报来源	h
@@ -25399,7 +25410,9 @@ A tiny orange-striped fish. It lives in inland waters.	一种橙色条纹的小�
 A tiny, curved and colorful fish found in coral reefs.	一种在珊瑚礁中发现的微小的、弯曲的、五颜六色的鱼。	lP
 A tiny, mollusk with a large shell and many tentacles.	一种体型微小的软体动物，有大壳和许多触手。	lP
 A very large legless person with a giant toothy mouth.	一种体型很大、没有腿的人形生物，长着一张布满利齿的巨口。	lP
+Adventure item action: Go below hatch ({d} level down)	到舱盖下方（下方{d}层）	h
 Adventure item action: Heat {s} near burning cap ({p})	在燃烧的菌盖旁加热{s}（{p}）	h
+Adventure item action: Start new conversation with {n}	与{n}开始新的交谈	h
 Adventurer log reputation: infamous information source	臭名昭著的情报来源	h
 Adventurer log reputation: known protector of the weak	众所周知的庇护者	h
 Adventurer log reputation: noted protector of the weak	著名的庇护者	h
@@ -26208,7 +26221,11 @@ A small reptile person with a wide two-part carapace.	一种小型爬行类人�
 A spotted person with the head and tail of a cheetah.	一种身有斑点长着猎豹的头与尾巴的人形生物	lP
 A spotted person with the head and tail of a leopard.	一种身有斑点长着豹子头和尾巴的人形生物。	lP
 A very small flying reptile with a long narrow mouth.	一种很小的飞行爬行动物，嘴部细长。	lP
+Adventure item action: Aim carefully and throw at {n}	仔细瞄准并投向{n}	h
+Adventure item action: Continue conversation with {n}	继续与{n}交谈	h
+Adventure item action: Go below hatch ({d} levels up)	到舱盖下方（上方{d}层）	h
 Adventure item action: Heat {s} near burning branches	在燃烧的树枝旁加热{s}	h
+Adventure item action: Path to here ({d} levels down)	前往此处（下方{d}层）	h
 Adventurer log reputation: legendary training partner	传奇训练伙伴	h
 Adventurer log reputation: rumored information source	传闻中的情报来源	h
 Alcohol, good food, and personal rooms go a long way.	酒、美食和私人房间都能起到很大作用。	hq
@@ -27077,6 +27094,8 @@ A tiny parasitic insect. It feeds on skin and blood.	一种小型的寄生昆虫
 A tiny scuttling arthropod with large compound eyes.	一种微小的节肢动物，长着硕大的复眼，会用碎步疾行。	lP
 A tiny underground bug, sought after for its thread.	一种微小的地底害虫，因其螺纹而备受追捧。	lP
 A tiny venomous snake found in the woods and swamps.	一种在树林和沼泽中发现的小毒蛇。	lP
+Adventure item action: Go below hatch ({d} level up)	到舱盖下方（上方{d}层）	h
+Adventure item action: Path to here ({d} level down)	前往此处（下方{d}层）	h
 Adventure item action: Ride {s}, push off toward {p}	乘坐{s}，向{p}蹬离	h
 Adventurer log reputation: dabbling training partner	初入门径的训练伙伴	h
 Adventurer log reputation: legendary treasure hunter	传奇寻宝者	h
@@ -28054,6 +28073,7 @@ A small, intelligent vermin with a long naked tail.	一种拥有长长裸露尾�
 A striped person with the head and tail of a skunk.	一种长着臭鼬头和尾巴的人形生物。	lP
 A tiny translucent creature, found in evil forests.	一种微小的半透明生物，发现于邪恶的森林中。	lP
 Adventure item action: Heat {s} near campfire ({p})	在篝火旁加热{s}（{p}）	h
+Adventure item action: Path to here ({d} levels up)	前往此处（上方{d}层）	h
 Adventurer log reputation: known information source	众所周知的情报来源	h
 Adventurer log reputation: noted information source	著名的情报来源	h
 After being interrogated by {a}, {a} implicated {a}	经过{a1}审讯后，{a2}供出了{a3}	ht
@@ -28971,8 +28991,10 @@ A person with the head and short tail of a bobcat.	一种长着山猫头和尾�
 A person with the head and tail of a red squirrel.	一种长着红松鼠头和尾巴的人形生物。	lP
 A person with the head and wings of a grey parrot.	一种长着灰鹦鹉脑袋和翅膀的人形生物。	lP
 A small arthropod person with large compound eyes.	一种小型节肢类人形生物，长着硕大的复眼。	lP
+Adventure item action: Aim carefully and shoot {n}	仔细瞄准并射击{n}	h
 Adventure item action: Heat {s} near burning trunk	在燃烧的树干旁加热{s}	h
 Adventure item action: Heat {s} near burning twigs	在燃烧的细枝旁加热{s}	h
+Adventure item action: Path to here ({d} level up)	前往此处（上方{d}层）	h
 Adventurer log reputation: famous training partner	名声显赫的训练伙伴	h
 Adventurer log reputation: legendary enemy fighter	传奇退敌斗士	h
 Adventurer log reputation: legendary loyal soldier	传奇的忠诚军人	h
@@ -29957,6 +29979,7 @@ A tiny brown bird given to singing complex songs.	一种擅长唱复杂的声乐
 A tiny predatory mollusk. It is brightly colored.	一种小型肉食软体动物。它颜色鲜艳。	lP
 A very large mammalian omnivore with a long head.	一种体型很大的哺乳类杂食动物，头部修长。	lP
 A very large woolly mammal person with two tusks.	一种体型很大的长毛哺乳类人形生物，长有两根獠牙。	lP
+Adventure item action: Continue conversation with	继续交谈	h
 Adventure item action: What will you do with {s}?	你想如何处理{s}？	h
 Adventurer log group status: Affiliated mercenary	附属佣兵	h
 Adventurer log group status: Associated mercenary	有关联的佣兵	h
@@ -34680,8 +34703,14 @@ A small fruit-eating ape, found in the trees.	一种吃水果的小型猿猴，�
 A small mammal resembling a large, white rat.	一个类似大白鼠的小型哺乳动物。	lP
 A very small reptile with a divided carapace.	一种很小的爬行动物，甲壳分成两部分。	lP
 A worm-like creature with the torso of a man.	一种长得像蠕虫的人形生物。	lP
+Adventure item action: Claim {n} ({p}) as pet	认领{n}为宠物（{p}）	h
 Adventure item action: Eat {s} from {s} ({p})	食用{s2}中的{s1}（{p}）	h
+Adventure item action: Get {s} from {n} ({p})	从{n}拿取{s}（{p}）	h
+Adventure item action: Get {s} from {s} ({p})	从{s2}拿取{s1}（{p}）	h
 Adventure item action: Heat {s} near campfire	在篝火旁加热{s}	h
+Adventure item action: Lower {s} bucket ({p})	降下{s}的水桶（{p}）	h
+Adventure item action: Raise {s} bucket ({p})	升起{s}的水桶（{p}）	h
+Adventure item action: Shout out to everybody	向所有人喊话	h
 Adventurer log group status: Affiliated slave	附属奴隶	h
 Adventurer log group status: Associated slave	有关联的奴隶	h
 Adventurer log group status: Former mercenary	前佣兵	h
@@ -35930,6 +35959,8 @@ A small ape found in the trees eating fruit.	在树上吃水果的小猴子被�
 A small aquatic bird, prized for its beauty.	一种小型水禽，因其美丽而珍贵。	lP
 A small, green, intelligent mountain parrot.	一种小型,绿油油的,高智商山鹦。	lP
 A very large cephalopod with a coiled shell.	一种体型很大的头足类动物，背负螺旋形外壳。	lP
+Adventure item action: Dismount to {s} ({p})	下坐骑到{s}（{p}）	h
+Adventure movement qualifier: releasing hold	，松开抓握	h
 Adventurer log group status: Former prisoner	前囚犯	h
 Adventurer log group status: Loyal mercenary	忠诚的佣兵	h
 Adventurer log reputation: infamous intruder	臭名昭著的入侵者	h
@@ -37261,6 +37292,7 @@ A small, flightless, brightly-colored bird.	一种无法飞行的色彩鲜艳的
 A spiny person with the head of an echidna.	一种长着豪猪的多刺的人形生物。	lP
 ABORT NOW and I'll look over my parameters.	立即中止，我要检查参数。	l
 Accept that the listener will not trade {i}	接受对方不愿交换{i1}的决定	hPt
+Adventure item action: Quickly throw at {n}	快速投向{n}	h
 Adventurer log group status: Devoted member	忠心耿耿的成员	h
 Adventurer log reputation: infamous brigand	臭名昭著的强盗	h
 Adventurer log reputation: infamous monster	臭名昭著的怪物	h
@@ -38617,7 +38649,13 @@ A tiny brown bird found in open woodlands.	一种褐色的小鸟，常见于开�
 A tiny larva which is prized for its milk.	一种微小的幼虫，因其乳汁而备受珍视。	lP
 A tiny, giggling humanoid with lacy wings.	一个长着花边翅膀、咯咯笑的小人形生物。	lP
 Accuse the speaker of being a troublemaker	指责说话者是个惹事精	hP
+Adventure item action: Bash down {s} ({p})	撞倒{s}（{p}）	h
+Adventure item action: Climb down from {s}	从{s}爬下	h
+Adventure item action: Hang from {s} ({p})	悬挂于{s}（{p}）	h
 Adventure item action: Heat {s} near magma	在岩浆旁加热{s}	h
+Adventure item action: Make Campfire ({p})	搭建篝火（{p}）	h
+Adventure item action: Pick {s} lock ({p})	撬开{s}的锁（{p}）	h
+Adventure item action: Release hold on {s}	松开抓住的{s}	h
 Adventure: move view/cursor down (z), fast	冒险模式：向下移动视野/光标（z），快速	w
 Adventurer log group status: Aligned slave	立场一致的奴隶	h
 Adventurer log group status: Devoted slave	忠心耿耿的奴隶	h
@@ -40181,6 +40219,9 @@ A tiny amphibian that lives in the trees.	一种生活在树上的微型两栖�
 A tiny marine fish found in vast schools.	一种在大量鱼群中发现的微小海鱼。	lP
 Accuse listener of being a night creature	指控对方是夜行生物	hP
 Acknowledge lack of righteous indignation	表示没有义愤	hP
+Adventure item action: Assume an identity	假扮身份	h
+Adventure item action: Break in {s} ({p})	破开{s}（{p}）	h
+Adventure item action: Climb to {s} ({p})	攀向{s}（{p}）	h
 Adventure item action: Drink {s} from {s}	饮用{s2}中的{s1}	h
 Adventure item action: Heat {s} near fire	在火旁加热{s}	h
 Adventure item action: Heat {s} near lava	在熔岩旁加热{s}	h
@@ -41685,8 +41726,12 @@ A large person with the head of a hippo.	一种长着河马头的体型庞大的
 A large sloth person with a long tongue.	一种大型树懒类人形生物，长着长舌头。	lP
 A thousand or more people were expelled.	至少一千人遭到驱逐。	h
 Adventure environment modifier: stagnant	停滞的	h
+Adventure item action: Continue shouting	继续喊话	h
 Adventure item action: Fill {s} from {s}	用{s2}中的内容物装满{s1}	h
 Adventure item action: Fill {s} with {s}	用{s2}装满{s1}	h
+Adventure item action: Move to {n} ({p})	移动到{n}（{p}）	h
+Adventure item action: Move to {s} ({p})	移动到{s}（{p}）	h
+Adventure item action: Quickly shoot {n}	快速射击{n}	h
 Adventure: move view/cursor up (z), fast	冒险模式：向上移动视野/光标（z），快速	w
 Adventurer log group status: Loyal slave	忠诚的奴隶	h
 Adventurer log reputation: famous dancer	名声显赫的舞蹈家	h
@@ -43216,13 +43261,25 @@ A small orange monkey with a long tail.	一只有长尾的橙色小猴子。	lP
 A small, slender gazelle-like creature.	一种像瞪羚一样的小而细长的生物。	lP
 A thousand or more people were expelled	至少一千人遭到驱逐	h
 A tiny land mollusk with a large shell.	一个有着大壳的小型陆地软体动物。	lP
+Adventure item action: Attack {n} ({p})	攻击{n}（{p}）	h
+Adventure item action: Charge {n} ({p})	冲向{n}（{p}）	h
+Adventure item action: Charge {s} ({p})	冲向{s}（{p}）	h
+Adventure item action: Claim {n} as pet	认领{n}为宠物	h
+Adventure item action: Combat {n} ({p})	与{n}战斗（{p}）	h
 Adventure item action: Eat {s} from {s}	食用{s2}中的{s1}	h
+Adventure item action: Get {s} from {n}	从{n}拿取{s}	h
+Adventure item action: Get {s} from {s}	从{s2}拿取{s1}	h
 Adventure item action: Guide {s} to {p}	将{s}引向{p}	h
+Adventure item action: Ignite {s} ({p})	点燃{s}（{p}）	h
+Adventure item action: Lower {s} bucket	降下{s}的水桶	h
 Adventure item action: Put in {s} ({p})	放入{s}（{p}）	h
 Adventure item action: Put on {n} ({p})	放到{n}上（{p}）	h
 Adventure item action: Put on {s} ({p})	放到{s}上（{p}）	h
 Adventure item action: Put or place {s}	放置或摆放{s}	h
+Adventure item action: Raise {s} bucket	升起{s}的水桶	h
 Adventure item action: Set on {s} ({p})	摆放到{s}上（{p}）	h
+Adventure item action: Stop leading {n}	停止牵领{n}	h
+Adventure item action: Topple {s} ({p})	推倒{s}（{p}）	h
 Adventurer log group status: Affiliated	附属关系	h
 Adventurer log group status: Associated	有所关联	h
 Adventurer log reputation: great hunter	伟大的猎人	h
@@ -44797,9 +44854,13 @@ A section of the cavern has collapsed!	洞穴的一部分坍塌了！	hP
 A small, grey, tree-dwelling creature.	一种居住在树上的灰色小生物。	lP
 Acknowledge lack of existential crisis	表示没有存在危机	hP
 Add stockpile links for this workshop.	为此工坊添加储物堆连接。	hj
+Adventure item action: Climb {s} ({p})	攀爬{s}（{p}）	h
+Adventure item action: Dismount to {s}	下坐骑到{s}	h
 Adventure item action: Drink {s} ({p})	饮用{s}（{p}）	h
 Adventure item action: Drink {s} ({s})	饮用{s1}（{s2}）	h
 Adventure item action: Gain possession	取得所有权	h
+Adventure item action: Jump to the {p}	跳向{p}	h
+Adventure item action: Mount {n} ({p})	骑上{n}（{p}）	h
 Adventure item action: Push {s} to {p}	将{s}推向{p}	h
 Adventurer log reputation: famous ally	名声显赫的同盟者	h
 Adventurer log reputation: famous bard	名声显赫的吟游诗人	h
@@ -46496,8 +46557,16 @@ A huge monster in the shape of a fox.	一只巨大的狐狸怪。	lP
 A tiny, colorful, long-bodied insect.	一种小型、色彩斑斓的长体昆虫。	lP
 A vile force of darkness has arrived!	一支邪恶的黑暗势力已经到来！	hP
 Acknowledge lack of grim satisfaction	表示没有冷酷的满足	hP
+Adventure item action: Fell {s} ({p})	砍倒{s}（{p}）	h
+Adventure item action: Go below hatch	到舱盖下方	h
 Adventure item action: Heat {s} ({p})	加热{s}（{p}）	h
+Adventure item action: Hold {s} ({p})	抓住{s}（{p}）	h
+Adventure item action: Lead {n} ({p})	牵领{n}（{p}）	h
+Adventure item action: Pick {s} ({p})	采摘{s}（{p}）	h
+Adventure item action: Pull {s} ({p})	拉动{s}（{p}）	h
 Adventure item action: Suck {n}'s {s}	吸取{n}的{s}	h
+Adventure item action: View engraving	查看雕刻	h
+Adventure movement qualifier: holding	，抓住	h
 Adventurer log group status: Criminal	罪犯	h
 Adventurer log group status: Prisoner	囚犯	h
 Adventurer log reputation: known ally	众所周知的同盟者	h
@@ -48162,10 +48231,16 @@ A huge woolly mammal with two horns.	一种巨大的长毛哺乳动物，长有�
 A person with the head of a warthog.	一种长着疣猪头的人形生物。	lP
 A {s} diplomat from {e} has arrived.	来自{e1}的{s1}外交官已抵达。	hPt
 Adventure environment modifier: salt	含盐的	h
+Adventure item action: Bash down {s}	撞倒{s}	h
 Adventure item action: Cease nocking	停止搭箭	h
 Adventure item action: Eat {s} ({p})	食用{s}（{p}）	h
 Adventure item action: Eat {s} ({s})	食用{s1}（{s2}）	h
+Adventure item action: Get {s} ({p})	拿取{s}（{p}）	h
+Adventure item action: Hang from {s}	悬挂于{s}	h
 Adventure item action: Load into {s}	装入{s}	h
+Adventure item action: Make Campfire	搭建篝火	h
+Adventure item action: Pick {s} lock	撬开{s}的锁	h
+Adventure item action: View yourself	查看自己	h
 Adventure: move view/cursor down (z)	冒险模式：向下移动视野/光标（z）	w
 Adventurer log group status: Aligned	立场一致	h
 Affects maximum number of followers.	影响追随者人数上限。	w
@@ -49970,7 +50045,13 @@ A large mammal person with a shell.	一种背负甲壳的大型哺乳类人形�
 A man-shaped creature made of iron.	由铁组成的人形生物。	lP
 A small amphibian with a flat body.	一种身体扁平的小型两栖动物。	lP
 Acknowledge lack of disillusionment	表示没有幻灭	hP
+Adventure item action: Attack error	攻击错误	h
+Adventure item action: Break in {s}	破开{s}	h
+Adventure item action: Climb to {s}	攀向{s}	h
+Adventure item action: Combat error	战斗错误	h
 Adventure item action: Name the {s}	为{s}命名	h
+Adventure item action: Path to here	前往此处	h
+Adventure item action: Throw at {s}	投向{s}	h
 Agree to have {e} pay homage to {e}	同意让{e1}向{e2}称臣纳贡	hPt
 All of your progress since the last	自上次保存以来的所有进度	w
 Announce your night creature status	宣布你是夜行生物	hP
@@ -51875,9 +51956,14 @@ A very large legless shark person.	一种体型很大、没有腿的鲨鱼类人
 Ability to grasp somewhat impaired	抓取能力有所受损	w
 Ability to stand somewhat impaired	直立能力有所受损	w
 Acknowledge lack of disappointment	表示没有失望	hP
+Adventure action target: creatures	生物	h
 Adventure item action: A {s} ({p})	一只{s}（{p}）	h
+Adventure item action: Climb ({p})	攀爬（{p}）	h
+Adventure item action: Move to {n}	移动到{n}	h
+Adventure item action: Move to {s}	移动到{s}	h
 Adventure item action: Nock in {s}	在{s}上搭箭	h
 Adventure item action: Pull it out	将其拔出	h
+Adventure movement qualifier: from	，从	h
 Adventure movement: Worst Possible	最差	l
 Adventure: move view/cursor up (z)	冒险模式：向上移动视野/光标（z）	w
 Adventurer log group status: Enemy	敌人	h
@@ -53865,11 +53951,20 @@ A person with the head of an elk.	一种长着麋鹿头的人形生物。	lP
 Accept invitation to become a {s}	接受成为{s1}的邀请	hPt
 Acknowledge lack of embarrassment	表示没有尴尬	hP
 Acknowledge lack of mortification	表示没有羞愧难当	hP
+Adventure action target: building	建筑	h
+Adventure action target: creature	生物	h
+Adventure action target: the Void	虚空	h
+Adventure item action: Attack {n}	攻击{n}	h
+Adventure item action: Charge {n}	冲向{n}	h
+Adventure item action: Charge {s}	冲向{s}	h
+Adventure item action: Climb down	爬下	h
+Adventure item action: Combat {n}	与{n}战斗	h
 Adventure item action: Put in {s}	放入{s}	h
 Adventure item action: Put on {n}	放到{n}上	h
 Adventure item action: Put on {s}	放到{s}上	h
 Adventure item action: Remove {s}	移除{s}	h
 Adventure item action: Set on {s}	摆放到{s}上	h
+Adventure item action: Topple {s}	推倒{s}	h
 Adventure movement: Best Possible	最佳	l
 Adventurer log reputation: polite	彬彬有礼	h
 Adventurer log tab: Organizations	组织	h
@@ -55701,10 +55796,17 @@ Acknowledge lack of hopelessness	表示没有绝望感	hP
 Acknowledge lack of restlessness	表示没有躁动不安	hP
 Acknowledge lack of satisfaction	表示没有满意	hP
 Acknowledge lack of vengefulness	表示没有复仇心	hP
+Adventure item action: Climb {s}	攀爬{s}	h
 Adventure item action: Drink {s}	饮用{s}	h
+Adventure item action: Guide {s}	引导{s}	h
 Adventure item action: Load into	装填	h
+Adventure item action: Mount {n}	骑上{n}	h
+Adventure item action: Shoot {s}	射击{s}	h
 Adventure item action: Throw {s}	投掷{s}	h
+Adventure item action: engraving	雕刻	h
 Adventure item action: {s} ({p})	{s}（{p}）	h
+Adventure movement medium: Magma	岩浆	h
+Adventure movement medium: Water	水	h
 Adventure movement: Faster Crawl	更快爬行	l
 Adventurer, choose your destiny!	冒险者，选择你的命运！	l
 Age of {a} and {a} in the wilds.	在荒野中，{a1}与{a2}时代。	htEi
@@ -57584,10 +57686,20 @@ Acknowledge lack of nervousness	表示没有紧张	hP
 Acknowledge lack of unhappiness	表示没有不快	hP
 Acquiesce (changes your values)	默认接受（改变你的价值观）	hP
 Adventure item action: Drop {s}	丢下{s}	h
+Adventure item action: Fell {s}	砍倒{s}	h
 Adventure item action: Heat {s}	加热{s}	h
+Adventure item action: Hold {s}	抓住{s}	h
+Adventure item action: Lead {n}	牵领{n}	h
+Adventure item action: Pick {s}	采摘{s}	h
+Adventure item action: Pull {s}	拉动{s}	h
+Adventure item action: Push {s}	推动{s}	h
+Adventure item action: Ride {s}	乘坐{s}	h
 Adventure item action: Roll all	投掷所有骰子	h
+Adventure item action: View {n}	查看{n}	h
 Adventure item action: View {s}	查看{s}	h
 Adventure item action: Wear {s}	穿戴{s}	h
+Adventure item action: the Void	虚空	h
+Adventure movement medium: Lava	熔岩	h
 Adventurer log reputation: hero	英雄	h
 Affects wrestling and charging.	影响摔跤和冲锋。	w
 After enduring an interrogation	忍受审讯后	h
@@ -59685,7 +59797,9 @@ Acknowledge lack of tenderness	表示没有温柔	hP
 Acknowledge lack of uneasiness	表示没有不安	hP
 Adventure item action: A ({p})	小生物（{p}）	h
 Adventure item action: Eat {s}	食用{s}	h
+Adventure item action: Get {s}	拿取{s}	h
 Adventure item action: Nock in	搭箭	h
+Adventure movement medium: Air	空气	h
 Adventure movement: Fast Crawl	快速爬行	l
 Adventure movement: Slow Crawl	慢爬	l
 Adventurer log date: {s} / {s}	{s2}{s1}发生了这件事。	wtl
@@ -61829,6 +61943,9 @@ Acknowledge lack of self-pity	表示没有自怜	hP
 Acknowledge lack of servility	表示没有卑躬屈膝	hP
 Acknowledge lack of suspicion	表示没有怀疑	hP
 Adds Pokemon related content.	添加宝可梦相关内容。	wl
+Adventure action target: item	物品	h
+Adventure action target: tree	树	h
+Adventure item action: Ignite	点火	h
 Adventure movement: Excellent	极好	l
 Adventure movement: Low Light	光线昏暗	l
 Age of {a} and {a} during {e}	在{e1}期间，{a1}与{a2}时代	htEi
@@ -63768,6 +63885,7 @@ Acknowledge lack of patience	表示没有耐心	hP
 Acknowledge lack of pleasure	表示没有愉悦	hP
 Acknowledge lack of sympathy	表示没有同情	hP
 Adventure action: Pet animal	抚摸动物	l
+Adventure item action: Climb	攀爬	h
 Adventure movement: Darkness	黑暗	l
 Adventure movement: Scramble	突进	l
 Adventure movement: Terrible	极差	l
@@ -67786,6 +67904,7 @@ Acknowledge lack of regret	表示没有后悔	hP
 Acknowledge lack of relief	表示没有如释重负	hP
 Acknowledge lack of terror	表示没有恐惧	hP
 Acknowledge lack of wonder	表示没有惊叹	hP
+Adventure item action: {p}	{p}	h
 Adventure movement: Sprint	冲刺	l
 Adventure movement: Stroll	散步	l
 Adventurer log tab: Actors	人物	h
@@ -70092,6 +70211,7 @@ Performance in the wilds.	在荒野中，表演。	hEi
 Persecution of {p} at {p}	在{p2}，对{p1}的迫害	htEi
 Persecution of {p} in {d}	{d1}年的对{p1}的迫害	htEi
 Persecution of {p} in {p}	在{p2}，对{p1}的迫害	htEi
+Pick up how many? (0-{d})	拾取多少？（0-{d}）	hPt
 Poetry Competition at {p}	在{p1}，诗歌比赛	htEi
 Poetry Competition in {d}	{d1}年的诗歌比赛	htEi
 Poetry Competition in {p}	在{p1}，诗歌比赛	htEi

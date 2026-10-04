@@ -10138,6 +10138,136 @@ Adventure item action: Heat {s} ({p})	加热{s}（{p}）	h
 # Vermin caption only appends its RAW singular when origin is available.
 Adventure item action: A {s} ({p})	一只{s}（{p}）	h
 Adventure item action: A ({p})	小生物（{p}）	h
+
+# Adventure chooser: all native caption constructors in the 77-type RTTI
+# directory, decompiled from both configured Windows PEs. Full productions
+# and their literal/call ownership live in data/extracted/adventure-action-menu/.
+# p is the complete 74f220 direction plus native movement constraints:
+# holding/from take another direction, not a terrain or a free name.
+# /Air, /Water and /(Lava|Magma) are independent appends in that order.
+# These are lookup-only scoped terms, never global replacements for verbs.
+Adventure movement qualifier: holding	，抓住	h
+Adventure movement qualifier: releasing hold	，松开抓握	h
+Adventure movement qualifier: from	，从	h
+Adventure movement medium: Air	空气	h
+Adventure movement medium: Water	水	h
+Adventure movement medium: Lava	熔岩	h
+Adventure movement medium: Magma	岩浆	h
+Adventure action target: creature	生物	h
+Adventure action target: creatures	生物	h
+Adventure action target: item	物品	h
+Adventure action target: building	建筑	h
+Adventure action target: tree	树	h
+Adventure action target: the Void	虚空	h
+Adventure item action: the Void	虚空	h
+Adventure item action: engraving	雕刻	h
+Adventure item action: View engraving	查看雕刻	h
+Adventure item action: View yourself	查看自己	h
+Adventure item action: View {n}	查看{n}	h
+Adventure item action: Start new conversation with {n}	与{n}开始新的交谈	h
+Adventure item action: Continue conversation with {n}	继续与{n}交谈	h
+Adventure item action: Continue conversation with	继续交谈	h
+Adventure item action: Continue shouting	继续喊话	h
+Adventure item action: Shout out to everybody	向所有人喊话	h
+Adventure item action: Assume an identity	假扮身份	h
+Adventure item action: Attack error	攻击错误	h
+Adventure item action: Combat error	战斗错误	h
+Adventure item action: Attack {n}	攻击{n}	h
+Adventure item action: Attack {n} ({p})	攻击{n}（{p}）	h
+Adventure item action: Combat {n}	与{n}战斗	h
+Adventure item action: Combat {n} ({p})	与{n}战斗（{p}）	h
+Adventure item action: Quickly shoot {n}	快速射击{n}	h
+Adventure item action: Aim carefully and shoot {n}	仔细瞄准并射击{n}	h
+Adventure item action: Shoot {s}	射击{s}	h
+Adventure item action: Quickly throw at {n}	快速投向{n}	h
+Adventure item action: Aim carefully and throw at {n}	仔细瞄准并投向{n}	h
+Adventure item action: Throw at {s}	投向{s}	h
+Adventure item action: Jump to the {p}	跳向{p}	h
+Adventure item action: {p}	{p}	h
+Adventure item action: Move to {n}	移动到{n}	h
+Adventure item action: Move to {n} ({p})	移动到{n}（{p}）	h
+Adventure item action: Move to {s}	移动到{s}	h
+Adventure item action: Move to {s} ({p})	移动到{s}（{p}）	h
+Adventure item action: Charge {n}	冲向{n}	h
+Adventure item action: Charge {n} ({p})	冲向{n}（{p}）	h
+Adventure item action: Charge {s}	冲向{s}	h
+Adventure item action: Charge {s} ({p})	冲向{s}（{p}）	h
+Adventure item action: Climb to {s}	攀向{s}	h
+Adventure item action: Climb to {s} ({p})	攀向{s}（{p}）	h
+Adventure item action: Hold {s}	抓住{s}	h
+Adventure item action: Hold {s} ({p})	抓住{s}（{p}）	h
+Adventure item action: Hang from {s}	悬挂于{s}	h
+Adventure item action: Hang from {s} ({p})	悬挂于{s}（{p}）	h
+Adventure item action: Release hold on {s}	松开抓住的{s}	h
+Adventure item action: Climb	攀爬	h
+Adventure item action: Climb ({p})	攀爬（{p}）	h
+Adventure item action: Climb {s}	攀爬{s}	h
+Adventure item action: Climb {s} ({p})	攀爬{s}（{p}）	h
+Adventure item action: Climb down	爬下	h
+Adventure item action: Climb down from {s}	从{s}爬下	h
+Adventure item action: Mount {n}	骑上{n}	h
+Adventure item action: Mount {n} ({p})	骑上{n}（{p}）	h
+Adventure item action: Dismount to {s}	下坐骑到{s}	h
+Adventure item action: Dismount to {s} ({p})	下坐骑到{s}（{p}）	h
+Adventure item action: Claim {n} as pet	认领{n}为宠物	h
+Adventure item action: Claim {n} ({p}) as pet	认领{n}为宠物（{p}）	h
+Adventure item action: Lead {n}	牵领{n}	h
+Adventure item action: Lead {n} ({p})	牵领{n}（{p}）	h
+Adventure item action: Stop leading {n}	停止牵领{n}	h
+Adventure item action: Push {s}	推动{s}	h
+Adventure item action: Ride {s}	乘坐{s}	h
+Adventure item action: Guide {s}	引导{s}	h
+Adventure item action: Raise {s} bucket	升起{s}的水桶	h
+Adventure item action: Raise {s} bucket ({p})	升起{s}的水桶（{p}）	h
+Adventure item action: Lower {s} bucket	降下{s}的水桶	h
+Adventure item action: Lower {s} bucket ({p})	降下{s}的水桶（{p}）	h
+Adventure item action: Pull {s}	拉动{s}	h
+Adventure item action: Pull {s} ({p})	拉动{s}（{p}）	h
+Adventure item action: Break in {s}	破开{s}	h
+Adventure item action: Break in {s} ({p})	破开{s}（{p}）	h
+Adventure item action: Pick {s} lock	撬开{s}的锁	h
+Adventure item action: Pick {s} lock ({p})	撬开{s}的锁（{p}）	h
+Adventure item action: Bash down {s}	撞倒{s}	h
+Adventure item action: Bash down {s} ({p})	撞倒{s}（{p}）	h
+Adventure item action: Topple {s}	推倒{s}	h
+Adventure item action: Topple {s} ({p})	推倒{s}（{p}）	h
+Adventure item action: Get {s}	拿取{s}	h
+Adventure item action: Get {s} ({p})	拿取{s}（{p}）	h
+Adventure item action: Get {s} from {n}	从{n}拿取{s}	h
+Adventure item action: Get {s} from {n} ({p})	从{n}拿取{s}（{p}）	h
+Adventure item action: Get {s} from {s}	从{s2}拿取{s1}	h
+Adventure item action: Get {s} from {s} ({p})	从{s2}拿取{s1}（{p}）	h
+Adventure item action: Pick {s}	采摘{s}	h
+Adventure item action: Pick {s} ({p})	采摘{s}（{p}）	h
+Adventure item action: Ignite	点火	h
+Adventure item action: Ignite {s} ({p})	点燃{s}（{p}）	h
+Adventure item action: Make Campfire	搭建篝火	h
+Adventure item action: Make Campfire ({p})	搭建篝火（{p}）	h
+Adventure item action: Fell {s}	砍倒{s}	h
+Adventure item action: Fell {s} ({p})	砍倒{s}（{p}）	h
+# 842ab0: prefix, the optional no-climbing flag, and independent level delta.
+Adventure item action: Path to here	前往此处	h
+Adventure item action: Path to here (no climbing/jumping)	前往此处（不攀爬或跳跃）	h
+Adventure item action: Path to here ({d} level up)	前往此处（上方{d}层）	h
+Adventure item action: Path to here ({d} levels up)	前往此处（上方{d}层）	h
+Adventure item action: Path to here ({d} level down)	前往此处（下方{d}层）	h
+Adventure item action: Path to here ({d} levels down)	前往此处（下方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} level up)	前往此处（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} levels up)	前往此处（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} level down)	前往此处（不攀爬或跳跃，下方{d}层）	h
+Adventure item action: Path to here (no climbing/jumping) ({d} levels down)	前往此处（不攀爬或跳跃，下方{d}层）	h
+Adventure item action: Go below hatch	到舱盖下方	h
+Adventure item action: Go below hatch (no climbing/jumping)	到舱盖下方（不攀爬或跳跃）	h
+Adventure item action: Go below hatch ({d} level up)	到舱盖下方（上方{d}层）	h
+Adventure item action: Go below hatch ({d} levels up)	到舱盖下方（上方{d}层）	h
+Adventure item action: Go below hatch ({d} level down)	到舱盖下方（下方{d}层）	h
+Adventure item action: Go below hatch ({d} levels down)	到舱盖下方（下方{d}层）	h
+Adventure item action: Go below hatch (no climbing/jumping) ({d} level up)	到舱盖下方（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Go below hatch (no climbing/jumping) ({d} levels up)	到舱盖下方（不攀爬或跳跃，上方{d}层）	h
+Adventure item action: Go below hatch (no climbing/jumping) ({d} level down)	到舱盖下方（不攀爬或跳跃，下方{d}层）	h
+Adventure item action: Go below hatch (no climbing/jumping) ({d} levels down)	到舱盖下方（不攀爬或跳跃，下方{d}层）	h
+# 884769..8847ac: exactly one bounded quantity prompt, with its native maximum.
+Pick up how many? (0-{d})	拾取多少？（0-{d}）	hPt
 Adventure vermin: A	小生物	l
 
 # DFHack plugins/stocks.lua: action fields, separate from keys and frame brand.

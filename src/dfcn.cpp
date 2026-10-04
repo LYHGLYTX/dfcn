@@ -21536,7 +21536,9 @@ std::vector<Match> Overlay::find_matches(int only_y,
             // but both contain independent shortcut captions, not the
             // conversation records that require captured keywords/identity.
             for (std::string_view action_title : {"What do you want to do?",
-                    "What would you like to do?"})
+                    "What would you like to do?", "Where would you like to move?",
+                    "Who or what would you like to shoot?",
+                    "At whom or what would you like to throw?"})
                 if (const size_t x = context[y].find(action_title); x != std::string::npos)
                     add_choice_panel(y, static_cast<int>(x), static_cast<int>(action_title.size()),
                         ChoiceKind::Action);
@@ -22031,6 +22033,9 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 }
                 continue;
             }
+            const auto action_draws = captured_native_drawn_text_rows();
+            const auto top_action_draws = captured_native_drawn_text_rows(true);
+            std::set<std::pair<int, int>> owned_action_captions;
             for (int y = title_y + 1; y < panel->y + panel->h; ++y) {
                 const auto &visible = context[y];
                 const auto is_shortcut = [&](int x, int edge) {
@@ -22040,6 +22045,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                          (visible[x] >= '0' && visible[x] <= '9'));
                 };
                 int choice_left = panel->x, choice_right = right;
+                std::optional<SDL_Rect> choice_box;
                 int key_x = panel->x;
                 while (key_x < caption_right(y) && visible[key_x] == ' ') ++key_x;
                 // Context actions are also drawn inside individual buttons.
@@ -22052,12 +22058,35 @@ std::vector<Match> Overlay::find_matches(int only_y,
                     // Classic list shortcuts can replace the middle left
                     // cap. The other eight slices still prove the button;
                     // retain the key outside the translated caption's span.
+                    bool key_top = false;
+                    cell_at(x, y, &key_top);
+                    const auto *key_flags = key_top
+                        ? gps_->screentexpos_top_flag : gps_->screentexpos_flag;
+                    const uint32_t key_half = key_flags
+                        ? key_flags[static_cast<size_t>(x) * gps_->dimy + y] &
+                            ((1u << 3) | (1u << 4)) : 0;
+                    const bool split_caption = key_half == (1u << 3) || key_half == (1u << 4);
                     auto button = native_button_text_rect(
-                        *gps_, x, x + 1, y, false, nullptr, false, true);
+                        *gps_, x, x + 1, y, split_caption, nullptr, false, true);
                     // Item context actions join their caption directly to a
                     // picture box instead of a rectangle's left cap. Reuse
                     // the complete picture/caption skin before reading text.
-                    if (!button) button = native_picture_caption_rect(*gps_, x, y);
+                    if (!button) {
+                        // The native 0x884460 chooser paints each three-row
+                        // picture at its top and key/caption at top+1
+                        // (0x8854ab..0x885628). A split font also leaves ink
+                        // at top+2. Both physical halves use that one frame,
+                        // whose complete picture/caption skin still proves
+                        // the bounds; a caption row is not its middle row.
+                        for (const int middle : {y, y - 1, y + 1}) {
+                            const auto picture = native_picture_caption_rect(
+                                *gps_, x, middle, false, nullptr, split_caption);
+                            if (!picture || y < picture->y + 1 ||
+                                y >= picture->y + picture->h) continue;
+                            button = picture;
+                            break;
+                        }
+                    }
                     if (!button) continue;
                     const int button_left = std::min(button->x, x);
                     if (button_left < panel->x ||
@@ -22067,6 +22096,7 @@ std::vector<Match> Overlay::find_matches(int only_y,
                             [](char ch) { return ch == ' '; })) continue;
                     choice_left = button_left;
                     choice_right = button->x + button->w;
+                    choice_box = *button;
                     key_x = x;
                     break;
                 }
@@ -22079,29 +22109,39 @@ std::vector<Match> Overlay::find_matches(int only_y,
                 while (first < visible_right && visible[first] == ' ') ++first;
                 int end = visible_right;
                 while (end > first && visible[end - 1] == ' ') --end;
-                if (first >= end) continue;
-                const auto &source_row = screen_rows[y];
-                // A raw-layer recovery may expose a different underlying
-                // widget. Its text never contributes to the visible choice.
-                if (source_row.compare(key_x, end - key_x,
-                        visible, key_x, end - key_x) != 0) continue;
+                if (first >= end || owned_action_captions.contains({first, y})) continue;
+                // Earlier shortcut protection deliberately blanks the key
+                // in screen_rows, and typed field readers can reserve parts
+                // of the caption. The actual native ink owns this complete
+                // action; the edited work buffer cannot decide its source.
+                const auto &source_row = visible;
                 bool intact = true;
                 std::vector<int> source_colors;
-                for (int x = first; x < end; ++x) {
+                for (int x = key_x; x < end; ++x) {
                     bool top = false;
                     const auto *cell = cell_at(x, y, &top);
+                    const size_t tile = static_cast<size_t>(x) * gps_->dimy + y;
+                    const unsigned char native = cell && cell[0] ? cell[0] : ' ';
                     if (is_cp437_box_separator(source_row, x) ||
-                        (screen_override && screen_override !=
-                            (top ? gps_->screen_top : gps_->screen))) {
+                        native != static_cast<unsigned char>(source_row[x]) ||
+                        (screen_override && source_row[x] != ' ' && screen_override !=
+                            (top ? gps_->screen_top : gps_->screen)) ||
+                        (screen_override && (screen_override[tile * 8]
+                            ? screen_override[tile * 8] : ' ') !=
+                                static_cast<unsigned char>(source_row[x]))) {
                         intact = false;
                         break;
                     }
-                    source_colors.push_back(cell
+                    if (x >= first) source_colors.push_back(cell
                         ? (cell[1] << 16) | (cell[2] << 8) | cell[3] : 0xffffff);
                 }
                 if (!intact) continue;
                 Match choice{first, y, end - first, kUiMessageRule, {},
                     source_row.substr(first, end - first)};
+                // Retain the proven control allocation for the shared fitter;
+                // rediscovering it from only the caption can miss its picture
+                // or lower font half and fall back to the enclosing menu.
+                choice.native_picture_caption_box = choice_box;
                 constexpr uint32_t top_half = 1u << 3;
                 constexpr uint32_t bottom_half = 1u << 4;
                 const auto caption_half = [&](int row_y) {
@@ -22133,8 +22173,6 @@ std::vector<Match> Overlay::find_matches(int only_y,
                     choice_caption_right(companion_y) >= end &&
                     context[companion_y].compare(key_x, end - key_x,
                         visible, key_x, end - key_x) == 0 &&
-                    screen_rows[companion_y].compare(key_x, end - key_x,
-                        visible, key_x, end - key_x) == 0 &&
                     std::all_of(context[companion_y].begin() + choice_left,
                         context[companion_y].begin() + key_x,
                         [](char ch) { return ch == ' '; }) &&
@@ -22143,10 +22181,17 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         [](char ch) { return ch == ' '; }) &&
                     caption_half(companion_y) == (half == top_half ? bottom_half : top_half);
                 if (companion && screen_override) {
-                    for (int x = first; x < end; ++x) {
+                    for (int x = key_x; x < end; ++x) {
                         bool top = false;
                         cell_at(x, companion_y, &top);
-                        if (screen_override != (top ? gps_->screen_top : gps_->screen)) {
+                        const size_t tile = static_cast<size_t>(x) * gps_->dimy + companion_y;
+                        if (context[companion_y][x] != ' ' &&
+                                screen_override != (top ? gps_->screen_top : gps_->screen)) {
+                            companion = false;
+                            break;
+                        }
+                        if ((screen_override[tile * 8] ? screen_override[tile * 8] : ' ') !=
+                                static_cast<unsigned char>(context[companion_y][x])) {
                             companion = false;
                             break;
                         }
@@ -22211,6 +22256,27 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         if (captured && *captured != complete) { ambiguous = true; break; }
                         captured = complete;
                     }
+                    // The draw retains the pre-resize caption with its
+                    // actual dotted text even after the clipping registry
+                    // advances. Bind it only to this same native field and
+                    // current physical row; dictionary prefixes supply no
+                    // evidence for a hidden direction or item-name suffix.
+                    for (const auto &draws : {&action_draws, &top_action_draws}) {
+                        for (const auto &draw : *draws) {
+                            if (draw.x != first || draw.complete_source.empty() ||
+                                (draw.y != y && (!companion || draw.y != companion_y)) ||
+                                draw.source.size() > static_cast<size_t>(visible_right - first) ||
+                                context[draw.y].compare(first, draw.source.size(), draw.source) != 0 ||
+                                normalize_utterance(draw.source) != joined) continue;
+                            bool top = false;
+                            cell_at(first, draw.y, &top);
+                            if (top != (draws == &top_action_draws)) continue;
+                            const std::string complete = normalize_utterance(draw.complete_source);
+                            if (captured && *captured != complete) { ambiguous = true; break; }
+                            captured = complete;
+                        }
+                        if (ambiguous) break;
+                    }
                     // Bind the pre-shortening value to this same frame, exact
                     // caption origin and visible text. A verified half-text
                     // companion is the same row; other matching prefixes are
@@ -22269,6 +22335,23 @@ std::vector<Match> Overlay::find_matches(int only_y,
                             translation_colors, target_colors, native_choice ? &*native_choice : nullptr);
                     }
                 }
+                const auto overlaps_caption = [&](const Match &match) {
+                    return ((match.y == y || (companion && match.y == companion_y)) &&
+                        match.x < end && first < match.x + match.length) ||
+                        std::any_of(continuation_companions.begin(), continuation_companions.end(),
+                            [&](const Match &row) {
+                                return match.y == row.y && match.x < row.x + row.length &&
+                                    row.x < match.x + match.length;
+                            });
+                };
+                // The proven complete choice supersedes earlier fragments,
+                // whether it translates or remains a single source-only
+                // record. Clearing the work buffer alone cannot remove a
+                // typed fragment already queued for the final overlay.
+                std::erase_if(result, overlaps_caption);
+                std::erase_if(untranslated_help_rows, overlaps_caption);
+                owned_action_captions.emplace(first, y);
+                if (companion) owned_action_captions.emplace(first, companion_y);
                 const size_t first_added = result.size();
                 // An in-progress native redraw can leave a short valid old
                 // caption in one half and a longer new choice in the other.
@@ -22283,11 +22366,17 @@ std::vector<Match> Overlay::find_matches(int only_y,
                         for (size_t index = first_added; index < result.size(); ++index) {
                             Match &caption = result[index];
                             caption.native_split_text = true;
-                            const int caption_top = caption.y - (half == bottom_half ? 1 : 0);
-                            caption.native_split_top_y = caption_top;
-                            caption.layout_y = std::max(0, caption_top);
-                            caption.layout_pixel_y = caption_top < 0
-                                ? -((gps_->tile_pixel_y + 1) / 2) : gps_->tile_pixel_y / 2;
+                            caption.native_split_top_y = top_y;
+                            // Move the measured paragraph as a whole to the
+                            // native split-font baseline. Keep each Chinese
+                            // continuation's own offset instead of stacking
+                            // every wrapped line on the original source row.
+                            const int pixel_y = caption.layout_y * gps_->tile_pixel_y +
+                                caption.layout_pixel_y + (top_y - y) * gps_->tile_pixel_y +
+                                gps_->tile_pixel_y / 2;
+                            caption.layout_y = std::max(0, pixel_y / gps_->tile_pixel_y);
+                            caption.layout_pixel_y = pixel_y < 0 ? pixel_y
+                                : pixel_y % gps_->tile_pixel_y;
                         }
                         if (companion) {
                             choice.y = companion_y;
@@ -22313,6 +22402,14 @@ std::vector<Match> Overlay::find_matches(int only_y,
                     if (complete_caption) row.native_help_review_source = translation_source;
                     std::fill_n(screen_rows[row.y].begin() + row.x, row.length, ' ');
                     untranslated_help_rows.push_back(std::move(row));
+                }
+                if (companion) {
+                    Match partner = choice;
+                    partner.y = companion_y;
+                    partner.native_help_source_only = true;
+                    if (complete_caption) partner.native_help_review_source = translation_source;
+                    std::fill_n(screen_rows[companion_y].begin() + first, end - first, ' ');
+                    untranslated_help_rows.push_back(std::move(partner));
                 }
                 for (auto &partner : continuation_companions) {
                     partner.native_help_source_only = true;
