@@ -33686,6 +33686,7 @@ Leave this menu and recenter on this creature.	离开此菜单，并将视图重
 Leave this menu and recenter on this creature.	离开该菜单并重定位至该生物.	w
 Milliseconds interface shutdown after recenter	重新定位后接口关闭毫秒数	w
 Minimum number of soldiers to follow new order	执行新命令所需的最少士兵人数	wl
+Mod details label: Earliest compatible version	最早兼容版本：	l
 Native Legends final battles of ancient powers	最后的古老势力进行了它们最后的战斗	h
 Native Legends war natural association {n} {s}	{n1}天生厌恶敌方与{s1}的内在联系	ht
 Native history collection title of {p} at {p}.	在{p2}，{p1}。	htEi
@@ -48569,6 +48570,8 @@ Minimum Initial Wetland Region Count	初始湿地区域最少数量
 Minimum Initial Wetland Square Count	初始湿地方格最少数量
 Mining cancelled near new damp stone	发现新的潮湿岩石时停止附近挖掘	wi
 Mining cancelled near new warm stone	发现新的温暖岩石时停止附近挖掘	wi
+Mod dependency label: Conflicts with	冲突：	l
+Mod dependency label: Must be before	需先于：	l
 Native Legends beasts attack {d} {s}	{d1}只{s1}来袭！	ht
 Native Legends numbered age {d}: {s}	第{d1}个{s1}	ht
 Native Legends only great powers {a}	{a1}是世上仅有的强大势力	ht
@@ -50303,6 +50306,7 @@ Minimum Initial Forest Square Count	初始森林方格最少数量
 Minimum Initial Tundra Region Count	初始苔原区域最少数量
 Minimum Initial Tundra Square Count	初始苔原方格最少数量
 Minimum Number of High-Rain Squares	高降雨量方格最少数量
+Mod dependency label: Must be after	需后于：	l
 Move keyboard cursor down and right	键盘光标向下和向右移动	w
 Native Legends attacker uncontested	进攻方未遭抵抗。	h
 Native Legends collection began {s}	{s1}开始了。	ht
@@ -60221,6 +60225,8 @@ Loading general information...	加载一般信息......	w
 Loud grinding (heard recently)	响亮机械摩擦声（刚刚听到）	wl
 Loud movement (heard recently)	响亮移动声（刚刚听到）	wl
 Make coke from bituminous coal	使用烟煤制作焦炭	wi
+Mod dependency label: Requires	依赖：	l
+Mod details label: Description	说明：	l
 Most property was confiscated.	大部分财产被没收。	h
 Mouse scroll repeat delay (ms)	鼠标滚动重复延迟(毫秒)	w
 Move view/cursor down (z), aux	向下移动视野/光标（z），辅助	w
@@ -68253,6 +68259,7 @@ Main: Toggle fluid numbers	主界面：切换流体数值	w
 Main: Traffic designations	主界面：通行设置	w
 Make the decision quickly.	迅速做出决定。	hP
 Minor River: Skeweredglens	小河：穿刺幽谷
+Mod details label: Version	版本：	l
 Monster Rampage during {e}	在{e1}期间，怪物肆虐事件	htEi
 Monster Rampage within {p}	在{p1}，怪物肆虐事件	htEi
 Mouse-context scrollbar up	鼠标-上下文滚动条向上	w
@@ -70068,6 +70075,7 @@ Main Ceremony within {p}.	在{p1}，主要仪式。	htEi
 Maximum Natural Cave Size	天然洞穴大小上限
 Member of respected group	受人尊敬的势力中的成员	wi
 Minimum Natural Cave Size	天然洞穴大小下限
+Mod details label: Author	作者：	l
 Move keyboard cursor down	键盘光标下移	w
 Move keyboard cursor left	键盘光标左移	w
 Move view/cursor down (z)	向下移动视野/光标（z）	w

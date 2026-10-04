@@ -10345,3 +10345,12 @@ This visitor has come seeking work as a {s}. It heard {e} would make a good base
 This visitor has come seeking work as a {s}. He heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。他听说{e1}适合长期从事学术研究。	hPt
 This visitor has come seeking work as a {s}. She heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。她听说{e1}适合长期从事学术研究。	hPt
 This visitor has come seeking work as a {s}. It heard {e} was the place for long-term scholarship.	这位访客前来寻找{s1}的工作。它听说{e1}适合长期从事学术研究。	hPt
+
+Mod details label: Author	作者：	l
+Mod details label: Version	版本：	l
+Mod details label: Earliest compatible version	最早兼容版本：	l
+Mod details label: Description	说明：	l
+Mod dependency label: Must be after	需后于：	l
+Mod dependency label: Must be before	需先于：	l
+Mod dependency label: Requires	依赖：	l
+Mod dependency label: Conflicts with	冲突：	l

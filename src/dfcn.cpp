@@ -2926,6 +2926,8 @@ enum class JournalSearchKind {
     Actor, Organization, Plot, PlotOrganization
 };
 
+struct NativeModListLayout;
+
 class Overlay {
 public:
     bool initialize();
@@ -3890,6 +3892,8 @@ private:
     void append_native_split_ui_messages(std::vector<std::string> &rows,
         std::vector<Match> &matches, int only_y,
         const unsigned char *screen_override) const;
+    void append_mod_list_details(const NativeModListLayout &layout,
+        std::vector<std::string> &rows, std::vector<Match> &matches) const;
     void layout_resting_place_details(SDL_Renderer *renderer);
     void layout_fortress_building_status(SDL_Renderer *renderer);
     void layout_fortress_farm_plot(SDL_Renderer *renderer);
@@ -20532,6 +20536,8 @@ static bool help_background_covered(const Match &match, int x, int y) {
         });
 }
 
+#include "mod_list.inc"
+
 std::vector<Match> Overlay::find_matches(int only_y,
                                          const unsigned char *screen_override) const {
     RenderTimingScope match_timing(render_timings_, config_.trace_render_timing, RenderTimingStage::Match);
@@ -20787,6 +20793,40 @@ std::vector<Match> Overlay::find_matches(int only_y,
     screen_rows.reserve(static_cast<size_t>(gps_->dimy));
     for (int row_y = 0; row_y < gps_->dimy; ++row_y)
         screen_rows.push_back(read_row(row_y));
+    const auto mod_list = native_mod_list_layout(*gps_, [&](int x, int y) {
+        bool top = false;
+        const auto *cell = cell_at(x, y, &top);
+        return cell && cell[0] ? cell[0] : static_cast<unsigned char>(' ');
+    });
+    std::vector<Match> mod_list_headers;
+    std::vector<Match> mod_details_matches;
+    if (mod_list) {
+        // Reserve the complete native name/version column before words,
+        // numeric templates or captured captions can consume its fragments.
+        // No name Match is emitted: the original font and alignment survive.
+        for (int y = mod_list->first_y; y < mod_list->bottom; ++y)
+            if ((y - mod_list->first_y) % 3 < 2)
+                std::fill(screen_rows[y].begin() + mod_list->left,
+                    screen_rows[y].begin() + mod_list->right, ' ');
+        for (Match header : mod_list->headers) {
+            auto &row = screen_rows[header.y];
+            if (row.compare(header.x, header.source.size(), header.source) != 0) continue;
+            const auto target = exact_literal_translation(header.source);
+            if (!target) continue;
+            header.target = *target;
+            header.layout_x = header.x;
+            header.layout_length = mod_list->header_right - header.x;
+            header.layout_clip_right = mod_list->header_right;
+            header.layout_left = true;
+            header.layout_font_pixels = unified_font_pixels();
+            header.layout_line_height_pixels = gps_->tile_pixel_y;
+            header.layout_lock_font_pixels = true;
+            header.layout_ellipsize = true;
+            std::fill_n(row.begin() + header.x, header.length, ' ');
+            mod_list_headers.push_back(std::move(header));
+        }
+        append_mod_list_details(*mod_list, screen_rows, mod_details_matches);
+    }
     const auto text_input_regions = native_text_input_regions(*gps_, screen_rows, screen_override);
     std::vector<Match> text_input_utf8;
     for (const auto &region : text_input_regions) {
@@ -21350,6 +21390,22 @@ std::vector<Match> Overlay::find_matches(int only_y,
         });
         result.insert(result.end(), std::make_move_iterator(text_input_utf8.begin()),
             std::make_move_iterator(text_input_utf8.end()));
+        // Captured/raw page readers can bypass the reserved work buffer.
+        // Remove their name fragments before either suppression mask is built.
+        if (mod_list) {
+            std::erase_if(result, [&](const Match &match) {
+                if (mod_list->owns_name(match) || mod_list->owns_details(match)) return true;
+                return std::any_of(mod_list_headers.begin(), mod_list_headers.end(),
+                    [&](const Match &header) {
+                        return match.y == header.y && match.x < header.x + header.length &&
+                            header.x < match.x + match.length;
+                    });
+            });
+            for (Match &header : mod_list_headers)
+                if (only_y < 0 || only_y == header.y) result.push_back(std::move(header));
+            for (Match &field : mod_details_matches)
+                if (only_y < 0 || only_y == field.y) result.push_back(std::move(field));
+        }
         return std::move(result);
     };
 
@@ -28698,8 +28754,22 @@ bool Overlay::prepare_immediate_row(bool top_layer, int y) {
     // Include the small vertical context used by wrapped-history assembly;
     // otherwise an unchanged continuation such as `Fortification.` could
     // retain a stale suppression mask after the preceding event row changed.
+    const auto mod_list = native_mod_list_layout(*gps_, [&](int x, int row) {
+        bool top = false;
+        const auto *cell = cell_at(x, row, &top);
+        return cell && cell[0] ? cell[0] : static_cast<unsigned char>(' ');
+    });
     const auto row_hash = [&](int hash_y) {
         uint64_t hash = 1469598103934665603ULL;
+        // Page ownership can change while a distant name row stays identical.
+        // Include the stable field bounds, not capture epochs or draw addresses.
+        for (int value : {mod_list ? mod_list->left : -1,
+                mod_list ? mod_list->right : -1, mod_list ? mod_list->first_y : -1,
+                mod_list ? mod_list->bottom : -1, mod_list ? mod_list->details_left : -1,
+                mod_list ? mod_list->details_right : -1}) {
+            hash ^= static_cast<uint32_t>(value);
+            hash *= 1099511628211ULL;
+        }
         // Identical continuation rows on different Legends tabs are not the
         // same translation context. Read the same rendered-page snapshot as
         // find_matches(), including changes in native ownership readiness.
